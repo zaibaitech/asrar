@@ -710,8 +710,9 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
             userElement,
             userName,
             birthDate,
-            currentHour: currentHour.planet,
-            hourEnergy: currentHour.energy,
+            currentPlanet: currentHour.planet.name,
+            planetElement: currentHour.planet.element,
+            isDayHour: currentHour.isDayHour,
             isRestDay,
             selectedPurpose,
           }}
