@@ -5,6 +5,8 @@ import { RelationshipInputForm } from '../../components/RelationshipInputForm';
 import { RelationshipCompatibilityView } from '../../components/RelationshipCompatibilityView';
 import { analyzeRelationshipCompatibility, getElementFromAbjadTotal } from '../../utils/relationshipCompatibility';
 import { useAbjad } from '../../contexts/AbjadContext';
+import AIChat from '../../components/AIChat';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 // Helper to calculate Abjad total from Arabic text
 function calculateAbjadTotal(text: string, abjadMap: Record<string, number>): number {
@@ -20,6 +22,7 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
   const [mode, setMode] = useState<CompatibilityMode>('relationship');
   const [relationshipResult, setRelationshipResult] = useState<RelationshipCompatibility | null>(null);
   const { abjad } = useAbjad();
+  const { language } = useLanguage();
   
   const handleRelationshipCalculate = (
     person1Name: string,
@@ -95,7 +98,6 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
           {!relationshipResult && (
             <RelationshipInputForm onCalculate={handleRelationshipCalculate} />
           )}
-          
           {/* Results */}
           {relationshipResult && (
             <>
@@ -111,6 +113,18 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
               >
                 Calculate Another Pair
               </button>
+
+              {/* AI Chat Assistant */}
+              <AIChat
+                calculationData={{
+                  person1: relationshipResult.person1,
+                  person2: relationshipResult.person2,
+                  overallScore: relationshipResult.overallScore,
+                  compatibility: relationshipResult,
+                }}
+                analysisType="compatibility"
+                language={language === 'fr' ? 'en' : language as 'ar' | 'en'}
+              />
             </>
           )}
           

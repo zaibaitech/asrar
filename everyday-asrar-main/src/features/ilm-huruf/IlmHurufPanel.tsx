@@ -19,6 +19,8 @@ import { DailyColorGuidanceCard } from '../../components/DailyColorGuidanceCard'
 import NameAutocomplete from '../../components/NameAutocomplete';
 import { TemperamentDisplay } from '../../components/TemperamentDisplay';
 import { DivineTiming } from '../../components/divine-timing';
+import AIAnalysis from '../../components/AIAnalysis';
+import AIChat from '../../components/AIChat';
 import {
   analyzeNameDestiny,
   analyzeCompatibility,
@@ -1432,6 +1434,17 @@ export function IlmHurufPanel() {
           />
         )}
       </div>
+
+      {/* AI Chat Assistant for Compatibility - Rendered at top level for fixed positioning */}
+      {results && !results.error && mode === 'compatibility' && results.person1 && results.person2 && (
+        <AIChat
+          calculationData={{
+            compatibility: results,
+          }}
+          analysisType="compatibility"
+          language={language === 'fr' ? 'ar' : language as 'ar' | 'en'}
+        />
+      )}
     </div>
   );
 }
@@ -5360,6 +5373,48 @@ function DestinyResults({ results }: { results: any }) {
         </div>
 
         <NameDestinyLearningCenter currentLanguage={language === 'fr' ? 'fr' : 'en'} />
+
+        {/* AI Deep Analysis Section */}
+        <div className="mt-8">
+          <AIAnalysis 
+            calculationData={{
+              name: results.nameDestiny?.arabicName || '',
+              motherName: results.nameDestiny?.motherArabicName || '',
+              totalValue: results.kabir,
+              saghir: results.saghir,
+              hadath: results.hadath,
+              element: results.nameDestiny?.element,
+              elementDistribution: results.nameDestiny?.elementDistribution,
+              burj: results.nameDestiny?.burj,
+              planetaryHour: results.nameDestiny?.hourIndex,
+              divineNameResonance: results.nameDestiny?.divineNameResonance,
+              colorResonance: results.nameDestiny?.colorResonance,
+              geometry: results.geometry,
+            }}
+            analysisType="name-destiny"
+            language={language === 'fr' ? 'ar' : language as 'ar' | 'en'}
+          />
+        </div>
+
+        {/* AI Chat Assistant */}
+        <AIChat
+          calculationData={{
+            name: results.nameDestiny?.arabicName || '',
+            motherName: results.nameDestiny?.motherArabicName || '',
+            totalValue: results.kabir,
+            saghir: results.saghir,
+            hadath: results.hadath,
+            element: results.nameDestiny?.element,
+            elementDistribution: results.nameDestiny?.elementDistribution,
+            burj: results.nameDestiny?.burj,
+            planetaryHour: results.nameDestiny?.hourIndex,
+            divineNameResonance: results.nameDestiny?.divineNameResonance,
+            colorResonance: results.nameDestiny?.colorResonance,
+            geometry: results.geometry,
+          }}
+          analysisType="name-destiny"
+          language={language === 'fr' ? 'ar' : language as 'ar' | 'en'}
+        />
       </div>
     </div>
   );
@@ -6896,6 +6951,32 @@ function LifePathResults({ results }: { results: EnhancedLifePathResult }) {
           </div>
         </div>
       )}
+
+      {/* AI Deep Analysis Section */}
+      <div className="mt-8">
+        <AIAnalysis 
+          calculationData={{
+            birthDate: results.birthDate,
+            lifePathNumber: results.lifePathNumber,
+            personalYear: results.personalYear,
+            personalMonth: results.personalMonth,
+          }}
+          analysisType="life-path"
+          language={language === 'fr' ? 'ar' : language as 'ar' | 'en'}
+        />
+      </div>
+
+      {/* AI Chat Assistant */}
+      <AIChat
+        calculationData={{
+          birthDate: results.birthDate,
+          lifePathNumber: results.lifePathNumber,
+          personalYear: results.personalYear,
+          personalMonth: results.personalMonth,
+        }}
+        analysisType="life-path"
+        language={language === 'fr' ? 'ar' : language as 'ar' | 'en'}
+      />
     </div>
   );
 }
@@ -7360,6 +7441,19 @@ function TimingResults({ results, birthDate, name, abjad }: { results: any; birt
           <ActNowButtons userElement={userElement as 'fire' | 'water' | 'air' | 'earth'} />
         </div>
       )}
+
+      {/* AI Chat Assistant */}
+      <AIChat
+        calculationData={{
+          birthDate,
+          name,
+          planetaryHour,
+          personalYear,
+          currentAlignment: results.currentAlignment,
+        }}
+        analysisType="divine-timing"
+        language={language === 'fr' ? 'ar' : language as 'ar' | 'en'}
+      />
     </div>
   );
 }

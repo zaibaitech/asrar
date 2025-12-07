@@ -24,6 +24,7 @@ import LearningCenter from './education/LearningCenter';
 import PlanetGuidePanel from './education/PlanetGuidePanel';
 import Glossary from './education/Glossary';
 import EnergyFlowChart from './education/EnergyFlowChart';
+import AIChat from '../AIChat';
 
 interface DivinTimingProps {
   userElement: Element;
@@ -701,6 +702,23 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
           ? '🌙 Les heures planétaires sont calculées selon les traditions islamiques classiques. Utilisez ce guide avec votre propre discernement.'
           : '🌙 Planetary hours are calculated according to classical Islamic traditions. Use this guidance with your own discernment.'}
       </div>
+
+      {/* AI Chat Assistant */}
+      {currentHour && (
+        <AIChat
+          calculationData={{
+            userElement,
+            userName,
+            birthDate,
+            currentHour: currentHour.planet,
+            hourEnergy: currentHour.energy,
+            isRestDay,
+            selectedPurpose,
+          }}
+          analysisType="divine-timing"
+          language={language === 'fr' ? 'ar' : language as 'ar' | 'en'}
+        />
+      )}
     </div>
   );
 }

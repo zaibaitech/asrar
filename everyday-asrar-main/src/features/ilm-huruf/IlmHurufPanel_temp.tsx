@@ -18,6 +18,8 @@ import { ActNowButtons } from '../../components/ActNowButtons';
 import { DailyColorGuidanceCard } from '../../components/DailyColorGuidanceCard';
 import NameAutocomplete from '../../components/NameAutocomplete';
 import { TemperamentDisplay } from '../../components/TemperamentDisplay';
+import AIAnalysis from '../../components/AIAnalysis';
+import { formatNameDestinyData, formatLifePathData, formatCompatibilityData } from '../../lib/ai-analysis';
 import {
   analyzeNameDestiny,
   analyzeCompatibility,
@@ -3421,6 +3423,28 @@ function DestinyResults({ results }: { results: any }) {
           </div>
         </div>
       </div>
+
+      {/* AI Deep Analysis Section */}
+      <div className="mt-8">
+        <AIAnalysis 
+          calculationData={{
+            name: results.nameDestiny?.arabicName || '',
+            motherName: results.nameDestiny?.motherArabicName || '',
+            totalValue: results.kabir,
+            saghir: results.saghir,
+            hadath: results.hadath,
+            element: results.nameDestiny?.element,
+            elementDistribution: results.nameDestiny?.elementDistribution,
+            burj: results.nameDestiny?.burj,
+            planetaryHour: results.nameDestiny?.hourIndex,
+            divineNameResonance: results.nameDestiny?.divineNameResonance,
+            colorResonance: results.nameDestiny?.colorResonance,
+            geometry: results.geometry,
+          }}
+          analysisType="name-destiny"
+          language={language === 'fr' ? 'ar' : language as 'ar' | 'en'}
+        />
+      </div>
     </div>
   );
 }
@@ -4448,6 +4472,20 @@ function LifePathResults({ results }: { results: EnhancedLifePathResult }) {
           </div>
         </div>
       )}
+
+      {/* AI Deep Analysis Section */}
+      <div className="mt-8">
+        <AIAnalysis 
+          calculationData={{
+            birthDate: results.birthDate,
+            lifePathNumber: results.lifePathNumber,
+            personalYear: results.personalYear,
+            personalMonth: results.personalMonth,
+          }}
+          analysisType="life-path"
+          language={language === 'fr' ? 'ar' : language as 'ar' | 'en'}
+        />
+      </div>
     </div>
   );
 }

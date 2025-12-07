@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useLanguage } from "../../../contexts/LanguageContext";
 import { translations } from "../../../lib/translations";
 import type { IstikharaCalculationResult } from "../types";
+import AIChat from "../../../components/AIChat";
 import { 
   BookOpen, 
   HelpCircle, 
@@ -554,6 +555,21 @@ export function IstikharaPanel() {
             </div>
           </div>
         </div>
+      )}
+
+      {/* AI Chat Assistant */}
+      {calculationResult && (
+        <AIChat
+          calculationData={{
+            personName: calculationResult.personName,
+            motherName: calculationResult.motherName,
+            combinedTotal: calculationResult.combinedTotal,
+            burujProfile: calculationResult.burujProfile,
+            repetitionCount: calculationResult.repetitionCount,
+          }}
+          analysisType="general"
+          language={language === 'fr' ? 'ar' : language as 'ar' | 'en'}
+        />
       )}
 
       {/* Custom Styles */}
