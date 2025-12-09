@@ -12,7 +12,7 @@ interface Message {
 
 interface AIChatProps {
   calculationData: any;
-  analysisType: 'name-destiny' | 'life-path' | 'compatibility' | 'divine-timing' | 'daily-reflection' | 'general';
+  analysisType: 'name-destiny' | 'life-path' | 'compatibility' | 'divine-timing' | 'daily-reflection' | 'istikhara' | 'general';
   language?: 'ar' | 'en' | 'fr';
   position?: 'bottom-right' | 'bottom-left';
 }
@@ -172,6 +172,32 @@ export default function AIChat({
         ];
       }
     }
+    
+    if (analysisType === 'istikhara') {
+      if (isArabic) {
+        return [
+          'ما هو معنى برجي؟',
+          'كيف أفسر النتيجة المجمعة؟',
+          'ما هي الأسماء الإلهية لبرجي؟',
+          'ماذا تعني ممارستي الروحية؟',
+        ];
+      } else if (isFrench) {
+        return [
+          'Quelle est la signification de mon buruj ?',
+          'Comment interpréter le total combiné ?',
+          'Quels sont les Noms divins pour mon buruj ?',
+          'Que signifie ma pratique spirituelle ?',
+        ];
+      } else {
+        return [
+          'What is the meaning of my buruj?',
+          'How do I interpret the combined total?',
+          'What are the Divine Names for my buruj?',
+          'What does my spiritual practice mean?',
+        ];
+      }
+    }
+    
     // Default questions for other analysis types
     if (isArabic) {
       return [
@@ -204,12 +230,12 @@ export default function AIChat({
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className={`fixed bottom-4 sm:bottom-6 ${positionClasses} z-50 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white p-4 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 flex items-center gap-2 group`}
+          className={`fixed bottom-[180px] sm:bottom-44 ${positionClasses} z-40 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white p-4 sm:px-5 sm:py-3 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-105 sm:hover:scale-110 flex items-center gap-2`}
           aria-label={isArabic ? 'افتح شرنو' : isFrench ? 'Ouvrir Cherno' : 'Open Cherno'}
         >
-          <MessageCircle className="w-6 h-6" />
+          <MessageCircle className="w-6 h-6 sm:w-5 sm:h-5" />
           <Sparkles className="w-4 h-4 absolute -top-1 -right-1 text-yellow-300 animate-pulse" />
-          <span className="hidden group-hover:inline-block text-sm font-semibold whitespace-nowrap">
+          <span className="hidden sm:inline-block text-sm font-semibold whitespace-nowrap">
             {isArabic ? 'اسألني' : isFrench ? 'Posez-moi' : 'Ask me'}
           </span>
         </button>
@@ -218,7 +244,7 @@ export default function AIChat({
       {/* Chat Window */}
       {isOpen && (
         <div
-          className={`fixed bottom-4 sm:bottom-6 ${positionClasses} z-50 w-[calc(100vw-2rem)] sm:w-96 h-[600px] max-h-[80vh] bg-white dark:bg-slate-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden border-2 border-purple-200 dark:border-purple-700`}
+          className={`fixed bottom-4 sm:bottom-28 ${positionClasses} z-50 w-[calc(100vw-2rem)] sm:w-96 h-[600px] max-h-[80vh] bg-white dark:bg-slate-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden border-2 border-purple-200 dark:border-purple-700`}
         >
           {/* Header */}
           <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-4 flex items-center justify-between">

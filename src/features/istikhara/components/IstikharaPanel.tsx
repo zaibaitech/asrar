@@ -563,11 +563,18 @@ export function IstikharaPanel() {
           calculationData={{
             personName: calculationResult.personName,
             motherName: calculationResult.motherName,
+            personTotal: calculationResult.personTotal,
+            motherTotal: calculationResult.motherTotal,
             combinedTotal: calculationResult.combinedTotal,
+            burujRemainder: calculationResult.burujRemainder,
             burujProfile: calculationResult.burujProfile,
             repetitionCount: calculationResult.repetitionCount,
+            element: calculationResult.burujProfile.element,
+            zodiacSign: calculationResult.burujProfile.zodiac_sign,
+            divineNames: calculationResult.burujProfile.divine_names,
+            spiritualPractice: calculationResult.burujProfile.spiritual_practice,
           }}
-          analysisType="general"
+          analysisType="istikhara"
           language={language as 'ar' | 'en' | 'fr'}
         />
       )}
