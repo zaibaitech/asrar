@@ -768,10 +768,10 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
               selectedPurpose,
               
               // Spiritual Context
-              divineName: getPlanetarySpirituality(currentHour.planet.name).divineName,
-              divineNameArabic: getPlanetarySpirituality(currentHour.planet.name).divineNameArabic,
-              focus: getPlanetarySpirituality(currentHour.planet.name).focus,
-              caution: getPlanetarySpirituality(currentHour.planet.name).caution,
+              divineName: getPlanetarySpirituality(currentHour.planet.name)?.divineName || '',
+              divineNameArabic: getPlanetarySpirituality(currentHour.planet.name)?.divineNameArabic || '',
+              focus: getPlanetarySpirituality(currentHour.planet.name)?.focus || '',
+              caution: getPlanetarySpirituality(currentHour.planet.name)?.caution || '',
               
               // Day Overview
               totalHoursToday: planetaryHours.length,
