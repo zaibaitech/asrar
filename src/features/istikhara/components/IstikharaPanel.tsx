@@ -570,8 +570,8 @@ export function IstikharaPanel() {
             burujProfile: calculationResult.burujProfile,
             repetitionCount: calculationResult.repetitionCount,
             element: calculationResult.burujProfile.element,
-            zodiacSign: calculationResult.burujProfile.zodiac_sign,
-            divineNames: calculationResult.burujProfile.divine_names,
+            zodiacSign: calculationResult.burujProfile.spiritual_practice.zodiac_sign,
+            divineNames: calculationResult.burujProfile.spiritual_practice.divine_names,
             spiritualPractice: calculationResult.burujProfile.spiritual_practice,
           }}
           analysisType="istikhara"
