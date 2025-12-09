@@ -746,7 +746,7 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
                 planetArabic: currentHour.planet.nameArabic,
                 element: currentHour.planet.element,
                 isDayHour: currentHour.isDayHour,
-                progress: currentHour.percentComplete,
+                progress: Math.round(((currentTime.getTime() - currentHour.startTime.getTime()) / (currentHour.endTime.getTime() - currentHour.startTime.getTime())) * 100),
                 minutesRemaining: Math.round((currentHour.endTime.getTime() - currentTime.getTime()) / 60000),
                 hourNumber: currentIndex + 1,
               },
