@@ -30,6 +30,7 @@ import {
 } from "lucide-react";
 import { DhikrCounter } from "./DhikrCounter";
 import { TrackingDashboard } from "./TrackingDashboard";
+import { PreciseTimingGuidance } from "./PreciseTimingGuidance";
 import type { IstikharaCalculationResult, ZodiacSign } from "../types";
 
 interface SpiritualPracticeTabProps {
@@ -931,6 +932,15 @@ function EnhancedDivineNamesSection({
         />
       </div>
 
+      {/* PRECISE TIMING GUIDANCE - NEW FEATURE */}
+      {practice.practice_night && (
+        <PreciseTimingGuidance
+          practiceNight={practice.practice_night}
+          userElement={result.burujProfile.element as "Fire" | "Water" | "Air" | "Earth"}
+          zodiacPlanet={getZodiacPlanet(result.burujRemainder)}
+        />
+      )}
+
       {/* Dhikr Counter - Main Feature */}
       {practice.divine_names && typeof practice.divine_names === 'object' && 'arabic' in practice.divine_names && (
         <DhikrCounter
@@ -949,6 +959,25 @@ function EnhancedDivineNamesSection({
 
     </div>
   );
+}
+
+// Helper function to get zodiac planet from buruj remainder
+function getZodiacPlanet(remainder: number): string {
+  const zodiacPlanets: Record<number, string> = {
+    1: 'Mars',      // Aries
+    2: 'Venus',     // Taurus
+    3: 'Mercury',   // Gemini
+    4: 'Moon',      // Cancer
+    5: 'Sun',       // Leo
+    6: 'Mercury',   // Virgo
+    7: 'Venus',     // Libra
+    8: 'Mars',      // Scorpio
+    9: 'Jupiter',   // Sagittarius
+    10: 'Saturn',   // Capricorn
+    11: 'Saturn',   // Aquarius
+    12: 'Jupiter',  // Pisces
+  };
+  return zodiacPlanets[remainder] || 'Sun';
 }
 
 // Reusable Info Card Component
