@@ -568,7 +568,7 @@ export function IstikharaPanel() {
             repetitionCount: calculationResult.repetitionCount,
           }}
           analysisType="general"
-          language={language === 'fr' ? 'ar' : language as 'ar' | 'en'}
+          language={language as 'ar' | 'en' | 'fr'}
         />
       )}
 

@@ -123,7 +123,7 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
                   compatibility: relationshipResult,
                 }}
                 analysisType="compatibility"
-                language={language === 'fr' ? 'en' : language as 'ar' | 'en'}
+                language={language as 'ar' | 'en' | 'fr'}
               />
             </>
           )}

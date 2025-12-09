@@ -47,9 +47,9 @@ export default function AIChat({
     }
   }, [isOpen]);
 
-  // Initialize with welcome message when first opened
+  // Initialize with welcome message when first opened or language changes
   useEffect(() => {
-    if (isOpen && messages.length === 0) {
+    if (isOpen) {
       let content = 'Peace be upon you! 👋\n\nI\'m Cherno, your intelligent spiritual assistant. I can help you understand your results more deeply and answer any questions you have.\n\nHow can I help you today?';
       
       if (isArabic) {
@@ -63,9 +63,13 @@ export default function AIChat({
         content,
         timestamp: new Date(),
       };
-      setMessages([welcomeMessage]);
+      
+      // Update welcome message if it's the first message and language changed
+      if (messages.length === 0 || (messages.length === 1 && messages[0].role === 'assistant' && messages[0].content !== content)) {
+        setMessages([welcomeMessage]);
+      }
     }
-  }, [isOpen, messages.length, isArabic, isFrench]);
+  }, [isOpen, isArabic, isFrench]);
 
   const handleSendMessage = async () => {
     if (!inputMessage.trim() || isLoading) return;

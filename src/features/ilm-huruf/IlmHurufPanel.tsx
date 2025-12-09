@@ -1442,7 +1442,7 @@ export function IlmHurufPanel() {
             compatibility: results,
           }}
           analysisType="compatibility"
-          language={language === 'fr' ? 'ar' : language as 'ar' | 'en'}
+          language={language as 'ar' | 'en' | 'fr'}
         />
       )}
     </div>
@@ -5413,7 +5413,7 @@ function DestinyResults({ results }: { results: any }) {
             geometry: results.geometry,
           }}
           analysisType="name-destiny"
-          language={language === 'fr' ? 'ar' : language as 'ar' | 'en'}
+          language={language as 'ar' | 'en' | 'fr'}
         />
       </div>
     </div>
@@ -6975,7 +6975,7 @@ function LifePathResults({ results }: { results: EnhancedLifePathResult }) {
           personalMonth: results.personalMonth,
         }}
         analysisType="life-path"
-        language={language === 'fr' ? 'ar' : language as 'ar' | 'en'}
+        language={language as 'ar' | 'en' | 'fr'}
       />
     </div>
   );
@@ -7452,7 +7452,7 @@ function TimingResults({ results, birthDate, name, abjad }: { results: any; birt
           currentAlignment: results.currentAlignment,
         }}
         analysisType="divine-timing"
-        language={language === 'fr' ? 'ar' : language as 'ar' | 'en'}
+        language={language as 'ar' | 'en' | 'fr'}
       />
     </div>
   );
