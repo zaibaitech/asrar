@@ -30,8 +30,8 @@ export const PLANET_INFO: Record<string, PlanetInfo> = {
   Jupiter: { 
     name: 'Jupiter', 
     nameArabic: 'المشتري', 
-    element: 'air', 
-    elementArabic: 'هواء' 
+    element: 'fire', 
+    elementArabic: 'نار' 
   },
   Venus: { 
     name: 'Venus', 
@@ -197,7 +197,7 @@ export const PLANETARY_SIGNATURES: Record<PlanetType, PlanetarySignature> = {
     metalArabic: 'القَصْدِير',
     color: 'Royal Blue / Purple',
     colorArabic: 'الأَزْرَق المَلَكِيّ',
-    element: 'Air',
+    element: 'Fire',
     temperament: 'Hot & Moist (Moderate)',
     spiritualQuality: 'Wisdom, expansion, generosity, divine grace',
     dhikrRecommendation: {

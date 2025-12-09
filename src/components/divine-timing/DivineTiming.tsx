@@ -704,22 +704,89 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
       </div>
 
       {/* AI Chat Assistant */}
-      {currentHour && (
-        <AIChat
-          calculationData={{
-            userElement,
-            userName,
-            birthDate,
-            currentPlanet: currentHour.planet.name,
-            planetElement: currentHour.planet.element,
-            isDayHour: currentHour.isDayHour,
-            isRestDay,
-            selectedPurpose,
-          }}
-          analysisType="divine-timing"
-          language={language === 'fr' ? 'ar' : language as 'ar' | 'en'}
-        />
-      )}
+      {currentHour && location && (() => {
+        // Find current hour index and next hour
+        const currentIndex = planetaryHours.findIndex(h => 
+          h.startTime <= currentTime && h.endTime > currentTime
+        );
+        const nextHour = currentIndex >= 0 && currentIndex < planetaryHours.length - 1
+          ? planetaryHours[currentIndex + 1]
+          : null;
+
+        return (
+          <AIChat
+            calculationData={{
+              // User Info
+              userElement,
+              userName,
+              birthDate,
+              nameTotal,
+              
+              // Location & Time
+              location: {
+                city: location.cityName || 'Unknown',
+                latitude: location.latitude.toFixed(4),
+                longitude: location.longitude.toFixed(4),
+              },
+              currentDate: currentTime.toLocaleDateString('en-US', { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+              }),
+              currentTime: currentTime.toLocaleTimeString('en-US', {
+                hour: '2-digit',
+                minute: '2-digit',
+              }),
+              weekday: currentTime.toLocaleDateString('en-US', { weekday: 'long' }),
+              
+              // Current Planetary Hour
+              currentHour: {
+                planet: currentHour.planet.name,
+                planetArabic: currentHour.planet.nameArabic,
+                element: currentHour.planet.element,
+                isDayHour: currentHour.isDayHour,
+                progress: currentHour.percentComplete,
+                minutesRemaining: Math.round((currentHour.endTime.getTime() - currentTime.getTime()) / 60000),
+                hourNumber: currentIndex + 1,
+              },
+              
+              // Next Planetary Hour
+              nextHour: nextHour ? {
+                planet: nextHour.planet.name,
+                planetArabic: nextHour.planet.nameArabic,
+                element: nextHour.planet.element,
+                startTime: nextHour.startTime.toLocaleTimeString('en-US', {
+                  hour: '2-digit',
+                  minute: '2-digit',
+                }),
+              } : null,
+              
+              // Alignment & Purpose
+              alignment: calculateAlignment(userElement, currentHour.planet.element),
+              isRestDay,
+              selectedPurpose,
+              
+              // Spiritual Context
+              divineName: getPlanetarySpirituality(currentHour.planet.name).divineName,
+              divineNameArabic: getPlanetarySpirituality(currentHour.planet.name).divineNameArabic,
+              focus: getPlanetarySpirituality(currentHour.planet.name).focus,
+              caution: getPlanetarySpirituality(currentHour.planet.name).caution,
+              
+              // Day Overview
+              totalHoursToday: planetaryHours.length,
+              dayRulerPlanet: planetaryHours[0]?.planet.name || 'Unknown',
+              allHoursToday: planetaryHours.map(h => ({
+                planet: h.planet.name,
+                element: h.planet.element,
+                startTime: h.startTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }),
+              })),
+            }}
+            analysisType="divine-timing"
+            language={language as 'ar' | 'en' | 'fr'}
+          />
+        );
+      })()}
     </div>
   );
 }
