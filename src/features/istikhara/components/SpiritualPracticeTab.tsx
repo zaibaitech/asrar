@@ -936,7 +936,7 @@ function EnhancedDivineNamesSection({
       {practice.practice_night && (
         <PreciseTimingGuidance
           practiceNight={practice.practice_night}
-          userElement={result.burujProfile.element as "Fire" | "Water" | "Air" | "Earth"}
+          userElement={result.burujProfile.element}
           zodiacPlanet={getZodiacPlanet(result.burujRemainder)}
         />
       )}

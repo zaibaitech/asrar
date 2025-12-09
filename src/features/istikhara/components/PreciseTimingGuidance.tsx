@@ -10,7 +10,7 @@ import type { AccuratePlanetaryHour } from "../../../types/planetary";
 
 interface PreciseTimingGuidanceProps {
   practiceNight: PracticeNight; // e.g., "Sunday night"
-  userElement: "Fire" | "Water" | "Air" | "Earth";
+  userElement: "Fire" | "Water" | "Air" | "Earth" | "fire" | "water" | "air" | "earth";
   zodiacPlanet?: string; // e.g., "Moon" for Cancer
 }
 
@@ -33,6 +33,9 @@ export function PreciseTimingGuidance({
 }: PreciseTimingGuidanceProps) {
   const { language } = useLanguage();
   const isFr = language === 'fr';
+
+  // Normalize element to lowercase for comparison with planetary hour elements
+  const normalizedElement = userElement.toLowerCase() as "fire" | "water" | "air" | "earth";
 
   const [location, setLocation] = useState<{ latitude: number; longitude: number; cityName?: string } | null>(null);
   const [practiceHours, setPracticeHours] = useState<AccuratePlanetaryHour[]>([]);
@@ -193,7 +196,7 @@ export function PreciseTimingGuidance({
     }
 
     setIsLoading(false);
-  }, [location, practiceNight, userElement, zodiacPlanet]);
+  }, [location, practiceNight, normalizedElement, zodiacPlanet]);
 
   // Calculate alignment score for a planetary hour
   const calculateAlignment = (hour: AccuratePlanetaryHour): number => {
@@ -201,18 +204,18 @@ export function PreciseTimingGuidance({
 
     // Element alignment (most important)
     const planetElement = hour.planet.element;
-    if (planetElement === userElement) {
+    if (planetElement === normalizedElement) {
       score += 50; // Perfect match
     } else if (
-      (userElement === 'Fire' && planetElement === 'Air') ||
-      (userElement === 'Air' && planetElement === 'Fire') ||
-      (userElement === 'Water' && planetElement === 'Earth') ||
-      (userElement === 'Earth' && planetElement === 'Water')
+      (normalizedElement === 'fire' && planetElement === 'air') ||
+      (normalizedElement === 'air' && planetElement === 'fire') ||
+      (normalizedElement === 'water' && planetElement === 'earth') ||
+      (normalizedElement === 'earth' && planetElement === 'water')
     ) {
       score += 30; // Compatible
     } else if (
-      (userElement === 'Fire' && planetElement === 'Water') ||
-      (userElement === 'Water' && planetElement === 'Fire')
+      (normalizedElement === 'fire' && planetElement === 'water') ||
+      (normalizedElement === 'water' && planetElement === 'fire')
     ) {
       score += 0; // Opposing
     } else {
@@ -409,7 +412,7 @@ export function PreciseTimingGuidance({
                   <div className="flex items-center justify-between">
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="text-lg">{hour.planet.element === 'Fire' ? '🔥' : hour.planet.element === 'Water' ? '💧' : hour.planet.element === 'Air' ? '🌬️' : '🌍'}</span>
+                        <span className="text-lg">{hour.planet.element === 'fire' ? '🔥' : hour.planet.element === 'water' ? '💧' : hour.planet.element === 'air' ? '🌬️' : '🌍'}</span>
                         <span className="font-semibold text-white">
                           {hour.planet.name}
                         </span>
