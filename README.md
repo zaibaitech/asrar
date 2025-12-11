@@ -1,5 +1,10 @@
 # Asrār Everyday - Islamic Numerology & Life Guidance App
 
+[![DevSecOps Security Scan](https://github.com/zaibaitech/asrar/actions/workflows/security-scan.yml/badge.svg)](https://github.com/zaibaitech/asrar/actions/workflows/security-scan.yml)
+[![Known Vulnerabilities](https://snyk.io/test/github/zaibaitech/asrar/badge.svg)](https://snyk.io/test/github/zaibaitech/asrar)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=zaibaitech_asrar&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=zaibaitech_asrar)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=zaibaitech_asrar&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=zaibaitech_asrar)
+
 A modern web application for exploring ʿIlm al-Ḥurūf (Science of Letters) and Abjad numerology, following the tradition of Imam al-Būnī and classical Islamic scholarship.
 
 ## ✨ Features
@@ -221,6 +226,23 @@ Contributions are welcome! Please:
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+## 🔒 Security & Quality
+
+This project employs comprehensive DevSecOps practices with automated security scanning:
+
+| Tool | Purpose | Frequency |
+|------|---------|-----------|
+| 🔍 [Snyk](https://snyk.io) | Dependency vulnerabilities | Every PR, Push, Weekly |
+| 📊 [SonarCloud](https://sonarcloud.io) | Code quality & security | Every PR, Push, Weekly |
+| 🛡️ [OWASP ZAP](https://www.zaproxy.org) | Dynamic security testing | Every PR, Push, Weekly |
+| 🐳 [Trivy](https://trivy.dev) | Comprehensive scanning | Every PR, Push, Weekly |
+
+**Security Reports:** [View Security Tab](https://github.com/zaibaitech/asrar/security)
+
+**Vulnerability Disclosure:** Found a security issue? Please email security@zaibaitech.com instead of opening a public issue.
+
+For more information, see our [Security Scanning Guide](SECURITY_SCANNING_GUIDE.md).
 
 ## 📝 License
 
