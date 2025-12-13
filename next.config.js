@@ -55,18 +55,18 @@ const nextConfig = {
               'accelerometer=()',
             ].join(', '),
           },
-          // Cross-Origin policies for Spectre mitigation
+          // Cross-Origin policies - Relaxed for Vercel Live compatibility
           {
             key: 'Cross-Origin-Embedder-Policy',
-            value: 'require-corp',
+            value: 'unsafe-none',
           },
           {
             key: 'Cross-Origin-Opener-Policy',
-            value: 'same-origin',
+            value: 'same-origin-allow-popups',
           },
           {
             key: 'Cross-Origin-Resource-Policy',
-            value: 'same-origin',
+            value: 'cross-origin',
           },
           // Referrer Policy - Control referrer information
           {
