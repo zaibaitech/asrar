@@ -11,9 +11,22 @@ export function UserMenu() {
   const { t } = useLanguage();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  // Don't show anything while loading or if not configured
-  if (isLoading || !isConfigured) {
+  // Don't show anything while loading
+  if (isLoading) {
     return null;
+  }
+  
+  // Show sign-in link even if not configured (will show message on auth page)
+  if (!isConfigured) {
+    return (
+      <Link
+        href="/auth"
+        className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-lg transition-all text-sm font-medium shadow-lg shadow-indigo-500/30"
+      >
+        <User className="w-5 h-5" />
+        <span>Sign In</span>
+      </Link>
+    );
   }
 
   const handleSignOut = async () => {
