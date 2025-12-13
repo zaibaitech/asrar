@@ -12,7 +12,7 @@ type AuthMode = 'signin' | 'signup' | 'reset';
 
 export default function AuthPage() {
   const router = useRouter();
-  const { signInWithEmail, signUpWithEmail, resetPassword } = useAuth();
+  const { signInWithEmail, signUpWithEmail, resetPassword, isConfigured } = useAuth();
   const { t } = useLanguage();
   
   const [mode, setMode] = useState<AuthMode>('signup');
@@ -100,6 +100,20 @@ export default function AuthPage() {
               {mode === 'reset' && 'Enter your email to reset your password'}
             </p>
           </div>
+
+          {/* Supabase Configuration Warning */}
+          {!isConfigured && (
+            <div className="mb-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg flex items-start gap-3">
+              <AlertCircle className="w-5 h-5 text-red-600 dark:text-red-400 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="text-sm text-red-700 dark:text-red-300 font-medium">Supabase not configured</p>
+                <p className="text-xs text-red-600 dark:text-red-400 mt-1">
+                  URL: {process.env.NEXT_PUBLIC_SUPABASE_URL ? '✓ Set' : '✗ Missing'} | 
+                  Key: {process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ? '✓ Set' : '✗ Missing'}
+                </p>
+              </div>
+            </div>
+          )}
 
           {/* Error/Success Messages */}
           {error && (
