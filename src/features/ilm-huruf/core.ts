@@ -763,8 +763,8 @@ export function buildDestiny(
   const { p: personKabir, m: motherKabir, total: totalKabir } = abjadTotalWithMother(personName, motherName, abjad);
   
   // ✅ CORE IDENTITY - Uses TOTAL (person + mother) for complete reading
-  // Digital root (Ṣaghīr) - person's essence (from personal name only)
-  const saghir = digitalRoot(personKabir);
+  // Digital root (Ṣaghīr) - calculated from total for complete essence
+  const saghir = digitalRoot(totalKabir);
   
   // Ṭabʿ (Element) = totalKabir ÷ 4, remainder 0 → 4 (Water)
   const tabhIdx = modIndex(totalKabir, 4) as ElementKey;

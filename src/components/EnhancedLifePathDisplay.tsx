@@ -218,9 +218,9 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
     || MASTER_NUMBERS[destinyNumber as keyof typeof MASTER_NUMBERS]
     || { name: 'Unknown', qualities: [], challenges: [], planet: '', element: '' };
 
-  // Get cycle information from data
+  // Get cycle information from data with null checks
   const cycleInfo = cycle;
-  const cyclePosition = cycle.positionInCycle;
+  const cyclePosition = cycle?.positionInCycle;
 
   const numberCards: NumberCard[] = [
     {

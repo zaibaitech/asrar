@@ -12,6 +12,7 @@ import { generateWafqAnalysis } from './src/features/ilm-huruf/wafqGenerator';
 import { calculateOptimalTimingWindows } from './src/features/ilm-huruf/talismanTiming';
 import { OnboardingTutorial } from './src/components/OnboardingTutorial';
 import { MobileMenu } from './src/components/MobileMenu';
+import { UserMenu } from './src/components/UserMenu';
 import LanguageToggle from './src/components/LanguageToggle';
 import { useLanguage } from './src/contexts/LanguageContext';
 import { LETTER_ELEMENTS, digitalRoot as calcDigitalRoot, hadathRemainder as calcHadathRemainder, hadathToElement, nearestSacred, ELEMENT_INFO as HADAD_ELEMENT_INFO, calculateBurj, getPlanetarySignatureFromTotal } from './src/components/hadad-summary/hadad-core';
@@ -21,6 +22,7 @@ import { AbjadSystemSelector } from './src/components/AbjadSystemSelector';
 import { ArabicKeyboard } from './src/components/ArabicKeyboard';
 import { findVersesByValue, getExactVerseMatch, type QuranicVerse } from './src/data/quranic-verses';
 import { findDivineNameByValue, findSimilarDivineNames, type DivineName } from './src/data/divine-names';
+import AsrarLogo from './src/components/AsrarLogo';
 
 // ============================================================================
 // DOMAIN RULES & CORE DATA
@@ -1727,7 +1729,9 @@ export default function AsrarEveryday() {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 flex items-center justify-center">
         <div className="text-center">
-          <Sparkles className="w-16 h-16 text-indigo-600 dark:text-indigo-400 mx-auto mb-4 animate-pulse" />
+          <div className="flex justify-center mb-4">
+            <AsrarLogo size={80} variant="icon" element="aether" animate={true} />
+          </div>
           <p className="text-xl font-semibold text-slate-700 dark:text-slate-300">Loading Asrār...</p>
         </div>
       </div>
@@ -1741,30 +1745,35 @@ export default function AsrarEveryday() {
         <header className="border-b border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm sticky top-0 z-40">
           <div className="max-w-6xl mx-auto px-4 py-3 md:py-4">
             {/* Mobile Header (< 768px) */}
-            <div className="flex md:hidden items-center justify-between">
+            <div className="flex md:hidden items-center justify-between gap-1">
               {/* Logo & Title */}
-              <div className="flex items-center gap-2 flex-1 min-w-0">
-                <Sparkles className="w-6 h-6 md:w-8 md:h-8 text-indigo-600 dark:text-indigo-400 flex-shrink-0" />
+              <div className="flex items-center gap-1.5 flex-1 min-w-0">
+                <AsrarLogo size={32} variant="icon" element="aether" animate={true} />
                 <div className="min-w-0">
-                  <h1 className="text-lg md:text-2xl font-bold text-slate-900 dark:text-slate-100 truncate">Asrār</h1>
-                  <p className="text-xs text-slate-600 dark:text-slate-400 truncate">ʿIlm al-Ḥurūf</p>
+                  <h1 className="text-base font-bold text-slate-900 dark:text-slate-100 truncate">Asrār</h1>
+                  <p className="text-[10px] text-slate-600 dark:text-slate-400 truncate hidden xs:block">ʿIlm al-Ḥurūf</p>
                 </div>
               </div>
 
               {/* Mobile Controls */}
-              <div className="flex items-center gap-2 flex-shrink-0">
-                {/* Language Toggle */}
-                <LanguageToggle />
+              <div className="flex items-center gap-1 flex-shrink-0">
+                {/* User Menu */}
+                <UserMenu />
+
+                {/* Language Toggle - hide on very small screens */}
+                <div className="hidden xs:block">
+                  <LanguageToggle />
+                </div>
 
                 {/* History Button */}
                 <button
                   onClick={() => setShowHistory(!showHistory)}
-                  className="p-2 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg transition-colors relative"
+                  className="p-2 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg transition-colors relative min-h-[40px] touch-manipulation"
                   title="View history"
                 >
                   <History className="w-5 h-5" />
                   {history.length > 0 && (
-                    <span className="absolute -top-1 -right-1 w-4 h-4 bg-indigo-600 text-white text-xs rounded-full flex items-center justify-center font-bold">
+                    <span className="absolute -top-1 -right-1 w-4 h-4 bg-indigo-600 text-white text-[10px] rounded-full flex items-center justify-center font-bold">
                       {history.length > 9 ? '9+' : history.length}
                     </span>
                   )}
@@ -1773,7 +1782,7 @@ export default function AsrarEveryday() {
                 {/* Hamburger Menu */}
                 <button
                   onClick={() => setShowMobileMenu(true)}
-                  className="flex md:hidden p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                  className="flex md:hidden p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors min-h-[40px] touch-manipulation"
                   aria-label="Open menu"
                 >
                   <Menu className="w-5 h-5" />
@@ -1785,9 +1794,9 @@ export default function AsrarEveryday() {
             <div className="hidden md:flex items-center justify-between">
               {/* Logo & Title */}
               <div className="flex items-center gap-3">
-                <Sparkles className="w-8 h-8 text-indigo-600 dark:text-indigo-400 flex-shrink-0" />
+                <AsrarLogo size={48} variant="icon" element="aether" animate={true} />
                 <div>
-                  <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100">Asrār Everyday</h1>
+                  <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100">Asrār</h1>
                   <p className="text-xs text-slate-600 dark:text-slate-400">ʿIlm al-Ḥurūf & ʿIlm al-ʿAdad Explorer</p>
                 </div>
               </div>
@@ -1799,6 +1808,9 @@ export default function AsrarEveryday() {
 
               {/* Desktop Controls */}
               <div className="flex items-center gap-2">
+                {/* User Menu */}
+                <UserMenu />
+
                 {/* Help Button */}
                 <button
                   onClick={() => setShowOnboarding(true)}

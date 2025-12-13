@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata, Viewport } from 'next'
 import { AbjadProvider } from '../src/contexts/AbjadContext'
 import { LanguageProvider } from '../src/contexts/LanguageContext'
+import { AuthProvider } from '../src/contexts/AuthContext'
 import { getSeoConfig } from '../src/lib/seoConfig'
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://asrar-everyday.vercel.app'
@@ -75,7 +76,7 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Asrār Everyday - Islamic Sciences Calculator',
+        alt: 'Asrār - Islamic Sciences Calculator',
         type: 'image/png',
       },
     ],
@@ -88,11 +89,11 @@ export const metadata: Metadata = {
   },
   authors: [
     {
-      name: 'Asrār Everyday',
+      name: 'Asrār',
       url: baseUrl,
     },
   ],
-  creator: 'Asrār Everyday',
+  creator: 'Asrār',
   category: 'Education',
   classification: 'Islamic Sciences',
 }
@@ -105,11 +106,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100">
-        <LanguageProvider>
-          <AbjadProvider>
-            {children}
-          </AbjadProvider>
-        </LanguageProvider>
+        <AuthProvider>
+          <LanguageProvider>
+            <AbjadProvider>
+              {children}
+            </AbjadProvider>
+          </LanguageProvider>
+        </AuthProvider>
       </body>
     </html>
   )

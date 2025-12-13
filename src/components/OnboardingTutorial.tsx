@@ -7,7 +7,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 const getTutorialSteps = (t: any) => [
   {
     id: 1,
-    title: t?.onboarding?.welcome || "Welcome to Asrār Everyday! 🌙",
+    title: t?.onboarding?.welcome || "Welcome to Asrār! 🌙",
     description: "Explore the beautiful tradition of ʿIlm al-Ḥurūf (Science of Letters) - an Islamic science that reveals numerical values and elemental associations in Arabic text.",
     icon: Sparkles,
     highlight: null

@@ -118,7 +118,7 @@ export function MobileMenu({
             {expandAbout && (
               <div className="px-4 py-3 bg-slate-100 dark:bg-slate-600/30 rounded-lg space-y-3 border border-slate-200 dark:border-slate-600">
                 <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-                  <strong>Asrār Everyday</strong> is your guide to the Islamic sciences of <strong>ʿIlm al-Ḥurūf</strong> (Science of Letters) and <strong>ʿIlm al-ʿAdad</strong> (Science of Numbers).
+                  <strong>Asrār</strong> is your guide to the Islamic sciences of <strong>ʿIlm al-Ḥurūf</strong> (Science of Letters) and <strong>ʿIlm al-ʿAdad</strong> (Science of Numbers).
                 </p>
                 <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                   Discover the sacred numerical values and elemental associations within Arabic text, connecting language to the deeper patterns of creation.

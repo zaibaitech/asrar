@@ -1,0 +1,84 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="og-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="50%" stop-color="#1E1B4B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    
+    <linearGradient id="og-logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="50%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+    
+    <filter id="og-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur" />
+      <feMerge>
+        <feMergeNode in="coloredBlur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Radial gradients for background -->
+    <radialGradient id="bg-gradient-1">
+      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.15" />
+      <stop offset="50%" stop-color="transparent" />
+    </radialGradient>
+    
+    <radialGradient id="bg-gradient-2">
+      <stop offset="0%" stop-color="#EC4899" stop-opacity="0.15" />
+      <stop offset="50%" stop-color="transparent" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#og-gradient)" />
+  
+  <!-- Sacred geometry background elements -->
+  <circle cx="240" cy="504" r="200" fill="url(#bg-gradient-1)" />
+  <circle cx="960" cy="126" r="200" fill="url(#bg-gradient-2)" />
+
+  <!-- Logo (centered left) -->
+  <g transform="translate(200, 215)">
+    <!-- Three concentric rings -->
+    <circle cx="100" cy="100" r="84" fill="none" stroke="url(#og-logo-gradient)" stroke-width="1.5" opacity="0.15" />
+    <circle cx="100" cy="100" r="75" fill="none" stroke="url(#og-logo-gradient)" stroke-width="1.2" opacity="0.25" />
+    <circle cx="100" cy="100" r="66" fill="none" stroke="url(#og-logo-gradient)" stroke-width="1" opacity="0.35" />
+
+    <!-- 8-pointed star -->
+    <path d="M 100 30 L 144.85 56.75 L 170 30 L 143.25 75.15 L 170 100 L 143.25 124.85 L 170 170 L 124.85 143.25 L 100 170 L 75.15 143.25 L 30 170 L 56.75 124.85 L 30 100 L 56.75 75.15 L 30 30 L 75.15 56.75 Z" fill="url(#og-logo-gradient)" filter="url(#og-glow)" />
+    
+    <!-- Center eye -->
+    <circle cx="100" cy="100" r="27.5" fill="#FDF4FF" opacity="0.9" />
+    <circle cx="100" cy="100" r="8.25" fill="url(#og-logo-gradient)" />
+
+    <!-- Ayn curve -->
+    <path d="M 79 105.5 Q 100 79 121 105.5" fill="none" stroke="url(#og-logo-gradient)" stroke-width="1.5" stroke-linecap="round" opacity="0.4" />
+
+    <!-- Three dots -->
+    <circle cx="100" cy="63.25" r="4.4" fill="url(#og-logo-gradient)" opacity="0.6" />
+    <circle cx="131.82" cy="118.82" r="4.4" fill="url(#og-logo-gradient)" opacity="0.6" />
+    <circle cx="68.18" cy="118.82" r="4.4" fill="url(#og-logo-gradient)" opacity="0.6" />
+  </g>
+
+  <!-- Title -->
+  <text x="450" y="280" font-family="'Noto Sans Arabic', Arial, sans-serif" font-size="80" font-weight="700" fill="#E5E7EB">
+    Asrār Everyday
+  </text>
+
+  <!-- Subtitle -->
+  <text x="450" y="340" font-family="'Noto Sans Arabic', Arial, sans-serif" font-size="32" fill="#9CA3AF">
+    ʿIlm al-Ḥurūf &amp; ʿIlm al-ʿAdad Explorer
+  </text>
+
+  <!-- Description -->
+  <text x="450" y="400" font-family="Arial, sans-serif" font-size="24" fill="#6B7280">
+    Sacred Geometry • Islamic Numerology • Divine Timing
+  </text>
+
+  <!-- Bottom tagline -->
+  <text x="600" y="560" text-anchor="middle" font-family="'Noto Sans Arabic', Arial, sans-serif" font-size="20" fill="#4B5563" opacity="0.8">
+    أسرار • Secrets &amp; Mysteries of the Letters
+  </text>
+</svg>

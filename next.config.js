@@ -17,10 +17,10 @@ const nextConfig = {
             value: [
               "default-src 'self'",
               "script-src 'self' 'unsafe-eval' 'unsafe-inline'", // Next.js requires unsafe-eval and unsafe-inline
-              "style-src 'self' 'unsafe-inline'", // Next.js requires unsafe-inline for styles
+              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com", // Allow Google Fonts
               "img-src 'self' data: https:",
-              "font-src 'self' data:",
-              "connect-src 'self' https://api.supabase.co https://generativelanguage.googleapis.com",
+              "font-src 'self' data: https://fonts.gstatic.com", // Allow Google Fonts
+              "connect-src 'self' https://azjgakbhovanweelkezt.supabase.co https://api.supabase.co https://generativelanguage.googleapis.com https://nominatim.openstreetmap.org", // Add Supabase, Google AI, and OpenStreetMap Nominatim
               "frame-ancestors 'none'", // Prevent clickjacking
               "base-uri 'self'",
               "form-action 'self'",

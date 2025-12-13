@@ -8,6 +8,7 @@ import {
   Plus, Info, X, ArrowUp, Circle, Minus, Zap, CheckCircle2, User, AlertCircle, Palette
 } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { useProfile } from '../../hooks/useProfile';
 import { BalanceMeter } from '../../components/BalanceMeter';
 import type { ElementType } from '../../components/BalanceMeter';
 import { HarmonyTooltip, type HarmonyBreakdown } from '../../components/HarmonyTooltip';
@@ -318,6 +319,8 @@ const PLANET_ICONS_EMOJI: Record<Planet, string> = {
 export function IlmHurufPanel() {
   const { t, language } = useLanguage();
   const { abjad } = useAbjad(); // Get the current Abjad system
+  const { profile } = useProfile(); // Get user profile for auto-fill
+  
   const [mode, setMode] = useState<'destiny' | 'compatibility' | 'timing' | 'life-path'>('destiny');
   const [name, setName] = useState('');
   const [name2, setName2] = useState('');
@@ -335,6 +338,31 @@ export function IlmHurufPanel() {
   const [motherLatinInput, setMotherLatinInput] = useState('');
   const [showMotherNameSection, setShowMotherNameSection] = useState(false);
   const [showMotherKeyboard, setShowMotherKeyboard] = useState(false);
+
+  // Auto-fill toggle - allow users to disable for calculating others
+  const [enableAutofill, setEnableAutofill] = useState(true);
+
+  // Auto-fill from user profile
+  useEffect(() => {
+    if (profile && enableAutofill) {
+      // Auto-fill user's name if empty
+      if (!latinInput && profile.full_name) {
+        setLatinInput(profile.full_name);
+        setName(profile.full_name); // Set both latin and arabic name
+      }
+      
+      // Auto-fill mother's name if empty
+      if (!motherLatinInput && profile.mother_name) {
+        setMotherLatinInput(profile.mother_name);
+        setMotherName(profile.mother_name);
+      }
+      
+      // Auto-fill birth date if empty
+      if (!birthDate && profile.date_of_birth) {
+        setBirthDate(profile.date_of_birth);
+      }
+    }
+  }, [profile, enableAutofill]);
 
   // Mother's Name Strategy - Name Destiny dual-mode system
   const [nameDestinyMode, setNameDestinyMode] = useState<NameDestinyMode>('personal'); // Default to Personal (recommended)
@@ -859,6 +887,36 @@ export function IlmHurufPanel() {
                 <li>✓ {t.mothersNameStrategy.modeSelector.reason3}</li>
               </ul>
             </div>
+          </div>
+        )}
+        
+        {/* Autofill Toggle - User Profile */}
+        {profile && (
+          <div className="mb-4 p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700">
+            <label className="flex items-center justify-between cursor-pointer">
+              <div>
+                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                  {t.ilmHuruf.autofillToggle?.label || 'Use my profile information'}
+                </span>
+                <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                  {t.ilmHuruf.autofillToggle?.description || 'Toggle off to calculate for family or friends'}
+                </p>
+              </div>
+              <button
+                onClick={() => setEnableAutofill(!enableAutofill)}
+                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                  enableAutofill 
+                    ? 'bg-purple-600' 
+                    : 'bg-slate-300 dark:bg-slate-600'
+                }`}
+              >
+                <span
+                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                    enableAutofill ? 'translate-x-6' : 'translate-x-1'
+                  }`}
+                />
+              </button>
+            </label>
           </div>
         )}
         

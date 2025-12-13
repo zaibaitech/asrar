@@ -1,0 +1,48 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="asrar-gradient-aether" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="50%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+    
+    <filter id="asrar-glow-aether" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+      <feMerge>
+        <feMergeNode in="coloredBlur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background gradient -->
+  <rect width="512" height="512" fill="url(#asrar-gradient-aether)" />
+
+  <!-- Three concentric rings - representing the number 3 -->
+  <circle cx="256" cy="256" r="158.2" fill="none" stroke="#fff" stroke-width="2" opacity="0.15" />
+  <circle cx="256" cy="256" r="141.25" fill="none" stroke="#fff" stroke-width="1.5" opacity="0.25" />
+  <circle cx="256" cy="256" r="124.3" fill="none" stroke="#fff" stroke-width="1" opacity="0.35" />
+
+  <!-- Outer rotating square (45° rotated) -->
+  <rect x="122.5" y="122.5" width="267" height="267" fill="none" stroke="#fff" stroke-width="1.5" opacity="0.3" transform="rotate(45 256 256)" />
+
+  <!-- Main 8-pointed star - back layer -->
+  <path d="M 256 76.3 L 335.39 138.96 L 435.7 76.3 L 373.04 176.61 L 435.7 256 L 373.04 335.39 L 435.7 435.7 L 335.39 373.04 L 256 435.7 L 176.61 373.04 L 76.3 435.7 L 138.96 335.39 L 76.3 256 L 138.96 176.61 L 76.3 76.3 L 176.61 138.96 Z" fill="#fff" opacity="0.3" />
+  
+  <!-- Main 8-pointed star - main layer -->
+  <path d="M 256 82 L 329.91 142.04 L 430 82 L 369.96 182.09 L 430 256 L 369.96 329.91 L 430 430 L 329.91 369.96 L 256 430 L 182.09 369.96 L 82 430 L 142.04 329.91 L 82 256 L 142.04 182.09 L 82 82 L 182.09 142.04 Z" fill="#fff" filter="url(#asrar-glow-aether)" />
+
+  <!-- Inner circle with subtle glow - the "eye" center -->
+  <circle cx="256" cy="256" r="55" fill="#FDF4FF" opacity="0.9" />
+  
+  <!-- Center dot - the pupil/seed -->
+  <circle cx="256" cy="256" r="16.5" fill="#fff" />
+
+  <!-- Subtle ع (Ayn) inspired curve -->
+  <path d="M 223 267 Q 256 223 289 267" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.4" />
+
+  <!-- Three dots arranged in triangle - number 3 symbolism -->
+  <circle cx="256" cy="173.25" r="8.8" fill="#fff" opacity="0.6" />
+  <circle cx="327.64" cy="297.63" r="8.8" fill="#fff" opacity="0.6" />
+  <circle cx="184.36" cy="297.63" r="8.8" fill="#fff" opacity="0.6" />
+</svg>

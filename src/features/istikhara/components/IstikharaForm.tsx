@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLanguage } from "../../../contexts/LanguageContext";
+import { useProfile } from "../../../hooks/useProfile";
 import { translations } from "../../../lib/translations";
 import { validateName, calculateIstikhara } from "../calculations";
 import type { IstikharaCalculationResult } from "../types";
@@ -47,6 +48,7 @@ interface IstikharaFormProps {
  */
 export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
   const { language } = useLanguage();
+  const { profile } = useProfile(); // Get user profile for auto-fill
   const t = translations[language].istikhara;
   
   // Form state
@@ -54,6 +56,24 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
   const [motherName, setMotherName] = useState("");
   const [personLatin, setPersonLatin] = useState("");
   const [motherLatin, setMotherLatin] = useState("");
+  const [enableAutofill, setEnableAutofill] = useState(true);
+  
+  // Auto-fill from user profile
+  useEffect(() => {
+    if (profile && enableAutofill) {
+      // Auto-fill person's name if empty
+      if (!personLatin && profile.full_name) {
+        setPersonLatin(profile.full_name);
+        setPersonName(profile.full_name);
+      }
+      
+      // Auto-fill mother's name if empty
+      if (!motherLatin && profile.mother_name) {
+        setMotherLatin(profile.mother_name);
+        setMotherName(profile.mother_name);
+      }
+    }
+  }, [profile, enableAutofill]);
   
   // UI state
   const [showPersonKeyboard, setShowPersonKeyboard] = useState(false);
@@ -418,6 +438,37 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
           }
         }}
       >
+        {/* Autofill Toggle - User Profile */}
+        {profile && (
+          <div className="mb-4 p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700">
+            <label className="flex items-center justify-between cursor-pointer">
+              <div>
+                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                  {translations[language].ilmHuruf.autofillToggle?.label || 'Use my profile information'}
+                </span>
+                <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                  {translations[language].ilmHuruf.autofillToggle?.description || 'Toggle off to calculate for family or friends'}
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setEnableAutofill(!enableAutofill)}
+                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                  enableAutofill 
+                    ? 'bg-purple-600' 
+                    : 'bg-slate-300 dark:bg-slate-600'
+                }`}
+              >
+                <span
+                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                    enableAutofill ? 'translate-x-6' : 'translate-x-1'
+                  }`}
+                />
+              </button>
+            </label>
+          </div>
+        )}
+
         {/* Form Title */}
         <div className="text-center">
           <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-1 sm:mb-2">

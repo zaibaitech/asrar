@@ -46,6 +46,88 @@ export const translations = {
       hideAll: "Hide All",
       expand: "Expand",
       collapse: "Collapse",
+      next: "Next",
+      back: "Back",
+      skip: "Skip",
+      edit: "Edit",
+      upload: "Upload",
+      remove: "Remove",
+      optional: "Optional",
+    },
+
+    // User Profile
+    profile: {
+      title: "My Profile",
+      setup: "Profile Setup",
+      edit: "Edit Profile",
+      view: "View Profile",
+      completion: "Profile Completion",
+      completeYourProfile: "Complete Your Profile",
+      profileIncomplete: "Your profile is incomplete. Complete it to personalize your experience.",
+      
+      // Setup Steps
+      steps: {
+        basicInfo: "Basic Info",
+        birthDate: "Birth Date",
+        location: "Location",
+        avatar: "Profile Picture",
+      },
+      
+      // Form Fields
+      fullName: "Full Name",
+      fullNamePlaceholder: "Enter your full name",
+      fullNameHelper: "Used for name calculations and personalized greetings",
+      
+      dateOfBirth: "Date of Birth",
+      dateOfBirthHelper: "Required for accurate destiny calculations",
+      
+      locationName: "Location",
+      locationPlaceholder: "City, Country",
+      locationHelper: "Used for planetary hour calculations based on your timezone",
+      detectLocation: "Detect My Location",
+      detectingLocation: "Detecting location...",
+      
+      language: "Preferred Language",
+      languageHelper: "Choose your preferred language for the app",
+      
+      timezone: "Timezone",
+      timezoneHelper: "Automatically detected from your location",
+      
+      // Avatar
+      profilePicture: "Profile Picture",
+      uploadPhoto: "Upload Photo",
+      changePhoto: "Change Photo",
+      removePhoto: "Remove Photo",
+      photoHelper: "JPG, PNG, or WebP (max 2MB)",
+      dragDropPhoto: "Drag and drop your photo here, or click to browse",
+      photoUploading: "Uploading...",
+      photoUploadSuccess: "Photo uploaded successfully!",
+      photoUploadError: "Failed to upload photo. Please try again.",
+      photoTooLarge: "Photo is too large. Maximum size is 2MB.",
+      photoInvalidType: "Invalid file type. Please upload JPG, PNG, or WebP.",
+      
+      // Messages
+      saveSuccess: "Profile saved successfully!",
+      saveError: "Failed to save profile. Please try again.",
+      setupComplete: "Profile setup complete!",
+      setupWelcome: "Welcome! Let's set up your profile to personalize your experience.",
+      
+      // Completion Status
+      percentComplete: "% Complete",
+      almostDone: "Almost done!",
+      getStarted: "Get started by completing your profile",
+      
+      // Actions
+      completeSetup: "Complete Setup",
+      saveChanges: "Save Changes",
+      cancelEdit: "Cancel",
+      skipForNow: "Skip for now",
+      
+      // Profile View
+      memberSince: "Member since",
+      lastSeen: "Last seen",
+      noProfileYet: "No profile information yet",
+      createProfile: "Create Profile",
     },
 
     // History & Comparisons
@@ -728,6 +810,12 @@ export const translations = {
       selectArabicName: "Select Arabic name",
       noMatchesFound: "No matches found",
       typeToSearch: "Type to search names...",
+      
+      // Autofill toggle
+      autofillToggle: {
+        label: "Use my profile information",
+        description: "Toggle off to calculate for family or friends"
+      },
       
       // Messages
       autoTransliterate: "Auto-transliterates to Arabic • Supports EN/FR names",
@@ -2557,6 +2645,88 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
       hideAll: "Masquer Tout",
       expand: "Développer",
       collapse: "Réduire",
+      next: "Suivant",
+      back: "Retour",
+      skip: "Passer",
+      edit: "Modifier",
+      upload: "Télécharger",
+      remove: "Supprimer",
+      optional: "Optionnel",
+    },
+
+    // Profil Utilisateur
+    profile: {
+      title: "Mon Profil",
+      setup: "Configuration du Profil",
+      edit: "Modifier le Profil",
+      view: "Voir le Profil",
+      completion: "Complétion du Profil",
+      completeYourProfile: "Complétez Votre Profil",
+      profileIncomplete: "Votre profil est incomplet. Complétez-le pour personnaliser votre expérience.",
+      
+      // Étapes de configuration
+      steps: {
+        basicInfo: "Informations de Base",
+        birthDate: "Date de Naissance",
+        location: "Localisation",
+        avatar: "Photo de Profil",
+      },
+      
+      // Champs du formulaire
+      fullName: "Nom Complet",
+      fullNamePlaceholder: "Entrez votre nom complet",
+      fullNameHelper: "Utilisé pour les calculs de nom et les salutations personnalisées",
+      
+      dateOfBirth: "Date de Naissance",
+      dateOfBirthHelper: "Requis pour des calculs de destinée précis",
+      
+      locationName: "Localisation",
+      locationPlaceholder: "Ville, Pays",
+      locationHelper: "Utilisé pour les calculs d'heures planétaires selon votre fuseau horaire",
+      detectLocation: "Détecter Ma Position",
+      detectingLocation: "Détection de la position...",
+      
+      language: "Langue Préférée",
+      languageHelper: "Choisissez votre langue préférée pour l'application",
+      
+      timezone: "Fuseau Horaire",
+      timezoneHelper: "Détecté automatiquement depuis votre localisation",
+      
+      // Avatar
+      profilePicture: "Photo de Profil",
+      uploadPhoto: "Télécharger une Photo",
+      changePhoto: "Changer la Photo",
+      removePhoto: "Supprimer la Photo",
+      photoHelper: "JPG, PNG ou WebP (max 2Mo)",
+      dragDropPhoto: "Glissez et déposez votre photo ici, ou cliquez pour parcourir",
+      photoUploading: "Téléchargement...",
+      photoUploadSuccess: "Photo téléchargée avec succès !",
+      photoUploadError: "Échec du téléchargement de la photo. Veuillez réessayer.",
+      photoTooLarge: "La photo est trop grande. Taille maximale de 2Mo.",
+      photoInvalidType: "Type de fichier invalide. Veuillez télécharger JPG, PNG ou WebP.",
+      
+      // Messages
+      saveSuccess: "Profil enregistré avec succès !",
+      saveError: "Échec de l'enregistrement du profil. Veuillez réessayer.",
+      setupComplete: "Configuration du profil terminée !",
+      setupWelcome: "Bienvenue ! Configurons votre profil pour personnaliser votre expérience.",
+      
+      // Statut de complétion
+      percentComplete: "% Complété",
+      almostDone: "Presque terminé !",
+      getStarted: "Commencez en complétant votre profil",
+      
+      // Actions
+      completeSetup: "Terminer la Configuration",
+      saveChanges: "Enregistrer les Modifications",
+      cancelEdit: "Annuler",
+      skipForNow: "Passer pour l'instant",
+      
+      // Vue du profil
+      memberSince: "Membre depuis",
+      lastSeen: "Dernière visite",
+      noProfileYet: "Aucune information de profil pour le moment",
+      createProfile: "Créer un Profil",
     },
 
     history: {
@@ -3028,6 +3198,12 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
       selectArabicName: "Sélectionnez le nom arabe",
       noMatchesFound: "Aucune correspondance trouvée",
       typeToSearch: "Tapez pour rechercher des noms...",
+      
+      // Autofill toggle
+      autofillToggle: {
+        label: "Utiliser mes informations de profil",
+        description: "Désactivez pour calculer pour la famille ou les amis"
+      },
       
       // Messages
       autoTransliterate: "Translittération automatique vers l'arabe • Prend en charge les noms EN/FR",

@@ -1,0 +1,19 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="favicon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="50%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="64" height="64" fill="url(#favicon-gradient)" rx="12" />
+
+  <!-- Simplified 8-pointed star -->
+  <path d="M 32 10.25 L 41.99 18.01 L 53.75 10.25 L 45.99 22.01 L 53.75 32 L 45.99 41.99 L 53.75 53.75 L 41.99 45.99 L 32 53.75 L 22.01 45.99 L 10.25 53.75 L 18.01 41.99 L 10.25 32 L 18.01 22.01 L 10.25 10.25 L 22.01 18.01 Z" fill="#fff" />
+
+  <!-- Center eye -->
+  <circle cx="32" cy="32" r="7" fill="#FDF4FF" />
+  <circle cx="32" cy="32" r="2" fill="#fff" />
+</svg>

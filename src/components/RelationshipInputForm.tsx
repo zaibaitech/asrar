@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Users, Calculator } from 'lucide-react';
+import { useProfile } from '../hooks/useProfile';
 
 interface RelationshipInputFormProps {
   onCalculate: (
@@ -13,10 +14,20 @@ interface RelationshipInputFormProps {
 
 export function RelationshipInputForm({ onCalculate, language = 'en' }: RelationshipInputFormProps) {
   const isFrench = language === 'fr';
+  const { profile } = useProfile();
   const [person1Name, setPerson1Name] = useState('');
   const [person1Arabic, setPerson1Arabic] = useState('');
   const [person2Name, setPerson2Name] = useState('');
   const [person2Arabic, setPerson2Arabic] = useState('');
+  
+  // Auto-fill Person 1 from profile
+  useEffect(() => {
+    if (profile) {
+      if (!person1Arabic && profile.full_name) {
+        setPerson1Arabic(profile.full_name);
+      }
+    }
+  }, [profile]);
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

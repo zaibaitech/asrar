@@ -1,9 +1,14 @@
 'use client';
 
+import AsrarLogo from '@/src/components/AsrarLogo';
+
 export default function TestPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full">
+        <div className="flex justify-center mb-4">
+          <AsrarLogo size={64} variant="icon" element="aether" animate={true} />
+        </div>
         <h1 className="text-4xl font-bold text-gray-900 mb-4">✅ React is Working!</h1>
         <p className="text-gray-700 text-lg mb-4">If you can see this colorful page, then:</p>
         <ul className="list-disc list-inside space-y-2 text-gray-600">
