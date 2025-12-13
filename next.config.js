@@ -20,7 +20,7 @@ const nextConfig = {
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://asrar.app.com", // Allow Google Fonts
               "img-src 'self' data: https: https://asrar.app.com",
               "font-src 'self' data: https://fonts.gstatic.com https://asrar.app.com", // Allow Google Fonts
-              "connect-src 'self' https://azjgakbhovanweelkezt.supabase.co https://api.supabase.co https://generativelanguage.googleapis.com https://nominatim.openstreetmap.org https://vercel.live https://*.vercel.live https://asrar.app.com", // Add Supabase, Google AI, OpenStreetMap Nominatim, Vercel Live, and production domain
+              "connect-src 'self' https://azjgakbhovanweelkezt.supabase.co wss://azjgakbhovanweelkezt.supabase.co https://api.supabase.co https://generativelanguage.googleapis.com https://nominatim.openstreetmap.org https://vercel.live https://*.vercel.live https://asrar.app.com", // Add Supabase (https + wss for Realtime), Google AI, OpenStreetMap Nominatim, Vercel Live, and production domain
               "frame-src 'self' https://vercel.live https://*.vercel.live", // Allow Vercel Live frames
               "frame-ancestors 'none'", // Prevent clickjacking
               "base-uri 'self' https://asrar.app.com",
