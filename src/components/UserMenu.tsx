@@ -21,10 +21,10 @@ export function UserMenu() {
     return (
       <Link
         href="/auth"
-        className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-lg transition-all text-sm font-medium shadow-lg shadow-indigo-500/30"
+        className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-lg transition-all text-xs sm:text-sm font-medium shadow-lg shadow-indigo-500/30"
       >
-        <User className="w-5 h-5" />
-        <span>Sign In</span>
+        <User className="w-4 h-4 sm:w-5 sm:h-5" />
+        <span className="hidden xs:inline">Sign In</span>
       </Link>
     );
   }
@@ -38,10 +38,10 @@ export function UserMenu() {
     return (
       <Link
         href="/auth"
-        className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-lg transition-all text-sm font-medium shadow-lg shadow-indigo-500/30"
+        className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-lg transition-all text-xs sm:text-sm font-medium shadow-lg shadow-indigo-500/30"
       >
-        <User className="w-5 h-5" />
-        <span>Sign In</span>
+        <User className="w-4 h-4 sm:w-5 sm:h-5" />
+        <span className="hidden xs:inline">Sign In</span>
       </Link>
     );
   }

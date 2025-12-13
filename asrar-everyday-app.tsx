@@ -1760,10 +1760,8 @@ export default function AsrarEveryday() {
                 {/* User Menu */}
                 <UserMenu />
 
-                {/* Language Toggle - hide on very small screens */}
-                <div className="hidden xs:block">
-                  <LanguageToggle />
-                </div>
+                {/* Language Toggle */}
+                <LanguageToggle />
 
                 {/* History Button */}
                 <button
