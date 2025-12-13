@@ -105,12 +105,19 @@ export default function AuthPage() {
           {!isConfigured && (
             <div className="mb-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg flex items-start gap-3">
               <AlertCircle className="w-5 h-5 text-red-600 dark:text-red-400 flex-shrink-0 mt-0.5" />
-              <div>
-                <p className="text-sm text-red-700 dark:text-red-300 font-medium">Supabase not configured</p>
-                <p className="text-xs text-red-600 dark:text-red-400 mt-1">
-                  URL: {process.env.NEXT_PUBLIC_SUPABASE_URL ? '✓ Set' : '✗ Missing'} | 
-                  Key: {process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ? '✓ Set' : '✗ Missing'}
-                </p>
+              <div className="text-xs">
+                <p className="text-sm text-red-700 dark:text-red-300 font-medium mb-2">Supabase not configured</p>
+                <div className="space-y-1 text-red-600 dark:text-red-400 font-mono">
+                  <div>URL: {process.env.NEXT_PUBLIC_SUPABASE_URL ? '✓ Set' : '✗ Missing'}</div>
+                  <div>Key: {process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ? '✓ Set' : '✗ Missing'}</div>
+                  {process.env.NEXT_PUBLIC_SUPABASE_URL && (
+                    <div className="mt-2">URL Value: {process.env.NEXT_PUBLIC_SUPABASE_URL.substring(0, 30)}...</div>
+                  )}
+                  {process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY && (
+                    <div>Key Length: {process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY.length} chars</div>
+                  )}
+                  <div className="mt-2 text-red-500">Build Time: {new Date().toISOString()}</div>
+                </div>
               </div>
             </div>
           )}
