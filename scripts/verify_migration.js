@@ -1,8 +1,15 @@
 const { createClient } = require('@supabase/supabase-js');
+require('dotenv').config();
+
+if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+  console.error('❌ Error: Supabase credentials not found in environment variables');
+  console.log('Please set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY');
+  process.exit(1);
+}
 
 const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://azjgakbhovanweelkezt.supabase.co',
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF6amdha2Job3ZhbndlZWxrZXp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUwNDk5OTYsImV4cCI6MjA4MDYyNTk5Nn0.BL4qJKR3P8sevTOU5xaVGRqrM32cjDox592T7zGkg9E'
+  process.env.NEXT_PUBLIC_SUPABASE_URL,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 );
 
 async function verifyMigration() {
