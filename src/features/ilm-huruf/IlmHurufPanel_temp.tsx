@@ -435,6 +435,10 @@ export function IlmHurufPanel() {
       if (mode === 'destiny' && name) {
         const result: any = analyzeNameDestiny(name, abjad);
         
+        // DEBUG: Log quranResonance status
+        console.log('🔍 analyzeNameDestiny result:', result);
+        console.log('📖 quranResonance:', result.quranResonance);
+        
         // Add mother's name analysis if provided
         if (motherName.trim()) {
           try {
@@ -455,6 +459,7 @@ export function IlmHurufPanel() {
           // Continue without name destiny enhancement if it fails
         }
         
+        console.log('📊 Final result before setResults:', result);
         setResults(result);
       } else if (mode === 'compatibility' && name && name2) {
         // Calculate Abjad totals
