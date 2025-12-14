@@ -788,7 +788,7 @@ function BatchCalculator({ onClose, abjad, analyzeElements }: {
       r.hadathElement,
       r.dominant,
       r.secondary,
-      `${r.balance.toFixed(1)}%`
+      `${r.balance?.toFixed(1) ?? '0'}%`
     ]);
     
     const csvContent = [headers, ...rows]
@@ -912,7 +912,7 @@ function BatchCalculator({ onClose, abjad, analyzeElements }: {
                             {result.dominant}
                           </span>
                           <span className="bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-2 py-0.5 rounded">
-                            {result.balance.toFixed(0)}%
+                            {result.balance?.toFixed(0) ?? '0'}%
                           </span>
                         </div>
                       </div>
@@ -947,7 +947,7 @@ function BatchCalculator({ onClose, abjad, analyzeElements }: {
                   {language === 'en' ? 'Avg Balance' : language === 'fr' ? 'Équilibre Moy.' : 'متوسط التوازن'}
                 </div>
                 <div className="text-2xl font-bold text-green-900 dark:text-green-100">
-                  {(results.reduce((sum, r) => sum + r.balance, 0) / results.length).toFixed(0)}%
+                  {(results.reduce((sum, r) => sum + (r.balance ?? 0), 0) / results.length).toFixed(0)}%
                 </div>
               </div>
               <div className="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-lg">
@@ -1538,7 +1538,14 @@ export default function AsrarEveryday() {
     const dominant = entries.reduce((a, b) => b[1] > a[1] ? b : a)[0];
     const secondary = entries.filter(([el]) => el !== dominant).reduce((a, b) => b[1] > a[1] ? b : a)[0];
     
-    return { counts, values, dominant, secondary, audit };
+    // Calculate balance score
+    const countValues = Object.values(counts);
+    const total = countValues.reduce((a, b) => a + b, 0);
+    const avg = total / 4;
+    const variance = countValues.reduce((sum, count) => sum + Math.pow(count - avg, 2), 0) / 4;
+    const balance = Math.max(0, 100 - (variance / avg) * 20);
+    
+    return { counts, values, dominant, secondary, balance, audit };
   };
   
   useEffect(() => {
