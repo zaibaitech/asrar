@@ -7,7 +7,7 @@ import { HadadSummaryPanel } from './src/components/hadad-summary';
 import { IlmHurufPanel } from './src/features/ilm-huruf';
 import { CompatibilityPanel } from './src/features/compatibility';
 import { IstikharaPanel } from './src/features/istikhara';
-import { analyzePatterns, analyzeMultiplePatterns } from './src/features/ilm-huruf/patternRecognition';
+import { analyzePatterns } from './src/features/ilm-huruf/patternRecognition';
 import { generateWafqAnalysis } from './src/features/ilm-huruf/wafqGenerator';
 import { calculateOptimalTimingWindows } from './src/features/ilm-huruf/talismanTiming';
 import { OnboardingTutorial } from './src/components/OnboardingTutorial';
@@ -16,7 +16,7 @@ import { UserMenu } from './src/components/UserMenu';
 import LanguageToggle from './src/components/LanguageToggle';
 import { useLanguage } from './src/contexts/LanguageContext';
 import { LETTER_ELEMENTS, digitalRoot as calcDigitalRoot, hadathRemainder as calcHadathRemainder, hadathToElement, nearestSacred, ELEMENT_INFO as HADAD_ELEMENT_INFO, calculateBurj, getPlanetarySignatureFromTotal } from './src/components/hadad-summary/hadad-core';
-import type { AbjadAudit, AuditStep, ElementType, SacredResonance } from './src/components/hadad-summary/types';
+import type { AbjadAudit, AuditStep, ElementType } from './src/components/hadad-summary/types';
 import { useAbjad } from './src/contexts/AbjadContext';
 import { AbjadSystemSelector } from './src/components/AbjadSystemSelector';
 import { ArabicKeyboard } from './src/components/ArabicKeyboard';
@@ -125,11 +125,11 @@ const ELEMENT_SUGGESTIONS = {
 
 function normalizeArabic(text: string): string {
   return text
-    .replace(/[ًٌٍَُِّْ]/g, '') // Remove diacritics
-    .replace(/[أإآ]/g, 'ا') // Unify Alif
-    .replace(/ى/g, 'ي') // Unify Ya
-    .replace(/ة/g, 'ه') // Ta Marbuta as Ha
-    .replace(/\s+/g, ''); // Remove spaces
+    .replaceAll(/[ًٌٍَُِّْ]/g, '') // Remove diacritics
+    .replaceAll(/[أإآ]/g, 'ا') // Unify Alif
+    .replaceAll(/ى/g, 'ي') // Unify Ya
+    .replaceAll(/ة/g, 'ه') // Ta Marbuta as Ha
+    .replaceAll(/\s+/g, ''); // Remove spaces
 }
 
 function auditAbjad(text: string, abjadMap: Record<string, number>, elementsMap: Record<string, ElementType>): AbjadAudit {
@@ -152,7 +152,7 @@ function auditAbjad(text: string, abjadMap: Record<string, number>, elementsMap:
 
 // Helper functions for calculations
 function abjadSum(text: string, abjadMap: Record<string, number>): number {
-  const normalized = text.replace(/[ًٌٍَُِّْ\s]/g, '');
+  const normalized = text.replaceAll(/[ًٌٍَُِّْ\s]/g, '');
   return [...normalized].reduce((sum, char) => sum + (abjadMap[char] || 0), 0);
 }
 
@@ -173,7 +173,7 @@ function calculateWusta(n: number): number {
 
 function calculateKamal(n: number): number {
   // Kamāl (Perfection) - Sum of all digits in the number
-  return n.toString().split('').reduce((sum, digit) => sum + parseInt(digit), 0);
+  return n.toString().split('').reduce((sum, digit) => sum + Number.parseInt(digit), 0);
 }
 
 function calculateBast(n: number): number {
@@ -183,7 +183,7 @@ function calculateBast(n: number): number {
 
 function calculateSirri(n: number): number {
   // Sirrī (Secret/Hidden) - Reverse digits and take digital root
-  const reversed = parseInt(n.toString().split('').reverse().join(''));
+  const reversed = Number.parseInt(n.toString().split('').reverse().join(''));
   return calcDigitalRoot(reversed);
 }
 
@@ -219,7 +219,7 @@ function DisclaimerBanner({ onDismiss }: { onDismiss: () => void }) {
   useEffect(() => {
     const dismissedTime = localStorage.getItem('disclaimerDismissedAt');
     if (dismissedTime) {
-      const hoursSinceDismissed = (Date.now() - parseInt(dismissedTime)) / (1000 * 60 * 60);
+      const hoursSinceDismissed = (Date.now() - Number.parseInt(dismissedTime)) / (1000 * 60 * 60);
       if (hoursSinceDismissed < 24) {
         // Still within 24 hours, keep dismissed
         onDismiss();
@@ -408,13 +408,13 @@ interface HistoryItem {
 }
 
 function loadHistory(): HistoryItem[] {
-  if (typeof window === 'undefined') return [];
+  if (typeof globalThis.window === 'undefined') return [];
   const stored = localStorage.getItem('asrar-history');
   return stored ? JSON.parse(stored) : [];
 }
 
 function saveHistory(history: HistoryItem[]) {
-  if (typeof window === 'undefined') return;
+  if (typeof globalThis.window === 'undefined') return;
   localStorage.setItem('asrar-history', JSON.stringify(history));
 }
 
@@ -504,7 +504,7 @@ function HistoryPanel({
       item.hadathElement,
       item.category || '',
       (item.tags || []).join('; '),
-      (item.notes || '').replace(/\n/g, ' ')
+      (item.notes || '').replaceAll(/\n/g, ' ')
     ]);
     
     const csvContent = [headers, ...rows]
@@ -1417,6 +1417,8 @@ export default function AsrarEveryday() {
   const [showBatchCalculator, setShowBatchCalculator] = useState(false);
   const [showKeyboard, setShowKeyboard] = useState(false);
   const [showCompatibility, setShowCompatibility] = useState(false);
+  const [copiedValue, setCopiedValue] = useState<string | null>(null);
+  const [isCalculating, setIsCalculating] = useState(false);
   
   // Collapsible sections state
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({
@@ -1598,14 +1600,18 @@ export default function AsrarEveryday() {
   const calculate = () => {
     if (!arabicInput.trim()) return;
     
-    const audit = auditAbjad(arabicInput, abjad, LETTER_ELEMENTS);
-    const kabir = audit.total;
-    const saghir = calcDigitalRoot(kabir);
-    const hadath = calcHadathRemainder(kabir);
-    const hadathElement = hadathToElement(hadath);
-    const elementAnalysis = analyzeElements(arabicInput);
-    const sacredMatches = findSacredMatches(kabir);
-    const resonance = sacredResonance(kabir);
+    setIsCalculating(true);
+    
+    // Use setTimeout to allow UI to update
+    setTimeout(() => {
+      const audit = auditAbjad(arabicInput, abjad, LETTER_ELEMENTS);
+      const kabir = audit.total;
+      const saghir = calcDigitalRoot(kabir);
+      const hadath = calcHadathRemainder(kabir);
+      const hadathElement = hadathToElement(hadath);
+      const elementAnalysis = analyzeElements(arabicInput);
+      const sacredMatches = findSacredMatches(kabir);
+      const resonance = sacredResonance(kabir);
     
     // Advanced calculation methods
     const wusta = calculateWusta(kabir);
@@ -1672,6 +1678,18 @@ export default function AsrarEveryday() {
     const newHistory = [historyItem, ...history].slice(0, 50); // Keep last 50
     setHistory(newHistory);
     saveHistory(newHistory);
+    setIsCalculating(false);
+    }, 100);
+  };
+  
+  // Copy to clipboard function
+  const copyToClipboard = (text: string, label: string) => {
+    navigator.clipboard.writeText(text).then(() => {
+      setCopiedValue(label);
+      setTimeout(() => setCopiedValue(null), 2000);
+    }).catch(err => {
+      console.error('Failed to copy:', err);
+    });
   };
   
   const handleHistorySelect = (item: HistoryItem) => {
@@ -2148,11 +2166,20 @@ export default function AsrarEveryday() {
               
               <button
                 onClick={calculate}
-                disabled={!arabicInput.trim()}
+                disabled={!arabicInput.trim() || isCalculating}
                 className="w-full py-3 px-4 sm:px-6 bg-indigo-600 hover:bg-indigo-700 disabled:bg-slate-300 dark:disabled:bg-slate-700 text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2 text-base sm:text-lg min-h-[44px]"
               >
-                <Sparkles className="w-5 h-5" />
-                {t.calculator.calculateButton}
+                {isCalculating ? (
+                  <>
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                    {language === 'en' ? 'Calculating...' : language === 'fr' ? 'Calcul...' : 'جاري الحساب...'}
+                  </>
+                ) : (
+                  <>
+                    <Sparkles className="w-5 h-5" />
+                    {t.calculator.calculateButton}
+                  </>
+                )}
               </button>
             </div>
           </div>
@@ -2194,10 +2221,23 @@ export default function AsrarEveryday() {
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                   {/* Kabīr Card */}
-                  <div className="group relative bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-900/40 rounded-xl p-4 border border-blue-200 dark:border-blue-800 hover:shadow-lg transition-all duration-300 cursor-help">
+                  <div className="group relative bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-900/40 rounded-xl p-4 border border-blue-200 dark:border-blue-800 hover:shadow-lg transition-all duration-300">
                     <div className="flex items-start justify-between mb-2">
                       <span className="text-xs font-semibold text-blue-700 dark:text-blue-300 uppercase tracking-wide">{t.calculator.kabir.label}</span>
-                      <Info className="w-4 h-4 text-blue-600 dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <div className="flex items-center gap-1">
+                        <button
+                          onClick={() => copyToClipboard(result.kabir.toString(), 'kabir')}
+                          className="p-1 hover:bg-blue-200 dark:hover:bg-blue-800 rounded transition-colors"
+                          title={language === 'en' ? 'Copy value' : language === 'fr' ? 'Copier' : 'نسخ'}
+                        >
+                          {copiedValue === 'kabir' ? (
+                            <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400" />
+                          ) : (
+                            <Copy className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                          )}
+                        </button>
+                        <Info className="w-4 h-4 text-blue-600 dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity cursor-help" />
+                      </div>
                     </div>
                     <div className="text-3xl font-bold text-blue-900 dark:text-blue-100 mb-1">{result.kabir}</div>
                     <p className="text-xs text-blue-700 dark:text-blue-300">{t.calculator.totalOfAllLetterValues}</p>
@@ -2207,10 +2247,23 @@ export default function AsrarEveryday() {
                   </div>
 
                   {/* Ṣaghīr Card */}
-                  <div className="group relative bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-900/20 dark:to-emerald-900/40 rounded-xl p-4 border border-emerald-200 dark:border-emerald-800 hover:shadow-lg transition-all duration-300 cursor-help">
+                  <div className="group relative bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-900/20 dark:to-emerald-900/40 rounded-xl p-4 border border-emerald-200 dark:border-emerald-800 hover:shadow-lg transition-all duration-300">
                     <div className="flex items-start justify-between mb-2">
                       <span className="text-xs font-semibold text-emerald-700 dark:text-emerald-300 uppercase tracking-wide">{t.calculator.saghir.label}</span>
-                      <Info className="w-4 h-4 text-emerald-600 dark:text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <div className="flex items-center gap-1">
+                        <button
+                          onClick={() => copyToClipboard(result.saghir.toString(), 'saghir')}
+                          className="p-1 hover:bg-emerald-200 dark:hover:bg-emerald-800 rounded transition-colors"
+                          title={language === 'en' ? 'Copy value' : language === 'fr' ? 'Copier' : 'نسخ'}
+                        >
+                          {copiedValue === 'saghir' ? (
+                            <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400" />
+                          ) : (
+                            <Copy className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                          )}
+                        </button>
+                        <Info className="w-4 h-4 text-emerald-600 dark:text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity cursor-help" />
+                      </div>
                     </div>
                     <div className="text-3xl font-bold text-emerald-900 dark:text-emerald-100 mb-1">{result.saghir}</div>
                     <p className="text-xs text-emerald-700 dark:text-emerald-300">{t.calculator.digitalRoot}</p>
