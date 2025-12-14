@@ -1692,6 +1692,45 @@ export default function AsrarEveryday() {
     });
   };
   
+  // Export current result as JSON
+  const exportResult = () => {
+    if (!result) return;
+    
+    const exportData = {
+      text: result.arabic,
+      display: result.display,
+      timestamp: new Date().toISOString(),
+      calculations: {
+        kabir: result.kabir,
+        saghir: result.saghir,
+        hadath: result.hadath,
+        hadathElement: result.hadathElement
+      },
+      elements: {
+        dominant: result.dominant,
+        secondary: result.secondary,
+        counts: result.counts,
+        values: result.values
+      },
+      advanced: {
+        wusta: result.wusta,
+        kamal: result.kamal,
+        bast: result.bast,
+        sirri: result.sirri
+      }
+    };
+    
+    const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `asrar-${result.arabic}-${Date.now()}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+  
   const handleHistorySelect = (item: HistoryItem) => {
     setArabicInput(item.arabic);
     setDisplayName(item.display !== item.arabic ? item.display : '');
@@ -2128,7 +2167,23 @@ export default function AsrarEveryday() {
                   dir="rtl"
                   className="w-full px-3 sm:px-4 py-3 sm:py-4 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-600 focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 outline-none transition-all text-2xl sm:text-3xl font-arabic"
                   style={{ fontFamily: "'Noto Naskh Arabic', 'Amiri', serif" }}
+                  maxLength={200}
                 />
+                {arabicInput.length > 0 && (
+                  <div className="flex items-center justify-between mt-1">
+                    <p className="text-xs text-slate-500 dark:text-slate-400">
+                      {t.calculator.examples}: يس (70), بسم الله (786), باكا (108)
+                    </p>
+                    <span className={`text-xs ${arabicInput.length > 150 ? 'text-amber-600 dark:text-amber-400' : 'text-slate-400 dark:text-slate-500'}`}>
+                      {arabicInput.length}/200
+                    </span>
+                  </div>
+                )}
+                {arabicInput.length === 0 && (
+                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                    {t.calculator.examples}: يس (70), بسم الله (786), باكا (108)
+                  </p>
+                )}
                 {showKeyboard && (
                   <div className="mt-3 overflow-x-auto">
                     <ArabicKeyboard 
@@ -2137,9 +2192,6 @@ export default function AsrarEveryday() {
                     />
                   </div>
                 )}
-                <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                  {t.calculator.examples}: يس (70), بسم الله (786), باكا (108)
-                </p>
                 {translitResult && translitResult.candidates.length > 1 && (
                   <div className="mt-2 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
                     <p className="text-xs font-medium text-blue-900 dark:text-blue-100 mb-2">Alternative spellings:</p>
@@ -2164,29 +2216,61 @@ export default function AsrarEveryday() {
                 )}
               </div>
               
-              <button
-                onClick={calculate}
-                disabled={!arabicInput.trim() || isCalculating}
-                className="w-full py-3 px-4 sm:px-6 bg-indigo-600 hover:bg-indigo-700 disabled:bg-slate-300 dark:disabled:bg-slate-700 text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2 text-base sm:text-lg min-h-[44px]"
-              >
-                {isCalculating ? (
-                  <>
-                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                    {language === 'en' ? 'Calculating...' : language === 'fr' ? 'Calcul...' : 'جاري الحساب...'}
-                  </>
-                ) : (
-                  <>
-                    <Sparkles className="w-5 h-5" />
-                    {t.calculator.calculateButton}
-                  </>
+              <div className="flex gap-2">
+                <button
+                  onClick={calculate}
+                  disabled={!arabicInput.trim() || isCalculating}
+                  className="flex-1 py-3 px-4 sm:px-6 bg-indigo-600 hover:bg-indigo-700 disabled:bg-slate-300 dark:disabled:bg-slate-700 text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2 text-base sm:text-lg min-h-[44px]"
+                >
+                  {isCalculating ? (
+                    <>
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      {language === 'en' ? 'Calculating...' : language === 'fr' ? 'Calcul...' : 'جاري الحساب...'}
+                    </>
+                  ) : (
+                    <>
+                      <Sparkles className="w-5 h-5" />
+                      {t.calculator.calculateButton}
+                    </>
+                  )}
+                </button>
+                {(arabicInput.trim() || latinInput.trim()) && (
+                  <button
+                    onClick={() => {
+                      setArabicInput('');
+                      setLatinInput('');
+                      setTranslitResult(null);
+                      setResult(null);
+                      setDisplayName('');
+                    }}
+                    className="px-4 py-3 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-300 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 min-h-[44px]"
+                    title={language === 'en' ? 'Clear all' : language === 'fr' ? 'Tout effacer' : 'مسح الكل'}
+                  >
+                    <X className="w-5 h-5" />
+                    <span className="hidden sm:inline">{language === 'en' ? 'Clear' : language === 'fr' ? 'Effacer' : 'مسح'}</span>
+                  </button>
                 )}
-              </button>
+              </div>
             </div>
           </div>
           
           {/* Results - Mobile Responsive with Educational Interface */}
           {result && (
             <div className="space-y-6 sm:space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+              
+              {/* Export Button */}
+              <div className="flex justify-end">
+                <button
+                  onClick={exportResult}
+                  className="flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg transition-colors text-sm font-medium"
+                  title={language === 'en' ? 'Export results as JSON' : language === 'fr' ? 'Exporter en JSON' : 'تصدير كـ JSON'}
+                >
+                  <Download className="w-4 h-4" />
+                  <span className="hidden sm:inline">
+                    {language === 'en' ? 'Export JSON' : language === 'fr' ? 'Exporter JSON' : 'تصدير JSON'}
+                  </span>
+                </button>
+              </div>
               
               {/* 1. Educational Context Banner */}
               <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-900/30 dark:to-purple-900/30 rounded-xl p-4 sm:p-6 border border-indigo-200 dark:border-indigo-800">
