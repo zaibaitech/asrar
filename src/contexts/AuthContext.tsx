@@ -70,11 +70,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
 
     try {
+      // Use configured base URL or fallback to current origin
+      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || window.location.origin;
       const { error } = await supabase.auth.signUp({
         email,
         password,
         options: {
-          emailRedirectTo: `${window.location.origin}/auth/callback`,
+          emailRedirectTo: `${baseUrl}/auth/callback`,
         },
       });
       return { error };
@@ -99,8 +101,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
 
     try {
+      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || window.location.origin;
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: `${window.location.origin}/auth/reset-password`,
+        redirectTo: `${baseUrl}/auth/reset-password`,
       });
       return { error };
     } catch (error) {

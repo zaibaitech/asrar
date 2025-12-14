@@ -3621,17 +3621,100 @@ export default function AsrarEveryday() {
           />
         )}
         
-        {/* Footer - Mobile Responsive */}
-        <footer className="border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 mt-12">
-          <div className="max-w-6xl mx-auto px-3 sm:px-4 py-6 space-y-3">
-            <div className="flex justify-center">
-              <div className="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg shadow-lg text-center">
-                <p className="text-sm sm:text-base font-semibold">Built with Next.js, TypeScript, and Tailwind CSS</p>
+        {/* Footer - Professional */}
+        <footer className="border-t border-slate-200 dark:border-slate-700 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-950 mt-12">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+            {/* Main Footer Content */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              {/* Logo & App Info */}
+              <div className="flex flex-col items-center md:items-start space-y-4">
+                <div className="flex items-center space-x-3">
+                  <AsrarLogo size={48} variant="icon" element="aether" animate={true} />
+                  <div>
+                    <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100">أسرار</h3>
+                    <p className="text-xs text-slate-500 dark:text-slate-400">Asrār</p>
+                  </div>
+                </div>
+                <p className="text-sm text-slate-600 dark:text-slate-400 text-center md:text-left max-w-xs">
+                  {language === 'ar' 
+                    ? 'منصة لاستكشاف الحكمة الروحية والتوقيت الإلهي'
+                    : 'A platform for spiritual wisdom and divine timing exploration'
+                  }
+                </p>
+              </div>
+
+              {/* Important Notice */}
+              <div className="flex flex-col items-center space-y-3">
+                <div className="inline-flex items-center space-x-2 px-4 py-2 bg-amber-100 dark:bg-amber-900/30 rounded-lg">
+                  <svg className="w-5 h-5 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                  </svg>
+                  <span className="text-xs font-semibold text-amber-800 dark:text-amber-300">
+                    {language === 'ar' ? 'إشعار مهم' : 'Important Notice'}
+                  </span>
+                </div>
+                <p className="text-xs text-center text-slate-600 dark:text-slate-400 max-w-sm">
+                  {language === 'ar'
+                    ? 'للأغراض التعليمية والثقافية فقط • يرجى دائماً استشارة العلماء المؤهلين للتوجيه الديني'
+                    : 'For educational and cultural exploration only • Always consult qualified scholars for religious guidance'
+                  }
+                </p>
+              </div>
+
+              {/* Powered By */}
+              <div className="flex flex-col items-center md:items-end space-y-3">
+                <p className="text-xs text-slate-500 dark:text-slate-400">
+                  {language === 'ar' ? 'مدعوم بواسطة' : 'Powered by'}
+                </p>
+                <a 
+                  href="https://zaibaitech.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group flex flex-col items-center md:items-end space-y-1 transition-transform hover:scale-105"
+                >
+                  <div className="flex items-center space-x-2">
+                    <span className="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                      Zaibai Tech
+                    </span>
+                    <svg className="w-4 h-4 text-purple-600 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </div>
+                  <span className="text-xs text-slate-500 dark:text-slate-400 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                    zaibaitech.com
+                  </span>
+                </a>
               </div>
             </div>
-            <div className="flex justify-center">
-              <div className="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-lg shadow-lg text-center max-w-2xl">
-                <p className="text-sm sm:text-base font-semibold">For educational and cultural exploration only • Always consult qualified scholars for religious guidance</p>
+
+            {/* Bottom Bar */}
+            <div className="pt-6 border-t border-slate-200 dark:border-slate-700">
+              <div className="flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-0">
+                <p className="text-xs text-slate-500 dark:text-slate-400">
+                  © {new Date().getFullYear()} {language === 'ar' ? 'جميع الحقوق محفوظة' : 'All rights reserved'}
+                </p>
+                <div className="flex items-center space-x-4 text-xs text-slate-500 dark:text-slate-400">
+                  <span className="flex items-center space-x-1">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                    <span>Next.js</span>
+                  </span>
+                  <span className="text-slate-300 dark:text-slate-600">•</span>
+                  <span className="flex items-center space-x-1">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                    </svg>
+                    <span>TypeScript</span>
+                  </span>
+                  <span className="text-slate-300 dark:text-slate-600">•</span>
+                  <span className="flex items-center space-x-1">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                    </svg>
+                    <span>Tailwind CSS</span>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
