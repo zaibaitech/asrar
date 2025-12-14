@@ -3636,8 +3636,8 @@ export default function AsrarEveryday() {
                   </div>
                 </div>
                 <p className="text-sm text-slate-600 dark:text-slate-400 text-center md:text-left max-w-xs">
-                  {language === 'ar' 
-                    ? 'منصة لاستكشاف الحكمة الروحية والتوقيت الإلهي'
+                  {language === 'fr' 
+                    ? 'Une plateforme pour explorer la sagesse spirituelle et le timing divin'
                     : 'A platform for spiritual wisdom and divine timing exploration'
                   }
                 </p>
@@ -3650,12 +3650,12 @@ export default function AsrarEveryday() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                   </svg>
                   <span className="text-xs font-semibold text-amber-800 dark:text-amber-300">
-                    {language === 'ar' ? 'إشعار مهم' : 'Important Notice'}
+                    {language === 'fr' ? 'Avis important' : 'Important Notice'}
                   </span>
                 </div>
                 <p className="text-xs text-center text-slate-600 dark:text-slate-400 max-w-sm">
-                  {language === 'ar'
-                    ? 'للأغراض التعليمية والثقافية فقط • يرجى دائماً استشارة العلماء المؤهلين للتوجيه الديني'
+                  {language === 'fr'
+                    ? 'À des fins éducatives et culturelles uniquement • Consultez toujours des érudits qualifiés pour des conseils religieux'
                     : 'For educational and cultural exploration only • Always consult qualified scholars for religious guidance'
                   }
                 </p>
@@ -3664,7 +3664,7 @@ export default function AsrarEveryday() {
               {/* Powered By */}
               <div className="flex flex-col items-center md:items-end space-y-3">
                 <p className="text-xs text-slate-500 dark:text-slate-400">
-                  {language === 'ar' ? 'مدعوم بواسطة' : 'Powered by'}
+                  {language === 'fr' ? 'Propulsé par' : 'Powered by'}
                 </p>
                 <a 
                   href="https://zaibaitech.com/" 
@@ -3691,7 +3691,7 @@ export default function AsrarEveryday() {
             <div className="pt-6 border-t border-slate-200 dark:border-slate-700">
               <div className="flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-0">
                 <p className="text-xs text-slate-500 dark:text-slate-400">
-                  © {new Date().getFullYear()} {language === 'ar' ? 'جميع الحقوق محفوظة' : 'All rights reserved'}
+                  © {new Date().getFullYear()} {language === 'fr' ? 'Tous droits réservés' : 'All rights reserved'}
                 </p>
                 <div className="flex items-center space-x-4 text-xs text-slate-500 dark:text-slate-400">
                   <span className="flex items-center space-x-1">
