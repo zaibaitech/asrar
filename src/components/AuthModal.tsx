@@ -13,7 +13,7 @@ type AuthMode = 'signin' | 'signup' | 'reset';
 
 export function AuthModal({ isOpen, onClose }: AuthModalProps) {
   const { signInWithEmail, signUpWithEmail, resetPassword, isConfigured } = useAuth();
-  const [mode, setMode] = useState<AuthMode>('signup');
+  const [mode, setMode] = useState<AuthMode>('signin');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -70,15 +70,13 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
         if (error) {
           setError(error.message || 'Failed to create account');
         } else {
-          setSuccess('Account created! Setting up your profile...');
+          setSuccess('Account created! Please check your email to verify your account.');
           setTimeout(() => {
             onClose();
             setEmail('');
             setPassword('');
             setSuccess(null);
-            // Redirect to profile setup
-            window.location.href = '/profile/setup';
-          }, 1500);
+          }, 3000);
         }
       } else {
         const { error } = await signInWithEmail(email, password);
@@ -115,18 +113,18 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4 overflow-y-auto" onClick={onClose}>
-      <div className="bg-white dark:bg-slate-800 rounded-lg shadow-xl p-6 max-w-md w-full my-8" onClick={(e) => e.stopPropagation()}>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
+      <div className="bg-white dark:bg-slate-800 rounded-lg shadow-xl p-4 sm:p-6 max-w-md w-full max-h-[90vh] overflow-y-auto">
         {/* Header */}
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
+        <div className="flex items-center justify-between mb-4 sm:mb-6">
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
             {mode === 'signin' && 'Sign In'}
             {mode === 'signup' && 'Create Account'}
             {mode === 'reset' && 'Reset Password'}
           </h2>
           <button
             onClick={onClose}
-            className="p-2 hover:bg-slate-100 dark:hover:bg-slate-700 rounded transition-colors"
+            className="p-1 hover:bg-slate-100 dark:hover:bg-slate-700 rounded transition-colors min-h-[40px] min-w-[40px] flex items-center justify-center touch-manipulation"
           >
             <X className="w-5 h-5 text-slate-500" />
           </button>
@@ -151,7 +149,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
         <form onSubmit={handleSubmit} className="space-y-4">
           {/* Email Field */}
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
               Email
             </label>
             <div className="relative">
@@ -163,7 +161,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 placeholder="your@email.com"
-                className="w-full pl-10 pr-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2.5 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:ring-2 focus:ring-indigo-500 focus:border-transparent min-h-[44px] text-base"
                 autoComplete="email"
               />
             </div>
@@ -172,7 +170,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
           {/* Password Field (not shown for reset) */}
           {mode !== 'reset' && (
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
+              <label htmlFor="password" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
                 Password
               </label>
               <div className="relative">
@@ -184,20 +182,20 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
                   onChange={(e) => setPassword(e.target.value)}
                   required
                   placeholder="••••••••"
-                  className="w-full pl-10 pr-12 py-3 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  className="w-full pl-10 pr-12 py-2.5 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white placeholder-slate-400 focus:ring-2 focus:ring-indigo-500 focus:border-transparent min-h-[44px] text-base"
                   autoComplete={mode === 'signup' ? 'new-password' : 'current-password'}
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 p-1"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 min-h-[40px] min-w-[40px] flex items-center justify-center touch-manipulation"
                   aria-label={showPassword ? 'Hide password' : 'Show password'}
                 >
                   {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                 </button>
               </div>
               {mode === 'signup' && (
-                <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">
+                <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
                   Must be at least 6 characters
                 </p>
               )}
@@ -208,7 +206,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
+            className="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 min-h-[44px] touch-manipulation"
           >
             {isLoading ? (
               <>
@@ -226,7 +224,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
         </form>
 
         {/* Mode Switchers */}
-        <div className="mt-6 text-center space-y-3">
+        <div className="mt-6 text-center space-y-2">
           {mode === 'signin' && (
             <>
               <p className="text-sm text-slate-600 dark:text-slate-400">
@@ -275,7 +273,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
         </div>
 
         {/* Optional Note */}
-        <div className="mt-6 pt-4 border-t border-slate-200 dark:border-slate-700">
+        <div className="mt-6 pt-6 border-t border-slate-200 dark:border-slate-700">
           <p className="text-xs text-slate-500 dark:text-slate-400 text-center">
             Authentication is optional. You can use this app without an account.
           </p>

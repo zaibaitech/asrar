@@ -7,7 +7,7 @@ import { HadadSummaryPanel } from './src/components/hadad-summary';
 import { IlmHurufPanel } from './src/features/ilm-huruf';
 import { CompatibilityPanel } from './src/features/compatibility';
 import { IstikharaPanel } from './src/features/istikhara';
-import { analyzePatterns } from './src/features/ilm-huruf/patternRecognition';
+import { analyzePatterns, analyzeMultiplePatterns } from './src/features/ilm-huruf/patternRecognition';
 import { generateWafqAnalysis } from './src/features/ilm-huruf/wafqGenerator';
 import { calculateOptimalTimingWindows } from './src/features/ilm-huruf/talismanTiming';
 import { OnboardingTutorial } from './src/components/OnboardingTutorial';
@@ -16,13 +16,12 @@ import { UserMenu } from './src/components/UserMenu';
 import LanguageToggle from './src/components/LanguageToggle';
 import { useLanguage } from './src/contexts/LanguageContext';
 import { LETTER_ELEMENTS, digitalRoot as calcDigitalRoot, hadathRemainder as calcHadathRemainder, hadathToElement, nearestSacred, ELEMENT_INFO as HADAD_ELEMENT_INFO, calculateBurj, getPlanetarySignatureFromTotal } from './src/components/hadad-summary/hadad-core';
-import type { AbjadAudit, AuditStep, ElementType } from './src/components/hadad-summary/types';
+import type { AbjadAudit, AuditStep, ElementType, SacredResonance } from './src/components/hadad-summary/types';
 import { useAbjad } from './src/contexts/AbjadContext';
 import { AbjadSystemSelector } from './src/components/AbjadSystemSelector';
 import { ArabicKeyboard } from './src/components/ArabicKeyboard';
 import { findVersesByValue, getExactVerseMatch, type QuranicVerse } from './src/data/quranic-verses';
 import { findDivineNameByValue, findSimilarDivineNames, type DivineName } from './src/data/divine-names';
-import AsrarLogo from './src/components/AsrarLogo';
 
 // ============================================================================
 // DOMAIN RULES & CORE DATA
@@ -125,11 +124,11 @@ const ELEMENT_SUGGESTIONS = {
 
 function normalizeArabic(text: string): string {
   return text
-    .replaceAll(/[ًٌٍَُِّْ]/g, '') // Remove diacritics
-    .replaceAll(/[أإآ]/g, 'ا') // Unify Alif
-    .replaceAll(/ى/g, 'ي') // Unify Ya
-    .replaceAll(/ة/g, 'ه') // Ta Marbuta as Ha
-    .replaceAll(/\s+/g, ''); // Remove spaces
+    .replace(/[ًٌٍَُِّْ]/g, '') // Remove diacritics
+    .replace(/[أإآ]/g, 'ا') // Unify Alif
+    .replace(/ى/g, 'ي') // Unify Ya
+    .replace(/ة/g, 'ه') // Ta Marbuta as Ha
+    .replace(/\s+/g, ''); // Remove spaces
 }
 
 function auditAbjad(text: string, abjadMap: Record<string, number>, elementsMap: Record<string, ElementType>): AbjadAudit {
@@ -152,7 +151,7 @@ function auditAbjad(text: string, abjadMap: Record<string, number>, elementsMap:
 
 // Helper functions for calculations
 function abjadSum(text: string, abjadMap: Record<string, number>): number {
-  const normalized = text.replaceAll(/[ًٌٍَُِّْ\s]/g, '');
+  const normalized = text.replace(/[ًٌٍَُِّْ\s]/g, '');
   return [...normalized].reduce((sum, char) => sum + (abjadMap[char] || 0), 0);
 }
 
@@ -173,7 +172,7 @@ function calculateWusta(n: number): number {
 
 function calculateKamal(n: number): number {
   // Kamāl (Perfection) - Sum of all digits in the number
-  return n.toString().split('').reduce((sum, digit) => sum + Number.parseInt(digit), 0);
+  return n.toString().split('').reduce((sum, digit) => sum + parseInt(digit), 0);
 }
 
 function calculateBast(n: number): number {
@@ -183,7 +182,7 @@ function calculateBast(n: number): number {
 
 function calculateSirri(n: number): number {
   // Sirrī (Secret/Hidden) - Reverse digits and take digital root
-  const reversed = Number.parseInt(n.toString().split('').reverse().join(''));
+  const reversed = parseInt(n.toString().split('').reverse().join(''));
   return calcDigitalRoot(reversed);
 }
 
@@ -219,7 +218,7 @@ function DisclaimerBanner({ onDismiss }: { onDismiss: () => void }) {
   useEffect(() => {
     const dismissedTime = localStorage.getItem('disclaimerDismissedAt');
     if (dismissedTime) {
-      const hoursSinceDismissed = (Date.now() - Number.parseInt(dismissedTime)) / (1000 * 60 * 60);
+      const hoursSinceDismissed = (Date.now() - parseInt(dismissedTime)) / (1000 * 60 * 60);
       if (hoursSinceDismissed < 24) {
         // Still within 24 hours, keep dismissed
         onDismiss();
@@ -408,13 +407,13 @@ interface HistoryItem {
 }
 
 function loadHistory(): HistoryItem[] {
-  if (typeof globalThis.window === 'undefined') return [];
+  if (typeof window === 'undefined') return [];
   const stored = localStorage.getItem('asrar-history');
   return stored ? JSON.parse(stored) : [];
 }
 
 function saveHistory(history: HistoryItem[]) {
-  if (typeof globalThis.window === 'undefined') return;
+  if (typeof window === 'undefined') return;
   localStorage.setItem('asrar-history', JSON.stringify(history));
 }
 
@@ -504,7 +503,7 @@ function HistoryPanel({
       item.hadathElement,
       item.category || '',
       (item.tags || []).join('; '),
-      (item.notes || '').replaceAll(/\n/g, ' ')
+      (item.notes || '').replace(/\n/g, ' ')
     ]);
     
     const csvContent = [headers, ...rows]
@@ -788,7 +787,7 @@ function BatchCalculator({ onClose, abjad, analyzeElements }: {
       r.hadathElement,
       r.dominant,
       r.secondary,
-      `${r.balance?.toFixed(1) ?? '0'}%`
+      `${r.balance.toFixed(1)}%`
     ]);
     
     const csvContent = [headers, ...rows]
@@ -912,7 +911,7 @@ function BatchCalculator({ onClose, abjad, analyzeElements }: {
                             {result.dominant}
                           </span>
                           <span className="bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-2 py-0.5 rounded">
-                            {result.balance?.toFixed(0) ?? '0'}%
+                            {result.balance.toFixed(0)}%
                           </span>
                         </div>
                       </div>
@@ -947,7 +946,7 @@ function BatchCalculator({ onClose, abjad, analyzeElements }: {
                   {language === 'en' ? 'Avg Balance' : language === 'fr' ? 'Équilibre Moy.' : 'متوسط التوازن'}
                 </div>
                 <div className="text-2xl font-bold text-green-900 dark:text-green-100">
-                  {(results.reduce((sum, r) => sum + (r.balance ?? 0), 0) / results.length).toFixed(0)}%
+                  {(results.reduce((sum, r) => sum + r.balance, 0) / results.length).toFixed(0)}%
                 </div>
               </div>
               <div className="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-lg">
@@ -1417,8 +1416,6 @@ export default function AsrarEveryday() {
   const [showBatchCalculator, setShowBatchCalculator] = useState(false);
   const [showKeyboard, setShowKeyboard] = useState(false);
   const [showCompatibility, setShowCompatibility] = useState(false);
-  const [copiedValue, setCopiedValue] = useState<string | null>(null);
-  const [isCalculating, setIsCalculating] = useState(false);
   
   // Collapsible sections state
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({
@@ -1540,14 +1537,7 @@ export default function AsrarEveryday() {
     const dominant = entries.reduce((a, b) => b[1] > a[1] ? b : a)[0];
     const secondary = entries.filter(([el]) => el !== dominant).reduce((a, b) => b[1] > a[1] ? b : a)[0];
     
-    // Calculate balance score
-    const countValues = Object.values(counts);
-    const total = countValues.reduce((a, b) => a + b, 0);
-    const avg = total / 4;
-    const variance = countValues.reduce((sum, count) => sum + Math.pow(count - avg, 2), 0) / 4;
-    const balance = Math.max(0, 100 - (variance / avg) * 20);
-    
-    return { counts, values, dominant, secondary, balance, audit };
+    return { counts, values, dominant, secondary, audit };
   };
   
   useEffect(() => {
@@ -1600,18 +1590,14 @@ export default function AsrarEveryday() {
   const calculate = () => {
     if (!arabicInput.trim()) return;
     
-    setIsCalculating(true);
-    
-    // Use setTimeout to allow UI to update
-    setTimeout(() => {
-      const audit = auditAbjad(arabicInput, abjad, LETTER_ELEMENTS);
-      const kabir = audit.total;
-      const saghir = calcDigitalRoot(kabir);
-      const hadath = calcHadathRemainder(kabir);
-      const hadathElement = hadathToElement(hadath);
-      const elementAnalysis = analyzeElements(arabicInput);
-      const sacredMatches = findSacredMatches(kabir);
-      const resonance = sacredResonance(kabir);
+    const audit = auditAbjad(arabicInput, abjad, LETTER_ELEMENTS);
+    const kabir = audit.total;
+    const saghir = calcDigitalRoot(kabir);
+    const hadath = calcHadathRemainder(kabir);
+    const hadathElement = hadathToElement(hadath);
+    const elementAnalysis = analyzeElements(arabicInput);
+    const sacredMatches = findSacredMatches(kabir);
+    const resonance = sacredResonance(kabir);
     
     // Advanced calculation methods
     const wusta = calculateWusta(kabir);
@@ -1678,57 +1664,6 @@ export default function AsrarEveryday() {
     const newHistory = [historyItem, ...history].slice(0, 50); // Keep last 50
     setHistory(newHistory);
     saveHistory(newHistory);
-    setIsCalculating(false);
-    }, 100);
-  };
-  
-  // Copy to clipboard function
-  const copyToClipboard = (text: string, label: string) => {
-    navigator.clipboard.writeText(text).then(() => {
-      setCopiedValue(label);
-      setTimeout(() => setCopiedValue(null), 2000);
-    }).catch(err => {
-      console.error('Failed to copy:', err);
-    });
-  };
-  
-  // Export current result as JSON
-  const exportResult = () => {
-    if (!result) return;
-    
-    const exportData = {
-      text: result.arabic,
-      display: result.display,
-      timestamp: new Date().toISOString(),
-      calculations: {
-        kabir: result.kabir,
-        saghir: result.saghir,
-        hadath: result.hadath,
-        hadathElement: result.hadathElement
-      },
-      elements: {
-        dominant: result.dominant,
-        secondary: result.secondary,
-        counts: result.counts,
-        values: result.values
-      },
-      advanced: {
-        wusta: result.wusta,
-        kamal: result.kamal,
-        bast: result.bast,
-        sirri: result.sirri
-      }
-    };
-    
-    const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `asrar-${result.arabic}-${Date.now()}.json`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
   };
   
   const handleHistorySelect = (item: HistoryItem) => {
@@ -1793,9 +1728,7 @@ export default function AsrarEveryday() {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 flex items-center justify-center">
         <div className="text-center">
-          <div className="flex justify-center mb-4">
-            <AsrarLogo size={80} variant="icon" element="aether" animate={true} />
-          </div>
+          <Sparkles className="w-16 h-16 text-indigo-600 dark:text-indigo-400 mx-auto mb-4 animate-pulse" />
           <p className="text-xl font-semibold text-slate-700 dark:text-slate-300">Loading Asrār...</p>
         </div>
       </div>
@@ -1812,7 +1745,7 @@ export default function AsrarEveryday() {
             <div className="flex md:hidden items-center justify-between gap-1">
               {/* Logo & Title */}
               <div className="flex items-center gap-1.5 flex-1 min-w-0">
-                <AsrarLogo size={32} variant="icon" element="aether" animate={true} />
+                <Sparkles className="w-5 h-5 text-indigo-600 dark:text-indigo-400 flex-shrink-0" />
                 <div className="min-w-0">
                   <h1 className="text-base font-bold text-slate-900 dark:text-slate-100 truncate">Asrār</h1>
                   <p className="text-[10px] text-slate-600 dark:text-slate-400 truncate hidden xs:block">ʿIlm al-Ḥurūf</p>
@@ -1824,8 +1757,10 @@ export default function AsrarEveryday() {
                 {/* User Menu */}
                 <UserMenu />
 
-                {/* Language Toggle */}
-                <LanguageToggle />
+                {/* Language Toggle - hide on very small screens */}
+                <div className="hidden xs:block">
+                  <LanguageToggle />
+                </div>
 
                 {/* History Button */}
                 <button
@@ -1856,9 +1791,9 @@ export default function AsrarEveryday() {
             <div className="hidden md:flex items-center justify-between">
               {/* Logo & Title */}
               <div className="flex items-center gap-3">
-                <AsrarLogo size={48} variant="icon" element="aether" animate={true} />
+                <Sparkles className="w-8 h-8 text-indigo-600 dark:text-indigo-400 flex-shrink-0" />
                 <div>
-                  <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100">Asrār</h1>
+                  <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100">Asrār Everyday</h1>
                   <p className="text-xs text-slate-600 dark:text-slate-400">ʿIlm al-Ḥurūf & ʿIlm al-ʿAdad Explorer</p>
                 </div>
               </div>
@@ -2167,23 +2102,7 @@ export default function AsrarEveryday() {
                   dir="rtl"
                   className="w-full px-3 sm:px-4 py-3 sm:py-4 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-600 focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400 outline-none transition-all text-2xl sm:text-3xl font-arabic"
                   style={{ fontFamily: "'Noto Naskh Arabic', 'Amiri', serif" }}
-                  maxLength={200}
                 />
-                {arabicInput.length > 0 && (
-                  <div className="flex items-center justify-between mt-1">
-                    <p className="text-xs text-slate-500 dark:text-slate-400">
-                      {t.calculator.examples}: يس (70), بسم الله (786), باكا (108)
-                    </p>
-                    <span className={`text-xs ${arabicInput.length > 150 ? 'text-amber-600 dark:text-amber-400' : 'text-slate-400 dark:text-slate-500'}`}>
-                      {arabicInput.length}/200
-                    </span>
-                  </div>
-                )}
-                {arabicInput.length === 0 && (
-                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                    {t.calculator.examples}: يس (70), بسم الله (786), باكا (108)
-                  </p>
-                )}
                 {showKeyboard && (
                   <div className="mt-3 overflow-x-auto">
                     <ArabicKeyboard 
@@ -2192,6 +2111,9 @@ export default function AsrarEveryday() {
                     />
                   </div>
                 )}
+                <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                  {t.calculator.examples}: يس (70), بسم الله (786), باكا (108)
+                </p>
                 {translitResult && translitResult.candidates.length > 1 && (
                   <div className="mt-2 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
                     <p className="text-xs font-medium text-blue-900 dark:text-blue-100 mb-2">Alternative spellings:</p>
@@ -2216,61 +2138,20 @@ export default function AsrarEveryday() {
                 )}
               </div>
               
-              <div className="flex gap-2">
-                <button
-                  onClick={calculate}
-                  disabled={!arabicInput.trim() || isCalculating}
-                  className="flex-1 py-3 px-4 sm:px-6 bg-indigo-600 hover:bg-indigo-700 disabled:bg-slate-300 dark:disabled:bg-slate-700 text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2 text-base sm:text-lg min-h-[44px]"
-                >
-                  {isCalculating ? (
-                    <>
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                      {language === 'en' ? 'Calculating...' : language === 'fr' ? 'Calcul...' : 'جاري الحساب...'}
-                    </>
-                  ) : (
-                    <>
-                      <Sparkles className="w-5 h-5" />
-                      {t.calculator.calculateButton}
-                    </>
-                  )}
-                </button>
-                {(arabicInput.trim() || latinInput.trim()) && (
-                  <button
-                    onClick={() => {
-                      setArabicInput('');
-                      setLatinInput('');
-                      setTranslitResult(null);
-                      setResult(null);
-                      setDisplayName('');
-                    }}
-                    className="px-4 py-3 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-300 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 min-h-[44px]"
-                    title={language === 'en' ? 'Clear all' : language === 'fr' ? 'Tout effacer' : 'مسح الكل'}
-                  >
-                    <X className="w-5 h-5" />
-                    <span className="hidden sm:inline">{language === 'en' ? 'Clear' : language === 'fr' ? 'Effacer' : 'مسح'}</span>
-                  </button>
-                )}
-              </div>
+              <button
+                onClick={calculate}
+                disabled={!arabicInput.trim()}
+                className="w-full py-3 px-4 sm:px-6 bg-indigo-600 hover:bg-indigo-700 disabled:bg-slate-300 dark:disabled:bg-slate-700 text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2 text-base sm:text-lg min-h-[44px]"
+              >
+                <Sparkles className="w-5 h-5" />
+                {t.calculator.calculateButton}
+              </button>
             </div>
           </div>
           
           {/* Results - Mobile Responsive with Educational Interface */}
           {result && (
             <div className="space-y-6 sm:space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-              
-              {/* Export Button */}
-              <div className="flex justify-end">
-                <button
-                  onClick={exportResult}
-                  className="flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg transition-colors text-sm font-medium"
-                  title={language === 'en' ? 'Export results as JSON' : language === 'fr' ? 'Exporter en JSON' : 'تصدير كـ JSON'}
-                >
-                  <Download className="w-4 h-4" />
-                  <span className="hidden sm:inline">
-                    {language === 'en' ? 'Export JSON' : language === 'fr' ? 'Exporter JSON' : 'تصدير JSON'}
-                  </span>
-                </button>
-              </div>
               
               {/* 1. Educational Context Banner */}
               <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-900/30 dark:to-purple-900/30 rounded-xl p-4 sm:p-6 border border-indigo-200 dark:border-indigo-800">
@@ -2305,23 +2186,10 @@ export default function AsrarEveryday() {
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                   {/* Kabīr Card */}
-                  <div className="group relative bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-900/40 rounded-xl p-4 border border-blue-200 dark:border-blue-800 hover:shadow-lg transition-all duration-300">
+                  <div className="group relative bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-900/40 rounded-xl p-4 border border-blue-200 dark:border-blue-800 hover:shadow-lg transition-all duration-300 cursor-help">
                     <div className="flex items-start justify-between mb-2">
                       <span className="text-xs font-semibold text-blue-700 dark:text-blue-300 uppercase tracking-wide">{t.calculator.kabir.label}</span>
-                      <div className="flex items-center gap-1">
-                        <button
-                          onClick={() => copyToClipboard(result.kabir.toString(), 'kabir')}
-                          className="p-1 hover:bg-blue-200 dark:hover:bg-blue-800 rounded transition-colors"
-                          title={language === 'en' ? 'Copy value' : language === 'fr' ? 'Copier' : 'نسخ'}
-                        >
-                          {copiedValue === 'kabir' ? (
-                            <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400" />
-                          ) : (
-                            <Copy className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-                          )}
-                        </button>
-                        <Info className="w-4 h-4 text-blue-600 dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity cursor-help" />
-                      </div>
+                      <Info className="w-4 h-4 text-blue-600 dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </div>
                     <div className="text-3xl font-bold text-blue-900 dark:text-blue-100 mb-1">{result.kabir}</div>
                     <p className="text-xs text-blue-700 dark:text-blue-300">{t.calculator.totalOfAllLetterValues}</p>
@@ -2331,23 +2199,10 @@ export default function AsrarEveryday() {
                   </div>
 
                   {/* Ṣaghīr Card */}
-                  <div className="group relative bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-900/20 dark:to-emerald-900/40 rounded-xl p-4 border border-emerald-200 dark:border-emerald-800 hover:shadow-lg transition-all duration-300">
+                  <div className="group relative bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-900/20 dark:to-emerald-900/40 rounded-xl p-4 border border-emerald-200 dark:border-emerald-800 hover:shadow-lg transition-all duration-300 cursor-help">
                     <div className="flex items-start justify-between mb-2">
                       <span className="text-xs font-semibold text-emerald-700 dark:text-emerald-300 uppercase tracking-wide">{t.calculator.saghir.label}</span>
-                      <div className="flex items-center gap-1">
-                        <button
-                          onClick={() => copyToClipboard(result.saghir.toString(), 'saghir')}
-                          className="p-1 hover:bg-emerald-200 dark:hover:bg-emerald-800 rounded transition-colors"
-                          title={language === 'en' ? 'Copy value' : language === 'fr' ? 'Copier' : 'نسخ'}
-                        >
-                          {copiedValue === 'saghir' ? (
-                            <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400" />
-                          ) : (
-                            <Copy className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                          )}
-                        </button>
-                        <Info className="w-4 h-4 text-emerald-600 dark:text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity cursor-help" />
-                      </div>
+                      <Info className="w-4 h-4 text-emerald-600 dark:text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </div>
                     <div className="text-3xl font-bold text-emerald-900 dark:text-emerald-100 mb-1">{result.saghir}</div>
                     <p className="text-xs text-emerald-700 dark:text-emerald-300">{t.calculator.digitalRoot}</p>
@@ -3765,100 +3620,17 @@ export default function AsrarEveryday() {
           />
         )}
         
-        {/* Footer - Professional */}
-        <footer className="border-t border-slate-200 dark:border-slate-700 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-950 mt-12">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-            {/* Main Footer Content */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              {/* Logo & App Info */}
-              <div className="flex flex-col items-center md:items-start space-y-4">
-                <div className="flex items-center space-x-3">
-                  <AsrarLogo size={48} variant="icon" element="aether" animate={true} />
-                  <div>
-                    <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100">أسرار</h3>
-                    <p className="text-xs text-slate-500 dark:text-slate-400">Asrār</p>
-                  </div>
-                </div>
-                <p className="text-sm text-slate-600 dark:text-slate-400 text-center md:text-left max-w-xs">
-                  {language === 'fr' 
-                    ? 'Une plateforme pour explorer la sagesse spirituelle et le timing divin'
-                    : 'A platform for spiritual wisdom and divine timing exploration'
-                  }
-                </p>
-              </div>
-
-              {/* Important Notice */}
-              <div className="flex flex-col items-center space-y-3">
-                <div className="inline-flex items-center space-x-2 px-4 py-2 bg-amber-100 dark:bg-amber-900/30 rounded-lg">
-                  <svg className="w-5 h-5 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                  </svg>
-                  <span className="text-xs font-semibold text-amber-800 dark:text-amber-300">
-                    {language === 'fr' ? 'Avis important' : 'Important Notice'}
-                  </span>
-                </div>
-                <p className="text-xs text-center text-slate-600 dark:text-slate-400 max-w-sm">
-                  {language === 'fr'
-                    ? 'À des fins éducatives et culturelles uniquement • Consultez toujours des érudits qualifiés pour des conseils religieux'
-                    : 'For educational and cultural exploration only • Always consult qualified scholars for religious guidance'
-                  }
-                </p>
-              </div>
-
-              {/* Powered By */}
-              <div className="flex flex-col items-center md:items-end space-y-3">
-                <p className="text-xs text-slate-500 dark:text-slate-400">
-                  {language === 'fr' ? 'Propulsé par' : 'Powered by'}
-                </p>
-                <a 
-                  href="https://zaibaitech.com/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="group flex flex-col items-center md:items-end space-y-1 transition-transform hover:scale-105"
-                >
-                  <div className="flex items-center space-x-2">
-                    <span className="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                      Zaibai Tech
-                    </span>
-                    <svg className="w-4 h-4 text-purple-600 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </div>
-                  <span className="text-xs text-slate-500 dark:text-slate-400 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
-                    zaibaitech.com
-                  </span>
-                </a>
+        {/* Footer - Mobile Responsive */}
+        <footer className="border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 mt-12">
+          <div className="max-w-6xl mx-auto px-3 sm:px-4 py-6 space-y-3">
+            <div className="flex justify-center">
+              <div className="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg shadow-lg text-center">
+                <p className="text-sm sm:text-base font-semibold">Built with Next.js, TypeScript, and Tailwind CSS</p>
               </div>
             </div>
-
-            {/* Bottom Bar */}
-            <div className="pt-6 border-t border-slate-200 dark:border-slate-700">
-              <div className="flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-0">
-                <p className="text-xs text-slate-500 dark:text-slate-400">
-                  © {new Date().getFullYear()} {language === 'fr' ? 'Tous droits réservés' : 'All rights reserved'}
-                </p>
-                <div className="flex items-center space-x-4 text-xs text-slate-500 dark:text-slate-400">
-                  <span className="flex items-center space-x-1">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                    </svg>
-                    <span>Next.js</span>
-                  </span>
-                  <span className="text-slate-300 dark:text-slate-600">•</span>
-                  <span className="flex items-center space-x-1">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                    </svg>
-                    <span>TypeScript</span>
-                  </span>
-                  <span className="text-slate-300 dark:text-slate-600">•</span>
-                  <span className="flex items-center space-x-1">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                    </svg>
-                    <span>Tailwind CSS</span>
-                  </span>
-                </div>
+            <div className="flex justify-center">
+              <div className="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-lg shadow-lg text-center max-w-2xl">
+                <p className="text-sm sm:text-base font-semibold">For educational and cultural exploration only • Always consult qualified scholars for religious guidance</p>
               </div>
             </div>
           </div>
