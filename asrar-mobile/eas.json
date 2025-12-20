@@ -8,10 +8,8 @@
       "developmentClient": true,
       "distribution": "internal",
       "android": {
-        "buildType": "apk"
-      },
-      "env": {
-        "EAS_BUILD_POST_INSTALL": "./eas-build-post-install.sh"
+        "buildType": "apk",
+        "withoutCredentials": false
       }
     },
     "preview": {
