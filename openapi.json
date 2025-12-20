@@ -1,0 +1,527 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Asrar Everyday API",
+    "version": "1.0.0",
+    "description": "RESTful API for Islamic spiritual calculations based on ʿIlm al-Ḥurūf (Science of Letters). Provides endpoints for name destiny analysis, spiritual guidance (Istikhara), and relationship compatibility assessment.",
+    "contact": {
+      "name": "Asrar Everyday Support",
+      "email": "support@asrar-everyday.com"
+    },
+    "license": {
+      "name": "Proprietary",
+      "url": "https://asrar-everyday.com/license"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000/api/v1",
+      "description": "Development server"
+    },
+    {
+      "url": "https://api.asrar-everyday.com/v1",
+      "description": "Production server"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Name Analysis",
+      "description": "Endpoints for name destiny and spiritual analysis"
+    },
+    {
+      "name": "Spiritual Guidance",
+      "description": "Istikhara and divine guidance calculations"
+    },
+    {
+      "name": "Compatibility",
+      "description": "Relationship compatibility analysis"
+    }
+  ],
+  "paths": {
+    "/name-destiny": {
+      "post": {
+        "tags": ["Name Analysis"],
+        "summary": "Calculate Name Destiny Analysis",
+        "description": "Performs complete ʿIlm al-Ḥurūf analysis including Kabīr, Ṣaghīr, Ḥadath calculations, Element and Burj determination, Quranic verse resonance, and Divine Name alignment. Optionally includes Life Path numbers and maternal influence.",
+        "operationId": "calculateNameDestiny",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NameDestinyRequest"
+              },
+              "examples": {
+                "basic": {
+                  "summary": "Basic name analysis",
+                  "value": {
+                    "personName": "Muhammad",
+                    "language": "en",
+                    "abjadSystem": "maghribi"
+                  }
+                },
+                "withMotherAndBirthDate": {
+                  "summary": "Complete analysis with mother name and birth date",
+                  "value": {
+                    "personName": "Fatimah",
+                    "motherName": "Aisha",
+                    "birthDate": "1990-05-15",
+                    "language": "en",
+                    "abjadSystem": "maghribi"
+                  }
+                },
+                "latinName": {
+                  "summary": "Latin name (auto-transliterated)",
+                  "value": {
+                    "personName": "Omar",
+                    "language": "fr",
+                    "abjadSystem": "mashriqi"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful name destiny analysis",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NameDestinyResponse"
+                },
+                "example": {
+                  "success": true,
+                  "data": {
+                    "personName": "Muhammad",
+                    "personNameArabic": "محمد",
+                    "calculations": {
+                      "kabir": 140,
+                      "saghir": 5,
+                      "hadath": 0
+                    },
+                    "element": {
+                      "en": "Earth",
+                      "fr": "Terre",
+                      "ar": "تراب",
+                      "icon": "🌍"
+                    },
+                    "burj": {
+                      "en": "Scorpio",
+                      "fr": "Scorpion",
+                      "ar": "العقرب",
+                      "symbol": "♏",
+                      "planet": "Mars"
+                    },
+                    "divineNameResonance": {
+                      "number": 41,
+                      "arabic": "الجَلِيل",
+                      "transliteration": "Al-Jalīl",
+                      "meaningEn": "The Majestic",
+                      "spiritualInfluence": "Majesty & Splendor"
+                    },
+                    "quranResonance": {
+                      "surahNumber": 26,
+                      "surahName": "Ash-Shu'ara",
+                      "ayahNumber": 140,
+                      "quranLink": "https://quran.com/26/140"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/ValidationError"
+          },
+          "500": {
+            "$ref": "#/components/responses/ServerError"
+          }
+        }
+      }
+    },
+    "/istikhara": {
+      "post": {
+        "tags": ["Spiritual Guidance"],
+        "summary": "Calculate Istikhara Spiritual Guidance",
+        "description": "Performs Istikharah al-Asmā' calculation based on person's name and mother's name. Determines Buruj position (1-12), element classification, spiritual profile, and provides Divine Name practice recommendations.",
+        "operationId": "calculateIstikhara",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IstikharaRequest"
+              },
+              "examples": {
+                "basic": {
+                  "summary": "Basic Istikhara calculation",
+                  "value": {
+                    "personName": "Omar",
+                    "motherName": "Aisha",
+                    "language": "en",
+                    "abjadSystem": "maghribi"
+                  }
+                },
+                "mashriqi": {
+                  "summary": "Using Mashriqi system",
+                  "value": {
+                    "personName": "زينب",
+                    "motherName": "فاطمة",
+                    "language": "ar",
+                    "abjadSystem": "mashriqi"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Istikhara calculation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IstikharaResponse"
+                },
+                "example": {
+                  "success": true,
+                  "data": {
+                    "personName": "Omar",
+                    "motherName": "Aisha",
+                    "calculations": {
+                      "personTotal": 318,
+                      "motherTotal": 241,
+                      "combinedTotal": 559,
+                      "burujIndex": 7
+                    },
+                    "buruj": {
+                      "en": "Libra",
+                      "fr": "Balance",
+                      "ar": "الميزان",
+                      "symbol": "♎"
+                    },
+                    "element": {
+                      "en": "Air",
+                      "icon": "💨"
+                    },
+                    "spiritualProfile": {
+                      "en": "Balance, Justice, Harmony - Seek fairness in all matters",
+                      "divineNameRepetition": 559
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/ValidationError"
+          },
+          "500": {
+            "$ref": "#/components/responses/ServerError"
+          }
+        }
+      }
+    },
+    "/compatibility": {
+      "post": {
+        "tags": ["Compatibility"],
+        "summary": "Calculate Relationship Compatibility",
+        "description": "Analyzes compatibility between two individuals using three methods (Spiritual-Destiny/Mod-9, Elemental-Temperament/Mod-4, Planetary-Cosmic/Mod-7). When mother names are provided, performs advanced four-layer analysis examining different relationship dimensions.",
+        "operationId": "calculateCompatibility",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompatibilityRequest"
+              },
+              "examples": {
+                "basic": {
+                  "summary": "Basic 3-method compatibility",
+                  "value": {
+                    "person1Name": "Ahmad",
+                    "person2Name": "Khadija",
+                    "language": "en",
+                    "abjadSystem": "maghribi"
+                  }
+                },
+                "fourLayer": {
+                  "summary": "Four-layer deep analysis",
+                  "value": {
+                    "person1Name": "Hassan",
+                    "person1MotherName": "Zainab",
+                    "person2Name": "Fatima",
+                    "person2MotherName": "Maryam",
+                    "language": "en",
+                    "abjadSystem": "maghribi"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful compatibility analysis",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CompatibilityResponse"
+                },
+                "example": {
+                  "success": true,
+                  "data": {
+                    "person1": {
+                      "name": "Hassan",
+                      "arabicName": "حسن"
+                    },
+                    "person2": {
+                      "name": "Fatima",
+                      "arabicName": "فاطمة"
+                    },
+                    "basicMethods": {
+                      "spiritualDestiny": {
+                        "score": 78,
+                        "quality": "excellent"
+                      },
+                      "elementalTemperament": {
+                        "score": 65,
+                        "quality": "good"
+                      },
+                      "planetaryCosmic": {
+                        "score": 54,
+                        "quality": "moderate"
+                      }
+                    },
+                    "overallScore": 66,
+                    "compatibilityQuality": "good",
+                    "recommendation": "Strong foundation with good prospects. Work on communication."
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/ValidationError"
+          },
+          "500": {
+            "$ref": "#/components/responses/ServerError"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "NameDestinyRequest": {
+        "type": "object",
+        "required": ["personName", "language"],
+        "properties": {
+          "personName": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100,
+            "description": "Person's name in Arabic or Latin characters (auto-transliterated)",
+            "example": "Muhammad"
+          },
+          "motherName": {
+            "type": "string",
+            "maxLength": 100,
+            "description": "Mother's name (optional, for maternal influence)",
+            "example": "Fatimah"
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Birth date in ISO 8601 format (YYYY-MM-DD) for Life Path calculation",
+            "example": "1990-05-15"
+          },
+          "language": {
+            "type": "string",
+            "enum": ["en", "fr", "ar"],
+            "description": "Response language",
+            "example": "en"
+          },
+          "abjadSystem": {
+            "type": "string",
+            "enum": ["maghribi", "mashriqi"],
+            "default": "maghribi",
+            "description": "Abjad calculation system (Maghribi for Western tradition, Mashriqi for Eastern)",
+            "example": "maghribi"
+          }
+        }
+      },
+      "IstikharaRequest": {
+        "type": "object",
+        "required": ["personName", "motherName", "language"],
+        "properties": {
+          "personName": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100,
+            "example": "Omar"
+          },
+          "motherName": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100,
+            "example": "Aisha"
+          },
+          "language": {
+            "type": "string",
+            "enum": ["en", "fr", "ar"],
+            "example": "en"
+          },
+          "abjadSystem": {
+            "type": "string",
+            "enum": ["maghribi", "mashriqi"],
+            "default": "maghribi",
+            "example": "maghribi"
+          }
+        }
+      },
+      "CompatibilityRequest": {
+        "type": "object",
+        "required": ["person1Name", "person2Name", "language"],
+        "properties": {
+          "person1Name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100,
+            "example": "Ahmad"
+          },
+          "person1MotherName": {
+            "type": "string",
+            "maxLength": 100,
+            "description": "For four-layer analysis",
+            "example": "Zainab"
+          },
+          "person2Name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100,
+            "example": "Khadija"
+          },
+          "person2MotherName": {
+            "type": "string",
+            "maxLength": 100,
+            "description": "For four-layer analysis",
+            "example": "Maryam"
+          },
+          "language": {
+            "type": "string",
+            "enum": ["en", "fr", "ar"],
+            "example": "en"
+          },
+          "abjadSystem": {
+            "type": "string",
+            "enum": ["maghribi", "mashriqi"],
+            "default": "maghribi",
+            "example": "maghribi"
+          }
+        }
+      },
+      "NameDestinyResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "data": {
+            "type": "object"
+          }
+        }
+      },
+      "IstikharaResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "data": {
+            "type": "object"
+          }
+        }
+      },
+      "CompatibilityResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "data": {
+            "type": "object"
+          }
+        }
+      },
+      "ApiError": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": false
+          },
+          "error": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string",
+                "example": "VALIDATION_ERROR"
+              },
+              "message": {
+                "type": "string",
+                "example": "Invalid input parameters"
+              },
+              "details": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "ValidationError": {
+        "description": "Validation error - invalid input parameters",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ApiError"
+            },
+            "example": {
+              "success": false,
+              "error": {
+                "code": "VALIDATION_ERROR",
+                "message": "Invalid input parameters",
+                "details": {
+                  "personName": "Name must be between 1 and 100 characters"
+                }
+              }
+            }
+          }
+        }
+      },
+      "ServerError": {
+        "description": "Internal server error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ApiError"
+            },
+            "example": {
+              "success": false,
+              "error": {
+                "code": "INTERNAL_ERROR",
+                "message": "An unexpected error occurred"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
