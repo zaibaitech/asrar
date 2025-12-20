@@ -152,7 +152,7 @@ export async function POST(request: NextRequest) {
 
       // Element data
       element: {
-        index: destinyResult.element.index,
+        index: destinyResult.element.index as 1 | 2 | 3 | 4,
         en: destinyResult.element.en,
         fr: destinyResult.element.fr,
         ar: destinyResult.element.ar,
