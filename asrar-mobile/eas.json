@@ -9,6 +9,9 @@
       "distribution": "internal",
       "android": {
         "buildType": "apk"
+      },
+      "env": {
+        "EAS_BUILD_POST_INSTALL": "./eas-build-post-install.sh"
       }
     },
     "preview": {
