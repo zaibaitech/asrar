@@ -5,6 +5,9 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.zaibaitech.asrarmobile"
@@ -12,6 +15,10 @@
     "android": {
       "package": "com.zaibaitech.asrarmobile"
     },
+    "plugins": [
+      "expo-router"
+    ],
+    "scheme": "asrar-mobile",
     "extra": {
       "eas": {
         "projectId": "92154153-0f9a-4685-b469-75ca8e3ce08b"
