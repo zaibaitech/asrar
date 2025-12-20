@@ -163,7 +163,7 @@ export async function POST(request: NextRequest) {
 
       // Zodiac data
       burj: {
-        index: destinyResult.burj.index,
+        index: destinyResult.burj.index as 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12,
         en: destinyResult.burj.en,
         fr: destinyResult.burj.fr,
         ar: destinyResult.burj.ar,
