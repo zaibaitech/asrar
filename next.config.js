@@ -5,6 +5,16 @@ const nextConfig = {
   compress: true,
   productionBrowserSourceMaps: false,
   
+  // Rewrites - Email verification redirect
+  async rewrites() {
+    return [
+      {
+        source: '/auth/verify',
+        destination: '/auth/verify.html',
+      },
+    ];
+  },
+
   // Security Headers - DevSecOps Best Practices
   async headers() {
     return [
