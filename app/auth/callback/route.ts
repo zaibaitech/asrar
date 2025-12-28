@@ -43,10 +43,12 @@ export async function GET(request: NextRequest) {
         .from('profiles')
         .select('id, full_name, date_of_birth')
         .eq('id', userId)
-        .single();
+        .maybeSingle() as { 
+          data: { id: string; full_name: string | null; date_of_birth: string | null } | null; 
+          error: any 
+        };
 
-      if (profileError && profileError.code !== 'PGRST116') {
-        // PGRST116 is "not found" error, which is expected for new users
+      if (profileError) {
         console.error('Error checking profile:', profileError);
       }
 
