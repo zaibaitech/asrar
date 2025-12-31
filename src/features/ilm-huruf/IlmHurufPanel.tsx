@@ -3912,14 +3912,16 @@ function DestinyResults({ results }: { results: any }) {
                   <div className="flex items-center justify-center gap-3 mb-6">
                     <span className="text-4xl">🕌</span>
                     <h4 className="text-xl sm:text-2xl font-bold text-purple-900 dark:text-purple-200">
-                      {t.nameDestiny.divineNameResonance.title}
+                      {isFr ? 'Nom Divin Gouvernant' : 'Governing Divine Name'}
                     </h4>
                   </div>
 
                   {/* Divine Name Display */}
                   <div className="text-center mb-6 space-y-3">
                     <p className="text-sm text-purple-700 dark:text-purple-300">
-                      {t.nameDestiny.divineNameResonance.subtitle}
+                      {isFr 
+                        ? 'Le Nom Divin correspondant à votre nom (Cycle de 28 Lettres)'
+                        : 'The Divine Name corresponding to your name (28-Letter Cycle)'}
                     </p>
                     <div className="bg-gradient-to-br from-violet-600 via-purple-700 to-indigo-700 dark:from-violet-500 dark:via-purple-600 dark:to-indigo-600 rounded-2xl p-6 sm:p-8 text-white shadow-2xl border border-purple-400/30">
                       <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-3 font-arabic leading-tight">
@@ -3934,26 +3936,96 @@ function DestinyResults({ results }: { results: any }) {
                     </div>
                   </div>
 
-                  {/* Spiritual Influence & Reflection */}
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/40 dark:to-purple-800/30 rounded-xl p-5 border border-purple-200 dark:border-purple-700">
-                      <div className="flex items-center gap-2 mb-2 text-purple-900 dark:text-purple-200 font-semibold">
-                        <Sparkles className="w-5 h-5" />
-                        <span>{t.nameDestiny.divineNameResonance.spiritualInfluence}</span>
+                  {/* How it was derived */}
+                  {results.nameDestiny.divineNameResonance.abjadTotal && results.nameDestiny.divineNameResonance.resonanceIndex && (
+                    <div className="mb-6 bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-900/30 dark:to-blue-900/30 rounded-xl p-5 border border-indigo-200 dark:border-indigo-700">
+                      <h5 className="text-base font-bold text-indigo-900 dark:text-indigo-200 mb-4 flex items-center gap-2">
+                        <Info className="w-5 h-5" />
+                        <span>{isFr ? 'Comment cela a été dérivé' : 'How it was derived'}</span>
+                      </h5>
+                      <div className="grid sm:grid-cols-2 gap-4">
+                        <div className="bg-white/50 dark:bg-slate-800/50 rounded-lg p-4 border border-indigo-300 dark:border-indigo-600">
+                          <div className="text-xs uppercase tracking-wider text-indigo-700 dark:text-indigo-300 mb-1 font-semibold">
+                            {isFr ? 'Total Abjad (Kabīr)' : 'Abjad Total (Kabīr)'}
+                          </div>
+                          <div className="text-3xl font-bold text-indigo-900 dark:text-indigo-200">
+                            {results.nameDestiny.divineNameResonance.abjadTotal}
+                          </div>
+                          <div className="text-xs text-indigo-600 dark:text-indigo-400 mt-1">
+                            {isFr ? 'Valeur totale des lettres' : 'Sum of letter values'}
+                          </div>
+                        </div>
+                        <div className="bg-white/50 dark:bg-slate-800/50 rounded-lg p-4 border border-purple-300 dark:border-purple-600">
+                          <div className="text-xs uppercase tracking-wider text-purple-700 dark:text-purple-300 mb-1 font-semibold">
+                            {isFr ? 'Index de Résonance' : 'Resonance Index'}
+                          </div>
+                          <div className="text-3xl font-bold text-purple-900 dark:text-purple-200">
+                            {results.nameDestiny.divineNameResonance.resonanceIndex}
+                            <span className="text-base font-normal text-purple-600 dark:text-purple-400 ml-1">/28</span>
+                          </div>
+                          <div className="text-xs text-purple-600 dark:text-purple-400 mt-1">
+                            {isFr ? 'Cycle de 28 lettres arabes' : '28-letter Arabic cycle'}
+                          </div>
+                        </div>
                       </div>
-                      <p className="text-sm text-purple-800 dark:text-purple-300 leading-relaxed">
-                        {isFr ? results.nameDestiny.divineNameResonance.spiritualInfluenceFr : results.nameDestiny.divineNameResonance.spiritualInfluence}
-                      </p>
+                      {results.nameDestiny.divineNameResonance.governingLetter && (
+                        <div className="mt-4 text-center">
+                          <div className="text-sm text-indigo-700 dark:text-indigo-300">
+                            {isFr ? 'Lettre gouvernante:' : 'Governing letter:'} 
+                            <span className="font-bold text-2xl mx-2 font-arabic text-indigo-900 dark:text-indigo-200">
+                              {results.nameDestiny.divineNameResonance.governingLetter}
+                            </span>
+                            {isFr 
+                              ? `(Position ${results.nameDestiny.divineNameResonance.resonanceIndex} dans l'alphabet arabe)`
+                              : `(Position ${results.nameDestiny.divineNameResonance.resonanceIndex} in Arabic alphabet)`}
+                          </div>
+                        </div>
+                      )}
                     </div>
+                  )}
 
-                    <div className="bg-gradient-to-br from-pink-50 to-pink-100 dark:from-pink-900/40 dark:to-pink-800/30 rounded-xl p-5 border border-pink-200 dark:border-pink-700">
-                      <div className="flex items-center gap-2 mb-2 text-pink-900 dark:text-pink-200 font-semibold">
-                        <Heart className="w-5 h-5" />
-                        <span>{t.nameDestiny.divineNameResonance.reflection}</span>
+                  {/* Dhikr (Optional) */}
+                  {results.nameDestiny.divineNameResonance.dhikrCount && (
+                    <div className="mb-6 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30 rounded-xl p-5 border border-emerald-200 dark:border-emerald-700">
+                      <h5 className="text-base font-bold text-emerald-900 dark:text-emerald-200 mb-3 flex items-center gap-2">
+                        <Sparkles className="w-5 h-5" />
+                        <span>{isFr ? 'Dhikr (Optionnel)' : 'Dhikr (Optional)'}</span>
+                      </h5>
+                      <div className="space-y-3">
+                        <div className="bg-white/50 dark:bg-slate-800/50 rounded-lg p-4 border border-emerald-300 dark:border-emerald-600 text-center">
+                          <div className="text-sm text-emerald-700 dark:text-emerald-300 mb-2">
+                            {isFr ? 'Compte recommandé' : 'Recommended count'}
+                          </div>
+                          <div className="text-4xl font-bold text-emerald-900 dark:text-emerald-200 mb-1">
+                            {results.nameDestiny.divineNameResonance.dhikrCount}
+                          </div>
+                          <div className="text-xs text-emerald-600 dark:text-emerald-400">
+                            {isFr 
+                              ? `Valeur Abjad de ${results.nameDestiny.divineNameResonance.arabic}`
+                              : `Abjad value of ${results.nameDestiny.divineNameResonance.arabic}`}
+                          </div>
+                        </div>
+                        <div className="text-sm text-emerald-800 dark:text-emerald-300 leading-relaxed">
+                          {isFr 
+                            ? "Ce Nom Divin peut être utilisé dans le dhikr (rappel d'Allah), cherchant la proximité, le pardon ou l'aide selon son intention (niyyah)."
+                            : "This Divine Name may be used in dhikr (remembrance of Allah), seeking closeness, forgiveness, or help according to one's intention (niyyah)."}
+                        </div>
+                        <div className="text-xs text-emerald-700 dark:text-emerald-400 italic text-center font-arabic">
+                          يُذكَر هذا الاسم في الذِّكر تقرُّبًا إلى الله وحسب النِّيَّة
+                        </div>
                       </div>
-                      <p className="text-sm text-pink-800 dark:text-pink-300 leading-relaxed">
-                        {isFr ? results.nameDestiny.divineNameResonance.reflectionFr : results.nameDestiny.divineNameResonance.reflection}
-                      </p>
+                    </div>
+                  )}
+
+                  {/* Important Disclaimer */}
+                  <div className="bg-amber-50 dark:bg-amber-900/30 rounded-xl p-4 border border-amber-200 dark:border-amber-700">
+                    <div className="flex gap-3">
+                      <Info className="w-5 h-5 text-amber-700 dark:text-amber-300 flex-shrink-0 mt-0.5" />
+                      <div className="text-sm text-amber-800 dark:text-amber-300 leading-relaxed">
+                        {isFr
+                          ? "Cette correspondance est basée sur ʿIlm al-Ḥurūf (Science des Lettres) de la tradition Maghribī. C'est une correspondance spirituelle, pas une garantie de destin."
+                          : "This correspondence is based on ʿIlm al-Ḥurūf (Science of Letters) from Maghribī tradition. It is a spiritual correspondence, not a guarantee of destiny."}
+                      </div>
                     </div>
                   </div>
                 </div>

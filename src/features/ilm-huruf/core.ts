@@ -704,7 +704,7 @@ export interface NameDestinyResult {
   expression: ElementData;     // Element from person's name alone
   foundation?: ElementData;    // Element from mother's name (if provided)
   // Higher Resonance Insights
-  divineNameResonance?: import('./divineNames').DivineName;
+  divineNameResonance?: any; // Flexible type to support both old (99-name) and new (28-letter) systems
   colorResonance?: import('./colorResonance').ColorResonanceResult;
   elementDistribution?: Record<'fire' | 'air' | 'water' | 'earth', number>;
   // Pattern Recognition
@@ -789,13 +789,35 @@ export function buildDestiny(
   // Calculate element distribution for color resonance (from person's name letters)
   const elementDistribution = calculateElementDistributionFromName(personName);
   
-  // Calculate Divine Name Resonance (uses PERSONAL NAME ONLY - authentic tradition)
+  // Calculate Divine Name Resonance (uses PERSONAL NAME ONLY - authentic 28-letter cycle tradition)
   let divineNameResonance;
   try {
-    const { calculateDivineNameResonance } = require('./divineNames');
-    divineNameResonance = calculateDivineNameResonance(personKabir); // ✅ Changed from totalKabir
+    const { calculateDivineNameResonance } = require('../../utils/divineNameResonance');
+    const resonanceResult = calculateDivineNameResonance(personName);
+    
+    // Map to the expected format for UI compatibility
+    if (resonanceResult) {
+      divineNameResonance = {
+        arabic: resonanceResult.governingName,
+        transliteration: resonanceResult.transliteration,
+        meaningEn: resonanceResult.translation.en,
+        meaningFr: resonanceResult.translation.fr,
+        // Add metadata for the new display
+        governingLetter: resonanceResult.governingLetter,
+        resonanceIndex: resonanceResult.resonanceIndex,
+        abjadTotal: resonanceResult.abjadTotal,
+        dhikrCount: resonanceResult.dhikrCount,
+        // Keep these for backwards compatibility
+        spiritualInfluence: 'Divine Name Resonance (28-Letter Cycle)',
+        spiritualInfluenceFr: 'Résonance du Nom Divin (Cycle de 28 Lettres)',
+        reflection: `This Divine Name may be used in dhikr (remembrance of Allah), seeking closeness, forgiveness, or help according to one's intention (niyyah).`,
+        reflectionFr: `Ce Nom Divin peut être utilisé dans le dhikr (rappel d'Allah), cherchant la proximité, le pardon ou l'aide selon son intention (niyyah).`
+      };
+    } else {
+      divineNameResonance = undefined;
+    }
   } catch (e) {
-    // Divine names module not available yet
+    console.error('Error calculating Divine Name Resonance:', e);
     divineNameResonance = undefined;
   }
   
