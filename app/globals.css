@@ -26,12 +26,10 @@ body {
 @keyframes slide-down {
   from {
     opacity: 0;
-    max-height: 0;
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
   to {
     opacity: 1;
-    max-height: 500px;
     transform: translateY(0);
   }
 }
@@ -70,7 +68,7 @@ body {
 }
 
 .animate-slide-down {
-  animation: slide-down 0.3s ease-out forwards;
+  animation: slide-down 0.3s ease-out;
 }
 
 .animate-fade-in {
@@ -87,4 +85,49 @@ body {
 
 .animate-shimmer {
   animation: shimmer 2s infinite;
+}
+
+/* Planetary card animations */
+@keyframes pulse-live {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes progress-shrink {
+  from { width: var(--progress-start, 100%); }
+  to { width: 0%; }
+}
+
+@keyframes planet-enter {
+  from {
+    opacity: 0;
+    transform: translateX(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes hour-change-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(251, 191, 36, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0); }
+}
+
+.animate-pulse-live {
+  animation: pulse-live 2s ease-in-out infinite;
+}
+
+.animate-planet-enter {
+  animation: planet-enter 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-hour-pulse {
+  animation: hour-change-pulse 2s ease-out;
+}
+
+/* Tabular nums for countdown timers */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
 }

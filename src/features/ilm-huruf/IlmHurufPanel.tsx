@@ -20,6 +20,7 @@ import { DailyColorGuidanceCard } from '../../components/DailyColorGuidanceCard'
 import NameAutocomplete from '../../components/NameAutocomplete';
 import { TemperamentDisplay } from '../../components/TemperamentDisplay';
 import { DivineTiming } from '../../components/divine-timing';
+// Planetary components removed - now in their own tab
 import AIAnalysis from '../../components/AIAnalysis';
 import AIChat from '../../components/AIChat';
 import {

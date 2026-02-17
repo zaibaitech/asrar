@@ -7,6 +7,7 @@ import { HadadSummaryPanel } from './src/components/hadad-summary';
 import { IlmHurufPanel } from './src/features/ilm-huruf';
 import { CompatibilityPanel } from './src/features/compatibility';
 import { IstikharaPanel } from './src/features/istikhara';
+import { PlanetOfTheDay, PlanetaryHourCard, PlanetTransitCard } from './src/components/planetary';
 import { analyzePatterns } from './src/features/ilm-huruf/patternRecognition';
 import { generateWafqAnalysis } from './src/features/ilm-huruf/wafqGenerator';
 import { calculateOptimalTimingWindows } from './src/features/ilm-huruf/talismanTiming';
@@ -1403,7 +1404,7 @@ export default function AsrarEveryday() {
   
   const [darkMode, setDarkMode] = useState(false);
   const [showDisclaimer, setShowDisclaimer] = useState(true);
-  const [viewMode, setViewMode] = useState<'calculator' | 'guidance' | 'advanced'>('guidance');
+  const [viewMode, setViewMode] = useState<'planetary' | 'calculator' | 'guidance' | 'advanced'>('planetary');
   const [calculatorMode, setCalculatorMode] = useState<'beginner' | 'intermediate' | 'scholar'>('beginner');
   const [arabicInput, setArabicInput] = useState('');
   const [displayName, setDisplayName] = useState('');
@@ -1947,6 +1948,18 @@ export default function AsrarEveryday() {
           <div className="mb-6 sm:mb-8 overflow-x-auto">
             <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 p-2 inline-flex gap-2 min-w-full sm:min-w-0">
               <button
+                onClick={() => setViewMode('planetary')}
+                className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all whitespace-nowrap text-sm sm:text-base ${
+                  viewMode === 'planetary'
+                    ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg'
+                    : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700'
+                }`}
+              >
+                <Moon className="w-4 sm:w-5 h-4 sm:h-5 inline mr-1 sm:mr-2" />
+                <span className="hidden sm:inline">{t.nav.planetary}</span>
+                <span className="sm:hidden">ʿIlm Nujūm</span>
+              </button>
+              <button
                 onClick={() => setViewMode('calculator')}
                 className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all whitespace-nowrap text-sm sm:text-base ${
                   viewMode === 'calculator'
@@ -1985,7 +1998,28 @@ export default function AsrarEveryday() {
             </div>
           </div>
           
-          {viewMode === 'guidance' ? (
+          {viewMode === 'planetary' ? (
+            <div className="space-y-6">
+              <div className="bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50 dark:from-indigo-900/20 dark:via-purple-900/20 dark:to-blue-900/20 rounded-xl p-4 md:p-6 shadow-md">
+                <h3 className="text-lg md:text-xl font-bold mb-2 text-slate-900 dark:text-slate-100 flex items-center gap-2">
+                  <Moon className="w-5 h-5 text-indigo-500" />
+                  {language === 'en' ? 'ʿIlm al-Nujūm – Planetary Alignment' : language === 'fr' ? 'ʿIlm al-Nujūm – Alignement Planétaire' : 'علم النجوم'}
+                </h3>
+                <p className="text-sm text-slate-600 dark:text-slate-400 mb-6">
+                  {language === 'fr'
+                    ? 'Aperçus en temps réel basés sur la science céleste islamique traditionnelle et les heures planétaires chaldéennes.'
+                    : 'Real-time insights based on traditional Islamic celestial science and Chaldean planetary hours.'}
+                </p>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
+                  <PlanetOfTheDay language={language} />
+                  <PlanetaryHourCard language={language} />
+                </div>
+                <div className="mt-4">
+                  <PlanetTransitCard language={language} onNavigate={() => {}} />
+                </div>
+              </div>
+            </div>
+          ) : viewMode === 'guidance' ? (
             <IlmHurufPanel />
           ) : viewMode === 'advanced' ? (
             <IstikharaPanel />
@@ -3709,6 +3743,21 @@ export default function AsrarEveryday() {
               </div>
             </div>
           )}
+          
+          {/* Planetary Modules Section */}
+          <div className="mt-8">
+            <h2 className="text-2xl font-bold mb-6 text-slate-900 dark:text-slate-100 flex items-center gap-2">
+              <Moon className="w-6 h-6" />
+              {language === 'en' ? 'Ilm Nujum – Planetary Alignment' : language === 'fr' ? 'Ilm Nujum – Alignement Planétaire' : 'علم النجوم'}
+            </h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <PlanetOfTheDay language={language} />
+              <PlanetaryHourCard language={language} />
+              <div className="lg:col-span-2">
+                <PlanetTransitCard language={language} onNavigate={() => {}} />
+              </div>
+            </div>
+          </div>
             </div>
             
             {/* Sidebar - History */}

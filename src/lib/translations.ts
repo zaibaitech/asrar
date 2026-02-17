@@ -7,6 +7,7 @@ export const translations = {
       letterCalculator: "Letter Calculator",
       compatibility: "Compatibility",
       planetaryHours: "Planetary Hours",
+      planetary: "Planetary Alignment",
       about: "About",
       guidance: "Life Guidance",
       advanced: "Istikharah",
@@ -721,6 +722,250 @@ export const translations = {
         jupiter: "Jupiter",
         venus: "Venus",
         saturn: "Saturn",
+      },
+    },
+
+    // Planetary Modules
+    planetary: {
+      // Planet of the Day
+      planetOfDay: {
+        title: "Planet of the Day",
+        titleAr: "يوم الكوكب",
+        subtitle: "Daily Energy",
+        bestFor: "Best For",
+        practiceLevel: "Practice Level",
+        currentPosition: "Current Position",
+        difficulty: {
+          easy: "Easy",
+          moderate: "Moderate",
+          advanced: "Advanced",
+        },
+      },
+
+      // Planetary Hour
+      planetaryHour: {
+        title: "Planetary Hour",
+        titleAr: "ساعة الكوكب",
+        subtitle: "Moment Alignment",
+        currentHour: "Current Hour",
+        nextHour: "Next Planet Hour",
+        yourElement: "Your Element",
+        hourElement: "Hour",
+        remaining: "Remaining",
+        day: "Day",
+        night: "Night",
+        hour: "Hour",
+        loading: "Loading...",
+        seeAllHours: "See All Hours",
+        dayHours: "Day Hours",
+        nightHours: "Night Hours",
+        sunrise: "sunrise",
+      },
+
+      // Planet names for display
+      planets: {
+        Sun: "Sun",
+        Moon: "Moon",
+        Mars: "Mars",
+        Mercury: "Mercury",
+        Jupiter: "Jupiter",
+        Venus: "Venus",
+        Saturn: "Saturn",
+      },
+
+      // Element names for display
+      elements: {
+        fire: "Fire",
+        water: "Water",
+        air: "Air",
+        earth: "Earth",
+      },
+
+      // Arabic planet names
+      planetsAr: {
+        Sun: "الشمس",
+        Moon: "القمر",
+        Mars: "المريخ",
+        Mercury: "عطارد",
+        Jupiter: "المشتري",
+        Venus: "الزهرة",
+        Saturn: "زحل",
+      },
+
+      // Arabic element names
+      elementsAr: {
+        fire: "نار",
+        water: "ماء",
+        air: "هواء",
+        earth: "تراب",
+      },
+
+      // Arabic zodiac names
+      zodiacAr: {
+        aries: "الحمل",
+        taurus: "الثور",
+        gemini: "الجوزاء",
+        cancer: "السرطان",
+        leo: "الأسد",
+        virgo: "العذراء",
+        libra: "الميزان",
+        scorpio: "العقرب",
+        sagittarius: "القوس",
+        capricorn: "الجدي",
+        aquarius: "الدلو",
+        pisces: "الحوت",
+      },
+
+      // Planet Transit
+      planetTransit: {
+        title: "Planet Transits",
+        titleAr: "العبور الكوكبي",
+        subtitle: "Celestial Movement",
+        skyNow: "Sky Now",
+        longTerm: "Long-term",
+        in: "In",
+        seeYourImpact: "See your impact",
+        livePositions: "Live positions",
+        loadingEphemeris: "Loading ephemeris data...",
+        tropical: "Tropical",
+        sidereal: "Sidereal",
+        carousel: "Carousel",
+        seeAll: "See All",
+        updated: "Updated",
+        planet: "Planet",
+        sign: "Sign",
+        elementPlanet: "{element} Planet",
+        elementSign: "{element} Sign",
+        viewDetails: "View Details",
+        hideDetails: "Hide Details",
+        dignitySection: "Essential Dignity",
+        rulesSign: "Rules",
+        exaltedAt: "Exalted at",
+        inFallIn: "In fall in",
+        inDetrimentIn: "In detriment in",
+        currentlyIn: "Currently in",
+        noNotableDignity: "No notable essential dignity at this position",
+        overallCondition: "Overall Condition",
+        dignityScore: "Score",
+        domicileOf: "Domicile of",
+        exaltationOf: "Exaltation of",
+      },
+
+      // Days of Week
+      days: {
+        sunday: "Sunday",
+        monday: "Monday",
+        tuesday: "Tuesday",
+        wednesday: "Wednesday",
+        thursday: "Thursday",
+        friday: "Friday",
+        saturday: "Saturday",
+      },
+
+      // Zodiac Signs
+      zodiac: {
+        aries: "Aries",
+        taurus: "Taurus",
+        gemini: "Gemini",
+        cancer: "Cancer",
+        leo: "Leo",
+        virgo: "Virgo",
+        libra: "Libra",
+        scorpio: "Scorpio",
+        sagittarius: "Sagittarius",
+        capricorn: "Capricorn",
+        aquarius: "Aquarius",
+        pisces: "Pisces",
+      },
+
+      // Ilm Nujum Badge
+      ilmNujum: {
+        auspicious: "Auspicious",
+        auspiciousAr: "سعيد",
+        proceed: "Proceed Mindfully",
+        proceedAr: "تأنَّ",
+        neutral: "Neutral Window",
+        neutralAr: "وقت محايد",
+        cautious: "Cautious",
+        cautiousAr: "احترس",
+        inauspicious: "Inauspicious",
+        inauspiciousAr: "نحس",
+      },
+
+      // Essential Dignities (Al-Karāmāt)
+      dignities: {
+        // Dignity types
+        sharaf: "Exalted",
+        bayt: "Domicile",
+        muthallatha: "Triplicity",
+        hadd: "Terms",
+        wajh: "Face",
+        gharib: "Peregrine",
+        hubut: "Fall",
+        darr: "Detriment",
+        // Condition tiers
+        musharraf: "Exalted",
+        qawi: "Strong",
+        said: "Favourable",
+        mutadil: "Moderate",
+        nahs: "Challenging",
+        daif: "Weak",
+        mubtala: "Afflicted",
+        // UI labels
+        dignityLabel: "Essential Dignity",
+        conditionLabel: "Condition",
+        retrogradeNote: "Retrograde weakens dignity (−2)",
+        scoreLabel: "Dignity Score",
+        breakdown: "Dignity Breakdown",
+        exaltedIn: "exalted in",
+        domicileIn: "domicile in",
+        fallIn: "in fall in",
+        detrimentIn: "in detriment in",
+        triplicityIn: "triplicity ruler of",
+        termsIn: "in own terms in",
+        faceIn: "in own face in",
+        peregrineIn: "peregrine in",
+        highlyFavourable: "Highly favourable",
+        favourablePosition: "Favourable position",
+        neutralPosition: "Neutral position",
+        difficultPosition: "Difficult position",
+        veryWeak: "Very weak position",
+      },
+
+      // Element descriptions
+      elementDescriptions: {
+        fire: "Passionate & energizing",
+        water: "Flowing & emotional",
+        air: "Intellectual & communicative",
+        earth: "Grounded & stable",
+      },
+
+      // Element activities
+      elementBestFor: {
+        fire: {
+          leadership: "Leadership",
+          starting: "Starting projects",
+          physical: "Physical activities",
+          bold: "Bold decisions",
+        },
+        water: {
+          healing: "Emotional healing",
+          relationships: "Relationships",
+          intuitive: "Intuitive work",
+          creative: "Creative flow",
+        },
+        air: {
+          learning: "Learning",
+          communication: "Communication",
+          planning: "Planning",
+          social: "Social connections",
+        },
+        earth: {
+          building: "Building foundations",
+          practical: "Practical tasks",
+          financial: "Financial matters",
+          health: "Physical health",
+        },
       },
     },
 
@@ -2607,6 +2852,7 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
       letterCalculator: "Calculatrice de Lettres",
       compatibility: "Compatibilité",
       planetaryHours: "Heures Planétaires",
+      planetary: "Alignement Planétaire",
       about: "À Propos",
       guidance: "Guide de Vie",
       advanced: "Istikharah",
@@ -3519,6 +3765,250 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
         jupiter: "Jupiter",
         venus: "Vénus",
         saturn: "Saturne",
+      },
+    },
+
+    // Modules Planétaires
+    planetary: {
+      // Planète du Jour
+      planetOfDay: {
+        title: "Planète du Jour",
+        titleAr: "يوم الكوكب",
+        subtitle: "Énergie Quotidienne",
+        bestFor: "Idéal pour",
+        practiceLevel: "Niveau de Pratique",
+        currentPosition: "Position Actuelle",
+        difficulty: {
+          easy: "Facile",
+          moderate: "Modéré",
+          advanced: "Avancé",
+        },
+      },
+
+      // Heure Planétaire
+      planetaryHour: {
+        title: "Heure Planétaire",
+        titleAr: "ساعة الكوكب",
+        subtitle: "Alignement du Moment",
+        currentHour: "Heure Actuelle",
+        nextHour: "Prochaine Heure Planétaire",
+        yourElement: "Votre Élément",
+        hourElement: "Heure",
+        remaining: "Restant",
+        day: "Jour",
+        night: "Nuit",
+        hour: "Heure",
+        loading: "Chargement...",
+        seeAllHours: "Voir toutes les heures",
+        dayHours: "Heures de Jour",
+        nightHours: "Heures de Nuit",
+        sunrise: "lever du soleil",
+      },
+
+      // Noms de planètes pour l'affichage
+      planets: {
+        Sun: "Soleil",
+        Moon: "Lune",
+        Mars: "Mars",
+        Mercury: "Mercure",
+        Jupiter: "Jupiter",
+        Venus: "Vénus",
+        Saturn: "Saturne",
+      },
+
+      // Noms des éléments pour l'affichage
+      elements: {
+        fire: "Feu",
+        water: "Eau",
+        air: "Air",
+        earth: "Terre",
+      },
+
+      // Noms arabes des planètes
+      planetsAr: {
+        Sun: "الشمس",
+        Moon: "القمر",
+        Mars: "المريخ",
+        Mercury: "عطارد",
+        Jupiter: "المشتري",
+        Venus: "الزهرة",
+        Saturn: "زحل",
+      },
+
+      // Noms arabes des éléments
+      elementsAr: {
+        fire: "نار",
+        water: "ماء",
+        air: "هواء",
+        earth: "تراب",
+      },
+
+      // Noms arabes du zodiaque
+      zodiacAr: {
+        aries: "الحمل",
+        taurus: "الثور",
+        gemini: "الجوزاء",
+        cancer: "السرطان",
+        leo: "الأسد",
+        virgo: "العذراء",
+        libra: "الميزان",
+        scorpio: "العقرب",
+        sagittarius: "القوس",
+        capricorn: "الجدي",
+        aquarius: "الدلو",
+        pisces: "الحوت",
+      },
+
+      // Transit Planétaire
+      planetTransit: {
+        title: "Transits Planétaires",
+        titleAr: "العبور الكوكبي",
+        subtitle: "Mouvement Céleste",
+        skyNow: "Ciel Maintenant",
+        longTerm: "Long Terme",
+        in: "En",
+        seeYourImpact: "Voir votre impact",
+        livePositions: "Positions en temps réel",
+        loadingEphemeris: "Chargement des données éphémérides...",
+        tropical: "Tropical",
+        sidereal: "Sidéral",
+        carousel: "Carousel",
+        seeAll: "Voir tout",
+        updated: "Mis à jour",
+        planet: "Planète",
+        sign: "Signe",
+        elementPlanet: "Planète de {element}",
+        elementSign: "Signe de {element}",
+        viewDetails: "Voir Détails",
+        hideDetails: "Masquer Détails",
+        dignitySection: "Dignité Essentielle",
+        rulesSign: "Gouverne",
+        exaltedAt: "Exalté à",
+        inFallIn: "En chute en",
+        inDetrimentIn: "En détriment en",
+        currentlyIn: "Actuellement en",
+        noNotableDignity: "Pas de dignité essentielle notable à cette position",
+        overallCondition: "Condition Générale",
+        dignityScore: "Score",
+        domicileOf: "Domicile de",
+        exaltationOf: "Exaltation de",
+      },
+
+      // Jours de la Semaine
+      days: {
+        sunday: "Dimanche",
+        monday: "Lundi",
+        tuesday: "Mardi",
+        wednesday: "Mercredi",
+        thursday: "Jeudi",
+        friday: "Vendredi",
+        saturday: "Samedi",
+      },
+
+      // Signes du Zodiaque
+      zodiac: {
+        aries: "Bélier",
+        taurus: "Taureau",
+        gemini: "Gémeaux",
+        cancer: "Cancer",
+        leo: "Lion",
+        virgo: "Vierge",
+        libra: "Balance",
+        scorpio: "Scorpion",
+        sagittarius: "Sagittaire",
+        capricorn: "Capricorne",
+        aquarius: "Verseau",
+        pisces: "Poissons",
+      },
+
+      // Badge Ilm Nujum
+      ilmNujum: {
+        auspicious: "Propice",
+        auspiciousAr: "سعيد",
+        proceed: "Procéder Consciemment",
+        proceedAr: "تأنَّ",
+        neutral: "Fenêtre Neutre",
+        neutralAr: "وقت محايد",
+        cautious: "Prudent",
+        cautiousAr: "احترس",
+        inauspicious: "Défavorable",
+        inauspiciousAr: "نحس",
+      },
+
+      // Dignités Essentielles (Al-Karāmāt)
+      dignities: {
+        // Types de dignités
+        sharaf: "Exalté",
+        bayt: "Domicile",
+        muthallatha: "Triplicité",
+        hadd: "Termes",
+        wajh: "Face",
+        gharib: "Pèlerin",
+        hubut: "Chute",
+        darr: "Détriment",
+        // Niveaux de condition
+        musharraf: "Exalté",
+        qawi: "Fort",
+        said: "Favorable",
+        mutadil: "Modéré",
+        nahs: "Difficile",
+        daif: "Faible",
+        mubtala: "Affligé",
+        // Libellés UI
+        dignityLabel: "Dignité Essentielle",
+        conditionLabel: "Condition",
+        retrogradeNote: "Rétrograde affaiblit la dignité (−2)",
+        scoreLabel: "Score de Dignité",
+        breakdown: "Détail des Dignités",
+        exaltedIn: "exalté en",
+        domicileIn: "domicile en",
+        fallIn: "en chute en",
+        detrimentIn: "en détriment en",
+        triplicityIn: "maître de triplicité de",
+        termsIn: "dans ses termes en",
+        faceIn: "dans sa face en",
+        peregrineIn: "pèlerin en",
+        highlyFavourable: "Très favorable",
+        favourablePosition: "Position favorable",
+        neutralPosition: "Position neutre",
+        difficultPosition: "Position difficile",
+        veryWeak: "Position très faible",
+      },
+
+      // Descriptions des Éléments
+      elementDescriptions: {
+        fire: "Passionné & énergisant",
+        water: "Fluide & émotionnel",
+        air: "Intellectuel & communicatif",
+        earth: "Ancré & stable",
+      },
+
+      // Activités des Éléments
+      elementBestFor: {
+        fire: {
+          leadership: "Leadership",
+          starting: "Démarrer des projets",
+          physical: "Activités physiques",
+          bold: "Décisions audacieuses",
+        },
+        water: {
+          healing: "Guérison émotionnelle",
+          relationships: "Relations",
+          intuitive: "Travail intuitif",
+          creative: "Flux créatif",
+        },
+        air: {
+          learning: "Apprentissage",
+          communication: "Communication",
+          planning: "Planification",
+          social: "Connexions sociales",
+        },
+        earth: {
+          building: "Construction de fondations",
+          practical: "Tâches pratiques",
+          financial: "Finances",
+          health: "Santé physique",
+        },
       },
     },
 
