@@ -3936,32 +3936,10 @@ export default function AsrarEveryday() {
 
             {/* Bottom Bar */}
             <div className="pt-6 border-t border-slate-200 dark:border-slate-700">
-              <div className="flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-0">
+              <div className="flex justify-center items-center">
                 <p className="text-xs text-slate-500 dark:text-slate-400">
                   © {new Date().getFullYear()} {language === 'fr' ? 'Tous droits réservés' : 'All rights reserved'}
                 </p>
-                <div className="flex items-center space-x-4 text-xs text-slate-500 dark:text-slate-400">
-                  <span className="flex items-center space-x-1">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                    </svg>
-                    <span>Next.js</span>
-                  </span>
-                  <span className="text-slate-300 dark:text-slate-600">•</span>
-                  <span className="flex items-center space-x-1">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                    </svg>
-                    <span>TypeScript</span>
-                  </span>
-                  <span className="text-slate-300 dark:text-slate-600">•</span>
-                  <span className="flex items-center space-x-1">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                    </svg>
-                    <span>Tailwind CSS</span>
-                  </span>
-                </div>
               </div>
             </div>
           </div>
