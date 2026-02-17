@@ -96,7 +96,7 @@ export function RamadanIstighfarTracker({
 
   const [ramadanInfo, setRamadanInfo] = useState<RamadanInfo | null>(null);
   const [state, setState] = useState<TrackerState>(loadState);
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
   const [showPlanPicker, setShowPlanPicker] = useState(false);
   const [showSessionLogger, setShowSessionLogger] = useState(false);
   const [selectedSession, setSelectedSession] = useState<SessionKey>('sessionCustom');
