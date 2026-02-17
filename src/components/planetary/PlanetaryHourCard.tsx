@@ -110,13 +110,25 @@ export function PlanetaryHourCard({
   const [showAllHours, setShowAllHours] = React.useState(false);
   const [allHours, setAllHours] = React.useState<{ hours: PlanetaryHour[]; currentHourIndex: number; sunrise: Date; sunset: Date } | null>(null);
   
-  const [coords, setCoords] = React.useState<{ lat: number; lon: number } | null>(
-    propLatitude !== undefined && propLongitude !== undefined 
-      ? { lat: propLatitude, lon: propLongitude }
-      : null
-  );
+  // Initialize coords immediately from props → cache → fallback (never null on first render)
+  const [coords, setCoords] = React.useState<{ lat: number; lon: number }>(() => {
+    if (propLatitude !== undefined && propLongitude !== undefined) {
+      return { lat: propLatitude, lon: propLongitude };
+    }
+    if (typeof window !== 'undefined') {
+      try {
+        const stored = localStorage.getItem('userLocation');
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          return { lat: parsed.latitude, lon: parsed.longitude };
+        }
+      } catch { /* ignore */ }
+    }
+    // Fallback: Makkah
+    return { lat: 21.4225, lon: 39.8262 };
+  });
 
-  // Fetch user location if not provided via props
+  // Refine location in background (non-blocking)
   React.useEffect(() => {
     if (propLatitude !== undefined && propLongitude !== undefined) {
       setCoords({ lat: propLatitude, lon: propLongitude });
@@ -129,46 +141,50 @@ export function PlanetaryHourCard({
       setLocationName(cached.cityName || '');
     }
 
+    // Fire-and-forget: refine with live geolocation in background
     getUserLocation().then((loc) => {
       setCoords({ lat: loc.latitude, lon: loc.longitude });
       setLocationName(loc.cityName || '');
-    }).catch((err) => {
-      console.error('[PlanetaryHourCard] Location error:', err);
-      setCoords({ lat: 21.4225, lon: 39.8262 });
+    }).catch(() => {
+      // Already have coords from init, just set the name
       setLocationName(language === 'fr' ? 'La Mecque (Défaut)' : 'Makkah (Default)');
     });
   }, [propLatitude, propLongitude, language]);
 
-  // Update planetary hour data
+  // Update planetary hour data (fast — SunCalc is synchronous, no API call)
   const updatePlanetaryHour = React.useCallback(async () => {
-    if (!coords) return;
-    
     const now = new Date();
     const data = await getPlanetaryHourDataForNow(coords.lat, coords.lon, now);
     if (data) {
       setPlanetaryData(data);
       setCountdown(data.countdownSeconds);
-      // Calculate total hour duration for progress bar
       const duration = Math.round((data.currentHour.endTime.getTime() - data.currentHour.startTime.getTime()) / 1000);
       setTotalDuration(duration);
-      
-      try {
-        const ephemeris = await getAllPlanetEphemeris('tropical');
-        const planetKey = data.currentHour.planet.toLowerCase();
-        const position = ephemeris.planets.find(p => p.planetKey === planetKey);
-        if (position) {
-          setLivePosition(position);
-          setDataSource(ephemeris.source);
-        }
-      } catch (error) {
-        console.error('[PlanetaryHourCard] Failed to fetch live position:', error);
-      }
     }
   }, [coords]);
 
+  // Fetch live ephemeris position separately (non-blocking, runs after card is visible)
+  React.useEffect(() => {
+    if (!planetaryData) return;
+    let cancelled = false;
+    
+    getAllPlanetEphemeris('tropical').then((ephemeris) => {
+      if (cancelled) return;
+      const planetKey = planetaryData.currentHour.planet.toLowerCase();
+      const position = ephemeris.planets.find(p => p.planetKey === planetKey);
+      if (position) {
+        setLivePosition(position);
+        setDataSource(ephemeris.source);
+      }
+    }).catch((error) => {
+      console.error('[PlanetaryHourCard] Failed to fetch live position:', error);
+    });
+
+    return () => { cancelled = true; };
+  }, [planetaryData?.currentHour.planet]);
+
   // Fetch all hours for "See All" view
   const fetchAllHours = React.useCallback(async () => {
-    if (!coords) return;
     const now = new Date();
     const data = await getAllPlanetaryHoursForToday(coords.lat, coords.lon, now);
     if (data) setAllHours(data);
@@ -179,11 +195,9 @@ export function PlanetaryHourCard({
   }, [showAllHours, allHours, fetchAllHours]);
 
   React.useEffect(() => {
-    if (!coords) return;
     updatePlanetaryHour();
     const interval = setInterval(() => {
       updatePlanetaryHour();
-      // Keep allHours in sync so currentHourIndex stays accurate
       if (showAllHours) fetchAllHours();
     }, 60000);
     return () => clearInterval(interval);

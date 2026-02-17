@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asrār App Icons - Preview & Download</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #1e1b4b 0%, #4c1d95 100%);
+      color: #fff;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #fcd34d, #fde047);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #c4b5fd;
+      margin-bottom: 3rem;
+    }
+    
+    .icon-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .icon-card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 2rem;
+      backdrop-filter: blur(10px);
+    }
+    
+    .icon-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #fde047;
+    }
+    
+    .icon-preview {
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 300px;
+    }
+    
+    .icon-preview.dark {
+      background: #1e1b4b;
+    }
+    
+    .icon-preview.transparent {
+      background: repeating-conic-gradient(#ddd 0% 25%, #fff 0% 50%) 50% / 20px 20px;
+    }
+    
+    .icon-info {
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: #e0e7ff;
+    }
+    
+    .icon-info strong {
+      color: #fde047;
+    }
+    
+    .button-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    button, .button {
+      background: linear-gradient(135deg, #4f46e5, #8b5cf6);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.3s;
+      flex: 1;
+      min-width: 150px;
+    }
+    
+    button:hover, .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(139, 92, 246, 0.4);
+    }
+    
+    .download-btn {
+      background: linear-gradient(135deg, #ec4899, #f97316);
+    }
+    
+    .instructions {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .instructions h2 {
+      color: #fde047;
+      margin-bottom: 1rem;
+    }
+    
+    .instructions ol {
+      margin-left: 1.5rem;
+      line-height: 1.8;
+    }
+    
+    .instructions li {
+      margin-bottom: 0.5rem;
+    }
+    
+    code {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      color: #fde047;
+    }
+    
+    .size-previews {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-end;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+    }
+    
+    .size-preview {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .size-label {
+      font-size: 0.8rem;
+      color: #c4b5fd;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📱 Asrār App Icons</h1>
+    <p class="subtitle">Ready for iOS App Store & Google Play Store</p>
+    
+    <div class="icon-grid">
+      <!-- Main App Icon -->
+      <div class="icon-card">
+        <h2 class="icon-title">🍎 iOS App Icon</h2>
+        <div class="icon-preview">
+          <svg id="icon-ios" width="256" height="256" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="bgGradient1" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:1" />
+                <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#EC4899;stop-opacity:1" />
+              </radialGradient>
+              <linearGradient id="starGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#FCD34D;stop-opacity:1" />
+                <stop offset="50%" style="stop-color:#FDE047;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#FBBF24;stop-opacity:1" />
+              </linearGradient>
+              <filter id="glow1">
+                <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                <feMerge>
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            <circle cx="512" cy="512" r="512" fill="url(#bgGradient1)" />
+            <circle cx="512" cy="512" r="340" fill="none" stroke="#E0E7FF" stroke-width="2" opacity="0.3"/>
+            <circle cx="512" cy="512" r="260" fill="none" stroke="#DDD6FE" stroke-width="3" opacity="0.4"/>
+            <circle cx="512" cy="512" r="180" fill="none" stroke="#C4B5FD" stroke-width="4" opacity="0.5"/>
+            <g transform="translate(512, 512)" filter="url(#glow1)">
+              <path d="M 0,-200 L 35,-35 L 200,0 L 35,35 L 0,200 L -35,35 L -200,0 L -35,-35 Z" fill="url(#starGradient1)" opacity="0.9"/>
+              <path d="M 0,-140 L 25,-25 L 140,0 L 25,25 L 0,140 L -25,25 L -140,0 L -25,-25 Z" fill="#FFFFFF" opacity="0.3"/>
+            </g>
+            <circle cx="512" cy="332" r="16" fill="#FFFFFF" opacity="0.8"/>
+            <circle cx="456" cy="432" r="16" fill="#FFFFFF" opacity="0.8"/>
+            <circle cx="568" cy="432" r="16" fill="#FFFFFF" opacity="0.8"/>
+            <circle cx="512" cy="512" r="80" fill="#1E1B4B" opacity="0.9"/>
+            <circle cx="512" cy="512" r="60" fill="url(#starGradient1)"/>
+            <circle cx="512" cy="512" r="24" fill="#1E1B4B"/>
+            <circle cx="512" cy="512" r="12" fill="#FFFFFF" opacity="0.9"/>
+            <path d="M 452,512 Q 452,540 482,550 Q 512,560 542,550 Q 572,540 572,512" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.3"/>
+          </svg>
+        </div>
+        <div class="icon-info">
+          <strong>File:</strong> icon.png<br>
+          <strong>Size:</strong> 1024×1024 pixels<br>
+          <strong>Format:</strong> PNG (no transparency)<br>
+          <strong>Use:</strong> iOS App Store
+        </div>
+        <div class="button-group">
+          <button onclick="downloadSVG('ios')">Download SVG</button>
+          <button class="download-btn" onclick="downloadPNG('ios', 1024)">Download PNG</button>
+        </div>
+        
+        <div class="size-previews">
+          <div class="size-preview">
+            <svg width="180" height="180" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+              <use href="#icon-ios"/>
+            </svg>
+            <span class="size-label">180px (3x)</span>
+          </div>
+          <div class="size-preview">
+            <svg width="120" height="120" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+              <use href="#icon-ios"/>
+            </svg>
+            <span class="size-label">120px (2x)</span>
+          </div>
+          <div class="size-preview">
+            <svg width="60" height="60" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+              <use href="#icon-ios"/>
+            </svg>
+            <span class="size-label">60px (1x)</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Android Foreground -->
+      <div class="icon-card">
+        <h2 class="icon-title">🤖 Android Foreground</h2>
+        <div class="icon-preview transparent">
+          <svg id="icon-android" width="256" height="256" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="bgGradient2" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:1" />
+                <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#EC4899;stop-opacity:1" />
+              </radialGradient>
+              <linearGradient id="starGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#FCD34D;stop-opacity:1" />
+                <stop offset="50%" style="stop-color:#FDE047;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#FBBF24;stop-opacity:1" />
+              </linearGradient>
+              <filter id="glow2">
+                <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                <feMerge>
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            <circle cx="512" cy="512" r="512" fill="url(#bgGradient2)" />
+            <circle cx="512" cy="512" r="340" fill="none" stroke="#E0E7FF" stroke-width="2" opacity="0.3"/>
+            <circle cx="512" cy="512" r="260" fill="none" stroke="#DDD6FE" stroke-width="3" opacity="0.4"/>
+            <circle cx="512" cy="512" r="180" fill="none" stroke="#C4B5FD" stroke-width="4" opacity="0.5"/>
+            <g transform="translate(512, 512)" filter="url(#glow2)">
+              <path d="M 0,-200 L 35,-35 L 200,0 L 35,35 L 0,200 L -35,35 L -200,0 L -35,-35 Z" fill="url(#starGradient2)" opacity="0.9"/>
+              <path d="M 0,-140 L 25,-25 L 140,0 L 25,25 L 0,140 L -25,25 L -140,0 L -25,-25 Z" fill="#FFFFFF" opacity="0.3"/>
+            </g>
+            <circle cx="512" cy="332" r="16" fill="#FFFFFF" opacity="0.8"/>
+            <circle cx="456" cy="432" r="16" fill="#FFFFFF" opacity="0.8"/>
+            <circle cx="568" cy="432" r="16" fill="#FFFFFF" opacity="0.8"/>
+            <circle cx="512" cy="512" r="80" fill="#1E1B4B" opacity="0.9"/>
+            <circle cx="512" cy="512" r="60" fill="url(#starGradient2)"/>
+            <circle cx="512" cy="512" r="24" fill="#1E1B4B"/>
+            <circle cx="512" cy="512" r="12" fill="#FFFFFF" opacity="0.9"/>
+            <path d="M 452,512 Q 452,540 482,550 Q 512,560 542,550 Q 572,540 572,512" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.3"/>
+          </svg>
+        </div>
+        <div class="icon-info">
+          <strong>File:</strong> adaptive-icon.png<br>
+          <strong>Size:</strong> 1024×1024 pixels<br>
+          <strong>Format:</strong> PNG (with transparency)<br>
+          <strong>Use:</strong> Android Play Store (foreground layer)
+        </div>
+        <div class="button-group">
+          <button onclick="downloadSVG('android')">Download SVG</button>
+          <button class="download-btn" onclick="downloadPNG('android', 1024)">Download PNG</button>
+        </div>
+      </div>
+      
+      <!-- Android Background -->
+      <div class="icon-card">
+        <h2 class="icon-title">🎨 Android Background</h2>
+        <div class="icon-preview">
+          <svg id="icon-background" width="256" height="256" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:1" />
+                <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#EC4899;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <rect width="1024" height="1024" fill="url(#brandGradient)" />
+          </svg>
+        </div>
+        <div class="icon-info">
+          <strong>File:</strong> adaptive-icon-background.png<br>
+          <strong>Size:</strong> 1024×1024 pixels<br>
+          <strong>Format:</strong> PNG (no transparency)<br>
+          <strong>Use:</strong> Android Play Store (background layer)
+        </div>
+        <div class="button-group">
+          <button onclick="downloadSVG('background')">Download SVG</button>
+          <button class="download-btn" onclick="downloadPNG('background', 1024)">Download PNG</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="instructions">
+      <h2>📋 Instructions</h2>
+      <ol>
+        <li>Click the <strong>"Download PNG"</strong> buttons above to get your app icons</li>
+        <li>For <strong>iOS</strong>: Use <code>icon.png</code> when submitting to App Store Connect</li>
+        <li>For <strong>Android</strong>: Use both <code>adaptive-icon.png</code> (foreground) and <code>adaptive-icon-background.png</code> (background) in Google Play Console</li>
+        <li>All icons are 1024×1024 pixels as required by both app stores</li>
+        <li>Test your icons on different backgrounds to ensure visibility</li>
+      </ol>
+      
+      <h2 style="margin-top: 2rem;">🎨 What's in the Icon?</h2>
+      <ul style="list-style: none; margin-left: 0;">
+        <li>⭐ <strong>8-Pointed Star:</strong> Divine order and cosmic harmony</li>
+        <li>⭕ <strong>3 Concentric Rings:</strong> أسرار numerology (462 → 4+6+2 = 12 → 1+2 = 3)</li>
+        <li>🔹 <strong>3 Dots:</strong> Trinity of body, soul, and spirit</li>
+        <li>👁️ <strong>Center Eye:</strong> Spiritual insight and vision</li>
+        <li>✨ <strong>Golden Star:</strong> Knowledge and illumination</li>
+        <li>💜 <strong>Purple/Pink Gradient:</strong> Spiritual and mystical energies</li>
+      </ul>
+    </div>
+  </div>
+  
+  <script>
+    function getSVGContent(type) {
+      const svgElement = document.getElementById(`icon-${type}`);
+      const serializer = new XMLSerializer();
+      let svgString = serializer.serializeToString(svgElement);
+      
+      // Add XML declaration
+      svgString = '<?xml version="1.0" encoding="UTF-8"?>\n' + svgString;
+      
+      return svgString;
+    }
+    
+    function downloadSVG(type) {
+      const svgContent = getSVGContent(type);
+      const blob = new Blob([svgContent], { type: 'image/svg+xml' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      
+      if (type === 'ios') {
+        a.download = 'icon.svg';
+      } else if (type === 'android') {
+        a.download = 'adaptive-icon.svg';
+      } else {
+        a.download = 'adaptive-icon-background.svg';
+      }
+      
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+    
+    function downloadPNG(type, size) {
+      const svgElement = document.getElementById(`icon-${type}`);
+      const canvas = document.createElement('canvas');
+      canvas.width = size;
+      canvas.height = size;
+      const ctx = canvas.getContext('2d');
+      
+      const svgString = new XMLSerializer().serializeToString(svgElement);
+      const img = new Image();
+      
+      img.onload = () => {
+        ctx.drawImage(img, 0, 0, size, size);
+        canvas.toBlob((blob) => {
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          
+          if (type === 'ios') {
+            a.download = 'icon.png';
+          } else if (type === 'android') {
+            a.download = 'adaptive-icon.png';
+          } else {
+            a.download = 'adaptive-icon-background.png';
+          }
+          
+          a.click();
+          URL.revokeObjectURL(url);
+        }, 'image/png');
+      };
+      
+      img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgString)));
+    }
+  </script>
+</body>
+</html>

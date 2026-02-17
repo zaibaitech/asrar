@@ -8,6 +8,8 @@ import { IlmHurufPanel } from './src/features/ilm-huruf';
 import { CompatibilityPanel } from './src/features/compatibility';
 import { IstikharaPanel } from './src/features/istikhara';
 import { PlanetOfTheDay, PlanetaryHourCard, PlanetTransitCard } from './src/components/planetary';
+import { RamadanIstighfarTracker } from './src/components/ramadan';
+import { getRamadanInfo } from './src/lib/hijri';
 import { analyzePatterns } from './src/features/ilm-huruf/patternRecognition';
 import { generateWafqAnalysis } from './src/features/ilm-huruf/wafqGenerator';
 import { calculateOptimalTimingWindows } from './src/features/ilm-huruf/talismanTiming';
@@ -24,6 +26,7 @@ import { ArabicKeyboard } from './src/components/ArabicKeyboard';
 import { findVersesByValue, getExactVerseMatch, type QuranicVerse } from './src/data/quranic-verses';
 import { findDivineNameByValue, findSimilarDivineNames, type DivineName } from './src/data/divine-names';
 import AsrarLogo from './src/components/AsrarLogo';
+import { useAuth } from './src/contexts/AuthContext';
 
 // ============================================================================
 // DOMAIN RULES & CORE DATA
@@ -234,7 +237,7 @@ function DisclaimerBanner({ onDismiss }: { onDismiss: () => void }) {
   };
   
   return (
-    <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-3 mb-4">
+    <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-3 mb-2">
       <div className="flex items-start gap-2">
         <Info className="w-4 h-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
         <div className="flex-1 min-w-0">
@@ -1322,30 +1325,73 @@ function ComparisonMode({ onClose, abjad, analyzeElements }: {
 }
 
 function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: boolean; onToggleCollapse: () => void }) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const daily = getDailyReflection();
+  const ramadan = getRamadanInfo();
+  const isRamadan = ramadan.isRamadan;
+
+  // Ramadan-aware header strings
+  const headerTitle = isRamadan
+    ? (language === 'fr'
+        ? `🌙 Jour ${ramadan.dayOfRamadan} de Ramadan · Défi Istighfār`
+        : `🌙 Ramadan Day ${ramadan.dayOfRamadan} · Istighfār Challenge`)
+    : t.dailyReflection.todaysReflection;
+
+  const badgeLabel = isRamadan ? 'رمضان' : t.dailyReflection.dailyBadge;
+
+  // Color scheme: amber/gold during Ramadan, emerald otherwise
+  const colors = isRamadan
+    ? {
+        bg: 'from-amber-50 via-yellow-50 to-orange-50 dark:from-amber-950/40 dark:via-yellow-950/30 dark:to-orange-950/30',
+        border: 'border-amber-200 dark:border-amber-700/50',
+        headerHover: 'hover:bg-amber-100/40 dark:hover:bg-amber-900/20',
+        pulse: 'bg-amber-400',
+        title: 'text-amber-900 dark:text-amber-100',
+        badge: 'bg-amber-600',
+        sub: 'text-amber-600 dark:text-amber-400',
+        btnHover: 'hover:bg-amber-200/50 dark:hover:bg-amber-800/50',
+        icon: 'text-amber-600 dark:text-amber-400',
+      }
+    : {
+        bg: 'from-emerald-50 to-green-50 dark:from-emerald-900/20 dark:to-green-900/20',
+        border: 'border-emerald-200 dark:border-emerald-800',
+        headerHover: 'hover:bg-emerald-100/50 dark:hover:bg-emerald-900/30',
+        pulse: 'bg-emerald-400',
+        title: 'text-emerald-900 dark:text-emerald-100',
+        badge: 'bg-emerald-600',
+        sub: 'text-emerald-600 dark:text-emerald-400',
+        btnHover: 'hover:bg-emerald-200/50 dark:hover:bg-emerald-900/50',
+        icon: 'text-emerald-600 dark:text-emerald-400',
+      };
   
   return (
-    <div className="bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-900/20 dark:to-green-900/20 rounded-xl border border-emerald-200 dark:border-emerald-800 overflow-hidden transition-all duration-300">
+    <div className={`bg-gradient-to-br ${colors.bg} rounded-xl border ${colors.border} overflow-hidden transition-all duration-300`}>
       {/* Header - Always Visible */}
-      <div className="p-6 cursor-pointer hover:bg-emerald-100/50 dark:hover:bg-emerald-900/30 transition-colors" onClick={onToggleCollapse}>
+      <div className={`px-4 py-3 sm:p-6 cursor-pointer ${colors.headerHover} transition-colors`} onClick={onToggleCollapse}>
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3 flex-1">
+          <div className="flex items-center gap-2.5 sm:gap-3 flex-1 min-w-0">
             {/* Pulse Animation Badge */}
-            <div className="relative">
-              <div className="absolute inset-0 bg-emerald-400 rounded-full opacity-75 animate-pulse" style={{width: '24px', height: '24px'}}></div>
-              <Calendar className="w-6 h-6 text-emerald-600 dark:text-emerald-400 relative z-10" />
+            <div className="relative flex-shrink-0">
+              <div className={`absolute inset-0 ${colors.pulse} rounded-full opacity-75 animate-pulse`} style={{width: '22px', height: '22px'}}></div>
+              {isRamadan
+                ? <span className="relative z-10 text-lg sm:text-xl">🌙</span>
+                : <Calendar className={`w-5 h-5 sm:w-6 sm:h-6 ${colors.icon} relative z-10`} />
+              }
             </div>
             
             <div className="flex-1 min-w-0">
-              <div className="flex items-center gap-2">
-                <h3 className="text-lg font-bold text-emerald-900 dark:text-emerald-100">{t.dailyReflection.todaysReflection}</h3>
-                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-600 text-white animate-pulse">
-                  {t.dailyReflection.dailyBadge}
+              <div className="flex items-center gap-2 flex-wrap">
+                <h3 className={`text-sm sm:text-lg font-bold ${colors.title}`}>{headerTitle}</h3>
+                <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-medium ${colors.badge} text-white ${isRamadan ? 'font-arabic' : 'animate-pulse'}`}>
+                  {badgeLabel}
                 </span>
               </div>
-              {!isCollapsed && (
-                <p className="text-xs text-emerald-600 dark:text-emerald-400 mt-1">{daily.date}</p>
+              {isRamadan ? (
+                <p className={`text-xs sm:text-sm font-arabic ${colors.sub} mt-0.5`} dir="rtl">أَسْتَغْفِرُ اللهَ</p>
+              ) : (
+                !isCollapsed && (
+                  <p className={`text-xs ${colors.sub} mt-0.5`}>{daily.date}</p>
+                )
               )}
             </div>
           </div>
@@ -1356,13 +1402,13 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
               e.stopPropagation();
               onToggleCollapse();
             }}
-            className="p-2 hover:bg-emerald-200/50 dark:hover:bg-emerald-900/50 rounded-lg transition-colors flex-shrink-0 ml-2"
+            className={`p-2 ${colors.btnHover} rounded-lg transition-colors flex-shrink-0 ml-2`}
             aria-label={isCollapsed ? t.dailyReflection.expandReflection : t.dailyReflection.collapseReflection}
           >
             {isCollapsed ? (
-              <ChevronDown className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+              <ChevronDown className={`w-5 h-5 ${colors.icon}`} />
             ) : (
-              <ChevronUp className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+              <ChevronUp className={`w-5 h-5 ${colors.icon}`} />
             )}
           </button>
         </div>
@@ -1371,6 +1417,9 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
       {/* Collapsible Content */}
       {!isCollapsed && (
         <div className="px-6 pb-6 pt-0 space-y-4 animate-in fade-in slide-in-from-top-2 duration-300">
+          {/* Ramadan Istighfār Tracker — pinned during Ramadan */}
+          <RamadanIstighfarTracker />
+
           <div className="bg-white/50 dark:bg-slate-800/50 rounded-lg p-4">
             <div className="text-xs font-medium text-emerald-600 dark:text-emerald-400 mb-1">{t.dailyReflection.verseOfTheDay}</div>
             <div className="text-sm font-medium mb-1">{daily.verse.text}</div>
@@ -1932,12 +1981,12 @@ export default function AsrarEveryday() {
         </header>
         
         {/* Main Content */}
-        <main className="w-full mx-auto px-3 sm:px-4 py-6 sm:py-8">
+        <main className="w-full mx-auto px-3 sm:px-4 py-2 sm:py-8">
           <div className="max-w-6xl mx-auto">
             {showDisclaimer && <DisclaimerBanner onDismiss={() => setShowDisclaimer(false)} />}
             
             {/* Daily Reflection - Prominent Banner */}
-            <div className="mb-6 sm:mb-8">
+            <div className="mb-2 sm:mb-8">
               <DailyReflectionCard 
                 isCollapsed={isDailyReflectionCollapsed}
               onToggleCollapse={handleToggleDailyReflection}
@@ -1945,8 +1994,8 @@ export default function AsrarEveryday() {
           </div>
           
           {/* View Mode Tabs - Mobile Responsive */}
-          <div className="mb-6 sm:mb-8 overflow-x-auto">
-            <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 p-2 inline-flex gap-2 min-w-full sm:min-w-0">
+          <div className="mb-2 sm:mb-8 overflow-x-auto">
+            <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 p-1.5 sm:p-2 inline-flex gap-1.5 sm:gap-2 min-w-full sm:min-w-0">
               <button
                 onClick={() => setViewMode('planetary')}
                 className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all whitespace-nowrap text-sm sm:text-base ${
@@ -1999,20 +2048,20 @@ export default function AsrarEveryday() {
           </div>
           
           {viewMode === 'planetary' ? (
-            <div className="space-y-6">
-              <div className="bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50 dark:from-indigo-900/20 dark:via-purple-900/20 dark:to-blue-900/20 rounded-xl p-4 md:p-6 shadow-md">
-                <h3 className="text-lg md:text-xl font-bold mb-2 text-slate-900 dark:text-slate-100 flex items-center gap-2">
-                  <Moon className="w-5 h-5 text-indigo-500" />
+            <div className="space-y-3 sm:space-y-6">
+              <div className="bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50 dark:from-indigo-900/20 dark:via-purple-900/20 dark:to-blue-900/20 rounded-xl p-3 md:p-6 shadow-md">
+                <h3 className="text-base md:text-xl font-bold mb-0.5 sm:mb-2 text-slate-900 dark:text-slate-100 flex items-center gap-2">
+                  <Moon className="w-4 h-4 sm:w-5 sm:h-5 text-indigo-500" />
                   {language === 'en' ? 'ʿIlm al-Nujūm – Planetary Alignment' : language === 'fr' ? 'ʿIlm al-Nujūm – Alignement Planétaire' : 'علم النجوم'}
                 </h3>
-                <p className="text-sm text-slate-600 dark:text-slate-400 mb-6">
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mb-2 sm:mb-6 hidden sm:block">
                   {language === 'fr'
                     ? 'Aperçus en temps réel basés sur la science céleste islamique traditionnelle et les heures planétaires chaldéennes.'
                     : 'Real-time insights based on traditional Islamic celestial science and Chaldean planetary hours.'}
                 </p>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
-                  <PlanetOfTheDay language={language} />
                   <PlanetaryHourCard language={language} />
+                  <PlanetOfTheDay language={language} />
                 </div>
                 <div className="mt-4">
                   <PlanetTransitCard language={language} onNavigate={() => {}} />

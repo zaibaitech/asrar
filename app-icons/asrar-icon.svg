@@ -1,0 +1,98 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EC4899;stop-opacity:1" />
+    </radialGradient>
+    
+    <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FCD34D;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FDE047;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FBBF24;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="512" cy="512" r="512" fill="url(#bgGradient)" />
+  
+  <!-- Outer Ring (Ring 1) -->
+  <circle 
+    cx="512" 
+    cy="512" 
+    r="340" 
+    fill="none" 
+    stroke="#E0E7FF" 
+    stroke-width="2" 
+    opacity="0.3"
+  />
+  
+  <!-- Middle Ring (Ring 2) -->
+  <circle 
+    cx="512" 
+    cy="512" 
+    r="260" 
+    fill="none" 
+    stroke="#DDD6FE" 
+    stroke-width="3" 
+    opacity="0.4"
+  />
+  
+  <!-- Inner Ring (Ring 3) -->
+  <circle 
+    cx="512" 
+    cy="512" 
+    r="180" 
+    fill="none" 
+    stroke="#C4B5FD" 
+    stroke-width="4" 
+    opacity="0.5"
+  />
+  
+  <!-- 8-Pointed Star (Octagram) -->
+  <g transform="translate(512, 512)" filter="url(#glow)">
+    <!-- Star points -->
+    <path
+      d="M 0,-200 L 35,-35 L 200,0 L 35,35 L 0,200 L -35,35 L -200,0 L -35,-35 Z"
+      fill="url(#starGradient)"
+      opacity="0.9"
+    />
+    
+    <!-- Inner star for depth -->
+    <path
+      d="M 0,-140 L 25,-25 L 140,0 L 25,25 L 0,140 L -25,25 L -140,0 L -25,-25 Z"
+      fill="#FFFFFF"
+      opacity="0.3"
+    />
+  </g>
+  
+  <!-- Three Dots (Trinity) in triangular formation -->
+  <circle cx="512" cy="332" r="16" fill="#FFFFFF" opacity="0.8" />
+  <circle cx="456" cy="432" r="16" fill="#FFFFFF" opacity="0.8" />
+  <circle cx="568" cy="432" r="16" fill="#FFFFFF" opacity="0.8" />
+  
+  <!-- Center Eye with Ayn (ع) curve -->
+  <circle cx="512" cy="512" r="80" fill="#1E1B4B" opacity="0.9" />
+  <circle cx="512" cy="512" r="60" fill="url(#starGradient)" />
+  
+  <!-- Inner pupil/seed -->
+  <circle cx="512" cy="512" r="24" fill="#1E1B4B" />
+  <circle cx="512" cy="512" r="12" fill="#FFFFFF" opacity="0.9" />
+  
+  <!-- Subtle Ayn curve -->
+  <path
+    d="M 452,512 Q 452,540 482,550 Q 512,560 542,550 Q 572,540 572,512"
+    fill="none"
+    stroke="#FFFFFF"
+    stroke-width="3"
+    opacity="0.3"
+  />
+</svg>

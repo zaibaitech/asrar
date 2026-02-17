@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asrār Logo Generator</title>
+</head>
+<body style="margin: 0; padding: 20px; background: #1a1a2e; font-family: Arial, sans-serif;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <h1 style="color: #D4AF37; text-align: center;">Asrār Everyday Logo Export</h1>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+            
+            <!-- App Icon 1024x1024 -->
+            <div style="background: white; padding: 20px; border-radius: 10px;">
+                <h3 style="color: #1a1a2e; margin-top: 0;">App Icon (1024x1024)</h3>
+                <canvas id="appIcon" width="1024" height="1024" style="width: 100%; border: 1px solid #ddd;"></canvas>
+                <button onclick="downloadCanvas('appIcon', 'asrar-app-icon-1024.png')" 
+                        style="margin-top: 10px; padding: 10px 20px; background: #D4AF37; color: #1a1a2e; border: none; border-radius: 5px; cursor: pointer; width: 100%;">
+                    Download App Icon
+                </button>
+            </div>
+
+            <!-- Splash Screen Logo -->
+            <div style="background: white; padding: 20px; border-radius: 10px;">
+                <h3 style="color: #1a1a2e; margin-top: 0;">Splash Screen (1080x1920)</h3>
+                <canvas id="splashScreen" width="1080" height="1920" style="width: 100%; border: 1px solid #ddd;"></canvas>
+                <button onclick="downloadCanvas('splashScreen', 'asrar-splash-screen.png')" 
+                        style="margin-top: 10px; padding: 10px 20px; background: #D4AF37; color: #1a1a2e; border: none; border-radius: 5px; cursor: pointer; width: 100%;">
+                    Download Splash Screen
+                </button>
+            </div>
+
+            <!-- Header Logo -->
+            <div style="background: white; padding: 20px; border-radius: 10px;">
+                <h3 style="color: #1a1a2e; margin-top: 0;">Header Logo (800x200)</h3>
+                <canvas id="headerLogo" width="800" height="200" style="width: 100%; border: 1px solid #ddd;"></canvas>
+                <button onclick="downloadCanvas('headerLogo', 'asrar-header-logo.png')" 
+                        style="margin-top: 10px; padding: 10px 20px; background: #D4AF37; color: #1a1a2e; border: none; border-radius: 5px; cursor: pointer; width: 100%;">
+                    Download Header Logo
+                </button>
+            </div>
+
+            <!-- Icon Only (512x512) -->
+            <div style="background: white; padding: 20px; border-radius: 10px;">
+                <h3 style="color: #1a1a2e; margin-top: 0;">Icon Only (512x512)</h3>
+                <canvas id="iconOnly" width="512" height="512" style="width: 100%; border: 1px solid #ddd;"></canvas>
+                <button onclick="downloadCanvas('iconOnly', 'asrar-icon-512.png')" 
+                        style="margin-top: 10px; padding: 10px 20px; background: #D4AF37; color: #1a1a2e; border: none; border-radius: 5px; cursor: pointer; width: 100%;">
+                    Download Icon Only
+                </button>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 40px; padding: 20px; background: rgba(212, 175, 55, 0.1); border-radius: 10px; color: #D4AF37;">
+            <h3>File Specifications:</h3>
+            <ul>
+                <li><strong>App Icon (1024x1024):</strong> For iOS and Android app stores</li>
+                <li><strong>Splash Screen (1080x1920):</strong> For app launch screen</li>
+                <li><strong>Header Logo (800x200):</strong> For in-app navigation header</li>
+                <li><strong>Icon Only (512x512):</strong> For notifications and small displays</li>
+            </ul>
+            <p><em>All images are PNG format with transparent backgrounds where applicable.</em></p>
+        </div>
+    </div>
+
+    <script>
+        // Draw 8-pointed star (octagram)
+        function drawStar(ctx, cx, cy, outerRadius, innerRadius, points, rotation = 0) {
+            ctx.save();
+            ctx.translate(cx, cy);
+            ctx.rotate(rotation);
+            ctx.beginPath();
+            
+            for (let i = 0; i < points * 2; i++) {
+                const radius = i % 2 === 0 ? outerRadius : innerRadius;
+                const angle = (Math.PI / points) * i;
+                const x = Math.cos(angle) * radius;
+                const y = Math.sin(angle) * radius;
+                
+                if (i === 0) {
+                    ctx.moveTo(x, y);
+                } else {
+                    ctx.lineTo(x, y);
+                }
+            }
+            
+            ctx.closePath();
+            ctx.restore();
+        }
+
+        // Draw the logo symbol
+        function drawLogoSymbol(ctx, x, y, size, withGlow = true) {
+            const outerRadius = size * 0.4;
+            const innerRadius = size * 0.2;
+            
+            // Glow effect
+            if (withGlow) {
+                ctx.shadowColor = 'rgba(212, 175, 55, 0.6)';
+                ctx.shadowBlur = size * 0.05;
+            }
+            
+            // Outer star
+            const gradient1 = ctx.createRadialGradient(x, y, 0, x, y, outerRadius);
+            gradient1.addColorStop(0, '#F4D03F');
+            gradient1.addColorStop(1, '#D4AF37');
+            
+            ctx.fillStyle = gradient1;
+            drawStar(ctx, x, y, outerRadius, innerRadius, 8, -Math.PI / 8);
+            ctx.fill();
+            
+            // Inner star (rotated)
+            const gradient2 = ctx.createRadialGradient(x, y, 0, x, y, outerRadius * 0.6);
+            gradient2.addColorStop(0, '#D4AF37');
+            gradient2.addColorStop(1, '#B8860B');
+            
+            ctx.fillStyle = gradient2;
+            drawStar(ctx, x, y, outerRadius * 0.6, innerRadius * 0.5, 8, 0);
+            ctx.fill();
+            
+            // Center circle
+            ctx.shadowBlur = 0;
+            ctx.fillStyle = '#1a1a2e';
+            ctx.beginPath();
+            ctx.arc(x, y, size * 0.08, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Inner glow in center
+            const centerGradient = ctx.createRadialGradient(x, y, 0, x, y, size * 0.08);
+            centerGradient.addColorStop(0, 'rgba(244, 208, 63, 0.3)');
+            centerGradient.addColorStop(1, 'rgba(212, 175, 55, 0)');
+            ctx.fillStyle = centerGradient;
+            ctx.fill();
+        }
+
+        // App Icon (1024x1024)
+        const appIconCanvas = document.getElementById('appIcon');
+        const appIconCtx = appIconCanvas.getContext('2d');
+        
+        // Background
+        const bgGradient = appIconCtx.createLinearGradient(0, 0, 0, 1024);
+        bgGradient.addColorStop(0, '#16213e');
+        bgGradient.addColorStop(1, '#0f1626');
+        appIconCtx.fillStyle = bgGradient;
+        appIconCtx.fillRect(0, 0, 1024, 1024);
+        
+        // Logo symbol
+        drawLogoSymbol(appIconCtx, 512, 512, 1024, true);
+        
+        // Splash Screen (1080x1920)
+        const splashCanvas = document.getElementById('splashScreen');
+        const splashCtx = splashCanvas.getContext('2d');
+        
+        // Background
+        const splashBg = splashCtx.createLinearGradient(0, 0, 0, 1920);
+        splashBg.addColorStop(0, '#16213e');
+        splashBg.addColorStop(0.5, '#0f1626');
+        splashBg.addColorStop(1, '#16213e');
+        splashCtx.fillStyle = splashBg;
+        splashCtx.fillRect(0, 0, 1080, 1920);
+        
+        // Logo symbol (centered)
+        drawLogoSymbol(splashCtx, 540, 800, 600, true);
+        
+        // Text
+        splashCtx.shadowColor = 'rgba(212, 175, 55, 0.4)';
+        splashCtx.shadowBlur = 20;
+        splashCtx.fillStyle = '#D4AF37';
+        splashCtx.font = 'bold 100px serif';
+        splashCtx.textAlign = 'center';
+        splashCtx.fillText('Asrār', 540, 1350);
+        
+        splashCtx.font = '60px serif';
+        splashCtx.fillStyle = '#B8860B';
+        splashCtx.fillText('أسرار', 540, 1440);
+        
+        splashCtx.shadowBlur = 0;
+        splashCtx.font = '40px sans-serif';
+        splashCtx.fillStyle = 'rgba(212, 175, 55, 0.6)';
+        splashCtx.fillText('Everyday', 540, 1520);
+        
+        // Header Logo (800x200)
+        const headerCanvas = document.getElementById('headerLogo');
+        const headerCtx = headerCanvas.getContext('2d');
+        
+        // Transparent background
+        headerCtx.clearRect(0, 0, 800, 200);
+        
+        // Logo symbol (left side)
+        drawLogoSymbol(headerCtx, 120, 100, 200, false);
+        
+        // Text (right side)
+        headerCtx.fillStyle = '#D4AF37';
+        headerCtx.font = 'bold 60px serif';
+        headerCtx.textAlign = 'left';
+        headerCtx.fillText('Asrār', 240, 115);
+        
+        headerCtx.font = '35px serif';
+        headerCtx.fillStyle = '#B8860B';
+        headerCtx.fillText('أسرار', 240, 155);
+        
+        // Icon Only (512x512)
+        const iconCanvas = document.getElementById('iconOnly');
+        const iconCtx = iconCanvas.getContext('2d');
+        
+        // Transparent background
+        iconCtx.clearRect(0, 0, 512, 512);
+        
+        // Logo symbol only
+        drawLogoSymbol(iconCtx, 256, 256, 512, true);
+        
+        // Download function
+        function downloadCanvas(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+    </script>
+</body>
+</html>
