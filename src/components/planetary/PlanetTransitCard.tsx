@@ -290,9 +290,8 @@ export function PlanetTransitCard({
                   {(t.planetsAr as Record<string, string>)?.[transit.planetName]}
                 </div>
                 <div className="text-[11px] text-slate-400 dark:text-slate-500 flex items-center gap-1 flex-wrap">
-                  <span className="whitespace-nowrap">{(t.elements as Record<string, string>)?.[transit.element] || transit.element.charAt(0).toUpperCase() + transit.element.slice(1)}{' '}
-                    <span className="font-arabic whitespace-nowrap min-w-fit" dir="rtl">{(t.elementsAr as Record<string, string>)?.[transit.element]}</span>
-                  </span>
+                  <span className="whitespace-nowrap">{(t.elements as Record<string, string>)?.[transit.element] || transit.element.charAt(0).toUpperCase() + transit.element.slice(1)}</span>
+                  <span className="font-arabic whitespace-nowrap min-w-fit" dir="rtl">{(t.elementsAr as Record<string, string>)?.[transit.element]}</span>
                   {transit.isRetrograde && (
                     <span className="text-amber-600 dark:text-amber-400 font-bold" title={language === 'fr' ? 'Rétrograde' : 'Retrograde'}>℞</span>
                   )}
