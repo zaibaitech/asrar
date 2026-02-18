@@ -1,3 +1,4 @@
+import Script from 'next/script'
 import './globals.css'
 import type { Metadata, Viewport } from 'next'
 import { AbjadProvider } from '../src/contexts/AbjadContext'
@@ -105,6 +106,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-VTWVCR2EJN"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-VTWVCR2EJN');
+        `}
+      </Script>
       <body className="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100">
         <AuthProvider>
           <LanguageProvider>
