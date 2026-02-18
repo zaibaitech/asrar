@@ -267,7 +267,7 @@ export function PlanetTransitCard({
         return (
           <div 
             key={transit.planetKey}
-            className={`bg-white/70 dark:bg-slate-800/50 border rounded-lg p-3 hover:shadow-md transition-all cursor-pointer ${
+            className={`bg-white/70 dark:bg-slate-800/50 border rounded-lg p-3 pr-4 hover:shadow-md transition-all cursor-pointer ${
               showDetailFor === transit.planetKey
                 ? 'border-purple-400 dark:border-purple-500/60 ring-1 ring-purple-300 dark:ring-purple-500/40 shadow-md scale-[1.02]'
                 : 'border-slate-200/80 dark:border-slate-700 hover:scale-[1.02]'
@@ -298,16 +298,16 @@ export function PlanetTransitCard({
                 </div>
               </div>
             </div>
-            <div className="flex items-center gap-2 bg-purple-50 dark:bg-purple-900/20 rounded px-2 py-1.5">
-              <span className="text-base">{zodiac.symbol}</span>
-              <div className="min-w-0 flex-1">
-                <span className="text-sm font-medium text-purple-700 dark:text-purple-300">
+            <div className="flex items-center gap-2 bg-purple-50 dark:bg-purple-900/20 rounded px-2 py-1.5 w-full overflow-hidden">
+              <span className="text-base flex-shrink-0">{zodiac.symbol}</span>
+              <div className="min-w-0 flex-1 flex items-center gap-1 overflow-hidden">
+                <span className="text-sm font-medium text-purple-700 dark:text-purple-300 truncate">
                   {(t.zodiac as Record<string, string>)?.[transit.sign] || transit.sign.charAt(0).toUpperCase() + transit.sign.slice(1)}
                 </span>
-                <span className="text-[10px] font-arabic text-purple-400 dark:text-purple-500 ml-1">
+                <span className="text-[10px] font-arabic text-purple-400 dark:text-purple-500 truncate">
                   {(t.zodiacAr as Record<string, string>)?.[transit.sign]}
                 </span>
-                <span className="text-xs text-slate-400 dark:text-slate-500 ml-1 tabular-nums">
+                <span className="text-xs text-slate-400 dark:text-slate-500 tabular-nums flex-shrink-0">
                   {transit.signDegree}°
                 </span>
               </div>
