@@ -208,7 +208,7 @@ export function EnhancedStatusBadge({
   if (compact) {
     return (
       <span
-        className="inline-flex items-center gap-0.5 text-[9px] font-semibold px-1 py-px rounded-full leading-none cursor-help"
+        className="inline-flex items-center gap-1 text-[9px] font-semibold px-1.5 py-0.5 rounded-full leading-none cursor-help"
         style={{
           backgroundColor: `${conditionLabel.color}18`,
           color: conditionLabel.color,
@@ -218,7 +218,9 @@ export function EnhancedStatusBadge({
         title={`${primary.transliteration} (${primary.labelAr}) — ${d[result.condition] || conditionLabel.en}: ${totalScore > 0 ? '+' : ''}${totalScore}`}
       >
         <span>{DIGNITY_ICONS[primary.type]}</span>
+        <span>{d[primary.type] || primary.labelEn}</span>
         <span className="font-arabic">{primary.labelAr}</span>
+        <span className="opacity-60 tabular-nums">{totalScore > 0 ? '+' : ''}{totalScore}</span>
       </span>
     );
   }

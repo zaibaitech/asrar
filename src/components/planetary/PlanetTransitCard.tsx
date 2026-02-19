@@ -430,8 +430,8 @@ export function PlanetTransitCard({
         </div>
       )}
 
-      {/* View Details — toggles dignity detail panel for the active planet */}
-      {transits.length > 0 && (() => {
+      {/* View Details — toggles dignity detail panel for the active planet (carousel only, grid has its own inline panel) */}
+      {!showAll && transits.length > 0 && (() => {
         const activePlanet = showDetailFor
           ? transits.find(t => t.planetKey === showDetailFor)
           : transits[currentIndex];
