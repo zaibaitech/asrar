@@ -233,7 +233,8 @@ export function EnhancedStatusBadge({
           backgroundColor: `${conditionLabel.color}12`,
           borderColor: `${conditionLabel.color}40`,
         }}
-        aria-label={`${planet} dignity: ${conditionLabel.en}`}
+        aria-label={`${planet} dignity: ${d[primary.type] || primary.labelEn} (${conditionLabel.en})`}
+        title={`${d[result.condition] || conditionLabel.en} — ${conditionLabel.ar}`}
         type="button"
       >
         {/* Pulsing status dot */}
@@ -248,22 +249,27 @@ export function EnhancedStatusBadge({
           />
         </div>
 
-        {/* Primary dignity label */}
+        {/* Primary dignity icon */}
+        <span className="text-sm" style={{ color: conditionLabel.color }}>
+          {DIGNITY_ICONS[primary.type]}
+        </span>
+
+        {/* Primary dignity label (essential dignity name, e.g. Sharaf/Exalted) */}
         <div className="flex items-center gap-1.5 text-sm font-medium">
           <span style={{ color: conditionLabel.color }}>
-            {d[result.condition] || conditionLabel.en}
+            {d[primary.type] || primary.labelEn}
           </span>
           <span
             className="font-arabic text-xs opacity-70"
             style={{ color: conditionLabel.color }}
           >
-            {conditionLabel.ar}
+            {primary.labelAr}
           </span>
         </div>
 
-        {/* Small dignity icon */}
-        <span className="text-xs opacity-60" style={{ color: conditionLabel.color }}>
-          {DIGNITY_ICONS[primary.type]}
+        {/* Condition score */}
+        <span className="text-[10px] font-bold tabular-nums opacity-60" style={{ color: conditionLabel.color }}>
+          {totalScore > 0 ? '+' : ''}{totalScore}
         </span>
       </button>
 
