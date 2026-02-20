@@ -114,18 +114,8 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
               </div>
             </div>
 
-            {/* Right: Total dhikr count + Chevron */}
-            <div className="flex items-center gap-4">
-              {/* Total Dhikr Stat Block */}
-              <div className="flex flex-col items-end leading-tight">
-                <span className="text-xl font-bold text-amber-700 dark:text-amber-300">
-                  {totalRamadanProgress.toLocaleString()}
-                </span>
-                <span className="text-xs text-amber-500 dark:text-amber-400">
-                  {language === 'fr' ? 'dhikr au total' : 'dhikr total'}
-                </span>
-              </div>
-              {/* Chevron */}
+            {/* Right: Chevron */}
+            <div className="flex items-center gap-2">
               {isExpanded ? (
                 <ChevronUp className="w-5 h-5 text-amber-500" />
               ) : (
