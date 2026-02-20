@@ -8,7 +8,7 @@ import { IlmHurufPanel } from './src/features/ilm-huruf';
 import { CompatibilityPanel } from './src/features/compatibility';
 import { IstikharaPanel } from './src/features/istikhara';
 import { PlanetOfTheDay, PlanetaryHourCard, PlanetTransitCard } from './src/components/planetary';
-import { RamadanHub } from './src/features/ramadanChallenges';
+import { RamadanHub, useRamadanChallenges } from './src/features/ramadanChallenges';
 import { getRamadanInfo } from './src/lib/hijri';
 import { analyzePatterns } from './src/features/ilm-huruf/patternRecognition';
 import { generateWafqAnalysis } from './src/features/ilm-huruf/wafqGenerator';
@@ -1383,6 +1383,10 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
   const daily = getDailyReflection();
   const ramadan = getRamadanInfo();
   const isRamadan = ramadan.isRamadan;
+  
+  // Get total dhikr count from Ramadan challenges
+  const { getTotalRamadanProgress } = useRamadanChallenges();
+  const totalDhikr = getTotalRamadanProgress();
 
   // Ramadan-aware header strings
   const headerTitle = isRamadan
@@ -1451,21 +1455,36 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
             )}
           </div>
           
-          {/* Collapse Toggle Button */}
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              onToggleCollapse();
-            }}
-            className={`p-2 ${colors.btnHover} rounded-lg transition-colors flex-shrink-0 ml-2`}
-            aria-label={isCollapsed ? t.dailyReflection.expandReflection : t.dailyReflection.collapseReflection}
-          >
-            {isCollapsed ? (
-              <ChevronDown className={`w-5 h-5 ${colors.icon}`} />
-            ) : (
-              <ChevronUp className={`w-5 h-5 ${colors.icon}`} />
+          {/* Right side: Total dhikr count (Ramadan only) + Collapse Toggle */}
+          <div className="flex items-center gap-3">
+            {/* Total Dhikr Stat Block - Always visible during Ramadan */}
+            {isRamadan && (
+              <div className="flex flex-col items-end leading-tight">
+                <span className="text-lg sm:text-xl font-bold text-amber-700 dark:text-amber-300">
+                  {totalDhikr.toLocaleString()}
+                </span>
+                <span className="text-[10px] sm:text-xs text-amber-500 dark:text-amber-400">
+                  {language === 'fr' ? 'dhikr au total' : 'dhikr total'}
+                </span>
+              </div>
             )}
-          </button>
+            
+            {/* Collapse Toggle Button */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                onToggleCollapse();
+              }}
+              className={`p-2 ${colors.btnHover} rounded-lg transition-colors flex-shrink-0`}
+              aria-label={isCollapsed ? t.dailyReflection.expandReflection : t.dailyReflection.collapseReflection}
+            >
+              {isCollapsed ? (
+                <ChevronDown className={`w-5 h-5 ${colors.icon}`} />
+              ) : (
+                <ChevronUp className={`w-5 h-5 ${colors.icon}`} />
+              )}
+            </button>
+          </div>
         </div>
       </div>
       
