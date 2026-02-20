@@ -98,9 +98,6 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
                   <h3 className="text-lg font-bold text-amber-900 dark:text-amber-100">
                     {language === 'fr' ? 'Ramadan Jour' : 'Ramadan Day'} {ramadanInfo.dayOfRamadan}
                   </h3>
-                  <span className="text-lg font-bold text-amber-600 dark:text-amber-400">
-                    · {formatNumber(totalRamadanProgress)} dhikr
-                  </span>
                 </div>
                 <p className="text-sm text-amber-700 dark:text-amber-300 mt-0.5">
                   {state.challenges.length} {language === 'fr' 
@@ -117,8 +114,18 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
               </div>
             </div>
 
-            {/* Right: Chevron */}
-            <div className="flex items-center gap-2">
+            {/* Right: Total dhikr count + Chevron */}
+            <div className="flex items-center gap-4">
+              {/* Total Dhikr Stat Block */}
+              <div className="flex flex-col items-end leading-tight">
+                <span className="text-xl font-bold text-amber-700 dark:text-amber-300">
+                  {totalRamadanProgress.toLocaleString()}
+                </span>
+                <span className="text-xs text-amber-500 dark:text-amber-400">
+                  {language === 'fr' ? 'dhikr au total' : 'dhikr total'}
+                </span>
+              </div>
+              {/* Chevron */}
               {isExpanded ? (
                 <ChevronUp className="w-5 h-5 text-amber-500" />
               ) : (
