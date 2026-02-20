@@ -2,7 +2,7 @@
  * Add Challenge Modal Component
  * ==============================
  * Modal for adding new dhikr challenges:
- * - Ṣalawāt with variant selection
+ * - Ṣalawāt with extended preset selection
  * - Divine Name selection
  * - Custom wird entry
  */
@@ -10,9 +10,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { X, ChevronRight } from 'lucide-react';
-import type { ChallengeType, SalawatVariant, DivineNameOption } from '../types';
-import { SALAWAT_VARIANTS, DIVINE_NAME_OPTIONS, DEFAULT_QUICK_ADD_PRESETS } from '../types';
+import { X, ChevronRight, ChevronLeft, ChevronDown, ChevronUp } from 'lucide-react';
+import type { ChallengeType, SalawatPreset, DivineNameOption } from '../types';
+import { SALAWAT_PRESETS, DIVINE_NAME_OPTIONS, DEFAULT_QUICK_ADD_PRESETS } from '../types';
 
 // ─── Types ───────────────────────────────────────────────────────────────────────
 
@@ -33,14 +33,15 @@ interface ChallengeConfig {
   quickAddPresets?: number[];
 }
 
-type ModalStep = 'SELECT_TYPE' | 'CONFIGURE_SALAWAT' | 'CONFIGURE_DIVINE_NAME' | 'CONFIGURE_CUSTOM';
+type ModalStep = 'SELECT_TYPE' | 'CONFIGURE_SALAWAT' | 'PREVIEW_SALAWAT' | 'CONFIGURE_DIVINE_NAME' | 'CONFIGURE_CUSTOM';
 
 // ─── Component ───────────────────────────────────────────────────────────────────
 
 export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en' }: AddChallengeModalProps) {
   const [step, setStep] = useState<ModalStep>('SELECT_TYPE');
-  const [selectedSalawat, setSelectedSalawat] = useState<SalawatVariant>(SALAWAT_VARIANTS[0]);
+  const [selectedSalawat, setSelectedSalawat] = useState<SalawatPreset>(SALAWAT_PRESETS[0]);
   const [selectedDivineName, setSelectedDivineName] = useState<DivineNameOption>(DIVINE_NAME_OPTIONS[0]);
+  const [showMeaning, setShowMeaning] = useState(false);
   
   // Custom wird state
   const [customTitle, setCustomTitle] = useState('');
@@ -53,11 +54,19 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en' }: A
   // ─── Reset modal state ───
   const handleClose = () => {
     setStep('SELECT_TYPE');
+    setShowMeaning(false);
     setCustomTitle('');
     setCustomArabic('');
     setCustomTranslit('');
     setCustomDaily('100');
     onClose();
+  };
+
+  // ─── Handle Ṣalawāt preset selection ───
+  const handleSalawatSelect = (preset: SalawatPreset) => {
+    setSelectedSalawat(preset);
+    setShowMeaning(false);
+    setStep('PREVIEW_SALAWAT');
   };
 
   // ─── Challenge type options ───
@@ -111,14 +120,15 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en' }: A
 
   // ─── Handle Ṣalawāt add ───
   const handleAddSalawat = () => {
+    const dailyTarget = selectedSalawat.recommendedDaily;
     onAdd('SALAWAT', {
-      title: 'Ṣalawāt Challenge',
+      title: selectedSalawat.title,
       arabicText: selectedSalawat.arabicText,
       transliteration: selectedSalawat.transliteration,
       meaning: selectedSalawat.meaning,
-      dailyTarget: 1000,
-      ramadanTarget: 30000,
-      quickAddPresets: [10, 33, 100, 500],
+      dailyTarget: dailyTarget,
+      ramadanTarget: dailyTarget * 30,
+      quickAddPresets: selectedSalawat.quickAddPresets,
     });
     handleClose();
   };
@@ -201,45 +211,143 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en' }: A
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setStep('SELECT_TYPE')}
-                className="text-sm text-slate-500 hover:text-slate-700 dark:hover:text-slate-300"
+                className="text-sm text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 flex items-center gap-1"
               >
-                ← {language === 'fr' ? 'Retour' : 'Back'}
+                <ChevronLeft className="w-4 h-4" />
+                {language === 'fr' ? 'Retour' : 'Back'}
               </button>
             </div>
             
-            <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
-              {language === 'fr' ? 'Choisir une Ṣalawāt' : 'Choose Ṣalawāt'}
-            </h3>
+            <div>
+              <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
+                {language === 'fr' ? 'Choisir une Ṣalawāt' : 'Choose Your Ṣalawāt'}
+              </h3>
+              <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
+                {language === 'fr' 
+                  ? 'Touchez pour voir le texte complet'
+                  : 'Tap to preview full text'
+                }
+              </p>
+            </div>
 
-            <div className="space-y-2">
-              {SALAWAT_VARIANTS.map((variant) => (
+            <div className="space-y-3 max-h-[60vh] overflow-y-auto pr-1">
+              {SALAWAT_PRESETS.map((preset) => (
                 <button
-                  key={variant.id}
-                  onClick={() => setSelectedSalawat(variant)}
-                  className={`w-full p-4 rounded-xl border text-left transition-all ${
-                    selectedSalawat.id === variant.id
-                      ? 'border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20'
-                      : 'border-slate-200 dark:border-slate-700 hover:border-emerald-300 dark:hover:border-emerald-600'
-                  }`}
+                  key={preset.id}
+                  onClick={() => handleSalawatSelect(preset)}
+                  className="w-full p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50/50 dark:hover:bg-emerald-900/20 transition-all text-left group"
                 >
-                  <p className="text-lg font-arabic text-slate-800 dark:text-slate-200" dir="rtl">
-                    {variant.arabicText}
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-semibold text-slate-900 dark:text-slate-100">
+                        {preset.title}
+                      </h4>
+                      <p className="text-xs text-emerald-600 dark:text-emerald-400 mt-0.5">
+                        {preset.tradition}
+                      </p>
+                    </div>
+                    <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-emerald-500 group-hover:translate-x-1 transition-all flex-shrink-0 mt-1" />
+                  </div>
+                  
+                  <p className="text-base font-arabic text-slate-700 dark:text-slate-300 mt-3 line-clamp-2" dir="rtl">
+                    {preset.arabicText.split('\n')[0]}
                   </p>
-                  <p className="text-sm italic text-slate-600 dark:text-slate-400 mt-1">
-                    {variant.transliteration}
-                  </p>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                    {variant.meaning}
-                  </p>
+                  
+                  <div className="flex items-center justify-between mt-3 pt-2 border-t border-slate-100 dark:border-slate-700">
+                    <span className="text-xs text-slate-500 dark:text-slate-400">
+                      {language === 'fr' ? 'Recommandé:' : 'Recommended:'} {preset.recommendedDaily}/{language === 'fr' ? 'jour' : 'day'}
+                    </span>
+                    <span className="text-xs text-emerald-600 dark:text-emerald-400">
+                      {language === 'fr' ? 'Voir texte complet →' : 'View full text →'}
+                    </span>
+                  </div>
                 </button>
               ))}
+            </div>
+          </div>
+        );
+
+      case 'PREVIEW_SALAWAT':
+        return (
+          <div className="space-y-4">
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setStep('CONFIGURE_SALAWAT')}
+                className="text-sm text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 flex items-center gap-1"
+              >
+                <ChevronLeft className="w-4 h-4" />
+                {language === 'fr' ? 'Retour' : 'Back'}
+              </button>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
+                {selectedSalawat.title}
+              </h3>
+              <p className="text-sm text-emerald-600 dark:text-emerald-400 mt-0.5">
+                {selectedSalawat.tradition}
+              </p>
+            </div>
+
+            <div className="max-h-[50vh] overflow-y-auto space-y-4">
+              {/* Full Arabic text */}
+              <div className="bg-emerald-50 dark:bg-emerald-900/20 rounded-xl p-4">
+                <p className="text-xl font-arabic text-center text-emerald-900 dark:text-emerald-100 leading-loose whitespace-pre-line" dir="rtl">
+                  {selectedSalawat.arabicText}
+                </p>
+              </div>
+
+              {/* Transliteration */}
+              <div className="space-y-1">
+                <p className="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wide">
+                  {language === 'fr' ? 'Translittération' : 'Transliteration'}
+                </p>
+                <p className="text-sm italic text-slate-700 dark:text-slate-300 whitespace-pre-line leading-relaxed">
+                  {selectedSalawat.transliteration}
+                </p>
+              </div>
+
+              {/* Collapsible meaning */}
+              <div className="border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
+                <button
+                  onClick={() => setShowMeaning(!showMeaning)}
+                  className="w-full flex items-center justify-between p-3 text-left hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors"
+                >
+                  <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                    {language === 'fr' ? 'Afficher la signification' : 'Show meaning'}
+                  </span>
+                  {showMeaning ? (
+                    <ChevronUp className="w-5 h-5 text-slate-400" />
+                  ) : (
+                    <ChevronDown className="w-5 h-5 text-slate-400" />
+                  )}
+                </button>
+                {showMeaning && (
+                  <div className="p-3 pt-0 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    {selectedSalawat.meaning}
+                  </div>
+                )}
+              </div>
+
+              {/* Note */}
+              <p className="text-sm italic text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/20 p-3 rounded-lg">
+                {selectedSalawat.note}
+              </p>
+
+              {/* Recommended daily */}
+              <div className="flex items-center justify-between text-sm text-slate-600 dark:text-slate-400">
+                <span>{language === 'fr' ? 'Cible quotidienne recommandée:' : 'Recommended daily target:'}</span>
+                <span className="font-semibold text-emerald-600 dark:text-emerald-400">
+                  {selectedSalawat.recommendedDaily}
+                </span>
+              </div>
             </div>
 
             <button
               onClick={handleAddSalawat}
               className="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold transition-colors"
             >
-              {language === 'fr' ? 'Ajouter Ṣalawāt' : 'Add Ṣalawāt Challenge'}
+              {language === 'fr' ? 'Choisir cette Ṣalawāt' : 'Select this Ṣalawāt'}
             </button>
           </div>
         );

@@ -173,3 +173,81 @@ export function needsMigration(): boolean {
 
   return !hasV2 && hasLegacy;
 }
+
+/**
+ * Migrate existing Ṣalawāt challenges with old hardcoded text to the new salawat_simple preset.
+ * This runs on every hydration to upgrade existing challenges in place.
+ *
+ * Old text patterns to recognize and map to salawat_simple:
+ * - "اللّٰهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّد"
+ * - "اللَّهُمَّ صَلِّ عَلَى مُحَمَّد"
+ * - Any Ṣalawāt that doesn't match a known preset ID
+ */
+export function migrateSalawatChallenges(): void {
+  if (typeof window === 'undefined') return;
+
+  const raw = localStorage.getItem(STORAGE_KEYS.CHALLENGES_V2);
+  if (!raw) return;
+
+  try {
+    const challenges: Challenge[] = JSON.parse(raw);
+    let updated = false;
+
+    // Known preset IDs to skip (they don't need migration)
+    const knownPresetIds = [
+      'salawat_ibrahimiyya',
+      'salawat_simple',
+      'salawat_fatih',
+      'salawat_nariyya',
+      'salawat_mashishiyya',
+      'salawat_jawharatul_kamal',
+    ];
+
+    // Legacy Arabic patterns that should map to salawat_simple
+    const legacyPatterns = [
+      'اللّٰهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّد',
+      'اللَّهُمَّ صَلِّ عَلَى مُحَمَّد',
+      'Allāhumma ṣalli ʿalā Sayyidinā Muḥammad',
+      'Allāhumma ṣalli ʿalā Muḥammad',
+    ];
+
+    for (let i = 0; i < challenges.length; i++) {
+      const c = challenges[i];
+      
+      // Only process Ṣalawāt challenges
+      if (c.type !== 'SALAWAT') continue;
+
+      // Check if already using a known preset (title or arabicText matches)
+      const hasKnownPreset = knownPresetIds.some(id => 
+        c.title.toLowerCase().includes(id.replace('salawat_', '').replace('_', ' '))
+      );
+      if (hasKnownPreset) continue;
+
+      // Check if using legacy text that needs migration
+      const isLegacy = legacyPatterns.some(pattern => 
+        c.arabicText.includes(pattern) || 
+        c.transliteration.includes(pattern)
+      );
+
+      if (isLegacy) {
+        // Upgrade to salawat_simple preset while preserving progress
+        challenges[i] = {
+          ...c,
+          title: 'Ṣalāt Mufrada · Simple Blessing',
+          arabicText: 'اللَّهُمَّ صَلِّ وَسَلِّمْ وَبَارِكْ عَلَى سَيِّدِنَا مُحَمَّدٍ',
+          transliteration: 'Allāhumma ṣalli wa sallim wa bārik ʿalā Sayyidinā Muḥammad',
+          meaning: 'O Allah, send blessings, peace, and grace upon our master Muḥammad.',
+          quickAddPresets: [33, 100, 313, 500, 1000, 3000],
+        };
+        updated = true;
+        console.log('[RamadanChallenges] Migrated legacy Ṣalawāt challenge to salawat_simple');
+      }
+    }
+
+    if (updated) {
+      localStorage.setItem(STORAGE_KEYS.CHALLENGES_V2, JSON.stringify(challenges));
+    }
+  } catch (error) {
+    console.error('[RamadanChallenges] Ṣalawāt migration failed:', error);
+  }
+}

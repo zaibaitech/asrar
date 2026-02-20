@@ -39,7 +39,7 @@ import {
   generateCommunityStats,
   STORAGE_KEYS,
 } from './utils';
-import { migrateExistingIstighfar } from './migrations';
+import { migrateExistingIstighfar, migrateSalawatChallenges } from './migrations';
 import { getRamadanInfo } from '@/src/lib/hijri';
 
 // ─── Initial State ───────────────────────────────────────────────────────────────
@@ -215,8 +215,9 @@ export function RamadanChallengesProvider({ children }: RamadanChallengesProvide
 
   // ─── Hydration from localStorage ───
   useEffect(() => {
-    // Run migration first
+    // Run migrations first
     migrateExistingIstighfar();
+    migrateSalawatChallenges();
 
     // Load from storage
     const raw = localStorage.getItem(STORAGE_KEYS.CHALLENGES_V2);

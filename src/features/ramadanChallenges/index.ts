@@ -20,11 +20,13 @@ export type {
   CommunityStats,
   RamadanChallengesState,
   SalawatVariant,
+  SalawatPreset,
   DivineNameOption,
 } from './types';
 
 export {
   SALAWAT_VARIANTS,
+  SALAWAT_PRESETS,
   DIVINE_NAME_OPTIONS,
   SESSION_TAGS,
   DEFAULT_QUICK_ADD_PRESETS,
