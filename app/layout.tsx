@@ -4,6 +4,7 @@ import type { Metadata, Viewport } from 'next'
 import { AbjadProvider } from '../src/contexts/AbjadContext'
 import { LanguageProvider } from '../src/contexts/LanguageContext'
 import { AuthProvider } from '../src/contexts/AuthContext'
+import { RamadanChallengesProvider } from '../src/features/ramadanChallenges'
 import { getSeoConfig } from '../src/lib/seoConfig'
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://asrar-everyday.vercel.app'
@@ -122,7 +123,9 @@ export default function RootLayout({
         <AuthProvider>
           <LanguageProvider>
             <AbjadProvider>
-              {children}
+              <RamadanChallengesProvider>
+                {children}
+              </RamadanChallengesProvider>
             </AbjadProvider>
           </LanguageProvider>
         </AuthProvider>

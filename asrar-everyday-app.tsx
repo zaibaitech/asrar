@@ -8,7 +8,7 @@ import { IlmHurufPanel } from './src/features/ilm-huruf';
 import { CompatibilityPanel } from './src/features/compatibility';
 import { IstikharaPanel } from './src/features/istikhara';
 import { PlanetOfTheDay, PlanetaryHourCard, PlanetTransitCard } from './src/components/planetary';
-import { RamadanIstighfarTracker } from './src/components/ramadan';
+import { RamadanHub } from './src/features/ramadanChallenges';
 import { getRamadanInfo } from './src/lib/hijri';
 import { analyzePatterns } from './src/features/ilm-huruf/patternRecognition';
 import { generateWafqAnalysis } from './src/features/ilm-huruf/wafqGenerator';
@@ -1324,6 +1324,60 @@ function ComparisonMode({ onClose, abjad, analyzeElements }: {
   );
 }
 
+// ─── Rotating Dhikr Preview for Header ────────────────────────────────────────────
+
+// Standard dhikr options to rotate through (shows variety even with 1 active challenge)
+const PREVIEW_DHIKR = [
+  { arabicText: 'أَسْتَغْفِرُ اللهَ', label: 'Istighfār' },
+  { arabicText: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّد', label: 'Ṣalawāt' },
+  { arabicText: 'يَا رَحْمَٰنُ', label: 'Divine Name' },
+  { arabicText: 'سُبْحَانَ اللهِ', label: 'Tasbīḥ' },
+];
+
+function RotatingDhikrPreview({ className }: { className?: string }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsVisible(false);
+      setTimeout(() => {
+        setCurrentIndex((prev) => (prev + 1) % PREVIEW_DHIKR.length);
+        setIsVisible(true);
+      }, 300);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const current = PREVIEW_DHIKR[currentIndex];
+  
+  return (
+    <div className={`flex flex-col items-end gap-1 ${className || ''}`}>
+      <p 
+        className={`text-base sm:text-lg font-arabic text-amber-800 dark:text-amber-200 transition-opacity duration-300 ${
+          isVisible ? 'opacity-100' : 'opacity-0'
+        }`}
+        dir="rtl"
+      >
+        {current.arabicText}
+      </p>
+      <div className="flex gap-1">
+        {PREVIEW_DHIKR.map((_, idx) => (
+          <span
+            key={idx}
+            className={`w-1.5 h-1.5 rounded-full transition-colors duration-300 ${
+              idx === currentIndex
+                ? 'bg-amber-600 dark:bg-amber-400'
+                : 'bg-amber-300 dark:bg-amber-700'
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: boolean; onToggleCollapse: () => void }) {
   const { t, language } = useLanguage();
   const daily = getDailyReflection();
@@ -1333,8 +1387,8 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
   // Ramadan-aware header strings
   const headerTitle = isRamadan
     ? (language === 'fr'
-        ? `🌙 Jour ${ramadan.dayOfRamadan} de Ramadan · Défi Istighfār`
-        : `🌙 Ramadan Day ${ramadan.dayOfRamadan} · Istighfār Challenge`)
+        ? `🌙 Jour ${ramadan.dayOfRamadan} de Ramadan · Défis Spirituels`
+        : `🌙 Ramadan Day ${ramadan.dayOfRamadan} · Spiritual Challenges`)
     : t.dailyReflection.todaysReflection;
 
   const badgeLabel = isRamadan ? 'رمضان' : t.dailyReflection.dailyBadge;
@@ -1386,14 +1440,15 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
                   {badgeLabel}
                 </span>
               </div>
-              {isRamadan ? (
-                <p className={`text-xs sm:text-sm font-arabic ${colors.sub} mt-0.5`} dir="rtl">أَسْتَغْفِرُ اللهَ</p>
-              ) : (
-                !isCollapsed && (
-                  <p className={`text-xs ${colors.sub} mt-0.5`}>{daily.date}</p>
-                )
+              {!isRamadan && !isCollapsed && (
+                <p className={`text-xs ${colors.sub} mt-0.5`}>{daily.date}</p>
               )}
             </div>
+            
+            {/* Rotating Dhikr Preview - Only during Ramadan when collapsed */}
+            {isRamadan && isCollapsed && (
+              <RotatingDhikrPreview className="hidden sm:flex" />
+            )}
           </div>
           
           {/* Collapse Toggle Button */}
@@ -1417,8 +1472,8 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
       {/* Collapsible Content */}
       {!isCollapsed && (
         <div className="px-6 pb-6 pt-0 space-y-4 animate-in fade-in slide-in-from-top-2 duration-300">
-          {/* Ramadan Istighfār Tracker — pinned during Ramadan */}
-          <RamadanIstighfarTracker />
+          {/* Ramadan Spiritual Challenge Hub — replaces old single tracker */}
+          <RamadanHub language={language} />
 
           <div className="bg-white/50 dark:bg-slate-800/50 rounded-lg p-4">
             <div className="text-xs font-medium text-emerald-600 dark:text-emerald-400 mb-1">{t.dailyReflection.verseOfTheDay}</div>
