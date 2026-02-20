@@ -989,6 +989,36 @@ export const translations = {
         veryWeak: "Very weak position",
       },
 
+      // Simplified 3-tier status (user-facing)
+      simplifiedStatus: {
+        // Tier labels
+        said: "Auspicious",
+        mutadil: "Moderate",
+        mahdhur: "Cautious",
+        // Arabic tier labels
+        saidAr: "سَعِيد",
+        mutadilAr: "مُعْتَدِل",
+        mahdhurAr: "مَحْذُور",
+        // Practice guidance
+        saidGuidance: "Excellent for prayers, zikr, and new intentions",
+        mutadilGuidance: "Suitable for regular practice and reflection",
+        mahdhurGuidance: "Focus on istighfar and protective adhkār",
+        // Reason templates
+        exaltedIn: "{planet} is exalted in {sign}",
+        strongIn: "{planet} is strong in {sign}",
+        atHomeIn: "{planet} is at home in {sign}",
+        comfortableIn: "{planet} is comfortable in {sign}",
+        neutralIn: "{planet} is neutral in {sign}",
+        weakenedIn: "{planet} is weakened in {sign}",
+        // Labels
+        statusLabel: "Practice Status",
+        viewDetails: "View Details",
+        // Practice hints
+        practiceHint: "Practice Hint",
+        appTeaser: "Personalized guidance in the Asrār app",
+        comingSoon: "Coming Soon",
+      },
+
       // Element descriptions
       elementDescriptions: {
         fire: "Passionate & energizing",
@@ -4083,6 +4113,36 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
         neutralPosition: "Position neutre",
         difficultPosition: "Position difficile",
         veryWeak: "Position très faible",
+      },
+
+      // Statut simplifié à 3 niveaux (pour l'utilisateur)
+      simplifiedStatus: {
+        // Libellés des niveaux
+        said: "Propice",
+        mutadil: "Modéré",
+        mahdhur: "Prudent",
+        // Libellés arabes des niveaux
+        saidAr: "سَعِيد",
+        mutadilAr: "مُعْتَدِل",
+        mahdhurAr: "مَحْذُور",
+        // Conseils de pratique
+        saidGuidance: "Excellent pour les prières, le dhikr et les nouvelles intentions",
+        mutadilGuidance: "Approprié pour la pratique régulière et la réflexion",
+        mahdhurGuidance: "Concentrez-vous sur l'istighfar et les adhkār de protection",
+        // Modèles de raison
+        exaltedIn: "{planet} est exalté en {sign}",
+        strongIn: "{planet} est fort en {sign}",
+        atHomeIn: "{planet} est chez lui en {sign}",
+        comfortableIn: "{planet} est confortable en {sign}",
+        neutralIn: "{planet} est neutre en {sign}",
+        weakenedIn: "{planet} est affaibli en {sign}",
+        // Libellés
+        statusLabel: "Statut de Pratique",
+        viewDetails: "Voir les Détails",
+        // Indications de pratique
+        practiceHint: "Indication de Pratique",
+        appTeaser: "Guidance personnalisée dans l'app Asrār",
+        comingSoon: "Bientôt disponible",
       },
 
       // Descriptions des Éléments

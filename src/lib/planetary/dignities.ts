@@ -342,5 +342,132 @@ export function isDebilitated(planet: Planet, sign: ZodiacSign, degree: number, 
   return result.totalScore < 0;
 }
 
+// ============================================================================
+// SIMPLIFIED 3-TIER STATUS (User-Facing)
+// ============================================================================
+
+/**
+ * Simplified status tier for user-facing display
+ * Maps the 8 dignities and 7 condition tiers to just 3 simple levels
+ */
+export type SimplifiedTier = 'said' | 'mutadil' | 'mahdhur';
+
+/** Simplified status result for user-facing display */
+export interface SimplifiedStatus {
+  tier: SimplifiedTier;
+  labelAr: string;
+  labelEn: string;
+  reason: string;
+  guidance: string;
+  color: string;
+  icon: string;
+}
+
+/** Mapping from dignity types to simplified tiers */
+const DIGNITY_TO_TIER: Record<DignityType, SimplifiedTier> = {
+  sharaf:      'said',     // Exalted → Auspicious
+  bayt:        'said',     // Domicile → Auspicious
+  muthallatha: 'said',     // Triplicity → Auspicious (strong)
+  hadd:        'mutadil',  // Terms → Moderate
+  wajh:        'mutadil',  // Face → Moderate
+  gharib:      'mutadil',  // Peregrine → Moderate
+  hubut:       'mahdhur',  // Fall → Cautious
+  darr:        'mahdhur',  // Detriment → Cautious
+};
+
+/** Simplified tier metadata */
+const SIMPLIFIED_TIER_INFO: Record<SimplifiedTier, { labelAr: string; labelEn: string; color: string; icon: string; guidance: string }> = {
+  said: {
+    labelAr: 'سَعِيد',
+    labelEn: 'Auspicious',
+    color: '#22C55E',
+    icon: '●',
+    guidance: 'Excellent for prayers, zikr, and new intentions',
+  },
+  mutadil: {
+    labelAr: 'مُعْتَدِل',
+    labelEn: 'Moderate',
+    color: '#3B82F6',
+    icon: '●',
+    guidance: 'Suitable for regular practice and reflection',
+  },
+  mahdhur: {
+    labelAr: 'مَحْذُور',
+    labelEn: 'Cautious',
+    color: '#F59E0B',
+    icon: '⚠',
+    guidance: 'Focus on istighfar and protective adhkār',
+  },
+};
+
+/** Maps dignity type to user-friendly English description */
+function getDignityDescription(dignityType: DignityType): string {
+  switch (dignityType) {
+    case 'sharaf':      return 'exalted';
+    case 'bayt':        return 'at home';
+    case 'muthallatha': return 'strong';
+    case 'hadd':        return 'comfortable';
+    case 'wajh':        return 'comfortable';
+    case 'gharib':      return 'neutral';
+    case 'hubut':       return 'weakened';
+    case 'darr':        return 'weakened';
+  }
+}
+
+/**
+ * Get simplified 3-tier status from full dignity result
+ * This converts the complex dignity calculation to a user-friendly status
+ */
+export function getSimplifiedStatus(
+  result: DignityResult,
+  planet: string,
+  sign: string,
+): SimplifiedStatus {
+  const primaryDignity = result.primary.type;
+  const tier = DIGNITY_TO_TIER[primaryDignity];
+  const tierInfo = SIMPLIFIED_TIER_INFO[tier];
+  
+  // Build user-friendly reason
+  const description = getDignityDescription(primaryDignity);
+  const reason = `${planet} is ${description} in ${sign}`;
+  
+  return {
+    tier,
+    labelAr: tierInfo.labelAr,
+    labelEn: tierInfo.labelEn,
+    reason,
+    guidance: tierInfo.guidance,
+    color: tierInfo.color,
+    icon: tierInfo.icon,
+  };
+}
+
+/**
+ * Quick helper to get simplified status directly from planet position
+ */
+export function calculateSimplifiedStatus(
+  planet: Planet,
+  sign: ZodiacSign,
+  degree: number,
+  isDay: boolean = true,
+  isRetrograde: boolean = false,
+): SimplifiedStatus {
+  const result = calculateDignities(planet, sign, degree, isDay, isRetrograde);
+  
+  // Capitalize planet and sign for display
+  const planetDisplay = planet;
+  const signDisplay = sign.charAt(0).toUpperCase() + sign.slice(1);
+  
+  return getSimplifiedStatus(result, planetDisplay, signDisplay);
+}
+
 // Re-export types and metadata for consumers
-export { CONDITION_INFO, DIGNITY_INFO, EXALTATIONS, FALLS, DETRIMENTS };
+export { 
+  CONDITION_INFO, 
+  DIGNITY_INFO, 
+  EXALTATIONS, 
+  FALLS, 
+  DETRIMENTS,
+  SIMPLIFIED_TIER_INFO,
+  DIGNITY_TO_TIER,
+};

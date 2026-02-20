@@ -14,6 +14,7 @@ import {
   getIlmNujumBadge,
   formatCountdownShort,
   getAllPlanetEphemeris,
+  calculateSimplifiedStatus,
   type PlanetaryHourData,
   type PlanetaryHour,
   type PlanetEphemerisData,
@@ -22,7 +23,8 @@ import {
   type ZodiacSign,
 } from '@/src/lib/planetary';
 import { IlmNujumBadge } from './IlmNujumBadge';
-import { EnhancedStatusBadge } from './EnhancedStatusBadge';
+import { SimplifiedStatusBadge } from './SimplifiedStatusBadge';
+import { CompactPracticeHint } from './CompactPracticeHint';
 import { getUserLocation, loadLocation } from '@/src/utils/location';
 import { translations } from '@/src/lib/translations';
 
@@ -90,7 +92,7 @@ function DataSourceBadge({ source }: { source: 'ephemeris' | 'fallback' }) {
           <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-600" />
         </span>
       )}
-      {isLive ? 'NASA' : 'Approx'}
+      {isLive ? 'Live' : ''}
     </span>
   );
 }
@@ -259,7 +261,7 @@ export function PlanetaryHourCard({
           )}
         </div>
         {livePosition ? (
-          <EnhancedStatusBadge
+          <SimplifiedStatusBadge
             planet={currentHour.planet as Planet}
             sign={livePosition.sign as ZodiacSign}
             degree={livePosition.signDegree}
@@ -339,6 +341,25 @@ export function PlanetaryHourCard({
             </div>
           </div>
         )}
+
+        {/* Practice Hint for current planetary hour */}
+        {livePosition && (() => {
+          const status = calculateSimplifiedStatus(
+            currentHour.planet as Planet,
+            livePosition.sign as ZodiacSign,
+            livePosition.signDegree,
+            currentHour.isDaytime,
+            livePosition.isRetrograde
+          );
+          return (
+            <CompactPracticeHint
+              tier={status.tier}
+              planet={currentHour.planet as Planet}
+              language={language}
+              className="mt-3"
+            />
+          );
+        })()}
 
         {/* Element vs User Element */}
         {userElement && (

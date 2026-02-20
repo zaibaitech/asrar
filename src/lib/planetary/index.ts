@@ -13,3 +13,4 @@ export * from './ephemeris';
 export * from './dignities';
 export * from './terms-bounds';
 export * from './decans';
+export * from './practice-hints';

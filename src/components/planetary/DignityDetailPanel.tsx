@@ -1,9 +1,15 @@
 /**
  * Dignity Detail Panel
  * ====================
- * An inline expandable panel that shows the full essential dignity
- * breakdown for a planet at its current transit position.
- * Used inside PlanetTransitCard (carousel & grid "View Details").
+ * A simplified, user-focused panel that shows the planetary status
+ * without overwhelming technical details.
+ *
+ * Shows only:
+ * - 3-tier status (سعيد/معتدل/محذور)
+ * - Simple reason explanation
+ * - Practice guidance
+ *
+ * Technical details are hidden by default but can be expanded.
  */
 
 'use client';
@@ -11,16 +17,13 @@
 import React from 'react';
 import {
   calculateDignities,
-  getExaltationInfo,
-  EXALTATIONS,
-  FALLS,
-  DETRIMENTS,
-  type DignityResult,
-  type DignityEntry,
+  getSimplifiedStatus,
+  getSimplePracticeHint,
   type Planet,
   type ZodiacSign,
+  type SimplifiedTier,
 } from '@/src/lib/planetary';
-import { PLANET_RULERSHIPS, ZODIAC_DATA, PLANET_INFO } from '@/src/lib/planetary';
+import { ZODIAC_DATA, PLANET_INFO } from '@/src/lib/planetary';
 import { translations } from '@/src/lib/translations';
 
 // ────────────────────────────────────────────────────────────
@@ -39,53 +42,79 @@ interface DignityDetailPanelProps {
 }
 
 // ────────────────────────────────────────────────────────────
-// Dignity icons (same as EnhancedStatusBadge)
+// Tier Icons
 // ────────────────────────────────────────────────────────────
 
-const DIGNITY_ICONS: Record<string, string> = {
-  sharaf:      '⬆',
-  bayt:        '🏠',
-  muthallatha: '△',
-  hadd:        '▬',
-  wajh:        '◑',
-  gharib:      '◌',
-  hubut:       '⬇',
-  darr:        '⊘',
+const TIER_ICONS = {
+  said: '✓',      // Checkmark for auspicious
+  mutadil: '⚖',   // Balance for moderate
+  mahdhur: '⚠',   // Warning for cautious
 };
 
 // ────────────────────────────────────────────────────────────
-// Score bar component
+// Practice Hint Section (with App Teaser)
 // ────────────────────────────────────────────────────────────
 
-function ScoreBar({ score, color }: { score: number; color: string }) {
-  // Map -10…+10 to 0%…100%
-  const pct = ((score + 10) / 20) * 100;
-  const midPct = 50; // 0 sits at 50%
+function PracticeHintSection({
+  tier,
+  planet,
+  language,
+}: {
+  tier: SimplifiedTier;
+  planet: Planet;
+  language: 'en' | 'fr';
+}) {
+  const practiceHint = getSimplePracticeHint(tier, planet);
+  
+  const sectionTitle = language === 'fr' ? 'Indication de Pratique' : 'Practice Hint';
+  const appTeaser = language === 'fr' 
+    ? 'Guidance personnalisée dans l\'app Asrār' 
+    : 'Personalized guidance in the Asrār app';
+  const comingSoon = language === 'fr' ? 'Bientôt disponible' : 'Coming Soon';
+
+  // Background color based on tier
+  const bgColor = tier === 'said' 
+    ? 'bg-emerald-50 dark:bg-emerald-900/20 border-emerald-200 dark:border-emerald-500/30'
+    : tier === 'mahdhur'
+      ? 'bg-amber-50 dark:bg-amber-900/20 border-amber-200 dark:border-amber-500/30'
+      : 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-500/30';
 
   return (
-    <div className="relative h-2.5 w-full rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
-      {/* Center line for 0 */}
-      <div className="absolute left-1/2 top-0 bottom-0 w-px bg-slate-400/50 dark:bg-slate-500/50 z-10" />
-      {/* Fill */}
-      {score >= 0 ? (
-        <div
-          className="absolute top-0 bottom-0 rounded-r-full transition-all duration-500"
-          style={{
-            left: `${midPct}%`,
-            width: `${pct - midPct}%`,
-            backgroundColor: color,
-          }}
-        />
-      ) : (
-        <div
-          className="absolute top-0 bottom-0 rounded-l-full transition-all duration-500"
-          style={{
-            left: `${pct}%`,
-            width: `${midPct - pct}%`,
-            backgroundColor: color,
-          }}
-        />
-      )}
+    <div className={`p-3 rounded-lg border ${bgColor}`}>
+      {/* Section header */}
+      <div className="flex items-center justify-between mb-2">
+        <div className="text-[10px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">
+          🤲 {sectionTitle}
+        </div>
+      </div>
+
+      {/* Dhikr recommendation */}
+      <div className="flex items-center gap-3 mb-3">
+        <div className="text-2xl font-arabic leading-none">
+          {practiceHint.nameAr}
+        </div>
+        <div className="flex-1 min-w-0">
+          <div className="text-sm font-medium text-slate-700 dark:text-slate-300">
+            {practiceHint.name}
+          </div>
+          <div className="text-xs text-slate-500 dark:text-slate-400">
+            {practiceHint.hint}
+          </div>
+        </div>
+      </div>
+
+      {/* App teaser */}
+      <div className="flex items-center gap-2 pt-2 border-t border-slate-200/50 dark:border-slate-600/30">
+        <span className="text-base">📱</span>
+        <div className="flex-1">
+          <span className="text-xs text-slate-500 dark:text-slate-400">
+            {appTeaser}
+          </span>
+        </div>
+        <span className="text-[10px] font-medium text-purple-600 dark:text-purple-400 bg-purple-100 dark:bg-purple-900/30 px-2 py-0.5 rounded-full">
+          {comingSoon}
+        </span>
+      </div>
     </div>
   );
 }
@@ -104,15 +133,24 @@ export function DignityDetailPanel({
   language = 'en',
   onClose,
 }: DignityDetailPanelProps) {
+  // Calculate dignities internally
   const result = React.useMemo(
     () => calculateDignities(planet, sign, degree, isDay, isRetrograde),
     [planet, sign, degree, isDay, isRetrograde]
   );
 
+  // Get simplified status for user display
+  const signDisplay = sign.charAt(0).toUpperCase() + sign.slice(1);
+  const simplifiedStatus = React.useMemo(
+    () => getSimplifiedStatus(result, planet, signDisplay),
+    [result, planet, signDisplay]
+  );
+
   const t = translations[language].planetary;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const tAny = t as any;
-  const d: Record<string, string> = tAny.dignities || {};
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const tSimplified = (t as any).simplifiedStatus || {};
   const pt: Record<string, string> = tAny.planetTransit || {};
 
   // Translated names
@@ -120,23 +158,25 @@ export function DignityDetailPanel({
   const planetAr: string = tAny.planetsAr?.[planet] || '';
   const signLabel: string = tAny.zodiac?.[sign] || sign;
   const signAr: string = tAny.zodiacAr?.[sign] || '';
-  const elementLabel: string = tAny.elements?.[ZODIAC_DATA[sign]?.element] || '';
-  const elementAr: string = tAny.elementsAr?.[ZODIAC_DATA[sign]?.element] || '';
 
-  // Rulership info
-  const ruledSigns = PLANET_RULERSHIPS[planet] || [];
-  const exaltation = getExaltationInfo(planet);
-  const fallSign = FALLS[planet];
-  const detrimentSigns = DETRIMENTS[planet] || [];
+  // Get tier labels and guidance
+  const tierLabel = tSimplified[simplifiedStatus.tier] || simplifiedStatus.labelEn;
+  const tierLabelAr = tSimplified[`${simplifiedStatus.tier}Ar`] || simplifiedStatus.labelAr;
+  const guidance = tSimplified[`${simplifiedStatus.tier}Guidance`] || simplifiedStatus.guidance;
 
-  const { conditionLabel, totalScore } = result;
+  // Build localized reason
+  const reason = simplifiedStatus.reason
+    .replace(planet, planetLabel)
+    .replace(signDisplay, signLabel);
+
+  const icon = TIER_ICONS[simplifiedStatus.tier];
 
   return (
     <div className="rounded-xl border border-purple-200/80 dark:border-purple-500/30 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm shadow-lg overflow-hidden animate-in">
       {/* ── Header ── */}
       <div
         className="flex items-center justify-between px-4 py-3 border-b border-slate-100 dark:border-slate-700/70"
-        style={{ background: `linear-gradient(135deg, ${conditionLabel.color}08, ${conditionLabel.color}15)` }}
+        style={{ background: `linear-gradient(135deg, ${simplifiedStatus.color}08, ${simplifiedStatus.color}15)` }}
       >
         <div className="flex items-center gap-3">
           {/* Planet symbol */}
@@ -168,159 +208,67 @@ export function DignityDetailPanel({
         )}
       </div>
 
-      <div className="px-4 py-3 space-y-4">
-        {/* ── Overall Condition ── */}
-        <div>
-          <div className="flex items-center justify-between mb-1.5">
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-              {pt.overallCondition || 'Overall Condition'}
+      <div className="px-4 py-4 space-y-4">
+        {/* ── Simplified Status Badge ── */}
+        <div
+          className="flex flex-col items-center gap-2 py-4 px-4 rounded-xl border"
+          style={{
+            backgroundColor: `${simplifiedStatus.color}08`,
+            borderColor: `${simplifiedStatus.color}25`,
+          }}
+        >
+          {/* Status row */}
+          <div className="flex items-center gap-3">
+            <span
+              className="text-2xl font-bold"
+              style={{ color: simplifiedStatus.color }}
+            >
+              {icon}
             </span>
-            <div className="flex items-center gap-2">
-              <span className="font-bold text-sm tabular-nums" style={{ color: conditionLabel.color }}>
-                {totalScore > 0 ? '+' : ''}{totalScore}
-              </span>
-              <span
-                className="px-2 py-0.5 rounded-full text-xs font-semibold border"
-                style={{
-                  color: conditionLabel.color,
-                  backgroundColor: `${conditionLabel.color}15`,
-                  borderColor: `${conditionLabel.color}40`,
-                }}
-              >
-                {d[result.condition] || conditionLabel.en}
-              </span>
-            </div>
+            <span
+              className="font-arabic text-xl font-semibold"
+              style={{ color: simplifiedStatus.color }}
+            >
+              {tierLabelAr}
+            </span>
+            <span
+              className="text-lg font-semibold"
+              style={{ color: simplifiedStatus.color }}
+            >
+              {tierLabel}
+            </span>
           </div>
-          {/* Score bar */}
-          <ScoreBar score={totalScore} color={conditionLabel.color} />
-          <div className="flex justify-between mt-0.5 text-[9px] text-slate-400 tabular-nums">
-            <span>−10</span>
-            <span className="font-arabic text-[10px]" style={{ color: conditionLabel.color }}>{conditionLabel.ar}</span>
-            <span>+10</span>
-          </div>
+          
+          {/* Simple reason */}
+          <p className="text-sm text-slate-600 dark:text-slate-400 text-center">
+            {reason}
+          </p>
         </div>
 
-        {/* ── Dignity Breakdown ── */}
-        <div>
-          <div className="text-[11px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
-            {pt.dignitySection || d.breakdown || 'Essential Dignity'}
+        {/* ── Practice Guidance ── */}
+        <div className="p-3 rounded-lg bg-slate-50 dark:bg-slate-700/30 border border-slate-100 dark:border-slate-700/50">
+          <div className="text-[10px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1.5">
+            {language === 'fr' ? 'Conseil de Pratique' : 'Practice Guidance'}
           </div>
-          <div className="space-y-1.5">
-            {result.all.map((entry: DignityEntry, i: number) => (
-              <div
-                key={i}
-                className="flex items-center justify-between py-1.5 px-2.5 rounded-lg bg-slate-50 dark:bg-slate-700/40 border border-slate-100 dark:border-slate-700/60"
-              >
-                <div className="flex items-center gap-2">
-                  <span className="text-sm w-5 text-center">{DIGNITY_ICONS[entry.type]}</span>
-                  <div>
-                    <div className="flex items-center gap-1.5">
-                      <span className="text-sm font-medium text-slate-800 dark:text-slate-200">
-                        {d[entry.type] || entry.labelEn}
-                      </span>
-                      <span className="text-xs font-arabic text-slate-400 dark:text-slate-500">
-                        {entry.labelAr}
-                      </span>
-                    </div>
-                    <span className="text-[10px] text-slate-400 dark:text-slate-500 italic">
-                      {entry.transliteration}
-                    </span>
-                  </div>
-                </div>
-                <span
-                  className={`text-sm font-bold tabular-nums ${
-                    entry.score > 0
-                      ? 'text-green-600 dark:text-green-400'
-                      : entry.score < 0
-                        ? 'text-red-500 dark:text-red-400'
-                        : 'text-slate-400 dark:text-slate-500'
-                  }`}
-                >
-                  {entry.score > 0 ? '+' : ''}{entry.score}
-                </span>
-              </div>
-            ))}
-
-            {/* Retrograde row */}
-            {isRetrograde && (
-              <div className="flex items-center justify-between py-1.5 px-2.5 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-500/30">
-                <div className="flex items-center gap-2">
-                  <span className="text-sm w-5 text-center">℞</span>
-                  <span className="text-sm font-medium text-amber-700 dark:text-amber-400">
-                    {language === 'fr' ? 'Rétrograde' : 'Retrograde'}
-                  </span>
-                </div>
-                <span className="text-sm font-bold tabular-nums text-red-500 dark:text-red-400">−2</span>
-              </div>
-            )}
-          </div>
+          <p className="text-sm text-slate-700 dark:text-slate-300 italic">
+            {guidance}
+          </p>
         </div>
 
-        {/* ── Planet Reference ── */}
-        <div className="pt-2 border-t border-slate-100 dark:border-slate-700/70">
-          <div className="grid grid-cols-2 gap-2 text-xs">
-            {/* Rulership */}
-            {ruledSigns.length > 0 && (
-              <div className="p-2 rounded-lg bg-slate-50 dark:bg-slate-700/30">
-                <div className="text-[10px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1">
-                  {pt.rulesSign || 'Rules'}
-                </div>
-                <div className="flex items-center gap-1 flex-wrap">
-                  {ruledSigns.map(s => (
-                    <span key={s} className="inline-flex items-center gap-0.5 text-slate-700 dark:text-slate-300">
-                      <span>{ZODIAC_DATA[s]?.symbol}</span>
-                      <span>{tAny.zodiac?.[s] || s}</span>
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
+        {/* ── Practice Hint (Dhikr Recommendation) ── */}
+        <PracticeHintSection 
+          tier={simplifiedStatus.tier as SimplifiedTier} 
+          planet={planet} 
+          language={language} 
+        />
 
-            {/* Exaltation */}
-            {exaltation && (
-              <div className="p-2 rounded-lg bg-slate-50 dark:bg-slate-700/30">
-                <div className="text-[10px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1">
-                  {pt.exaltedAt || 'Exalted at'}
-                </div>
-                <span className="inline-flex items-center gap-0.5 text-slate-700 dark:text-slate-300">
-                  <span>{ZODIAC_DATA[exaltation.sign]?.symbol}</span>
-                  <span>{tAny.zodiac?.[exaltation.sign] || exaltation.sign}</span>
-                  <span className="tabular-nums text-slate-400 ml-0.5">{exaltation.degree}°</span>
-                </span>
-              </div>
-            )}
-
-            {/* Fall */}
-            {fallSign && (
-              <div className="p-2 rounded-lg bg-red-50/50 dark:bg-red-900/10">
-                <div className="text-[10px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1">
-                  {pt.inFallIn || 'In fall in'}
-                </div>
-                <span className="inline-flex items-center gap-0.5 text-red-600 dark:text-red-400">
-                  <span>{ZODIAC_DATA[fallSign]?.symbol}</span>
-                  <span>{tAny.zodiac?.[fallSign] || fallSign}</span>
-                </span>
-              </div>
-            )}
-
-            {/* Detriment */}
-            {detrimentSigns.length > 0 && (
-              <div className="p-2 rounded-lg bg-red-50/50 dark:bg-red-900/10">
-                <div className="text-[10px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1">
-                  {pt.inDetrimentIn || 'In detriment in'}
-                </div>
-                <div className="flex items-center gap-1 flex-wrap">
-                  {detrimentSigns.map(s => (
-                    <span key={s} className="inline-flex items-center gap-0.5 text-red-600 dark:text-red-400">
-                      <span>{ZODIAC_DATA[s]?.symbol}</span>
-                      <span>{tAny.zodiac?.[s] || s}</span>
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
+        {/* ── Retrograde note (subtle, if applicable) ── */}
+        {isRetrograde && (
+          <div className="flex items-center gap-2 text-xs text-amber-600 dark:text-amber-400">
+            <span>℞</span>
+            <span>{language === 'fr' ? 'Rétrograde — mouvement intérieur encouragé' : 'Retrograde — inner reflection encouraged'}</span>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

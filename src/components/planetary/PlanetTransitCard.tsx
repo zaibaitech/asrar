@@ -10,13 +10,15 @@ import React from 'react';
 import { 
   getAllPlanetEphemeris,
   getZodiacInfo,
+  calculateSimplifiedStatus,
   type PlanetEphemerisData,
   type ZodiacSystem,
   type Planet,
   type ZodiacSign,
 } from '@/src/lib/planetary';
-import { EnhancedStatusBadge } from './EnhancedStatusBadge';
+import { SimplifiedStatusBadge } from './SimplifiedStatusBadge';
 import { DignityDetailPanel } from './DignityDetailPanel';
+import { CompactPracticeHint } from './CompactPracticeHint';
 import { translations } from '@/src/lib/translations';
 
 interface PlanetTransitCardProps {
@@ -76,7 +78,7 @@ function DataSourceBadge({ source }: { source: 'ephemeris' | 'fallback' }) {
           <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-600" />
         </span>
       )}
-      {isLive ? 'NASA JPL' : 'Approx'}
+      {isLive ? 'Live' : ''}
     </span>
   );
 }
@@ -225,18 +227,36 @@ export function PlanetTransitCard({
           </div>
         </div>
 
-        {/* Dignity Badge */}
+        {/* Simplified Status Badge */}
         <div className="mt-3">
-          <EnhancedStatusBadge
+          <SimplifiedStatusBadge
             planet={currentTransit.planetName as Planet}
             sign={currentTransit.sign as ZodiacSign}
             degree={currentTransit.signDegree}
             isDay={isDay}
             isRetrograde={currentTransit.isRetrograde}
             language={language}
-            showDetails={false}
           />
         </div>
+
+        {/* Compact Practice Hint */}
+        {(() => {
+          const status = calculateSimplifiedStatus(
+            currentTransit.planetName as Planet,
+            currentTransit.sign as ZodiacSign,
+            currentTransit.signDegree,
+            isDay,
+            currentTransit.isRetrograde
+          );
+          return (
+            <CompactPracticeHint
+              tier={status.tier}
+              planet={currentTransit.planetName as Planet}
+              language={language}
+              className="mt-3"
+            />
+          );
+        })()}
       </div>
 
       {/* Progress dots */}
@@ -313,7 +333,7 @@ export function PlanetTransitCard({
               </div>
             </div>
             <div className="mt-1.5 flex items-center justify-between">
-              <EnhancedStatusBadge
+              <SimplifiedStatusBadge
                 planet={transit.planetName as Planet}
                 sign={transit.sign as ZodiacSign}
                 degree={transit.signDegree}
@@ -321,7 +341,6 @@ export function PlanetTransitCard({
                 isRetrograde={transit.isRetrograde}
                 language={language}
                 compact
-                showDetails={false}
               />
               <span className={`text-[9px] font-medium ${
                 showDetailFor === transit.planetKey

@@ -9,7 +9,7 @@
 import React from 'react';
 import { getDayRulerInfo, getAllPlanetEphemeris } from '@/src/lib/planetary';
 import type { DayRulerInfo, PlanetEphemerisData, Planet, ZodiacSign } from '@/src/lib/planetary';
-import { EnhancedStatusBadge } from './EnhancedStatusBadge';
+import { SimplifiedStatusBadge } from './SimplifiedStatusBadge';
 import { translations } from '@/src/lib/translations';
 
 interface PlanetOfTheDayProps {
@@ -73,7 +73,7 @@ function DataSourceBadge({ source }: { source: 'ephemeris' | 'fallback' }) {
           <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-600" />
         </span>
       )}
-      {isLive ? 'NASA JPL' : 'Approx'}
+      {isLive ? 'Live' : ''}
     </span>
   );
 }
@@ -226,16 +226,15 @@ export function PlanetOfTheDay({ language = 'en' }: PlanetOfTheDayProps) {
             </div>
             <DataSourceBadge source={dataSource} />
           </div>
-          {/* Dignity Badge */}
+          {/* Simplified Status Badge */}
           <div className="mt-2.5 flex justify-end">
-            <EnhancedStatusBadge
+            <SimplifiedStatusBadge
               planet={dayInfo.planet as Planet}
               sign={livePosition.sign as ZodiacSign}
               degree={livePosition.signDegree}
               isDay={new Date().getHours() >= 6 && new Date().getHours() < 18}
               isRetrograde={livePosition.isRetrograde}
               language={language}
-              compact={false}
             />
           </div>
         </div>
