@@ -67,9 +67,9 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
           arabicText: 'أسماء النبي ﷺ',
           transliteration: 'Asmāʾ an-Nabī ﷺ',
           meaning: RIZQ_PRACTICE_INFO.description,
-          dailyTarget: 2, // 2 sessions per day (morning + evening)
-          ramadanTarget: 14, // 7 days × 2 sessions
-          quickAddPresets: [1, 2],
+          dailyTarget: 1, // 1 session per day (morning)
+          ramadanTarget: 7, // 7 days × 1 session
+          quickAddPresets: [1],
         });
       }
       

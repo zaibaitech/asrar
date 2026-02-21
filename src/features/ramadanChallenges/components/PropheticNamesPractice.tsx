@@ -18,7 +18,6 @@ import {
   ChevronLeft, 
   Check, 
   Sun, 
-  Moon,
   Volume2,
   VolumeX,
   RotateCcw
@@ -38,7 +37,6 @@ interface PropheticNamesPracticeProps {
   onClose: () => void;
   onComplete: () => void;
   day: number;
-  session: 'morning' | 'evening';
   language?: 'en' | 'fr';
 }
 
@@ -51,7 +49,6 @@ export function PropheticNamesPractice({
   onClose,
   onComplete,
   day,
-  session,
   language = 'en'
 }: PropheticNamesPracticeProps) {
   const [step, setStep] = useState<PracticeStep>('INTRO');
@@ -149,15 +146,11 @@ export function PropheticNamesPractice({
         return (
           <div className="flex flex-col items-center justify-center min-h-full p-6 text-center">
             <div className="flex items-center gap-2 mb-4">
-              {session === 'morning' ? (
-                <Sun className="w-8 h-8 text-amber-500" />
-              ) : (
-                <Moon className="w-8 h-8 text-indigo-400" />
-              )}
+              <Sun className="w-8 h-8 text-amber-500" />
             </div>
             
             <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">
-              {t.day} {day} · {session === 'morning' ? t.morning : t.evening}
+              {t.day} {day}
             </h2>
             
             <p className="text-lg text-amber-600 dark:text-amber-400 font-medium mb-6">
@@ -526,7 +519,7 @@ export function PropheticNamesPractice({
               {t.mashaAllah}
             </h2>
             <p className="text-lg text-emerald-600 dark:text-emerald-400 font-medium mb-6">
-              {t.day} {day} · {session === 'morning' ? t.morning : t.evening} {t.completedBadge}
+              {t.day} {day} {t.completedBadge}
             </p>
 
             <div className="w-full max-w-md p-4 rounded-xl bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800/50 mb-8">
@@ -536,13 +529,11 @@ export function PropheticNamesPractice({
             </div>
 
             <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 mb-8">
-              <span>{session === 'morning' ? '☀️' : '🌙'}</span>
+              <span>☀️</span>
               <span>
-                {session === 'morning' 
-                  ? `${t.tonight} ${t.eveningSession}`
-                  : day < 7 
-                    ? `${t.next} ${t.day} ${day + 1} ${t.morning}`
-                    : `${t.practiceComplete}`
+                {day < 7 
+                  ? `${t.next} ${t.day} ${day + 1}`
+                  : `${t.practiceComplete}`
                 }
               </span>
             </div>
@@ -570,11 +561,7 @@ export function PropheticNamesPractice({
         </button>
         
         <div className="flex items-center gap-2">
-          {session === 'morning' ? (
-            <Sun className="w-5 h-5 text-amber-500" />
-          ) : (
-            <Moon className="w-5 h-5 text-indigo-400" />
-          )}
+          <Sun className="w-5 h-5 text-amber-500" />
           <span className="text-sm font-medium text-slate-600 dark:text-slate-400">
             {t.day} {day}
           </span>

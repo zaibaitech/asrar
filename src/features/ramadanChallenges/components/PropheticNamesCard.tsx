@@ -15,7 +15,6 @@ import {
   CheckCircle2, 
   Circle, 
   Sun, 
-  Moon,
   Trash2,
   Star,
   Share2,
@@ -41,8 +40,7 @@ interface PropheticNamesCardProps {
 
 interface DaySession {
   day: number;
-  morning: boolean;
-  evening: boolean;
+  completed: boolean;
 }
 
 // ─── Local Storage Key for Session Progress ──────────────────────────────────────
@@ -70,8 +68,7 @@ function storeSessionProgress(challengeId: string, sessions: DaySession[]) {
 function getDefaultSessions(): DaySession[] {
   return Array.from({ length: 7 }, (_, i) => ({
     day: i + 1,
-    morning: false,
-    evening: false,
+    completed: false,
   }));
 }
 
@@ -86,7 +83,6 @@ export function PropheticNamesCard({
   const t = translations[language].propheticNames;
   const [sessions, setSessions] = useState<DaySession[]>(getDefaultSessions());
   const [showPractice, setShowPractice] = useState(false);
-  const [currentSession, setCurrentSession] = useState<'morning' | 'evening'>('morning');
   const [currentDay, setCurrentDay] = useState(1);
   const [isExpanded, setIsExpanded] = useState(true);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
@@ -170,20 +166,20 @@ export function PropheticNamesCard({
 
   // Calculate progress
   const completedSessions = sessions.reduce(
-    (acc, s) => acc + (s.morning ? 1 : 0) + (s.evening ? 1 : 0),
+    (acc, s) => acc + (s.completed ? 1 : 0),
     0
   );
-  const totalSessions = 14;
+  const totalSessions = 7;
   const progressPercent = Math.round((completedSessions / totalSessions) * 100);
-  const currentDayNumber = sessions.findIndex(s => !s.morning || !s.evening) + 1 || 7;
+  const currentDayNumber = sessions.findIndex(s => !s.completed) + 1 || 7;
   const isComplete = completedSessions === totalSessions;
 
   // Toggle a session completion
-  const toggleSession = (day: number, sessionType: 'morning' | 'evening') => {
+  const toggleSession = (day: number) => {
     const newSessions = sessions.map(s => {
       if (s.day === day) {
-        const newValue = !s[sessionType];
-        return { ...s, [sessionType]: newValue };
+        const newValue = !s.completed;
+        return { ...s, completed: newValue };
       }
       return s;
     });
@@ -192,22 +188,21 @@ export function PropheticNamesCard({
 
     // If marking as complete, also log it
     const session = sessions.find(s => s.day === day);
-    if (session && !session[sessionType]) {
-      const sessionTag: SessionTag = sessionType === 'morning' ? 'Ḍuḥā / Morning' : 'Maghrib / Ifṭār';
+    if (session && !session.completed) {
+      const sessionTag: SessionTag = 'Ḍuḥā / Morning';
       onLogSession(challenge.id, 1, sessionTag);
     }
   };
 
-  // Start practice for a specific session
-  const startPractice = (day: number, sessionType: 'morning' | 'evening') => {
+  // Start practice for a specific day
+  const startPractice = (day: number) => {
     setCurrentDay(day);
-    setCurrentSession(sessionType);
     setShowPractice(true);
   };
 
   // Complete a practice session
   const completePractice = () => {
-    toggleSession(currentDay, currentSession);
+    toggleSession(currentDay);
     setShowPractice(false);
   };
 
@@ -288,75 +283,46 @@ export function PropheticNamesCard({
             <div className="grid grid-cols-7 gap-1.5">
               {sessions.map((session) => {
                 const isCurrentDay = session.day === currentDayNumber;
-                const dayComplete = session.morning && session.evening;
+                const dayComplete = session.completed;
                 
                 return (
-                  <div 
+                  <button 
                     key={session.day}
-                    className={`rounded-lg p-2 text-center ${
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      if (!session.completed) {
+                        startPractice(session.day);
+                      } else {
+                        toggleSession(session.day);
+                      }
+                    }}
+                    className={`rounded-lg p-2 text-center transition-all ${
                       dayComplete 
                         ? 'bg-emerald-100 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-800/50'
                         : isCurrentDay
-                          ? 'bg-amber-100 dark:bg-amber-900/30 border-2 border-amber-400 dark:border-amber-600'
-                          : 'bg-white/50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700'
+                          ? 'bg-amber-100 dark:bg-amber-900/30 border-2 border-amber-400 dark:border-amber-600 hover:bg-amber-200 dark:hover:bg-amber-800/40'
+                          : 'bg-white/50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700/50'
                     }`}
                   >
-                    <div className={`text-xs font-bold mb-1.5 ${
+                    <div className={`text-xs font-bold mb-1 ${
                       dayComplete ? 'text-emerald-700 dark:text-emerald-300' : 'text-slate-600 dark:text-slate-400'
                     }`}>
                       {t.day[0]}{session.day}
                     </div>
                     
-                    {/* Morning checkbox */}
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        if (!session.morning) {
-                          startPractice(session.day, 'morning');
-                        } else {
-                          toggleSession(session.day, 'morning');
-                        }
-                      }}
-                      className={`w-full flex items-center justify-center gap-0.5 p-1 rounded text-xs transition-colors ${
-                        session.morning
-                          ? 'text-emerald-600 dark:text-emerald-400'
-                          : 'text-slate-400 hover:text-amber-500'
-                      }`}
-                      title={t.morning}
-                    >
-                      <Sun className="w-3 h-3" />
-                      {session.morning ? (
-                        <CheckCircle2 className="w-3 h-3" />
+                    {/* Completion indicator */}
+                    <div className={`flex items-center justify-center ${
+                      session.completed
+                        ? 'text-emerald-600 dark:text-emerald-400'
+                        : 'text-slate-400'
+                    }`}>
+                      {session.completed ? (
+                        <CheckCircle2 className="w-5 h-5" />
                       ) : (
-                        <Circle className="w-3 h-3" />
+                        <Sun className="w-5 h-5" />
                       )}
-                    </button>
-                    
-                    {/* Evening checkbox */}
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        if (!session.evening) {
-                          startPractice(session.day, 'evening');
-                        } else {
-                          toggleSession(session.day, 'evening');
-                        }
-                      }}
-                      className={`w-full flex items-center justify-center gap-0.5 p-1 rounded text-xs transition-colors ${
-                        session.evening
-                          ? 'text-emerald-600 dark:text-emerald-400'
-                          : 'text-slate-400 hover:text-amber-500'
-                      }`}
-                      title={t.evening}
-                    >
-                      <Moon className="w-3 h-3" />
-                      {session.evening ? (
-                        <CheckCircle2 className="w-3 h-3" />
-                      ) : (
-                        <Circle className="w-3 h-3" />
-                      )}
-                    </button>
-                  </div>
+                    </div>
+                  </button>
                 );
               })}
             </div>
@@ -364,10 +330,10 @@ export function PropheticNamesCard({
             {/* Legend */}
             <div className="flex items-center justify-center gap-4 text-xs text-slate-500 dark:text-slate-400">
               <span className="flex items-center gap-1">
-                <Sun className="w-3 h-3" /> {t.morning}
+                <Sun className="w-3 h-3" /> {t.onceDaily}
               </span>
               <span className="flex items-center gap-1">
-                <Moon className="w-3 h-3" /> {t.evening}
+                <CheckCircle2 className="w-3 h-3 text-emerald-500" /> {t.complete}
               </span>
             </div>
 
@@ -375,14 +341,9 @@ export function PropheticNamesCard({
             {!isComplete && (
               <button
                 onClick={() => {
-                  const nextSession = sessions.find(s => !s.morning);
+                  const nextSession = sessions.find(s => !s.completed);
                   if (nextSession) {
-                    startPractice(nextSession.day, 'morning');
-                  } else {
-                    const eveningSession = sessions.find(s => !s.evening);
-                    if (eveningSession) {
-                      startPractice(eveningSession.day, 'evening');
-                    }
+                    startPractice(nextSession.day);
                   }
                 }}
                 className="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold transition-all flex items-center justify-center gap-2 shadow-lg shadow-amber-500/25"
@@ -450,7 +411,6 @@ export function PropheticNamesCard({
           onClose={() => setShowPractice(false)}
           onComplete={completePractice}
           day={currentDay}
-          session={currentSession}
           language={language}
         />
       )}

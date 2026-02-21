@@ -227,7 +227,7 @@ export const translations = {
     // 201 Holy Names of Prophet ﷺ
     propheticNames: {
       title: "201 Holy Names of Prophet Muḥammad ﷺ",
-      subtitle: "Rizq Abundance Practice",
+      subtitle: "Rizq Abundance · 7-Day Morning Practice",
       shortTitle: "201 Holy Names",
       tradition: "Dalāʾilu l-Khayrāt · Imam Muḥammad al-Jazūlī",
       authorization: "Cherno Moussa Yero Sy — Spiritual Master of the Tijaniyya Order",
@@ -247,9 +247,10 @@ export const translations = {
       morning: "Morning",
       evening: "Evening",
       dayComplete: "Day complete",
-      sessionsComplete: "sessions",
+      sessionsComplete: "days",
       complete: "Complete",
-      startNext: "Start Next Session",
+      onceDaily: "Once daily (Morning)",
+      startNext: "Start Today's Practice",
       congratulations: "Congratulations!",
       completedAllDays: "You have completed all 7 days of practice!",
       startAgain: "Start Again",
@@ -3266,7 +3267,7 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
     // 201 Noms Saints du Prophète ﷺ
     propheticNames: {
       title: "201 Noms Saints du Prophète Muḥammad ﷺ",
-      subtitle: "Pratique d'Abondance Rizq",
+      subtitle: "Pratique d'Abondance Rizq · 7 Jours le Matin",
       shortTitle: "201 Noms Saints",
       tradition: "Dalāʾilu l-Khayrāt · Imam Muḥammad al-Jazūlī",
       authorization: "Cherno Moussa Yero Sy — Maître Spirituel de l'Ordre Tijaniyya",
@@ -3286,9 +3287,10 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
       morning: "Matin",
       evening: "Soir",
       dayComplete: "Jour terminé",
-      sessionsComplete: "sessions",
+      sessionsComplete: "jours",
       complete: "Terminé",
-      startNext: "Commencer la prochaine session",
+      onceDaily: "Une fois par jour (Matin)",
+      startNext: "Commencer la pratique du jour",
       congratulations: "Félicitations!",
       completedAllDays: "Vous avez complété les 7 jours de pratique!",
       startAgain: "Recommencer",
