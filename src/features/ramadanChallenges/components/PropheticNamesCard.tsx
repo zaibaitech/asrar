@@ -340,18 +340,33 @@ export function PropheticNamesCard({
 
             {/* Start next session button */}
             {!isComplete && (
-              <button
-                onClick={() => {
-                  const nextSession = sessions.find(s => !s.completed);
-                  if (nextSession) {
-                    startPractice(nextSession.day);
-                  }
-                }}
-                className="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold transition-all flex items-center justify-center gap-2 shadow-lg shadow-amber-500/25"
-              >
-                <Play className="w-4 h-4" />
-                {t.startNext}
-              </button>
+              <div className="space-y-2">
+                <button
+                  onClick={() => {
+                    const nextSession = sessions.find(s => !s.completed);
+                    if (nextSession) {
+                      startPractice(nextSession.day);
+                    }
+                  }}
+                  className="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold transition-all flex items-center justify-center gap-2 shadow-lg shadow-amber-500/25"
+                >
+                  <Play className="w-4 h-4" />
+                  {t.startNext}
+                </button>
+                <button
+                  onClick={() => {
+                    if (typeof navigator !== 'undefined' && 'share' in navigator) {
+                      handleNativeShare();
+                    } else {
+                      setShowShareModal(true);
+                    }
+                  }}
+                  className="w-full py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-medium transition-all flex items-center justify-center gap-2 shadow-md shadow-emerald-500/20"
+                >
+                  <Share2 className="w-4 h-4" />
+                  {t.inviteFriends}
+                </button>
+              </div>
             )}
 
             {/* Complete celebration */}
@@ -364,39 +379,39 @@ export function PropheticNamesCard({
                 <p className="text-sm text-emerald-600 dark:text-emerald-400 mt-1">
                   {t.completedAllDays}
                 </p>
-                <button
-                  onClick={resetProgress}
-                  className="mt-3 text-sm text-emerald-600 dark:text-emerald-400 hover:underline"
-                >
-                  {t.startAgain}
-                </button>
+                <div className="mt-4 space-y-2">
+                  <button
+                    onClick={() => {
+                      if (typeof navigator !== 'undefined' && 'share' in navigator) {
+                        handleNativeShare();
+                      } else {
+                        setShowShareModal(true);
+                      }
+                    }}
+                    className="w-full py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-medium transition-all flex items-center justify-center gap-2 shadow-md"
+                  >
+                    <Share2 className="w-4 h-4" />
+                    {t.inviteFriends}
+                  </button>
+                  <button
+                    onClick={resetProgress}
+                    className="text-sm text-emerald-600 dark:text-emerald-400 hover:underline"
+                  >
+                    {t.startAgain}
+                  </button>
+                </div>
               </div>
             )}
 
             {/* Actions */}
             <div className="flex items-center justify-between pt-2 border-t border-amber-200/50 dark:border-amber-800/30">
-              <div className="flex items-center gap-3">
-                <button
-                  onClick={() => setShowDeleteConfirm(true)}
-                  className="text-xs text-slate-400 hover:text-red-500 transition-colors flex items-center gap-1"
-                >
-                  <Trash2 className="w-3 h-3" />
-                  {t.remove}
-                </button>
-                <button
-                  onClick={() => {
-                    if (typeof navigator !== 'undefined' && 'share' in navigator) {
-                      handleNativeShare();
-                    } else {
-                      setShowShareModal(true);
-                    }
-                  }}
-                  className="text-xs text-slate-400 hover:text-amber-500 transition-colors flex items-center gap-1"
-                >
-                  <Share2 className="w-3 h-3" />
-                  {t.share}
-                </button>
-              </div>
+              <button
+                onClick={() => setShowDeleteConfirm(true)}
+                className="text-xs text-slate-400 hover:text-red-500 transition-colors flex items-center gap-1"
+              >
+                <Trash2 className="w-3 h-3" />
+                {t.remove}
+              </button>
               <span className="text-xs text-slate-400 dark:text-slate-500">
                 {t.tradition}
               </span>

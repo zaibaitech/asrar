@@ -328,6 +328,7 @@ export const translations = {
       
       // Share
       share: "Share",
+      inviteFriends: "Invite Friends to Join",
       shareInvite: "Share this practice",
       shareTitle: "201 Holy Names of Prophet Muḥammad ﷺ",
       shareText: "Join the 7-day Rizq Abundance Practice! Recite the 201 Holy Names of Prophet Muḥammad ﷺ every morning for divine blessings.",
@@ -3368,6 +3369,7 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
       
       // Partage
       share: "Partager",
+      inviteFriends: "Inviter des amis",
       shareInvite: "Partager cette pratique",
       shareTitle: "201 Noms Saints du Prophète Muḥammad ﷺ",
       shareText: "Rejoignez la pratique de 7 jours pour l'abondance du Rizq! Récitez les 201 Noms Saints du Prophète Muḥammad ﷺ chaque matin pour les bénédictions divines.",
