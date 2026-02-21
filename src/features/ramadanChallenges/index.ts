@@ -72,4 +72,16 @@ export {
   CommunityBanner,
   RecommenderBanner,
   AddChallengeModal,
+  PropheticNamesCard,
+  PropheticNamesPractice,
 } from './components';
+
+// ─── 201 Prophetic Names ─────────────────────────────────────────────────────────
+export type { PropheticName } from './propheticNames201';
+export {
+  PROPHETIC_NAMES_201,
+  YA_JAMIU,
+  RIZQ_DUA,
+  CLOSING_DUA,
+  RIZQ_PRACTICE_INFO,
+} from './propheticNames201';

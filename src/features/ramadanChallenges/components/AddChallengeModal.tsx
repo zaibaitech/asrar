@@ -4,15 +4,17 @@
  * Modal for adding new dhikr challenges:
  * - Ṣalawāt with extended preset selection
  * - Divine Name selection
+ * - 201 Holy Names of Prophet ﷺ (Rizq Practice)
  * - Custom wird entry
  */
 
 'use client';
 
 import React, { useState } from 'react';
-import { X, ChevronRight, ChevronLeft, ChevronDown, ChevronUp } from 'lucide-react';
+import { X, ChevronRight, ChevronLeft, ChevronDown, ChevronUp, Star } from 'lucide-react';
 import type { ChallengeType, SalawatPreset, DivineNameOption } from '../types';
 import { SALAWAT_PRESETS, DIVINE_NAME_OPTIONS, DEFAULT_QUICK_ADD_PRESETS } from '../types';
+import { RIZQ_PRACTICE_INFO } from '../propheticNames201';
 
 // ─── Types ───────────────────────────────────────────────────────────────────────
 
@@ -33,7 +35,7 @@ interface ChallengeConfig {
   quickAddPresets?: number[];
 }
 
-type ModalStep = 'SELECT_TYPE' | 'CONFIGURE_SALAWAT' | 'PREVIEW_SALAWAT' | 'CONFIGURE_DIVINE_NAME' | 'CONFIGURE_CUSTOM';
+type ModalStep = 'SELECT_TYPE' | 'CONFIGURE_SALAWAT' | 'PREVIEW_SALAWAT' | 'CONFIGURE_DIVINE_NAME' | 'CONFIGURE_CUSTOM' | 'CONFIGURE_PROPHETIC_NAMES';
 
 // ─── Component ───────────────────────────────────────────────────────────────────
 
@@ -82,6 +84,17 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en' }: A
       color: 'emerald',
     },
     {
+      type: 'PROPHETIC_NAMES' as ChallengeType,
+      title: language === 'fr' ? '201 Noms Saints' : '201 Holy Names',
+      titleAr: 'أسماء النبي ﷺ',
+      description: language === 'fr'
+        ? 'Pratique Rizq · 7 jours matin & soir'
+        : 'Rizq Abundance · 7-Day Morning & Evening',
+      icon: '⭐',
+      color: 'amber',
+      featured: true,
+    },
+    {
       type: 'DIVINE_NAME' as ChallengeType,
       title: language === 'fr' ? 'Nom Divin' : 'Divine Name',
       titleAr: 'اسم إلهي',
@@ -111,6 +124,9 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en' }: A
         break;
       case 'DIVINE_NAME':
         setStep('CONFIGURE_DIVINE_NAME');
+        break;
+      case 'PROPHETIC_NAMES':
+        setStep('CONFIGURE_PROPHETIC_NAMES');
         break;
       case 'CUSTOM':
         setStep('CONFIGURE_CUSTOM');
@@ -161,6 +177,20 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en' }: A
     handleClose();
   };
 
+  // ─── Handle 201 Prophetic Names add ───
+  const handleAddPropheticNames = () => {
+    onAdd('PROPHETIC_NAMES', {
+      title: RIZQ_PRACTICE_INFO.title,
+      arabicText: 'أسماء النبي ﷺ',
+      transliteration: 'Asmāʾ an-Nabī ﷺ',
+      meaning: RIZQ_PRACTICE_INFO.description,
+      dailyTarget: 2, // 2 sessions per day (morning + evening)
+      ramadanTarget: 14, // 7 days × 2 sessions
+      quickAddPresets: [1, 2],
+    });
+    handleClose();
+  };
+
   // ─── Modal content based on step ───
   const renderContent = () => {
     switch (step) {
@@ -182,17 +212,27 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en' }: A
                 <button
                   key={ct.type}
                   onClick={() => handleTypeSelect(ct.type)}
-                  className="w-full flex items-center gap-4 p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-amber-300 dark:hover:border-amber-600 hover:bg-amber-50/50 dark:hover:bg-amber-900/20 transition-all group text-left"
+                  className={`w-full flex items-center gap-4 p-4 rounded-xl border transition-all group text-left ${
+                    'featured' in ct && ct.featured
+                      ? 'border-amber-300 dark:border-amber-600 bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 hover:border-amber-400 dark:hover:border-amber-500'
+                      : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-amber-300 dark:hover:border-amber-600 hover:bg-amber-50/50 dark:hover:bg-amber-900/20'
+                  }`}
                 >
                   <span className="text-2xl">{ct.icon}</span>
                   <div className="flex-1 min-w-0">
-                    <div className="flex items-baseline gap-2">
+                    <div className="flex items-baseline gap-2 flex-wrap">
                       <span className="font-semibold text-slate-900 dark:text-slate-100">
                         {ct.title}
                       </span>
                       <span className="text-sm font-arabic text-slate-400 dark:text-slate-500">
                         {ct.titleAr}
                       </span>
+                      {'featured' in ct && ct.featured && (
+                        <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-amber-200 dark:bg-amber-700/50 text-amber-800 dark:text-amber-200 text-xs font-medium">
+                          <Star className="w-3 h-3" />
+                          {language === 'fr' ? 'Spécial' : 'Special'}
+                        </span>
+                      )}
                     </div>
                     <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">
                       {ct.description}
@@ -485,6 +525,113 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en' }: A
               className="w-full py-3 rounded-xl bg-slate-700 hover:bg-slate-800 disabled:bg-slate-300 dark:disabled:bg-slate-600 text-white font-semibold transition-colors disabled:cursor-not-allowed"
             >
               {language === 'fr' ? 'Ajouter le Wird' : 'Add Custom Wird'}
+            </button>
+          </div>
+        );
+
+      case 'CONFIGURE_PROPHETIC_NAMES':
+        return (
+          <div className="space-y-4">
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setStep('SELECT_TYPE')}
+                className="text-sm text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 flex items-center gap-1"
+              >
+                <ChevronLeft className="w-4 h-4" />
+                {language === 'fr' ? 'Retour' : 'Back'}
+              </button>
+            </div>
+            
+            {/* Featured Badge */}
+            <div className="flex items-center gap-2">
+              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 text-xs font-medium">
+                <Star className="w-3 h-3" />
+                {language === 'fr' ? 'Pratique spéciale' : 'Special Practice'}
+              </span>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
+                {RIZQ_PRACTICE_INFO.title}
+              </h3>
+              <p className="text-sm text-amber-600 dark:text-amber-400 font-medium">
+                {RIZQ_PRACTICE_INFO.subtitle}
+              </p>
+            </div>
+
+            {/* Practice details card */}
+            <div className="p-4 rounded-xl bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 border border-amber-200 dark:border-amber-800/50">
+              <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                {RIZQ_PRACTICE_INFO.description}
+              </p>
+              
+              <div className="mt-4 space-y-2">
+                <div className="flex items-center gap-2 text-sm">
+                  <span className="text-amber-600 dark:text-amber-400">⏱</span>
+                  <span className="text-slate-600 dark:text-slate-400">
+                    {language === 'fr' ? 'Durée:' : 'Duration:'} <strong>{RIZQ_PRACTICE_INFO.duration} {language === 'fr' ? 'jours' : 'days'}</strong>
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <span className="text-amber-600 dark:text-amber-400">🌅</span>
+                  <span className="text-slate-600 dark:text-slate-400">
+                    {language === 'fr' ? 'Sessions:' : 'Sessions:'} <strong>{language === 'fr' ? 'Matin & Soir' : 'Morning & Evening'}</strong>
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <span className="text-amber-600 dark:text-amber-400">⏰</span>
+                  <span className="text-slate-600 dark:text-slate-400">
+                    {language === 'fr' ? 'Temps estimé:' : 'Estimated time:'} <strong>{RIZQ_PRACTICE_INFO.estimatedTime}</strong>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Practice steps preview */}
+            <div className="space-y-2">
+              <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+                {language === 'fr' ? 'Étapes de la pratique:' : 'Practice Steps:'}
+              </h4>
+              <div className="text-sm text-slate-600 dark:text-slate-400 space-y-1.5">
+                <div className="flex items-start gap-2">
+                  <span className="text-amber-500">①</span>
+                  <span>
+                    <strong className="font-arabic">يَا جَامِعُ</strong> (Yā Jāmiʿu) — 180×
+                  </span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-amber-500">②</span>
+                  <span>{language === 'fr' ? 'Récitez les 201 Noms Saints avec Ṣalla-llāhu ʿalayhi wa sallam' : 'Recite 201 Holy Names with Ṣalla-llāhu ʿalayhi wa sallam'}</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-amber-500">③</span>
+                  <span>{language === 'fr' ? 'Duʿāʾ de clôture' : 'Closing Duʿāʾ'}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Tradition source */}
+            <div className="p-3 rounded-lg bg-slate-100 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600">
+              <p className="text-xs text-slate-600 dark:text-slate-400">
+                <span className="font-medium">{language === 'fr' ? 'Source:' : 'Source:'}</span> {RIZQ_PRACTICE_INFO.tradition}
+              </p>
+              <p className="text-xs text-slate-500 dark:text-slate-500 mt-1">
+                <span className="font-medium">{language === 'fr' ? 'Autorisation:' : 'Authorization:'}</span> {RIZQ_PRACTICE_INFO.authorization}
+              </p>
+            </div>
+
+            {/* Promise */}
+            <div className="p-3 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800/50">
+              <p className="text-sm text-emerald-700 dark:text-emerald-300 italic">
+                "{RIZQ_PRACTICE_INFO.promise}"
+              </p>
+            </div>
+
+            <button
+              onClick={handleAddPropheticNames}
+              className="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold transition-all shadow-lg shadow-amber-500/25"
+            >
+              {language === 'fr' ? 'Commencer le défi de 7 jours' : 'Start 7-Day Challenge'}
             </button>
           </div>
         );

@@ -149,6 +149,10 @@ export function getBestDhikrNow(
       en: 'Divine Name invocation is especially blessed now',
       ar: 'ذكر الاسم الإلهي مبارك خاصة الآن',
     },
+    PROPHETIC_NAMES: {
+      en: '201 Holy Names practice invokes powerful rizq blessings',
+      ar: 'ممارسة الأسماء النبوية ٢٠١ تجلب بركات الرزق',
+    },
     CUSTOM: {
       en: 'Continue your personal wird during this spiritual window',
       ar: 'استمر في وردك الشخصي في هذا الوقت الروحاني',

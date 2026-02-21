@@ -35,6 +35,12 @@ const TYPE_STYLES: Record<ChallengeType, { bg: string; text: string; label: stri
     label: 'Divine Name',
     labelAr: 'اسم إلهي',
   },
+  PROPHETIC_NAMES: {
+    bg: 'bg-amber-100 dark:bg-amber-900/40',
+    text: 'text-amber-700 dark:text-amber-300',
+    label: '201 Names',
+    labelAr: 'أسماء النبي',
+  },
   CUSTOM: {
     bg: 'bg-slate-100 dark:bg-slate-700/40',
     text: 'text-slate-700 dark:text-slate-300',

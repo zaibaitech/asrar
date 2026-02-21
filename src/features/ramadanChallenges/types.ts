@@ -2,7 +2,7 @@
  * Ramadan Spiritual Challenge Types
  * ==================================
  * Data models for the multi-challenge hub supporting:
- * - Istighfār, Ṣalawāt, Divine Name, and Custom challenges
+ * - Istighfār, Ṣalawāt, Divine Name, Custom, and Prophetic Names challenges
  * - Session logging with prayer-time tags
  * - Streak tracking
  * - Community aggregation (mock until backend ready)
@@ -10,7 +10,7 @@
 
 // ─── Challenge Types ─────────────────────────────────────────────────────────────
 
-export type ChallengeType = 'ISTIGHFAR' | 'SALAWAT' | 'DIVINE_NAME' | 'CUSTOM';
+export type ChallengeType = 'ISTIGHFAR' | 'SALAWAT' | 'DIVINE_NAME' | 'CUSTOM' | 'PROPHETIC_NAMES';
 
 export type SessionTag =
   | 'Fajr'

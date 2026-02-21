@@ -20,6 +20,7 @@ import { useRamadanChallenges, createIstighfarChallenge } from '../store';
 import type { ChallengeType, SessionTag } from '../types';
 import { formatNumber } from '../utils';
 import { ChallengeCard } from './ChallengeCard';
+import { PropheticNamesCard } from './PropheticNamesCard';
 import { CommunityBanner } from './CommunityBanner';
 import { RecommenderBanner } from './RecommenderBanner';
 import { AddChallengeModal } from './AddChallengeModal';
@@ -35,7 +36,7 @@ interface RamadanHubProps {
 // ─── Component ───────────────────────────────────────────────────────────────────
 
 export function RamadanHub({ language = 'en', defaultExpanded = false }: RamadanHubProps) {
-  const { state, addChallenge, logCount, getTotalRamadanProgress, getTotalTodayProgress } = useRamadanChallenges();
+  const { state, addChallenge, removeChallenge, logCount, getTotalRamadanProgress, getTotalTodayProgress } = useRamadanChallenges();
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
   const [showAddModal, setShowAddModal] = useState(false);
   const [ramadanInfo, setRamadanInfo] = useState<RamadanInfo | null>(null);
@@ -133,13 +134,23 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
 
             {/* Challenge Cards */}
             {state.challenges.map((challenge, index) => (
-              <ChallengeCard
-                key={challenge.id}
-                challenge={challenge}
-                onLogCount={handleLogCount(challenge.id)}
-                language={language}
-                defaultExpanded={index === 0}
-              />
+              challenge.type === 'PROPHETIC_NAMES' ? (
+                <PropheticNamesCard
+                  key={challenge.id}
+                  challenge={challenge}
+                  onLogSession={logCount}
+                  onRemove={removeChallenge}
+                  language={language}
+                />
+              ) : (
+                <ChallengeCard
+                  key={challenge.id}
+                  challenge={challenge}
+                  onLogCount={handleLogCount(challenge.id)}
+                  language={language}
+                  defaultExpanded={index === 0}
+                />
+              )
             ))}
 
             {/* Add Challenge Button */}

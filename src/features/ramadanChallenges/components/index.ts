@@ -7,3 +7,5 @@ export { CommunityBanner } from './CommunityBanner';
 export { RecommenderBanner } from './RecommenderBanner';
 export { AddChallengeModal } from './AddChallengeModal';
 export { RamadanHub } from './RamadanHub';
+export { PropheticNamesCard } from './PropheticNamesCard';
+export { PropheticNamesPractice } from './PropheticNamesPractice';
