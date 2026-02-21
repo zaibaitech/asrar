@@ -28,6 +28,7 @@ import {
   RIZQ_DUA,
   CLOSING_DUA
 } from '../propheticNames201';
+import { WaveHadiyyaCard } from './WaveHadiyyaCard';
 import { translations } from '@/src/lib/translations';
 
 // ─── Types ───────────────────────────────────────────────────────────────────────
@@ -537,6 +538,9 @@ export function PropheticNamesPractice({
                 }
               </span>
             </div>
+
+            {/* Wave Hadiyya Card */}
+            <WaveHadiyyaCard locale={language} />
 
             <button
               onClick={onComplete}
