@@ -12,51 +12,75 @@ type Language = 'en' | 'fr';
  */
 export const bilingualMeta = {
   en: {
-    title: 'Asrār Everyday — Islamic Spiritual Guidance',
+    title: 'Asrār Everyday — Unlock Divine Timing & Sacred Sciences ✨',
     // Short description for HTML meta (under 160 chars)
-    shortDescription: 'Your daily Islamic spiritual companion. Explore ʿIlm al-Ḥurūf, planetary hours, spiritual challenges, Prophetic Names, and more.',
+    shortDescription: 'Discover ʿIlm al-Nujūm planetary hours, Abjad numerology, 201 Prophetic Names & spiritual challenges. Your Islamic esoteric companion.',
     // Full description for OG and app stores
-    fullDescription: 'Your daily Islamic spiritual companion rooted in Islamic esotericism. Explore ʿIlm al-Ḥurūf (letter science), planetary hours, Ramadan challenges, 201 Prophetic Names, Ṣalawāt tracking, Divine Names, and Name Destiny analysis — in English and French.',
+    fullDescription: 'Align your actions with cosmic rhythms! ʿIlm al-Nujūm reveals the optimal planetary hour for every intention. Plus: Abjad calculator, 201 Prophetic Names for Rizq, Ṣalawāt tracking, Divine Name resonance & Name Destiny analysis. Ancient wisdom, modern interface.',
     ogImage: '/og-image-en.png',
     locale: 'en_GB',
     // App store long description
-    appStoreDescription: `Asrār Everyday — Islamic Spiritual Guidance
+    appStoreDescription: `Asrār Everyday — Unlock Divine Timing & Sacred Sciences ✨
 
-Your daily Islamic spiritual companion rooted in Islamic esotericism.
+Your gateway to Islamic esoteric sciences — ancient wisdom in a modern interface.
 
-Features:
-• ʿIlm al-Ḥurūf — Letter & Number Science (Abjad calculator)
-• ʿIlm al-Nujūm — Planetary Hours & Moment Alignment
-• Spiritual Challenges — Istighfār, Ṣalawāt, Divine Names, Custom Dhikr
-• 201 Holy Names of Prophet Muḥammad ﷺ (Dalāʾilu l-Khayrāt)
-• Ṣalawāt Hub — Ṣalāt al-Fātiḥ, al-Nāriyya, al-Mashīshiyya, Jawharatu l-Kamāl
-• Name Destiny Analysis — Spiritual meaning of your name
-• Istikhāra Guidance
-• Verse of the Day & Divine Name for Reflection
-• Bilingual — English & French
+🌙 ʿIlm al-Nujūm — Planetary Hours
+Know the perfect moment for every intention. Real-time planetary hour guidance for love, wealth, protection, travel, and spiritual work.
+
+🔢 ʿIlm al-Ḥurūf — Letter & Number Science
+Calculate Abjad values, discover name compatibility, and unlock the secrets hidden in Arabic letters.
+
+📿 Spiritual Challenges
+Track Istighfār, Ṣalawāt, Divine Names & custom dhikr with beautiful progress tracking.
+
+🌟 201 Prophetic Names (Dalāʾilu l-Khayrāt)
+The sacred practice for Rizq abundance, authorized by the masters.
+
+💫 Ṣalawāt Hub
+Ṣalāt al-Fātiḥ, al-Nāriyya, al-Mashīshiyya, Jawharatu l-Kamāl — all in one place.
+
+🎯 Name Destiny Analysis
+Discover the spiritual blueprint encoded in your name.
+
+🤲 Istikhāra Guidance
+Divine consultation made simple.
+
+Available in English & French.
 
 Built by Zaibaitech Ltd · Edinburgh, Scotland`,
   },
   fr: {
-    title: 'Asrār Everyday — Guidance Spirituelle Islamique',
-    shortDescription: 'Votre compagnon spirituel islamique quotidien. Explorez ʿIlm al-Ḥurūf, heures planétaires, défis spirituels, Noms Prophétiques.',
-    fullDescription: 'Votre compagnon spirituel islamique quotidien, ancré dans l\'ésotérisme islamique. Explorez ʿIlm al-Ḥurūf, les heures planétaires, les défis du Ramadan, les 201 Noms Prophétiques, le suivi des Ṣalawāt, les Noms Divins, l\'analyse du Destin du Nom — en français et en anglais.',
+    title: 'Asrār Everyday — Sciences Sacrées & Timing Divin ✨',
+    shortDescription: 'Découvrez ʿIlm al-Nujūm (heures planétaires), numérologie Abjad, 201 Noms Prophétiques & défis spirituels. Sagesse ésotérique.',
+    fullDescription: 'Alignez vos actions avec les rythmes cosmiques ! ʿIlm al-Nujūm révèle l\'heure planétaire optimale pour chaque intention. Plus : calculateur Abjad, 201 Noms Prophétiques pour le Rizq, suivi des Ṣalawāt, résonance des Noms Divins & analyse du Destin. Sagesse ancienne, interface moderne.',
     ogImage: '/og-image-fr.png',
     locale: 'fr_FR',
-    appStoreDescription: `Asrār Everyday — Guidance Spirituelle Islamique
+    appStoreDescription: `Asrār Everyday — Sciences Sacrées & Timing Divin ✨
 
-Votre compagnon spirituel islamique quotidien, ancré dans les sciences ésotériques islamiques.
+Votre portail vers les sciences ésotériques islamiques — sagesse ancienne, interface moderne.
 
-Fonctionnalités :
-• ʿIlm al-Ḥurūf — Science des Lettres et des Nombres (calculateur Abjad)
-• ʿIlm al-Nujūm — Heures Planétaires et Alignement du Moment
-• Défis Spirituels — Istighfār, Ṣalawāt, Noms Divins, Dhikr Personnalisé
-• 201 Noms Saints du Prophète Muḥammad ﷺ (Dalāʾilu l-Khayrāt)
-• Hub des Ṣalawāt — Ṣalāt al-Fātiḥ, al-Nāriyya, al-Mashīshiyya, Jawharatu l-Kamāl
-• Analyse du Destin du Nom — Signification spirituelle de votre prénom
-• Guidance Istikhāra
-• Verset du Jour & Nom Divin pour la Réflexion
-• Bilingue — Français & Anglais
+🌙 ʿIlm al-Nujūm — Heures Planétaires
+Connaissez le moment parfait pour chaque intention. Guidance en temps réel pour l'amour, la richesse, la protection, les voyages et le travail spirituel.
+
+🔢 ʿIlm al-Ḥurūf — Science des Lettres et des Nombres
+Calculez les valeurs Abjad, découvrez la compatibilité des noms et dévoilez les secrets cachés dans les lettres arabes.
+
+📿 Défis Spirituels
+Suivez Istighfār, Ṣalawāt, Noms Divins & dhikr personnalisé avec un suivi visuel élégant.
+
+🌟 201 Noms Prophétiques (Dalāʾilu l-Khayrāt)
+La pratique sacrée pour l'abondance du Rizq, autorisée par les maîtres.
+
+💫 Hub des Ṣalawāt
+Ṣalāt al-Fātiḥ, al-Nāriyya, al-Mashīshiyya, Jawharatu l-Kamāl — tout en un seul endroit.
+
+🎯 Analyse du Destin du Nom
+Découvrez le plan spirituel encodé dans votre prénom.
+
+🤲 Guidance Istikhāra
+La consultation divine simplifiée.
+
+Disponible en français et en anglais.
 
 Développé par Zaibaitech Ltd · Édimbourg, Écosse`,
   },
