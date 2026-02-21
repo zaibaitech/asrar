@@ -89,11 +89,12 @@ export function PropheticNamesCard({
   const [showShareModal, setShowShareModal] = useState(false);
   const [linkCopied, setLinkCopied] = useState(false);
 
-  // Generate shareable URL
+  // Generate shareable URL with language parameter
   const getShareUrl = () => {
     if (typeof window === 'undefined') return '';
     const baseUrl = window.location.origin;
-    return `${baseUrl}?challenge=prophetic-names`;
+    const langParam = language === 'fr' ? '&lang=fr' : '';
+    return `${baseUrl}?challenge=prophetic-names${langParam}`;
   };
 
   // Handle native share (Web Share API)

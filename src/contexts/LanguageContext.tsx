@@ -44,6 +44,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     if (saved === 'en' || saved === 'fr') {
       // User has previously chosen a language - respect their choice
       setLanguage(saved);
+      // Sync with cookie for server-side metadata
+      document.cookie = `asrar_lang=${saved};path=/;max-age=31536000;samesite=lax`;
     } else {
       // First time visitor - auto-detect from browser
       const detected = detectBrowserLanguage();
@@ -56,6 +58,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     setLanguage(lang);
     // Save user's manual preference
     localStorage.setItem('preferred-language', lang);
+    // Sync with cookie for server-side metadata (OG tags)
+    document.cookie = `asrar_lang=${lang};path=/;max-age=31536000;samesite=lax`;
   };
 
   return (
