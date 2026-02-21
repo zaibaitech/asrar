@@ -27,9 +27,9 @@ import {
   PROPHETIC_NAMES_201, 
   YA_JAMIU, 
   RIZQ_DUA,
-  CLOSING_DUA,
-  RIZQ_PRACTICE_INFO 
+  CLOSING_DUA
 } from '../propheticNames201';
+import { translations } from '@/src/lib/translations';
 
 // ─── Types ───────────────────────────────────────────────────────────────────────
 
@@ -81,6 +81,7 @@ export function PropheticNamesPractice({
 
   if (!isOpen) return null;
 
+  const t = translations[language].propheticNames;
   const isJamiuComplete = jamiuCount >= YA_JAMIU.count;
   const isNamesComplete = currentNameIndex >= PROPHETIC_NAMES_201.length - 1;
   const currentName = PROPHETIC_NAMES_201[currentNameIndex];
@@ -156,17 +157,17 @@ export function PropheticNamesPractice({
             </div>
             
             <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">
-              {language === 'fr' ? 'Jour' : 'Day'} {day} · {session === 'morning' ? (language === 'fr' ? 'Matin' : 'Morning') : (language === 'fr' ? 'Soir' : 'Evening')}
+              {t.day} {day} · {session === 'morning' ? t.morning : t.evening}
             </h2>
             
             <p className="text-lg text-amber-600 dark:text-amber-400 font-medium mb-6">
-              {RIZQ_PRACTICE_INFO.title}
+              {t.title}
             </p>
 
             {/* Opening Duʿāʾ */}
             <div className="w-full max-w-md mb-8 p-4 rounded-xl bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800/50">
               <h3 className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3">
-                {language === 'fr' ? 'Duʿāʾ d\'ouverture pour Rizq' : 'Opening Duʿāʾ for Rizq'}
+                {t.openingDua}
               </h3>
               <p className="text-xl font-arabic text-slate-800 dark:text-slate-200 leading-relaxed mb-3" dir="rtl">
                 {RIZQ_DUA.arabic}
@@ -182,7 +183,7 @@ export function PropheticNamesPractice({
             {/* Practice steps */}
             <div className="w-full max-w-md text-left space-y-3 mb-8">
               <h4 className="text-sm font-semibold text-slate-600 dark:text-slate-400">
-                {language === 'fr' ? 'Étapes de cette session:' : 'Steps for this session:'}
+                {t.stepsForSession}
               </h4>
               <div className="flex items-start gap-3">
                 <span className="flex items-center justify-center w-6 h-6 rounded-full bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 text-sm font-bold">1</span>
@@ -199,13 +200,10 @@ export function PropheticNamesPractice({
                 <span className="flex items-center justify-center w-6 h-6 rounded-full bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 text-sm font-bold">2</span>
                 <div>
                   <p className="font-medium text-slate-800 dark:text-slate-200">
-                    {language === 'fr' ? 'Les 201 Noms Saints' : 'The 201 Holy Names'}
+                    {t.the201HolyNames}
                   </p>
                   <p className="text-sm text-slate-500 dark:text-slate-400">
-                    {language === 'fr' 
-                      ? 'Avec Ṣalla-llāhu ʿalayhi wa sallam après chaque nom'
-                      : 'With Ṣalla-llāhu ʿalayhi wa sallam after each name'
-                    }
+                    {t.withSallaAfterEach}
                   </p>
                 </div>
               </div>
@@ -213,10 +211,10 @@ export function PropheticNamesPractice({
                 <span className="flex items-center justify-center w-6 h-6 rounded-full bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 text-sm font-bold">3</span>
                 <div>
                   <p className="font-medium text-slate-800 dark:text-slate-200">
-                    {language === 'fr' ? 'Duʿāʾ de clôture' : 'Closing Duʿāʾ'}
+                    {t.closingDua}
                   </p>
                   <p className="text-sm text-slate-500 dark:text-slate-400">
-                    {language === 'fr' ? 'De Dalāʾilu l-Khayrāt' : 'From Dalāʾilu l-Khayrāt'}
+                    {t.fromDalail}
                   </p>
                 </div>
               </div>
@@ -226,7 +224,7 @@ export function PropheticNamesPractice({
               onClick={goToNextStep}
               className="w-full max-w-md py-4 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold text-lg transition-all shadow-lg shadow-amber-500/25"
             >
-              {language === 'fr' ? 'Commencer بسم الله' : 'Begin بسم الله'}
+              {t.beginBismillah}
             </button>
           </div>
         );
@@ -338,7 +336,7 @@ export function PropheticNamesPractice({
                 
                 {/* Tap hint */}
                 <div className="absolute bottom-8 text-xs text-slate-400 dark:text-slate-500">
-                  {language === 'fr' ? 'Toucher pour compter' : 'Tap to count'}
+                  {t.tapToCount}
                 </div>
               </button>
             </div>
@@ -349,7 +347,7 @@ export function PropheticNamesPractice({
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-sm hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-red-500 transition-colors"
             >
               <RotateCcw className="w-3.5 h-3.5" />
-              {language === 'fr' ? 'Réinitialiser' : 'Reset'}
+              {t.reset}
             </button>
 
             {/* Continue button */}
@@ -358,7 +356,7 @@ export function PropheticNamesPractice({
                 onClick={goToNextStep}
                 className="mt-8 px-8 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold flex items-center gap-2 shadow-lg shadow-emerald-500/25 animate-in fade-in slide-in-from-bottom-4 duration-300"
               >
-                {language === 'fr' ? 'Continuer aux Noms' : 'Continue to Names'}
+                {t.continueToNames}
                 <ChevronRight className="w-5 h-5" />
               </button>
             )}
@@ -372,13 +370,13 @@ export function PropheticNamesPractice({
             <div className="sticky top-0 z-10 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700 p-4">
               <div className="flex items-center justify-between mb-2">
                 <h2 className="font-semibold text-slate-900 dark:text-slate-100">
-                  {language === 'fr' ? 'Étape 2: Les 201 Noms' : 'Step 2: The 201 Names'}
+                  {t.step2The201Names}
                 </h2>
                 <button
                   onClick={() => setShowTranslation(!showTranslation)}
                   className="text-xs px-2 py-1 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-400"
                 >
-                  {showTranslation ? (language === 'fr' ? 'Masquer sens' : 'Hide meaning') : (language === 'fr' ? 'Afficher sens' : 'Show meaning')}
+                  {showTranslation ? t.hideMeaning : t.showMeaning}
                 </button>
               </div>
               <div className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
@@ -476,7 +474,7 @@ export function PropheticNamesPractice({
                   onClick={goToNextStep}
                   className="w-full py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/25"
                 >
-                  {language === 'fr' ? 'Continuer au Duʿāʾ' : 'Continue to Duʿāʾ'}
+                  {t.continueToDua}
                   <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
@@ -489,10 +487,10 @@ export function PropheticNamesPractice({
           <div className="flex flex-col items-center justify-center min-h-full p-6">
             <div className="text-center mb-6">
               <h2 className="text-lg font-medium text-slate-600 dark:text-slate-400 mb-2">
-                {language === 'fr' ? 'Étape 3: Duʿāʾ de clôture' : 'Step 3: Closing Duʿāʾ'}
+                {t.step3ClosingDua}
               </h2>
               <p className="text-sm text-slate-500 dark:text-slate-400">
-                {language === 'fr' ? 'De Dalāʾilu l-Khayrāt' : 'From Dalāʾilu l-Khayrāt'}
+                {t.fromDalail}
               </p>
             </div>
 
@@ -515,7 +513,7 @@ export function PropheticNamesPractice({
               className="w-full max-w-md py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-semibold text-lg transition-all shadow-lg shadow-emerald-500/25 flex items-center justify-center gap-2"
             >
               <Check className="w-5 h-5" />
-              {language === 'fr' ? 'Terminer la session' : 'Complete Session'}
+              {t.completeSession}
             </button>
           </div>
         );
@@ -525,27 +523,26 @@ export function PropheticNamesPractice({
           <div className="flex flex-col items-center justify-center min-h-full p-6 text-center">
             <div className="text-6xl mb-6">🎉</div>
             <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">
-              {language === 'fr' ? 'Māshāʾ Allāh!' : 'Māshāʾ Allāh!'}
+              {t.mashaAllah}
             </h2>
             <p className="text-lg text-emerald-600 dark:text-emerald-400 font-medium mb-6">
-              {language === 'fr' 
-                ? `Jour ${day} · ${session === 'morning' ? 'Matin' : 'Soir'} complété!`
-                : `Day ${day} · ${session === 'morning' ? 'Morning' : 'Evening'} completed!`
-              }
+              {t.day} {day} · {session === 'morning' ? t.morning : t.evening} {t.completedBadge}
             </p>
 
             <div className="w-full max-w-md p-4 rounded-xl bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800/50 mb-8">
               <p className="text-sm text-slate-700 dark:text-slate-300 italic">
-                "{RIZQ_PRACTICE_INFO.promise}"
+                "{t.promise}"
               </p>
             </div>
 
             <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 mb-8">
               <span>{session === 'morning' ? '☀️' : '🌙'}</span>
               <span>
-                {language === 'fr' 
-                  ? `${session === 'evening' || day === 7 ? 'Prochain: ' : 'Ce soir:'} ${session === 'morning' ? 'Session du soir' : day < 7 ? `Jour ${day + 1} Matin` : 'Pratique terminée!'}`
-                  : `${session === 'evening' || day === 7 ? 'Next: ' : 'Tonight:'} ${session === 'morning' ? 'Evening session' : day < 7 ? `Day ${day + 1} Morning` : 'Practice complete!'}`
+                {session === 'morning' 
+                  ? `${t.tonight} ${t.eveningSession}`
+                  : day < 7 
+                    ? `${t.next} ${t.day} ${day + 1} ${t.morning}`
+                    : `${t.practiceComplete}`
                 }
               </span>
             </div>
@@ -554,7 +551,7 @@ export function PropheticNamesPractice({
               onClick={onComplete}
               className="w-full max-w-md py-4 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold text-lg transition-all shadow-lg shadow-amber-500/25"
             >
-              {language === 'fr' ? 'Fermer' : 'Close'}
+              {t.close}
             </button>
           </div>
         );
@@ -579,7 +576,7 @@ export function PropheticNamesPractice({
             <Moon className="w-5 h-5 text-indigo-400" />
           )}
           <span className="text-sm font-medium text-slate-600 dark:text-slate-400">
-            {language === 'fr' ? 'Jour' : 'Day'} {day}
+            {t.day} {day}
           </span>
         </div>
         

@@ -224,6 +224,108 @@ export const translations = {
       quickTap: "Quick Add",
     },
 
+    // 201 Holy Names of Prophet ﷺ
+    propheticNames: {
+      title: "201 Holy Names of Prophet Muḥammad ﷺ",
+      subtitle: "Rizq Abundance Practice",
+      shortTitle: "201 Holy Names",
+      tradition: "Dalāʾilu l-Khayrāt · Imam Muḥammad al-Jazūlī",
+      authorization: "Cherno Moussa Yero Sy — Spiritual Master of the Tijaniyya Order",
+      description: "For those seeking immense abundance, provision, and divine sustenance (Rizq), recite Yā Jāmiʿu 180 times followed by all 201 Holy Names with Ṣalla-llāhu ʿalayhi wa sallam after each name. Practice morning and evening for 7 consecutive days.",
+      promise: "Immeasurable changes in your rizq, abundance, and divine provision will manifest.",
+      
+      // Duration & Sessions
+      duration: "Duration",
+      days: "days",
+      sessions: "Sessions",
+      sessionsPerDay: "Morning & Evening",
+      estimatedTime: "Estimated time",
+      estimatedTimeValue: "25-35 minutes per session",
+      
+      // 7-Day Tracker
+      day: "Day",
+      morning: "Morning",
+      evening: "Evening",
+      dayComplete: "Day complete",
+      sessionsComplete: "sessions",
+      complete: "Complete",
+      startNext: "Start Next Session",
+      congratulations: "Congratulations!",
+      completedAllDays: "You have completed all 7 days of practice!",
+      startAgain: "Start Again",
+      
+      // Practice Steps
+      practiceSteps: "Practice Steps",
+      stepPrefix: "Step",
+      step1: "Yā Jāmiʿu",
+      step1Count: "180×",
+      step2: "The 201 Holy Names",
+      step2Note: "With Ṣalla-llāhu ʿalayhi wa sallam after each name",
+      step3: "Closing Duʿāʾ",
+      step3Note: "From Dalāʾilu l-Khayrāt",
+      stepsForSession: "Steps for this session:",
+      the201HolyNames: "The 201 Holy Names",
+      withSallaAfterEach: "With Ṣalla-llāhu ʿalayhi wa sallam after each name",
+      fromDalail: "From Dalāʾilu l-Khayrāt",
+      beginBismillah: "Begin بسم الله",
+      step2The201Names: "Step 2: The 201 Names",
+      step3ClosingDua: "Step 3: Closing Duʿāʾ",
+      
+      // Practice Modal
+      recite: "Recite",
+      tapToCount: "Tap to count",
+      reset: "Reset",
+      continueToNames: "Continue to Names",
+      continueToDua: "Continue to Duʿāʾ",
+      completeSession: "Complete Session",
+      close: "Close",
+      
+      // Yā Jāmiʿu
+      yaJamiuArabic: "يَا جَامِعُ",
+      yaJamiuTranslit: "Yā Jāmiʿu",
+      yaJamiuMeaning: "O Gatherer, O Mighty One",
+      
+      // Names list
+      theNames: "The 201 Names",
+      hideMeaning: "Hide meaning",
+      showMeaning: "Show meaning",
+      salawatAfterName: "Ṣalla-llāhu ʿalayhi wa sallam",
+      
+      // Opening Duʿāʾ
+      openingDua: "Opening Duʿāʾ for Rizq",
+      
+      // Closing Duʿāʾ
+      closingDua: "Closing Duʿāʾ",
+      closingDuaSource: "From Dalāʾilu l-Khayrāt",
+      
+      // Completion
+      mashaAllah: "Māshāʾ Allāh!",
+      sessionCompleted: "completed!",
+      completedBadge: "completed!",
+      nextSession: "Next:",
+      next: "Next:",
+      practiceComplete: "Practice complete!",
+      tonightSession: "Tonight:",
+      tonight: "Tonight:",
+      eveningSession: "Evening session",
+      tomorrowMorning: "Morning",
+      
+      // Source & Authorization
+      source: "Source",
+      authorizationLabel: "Authorization",
+      
+      // Add Challenge Modal
+      specialPractice: "Special Practice",
+      special: "Special",
+      sevenDayPractice: "7-Day Morning & Evening",
+      start7Day: "Start 7-Day Challenge",
+      
+      // Card
+      remove: "Remove",
+      removeChallenge: "Remove this challenge?",
+      progressWillBeLost: "Your progress will be lost.",
+    },
+
     // Guidance Content
     guidance: {
       relatedQuranicVerses: "Related Quranic Verses",
@@ -3146,6 +3248,108 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
       heatmapTitle: "Progrès Mensuel",
       streakDays: "Jours Consécutifs",
       quickTap: "Ajout Rapide",
+    },
+
+    // 201 Noms Saints du Prophète ﷺ
+    propheticNames: {
+      title: "201 Noms Saints du Prophète Muḥammad ﷺ",
+      subtitle: "Pratique d'Abondance Rizq",
+      shortTitle: "201 Noms Saints",
+      tradition: "Dalāʾilu l-Khayrāt · Imam Muḥammad al-Jazūlī",
+      authorization: "Cherno Moussa Yero Sy — Maître Spirituel de l'Ordre Tijaniyya",
+      description: "Pour ceux qui cherchent une abondance immense, la subsistance et la provision divine (Rizq), récitez Yā Jāmiʿu 180 fois suivi de tous les 201 Noms Saints avec Ṣalla-llāhu ʿalayhi wa sallam après chaque nom. Pratiquez matin et soir pendant 7 jours consécutifs.",
+      promise: "Des changements incommensurables dans votre rizq, abondance et provision divine se manifesteront.",
+      
+      // Durée & Sessions
+      duration: "Durée",
+      days: "jours",
+      sessions: "Sessions",
+      sessionsPerDay: "Matin & Soir",
+      estimatedTime: "Temps estimé",
+      estimatedTimeValue: "25-35 minutes par session",
+      
+      // Suivi 7 jours
+      day: "Jour",
+      morning: "Matin",
+      evening: "Soir",
+      dayComplete: "Jour terminé",
+      sessionsComplete: "sessions",
+      complete: "Terminé",
+      startNext: "Commencer la prochaine session",
+      congratulations: "Félicitations!",
+      completedAllDays: "Vous avez complété les 7 jours de pratique!",
+      startAgain: "Recommencer",
+      
+      // Étapes de pratique
+      practiceSteps: "Étapes de la pratique",
+      stepPrefix: "Étape",
+      step1: "Yā Jāmiʿu",
+      step1Count: "180×",
+      step2: "Les 201 Noms Saints",
+      step2Note: "Avec Ṣalla-llāhu ʿalayhi wa sallam après chaque nom",
+      step3: "Duʿāʾ de clôture",
+      step3Note: "De Dalāʾilu l-Khayrāt",
+      stepsForSession: "Étapes de cette session:",
+      the201HolyNames: "Les 201 Noms Saints",
+      withSallaAfterEach: "Avec Ṣalla-llāhu ʿalayhi wa sallam après chaque nom",
+      fromDalail: "De Dalāʾilu l-Khayrāt",
+      beginBismillah: "Commencer بسم الله",
+      step2The201Names: "Étape 2: Les 201 Noms",
+      step3ClosingDua: "Étape 3: Duʿāʾ de clôture",
+      
+      // Modal de pratique
+      recite: "Récitez",
+      tapToCount: "Toucher pour compter",
+      reset: "Réinitialiser",
+      continueToNames: "Continuer aux Noms",
+      continueToDua: "Continuer au Duʿāʾ",
+      completeSession: "Terminer la session",
+      close: "Fermer",
+      
+      // Yā Jāmiʿu
+      yaJamiuArabic: "يَا جَامِعُ",
+      yaJamiuTranslit: "Yā Jāmiʿu",
+      yaJamiuMeaning: "Ô Rassembleur, Ô Puissant",
+      
+      // Liste des noms
+      theNames: "Les 201 Noms",
+      hideMeaning: "Masquer le sens",
+      showMeaning: "Afficher le sens",
+      salawatAfterName: "Ṣalla-llāhu ʿalayhi wa sallam",
+      
+      // Duʿāʾ d'ouverture
+      openingDua: "Duʿāʾ d'ouverture pour le Rizq",
+      
+      // Duʿāʾ de clôture
+      closingDua: "Duʿāʾ de clôture",
+      closingDuaSource: "De Dalāʾilu l-Khayrāt",
+      
+      // Completion
+      mashaAllah: "Māshāʾ Allāh!",
+      sessionCompleted: "complété!",
+      completedBadge: "complété!",
+      nextSession: "Prochain:",
+      next: "Prochain:",
+      practiceComplete: "Pratique terminée!",
+      tonightSession: "Ce soir:",
+      tonight: "Ce soir:",
+      eveningSession: "Session du soir",
+      tomorrowMorning: "Matin",
+      
+      // Source & Autorisation
+      source: "Source",
+      authorizationLabel: "Autorisation",
+      
+      // Modal d'ajout
+      specialPractice: "Pratique spéciale",
+      special: "Spécial",
+      sevenDayPractice: "7 jours matin & soir",
+      start7Day: "Commencer le défi de 7 jours",
+      
+      // Carte
+      remove: "Supprimer",
+      removeChallenge: "Supprimer ce défi?",
+      progressWillBeLost: "Votre progression sera perdue.",
     },
 
     guidance: {

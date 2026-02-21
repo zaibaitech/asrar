@@ -22,6 +22,7 @@ import {
 import type { Challenge, SessionTag } from '../types';
 import { RIZQ_PRACTICE_INFO } from '../propheticNames201';
 import { PropheticNamesPractice } from './PropheticNamesPractice';
+import { translations } from '@/src/lib/translations';
 
 // ─── Types ───────────────────────────────────────────────────────────────────────
 
@@ -76,6 +77,7 @@ export function PropheticNamesCard({
   onRemove,
   language = 'en' 
 }: PropheticNamesCardProps) {
+  const t = translations[language].propheticNames;
   const [sessions, setSessions] = useState<DaySession[]>(getDefaultSessions());
   const [showPractice, setShowPractice] = useState(false);
   const [currentSession, setCurrentSession] = useState<'morning' | 'evening'>('morning');
@@ -160,10 +162,10 @@ export function PropheticNamesCard({
                 <span className="text-2xl">⭐</span>
                 <div>
                   <h3 className="font-bold text-slate-900 dark:text-slate-100 text-sm">
-                    {RIZQ_PRACTICE_INFO.title}
+                    {t.title}
                   </h3>
                   <p className="text-xs text-amber-600 dark:text-amber-400 font-medium">
-                    {RIZQ_PRACTICE_INFO.subtitle}
+                    {t.subtitle}
                   </p>
                 </div>
               </div>
@@ -172,7 +174,7 @@ export function PropheticNamesCard({
               {isComplete && (
                 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 text-xs font-medium">
                   <CheckCircle2 className="w-3 h-3" />
-                  {language === 'fr' ? 'Terminé' : 'Complete'}
+                  {t.complete}
                 </span>
               )}
               {isExpanded ? (
@@ -187,10 +189,10 @@ export function PropheticNamesCard({
           <div className="mt-3">
             <div className="flex items-center justify-between text-xs mb-1">
               <span className="text-slate-600 dark:text-slate-400">
-                {language === 'fr' ? 'Jour' : 'Day'} {currentDayNumber} / 7
+                {t.day} {currentDayNumber} / 7
               </span>
               <span className="text-amber-600 dark:text-amber-400 font-medium">
-                {completedSessions} / {totalSessions} {language === 'fr' ? 'sessions' : 'sessions'}
+                {completedSessions} / {totalSessions} {t.sessionsComplete}
               </span>
             </div>
             <div className="h-2 rounded-full bg-amber-200/50 dark:bg-amber-800/30 overflow-hidden">
@@ -225,7 +227,7 @@ export function PropheticNamesCard({
                     <div className={`text-xs font-bold mb-1.5 ${
                       dayComplete ? 'text-emerald-700 dark:text-emerald-300' : 'text-slate-600 dark:text-slate-400'
                     }`}>
-                      {language === 'fr' ? 'J' : 'D'}{session.day}
+                      {t.day[0]}{session.day}
                     </div>
                     
                     {/* Morning checkbox */}
@@ -243,7 +245,7 @@ export function PropheticNamesCard({
                           ? 'text-emerald-600 dark:text-emerald-400'
                           : 'text-slate-400 hover:text-amber-500'
                       }`}
-                      title={language === 'fr' ? 'Matin' : 'Morning'}
+                      title={t.morning}
                     >
                       <Sun className="w-3 h-3" />
                       {session.morning ? (
@@ -268,7 +270,7 @@ export function PropheticNamesCard({
                           ? 'text-emerald-600 dark:text-emerald-400'
                           : 'text-slate-400 hover:text-amber-500'
                       }`}
-                      title={language === 'fr' ? 'Soir' : 'Evening'}
+                      title={t.evening}
                     >
                       <Moon className="w-3 h-3" />
                       {session.evening ? (
@@ -285,10 +287,10 @@ export function PropheticNamesCard({
             {/* Legend */}
             <div className="flex items-center justify-center gap-4 text-xs text-slate-500 dark:text-slate-400">
               <span className="flex items-center gap-1">
-                <Sun className="w-3 h-3" /> {language === 'fr' ? 'Matin' : 'Morning'}
+                <Sun className="w-3 h-3" /> {t.morning}
               </span>
               <span className="flex items-center gap-1">
-                <Moon className="w-3 h-3" /> {language === 'fr' ? 'Soir' : 'Evening'}
+                <Moon className="w-3 h-3" /> {t.evening}
               </span>
             </div>
 
@@ -309,7 +311,7 @@ export function PropheticNamesCard({
                 className="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold transition-all flex items-center justify-center gap-2 shadow-lg shadow-amber-500/25"
               >
                 <Play className="w-4 h-4" />
-                {language === 'fr' ? 'Commencer la prochaine session' : 'Start Next Session'}
+                {t.startNext}
               </button>
             )}
 
@@ -318,19 +320,16 @@ export function PropheticNamesCard({
               <div className="p-4 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-800/50 text-center">
                 <div className="text-3xl mb-2">🎉</div>
                 <h4 className="font-bold text-emerald-700 dark:text-emerald-300">
-                  {language === 'fr' ? 'Félicitations!' : 'Congratulations!'}
+                  {t.congratulations}
                 </h4>
                 <p className="text-sm text-emerald-600 dark:text-emerald-400 mt-1">
-                  {language === 'fr' 
-                    ? 'Vous avez complété les 7 jours de pratique!'
-                    : 'You have completed all 7 days of practice!'
-                  }
+                  {t.completedAllDays}
                 </p>
                 <button
                   onClick={resetProgress}
                   className="mt-3 text-sm text-emerald-600 dark:text-emerald-400 hover:underline"
                 >
-                  {language === 'fr' ? 'Recommencer' : 'Start Again'}
+                  {t.startAgain}
                 </button>
               </div>
             )}
@@ -342,10 +341,10 @@ export function PropheticNamesCard({
                 className="text-xs text-slate-400 hover:text-red-500 transition-colors flex items-center gap-1"
               >
                 <Trash2 className="w-3 h-3" />
-                {language === 'fr' ? 'Supprimer' : 'Remove'}
+                {t.remove}
               </button>
               <span className="text-xs text-slate-400 dark:text-slate-500">
-                {RIZQ_PRACTICE_INFO.tradition}
+                {t.tradition}
               </span>
             </div>
           </div>
@@ -369,26 +368,23 @@ export function PropheticNamesCard({
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 animate-in fade-in duration-200">
           <div className="w-full max-w-sm bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-xl animate-in zoom-in-95 duration-200">
             <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 mb-2">
-              {language === 'fr' ? 'Supprimer ce défi?' : 'Remove this challenge?'}
+              {t.removeChallenge}
             </h3>
             <p className="text-sm text-slate-500 dark:text-slate-400 mb-4">
-              {language === 'fr' 
-                ? 'Votre progression sera perdue.'
-                : 'Your progress will be lost.'
-              }
+              {t.progressWillBeLost}
             </p>
             <div className="flex gap-3">
               <button
                 onClick={() => setShowDeleteConfirm(false)}
                 className="flex-1 py-2 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-medium hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
               >
-                {language === 'fr' ? 'Annuler' : 'Cancel'}
+                {translations[language].common.cancel}
               </button>
               <button
                 onClick={handleDelete}
                 className="flex-1 py-2 rounded-lg bg-red-500 hover:bg-red-600 text-white font-medium transition-colors"
               >
-                {language === 'fr' ? 'Supprimer' : 'Remove'}
+                {t.remove}
               </button>
             </div>
           </div>
