@@ -169,7 +169,7 @@ export function PropheticNamesPractice({
                 {RIZQ_DUA.transliteration}
               </p>
               <p className="text-xs text-slate-500 dark:text-slate-500 mt-2">
-                {RIZQ_DUA.meaning}
+                {language === 'fr' ? RIZQ_DUA.meaningFr : RIZQ_DUA.meaning}
               </p>
             </div>
 
@@ -185,7 +185,7 @@ export function PropheticNamesPractice({
                     <span className="font-arabic">{YA_JAMIU.arabic}</span> ({YA_JAMIU.transliteration})
                   </p>
                   <p className="text-sm text-slate-500 dark:text-slate-400">
-                    {YA_JAMIU.count}× — {YA_JAMIU.meaning}
+                    {YA_JAMIU.count}× — {language === 'fr' ? YA_JAMIU.meaningFr : YA_JAMIU.meaning}
                   </p>
                 </div>
               </div>
@@ -231,7 +231,7 @@ export function PropheticNamesPractice({
                 {YA_JAMIU.arabic}
               </p>
               <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-                {YA_JAMIU.transliteration} — {YA_JAMIU.meaning}
+                {YA_JAMIU.transliteration} — {language === 'fr' ? YA_JAMIU.meaningFr : YA_JAMIU.meaning}
               </p>
             </div>
 
@@ -397,7 +397,7 @@ export function PropheticNamesPractice({
                 </p>
                 {showTranslation && (
                   <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
-                    {currentName.meaning}
+                    {language === 'fr' ? currentName.meaningFr : currentName.meaning}
                   </p>
                 )}
                 <p className="text-lg text-emerald-600 dark:text-emerald-400 font-arabic mt-4" dir="rtl">
@@ -496,7 +496,7 @@ export function PropheticNamesPractice({
               </p>
               <div className="border-t border-emerald-200 dark:border-emerald-700/50 pt-4">
                 <p className="text-sm text-slate-500 dark:text-slate-400">
-                  {CLOSING_DUA.meaning}
+                  {language === 'fr' ? CLOSING_DUA.meaningFr : CLOSING_DUA.meaning}
                 </p>
               </div>
             </div>
