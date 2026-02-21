@@ -514,22 +514,22 @@ export function PropheticNamesPractice({
 
       case 'COMPLETE':
         return (
-          <div className="flex flex-col items-center justify-center min-h-full p-6 text-center">
-            <div className="text-6xl mb-6">🎉</div>
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">
+          <div className="flex flex-col items-center justify-center min-h-full p-4 text-center">
+            <div className="text-5xl mb-3">🎉</div>
+            <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-1">
               {t.mashaAllah}
             </h2>
-            <p className="text-lg text-emerald-600 dark:text-emerald-400 font-medium mb-6">
+            <p className="text-base text-emerald-600 dark:text-emerald-400 font-medium mb-4">
               {t.day} {day} {t.completedBadge}
             </p>
 
-            <div className="w-full max-w-md p-4 rounded-xl bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800/50 mb-8">
-              <p className="text-sm text-slate-700 dark:text-slate-300 italic">
+            <div className="w-full max-w-md p-3 rounded-xl bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800/50 mb-4">
+              <p className="text-xs text-slate-700 dark:text-slate-300 italic">
                 "{t.promise}"
               </p>
             </div>
 
-            <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 mb-8">
+            <div className="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm mb-4">
               <span>☀️</span>
               <span>
                 {day < 7 
@@ -544,7 +544,7 @@ export function PropheticNamesPractice({
 
             <button
               onClick={onComplete}
-              className="w-full max-w-md py-4 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold text-lg transition-all shadow-lg shadow-amber-500/25"
+              className="w-full max-w-md py-3 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold text-base transition-all shadow-lg shadow-amber-500/25"
             >
               {t.close}
             </button>
