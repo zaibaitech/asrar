@@ -1586,6 +1586,16 @@ export default function AsrarEveryday() {
   // Load daily reflection preference from localStorage
   useEffect(() => {
     if (typeof window !== 'undefined') {
+      // Check for deep-link - auto-expand if user came from shared link
+      const urlParams = new URLSearchParams(window.location.search);
+      const hasDeepLink = urlParams.get('challenge') !== null;
+      
+      if (hasDeepLink) {
+        // Force expand to show the challenge
+        setIsDailyReflectionCollapsed(false);
+        return;
+      }
+      
       const stored = localStorage.getItem('dailyReflectionCollapsed');
       if (stored) {
         setIsDailyReflectionCollapsed(JSON.parse(stored));
@@ -1616,11 +1626,20 @@ export default function AsrarEveryday() {
       // Ensure mobile menu starts closed
       setShowMobileMenu(false);
       
+      // Check for deep-link parameters - skip onboarding if user came from shared link
+      const urlParams = new URLSearchParams(window.location.search);
+      const hasDeepLink = urlParams.get('challenge') !== null;
+      
       const hasSeenOnboarding = localStorage.getItem('hasSeenOnboarding');
-      if (!hasSeenOnboarding) {
+      if (!hasSeenOnboarding && !hasDeepLink) {
         // Small delay for smoother UX
         const timer = setTimeout(() => setShowOnboarding(true), 500);
         return () => clearTimeout(timer);
+      }
+      
+      // If user came via deep-link, mark onboarding as seen
+      if (hasDeepLink && !hasSeenOnboarding) {
+        localStorage.setItem('hasSeenOnboarding', 'true');
       }
     }
   }, []);
