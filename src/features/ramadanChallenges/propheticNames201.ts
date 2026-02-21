@@ -254,18 +254,18 @@ Ihdinā ṣ-ṣirāṭa l-mustaqīm.
   meaningFr: 'Au nom d\'Allah, le Tout Miséricordieux, le Très Miséricordieux. Louange à Allah, Seigneur des mondes. Le Tout Miséricordieux, le Très Miséricordieux. Maître du Jour du Jugement. C\'est Toi seul que nous adorons, et c\'est Toi seul dont nous implorons l\'aide. Guide-nous sur le droit chemin — le chemin de ceux que Tu as comblés de bienfaits, non de ceux qui ont encouru Ta colère, ni des égarés.',
 };
 
-/** Closing Duʿāʾ from Dalāʾilu l-Khayrāt */
+/** Closing Duʿāʾ — Authenticated Prophetic Supplication for Rizq */
 export const CLOSING_DUA = {
-  arabic: `اللَّهُمَّ يَا رَبِّ بِجَاهِ نَبِيِّكَ الْمُصْطَفَى وَرَسُولِكَ الْمُرْتَضَى
-طَهِّرْ قُلُوبَنَا مِنْ كُلِّ وَصْفٍ يُبَاعِدُنَا عَنْ مُشَاهَدَتِكَ وَمَحَبَّتِكَ
-وَأَمِتْنَا عَلَى السُّنَّةِ وَالْجَمَاعَةِ وَالشَّوْقِ إِلَى لِقَائِكَ
-يَا ذَا الْجَلَالِ وَالْإِكْرَام`,
-  transliteration: `Allāhumma yā rabbī bi-jāhi Nabīyyika l-Muṣṭafā wa Rasūlika l-Murtaḍā
-ṭahhir qulūbanā min kulli waṣfin yubāʿidunā ʿan mushāhadatika wa maḥabbatika
-wa amitnā ʿalā s-sunnati wa l-jamāʿati wa sh-shawqi ilā liqāʾika
-yā Dhal-Jalāli wa l-Ikrām.`,
-  meaning: 'O Allah, O Lord — by the honor of Your Chosen Prophet and Your Messenger with whom You are well pleased — purify our hearts from every trait that keeps us from beholding You and from Your Love. Cause us to depart this world following his way, his community, and longing to meet You — O Owner of Majesty and Nobility.',
-  meaningFr: 'Ô Allah, Ô Seigneur — par l\'honneur de Ton Prophète élu et de Ton Messager agréé — purifie nos cœurs de tout trait qui nous éloigne de Ta contemplation et de Ton Amour. Fais-nous quitter ce monde en suivant sa voie, sa communauté, et en aspirant à Te rencontrer — Ô Détenteur de la Majesté et de la Noblesse.',
+  arabic: `اللَّهُمَّ اكْفِنِي بِحَلَالِكَ عَنْ حَرَامِكَ
+وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ`,
+  transliteration: `Allāhumma ikfinī bi-ḥalālika ʿan ḥarāmik,
+wa aghnīnī bi-faḍlika ʿamman siwāk.`,
+  meaning: 'O Allah, suffice me with what You have made lawful, keeping me away from what You have made unlawful. And enrich me by Your bounty, making me free of need from all besides You.',
+  meaningFr: 'Ô Allah, suffit-moi par ce que Tu as rendu licite, en m\'éloignant de ce que Tu as rendu illicite. Et enrichis-moi par Ta grâce, me rendant indépendant de tout ce qui n\'est pas Toi.',
+  source: {
+    en: 'Transmitted by Tirmidhī · Graded Ḥasan · Taught by the Prophet ﷺ to ʿAlī ibn Abī Ṭālib (RA) for provision and debt relief.',
+    fr: 'Transmis par Tirmidhī · Classé Ḥasan · Enseigné par le Prophète ﷺ à ʿAlī ibn Abī Ṭālib (RA) pour la provision et le soulagement des dettes.',
+  },
 };
 
 /** Practice metadata */

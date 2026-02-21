@@ -297,7 +297,7 @@ export const translations = {
       
       // Closing Duʿāʾ
       closingDua: "Closing Duʿāʾ",
-      closingDuaSource: "From Dalāʾilu l-Khayrāt",
+      closingDuaSource: "Tirmidhī · Ḥasan",
       
       // Completion
       mashaAllah: "Māshāʾ Allāh!",
@@ -3337,7 +3337,7 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
       
       // Duʿāʾ de clôture
       closingDua: "Duʿāʾ de clôture",
-      closingDuaSource: "De Dalāʾilu l-Khayrāt",
+      closingDuaSource: "Tirmidhī · Ḥasan",
       
       // Completion
       mashaAllah: "Māshāʾ Allāh!",

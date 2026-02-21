@@ -207,7 +207,7 @@ export function PropheticNamesPractice({
                     {t.closingDua}
                   </p>
                   <p className="text-sm text-slate-500 dark:text-slate-400">
-                    {t.fromDalail}
+                    {t.closingDuaSource}
                   </p>
                 </div>
               </div>
@@ -482,9 +482,6 @@ export function PropheticNamesPractice({
               <h2 className="text-lg font-medium text-slate-600 dark:text-slate-400 mb-2">
                 {t.step3ClosingDua}
               </h2>
-              <p className="text-sm text-slate-500 dark:text-slate-400">
-                {t.fromDalail}
-              </p>
             </div>
 
             <div className="w-full max-w-lg p-6 rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 border border-emerald-200 dark:border-emerald-800/50 mb-8">
@@ -495,8 +492,11 @@ export function PropheticNamesPractice({
                 {CLOSING_DUA.transliteration}
               </p>
               <div className="border-t border-emerald-200 dark:border-emerald-700/50 pt-4">
-                <p className="text-sm text-slate-500 dark:text-slate-400">
+                <p className="text-sm text-slate-500 dark:text-slate-400 mb-3">
                   {language === 'fr' ? CLOSING_DUA.meaningFr : CLOSING_DUA.meaning}
+                </p>
+                <p className="text-xs text-emerald-600 dark:text-emerald-400 italic">
+                  {language === 'fr' ? CLOSING_DUA.source.fr : CLOSING_DUA.source.en}
                 </p>
               </div>
             </div>
