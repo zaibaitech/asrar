@@ -303,15 +303,30 @@ export function PropheticNamesPractice({
 
               {/* Tap area */}
               <button
-                onClick={() => {
+                onPointerDown={(e) => {
+                  e.preventDefault();
+                  const newCount = jamiuCount + 1;
                   incrementJamiu(1);
-                  // Haptic feedback
+                  
+                  // Enhanced haptic feedback for mobile
                   if (typeof navigator !== 'undefined' && navigator.vibrate) {
-                    navigator.vibrate(15);
+                    if (newCount >= YA_JAMIU.count) {
+                      // Completion: celebratory double vibration
+                      navigator.vibrate([50, 50, 100]);
+                    } else if (newCount % 33 === 0) {
+                      // Every 33 (tasbih round): medium pulse
+                      navigator.vibrate([30, 30, 30]);
+                    } else if (newCount % 10 === 0) {
+                      // Every 10: slightly longer
+                      navigator.vibrate(25);
+                    } else {
+                      // Normal tap: short crisp vibration
+                      navigator.vibrate(12);
+                    }
                   }
                 }}
-                className="relative w-56 h-56 rounded-full bg-gradient-to-br from-amber-50 to-orange-100 dark:from-amber-900/30 dark:to-orange-900/30 border-4 border-amber-200 dark:border-amber-700/50 shadow-inner flex flex-col items-center justify-center active:scale-[0.98] active:bg-gradient-to-br active:from-amber-100 active:to-orange-200 dark:active:from-amber-800/40 dark:active:to-orange-800/40 transition-all duration-75 cursor-pointer"
-                style={{ touchAction: 'manipulation' }}
+                className="relative w-56 h-56 rounded-full bg-gradient-to-br from-amber-50 to-orange-100 dark:from-amber-900/30 dark:to-orange-900/30 border-4 border-amber-200 dark:border-amber-700/50 shadow-inner flex flex-col items-center justify-center active:scale-[0.98] active:bg-gradient-to-br active:from-amber-100 active:to-orange-200 dark:active:from-amber-800/40 dark:active:to-orange-800/40 transition-all duration-75 cursor-pointer touch-none"
+                style={{ touchAction: 'manipulation', WebkitTapHighlightColor: 'transparent' }}
               >
                 {/* Counter display */}
                 <div className="text-6xl font-bold text-amber-600 dark:text-amber-400 tabular-nums">
