@@ -102,6 +102,17 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
   // ─── Handle challenge add ───
   const handleAddChallenge = (type: ChallengeType, config: Parameters<typeof addChallenge>[1]) => {
     addChallenge(type, config);
+    setIsExpanded(true);
+    
+    // Scroll to the card after it renders
+    if (type === 'PROPHETIC_NAMES') {
+      setTimeout(() => {
+        const card = document.getElementById('prophetic-names-card');
+        if (card) {
+          card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 150);
+    }
   };
 
   // ─── Handle count log ───
@@ -166,13 +177,14 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
             {/* Challenge Cards */}
             {state.challenges.map((challenge, index) => (
               challenge.type === 'PROPHETIC_NAMES' ? (
-                <PropheticNamesCard
-                  key={challenge.id}
-                  challenge={challenge}
-                  onLogSession={logCount}
-                  onRemove={removeChallenge}
-                  language={language}
-                />
+                <div key={challenge.id} id="prophetic-names-card">
+                  <PropheticNamesCard
+                    challenge={challenge}
+                    onLogSession={logCount}
+                    onRemove={removeChallenge}
+                    language={language}
+                  />
+                </div>
               ) : (
                 <ChallengeCard
                   key={challenge.id}
