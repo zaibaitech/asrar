@@ -9,7 +9,7 @@
  * Practice: 7-Day Rizq Abundance Challenge
  * - Recite Yā Jāmiʿu 180 times
  * - Recite all 201 Holy Names with Ṣalla-llāhu ʿalayhi wa sallam after each
- * - Morning and evening for 7 consecutive days
+ * - Once daily in the morning for 7 consecutive days
  */
 
 export interface PropheticName {
@@ -263,14 +263,19 @@ yā Dhal-Jalāli wa l-Ikrām.`,
 /** Practice metadata */
 export const RIZQ_PRACTICE_INFO = {
   title: '201 Holy Names of Prophet Muḥammad ﷺ',
+  titleFr: '201 Noms Saints du Prophète Muḥammad ﷺ',
   subtitle: 'Rizq Abundance Practice',
+  subtitleFr: 'Pratique d\'Abondance du Rizq',
   tradition: 'Dalāʾilu l-Khayrāt · Imam Muḥammad al-Jazūlī',
   authorization: 'Cherno Moussa Yero Sy — Spiritual Master of the Tijaniyya Order',
   authorizationFr: 'Cherno Moussa Yero Sy — Maître spirituel de l\'ordre Tijaniyya',
   duration: 7, // days
-  sessionsPerDay: 2, // morning + evening
-  totalSessions: 14,
-  estimatedTime: '25-35 minutes per session',
-  description: 'For those seeking immense abundance, provision, and divine sustenance (Rizq), recite Yā Jāmiʿu 180 times followed by all 201 Holy Names with Ṣalla-llāhu ʿalayhi wa sallam after each name. Practice morning and evening for 7 consecutive days.',
-  promise: 'Immeasurable changes in your rizq, abundance, and divine provision will manifest.',
+  sessionsPerDay: 1, // once daily (morning)
+  totalSessions: 7,
+  estimatedTime: '25-35 minutes',
+  estimatedTimeFr: '25-35 minutes',
+  description: 'Recite Yā Jāmiʿu 180× followed by the 201 Holy Names with Ṣalla-llāhu ʿalayhi wa sallam. Practice once daily in the morning for 7 days.',
+  descriptionFr: 'Récitez Yā Jāmiʿu 180× suivi des 201 Noms Saints avec Ṣalla-llāhu ʿalayhi wa sallam. Pratiquez une fois par jour le matin pendant 7 jours.',
+  promise: 'Immeasurable changes in your rizq will manifest.',
+  promiseFr: 'Des changements incommensurables dans votre rizq se manifesteront.',
 };

@@ -10,7 +10,7 @@
 
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, ChevronRight, ChevronLeft, ChevronDown, ChevronUp, Star } from 'lucide-react';
 import type { ChallengeType, SalawatPreset, DivineNameOption } from '../types';
 import { SALAWAT_PRESETS, DIVINE_NAME_OPTIONS, DEFAULT_QUICK_ADD_PRESETS } from '../types';
@@ -23,6 +23,7 @@ interface AddChallengeModalProps {
   onClose: () => void;
   onAdd: (type: ChallengeType, config: ChallengeConfig) => void;
   language?: 'en' | 'fr';
+  initialStep?: ModalStep;
 }
 
 interface ChallengeConfig {
@@ -37,10 +38,12 @@ interface ChallengeConfig {
 
 type ModalStep = 'SELECT_TYPE' | 'CONFIGURE_SALAWAT' | 'PREVIEW_SALAWAT' | 'CONFIGURE_DIVINE_NAME' | 'CONFIGURE_CUSTOM' | 'CONFIGURE_PROPHETIC_NAMES';
 
+export type { ModalStep as AddChallengeModalStep };
+
 // ─── Component ───────────────────────────────────────────────────────────────────
 
-export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en' }: AddChallengeModalProps) {
-  const [step, setStep] = useState<ModalStep>('SELECT_TYPE');
+export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en', initialStep = 'SELECT_TYPE' }: AddChallengeModalProps) {
+  const [step, setStep] = useState<ModalStep>(initialStep);
   const [selectedSalawat, setSelectedSalawat] = useState<SalawatPreset>(SALAWAT_PRESETS[0]);
   const [selectedDivineName, setSelectedDivineName] = useState<DivineNameOption>(DIVINE_NAME_OPTIONS[0]);
   const [showMeaning, setShowMeaning] = useState(false);
@@ -50,6 +53,13 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en' }: A
   const [customArabic, setCustomArabic] = useState('');
   const [customTranslit, setCustomTranslit] = useState('');
   const [customDaily, setCustomDaily] = useState('100');
+
+  // Reset to initial step when modal opens or initialStep changes
+  useEffect(() => {
+    if (isOpen) {
+      setStep(initialStep);
+    }
+  }, [isOpen, initialStep]);
 
   if (!isOpen) return null;
 
@@ -88,8 +98,8 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en' }: A
       title: language === 'fr' ? '201 Noms Saints' : '201 Holy Names',
       titleAr: 'أسماء النبي ﷺ',
       description: language === 'fr'
-        ? 'Pratique Rizq · 7 jours matin & soir'
-        : 'Rizq Abundance · 7-Day Morning & Evening',
+        ? 'Pratique Rizq · 7 jours le matin'
+        : 'Rizq Abundance · 7-Day Morning Practice',
       icon: '⭐',
       color: 'amber',
       featured: true,
@@ -531,8 +541,9 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en' }: A
 
       case 'CONFIGURE_PROPHETIC_NAMES':
         return (
-          <div className="space-y-4">
-            <div className="flex items-center gap-2">
+          <div className="space-y-3">
+            {/* Header row */}
+            <div className="flex items-center justify-between">
               <button
                 onClick={() => setStep('SELECT_TYPE')}
                 className="text-sm text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 flex items-center gap-1"
@@ -540,90 +551,52 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en' }: A
                 <ChevronLeft className="w-4 h-4" />
                 {language === 'fr' ? 'Retour' : 'Back'}
               </button>
-            </div>
-            
-            {/* Featured Badge */}
-            <div className="flex items-center gap-2">
               <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 text-xs font-medium">
                 <Star className="w-3 h-3" />
                 {language === 'fr' ? 'Pratique spéciale' : 'Special Practice'}
               </span>
             </div>
             
+            {/* Title */}
             <div>
               <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
-                {RIZQ_PRACTICE_INFO.title}
+                {language === 'fr' ? RIZQ_PRACTICE_INFO.titleFr : RIZQ_PRACTICE_INFO.title}
               </h3>
               <p className="text-sm text-amber-600 dark:text-amber-400 font-medium">
-                {RIZQ_PRACTICE_INFO.subtitle}
+                {language === 'fr' ? RIZQ_PRACTICE_INFO.subtitleFr : RIZQ_PRACTICE_INFO.subtitle}
               </p>
             </div>
 
-            {/* Practice details card */}
-            <div className="p-4 rounded-xl bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 border border-amber-200 dark:border-amber-800/50">
-              <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-                {RIZQ_PRACTICE_INFO.description}
+            {/* Compact info card */}
+            <div className="p-3 rounded-xl bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 border border-amber-200 dark:border-amber-800/50">
+              <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed mb-3">
+                {language === 'fr' ? RIZQ_PRACTICE_INFO.descriptionFr : RIZQ_PRACTICE_INFO.description}
               </p>
               
-              <div className="mt-4 space-y-2">
-                <div className="flex items-center gap-2 text-sm">
-                  <span className="text-amber-600 dark:text-amber-400">⏱</span>
-                  <span className="text-slate-600 dark:text-slate-400">
-                    {language === 'fr' ? 'Durée:' : 'Duration:'} <strong>{RIZQ_PRACTICE_INFO.duration} {language === 'fr' ? 'jours' : 'days'}</strong>
-                  </span>
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <span className="text-amber-600 dark:text-amber-400">🌅</span>
-                  <span className="text-slate-600 dark:text-slate-400">
-                    {language === 'fr' ? 'Sessions:' : 'Sessions:'} <strong>{language === 'fr' ? 'Matin & Soir' : 'Morning & Evening'}</strong>
-                  </span>
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <span className="text-amber-600 dark:text-amber-400">⏰</span>
-                  <span className="text-slate-600 dark:text-slate-400">
-                    {language === 'fr' ? 'Temps estimé:' : 'Estimated time:'} <strong>{RIZQ_PRACTICE_INFO.estimatedTime}</strong>
-                  </span>
-                </div>
+              {/* Compact stats row */}
+              <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-600 dark:text-slate-400">
+                <span>⏱ <strong>7 {language === 'fr' ? 'jours' : 'days'}</strong></span>
+                <span>🌅 <strong>{language === 'fr' ? 'Matin' : 'Morning'}</strong></span>
+                <span>⏰ <strong>25-35 min</strong></span>
               </div>
             </div>
 
-            {/* Practice steps preview */}
-            <div className="space-y-2">
-              <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                {language === 'fr' ? 'Étapes de la pratique:' : 'Practice Steps:'}
-              </h4>
-              <div className="text-sm text-slate-600 dark:text-slate-400 space-y-1.5">
-                <div className="flex items-start gap-2">
-                  <span className="text-amber-500">①</span>
-                  <span>
-                    <strong className="font-arabic">يَا جَامِعُ</strong> (Yā Jāmiʿu) — 180×
-                  </span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-amber-500">②</span>
-                  <span>{language === 'fr' ? 'Récitez les 201 Noms Saints avec Ṣalla-llāhu ʿalayhi wa sallam' : 'Recite 201 Holy Names with Ṣalla-llāhu ʿalayhi wa sallam'}</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-amber-500">③</span>
-                  <span>{language === 'fr' ? 'Duʿāʾ de clôture' : 'Closing Duʿāʾ'}</span>
-                </div>
-              </div>
+            {/* Compact Practice steps */}
+            <div className="text-sm text-slate-600 dark:text-slate-400">
+              <span className="font-medium text-slate-700 dark:text-slate-300">{language === 'fr' ? 'Étapes:' : 'Steps:'}</span>{' '}
+              <span className="font-arabic">يَا جَامِعُ</span> 180× → 201 {language === 'fr' ? 'Noms' : 'Names'} → Duʿāʾ
             </div>
 
-            {/* Tradition source */}
-            <div className="p-3 rounded-lg bg-slate-100 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600">
-              <p className="text-xs text-slate-600 dark:text-slate-400">
-                <span className="font-medium">{language === 'fr' ? 'Source:' : 'Source:'}</span> {RIZQ_PRACTICE_INFO.tradition}
-              </p>
-              <p className="text-xs text-slate-500 dark:text-slate-500 mt-1">
-                <span className="font-medium">{language === 'fr' ? 'Autorisation:' : 'Authorization:'}</span> {RIZQ_PRACTICE_INFO.authorization}
-              </p>
+            {/* Source & Authorization - compact */}
+            <div className="text-xs text-slate-500 dark:text-slate-500">
+              <p><strong>Source:</strong> {RIZQ_PRACTICE_INFO.tradition}</p>
+              <p><strong>{language === 'fr' ? 'Autorisation:' : 'Authorization:'}</strong> {language === 'fr' ? RIZQ_PRACTICE_INFO.authorizationFr : RIZQ_PRACTICE_INFO.authorization}</p>
             </div>
 
             {/* Promise */}
-            <div className="p-3 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800/50">
-              <p className="text-sm text-emerald-700 dark:text-emerald-300 italic">
-                "{RIZQ_PRACTICE_INFO.promise}"
+            <div className="p-2.5 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800/50">
+              <p className="text-sm text-emerald-700 dark:text-emerald-300 italic text-center">
+                "{language === 'fr' ? RIZQ_PRACTICE_INFO.promiseFr : RIZQ_PRACTICE_INFO.promise}"
               </p>
             </div>
 

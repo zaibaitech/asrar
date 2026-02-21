@@ -231,14 +231,14 @@ export const translations = {
       shortTitle: "201 Holy Names",
       tradition: "Dalāʾilu l-Khayrāt · Imam Muḥammad al-Jazūlī",
       authorization: "Cherno Moussa Yero Sy — Spiritual Master of the Tijaniyya Order",
-      description: "For those seeking immense abundance, provision, and divine sustenance (Rizq), recite Yā Jāmiʿu 180 times followed by all 201 Holy Names with Ṣalla-llāhu ʿalayhi wa sallam after each name. Practice morning and evening for 7 consecutive days.",
+      description: "Recite Yā Jāmiʿu 180× followed by the 201 Holy Names with Ṣalla-llāhu ʿalayhi wa sallam. Practice once daily in the morning for 7 days.",
       promise: "Immeasurable changes in your rizq, abundance, and divine provision will manifest.",
       
       // Duration & Sessions
       duration: "Duration",
       days: "days",
       sessions: "Sessions",
-      sessionsPerDay: "Morning & Evening",
+      sessionsPerDay: "Once daily (Morning)",
       estimatedTime: "Estimated time",
       estimatedTimeValue: "25-35 minutes per session",
       
@@ -318,7 +318,7 @@ export const translations = {
       // Add Challenge Modal
       specialPractice: "Special Practice",
       special: "Special",
-      sevenDayPractice: "7-Day Morning & Evening",
+      sevenDayPractice: "7-Day Morning Practice",
       start7Day: "Start 7-Day Challenge",
       
       // Card
@@ -330,7 +330,7 @@ export const translations = {
       share: "Share",
       shareInvite: "Share this practice",
       shareTitle: "201 Holy Names of Prophet Muḥammad ﷺ",
-      shareText: "Join me in the 7-day Rizq Abundance Practice! Recite the 201 Holy Names of Prophet Muḥammad ﷺ morning and evening for divine blessings.",
+      shareText: "Join the 7-day Rizq Abundance Practice! Recite the 201 Holy Names of Prophet Muḥammad ﷺ every morning for divine blessings.",
       shareVia: "Share via",
       whatsapp: "WhatsApp",
       telegram: "Telegram",
@@ -3271,14 +3271,14 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
       shortTitle: "201 Noms Saints",
       tradition: "Dalāʾilu l-Khayrāt · Imam Muḥammad al-Jazūlī",
       authorization: "Cherno Moussa Yero Sy — Maître Spirituel de l'Ordre Tijaniyya",
-      description: "Pour ceux qui cherchent une abondance immense, la subsistance et la provision divine (Rizq), récitez Yā Jāmiʿu 180 fois suivi de tous les 201 Noms Saints avec Ṣalla-llāhu ʿalayhi wa sallam après chaque nom. Pratiquez matin et soir pendant 7 jours consécutifs.",
+      description: "Récitez Yā Jāmiʿu 180× suivi des 201 Noms Saints avec Ṣalla-llāhu ʿalayhi wa sallam. Pratiquez une fois par jour le matin pendant 7 jours.",
       promise: "Des changements incommensurables dans votre rizq, abondance et provision divine se manifesteront.",
       
       // Durée & Sessions
       duration: "Durée",
       days: "jours",
       sessions: "Sessions",
-      sessionsPerDay: "Matin & Soir",
+      sessionsPerDay: "Une fois par jour (Matin)",
       estimatedTime: "Temps estimé",
       estimatedTimeValue: "25-35 minutes par session",
       
@@ -3358,7 +3358,7 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
       // Modal d'ajout
       specialPractice: "Pratique spéciale",
       special: "Spécial",
-      sevenDayPractice: "7 jours matin & soir",
+      sevenDayPractice: "7 jours le matin",
       start7Day: "Commencer le défi de 7 jours",
       
       // Carte
@@ -3370,7 +3370,7 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
       share: "Partager",
       shareInvite: "Partager cette pratique",
       shareTitle: "201 Noms Saints du Prophète Muḥammad ﷺ",
-      shareText: "Rejoignez-moi dans la pratique de 7 jours pour l'abondance du Rizq! Récitez les 201 Noms Saints du Prophète Muḥammad ﷺ matin et soir pour les bénédictions divines.",
+      shareText: "Rejoignez la pratique de 7 jours pour l'abondance du Rizq! Récitez les 201 Noms Saints du Prophète Muḥammad ﷺ chaque matin pour les bénédictions divines.",
       shareVia: "Partager via",
       whatsapp: "WhatsApp",
       telegram: "Telegram",

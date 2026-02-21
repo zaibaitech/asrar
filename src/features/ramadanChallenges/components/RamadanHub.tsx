@@ -25,7 +25,7 @@ import { ChallengeCard } from './ChallengeCard';
 import { PropheticNamesCard } from './PropheticNamesCard';
 import { CommunityBanner } from './CommunityBanner';
 import { RecommenderBanner } from './RecommenderBanner';
-import { AddChallengeModal } from './AddChallengeModal';
+import { AddChallengeModal, type AddChallengeModalStep } from './AddChallengeModal';
 import { getBestDhikrNow } from '../recommender';
 
 // ─── Props ───────────────────────────────────────────────────────────────────────
@@ -41,6 +41,7 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
   const { state, addChallenge, removeChallenge, logCount, getTotalRamadanProgress, getTotalTodayProgress } = useRamadanChallenges();
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
   const [showAddModal, setShowAddModal] = useState(false);
+  const [initialModalStep, setInitialModalStep] = useState<AddChallengeModalStep>('SELECT_TYPE');
   const [ramadanInfo, setRamadanInfo] = useState<RamadanInfo | null>(null);
   const [mounted, setMounted] = useState(false);
   const searchParams = useSearchParams();
@@ -51,7 +52,7 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
     setRamadanInfo(getRamadanInfo());
   }, []);
 
-  // ─── Deep-link handling: Auto-add prophetic names from shared link ───
+  // ─── Deep-link handling: Show intro modal from shared link ───
   useEffect(() => {
     if (!state.isHydrated || !mounted) return;
     
@@ -61,19 +62,12 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
       const hasProheticNames = state.challenges.some(c => c.type === 'PROPHETIC_NAMES');
       
       if (!hasProheticNames) {
-        // Auto-add the prophetic names challenge
-        addChallenge('PROPHETIC_NAMES', {
-          title: RIZQ_PRACTICE_INFO.title,
-          arabicText: 'أسماء النبي ﷺ',
-          transliteration: 'Asmāʾ an-Nabī ﷺ',
-          meaning: RIZQ_PRACTICE_INFO.description,
-          dailyTarget: 1, // 1 session per day (morning)
-          ramadanTarget: 7, // 7 days × 1 session
-          quickAddPresets: [1],
-        });
+        // Show the intro modal (user will start from there)
+        setInitialModalStep('CONFIGURE_PROPHETIC_NAMES');
+        setShowAddModal(true);
       }
       
-      // Expand the hub to show the challenge
+      // Expand the hub to show challenges
       setIsExpanded(true);
       
       // Clean up URL parameter without page reload
@@ -83,7 +77,7 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
         window.history.replaceState({}, '', url.pathname);
       }
     }
-  }, [state.isHydrated, mounted, searchParams, state.challenges, addChallenge]);
+  }, [state.isHydrated, mounted, searchParams, state.challenges]);
 
   // ─── Auto-create Istighfār challenge if no challenges exist ───
   useEffect(() => {
@@ -192,7 +186,7 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
 
             {/* Add Challenge Button */}
             <button
-              onClick={() => setShowAddModal(true)}
+              onClick={() => { setInitialModalStep('SELECT_TYPE'); setShowAddModal(true); }}
               className="w-full flex items-center justify-center gap-2 p-4 rounded-xl border-2 border-dashed border-amber-300 dark:border-amber-600/50 text-amber-700 dark:text-amber-300 hover:bg-amber-100/50 dark:hover:bg-amber-900/30 hover:border-amber-400 dark:hover:border-amber-500 transition-all"
             >
               <Plus className="w-5 h-5" />
@@ -213,6 +207,7 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
         onClose={() => setShowAddModal(false)}
         onAdd={handleAddChallenge}
         language={language}
+        initialStep={initialModalStep}
       />
     </>
   );
