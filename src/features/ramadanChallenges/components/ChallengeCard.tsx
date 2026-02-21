@@ -8,7 +8,7 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import { ChevronDown, ChevronUp, Settings, Flame } from 'lucide-react';
+import { ChevronDown, ChevronUp, Settings, Flame, Share2, X, Copy, Check } from 'lucide-react';
 import type { Challenge, SessionTag, ChallengeType } from '../types';
 import { SESSION_TAGS } from '../types';
 import { computePercent, formatNumber, formatPercent } from '../utils';
@@ -82,6 +82,8 @@ export function ChallengeCard({
   const [selectedSession, setSelectedSession] = useState<SessionTag>('Other');
   const [customAmount, setCustomAmount] = useState('');
   const [showMonthlyLog, setShowMonthlyLog] = useState(false);
+  const [showShareModal, setShowShareModal] = useState(false);
+  const [linkCopied, setLinkCopied] = useState(false);
 
   // ─── Computed values ───
   const ramadanInfo = getRamadanInfo();
@@ -115,6 +117,72 @@ export function ChallengeCard({
       onLogCount(amount, selectedSession);
       setCustomAmount('');
     }
+  };
+
+  // ─── Share functionality ───
+  const getShareUrl = () => {
+    if (typeof window === 'undefined') return '';
+    return `${window.location.origin}?lang=${language}`;
+  };
+
+  const handleNativeShare = async () => {
+    const shareUrl = getShareUrl();
+    const shareTitle = language === 'fr' 
+      ? 'Hub Spirituel du Ramadan' 
+      : 'Ramadan Spiritual Challenge Hub';
+    const shareText = language === 'fr'
+      ? `Rejoignez-moi dans le dhikr de ${challenge.title}! Pratiquez le dhikr quotidien pour les bénédictions divines.`
+      : `Join me in the practice of ${challenge.title}! Practice daily dhikr for divine blessings.`;
+
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: shareTitle,
+          text: shareText,
+          url: shareUrl,
+        });
+        setShowShareModal(false);
+      } catch {
+        // User cancelled or share failed
+      }
+    } else {
+      setShowShareModal(true);
+    }
+  };
+
+  const copyLink = async () => {
+    const shareUrl = getShareUrl();
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setLinkCopied(true);
+      setTimeout(() => setLinkCopied(false), 2000);
+    } catch {
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = shareUrl;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      setLinkCopied(true);
+      setTimeout(() => setLinkCopied(false), 2000);
+    }
+  };
+
+  const shareWhatsApp = () => {
+    const shareUrl = getShareUrl();
+    const text = language === 'fr'
+      ? `Rejoignez-moi dans le dhikr de ${challenge.title}!`
+      : `Join me in the practice of ${challenge.title}!`;
+    window.open(`https://wa.me/?text=${encodeURIComponent(text + '\n' + shareUrl)}`, '_blank');
+  };
+
+  const shareTelegram = () => {
+    const shareUrl = getShareUrl();
+    const text = language === 'fr'
+      ? `Rejoignez-moi dans le dhikr de ${challenge.title}!`
+      : `Join me in the practice of ${challenge.title}!`;
+    window.open(`https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(text)}`, '_blank');
   };
 
   // ─── Daily breakdown ───
@@ -370,6 +438,70 @@ export function ChallengeCard({
             <p className="text-center text-sm font-arabic text-amber-700/60 dark:text-amber-300/60 mt-1" dir="rtl">
               {quote.ar}
             </p>
+          </div>
+
+          {/* Invite Friends Button */}
+          <button
+            onClick={handleNativeShare}
+            className="w-full py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-medium transition-all flex items-center justify-center gap-2 shadow-md shadow-emerald-500/20"
+          >
+            <Share2 className="w-4 h-4" />
+            {language === 'fr' ? 'Inviter des amis' : 'Invite Friends to Join'}
+          </button>
+        </div>
+      )}
+
+      {/* Share Modal */}
+      {showShareModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 animate-in fade-in duration-200">
+          <div className="w-full max-w-sm bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-xl animate-in zoom-in-95 duration-200">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
+                {language === 'fr' ? 'Partager cette pratique' : 'Share this practice'}
+              </h3>
+              <button
+                onClick={() => setShowShareModal(false)}
+                className="p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700"
+              >
+                <X className="w-5 h-5 text-slate-400" />
+              </button>
+            </div>
+            
+            <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">
+              {language === 'fr' ? 'Partager via' : 'Share via'}
+            </p>
+            
+            <div className="grid grid-cols-2 gap-3">
+              <button
+                onClick={shareWhatsApp}
+                className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-green-500 hover:bg-green-600 text-white font-medium transition-colors"
+              >
+                WhatsApp
+              </button>
+              <button
+                onClick={shareTelegram}
+                className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-blue-500 hover:bg-blue-600 text-white font-medium transition-colors"
+              >
+                Telegram
+              </button>
+            </div>
+            
+            <div className="mt-4">
+              <button
+                onClick={copyLink}
+                className={`w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl transition-colors ${
+                  linkCopied
+                    ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300'
+                    : 'bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600'
+                }`}
+              >
+                {linkCopied ? (
+                  <><Check className="w-4 h-4" /> {language === 'fr' ? 'Lien copié!' : 'Link copied!'}</>
+                ) : (
+                  <><Copy className="w-4 h-4" /> {language === 'fr' ? 'Copier le lien' : 'Copy Link'}</>
+                )}
+              </button>
+            </div>
           </div>
         </div>
       )}
