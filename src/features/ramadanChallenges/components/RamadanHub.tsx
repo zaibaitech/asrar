@@ -17,7 +17,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { ChevronDown, ChevronUp, Plus } from 'lucide-react';
 import { getRamadanInfo, formatRamadanDay, type RamadanInfo } from '@/src/lib/hijri';
-import { useRamadanChallenges, createIstighfarChallenge } from '../store';
+import { useRamadanChallenges, createIstighfarChallenge, createSalawatChallenge, createDivineNameChallenge } from '../store';
 import { RIZQ_PRACTICE_INFO } from '../propheticNames201';
 import type { ChallengeType, SessionTag } from '../types';
 import { formatNumber } from '../utils';
@@ -46,6 +46,9 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
   const [mounted, setMounted] = useState(false);
   const searchParams = useSearchParams();
 
+  // Track which challenge to auto-expand based on deep-link
+  const [deepLinkedChallengeType, setDeepLinkedChallengeType] = useState<ChallengeType | null>(null);
+
   // ─── Hydration safety ───
   useEffect(() => {
     setMounted(true);
@@ -57,27 +60,86 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
     if (!state.isHydrated || !mounted) return;
     
     const challengeParam = searchParams.get('challenge');
-    if (challengeParam === 'prophetic-names') {
-      // Check if prophetic names challenge already exists
-      const hasProheticNames = state.challenges.some(c => c.type === 'PROPHETIC_NAMES');
-      
-      if (!hasProheticNames) {
-        // Show the intro modal (user will start from there)
-        setInitialModalStep('CONFIGURE_PROPHETIC_NAMES');
+    if (!challengeParam) return;
+
+    // Map URL params to challenge types
+    const slugToType: Record<string, ChallengeType> = {
+      'prophetic-names': 'PROPHETIC_NAMES',
+      'istighfar': 'ISTIGHFAR',
+      'salawat': 'SALAWAT',
+      'divine-name': 'DIVINE_NAME',
+      'custom': 'CUSTOM',
+    };
+
+    const challengeType = slugToType[challengeParam];
+    if (!challengeType) return;
+
+    // Check if this challenge type already exists
+    const hasChallenge = state.challenges.some(c => c.type === challengeType);
+    
+    if (!hasChallenge) {
+      // For ISTIGHFAR, auto-create without modal (no config modal for it)
+      if (challengeType === 'ISTIGHFAR') {
+        const config = createIstighfarChallenge();
+        addChallenge('ISTIGHFAR', config);
+      } else {
+        // Map challenge type to the appropriate modal step
+        const typeToModalStep: Record<ChallengeType, AddChallengeModalStep> = {
+          'PROPHETIC_NAMES': 'CONFIGURE_PROPHETIC_NAMES',
+          'ISTIGHFAR': 'SELECT_TYPE', // Won't be used since we auto-create above
+          'SALAWAT': 'CONFIGURE_SALAWAT',
+          'DIVINE_NAME': 'CONFIGURE_DIVINE_NAME',
+          'CUSTOM': 'CONFIGURE_CUSTOM',
+        };
+        
+        setInitialModalStep(typeToModalStep[challengeType]);
         setShowAddModal(true);
       }
-      
-      // Expand the hub to show challenges
-      setIsExpanded(true);
-      
-      // Clean up URL parameter without page reload
-      if (typeof window !== 'undefined') {
-        const url = new URL(window.location.href);
-        url.searchParams.delete('challenge');
+    }
+    
+    // Mark this type for auto-expansion
+    setDeepLinkedChallengeType(challengeType);
+    
+    // Expand the hub to show challenges
+    setIsExpanded(true);
+    
+    // Clean up URL parameter without page reload
+    if (typeof window !== 'undefined') {
+      const url = new URL(window.location.href);
+      url.searchParams.delete('challenge');
+      // Keep language param if present
+      const langParam = url.searchParams.get('lang');
+      if (langParam) {
+        window.history.replaceState({}, '', `${url.pathname}?lang=${langParam}`);
+      } else {
         window.history.replaceState({}, '', url.pathname);
       }
     }
   }, [state.isHydrated, mounted, searchParams, state.challenges]);
+
+  // ─── Scroll to deep-linked challenge after it's rendered ───
+  useEffect(() => {
+    if (!deepLinkedChallengeType || !mounted) return;
+    
+    // Find the challenge with this type
+    const challenge = state.challenges.find(c => c.type === deepLinkedChallengeType);
+    if (!challenge) return;
+    
+    // Small delay to allow DOM to update
+    const timer = setTimeout(() => {
+      // For prophetic names, use the specific ID
+      const elementId = deepLinkedChallengeType === 'PROPHETIC_NAMES' 
+        ? 'prophetic-names-card'
+        : `challenge-card-${challenge.id}`;
+      
+      const element = document.getElementById(elementId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 300);
+    
+    return () => clearTimeout(timer);
+  }, [deepLinkedChallengeType, mounted, state.challenges]);
 
   // ─── Auto-create Istighfār challenge if no challenges exist ───
   useEffect(() => {
@@ -186,13 +248,14 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
                   />
                 </div>
               ) : (
-                <ChallengeCard
-                  key={challenge.id}
-                  challenge={challenge}
-                  onLogCount={handleLogCount(challenge.id)}
-                  language={language}
-                  defaultExpanded={index === 0}
-                />
+                <div key={challenge.id} id={`challenge-card-${challenge.id}`}>
+                  <ChallengeCard
+                    challenge={challenge}
+                    onLogCount={handleLogCount(challenge.id)}
+                    language={language}
+                    defaultExpanded={deepLinkedChallengeType === challenge.type || index === 0}
+                  />
+                </div>
               )
             ))}
 

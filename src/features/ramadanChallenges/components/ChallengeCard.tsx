@@ -120,19 +120,35 @@ export function ChallengeCard({
   };
 
   // ─── Share functionality ───
+  
+  // Convert challenge type to URL-friendly kebab-case
+  const getChallengeSlug = (): string => {
+    const typeToSlug: Record<ChallengeType, string> = {
+      ISTIGHFAR: 'istighfar',
+      SALAWAT: 'salawat',
+      DIVINE_NAME: 'divine-name',
+      PROPHETIC_NAMES: 'prophetic-names',
+      CUSTOM: 'custom',
+    };
+    return typeToSlug[challenge.type] || 'custom';
+  };
+
   const getShareUrl = () => {
     if (typeof window === 'undefined') return '';
-    return `${window.location.origin}?lang=${language}`;
+    const baseUrl = window.location.origin;
+    const challengeSlug = getChallengeSlug();
+    const langParam = language === 'fr' ? '&lang=fr' : '';
+    return `${baseUrl}?challenge=${challengeSlug}${langParam}`;
   };
 
   const handleNativeShare = async () => {
     const shareUrl = getShareUrl();
     const shareTitle = language === 'fr' 
-      ? 'Hub Spirituel du Ramadan' 
-      : 'Ramadan Spiritual Challenge Hub';
+      ? `Défi ${challenge.title} — Asrār` 
+      : `${challenge.title} Challenge — Asrār`;
     const shareText = language === 'fr'
-      ? `Rejoignez-moi dans le dhikr de ${challenge.title}! Pratiquez le dhikr quotidien pour les bénédictions divines.`
-      : `Join me in the practice of ${challenge.title}! Practice daily dhikr for divine blessings.`;
+      ? `🤲 Rejoignez-moi dans ce défi spirituel!\n\n${challenge.title}\n${challenge.arabicText}\n\nSuivez votre dhikr quotidien et transformez votre Ramadan.`
+      : `🤲 Join me in this spiritual challenge!\n\n${challenge.title}\n${challenge.arabicText}\n\nTrack your daily dhikr and transform your Ramadan.`;
 
     if (navigator.share) {
       try {
@@ -172,16 +188,16 @@ export function ChallengeCard({
   const shareWhatsApp = () => {
     const shareUrl = getShareUrl();
     const text = language === 'fr'
-      ? `Rejoignez-moi dans le dhikr de ${challenge.title}!`
-      : `Join me in the practice of ${challenge.title}!`;
+      ? `🤲 Rejoignez-moi dans ${challenge.title}!\n\n${challenge.arabicText}\n\nSuivez votre dhikr quotidien:`
+      : `🤲 Join me in ${challenge.title}!\n\n${challenge.arabicText}\n\nTrack your daily dhikr:`;
     window.open(`https://wa.me/?text=${encodeURIComponent(text + '\n' + shareUrl)}`, '_blank');
   };
 
   const shareTelegram = () => {
     const shareUrl = getShareUrl();
     const text = language === 'fr'
-      ? `Rejoignez-moi dans le dhikr de ${challenge.title}!`
-      : `Join me in the practice of ${challenge.title}!`;
+      ? `🤲 Rejoignez-moi dans ${challenge.title}!\n\n${challenge.arabicText}`
+      : `🤲 Join me in ${challenge.title}!\n\n${challenge.arabicText}`;
     window.open(`https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(text)}`, '_blank');
   };
 

@@ -120,6 +120,26 @@ export const challengeMeta = {
       description: 'Rejoignez le défi Istighfār et vivez la paix de demander le pardon d\'Allah. Suivez votre dhikr quotidien et transformez votre pratique spirituelle.',
     },
   },
+  'divine-name': {
+    en: {
+      title: 'Asrār — Divine Name Challenge · 99 Names of Allah',
+      description: 'Invoke the Beautiful Names of Allah with daily tracking. Experience the blessings of calling upon Allah by His Most Beautiful Names.',
+    },
+    fr: {
+      title: 'Asrār — Défi Nom Divin · 99 Noms d\'Allah',
+      description: 'Invoquez les Beaux Noms d\'Allah avec un suivi quotidien. Vivez les bénédictions d\'appeler Allah par Ses Plus Beaux Noms.',
+    },
+  },
+  'custom': {
+    en: {
+      title: 'Asrār — Custom Dhikr Challenge · Personal Spiritual Practice',
+      description: 'Create your personal dhikr challenge and track your spiritual journey. Join thousands in daily remembrance of Allah.',
+    },
+    fr: {
+      title: 'Asrār — Défi Dhikr Personnalisé · Pratique Spirituelle Personnelle',
+      description: 'Créez votre défi dhikr personnel et suivez votre parcours spirituel. Rejoignez des milliers dans le rappel quotidien d\'Allah.',
+    },
+  },
 };
 
 /**
