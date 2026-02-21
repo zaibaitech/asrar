@@ -277,6 +277,30 @@ Allāhumma ṣalli wa sallim ʿalayhi wa ʿalā ālihi ṣalātan tuʿarrifunā 
     recommendedDaily: 12,
     note: 'The most exalted ṣalawāt of the Tijāniyya — recited 12 times daily in the wāẓifa. Requires respectful intention and attentiveness.',
   },
+  {
+    id: 'salawat_mawsuf',
+    title: 'Ṣalāt al-Mawṣūf · Described with Generosity',
+    tradition: 'Prophetic Blessing · Traditional',
+    arabicText: `صَلَّى اللَّهُ عَلَى مُحَمَّدٍ الْمَوْصُوفِ بِالْكَرَمِ وَالْجُودِ`,
+    transliteration: `Ṣallā-llāhu ʿalā Muḥammadini l-mawṣūfi bil-karami wal-jūd`,
+    meaning: 'May Allah send blessings upon Muḥammad — the one described with nobility and generosity.',
+    quickAddPresets: [100, 300, 700, 1000, 2100, 4200],
+    recommendedDaily: 2100,
+    note: 'A concise yet powerful ṣalawāt praising the Prophet ﷺ for his perfect generosity and noble character. Ideal for high-count daily practice.',
+  },
+  {
+    id: 'salawat_nur_qalb',
+    title: 'Ṣalāt Nūr al-Qalb · Light of the Heart',
+    tradition: 'Traditional Blessing',
+    arabicText: `صَلَّى اللَّهُ عَلَى مُحَمَّدٍ، أَصْبَحَ لِلْقَلْبِ نُورُهُ، وَرَحْمَةً لِلْعَالَمِينَ ظُهُورُهُ`,
+    transliteration: `Ṣallā Allāhu ʿalā Muḥammadin,
+aṣbaḥa lil-qalbi nūruhu,
+wa raḥmatan lil-ʿālamīna ẓuhūruhu.`,
+    meaning: 'May Allah send blessings upon Muḥammad — his light has dawned for the heart, and his appearance is a mercy to all the worlds.',
+    quickAddPresets: [33, 100, 300, 500, 900, 1000],
+    recommendedDaily: 300,
+    note: 'A beautiful ṣalawāt connecting the Prophet ﷺ as light for the heart and mercy for all creation. Excellent for morning recitation.',
+  },
 ];
 
 /** Pre-defined Divine Names for challenge */
