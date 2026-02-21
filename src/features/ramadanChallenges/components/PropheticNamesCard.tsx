@@ -17,7 +17,13 @@ import {
   Sun, 
   Moon,
   Trash2,
-  Star
+  Star,
+  Share2,
+  X,
+  MessageCircle,
+  Send,
+  Link2,
+  Check
 } from 'lucide-react';
 import type { Challenge, SessionTag } from '../types';
 import { RIZQ_PRACTICE_INFO } from '../propheticNames201';
@@ -84,6 +90,77 @@ export function PropheticNamesCard({
   const [currentDay, setCurrentDay] = useState(1);
   const [isExpanded, setIsExpanded] = useState(true);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const [showShareModal, setShowShareModal] = useState(false);
+  const [linkCopied, setLinkCopied] = useState(false);
+
+  // Generate shareable URL
+  const getShareUrl = () => {
+    if (typeof window === 'undefined') return '';
+    const baseUrl = window.location.origin;
+    return `${baseUrl}?challenge=prophetic-names`;
+  };
+
+  // Handle native share (Web Share API)
+  const handleNativeShare = async () => {
+    const shareUrl = getShareUrl();
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: t.shareTitle,
+          text: t.shareText,
+          url: shareUrl,
+        });
+        setShowShareModal(false);
+      } catch (err) {
+        // User cancelled or share failed - show fallback options
+        console.log('Native share cancelled');
+      }
+    }
+  };
+
+  // Share via WhatsApp
+  const shareWhatsApp = () => {
+    const shareUrl = getShareUrl();
+    const text = encodeURIComponent(`${t.shareText}\n\n${shareUrl}`);
+    window.open(`https://wa.me/?text=${text}`, '_blank');
+    setShowShareModal(false);
+  };
+
+  // Share via Telegram
+  const shareTelegram = () => {
+    const shareUrl = getShareUrl();
+    const text = encodeURIComponent(t.shareText);
+    window.open(`https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${text}`, '_blank');
+    setShowShareModal(false);
+  };
+
+  // Share via Twitter/X
+  const shareTwitter = () => {
+    const shareUrl = getShareUrl();
+    const text = encodeURIComponent(t.shareText);
+    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${encodeURIComponent(shareUrl)}`, '_blank');
+    setShowShareModal(false);
+  };
+
+  // Copy link to clipboard
+  const copyLink = async () => {
+    const shareUrl = getShareUrl();
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setLinkCopied(true);
+      setTimeout(() => setLinkCopied(false), 2000);
+    } catch {
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = shareUrl;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      setLinkCopied(true);
+      setTimeout(() => setLinkCopied(false), 2000);
+    }
+  };
 
   // Load sessions from localStorage on mount
   useEffect(() => {
@@ -336,13 +413,28 @@ export function PropheticNamesCard({
 
             {/* Actions */}
             <div className="flex items-center justify-between pt-2 border-t border-amber-200/50 dark:border-amber-800/30">
-              <button
-                onClick={() => setShowDeleteConfirm(true)}
-                className="text-xs text-slate-400 hover:text-red-500 transition-colors flex items-center gap-1"
-              >
-                <Trash2 className="w-3 h-3" />
-                {t.remove}
-              </button>
+              <div className="flex items-center gap-3">
+                <button
+                  onClick={() => setShowDeleteConfirm(true)}
+                  className="text-xs text-slate-400 hover:text-red-500 transition-colors flex items-center gap-1"
+                >
+                  <Trash2 className="w-3 h-3" />
+                  {t.remove}
+                </button>
+                <button
+                  onClick={() => {
+                    if (typeof navigator !== 'undefined' && 'share' in navigator) {
+                      handleNativeShare();
+                    } else {
+                      setShowShareModal(true);
+                    }
+                  }}
+                  className="text-xs text-slate-400 hover:text-amber-500 transition-colors flex items-center gap-1"
+                >
+                  <Share2 className="w-3 h-3" />
+                  {t.share}
+                </button>
+              </div>
               <span className="text-xs text-slate-400 dark:text-slate-500">
                 {t.tradition}
               </span>
@@ -385,6 +477,92 @@ export function PropheticNamesCard({
                 className="flex-1 py-2 rounded-lg bg-red-500 hover:bg-red-600 text-white font-medium transition-colors"
               >
                 {t.remove}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Share Modal */}
+      {showShareModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 animate-in fade-in duration-200">
+          <div className="w-full max-w-sm bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-xl animate-in zoom-in-95 duration-200">
+            {/* Header */}
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
+                {t.shareInvite}
+              </h3>
+              <button
+                onClick={() => setShowShareModal(false)}
+                className="p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Share description */}
+            <p className="text-sm text-slate-500 dark:text-slate-400 mb-5">
+              {t.shareText}
+            </p>
+
+            {/* Share options */}
+            <div className="space-y-2">
+              {/* WhatsApp */}
+              <button
+                onClick={shareWhatsApp}
+                className="w-full flex items-center gap-3 p-3 rounded-xl bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#25D366] transition-colors"
+              >
+                <div className="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center">
+                  <MessageCircle className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-medium">{t.whatsapp}</span>
+              </button>
+
+              {/* Telegram */}
+              <button
+                onClick={shareTelegram}
+                className="w-full flex items-center gap-3 p-3 rounded-xl bg-[#0088cc]/10 hover:bg-[#0088cc]/20 text-[#0088cc] transition-colors"
+              >
+                <div className="w-10 h-10 rounded-full bg-[#0088cc] flex items-center justify-center">
+                  <Send className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-medium">{t.telegram}</span>
+              </button>
+
+              {/* Twitter/X */}
+              <button
+                onClick={shareTwitter}
+                className="w-full flex items-center gap-3 p-3 rounded-xl bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-300 transition-colors"
+              >
+                <div className="w-10 h-10 rounded-full bg-black dark:bg-white flex items-center justify-center">
+                  <span className="text-white dark:text-black font-bold text-lg">𝕏</span>
+                </div>
+                <span className="font-medium">{t.twitter}</span>
+              </button>
+
+              {/* Copy Link */}
+              <button
+                onClick={copyLink}
+                className={`w-full flex items-center gap-3 p-3 rounded-xl transition-colors ${
+                  linkCopied 
+                    ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400'
+                    : 'bg-amber-100 dark:bg-amber-900/30 hover:bg-amber-200 dark:hover:bg-amber-900/50 text-amber-700 dark:text-amber-300'
+                }`}
+              >
+                <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
+                  linkCopied 
+                    ? 'bg-emerald-500' 
+                    : 'bg-amber-500'
+                }`}>
+                  {linkCopied ? (
+                    <Check className="w-5 h-5 text-white" />
+                  ) : (
+                    <Link2 className="w-5 h-5 text-white" />
+                  )}
+                </div>
+                <span className="font-medium">
+                  {linkCopied ? t.linkCopied : t.copyLink}
+                </span>
               </button>
             </div>
           </div>

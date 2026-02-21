@@ -14,9 +14,11 @@
 'use client';
 
 import React, { useState, useEffect, useMemo } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { ChevronDown, ChevronUp, Plus } from 'lucide-react';
 import { getRamadanInfo, formatRamadanDay, type RamadanInfo } from '@/src/lib/hijri';
 import { useRamadanChallenges, createIstighfarChallenge } from '../store';
+import { RIZQ_PRACTICE_INFO } from '../propheticNames201';
 import type { ChallengeType, SessionTag } from '../types';
 import { formatNumber } from '../utils';
 import { ChallengeCard } from './ChallengeCard';
@@ -41,12 +43,47 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
   const [showAddModal, setShowAddModal] = useState(false);
   const [ramadanInfo, setRamadanInfo] = useState<RamadanInfo | null>(null);
   const [mounted, setMounted] = useState(false);
+  const searchParams = useSearchParams();
 
   // ─── Hydration safety ───
   useEffect(() => {
     setMounted(true);
     setRamadanInfo(getRamadanInfo());
   }, []);
+
+  // ─── Deep-link handling: Auto-add prophetic names from shared link ───
+  useEffect(() => {
+    if (!state.isHydrated || !mounted) return;
+    
+    const challengeParam = searchParams.get('challenge');
+    if (challengeParam === 'prophetic-names') {
+      // Check if prophetic names challenge already exists
+      const hasProheticNames = state.challenges.some(c => c.type === 'PROPHETIC_NAMES');
+      
+      if (!hasProheticNames) {
+        // Auto-add the prophetic names challenge
+        addChallenge('PROPHETIC_NAMES', {
+          title: RIZQ_PRACTICE_INFO.title,
+          arabicText: 'أسماء النبي ﷺ',
+          transliteration: 'Asmāʾ an-Nabī ﷺ',
+          meaning: RIZQ_PRACTICE_INFO.description,
+          dailyTarget: 2, // 2 sessions per day (morning + evening)
+          ramadanTarget: 14, // 7 days × 2 sessions
+          quickAddPresets: [1, 2],
+        });
+      }
+      
+      // Expand the hub to show the challenge
+      setIsExpanded(true);
+      
+      // Clean up URL parameter without page reload
+      if (typeof window !== 'undefined') {
+        const url = new URL(window.location.href);
+        url.searchParams.delete('challenge');
+        window.history.replaceState({}, '', url.pathname);
+      }
+    }
+  }, [state.isHydrated, mounted, searchParams, state.challenges, addChallenge]);
 
   // ─── Auto-create Istighfār challenge if no challenges exist ───
   useEffect(() => {

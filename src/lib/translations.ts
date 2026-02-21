@@ -324,6 +324,19 @@ export const translations = {
       remove: "Remove",
       removeChallenge: "Remove this challenge?",
       progressWillBeLost: "Your progress will be lost.",
+      
+      // Share
+      share: "Share",
+      shareInvite: "Share this practice",
+      shareTitle: "201 Holy Names of Prophet Muḥammad ﷺ",
+      shareText: "Join me in the 7-day Rizq Abundance Practice! Recite the 201 Holy Names of Prophet Muḥammad ﷺ morning and evening for divine blessings.",
+      shareVia: "Share via",
+      whatsapp: "WhatsApp",
+      telegram: "Telegram",
+      twitter: "X (Twitter)",
+      copyLink: "Copy Link",
+      linkCopied: "Link copied!",
+      shareFailed: "Could not share",
     },
 
     // Guidance Content
@@ -3350,6 +3363,19 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
       remove: "Supprimer",
       removeChallenge: "Supprimer ce défi?",
       progressWillBeLost: "Votre progression sera perdue.",
+      
+      // Partage
+      share: "Partager",
+      shareInvite: "Partager cette pratique",
+      shareTitle: "201 Noms Saints du Prophète Muḥammad ﷺ",
+      shareText: "Rejoignez-moi dans la pratique de 7 jours pour l'abondance du Rizq! Récitez les 201 Noms Saints du Prophète Muḥammad ﷺ matin et soir pour les bénédictions divines.",
+      shareVia: "Partager via",
+      whatsapp: "WhatsApp",
+      telegram: "Telegram",
+      twitter: "X (Twitter)",
+      copyLink: "Copier le lien",
+      linkCopied: "Lien copié!",
+      shareFailed: "Impossible de partager",
     },
 
     guidance: {
