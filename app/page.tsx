@@ -12,25 +12,28 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
 export async function generateMetadata({
   searchParams,
 }: {
-  searchParams: { lang?: string; challenge?: string };
+  searchParams: Promise<{ lang?: string; challenge?: string }>;
 }): Promise<Metadata> {
+  // Await searchParams (Next.js 14.2+ requirement)
+  const params = await searchParams;
+  
   // Check URL param first, then cookie
   let lang: 'en' | 'fr' = 'en';
   
-  if (searchParams?.lang === 'fr') {
+  if (params?.lang === 'fr') {
     lang = 'fr';
-  } else if (searchParams?.lang === 'en') {
+  } else if (params?.lang === 'en') {
     lang = 'en';
   } else {
     // Try to read from cookie
-    const cookieStore = cookies();
+    const cookieStore = await cookies();
     const cookieLang = cookieStore.get('asrar_lang')?.value;
     if (cookieLang === 'fr') {
       lang = 'fr';
     }
   }
 
-  const challenge = searchParams?.challenge as keyof typeof challengeMeta | undefined;
+  const challenge = params?.challenge as keyof typeof challengeMeta | undefined;
   
   // Check for challenge-specific metadata
   if (challenge && challengeMeta[challenge]) {
