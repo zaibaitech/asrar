@@ -292,8 +292,8 @@ export const translations = {
       showMeaning: "Show meaning",
       salawatAfterName: "Ṣalla-llāhu ʿalayhi wa sallam",
       
-      // Opening Duʿāʾ
-      openingDua: "Opening Duʿāʾ for Rizq",
+      // Opening: Al-Fātiḥa
+      openingDua: "Al-Fātiḥa (The Opening)",
       
       // Closing Duʿāʾ
       closingDua: "Closing Duʿāʾ",
@@ -3333,7 +3333,7 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
       salawatAfterName: "Ṣalla-llāhu ʿalayhi wa sallam",
       
       // Duʿāʾ d'ouverture
-      openingDua: "Duʿāʾ d'ouverture pour le Rizq",
+      openingDua: "Al-Fātiḥa (L'Ouverture)",
       
       // Duʿāʾ de clôture
       closingDua: "Duʿāʾ de clôture",

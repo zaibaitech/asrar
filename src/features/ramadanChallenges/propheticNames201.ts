@@ -234,16 +234,24 @@ export const YA_JAMIU = {
   count: 180,
 };
 
-/** Opening Duʿāʾ for Rizq */
+/** Opening with Al-Fātiḥa */
 export const RIZQ_DUA = {
-  arabic: `اللَّهُمَّ إِنِّي أَسْأَلُكَ رِزْقًا وَاسِعًا مِنْ حَيْثُ لَا أَحْتَسِبُ
-وَبَرَكَةً فِيهِ وَتَوْفِيقًا لِطَاعَتِكَ
-آمِين آمِين آمِين`,
-  transliteration: `Allāhumma inī asʾaluka rizqan wāsiʿan min ḥaythu lā aḥtasib,
-wa barakatan fīhi, wa tawfīqan li-ṭāʿatika.
-Amīn, Amīn, Amīn.`,
-  meaning: 'O Allah, I ask You for abundant provision from sources I do not expect, blessing in it, and success in Your obedience. Amīn, Amīn, Amīn.',
-  meaningFr: 'Ô Allah, je Te demande une subsistance abondante venant de sources inattendues, la bénédiction en elle, et le succès dans Ton obéissance. Amīn, Amīn, Amīn.',
+  arabic: `بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ ۝
+الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ۝
+الرَّحْمَٰنِ الرَّحِيمِ ۝
+مَالِكِ يَوْمِ الدِّينِ ۝
+إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ۝
+اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ۝
+صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ ۝`,
+  transliteration: `Bismi-llāhi r-Raḥmāni r-Raḥīm.
+Al-ḥamdu li-llāhi Rabbi l-ʿālamīn.
+Ar-Raḥmāni r-Raḥīm.
+Māliki yawmi d-dīn.
+Iyyāka naʿbudu wa iyyāka nastaʿīn.
+Ihdinā ṣ-ṣirāṭa l-mustaqīm.
+Ṣirāṭa lladhīna anʿamta ʿalayhim ghayri l-maghḍūbi ʿalayhim wa lā ḍ-ḍāllīn.`,
+  meaning: 'In the name of Allah, the Most Gracious, the Most Merciful. All praise is due to Allah, Lord of all worlds. The Most Gracious, the Most Merciful. Master of the Day of Judgment. You alone we worship, and You alone we ask for help. Guide us on the Straight Path — the path of those You have blessed, not of those who incurred wrath, nor of those who went astray.',
+  meaningFr: 'Au nom d\'Allah, le Tout Miséricordieux, le Très Miséricordieux. Louange à Allah, Seigneur des mondes. Le Tout Miséricordieux, le Très Miséricordieux. Maître du Jour du Jugement. C\'est Toi seul que nous adorons, et c\'est Toi seul dont nous implorons l\'aide. Guide-nous sur le droit chemin — le chemin de ceux que Tu as comblés de bienfaits, non de ceux qui ont encouru Ta colère, ni des égarés.',
 };
 
 /** Closing Duʿāʾ from Dalāʾilu l-Khayrāt */
