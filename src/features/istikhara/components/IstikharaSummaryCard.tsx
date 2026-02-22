@@ -63,6 +63,25 @@ export function IstikharaSummaryCard({ result }: IstikhSummaryCardProps) {
   const profile = result.burujProfile;
   const elementKey = profile.element.toLowerCase() as "fire" | "earth" | "air" | "water";
   
+  // Zodiac-to-Primary-Mansion mapping (burujRemainder 1-12)
+  const ZODIAC_PRIMARY_MANSIONS: Record<number, { name: string; arabic: string }> = {
+    1:  { name: "Al-Sharaṭān",      arabic: "الشرطان" },      // Aries
+    2:  { name: "Al-Dabarān",       arabic: "الدبران" },      // Taurus
+    3:  { name: "Al-Dhirāʿ",        arabic: "الذراع" },       // Gemini
+    4:  { name: "Al-Jabha",         arabic: "الجبهة" },       // Cancer
+    5:  { name: "Al-ʿAwwā",         arabic: "العواء" },       // Leo
+    6:  { name: "Al-Zubānā",        arabic: "الزبانى" },      // Virgo
+    7:  { name: "Al-Ghafr",         arabic: "الغفر" },        // Libra
+    8:  { name: "Al-Shawla",        arabic: "الشولة" },       // Scorpio
+    9:  { name: "Saʿd al-Dhābiḥ",   arabic: "سعد الذابح" },   // Sagittarius
+    10: { name: "Saʿd al-Akhbiya",  arabic: "سعد الأخبية" },  // Capricorn
+    11: { name: "Saʿd al-Suʿūd",    arabic: "سعد السعود" },   // Aquarius
+    12: { name: "Al-Rishah",        arabic: "الرشاء" },       // Pisces
+  };
+
+  // Get the user's primary mansion based on their zodiac
+  const userPrimaryMansion = ZODIAC_PRIMARY_MANSIONS[result.burujRemainder] || ZODIAC_PRIMARY_MANSIONS[1];
+  
   // Animation states
   const [mainProgress, setMainProgress] = useState(0);
   const [secondaryProgress, setSecondaryProgress] = useState(0);
@@ -457,21 +476,19 @@ export function IstikharaSummaryCard({ result }: IstikhSummaryCardProps) {
           </h4>
 
           <div className="grid grid-cols-2 gap-3">
-            {/* Lunar Mansion */}
+            {/* Lunar Mansion - Based on User's Zodiac Sign */}
             <div className={`group relative p-4 rounded-xl border-2 ${config.border} bg-black/30 backdrop-blur-sm hover:bg-black/40 transition-all duration-300 hover:scale-105 ${config.progressGlow}`}>
               <div className={`absolute top-2 right-2 w-2 h-2 rounded-full ${config.pulseColor} animate-ping`}></div>
               <div className="text-2xl mb-1">🌙</div>
-              <div className={`text-3xl font-bold ${config.textBright} mb-1 group-hover:scale-110 transition-transform`}>
-                {lunarMansion?.mansion.number || result.burujRemainder}
+              <div className={`text-xs font-semibold ${config.text} mb-1`}>
+                {language === "en" ? "Manāzil" : "Manāzil"}
               </div>
-              <div className="text-xs font-semibold text-white">
-                {lunarMansion?.mansion.nameTransliteration || (language === "en" ? "Lunar Mansion" : "Manoir Lunaire")}
+              <div className={`text-base font-bold ${config.textBright} mb-1 group-hover:scale-105 transition-transform leading-tight`}>
+                {userPrimaryMansion.name}
               </div>
-              {lunarMansion && (
-                <div className="text-xs font-arabic text-white/90 mt-0.5" dir="rtl">
-                  {lunarMansion.mansion.nameArabic}
-                </div>
-              )}
+              <div className="text-sm font-arabic text-white/90" dir="rtl">
+                {userPrimaryMansion.arabic}
+              </div>
             </div>
 
             {/* Element Number */}
