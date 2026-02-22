@@ -924,9 +924,14 @@ function EnhancedDivineNamesSection({
         <InfoCard
           icon="🔢"
           label={language === 'en' ? 'Repetition Count' : 'Nombre de Répétitions'}
-          value={`${result.repetitionCount} ${language === 'en' ? 'times' : 'fois'}`}
-          subtitle={language === 'en' ? 'Complete daily' : 'Complétez quotidiennement'}
+          value={result.calculationMethod === 'name-based' 
+            ? `${result.repetitionCount} ${language === 'en' ? 'times' : 'fois'}`
+            : (language === 'en' ? 'Use Name' : 'Utilisez Nom')}
+          subtitle={result.calculationMethod === 'name-based' 
+            ? (language === 'en' ? 'Complete daily' : 'Complétez quotidiennement')
+            : (language === 'en' ? 'For dhikr count' : 'Pour le comptage')}
           colors={colors}
+          muted={result.calculationMethod !== 'name-based'}
         />
         <InfoCard
           icon="♈"
@@ -966,6 +971,7 @@ function EnhancedDivineNamesSection({
           zodiacSign={'arabic' in practice.zodiac_sign ? practice.zodiac_sign as ZodiacSign : undefined}
           instructions={practice.instructions}
           elementColors={colors}
+          calculationMethod={result.calculationMethod}
         />
       )}
 
@@ -999,22 +1005,24 @@ function InfoCard({
   label, 
   value, 
   subtitle,
-  colors 
+  colors,
+  muted = false
 }: { 
   icon: string; 
   label: string; 
   value: string; 
   subtitle?: string;
   colors?: any;
+  muted?: boolean;
 }) {
   return (
-    <div className={`bg-white/5 rounded-xl p-5 space-y-3 hover:bg-white/10 transition-all ${colors?.border ? `border-2 ${colors.border}` : ''}`}>
+    <div className={`bg-white/5 rounded-xl p-5 space-y-3 hover:bg-white/10 transition-all ${colors?.border ? `border-2 ${colors.border}` : ''} ${muted ? 'opacity-70' : ''}`}>
       <div className="flex items-center gap-3">
         <span className="text-3xl">{icon}</span>
         <p className="text-sm text-white">{label}</p>
       </div>
       <div>
-        <p className="text-xl font-bold text-white">{value}</p>
+        <p className={`text-xl font-bold ${muted ? 'text-white/70 italic' : 'text-white'}`}>{value}</p>
         {subtitle && (
           <p className="text-xs text-white/80 mt-1">{subtitle}</p>
         )}

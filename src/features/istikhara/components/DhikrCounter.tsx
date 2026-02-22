@@ -70,6 +70,7 @@ interface DhikrCounterProps {
     glow: string;
   };
   onComplete?: () => void;
+  calculationMethod?: 'name-based' | 'birth-date';
 }
 
 /**
@@ -98,7 +99,8 @@ export function DhikrCounter({
   zodiacSign,
   instructions,
   elementColors,
-  onComplete 
+  onComplete,
+  calculationMethod = 'name-based'
 }: DhikrCounterProps) {
   const { language } = useLanguage();
   
@@ -573,6 +575,11 @@ export function DhikrCounter({
               {count}
             </p>
             <p className="text-2xl text-white/80 mt-2">/ {targetCount}</p>
+            {calculationMethod !== 'name-based' && (
+              <p className="text-xs text-white/50 mt-1 italic">
+                {language === 'en' ? '(Use Name for exact count)' : '(Utilisez Nom pour le comptage exact)'}
+              </p>
+            )}
             <div className={`mt-3 px-4 py-1.5 ${colors.iconBg} rounded-full`}>
               <p className={`text-lg font-semibold ${colors.accent}`}>
                 {Math.round(progress)}%
