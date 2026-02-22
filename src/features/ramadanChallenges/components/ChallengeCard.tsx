@@ -121,6 +121,9 @@ export function ChallengeCard({
 
   // ─── Share functionality ───
   
+  // Use production base URL for consistent share links
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
+
   // Convert challenge type to URL-friendly kebab-case
   const getChallengeSlug = (): string => {
     const typeToSlug: Record<ChallengeType, string> = {
@@ -134,11 +137,9 @@ export function ChallengeCard({
   };
 
   const getShareUrl = () => {
-    if (typeof window === 'undefined') return '';
-    const baseUrl = window.location.origin;
     const challengeSlug = getChallengeSlug();
     const langParam = language === 'fr' ? '&lang=fr' : '';
-    return `${baseUrl}?challenge=${challengeSlug}${langParam}`;
+    return `${BASE_URL}/?challenge=${challengeSlug}${langParam}`;
   };
 
   const handleNativeShare = async () => {

@@ -7,7 +7,7 @@
  * Cherno Moussa Yero Sy — Spiritual Master of the Tijaniyya Order
  * 
  * Practice: 7-Day Rizq Abundance Challenge
- * - Recite Yā Jāmiʿu 180 times
+ * - Recite Allāhu Jāmiʿu 180 times
  * - Recite all 201 Holy Names with Ṣalla-llāhu ʿalayhi wa sallam after each
  * - Once daily in the morning for 7 consecutive days
  */
@@ -225,12 +225,12 @@ export const PROPHETIC_NAMES_201: PropheticName[] = [
   { number: 201, arabic: 'صَاحِبُ الْفَرَج', transliteration: 'Ṣāhibu l-faraji', meaning: 'The Owner of Relief', meaningFr: 'Le Maître de la Délivrance' },
 ];
 
-/** Yā Jāmiʿu — The Gathering Name recited 180 times before the 201 Names */
+/** Allāhu Jāmiʿu — The Gathering Name recited 180 times before the 201 Names */
 export const YA_JAMIU = {
-  arabic: 'يَا جَامِعُ',
-  transliteration: 'Yā Jāmiʿu',
-  meaning: 'O Gatherer, O Mighty One',
-  meaningFr: 'Ô Rassembleur, Ô Puissant',
+  arabic: 'اللهُ جَامِعُ',
+  transliteration: 'Allāhu Jāmiʿu',
+  meaning: 'Allah is the Gatherer, the Mighty One',
+  meaningFr: 'Allah est le Rassembleur, le Puissant',
   count: 180,
 };
 
@@ -282,8 +282,8 @@ export const RIZQ_PRACTICE_INFO = {
   totalSessions: 7,
   estimatedTime: '25-35 minutes',
   estimatedTimeFr: '25-35 minutes',
-  description: 'Recite Yā Jāmiʿu 180× followed by the 201 Holy Names with Ṣalla-llāhu ʿalayhi wa sallam. Practice once daily in the morning for 7 days.',
-  descriptionFr: 'Récitez Yā Jāmiʿu 180× suivi des 201 Noms Saints avec Ṣalla-llāhu ʿalayhi wa sallam. Pratiquez une fois par jour le matin pendant 7 jours.',
+  description: 'Recite Allāhu Jāmiʿu 180× followed by the 201 Holy Names with Ṣalla-llāhu ʿalayhi wa sallam. Practice once daily in the morning for 7 days.',
+  descriptionFr: 'Récitez Allāhu Jāmiʿu 180× suivi des 201 Noms Saints avec Ṣalla-llāhu ʿalayhi wa sallam. Pratiquez une fois par jour le matin pendant 7 jours.',
   promise: 'Immeasurable changes in your rizq will manifest.',
   promiseFr: 'Des changements incommensurables dans votre rizq se manifesteront.',
 };

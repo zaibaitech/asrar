@@ -26,6 +26,7 @@ import { PropheticNamesCard } from './PropheticNamesCard';
 import { CommunityBanner } from './CommunityBanner';
 import { RecommenderBanner } from './RecommenderBanner';
 import { AddChallengeModal, type AddChallengeModalStep } from './AddChallengeModal';
+import { ChallengeSettingsModal } from './ChallengeSettingsModal';
 import { getBestDhikrNow } from '../recommender';
 
 // ─── Props ───────────────────────────────────────────────────────────────────────
@@ -38,12 +39,13 @@ interface RamadanHubProps {
 // ─── Component ───────────────────────────────────────────────────────────────────
 
 export function RamadanHub({ language = 'en', defaultExpanded = false }: RamadanHubProps) {
-  const { state, addChallenge, removeChallenge, logCount, getTotalRamadanProgress, getTotalTodayProgress } = useRamadanChallenges();
+  const { state, addChallenge, removeChallenge, logCount, setTargets, getTotalRamadanProgress, getTotalTodayProgress } = useRamadanChallenges();
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
   const [showAddModal, setShowAddModal] = useState(false);
   const [initialModalStep, setInitialModalStep] = useState<AddChallengeModalStep>('SELECT_TYPE');
   const [ramadanInfo, setRamadanInfo] = useState<RamadanInfo | null>(null);
   const [mounted, setMounted] = useState(false);
+  const [editingChallenge, setEditingChallenge] = useState<string | null>(null);
   const searchParams = useSearchParams();
 
   // Track which challenge to auto-expand based on deep-link
@@ -182,6 +184,16 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
     logCount(challengeId, amount, session);
   };
 
+  // ─── Handle settings save ───
+  const handleSaveSettings = (challengeId: string) => (dailyTarget: number, ramadanTarget: number) => {
+    setTargets(challengeId, dailyTarget, ramadanTarget);
+  };
+
+  // Get the challenge being edited
+  const challengeBeingEdited = editingChallenge 
+    ? state.challenges.find(c => c.id === editingChallenge)
+    : null;
+
   return (
     <>
       <div className="bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 dark:from-amber-950/40 dark:via-yellow-950/30 dark:to-orange-950/30 rounded-xl border border-amber-200 dark:border-amber-700/50 overflow-hidden transition-all duration-300 animate-in">
@@ -252,6 +264,7 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
                   <ChallengeCard
                     challenge={challenge}
                     onLogCount={handleLogCount(challenge.id)}
+                    onOpenSettings={() => setEditingChallenge(challenge.id)}
                     language={language}
                     defaultExpanded={deepLinkedChallengeType === challenge.type || index === 0}
                   />
@@ -284,6 +297,17 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
         language={language}
         initialStep={initialModalStep}
       />
+
+      {/* Challenge Settings Modal */}
+      {challengeBeingEdited && (
+        <ChallengeSettingsModal
+          isOpen={!!editingChallenge}
+          onClose={() => setEditingChallenge(null)}
+          challenge={challengeBeingEdited}
+          onSave={handleSaveSettings(editingChallenge!)}
+          language={language}
+        />
+      )}
     </>
   );
 }

@@ -3,6 +3,7 @@
  */
 
 export { ChallengeCard } from './ChallengeCard';
+export { ChallengeSettingsModal } from './ChallengeSettingsModal';
 export { CommunityBanner } from './CommunityBanner';
 export { RecommenderBanner } from './RecommenderBanner';
 export { AddChallengeModal } from './AddChallengeModal';

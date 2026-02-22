@@ -231,7 +231,7 @@ export const translations = {
       shortTitle: "201 Holy Names",
       tradition: "Dalāʾilu l-Khayrāt · Imam Muḥammad al-Jazūlī",
       authorization: "Cherno Moussa Yero Sy — Spiritual Master of the Tijaniyya Order",
-      description: "Recite Yā Jāmiʿu 180× followed by the 201 Holy Names with Ṣalla-llāhu ʿalayhi wa sallam. Practice once daily in the morning for 7 days.",
+      description: "Recite Allāhu Jāmiʿu 180× followed by the 201 Holy Names with Ṣalla-llāhu ʿalayhi wa sallam. Practice once daily in the morning for 7 days.",
       promise: "Immeasurable changes in your rizq, abundance, and divine provision will manifest.",
       
       // Duration & Sessions
@@ -258,7 +258,7 @@ export const translations = {
       // Practice Steps
       practiceSteps: "Practice Steps",
       stepPrefix: "Step",
-      step1: "Yā Jāmiʿu",
+      step1: "Allāhu Jāmiʿu",
       step1Count: "180×",
       step2: "The 201 Holy Names",
       step2Note: "With Ṣalla-llāhu ʿalayhi wa sallam after each name",
@@ -281,10 +281,10 @@ export const translations = {
       completeSession: "Complete Session",
       close: "Close",
       
-      // Yā Jāmiʿu
-      yaJamiuArabic: "يَا جَامِعُ",
-      yaJamiuTranslit: "Yā Jāmiʿu",
-      yaJamiuMeaning: "O Gatherer, O Mighty One",
+      // Allāhu Jāmiʿu
+      yaJamiuArabic: "اللهُ جَامِعُ",
+      yaJamiuTranslit: "Allāhu Jāmiʿu",
+      yaJamiuMeaning: "Allah is the Gatherer, the Mighty One",
       
       // Names list
       theNames: "The 201 Names",
@@ -3277,7 +3277,7 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
       shortTitle: "201 Noms Saints",
       tradition: "Dalāʾilu l-Khayrāt · Imam Muḥammad al-Jazūlī",
       authorization: "Cherno Moussa Yero Sy — Maître Spirituel de l'Ordre Tijaniyya",
-      description: "Récitez Yā Jāmiʿu 180× suivi des 201 Noms Saints avec Ṣalla-llāhu ʿalayhi wa sallam. Pratiquez une fois par jour le matin pendant 7 jours.",
+      description: "Récitez Allāhu Jāmiʿu 180× suivi des 201 Noms Saints avec Ṣalla-llāhu ʿalayhi wa sallam. Pratiquez une fois par jour le matin pendant 7 jours.",
       promise: "Des changements incommensurables dans votre rizq, abondance et provision divine se manifesteront.",
       
       // Durée & Sessions
@@ -3304,7 +3304,7 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
       // Étapes de pratique
       practiceSteps: "Étapes de la pratique",
       stepPrefix: "Étape",
-      step1: "Yā Jāmiʿu",
+      step1: "Allāhu Jāmiʿu",
       step1Count: "180×",
       step2: "Les 201 Noms Saints",
       step2Note: "Avec Ṣalla-llāhu ʿalayhi wa sallam après chaque nom",
@@ -3327,10 +3327,10 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
       completeSession: "Terminer la session",
       close: "Fermer",
       
-      // Yā Jāmiʿu
-      yaJamiuArabic: "يَا جَامِعُ",
-      yaJamiuTranslit: "Yā Jāmiʿu",
-      yaJamiuMeaning: "Ô Rassembleur, Ô Puissant",
+      // Allāhu Jāmiʿu
+      yaJamiuArabic: "اللهُ جَامِعُ",
+      yaJamiuTranslit: "Allāhu Jāmiʿu",
+      yaJamiuMeaning: "Allah est le Rassembleur, le Puissant",
       
       // Liste des noms
       theNames: "Les 201 Noms",

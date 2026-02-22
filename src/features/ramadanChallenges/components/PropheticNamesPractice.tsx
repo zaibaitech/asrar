@@ -4,7 +4,7 @@
  * Full-screen practice interface for the 201 Holy Names.
  * 
  * Steps:
- * 1. Yā Jāmiʿu 180× (with counter)
+ * 1. Allāhu Jāmiʿu 180× (with counter)
  * 2. 201 Holy Names (scrollable list)
  * 3. Closing Duʿāʾ
  */
