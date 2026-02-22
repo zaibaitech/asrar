@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useLanguage } from "../../../contexts/LanguageContext";
 import { useProfile } from "../../../hooks/useProfile";
 import { translations } from "../../../lib/translations";
-import { validateName, calculateIstikhara } from "../calculations";
+import { validateName, calculateIstikhara, calculateIstikharaFromBirthDate } from "../calculations";
 import type { IstikharaCalculationResult } from "../types";
 import { 
   Keyboard, 
@@ -12,7 +12,7 @@ import {
   Info, 
   Lock, 
   BookOpen, 
-  Moon, 
+  Moon,
   Star,
   CheckCircle,
   AlertCircle,
@@ -51,11 +51,18 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
   const { profile } = useProfile(); // Get user profile for auto-fill
   const t = translations[language].istikhara;
   
+  // Calculation method state
+  const [calculationMethod, setCalculationMethod] = useState<'name-based' | 'birth-date'>('name-based');
+  const [dateFormat, setDateFormat] = useState<'full' | 'month-day'>('full');
+  
   // Form state
   const [personName, setPersonName] = useState("");
   const [motherName, setMotherName] = useState("");
   const [personLatin, setPersonLatin] = useState("");
   const [motherLatin, setMotherLatin] = useState("");
+  const [dateOfBirth, setDateOfBirth] = useState("");
+  const [birthMonth, setBirthMonth] = useState("");
+  const [birthDay, setBirthDay] = useState("");
   const [enableAutofill, setEnableAutofill] = useState(true);
   
   // Auto-fill from user profile
@@ -71,6 +78,11 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
       if (!motherLatin && profile.mother_name) {
         setMotherLatin(profile.mother_name);
         setMotherName(profile.mother_name);
+      }
+      
+      // Auto-fill birth date if empty
+      if (!dateOfBirth && profile.date_of_birth) {
+        setDateOfBirth(profile.date_of_birth);
       }
     }
   }, [profile, enableAutofill]);
@@ -221,14 +233,16 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Mark all as touched
-    setTouched({ person: true, mother: true });
+    // Mark all as touched (only relevant for name-based)
+    if (calculationMethod === 'name-based') {
+      setTouched({ person: true, mother: true });
+    }
     
     // Clear previous errors
     setErrors({});
     
-    // Validate inputs
-    if (!validateInputs()) {
+    // Validate inputs (only for name-based method)
+    if (calculationMethod === 'name-based' && !validateInputs()) {
       return;
     }
     
@@ -239,11 +253,19 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
       // Simulate minimum loading time for better UX
       await new Promise(resolve => setTimeout(resolve, 800));
       
-      // Perform calculation
-      const result = calculateIstikhara(personName, motherName);
-      
-      // Pass result to parent
-      onCalculate(result);
+      if (calculationMethod === 'name-based') {
+        // Name-based calculation (Classical ʿIlm al-Ḥurūf)
+        const result = calculateIstikhara(personName, motherName);
+        onCalculate(result);
+      } else {
+        // Birth-date calculation (ʿIlm al-Nujūm - Tropical Zodiac)
+        const birthDateStr = dateFormat === 'full' 
+          ? dateOfBirth 
+          : `2000-${birthMonth}-${birthDay}`; // Use 2000 as placeholder year for month-day only
+        
+        const result = calculateIstikharaFromBirthDate(birthDateStr, dateFormat);
+        onCalculate(result);
+      }
     } catch (error) {
       console.error("Istikhara calculation error:", error);
       setErrors({
@@ -262,6 +284,9 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
     setMotherName("");
     setPersonLatin("");
     setMotherLatin("");
+    setDateOfBirth("");
+    setBirthMonth("");
+    setBirthDay("");
     setErrors({});
     setTouched({ person: false, mother: false });
     setShowPersonKeyboard(false);
@@ -284,9 +309,13 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
     setShowExamples(false);
   };
 
-  // Check if form is valid
-  const isFormValid = personName.trim() && motherName.trim() && 
-                      validateName(personName) && validateName(motherName);
+  // Check if form is valid based on calculation method
+  const isNameBasedValid = personName.trim() && motherName.trim() && 
+                           validateName(personName) && validateName(motherName);
+  const isBirthDateValid = dateFormat === 'full' 
+    ? dateOfBirth.trim() !== ''
+    : birthMonth !== '' && birthDay !== '';
+  const isFormValid = calculationMethod === 'name-based' ? isNameBasedValid : isBirthDateValid;
 
   return (
     <div className="space-y-4 sm:space-y-6">
@@ -469,17 +498,101 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
           </div>
         )}
 
-        {/* Form Title */}
-        <div className="text-center">
-          <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-1 sm:mb-2">
-            {language === 'en' ? 'Enter Names for Calculation' : 'Entrez les Noms pour le Calcul'}
+        {/* Choose Calculation Method */}
+        <div className="text-center mb-4">
+          <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-3">
+            {language === 'en' ? 'Choose Calculation Method:' : 'Choisissez la Méthode de Calcul:'}
           </h3>
-          <p className="text-xs text-white px-2">
-            {language === 'en' 
-              ? 'Both names must be in Arabic script for accurate spiritual analysis'
-              : 'Les deux noms doivent être en écriture arabe pour une analyse spirituelle précise'}
-          </p>
+          
+          {/* Method Selection Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+            {/* Name-Based Method */}
+            <button
+              type="button"
+              onClick={() => setCalculationMethod('name-based')}
+              className={`relative p-4 rounded-xl border-2 transition-all text-left ${
+                calculationMethod === 'name-based'
+                  ? 'bg-slate-800/60 border-purple-500 shadow-lg shadow-purple-500/20'
+                  : 'bg-slate-900/40 border-white/20 hover:border-white/40'
+              }`}
+            >
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">📜</span>
+                <div className="flex-1">
+                  <h4 className="font-bold text-white text-sm sm:text-base">
+                    {language === 'en' ? 'Name-Based' : 'Basé sur le Nom'}
+                  </h4>
+                  <span className={`inline-block px-2 py-0.5 rounded text-[10px] font-semibold uppercase tracking-wide mt-1 ${
+                    calculationMethod === 'name-based' 
+                      ? 'bg-purple-600 text-white' 
+                      : 'bg-slate-700 text-slate-300'
+                  }`}>
+                    {language === 'en' ? 'CLASSICAL' : 'CLASSIQUE'}
+                  </span>
+                  <p className="text-xs text-slate-400 mt-2">
+                    {language === 'en' 
+                      ? "Traditional ʿIlm al-Ḥurūf method using your name + mother's name"
+                      : "Méthode traditionnelle ʿIlm al-Ḥurūf utilisant votre nom + nom de mère"}
+                  </p>
+                </div>
+              </div>
+              {calculationMethod === 'name-based' && (
+                <div className="absolute top-3 right-3">
+                  <CheckCircle className="w-5 h-5 text-purple-400" />
+                </div>
+              )}
+            </button>
+
+            {/* Birth Date Method */}
+            <button
+              type="button"
+              onClick={() => setCalculationMethod('birth-date')}
+              className={`relative p-4 rounded-xl border-2 transition-all text-left ${
+                calculationMethod === 'birth-date'
+                  ? 'bg-slate-800/60 border-teal-500 shadow-lg shadow-teal-500/20'
+                  : 'bg-slate-900/40 border-white/20 hover:border-white/40'
+              }`}
+            >
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">📅</span>
+                <div className="flex-1">
+                  <h4 className="font-bold text-white text-sm sm:text-base">
+                    {language === 'en' ? 'Birth Date' : 'Date de Naissance'}
+                  </h4>
+                  <span className={`inline-block px-2 py-0.5 rounded text-[10px] font-semibold uppercase tracking-wide mt-1 ${
+                    calculationMethod === 'birth-date' 
+                      ? 'bg-teal-600 text-white' 
+                      : 'bg-slate-700 text-slate-300'
+                  }`}>
+                    {language === 'en' ? 'QUICK' : 'RAPIDE'}
+                  </span>
+                  <p className="text-xs text-slate-400 mt-2">
+                    {language === 'en' 
+                      ? 'Simpler method using only your date of birth'
+                      : 'Méthode plus simple utilisant uniquement votre date de naissance'}
+                  </p>
+                </div>
+              </div>
+              {calculationMethod === 'birth-date' && (
+                <div className="absolute top-3 right-3">
+                  <CheckCircle className="w-5 h-5 text-teal-400" />
+                </div>
+              )}
+            </button>
+          </div>
         </div>
+
+        {/* Name-Based Form Fields */}
+        {calculationMethod === 'name-based' && (
+          <>
+            {/* Form Title */}
+            <div className="text-center">
+              <p className="text-xs text-white px-2">
+                {language === 'en' 
+                  ? 'Both names must be in Arabic script for accurate spiritual analysis'
+                  : 'Les deux noms doivent être en écriture arabe pour une analyse spirituelle précise'}
+              </p>
+            </div>
 
         {/* Person's Name Input */}
         <div className="space-y-2 sm:space-y-3 p-3 sm:p-4 bg-gradient-to-br from-purple-900/30 to-pink-900/20 border-2 border-purple-400/40 rounded-lg">
@@ -680,8 +793,140 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
             )}
           </div>
         </div>
+          </>
+        )}
 
-        {/* Example Names Button */}
+        {/* Birth Date Form Fields */}
+        {calculationMethod === 'birth-date' && (
+          <div className="space-y-4">
+            {/* Select Your Birth Date Header */}
+            <div className="p-4 bg-gradient-to-br from-teal-900/30 to-cyan-900/20 border-2 border-teal-400/40 rounded-xl">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-2xl">📅</span>
+                <h4 className="font-bold text-teal-200 text-lg">
+                  {language === 'en' ? 'Select Your Birth Date' : 'Sélectionnez Votre Date de Naissance'}
+                </h4>
+              </div>
+
+              {/* Date Format Toggle */}
+              <div className="flex rounded-lg overflow-hidden mb-3 bg-slate-800/50">
+                <button
+                  type="button"
+                  onClick={() => setDateFormat('full')}
+                  className={`flex-1 px-4 py-2.5 text-sm font-medium transition-all ${
+                    dateFormat === 'full'
+                      ? 'bg-teal-600 text-white'
+                      : 'text-slate-400 hover:text-white hover:bg-slate-700/50'
+                  }`}
+                >
+                  {language === 'en' ? 'Full date' : 'Date complète'}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setDateFormat('month-day')}
+                  className={`flex-1 px-4 py-2.5 text-sm font-medium transition-all ${
+                    dateFormat === 'month-day'
+                      ? 'bg-teal-600 text-white'
+                      : 'text-slate-400 hover:text-white hover:bg-slate-700/50'
+                  }`}
+                >
+                  {language === 'en' ? 'Month & day only' : 'Mois et jour uniquement'}
+                </button>
+              </div>
+
+              <p className="text-xs text-slate-400 mb-4">
+                {language === 'en' 
+                  ? 'Best when using your own saved profile.' 
+                  : 'Idéal lorsque vous utilisez votre propre profil enregistré.'}
+              </p>
+
+              {/* Date Input - Full Date */}
+              {dateFormat === 'full' && (
+                <div className="relative">
+                  <div className="flex items-center gap-2 p-3 bg-slate-800/70 border-2 border-slate-600 rounded-xl">
+                    <span className="text-xl">📅</span>
+                    <input
+                      type="date"
+                      value={dateOfBirth}
+                      onChange={(e) => setDateOfBirth(e.target.value)}
+                      max={new Date().toISOString().split('T')[0]}
+                      min="1900-01-01"
+                      className="flex-1 bg-transparent text-white text-lg focus:outline-none"
+                      aria-label={language === 'en' ? 'Date of Birth' : 'Date de Naissance'}
+                    />
+                  </div>
+                </div>
+              )}
+
+              {/* Date Input - Month & Day Only */}
+              {dateFormat === 'month-day' && (
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="relative">
+                    <label className="block text-xs text-slate-400 mb-1">
+                      {language === 'en' ? 'Month' : 'Mois'}
+                    </label>
+                    <select
+                      value={birthMonth}
+                      onChange={(e) => setBirthMonth(e.target.value)}
+                      className="w-full p-3 bg-slate-800/70 border-2 border-slate-600 rounded-xl text-white focus:outline-none focus:border-teal-500"
+                    >
+                      <option value="">{language === 'en' ? 'Select...' : 'Sélectionner...'}</option>
+                      {Array.from({ length: 12 }, (_, i) => (
+                        <option key={i + 1} value={String(i + 1).padStart(2, '0')}>
+                          {new Date(2000, i, 1).toLocaleString(language === 'en' ? 'en-US' : 'fr-FR', { month: 'long' })}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="relative">
+                    <label className="block text-xs text-slate-400 mb-1">
+                      {language === 'en' ? 'Day' : 'Jour'}
+                    </label>
+                    <select
+                      value={birthDay}
+                      onChange={(e) => setBirthDay(e.target.value)}
+                      className="w-full p-3 bg-slate-800/70 border-2 border-slate-600 rounded-xl text-white focus:outline-none focus:border-teal-500"
+                    >
+                      <option value="">{language === 'en' ? 'Select...' : 'Sélectionner...'}</option>
+                      {Array.from({ length: 31 }, (_, i) => (
+                        <option key={i + 1} value={String(i + 1).padStart(2, '0')}>
+                          {i + 1}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* What You'll Discover Card */}
+            <div className="p-4 bg-gradient-to-br from-amber-900/20 to-orange-900/10 border-2 border-amber-400/30 rounded-xl">
+              <h5 className="font-bold text-amber-200 flex items-center gap-2 mb-3">
+                <Sparkles className="w-4 h-4" />
+                {language === 'en' ? "What You'll Discover:" : "Ce que Vous Découvrirez:"}
+              </h5>
+              <ul className="space-y-2 text-sm text-slate-300">
+                <li className="flex items-center gap-2">
+                  <span className="text-amber-400">•</span>
+                  {language === 'en' ? 'Your Burj (zodiac sign)' : 'Votre Burj (signe du zodiaque)'}
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-amber-400">•</span>
+                  {language === 'en' ? 'Your elemental nature' : 'Votre nature élémentaire'}
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-amber-400">•</span>
+                  {language === 'en' 
+                    ? 'Optional lunar timing baselines (requires full DOB year)' 
+                    : 'Base de timing lunaire optionnelle (nécessite l\'année de naissance complète)'}
+                </li>
+              </ul>
+            </div>
+          </div>
+        )}
+
+        {/* Example Names Button - Only show for name-based method */}
+        {calculationMethod === 'name-based' && (
         <div className="border-t border-white/10 pt-4">
           <button
             type="button"
@@ -741,6 +986,7 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
             </div>
           )}
         </div>
+        )}
 
         {/* Action Buttons */}
         <div className="flex gap-2 sm:gap-3 pt-2 sm:pt-3">

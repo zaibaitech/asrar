@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useLanguage } from "../../../contexts/LanguageContext";
 import { translations } from "../../../lib/translations";
+import { getCurrentLunarMansion, type CurrentMansion } from "../../../lib/lunarMansions";
 import type { IstikharaCalculationResult } from "../types";
 import { 
   Sparkles, 
@@ -67,6 +68,7 @@ export function IstikharaSummaryCard({ result }: IstikhSummaryCardProps) {
   const [secondaryProgress, setSecondaryProgress] = useState(0);
   const [tertiaryProgress, setTertiaryProgress] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [lunarMansion, setLunarMansion] = useState<CurrentMansion | null>(null);
 
   // Animated progress on mount
   useEffect(() => {
@@ -74,6 +76,10 @@ export function IstikharaSummaryCard({ result }: IstikhSummaryCardProps) {
     const timer1 = setTimeout(() => setMainProgress(100), 200);
     const timer2 = setTimeout(() => setSecondaryProgress(100), 400);
     const timer3 = setTimeout(() => setTertiaryProgress(100), 600);
+    
+    // Get current lunar mansion
+    const mansion = getCurrentLunarMansion();
+    setLunarMansion(mansion);
     
     return () => {
       clearTimeout(timer1);
@@ -94,13 +100,6 @@ export function IstikharaSummaryCard({ result }: IstikhSummaryCardProps) {
   };
 
   const scores = calculateAlignmentScores();
-  
-  // SVG circle calculations
-  const radius = 58;
-  const circumference = 2 * Math.PI * radius;
-  const mainStrokeDashoffset = circumference - (scores.main / 100) * circumference;
-  const careerStrokeDashoffset = circumference - (scores.career / 100) * circumference;
-  const spiritualStrokeDashoffset = circumference - (scores.spiritual / 100) * circumference;
 
   // Get element icon
   const getElementIcon = () => {
@@ -239,115 +238,176 @@ export function IstikharaSummaryCard({ result }: IstikhSummaryCardProps) {
               {language === "en" ? "Your Profile" : "Votre Profil"}
             </h3>
             
-            {/* Names Display */}
-            <div className="p-3 sm:p-4 bg-black/20 backdrop-blur-sm rounded-lg sm:rounded-xl border border-white/10">
-              <div className="space-y-2">
-                <div>
-                  <p className="text-xs text-white mb-1">
-                    {language === "en" ? "Your Name" : "Votre Nom"}
-                  </p>
-                  <p className="text-lg sm:text-xl font-arabic text-white" dir="rtl">
-                    {result.personName}
-                  </p>
-                </div>
-                <div className="border-t border-white/10 pt-2">
-                  <p className="text-xs text-white mb-1">
-                    {language === "en" ? "Mother's Name" : "Nom de la Mère"}
-                  </p>
-                  <p className="text-lg sm:text-xl font-arabic text-white" dir="rtl">
-                    {result.motherName}
-                  </p>
+            {/* Names Display - Only for name-based calculations */}
+            {result.calculationMethod !== 'birth-date' && result.personName && (
+              <div className="p-3 sm:p-4 bg-black/20 backdrop-blur-sm rounded-lg sm:rounded-xl border border-white/10">
+                <div className="space-y-2">
+                  <div>
+                    <p className="text-xs text-white mb-1">
+                      {language === "en" ? "Your Name" : "Votre Nom"}
+                    </p>
+                    <p className="text-lg sm:text-xl font-arabic text-white" dir="rtl">
+                      {result.personName}
+                    </p>
+                  </div>
+                  <div className="border-t border-white/10 pt-2">
+                    <p className="text-xs text-white mb-1">
+                      {language === "en" ? "Mother's Name" : "Nom de la Mère"}
+                    </p>
+                    <p className="text-lg sm:text-xl font-arabic text-white" dir="rtl">
+                      {result.motherName}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
+            
+            {/* Birth Date Display - Only for DOB-based calculations */}
+            {result.calculationMethod === 'birth-date' && result.birthDate && (
+              <div className="p-3 sm:p-4 bg-black/20 backdrop-blur-sm rounded-lg sm:rounded-xl border border-white/10">
+                <div className="space-y-2">
+                  <div>
+                    <p className="text-xs text-white mb-1">
+                      {language === "en" ? "Birth Date" : "Date de Naissance"}
+                    </p>
+                    <p className="text-lg sm:text-xl text-white">
+                      {new Date(result.birthDate).toLocaleDateString(language === "fr" ? "fr-FR" : "en-US", {
+                        year: result.dateFormat === 'full' ? 'numeric' : undefined,
+                        month: 'long',
+                        day: 'numeric'
+                      })}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
 
-          {/* Multi-Ring Radial Progress */}
-          <div className="flex items-center justify-center">
-            <div className="relative w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48">
-              <svg className="w-full h-full transform -rotate-90">
-                {/* Outer ring - Main Score */}
+          {/* DOMINANT ELEMENT - Mobile App Style */}
+          <div className="flex flex-col items-center">
+            {/* DOMINANT ELEMENT Header */}
+            <h4 className="text-xs sm:text-sm font-bold tracking-[0.25em] text-white/80 uppercase mb-4 sm:mb-6">
+              {language === "en" ? "DOMINANT ELEMENT" : "ÉLÉMENT DOMINANT"}
+            </h4>
+            
+            {/* Animated Circle with Segments */}
+            <div className="relative w-44 h-44 sm:w-52 sm:h-52 md:w-60 md:h-60">
+              {/* Outer glow effect */}
+              <div className={`absolute inset-0 rounded-full ${config.progressGlow} blur-xl opacity-30 animate-pulse-glow`}></div>
+              
+              {/* Background dark circle */}
+              <div className="absolute inset-4 sm:inset-5 rounded-full bg-slate-900/80 border-2 border-white/10"></div>
+              
+              {/* Animated segmented ring */}
+              <svg className="w-full h-full transform -rotate-90" viewBox="0 0 200 200">
+                {/* Static background ring */}
                 <circle
-                  cx="50%"
-                  cy="50%"
-                  r={radius + 20}
+                  cx="100"
+                  cy="100"
+                  r="88"
                   stroke="rgba(255, 255, 255, 0.1)"
-                  strokeWidth="6"
+                  strokeWidth="8"
                   fill="none"
                 />
+                
+                {/* Animated glowing segments - creates the segmented animation effect */}
+                {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => {
+                  const segmentAngle = 45;
+                  const gap = 4;
+                  const r = 88;
+                  const circumference = 2 * Math.PI * r;
+                  const segmentLength = (segmentAngle - gap) / 360 * circumference;
+                  const gapLength = gap / 360 * circumference;
+                  const offset = mainProgress 
+                    ? circumference - (scores.main / 100) * circumference * (i + 1) / 8 
+                    : circumference;
+                  
+                  return (
+                    <circle
+                      key={i}
+                      cx="100"
+                      cy="100"
+                      r={r}
+                      stroke={config.progressColor}
+                      strokeWidth="8"
+                      fill="none"
+                      strokeDasharray={`${segmentLength} ${circumference - segmentLength}`}
+                      strokeDashoffset={-i * (segmentAngle / 360 * circumference)}
+                      className={`transition-all duration-1000 ease-out animate-segment-glow`}
+                      style={{
+                        filter: `drop-shadow(0 0 8px ${config.progressColor})`,
+                        opacity: mainProgress ? (i < Math.ceil(scores.main / 12.5) ? 1 : 0.2) : 0.2,
+                        transitionDelay: `${i * 100}ms`
+                      }}
+                      strokeLinecap="round"
+                    />
+                  );
+                })}
+                
+                {/* Inner decorative ring */}
                 <circle
-                  cx="50%"
-                  cy="50%"
-                  r={radius + 20}
+                  cx="100"
+                  cy="100"
+                  r="70"
                   stroke={config.progressColor}
-                  strokeWidth="6"
+                  strokeWidth="1"
                   fill="none"
-                  strokeDasharray={2 * Math.PI * (radius + 20)}
-                  strokeDashoffset={mainProgress ? 2 * Math.PI * (radius + 20) - (scores.main / 100) * 2 * Math.PI * (radius + 20) : 2 * Math.PI * (radius + 20)}
-                  className={`transition-all duration-1500 ease-out ${config.progressGlow}`}
-                  strokeLinecap="round"
-                />
-
-                {/* Middle ring - Career Score */}
-                <circle
-                  cx="50%"
-                  cy="50%"
-                  r={radius + 8}
-                  stroke="rgba(255, 255, 255, 0.1)"
-                  strokeWidth="5"
-                  fill="none"
-                />
-                <circle
-                  cx="50%"
-                  cy="50%"
-                  r={radius + 8}
-                  stroke={config.progressColor}
-                  strokeWidth="5"
-                  fill="none"
-                  strokeDasharray={2 * Math.PI * (radius + 8)}
-                  strokeDashoffset={secondaryProgress ? 2 * Math.PI * (radius + 8) - (scores.career / 100) * 2 * Math.PI * (radius + 8) : 2 * Math.PI * (radius + 8)}
-                  className="transition-all duration-1500 ease-out delay-200"
-                  strokeLinecap="round"
-                  opacity="0.7"
-                />
-
-                {/* Inner ring - Spiritual Score */}
-                <circle
-                  cx="50%"
-                  cy="50%"
-                  r={radius - 4}
-                  stroke="rgba(255, 255, 255, 0.1)"
-                  strokeWidth="4"
-                  fill="none"
-                />
-                <circle
-                  cx="50%"
-                  cy="50%"
-                  r={radius - 4}
-                  stroke={config.progressColor}
-                  strokeWidth="4"
-                  fill="none"
-                  strokeDasharray={2 * Math.PI * (radius - 4)}
-                  strokeDashoffset={tertiaryProgress ? 2 * Math.PI * (radius - 4) - (scores.spiritual / 100) * 2 * Math.PI * (radius - 4) : 2 * Math.PI * (radius - 4)}
-                  className="transition-all duration-1500 ease-out delay-400"
-                  strokeLinecap="round"
-                  opacity="0.5"
+                  opacity="0.3"
                 />
               </svg>
               
-              {/* Center Content */}
+              {/* Center Content - Zodiac + Element Display */}
               <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <div className="text-4xl sm:text-5xl md:text-6xl mb-1 sm:mb-2 animate-bounce-slow">{config.emoji}</div>
-                <div className={`text-2xl sm:text-3xl font-bold ${config.textBright} mb-1`}>
+                {/* Element emoji with glow */}
+                <div 
+                  className="text-3xl sm:text-4xl mb-2 animate-float"
+                  style={{ filter: `drop-shadow(0 0 10px ${config.progressColor})` }}
+                >
+                  {config.emoji}
+                </div>
+                
+                {/* Percentage */}
+                <div className={`text-4xl sm:text-5xl font-bold ${config.textBright} tabular-nums`}>
                   {scores.main}%
                 </div>
-                <div className="text-xs sm:text-sm text-white capitalize">
-                  {profile.element}
-                </div>
-                <div className="text-[10px] sm:text-xs text-white mt-1">
-                  {language === "en" ? "Element" : "Élément"}
-                </div>
+                
+                {/* Zodiac Name - English */}
+                {result.burjNameEn ? (
+                  <div className="text-lg sm:text-xl font-semibold text-white mt-1">
+                    {language === "fr" ? result.burjNameFr : result.burjNameEn}
+                  </div>
+                ) : (
+                  <div className="text-lg sm:text-xl font-semibold text-white mt-1 capitalize">
+                    {profile.element}
+                  </div>
+                )}
+                
+                {/* Zodiac Name - Arabic */}
+                {result.burjNameAr && (
+                  <div className="text-base sm:text-lg font-arabic text-white/90 mt-0.5" dir="rtl">
+                    {result.burjNameAr}
+                  </div>
+                )}
               </div>
+            </div>
+            
+            {/* Element Label Below Circle - Mobile App Style */}
+            <div className="mt-6 sm:mt-8 text-center">
+              <span className="text-white/70 text-base sm:text-lg">
+                {language === "en" ? "Element" : "Élément"}:
+              </span>
+              <span 
+                className="ml-2 text-xl sm:text-2xl font-semibold capitalize"
+                style={{ color: config.progressColor, textShadow: `0 0 20px ${config.progressColor}` }}
+              >
+                {language === "en" 
+                  ? profile.element.charAt(0).toUpperCase() + profile.element.slice(1)
+                  : profile.element === 'fire' ? 'Feu' 
+                  : profile.element === 'earth' ? 'Terre'
+                  : profile.element === 'air' ? 'Air'
+                  : 'Eau'
+                }
+              </span>
             </div>
           </div>
 
@@ -391,19 +451,21 @@ export function IstikharaSummaryCard({ result }: IstikhSummaryCardProps) {
           </h4>
 
           <div className="grid grid-cols-2 gap-3">
-            {/* Buruj Number */}
+            {/* Lunar Mansion */}
             <div className={`group relative p-4 rounded-xl border-2 ${config.border} bg-black/30 backdrop-blur-sm hover:bg-black/40 transition-all duration-300 hover:scale-105 ${config.progressGlow}`}>
               <div className={`absolute top-2 right-2 w-2 h-2 rounded-full ${config.pulseColor} animate-ping`}></div>
               <div className="text-2xl mb-1">🌙</div>
               <div className={`text-3xl font-bold ${config.textBright} mb-1 group-hover:scale-110 transition-transform`}>
-                {result.burujRemainder}
+                {lunarMansion?.mansion.number || result.burujRemainder}
               </div>
               <div className="text-xs font-semibold text-white">
-                {language === "en" ? "Burūj" : "Burūj"}
+                {lunarMansion?.mansion.nameTransliteration || (language === "en" ? "Lunar Mansion" : "Manoir Lunaire")}
               </div>
-              <div className="text-xs text-white/80">
-                {language === "en" ? "Mansion" : "Maison"}
-              </div>
+              {lunarMansion && (
+                <div className="text-xs font-arabic text-white/90 mt-0.5" dir="rtl">
+                  {lunarMansion.mansion.nameArabic}
+                </div>
+              )}
             </div>
 
             {/* Element Number */}
@@ -420,33 +482,37 @@ export function IstikharaSummaryCard({ result }: IstikhSummaryCardProps) {
               </div>
             </div>
 
-            {/* Total Hadad */}
-            <div className={`group relative p-4 rounded-xl border-2 ${config.border} bg-black/30 backdrop-blur-sm hover:bg-black/40 transition-all duration-300 hover:scale-105`}>
-              <div className="text-2xl mb-1">📊</div>
-              <div className={`text-3xl font-bold ${config.textBright} mb-1 group-hover:scale-110 transition-transform`}>
-                {result.combinedTotal}
+            {/* Total Hadad - Only show for name-based calculations */}
+            {result.calculationMethod !== 'birth-date' && result.combinedTotal > 0 && (
+              <div className={`group relative p-4 rounded-xl border-2 ${config.border} bg-black/30 backdrop-blur-sm hover:bg-black/40 transition-all duration-300 hover:scale-105`}>
+                <div className="text-2xl mb-1">📊</div>
+                <div className={`text-3xl font-bold ${config.textBright} mb-1 group-hover:scale-110 transition-transform`}>
+                  {result.combinedTotal}
+                </div>
+                <div className="text-xs font-semibold text-white">
+                  {language === "en" ? "Total" : "Total"}
+                </div>
+                <div className="text-xs text-white/80">
+                  {language === "en" ? "Ḥadad Value" : "Valeur Ḥadad"}
+                </div>
               </div>
-              <div className="text-xs font-semibold text-white">
-                {language === "en" ? "Total" : "Total"}
-              </div>
-              <div className="text-xs text-white/80">
-                {language === "en" ? "Ḥadad Value" : "Valeur Ḥadad"}
-              </div>
-            </div>
+            )}
 
-            {/* Repetition Count */}
-            <div className={`group relative p-4 rounded-xl border-2 ${config.border} bg-black/30 backdrop-blur-sm hover:bg-black/40 transition-all duration-300 hover:scale-105`}>
-              <div className="text-2xl mb-1">🔢</div>
-              <div className={`text-3xl font-bold ${config.textBright} mb-1 group-hover:scale-110 transition-transform`}>
-                {result.repetitionCount}
+            {/* Repetition Count - Only show for name-based calculations */}
+            {result.calculationMethod !== 'birth-date' && result.repetitionCount > 0 && (
+              <div className={`group relative p-4 rounded-xl border-2 ${config.border} bg-black/30 backdrop-blur-sm hover:bg-black/40 transition-all duration-300 hover:scale-105`}>
+                <div className="text-2xl mb-1">🔢</div>
+                <div className={`text-3xl font-bold ${config.textBright} mb-1 group-hover:scale-110 transition-transform`}>
+                  {result.repetitionCount}
+                </div>
+                <div className="text-xs font-semibold text-white">
+                  {language === "en" ? "Count" : "Compteur"}
+                </div>
+                <div className="text-xs text-white/80">
+                  {language === "en" ? "Repetitions" : "Répétitions"}
+                </div>
               </div>
-              <div className="text-xs font-semibold text-white">
-                {language === "en" ? "Count" : "Compteur"}
-              </div>
-              <div className="text-xs text-white/80">
-                {language === "en" ? "Repetitions" : "Répétitions"}
-              </div>
-            </div>
+            )}
           </div>
 
           {/* Blessed Day Card */}
@@ -663,12 +729,53 @@ export function IstikharaSummaryCard({ result }: IstikhSummaryCardProps) {
           }
         }
 
+        @keyframes pulse-glow {
+          0%, 100% {
+            opacity: 0.3;
+            transform: scale(1);
+          }
+          50% {
+            opacity: 0.5;
+            transform: scale(1.08);
+          }
+        }
+
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-6px);
+          }
+        }
+
+        @keyframes segment-glow {
+          0%, 100% {
+            filter: drop-shadow(0 0 8px currentColor);
+          }
+          50% {
+            filter: drop-shadow(0 0 16px currentColor);
+          }
+        }
+
         .animate-bounce-slow {
           animation: bounce-slow 3s ease-in-out infinite;
         }
 
         .animate-pulse-slow {
           animation: pulse-slow 3s ease-in-out infinite;
+        }
+
+        .animate-pulse-glow {
+          animation: pulse-glow 2.5s ease-in-out infinite;
+        }
+
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
+        }
+
+        .animate-segment-glow {
+          animation: segment-glow 2s ease-in-out infinite;
         }
 
         .delay-200 {

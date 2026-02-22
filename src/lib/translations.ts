@@ -10,7 +10,7 @@ export const translations = {
       planetary: "Planetary Alignment",
       about: "About",
       guidance: "Life Guidance",
-      advanced: "Istikharah",
+      advanced: "Who Am I?",
       menu: "Menu",
     },
 
@@ -2897,23 +2897,27 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
     },
 
     // ============================================================================
-    // ISTIKHARA MODULE - Istikharah al-Asmā' (الاستخارة بالأسماء)
+    // WHO AM I MODULE - Istikharah al-Asmā' (الاستخارة بالأسماء)
     // ============================================================================
     istikhara: {
       // Main panel
-      title: "Istikharah al-Asmā'",
-      titleArabic: "الاستخارة بالأسماء",
-      subtitle: "Spiritual Guidance Through Names",
-      description: "Seek divine guidance by examining the spiritual connection between two names using the sacred science of ʿIlm al-Ḥurūf.",
+      title: "Who Am I?",
+      titleArabic: "من أنا؟",
+      subtitle: "Discover Your Spiritual Profile",
+      description: "Uncover your spiritual essence through sacred numerology. Using ʿIlm al-Ḥurūf, discover your element, personality traits, blessed day, and divine guidance.",
+      scholarlyName: "Istikharah al-Asmāʾ",
       
       // Form section
       form: {
-        title: "Enter Names for Guidance",
-        personName: "Person's Name",
+        title: "Enter Your Details",
+        personName: "Your Name",
         personNamePlaceholder: "e.g., Muhammad, Fatima, Ibrahim",
         motherName: "Mother's Name",
         motherNamePlaceholder: "e.g., Khadija, Aisha, Maryam",
-        calculateButton: "Seek Guidance",
+        dateOfBirth: "Date of Birth",
+        dateOfBirthPlaceholder: "Select your birth date",
+        dateOfBirthHelper: "Used for precise astrological calculations",
+        calculateButton: "Discover My Profile",
         clearButton: "Clear",
         validationError: "Please enter both names to continue",
         bothNamesRequired: "Both names are required for accurate guidance",
@@ -3032,11 +3036,11 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
       
       // Educational footer
       education: {
-        title: "About Istikharah al-Asmā'",
+        title: "About This Analysis",
         whatIsIt: "What is it?",
-        whatIsItText: "Istikharah al-Asmā' (الاستخارة بالأسماء) is a traditional Islamic practice that seeks divine guidance by analyzing the spiritual resonance between names using ʿIlm al-Ḥurūf (Science of Letters).",
+        whatIsItText: "'Who Am I?' uses Istikharah al-Asmāʾ (الاستخارة بالأسماء), a traditional Islamic practice that reveals your spiritual profile by analyzing the sacred resonance of your name and mother's name using ʿIlm al-Ḥurūf (Science of Letters).",
         howItWorks: "How does it work?",
-        howItWorksText: "By calculating the Abjad values of both names and applying the Buruj system (12 remainders mapped to 4 elements), we reveal the spiritual temperament and divine guidance specific to this connection.",
+        howItWorksText: "By calculating the Abjad values of both names and applying the Buruj system (12 remainders mapped to 4 elements), we reveal your spiritual temperament, blessed day, ideal career paths, and personalized spiritual practices.",
         isItPermissible: "Is it permissible?",
         isItPermissibleText: "This practice is rooted in West African Islamic scholarly tradition, particularly Senegalese ʿIlm al-Ḥurūf. It is used for reflection and guidance, not fortune-telling. Always combine with prayer (duʿāʾ) and consult qualified scholars for important decisions.",
       },
@@ -3059,7 +3063,7 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
       planetary: "Alignement Planétaire",
       about: "À Propos",
       guidance: "Guide de Vie",
-      advanced: "Istikharah",
+      advanced: "Qui Suis-Je ?",
       menu: "Menu",
     },
 
@@ -5934,23 +5938,27 @@ AVEC cette connaissance, ils comprennent : "Nous essayons tous les deux de nous 
     },
 
     // ============================================================================
-    // MODULE ISTIKHARA - Istikharah al-Asmā' (الاستخارة بالأسماء)
+    // MODULE QUI SUIS-JE - Istikharah al-Asmā' (الاستخارة بالأسماء)
     // ============================================================================
     istikhara: {
       // Panneau principal
-      title: "Istikharah al-Asmā'",
-      titleArabic: "الاستخارة بالأسماء",
-      subtitle: "Guidance Spirituelle par les Noms",
-      description: "Cherchez la guidance divine en examinant la connexion spirituelle entre deux noms en utilisant la science sacrée du ʿIlm al-Ḥurūf.",
+      title: "Qui Suis-Je ?",
+      titleArabic: "من أنا؟",
+      subtitle: "Découvrez Votre Profil Spirituel",
+      description: "Dévoilez votre essence spirituelle grâce à la numérologie sacrée. Avec ʿIlm al-Ḥurūf, découvrez votre élément, vos traits de personnalité, votre jour béni et votre guidance divine.",
+      scholarlyName: "Istikharah al-Asmāʾ",
       
       // Section formulaire
       form: {
-        title: "Entrez les Noms pour la Guidance",
-        personName: "Nom de la Personne",
+        title: "Entrez Vos Informations",
+        personName: "Votre Nom",
         personNamePlaceholder: "p.ex., Muhammad, Fatima, Ibrahim",
         motherName: "Nom de la Mère",
         motherNamePlaceholder: "p.ex., Khadija, Aisha, Maryam",
-        calculateButton: "Chercher la Guidance",
+        dateOfBirth: "Date de Naissance",
+        dateOfBirthPlaceholder: "Sélectionnez votre date de naissance",
+        dateOfBirthHelper: "Utilisée pour des calculs astrologiques précis",
+        calculateButton: "Découvrir Mon Profil",
         clearButton: "Effacer",
         validationError: "Veuillez entrer les deux noms pour continuer",
         bothNamesRequired: "Les deux noms sont requis pour une guidance précise",
@@ -6069,11 +6077,11 @@ AVEC cette connaissance, ils comprennent : "Nous essayons tous les deux de nous 
       
       // Pied de page éducatif
       education: {
-        title: "À Propos d'Istikharah al-Asmā'",
+        title: "À Propos de Cette Analyse",
         whatIsIt: "Qu'est-ce que c'est ?",
-        whatIsItText: "Istikharah al-Asmā' (الاستخارة بالأسماء) est une pratique islamique traditionnelle qui cherche la guidance divine en analysant la résonance spirituelle entre les noms en utilisant le ʿIlm al-Ḥurūf (Science des Lettres).",
+        whatIsItText: "'Qui Suis-Je ?' utilise Istikharah al-Asmāʾ (الاستخارة بالأسماء), une pratique islamique traditionnelle qui révèle votre profil spirituel en analysant la résonance sacrée de votre nom et du nom de votre mère en utilisant le ʿIlm al-Ḥurūf (Science des Lettres).",
         howItWorks: "Comment ça fonctionne ?",
-        howItWorksText: "En calculant les valeurs Abjad des deux noms et en appliquant le système Buruj (12 restes mappés à 4 éléments), nous révélons le tempérament spirituel et la guidance divine spécifiques à cette connexion.",
+        howItWorksText: "En calculant les valeurs Abjad des deux noms et en appliquant le système Buruj (12 restes mappés à 4 éléments), nous révélons votre tempérament spirituel, jour béni, parcours professionnels idéaux et pratiques spirituelles personnalisées.",
         isItPermissible: "Est-ce permis ?",
         isItPermissibleText: "Cette pratique est enracinée dans la tradition savante islamique d'Afrique de l'Ouest, en particulier le ʿIlm al-Ḥurūf sénégalais. Elle est utilisée pour la réflexion et la guidance, pas pour la divination. Combinez toujours avec la prière (duʿāʾ) et consultez des savants qualifiés pour les décisions importantes.",
       },

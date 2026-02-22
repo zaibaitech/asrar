@@ -186,6 +186,15 @@ export interface IstikharaCalculationResult {
   burujRemainder: number;
   burujProfile: BurujProfile;
   repetitionCount: number;
+  // Optional fields for birth-date calculation method
+  calculationMethod?: 'name-based' | 'birth-date';
+  birthDate?: string;
+  dateFormat?: 'full' | 'month-day';
+  // Zodiac (Burj) names - available for birth-date method
+  burjNameAr?: string;
+  burjNameEn?: string;
+  burjNameFr?: string;
+  burjPlanetaryRuler?: string;
 }
 
 export interface IstikharaFormData {
