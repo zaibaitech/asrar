@@ -2113,19 +2113,22 @@ export default function AsrarEveryday() {
                 <span className="hidden sm:inline">{t.calculator.title}</span>
                 <span className="sm:hidden">{t.common.calculate}</span>
               </button>
-              {/* Life Guidance & Who Am I tabs */}
-              <button
-                onClick={() => setViewMode('guidance')}
-                className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all whitespace-nowrap text-sm sm:text-base ${
-                  viewMode === 'guidance'
-                    ? 'bg-gradient-to-r from-violet-600 to-purple-700 text-white shadow-lg'
-                    : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700'
-                }`}
-              >
-                <Compass className="w-4 sm:w-5 h-4 sm:h-5 inline mr-1 sm:mr-2" />
-                <span className="hidden sm:inline">{t.nav.guidance}</span>
-                <span className="sm:hidden">{t.nav.guidance}</span>
-              </button>
+              {/* Life Guidance — dev only */}
+              {process.env.NODE_ENV === 'development' && (
+                <button
+                  onClick={() => setViewMode('guidance')}
+                  className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all whitespace-nowrap text-sm sm:text-base ${
+                    viewMode === 'guidance'
+                      ? 'bg-gradient-to-r from-violet-600 to-purple-700 text-white shadow-lg'
+                      : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700'
+                  }`}
+                >
+                  <Compass className="w-4 sm:w-5 h-4 sm:h-5 inline mr-1 sm:mr-2" />
+                  <span className="hidden sm:inline">{t.nav.guidance}</span>
+                  <span className="sm:hidden">{t.nav.guidance}</span>
+                </button>
+              )}
+              {/* Who Am I tab */}
               <button
                 onClick={() => setViewMode('advanced')}
                 className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all whitespace-nowrap text-sm sm:text-base ${
