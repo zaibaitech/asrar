@@ -75,7 +75,7 @@ export function WaveHadiyyaCard({ locale }: WaveHadiyyaCardProps) {
           <div className="flex justify-center">
             <div className="bg-white p-3 rounded-xl shadow-sm">
               <Image
-                src="/images/wave-qr-senegal.png"
+                src="/images/wave_qr_773363584.png"
                 alt="Wave Sénégal QR Code"
                 width={200}
                 height={200}
