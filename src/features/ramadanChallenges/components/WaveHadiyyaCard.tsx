@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Copy, Check } from 'lucide-react';
+import Image from 'next/image';
+import { Copy, Check, QrCode } from 'lucide-react';
 import { WAVE_RECIPIENT, HADIYYA_TEXT } from '../waveDonation';
 
 interface WaveHadiyyaCardProps {
@@ -29,6 +30,7 @@ const SendWaveLogo = () => (
 
 export function WaveHadiyyaCard({ locale }: WaveHadiyyaCardProps) {
   const [copied, setCopied] = useState(false);
+  const [showQR, setShowQR] = useState(false);
   const t = HADIYYA_TEXT[locale];
 
   const copyNumber = async () => {
@@ -57,6 +59,35 @@ export function WaveHadiyyaCard({ locale }: WaveHadiyyaCardProps) {
       <p className="text-base font-medium text-amber-700 dark:text-amber-300 mb-3">
         {WAVE_RECIPIENT.name}
       </p>
+
+      {/* QR Code Toggle Button */}
+      <button
+        onClick={() => setShowQR(!showQR)}
+        className="w-full flex items-center justify-center gap-2 py-2.5 px-3 mb-3 rounded-xl bg-cyan-500 hover:bg-cyan-600 text-white font-medium text-sm transition-all shadow-md shadow-cyan-500/20"
+      >
+        <QrCode className="w-5 h-5" />
+        <span>🇸🇳 {showQR ? (locale === 'fr' ? 'Masquer QR Code' : 'Hide QR Code') : (locale === 'fr' ? 'Scanner QR Wave Sénégal' : 'Scan Wave Senegal QR')}</span>
+      </button>
+
+      {/* QR Code Display */}
+      {showQR && (
+        <div className="mb-4 p-4 bg-white dark:bg-slate-800 rounded-xl border border-cyan-200 dark:border-cyan-800 animate-in slide-in-from-top-2 duration-200">
+          <div className="flex justify-center">
+            <div className="bg-white p-3 rounded-xl shadow-sm">
+              <Image
+                src="/images/wave-qr-senegal.png"
+                alt="Wave Sénégal QR Code"
+                width={200}
+                height={200}
+                className="rounded-lg"
+              />
+            </div>
+          </div>
+          <p className="text-center text-xs text-slate-500 dark:text-slate-400 mt-3">
+            {locale === 'fr' ? 'Scannez avec l\'app Wave Sénégal' : 'Scan with Wave Senegal app'}
+          </p>
+        </div>
+      )}
 
       {/* Buttons Row */}
       <div className="flex gap-2 mb-2">

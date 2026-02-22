@@ -14,7 +14,7 @@ export const WAVE_RECIPIENT = {
     en: 'Spiritual Master · Ṭarīqa Tijāniyya',
     fr: 'Maître Spirituel · Ṭarīqa Tijāniyya',
   },
-  waveUrlSenegal: 'https://wave.com/send?phone=+221773363584',
+  waveUrlSenegal: 'https://pay.wave.com/m/221773363584',
   sendWaveUrl: {
     en: 'https://www.sendwave.com/en',
     fr: 'https://www.sendwave.com/fr',
