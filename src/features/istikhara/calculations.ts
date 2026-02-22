@@ -118,6 +118,9 @@ export function calculateIstikhara(
   // Calculate repetition count for spiritual practice
   const repetitionCount = calculateRepetitionCount(personTotal, motherTotal);
 
+  // Get zodiac names using burujRemainder (1-12) mapped to 0-indexed arrays
+  const zodiacIndex = burujRemainder - 1;
+
   return {
     personName: personName.trim(),
     motherName: motherName.trim(),
@@ -126,7 +129,12 @@ export function calculateIstikhara(
     combinedTotal,
     burujRemainder,
     burujProfile,
-    repetitionCount
+    repetitionCount,
+    calculationMethod: 'name-based',
+    // Include zodiac names for display (same as DOB calculation)
+    burjNameAr: BURJ_NAMES_AR[zodiacIndex],
+    burjNameEn: BURJ_NAMES_EN[zodiacIndex],
+    burjNameFr: BURJ_NAMES_FR[zodiacIndex],
   };
 }
 

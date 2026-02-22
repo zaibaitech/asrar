@@ -371,23 +371,29 @@ export function IstikharaSummaryCard({ result }: IstikhSummaryCardProps) {
                   {scores.main}%
                 </div>
                 
-                {/* Zodiac Name - English */}
-                {result.burjNameEn ? (
-                  <div className="text-lg sm:text-xl font-semibold text-white mt-1">
-                    {language === "fr" ? result.burjNameFr : result.burjNameEn}
-                  </div>
-                ) : (
-                  <div className="text-lg sm:text-xl font-semibold text-white mt-1 capitalize">
-                    {profile.element}
-                  </div>
-                )}
-                
-                {/* Zodiac Name - Arabic */}
-                {result.burjNameAr && (
-                  <div className="text-base sm:text-lg font-arabic text-white/90 mt-0.5" dir="rtl">
-                    {result.burjNameAr}
-                  </div>
-                )}
+                {/* Zodiac Name - Derived from burujRemainder for consistency */}
+                {(() => {
+                  // Zodiac names arrays (same as calculations.ts)
+                  const ZODIAC_EN = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
+                  const ZODIAC_FR = ['Bélier', 'Taureau', 'Gémeaux', 'Cancer', 'Lion', 'Vierge', 'Balance', 'Scorpion', 'Sagittaire', 'Capricorne', 'Verseau', 'Poissons'];
+                  const ZODIAC_AR = ['الحمل', 'الثور', 'الجوزاء', 'السرطان', 'الأسد', 'العذراء', 'الميزان', 'العقرب', 'القوس', 'الجدي', 'الدلو', 'الحوت'];
+                  
+                  const zodiacIndex = result.burujRemainder - 1; // Convert 1-12 to 0-11
+                  const zodiacEn = result.burjNameEn || ZODIAC_EN[zodiacIndex];
+                  const zodiacFr = result.burjNameFr || ZODIAC_FR[zodiacIndex];
+                  const zodiacAr = result.burjNameAr || ZODIAC_AR[zodiacIndex];
+                  
+                  return (
+                    <>
+                      <div className="text-lg sm:text-xl font-semibold text-white mt-1">
+                        {language === "fr" ? zodiacFr : zodiacEn}
+                      </div>
+                      <div className="text-base sm:text-lg font-arabic text-white/90 mt-0.5" dir="rtl">
+                        {zodiacAr}
+                      </div>
+                    </>
+                  );
+                })()}
               </div>
             </div>
             
