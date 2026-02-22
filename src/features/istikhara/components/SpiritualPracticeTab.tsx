@@ -234,13 +234,26 @@ export function SpiritualPracticeTab({ result }: SpiritualPracticeTabProps) {
 
         {/* Quick Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 md:gap-4">
-          <div className={`p-3 sm:p-4 bg-black/30 rounded-lg sm:rounded-xl border ${colors.border}`}>
-            <div className="text-xl sm:text-2xl mb-1">🔢</div>
-            <div className="text-xl sm:text-2xl font-bold text-white">{result.repetitionCount}</div>
-            <div className="text-[10px] sm:text-xs text-white">
-              {language === 'en' ? 'Dhikr Count' : 'Compteur Dhikr'}
+          {/* Dhikr Count - Only show for name-based calculations */}
+          {result.calculationMethod === 'name-based' ? (
+            <div className={`p-3 sm:p-4 bg-black/30 rounded-lg sm:rounded-xl border ${colors.border}`}>
+              <div className="text-xl sm:text-2xl mb-1">🔢</div>
+              <div className="text-xl sm:text-2xl font-bold text-white">{result.repetitionCount}</div>
+              <div className="text-[10px] sm:text-xs text-white">
+                {language === 'en' ? 'Dhikr Count' : 'Compteur Dhikr'}
+              </div>
             </div>
-          </div>
+          ) : (
+            <div className={`p-3 sm:p-4 bg-black/30 rounded-lg sm:rounded-xl border ${colors.border} opacity-70`}>
+              <div className="text-xl sm:text-2xl mb-1">🔢</div>
+              <div className="text-xs sm:text-sm font-medium text-white/80">
+                {language === 'en' ? 'Use Name' : 'Utiliser Nom'}
+              </div>
+              <div className="text-[10px] sm:text-xs text-white/60">
+                {language === 'en' ? 'For Dhikr Count' : 'Pour le Compteur'}
+              </div>
+            </div>
+          )}
           
           <div className={`p-3 sm:p-4 bg-black/30 rounded-lg sm:rounded-xl border ${colors.border}`}>
             <div className="text-xl sm:text-2xl mb-1">🌙</div>
