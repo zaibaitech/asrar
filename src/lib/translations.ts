@@ -2936,6 +2936,7 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
           career: "Career Guidance",
           blessedDay: "Blessed Day",
           spiritual: "Spiritual Practice",
+          sadaqah: "Sadaqah",
         },
       },
       
@@ -5977,6 +5978,7 @@ AVEC cette connaissance, ils comprennent : "Nous essayons tous les deux de nous 
           career: "Guidance Professionnelle",
           blessedDay: "Jour Béni",
           spiritual: "Pratique Spirituelle",
+          sadaqah: "Sadaqah",
         },
       },
       

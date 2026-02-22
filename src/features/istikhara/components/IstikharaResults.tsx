@@ -6,6 +6,7 @@ import { translations } from "../../../lib/translations";
 import { IstikharaSummaryCard } from "./IstikharaSummaryCard";
 import { CareerTabAdvanced } from "./CareerTabAdvanced";
 import { SpiritualPracticeTab } from "./SpiritualPracticeTab";
+import { SadaqaTab } from "./SadaqaTab";
 import type { IstikharaCalculationResult } from "../types";
 import {
   User,
@@ -43,7 +44,7 @@ interface IstikharaResultsProps {
   onReset: () => void;
 }
 
-type TabKey = "overview" | "personality" | "career" | "blessedDay" | "spiritual";
+type TabKey = "overview" | "personality" | "career" | "blessedDay" | "spiritual" | "sadaqah";
 
 /**
  * IstikharaResults - Enhanced Results Display with Comprehensive Data
@@ -153,6 +154,12 @@ export function IstikharaResults({ result, onReset }: IstikharaResultsProps) {
       label: t.results.tabs.spiritual, 
       icon: <Moon className="w-5 h-5" />,
       description: language === "en" ? "Practices" : "Pratiques"
+    },
+    { 
+      key: "sadaqah", 
+      label: t.results.tabs.sadaqah || (language === "en" ? "Sadaqah" : "Sadaqah"), 
+      icon: <Heart className="w-5 h-5" />,
+      description: language === "en" ? "Charity" : "Charité"
     }
   ];
 
@@ -252,7 +259,7 @@ export function IstikharaResults({ result, onReset }: IstikharaResultsProps) {
     <div className="space-y-8 pb-12" ref={resultsRef}>
       {/* Tab Navigation - Enhanced */}
       <div className="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-2 border-white/10 rounded-xl sm:rounded-2xl p-1 sm:p-2">
-        <div className="grid grid-cols-5 gap-1 sm:gap-2 overflow-x-auto">
+        <div className="grid grid-cols-3 sm:grid-cols-6 gap-1 sm:gap-2 overflow-x-auto">
           {tabs.map((tab) => (
             <button
               key={tab.key}
@@ -305,6 +312,9 @@ export function IstikharaResults({ result, onReset }: IstikharaResultsProps) {
         )}
         {activeTab === "spiritual" && (
           <SpiritualPracticeTab result={result} />
+        )}
+        {activeTab === "sadaqah" && (
+          <SadaqaTab result={result} />
         )}
       </div>
 
