@@ -15,7 +15,7 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { ChevronDown, ChevronUp, Plus } from 'lucide-react';
+import { ChevronDown, ChevronUp, Plus, Compass } from 'lucide-react';
 import { getRamadanInfo, formatRamadanDay, type RamadanInfo } from '@/src/lib/hijri';
 import { useRamadanChallenges, createIstighfarChallenge, createSalawatChallenge, createDivineNameChallenge } from '../store';
 import { RIZQ_PRACTICE_INFO } from '../propheticNames201';
@@ -285,6 +285,22 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
 
             {/* Community Banner (at bottom) */}
             <CommunityBanner stats={state.community} language={language} />
+            
+            {/* Explore App Button - Always visible for easy navigation */}
+            <button
+              onClick={() => {
+                const tabsElement = document.getElementById('app-main-tabs');
+                if (tabsElement) {
+                  tabsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              }}
+              className="w-full flex items-center justify-center gap-2 p-3 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-medium transition-all shadow-md hover:shadow-lg"
+            >
+              <Compass className="w-5 h-5" />
+              <span>
+                {language === 'fr' ? 'Explorer Asrar' : 'Explore Asrar'}
+              </span>
+            </button>
           </div>
         )}
       </div>

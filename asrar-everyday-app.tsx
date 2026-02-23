@@ -2087,7 +2087,7 @@ export default function AsrarEveryday() {
           </div>
           
           {/* View Mode Tabs - Mobile Responsive */}
-          <div className="mb-2 sm:mb-8 overflow-x-auto">
+          <div id="app-main-tabs" className="mb-2 sm:mb-8 overflow-x-auto scroll-mt-4">
             <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 p-1.5 sm:p-2 inline-flex gap-1.5 sm:gap-2 min-w-full sm:min-w-0">
               <button
                 onClick={() => setViewMode('planetary')}
