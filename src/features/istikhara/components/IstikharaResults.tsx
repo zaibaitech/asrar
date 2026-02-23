@@ -153,7 +153,7 @@ export function IstikharaResults({ result, onReset }: IstikharaResultsProps) {
       key: "spiritual", 
       label: t.results.tabs.spiritual, 
       icon: <Moon className="w-5 h-5" />,
-      description: language === "en" ? "Practices" : "Pratiques"
+      description: language === "en" ? "Dhikr" : "Dhikr"
     },
     { 
       key: "sadaqah", 

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { useLanguage } from "../../../contexts/LanguageContext";
 import { 
   Moon, 
@@ -36,8 +36,6 @@ import type { IstikharaCalculationResult, ZodiacSign } from "../types";
 interface SpiritualPracticeTabProps {
   result: IstikharaCalculationResult;
 }
-
-type PracticeType = "monthly" | "lifetime" | "divine";
 
 /**
  * SpiritualPracticeTab - Complete Spiritual Practice Guidance with ALL Data
@@ -75,17 +73,11 @@ export function SpiritualPracticeTab({ result }: SpiritualPracticeTabProps) {
   const profile = result.burujProfile;
   const elementKey = profile.element.toLowerCase() as "fire" | "earth" | "air" | "water";
   
-  const [activeType, setActiveType] = useState<PracticeType>("divine");
   const [showInstructions, setShowInstructions] = useState(false);
   const [showTracking, setShowTracking] = useState(false);
   const [showAngelsJinn, setShowAngelsJinn] = useState(true);
   const [showQuranicVerse, setShowQuranicVerse] = useState(true);
   const [copied, setCopied] = useState<string | null>(null);
-
-  // Create refs for scroll-to-section functionality
-  const monthlyRef = useRef<HTMLDivElement>(null);
-  const lifetimeRef = useRef<HTMLDivElement>(null);
-  const divineRef = useRef<HTMLDivElement>(null);
 
   // Enhanced element colors - Optimized for visibility
   const elementColors = {
@@ -129,27 +121,6 @@ export function SpiritualPracticeTab({ result }: SpiritualPracticeTabProps) {
 
   const colors = elementColors[elementKey];
 
-  const tabs: Array<{ type: PracticeType; label: string; icon: React.ReactNode; desc: string }> = [
-    { 
-      type: "monthly", 
-      label: language === 'en' ? 'Monthly Sadaqah' : 'Sadaqah Mensuel', 
-      icon: <Calendar className="w-5 h-5" />,
-      desc: language === 'en' ? 'Regular practice' : 'Pratique régulière'
-    },
-    { 
-      type: "lifetime", 
-      label: language === 'en' ? 'Lifetime Offering' : 'Offrande de Vie', 
-      icon: <Gift className="w-5 h-5" />,
-      desc: language === 'en' ? 'Once in life' : 'Une fois dans la vie'
-    },
-    { 
-      type: "divine", 
-      label: language === 'en' ? 'Divine Names' : 'Noms Divins', 
-      icon: <Sparkles className="w-5 h-5" />,
-      desc: language === 'en' ? 'Daily dhikr' : 'Dhikr quotidien'
-    }
-  ];
-
   // Copy to clipboard helper
   const handleCopy = async (text: string, type: string) => {
     try {
@@ -158,57 +129,6 @@ export function SpiritualPracticeTab({ result }: SpiritualPracticeTabProps) {
       setTimeout(() => setCopied(null), 2000);
     } catch (err) {
       console.error('Failed to copy:', err);
-    }
-  };
-
-  // Smooth scroll to section with mobile optimization
-  const scrollToSection = (ref: React.RefObject<HTMLDivElement>, tabName: PracticeType) => {
-    // If already active, just scroll to it
-    if (activeType === tabName && ref.current) {
-      ref.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-        inline: 'nearest'
-      });
-      return;
-    }
-
-    // Change active type to show the target section
-    setActiveType(tabName);
-    
-    // Wait for DOM update, then scroll
-    setTimeout(() => {
-      if (ref.current) {
-        const isMobile = window.innerWidth < 768;
-        const yOffset = isMobile ? -100 : -80; // Offset for sticky header
-        const element = ref.current;
-        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-        window.scrollTo({
-          top: y,
-          behavior: 'smooth'
-        });
-
-        // Add highlight animation
-        element.classList.add('section-highlight');
-        setTimeout(() => {
-          element.classList.remove('section-highlight');
-        }, 1500);
-      }
-    }, 50);
-  };
-
-  // Map practice types to refs
-  const getRefForType = (type: PracticeType) => {
-    switch (type) {
-      case 'monthly':
-        return monthlyRef;
-      case 'lifetime':
-        return lifetimeRef;
-      case 'divine':
-        return divineRef;
-      default:
-        return divineRef;
     }
   };
 
@@ -223,12 +143,12 @@ export function SpiritualPracticeTab({ result }: SpiritualPracticeTabProps) {
             </div>
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold text-white">
-            {language === 'en' ? 'Spiritual Practice & Growth' : 'Pratique Spirituelle & Croissance'}
+            {language === 'en' ? 'Divine Names & Dhikr Practice' : 'Noms Divins & Pratique du Dhikr'}
           </h2>
           <p className="text-sm sm:text-base text-white max-w-2xl mx-auto px-2">
             {language === 'en' 
-              ? 'Complete guidance for your spiritual journey with three types of practices tailored to your element' 
-              : 'Guide complet pour votre cheminement spirituel avec trois types de pratiques adaptées à votre élément'}
+              ? 'Your personalized dhikr guidance with Divine Names tailored to your spiritual profile' 
+              : 'Votre guidance personnalisée pour le dhikr avec les Noms Divins adaptés à votre profil spirituel'}
           </p>
         </div>
 
@@ -512,39 +432,10 @@ export function SpiritualPracticeTab({ result }: SpiritualPracticeTabProps) {
       )}
 
       {/* Practice Type Navigation */}
-      <div className="sticky top-0 z-10 bg-slate-900/80 backdrop-blur-sm py-3 px-2 rounded-xl border-2 border-white/10">
-        <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-2">
-          {tabs.map((tab) => (
-            <button
-              key={tab.type}
-              onClick={() => scrollToSection(getRefForType(tab.type), tab.type)}
-              className={`
-                flex items-center gap-2 px-5 py-3 rounded-xl
-                font-medium text-sm transition-all duration-200
-                whitespace-nowrap shadow-sm
-                ${activeType === tab.type
-                  ? `bg-gradient-to-br ${colors.bgGradient} border-2 ${colors.border} ${colors.glow} text-white scale-105`
-                  : 'bg-slate-700/50 text-slate-200 hover:bg-slate-600/50 border-2 border-white/10'
-                }
-              `}
-            >
-              <span className={activeType === tab.type ? colors.text : ''}>{tab.icon}</span>
-              <span>{tab.label}</span>
-            </button>
-          ))}
-        </div>
-      </div>
+      {/* Sub-tabs removed - content is now in dedicated Sadaqah tab */}
 
-      {/* Practice Content */}
-      <div ref={monthlyRef} className={`min-h-[600px] scroll-section ${activeType === "monthly" ? "" : "hidden"}`}>
-        <EnhancedMonthlySadaqahSection result={result} colors={colors} />
-      </div>
-      
-      <div ref={lifetimeRef} className={`min-h-[600px] scroll-section ${activeType === "lifetime" ? "" : "hidden"}`}>
-        <EnhancedLifetimeOfferingSection result={result} colors={colors} />
-      </div>
-      
-      <div ref={divineRef} className={`min-h-[600px] scroll-section ${activeType === "divine" ? "" : "hidden"}`}>
+      {/* Divine Names Content - Main Section */}
+      <div className="min-h-[600px]">
         <EnhancedDivineNamesSection 
           result={result}
           colors={colors}
