@@ -22,7 +22,9 @@ import {
   MessageCircle,
   Send,
   Link2,
-  Check
+  Check,
+  RefreshCw,
+  Repeat
 } from 'lucide-react';
 import type { Challenge, SessionTag } from '../types';
 import { RIZQ_PRACTICE_INFO } from '../propheticNames201';
@@ -46,6 +48,38 @@ interface DaySession {
 // ─── Local Storage Key for Session Progress ──────────────────────────────────────
 
 const SESSIONS_STORAGE_KEY = 'prophetic_names_sessions_v1';
+const CONTINUE_DAILY_KEY = 'prophetic_names_continue_daily_v1';
+
+// ─── Continue Daily Types ────────────────────────────────────────────────────────
+
+interface ContinueDailyState {
+  enabled: boolean;
+  completedCycles: number;
+  lastPracticeDate: string | null; // ISO date string (YYYY-MM-DD)
+  totalDailyPractices: number;
+}
+
+function getDefaultContinueState(): ContinueDailyState {
+  return { enabled: false, completedCycles: 0, lastPracticeDate: null, totalDailyPractices: 0 };
+}
+
+function getStoredContinueState(challengeId: string): ContinueDailyState {
+  if (typeof window === 'undefined') return getDefaultContinueState();
+  try {
+    const raw = localStorage.getItem(`${CONTINUE_DAILY_KEY}_${challengeId}`);
+    if (raw) return JSON.parse(raw);
+  } catch {}
+  return getDefaultContinueState();
+}
+
+function storeContinueState(challengeId: string, state: ContinueDailyState) {
+  if (typeof window === 'undefined') return;
+  localStorage.setItem(`${CONTINUE_DAILY_KEY}_${challengeId}`, JSON.stringify(state));
+}
+
+function getTodayDate(): string {
+  return new Date().toISOString().split('T')[0];
+}
 
 // ─── Helper Functions ────────────────────────────────────────────────────────────
 
@@ -88,6 +122,7 @@ export function PropheticNamesCard({
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
   const [linkCopied, setLinkCopied] = useState(false);
+  const [continueState, setContinueState] = useState<ContinueDailyState>(getDefaultContinueState());
 
   // Use production base URL for consistent share links
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
@@ -164,6 +199,8 @@ export function PropheticNamesCard({
   useEffect(() => {
     const stored = getStoredSessions(challenge.id);
     setSessions(stored);
+    const storedContinue = getStoredContinueState(challenge.id);
+    setContinueState(storedContinue);
   }, [challenge.id]);
 
   // Calculate progress
@@ -175,6 +212,44 @@ export function PropheticNamesCard({
   const progressPercent = Math.round((completedSessions / totalSessions) * 100);
   const currentDayNumber = sessions.findIndex(s => !s.completed) + 1 || 7;
   const isComplete = completedSessions === totalSessions;
+  const isContinueMode = continueState.enabled;
+  const todayDone = continueState.lastPracticeDate === getTodayDate();
+
+  // Enable continue daily mode
+  const enableContinueDaily = () => {
+    const newState: ContinueDailyState = {
+      enabled: true,
+      completedCycles: continueState.completedCycles + 1,
+      lastPracticeDate: continueState.lastPracticeDate,
+      totalDailyPractices: continueState.totalDailyPractices,
+    };
+    setContinueState(newState);
+    storeContinueState(challenge.id, newState);
+  };
+
+  // Mark today's daily practice as done
+  const completeDailyPractice = () => {
+    const newState: ContinueDailyState = {
+      ...continueState,
+      lastPracticeDate: getTodayDate(),
+      totalDailyPractices: continueState.totalDailyPractices + 1,
+    };
+    setContinueState(newState);
+    storeContinueState(challenge.id, newState);
+    const sessionTag: SessionTag = 'Ḍuḥā / Morning';
+    onLogSession(challenge.id, 1, sessionTag);
+    setShowPractice(false);
+  };
+
+  // Exit continue mode and reset
+  const exitContinueMode = () => {
+    const defaultSessions = getDefaultSessions();
+    setSessions(defaultSessions);
+    storeSessionProgress(challenge.id, defaultSessions);
+    const newState = getDefaultContinueState();
+    setContinueState(newState);
+    storeContinueState(challenge.id, newState);
+  };
 
   // Toggle a session completion
   const toggleSession = (day: number) => {
@@ -204,8 +279,12 @@ export function PropheticNamesCard({
 
   // Complete a practice session
   const completePractice = () => {
-    toggleSession(currentDay);
-    setShowPractice(false);
+    if (isContinueMode) {
+      completeDailyPractice();
+    } else {
+      toggleSession(currentDay);
+      setShowPractice(false);
+    }
   };
 
   // Reset progress
@@ -219,6 +298,7 @@ export function PropheticNamesCard({
   // Delete challenge
   const handleDelete = () => {
     localStorage.removeItem(`${SESSIONS_STORAGE_KEY}_${challenge.id}`);
+    localStorage.removeItem(`${CONTINUE_DAILY_KEY}_${challenge.id}`);
     onRemove(challenge.id);
   };
 
@@ -371,7 +451,7 @@ export function PropheticNamesCard({
             )}
 
             {/* Complete celebration */}
-            {isComplete && (
+            {isComplete && !isContinueMode && (
               <div className="p-4 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-800/50 text-center">
                 <div className="text-3xl mb-2">🎉</div>
                 <h4 className="font-bold text-emerald-700 dark:text-emerald-300">
@@ -381,6 +461,13 @@ export function PropheticNamesCard({
                   {t.completedAllDays}
                 </p>
                 <div className="mt-4 space-y-2">
+                  <button
+                    onClick={enableContinueDaily}
+                    className="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold transition-all flex items-center justify-center gap-2 shadow-lg shadow-amber-500/25"
+                  >
+                    <Repeat className="w-4 h-4" />
+                    {t.continueDaily}
+                  </button>
                   <button
                     onClick={() => {
                       if (typeof navigator !== 'undefined' && 'share' in navigator) {
@@ -399,6 +486,76 @@ export function PropheticNamesCard({
                     className="text-sm text-emerald-600 dark:text-emerald-400 hover:underline"
                   >
                     {t.startAgain}
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* Continue Daily Mode */}
+            {isContinueMode && (
+              <div className="p-4 rounded-xl bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 border border-amber-200 dark:border-amber-800/50">
+                {/* Stats row */}
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-2">
+                    <Repeat className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+                    <span className="text-sm font-semibold text-amber-700 dark:text-amber-300">
+                      {t.dailyPractice}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400">
+                    <span>{t.cycles}: {continueState.completedCycles}</span>
+                    <span>•</span>
+                    <span>{t.totalPractices}: {continueState.totalDailyPractices}</span>
+                  </div>
+                </div>
+
+                {/* Today's status */}
+                {todayDone ? (
+                  <div className="flex items-center gap-3 p-3 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-800/50">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm font-medium text-emerald-700 dark:text-emerald-300">
+                        {t.todayComplete}
+                      </p>
+                      <p className="text-xs text-emerald-600 dark:text-emerald-400">
+                        {t.comeBackTomorrow}
+                      </p>
+                    </div>
+                  </div>
+                ) : (
+                  <button
+                    onClick={() => {
+                      setCurrentDay(1);
+                      setShowPractice(true);
+                    }}
+                    className="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold transition-all flex items-center justify-center gap-2 shadow-lg shadow-amber-500/25"
+                  >
+                    <Play className="w-4 h-4" />
+                    {t.startTodaysPractice}
+                  </button>
+                )}
+
+                {/* Exit continue mode */}
+                <div className="mt-3 flex items-center justify-between">
+                  <button
+                    onClick={() => {
+                      if (typeof navigator !== 'undefined' && 'share' in navigator) {
+                        handleNativeShare();
+                      } else {
+                        setShowShareModal(true);
+                      }
+                    }}
+                    className="text-xs text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
+                  >
+                    <Share2 className="w-3 h-3" />
+                    {t.inviteFriends}
+                  </button>
+                  <button
+                    onClick={exitContinueMode}
+                    className="text-xs text-slate-400 hover:text-red-500 transition-colors flex items-center gap-1"
+                  >
+                    <RefreshCw className="w-3 h-3" />
+                    {t.resetAll}
                   </button>
                 </div>
               </div>

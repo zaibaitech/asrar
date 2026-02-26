@@ -254,6 +254,14 @@ export const translations = {
       congratulations: "Congratulations!",
       completedAllDays: "You have completed all 7 days of practice!",
       startAgain: "Start Again",
+      continueDaily: "Continue Daily",
+      dailyPractice: "Daily Practice",
+      cycles: "Cycles",
+      totalPractices: "Total",
+      todayComplete: "Today's practice is done!",
+      comeBackTomorrow: "Come back tomorrow for your next session",
+      startTodaysPractice: "Start Today's Practice",
+      resetAll: "Reset All",
       
       // Practice Steps
       practiceSteps: "Practice Steps",
@@ -3300,6 +3308,14 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
       congratulations: "Félicitations!",
       completedAllDays: "Vous avez complété les 7 jours de pratique!",
       startAgain: "Recommencer",
+      continueDaily: "Continuer chaque jour",
+      dailyPractice: "Pratique quotidienne",
+      cycles: "Cycles",
+      totalPractices: "Total",
+      todayComplete: "La pratique d'aujourd'hui est terminée!",
+      comeBackTomorrow: "Revenez demain pour votre prochaine session",
+      startTodaysPractice: "Commencer la pratique du jour",
+      resetAll: "Tout réinitialiser",
       
       // Étapes de pratique
       practiceSteps: "Étapes de la pratique",
