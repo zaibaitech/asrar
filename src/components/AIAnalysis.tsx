@@ -13,7 +13,15 @@ interface AIAnalysisProps {
   className?: string;
 }
 
-export default function AIAnalysis({
+// Hide AI features in production
+const IS_AI_ENABLED = process.env.NODE_ENV !== 'production';
+
+export default function AIAnalysis(props: AIAnalysisProps) {
+  if (!IS_AI_ENABLED) return null;
+  return <AIAnalysisInner {...props} />;
+}
+
+function AIAnalysisInner({
   calculationData,
   analysisType,
   language = 'ar',

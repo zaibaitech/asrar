@@ -226,24 +226,78 @@ export function IstikharaPanel() {
   const handleShare = async () => {
     if (!calculationResult) return;
 
-    const shareText = language === 'en'
-      ? `I discovered my spiritual profile through Istikhara al-Asmāʾ! I'm a ${calculationResult.burujProfile.element} element. ✨🌙`
-      : `J'ai découvert mon profil spirituel avec Istikhara al-Asmāʾ! Je suis un élément ${calculationResult.burujProfile.element}. ✨🌙`;
+    const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
+    const langParam = language === 'fr' ? '?lang=fr' : '';
+    const shareUrl = `${BASE_URL}${langParam}`;
+
+    const shareTitle = language === 'fr'
+      ? 'Istikhara al-Asmāʾ — Mon Profil Spirituel'
+      : 'Istikhara al-Asmāʾ — My Spiritual Profile';
+
+    const shareText = language === 'fr'
+      ? `✨🌙 J'ai découvert mon profil spirituel avec Istikhara al-Asmāʾ ! Je suis un élément ${calculationResult.burujProfile.element}. Découvrez le vôtre sur Asrār !`
+      : `✨🌙 I discovered my spiritual profile through Istikhara al-Asmāʾ! I'm a ${calculationResult.burujProfile.element} element. Discover yours on Asrār!`;
 
     if (navigator.share) {
       try {
         await navigator.share({
-          title: 'Istikhara al-Asmāʾ Results',
+          title: shareTitle,
           text: shareText,
-          url: window.location.href
+          url: shareUrl
         });
       } catch (err) {
         console.log('Share cancelled');
       }
     } else {
-      await navigator.clipboard.writeText(shareText);
-      alert(language === 'en' ? 'Copied to clipboard!' : 'Copié dans le presse-papiers!');
+      await navigator.clipboard.writeText(`${shareText}\n${shareUrl}`);
+      alert(language === 'en' ? 'Copied to clipboard!' : 'Copié dans le presse-papiers !');
     }
+  };
+
+  /**
+   * Invite a friend to try Who Am I
+   */
+  const handleInvite = async () => {
+    const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
+    const langParam = language === 'fr' ? '?lang=fr' : '';
+    const inviteUrl = `${BASE_URL}${langParam}`;
+
+    const inviteTitle = language === 'fr'
+      ? 'Découvrez Asrār — Sciences Sacrées & Timing Divin'
+      : 'Discover Asrār — Sacred Sciences & Divine Timing';
+
+    const inviteText = language === 'fr'
+      ? `🌙 Découvrez votre profil spirituel avec Istikhara al-Asmāʾ sur Asrār ! Numérologie Abjad, heures planétaires, défis du Ramadan et plus encore.`
+      : `🌙 Discover your spiritual profile with Istikhara al-Asmāʾ on Asrār! Abjad numerology, planetary hours, Ramadan challenges, and more.`;
+
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: inviteTitle, text: inviteText, url: inviteUrl });
+      } catch {}
+    } else {
+      await navigator.clipboard.writeText(`${inviteText}\n${inviteUrl}`);
+      alert(language === 'en' ? 'Invitation copied!' : 'Invitation copiée !');
+    }
+  };
+
+  const handleInviteWhatsApp = () => {
+    const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
+    const langParam = language === 'fr' ? '?lang=fr' : '';
+    const url = `${BASE_URL}${langParam}`;
+    const text = language === 'fr'
+      ? `🌙 Découvrez votre profil spirituel avec Istikhara al-Asmāʾ sur Asrār ! Numérologie Abjad, heures planétaires, défis du Ramadan et plus encore.\n\n${url}`
+      : `🌙 Discover your spiritual profile with Istikhara al-Asmāʾ on Asrār! Abjad numerology, planetary hours, Ramadan challenges, and more.\n\n${url}`;
+    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+  };
+
+  const handleInviteTelegram = () => {
+    const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
+    const langParam = language === 'fr' ? '?lang=fr' : '';
+    const url = `${BASE_URL}${langParam}`;
+    const text = language === 'fr'
+      ? `🌙 Découvrez votre profil spirituel avec Istikhara al-Asmāʾ sur Asrār !`
+      : `🌙 Discover your spiritual profile with Istikhara al-Asmāʾ on Asrār!`;
+    window.open(`https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`, '_blank');
   };
 
   return (
@@ -487,19 +541,23 @@ export function IstikharaPanel() {
 
 
 
-      {/* Simplified Header Section */}
-      <div className="text-center space-y-2 max-w-3xl mx-auto pt-2 sm:pt-4">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent">
+      {/* Simplified Header Section - Compact when results showing */}
+      <div className={`text-center max-w-3xl mx-auto ${showResults ? 'space-y-0.5 pt-0' : 'space-y-2 pt-2 sm:pt-4'}`}>
+        <h1 className={`font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent ${showResults ? 'text-lg sm:text-xl' : 'text-2xl sm:text-3xl md:text-4xl'}`}>
           {t.title}
         </h1>
         
-        <p className="text-lg sm:text-xl text-purple-200 font-arabic tracking-wide">
-          {t.titleArabic}
-        </p>
+        {!showResults && (
+          <p className="text-lg sm:text-xl text-purple-200 font-arabic tracking-wide">
+            {t.titleArabic}
+          </p>
+        )}
         
-        <p className="text-sm sm:text-base text-gray-300 leading-relaxed max-w-2xl mx-auto px-2">
-          {t.subtitle}
-        </p>
+        {!showResults && (
+          <p className="text-sm sm:text-base text-gray-300 leading-relaxed max-w-2xl mx-auto px-2">
+            {t.subtitle}
+          </p>
+        )}
       </div>
 
       {/* Progress Indicator - More compact */}
@@ -556,6 +614,58 @@ export function IstikharaPanel() {
           </div>
         </div>
       )}
+
+      {/* ─── Invite Friends Section ─── */}
+      <div className="max-w-3xl mx-auto">
+        <div className="bg-gradient-to-br from-indigo-900/30 to-purple-900/30 border border-indigo-500/20 rounded-xl p-4 sm:p-5">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+            <div className="flex-1 min-w-0">
+              <h3 className="font-bold text-white text-sm sm:text-base flex items-center gap-2">
+                <Heart className="w-4 h-4 text-pink-400" />
+                {language === 'fr' ? 'Invitez vos proches' : 'Invite your loved ones'}
+              </h3>
+              <p className="text-xs sm:text-sm text-indigo-200/70 mt-0.5">
+                {language === 'fr'
+                  ? 'Partagez la sagesse sacrée — invitez vos amis à découvrir leur profil spirituel'
+                  : 'Share sacred wisdom — invite friends to discover their spiritual profile'}
+              </p>
+            </div>
+            <div className="flex items-center gap-2 flex-shrink-0">
+              {/* WhatsApp */}
+              <button
+                onClick={handleInviteWhatsApp}
+                className="flex items-center gap-1.5 px-3 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg text-xs sm:text-sm font-medium transition-colors"
+                title="WhatsApp"
+              >
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                <span className="hidden sm:inline">WhatsApp</span>
+              </button>
+              {/* Telegram */}
+              <button
+                onClick={handleInviteTelegram}
+                className="flex items-center gap-1.5 px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-xs sm:text-sm font-medium transition-colors"
+                title="Telegram"
+              >
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                </svg>
+                <span className="hidden sm:inline">Telegram</span>
+              </button>
+              {/* General Share */}
+              <button
+                onClick={handleInvite}
+                className="flex items-center gap-1.5 px-3 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg text-xs sm:text-sm font-medium transition-colors"
+                title={language === 'fr' ? 'Partager' : 'Share'}
+              >
+                <Share2 className="w-4 h-4" />
+                <span className="hidden sm:inline">{language === 'fr' ? 'Inviter' : 'Invite'}</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* AI Chat Assistant */}
       {calculationResult && (

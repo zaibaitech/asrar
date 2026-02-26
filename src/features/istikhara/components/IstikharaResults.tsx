@@ -256,15 +256,15 @@ export function IstikharaResults({ result, onReset }: IstikharaResultsProps) {
   };
 
   return (
-    <div className="space-y-8 pb-12" ref={resultsRef}>
-      {/* Tab Navigation - Enhanced */}
-      <div className="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-2 border-white/10 rounded-xl sm:rounded-2xl p-1 sm:p-2">
-        <div className="grid grid-cols-3 sm:grid-cols-6 gap-1 sm:gap-2 overflow-x-auto">
+    <div className="space-y-3 sm:space-y-4 md:space-y-6 pb-8" ref={resultsRef}>
+      {/* Tab Navigation - Compact */}
+      <div className="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-2 border-white/10 rounded-xl sm:rounded-2xl p-1 sm:p-1.5">
+        <div className="grid grid-cols-3 sm:grid-cols-6 gap-0.5 sm:gap-1.5 overflow-x-auto">
           {tabs.map((tab) => (
             <button
               key={tab.key}
               onClick={() => handleTabChange(tab.key)}
-              className={`flex flex-col items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 sm:py-4 rounded-lg sm:rounded-xl font-medium text-xs sm:text-sm transition-all min-w-[60px] sm:min-w-0 ${
+              className={`flex flex-col items-center gap-0.5 sm:gap-1.5 px-1.5 sm:px-3 py-1.5 sm:py-3 rounded-lg sm:rounded-xl font-medium text-[11px] sm:text-sm transition-all min-w-[55px] sm:min-w-0 ${
                 activeTab === tab.key
                   ? `bg-gradient-to-br ${colors.gradient} border-2 ${colors.border} ${colors.glow} text-white scale-105`
                   : "text-white hover:text-white hover:bg-white/5"
@@ -282,13 +282,20 @@ export function IstikharaResults({ result, onReset }: IstikharaResultsProps) {
         </div>
       </div>
 
-      {/* Action Buttons Bar */}
-      <div className="flex justify-center">
+      {/* Action Buttons Bar - Inline compact */}
+      <div className="flex justify-center gap-2 sm:gap-3">
+        <button
+          onClick={onReset}
+          className="flex items-center gap-1.5 px-3 sm:px-5 py-1.5 sm:py-2.5 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold rounded-lg sm:rounded-xl transition-all hover:scale-105 text-xs sm:text-sm"
+        >
+          <span>🔄</span>
+          <span>{t.ui.backToForm}</span>
+        </button>
         <button
           onClick={handleShare}
-          className={`flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r ${colors.gradient} border ${colors.border} ${colors.hoverBg} text-white font-semibold rounded-lg sm:rounded-xl transition-all hover:scale-105 text-sm sm:text-base shadow-lg`}
+          className={`flex items-center gap-1.5 px-3 sm:px-5 py-1.5 sm:py-2.5 bg-gradient-to-r ${colors.gradient} border ${colors.border} ${colors.hoverBg} text-white font-semibold rounded-lg sm:rounded-xl transition-all hover:scale-105 text-xs sm:text-sm shadow-lg`}
         >
-          <Share2 className="w-4 h-4 sm:w-5 sm:h-5" />
+          <Share2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
           <span>{language === 'en' ? 'Share' : 'Partager'}</span>
         </button>
       </div>
@@ -297,7 +304,7 @@ export function IstikharaResults({ result, onReset }: IstikharaResultsProps) {
       <IstikharaSummaryCard result={result} />
 
       {/* Tab Content */}
-      <div ref={tabContentRef} className={`bg-gradient-to-br ${colors.gradient} border-2 ${colors.border} rounded-2xl p-8 ${colors.glow} min-h-[400px] animate-fade-in`}>
+      <div ref={tabContentRef} className={`bg-gradient-to-br ${colors.gradient} border-2 ${colors.border} rounded-xl sm:rounded-2xl p-3 sm:p-5 md:p-8 ${colors.glow} min-h-[250px] sm:min-h-[350px] animate-fade-in`}>
         {activeTab === "overview" && (
           <EnhancedOverviewSection result={result} colors={colors} />
         )}
@@ -319,10 +326,10 @@ export function IstikharaResults({ result, onReset }: IstikharaResultsProps) {
       </div>
 
       {/* Bottom Actions */}
-      <div className="flex gap-3 pt-6">
+      <div className="flex gap-3 pt-3 sm:pt-5">
         <button
           onClick={onReset}
-          className="flex-1 px-8 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 hover:from-purple-700 hover:via-pink-700 hover:to-orange-700 text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-2xl transition-all hover:scale-105 flex items-center justify-center gap-2"
+          className="flex-1 px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 hover:from-purple-700 hover:via-pink-700 hover:to-orange-700 text-white font-bold text-base sm:text-lg rounded-xl shadow-lg hover:shadow-2xl transition-all hover:scale-105 flex items-center justify-center gap-2"
         >
           <span>←</span>
           <span>{t.ui.backToForm}</span>

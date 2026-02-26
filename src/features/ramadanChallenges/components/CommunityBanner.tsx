@@ -1,8 +1,8 @@
 /**
  * Community Banner Component
  * ===========================
- * Displays community-wide dhikr statistics.
- * Currently using mock data; designed to be pluggable for real backend.
+ * Displays real-time community-wide dhikr statistics from Supabase.
+ * Falls back to prop-based stats if the API is unavailable.
  */
 
 'use client';
@@ -10,16 +10,26 @@
 import React, { useMemo } from 'react';
 import type { CommunityStats } from '../types';
 import { formatNumber } from '../utils';
+import { useCommunityDhikr } from '../communityDhikrService';
 
 interface CommunityBannerProps {
-  stats: CommunityStats;
+  stats?: CommunityStats;
   language?: 'en' | 'fr';
   compact?: boolean;
 }
 
 export function CommunityBanner({ stats, language = 'en', compact = false }: CommunityBannerProps) {
-  const formattedToday = useMemo(() => formatNumber(stats.todayTotal), [stats.todayTotal]);
-  const formattedUsers = useMemo(() => formatNumber(stats.activeUsers), [stats.activeUsers]);
+  // Use live community stats from Supabase
+  const liveStats = useCommunityDhikr();
+
+  // Prefer live data; fall back to prop (mock) only if live is empty
+  const todayTotal = liveStats.todayTotal > 0 ? liveStats.todayTotal : (stats?.todayTotal ?? 0);
+  const activeUsers = liveStats.todayUsers > 0 ? liveStats.todayUsers : (stats?.activeUsers ?? 0);
+  const allTimeTotal = liveStats.allTimeTotal;
+
+  const formattedToday = useMemo(() => formatNumber(todayTotal), [todayTotal]);
+  const formattedAllTime = useMemo(() => formatNumber(allTimeTotal), [allTimeTotal]);
+  const formattedUsers = useMemo(() => formatNumber(activeUsers), [activeUsers]);
 
   if (compact) {
     return (
@@ -46,10 +56,22 @@ export function CommunityBanner({ stats, language = 'en', compact = false }: Com
             {language === 'fr' ? "dhikr complétés par la communauté aujourd'hui" : 'dhikr completed by the community today'}
           </span>
         </div>
+        {allTimeTotal > 0 && (
+          <p className="text-xs text-teal-500 dark:text-teal-400 mt-0.5 font-medium">
+            {language === 'fr' 
+              ? `Total cumulé : ${formattedAllTime} dhikr`
+              : `All-time total: ${formattedAllTime} dhikr`
+            }
+          </p>
+        )}
         <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-          {language === 'fr' 
-            ? `Rejoignez ${formattedUsers} adorateurs ce Ramadan`
-            : `Join ${formattedUsers} worshippers this Ramadan`
+          {activeUsers > 0
+            ? (language === 'fr' 
+                ? `${formattedUsers} utilisateurs actifs aujourd'hui`
+                : `${formattedUsers} active users today`)
+            : (language === 'fr'
+                ? 'Soyez le premier à contribuer aujourd\'hui !'
+                : 'Be the first to contribute today!')
           }
         </p>
       </div>

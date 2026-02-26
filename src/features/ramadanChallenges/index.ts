@@ -52,6 +52,14 @@ export {
   generateCommunityStats,
 } from './utils';
 
+// ─── Community Dhikr (Real-time) ─────────────────────────────────────────────────
+export {
+  useCommunityDhikr,
+  queueDhikrIncrement,
+  flushDhikrQueue,
+} from './communityDhikrService';
+export type { CommunityDhikrStats } from './communityDhikrService';
+
 // ─── Migrations ──────────────────────────────────────────────────────────────────
 export {
   migrateExistingIstighfar,
@@ -68,6 +76,7 @@ export {
 // ─── Components ──────────────────────────────────────────────────────────────────
 export {
   RamadanHub,
+  RamadanBannerMini,
   ChallengeCard,
   CommunityBanner,
   RecommenderBanner,

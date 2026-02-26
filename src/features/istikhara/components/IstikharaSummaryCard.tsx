@@ -210,7 +210,7 @@ export function IstikharaSummaryCard({ result }: IstikhSummaryCardProps) {
 
   return (
     <div 
-      className={`relative p-4 sm:p-6 md:p-8 lg:p-10 bg-gradient-to-br ${config.bgGradient} backdrop-blur-xl rounded-2xl sm:rounded-3xl ${config.cardGlow} border-2 ${config.border} overflow-hidden transition-all duration-700 ${config.hoverScale} ${
+      className={`relative p-3 sm:p-5 md:p-8 lg:p-10 bg-gradient-to-br ${config.bgGradient} backdrop-blur-xl rounded-xl sm:rounded-2xl md:rounded-3xl ${config.cardGlow} border-2 ${config.border} overflow-hidden transition-all duration-700 ${config.hoverScale} ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
       }`}
     >
@@ -244,10 +244,10 @@ export function IstikharaSummaryCard({ result }: IstikhSummaryCardProps) {
       </div>
 
       {/* Main Content Grid */}
-      <div className="relative z-10 grid lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+      <div className="relative z-10 grid lg:grid-cols-3 gap-3 sm:gap-5 md:gap-8">
         
         {/* LEFT COLUMN: Names, Element, and Main Score */}
-        <div className="lg:col-span-1 space-y-4 sm:space-y-6">
+        <div className="lg:col-span-1 space-y-3 sm:space-y-5">
           {/* Names Header */}
           <div className="space-y-2 sm:space-y-3">
             <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 flex items-center gap-2 sm:gap-3">

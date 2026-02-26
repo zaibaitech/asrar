@@ -3028,7 +3028,7 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
       ui: {
         loading: "Calculating spiritual guidance...",
         error: "Unable to calculate guidance. Please check the names and try again.",
-        backToForm: "Enter New Names",
+        backToForm: "New Calculation",
         printResults: "Print Guidance",
         shareResults: "Share",
         expandAll: "Expand All Sections",
@@ -6070,7 +6070,7 @@ AVEC cette connaissance, ils comprennent : "Nous essayons tous les deux de nous 
       ui: {
         loading: "Calcul de la guidance spirituelle...",
         error: "Impossible de calculer la guidance. Veuillez vérifier les noms et réessayer.",
-        backToForm: "Entrer de Nouveaux Noms",
+        backToForm: "Nouveau Calcul",
         printResults: "Imprimer la Guidance",
         shareResults: "Partager",
         expandAll: "Développer Toutes les Sections",

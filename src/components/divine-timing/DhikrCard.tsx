@@ -120,6 +120,12 @@ export function DhikrCard({ planetName, planetElement, planetNameArabic, onClose
     setIsAnimating(true);
     setCount(prev => (prev + 1) % (dhikr.count + 1));
     setTimeout(() => setIsAnimating(false), 200);
+
+    // Sync to community counter
+    try {
+      const { queueDhikrIncrement } = require('@/src/features/ramadanChallenges/communityDhikrService');
+      queueDhikrIncrement(1, 'planetary');
+    } catch {}
   };
 
   const decrement = () => {

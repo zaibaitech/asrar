@@ -1,15 +1,18 @@
 'use client';
 
 import React, { useState, useMemo, useEffect } from 'react';
-import { Calculator, Book, TrendingUp, Moon, Sun, Info, Sparkles, Flame, Droplet, Wind, Mountain, History, Star, GitCompare, Calendar, Trash2, X, Copy, CheckCircle, AlertTriangle, Zap, Compass, Keyboard, Heart, ChevronUp, ChevronDown, HelpCircle, Menu, Lightbulb, Waves, List, BookOpen, Download, Search, Tag } from 'lucide-react';
+import Link from 'next/link';
+import { Calculator, Book, TrendingUp, Moon, Sun, Info, Sparkles, Flame, Droplet, Wind, Mountain, History, Star, GitCompare, Calendar, Trash2, X, Copy, CheckCircle, AlertTriangle, Zap, Compass, Keyboard, Heart, ChevronUp, ChevronDown, ChevronRight, HelpCircle, Menu, Lightbulb, Waves, List, BookOpen, Download, Search, Tag } from 'lucide-react';
 import { transliterateLatinToArabic } from './src/lib/text-normalize';
 import { HadadSummaryPanel } from './src/components/hadad-summary';
 import { IlmHurufPanel } from './src/features/ilm-huruf';
 import { CompatibilityPanel } from './src/features/compatibility';
 import { IstikharaPanel } from './src/features/istikhara';
 import { PlanetOfTheDay, PlanetaryHourCard, PlanetTransitCard } from './src/components/planetary';
-import { RamadanHub, useRamadanChallenges } from './src/features/ramadanChallenges';
+import { useRamadanChallenges } from './src/features/ramadanChallenges';
 import { getRamadanInfo } from './src/lib/hijri';
+import { getTotalAppDhikr } from './src/lib/getTotalAppDhikr';
+import { useCommunityDhikr } from './src/features/ramadanChallenges/communityDhikrService';
 import { analyzePatterns } from './src/features/ilm-huruf/patternRecognition';
 import { generateWafqAnalysis } from './src/features/ilm-huruf/wafqGenerator';
 import { calculateOptimalTimingWindows } from './src/features/ilm-huruf/talismanTiming';
@@ -1384,15 +1387,28 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
   const ramadan = getRamadanInfo();
   const isRamadan = ramadan.isRamadan;
   
-  // Get total dhikr count from Ramadan challenges
-  const { getTotalRamadanProgress } = useRamadanChallenges();
-  const totalDhikr = getTotalRamadanProgress();
+  // Get Ramadan challenge stats
+  const { getTotalRamadanProgress, getTotalTodayProgress, state } = useRamadanChallenges();
+  const todayDhikr = getTotalTodayProgress();
+  const totalTarget = state.challenges.reduce((sum, c) => sum + c.ramadanTarget, 0);
+  
+  // Get TOTAL dhikr from ALL sources in the app (hydration-safe)
+  const [appDhikrTotal, setAppDhikrTotal] = useState(0);
+  useEffect(() => {
+    const totals = getTotalAppDhikr();
+    setAppDhikrTotal(totals.total);
+  }, [state.challenges]); // Re-calculate when challenges change
+  
+  // Live community stats from all users
+  const communityStats = useCommunityDhikr();
+  
+  const progressPercent = totalTarget > 0 ? Math.round((appDhikrTotal / totalTarget) * 100) : 0;
 
   // Ramadan-aware header strings
   const headerTitle = isRamadan
     ? (language === 'fr'
-        ? `🌙 Jour ${ramadan.dayOfRamadan} de Ramadan · Défis Spirituels`
-        : `🌙 Ramadan Day ${ramadan.dayOfRamadan} · Spiritual Challenges`)
+        ? `Ramadan Jour ${ramadan.dayOfRamadan} · Défis Spirituels`
+        : `Ramadan Day ${ramadan.dayOfRamadan} · Spiritual Challenges`)
     : t.dailyReflection.todaysReflection;
 
   const badgeLabel = isRamadan ? 'رمضان' : t.dailyReflection.dailyBadge;
@@ -1422,6 +1438,110 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
         icon: 'text-emerald-600 dark:text-emerald-400',
       };
   
+  // During Ramadan: Single tappable banner that navigates to /ramadan
+  // Format large numbers compactly (e.g. 76205 → "76.2K")
+  const formatCompact = (n: number) => {
+    if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1).replace(/\.0$/, '')}M`;
+    if (n >= 1_000) return `${(n / 1_000).toFixed(1).replace(/\.0$/, '')}K`;
+    return n.toLocaleString();
+  };
+
+  const hasProgress = appDhikrTotal > 0;
+  const hasCommunity = communityStats.allTimeTotal > 0;
+
+  if (isRamadan) {
+    return (
+      <Link
+        href="/ramadan"
+        prefetch
+        className={`block bg-gradient-to-br ${colors.bg} rounded-xl border ${colors.border} overflow-hidden transition-all duration-300 ${colors.headerHover} shadow-sm`}
+      >
+        <div className="px-4 py-3.5 sm:px-5 sm:py-4">
+          <div className="flex items-center justify-between gap-3">
+            {/* Left side: Title + Subtitle */}
+            <div className="flex items-center gap-2.5 sm:gap-3 flex-1 min-w-0">
+              {/* Moon icon with pulse */}
+              <div className="relative flex-shrink-0">
+                <div className={`absolute inset-0 ${colors.pulse} rounded-full opacity-60 animate-pulse`} style={{width: '28px', height: '28px'}}></div>
+                <span className="relative z-10 text-xl sm:text-2xl">🌙</span>
+              </div>
+              
+              <div className="flex-1 min-w-0">
+                {/* Title row */}
+                <div className="flex items-center gap-2 flex-wrap">
+                  <h3 className={`text-sm sm:text-base font-bold ${colors.title} leading-tight`}>{headerTitle}</h3>
+                  <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-medium ${colors.badge} text-white font-arabic`}>
+                    {badgeLabel}
+                  </span>
+                </div>
+
+                {/* Contextual subtitle */}
+                {hasProgress ? (
+                  /* User has logged dhikr — show clean personal stats */
+                  <p className={`text-xs sm:text-sm ${colors.sub} mt-1 font-medium`}>
+                    📿 {todayDhikr.toLocaleString()} {language === 'fr' ? "aujourd'hui" : 'today'}
+                    <span className="mx-1.5 opacity-40">·</span>
+                    {appDhikrTotal.toLocaleString()} {language === 'fr' ? 'total' : 'total'}
+                    {totalTarget > 0 && progressPercent > 0 && (
+                      <span className="text-amber-500 dark:text-amber-300 ml-1.5">({progressPercent}%)</span>
+                    )}
+                  </p>
+                ) : (
+                  /* No dhikr yet — motivational CTA */
+                  <p className={`text-xs sm:text-sm mt-1 font-medium text-amber-600 dark:text-amber-300`}>
+                    ✨ {language === 'fr' ? 'Commence tes défis spirituels !' : 'Start your spiritual challenges!'}
+                  </p>
+                )}
+              </div>
+            </div>
+            
+            {/* Right side: Community or personal highlight + arrow */}
+            <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+              {hasCommunity ? (
+                /* Community total — the impressive social-proof number */
+                <div className="flex flex-col items-end leading-tight">
+                  <span className="text-[10px] sm:text-xs text-teal-600 dark:text-teal-400 font-medium">
+                    🌍 {language === 'fr' ? 'Communauté' : 'Community'}
+                  </span>
+                  <span className="text-lg sm:text-xl font-bold text-teal-700 dark:text-teal-300 tabular-nums">
+                    {formatCompact(communityStats.allTimeTotal)}
+                  </span>
+                  {communityStats.todayUsers > 0 && (
+                    <span className="text-[9px] sm:text-[10px] text-slate-400 dark:text-slate-500">
+                      {communityStats.todayUsers} {language === 'fr' ? 'actifs' : 'active'}
+                    </span>
+                  )}
+                </div>
+              ) : hasProgress ? (
+                /* No community data but user has personal progress */
+                <div className="flex flex-col items-end leading-tight">
+                  <span className="text-xs text-amber-600 dark:text-amber-400 font-arabic" dir="rtl">ذِكْر</span>
+                  <span className="text-lg sm:text-xl font-bold text-amber-700 dark:text-amber-300 tabular-nums">
+                    {formatCompact(appDhikrTotal)}
+                  </span>
+                </div>
+              ) : (
+                /* Nothing yet — show challenge count as gentle nudge */
+                <div className="flex flex-col items-end leading-tight">
+                  <span className="text-xs text-amber-600 dark:text-amber-400">{state.challenges.length}</span>
+                  <span className="text-[10px] sm:text-xs text-amber-500 dark:text-amber-400">
+                    {language === 'fr' ? 'défis' : 'challenges'}
+                  </span>
+                </div>
+              )}
+              
+              {/* Navigation Arrow */}
+              <div className={`p-1.5 sm:p-2 ${colors.btnHover} rounded-lg transition-colors`}>
+                <ChevronRight className={`w-4 h-4 sm:w-5 sm:h-5 ${colors.icon}`} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </Link>
+    );
+  }
+  
+  // Non-Ramadan: Original collapsible card
   return (
     <div className={`bg-gradient-to-br ${colors.bg} rounded-xl border ${colors.border} overflow-hidden transition-all duration-300`}>
       {/* Header - Always Visible */}
@@ -1431,69 +1551,43 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
             {/* Pulse Animation Badge */}
             <div className="relative flex-shrink-0">
               <div className={`absolute inset-0 ${colors.pulse} rounded-full opacity-75 animate-pulse`} style={{width: '22px', height: '22px'}}></div>
-              {isRamadan
-                ? <span className="relative z-10 text-lg sm:text-xl">🌙</span>
-                : <Calendar className={`w-5 h-5 sm:w-6 sm:h-6 ${colors.icon} relative z-10`} />
-              }
+              <Calendar className={`w-5 h-5 sm:w-6 sm:h-6 ${colors.icon} relative z-10`} />
             </div>
             
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 flex-wrap">
                 <h3 className={`text-sm sm:text-lg font-bold ${colors.title}`}>{headerTitle}</h3>
-                <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-medium ${colors.badge} text-white ${isRamadan ? 'font-arabic' : 'animate-pulse'}`}>
+                <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-medium ${colors.badge} text-white animate-pulse`}>
                   {badgeLabel}
                 </span>
               </div>
-              {!isRamadan && !isCollapsed && (
+              {!isCollapsed && (
                 <p className={`text-xs ${colors.sub} mt-0.5`}>{daily.date}</p>
               )}
             </div>
-            
-            {/* Rotating Dhikr Preview - Only during Ramadan when collapsed */}
-            {isRamadan && isCollapsed && (
-              <RotatingDhikrPreview className="hidden sm:flex" />
-            )}
           </div>
           
-          {/* Right side: Total dhikr count (Ramadan only) + Collapse Toggle */}
-          <div className="flex items-center gap-3">
-            {/* Total Dhikr Stat Block - Always visible during Ramadan */}
-            {isRamadan && (
-              <div className="flex flex-col items-end leading-tight">
-                <span className="text-lg sm:text-xl font-bold text-amber-700 dark:text-amber-300">
-                  {totalDhikr.toLocaleString()}
-                </span>
-                <span className="text-[10px] sm:text-xs text-amber-500 dark:text-amber-400">
-                  {language === 'fr' ? 'dhikr au total' : 'dhikr total'}
-                </span>
-              </div>
+          {/* Collapse Toggle Button */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onToggleCollapse();
+            }}
+            className={`p-2 ${colors.btnHover} rounded-lg transition-colors flex-shrink-0`}
+            aria-label={isCollapsed ? t.dailyReflection.expandReflection : t.dailyReflection.collapseReflection}
+          >
+            {isCollapsed ? (
+              <ChevronDown className={`w-5 h-5 ${colors.icon}`} />
+            ) : (
+              <ChevronUp className={`w-5 h-5 ${colors.icon}`} />
             )}
-            
-            {/* Collapse Toggle Button */}
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                onToggleCollapse();
-              }}
-              className={`p-2 ${colors.btnHover} rounded-lg transition-colors flex-shrink-0`}
-              aria-label={isCollapsed ? t.dailyReflection.expandReflection : t.dailyReflection.collapseReflection}
-            >
-              {isCollapsed ? (
-                <ChevronDown className={`w-5 h-5 ${colors.icon}`} />
-              ) : (
-                <ChevronUp className={`w-5 h-5 ${colors.icon}`} />
-              )}
-            </button>
-          </div>
+          </button>
         </div>
       </div>
       
       {/* Collapsible Content */}
       {!isCollapsed && (
         <div className="px-6 pb-6 pt-0 space-y-4 animate-in fade-in slide-in-from-top-2 duration-300">
-          {/* Ramadan Spiritual Challenge Hub — replaces old single tracker */}
-          <RamadanHub language={language} />
-
           <div className="bg-white/50 dark:bg-slate-800/50 rounded-lg p-4">
             <div className="text-xs font-medium text-emerald-600 dark:text-emerald-400 mb-1">{t.dailyReflection.verseOfTheDay}</div>
             <div className="text-sm font-medium mb-1">{daily.verse.text}</div>

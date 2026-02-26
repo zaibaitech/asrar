@@ -36,9 +36,9 @@ import {
   isToday,
   calculateStreak,
   generateId,
-  generateCommunityStats,
   STORAGE_KEYS,
 } from './utils';
+import { queueDhikrIncrement } from './communityDhikrService';
 import { migrateExistingIstighfar, migrateSalawatChallenges } from './migrations';
 import { getRamadanInfo } from '@/src/lib/hijri';
 
@@ -64,10 +64,57 @@ function reducer(
 ): RamadanChallengesState {
   switch (action.type) {
     case 'HYDRATE': {
+      const today = action.payload.currentDate;
+      // Recalculate progress from sessionLogs to ensure consistency.
+      // This fixes stale todayProgress on day boundaries and recovers
+      // ramadanProgress if the stored value ever got out of sync.
+      const rehydrated = action.payload.challenges.map((challenge) => {
+        // Recalculate todayProgress from today's session logs only
+        const todayProgress = challenge.sessionLogs
+          .filter((log) => log.date === today)
+          .reduce((sum, log) => sum + log.count, 0);
+
+        // Recalculate ramadanProgress from all session logs
+        const ramadanProgress = challenge.sessionLogs.reduce(
+          (sum, log) => sum + log.count,
+          0
+        );
+
+        // Recalculate streak from session log dates
+        const logDates = [
+          ...new Set(
+            challenge.sessionLogs
+              .filter((log) => log.count > 0)
+              .map((log) => log.date)
+          ),
+        ].sort((a, b) => b.localeCompare(a)); // Descending
+
+        let streakDays = 0;
+        if (logDates.length > 0) {
+          const checkDate = new Date(today + 'T00:00:00');
+          for (const dateStr of logDates) {
+            const checkStr = checkDate.toISOString().slice(0, 10);
+            if (dateStr === checkStr) {
+              streakDays++;
+              checkDate.setDate(checkDate.getDate() - 1);
+            } else if (dateStr < checkStr) {
+              break; // Gap found
+            }
+          }
+        }
+
+        return {
+          ...challenge,
+          todayProgress,
+          ramadanProgress,
+          streakDays,
+        };
+      });
+
       return {
         ...state,
-        challenges: action.payload.challenges,
-        currentDate: action.payload.currentDate,
+        challenges: rehydrated,
+        currentDate: today,
         isHydrated: true,
       };
     }
@@ -252,22 +299,8 @@ export function RamadanChallengesProvider({ children }: RamadanChallengesProvide
     return () => clearInterval(interval);
   }, [state.isHydrated, state.currentDate]);
 
-  // ─── Update community stats (mock) ───
-  useEffect(() => {
-    if (!state.isHydrated) return;
-
-    const ramadanInfo = getRamadanInfo();
-    if (!ramadanInfo?.isRamadan) return;
-
-    const stats = generateCommunityStats(ramadanInfo.dayOfRamadan);
-    dispatch({
-      type: 'UPDATE_COMMUNITY',
-      payload: {
-        ...stats,
-        lastUpdated: new Date().toISOString(),
-      },
-    });
-  }, [state.isHydrated]);
+  // Community stats are now fetched live via useCommunityDhikr hook in the UI.
+  // The store no longer generates mock stats.
 
   // ─── Actions ───
 
@@ -300,7 +333,12 @@ export function RamadanChallengesProvider({ children }: RamadanChallengesProvide
   const logCount = useCallback((id: string, amount: number, session: SessionTag) => {
     if (amount <= 0) return;
     dispatch({ type: 'LOG_COUNT', payload: { id, amount, session } });
-  }, []);
+
+    // Sync to community counter
+    const challenge = state.challenges.find((c) => c.id === id);
+    const dhikrType = challenge?.type?.toLowerCase() || 'general';
+    queueDhikrIncrement(amount, dhikrType);
+  }, [state.challenges]);
 
   const setTargets = useCallback((id: string, dailyTarget: number, ramadanTarget: number) => {
     dispatch({ type: 'SET_TARGETS', payload: { id, dailyTarget, ramadanTarget } });

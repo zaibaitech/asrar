@@ -244,6 +244,12 @@ export function DhikrCounter({
     const newCount = count + 1;
     setCount(newCount);
     
+    // Sync to community counter
+    try {
+      const { queueDhikrIncrement } = require('@/src/features/ramadanChallenges/communityDhikrService');
+      queueDhikrIncrement(1, 'tashbih');
+    } catch {}
+    
     // Check for completion
     if (newCount === targetCount) {
       handleCompletion();

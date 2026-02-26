@@ -139,7 +139,7 @@ export function ChallengeCard({
   const getShareUrl = () => {
     const challengeSlug = getChallengeSlug();
     const langParam = language === 'fr' ? '&lang=fr' : '';
-    return `${BASE_URL}/?challenge=${challengeSlug}${langParam}`;
+    return `${BASE_URL}/ramadan?challenge=${challengeSlug}${langParam}`;
   };
 
   const handleNativeShare = async () => {

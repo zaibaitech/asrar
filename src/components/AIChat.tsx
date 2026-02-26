@@ -17,7 +17,15 @@ interface AIChatProps {
   position?: 'bottom-right' | 'bottom-left';
 }
 
-export default function AIChat({
+// Hide AI features in production
+const IS_AI_ENABLED = process.env.NODE_ENV !== 'production';
+
+export default function AIChat(props: AIChatProps) {
+  if (!IS_AI_ENABLED) return null;
+  return <AIChatInner {...props} />;
+}
+
+function AIChatInner({
   calculationData,
   analysisType,
   language = 'en',

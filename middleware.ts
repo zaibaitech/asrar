@@ -41,6 +41,15 @@ function detectLanguage(request: NextRequest): Language {
 }
 
 export function middleware(request: NextRequest) {
+  // Redirect legacy /?challenge=... links to /ramadan?challenge=...
+  const challengeParam = request.nextUrl.searchParams.get('challenge');
+  if (challengeParam && request.nextUrl.pathname === '/') {
+    const url = request.nextUrl.clone();
+    url.pathname = '/ramadan';
+    // searchParams (challenge, lang) are preserved automatically
+    return NextResponse.redirect(url, 301);
+  }
+
   const response = NextResponse.next();
   
   // Detect language
