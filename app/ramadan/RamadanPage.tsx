@@ -426,11 +426,6 @@ export function RamadanPage() {
               <span className="text-teal-600/80 dark:text-teal-400/60">
                 {language === 'fr' ? "dhikr communautaires aujourd'hui" : 'community dhikr today'}
               </span>
-              {communityStats.todayUsers > 0 && (
-                <span className="text-teal-500/60 dark:text-teal-500/40">
-                  · {communityStats.todayUsers} {language === 'fr' ? 'actifs' : 'active'}
-                </span>
-              )}
             </div>
           )}
         </div>

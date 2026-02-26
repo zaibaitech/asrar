@@ -155,7 +155,7 @@ export function PropheticNamesCard({
   const shareWhatsApp = () => {
     const shareUrl = getShareUrl();
     const text = encodeURIComponent(`${t.shareText}\n\n${shareUrl}`);
-    window.open(`https://wa.me/?text=${text}`, '_blank');
+    window.open(`whatsapp://send?text=${text}`, '_blank');
     setShowShareModal(false);
   };
 
@@ -163,7 +163,7 @@ export function PropheticNamesCard({
   const shareTelegram = () => {
     const shareUrl = getShareUrl();
     const text = encodeURIComponent(t.shareText);
-    window.open(`https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${text}`, '_blank');
+    window.open(`tg://msg_url?url=${encodeURIComponent(shareUrl)}&text=${text}`, '_blank');
     setShowShareModal(false);
   };
 

@@ -349,6 +349,17 @@ export const translations = {
       shareFailed: "Could not share",
     },
 
+    // Digital Tasbih Counter
+    tasbih: {
+      title: "Tasbih Counter",
+      tapToCount: "Tap to count",
+      reset: "Reset",
+      complete: "Complete!",
+      logProgress: "Log Progress",
+      hint: "You can close anytime — your count will be saved",
+      openTasbih: "Open Tasbih",
+    },
+
     // Guidance Content
     guidance: {
       relatedQuranicVerses: "Related Quranic Verses",
@@ -3401,6 +3412,17 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
       copyLink: "Copier le lien",
       linkCopied: "Lien copié!",
       shareFailed: "Impossible de partager",
+    },
+
+    // Compteur de Tasbih numérique
+    tasbih: {
+      title: "Compteur Tasbih",
+      tapToCount: "Toucher pour compter",
+      reset: "Réinitialiser",
+      complete: "Terminé!",
+      logProgress: "Enregistrer",
+      hint: "Vous pouvez fermer à tout moment — votre compte sera sauvegardé",
+      openTasbih: "Ouvrir Tasbih",
     },
 
     guidance: {

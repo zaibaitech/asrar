@@ -13,6 +13,8 @@ import type { Challenge, SessionTag, ChallengeType } from '../types';
 import { SESSION_TAGS } from '../types';
 import { computePercent, formatNumber, formatPercent } from '../utils';
 import { getRamadanInfo } from '@/src/lib/hijri';
+import { TasbihCounter } from './TasbihCounter';
+import { translations } from '@/src/lib/translations';
 
 // ─── Type Badge Colors ───────────────────────────────────────────────────────────
 
@@ -84,6 +86,10 @@ export function ChallengeCard({
   const [showMonthlyLog, setShowMonthlyLog] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
   const [linkCopied, setLinkCopied] = useState(false);
+  const [showTasbih, setShowTasbih] = useState(false);
+
+  // Translations
+  const t = translations[language].tasbih;
 
   // ─── Computed values ───
   const ramadanInfo = getRamadanInfo();
@@ -191,7 +197,7 @@ export function ChallengeCard({
     const text = language === 'fr'
       ? `🤲 Rejoignez-moi dans ${challenge.title}!\n\n${challenge.arabicText}\n\nSuivez votre dhikr quotidien:`
       : `🤲 Join me in ${challenge.title}!\n\n${challenge.arabicText}\n\nTrack your daily dhikr:`;
-    window.open(`https://wa.me/?text=${encodeURIComponent(text + '\n' + shareUrl)}`, '_blank');
+    window.open(`whatsapp://send?text=${encodeURIComponent(text + '\n' + shareUrl)}`, '_blank');
   };
 
   const shareTelegram = () => {
@@ -199,7 +205,7 @@ export function ChallengeCard({
     const text = language === 'fr'
       ? `🤲 Rejoignez-moi dans ${challenge.title}!\n\n${challenge.arabicText}`
       : `🤲 Join me in ${challenge.title}!\n\n${challenge.arabicText}`;
-    window.open(`https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(text)}`, '_blank');
+    window.open(`tg://msg_url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(text)}`, '_blank');
   };
 
   // ─── Daily breakdown ───
@@ -339,9 +345,19 @@ export function ChallengeCard({
 
           {/* Quick Add */}
           <div>
-            <h5 className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
-              {language === 'fr' ? 'Ajout rapide' : 'Quick Add'}
-            </h5>
+            <div className="flex items-center justify-between mb-2">
+              <h5 className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                {language === 'fr' ? 'Ajout rapide' : 'Quick Add'}
+              </h5>
+              <button
+                onClick={() => setShowTasbih(true)}
+                className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-50 dark:bg-amber-900/30 hover:bg-amber-100 dark:hover:bg-amber-900/50 text-amber-600 dark:text-amber-400 text-xs font-medium transition-colors border border-amber-200 dark:border-amber-800/50"
+                title={t.openTasbih}
+              >
+                <span>📿</span>
+                <span>{t.openTasbih}</span>
+              </button>
+            </div>
             <div className="flex flex-wrap gap-2">
               {challenge.quickAddPresets.map((amount) => (
                 <button
@@ -522,6 +538,21 @@ export function ChallengeCard({
           </div>
         </div>
       )}
+
+      {/* Tasbih Counter Modal */}
+      <TasbihCounter
+        isOpen={showTasbih}
+        onClose={() => setShowTasbih(false)}
+        onComplete={(count) => {
+          if (count > 0) {
+            onLogCount(count, selectedSession);
+          }
+        }}
+        arabicText={challenge.arabicText}
+        transliteration={challenge.transliteration}
+        targetCount={challenge.dailyTarget}
+        language={language}
+      />
     </div>
   );
 }

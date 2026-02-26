@@ -11,3 +11,4 @@ export { RamadanHub } from './RamadanHub';
 export { RamadanBannerMini } from './RamadanBannerMini';
 export { PropheticNamesCard } from './PropheticNamesCard';
 export { PropheticNamesPractice } from './PropheticNamesPractice';
+export { TasbihCounter } from './TasbihCounter';

@@ -287,7 +287,7 @@ export function IstikharaPanel() {
     const text = language === 'fr'
       ? `🌙 Découvrez votre profil spirituel avec Istikhara al-Asmāʾ sur Asrār ! Numérologie Abjad, heures planétaires, défis du Ramadan et plus encore.\n\n${url}`
       : `🌙 Discover your spiritual profile with Istikhara al-Asmāʾ on Asrār! Abjad numerology, planetary hours, Ramadan challenges, and more.\n\n${url}`;
-    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+    window.open(`whatsapp://send?text=${encodeURIComponent(text)}`, '_blank');
   };
 
   const handleInviteTelegram = () => {
@@ -297,7 +297,7 @@ export function IstikharaPanel() {
     const text = language === 'fr'
       ? `🌙 Découvrez votre profil spirituel avec Istikhara al-Asmāʾ sur Asrār !`
       : `🌙 Discover your spiritual profile with Istikhara al-Asmāʾ on Asrār!`;
-    window.open(`https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`, '_blank');
+    window.open(`tg://msg_url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`, '_blank');
   };
 
   return (
