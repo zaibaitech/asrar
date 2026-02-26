@@ -1506,11 +1506,6 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
                   <span className="text-lg sm:text-xl font-bold text-teal-700 dark:text-teal-300 tabular-nums">
                     {formatCompact(communityStats.allTimeTotal)}
                   </span>
-                  {communityStats.todayUsers > 0 && (
-                    <span className="text-[9px] sm:text-[10px] text-slate-400 dark:text-slate-500">
-                      {communityStats.todayUsers} {language === 'fr' ? 'actifs' : 'active'}
-                    </span>
-                  )}
                 </div>
               ) : hasProgress ? (
                 /* No community data but user has personal progress */
