@@ -158,7 +158,7 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
   // ─── Computed values ───
   const totalRamadanProgress = getTotalProgress();
   const totalTodayProgress = getTotalTodayProgress();
-  const totalRamadanTarget = state.challenges.reduce((sum, c) => sum + c.totalTarget, 0);
+  const totalRamadanTarget = state.challenges.reduce((sum, c) => sum + (c.totalTarget || 0), 0);
 
   // Get current recommendation for collapsed banner
   const recommendation = getBestDhikrNow(state.challenges);

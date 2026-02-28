@@ -256,7 +256,7 @@ export function RamadanPage() {
   const progressPercent = totalRamadanTarget > 0 ? Math.round((totalRamadanProgress / totalRamadanTarget) * 100) : 0;
 
   // Calculate total streak (max across challenges)
-  const totalStreak = state.challenges.reduce((max, c) => Math.max(max, c.streakDays), 0);
+  const totalStreak = state.challenges.reduce((max, c) => Math.max(max, c.streakDays || 0), 0);
 
   // ─── Handle challenge add ───
   const handleAddChallenge = (type: ChallengeType, config: Parameters<typeof addChallenge>[1]) => {

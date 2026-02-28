@@ -348,11 +348,11 @@ export function RamadanChallengesProvider({ children }: RamadanChallengesProvide
   // ─── Computed values ───
 
   const getTotalTodayProgress = useCallback(() => {
-    return state.challenges.reduce((sum, c) => sum + c.todayProgress, 0);
+    return state.challenges.reduce((sum, c) => sum + (c.todayProgress || 0), 0);
   }, [state.challenges]);
 
   const getTotalProgress = useCallback(() => {
-    return state.challenges.reduce((sum, c) => sum + c.totalProgress, 0);
+    return state.challenges.reduce((sum, c) => sum + (c.totalProgress || 0), 0);
   }, [state.challenges]);
 
   // ─── Context value ───

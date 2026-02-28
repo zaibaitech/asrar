@@ -1390,7 +1390,7 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
   // Get Ramadan challenge stats
   const { getTotalProgress, getTotalTodayProgress, state } = useRamadanChallenges();
   const todayDhikr = getTotalTodayProgress();
-  const totalTarget = state.challenges.reduce((sum, c) => sum + c.totalTarget, 0);
+  const totalTarget = state.challenges.reduce((sum, c) => sum + (c.totalTarget || 0), 0);
   
   // Get TOTAL dhikr from ALL sources in the app (hydration-safe)
   const [appDhikrTotal, setAppDhikrTotal] = useState(0);

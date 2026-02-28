@@ -68,7 +68,7 @@ export function RamadanBannerMini({ language = 'en' }: RamadanBannerMiniProps) {
   const totalProgress = getTotalProgress();
   const totalTarget = state.challenges.reduce((sum, c) => sum + (c.totalTarget || 0), 0);
   const progressPercent = totalTarget > 0 ? Math.round((totalProgress / totalTarget) * 100) : 0;
-  const totalStreak = state.challenges.reduce((max, c) => Math.max(max, c.streakDays), 0);
+  const totalStreak = state.challenges.reduce((max, c) => Math.max(max, c.streakDays || 0), 0);
 
   return (
     <Link
