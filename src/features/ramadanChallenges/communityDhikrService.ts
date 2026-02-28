@@ -162,7 +162,7 @@ async function migrateExistingLocalData() {
         for (const c of challenges) {
           const amount = Array.isArray(c.sessionLogs)
             ? c.sessionLogs.reduce((s: number, l: { count: number }) => s + (l.count || 0), 0)
-            : (c.ramadanProgress || 0);
+            : (c.totalProgress || 0);
           if (amount > 0) {
             totalToSync += amount;
             try {

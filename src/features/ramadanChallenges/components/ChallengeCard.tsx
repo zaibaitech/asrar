@@ -96,8 +96,8 @@ export function ChallengeCard({
   const typeStyle = TYPE_STYLES[challenge.type];
 
   const progressPct = useMemo(
-    () => computePercent(challenge.ramadanProgress, challenge.ramadanTarget),
-    [challenge.ramadanProgress, challenge.ramadanTarget]
+    () => computePercent(challenge.totalProgress, challenge.totalTarget),
+    [challenge.totalProgress, challenge.totalTarget]
   );
 
   const todayPct = useMemo(
@@ -106,7 +106,7 @@ export function ChallengeCard({
   );
 
   const todayRemaining = Math.max(0, challenge.dailyTarget - challenge.todayProgress);
-  const isComplete = challenge.ramadanProgress >= challenge.ramadanTarget;
+  const isComplete = challenge.totalProgress >= challenge.totalTarget;
   const isTodayComplete = challenge.todayProgress >= challenge.dailyTarget;
 
   // Get random quote (stable per card)
@@ -288,7 +288,7 @@ export function ChallengeCard({
           />
         </div>
         <div className="flex items-center justify-between mt-1.5 text-xs text-slate-500 dark:text-slate-400">
-          <span>{formatNumber(challenge.ramadanProgress)} / {formatNumber(challenge.ramadanTarget)}</span>
+          <span>{formatNumber(challenge.totalProgress)} / {formatNumber(challenge.totalTarget)}</span>
           <span>{formatPercent(progressPct)}</span>
         </div>
       </div>

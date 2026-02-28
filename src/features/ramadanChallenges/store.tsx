@@ -75,7 +75,7 @@ function reducer(
           .reduce((sum, log) => sum + log.count, 0);
 
         // Recalculate ramadanProgress from all session logs
-        const ramadanProgress = challenge.sessionLogs.reduce(
+        const totalProgress = challenge.sessionLogs.reduce(
           (sum, log) => sum + log.count,
           0
         );
@@ -106,7 +106,7 @@ function reducer(
         return {
           ...challenge,
           todayProgress,
-          ramadanProgress,
+          totalProgress,
           streakDays,
         };
       });
@@ -152,7 +152,7 @@ function reducer(
           return {
             ...challenge,
             todayProgress: challenge.todayProgress + amount,
-            ramadanProgress: challenge.ramadanProgress + amount,
+            totalProgress: challenge.totalProgress + amount,
             streakDays: newStreak,
             lastLoggedDate: today,
             sessionLogs: [
@@ -170,12 +170,12 @@ function reducer(
     }
 
     case 'SET_TARGETS': {
-      const { id, dailyTarget, ramadanTarget } = action.payload;
+      const { id, dailyTarget, totalTarget } = action.payload;
       return {
         ...state,
         challenges: state.challenges.map((challenge) =>
           challenge.id === id
-            ? { ...challenge, dailyTarget, ramadanTarget }
+            ? { ...challenge, dailyTarget, totalTarget }
             : challenge
         ),
       };
@@ -233,10 +233,10 @@ interface RamadanChallengesContextValue {
   addChallenge: (type: ChallengeType, config: ChallengeConfig) => void;
   removeChallenge: (id: string) => void;
   logCount: (id: string, amount: number, session: SessionTag) => void;
-  setTargets: (id: string, dailyTarget: number, ramadanTarget: number) => void;
+  setTargets: (id: string, dailyTarget: number, totalTarget: number) => void;
   // Computed
   getTotalTodayProgress: () => number;
-  getTotalRamadanProgress: () => number;
+  getTotalProgress: () => number;
 }
 
 interface ChallengeConfig {
@@ -245,8 +245,9 @@ interface ChallengeConfig {
   transliteration: string;
   meaning?: string;
   dailyTarget: number;
-  ramadanTarget: number;
+  totalTarget: number;
   quickAddPresets?: number[];
+  season?: string;
 }
 
 const RamadanChallengesContext = createContext<RamadanChallengesContextValue | null>(null);
@@ -313,9 +314,9 @@ export function RamadanChallengesProvider({ children }: RamadanChallengesProvide
       transliteration: config.transliteration,
       meaning: config.meaning,
       dailyTarget: config.dailyTarget,
-      ramadanTarget: config.ramadanTarget,
+      totalTarget: config.totalTarget,
       todayProgress: 0,
-      ramadanProgress: 0,
+      totalProgress: 0,
       streakDays: 0,
       lastLoggedDate: null,
       quickAddPresets: config.quickAddPresets || DEFAULT_QUICK_ADD_PRESETS,
@@ -340,8 +341,8 @@ export function RamadanChallengesProvider({ children }: RamadanChallengesProvide
     queueDhikrIncrement(amount, dhikrType);
   }, [state.challenges]);
 
-  const setTargets = useCallback((id: string, dailyTarget: number, ramadanTarget: number) => {
-    dispatch({ type: 'SET_TARGETS', payload: { id, dailyTarget, ramadanTarget } });
+  const setTargets = useCallback((id: string, dailyTarget: number, totalTarget: number) => {
+    dispatch({ type: 'SET_TARGETS', payload: { id, dailyTarget, totalTarget } });
   }, []);
 
   // ─── Computed values ───
@@ -350,8 +351,8 @@ export function RamadanChallengesProvider({ children }: RamadanChallengesProvide
     return state.challenges.reduce((sum, c) => sum + c.todayProgress, 0);
   }, [state.challenges]);
 
-  const getTotalRamadanProgress = useCallback(() => {
-    return state.challenges.reduce((sum, c) => sum + c.ramadanProgress, 0);
+  const getTotalProgress = useCallback(() => {
+    return state.challenges.reduce((sum, c) => sum + c.totalProgress, 0);
   }, [state.challenges]);
 
   // ─── Context value ───
@@ -364,9 +365,9 @@ export function RamadanChallengesProvider({ children }: RamadanChallengesProvide
       logCount,
       setTargets,
       getTotalTodayProgress,
-      getTotalRamadanProgress,
+      getTotalProgress,
     }),
-    [state, addChallenge, removeChallenge, logCount, setTargets, getTotalTodayProgress, getTotalRamadanProgress]
+    [state, addChallenge, removeChallenge, logCount, setTargets, getTotalTodayProgress, getTotalProgress]
   );
 
   return (
@@ -395,7 +396,7 @@ export function createIstighfarChallenge(): ChallengeConfig {
     transliteration: 'Astaghfirullāh',
     meaning: 'I seek forgiveness from Allah',
     dailyTarget: 6200,
-    ramadanTarget: 124000,
+    totalTarget: 124000,
     quickAddPresets: [33, 100, 500, 1000],
   };
 }
@@ -407,7 +408,7 @@ export function createSalawatChallenge(variant: SalawatVariant = SALAWAT_VARIANT
     transliteration: variant.transliteration,
     meaning: variant.meaning,
     dailyTarget: 1000,
-    ramadanTarget: 30000,
+    totalTarget: 30000,
     quickAddPresets: [10, 33, 100, 500],
   };
 }
@@ -419,7 +420,7 @@ export function createDivineNameChallenge(name: DivineNameOption = DIVINE_NAME_O
     transliteration: name.transliteration,
     meaning: name.meaning,
     dailyTarget: 500,
-    ramadanTarget: 15000,
+    totalTarget: 15000,
     quickAddPresets: [33, 99, 100, 500],
   };
 }
@@ -435,6 +436,6 @@ export function createCustomChallenge(
     arabicText,
     transliteration,
     dailyTarget,
-    ramadanTarget: dailyTarget * 30,
+    totalTarget: dailyTarget * 30,
   };
 }

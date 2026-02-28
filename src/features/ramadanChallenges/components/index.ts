@@ -12,3 +12,6 @@ export { RamadanBannerMini } from './RamadanBannerMini';
 export { PropheticNamesCard } from './PropheticNamesCard';
 export { PropheticNamesPractice } from './PropheticNamesPractice';
 export { TasbihCounter } from './TasbihCounter';
+export { BadgeDisplay, BadgeGrid } from './BadgeDisplay';
+export { BadgeCelebration } from './BadgeCelebration';
+export { ShareButton } from './ShareButton';

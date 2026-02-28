@@ -41,7 +41,7 @@ export interface Challenge {
   id: string;
   /** Challenge category */
   type: ChallengeType;
-  /** Display title (e.g., "Ramadan Istighfār") */
+  /** Display title (e.g., "Istighfār Challenge") */
   title: string;
   /** Primary Arabic text for the dhikr */
   arabicText: string;
@@ -51,12 +51,12 @@ export interface Challenge {
   meaning?: string;
   /** Daily recitation target */
   dailyTarget: number;
-  /** Total target for the entire Ramadan (30 days) */
-  ramadanTarget: number;
+  /** Total target for the challenge (can be for Ramadan, year, etc.) */
+  totalTarget: number;
   /** Progress made today (resets at midnight) */
   todayProgress: number;
-  /** Total progress across all of Ramadan */
-  ramadanProgress: number;
+  /** Total progress across all time or season */
+  totalProgress: number;
   /** Consecutive days with at least 1 recitation logged */
   streakDays: number;
   /** Last date a recitation was logged (ISO "YYYY-MM-DD") */
@@ -67,6 +67,8 @@ export interface Challenge {
   sessionLogs: SessionLog[];
   /** ISO timestamp of challenge creation */
   createdAt: string;
+  /** Optional: season or tag (e.g., 'Ramadan 2026', 'Year-round') */
+  season?: string;
 }
 
 // ─── Challenge Presets ───────────────────────────────────────────────────────────
@@ -131,7 +133,7 @@ export type RamadanChallengesAction =
   | { type: 'ADD_CHALLENGE'; payload: Challenge }
   | { type: 'REMOVE_CHALLENGE'; payload: { id: string } }
   | { type: 'LOG_COUNT'; payload: { id: string; amount: number; session: SessionTag } }
-  | { type: 'SET_TARGETS'; payload: { id: string; dailyTarget: number; ramadanTarget: number } }
+  | { type: 'SET_TARGETS'; payload: { id: string; dailyTarget: number; totalTarget: number } }
   | { type: 'RESET_TODAY'; payload: { currentDate: string } }
   | { type: 'UPDATE_COMMUNITY'; payload: CommunityStats };
 

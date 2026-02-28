@@ -83,7 +83,32 @@ export {
   AddChallengeModal,
   PropheticNamesCard,
   PropheticNamesPractice,
+  BadgeDisplay,
+  BadgeGrid,
+  BadgeCelebration,
+  ShareButton,
 } from './components';
+
+// ─── Badges & Achievements ───────────────────────────────────────────────────────
+export type { Badge, BadgeCategory } from './badges';
+export {
+  BADGES,
+  getEarnedBadges,
+  getNewlyEarnedBadges,
+  getNextBadgeProgress,
+  getBadgeRarityColor,
+  getBadgeRarityBorder,
+} from './badges';
+
+// ─── Social Sharing ──────────────────────────────────────────────────────────────
+export type { ShareData } from './sharing';
+export {
+  generateProgressShareText,
+  generateChallengeShareText,
+  generateMilestoneShareText,
+  shareContent,
+  getSocialShareUrls,
+} from './sharing';
 
 // ─── 201 Prophetic Names ─────────────────────────────────────────────────────────
 export type { PropheticName } from './propheticNames201';

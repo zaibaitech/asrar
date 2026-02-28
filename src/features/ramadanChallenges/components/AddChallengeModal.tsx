@@ -32,8 +32,9 @@ interface ChallengeConfig {
   transliteration: string;
   meaning?: string;
   dailyTarget: number;
-  ramadanTarget: number;
+  totalTarget: number;
   quickAddPresets?: number[];
+  season?: string;
 }
 
 type ModalStep = 'SELECT_TYPE' | 'CONFIGURE_SALAWAT' | 'PREVIEW_SALAWAT' | 'CONFIGURE_DIVINE_NAME' | 'CONFIGURE_CUSTOM' | 'CONFIGURE_PROPHETIC_NAMES';
@@ -153,7 +154,7 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en', ini
       transliteration: selectedSalawat.transliteration,
       meaning: selectedSalawat.meaning,
       dailyTarget: dailyTarget,
-      ramadanTarget: dailyTarget * 30,
+      totalTarget: dailyTarget * 30,
       quickAddPresets: selectedSalawat.quickAddPresets,
     });
     handleClose();
@@ -167,7 +168,7 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en', ini
       transliteration: selectedDivineName.transliteration,
       meaning: selectedDivineName.meaning,
       dailyTarget: 500,
-      ramadanTarget: 15000,
+      totalTarget: 15000,
       quickAddPresets: [33, 99, 100, 500],
     });
     handleClose();
@@ -181,7 +182,7 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en', ini
       arabicText: customArabic || 'ذكر',
       transliteration: customTranslit || 'dhikr',
       dailyTarget: daily,
-      ramadanTarget: daily * 30,
+      totalTarget: daily * 30,
       quickAddPresets: DEFAULT_QUICK_ADD_PRESETS,
     });
     handleClose();
@@ -195,7 +196,7 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en', ini
       transliteration: 'Asmāʾ an-Nabī ﷺ',
       meaning: RIZQ_PRACTICE_INFO.description,
       dailyTarget: 1, // 1 session per day (morning)
-      ramadanTarget: 7, // 7 days × 1 session
+      totalTarget: 7, // 7 days × 1 session
       quickAddPresets: [1],
     });
     handleClose();

@@ -55,6 +55,7 @@ export function computePercent(progress: number, target: number): number {
  * Format large numbers with locale separators
  */
 export function formatNumber(num: number, locale: string = 'en'): string {
+  if (num == null || isNaN(num)) return '0';
   return num.toLocaleString(locale);
 }
 

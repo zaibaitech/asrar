@@ -128,8 +128,8 @@ export function getBestDhikrNow(
   // If no type match, pick any active challenge (prefer one with lowest completion %)
   if (!bestChallenge && challenges.length > 0) {
     const sorted = [...challenges].sort((a, b) => {
-      const pctA = a.ramadanTarget > 0 ? a.ramadanProgress / a.ramadanTarget : 1;
-      const pctB = b.ramadanTarget > 0 ? b.ramadanProgress / b.ramadanTarget : 1;
+      const pctA = a.totalTarget > 0 ? a.totalProgress / a.totalTarget : 1;
+      const pctB = b.totalTarget > 0 ? b.totalProgress / b.totalTarget : 1;
       return pctA - pctB;
     });
     bestChallenge = sorted[0];

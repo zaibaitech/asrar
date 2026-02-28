@@ -39,7 +39,7 @@ interface RamadanHubProps {
 // ─── Component ───────────────────────────────────────────────────────────────────
 
 export function RamadanHub({ language = 'en', defaultExpanded = false }: RamadanHubProps) {
-  const { state, addChallenge, removeChallenge, logCount, setTargets, getTotalRamadanProgress, getTotalTodayProgress } = useRamadanChallenges();
+  const { state, addChallenge, removeChallenge, logCount, setTargets, getTotalProgress, getTotalTodayProgress } = useRamadanChallenges();
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
   const [showAddModal, setShowAddModal] = useState(false);
   const [initialModalStep, setInitialModalStep] = useState<AddChallengeModalStep>('SELECT_TYPE');
@@ -156,9 +156,9 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
   if (!mounted || !ramadanInfo?.isRamadan) return null;
 
   // ─── Computed values ───
-  const totalRamadanProgress = getTotalRamadanProgress();
+  const totalRamadanProgress = getTotalProgress();
   const totalTodayProgress = getTotalTodayProgress();
-  const totalRamadanTarget = state.challenges.reduce((sum, c) => sum + c.ramadanTarget, 0);
+  const totalRamadanTarget = state.challenges.reduce((sum, c) => sum + c.totalTarget, 0);
 
   // Get current recommendation for collapsed banner
   const recommendation = getBestDhikrNow(state.challenges);
@@ -185,8 +185,8 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
   };
 
   // ─── Handle settings save ───
-  const handleSaveSettings = (challengeId: string) => (dailyTarget: number, ramadanTarget: number) => {
-    setTargets(challengeId, dailyTarget, ramadanTarget);
+  const handleSaveSettings = (challengeId: string) => (dailyTarget: number, totalTarget: number) => {
+    setTargets(challengeId, dailyTarget, totalTarget);
   };
 
   // Get the challenge being edited

@@ -21,7 +21,11 @@ import { CommunityBanner } from '@/src/features/ramadanChallenges/components/Com
 import { RecommenderBanner } from '@/src/features/ramadanChallenges/components/RecommenderBanner';
 import { AddChallengeModal, type AddChallengeModalStep } from '@/src/features/ramadanChallenges/components/AddChallengeModal';
 import { ChallengeSettingsModal } from '@/src/features/ramadanChallenges/components/ChallengeSettingsModal';
+import { BadgeGrid, BadgeCelebration } from '@/src/features/ramadanChallenges/components';
+import { ShareButton } from '@/src/features/ramadanChallenges/components/ShareButton';
 import { useCommunityDhikr } from '@/src/features/ramadanChallenges/communityDhikrService';
+import { getEarnedBadges, getNewlyEarnedBadges, type Badge } from '@/src/features/ramadanChallenges/badges';
+import { generateProgressShareText } from '@/src/features/ramadanChallenges/sharing';
 
 // ─── Translations ────────────────────────────────────────────────────────────────
 
@@ -70,7 +74,7 @@ export function RamadanPage() {
   const { language } = useLanguage();
   const t = translations[language];
   
-  const { state, addChallenge, removeChallenge, logCount, setTargets, getTotalRamadanProgress, getTotalTodayProgress } = useRamadanChallenges();
+  const { state, addChallenge, removeChallenge, logCount, setTargets, getTotalProgress, getTotalTodayProgress } = useRamadanChallenges();
   
   const [showAddModal, setShowAddModal] = useState(false);
   const [initialModalStep, setInitialModalStep] = useState<AddChallengeModalStep>('SELECT_TYPE');
@@ -79,9 +83,26 @@ export function RamadanPage() {
   const [editingChallenge, setEditingChallenge] = useState<string | null>(null);
   const [linkCopied, setLinkCopied] = useState(false);
   const [deepLinkedChallengeType, setDeepLinkedChallengeType] = useState<ChallengeType | null>(null);
+  
+  // Badge tracking
+  const [previousChallenges, setPreviousChallenges] = useState(state.challenges);
+  const [celebratingBadge, setCelebratingBadge] = useState<Badge | null>(null);
 
   // Live community stats (must be before any early returns)
   const communityStats = useCommunityDhikr();
+  
+  // Track badge unlocks
+  useEffect(() => {
+    if (!state.isHydrated) return;
+    
+    const newBadges = getNewlyEarnedBadges(previousChallenges, state.challenges);
+    if (newBadges.length > 0) {
+      // Celebrate the first new badge
+      setCelebratingBadge(newBadges[0]);
+    }
+    
+    setPreviousChallenges(state.challenges);
+  }, [state.challenges, state.isHydrated]);
 
   // ─── Hydration safety ───
   useEffect(() => {
@@ -229,9 +250,9 @@ export function RamadanPage() {
   }
 
   // ─── Computed values ───
-  const totalRamadanProgress = getTotalRamadanProgress();
+  const totalRamadanProgress = getTotalProgress();
   const totalTodayProgress = getTotalTodayProgress();
-  const totalRamadanTarget = state.challenges.reduce((sum, c) => sum + c.ramadanTarget, 0);
+  const totalRamadanTarget = state.challenges.reduce((sum, c) => sum + (c.totalTarget || 0), 0);
   const progressPercent = totalRamadanTarget > 0 ? Math.round((totalRamadanProgress / totalRamadanTarget) * 100) : 0;
 
   // Calculate total streak (max across challenges)
@@ -257,8 +278,8 @@ export function RamadanPage() {
   };
 
   // ─── Handle settings save ───
-  const handleSaveSettings = (challengeId: string) => (dailyTarget: number, ramadanTarget: number) => {
-    setTargets(challengeId, dailyTarget, ramadanTarget);
+  const handleSaveSettings = (challengeId: string) => (dailyTarget: number, totalTarget: number) => {
+    setTargets(challengeId, dailyTarget, totalTarget);
   };
 
   // ─── Share functionality ───
@@ -316,22 +337,18 @@ export function RamadanPage() {
             </div>
 
             {/* Share button */}
-            <button
-              onClick={handleShare}
-              className="flex items-center gap-2 px-3 py-2 -mr-3 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors"
-            >
-              {linkCopied ? (
-                <>
-                  <Check className="w-5 h-5 text-green-500" />
-                  <span className="hidden sm:inline text-sm font-medium text-green-500">{t.linkCopied}</span>
-                </>
-              ) : (
-                <>
-                  <Share2 className="w-5 h-5" />
-                  <span className="hidden sm:inline text-sm font-medium">{t.share}</span>
-                </>
+            <ShareButton
+              shareData={generateProgressShareText(
+                totalRamadanProgress,
+                totalTodayProgress,
+                totalStreak,
+                state.challenges.length,
+                language
               )}
-            </button>
+              language={language}
+              variant="button"
+              className="-mr-3"
+            />
           </div>
         </div>
       </header>
@@ -460,6 +477,20 @@ export function RamadanPage() {
           )
         ))}
 
+        {/* Badges Section */}
+        {state.challenges.length > 0 && (() => {
+          const earnedBadges = getEarnedBadges(state.challenges);
+          if (earnedBadges.length > 0) {
+            return (
+              <div className="bg-white/70 dark:bg-slate-800/60 rounded-2xl border border-purple-200/60 dark:border-purple-700/30 shadow-sm p-6">
+                <h3 className="text-lg font-bold text-purple-900 dark:text-purple-100 mb-4 text-center">🎖️ {language === 'fr' ? 'Vos Badges' : 'Your Badges'}</h3>
+                <BadgeGrid badges={earnedBadges} language={language} maxDisplay={6} />
+              </div>
+            );
+          }
+          return null;
+        })()}
+
         {/* Add Challenge Button */}
         <button
           onClick={() => { setInitialModalStep('SELECT_TYPE'); setShowAddModal(true); }}
@@ -500,6 +531,15 @@ export function RamadanPage() {
           challenge={challengeBeingEdited}
           onSave={handleSaveSettings(editingChallenge!)}
           language={language}
+        />
+      )}
+
+      {/* Badge Celebration Modal */}
+      {celebratingBadge && (
+        <BadgeCelebration
+          badge={celebratingBadge}
+          language={language}
+          onClose={() => setCelebratingBadge(null)}
         />
       )}
     </div>

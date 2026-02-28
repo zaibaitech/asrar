@@ -64,16 +64,7 @@ export function CommunityBanner({ stats, language = 'en', compact = false }: Com
             }
           </p>
         )}
-        <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-          {activeUsers > 0
-            ? (language === 'fr' 
-                ? `${formattedUsers} utilisateurs actifs aujourd'hui`
-                : `${formattedUsers} active users today`)
-            : (language === 'fr'
-                ? 'Soyez le premier à contribuer aujourd\'hui !'
-                : 'Be the first to contribute today!')
-          }
-        </p>
+        {/* Active users hidden as requested */}
       </div>
     </div>
   );

@@ -2,7 +2,7 @@
  * Get Total App Dhikr
  * ====================
  * Aggregates dhikr counts from all tracking sources in the app:
- * 1. Ramadan Challenges store (ramadanProgress per challenge)
+ * 1. Ramadan Challenges store (totalProgress per challenge)
  * 2. Istikhara DhikrCounter sessions (dhikr-history)
  * 3. Planetary DhikrCard counters (dhikr_count_${planet})
  */
@@ -34,12 +34,12 @@ export function getTotalAppDhikr(): AppDhikrTotals {
       // Storage format is an array of challenges directly
       if (Array.isArray(challenges)) {
         ramadanChallenges = challenges.reduce(
-          (sum: number, c: { ramadanProgress?: number; sessionLogs?: { count: number }[] }) => {
+          (sum: number, c: { totalProgress?: number; sessionLogs?: { count: number }[] }) => {
             // Prefer recalculating from sessionLogs for accuracy
             if (Array.isArray(c.sessionLogs) && c.sessionLogs.length > 0) {
               return sum + c.sessionLogs.reduce((s: number, log: { count: number }) => s + (log.count || 0), 0);
             }
-            return sum + (c.ramadanProgress || 0);
+            return sum + (c.totalProgress || 0);
           },
           0
         );

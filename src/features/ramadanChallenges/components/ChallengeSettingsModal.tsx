@@ -16,7 +16,7 @@ interface ChallengeSettingsModalProps {
   isOpen: boolean;
   onClose: () => void;
   challenge: Challenge;
-  onSave: (dailyTarget: number, ramadanTarget: number) => void;
+  onSave: (dailyTarget: number, totalTarget: number) => void;
   language?: 'en' | 'fr';
 }
 
@@ -26,23 +26,23 @@ const translations = {
   en: {
     title: 'Challenge Settings',
     dailyTarget: 'Daily Target',
-    ramadanTarget: 'Ramadan Target (30 days)',
+    ramadanTarget: 'Total Target (30 days)',
     autoCalculate: 'Auto-calculate from daily',
     save: 'Save',
     cancel: 'Cancel',
     dailyPlaceholder: 'Enter daily target',
-    ramadanPlaceholder: 'Total for Ramadan',
+    ramadanPlaceholder: 'Total goal',
     hint: 'Adjust your daily goal based on your capacity',
   },
   fr: {
     title: 'Paramètres du défi',
     dailyTarget: 'Objectif quotidien',
-    ramadanTarget: 'Objectif Ramadan (30 jours)',
+    ramadanTarget: 'Objectif Total (30 jours)',
     autoCalculate: 'Calculer automatiquement',
     save: 'Enregistrer',
     cancel: 'Annuler',
     dailyPlaceholder: 'Entrez l\'objectif quotidien',
-    ramadanPlaceholder: 'Total pour le Ramadan',
+    ramadanPlaceholder: 'Objectif total',
     hint: 'Ajustez votre objectif selon votre capacité',
   },
 };
@@ -59,21 +59,21 @@ export function ChallengeSettingsModal({
   const t = translations[language];
   
   const [dailyTarget, setDailyTarget] = useState(challenge.dailyTarget);
-  const [ramadanTarget, setRamadanTarget] = useState(challenge.ramadanTarget);
+  const [totalTarget, setTotalTarget] = useState(challenge.totalTarget || 0);
   const [autoCalculate, setAutoCalculate] = useState(true);
 
   // Reset form when challenge changes
   useEffect(() => {
     setDailyTarget(challenge.dailyTarget);
-    setRamadanTarget(challenge.ramadanTarget);
+    setTotalTarget(challenge.totalTarget || 0);
     // Check if current values match auto-calculation
-    setAutoCalculate(challenge.ramadanTarget === challenge.dailyTarget * 30);
+    setAutoCalculate((challenge.totalTarget || 0) === challenge.dailyTarget * 30);
   }, [challenge]);
 
-  // Auto-update Ramadan target when daily changes
+  // Auto-update total target when daily changes
   useEffect(() => {
     if (autoCalculate) {
-      setRamadanTarget(dailyTarget * 30);
+      setTotalTarget(dailyTarget * 30);
     }
   }, [dailyTarget, autoCalculate]);
 
@@ -86,17 +86,17 @@ export function ChallengeSettingsModal({
     }
   };
 
-  const handleRamadanChange = (value: string) => {
+  const handleTotalChange = (value: string) => {
     const num = parseInt(value, 10);
     if (!isNaN(num) && num >= 0) {
-      setRamadanTarget(num);
+      setTotalTarget(num);
     } else if (value === '') {
-      setRamadanTarget(0);
+      setTotalTarget(0);
     }
   };
 
   const handleSave = () => {
-    onSave(dailyTarget, ramadanTarget);
+    onSave(dailyTarget, totalTarget);
     onClose();
   };
 
@@ -170,7 +170,7 @@ export function ChallengeSettingsModal({
             </label>
           </div>
 
-          {/* Ramadan Target */}
+          {/* Total Target */}
           <div className="space-y-2">
             <label className="flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-300">
               <Calendar size={16} className="text-amber-500" />
@@ -178,8 +178,8 @@ export function ChallengeSettingsModal({
             </label>
             <input
               type="number"
-              value={ramadanTarget || ''}
-              onChange={(e) => handleRamadanChange(e.target.value)}
+              value={totalTarget || ''}
+              onChange={(e) => handleTotalChange(e.target.value)}
               placeholder={t.ramadanPlaceholder}
               min={1}
               disabled={autoCalculate}
@@ -200,7 +200,7 @@ export function ChallengeSettingsModal({
           </button>
           <button
             onClick={handleSave}
-            disabled={dailyTarget < 1 || ramadanTarget < 1}
+            disabled={dailyTarget < 1 || totalTarget < 1}
             className="flex-1 px-4 py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {t.save}
