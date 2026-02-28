@@ -193,7 +193,7 @@ export function RamadanPage() {
   }, [state.isHydrated, state.challenges.length, addChallenge]);
 
   // ─── Loading state (skeleton matching real layout to prevent flash) ───
-  if (!mounted) {
+  if (!mounted || !state.isHydrated) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
         {/* Skeleton header */}

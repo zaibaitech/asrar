@@ -41,6 +41,13 @@ import {
 import { queueDhikrIncrement } from './communityDhikrService';
 import { migrateExistingIstighfar, migrateSalawatChallenges } from './migrations';
 import { getRamadanInfo } from '@/src/lib/hijri';
+import { 
+  syncChallenges, 
+  queueCloudSync, 
+  flushCloudSync,
+  isAuthenticated 
+} from './sync';
+import { supabase } from '@/src/lib/supabase';
 
 // ─── Initial State ───────────────────────────────────────────────────────────────
 
@@ -261,24 +268,107 @@ interface RamadanChallengesProviderProps {
 export function RamadanChallengesProvider({ children }: RamadanChallengesProviderProps) {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  // ─── Hydration from localStorage ───
+  // ─── Hydration from localStorage + Cloud Sync ───
   useEffect(() => {
-    // Run migrations first
-    migrateExistingIstighfar();
-    migrateSalawatChallenges();
+    const hydrateAndSync = async () => {
+      // Run migrations first
+      migrateExistingIstighfar();
+      migrateSalawatChallenges();
 
-    // Load from storage
-    const raw = localStorage.getItem(STORAGE_KEYS.CHALLENGES_V2);
-    const challenges: Challenge[] = raw ? JSON.parse(raw) : [];
-    const today = getToday();
+      // Load from localStorage
+      const raw = localStorage.getItem(STORAGE_KEYS.CHALLENGES_V2);
+      const localChallenges: Challenge[] = raw ? JSON.parse(raw) : [];
+      const today = getToday();
 
-    dispatch({ type: 'HYDRATE', payload: { challenges, currentDate: today } });
+      // Check if user is authenticated
+      const authed = await isAuthenticated();
+      
+      if (authed) {
+        console.log('[RamadanChallenges] User authenticated - syncing with cloud...');
+        
+        // Sync with cloud (merge local + cloud)
+        const syncResult = await syncChallenges(localChallenges);
+        
+        if (syncResult.success && syncResult.data) {
+          // Use merged data from cloud
+          const mergedChallenges = syncResult.data.challenges;
+          
+          // Save merged data to localStorage
+          localStorage.setItem(STORAGE_KEYS.CHALLENGES_V2, JSON.stringify(mergedChallenges));
+          
+          // Hydrate with merged data
+          dispatch({ type: 'HYDRATE', payload: { challenges: mergedChallenges, currentDate: today } });
+          console.log('[RamadanChallenges] Synced successfully:', mergedChallenges.length, 'challenges');
+        } else {
+          // Sync failed - use local data
+          console.warn('[RamadanChallenges] Sync failed, using local data');
+          dispatch({ type: 'HYDRATE', payload: { challenges: localChallenges, currentDate: today } });
+        }
+      } else {
+        // Not authenticated - use local data only
+        console.log('[RamadanChallenges] User not authenticated - using local storage only');
+        dispatch({ type: 'HYDRATE', payload: { challenges: localChallenges, currentDate: today } });
+      }
+    };
+
+    hydrateAndSync();
   }, []);
 
-  // ─── Persist to localStorage ───
+  // ─── Persist to localStorage + Cloud Sync ───
   useEffect(() => {
     if (!state.isHydrated) return;
+    
+    // Always save to localStorage (works offline)
     localStorage.setItem(STORAGE_KEYS.CHALLENGES_V2, JSON.stringify(state.challenges));
+    
+    // Queue cloud sync (debounced, only if authenticated)
+    queueCloudSync(state.challenges, 2000);
+  }, [state.challenges, state.isHydrated]);
+
+  // ─── Listen for auth state changes ───
+  useEffect(() => {
+    if (!supabase || !state.isHydrated) return;
+
+    // When user signs in/out, re-sync
+    const { data: authListener } = supabase.auth.onAuthStateChange(async (event, session) => {
+      if (event === 'SIGNED_IN' && session?.user) {
+        console.log('[RamadanChallenges] User signed in - syncing with cloud...');
+        
+        // Sync current local data with cloud
+        const syncResult = await syncChallenges(state.challenges);
+        
+        if (syncResult.success && syncResult.data) {
+          const mergedChallenges = syncResult.data.challenges;
+          localStorage.setItem(STORAGE_KEYS.CHALLENGES_V2, JSON.stringify(mergedChallenges));
+          dispatch({ type: 'HYDRATE', payload: { challenges: mergedChallenges, currentDate: getToday() } });
+          console.log('[RamadanChallenges] Signed in - synced successfully');
+        }
+      } else if (event === 'SIGNED_OUT') {
+        console.log('[RamadanChallenges] User signed out - continuing with local storage only');
+      }
+    });
+
+    return () => {
+      authListener?.subscription?.unsubscribe();
+    };
+  }, [state.isHydrated, state.challenges]);
+
+  // ─── Flush sync on page unload ───
+  useEffect(() => {
+    if (!state.isHydrated) return;
+
+    const handleBeforeUnload = () => {
+      // Force immediate sync on page close
+      flushCloudSync(state.challenges);
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+      // Also flush on component unmount
+      flushCloudSync(state.challenges);
+    };
   }, [state.challenges, state.isHydrated]);
 
   // ─── Day reset check (runs on mount and periodically) ───

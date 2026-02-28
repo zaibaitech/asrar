@@ -60,8 +60,8 @@ export function RamadanBannerMini({ language = 'en' }: RamadanBannerMiniProps) {
     addChallenge('ISTIGHFAR', config);
   }, [state.isHydrated, state.challenges.length, addChallenge]);
 
-  // Don't render if not mounted
-  if (!mounted) return null;
+  // Don't render if not mounted or not hydrated
+  if (!mounted || !state.isHydrated) return null;
 
   // ─── Computed values ───
   const totalTodayProgress = getTotalTodayProgress();
