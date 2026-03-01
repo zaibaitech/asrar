@@ -136,7 +136,7 @@ export function DhikrCard({ planetName, planetElement, planetNameArabic, onClose
     setCount(0);
   };
 
-  const progress = (count / dhikr.count) * 100;
+  const progress = dhikr.count > 0 ? (count / dhikr.count) * 100 : 0;
   const isComplete = count === dhikr.count;
 
   return (

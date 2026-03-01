@@ -63,8 +63,10 @@ export function formatNumber(num: number | undefined | null, locale: string = 'e
 
 /**
  * Format percentage with specified decimals
+ * Handles NaN and Infinity by returning 0%
  */
 export function formatPercent(value: number, decimals: number = 1): string {
+  if (!isFinite(value) || isNaN(value)) return '0%';
   return `${value.toFixed(decimals)}%`;
 }
 

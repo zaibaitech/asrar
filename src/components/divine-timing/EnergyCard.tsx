@@ -69,7 +69,7 @@ export function EnergyCard({
       }
 
       // Calculate progress percentage
-      const progressPercent = Math.min(100, (elapsed / total) * 100);
+      const progressPercent = total > 0 ? Math.min(100, (elapsed / total) * 100) : 0;
       setProgress(progressPercent);
 
       // Format remaining time

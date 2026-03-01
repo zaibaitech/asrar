@@ -209,7 +209,7 @@ export function PropheticNamesCard({
     0
   );
   const totalSessions = 7;
-  const progressPercent = Math.round((completedSessions / totalSessions) * 100);
+  const progressPercent = totalSessions > 0 ? Math.round((completedSessions / totalSessions) * 100) : 0;
   const currentDayNumber = sessions.findIndex(s => !s.completed) + 1 || 7;
   const isComplete = completedSessions === totalSessions;
   const isContinueMode = continueState.enabled;

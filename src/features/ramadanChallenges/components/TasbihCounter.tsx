@@ -47,7 +47,7 @@ export function TasbihCounter({
   if (!isOpen) return null;
 
   const isComplete = count >= targetCount;
-  const progressPercent = Math.min((count / targetCount) * 100, 100);
+  const progressPercent = targetCount > 0 ? Math.min((count / targetCount) * 100, 100) : 0;
 
   // Increment counter with haptic feedback
   const increment = () => {

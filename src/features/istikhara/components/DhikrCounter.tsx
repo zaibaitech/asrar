@@ -191,7 +191,7 @@ export function DhikrCounter({
   }, [count, countingMode, isActive, isPaused, autoSpeed]);
   
   // Calculate progress
-  const progress = (count / targetCount) * 100;
+  const progress = targetCount > 0 ? (count / targetCount) * 100 : 0;
   const radius = 140;
   const circumference = 2 * Math.PI * radius;
   const strokeDashoffset = circumference - (progress / 100) * circumference;

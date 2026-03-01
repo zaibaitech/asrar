@@ -224,7 +224,7 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
                   {' · '}{language === 'fr' ? "Aujourd'hui:" : 'Today:'} {formatNumber(totalTodayProgress)}
                   {totalRamadanTarget > 0 && (
                     <span className="text-amber-500 dark:text-amber-500">
-                      {' · '}{Math.round((totalRamadanProgress / totalRamadanTarget) * 100)}%
+                      {' · '}{totalRamadanTarget > 0 ? Math.round((totalRamadanProgress / totalRamadanTarget) * 100) : 0}%
                     </span>
                   )}
                 </p>

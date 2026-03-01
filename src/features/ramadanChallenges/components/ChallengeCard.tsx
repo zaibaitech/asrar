@@ -498,16 +498,19 @@ export function ChallengeCard({
             {language === 'fr' ? 'Inviter des amis' : 'Invite Friends to Join'}
           </button>
 
-          {/* Delete Option */}
+          {/* Footer Actions */}
           {onRemove && (
-            <div className="flex items-center justify-center pt-2">
+            <div className="flex items-center justify-between pt-3 border-t border-amber-200/50 dark:border-amber-800/30">
               <button
                 onClick={() => setShowDeleteConfirm(true)}
-                className="text-sm text-slate-400 hover:text-red-500 transition-colors flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-red-50 dark:hover:bg-red-900/20"
+                className="text-xs text-slate-400 hover:text-red-500 transition-colors flex items-center gap-1"
               >
-                <Trash2 className="w-4 h-4" />
-                {language === 'fr' ? 'Supprimer ce défi' : 'Remove this challenge'}
+                <Trash2 className="w-3 h-3" />
+                {language === 'fr' ? 'Supprimer' : 'Remove'}
               </button>
+              <span className="text-xs text-slate-400 dark:text-slate-500">
+                {challenge.transliteration || challenge.title}
+              </span>
             </div>
           )}
         </div>

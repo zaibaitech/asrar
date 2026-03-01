@@ -483,6 +483,7 @@ export function RamadanPage() {
                 challenge={challenge}
                 onLogCount={handleLogCount(challenge.id)}
                 onOpenSettings={() => setEditingChallenge(challenge.id)}
+                onRemove={removeChallenge}
                 language={language}
                 defaultExpanded={deepLinkedChallengeType === challenge.type || index === 0}
               />
