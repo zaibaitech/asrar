@@ -45,7 +45,8 @@ import {
   syncChallenges, 
   queueCloudSync, 
   flushCloudSync,
-  isAuthenticated 
+  isAuthenticated,
+  type SyncResult
 } from './sync';
 import { supabase } from '@/src/lib/supabase';
 
@@ -299,7 +300,7 @@ export function RamadanChallengesProvider({ children }: RamadanChallengesProvide
           const syncResult = await Promise.race([
             syncChallenges(localChallenges),
             timeoutPromise
-          ]).catch((err) => {
+          ]).catch((err): SyncResult => {
             console.warn('[RamadanChallenges] Sync timed out or failed:', err);
             return { success: false, error: String(err) };
           });
