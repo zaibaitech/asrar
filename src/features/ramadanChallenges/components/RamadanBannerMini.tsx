@@ -12,6 +12,7 @@ import { ChevronRight, Flame } from 'lucide-react';
 import { getRamadanInfo, type RamadanInfo } from '@/src/lib/hijri';
 import { useRamadanChallenges, createIstighfarChallenge } from '../store';
 import { formatNumber } from '../utils';
+import { useCommunityDhikr } from '../communityDhikrService';
 
 // ─── Props ───────────────────────────────────────────────────────────────────────
 
@@ -43,6 +44,7 @@ const translations = {
 export function RamadanBannerMini({ language = 'en' }: RamadanBannerMiniProps) {
   const t = translations[language];
   const { state, addChallenge, getTotalTodayProgress, getTotalProgress } = useRamadanChallenges();
+  const communityStats = useCommunityDhikr();
   const [ramadanInfo, setRamadanInfo] = useState<RamadanInfo | null>(null);
   const [mounted, setMounted] = useState(false);
 
@@ -111,6 +113,11 @@ export function RamadanBannerMini({ language = 'en' }: RamadanBannerMiniProps) {
                 <span className="text-amber-500"> · {progressPercent}%</span>
               )}
             </p>
+            {communityStats.allTimeTotal > 0 && (
+              <p className="text-xs text-teal-600 dark:text-teal-400 font-medium">
+                🌍 {formatNumber(communityStats.allTimeTotal)} {language === 'fr' ? 'dhikr communautaires' : 'community dhikr'}
+              </p>
+            )}
           </div>
         </div>
         {/* Right: View link + Arrow */}
