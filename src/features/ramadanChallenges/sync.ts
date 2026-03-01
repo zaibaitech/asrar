@@ -281,11 +281,22 @@ export async function isAuthenticated(): Promise<boolean> {
  */
 let saveTimeout: ReturnType<typeof setTimeout> | null = null;
 
-export function queueCloudSync(challenges: Challenge[], debounceMs = 2000) {
+export function queueCloudSync(challenges: Challenge[], debounceMs = 0) {
   if (saveTimeout) {
     clearTimeout(saveTimeout);
   }
 
+  // If no debounce requested, sync immediately
+  if (debounceMs === 0) {
+    isAuthenticated().then(authed => {
+      if (authed) {
+        saveChallengesToCloud(challenges);
+      }
+    });
+    return;
+  }
+
+  // Otherwise use debounce
   saveTimeout = setTimeout(async () => {
     const authed = await isAuthenticated();
     if (authed) {

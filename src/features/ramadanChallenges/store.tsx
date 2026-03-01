@@ -321,8 +321,8 @@ export function RamadanChallengesProvider({ children }: RamadanChallengesProvide
     // Always save to localStorage (works offline)
     localStorage.setItem(STORAGE_KEYS.CHALLENGES_V2, JSON.stringify(state.challenges));
     
-    // Queue cloud sync (debounced, only if authenticated)
-    queueCloudSync(state.challenges, 2000);
+    // Immediate cloud sync (no debounce for mobile reliability)
+    queueCloudSync(state.challenges, 0);
   }, [state.challenges, state.isHydrated]);
 
   // ─── Listen for auth state changes ───
