@@ -280,33 +280,53 @@ export function RamadanChallengesProvider({ children }: RamadanChallengesProvide
       const localChallenges: Challenge[] = raw ? JSON.parse(raw) : [];
       const today = getToday();
 
-      // Check if user is authenticated
-      const authed = await isAuthenticated();
-      
-      if (authed) {
-        console.log('[RamadanChallenges] User authenticated - syncing with cloud...');
+      try {
+        // Create a timeout promise to prevent infinite loading on mobile
+        const timeoutPromise = new Promise<null>((_, reject) => 
+          setTimeout(() => reject(new Error('Hydration timeout')), 8000)
+        );
+
+        // Check if user is authenticated with timeout
+        const authed = await Promise.race([
+          isAuthenticated(),
+          timeoutPromise
+        ]).catch(() => false);
         
-        // Sync with cloud (merge local + cloud)
-        const syncResult = await syncChallenges(localChallenges);
-        
-        if (syncResult.success && syncResult.data) {
-          // Use merged data from cloud
-          const mergedChallenges = syncResult.data.challenges;
+        if (authed) {
+          console.log('[RamadanChallenges] User authenticated - syncing with cloud...');
           
-          // Save merged data to localStorage
-          localStorage.setItem(STORAGE_KEYS.CHALLENGES_V2, JSON.stringify(mergedChallenges));
+          // Sync with cloud (merge local + cloud) with timeout
+          const syncResult = await Promise.race([
+            syncChallenges(localChallenges),
+            timeoutPromise
+          ]).catch((err) => {
+            console.warn('[RamadanChallenges] Sync timed out or failed:', err);
+            return { success: false, error: String(err) };
+          });
           
-          // Hydrate with merged data
-          dispatch({ type: 'HYDRATE', payload: { challenges: mergedChallenges, currentDate: today } });
-          console.log('[RamadanChallenges] Synced successfully:', mergedChallenges.length, 'challenges');
+          if (syncResult && syncResult.success && syncResult.data) {
+            // Use merged data from cloud
+            const mergedChallenges = syncResult.data.challenges;
+            
+            // Save merged data to localStorage
+            localStorage.setItem(STORAGE_KEYS.CHALLENGES_V2, JSON.stringify(mergedChallenges));
+            
+            // Hydrate with merged data
+            dispatch({ type: 'HYDRATE', payload: { challenges: mergedChallenges, currentDate: today } });
+            console.log('[RamadanChallenges] Synced successfully:', mergedChallenges.length, 'challenges');
+          } else {
+            // Sync failed - use local data
+            console.warn('[RamadanChallenges] Sync failed, using local data');
+            dispatch({ type: 'HYDRATE', payload: { challenges: localChallenges, currentDate: today } });
+          }
         } else {
-          // Sync failed - use local data
-          console.warn('[RamadanChallenges] Sync failed, using local data');
+          // Not authenticated - use local data only
+          console.log('[RamadanChallenges] User not authenticated - using local storage only');
           dispatch({ type: 'HYDRATE', payload: { challenges: localChallenges, currentDate: today } });
         }
-      } else {
-        // Not authenticated - use local data only
-        console.log('[RamadanChallenges] User not authenticated - using local storage only');
+      } catch (error) {
+        // Always hydrate with local data even if cloud sync fails completely
+        console.error('[RamadanChallenges] Hydration error, falling back to local data:', error);
         dispatch({ type: 'HYDRATE', payload: { challenges: localChallenges, currentDate: today } });
       }
     };

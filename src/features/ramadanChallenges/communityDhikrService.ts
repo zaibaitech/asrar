@@ -124,7 +124,15 @@ export function flushDhikrQueue() {
 
 async function fetchStats(): Promise<CommunityDhikrStats | null> {
   try {
-    const res = await fetch('/api/v1/community-dhikr');
+    // Add timeout for mobile networks
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 8000);
+    
+    const res = await fetch('/api/v1/community-dhikr', { 
+      signal: controller.signal 
+    });
+    clearTimeout(timeoutId);
+    
     if (!res.ok) return null;
     const json = await res.json();
     if (json.success && json.data) {
@@ -268,7 +276,14 @@ export function useCommunityDhikr(): CommunityDhikrStats {
   // Initial fetch + polling every 30s + one-time migration
   useEffect(() => {
     // Sync existing localStorage data on first load after deploy
-    migrateExistingLocalData().then(() => fetchStats());
+    // Wrap in timeout to prevent blocking on mobile
+    Promise.race([
+      migrateExistingLocalData(),
+      new Promise(resolve => setTimeout(resolve, 5000)) // 5s timeout
+    ])
+      .catch(err => console.warn('[community-dhikr] Migration timeout or error:', err))
+      .finally(() => fetchStats());
+    
     intervalRef.current = setInterval(fetchStats, 30_000);
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);

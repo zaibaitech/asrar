@@ -83,6 +83,7 @@ export function RamadanPage() {
   const [editingChallenge, setEditingChallenge] = useState<string | null>(null);
   const [linkCopied, setLinkCopied] = useState(false);
   const [deepLinkedChallengeType, setDeepLinkedChallengeType] = useState<ChallengeType | null>(null);
+  const [hydrationTimeout, setHydrationTimeout] = useState(false);
   
   // Badge tracking
   const [previousChallenges, setPreviousChallenges] = useState(state.challenges);
@@ -109,6 +110,18 @@ export function RamadanPage() {
     setMounted(true);
     setRamadanInfo(getRamadanInfo());
   }, []);
+
+  // ─── Hydration timeout fallback (ensure skeleton never hangs forever on mobile) ───
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      if (!state.isHydrated) {
+        console.warn('[RamadanPage] Hydration timeout - forcing display');
+        setHydrationTimeout(true);
+      }
+    }, 10000); // 10 second max wait for hydration
+
+    return () => clearTimeout(timeoutId);
+  }, [state.isHydrated]);
 
   // ─── Deep-link handling ───
   useEffect(() => {
@@ -193,7 +206,7 @@ export function RamadanPage() {
   }, [state.isHydrated, state.challenges.length, addChallenge]);
 
   // ─── Loading state (skeleton matching real layout to prevent flash) ───
-  if (!mounted || !state.isHydrated) {
+  if (!mounted || (!state.isHydrated && !hydrationTimeout)) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
         {/* Skeleton header */}
