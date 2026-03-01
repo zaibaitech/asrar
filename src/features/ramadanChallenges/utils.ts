@@ -54,9 +54,11 @@ export function computePercent(progress: number, target: number): number {
 /**
  * Format large numbers with locale separators
  */
-export function formatNumber(num: number, locale: string = 'en'): string {
-  if (num == null || isNaN(num)) return '0';
-  return num.toLocaleString(locale);
+export function formatNumber(num: number | undefined | null, locale: string = 'en'): string {
+  if (num == null || num === undefined || isNaN(num)) return '0';
+  const safeNum = Number(num);
+  if (isNaN(safeNum)) return '0';
+  return safeNum.toLocaleString(locale);
 }
 
 /**
