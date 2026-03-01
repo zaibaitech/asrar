@@ -253,7 +253,7 @@ export function RamadanPage() {
   const totalRamadanProgress = getTotalProgress();
   const totalTodayProgress = getTotalTodayProgress();
   const totalRamadanTarget = state.challenges.reduce((sum, c) => sum + (c.totalTarget || 0), 0);
-  const progressPercent = totalRamadanTarget > 0 ? Math.round((totalRamadanProgress / totalRamadanTarget) * 100) : 0;
+  const progressPercent = totalRamadanTarget > 0 ? Math.round(((totalRamadanProgress || 0) / totalRamadanTarget) * 100) : 0;
 
   // Calculate total streak (max across challenges)
   const totalStreak = state.challenges.reduce((max, c) => Math.max(max, c.streakDays || 0), 0);

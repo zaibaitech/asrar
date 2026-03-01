@@ -76,7 +76,7 @@ export function generateChallengeShareText(
 ): ShareData {
   const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://www.asrar.app';
   const progress = challenge.totalTarget > 0 
-    ? Math.round((challenge.totalProgress / challenge.totalTarget) * 100) 
+    ? Math.round(((challenge.totalProgress || 0) / challenge.totalTarget) * 100) 
     : 0;
   
   if (language === 'fr') {
