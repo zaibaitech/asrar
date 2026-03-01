@@ -358,6 +358,9 @@ export const translations = {
       logProgress: "Log Progress",
       hint: "You can close anytime — your count will be saved",
       openTasbih: "Open Tasbih",
+      remove: "Remove",
+      removeChallenge: "Remove this challenge?",
+      progressWillBeLost: "Your progress will be lost.",
     },
 
     // Guidance Content
@@ -3423,6 +3426,9 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
       logProgress: "Enregistrer",
       hint: "Vous pouvez fermer à tout moment — votre compte sera sauvegardé",
       openTasbih: "Ouvrir Tasbih",
+      remove: "Supprimer",
+      removeChallenge: "Supprimer ce défi?",
+      progressWillBeLost: "Votre progression sera perdue.",
     },
 
     guidance: {
