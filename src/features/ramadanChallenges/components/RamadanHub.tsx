@@ -311,6 +311,11 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
         isOpen={showAddModal}
         onClose={() => setShowAddModal(false)}
         onAdd={handleAddChallenge}
+        existingChallenges={state.challenges.map(c => ({
+          type: c.type,
+          title: c.title,
+          arabicText: c.arabicText
+        }))}
         language={language}
         initialStep={initialModalStep}
       />

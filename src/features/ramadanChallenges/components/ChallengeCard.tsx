@@ -242,6 +242,19 @@ export function ChallengeCard({
 
           {/* Controls */}
           <div className="flex items-center gap-2">
+            {onRemove && (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setShowDeleteConfirm(true);
+                }}
+                className="p-1.5 rounded-lg hover:bg-red-50 dark:hover:bg-red-900/20 text-slate-400 hover:text-red-500 dark:hover:text-red-400 transition-colors"
+                aria-label="Remove challenge"
+                title={language === 'fr' ? 'Supprimer' : 'Remove'}
+              >
+                <Trash2 size={16} />
+              </button>
+            )}
             {onOpenSettings && (
               <button
                 onClick={(e) => {
@@ -484,19 +497,6 @@ export function ChallengeCard({
             <Share2 className="w-4 h-4" />
             {language === 'fr' ? 'Inviter des amis' : 'Invite Friends to Join'}
           </button>
-
-          {/* Delete Button */}
-          {onRemove && (
-            <div className="flex items-center justify-center pt-2">
-              <button
-                onClick={() => setShowDeleteConfirm(true)}
-                className="text-xs text-slate-400 hover:text-red-500 transition-colors flex items-center gap-1"
-              >
-                <Trash2 className="w-3 h-3" />
-                {language === 'fr' ? 'Supprimer' : 'Remove'}
-              </button>
-            </div>
-          )}
         </div>
       )}
 

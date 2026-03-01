@@ -22,6 +22,7 @@ interface AddChallengeModalProps {
   isOpen: boolean;
   onClose: () => void;
   onAdd: (type: ChallengeType, config: ChallengeConfig) => void;
+  existingChallenges?: Array<{ type: ChallengeType; title: string; arabicText: string }>;
   language?: 'en' | 'fr';
   initialStep?: ModalStep;
 }
@@ -43,7 +44,7 @@ export type { ModalStep as AddChallengeModalStep };
 
 // ─── Component ───────────────────────────────────────────────────────────────────
 
-export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en', initialStep = 'SELECT_TYPE' }: AddChallengeModalProps) {
+export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges = [], language = 'en', initialStep = 'SELECT_TYPE' }: AddChallengeModalProps) {
   const [step, setStep] = useState<ModalStep>(initialStep);
   const [selectedSalawat, setSelectedSalawat] = useState<SalawatPreset>(SALAWAT_PRESETS[0]);
   const [selectedDivineName, setSelectedDivineName] = useState<DivineNameOption>(DIVINE_NAME_OPTIONS[0]);
@@ -63,6 +64,21 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en', ini
   }, [isOpen, initialStep]);
 
   if (!isOpen) return null;
+
+  // ─── Check for duplicate challenges ───
+  const isDuplicate = (type: ChallengeType, arabicText?: string): boolean => {
+    return existingChallenges.some(challenge => {
+      // For ISTIGHFAR, PROPHETIC_NAMES - only one allowed
+      if ((type === 'ISTIGHFAR' || type === 'PROPHETIC_NAMES') && challenge.type === type) {
+        return true;
+      }
+      // For SALAWAT and DIVINE_NAME - check if same arabic text exists
+      if ((type === 'SALAWAT' || type === 'DIVINE_NAME') && challenge.type === type && arabicText) {
+        return challenge.arabicText === arabicText;
+      }
+      return false;
+    });
+  };
 
   // ─── Reset modal state ───
   const handleClose = () => {
@@ -147,6 +163,10 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en', ini
 
   // ─── Handle Ṣalawāt add ───
   const handleAddSalawat = () => {
+    // Check for duplicate before adding
+    if (isDuplicate('SALAWAT', selectedSalawat.arabicText)) {
+      return; // Don't add duplicate
+    }
     const dailyTarget = selectedSalawat.recommendedDaily;
     onAdd('SALAWAT', {
       title: selectedSalawat.title,
@@ -162,6 +182,10 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en', ini
 
   // ─── Handle Divine Name add ───
   const handleAddDivineName = () => {
+    // Check for duplicate before adding
+    if (isDuplicate('DIVINE_NAME', selectedDivineName.arabicName)) {
+      return; // Don't add duplicate
+    }
     onAdd('DIVINE_NAME', {
       title: `${selectedDivineName.transliteration} Challenge`,
       arabicText: selectedDivineName.arabicName,
@@ -219,39 +243,52 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en', ini
             </p>
             
             <div className="space-y-2 pt-2">
-              {challengeTypes.map((ct) => (
-                <button
-                  key={ct.type}
-                  onClick={() => handleTypeSelect(ct.type)}
-                  className={`w-full flex items-center gap-4 p-4 rounded-xl border transition-all group text-left ${
-                    'featured' in ct && ct.featured
-                      ? 'border-amber-300 dark:border-amber-600 bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 hover:border-amber-400 dark:hover:border-amber-500'
-                      : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-amber-300 dark:hover:border-amber-600 hover:bg-amber-50/50 dark:hover:bg-amber-900/20'
-                  }`}
-                >
-                  <span className="text-2xl">{ct.icon}</span>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-baseline gap-2 flex-wrap">
-                      <span className="font-semibold text-slate-900 dark:text-slate-100">
-                        {ct.title}
-                      </span>
-                      <span className="text-sm font-arabic text-slate-400 dark:text-slate-500">
-                        {ct.titleAr}
-                      </span>
-                      {'featured' in ct && ct.featured && (
-                        <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-amber-200 dark:bg-amber-700/50 text-amber-800 dark:text-amber-200 text-xs font-medium">
-                          <Star className="w-3 h-3" />
-                          {language === 'fr' ? 'Spécial' : 'Special'}
+              {challengeTypes.map((ct) => {
+                const isTypeDuplicate = isDuplicate(ct.type);
+                return (
+                  <button
+                    key={ct.type}
+                    onClick={() => !isTypeDuplicate && handleTypeSelect(ct.type)}
+                    disabled={isTypeDuplicate}
+                    className={`w-full flex items-center gap-4 p-4 rounded-xl border transition-all group text-left ${
+                      isTypeDuplicate
+                        ? 'border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 opacity-60 cursor-not-allowed'
+                        : 'featured' in ct && ct.featured
+                        ? 'border-amber-300 dark:border-amber-600 bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 hover:border-amber-400 dark:hover:border-amber-500'
+                        : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-amber-300 dark:hover:border-amber-600 hover:bg-amber-50/50 dark:hover:bg-amber-900/20'
+                    }`}
+                  >
+                    <span className="text-2xl">{ct.icon}</span>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-baseline gap-2 flex-wrap">
+                        <span className="font-semibold text-slate-900 dark:text-slate-100">
+                          {ct.title}
                         </span>
-                      )}
+                        <span className="text-sm font-arabic text-slate-400 dark:text-slate-500">
+                          {ct.titleAr}
+                        </span>
+                        {'featured' in ct && ct.featured && !isTypeDuplicate && (
+                          <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-amber-200 dark:bg-amber-700/50 text-amber-800 dark:text-amber-200 text-xs font-medium">
+                            <Star className="w-3 h-3" />
+                            {language === 'fr' ? 'Spécial' : 'Special'}
+                          </span>
+                        )}
+                        {isTypeDuplicate && (
+                          <span className="inline-flex items-center px-1.5 py-0.5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-400 text-xs font-medium">
+                            {language === 'fr' ? 'Déjà ajouté' : 'Already added'}
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">
+                        {ct.description}
+                      </p>
                     </div>
-                    <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">
-                      {ct.description}
-                    </p>
-                  </div>
-                  <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-amber-500 group-hover:translate-x-1 transition-all" />
-                </button>
-              ))}
+                    {!isTypeDuplicate && (
+                      <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-amber-500 group-hover:translate-x-1 transition-all" />
+                    )}
+                  </button>
+                );
+              })}
             </div>
           </div>
         );
@@ -396,9 +433,17 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, language = 'en', ini
 
             <button
               onClick={handleAddSalawat}
-              className="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold transition-colors"
+              disabled={isDuplicate('SALAWAT', selectedSalawat.arabicText)}
+              className={`w-full py-3 rounded-xl font-semibold transition-colors ${
+                isDuplicate('SALAWAT', selectedSalawat.arabicText)
+                  ? 'bg-slate-300 dark:bg-slate-700 text-slate-500 dark:text-slate-400 cursor-not-allowed'
+                  : 'bg-emerald-600 hover:bg-emerald-700 text-white'
+              }`}
             >
-              {language === 'fr' ? 'Choisir cette Ṣalawāt' : 'Select this Ṣalawāt'}
+              {isDuplicate('SALAWAT', selectedSalawat.arabicText)
+                ? (language === 'fr' ? 'Déjà ajouté' : 'Already Added')
+                : (language === 'fr' ? 'Choisir cette Ṣalawāt' : 'Select this Ṣalawāt')
+              }
             </button>
           </div>
         );
