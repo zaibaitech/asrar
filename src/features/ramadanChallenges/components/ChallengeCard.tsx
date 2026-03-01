@@ -8,7 +8,7 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import { ChevronDown, ChevronUp, Settings, Flame, Share2, X, Copy, Check } from 'lucide-react';
+import { ChevronDown, ChevronUp, Settings, Flame, Share2, X, Copy, Check, Trash2 } from 'lucide-react';
 import type { Challenge, SessionTag, ChallengeType } from '../types';
 import { SESSION_TAGS } from '../types';
 import { computePercent, formatNumber, formatPercent } from '../utils';
@@ -66,6 +66,7 @@ interface ChallengeCardProps {
   challenge: Challenge;
   onLogCount: (amount: number, session: SessionTag) => void;
   onOpenSettings?: () => void;
+  onRemove?: (id: string) => void;
   language?: 'en' | 'fr';
   defaultExpanded?: boolean;
 }
@@ -76,6 +77,7 @@ export function ChallengeCard({
   challenge,
   onLogCount,
   onOpenSettings,
+  onRemove,
   language = 'en',
   defaultExpanded = false,
 }: ChallengeCardProps) {
@@ -87,6 +89,7 @@ export function ChallengeCard({
   const [showShareModal, setShowShareModal] = useState(false);
   const [linkCopied, setLinkCopied] = useState(false);
   const [showTasbih, setShowTasbih] = useState(false);
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
 
   // Translations
   const t = translations[language].tasbih;
@@ -481,6 +484,52 @@ export function ChallengeCard({
             <Share2 className="w-4 h-4" />
             {language === 'fr' ? 'Inviter des amis' : 'Invite Friends to Join'}
           </button>
+
+          {/* Delete Button */}
+          {onRemove && (
+            <div className="flex items-center justify-center pt-2">
+              <button
+                onClick={() => setShowDeleteConfirm(true)}
+                className="text-xs text-slate-400 hover:text-red-500 transition-colors flex items-center gap-1"
+              >
+                <Trash2 className="w-3 h-3" />
+                {language === 'fr' ? 'Supprimer' : 'Remove'}
+              </button>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Delete Confirmation Modal */}
+      {showDeleteConfirm && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 animate-in fade-in duration-200">
+          <div className="w-full max-w-sm bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-xl animate-in zoom-in-95 duration-200">
+            <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 mb-2">
+              {t.removeChallenge}
+            </h3>
+            <p className="text-sm text-slate-500 dark:text-slate-400 mb-4">
+              {t.progressWillBeLost}
+            </p>
+            <div className="flex gap-3">
+              <button
+                onClick={() => setShowDeleteConfirm(false)}
+                className="flex-1 py-2 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-medium hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
+              >
+                {translations[language].common.cancel}
+              </button>
+              <button
+                onClick={() => {
+                  if (onRemove) {
+                    onRemove(challenge.id);
+                  }
+                  setShowDeleteConfirm(false);
+                }}
+                className="flex-1 py-2 rounded-lg bg-red-500 hover:bg-red-600 text-white font-medium transition-colors"
+              >
+                {t.remove}
+              </button>
+            </div>
+          </div>
         </div>
       )}
 
