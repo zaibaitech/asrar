@@ -497,6 +497,19 @@ export function ChallengeCard({
             <Share2 className="w-4 h-4" />
             {language === 'fr' ? 'Inviter des amis' : 'Invite Friends to Join'}
           </button>
+
+          {/* Delete Option */}
+          {onRemove && (
+            <div className="flex items-center justify-center pt-2">
+              <button
+                onClick={() => setShowDeleteConfirm(true)}
+                className="text-sm text-slate-400 hover:text-red-500 transition-colors flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-red-50 dark:hover:bg-red-900/20"
+              >
+                <Trash2 className="w-4 h-4" />
+                {language === 'fr' ? 'Supprimer ce défi' : 'Remove this challenge'}
+              </button>
+            </div>
+          )}
         </div>
       )}
 
