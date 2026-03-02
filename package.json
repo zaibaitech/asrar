@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
-    "@supabase/supabase-js": "^2.87.1",
+    "@supabase/supabase-js": "^2.88.0",
     "adhan": "^4.4.3",
     "astronomy-engine": "^2.1.19",
     "groq-sdk": "^0.37.0",
