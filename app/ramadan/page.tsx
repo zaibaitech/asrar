@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { cookies } from 'next/headers';
 import { Suspense } from 'react';
 import { RamadanPage } from './RamadanPage';
-import { challengeMeta } from '@/src/lib/seoConfig';
+import { challengeMeta, getChallengeOGMeta } from '@/src/lib/seoConfig';
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
 
@@ -51,35 +51,13 @@ export async function generateMetadata({
   // Check for challenge-specific deep-link metadata
   const challenge = params?.challenge as keyof typeof challengeMeta | undefined;
   if (challenge && challengeMeta[challenge]) {
-    const cMeta = challengeMeta[challenge][lang];
-    return {
-      title: cMeta.title,
-      description: cMeta.description,
-      openGraph: {
-        type: 'website',
-        locale: lang === 'fr' ? 'fr_FR' : 'en_GB',
-        url: `${baseUrl}/ramadan?challenge=${challenge}${lang === 'fr' ? '&lang=fr' : ''}`,
-        siteName: 'Asrār Everyday',
-        title: cMeta.title,
-        description: cMeta.description,
-        images: [
-          {
-            url: lang === 'fr' ? '/og-image-fr.png' : '/og-image-en.png',
-            width: 1200,
-            height: 630,
-            alt: cMeta.title,
-          },
-        ],
-      },
-      twitter: {
-        card: 'summary_large_image',
-        title: cMeta.title,
-        description: cMeta.description,
-        images: [lang === 'fr' ? '/og-image-fr.png' : '/og-image-en.png'],
-      },
-    };
+    const challengeMetadata = getChallengeOGMeta(challenge, lang, baseUrl);
+    if (challengeMetadata) {
+      return challengeMetadata;
+    }
   }
 
+  // Default Ramadan page metadata
   return {
     title: currentMeta.title,
     description: currentMeta.description,
@@ -92,7 +70,7 @@ export async function generateMetadata({
       description: currentMeta.description,
       images: [
         {
-          url: lang === 'fr' ? '/og-image-fr.png' : '/og-image-en.png',
+          url: '/og/default.jpg',
           width: 1200,
           height: 630,
           alt: currentMeta.title,
@@ -103,7 +81,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: currentMeta.title,
       description: currentMeta.description,
-      images: [lang === 'fr' ? '/og-image-fr.png' : '/og-image-en.png'],
+      images: ['/og/default.jpg'],
     },
   };
 }

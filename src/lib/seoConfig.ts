@@ -88,59 +88,118 @@ Développé par Zaibaitech Ltd · Édimbourg, Écosse`,
 
 /**
  * Challenge-specific metadata for deep links
+ * Each challenge has bilingual metadata with OG images
  */
 export const challengeMeta = {
   'prophetic-names': {
     en: {
-      title: 'Asrār — 7-Day Rizq Abundance Challenge · 201 Prophetic Names',
-      description: 'Join the 7-Day Rizq Abundance Practice authorized by Cherno Moussa Yero Sy. Recite the 201 Holy Names of Prophet Muḥammad ﷺ every morning. Experience immeasurable blessings.',
+      title: '201 Prophetic Names Challenge — Asrār Ramadan',
+      description: 'Join me in reciting the 201 Holy Names of Prophet Muḥammad ﷺ this Ramadan. Experience immeasurable blessings and Rizq abundance.',
+      image: '/og/prophetic-names.jpg',
     },
     fr: {
-      title: 'Asrār — Défi 7 Jours d\'Abondance du Rizq · 201 Noms Prophétiques',
-      description: 'Rejoignez la pratique de 7 jours pour l\'abondance du Rizq, autorisée par Cherno Moussa Yero Sy. Récitez les 201 Noms Saints du Prophète Muḥammad ﷺ chaque matin.',
+      title: 'Défi 201 Noms Prophétiques — Asrār Ramadan',
+      description: 'Rejoignez-moi pour réciter les 201 Noms Saints du Prophète Muḥammad ﷺ ce Ramadan. Vivez des bénédictions et une abondance de Rizq.',
+      image: '/og/prophetic-names.jpg',
     },
   },
   'salawat': {
     en: {
-      title: 'Asrār — Ṣalawāt Challenge · Blessings Upon the Prophet ﷺ',
-      description: 'Track your daily Ṣalawāt and join thousands sending blessings upon Prophet Muḥammad ﷺ. Ṣalāt al-Fātiḥ, al-Nāriyya, al-Mashīshiyya and more.',
+      title: 'Ṣalawāt Challenge — Asrār Ramadan',
+      description: 'Join me in reciting Ṣalawāt this Ramadan. Track your daily dhikr with Asrār.',
+      image: '/og/salawat.jpg',
     },
     fr: {
-      title: 'Asrār — Défi Ṣalawāt · Bénédictions sur le Prophète ﷺ',
-      description: 'Suivez vos Ṣalawāt quotidiennes et rejoignez des milliers de personnes envoyant des bénédictions au Prophète Muḥammad ﷺ.',
+      title: 'Défi Ṣalawāt — Asrār Ramadan',
+      description: 'Rejoignez-moi pour réciter les Ṣalawāt ce Ramadan. Suivez votre dhikr quotidien avec Asrār.',
+      image: '/og/salawat.jpg',
     },
   },
   'istighfar': {
     en: {
-      title: 'Asrār — Istighfār Challenge · Seeking Forgiveness',
-      description: 'Join the Istighfār challenge and experience the peace of seeking Allah\'s forgiveness. Track your daily dhikr and transform your spiritual practice.',
+      title: 'Istighfār Challenge — Asrār Ramadan',
+      description: 'Join me in seeking Allah's forgiveness this Ramadan. Track your daily Istighfār with Asrār.',
+      image: '/og/istighfar.jpg',
     },
     fr: {
-      title: 'Asrār — Défi Istighfār · Demande de Pardon',
-      description: 'Rejoignez le défi Istighfār et vivez la paix de demander le pardon d\'Allah. Suivez votre dhikr quotidien et transformez votre pratique spirituelle.',
+      title: 'Défi Istighfār — Asrār Ramadan',
+      description: 'Rejoignez-moi pour demander le pardon d'Allah ce Ramadan. Suivez votre Istighfār quotidien avec Asrār.',
+      image: '/og/istighfar.jpg',
     },
   },
   'divine-name': {
     en: {
-      title: 'Asrār — Divine Name Challenge · 99 Names of Allah',
-      description: 'Invoke the Beautiful Names of Allah with daily tracking. Experience the blessings of calling upon Allah by His Most Beautiful Names.',
+      title: 'Divine Name Challenge — Asrār Ramadan',
+      description: 'Join me in invoking the 99 Names of Allah this Ramadan. Track your daily dhikr with Asrār.',
+      image: '/og/divine-name.jpg',
     },
     fr: {
-      title: 'Asrār — Défi Nom Divin · 99 Noms d\'Allah',
-      description: 'Invoquez les Beaux Noms d\'Allah avec un suivi quotidien. Vivez les bénédictions d\'appeler Allah par Ses Plus Beaux Noms.',
+      title: 'Défi Nom Divin — Asrār Ramadan',
+      description: 'Rejoignez-moi pour invoquer les 99 Noms d'Allah ce Ramadan. Suivez votre dhikr quotidien avec Asrār.',
+      image: '/og/divine-name.jpg',
     },
   },
   'custom': {
     en: {
-      title: 'Asrār — Custom Dhikr Challenge · Personal Spiritual Practice',
-      description: 'Create your personal dhikr challenge and track your spiritual journey. Join thousands in daily remembrance of Allah.',
+      title: 'Custom Dhikr Challenge — Asrār Ramadan',
+      description: 'Join me in my personal dhikr practice this Ramadan. Track your spiritual journey with Asrār.',
+      image: '/og/custom.jpg',
     },
     fr: {
-      title: 'Asrār — Défi Dhikr Personnalisé · Pratique Spirituelle Personnelle',
-      description: 'Créez votre défi dhikr personnel et suivez votre parcours spirituel. Rejoignez des milliers dans le rappel quotidien d\'Allah.',
+      title: 'Défi Dhikr Personnalisé — Asrār Ramadan',
+      description: 'Rejoignez-moi dans ma pratique personnelle de dhikr ce Ramadan. Suivez votre parcours spirituel avec Asrār.',
+      image: '/og/custom.jpg',
     },
   },
 };
+
+/**
+ * Helper to generate full OpenGraph metadata for a challenge
+ * @param challengeSlug - The challenge slug (e.g., 'salawat')
+ * @param language - The current language
+ * @param baseUrl - The base URL of the site
+ * @returns OpenGraph metadata object
+ */
+export function getChallengeOGMeta(
+  challengeSlug: keyof typeof challengeMeta,
+  language: Language = 'en',
+  baseUrl: string = 'https://www.asrar.app'
+) {
+  const meta = challengeMeta[challengeSlug]?.[language];
+  if (!meta) {
+    return null;
+  }
+
+  const langParam = language === 'fr' ? '&lang=fr' : '';
+  const url = `${baseUrl}/ramadan?challenge=${challengeSlug}${langParam}`;
+
+  return {
+    title: meta.title,
+    description: meta.description,
+    openGraph: {
+      type: 'website' as const,
+      locale: language === 'fr' ? 'fr_FR' : 'en_GB',
+      url,
+      siteName: 'Asrār Everyday',
+      title: meta.title,
+      description: meta.description,
+      images: [
+        {
+          url: meta.image,
+          width: 1200,
+          height: 630,
+          alt: meta.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image' as const,
+      title: meta.title,
+      description: meta.description,
+      images: [meta.image],
+    },
+  };
+}
 
 /**
  * Get SEO configuration with language-specific titles
