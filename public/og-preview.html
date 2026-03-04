@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramadan OG Images Preview</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      color: white;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .subtitle {
+      color: rgba(255,255,255,0.9);
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    
+    .card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+    }
+    
+    .card-image {
+      width: 100%;
+      display: block;
+      aspect-ratio: 1200/630;
+      object-fit: cover;
+    }
+    
+    .card-info {
+      padding: 20px;
+    }
+    
+    .card-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #1a202c;
+      margin-bottom: 8px;
+    }
+    
+    .card-subtitle {
+      color: #718096;
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+    
+    .card-url {
+      font-family: 'Courier New', monospace;
+      font-size: 0.85rem;
+      color: #4a5568;
+      background: #f7fafc;
+      padding: 8px 12px;
+      border-radius: 6px;
+      word-break: break-all;
+    }
+    
+    .test-links {
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    
+    .test-links h2 {
+      color: #1a202c;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+    
+    .test-links ul {
+      list-style: none;
+    }
+    
+    .test-links li {
+      margin-bottom: 12px;
+    }
+    
+    .test-links a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    
+    .test-links a:hover {
+      color: #764ba2;
+      text-decoration: underline;
+    }
+    
+    .status {
+      background: #48bb78;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 Ramadan OG Images Preview</h1>
+    <p class="subtitle">Dynamic Open Graph images for social media sharing</p>
+    
+    <div class="status">
+      ✅ All 6 images created successfully • 1200×630px • Optimized JPG
+    </div>
+    
+    <div class="grid">
+      <!-- Salawat -->
+      <div class="card">
+        <img src="/og/salawat.jpg" alt="Salawat Challenge" class="card-image" />
+        <div class="card-info">
+          <h3 class="card-title">Ṣalawāt Challenge</h3>
+          <p class="card-subtitle">Blessings upon the Prophet ﷺ</p>
+          <div class="card-url">/ramadan?challenge=salawat</div>
+        </div>
+      </div>
+      
+      <!-- Istighfar -->
+      <div class="card">
+        <img src="/og/istighfar.jpg" alt="Istighfar Challenge" class="card-image" />
+        <div class="card-info">
+          <h3 class="card-title">Istighfār Challenge</h3>
+          <p class="card-subtitle">Seeking Allah's forgiveness</p>
+          <div class="card-url">/ramadan?challenge=istighfar</div>
+        </div>
+      </div>
+      
+      <!-- Divine Name -->
+      <div class="card">
+        <img src="/og/divine-name.jpg" alt="Divine Name Challenge" class="card-image" />
+        <div class="card-info">
+          <h3 class="card-title">Divine Name Challenge</h3>
+          <p class="card-subtitle">99 Names of Allah</p>
+          <div class="card-url">/ramadan?challenge=divine-name</div>
+        </div>
+      </div>
+      
+      <!-- Prophetic Names -->
+      <div class="card">
+        <img src="/og/prophetic-names.jpg" alt="Prophetic Names Challenge" class="card-image" />
+        <div class="card-info">
+          <h3 class="card-title">201 Prophetic Names</h3>
+          <p class="card-subtitle">Dalāʾilu l-Khayrāt practice</p>
+          <div class="card-url">/ramadan?challenge=prophetic-names</div>
+        </div>
+      </div>
+      
+      <!-- Custom -->
+      <div class="card">
+        <img src="/og/custom.jpg" alt="Custom Dhikr Challenge" class="card-image" />
+        <div class="card-info">
+          <h3 class="card-title">Custom Dhikr Challenge</h3>
+          <p class="card-subtitle">Personal spiritual practice</p>
+          <div class="card-url">/ramadan?challenge=custom</div>
+        </div>
+      </div>
+      
+      <!-- Default -->
+      <div class="card">
+        <img src="/og/default.jpg" alt="Ramadan Challenges" class="card-image" />
+        <div class="card-info">
+          <h3 class="card-title">Ramadan Challenges</h3>
+          <p class="card-subtitle">Default page (no specific challenge)</p>
+          <div class="card-url">/ramadan</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="test-links">
+      <h2>🧪 Test Your OG Images</h2>
+      <p style="color: #718096; margin-bottom: 20px;">
+        Use these tools to verify your OG images are working correctly:
+      </p>
+      <ul>
+        <li>📘 <a href="https://developers.facebook.com/tools/debug/" target="_blank">Facebook Sharing Debugger</a></li>
+        <li>🐦 <a href="https://cards-dev.twitter.com/validator" target="_blank">Twitter Card Validator</a></li>
+        <li>💼 <a href="https://www.linkedin.com/post-inspector/" target="_blank">LinkedIn Post Inspector</a></li>
+        <li>💬 Share on WhatsApp to see the preview in action!</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
