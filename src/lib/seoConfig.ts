@@ -118,12 +118,12 @@ export const challengeMeta = {
   'istighfar': {
     en: {
       title: 'Istighfār Challenge — Asrār Ramadan',
-      description: 'Join me in seeking Allah's forgiveness this Ramadan. Track your daily Istighfār with Asrār.',
+      description: 'Join me in seeking Allah\'s forgiveness this Ramadan. Track your daily Istighfār with Asrār.',
       image: '/og/istighfar.jpg',
     },
     fr: {
       title: 'Défi Istighfār — Asrār Ramadan',
-      description: 'Rejoignez-moi pour demander le pardon d'Allah ce Ramadan. Suivez votre Istighfār quotidien avec Asrār.',
+      description: 'Rejoignez-moi pour demander le pardon d\'Allah ce Ramadan. Suivez votre Istighfār quotidien avec Asrār.',
       image: '/og/istighfar.jpg',
     },
   },
@@ -135,7 +135,7 @@ export const challengeMeta = {
     },
     fr: {
       title: 'Défi Nom Divin — Asrār Ramadan',
-      description: 'Rejoignez-moi pour invoquer les 99 Noms d'Allah ce Ramadan. Suivez votre dhikr quotidien avec Asrār.',
+      description: 'Rejoignez-moi pour invoquer les 99 Noms d\'Allah ce Ramadan. Suivez votre dhikr quotidien avec Asrār.',
       image: '/og/divine-name.jpg',
     },
   },
