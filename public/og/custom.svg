@@ -1,0 +1,49 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="bg-gradient-custom" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef3c7;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#fed7aa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fecaca;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="1200" height="630" fill="url(#bg-gradient-custom)"/>
+  
+  <!-- Decorative Pattern -->
+  <circle cx="140" cy="120" r="160" fill="#f97316" opacity="0.1"/>
+  <circle cx="1060" cy="510" r="190" fill="#ec4899" opacity="0.08"/>
+  
+  <!-- Logo/Branding (top-left) -->
+  <text x="50" y="60" font-family="'Inter', sans-serif" font-size="32" font-weight="700" fill="#292524">
+    ✨ Asrār
+  </text>
+  
+  <!-- Main Arabic Text (Large, centered) -->
+  <text x="600" y="280" font-family="'Amiri', 'Traditional Arabic', serif" font-size="100" font-weight="700" fill="#7c2d12" text-anchor="middle" filter="url(#glow)">
+    ذِكْرُ اللهِ
+  </text>
+  
+  <!-- Transliteration (Medium) -->
+  <text x="600" y="360" font-family="'Crimson Text', serif" font-size="38" fill="#92400e" text-anchor="middle" font-style="italic">
+    Dhikru Llāh
+  </text>
+  
+  <!-- English Translation (Small) -->
+  <text x="600" y="410" font-family="'Inter', sans-serif" font-size="24" fill="#9a3412" text-anchor="middle">
+    Remembrance of Allah
+  </text>
+  
+  <!-- Challenge Badge (bottom-right) -->
+  <rect x="900" y="530" width="250" height="60" rx="30" fill="#ffffff" opacity="0.95" stroke="#f97316" stroke-width="2"/>
+  <text x="1025" y="568" font-family="'Inter', sans-serif" font-size="20" font-weight="600" fill="#ea580c" text-anchor="middle">
+    Custom Dhikr • Asrār
+  </text>
+</svg>
