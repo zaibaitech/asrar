@@ -153,13 +153,13 @@ export const challengeMeta = {
   },
   'debt-relief': {
     en: {
-      title: 'Debt Relief Wird — Asrār Ramadan',
-      description: 'Join me in reciting this sacred Qurʾānic verse 1000× after ʿIshāʾ for relief from debt and fast repayment.',
+      title: '💰 Debt Relief Wird — Asrār Ramadan',
+      description: '🌙 Join me in this powerful practice: Recite "Wamā dhālika ʿalā llāhi bi-ʿAzīzin" 1000× after ʿIshāʾ for miraculous debt relief. What seems impossible for us is effortless for Allah. Track your journey to financial freedom! ✨',
       image: '/og/debt-relief.jpg',
     },
     fr: {
-      title: 'Wird pour le Soulagement des Dettes — Asrār Ramadan',
-      description: 'Rejoignez-moi pour réciter ce verset sacré du Qour\'ān 1000× après ʿIshāʾ pour le soulagement des dettes et le remboursement rapide.',
+      title: '💰 Wird pour le Soulagement des Dettes — Asrār Ramadan',
+      description: '🌙 Rejoignez-moi dans cette pratique puissante: Récitez "Wamā dhālika ʿalā llāhi bi-ʿAzīzin" 1000× après ʿIshāʾ pour un soulagement miraculeux des dettes. Ce qui semble impossible pour nous est sans effort pour Allah. Suivez votre parcours vers la liberté financière! ✨',
       image: '/og/debt-relief.jpg',
     },
   },
@@ -184,6 +184,9 @@ export function getChallengeOGMeta(
 
   const langParam = language === 'fr' ? '&lang=fr' : '';
   const url = `${baseUrl}/ramadan?challenge=${challengeSlug}${langParam}`;
+  
+  // Ensure absolute URL for OG image (Facebook requirement)
+  const imageUrl = meta.image.startsWith('http') ? meta.image : `${baseUrl}${meta.image}`;
 
   return {
     title: meta.title,
@@ -197,7 +200,7 @@ export function getChallengeOGMeta(
       description: meta.description,
       images: [
         {
-          url: meta.image,
+          url: imageUrl,
           width: 1200,
           height: 630,
           alt: meta.title,
@@ -208,7 +211,7 @@ export function getChallengeOGMeta(
       card: 'summary_large_image' as const,
       title: meta.title,
       description: meta.description,
-      images: [meta.image],
+      images: [imageUrl],
     },
   };
 }
