@@ -21,6 +21,7 @@ function getChallengeSlug(type: ChallengeType): string {
     SALAWAT: 'salawat',
     DIVINE_NAME: 'divine-name',
     PROPHETIC_NAMES: 'prophetic-names',
+    DEBT_RELIEF: 'debt-relief',
     CUSTOM: 'custom',
   };
   return typeToSlug[type] || 'custom';

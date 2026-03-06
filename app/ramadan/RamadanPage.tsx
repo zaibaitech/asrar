@@ -132,6 +132,7 @@ export function RamadanPage() {
 
     const slugToType: Record<string, ChallengeType> = {
       'prophetic-names': 'PROPHETIC_NAMES',
+      'debt-relief': 'DEBT_RELIEF',
       'istighfar': 'ISTIGHFAR',
       'salawat': 'SALAWAT',
       'divine-name': 'DIVINE_NAME',
@@ -150,6 +151,7 @@ export function RamadanPage() {
       } else {
         const typeToModalStep: Record<ChallengeType, AddChallengeModalStep> = {
           'PROPHETIC_NAMES': 'CONFIGURE_PROPHETIC_NAMES',
+          'DEBT_RELIEF': 'CONFIGURE_DEBT_RELIEF',
           'ISTIGHFAR': 'SELECT_TYPE',
           'SALAWAT': 'CONFIGURE_SALAWAT',
           'DIVINE_NAME': 'CONFIGURE_DIVINE_NAME',

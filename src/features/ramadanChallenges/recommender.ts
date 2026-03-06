@@ -153,6 +153,10 @@ export function getBestDhikrNow(
       en: '201 Holy Names practice invokes powerful rizq blessings',
       ar: 'ممارسة الأسماء النبوية ٢٠١ تجلب بركات الرزق',
     },
+    DEBT_RELIEF: {
+      en: 'Debt Relief wird after ʿIshāʾ brings miraculous financial relief',
+      ar: 'ورد فرج الدين بعد العشاء يجلب الفرج المالي المعجز',
+    },
     CUSTOM: {
       en: 'Continue your personal wird during this spiritual window',
       ar: 'استمر في وردك الشخصي في هذا الوقت الروحاني',

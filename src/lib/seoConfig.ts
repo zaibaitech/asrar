@@ -151,6 +151,18 @@ export const challengeMeta = {
       image: '/og/custom.jpg',
     },
   },
+  'debt-relief': {
+    en: {
+      title: 'Debt Relief Wird — Asrār Ramadan',
+      description: 'Join me in reciting this sacred Qurʾānic verse 1000× after ʿIshāʾ for relief from debt and fast repayment.',
+      image: '/og/debt-relief.jpg',
+    },
+    fr: {
+      title: 'Wird pour le Soulagement des Dettes — Asrār Ramadan',
+      description: 'Rejoignez-moi pour réciter ce verset sacré du Qour\'ān 1000× après ʿIshāʾ pour le soulagement des dettes et le remboursement rapide.',
+      image: '/og/debt-relief.jpg',
+    },
+  },
 };
 
 /**

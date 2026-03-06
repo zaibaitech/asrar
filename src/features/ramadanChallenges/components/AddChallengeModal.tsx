@@ -5,6 +5,7 @@
  * - Ṣalawāt with extended preset selection
  * - Divine Name selection
  * - 201 Holy Names of Prophet ﷺ (Rizq Practice)
+ * - Debt Relief Wird (1000× after ʿIshāʾ)
  * - Custom wird entry
  */
 
@@ -15,6 +16,7 @@ import { X, ChevronRight, ChevronLeft, ChevronDown, ChevronUp, Star } from 'luci
 import type { ChallengeType, SalawatPreset, DivineNameOption } from '../types';
 import { SALAWAT_PRESETS, DIVINE_NAME_OPTIONS, DEFAULT_QUICK_ADD_PRESETS } from '../types';
 import { RIZQ_PRACTICE_INFO } from '../propheticNames201';
+import { DEBT_RELIEF_PRACTICE_INFO } from '../debtRelief1000';
 
 // ─── Types ───────────────────────────────────────────────────────────────────────
 
@@ -38,7 +40,7 @@ interface ChallengeConfig {
   season?: string;
 }
 
-type ModalStep = 'SELECT_TYPE' | 'CONFIGURE_SALAWAT' | 'PREVIEW_SALAWAT' | 'CONFIGURE_DIVINE_NAME' | 'CONFIGURE_CUSTOM' | 'CONFIGURE_PROPHETIC_NAMES';
+type ModalStep = 'SELECT_TYPE' | 'CONFIGURE_SALAWAT' | 'PREVIEW_SALAWAT' | 'CONFIGURE_DIVINE_NAME' | 'CONFIGURE_CUSTOM' | 'CONFIGURE_PROPHETIC_NAMES' | 'CONFIGURE_DEBT_RELIEF';
 
 export type { ModalStep as AddChallengeModalStep };
 
@@ -68,8 +70,8 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
   // ─── Check for duplicate challenges ───
   const isDuplicate = (type: ChallengeType, arabicText?: string): boolean => {
     return existingChallenges.some(challenge => {
-      // For ISTIGHFAR, PROPHETIC_NAMES - only one allowed
-      if ((type === 'ISTIGHFAR' || type === 'PROPHETIC_NAMES') && challenge.type === type) {
+      // For ISTIGHFAR, PROPHETIC_NAMES, DEBT_RELIEF - only one allowed
+      if ((type === 'ISTIGHFAR' || type === 'PROPHETIC_NAMES' || type === 'DEBT_RELIEF') && challenge.type === type) {
         return true;
       }
       // For SALAWAT and DIVINE_NAME - check if same arabic text exists
@@ -122,6 +124,16 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
       featured: true,
     },
     {
+      type: 'DEBT_RELIEF' as ChallengeType,
+      title: language === 'fr' ? 'Wird Soulagement Dettes' : 'Debt Relief Wird',
+      titleAr: 'فرج من الدين',
+      description: language === 'fr'
+        ? '1000× après ʿIshāʾ · Verset Qour\'ānique'
+        : '1000× after ʿIshāʾ · Qurʾānic Verse',
+      icon: '💎',
+      color: 'teal',
+    },
+    {
       type: 'DIVINE_NAME' as ChallengeType,
       title: language === 'fr' ? 'Nom Divin' : 'Divine Name',
       titleAr: 'اسم إلهي',
@@ -154,6 +166,9 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
         break;
       case 'PROPHETIC_NAMES':
         setStep('CONFIGURE_PROPHETIC_NAMES');
+        break;
+      case 'DEBT_RELIEF':
+        setStep('CONFIGURE_DEBT_RELIEF');
         break;
       case 'CUSTOM':
         setStep('CONFIGURE_CUSTOM');
@@ -222,6 +237,20 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
       dailyTarget: 1, // 1 session per day (morning)
       totalTarget: 7, // 7 days × 1 session
       quickAddPresets: [1],
+    });
+    handleClose();
+  };
+
+  // ─── Handle Debt Relief Wird add ───
+  const handleAddDebtRelief = () => {
+    onAdd('DEBT_RELIEF', {
+      title: language === 'fr' ? DEBT_RELIEF_PRACTICE_INFO.titleFr : DEBT_RELIEF_PRACTICE_INFO.title,
+      arabicText: 'وَمَا ذَٰلِكَ عَلَى اللهِ بِعَزِيزٍ',
+      transliteration: 'Wamā dhālika ʿalā llāhi bi-ʿAzīzin',
+      meaning: language === 'fr' ? DEBT_RELIEF_PRACTICE_INFO.descriptionFr : DEBT_RELIEF_PRACTICE_INFO.description,
+      dailyTarget: 1000,
+      totalTarget: 30000, // 1000 × 30 days
+      quickAddPresets: [100, 250, 500, 1000],
     });
     handleClose();
   };
@@ -651,6 +680,83 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
               className="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold transition-all shadow-lg shadow-amber-500/25"
             >
               {language === 'fr' ? 'Commencer le défi de 7 jours' : 'Start 7-Day Challenge'}
+            </button>
+          </div>
+        );
+
+      case 'CONFIGURE_DEBT_RELIEF':
+        return (
+          <div className="space-y-3">
+            {/* Header row */}
+            <div className="flex items-center justify-between">
+              <button
+                onClick={() => setStep('SELECT_TYPE')}
+                className="text-sm text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 flex items-center gap-1"
+              >
+                <ChevronLeft className="w-4 h-4" />
+                {language === 'fr' ? 'Retour' : 'Back'}
+              </button>
+            </div>
+            
+            {/* Title */}
+            <div>
+              <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
+                {language === 'fr' ? DEBT_RELIEF_PRACTICE_INFO.titleFr : DEBT_RELIEF_PRACTICE_INFO.title}
+              </h3>
+              <p className="text-sm text-teal-600 dark:text-teal-400 font-medium">
+                {language === 'fr' ? DEBT_RELIEF_PRACTICE_INFO.subtitleFr : DEBT_RELIEF_PRACTICE_INFO.subtitle}
+              </p>
+            </div>
+
+            {/* Verse display */}
+            <div className="p-4 rounded-xl bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-teal-900/20 dark:to-cyan-900/20 border border-teal-200 dark:border-teal-800/50 text-center">
+              <p className="text-2xl font-arabic text-teal-900 dark:text-teal-100 mb-2 leading-loose">
+                وَمَا ذَٰلِكَ عَلَى اللهِ بِعَزِيزٍ
+              </p>
+              <p className="text-sm text-slate-700 dark:text-slate-300 italic mb-1">
+                Wamā dhālika ʿalā llāhi bi-ʿAzīzin
+              </p>
+              <p className="text-xs text-slate-600 dark:text-slate-400">
+                {language === 'fr' ? '"Et cela n\'est pas difficile pour Allah"' : '"And that is not difficult for Allah"'}
+              </p>
+            </div>
+
+            {/* Description */}
+            <div className="p-3 rounded-xl bg-white dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600">
+              <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed mb-2">
+                {language === 'fr' ? DEBT_RELIEF_PRACTICE_INFO.descriptionFr : DEBT_RELIEF_PRACTICE_INFO.description}
+              </p>
+              
+              {/* Compact stats row */}
+              <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-600 dark:text-slate-400 pt-2 border-t border-slate-200 dark:border-slate-600">
+                <span>📖 <strong>{DEBT_RELIEF_PRACTICE_INFO.source}</strong></span>
+                <span>🕌 <strong>{language === 'fr' ? DEBT_RELIEF_PRACTICE_INFO.timingFr : DEBT_RELIEF_PRACTICE_INFO.timing}</strong></span>
+                <span>⏰ <strong>{DEBT_RELIEF_PRACTICE_INFO.estimatedTime}</strong></span>
+              </div>
+            </div>
+
+            {/* Purpose */}
+            <div className="p-3 rounded-lg bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800/50">
+              <p className="text-xs font-medium text-teal-700 dark:text-teal-300 mb-1">
+                {language === 'fr' ? 'Objectif spirituel:' : 'Spiritual Purpose:'}
+              </p>
+              <p className="text-sm text-teal-700 dark:text-teal-300">
+                {language === 'fr' ? DEBT_RELIEF_PRACTICE_INFO.purposeFr : DEBT_RELIEF_PRACTICE_INFO.purpose}
+              </p>
+            </div>
+
+            {/* Meaning */}
+            <div className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+              <p className="italic">
+                {language === 'fr' ? DEBT_RELIEF_PRACTICE_INFO.spiritualMeaning.fr : DEBT_RELIEF_PRACTICE_INFO.spiritualMeaning.en}
+              </p>
+            </div>
+
+            <button
+              onClick={handleAddDebtRelief}
+              className="w-full py-3 rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white font-semibold transition-all shadow-lg shadow-teal-500/25"
+            >
+              {language === 'fr' ? 'Commencer le wird quotidien' : 'Start Daily Wird'}
             </button>
           </div>
         );

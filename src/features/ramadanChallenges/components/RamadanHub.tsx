@@ -67,6 +67,7 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
     // Map URL params to challenge types
     const slugToType: Record<string, ChallengeType> = {
       'prophetic-names': 'PROPHETIC_NAMES',
+      'debt-relief': 'DEBT_RELIEF',
       'istighfar': 'ISTIGHFAR',
       'salawat': 'SALAWAT',
       'divine-name': 'DIVINE_NAME',
@@ -88,6 +89,7 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
         // Map challenge type to the appropriate modal step
         const typeToModalStep: Record<ChallengeType, AddChallengeModalStep> = {
           'PROPHETIC_NAMES': 'CONFIGURE_PROPHETIC_NAMES',
+          'DEBT_RELIEF': 'CONFIGURE_DEBT_RELIEF',
           'ISTIGHFAR': 'SELECT_TYPE', // Won't be used since we auto-create above
           'SALAWAT': 'CONFIGURE_SALAWAT',
           'DIVINE_NAME': 'CONFIGURE_DIVINE_NAME',

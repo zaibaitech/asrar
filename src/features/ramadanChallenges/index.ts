@@ -119,3 +119,9 @@ export {
   CLOSING_DUA,
   RIZQ_PRACTICE_INFO,
 } from './propheticNames201';
+
+// ─── Debt Relief Wird ────────────────────────────────────────────────────────────
+export {
+  DEBT_RELIEF_WIRD,
+  DEBT_RELIEF_PRACTICE_INFO,
+} from './debtRelief1000';

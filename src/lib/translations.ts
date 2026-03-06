@@ -349,6 +349,46 @@ export const translations = {
       shareFailed: "Could not share",
     },
 
+    // Debt Relief Wird
+    debtRelief: {
+      title: "Debt Relief Wird",
+      shortTitle: "Debt Relief",
+      subtitle: "1000× After ʿIshāʾ Prayer",
+      quranicWird: "Qurʾānic Wird",
+      source: "Sūrat Fāṭir 35:17 · Sūrat Ibrāhīm 14:20",
+      timing: "After ʿIshāʾ Prayer",
+      dailyCount: "1000 recitations",
+      estimatedTime: "15-20 minutes",
+      description: "Recite this sacred Qurʾānic verse 1000 times after ʿIshāʾ prayer daily for relief from debt and fast repayment.",
+      purpose: "Relief from debt and fast repayment (faraj min al-dayn)",
+      
+      // The sacred verse
+      arabic: "وَمَا ذَٰلِكَ عَلَى اللهِ بِعَزِيزٍ",
+      transliteration: "Wamā dhālika ʿalā llāhi bi-ʿAzīzin",
+      meaning: "And that is not difficult for Allah",
+      
+      // Spiritual meaning
+      spiritualMeaning: "This verse affirms absolute trust in Allah's limitless power. What may seem impossible to us — including freedom from debt — is effortless for Allah. By repeatedly invoking this truth, we align our hearts with Divine capability and invite miraculous relief.",
+      
+      // Benefits
+      benefits: "Benefits",
+      benefit1: "Relief from financial burden and debt",
+      benefit2: "Fast and unexpected repayment opportunities",
+      benefit3: "Opening of new sources of provision",
+      benefit4: "Peace of heart regarding financial matters",
+      benefit5: "Strengthened trust in Allah's power",
+      
+      // Practice
+      startDailyWird: "Start Daily Wird",
+      continueWird: "Continue Wird",
+      wirdComplete: "Daily wird complete!",
+      
+      // Card & Modal
+      remove: "Remove",
+      removeChallenge: "Remove this challenge?",
+      progressWillBeLost: "Your progress will be lost.",
+    },
+
     // Digital Tasbih Counter
     tasbih: {
       title: "Tasbih Counter",
@@ -3415,6 +3455,46 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
       copyLink: "Copier le lien",
       linkCopied: "Lien copié!",
       shareFailed: "Impossible de partager",
+    },
+
+    // Wird pour le Soulagement des Dettes
+    debtRelief: {
+      title: "Wird pour le Soulagement des Dettes",
+      shortTitle: "Soulagement Dettes",
+      subtitle: "1000× Après la Prière ʿIshāʾ",
+      quranicWird: "Wird Qourʾānique",
+      source: "Sourate Fāṭir 35:17 · Sourate Ibrāhīm 14:20",
+      timing: "Après la Prière ʿIshāʾ",
+      dailyCount: "1000 récitations",
+      estimatedTime: "15-20 minutes",
+      description: "Récitez ce verset sacré du Qourʾān 1000 fois après la prière ʿIshāʾ quotidiennement pour le soulagement des dettes et le remboursement rapide.",
+      purpose: "Soulagement des dettes et remboursement rapide (faraj min al-dayn)",
+      
+      // Le verset sacré
+      arabic: "وَمَا ذَٰلِكَ عَلَى اللهِ بِعَزِيزٍ",
+      transliteration: "Wamā dhālika ʿalā llāhi bi-ʿAzīzin",
+      meaning: "Et cela n'est pas difficile pour Allah",
+      
+      // Signification spirituelle
+      spiritualMeaning: "Ce verset affirme une confiance absolue dans le pouvoir illimité d'Allah. Ce qui peut sembler impossible pour nous — y compris la liberté des dettes — est sans effort pour Allah. En invoquant répétitivement cette vérité, nous alignons nos cœurs avec la capacité Divine et invitons un soulagement miraculeux.",
+      
+      // Bienfaits
+      benefits: "Bienfaits",
+      benefit1: "Soulagement du fardeau financier et des dettes",
+      benefit2: "Opportunités de remboursement rapides et inattendues",
+      benefit3: "Ouverture de nouvelles sources de provision",
+      benefit4: "Paix du cœur concernant les questions financières",
+      benefit5: "Confiance renforcée dans le pouvoir d'Allah",
+      
+      // Pratique
+      startDailyWird: "Commencer le wird quotidien",
+      continueWird: "Continuer le wird",
+      wirdComplete: "Wird quotidien terminé!",
+      
+      // Carte & Modale
+      remove: "Supprimer",
+      removeChallenge: "Supprimer ce défi?",
+      progressWillBeLost: "Votre progression sera perdue.",
     },
 
     // Compteur de Tasbih numérique

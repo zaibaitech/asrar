@@ -550,3 +550,15 @@ export function createCustomChallenge(
     totalTarget: dailyTarget * 30,
   };
 }
+
+export function createDebtReliefChallenge(): ChallengeConfig {
+  return {
+    title: 'Debt Relief Wird',
+    arabicText: 'وَمَا ذَٰلِكَ عَلَى اللهِ بِعَزِيزٍ',
+    transliteration: 'Wamā dhālika ʿalā llāhi bi-ʿAzīzin',
+    meaning: 'And that is not difficult for Allah',
+    dailyTarget: 1000,
+    totalTarget: 30000, // 1000 × 30 days
+    quickAddPresets: [100, 250, 500, 1000],
+  };
+}

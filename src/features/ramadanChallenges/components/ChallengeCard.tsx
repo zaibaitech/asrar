@@ -18,35 +18,47 @@ import { translations } from '@/src/lib/translations';
 
 // ─── Type Badge Colors ───────────────────────────────────────────────────────────
 
-const TYPE_STYLES: Record<ChallengeType, { bg: string; text: string; label: string; labelAr: string }> = {
+const TYPE_STYLES: Record<ChallengeType, { bg: string; text: string; label: string; labelFr: string; labelAr: string }> = {
   ISTIGHFAR: {
     bg: 'bg-amber-100 dark:bg-amber-900/40',
     text: 'text-amber-700 dark:text-amber-300',
     label: 'Istighfār',
+    labelFr: 'Istighfār',
     labelAr: 'استغفار',
   },
   SALAWAT: {
     bg: 'bg-emerald-100 dark:bg-emerald-900/40',
     text: 'text-emerald-700 dark:text-emerald-300',
     label: 'Ṣalawāt',
+    labelFr: 'Ṣalawāt',
     labelAr: 'صلوات',
   },
   DIVINE_NAME: {
     bg: 'bg-purple-100 dark:bg-purple-900/40',
     text: 'text-purple-700 dark:text-purple-300',
     label: 'Divine Name',
+    labelFr: 'Nom Divin',
     labelAr: 'اسم إلهي',
   },
   PROPHETIC_NAMES: {
     bg: 'bg-amber-100 dark:bg-amber-900/40',
     text: 'text-amber-700 dark:text-amber-300',
     label: '201 Names',
+    labelFr: '201 Noms',
     labelAr: 'أسماء النبي',
+  },
+  DEBT_RELIEF: {
+    bg: 'bg-teal-100 dark:bg-teal-900/40',
+    text: 'text-teal-700 dark:text-teal-300',
+    label: 'Debt Relief',
+    labelFr: 'Soulagement Dettes',
+    labelAr: 'فرج من الدين',
   },
   CUSTOM: {
     bg: 'bg-slate-100 dark:bg-slate-700/40',
     text: 'text-slate-700 dark:text-slate-300',
     label: 'Custom',
+    labelFr: 'Personnalisé',
     labelAr: 'مخصص',
   },
 };
@@ -140,6 +152,7 @@ export function ChallengeCard({
       SALAWAT: 'salawat',
       DIVINE_NAME: 'divine-name',
       PROPHETIC_NAMES: 'prophetic-names',
+      DEBT_RELIEF: 'debt-relief',
       CUSTOM: 'custom',
     };
     return typeToSlug[challenge.type] || 'custom';
@@ -231,7 +244,7 @@ export function ChallengeCard({
           {/* Type badge and title */}
           <div className="flex items-center gap-3 flex-1 min-w-0">
             <span className={`inline-flex items-center px-2 py-1 rounded-lg text-xs font-medium ${typeStyle.bg} ${typeStyle.text}`}>
-              {typeStyle.label}
+              {language === 'fr' ? typeStyle.labelFr : typeStyle.label}
             </span>
             <div className="min-w-0 flex-1">
               <h4 className="font-semibold text-slate-900 dark:text-slate-100 truncate">
