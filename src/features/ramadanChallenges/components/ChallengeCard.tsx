@@ -166,6 +166,34 @@ export function ChallengeCard({
 
   const handleNativeShare = async () => {
     const shareUrl = getShareUrl();
+    
+    // Special captivating message for Debt Relief Wird
+    if (challenge.type === 'DEBT_RELIEF') {
+      const shareTitle = language === 'fr'
+        ? `💰 Wird pour Soulagement des Dettes — Asrār`
+        : `💰 Debt Relief Wird — Asrār`;
+      const shareText = language === 'fr'
+        ? `💰✨ Soulagement Miraculeux des Dettes\n\n🌙 Ce qui semble IMPOSSIBLE pour nous est SANS EFFORT pour Allah!\n\n📿 Récitez avec moi après ʿIshāʾ:\n"${challenge.arabicText}"\n${challenge.transliteration}\n\n🎯 1000× quotidiennement pour un soulagement rapide des dettes\n\n💫 Rejoignez cette pratique transformatrice!\nVers la liberté financière par la grâce d'Allah... 🤲`
+        : `💰✨ Miraculous Debt Relief\n\n🌙 What seems IMPOSSIBLE for us is EFFORTLESS for Allah!\n\n📿 Recite with me after ʿIshāʾ:\n"${challenge.arabicText}"\n${challenge.transliteration}\n\n🎯 1000× daily for fast debt repayment\n\n💫 Join this transformative practice!\nTowards financial freedom through Allah's grace... 🤲`;
+      
+      if (navigator.share) {
+        try {
+          await navigator.share({
+            title: shareTitle,
+            text: shareText,
+            url: shareUrl,
+          });
+          setShowShareModal(false);
+        } catch {
+          // User cancelled or share failed
+        }
+      } else {
+        setShowShareModal(true);
+      }
+      return;
+    }
+    
+    // Default message for other challenges
     const shareTitle = language === 'fr' 
       ? `Défi ${challenge.title} — Asrār` 
       : `${challenge.title} Challenge — Asrār`;

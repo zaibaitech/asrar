@@ -17,7 +17,7 @@ export const bilingualMeta = {
     shortDescription: 'Discover ʿIlm al-Nujūm planetary hours, Abjad numerology, 201 Prophetic Names & spiritual challenges. Your Islamic esoteric companion.',
     // Full description for OG and app stores
     fullDescription: 'Align your actions with cosmic rhythms! ʿIlm al-Nujūm reveals the optimal planetary hour for every intention. Plus: Abjad calculator, 201 Prophetic Names for Rizq, Ṣalawāt tracking, Divine Name resonance & Name Destiny analysis. Ancient wisdom, modern interface.',
-    ogImage: '/og-image-en.png',
+    ogImage: '/og/default.jpg',
     locale: 'en_GB',
     // App store long description
     appStoreDescription: `Asrār Everyday — Unlock Divine Timing & Sacred Sciences ✨
@@ -53,7 +53,7 @@ Built by Zaibaitech Ltd · Edinburgh, Scotland`,
     title: 'Asrār Everyday — Sciences Sacrées & Timing Divin ✨',
     shortDescription: 'Découvrez ʿIlm al-Nujūm (heures planétaires), numérologie Abjad, 201 Noms Prophétiques & défis spirituels. Sagesse ésotérique.',
     fullDescription: 'Alignez vos actions avec les rythmes cosmiques ! ʿIlm al-Nujūm révèle l\'heure planétaire optimale pour chaque intention. Plus : calculateur Abjad, 201 Noms Prophétiques pour le Rizq, suivi des Ṣalawāt, résonance des Noms Divins & analyse du Destin. Sagesse ancienne, interface moderne.',
-    ogImage: '/og-image-fr.png',
+    ogImage: '/og/default.jpg',
     locale: 'fr_FR',
     appStoreDescription: `Asrār Everyday — Sciences Sacrées & Timing Divin ✨
 

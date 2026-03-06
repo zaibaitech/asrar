@@ -80,6 +80,46 @@ export function generateChallengeShareText(
     ? Math.round(((challenge.totalProgress || 0) / challenge.totalTarget) * 100) 
     : 0;
   
+  // Special captivating message for Debt Relief Wird
+  if (challenge.type === 'DEBT_RELIEF') {
+    if (language === 'fr') {
+      const text = `💰✨ Soulagement Miraculeux des Dettes - Wird Puissant\n\n` +
+        `🌙 Ce qui semble IMPOSSIBLE pour nous est SANS EFFORT pour Allah!\n\n` +
+        `📿 Récitez avec moi:\n` +
+        `"${challenge.arabicText}"\n` +
+        `${challenge.transliteration}\n\n` +
+        `🎯 Objectif: ${challenge.totalTarget.toLocaleString()}× après ʿIshāʾ\n` +
+        `📊 Mon progrès: ${challenge.totalProgress.toLocaleString()} (${progress}%)\n` +
+        (challenge.streakDays > 0 ? `🔥 ${challenge.streakDays} jours consécutifs!\n` : '') +
+        `\n💫 Rejoignez-moi dans cette pratique transformatrice!\n` +
+        `Vers la liberté financière par la grâce d'Allah... 🤲`;
+      
+      return {
+        title: '💰 Wird pour Soulagement des Dettes',
+        text,
+        url: `${baseUrl}/ramadan?challenge=${getChallengeSlug(challenge.type)}&lang=fr`,
+      };
+    } else {
+      const text = `💰✨ Miraculous Debt Relief - Powerful Wird\n\n` +
+        `🌙 What seems IMPOSSIBLE for us is EFFORTLESS for Allah!\n\n` +
+        `📿 Recite with me:\n` +
+        `"${challenge.arabicText}"\n` +
+        `${challenge.transliteration}\n\n` +
+        `🎯 Goal: ${challenge.totalTarget.toLocaleString()}× after ʿIshāʾ\n` +
+        `📊 My progress: ${challenge.totalProgress.toLocaleString()} (${progress}%)\n` +
+        (challenge.streakDays > 0 ? `🔥 ${challenge.streakDays} day streak!\n` : '') +
+        `\n💫 Join me in this transformative practice!\n` +
+        `Towards financial freedom through Allah's grace... 🤲`;
+      
+      return {
+        title: '💰 Debt Relief Wird',
+        text,
+        url: `${baseUrl}/ramadan?challenge=${getChallengeSlug(challenge.type)}`,
+      };
+    }
+  }
+  
+  // Default message for other challenges
   if (language === 'fr') {
     const text = `🤲 ${challenge.title}\n\n` +
       `${challenge.arabicText}\n` +

@@ -57,7 +57,9 @@ export async function generateMetadata({
     }
   }
 
-  // Default Ramadan page metadata
+  // Default Ramadan page metadata with absolute URL
+  const defaultImageUrl = `${baseUrl}/og/default.jpg`;
+  
   return {
     title: currentMeta.title,
     description: currentMeta.description,
@@ -70,7 +72,7 @@ export async function generateMetadata({
       description: currentMeta.description,
       images: [
         {
-          url: '/og/default.jpg',
+          url: defaultImageUrl,
           width: 1200,
           height: 630,
           alt: currentMeta.title,
@@ -81,7 +83,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: currentMeta.title,
       description: currentMeta.description,
-      images: ['/og/default.jpg'],
+      images: [defaultImageUrl],
     },
   };
 }

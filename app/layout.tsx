@@ -91,11 +91,11 @@ export const metadata: Metadata = {
     description: bilingualMeta.en.fullDescription,
     images: [
       {
-        url: '/og-image-en.png',
+        url: `${baseUrl}/og/default.jpg`,
         width: 1200,
         height: 630,
         alt: 'Asrār — Planetary Hours, Abjad Calculator & Islamic Sacred Sciences',
-        type: 'image/png',
+        type: 'image/jpeg',
       },
     ],
   },
@@ -103,7 +103,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: bilingualMeta.en.title,
     description: bilingualMeta.en.fullDescription,
-    images: ['/og-image-en.png'],
+    images: [`${baseUrl}/og/default.jpg`],
     creator: '@AsrarEveryday',
   },
   authors: [

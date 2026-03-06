@@ -38,6 +38,9 @@ export async function generateMetadata({
   // Check for challenge-specific metadata
   if (challenge && challengeMeta[challenge]) {
     const meta = challengeMeta[challenge][lang];
+    // Use challenge-specific image with absolute URL
+    const imageUrl = meta.image.startsWith('http') ? meta.image : `${baseUrl}${meta.image}`;
+    
     return {
       title: meta.title,
       description: meta.description,
@@ -50,7 +53,7 @@ export async function generateMetadata({
         description: meta.description,
         images: [
           {
-            url: bilingualMeta[lang].ogImage,
+            url: imageUrl,
             width: 1200,
             height: 630,
             alt: meta.title,
@@ -61,13 +64,16 @@ export async function generateMetadata({
         card: 'summary_large_image',
         title: meta.title,
         description: meta.description,
-        images: [bilingualMeta[lang].ogImage],
+        images: [imageUrl],
       },
     };
   }
 
   // Default bilingual metadata
   const meta = bilingualMeta[lang];
+  // Ensure absolute URL for default OG image
+  const defaultImageUrl = meta.ogImage.startsWith('http') ? meta.ogImage : `${baseUrl}${meta.ogImage}`;
+  
   return {
     title: meta.title,
     description: meta.shortDescription,
@@ -81,7 +87,7 @@ export async function generateMetadata({
       description: meta.fullDescription,
       images: [
         {
-          url: meta.ogImage,
+          url: defaultImageUrl,
           width: 1200,
           height: 630,
           alt: meta.title,
@@ -92,7 +98,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: meta.title,
       description: meta.fullDescription,
-      images: [meta.ogImage],
+      images: [defaultImageUrl],
     },
   };
 }
