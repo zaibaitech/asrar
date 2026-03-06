@@ -35,17 +35,7 @@ Dynamic Open Graph meta tags have been successfully added for Ramadan challenge 
 
 When sharing `https://www.asrar.app/ramadan?challenge=salawat`:
 
-```html
-<meta property="og:title" content="Ṣalawāt Challenge — Asrār Ramadan" />
-<meta property="og:description" content="Join me in reciting Ṣalawāt this Ramadan. Track your daily dhikr with Asrār." />
-<meta property="og:image" content="https://www.asrar.app/og/salawat.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://www.asrar.app/ramadan?challenge=salawat" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://www.asrar.app/og/salawat.jpg" />
-```
+![Open Graph Meta Tags Example](public/images/OG.TAGS.png)
 
 ---
 
