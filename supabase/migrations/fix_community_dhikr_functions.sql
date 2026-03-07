@@ -21,19 +21,23 @@ SECURITY DEFINER
 SET search_path = public
 AS $$
 BEGIN
+    -- Use dhikr_logs as the source of truth (not community_dhikr aggregation table)
+    -- This ensures accurate counts even if aggregation gets out of sync
     RETURN QUERY
     SELECT
-        COALESCE((SELECT total_count FROM public.community_dhikr WHERE date = CURRENT_DATE), 0)::bigint AS today_total,
-        COALESCE((SELECT user_count FROM public.community_dhikr WHERE date = CURRENT_DATE), 0)::bigint AS today_users,
-        COALESCE(SUM(total_count), 0)::bigint AS all_time_total
-    FROM public.community_dhikr;
+        COALESCE(SUM(amount), 0)::bigint AS today_total,
+        COUNT(DISTINCT fingerprint)::bigint AS today_users,
+        (SELECT COALESCE(SUM(amount), 0)::bigint FROM public.dhikr_logs) AS all_time_total
+    FROM public.dhikr_logs
+    WHERE date = CURRENT_DATE;
 END;
 $$;
 
 -- =========================================
 -- 2. FIX increment_community_dhikr FUNCTION
 -- =========================================
--- Add missing search_path and fix user counting logic
+-- Simplified to only insert into dhikr_logs (source of truth)
+-- Removed dependency on community_dhikr aggregation table
 
 CREATE OR REPLACE FUNCTION public.increment_community_dhikr(
     p_fingerprint text, 
@@ -45,38 +49,13 @@ LANGUAGE plpgsql
 SECURITY DEFINER
 SET search_path = public
 AS $$
-DECLARE
-    v_today date := CURRENT_DATE;
-    v_is_new_user boolean;
 BEGIN
-    -- Check if this fingerprint has already contributed today
-    -- (before inserting the new log entry)
-    SELECT NOT EXISTS (
-        SELECT 1 FROM public.dhikr_logs 
-        WHERE fingerprint = p_fingerprint 
-        AND date = v_today
-    ) INTO v_is_new_user;
-    
-    -- Insert dhikr log (date defaults to CURRENT_DATE)
+    -- Insert dhikr log (source of truth)
     -- RLS policies allow anon/authenticated users to insert
     INSERT INTO public.dhikr_logs (fingerprint, amount, dhikr_type)
     VALUES (p_fingerprint, p_amount, p_dhikr_type);
     
-    -- Update or insert community stats for today
-    INSERT INTO public.community_dhikr (date, total_count, user_count, updated_at)
-    VALUES (
-        v_today,
-        p_amount,
-        CASE WHEN v_is_new_user THEN 1 ELSE 0 END,
-        NOW()
-    )
-    ON CONFLICT (date)
-    DO UPDATE SET
-        total_count = public.community_dhikr.total_count + p_amount,
-        user_count = public.community_dhikr.user_count + CASE WHEN v_is_new_user THEN 1 ELSE 0 END,
-        updated_at = NOW();
-    
-    -- Return updated stats
+    -- Return updated stats (calculated from dhikr_logs)
     RETURN QUERY
     SELECT * FROM public.get_community_dhikr_stats();
 END;
@@ -96,3 +75,8 @@ $$;
 -- 2. They have explicit search_path set for security
 -- 3. RLS policies on dhikr_logs allow INSERT for anon/authenticated
 -- 4. The function owner has permission to bypass RLS
+
+-- SOURCE OF TRUTH:
+-- - dhikr_logs table contains all raw dhikr entries (827,529+)
+-- - community_dhikr table is an aggregation cache (may drift)
+-- - get_community_dhikr_stats() uses dhikr_logs for accuracy
