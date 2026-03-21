@@ -2142,11 +2142,24 @@ export default function AsrarEveryday() {
                     : 'Real-time insights based on traditional Islamic celestial science and Chaldean planetary hours.'}
                 </p>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
-                  <PlanetaryHourCard language={language} />
-                  <PlanetOfTheDay language={language} />
+                  <div className="flex flex-col gap-2">
+                    <PlanetaryHourCard language={language} />
+                    <Link href="/planetary-hours" className="self-end text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-1">
+                      {language === 'fr' ? 'Guide complet →' : 'Full Guide →'}
+                    </Link>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <PlanetOfTheDay language={language} />
+                    <Link href="/planet-of-the-day" className="self-end text-xs font-semibold text-amber-600 dark:text-amber-400 hover:underline flex items-center gap-1">
+                      {language === 'fr' ? 'Guide complet →' : 'Full Guide →'}
+                    </Link>
+                  </div>
                 </div>
-                <div className="mt-4">
+                <div className="mt-4 flex flex-col gap-2">
                   <PlanetTransitCard language={language} onNavigate={() => {}} />
+                  <Link href="/planet-transit" className="self-end text-xs font-semibold text-violet-600 dark:text-violet-400 hover:underline flex items-center gap-1">
+                    {language === 'fr' ? 'Guide complet →' : 'Full Guide →'}
+                  </Link>
                 </div>
               </div>
             </div>
@@ -3882,10 +3895,23 @@ export default function AsrarEveryday() {
               {language === 'en' ? 'Ilm Nujum – Planetary Alignment' : language === 'fr' ? 'Ilm Nujum – Alignement Planétaire' : 'علم النجوم'}
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <PlanetOfTheDay language={language} />
-              <PlanetaryHourCard language={language} />
-              <div className="lg:col-span-2">
+              <div className="flex flex-col gap-2">
+                <PlanetOfTheDay language={language} />
+                <Link href="/planet-of-the-day" className="self-end text-xs font-semibold text-amber-600 dark:text-amber-400 hover:underline">
+                  {language === 'fr' ? 'Guide complet →' : 'Full Guide →'}
+                </Link>
+              </div>
+              <div className="flex flex-col gap-2">
+                <PlanetaryHourCard language={language} />
+                <Link href="/planetary-hours" className="self-end text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:underline">
+                  {language === 'fr' ? 'Guide complet →' : 'Full Guide →'}
+                </Link>
+              </div>
+              <div className="lg:col-span-2 flex flex-col gap-2">
                 <PlanetTransitCard language={language} onNavigate={() => {}} />
+                <Link href="/planet-transit" className="self-end text-xs font-semibold text-violet-600 dark:text-violet-400 hover:underline">
+                  {language === 'fr' ? 'Guide complet →' : 'Full Guide →'}
+                </Link>
               </div>
             </div>
           </div>
