@@ -154,8 +154,8 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
     addChallenge('ISTIGHFAR', config);
   }, [state.isHydrated, state.challenges.length, addChallenge]);
 
-  // Don't render until mounted and during Ramadan
-  if (!mounted || !ramadanInfo?.isRamadan) return null;
+  // Don't render until mounted
+  if (!mounted) return null;
 
   // ─── Computed values ───
   const totalRamadanProgress = getTotalProgress();
@@ -198,34 +198,34 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
 
   return (
     <>
-      <div className="bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 dark:from-amber-950/40 dark:via-yellow-950/30 dark:to-orange-950/30 rounded-xl border border-amber-200 dark:border-amber-700/50 overflow-hidden transition-all duration-300 animate-in">
+      <div className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/40 dark:to-teal-950/30 rounded-xl border border-emerald-200 dark:border-emerald-700/50 overflow-hidden transition-all duration-300 animate-in">
         
         {/* ─── Collapsed Banner ─── */}
         <div
-          className="p-5 cursor-pointer hover:bg-amber-100/40 dark:hover:bg-amber-900/20 transition-colors"
+          className="p-5 cursor-pointer hover:bg-emerald-100/40 dark:hover:bg-emerald-900/20 transition-colors"
           onClick={() => setIsExpanded(!isExpanded)}
         >
           <div className="flex items-center justify-between">
             {/* Left: Moon icon + title */}
             <div className="flex items-center gap-3 flex-1 min-w-0">
               <div className="relative flex-shrink-0">
-                <div className="absolute inset-0 bg-amber-400 rounded-full opacity-60 animate-pulse" style={{ width: 28, height: 28 }} />
-                <span className="relative z-10 text-2xl">🌙</span>
+                <div className="absolute inset-0 bg-emerald-400 rounded-full opacity-60 animate-pulse" style={{ width: 28, height: 28 }} />
+                <span className="relative z-10 text-2xl">📿</span>
               </div>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-2 flex-wrap">
-                  <h3 className="text-lg font-bold text-amber-900 dark:text-amber-100">
-                    {language === 'fr' ? 'Ramadan Jour' : 'Ramadan Day'} {ramadanInfo.dayOfRamadan}
+                  <h3 className="text-lg font-bold text-emerald-900 dark:text-emerald-100">
+                    {language === 'fr' ? 'Défi de Zikr' : 'Zikr Challenge'}
                   </h3>
                 </div>
-                <p className="text-sm text-amber-700 dark:text-amber-300 mt-0.5">
+                <p className="text-sm text-emerald-700 dark:text-emerald-300 mt-0.5">
                   {state.challenges.length} {language === 'fr' 
                     ? (state.challenges.length === 1 ? 'défi actif' : 'défis actifs')
                     : (state.challenges.length === 1 ? 'challenge' : 'challenges')
                   }
                   {' · '}{language === 'fr' ? "Aujourd'hui:" : 'Today:'} {formatNumber(totalTodayProgress)}
                   {totalRamadanTarget > 0 && (
-                    <span className="text-amber-500 dark:text-amber-500">
+                    <span className="text-emerald-500 dark:text-emerald-500">
                       {' · '}{totalRamadanTarget > 0 ? Math.round((totalRamadanProgress / totalRamadanTarget) * 100) : 0}%
                     </span>
                   )}
@@ -236,9 +236,9 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
             {/* Right: Chevron */}
             <div className="flex items-center gap-2">
               {isExpanded ? (
-                <ChevronUp className="w-5 h-5 text-amber-500" />
+                <ChevronUp className="w-5 h-5 text-emerald-500" />
               ) : (
-                <ChevronDown className="w-5 h-5 text-amber-500" />
+                <ChevronDown className="w-5 h-5 text-emerald-500" />
               )}
             </div>
           </div>

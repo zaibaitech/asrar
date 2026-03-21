@@ -31,37 +31,29 @@ import { generateProgressShareText } from '@/src/features/ramadanChallenges/shar
 
 const translations = {
   en: {
-    title: 'Ramadan Challenges',
-    day: 'Day',
+    title: 'Zikr Challenges',
     challenges: 'challenges',
     challenge: 'challenge',
     todayTotal: 'Today',
-    ramadanTotal: 'Ramadan Total',
+    total: 'Total',
     progress: 'Progress',
     addChallenge: 'Add Challenge',
     backHome: 'Back to Home',
     share: 'Share',
     linkCopied: 'Link copied!',
-    notRamadan: 'Ramadan challenges are only available during Ramadan.',
-    visitHome: 'Visit Home',
-    comingSoon: 'Come back during the blessed month of Ramadan!',
     streak: 'day streak',
   },
   fr: {
-    title: 'Défis du Ramadan',
-    day: 'Jour',
+    title: 'Défis de Zikr',
     challenges: 'défis',
     challenge: 'défi',
     todayTotal: "Aujourd'hui",
-    ramadanTotal: 'Total Ramadan',
+    total: 'Total',
     progress: 'Progrès',
     addChallenge: 'Ajouter un défi',
     backHome: "Retour à l'accueil",
     share: 'Partager',
     linkCopied: 'Lien copié!',
-    notRamadan: 'Les défis du Ramadan ne sont disponibles que pendant le Ramadan.',
-    visitHome: "Visiter l'accueil",
-    comingSoon: 'Revenez pendant le mois béni du Ramadan!',
     streak: 'jours consécutifs',
   },
 };
@@ -240,30 +232,6 @@ export function RamadanPage() {
     );
   }
 
-  // ─── Not Ramadan state ───
-  if (!ramadanInfo?.isRamadan) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
-        <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 max-w-md text-center shadow-xl">
-          <div className="text-6xl mb-4">🌙</div>
-          <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">
-            {t.title}
-          </h1>
-          <p className="text-slate-600 dark:text-slate-400 mb-6">
-            {t.comingSoon}
-          </p>
-          <button
-            onClick={() => router.push('/')}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-medium transition-colors"
-          >
-            <Home className="w-5 h-5" />
-            {t.visitHome}
-          </button>
-        </div>
-      </div>
-    );
-  }
-
   // ─── Computed values ───
   const totalRamadanProgress = getTotalProgress();
   const totalTodayProgress = getTotalTodayProgress();
@@ -302,8 +270,8 @@ export function RamadanPage() {
     const shareUrl = `${process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app'}/ramadan${language === 'fr' ? '?lang=fr' : ''}`;
     const shareTitle = t.title;
     const shareText = language === 'fr'
-      ? '🌙 Rejoignez-moi dans mes défis spirituels du Ramadan sur Asrār!'
-      : '🌙 Join me in my Ramadan spiritual challenges on Asrār!';
+      ? '📿 Rejoignez-moi dans mes défis de zikr sur Asrār!'
+      : '📿 Join me in my zikr challenges on Asrār!';
 
     if (navigator.share) {
       try {
@@ -343,10 +311,10 @@ export function RamadanPage() {
 
             {/* Title */}
             <div className="flex items-center gap-2">
-              <span className="text-2xl">🌙</span>
+              <span className="text-2xl">📿</span>
               <div className="text-center">
-                <h1 className="text-lg font-bold text-amber-900 dark:text-amber-100">
-                  {t.day} {ramadanInfo.dayOfRamadan}
+                <h1 className="text-lg font-bold text-emerald-900 dark:text-emerald-100">
+                  {t.title}
                 </h1>
               </div>
             </div>
@@ -390,10 +358,10 @@ export function RamadanPage() {
                 )}
               </div>
 
-              {/* Ramadan Total — center emphasis */}
+              {/* Total — center emphasis */}
               <div className="flex flex-col items-center gap-0.5 relative">
                 <span className="text-[10px] uppercase tracking-wider font-semibold text-amber-600/70 dark:text-amber-400/60">
-                  {t.ramadanTotal}
+                  {t.total}
                 </span>
                 <span className={`text-2xl font-extrabold tabular-nums ${totalRamadanProgress > 0 ? 'text-amber-900 dark:text-amber-100' : 'text-slate-300 dark:text-slate-600'}`}>
                   {formatNumber(totalRamadanProgress)}

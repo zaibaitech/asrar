@@ -28,14 +28,14 @@ const translations = {
     today: 'Today',
     total: 'Total',
     viewChallenges: 'View Challenges',
-    spiritualChallenge: 'Spiritual Challenge',
+    spiritualChallenge: 'Zikr Challenge',
   },
   fr: {
     day: 'Jour',
     today: "Aujourd'hui",
     total: 'Total',
     viewChallenges: 'Voir les défis',
-    spiritualChallenge: 'Défi Spirituel',
+    spiritualChallenge: 'Défi de Zikr',
   },
 };
 
@@ -75,29 +75,21 @@ export function RamadanBannerMini({ language = 'en' }: RamadanBannerMiniProps) {
   return (
     <Link
       href="/ramadan"
-      className="block bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 dark:from-amber-950/40 dark:via-yellow-950/30 dark:to-orange-950/30 rounded-xl border border-amber-200 dark:border-amber-700/50 px-4 py-3 sm:px-6 sm:py-4 hover:bg-amber-100/40 dark:hover:bg-amber-900/20 transition-colors"
+      className="block bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/40 dark:to-teal-950/30 rounded-xl border border-emerald-200 dark:border-emerald-700/50 px-4 py-3 sm:px-6 sm:py-4 hover:bg-emerald-100/40 dark:hover:bg-emerald-900/20 transition-colors"
     >
       <div className="flex items-center justify-between">
         {/* Left: Icon/Day/Stats */}
         <div className="flex items-center gap-3 flex-1 min-w-0">
-          {/* Show moon/day only if Ramadan, else show generic icon */}
+          {/* Zikr icon with pulse */}
           <div className="relative flex-shrink-0">
-            {ramadanInfo?.isRamadan ? (
-              <>
-                <div className="absolute inset-0 bg-amber-400 rounded-full opacity-50 animate-pulse" style={{ width: 28, height: 28 }} />
-                <span className="relative z-10 text-2xl">🌙</span>
-              </>
-            ) : (
-                <span className="relative z-10 text-2xl">✨</span>
-            )}
+            <div className="absolute inset-0 bg-emerald-400 rounded-full opacity-50 animate-pulse" style={{ width: 28, height: 28 }} />
+            <span className="relative z-10 text-2xl">📿</span>
           </div>
           {/* Text content */}
           <div className="min-w-0 flex-1">
             <div className="flex items-center gap-2 flex-wrap">
-              <h3 className="text-base sm:text-lg font-bold text-amber-900 dark:text-amber-100">
-                {ramadanInfo?.isRamadan
-                  ? `${t.day} ${ramadanInfo.dayOfRamadan}`
-                  : t.spiritualChallenge}
+              <h3 className="text-base sm:text-lg font-bold text-emerald-900 dark:text-emerald-100">
+                {t.spiritualChallenge}
               </h3>
               {totalStreak > 0 && (
                 <span className="inline-flex items-center gap-1 px-1.5 py-0.5 bg-orange-100 dark:bg-orange-900/40 text-orange-600 dark:text-orange-400 text-xs font-bold rounded-full">
@@ -106,11 +98,11 @@ export function RamadanBannerMini({ language = 'en' }: RamadanBannerMiniProps) {
                 </span>
               )}
             </div>
-            <p className="text-xs sm:text-sm text-amber-700 dark:text-amber-300">
+            <p className="text-xs sm:text-sm text-emerald-700 dark:text-emerald-300">
               {t.today}: <span className="font-semibold">{formatNumber(totalTodayProgress)}</span>
               {' · '}{t.total}: <span className="font-semibold">{formatNumber(totalProgress)}</span>
               {totalTarget > 0 && (
-                <span className="text-amber-500"> · {progressPercent}%</span>
+                <span className="text-emerald-500"> · {progressPercent}%</span>
               )}
             </p>
             {communityStats.allTimeTotal > 0 && (
@@ -122,10 +114,10 @@ export function RamadanBannerMini({ language = 'en' }: RamadanBannerMiniProps) {
         </div>
         {/* Right: View link + Arrow */}
         <div className="flex items-center gap-2 flex-shrink-0">
-          <span className="text-sm font-medium text-amber-700 dark:text-amber-300 hidden sm:inline">
+          <span className="text-sm font-medium text-emerald-700 dark:text-emerald-300 hidden sm:inline">
             {t.viewChallenges}
           </span>
-          <ChevronRight className="w-5 h-5 text-amber-500" />
+          <ChevronRight className="w-5 h-5 text-emerald-500" />
         </div>
       </div>
     </Link>
