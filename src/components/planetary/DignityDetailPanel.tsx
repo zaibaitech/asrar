@@ -164,10 +164,23 @@ export function DignityDetailPanel({
   const tierLabelAr = tSimplified[`${simplifiedStatus.tier}Ar`] || simplifiedStatus.labelAr;
   const guidance = tSimplified[`${simplifiedStatus.tier}Guidance`] || simplifiedStatus.guidance;
 
-  // Build localized reason
-  const reason = simplifiedStatus.reason
-    .replace(planet, planetLabel)
-    .replace(signDisplay, signLabel);
+  // Build localized reason using translation templates
+  const DIGNITY_TEMPLATE_KEY: Record<string, string> = {
+    sharaf:      'exaltedIn',
+    bayt:        'atHomeIn',
+    muthallatha: 'strongIn',
+    hadd:        'comfortableIn',
+    wajh:        'comfortableIn',
+    gharib:      'neutralIn',
+    hubut:       'weakenedIn',
+    darr:        'weakenedIn',
+  };
+  const dignityType = result.primary.type;
+  const templateKey = DIGNITY_TEMPLATE_KEY[dignityType];
+  const reasonTemplate: string = templateKey ? (tSimplified[templateKey] || '') : '';
+  const reason = reasonTemplate
+    ? reasonTemplate.replace('{planet}', planetLabel).replace('{sign}', signLabel)
+    : simplifiedStatus.reason.replace(planet, planetLabel).replace(signDisplay, signLabel);
 
   const icon = TIER_ICONS[simplifiedStatus.tier];
 

@@ -159,10 +159,25 @@ export function SimplifiedStatusBadge({
   const planetName = tPlanets[planet] || planet;
   const signName = tZodiac[sign] || signDisplay;
 
-  // Build localized reason
-  const reason = simplifiedStatus.reason
-    .replace(planet, planetName)
-    .replace(signDisplay, signName);
+  // Map dignity type → translation template key
+  const DIGNITY_TEMPLATE_KEY: Record<string, string> = {
+    sharaf:      'exaltedIn',
+    bayt:        'atHomeIn',
+    muthallatha: 'strongIn',
+    hadd:        'comfortableIn',
+    wajh:        'comfortableIn',
+    gharib:      'neutralIn',
+    hubut:       'weakenedIn',
+    darr:        'weakenedIn',
+  };
+
+  // Build fully localized reason using translation templates
+  const dignityType = result.primary.type;
+  const templateKey = DIGNITY_TEMPLATE_KEY[dignityType];
+  const reasonTemplate: string = templateKey ? (tSimplified[templateKey] || '') : '';
+  const reason = reasonTemplate
+    ? reasonTemplate.replace('{planet}', planetName).replace('{sign}', signName)
+    : simplifiedStatus.reason.replace(planet, planetName).replace(signDisplay, signName);
 
   // Close details on outside click
   React.useEffect(() => {
