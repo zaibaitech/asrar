@@ -292,19 +292,20 @@ function GetTheAppBanner() {
     : 'Personalised spiritual guidance · Dhikr · Abjad · Planetary Hours';
 
   return (
-    <div className="relative mb-2 sm:mb-4 rounded-xl overflow-hidden border border-amber-400/30 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 shadow-lg">
-      {/* Subtle gold shimmer line at top */}
+    /* Fixed bottom bar — always visible regardless of scroll */
+    <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-amber-400/30 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 shadow-2xl">
+      {/* Gold accent line at top */}
       <div className="h-0.5 w-full bg-gradient-to-r from-transparent via-amber-400 to-transparent" />
-      <div className="px-4 py-3 sm:px-5 sm:py-4 flex items-center gap-4">
-        {/* App icon placeholder */}
-        <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-indigo-800/60 border border-amber-400/20 flex items-center justify-center text-2xl shadow-inner">
+      <div className="max-w-6xl mx-auto px-4 py-2.5 sm:px-5 sm:py-3 flex items-center gap-3">
+        {/* Icon */}
+        <div className="flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-indigo-800/60 border border-amber-400/20 flex items-center justify-center text-xl sm:text-2xl shadow-inner">
           ✨
         </div>
 
         {/* Text */}
         <div className="flex-1 min-w-0">
-          <p className="text-sm sm:text-base font-bold text-amber-300 leading-tight">{headline}</p>
-          <p className="text-xs text-slate-400 mt-0.5 leading-snug hidden sm:block">{sub}</p>
+          <p className="text-xs sm:text-sm font-bold text-amber-300 leading-tight">{headline}</p>
+          <p className="text-[11px] text-slate-400 mt-0.5 leading-snug hidden sm:block">{sub}</p>
         </div>
 
         {/* Google Play badge */}
@@ -319,8 +320,7 @@ function GetTheAppBanner() {
           <img
             src={badgeSrc}
             alt="Get it on Google Play"
-            height={44}
-            className="h-10 sm:h-11 w-auto"
+            className="h-9 sm:h-10 w-auto"
           />
         </a>
 
@@ -2139,7 +2139,6 @@ export default function AsrarEveryday() {
         <main className="w-full mx-auto px-3 sm:px-4 py-2 sm:py-8">
           <div className="max-w-6xl mx-auto">
             {showDisclaimer && <DisclaimerBanner onDismiss={() => setShowDisclaimer(false)} />}
-            <GetTheAppBanner />
             
             {/* Daily Reflection - Prominent Banner */}
             <div className="mb-2 sm:mb-8">
@@ -4126,6 +4125,7 @@ export default function AsrarEveryday() {
           </div>
         </footer>
       </div>
+      <GetTheAppBanner />
     </div>
   );
 }
