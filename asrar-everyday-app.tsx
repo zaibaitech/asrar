@@ -260,6 +260,83 @@ function DisclaimerBanner({ onDismiss }: { onDismiss: () => void }) {
   );
 }
 
+function GetTheAppBanner() {
+  const { language } = useLanguage();
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    // Don't show on Android (user likely already has the app)
+    const isAndroid = /android/i.test(navigator.userAgent);
+    if (isAndroid) return;
+    // Don't show if dismissed this session
+    const dismissed = sessionStorage.getItem('getAppBannerDismissed');
+    if (!dismissed) setVisible(true);
+  }, []);
+
+  const handleDismiss = () => {
+    sessionStorage.setItem('getAppBannerDismissed', '1');
+    setVisible(false);
+  };
+
+  if (!visible) return null;
+
+  const playUrl = 'https://play.google.com/store/apps/details?id=com.zaibaitech.asrariya';
+  const badgeSrc = language === 'fr'
+    ? 'https://play.google.com/intl/fr_fr/badges/static/images/badges/fr_badge_web_generic.png'
+    : 'https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png';
+  const headline = language === 'fr'
+    ? 'Téléchargez Asrāriya sur Android'
+    : 'Get the full experience — Download Asrāriya';
+  const sub = language === 'fr'
+    ? 'Guidance spirituelle personnalisée · Dhikr · Abjad · Heures planétaires'
+    : 'Personalised spiritual guidance · Dhikr · Abjad · Planetary Hours';
+
+  return (
+    <div className="relative mb-2 sm:mb-4 rounded-xl overflow-hidden border border-amber-400/30 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 shadow-lg">
+      {/* Subtle gold shimmer line at top */}
+      <div className="h-0.5 w-full bg-gradient-to-r from-transparent via-amber-400 to-transparent" />
+      <div className="px-4 py-3 sm:px-5 sm:py-4 flex items-center gap-4">
+        {/* App icon placeholder */}
+        <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-indigo-800/60 border border-amber-400/20 flex items-center justify-center text-2xl shadow-inner">
+          ✨
+        </div>
+
+        {/* Text */}
+        <div className="flex-1 min-w-0">
+          <p className="text-sm sm:text-base font-bold text-amber-300 leading-tight">{headline}</p>
+          <p className="text-xs text-slate-400 mt-0.5 leading-snug hidden sm:block">{sub}</p>
+        </div>
+
+        {/* Google Play badge */}
+        <a
+          href={playUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-shrink-0"
+          aria-label="Get it on Google Play"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={badgeSrc}
+            alt="Get it on Google Play"
+            height={44}
+            className="h-10 sm:h-11 w-auto"
+          />
+        </a>
+
+        {/* Dismiss */}
+        <button
+          onClick={handleDismiss}
+          className="flex-shrink-0 p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
+          aria-label="Dismiss"
+        >
+          <X className="w-4 h-4" />
+        </button>
+      </div>
+    </div>
+  );
+}
+
 function ConfidenceMeter({ confidence, warnings }: { confidence: number; warnings: string[] }) {
   const color = confidence >= 80 ? 'green' : confidence >= 60 ? 'yellow' : 'red';
   const colorClasses = {
@@ -2062,6 +2139,7 @@ export default function AsrarEveryday() {
         <main className="w-full mx-auto px-3 sm:px-4 py-2 sm:py-8">
           <div className="max-w-6xl mx-auto">
             {showDisclaimer && <DisclaimerBanner onDismiss={() => setShowDisclaimer(false)} />}
+            <GetTheAppBanner />
             
             {/* Daily Reflection - Prominent Banner */}
             <div className="mb-2 sm:mb-8">
