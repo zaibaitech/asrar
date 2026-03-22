@@ -66,10 +66,10 @@ export function CompactPracticeHint({
 
   const styles = tierStyles[tier];
 
-  // Translations for app teaser
-  const appTeaser = language === 'fr' 
-    ? 'Plus dans l\'app Asrār' 
-    : 'More in Asrār app';
+  const playUrl = 'https://play.google.com/store/apps/details?id=com.zaibaitech.asrariya';
+  const appTeaser = language === 'fr'
+    ? 'Télécharger Asrāriya'
+    : 'Download Asrāriya';
 
   return (
     <div 
@@ -94,12 +94,17 @@ export function CompactPracticeHint({
         </span>
       </div>
 
-      {/* App teaser */}
+      {/* App link */}
       <div className="flex items-center gap-1.5 mt-1">
         <span className="text-xs">📱</span>
-        <span className="text-xs text-slate-400 dark:text-slate-500 italic">
+        <a
+          href={playUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs text-indigo-500 dark:text-indigo-400 hover:underline font-medium"
+        >
           {appTeaser}
-        </span>
+        </a>
       </div>
     </div>
   );

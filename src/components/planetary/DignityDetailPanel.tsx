@@ -67,10 +67,10 @@ function PracticeHintSection({
   const practiceHint = getSimplePracticeHint(tier, planet);
   
   const sectionTitle = language === 'fr' ? 'Indication de Pratique' : 'Practice Hint';
-  const appTeaser = language === 'fr' 
-    ? 'Guidance personnalisée dans l\'app Asrār' 
-    : 'Personalized guidance in the Asrār app';
-  const comingSoon = language === 'fr' ? 'Bientôt disponible' : 'Coming Soon';
+  const playUrl = 'https://play.google.com/store/apps/details?id=com.zaibaitech.asrariya';
+  const appTeaser = language === 'fr'
+    ? 'Télécharger Asrāriya sur Google Play'
+    : 'Download Asrāriya on Google Play';
 
   // Background color based on tier
   const bgColor = tier === 'said' 
@@ -103,17 +103,19 @@ function PracticeHintSection({
         </div>
       </div>
 
-      {/* App teaser */}
+      {/* App link */}
       <div className="flex items-center gap-2 pt-2 border-t border-slate-200/50 dark:border-slate-600/30">
         <span className="text-base">📱</span>
         <div className="flex-1">
-          <span className="text-xs text-slate-500 dark:text-slate-400">
+          <a
+            href={playUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-indigo-500 dark:text-indigo-400 hover:underline font-medium"
+          >
             {appTeaser}
-          </span>
+          </a>
         </div>
-        <span className="text-[10px] font-medium text-purple-600 dark:text-purple-400 bg-purple-100 dark:bg-purple-900/30 px-2 py-0.5 rounded-full">
-          {comingSoon}
-        </span>
       </div>
     </div>
   );
