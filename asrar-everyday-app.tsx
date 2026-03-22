@@ -265,9 +265,6 @@ function GetTheAppBanner() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    // Don't show on Android (user likely already has the app)
-    const isAndroid = /android/i.test(navigator.userAgent);
-    if (isAndroid) return;
     // Don't show if dismissed this session
     const dismissed = sessionStorage.getItem('getAppBannerDismissed');
     if (!dismissed) setVisible(true);
