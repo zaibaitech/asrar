@@ -7,7 +7,6 @@ import { QURAN_META } from '@/src/features/ilm-huruf/quranResonance';
 import { validateVerseReference } from '@/src/features/ilm-huruf/quranApi';
 
 const BASE_URL = 'https://asrar.app';
-const IOS_STORE_URL = 'https://apps.apple.com/app/id[YOUR_APP_ID]';
 const ANDROID_STORE_URL =
   'https://play.google.com/store/apps/details?id=com.zaibaitech.asrariya';
 
@@ -214,7 +213,6 @@ export default async function QuranSharePage({
 
         <ShareActions
           deepLinkUrl={deepLinkUrl}
-          iosStoreUrl={IOS_STORE_URL}
           androidStoreUrl={ANDROID_STORE_URL}
         />
       </div>
