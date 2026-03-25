@@ -195,10 +195,12 @@ export function PlanetTransitCard({
                 </span>
               )}
             </div>
-            <div className="text-sm text-slate-500 dark:text-slate-400">
-              {(t.elements as Record<string, string>)?.[currentTransit.element] || currentTransit.element.charAt(0).toUpperCase() + currentTransit.element.slice(1)}{' '}
-              <span className="font-arabic text-slate-400 dark:text-slate-500">{(t.elementsAr as Record<string, string>)?.[currentTransit.element]}</span>{' '}
-              {t.planetTransit.planet}
+            <div className="text-sm text-slate-500 dark:text-slate-400 flex items-center justify-between">
+              <span>
+                {(t.elements as Record<string, string>)?.[currentTransit.element] || currentTransit.element.charAt(0).toUpperCase() + currentTransit.element.slice(1)}{' '}
+                {t.planetTransit.planet}
+              </span>
+              <span className="font-arabic text-slate-400 dark:text-slate-500">{(t.elementsAr as Record<string, string>)?.[currentTransit.element]}</span>
             </div>
           </div>
         </div>
@@ -210,7 +212,7 @@ export function PlanetTransitCard({
               {zodiacInfo.symbol}
             </div>
             <div className="flex-1">
-              <div className="flex items-baseline gap-1.5">
+              <div className="flex items-baseline justify-between gap-2">
                 <span className="text-lg font-semibold text-purple-700 dark:text-purple-300">
                   {(t.zodiac as Record<string, string>)?.[currentTransit.sign] || currentTransit.sign.charAt(0).toUpperCase() + currentTransit.sign.slice(1)}
                 </span>
@@ -218,10 +220,12 @@ export function PlanetTransitCard({
                   {(t.zodiacAr as Record<string, string>)?.[currentTransit.sign]}
                 </span>
               </div>
-              <div className="text-sm text-slate-500 dark:text-slate-400 tabular-nums">
-                {currentTransit.signDegree}° {currentTransit.signMinute}′ · {(t.elements as Record<string, string>)?.[zodiacInfo.element] || zodiacInfo.element.charAt(0).toUpperCase() + zodiacInfo.element.slice(1)}{' '}
-                <span className="font-arabic">{(t.elementsAr as Record<string, string>)?.[zodiacInfo.element]}</span>{' '}
-                {t.planetTransit.sign}
+              <div className="text-sm text-slate-500 dark:text-slate-400 tabular-nums flex items-center justify-between gap-2">
+                <span>
+                  {currentTransit.signDegree}° {currentTransit.signMinute}′ · {(t.elements as Record<string, string>)?.[zodiacInfo.element] || zodiacInfo.element.charAt(0).toUpperCase() + zodiacInfo.element.slice(1)}{' '}
+                  {t.planetTransit.sign}
+                </span>
+                <span className="font-arabic">{(t.elementsAr as Record<string, string>)?.[zodiacInfo.element]}</span>
               </div>
             </div>
           </div>
@@ -308,27 +312,30 @@ export function PlanetTransitCard({
                 <div className="text-[10px] font-arabic text-slate-400 dark:text-slate-500 truncate">
                   {(t.planetsAr as Record<string, string>)?.[transit.planetName]}
                 </div>
-                <div className="text-[11px] text-slate-400 dark:text-slate-500 flex items-center gap-1">
-                  <span>{(t.elements as Record<string, string>)?.[transit.element] || transit.element.charAt(0).toUpperCase() + transit.element.slice(1)}{' '}
-                    <span className="font-arabic">{(t.elementsAr as Record<string, string>)?.[transit.element]}</span>
+                <div className="text-[11px] text-slate-400 dark:text-slate-500 flex items-center justify-between gap-1">
+                  <span className="flex items-center gap-1">
+                    <span>{(t.elements as Record<string, string>)?.[transit.element] || transit.element.charAt(0).toUpperCase() + transit.element.slice(1)}</span>
+                    {transit.isRetrograde && (
+                      <span className="text-amber-600 dark:text-amber-400 font-bold" title={language === 'fr' ? 'Rétrograde' : 'Retrograde'}>℞</span>
+                    )}
                   </span>
-                  {transit.isRetrograde && (
-                    <span className="text-amber-600 dark:text-amber-400 font-bold" title={language === 'fr' ? 'Rétrograde' : 'Retrograde'}>℞</span>
-                  )}
+                  <span className="font-arabic">{(t.elementsAr as Record<string, string>)?.[transit.element]}</span>
                 </div>
               </div>
             </div>
             <div className="flex items-center gap-2 bg-purple-50 dark:bg-purple-900/20 rounded px-2 py-1.5">
               <span className="text-base">{zodiac.symbol}</span>
-              <div className="min-w-0 flex-1">
-                <span className="text-sm font-medium text-purple-700 dark:text-purple-300">
-                  {(t.zodiac as Record<string, string>)?.[transit.sign] || transit.sign.charAt(0).toUpperCase() + transit.sign.slice(1)}
+              <div className="min-w-0 flex-1 flex items-baseline justify-between gap-1">
+                <span className="flex items-baseline gap-1">
+                  <span className="text-sm font-medium text-purple-700 dark:text-purple-300">
+                    {(t.zodiac as Record<string, string>)?.[transit.sign] || transit.sign.charAt(0).toUpperCase() + transit.sign.slice(1)}
+                  </span>
+                  <span className="text-xs text-slate-400 dark:text-slate-500 tabular-nums">
+                    {transit.signDegree}°
+                  </span>
                 </span>
-                <span className="text-[10px] font-arabic text-purple-400 dark:text-purple-500 ml-1">
+                <span className="text-[10px] font-arabic text-purple-400 dark:text-purple-500">
                   {(t.zodiacAr as Record<string, string>)?.[transit.sign]}
-                </span>
-                <span className="text-xs text-slate-400 dark:text-slate-500 ml-1 tabular-nums">
-                  {transit.signDegree}°
                 </span>
               </div>
             </div>
