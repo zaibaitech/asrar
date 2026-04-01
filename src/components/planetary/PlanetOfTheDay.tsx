@@ -10,6 +10,7 @@ import React from 'react';
 import { getDayRulerInfo, getAllPlanetEphemeris } from '@/src/lib/planetary';
 import type { DayRulerInfo, PlanetEphemerisData, Planet, ZodiacSign } from '@/src/lib/planetary';
 import { SimplifiedStatusBadge } from './SimplifiedStatusBadge';
+import { ZikrPracticePanel } from '../ZikrPracticePanel';
 import { translations } from '@/src/lib/translations';
 
 interface PlanetOfTheDayProps {
@@ -276,6 +277,12 @@ export function PlanetOfTheDay({ language = 'en' }: PlanetOfTheDayProps) {
           {t.planetOfDay.difficulty[dayInfo.difficulty.toLowerCase() as 'easy' | 'moderate' | 'advanced']}
         </span>
       </div>
+
+      <ZikrPracticePanel
+        planetKey={dayInfo.planet}
+        context="Planet of the Day"
+        showWhen="always"
+      />
     </div>
   );
 }

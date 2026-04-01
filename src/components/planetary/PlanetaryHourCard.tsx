@@ -25,6 +25,7 @@ import {
 import { IlmNujumBadge } from './IlmNujumBadge';
 import { SimplifiedStatusBadge } from './SimplifiedStatusBadge';
 import { CompactPracticeHint } from './CompactPracticeHint';
+import { ZikrPracticePanel } from '../ZikrPracticePanel';
 import { getUserLocation, loadLocation } from '@/src/utils/location';
 import { translations } from '@/src/lib/translations';
 
@@ -110,6 +111,7 @@ export function PlanetaryHourCard({
   const [dataSource, setDataSource] = React.useState<'ephemeris' | 'fallback'>('fallback');
   const [locationName, setLocationName] = React.useState<string>('');
   const [showAllHours, setShowAllHours] = React.useState(false);
+  const [selectedHourId, setSelectedHourId] = React.useState<string | null>(null);
   const [allHours, setAllHours] = React.useState<{ hours: PlanetaryHour[]; currentHourIndex: number; sunrise: Date; sunset: Date } | null>(null);
   
   // Initialize coords immediately from props → cache → fallback (never null on first render)
@@ -242,6 +244,10 @@ export function PlanetaryHourCard({
 
   const currentColors = elementColors[currentElement];
   const nextColors = elementColors[nextHour.planetInfo.element];
+  const getHourId = (hour: PlanetaryHour) => `${hour.startTime.toISOString()}-${hour.planet}`;
+  const selectedHour = selectedHourId && allHours
+    ? allHours.hours.find((hour) => getHourId(hour) === selectedHourId) ?? null
+    : null;
 
   return (
     <div className={`relative rounded-xl border ${currentColors.border} ${currentColors.cardBg} p-6 shadow-lg hover:shadow-xl transition-all duration-300 animate-in`}>
@@ -361,6 +367,12 @@ export function PlanetaryHourCard({
           );
         })()}
 
+        <ZikrPracticePanel
+          planetKey={currentHour.planet}
+          context="Current Hour Ruler"
+          showWhen="always"
+        />
+
         {/* Element vs User Element */}
         {userElement && (
           <div className="flex items-center gap-4 mt-4 p-3 rounded-lg bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
@@ -457,8 +469,17 @@ export function PlanetaryHourCard({
                         className={`relative p-1.5 rounded-lg border text-center transition-all ${
                           isCurrent
                             ? 'border-amber-400 bg-gradient-to-b from-amber-100 to-amber-200 dark:from-amber-800/50 dark:to-amber-900/40 ring-2 ring-amber-400/60 shadow-md shadow-amber-200/50 dark:shadow-amber-900/30 scale-[1.03]'
-                            : 'border-slate-200/80 dark:border-slate-700 bg-white/50 dark:bg-slate-800/40'
+                            : 'border-slate-200/80 dark:border-slate-700 bg-white/50 dark:bg-slate-800/40 hover:border-amber-300 dark:hover:border-amber-500/40 cursor-pointer'
                         }`}
+                        role="button"
+                        tabIndex={0}
+                        onClick={() => setSelectedHourId((current) => current === getHourId(hour) ? null : getHourId(hour))}
+                        onKeyDown={(event) => {
+                          if (event.key === 'Enter' || event.key === ' ') {
+                            event.preventDefault();
+                            setSelectedHourId((current) => current === getHourId(hour) ? null : getHourId(hour));
+                          }
+                        }}
                       >
                         {isCurrent && (
                           <span className="absolute -top-1.5 left-1/2 -translate-x-1/2 text-[7px] font-bold uppercase tracking-wider bg-amber-500 text-white px-1.5 py-px rounded-full leading-none shadow-sm">
@@ -505,8 +526,17 @@ export function PlanetaryHourCard({
                         className={`relative p-1.5 rounded-lg border text-center transition-all ${
                           isCurrent
                             ? 'border-indigo-400 bg-gradient-to-b from-indigo-100 to-indigo-200 dark:from-indigo-800/50 dark:to-indigo-900/40 ring-2 ring-indigo-400/60 shadow-md shadow-indigo-200/50 dark:shadow-indigo-900/30 scale-[1.03]'
-                            : 'border-slate-200/80 dark:border-slate-700 bg-white/50 dark:bg-slate-800/40'
+                            : 'border-slate-200/80 dark:border-slate-700 bg-white/50 dark:bg-slate-800/40 hover:border-indigo-300 dark:hover:border-indigo-500/40 cursor-pointer'
                         }`}
+                        role="button"
+                        tabIndex={0}
+                        onClick={() => setSelectedHourId((current) => current === getHourId(hour) ? null : getHourId(hour))}
+                        onKeyDown={(event) => {
+                          if (event.key === 'Enter' || event.key === ' ') {
+                            event.preventDefault();
+                            setSelectedHourId((current) => current === getHourId(hour) ? null : getHourId(hour));
+                          }
+                        }}
                       >
                         {isCurrent && (
                           <span className="absolute -top-1.5 left-1/2 -translate-x-1/2 text-[7px] font-bold uppercase tracking-wider bg-indigo-500 text-white px-1.5 py-px rounded-full leading-none shadow-sm">
@@ -531,6 +561,26 @@ export function PlanetaryHourCard({
                   })}
                 </div>
               </div>
+
+              {selectedHour && (
+                <div className="rounded-lg border border-slate-200/80 bg-white/55 p-3 dark:border-slate-700 dark:bg-slate-800/40">
+                  <div className="mb-2 flex items-center justify-between gap-3 text-sm text-slate-600 dark:text-slate-300">
+                    <span className="font-medium">
+                      {(t.planets as Record<string, string>)?.[selectedHour.planet] || selectedHour.planet} {language === 'fr' ? 'heure' : 'hour'}
+                    </span>
+                    <span className="text-xs tabular-nums text-slate-400 dark:text-slate-500">
+                      {selectedHour.startTime.toLocaleTimeString(language, { hour: '2-digit', minute: '2-digit' })} → {selectedHour.endTime.toLocaleTimeString(language, { hour: '2-digit', minute: '2-digit' })}
+                    </span>
+                  </div>
+                  <ZikrPracticePanel
+                    planetKey={selectedHour.planet}
+                    context={language === 'fr'
+                      ? `Heure de ${(t.planets as Record<string, string>)?.[selectedHour.planet] || selectedHour.planet}`
+                      : `${(t.planets as Record<string, string>)?.[selectedHour.planet] || selectedHour.planet} Hour`}
+                    showWhen="always"
+                  />
+                </div>
+              )}
             </div>
           ) : (
             <div className="flex items-center justify-center gap-2 py-4 text-slate-500">

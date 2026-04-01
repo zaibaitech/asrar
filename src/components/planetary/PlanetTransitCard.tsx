@@ -19,6 +19,7 @@ import {
 import { SimplifiedStatusBadge } from './SimplifiedStatusBadge';
 import { DignityDetailPanel } from './DignityDetailPanel';
 import { CompactPracticeHint } from './CompactPracticeHint';
+import { ZikrPracticePanel } from '../ZikrPracticePanel';
 import { translations } from '@/src/lib/translations';
 
 interface PlanetTransitCardProps {
@@ -257,6 +258,12 @@ export function PlanetTransitCard({
             />
           );
         })()}
+
+        <ZikrPracticePanel
+          planetKey={currentTransit.planetKey}
+          context="Transit Practice"
+          showWhen="always"
+        />
       </div>
 
       {/* Progress dots */}
@@ -438,6 +445,11 @@ export function PlanetTransitCard({
             isRetrograde={detailTransit.isRetrograde}
             language={language}
             onClose={() => setShowDetailFor(null)}
+          />
+          <ZikrPracticePanel
+            planetKey={detailTransit.planetKey}
+            context="Transit Practice"
+            showWhen="always"
           />
         </div>
       )}
