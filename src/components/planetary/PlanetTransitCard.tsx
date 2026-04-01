@@ -261,8 +261,9 @@ export function PlanetTransitCard({
 
         <ZikrPracticePanel
           planetKey={currentTransit.planetKey}
-          context="Transit Practice"
+          context={t.zikr.transitPractice}
           showWhen="always"
+          language={language}
         />
       </div>
 
@@ -448,8 +449,9 @@ export function PlanetTransitCard({
           />
           <ZikrPracticePanel
             planetKey={detailTransit.planetKey}
-            context="Transit Practice"
+            context={t.zikr.transitPractice}
             showWhen="always"
+            language={language}
           />
         </div>
       )}

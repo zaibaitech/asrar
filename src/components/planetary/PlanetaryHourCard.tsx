@@ -369,8 +369,9 @@ export function PlanetaryHourCard({
 
         <ZikrPracticePanel
           planetKey={currentHour.planet}
-          context="Current Hour Ruler"
+          context={t.zikr.currentHourRuler}
           showWhen="always"
+          language={language}
         />
 
         {/* Element vs User Element */}
@@ -574,10 +575,12 @@ export function PlanetaryHourCard({
                   </div>
                   <ZikrPracticePanel
                     planetKey={selectedHour.planet}
-                    context={language === 'fr'
-                      ? `Heure de ${(t.planets as Record<string, string>)?.[selectedHour.planet] || selectedHour.planet}`
-                      : `${(t.planets as Record<string, string>)?.[selectedHour.planet] || selectedHour.planet} Hour`}
+                    context={t.zikr.hourContext.replace(
+                      '{planet}',
+                      (t.planets as Record<string, string>)?.[selectedHour.planet] || selectedHour.planet
+                    )}
                     showWhen="always"
+                    language={language}
                   />
                 </div>
               )}

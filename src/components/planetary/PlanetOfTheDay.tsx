@@ -280,8 +280,9 @@ export function PlanetOfTheDay({ language = 'en' }: PlanetOfTheDayProps) {
 
       <ZikrPracticePanel
         planetKey={dayInfo.planet}
-        context="Planet of the Day"
+        context={t.zikr.planetOfTheDay}
         showWhen="always"
+        language={language}
       />
     </div>
   );

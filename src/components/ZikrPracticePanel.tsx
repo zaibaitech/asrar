@@ -2,12 +2,14 @@
 
 import { useState } from 'react';
 import { PLANETARY_ZIKR } from '@/src/lib/planetaryZikr';
+import { translations } from '@/src/lib/translations';
 
 type Props = {
   planetKey: string;
   context?: string;
   showWhen?: 'always' | 'auspicious-only';
   isAuspicious?: boolean;
+  language?: 'en' | 'fr';
 };
 
 export function ZikrPracticePanel({
@@ -15,9 +17,11 @@ export function ZikrPracticePanel({
   context,
   showWhen = 'always',
   isAuspicious,
+  language = 'en',
 }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const data = PLANETARY_ZIKR[planetKey?.toLowerCase()];
+  const t = translations[language].planetary.zikr;
 
   if (!data) return null;
   if (data.zikr.length === 0) return null;
@@ -36,7 +40,7 @@ export function ZikrPracticePanel({
         </span>
         <span className="zikr-panel-title">
           {context ? `${context} - ` : ''}
-          Recommended Zikr
+          {t.recommendedZikr}
         </span>
         <span className="zikr-toggle-icon">{isOpen ? '▲' : '▼'}</span>
       </button>
@@ -68,7 +72,7 @@ export function ZikrPracticePanel({
             ))}
           </ul>
           <p className="zikr-footer-note">
-            Recite with presence of heart (hudur al-qalb) and intention (niyyah).
+            {t.footerNote}
           </p>
         </div>
       )}

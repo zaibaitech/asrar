@@ -978,6 +978,15 @@ export const translations = {
         },
       },
 
+      zikr: {
+        recommendedZikr: "Recommended Zikr",
+        footerNote: "Recite with presence of heart (hudur al-qalb) and intention (niyyah).",
+        currentHourRuler: "Current Hour Ruler",
+        transitPractice: "Transit Practice",
+        planetOfTheDay: "Planet of the Day",
+        hourContext: "{planet} Hour",
+      },
+
       // Planetary Hour
       planetaryHour: {
         title: "Planetary Hour",
@@ -4286,6 +4295,15 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
           moderate: "Modéré",
           advanced: "Avancé",
         },
+      },
+
+      zikr: {
+        recommendedZikr: "Dhikr recommandé",
+        footerNote: "Récitez avec présence du cœur (hudur al-qalb) et intention (niyyah).",
+        currentHourRuler: "Maître de l'heure actuelle",
+        transitPractice: "Pratique du transit",
+        planetOfTheDay: "Planète du Jour",
+        hourContext: "Heure de {planet}",
       },
 
       // Heure Planétaire
