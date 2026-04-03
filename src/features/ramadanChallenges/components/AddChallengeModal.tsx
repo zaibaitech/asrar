@@ -17,6 +17,7 @@ import type { ChallengeType, SalawatPreset, DivineNameOption } from '../types';
 import { SALAWAT_PRESETS, DIVINE_NAME_OPTIONS, DEFAULT_QUICK_ADD_PRESETS } from '../types';
 import { RIZQ_PRACTICE_INFO } from '../propheticNames201';
 import { DEBT_RELIEF_PRACTICE_INFO } from '../debtRelief1000';
+import { translations } from '@/src/lib/translations';
 
 // ─── Types ───────────────────────────────────────────────────────────────────────
 
@@ -47,6 +48,10 @@ export type { ModalStep as AddChallengeModalStep };
 // ─── Component ───────────────────────────────────────────────────────────────────
 
 export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges = [], language = 'en', initialStep = 'SELECT_TYPE' }: AddChallengeModalProps) {
+  const commonT = translations[language].common;
+  const modalT = translations[language].ramadan.addChallenge;
+  const propheticT = translations[language].propheticNames;
+  const debtReliefT = translations[language].debtRelief;
   const [step, setStep] = useState<ModalStep>(initialStep);
   const [selectedSalawat, setSelectedSalawat] = useState<SalawatPreset>(SALAWAT_PRESETS[0]);
   const [selectedDivineName, setSelectedDivineName] = useState<DivineNameOption>(DIVINE_NAME_OPTIONS[0]);
@@ -104,52 +109,42 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
   const challengeTypes = [
     {
       type: 'SALAWAT' as ChallengeType,
-      title: language === 'fr' ? 'Ṣalawāt' : 'Ṣalawāt',
+      title: modalT.typeSalawat,
       titleAr: 'صلوات',
-      description: language === 'fr' 
-        ? 'Bénédictions sur le Prophète ﷺ'
-        : 'Blessings upon the Prophet ﷺ',
+      description: modalT.typeSalawatDesc,
       icon: '🌹',
       color: 'emerald',
     },
     {
       type: 'PROPHETIC_NAMES' as ChallengeType,
-      title: language === 'fr' ? '201 Noms Saints' : '201 Holy Names',
+      title: modalT.typePropheticNames,
       titleAr: 'أسماء النبي ﷺ',
-      description: language === 'fr'
-        ? 'Pratique Rizq · 7 jours le matin'
-        : 'Rizq Abundance · 7-Day Morning Practice',
+      description: modalT.typePropheticNamesDesc,
       icon: '⭐',
       color: 'amber',
       featured: true,
     },
     {
       type: 'DEBT_RELIEF' as ChallengeType,
-      title: language === 'fr' ? 'Wird Soulagement Dettes' : 'Debt Relief Wird',
+      title: modalT.typeDebtRelief,
       titleAr: 'فرج من الدين',
-      description: language === 'fr'
-        ? '1000× après ʿIshāʾ · Verset Qour\'ānique'
-        : '1000× after ʿIshāʾ · Qurʾānic Verse',
+      description: modalT.typeDebtReliefDesc,
       icon: '💎',
       color: 'teal',
     },
     {
       type: 'DIVINE_NAME' as ChallengeType,
-      title: language === 'fr' ? 'Nom Divin' : 'Divine Name',
+      title: modalT.typeDivineName,
       titleAr: 'اسم إلهي',
-      description: language === 'fr'
-        ? "Invocation des Noms d'Allah"
-        : 'Invocation of Allah\'s Names',
+      description: modalT.typeDivineNameDesc,
       icon: '✨',
       color: 'purple',
     },
     {
       type: 'CUSTOM' as ChallengeType,
-      title: language === 'fr' ? 'Wird Personnalisé' : 'Custom Wird',
+      title: modalT.typeCustom,
       titleAr: 'ورد مخصص',
-      description: language === 'fr'
-        ? 'Votre propre pratique de dhikr'
-        : 'Your own dhikr practice',
+      description: modalT.typeCustomDesc,
       icon: '📿',
       color: 'slate',
     },
@@ -262,13 +257,10 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
         return (
           <div className="space-y-3">
             <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
-              {language === 'fr' ? 'Ajouter un défi' : 'Add Challenge'}
+              {modalT.title}
             </h3>
             <p className="text-sm text-slate-500 dark:text-slate-400">
-              {language === 'fr' 
-                ? 'Choisissez un type de défi dhikr à suivre'
-                : 'Choose a type of dhikr challenge to track'
-              }
+              {modalT.chooseType}
             </p>
             
             <div className="space-y-2 pt-2">
@@ -299,12 +291,12 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
                         {'featured' in ct && ct.featured && !isTypeDuplicate && (
                           <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-amber-200 dark:bg-amber-700/50 text-amber-800 dark:text-amber-200 text-xs font-medium">
                             <Star className="w-3 h-3" />
-                            {language === 'fr' ? 'Spécial' : 'Special'}
+                            {modalT.special}
                           </span>
                         )}
                         {isTypeDuplicate && (
                           <span className="inline-flex items-center px-1.5 py-0.5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-400 text-xs font-medium">
-                            {language === 'fr' ? 'Déjà ajouté' : 'Already added'}
+                            {modalT.alreadyAdded}
                           </span>
                         )}
                       </div>
@@ -331,19 +323,16 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
                 className="text-sm text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 flex items-center gap-1"
               >
                 <ChevronLeft className="w-4 h-4" />
-                {language === 'fr' ? 'Retour' : 'Back'}
+                {commonT.back}
               </button>
             </div>
             
             <div>
               <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
-                {language === 'fr' ? 'Choisir une Ṣalawāt' : 'Choose Your Ṣalawāt'}
+                {modalT.chooseSalawat}
               </h3>
               <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
-                {language === 'fr' 
-                  ? 'Touchez pour voir le texte complet'
-                  : 'Tap to preview full text'
-                }
+                {modalT.tapToPreview}
               </p>
             </div>
 
@@ -372,10 +361,10 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
                   
                   <div className="flex items-center justify-between mt-3 pt-2 border-t border-slate-100 dark:border-slate-700">
                     <span className="text-xs text-slate-500 dark:text-slate-400">
-                      {language === 'fr' ? 'Recommandé:' : 'Recommended:'} {preset.recommendedDaily}/{language === 'fr' ? 'jour' : 'day'}
+                      {modalT.recommended} {preset.recommendedDaily}/{modalT.day}
                     </span>
                     <span className="text-xs text-emerald-600 dark:text-emerald-400">
-                      {language === 'fr' ? 'Voir texte complet →' : 'View full text →'}
+                      {modalT.viewFullText}
                     </span>
                   </div>
                 </button>
@@ -393,7 +382,7 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
                 className="text-sm text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 flex items-center gap-1"
               >
                 <ChevronLeft className="w-4 h-4" />
-                {language === 'fr' ? 'Retour' : 'Back'}
+                {commonT.back}
               </button>
             </div>
             
@@ -417,7 +406,7 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
               {/* Transliteration */}
               <div className="space-y-1">
                 <p className="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wide">
-                  {language === 'fr' ? 'Translittération' : 'Transliteration'}
+                  {modalT.transliteration}
                 </p>
                 <p className="text-sm italic text-slate-700 dark:text-slate-300 whitespace-pre-line leading-relaxed">
                   {selectedSalawat.transliteration}
@@ -431,7 +420,7 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
                   className="w-full flex items-center justify-between p-3 text-left hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors"
                 >
                   <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
-                    {language === 'fr' ? 'Afficher la signification' : 'Show meaning'}
+                    {modalT.showMeaning}
                   </span>
                   {showMeaning ? (
                     <ChevronUp className="w-5 h-5 text-slate-400" />
@@ -453,7 +442,7 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
 
               {/* Recommended daily */}
               <div className="flex items-center justify-between text-sm text-slate-600 dark:text-slate-400">
-                <span>{language === 'fr' ? 'Cible quotidienne recommandée:' : 'Recommended daily target:'}</span>
+                <span>{modalT.recommendedDailyTarget}</span>
                 <span className="font-semibold text-emerald-600 dark:text-emerald-400">
                   {selectedSalawat.recommendedDaily}
                 </span>
@@ -470,8 +459,8 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
               }`}
             >
               {isDuplicate('SALAWAT', selectedSalawat.arabicText)
-                ? (language === 'fr' ? 'Déjà ajouté' : 'Already Added')
-                : (language === 'fr' ? 'Choisir cette Ṣalawāt' : 'Select this Ṣalawāt')
+                ? modalT.alreadyAddedButton
+                : modalT.selectSalawat
               }
             </button>
           </div>
@@ -485,12 +474,12 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
                 onClick={() => setStep('SELECT_TYPE')}
                 className="text-sm text-slate-500 hover:text-slate-700 dark:hover:text-slate-300"
               >
-                ← {language === 'fr' ? 'Retour' : 'Back'}
+                ← {commonT.back}
               </button>
             </div>
             
             <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
-              {language === 'fr' ? 'Choisir un Nom Divin' : 'Choose Divine Name'}
+              {modalT.chooseDivineName}
             </h3>
 
             <div className="grid grid-cols-2 gap-2 max-h-64 overflow-y-auto">
@@ -521,7 +510,7 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
               onClick={handleAddDivineName}
               className="w-full py-3 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-semibold transition-colors"
             >
-              {language === 'fr' ? 'Ajouter ce Nom' : 'Add Divine Name Challenge'}
+              {modalT.addDivineName}
             </button>
           </div>
         );
@@ -534,31 +523,31 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
                 onClick={() => setStep('SELECT_TYPE')}
                 className="text-sm text-slate-500 hover:text-slate-700 dark:hover:text-slate-300"
               >
-                ← {language === 'fr' ? 'Retour' : 'Back'}
+                ← {commonT.back}
               </button>
             </div>
             
             <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
-              {language === 'fr' ? 'Wird Personnalisé' : 'Custom Wird'}
+              {modalT.customWird}
             </h3>
 
             <div className="space-y-3">
               <div>
                 <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
-                  {language === 'fr' ? 'Titre' : 'Title'}
+                  {modalT.titleLabel}
                 </label>
                 <input
                   type="text"
                   value={customTitle}
                   onChange={(e) => setCustomTitle(e.target.value)}
-                  placeholder={language === 'fr' ? 'Mon Wird' : 'My Wird'}
+                  placeholder={modalT.myWird}
                   className="w-full px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-amber-500"
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
-                  {language === 'fr' ? 'Texte Arabe' : 'Arabic Text'}
+                  {modalT.arabicText}
                 </label>
                 <input
                   type="text"
@@ -572,7 +561,7 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
 
               <div>
                 <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
-                  {language === 'fr' ? 'Translittération' : 'Transliteration'}
+                  {modalT.transliteration}
                 </label>
                 <input
                   type="text"
@@ -585,7 +574,7 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
 
               <div>
                 <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
-                  {language === 'fr' ? 'Objectif quotidien' : 'Daily Target'}
+                  {modalT.dailyTarget}
                 </label>
                 <input
                   type="number"
@@ -596,10 +585,7 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
                   className="w-full px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-amber-500"
                 />
                 <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                  {language === 'fr' 
-                    ? `Objectif Ramadan: ${(parseInt(customDaily, 10) || 100) * 30}`
-                    : `Ramadan target: ${(parseInt(customDaily, 10) || 100) * 30}`
-                  }
+                  {modalT.ramadanTarget} {(parseInt(customDaily, 10) || 100) * 30}
                 </p>
               </div>
             </div>
@@ -609,7 +595,7 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
               disabled={!customArabic.trim()}
               className="w-full py-3 rounded-xl bg-slate-700 hover:bg-slate-800 disabled:bg-slate-300 dark:disabled:bg-slate-600 text-white font-semibold transition-colors disabled:cursor-not-allowed"
             >
-              {language === 'fr' ? 'Ajouter le Wird' : 'Add Custom Wird'}
+              {modalT.addCustomWird}
             </button>
           </div>
         );
@@ -624,11 +610,11 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
                 className="text-sm text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 flex items-center gap-1"
               >
                 <ChevronLeft className="w-4 h-4" />
-                {language === 'fr' ? 'Retour' : 'Back'}
+                {commonT.back}
               </button>
               <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 text-xs font-medium">
                 <Star className="w-3 h-3" />
-                {language === 'fr' ? 'Pratique spéciale' : 'Special Practice'}
+                {propheticT.specialPractice}
               </span>
             </div>
             
@@ -650,22 +636,22 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
               
               {/* Compact stats row */}
               <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-600 dark:text-slate-400">
-                <span>⏱ <strong>7 {language === 'fr' ? 'jours' : 'days'}</strong></span>
-                <span>🌅 <strong>{language === 'fr' ? 'Matin' : 'Morning'}</strong></span>
+                <span>⏱ <strong>7 {propheticT.days}</strong></span>
+                <span>🌅 <strong>{propheticT.morning}</strong></span>
                 <span>⏰ <strong>25-35 min</strong></span>
               </div>
             </div>
 
             {/* Compact Practice steps */}
             <div className="text-sm text-slate-600 dark:text-slate-400">
-              <span className="font-medium text-slate-700 dark:text-slate-300">{language === 'fr' ? 'Étapes:' : 'Steps:'}</span>{' '}
-              <span className="font-arabic">يَا جَامِعُ</span> 180× → 201 {language === 'fr' ? 'Noms' : 'Names'} → Duʿāʾ
+              <span className="font-medium text-slate-700 dark:text-slate-300">{modalT.steps}</span>{' '}
+              <span className="font-arabic">يَا جَامِعُ</span> 180× → 201 {modalT.names} → Duʿāʾ
             </div>
 
             {/* Source & Authorization - compact */}
             <div className="text-xs text-slate-500 dark:text-slate-500">
               <p><strong>Source:</strong> {RIZQ_PRACTICE_INFO.tradition}</p>
-              <p><strong>{language === 'fr' ? 'Autorisation:' : 'Authorization:'}</strong> {language === 'fr' ? RIZQ_PRACTICE_INFO.authorizationFr : RIZQ_PRACTICE_INFO.authorization}</p>
+              <p><strong>{propheticT.authorizationLabel}:</strong> {language === 'fr' ? RIZQ_PRACTICE_INFO.authorizationFr : RIZQ_PRACTICE_INFO.authorization}</p>
             </div>
 
             {/* Promise */}
@@ -679,7 +665,7 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
               onClick={handleAddPropheticNames}
               className="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold transition-all shadow-lg shadow-amber-500/25"
             >
-              {language === 'fr' ? 'Commencer le défi de 7 jours' : 'Start 7-Day Challenge'}
+              {propheticT.start7Day}
             </button>
           </div>
         );
@@ -694,7 +680,7 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
                 className="text-sm text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 flex items-center gap-1"
               >
                 <ChevronLeft className="w-4 h-4" />
-                {language === 'fr' ? 'Retour' : 'Back'}
+                {commonT.back}
               </button>
             </div>
             
@@ -717,7 +703,7 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
                 Wamā dhālika ʿalā llāhi bi-ʿAzīzin
               </p>
               <p className="text-xs text-slate-600 dark:text-slate-400">
-                {language === 'fr' ? '"Et cela n\'est pas difficile pour Allah"' : '"And that is not difficult for Allah"'}
+                "{modalT.difficultyForAllah}"
               </p>
             </div>
 
@@ -738,7 +724,7 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
             {/* Purpose */}
             <div className="p-3 rounded-lg bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800/50">
               <p className="text-xs font-medium text-teal-700 dark:text-teal-300 mb-1">
-                {language === 'fr' ? 'Objectif spirituel:' : 'Spiritual Purpose:'}
+                {modalT.spiritualPurpose}
               </p>
               <p className="text-sm text-teal-700 dark:text-teal-300">
                 {language === 'fr' ? DEBT_RELIEF_PRACTICE_INFO.purposeFr : DEBT_RELIEF_PRACTICE_INFO.purpose}
@@ -756,7 +742,7 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
               onClick={handleAddDebtRelief}
               className="w-full py-3 rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white font-semibold transition-all shadow-lg shadow-teal-500/25"
             >
-              {language === 'fr' ? 'Commencer le wird quotidien' : 'Start Daily Wird'}
+              {debtReliefT.startDailyWird}
             </button>
           </div>
         );
