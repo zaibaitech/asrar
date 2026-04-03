@@ -131,208 +131,183 @@ const ELEMENT_SUGGESTIONS = {
 // ============================================================================
 
 function normalizeArabic(text: string): string {
-  return text
-    .replaceAll(/[ًٌٍَُِّْ]/g, '') // Remove diacritics
-    .replaceAll(/[أإآ]/g, 'ا') // Unify Alif
-    .replaceAll(/ى/g, 'ي') // Unify Ya
-    .replaceAll(/ة/g, 'ه') // Ta Marbuta as Ha
-    .replaceAll(/\s+/g, ''); // Remove spaces
-}
+    return text
+      .replaceAll(/[ًٌٍَُِّْ]/g, '')
+      .replaceAll(/[أإآ]/g, 'ا')
+      .replaceAll(/ى/g, 'ي')
+      .replaceAll(/ة/g, 'ه')
+      .replaceAll(/\s+/g, '');
+  }
 
 function auditAbjad(text: string, abjadMap: Record<string, number>, elementsMap: Record<string, ElementType>): AbjadAudit {
-  const normalized = normalizeArabic(text);
-  const steps: AuditStep[] = [...normalized].map(ch => ({
-    ch,
-    value: abjadMap[ch] || 0,
-    element: elementsMap[ch] || 'Earth'
-  }));
-  
-  const total = steps.reduce((sum, step) => sum + step.value, 0);
-  
-  return {
-    original: text,
-    normalized,
-    steps,
-    total
-  };
-}
+    const normalized = normalizeArabic(text);
+    const steps: AuditStep[] = [...normalized].map(ch => ({
+      ch,
+      value: abjadMap[ch] || 0,
+      element: elementsMap[ch] || 'Earth'
+    }));
+
+    const total = steps.reduce((sum, step) => sum + step.value, 0);
+
+    return {
+      original: text,
+      normalized,
+      steps,
+      total
+    };
+  }
 
 // Helper functions for calculations
 function abjadSum(text: string, abjadMap: Record<string, number>): number {
-  const normalized = text.replaceAll(/[ًٌٍَُِّْ\s]/g, '');
-  return [...normalized].reduce((sum, char) => sum + (abjadMap[char] || 0), 0);
-}
+    const normalized = text.replaceAll(/[ًٌٍَُِّْ\s]/g, '');
+    return [...normalized].reduce((sum, char) => sum + (abjadMap[char] || 0), 0);
+  }
 
 function digitalRoot(n: number): number {
-  return calcDigitalRoot(n);
-}
+    return calcDigitalRoot(n);
+  }
 
 function hadathRemainder(n: number): 0 | 1 | 2 | 3 {
-  return calcHadathRemainder(n);
-}
+    return calcHadathRemainder(n);
+  }
 
 // Advanced Calculation Methods
 function calculateWusta(n: number): number {
-  // Wusṭā (Middle/Mean) - Average of Kabīr and Ṣaghīr
-  const saghir = calcDigitalRoot(n);
-  return Math.round((n + saghir) / 2);
-}
+    const saghir = calcDigitalRoot(n);
+    return Math.round((n + saghir) / 2);
+  }
 
 function calculateKamal(n: number): number {
-  // Kamāl (Perfection) - Sum of all digits in the number
-  return n.toString().split('').reduce((sum, digit) => sum + Number.parseInt(digit), 0);
-}
+    return n.toString().split('').reduce((sum, digit) => sum + Number.parseInt(digit), 0);
+  }
 
 function calculateBast(n: number): number {
-  // Basṭ (Expansion) - Multiply by 9 and reduce
-  return calcDigitalRoot(n * 9);
-}
+    return calcDigitalRoot(n * 9);
+  }
 
 function calculateSirri(n: number): number {
-  // Sirrī (Secret/Hidden) - Reverse digits and take digital root
-  const reversed = Number.parseInt(n.toString().split('').reverse().join(''));
-  return calcDigitalRoot(reversed);
-}
+    const reversed = Number.parseInt(n.toString().split('').reverse().join(''));
+    return calcDigitalRoot(reversed);
+  }
 
 function sacredResonance(n: number) {
-  const sacred = nearestSacred(n);
-  return sacred;
-}
-
-// hadathToElement is now imported from hadad-core
+    const sacred = nearestSacred(n);
+    return sacred;
+  }
 
 function findSacredMatches(kabir: number) {
-  return SACRED_NUMBERS
-    .filter(s => Math.abs(s.num - kabir) <= s.num * 0.1)
-    .map(s => ({
-      ...s,
-      confidence: s.num === kabir ? 'exact' as const : 'close' as const
-    }));
-}
-
-// ============================================================================
-// CELESTIAL CORRESPONDENCE MAPPING
-// Based on Al-Buni's Shams al-Ma'arif and classical Ilm al-Huruf
-// ============================================================================
-
-// ============================================================================
-// COMPONENTS
-// ============================================================================
+    return SACRED_NUMBERS
+      .filter(s => Math.abs(s.num - kabir) <= s.num * 0.1)
+      .map(s => ({
+        ...s,
+        confidence: s.num === kabir ? 'exact' as const : 'close' as const
+      }));
+  }
 
 function DisclaimerBanner({ onDismiss }: { onDismiss: () => void }) {
-  const { t } = useLanguage();
-  
-  // Auto-show again after 24 hours
-  useEffect(() => {
-    const dismissedTime = localStorage.getItem('disclaimerDismissedAt');
-    if (dismissedTime) {
-      const hoursSinceDismissed = (Date.now() - Number.parseInt(dismissedTime)) / (1000 * 60 * 60);
-      if (hoursSinceDismissed < 24) {
-        // Still within 24 hours, keep dismissed
-        onDismiss();
+    const { t } = useLanguage();
+
+    useEffect(() => {
+      const dismissedTime = localStorage.getItem('disclaimerDismissedAt');
+      if (dismissedTime) {
+        const hoursSinceDismissed = (Date.now() - Number.parseInt(dismissedTime)) / (1000 * 60 * 60);
+        if (hoursSinceDismissed < 24) {
+          onDismiss();
+        }
       }
-    }
-  }, [onDismiss]);
-  
-  const handleDismiss = () => {
-    localStorage.setItem('disclaimerDismissedAt', Date.now().toString());
-    onDismiss();
-  };
-  
-  return (
-    <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-3 mb-2">
-      <div className="flex items-start gap-2">
-        <Info className="w-4 h-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
-        <div className="flex-1 min-w-0">
-          <p className="text-xs text-amber-900 dark:text-amber-100">
-            <strong>{t.disclaimer.title}</strong> {t.disclaimer.message}
-          </p>
+    }, [onDismiss]);
+
+    const handleDismiss = () => {
+      localStorage.setItem('disclaimerDismissedAt', Date.now().toString());
+      onDismiss();
+    };
+
+    return (
+      <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-3 mb-2">
+        <div className="flex items-start gap-2">
+          <Info className="w-4 h-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
+          <div className="flex-1 min-w-0">
+            <p className="text-xs text-amber-900 dark:text-amber-100">
+              <strong>{t.disclaimer.title}</strong> {t.disclaimer.message}
+            </p>
+          </div>
+          <button
+            onClick={handleDismiss}
+            className="text-amber-600 dark:text-amber-400 hover:text-amber-800 dark:hover:text-amber-200 flex-shrink-0 p-1 rounded hover:bg-amber-100 dark:hover:bg-amber-900/40 transition-colors"
+            aria-label="Dismiss"
+          >
+            <X className="w-4 h-4" />
+          </button>
         </div>
-        <button 
-          onClick={handleDismiss} 
-          className="text-amber-600 dark:text-amber-400 hover:text-amber-800 dark:hover:text-amber-200 flex-shrink-0 p-1 rounded hover:bg-amber-100 dark:hover:bg-amber-900/40 transition-colors"
-          aria-label="Dismiss"
-        >
-          <X className="w-4 h-4" />
-        </button>
       </div>
-    </div>
-  );
-}
+    );
+  }
 
 function GetTheAppBanner() {
-  const { language } = useLanguage();
-  const [visible, setVisible] = useState(false);
+    const { language } = useLanguage();
+    const [visible, setVisible] = useState(false);
 
-  useEffect(() => {
-    // Don't show if dismissed this session
-    const dismissed = sessionStorage.getItem('getAppBannerDismissed');
-    if (!dismissed) setVisible(true);
-  }, []);
+    useEffect(() => {
+      const dismissed = sessionStorage.getItem('getAppBannerDismissed');
+      if (!dismissed) setVisible(true);
+    }, []);
 
-  const handleDismiss = () => {
-    sessionStorage.setItem('getAppBannerDismissed', '1');
-    setVisible(false);
-  };
+    const handleDismiss = () => {
+      sessionStorage.setItem('getAppBannerDismissed', '1');
+      setVisible(false);
+    };
 
-  if (!visible) return null;
+    if (!visible) return null;
 
-  const playUrl = 'https://play.google.com/store/apps/details?id=com.zaibaitech.asrariya';
-  const badgeSrc = language === 'fr'
-    ? 'https://play.google.com/intl/fr_fr/badges/static/images/badges/fr_badge_web_generic.png'
-    : 'https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png';
-  const headline = language === 'fr'
-    ? 'Téléchargez Asrāriya sur Android'
-    : 'Get the full experience — Download Asrāriya';
-  const sub = language === 'fr'
-    ? 'Guidance spirituelle personnalisée · Dhikr · Abjad · Heures planétaires'
-    : 'Personalised spiritual guidance · Dhikr · Abjad · Planetary Hours';
+    const playUrl = 'https://play.google.com/store/apps/details?id=com.zaibaitech.asrariya';
+    const badgeSrc = language === 'fr'
+      ? 'https://play.google.com/intl/fr_fr/badges/static/images/badges/fr_badge_web_generic.png'
+      : 'https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png';
+    const headline = language === 'fr'
+      ? 'Téléchargez Asrāriya sur Android'
+      : 'Get the full experience — Download Asrāriya';
+    const sub = language === 'fr'
+      ? 'Guidance spirituelle personnalisée · Dhikr · Abjad · Heures planétaires'
+      : 'Personalised spiritual guidance · Dhikr · Abjad · Planetary Hours';
 
-  return (
-    /* Fixed bottom bar — always visible regardless of scroll */
-    <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-amber-400/30 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 shadow-2xl">
-      {/* Gold accent line at top */}
-      <div className="h-0.5 w-full bg-gradient-to-r from-transparent via-amber-400 to-transparent" />
-      <div className="max-w-6xl mx-auto px-4 py-2.5 sm:px-5 sm:py-3 flex items-center gap-3">
-        {/* Icon */}
-        <div className="flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-indigo-800/60 border border-amber-400/20 flex items-center justify-center text-xl sm:text-2xl shadow-inner">
-          ✨
+    return (
+      <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-amber-400/30 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 shadow-2xl">
+        <div className="h-0.5 w-full bg-gradient-to-r from-transparent via-amber-400 to-transparent" />
+        <div className="max-w-6xl mx-auto px-4 py-2.5 sm:px-5 sm:py-3 flex items-center gap-3">
+          <div className="flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-indigo-800/60 border border-amber-400/20 flex items-center justify-center text-xl sm:text-2xl shadow-inner">
+            ✨
+          </div>
+
+          <div className="flex-1 min-w-0">
+            <p className="text-xs sm:text-sm font-bold text-amber-300 leading-tight">{headline}</p>
+            <p className="text-[11px] text-slate-400 mt-0.5 leading-snug hidden sm:block">{sub}</p>
+          </div>
+
+          <a
+            href={playUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-shrink-0"
+            aria-label="Get it on Google Play"
+          >
+            <img
+              src={badgeSrc}
+              alt="Get it on Google Play"
+              className="h-9 sm:h-10 w-auto"
+            />
+          </a>
+
+          <button
+            onClick={handleDismiss}
+            className="flex-shrink-0 p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
+            aria-label="Dismiss"
+          >
+            <X className="w-4 h-4" />
+          </button>
         </div>
-
-        {/* Text */}
-        <div className="flex-1 min-w-0">
-          <p className="text-xs sm:text-sm font-bold text-amber-300 leading-tight">{headline}</p>
-          <p className="text-[11px] text-slate-400 mt-0.5 leading-snug hidden sm:block">{sub}</p>
-        </div>
-
-        {/* Google Play badge */}
-        <a
-          href={playUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-shrink-0"
-          aria-label="Get it on Google Play"
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={badgeSrc}
-            alt="Get it on Google Play"
-            className="h-9 sm:h-10 w-auto"
-          />
-        </a>
-
-        {/* Dismiss */}
-        <button
-          onClick={handleDismiss}
-          className="flex-shrink-0 p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
-          aria-label="Dismiss"
-        >
-          <X className="w-4 h-4" />
-        </button>
       </div>
-    </div>
-  );
-}
+    );
+  }
 
 function ConfidenceMeter({ confidence, warnings }: { confidence: number; warnings: string[] }) {
   const color = confidence >= 80 ? 'green' : confidence >= 60 ? 'yellow' : 'red';
@@ -1484,6 +1459,11 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
 
   const hasProgress = appDhikrTotal > 0;
   const hasCommunity = communityStats.allTimeTotal > 0;
+  const isRamadanActive = getRamadanInfo().isRamadan;
+
+  if (!isRamadanActive) {
+    return null;
+  }
 
   return (
     <Link
@@ -1493,16 +1473,13 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
     >
       <div className="px-4 py-3.5 sm:px-5 sm:py-4">
         <div className="flex items-center justify-between gap-3">
-          {/* Left side: Title + Subtitle */}
           <div className="flex items-center gap-2.5 sm:gap-3 flex-1 min-w-0">
-            {/* Zikr icon with pulse */}
             <div className="relative flex-shrink-0">
-              <div className="absolute inset-0 bg-emerald-400 rounded-full opacity-60 animate-pulse" style={{width: '28px', height: '28px'}}></div>
+              <div className="absolute inset-0 bg-emerald-400 rounded-full opacity-60 animate-pulse" style={{ width: '28px', height: '28px' }}></div>
               <span className="relative z-10 text-xl sm:text-2xl">📿</span>
             </div>
 
             <div className="flex-1 min-w-0">
-              {/* Title row */}
               <div className="flex items-center gap-2 flex-wrap">
                 <h3 className="text-sm sm:text-base font-bold text-emerald-900 dark:text-emerald-100 leading-tight">
                   {language === 'fr' ? 'Défi de Zikr' : 'Zikr Challenge'}
@@ -1512,9 +1489,7 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
                 </span>
               </div>
 
-              {/* Contextual subtitle */}
               {hasProgress ? (
-                /* User has logged dhikr — show clean personal stats */
                 <p className="text-xs sm:text-sm text-emerald-600 dark:text-emerald-400 mt-1 font-medium">
                   📿 {todayDhikr.toLocaleString()} {language === 'fr' ? "aujourd'hui" : 'today'}
                   <span className="mx-1.5 opacity-40">·</span>
@@ -1524,7 +1499,6 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
                   )}
                 </p>
               ) : (
-                /* No dhikr yet — motivational CTA */
                 <p className="text-xs sm:text-sm mt-1 font-medium text-emerald-600 dark:text-emerald-300">
                   ✨ {language === 'fr' ? 'Commence ton zikr quotidien !' : 'Start your daily zikr!'}
                 </p>
@@ -1532,10 +1506,8 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
             </div>
           </div>
 
-          {/* Right side: Community or personal highlight + arrow */}
           <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
             {hasCommunity ? (
-              /* Community total — the impressive social-proof number */
               <div className="flex flex-col items-end leading-tight">
                 <span className="text-[10px] sm:text-xs text-teal-600 dark:text-teal-400 font-medium">
                   🌍 {language === 'fr' ? 'Communauté' : 'Community'}
@@ -1545,7 +1517,6 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
                 </span>
               </div>
             ) : hasProgress ? (
-              /* No community data but user has personal progress */
               <div className="flex flex-col items-end leading-tight">
                 <span className="text-xs text-emerald-600 dark:text-emerald-400 font-arabic" dir="rtl">ذِكْر</span>
                 <span className="text-lg sm:text-xl font-bold text-emerald-700 dark:text-emerald-300 tabular-nums">
@@ -1553,7 +1524,6 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
                 </span>
               </div>
             ) : (
-              /* Nothing yet — show challenge count as gentle nudge */
               <div className="flex flex-col items-end leading-tight">
                 <span className="text-xs text-emerald-600 dark:text-emerald-400">{state.challenges.length}</span>
                 <span className="text-[10px] sm:text-xs text-emerald-500 dark:text-emerald-400">
@@ -1562,7 +1532,6 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
               </div>
             )}
 
-            {/* Navigation Arrow */}
             <div className="p-1.5 sm:p-2 hover:bg-emerald-200/50 dark:hover:bg-emerald-800/50 rounded-lg transition-colors">
               <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 dark:text-emerald-400" />
             </div>

@@ -147,15 +147,16 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
 
   // ─── Auto-create Istighfār challenge if no challenges exist ───
   useEffect(() => {
-    if (!state.isHydrated || state.challenges.length > 0) return;
+    if (!ramadanInfo?.isRamadan || !state.isHydrated || state.challenges.length > 0) return;
     
     // Create default Istighfār challenge for new users
     const config = createIstighfarChallenge();
     addChallenge('ISTIGHFAR', config);
-  }, [state.isHydrated, state.challenges.length, addChallenge]);
+  }, [ramadanInfo?.isRamadan, state.isHydrated, state.challenges.length, addChallenge]);
 
   // Don't render until mounted
   if (!mounted) return null;
+  if (!ramadanInfo?.isRamadan) return null;
 
   // ─── Computed values ───
   const totalRamadanProgress = getTotalProgress();

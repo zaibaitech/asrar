@@ -56,14 +56,15 @@ export function RamadanBannerMini({ language = 'en' }: RamadanBannerMiniProps) {
 
   // ─── Auto-create Istighfār challenge if no challenges exist ───
   useEffect(() => {
-    if (!state.isHydrated || state.challenges.length > 0) return;
+    if (!ramadanInfo?.isRamadan || !state.isHydrated || state.challenges.length > 0) return;
     
     const config = createIstighfarChallenge();
     addChallenge('ISTIGHFAR', config);
-  }, [state.isHydrated, state.challenges.length, addChallenge]);
+  }, [ramadanInfo?.isRamadan, state.isHydrated, state.challenges.length, addChallenge]);
 
   // Don't render if not mounted or not hydrated
   if (!mounted || !state.isHydrated) return null;
+  if (!ramadanInfo?.isRamadan) return null;
 
   // ─── Computed values ───
   const totalTodayProgress = getTotalTodayProgress();

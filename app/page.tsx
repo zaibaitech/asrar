@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { cookies } from 'next/headers';
-import { bilingualMeta, challengeMeta } from '../src/lib/seoConfig';
+import { bilingualMeta } from '../src/lib/seoConfig';
 import AsrarEveryday from '../asrar-everyday-app';
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
@@ -31,42 +31,6 @@ export async function generateMetadata({
     if (cookieLang === 'fr') {
       lang = 'fr';
     }
-  }
-
-  const challenge = params?.challenge as keyof typeof challengeMeta | undefined;
-  
-  // Check for challenge-specific metadata
-  if (challenge && challengeMeta[challenge]) {
-    const meta = challengeMeta[challenge][lang];
-    // Use challenge-specific image with absolute URL
-    const imageUrl = meta.image.startsWith('http') ? meta.image : `${baseUrl}${meta.image}`;
-    
-    return {
-      title: meta.title,
-      description: meta.description,
-      openGraph: {
-        type: 'website',
-        locale: lang === 'fr' ? 'fr_FR' : 'en_GB',
-        url: `${baseUrl}?challenge=${challenge}${lang === 'fr' ? '&lang=fr' : ''}`,
-        siteName: 'Asrār Everyday',
-        title: meta.title,
-        description: meta.description,
-        images: [
-          {
-            url: imageUrl,
-            width: 1200,
-            height: 630,
-            alt: meta.title,
-          },
-        ],
-      },
-      twitter: {
-        card: 'summary_large_image',
-        title: meta.title,
-        description: meta.description,
-        images: [imageUrl],
-      },
-    };
   }
 
   // Default bilingual metadata
