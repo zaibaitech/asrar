@@ -267,8 +267,8 @@ export function IstikharaPanel() {
       : 'Discover Asrār — Sacred Sciences & Divine Timing';
 
     const inviteText = language === 'fr'
-      ? `🌙 Découvrez votre profil spirituel avec Istikhara al-Asmāʾ sur Asrār ! Numérologie Abjad, heures planétaires, défis du Ramadan et plus encore.`
-      : `🌙 Discover your spiritual profile with Istikhara al-Asmāʾ on Asrār! Abjad numerology, planetary hours, Ramadan challenges, and more.`;
+      ? `🌙 Découvrez votre profil spirituel avec Istikhara al-Asmāʾ sur Asrār ! Numérologie Abjad, heures planétaires, défis de Zikr et plus encore.`
+      : `🌙 Discover your spiritual profile with Istikhara al-Asmāʾ on Asrār! Abjad numerology, planetary hours, Zikr challenges, and more.`;
 
     if (navigator.share) {
       try {
@@ -285,8 +285,8 @@ export function IstikharaPanel() {
     const langParam = language === 'fr' ? '?lang=fr' : '';
     const url = `${BASE_URL}${langParam}`;
     const text = language === 'fr'
-      ? `🌙 Découvrez votre profil spirituel avec Istikhara al-Asmāʾ sur Asrār ! Numérologie Abjad, heures planétaires, défis du Ramadan et plus encore.\n\n${url}`
-      : `🌙 Discover your spiritual profile with Istikhara al-Asmāʾ on Asrār! Abjad numerology, planetary hours, Ramadan challenges, and more.\n\n${url}`;
+      ? `🌙 Découvrez votre profil spirituel avec Istikhara al-Asmāʾ sur Asrār ! Numérologie Abjad, heures planétaires, défis de Zikr et plus encore.\n\n${url}`
+      : `🌙 Discover your spiritual profile with Istikhara al-Asmāʾ on Asrār! Abjad numerology, planetary hours, Zikr challenges, and more.\n\n${url}`;
     window.open(`whatsapp://send?text=${encodeURIComponent(text)}`, '_blank');
   };
 

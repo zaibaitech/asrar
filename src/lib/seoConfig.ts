@@ -17,7 +17,7 @@ export const bilingualMeta = {
     shortDescription: 'Discover ʿIlm al-Nujūm planetary hours, Abjad numerology, 201 Prophetic Names & spiritual challenges. Your Islamic esoteric companion.',
     // Full description for OG and app stores
     fullDescription: 'Align your actions with cosmic rhythms! ʿIlm al-Nujūm reveals the optimal planetary hour for every intention. Plus: Abjad calculator, 201 Prophetic Names for Rizq, Ṣalawāt tracking, Divine Name resonance & Name Destiny analysis. Ancient wisdom, modern interface.',
-    ogImage: '/asrar-logo.svg',
+    ogImage: '/opengraph-image',
     locale: 'en_GB',
     // App store long description
     appStoreDescription: `Asrār Everyday — Unlock Divine Timing & Sacred Sciences ✨
@@ -53,7 +53,7 @@ Built by Zaibaitech Ltd · Edinburgh, Scotland`,
     title: 'Asrār Everyday — Sciences Sacrées & Timing Divin ✨',
     shortDescription: 'Découvrez ʿIlm al-Nujūm (heures planétaires), numérologie Abjad, 201 Noms Prophétiques & défis spirituels. Sagesse ésotérique.',
     fullDescription: 'Alignez vos actions avec les rythmes cosmiques ! ʿIlm al-Nujūm révèle l\'heure planétaire optimale pour chaque intention. Plus : calculateur Abjad, 201 Noms Prophétiques pour le Rizq, suivi des Ṣalawāt, résonance des Noms Divins & analyse du Destin. Sagesse ancienne, interface moderne.',
-    ogImage: '/asrar-logo.svg',
+    ogImage: '/opengraph-image',
     locale: 'fr_FR',
     appStoreDescription: `Asrār Everyday — Sciences Sacrées & Timing Divin ✨
 
@@ -95,72 +95,72 @@ export const challengeMeta = {
     en: {
       title: '201 Prophetic Names Challenge — Asrār',
       description: 'Join me in reciting the 201 Holy Names of Prophet Muḥammad ﷺ with Asrār. Experience blessings and rizq abundance through this sacred practice.',
-      image: '/asrar-logo.svg',
+      image: '/opengraph-image',
     },
     fr: {
       title: 'Défi 201 Noms Prophétiques — Asrār',
       description: 'Rejoignez-moi pour réciter les 201 Noms Saints du Prophète Muḥammad ﷺ avec Asrār. Vivez des bénédictions et une abondance de rizq grâce à cette pratique sacrée.',
-      image: '/asrar-logo.svg',
+      image: '/opengraph-image',
     },
   },
   'salawat': {
     en: {
       title: 'Ṣalawāt Challenge — Asrār',
       description: 'Join me in reciting Ṣalawāt and tracking daily dhikr with Asrār.',
-      image: '/asrar-logo.svg',
+      image: '/opengraph-image',
     },
     fr: {
       title: 'Défi Ṣalawāt — Asrār',
       description: 'Rejoignez-moi pour réciter les Ṣalawāt et suivre votre dhikr quotidien avec Asrār.',
-      image: '/asrar-logo.svg',
+      image: '/opengraph-image',
     },
   },
   'istighfar': {
     en: {
       title: 'Istighfār Challenge — Asrār',
       description: 'Join me in seeking Allah\'s forgiveness and tracking daily Istighfār with Asrār.',
-      image: '/asrar-logo.svg',
+      image: '/opengraph-image',
     },
     fr: {
       title: 'Défi Istighfār — Asrār',
       description: 'Rejoignez-moi pour demander le pardon d\'Allah et suivre votre Istighfār quotidien avec Asrār.',
-      image: '/asrar-logo.svg',
+      image: '/opengraph-image',
     },
   },
   'divine-name': {
     en: {
       title: 'Divine Name Challenge — Asrār',
       description: 'Join me in invoking the Names of Allah and tracking daily dhikr with Asrār.',
-      image: '/asrar-logo.svg',
+      image: '/opengraph-image',
     },
     fr: {
       title: 'Défi Nom Divin — Asrār',
       description: 'Rejoignez-moi pour invoquer les noms d\'Allah et suivre votre dhikr quotidien avec Asrār.',
-      image: '/asrar-logo.svg',
+      image: '/opengraph-image',
     },
   },
   'custom': {
     en: {
       title: 'Custom Dhikr Challenge — Asrār',
       description: 'Join me in a personal dhikr practice and track the journey with Asrār.',
-      image: '/asrar-logo.svg',
+      image: '/opengraph-image',
     },
     fr: {
       title: 'Défi Dhikr Personnalisé — Asrār',
       description: 'Rejoignez-moi dans une pratique personnelle de dhikr et suivez ce parcours avec Asrār.',
-      image: '/asrar-logo.svg',
+      image: '/opengraph-image',
     },
   },
   'debt-relief': {
     en: {
       title: 'Debt Relief Wird — Asrār',
       description: 'Join me in the debt relief wird practice and track your progress with Asrār.',
-      image: '/asrar-logo.svg',
+      image: '/opengraph-image',
     },
     fr: {
       title: 'Wird pour le Soulagement des Dettes — Asrār',
       description: 'Rejoignez-moi dans la pratique du wird de soulagement des dettes et suivez votre progression avec Asrār.',
-      image: '/asrar-logo.svg',
+      image: '/opengraph-image',
     },
   },
 };

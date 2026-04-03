@@ -1,56 +1,67 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background Gradient -->
   <defs>
-    <linearGradient id="bg-gradient-default" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#fef3c7;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#fde68a;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#fed7aa;stop-opacity:1" />
+    <linearGradient id="og-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="50%" stop-color="#1E1B4B" />
+      <stop offset="100%" stop-color="#0F172A" />
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+    <linearGradient id="og-logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="50%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+    <filter id="og-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur" />
       <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
+        <feMergeNode in="coloredBlur" />
+        <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
+    <radialGradient id="bg-glow-1" cx="20%" cy="80%" r="40%">
+      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="transparent" />
+    </radialGradient>
+    <radialGradient id="bg-glow-2" cx="80%" cy="20%" r="40%">
+      <stop offset="0%" stop-color="#EC4899" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="transparent" />
+    </radialGradient>
   </defs>
-  
-  <rect width="1200" height="630" fill="url(#bg-gradient-default)"/>
-  
-  <!-- Decorative Stars and Crescent -->
-  <circle cx="100" cy="100" r="150" fill="#f59e0b" opacity="0.12"/>
-  <text x="1050" y="150" font-size="120" opacity="0.15">🌙</text>
-  <text x="180" y="520" font-size="80" opacity="0.12">⭐</text>
-  <circle cx="1080" cy="530" r="200" fill="#14b8a6" opacity="0.08"/>
-  
-  <!-- Logo/Branding (top-left) -->
-  <text x="50" y="60" font-family="'Inter', sans-serif" font-size="32" font-weight="700" fill="#292524">
-    ✨ Asrār
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#og-gradient)" />
+  <rect width="1200" height="630" fill="url(#bg-glow-1)" />
+  <rect width="1200" height="630" fill="url(#bg-glow-2)" />
+
+  <!-- Logo mark (left-center) -->
+  <g transform="translate(130, 190) scale(0.48)">
+    <rect width="512" height="512" rx="80" fill="url(#og-logo-gradient)" />
+    <circle cx="256" cy="256" r="158" fill="none" stroke="#fff" stroke-width="4" opacity="0.15" />
+    <circle cx="256" cy="256" r="141" fill="none" stroke="#fff" stroke-width="3" opacity="0.25" />
+    <path d="M 256 82 L 329.91 142.04 L 430 82 L 369.96 182.09 L 430 256 L 369.96 329.91 L 430 430 L 329.91 369.96 L 256 430 L 182.09 369.96 L 82 430 L 142.04 329.91 L 82 256 L 142.04 182.09 L 82 82 L 182.09 142.04 Z" fill="#fff" filter="url(#og-glow)" />
+    <circle cx="256" cy="256" r="55" fill="#FDF4FF" opacity="0.9" />
+    <circle cx="256" cy="256" r="16" fill="#8B5CF6" />
+    <circle cx="256" cy="173" r="9" fill="#fff" opacity="0.6" />
+    <circle cx="328" cy="298" r="9" fill="#fff" opacity="0.6" />
+    <circle cx="184" cy="298" r="9" fill="#fff" opacity="0.6" />
+  </g>
+
+  <!-- App name -->
+  <text x="410" y="275" font-family="'Inter', Arial, sans-serif" font-size="78" font-weight="700" fill="#E5E7EB" letter-spacing="-1">
+    Asrār Everyday
   </text>
-  
-  <!-- Main Arabic Text (Large, centered) -->
-  <text x="600" y="260" font-family="'Amiri', 'Traditional Arabic', serif" font-size="100" font-weight="700" fill="#7c2d12" text-anchor="middle" filter="url(#glow)">
-    رَمَضَانَ مُبَارَك
+
+  <!-- Sciences subtitle -->
+  <text x="412" y="338" font-family="'Inter', Arial, sans-serif" font-size="30" fill="#A78BFA">
+    ʿIlm al-Ḥurūf · ʿIlm al-Nujūm · ʿIlm al-ʿAdad
   </text>
-  
-  <!-- Transliteration (Medium) -->
-  <text x="600" y="340" font-family="'Crimson Text', serif" font-size="40" fill="#92400e" text-anchor="middle" font-style="italic">
-    Ramaḍān Mubārak
+
+  <!-- Feature line -->
+  <text x="412" y="395" font-family="Arial, sans-serif" font-size="22" fill="#6B7280">
+    Planetary Hours · Abjad Numerology · Zikr Challenges · Name Destiny
   </text>
-  
-  <!-- English Translation (Small) -->
-  <text x="600" y="395" font-family="'Inter', sans-serif" font-size="26" fill="#9a3412" text-anchor="middle">
-    Blessed Ramadan
-  </text>
-  
-  <!-- Subtitle -->
-  <text x="600" y="445" font-family="'Inter', sans-serif" font-size="22" fill="#a8a29e" text-anchor="middle">
-    Track Your Spiritual Journey
-  </text>
-  
-  <!-- Challenge Badge (bottom-right) -->
-  <rect x="870" y="530" width="280" height="60" rx="30" fill="#ffffff" opacity="0.95" stroke="#f59e0b" stroke-width="2"/>
-  <text x="1010" y="568" font-family="'Inter', sans-serif" font-size="20" font-weight="600" fill="#ea580c" text-anchor="middle">
-    Spiritual Challenges • Asrār
+
+  <!-- Bottom Arabic tagline -->
+  <text x="600" y="570" text-anchor="middle" font-family="'Noto Sans Arabic', Arial, sans-serif" font-size="20" fill="#4B5563" opacity="0.8">
+    أسرار • Secrets &amp; Mysteries of the Letters
   </text>
 </svg>

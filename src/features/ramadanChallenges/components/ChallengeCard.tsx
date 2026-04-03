@@ -198,8 +198,8 @@ export function ChallengeCard({
       ? `Défi ${challenge.title} — Asrār` 
       : `${challenge.title} Challenge — Asrār`;
     const shareText = language === 'fr'
-      ? `🤲 Rejoignez-moi dans ce défi spirituel!\n\n${challenge.title}\n${challenge.arabicText}\n\nSuivez votre dhikr quotidien et transformez votre Ramadan.`
-      : `🤲 Join me in this spiritual challenge!\n\n${challenge.title}\n${challenge.arabicText}\n\nTrack your daily dhikr and transform your Ramadan.`;
+      ? `🤲 Rejoignez-moi dans ce défi spirituel!\n\n${challenge.title}\n${challenge.arabicText}\n\nSuivez votre dhikr quotidien et transformez votre pratique spirituelle.`
+      : `🤲 Join me in this spiritual challenge!\n\n${challenge.title}\n${challenge.arabicText}\n\nTrack your daily dhikr and transform your spiritual practice.`;
 
     if (navigator.share) {
       try {

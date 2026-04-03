@@ -93,7 +93,7 @@ export async function generateMetadata({
   }
 
   // Default Ramadan page metadata with absolute URL
-  const defaultImageUrl = `${baseUrl}/asrar-logo.svg`;
+  const defaultImageUrl = `${baseUrl}/opengraph-image`;
   
   return {
     title: currentMeta.title,
