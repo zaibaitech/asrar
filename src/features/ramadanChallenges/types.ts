@@ -84,13 +84,17 @@ export interface SalawatVariant {
 export interface SalawatPreset {
   id: string;
   title: string;
+  titleFr?: string;
   tradition: string;
+  traditionFr?: string;
   arabicText: string;
   transliteration: string;
   meaning: string;
+  meaningFr?: string;
   quickAddPresets: number[];
   recommendedDaily: number;
   note: string;
+  noteFr?: string;
 }
 
 export interface DivineNameOption {
@@ -98,6 +102,7 @@ export interface DivineNameOption {
   arabicName: string;
   transliteration: string;
   meaning: string;
+  meaningFr?: string;
 }
 
 // ─── Community Stats (Mock) ──────────────────────────────────────────────────────
@@ -166,7 +171,9 @@ export const SALAWAT_PRESETS: SalawatPreset[] = [
   {
     id: 'salawat_ibrahimiyya',
     title: 'Ṣalāt al-Ibrāhīmiyya',
+    titleFr: 'Ṣalāt al-Ibrāhīmiyya',
     tradition: 'Prophetic Ḥadīth · Ṣaḥīḥ al-Bukhārī',
+    traditionFr: 'Ḥadīth prophétique · Ṣaḥīḥ al-Bukhārī',
     arabicText: `اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ
 كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ
 إِنَّكَ حَمِيدٌ مَجِيدٌ
@@ -180,25 +187,33 @@ Allāhumma bārik ʿalā Muḥammadin wa ʿalā āli Muḥammad,
 kamā bārakta ʿalā Ibrāhīma wa ʿalā āli Ibrāhīm,
 innaka Ḥamīdun Majīd.`,
     meaning: 'O Allah, send blessings upon Muḥammad and the family of Muḥammad, as You sent blessings upon Ibrāhīm and the family of Ibrāhīm — verily You are Most Praiseworthy, Most Glorious. O Allah, send grace upon Muḥammad and the family of Muḥammad, as You sent grace upon Ibrāhīm and the family of Ibrāhīm — verily You are Most Praiseworthy, Most Glorious.',
+    meaningFr: 'Ô Allah, accorde Tes bénédictions à Muḥammad et à la famille de Muḥammad, comme Tu as accordé Tes bénédictions à Ibrāhīm et à la famille d’Ibrāhīm — Tu es certes Le Digne de louange, Le Glorieux. Ô Allah, accorde Ta grâce à Muḥammad et à la famille de Muḥammad, comme Tu as accordé Ta grâce à Ibrāhīm et à la famille d’Ibrāhīm — Tu es certes Le Digne de louange, Le Glorieux.',
     quickAddPresets: [10, 33, 100, 313, 500, 1000],
     recommendedDaily: 100,
     note: 'The most authentic ṣalawāt, taught by the Prophet ﷺ himself. Recited in every Ṣalāh.',
+    noteFr: 'La ṣalawāt la plus authentique, enseignée par le Prophète ﷺ lui-même. Récitée dans chaque Ṣalāh.',
   },
   {
     id: 'salawat_simple',
     title: 'Ṣalāt Mufrada · Simple Blessing',
+    titleFr: 'Ṣalāt Mufrada · Bénédiction simple',
     tradition: 'Universal · All Schools',
+    traditionFr: 'Universelle · Toutes les écoles',
     arabicText: `اللَّهُمَّ صَلِّ وَسَلِّمْ وَبَارِكْ عَلَى سَيِّدِنَا مُحَمَّدٍ`,
     transliteration: `Allāhumma ṣalli wa sallim wa bārik ʿalā Sayyidinā Muḥammad`,
     meaning: 'O Allah, send blessings, peace, and grace upon our master Muḥammad.',
+    meaningFr: 'Ô Allah, accorde Tes bénédictions, Ta paix et Ta grâce à notre maître Muḥammad.',
     quickAddPresets: [33, 100, 313, 500, 1000, 3000],
     recommendedDaily: 500,
     note: 'The shortest complete ṣalawāt — ideal for high-count daily dhikr sessions.',
+    noteFr: 'La ṣalawāt complète la plus courte — idéale pour les séances quotidiennes de dhikr à grand nombre.',
   },
   {
     id: 'salawat_fatih',
     title: 'Ṣalāt al-Fātiḥ · The Opener',
+    titleFr: 'Ṣalāt al-Fātiḥ · L’Ouvreur',
     tradition: 'Ṭarīqa Tijāniyya · Shaykh Muḥammad al-Bakrī',
+    traditionFr: 'Ṭarīqa Tijāniyya · Shaykh Muḥammad al-Bakrī',
     arabicText: `اللَّهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ الْفَاتِحِ لِمَا أُغْلِقَ
 وَالْخَاتِمِ لِمَا سَبَقَ نَاصِرِ الْحَقِّ بِالْحَقِّ
 وَالْهَادِي إِلَى صِرَاطِكَ الْمُسْتَقِيمِ
@@ -208,14 +223,18 @@ wal-khātimi limā sabaqa, nāṣiri l-ḥaqqi bil-ḥaqq,
 wal-hādī ilā ṣirāṭika l-mustaqīm,
 wa ʿalā ālihi ḥaqqa qadrihi wa miqdārihil-ʿaẓīm.`,
     meaning: 'O Allah, send blessings upon our master Muḥammad — the Opener of what was closed, the Seal of what came before, the Helper of Truth through Truth, the Guide to Your straight path — and upon his family, blessings worthy of his immense station and grandeur.',
+    meaningFr: 'Ô Allah, accorde Tes bénédictions à notre maître Muḥammad — l’Ouvreur de ce qui était fermé, le Sceau de ce qui l’a précédé, le Soutien de la Vérité par la Vérité, le Guide vers Ton droit chemin — ainsi qu’à sa famille, d’une bénédiction à la mesure de son immense rang et de sa grandeur.',
     quickAddPresets: [7, 33, 100, 313, 500, 1000],
     recommendedDaily: 100,
     note: 'Central wird of the Tijāniyya order. Especially beloved in West African Sufi communities.',
+    noteFr: 'Wird central de l’ordre Tijāniyya. Particulièrement aimé dans les communautés soufies d’Afrique de l’Ouest.',
   },
   {
     id: 'salawat_nariyya',
     title: 'Ṣalāt al-Nāriyya · Prayer of Relief',
+    titleFr: 'Ṣalāt al-Nāriyya · Prière du soulagement',
     tradition: 'Imam al-Qurṭubī · Also known as Ṣalāt al-Tafrijiyya',
+    traditionFr: 'Imam al-Qurṭubī · Aussi connue comme Ṣalāt al-Tafrijiyya',
     arabicText: `اللَّهُمَّ صَلِّ صَلَاةً كَامِلَةً وَسَلِّمْ سَلَامًا تَامًّا
 عَلَى سَيِّدِنَا مُحَمَّدٍ الَّذِي تَنْحَلُّ بِهِ الْعُقَدُ
 وَتَنْفَرِجُ بِهِ الْكُرَبُ وَتُقْضَى بِهِ الْحَوَائِجُ
@@ -231,14 +250,18 @@ wa yustasqā l-ghamāmu bi-wajhihil-karīm,
 wa ʿalā ālihi wa ṣaḥbihī fī kulli lamḥatin wa nafas,
 bi-ʿadadi kulli maʿlūmin lak.`,
     meaning: 'O Allah, bestow complete blessings and perfect peace upon our master Muḥammad — through whom knots are untied, distress is relieved, needs are fulfilled, desires are attained, and good endings are granted; through whose noble face rain is sought — and upon his family and companions in every moment and breath, equal in number to all that is known to You.',
+    meaningFr: 'Ô Allah, accorde des bénédictions complètes et une paix parfaite à notre maître Muḥammad — par qui les nœuds se dénouent, les détresses se dissipent, les besoins sont comblés, les désirs sont atteints et les bonnes fins sont accordées ; par dont le noble visage la pluie est demandée — ainsi qu’à sa famille et à ses compagnons à chaque instant et à chaque souffle, en nombre égal à tout ce qui est connu de Toi.',
     quickAddPresets: [11, 33, 100, 313, 444, 1000],
     recommendedDaily: 11,
     note: 'Known for alleviating difficulties. Traditionally recited 11 times for relief, or 4,444 times for major opening.',
+    noteFr: 'Connue pour soulager les difficultés. Traditionnellement récitée 11 fois pour le soulagement, ou 4 444 fois pour une grande ouverture.',
   },
   {
     id: 'salawat_mashishiyya',
     title: 'Ṣalāt al-Mashīshiyya',
+    titleFr: 'Ṣalāt al-Mashīshiyya',
     tradition: 'Shaykh ʿAbd al-Salām ibn Mashīsh · Shādhilī tradition',
+    traditionFr: 'Shaykh ʿAbd al-Salām ibn Mashīsh · Tradition Shādhilī',
     arabicText: `اللَّهُمَّ صَلِّ عَلَى مَنْ مِنْهُ انْشَقَّتِ الأَسْرَارُ
 وَانْفَلَقَتِ الأَنْوَارُ
 وَفِيهِ ارْتَقَتِ الحَقَائِقُ
@@ -252,14 +275,18 @@ wa tanazzalat ʿulūmu Ādam fa-aʿjazal-khalāʾiq,
 wa lahu taḍāʾalatil-fuhūm,
 fa-lam yudrikhu minnā sābiqun wa lā lāḥiq.`,
     meaning: 'O Allah, send blessings upon the one from whom secrets split open, lights dawned, realities ascended, and the sciences of Ādam descended — bewildering all creation. Before him, all understanding falls short — none among us, first or last, can fully reach him.',
+    meaningFr: 'Ô Allah, accorde Tes bénédictions à celui de qui les secrets se sont fendus, les lumières se sont déployées, les réalités se sont élevées, et les sciences d’Ādam sont descendues — laissant toute la création dans l’émerveillement. Devant lui, toute compréhension demeure insuffisante — nul parmi nous, premier ou dernier, ne peut pleinement l’atteindre.',
     quickAddPresets: [7, 33, 100, 313, 500, 1000],
     recommendedDaily: 100,
     note: 'The sublime prayer of Shaykh Ibn Mashīsh, spiritual guide of Imam al-Shādhilī. Widely recited in the Maghrib and West Africa.',
+    noteFr: 'La prière sublime de Shaykh Ibn Mashīsh, guide spirituel de l’Imam al-Shādhilī. Largement récitée au Maghreb et en Afrique de l’Ouest.',
   },
   {
     id: 'salawat_jawharatul_kamal',
     title: 'Jawharatu l-Kamāl · Jewel of Perfection',
+    titleFr: 'Jawharatu l-Kamāl · Joyau de perfection',
     tradition: 'Ṭarīqa Tijāniyya · Shaykh Aḥmad al-Tijānī',
+    traditionFr: 'Ṭarīqa Tijāniyya · Shaykh Aḥmad al-Tijānī',
     arabicText: `اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى عَيْنِ الرَّحْمَةِ الرَّبَّانِيَّةِ
 وَالْيَاقُوتَةِ الْمُتَحَقِّقَةِ الْحَائِطَةِ بِمَرْكَزِ الْفُهُومِ وَالْمَعَانِي
 وَنُورِ الْأَكْوَانِ الْمُتَكَوِّنَةِ الْآدَمِيِّ صَاحِبِ الْحَقِّ الرَّبَّانِيِّ
@@ -275,46 +302,56 @@ Wa ṣalli wa sallim ʿalā ʿayni l-ḥaqqi llatī tatajallā minhā ʿurūshu 
 ʿayni l-maʿārifi l-aqwam, ṣirāṭika t-tāmmi l-afkham.
 Allāhumma ṣalli wa sallim ʿalayhi wa ʿalā ālihi ṣalātan tuʿarrifunā bihā iyyāh.`,
     meaning: 'O Allah, send blessings and peace upon the Essence of Divine Mercy — the realized ruby encompassing the centre of understanding and meaning — the light of all created realms, the human bearer of Divine Truth, the most radiant lightning in the clouds of profit that fills every seeker, all oceans and vessels. Send blessings and peace upon the Eye of Truth from which the thrones of realities manifest — the most upright source of gnosis, Your most complete and magnificent path. O Allah, send blessings and peace upon him and his family — blessings through which You make him known to us.',
+    meaningFr: 'Ô Allah, accorde Tes bénédictions et Ta paix à l’Essence de la Miséricorde divine — le rubis réalisé englobant le centre de la compréhension et des significations — la lumière de tous les mondes créés, le porteur humain de la Vérité divine, l’éclair le plus éclatant dans les nuages de profit qui comble chaque chercheur, toutes les mers et tous les récipients. Accorde bénédictions et paix à l’Œil de la Vérité d’où se manifestent les trônes des réalités — la source la plus droite de la gnose, Ton chemin le plus complet et le plus magnifique. Ô Allah, accorde Tes bénédictions et Ta paix sur lui et sur sa famille — des bénédictions par lesquelles Tu nous le fais connaître.',
     quickAddPresets: [7, 12, 33, 100, 313, 500],
     recommendedDaily: 12,
     note: 'The most exalted ṣalawāt of the Tijāniyya — recited 12 times daily in the wāẓifa. Requires respectful intention and attentiveness.',
+    noteFr: 'La ṣalawāt la plus exaltée de la Tijāniyya — récitée 12 fois par jour dans la wāẓifa. Requiert une intention respectueuse et de l’attention.',
   },
   {
     id: 'salawat_mawsuf',
     title: 'Ṣalāt al-Mawṣūf · Described with Generosity',
+    titleFr: 'Ṣalāt al-Mawṣūf · Décrit par la générosité',
     tradition: 'Prophetic Blessing · Traditional',
+    traditionFr: 'Bénédiction prophétique · Traditionnelle',
     arabicText: `صَلَّى اللَّهُ عَلَى مُحَمَّدٍ الْمَوْصُوفِ بِالْكَرَمِ وَالْجُودِ`,
     transliteration: `Ṣallā-llāhu ʿalā Muḥammadini l-mawṣūfi bil-karami wal-jūd`,
     meaning: 'May Allah send blessings upon Muḥammad — the one described with nobility and generosity.',
+    meaningFr: 'Qu’Allah accorde Ses bénédictions à Muḥammad — celui qui est décrit par la noblesse et la générosité.',
     quickAddPresets: [100, 300, 700, 1000, 2100, 4200],
     recommendedDaily: 2100,
     note: 'A concise yet powerful ṣalawāt praising the Prophet ﷺ for his perfect generosity and noble character. Ideal for high-count daily practice.',
+    noteFr: 'Une ṣalawāt concise mais puissante louant le Prophète ﷺ pour sa générosité parfaite et son noble caractère. Idéale pour une pratique quotidienne à grand nombre.',
   },
   {
     id: 'salawat_nur_qalb',
     title: 'Ṣalāt Nūr al-Qalb · Light of the Heart',
+    titleFr: 'Ṣalāt Nūr al-Qalb · Lumière du cœur',
     tradition: 'Traditional Blessing',
+    traditionFr: 'Bénédiction traditionnelle',
     arabicText: `صَلَّى اللَّهُ عَلَى مُحَمَّدٍ، أَصْبَحَ لِلْقَلْبِ نُورُهُ، وَرَحْمَةً لِلْعَالَمِينَ ظُهُورُهُ`,
     transliteration: `Ṣallā Allāhu ʿalā Muḥammadin,
 aṣbaḥa lil-qalbi nūruhu,
 wa raḥmatan lil-ʿālamīna ẓuhūruhu.`,
     meaning: 'May Allah send blessings upon Muḥammad — his light has dawned for the heart, and his appearance is a mercy to all the worlds.',
+    meaningFr: 'Qu’Allah accorde Ses bénédictions à Muḥammad — sa lumière s’est levée pour le cœur, et son apparition est une miséricorde pour tous les mondes.',
     quickAddPresets: [33, 100, 300, 500, 900, 1000],
     recommendedDaily: 300,
     note: 'A beautiful ṣalawāt connecting the Prophet ﷺ as light for the heart and mercy for all creation. Excellent for morning recitation.',
+    noteFr: 'Une belle ṣalawāt reliant le Prophète ﷺ comme lumière pour le cœur et miséricorde pour toute la création. Excellente pour la récitation matinale.',
   },
 ];
 
 /** Pre-defined Divine Names for challenge */
 export const DIVINE_NAME_OPTIONS: DivineNameOption[] = [
-  { id: 'rahim', arabicName: 'يَا رَحِيم', transliteration: 'Yā Raḥīm', meaning: 'O Most Merciful' },
-  { id: 'razzaq', arabicName: 'يَا رَزَّاق', transliteration: 'Yā Razzāq', meaning: 'O Provider' },
-  { id: 'ghaffar', arabicName: 'يَا غَفَّار', transliteration: 'Yā Ghaffār', meaning: 'O Ever-Forgiving' },
-  { id: 'latif', arabicName: 'يَا لَطِيف', transliteration: 'Yā Laṭīf', meaning: 'O Most Subtle' },
-  { id: 'wadud', arabicName: 'يَا وَدُود', transliteration: 'Yā Wadūd', meaning: 'O Most Loving' },
-  { id: 'kareem', arabicName: 'يَا كَرِيم', transliteration: 'Yā Karīm', meaning: 'O Most Generous' },
-  { id: 'fattah', arabicName: 'يَا فَتَّاح', transliteration: 'Yā Fattāḥ', meaning: 'O Opener' },
-  { id: 'nur', arabicName: 'يَا نُور', transliteration: 'Yā Nūr', meaning: 'O Light' },
+  { id: 'rahim', arabicName: 'يَا رَحِيم', transliteration: 'Yā Raḥīm', meaning: 'O Most Merciful', meaningFr: 'Ô Le Très Miséricordieux' },
+  { id: 'razzaq', arabicName: 'يَا رَزَّاق', transliteration: 'Yā Razzāq', meaning: 'O Provider', meaningFr: 'Ô Le Pourvoyeur' },
+  { id: 'ghaffar', arabicName: 'يَا غَفَّار', transliteration: 'Yā Ghaffār', meaning: 'O Ever-Forgiving', meaningFr: 'Ô Le Très Pardonneur' },
+  { id: 'latif', arabicName: 'يَا لَطِيف', transliteration: 'Yā Laṭīf', meaning: 'O Most Subtle', meaningFr: 'Ô Le Très Subtil' },
+  { id: 'wadud', arabicName: 'يَا وَدُود', transliteration: 'Yā Wadūd', meaning: 'O Most Loving', meaningFr: 'Ô Le Très Aimant' },
+  { id: 'kareem', arabicName: 'يَا كَرِيم', transliteration: 'Yā Karīm', meaning: 'O Most Generous', meaningFr: 'Ô Le Très Généreux' },
+  { id: 'fattah', arabicName: 'يَا فَتَّاح', transliteration: 'Yā Fattāḥ', meaning: 'O Opener', meaningFr: 'Ô L’Ouvreur' },
+  { id: 'nur', arabicName: 'يَا نُور', transliteration: 'Yā Nūr', meaning: 'O Light', meaningFr: 'Ô La Lumière' },
 ];
 
 /** Session tags in order of prayer times */
