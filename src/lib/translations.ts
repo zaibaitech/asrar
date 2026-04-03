@@ -222,6 +222,55 @@ export const translations = {
       streakDays: "Day Streak",
       // Quick-tap amounts
       quickTap: "Quick Add",
+
+      // Add Challenge Modal
+      addChallenge: {
+        title: "Add Challenge",
+        chooseType: "Choose a type of dhikr challenge to track",
+        // Challenge types
+        typeSalawat: "Ṣalawāt",
+        typeSalawatDesc: "Blessings upon the Prophet ﷺ",
+        typePropheticNames: "201 Holy Names",
+        typePropheticNamesDesc: "Rizq Abundance · 7-Day Morning Practice",
+        typeDebtRelief: "Debt Relief Wird",
+        typeDebtReliefDesc: "1000× after ʿIshāʾ · Qurʾānic Verse",
+        typeDivineName: "Divine Name",
+        typeDivineNameDesc: "Invocation of Allah's Names",
+        typeCustom: "Custom Wird",
+        typeCustomDesc: "Your own dhikr practice",
+        // Badges
+        special: "Special",
+        alreadyAdded: "Already added",
+        // Salawat configuration
+        chooseSalawat: "Choose Your Ṣalawāt",
+        tapToPreview: "Tap to preview full text",
+        recommended: "Recommended:",
+        day: "day",
+        viewFullText: "View full text →",
+        // Salawat preview
+        transliteration: "Transliteration",
+        showMeaning: "Show meaning",
+        recommendedDailyTarget: "Recommended daily target:",
+        alreadyAddedButton: "Already Added",
+        selectSalawat: "Select this Ṣalawāt",
+        // Divine name
+        chooseDivineName: "Choose Divine Name",
+        addDivineName: "Add Divine Name Challenge",
+        // Custom wird
+        customWird: "Custom Wird",
+        titleLabel: "Title",
+        myWird: "My Wird",
+        arabicText: "Arabic Text",
+        dailyTarget: "Daily Target",
+        ramadanTarget: "Ramadan target:",
+        addCustomWird: "Add Custom Wird",
+        // Prophetic names step
+        steps: "Steps:",
+        names: "Names",
+        // Debt relief step
+        difficultyForAllah: "And that is not difficult for Allah",
+        spiritualPurpose: "Spiritual Purpose:",
+      },
     },
 
     // 201 Holy Names of Prophet ﷺ
@@ -3339,6 +3388,55 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
       heatmapTitle: "Progrès Mensuel",
       streakDays: "Jours Consécutifs",
       quickTap: "Ajout Rapide",
+
+      // Modale Ajouter un Défi
+      addChallenge: {
+        title: "Ajouter un défi",
+        chooseType: "Choisissez un type de défi dhikr à suivre",
+        // Types de défi
+        typeSalawat: "Ṣalawāt",
+        typeSalawatDesc: "Bénédictions sur le Prophète ﷺ",
+        typePropheticNames: "201 Noms Saints",
+        typePropheticNamesDesc: "Pratique Rizq · 7 jours le matin",
+        typeDebtRelief: "Wird Soulagement Dettes",
+        typeDebtReliefDesc: "1000× après ʿIshāʾ · Verset Qourʾānique",
+        typeDivineName: "Nom Divin",
+        typeDivineNameDesc: "Invocation des Noms d'Allah",
+        typeCustom: "Wird Personnalisé",
+        typeCustomDesc: "Votre propre pratique de dhikr",
+        // Badges
+        special: "Spécial",
+        alreadyAdded: "Déjà ajouté",
+        // Configuration Ṣalawāt
+        chooseSalawat: "Choisir une Ṣalawāt",
+        tapToPreview: "Touchez pour voir le texte complet",
+        recommended: "Recommandé :",
+        day: "jour",
+        viewFullText: "Voir texte complet →",
+        // Aperçu Ṣalawāt
+        transliteration: "Translittération",
+        showMeaning: "Afficher la signification",
+        recommendedDailyTarget: "Cible quotidienne recommandée :",
+        alreadyAddedButton: "Déjà ajouté",
+        selectSalawat: "Choisir cette Ṣalawāt",
+        // Nom divin
+        chooseDivineName: "Choisir un Nom Divin",
+        addDivineName: "Ajouter ce Nom",
+        // Wird personnalisé
+        customWird: "Wird Personnalisé",
+        titleLabel: "Titre",
+        myWird: "Mon Wird",
+        arabicText: "Texte Arabe",
+        dailyTarget: "Objectif quotidien",
+        ramadanTarget: "Objectif Ramadan :",
+        addCustomWird: "Ajouter le Wird",
+        // Étape noms prophétiques
+        steps: "Étapes :",
+        names: "Noms",
+        // Étape soulagement des dettes
+        difficultyForAllah: "Et cela n'est pas difficile pour Allah",
+        spiritualPurpose: "Objectif spirituel :",
+      },
     },
 
     // 201 Noms Saints du Prophète ﷺ
