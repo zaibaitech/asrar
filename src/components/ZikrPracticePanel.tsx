@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { PLANETARY_ZIKR } from '@/src/lib/planetaryZikr';
+import { PLANETARY_ZIKR, LocalizedText } from '@/src/lib/planetaryZikr';
 import { translations } from '@/src/lib/translations';
 
 type Props = {
@@ -23,6 +23,8 @@ export function ZikrPracticePanel({
   const data = PLANETARY_ZIKR[planetKey?.toLowerCase()];
   const t = translations[language].planetary.zikr;
 
+  const getText = (field: LocalizedText) => field[language] ?? field.en;
+
   if (!data) return null;
   if (data.zikr.length === 0) return null;
   if (showWhen === 'auspicious-only' && !isAuspicious) return null;
@@ -36,7 +38,7 @@ export function ZikrPracticePanel({
         aria-expanded={isOpen}
       >
         <span className="zikr-planet-badge" style={{ background: data.color }}>
-          {data.planet} {data.label}
+          {data.planet} {getText(data.label)}
         </span>
         <span className="zikr-panel-title">
           {context ? `${context} - ` : ''}
@@ -48,7 +50,7 @@ export function ZikrPracticePanel({
       {isOpen && (
         <div className="zikr-panel-body">
           {data.sectionNote && (
-            <p className="zikr-section-note">{data.sectionNote}</p>
+            <p className="zikr-section-note">{getText(data.sectionNote)}</p>
           )}
           <ul className="zikr-list">
             {data.zikr.map((entry, index) => (
@@ -62,12 +64,12 @@ export function ZikrPracticePanel({
                       </span>
                     )}
                   </div>
-                  {entry.note && <span className="zikr-badge">{entry.note}</span>}
+                  {entry.note && <span className="zikr-badge">{getText(entry.note)}</span>}
                   <span className="zikr-count" style={{ color: data.color }}>
                     {entry.count}x
                   </span>
                 </div>
-                <p className="zikr-benefit">{entry.benefit}</p>
+                <p className="zikr-benefit">{getText(entry.benefit)}</p>
               </li>
             ))}
           </ul>
