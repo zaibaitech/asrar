@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { PLANETARY_ZIKR, LocalizedText } from '@/src/lib/planetaryZikr';
+import { PLANETARY_ZIKR } from '@/src/lib/planetaryZikr';
 import { translations } from '@/src/lib/translations';
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
   context?: string;
   showWhen?: 'always' | 'auspicious-only';
   isAuspicious?: boolean;
-  language?: 'en' | 'fr';
+  language?: string;
 };
 
 export function ZikrPracticePanel({
@@ -21,9 +21,9 @@ export function ZikrPracticePanel({
 }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const data = PLANETARY_ZIKR[planetKey?.toLowerCase()];
-  const t = translations[language].planetary.zikr;
-
-  const getText = (field: LocalizedText) => field[language] ?? field.en;
+  const isFrench = language.toLowerCase().startsWith('fr');
+  const t = translations[isFrench ? 'fr' : 'en'].planetary.zikr;
+  const sectionNote = isFrench ? data?.sectionNoteFr ?? data?.sectionNote : data?.sectionNote;
 
   if (!data) return null;
   if (data.zikr.length === 0) return null;
@@ -38,7 +38,7 @@ export function ZikrPracticePanel({
         aria-expanded={isOpen}
       >
         <span className="zikr-planet-badge" style={{ background: data.color }}>
-          {data.planet} {getText(data.label)}
+          {data.planet} {data.label}
         </span>
         <span className="zikr-panel-title">
           {context ? `${context} - ` : ''}
@@ -49,8 +49,8 @@ export function ZikrPracticePanel({
 
       {isOpen && (
         <div className="zikr-panel-body">
-          {data.sectionNote && (
-            <p className="zikr-section-note">{getText(data.sectionNote)}</p>
+          {sectionNote && (
+            <p className="zikr-section-note">{sectionNote}</p>
           )}
           <ul className="zikr-list">
             {data.zikr.map((entry, index) => (
@@ -64,12 +64,14 @@ export function ZikrPracticePanel({
                       </span>
                     )}
                   </div>
-                  {entry.note && <span className="zikr-badge">{getText(entry.note)}</span>}
+                  {(isFrench ? entry.noteFr ?? entry.note : entry.note) && (
+                    <span className="zikr-badge">{isFrench ? entry.noteFr ?? entry.note : entry.note}</span>
+                  )}
                   <span className="zikr-count" style={{ color: data.color }}>
                     {entry.count}x
                   </span>
                 </div>
-                <p className="zikr-benefit">{getText(entry.benefit)}</p>
+                <p className="zikr-benefit">{isFrench ? entry.benefitFr ?? entry.benefit : entry.benefit}</p>
               </li>
             ))}
           </ul>
