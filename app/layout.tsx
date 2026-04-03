@@ -29,6 +29,15 @@ export const metadata: Metadata = {
     template: '%s | Asrār',
   },
   description: bilingualMeta.en.shortDescription,
+  manifest: '/manifest.json',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    title: 'Asrār',
+    startupImage: [
+      { url: '/icons/icon-512x512.png' },
+    ],
+  },
   keywords: [
     'ilm al nujum',
     'planetary hours',
@@ -125,6 +134,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-192x192.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="Asrār" />
+      </head>
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-VTWVCR2EJN"
         strategy="afterInteractive"

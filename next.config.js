@@ -1,10 +1,18 @@
 /** @type {import('next').NextConfig} */
+const withPWA = require('next-pwa')({
+  dest: 'public',
+  register: true,
+  skipWaiting: true,
+  disable: process.env.NODE_ENV === 'development',
+  buildExcludes: [/middleware-manifest\.json$/],
+});
+
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   compress: true,
   productionBrowserSourceMaps: false,
-  
+
   // Rewrites - Email verification redirect
   async rewrites() {
     return [
@@ -111,9 +119,9 @@ const nextConfig = {
       },
     ]
   },
-  
+
   // Remove X-Powered-By header
   poweredByHeader: false,
 }
 
-module.exports = nextConfig
+module.exports = withPWA(nextConfig)
