@@ -286,8 +286,6 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
               </span>
             </button>
 
-            {/* Community Banner (at bottom) */}
-            <CommunityBanner stats={state.community} language={language} />
             
             {/* Explore App Button - Always visible for easy navigation */}
             <button

@@ -484,8 +484,6 @@ export function RamadanPage() {
           <span className="font-medium">{t.addChallenge}</span>
         </button>
 
-        {/* Community Banner */}
-        <CommunityBanner stats={state.community} language={language} />
       </main>
 
       {/* ─── Floating Home Button ─── */}
