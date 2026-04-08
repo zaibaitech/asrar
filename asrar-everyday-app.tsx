@@ -1492,17 +1492,28 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
 
   // Get Zikr challenge stats
   const { getTotalTodayProgress, state } = useRamadanChallenges();
-  const todayDhikr = getTotalTodayProgress();
   const totalTarget = state.challenges.reduce((sum, c) => sum + (c.totalTarget || 0), 0);
 
-  // Get TOTAL dhikr from ALL sources in the app (hydration-safe)
+  // Get TOTAL and TODAY dhikr from ALL sources (hydration-safe)
   const [appDhikrTotal, setAppDhikrTotal] = useState(0);
+  const [todayDhikr, setTodayDhikr] = useState(0);
   useEffect(() => {
-    const refresh = () => setAppDhikrTotal(getTotalAppDhikr().total);
+    const refresh = () => {
+      setAppDhikrTotal(getTotalAppDhikr().total);
+      // Today = challenges today + planetary zikr tasbih today
+      const challengesToday = getTotalTodayProgress();
+      let planetaryToday = 0;
+      try {
+        const stored = JSON.parse(localStorage.getItem('planetary_zikr_today') || '{}');
+        const today = new Date().toISOString().slice(0, 10);
+        if (stored.date === today) planetaryToday = stored.count || 0;
+      } catch { /* ignore */ }
+      setTodayDhikr(challengesToday + planetaryToday);
+    };
     refresh();
     window.addEventListener('planetaryZikrUpdate', refresh);
     return () => window.removeEventListener('planetaryZikrUpdate', refresh);
-  }, [state.challenges]); // Re-calculate when challenges change or planetary tasbih fires
+  }, [state.challenges, getTotalTodayProgress]);
 
   // Live community stats from all users
   const communityStats = useCommunityDhikr();

@@ -53,14 +53,25 @@ export function ZikrPracticePanel({
 
   const handleTasbihComplete = useCallback((zikrName: string, count: number) => {
     if (count <= 0) return;
+    const today = new Date().toISOString().slice(0, 10);
     const key = getStorageKey(planetKey, zikrName);
-    setCounts((prev) => {
-      const updated = { ...prev, [zikrName]: (prev[zikrName] || 0) + count };
-      localStorage.setItem(key, String(updated[zikrName]));
-      return updated;
-    });
+
+    // Write to localStorage synchronously BEFORE dispatching the event
+    // so getTotalAppDhikr reads the correct updated value
+    const current = parseInt(localStorage.getItem(key) || '0', 10) || 0;
+    const newTotal = current + count;
+    localStorage.setItem(key, String(newTotal));
+
+    // Track today's planetary zikr total for the banner "today" counter
+    const todayKey = 'planetary_zikr_today';
+    try {
+      const stored = JSON.parse(localStorage.getItem(todayKey) || '{}');
+      const todayCount = (stored.date === today ? (stored.count || 0) : 0) + count;
+      localStorage.setItem(todayKey, JSON.stringify({ date: today, count: todayCount }));
+    } catch { localStorage.setItem(todayKey, JSON.stringify({ date: today, count })); }
+
+    setCounts((prev) => ({ ...prev, [zikrName]: newTotal }));
     queueDhikrIncrement(count, `planetary_${planetKey}_${zikrName}`);
-    // Notify the Zikr Challenge banner to re-read totals
     window.dispatchEvent(new CustomEvent('planetaryZikrUpdate', { detail: { count } }));
     setOpenTasbihIndex(null);
   }, [planetKey]);
