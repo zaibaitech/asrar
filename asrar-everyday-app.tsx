@@ -1498,9 +1498,11 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
   // Get TOTAL dhikr from ALL sources in the app (hydration-safe)
   const [appDhikrTotal, setAppDhikrTotal] = useState(0);
   useEffect(() => {
-    const totals = getTotalAppDhikr();
-    setAppDhikrTotal(totals.total);
-  }, [state.challenges]); // Re-calculate when challenges change
+    const refresh = () => setAppDhikrTotal(getTotalAppDhikr().total);
+    refresh();
+    window.addEventListener('planetaryZikrUpdate', refresh);
+    return () => window.removeEventListener('planetaryZikrUpdate', refresh);
+  }, [state.challenges]); // Re-calculate when challenges change or planetary tasbih fires
 
   // Live community stats from all users
   const communityStats = useCommunityDhikr();

@@ -83,6 +83,19 @@ export function getTotalAppDhikr(): AppDhikrTotals {
     console.warn('Failed to read planetary dhikr:', e);
   }
 
+  // 4. Planetary Zikr Panel tasbih counters (planetary_zikr_${planet}_${name})
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key?.startsWith('planetary_zikr_')) {
+        const count = parseInt(localStorage.getItem(key) || '0', 10);
+        if (!isNaN(count)) planetaryDhikr += count;
+      }
+    }
+  } catch (e) {
+    console.warn('Failed to read planetary zikr tasbih:', e);
+  }
+
   return {
     ramadanChallenges,
     istikharaSessions,

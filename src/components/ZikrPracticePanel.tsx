@@ -60,6 +60,8 @@ export function ZikrPracticePanel({
       return updated;
     });
     queueDhikrIncrement(count, `planetary_${planetKey}_${zikrName}`);
+    // Notify the Zikr Challenge banner to re-read totals
+    window.dispatchEvent(new CustomEvent('planetaryZikrUpdate', { detail: { count } }));
     setOpenTasbihIndex(null);
   }, [planetKey]);
 
