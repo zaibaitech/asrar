@@ -10,8 +10,6 @@ import { CompatibilityPanel } from './src/features/compatibility';
 import { IstikharaPanel } from './src/features/istikhara';
 import { PlanetOfTheDay, PlanetaryHourCard, PlanetTransitCard } from './src/components/planetary';
 import { useRamadanChallenges } from './src/features/ramadanChallenges';
-import { getTotalAppDhikr } from './src/lib/getTotalAppDhikr';
-import { useCommunityDhikr } from './src/features/ramadanChallenges/communityDhikrService';
 import { analyzePatterns } from './src/features/ilm-huruf/patternRecognition';
 import { generateWafqAnalysis } from './src/features/ilm-huruf/wafqGenerator';
 import { calculateOptimalTimingWindows } from './src/features/ilm-huruf/talismanTiming';
@@ -1492,15 +1490,16 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
 
   // Get Zikr challenge stats
   const { getTotalTodayProgress, state } = useRamadanChallenges();
-  const totalTarget = state.challenges.reduce((sum, c) => sum + (c.totalTarget || 0), 0);
 
-  // Get TOTAL and TODAY dhikr from ALL sources (hydration-safe)
-  const [appDhikrTotal, setAppDhikrTotal] = useState(0);
+  // Challenges-only totals — consistent with what challenge cards display
+  const challengesTotal = state.challenges.reduce((sum, c) => sum + (c.totalProgress || 0), 0);
+  const totalTarget = state.challenges.reduce((sum, c) => sum + (c.totalTarget || 0), 0);
+  const progressPercent = totalTarget > 0 ? Math.round((challengesTotal / totalTarget) * 100) : 0;
+
+  // Today = challenges today + planetary zikr tasbih done today
   const [todayDhikr, setTodayDhikr] = useState(0);
   useEffect(() => {
     const refresh = () => {
-      setAppDhikrTotal(getTotalAppDhikr().total);
-      // Today = challenges today + planetary zikr tasbih today
       const challengesToday = getTotalTodayProgress();
       let planetaryToday = 0;
       try {
@@ -1515,20 +1514,9 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
     return () => window.removeEventListener('planetaryZikrUpdate', refresh);
   }, [state.challenges, getTotalTodayProgress]);
 
-  // Live community stats from all users
-  const communityStats = useCommunityDhikr();
 
-  const progressPercent = totalTarget > 0 ? Math.round((appDhikrTotal / totalTarget) * 100) : 0;
-
-  // Format large numbers compactly (e.g. 76205 → "76.2K")
-  const formatCompact = (n: number) => {
-    if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1).replace(/\.0$/, '')}M`;
-    if (n >= 1_000) return `${(n / 1_000).toFixed(1).replace(/\.0$/, '')}K`;
-    return n.toLocaleString();
-  };
-
-  const hasProgress = appDhikrTotal > 0;
-  const hasCommunity = communityStats.allTimeTotal > 0;
+  const hasTotal = challengesTotal > 0;
+  const hasToday = todayDhikr > 0;
 
   return (
     <Link
@@ -1554,13 +1542,21 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
                 </span>
               </div>
 
-              {hasProgress ? (
+              {hasTotal || hasToday ? (
                 <p className="text-xs sm:text-sm text-emerald-600 dark:text-emerald-400 mt-1 font-medium">
-                  📿 {todayDhikr.toLocaleString()} {language === 'fr' ? "aujourd'hui" : 'today'}
-                  <span className="mx-1.5 opacity-40">·</span>
-                  {appDhikrTotal.toLocaleString()} {language === 'fr' ? 'total' : 'total'}
-                  {totalTarget > 0 && progressPercent > 0 && (
-                    <span className="text-emerald-500 dark:text-emerald-300 ml-1.5">({progressPercent}%)</span>
+                  {hasToday && (
+                    <>
+                      📿 {todayDhikr.toLocaleString()} {language === 'fr' ? "aujourd'hui" : 'today'}
+                      {hasTotal && <span className="mx-1.5 opacity-40">·</span>}
+                    </>
+                  )}
+                  {hasTotal && (
+                    <>
+                      {challengesTotal.toLocaleString()} {language === 'fr' ? 'total' : 'total'}
+                      {totalTarget > 0 && progressPercent > 0 && (
+                        <span className="text-emerald-500 dark:text-emerald-300 ml-1.5">({progressPercent}%)</span>
+                      )}
+                    </>
                   )}
                 </p>
               ) : (
@@ -1571,35 +1567,8 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
             </div>
           </div>
 
-          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-            {hasCommunity ? (
-              <div className="flex flex-col items-end leading-tight">
-                <span className="text-[10px] sm:text-xs text-teal-600 dark:text-teal-400 font-medium">
-                  🌍 {language === 'fr' ? 'Communauté' : 'Community'}
-                </span>
-                <span className="text-lg sm:text-xl font-bold text-teal-700 dark:text-teal-300 tabular-nums">
-                  {formatCompact(communityStats.allTimeTotal)}
-                </span>
-              </div>
-            ) : hasProgress ? (
-              <div className="flex flex-col items-end leading-tight">
-                <span className="text-xs text-emerald-600 dark:text-emerald-400 font-arabic" dir="rtl">ذِكْر</span>
-                <span className="text-lg sm:text-xl font-bold text-emerald-700 dark:text-emerald-300 tabular-nums">
-                  {formatCompact(appDhikrTotal)}
-                </span>
-              </div>
-            ) : (
-              <div className="flex flex-col items-end leading-tight">
-                <span className="text-xs text-emerald-600 dark:text-emerald-400">{state.challenges.length}</span>
-                <span className="text-[10px] sm:text-xs text-emerald-500 dark:text-emerald-400">
-                  {language === 'fr' ? 'défis' : 'challenges'}
-                </span>
-              </div>
-            )}
-
-            <div className="p-1.5 sm:p-2 hover:bg-emerald-200/50 dark:hover:bg-emerald-800/50 rounded-lg transition-colors">
-              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 dark:text-emerald-400" />
-            </div>
+          <div className="p-1.5 sm:p-2 hover:bg-emerald-200/50 dark:hover:bg-emerald-800/50 rounded-lg transition-colors flex-shrink-0">
+            <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 dark:text-emerald-400" />
           </div>
         </div>
       </div>
