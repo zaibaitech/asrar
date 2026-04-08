@@ -10,6 +10,7 @@ import { CompatibilityPanel } from './src/features/compatibility';
 import { IstikharaPanel } from './src/features/istikhara';
 import { PlanetOfTheDay, PlanetaryHourCard, PlanetTransitCard } from './src/components/planetary';
 import { useRamadanChallenges } from './src/features/ramadanChallenges';
+import { useCommunityDhikr } from './src/features/ramadanChallenges/communityDhikrService';
 import { analyzePatterns } from './src/features/ilm-huruf/patternRecognition';
 import { generateWafqAnalysis } from './src/features/ilm-huruf/wafqGenerator';
 import { calculateOptimalTimingWindows } from './src/features/ilm-huruf/talismanTiming';
@@ -1490,6 +1491,7 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
 
   // Get Zikr challenge stats
   const { getTotalTodayProgress, state } = useRamadanChallenges();
+  const communityStats = useCommunityDhikr();
 
   // Challenges-only totals — consistent with what challenge cards display
   const challengesTotal = state.challenges.reduce((sum, c) => sum + (c.totalProgress || 0), 0);
@@ -1567,8 +1569,24 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
             </div>
           </div>
 
-          <div className="p-1.5 sm:p-2 hover:bg-emerald-200/50 dark:hover:bg-emerald-800/50 rounded-lg transition-colors flex-shrink-0">
-            <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 dark:text-emerald-400" />
+          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+            {communityStats.allTimeTotal > 0 && (
+              <div className="flex flex-col items-end leading-tight">
+                <span className="text-[10px] sm:text-xs text-teal-600 dark:text-teal-400 font-medium">
+                  🌍 {language === 'fr' ? 'Communauté' : 'Community'}
+                </span>
+                <span className="text-lg sm:text-xl font-bold text-teal-700 dark:text-teal-300 tabular-nums">
+                  {communityStats.allTimeTotal >= 1_000_000
+                    ? `${(communityStats.allTimeTotal / 1_000_000).toFixed(1).replace(/\.0$/, '')}M`
+                    : communityStats.allTimeTotal >= 1_000
+                    ? `${(communityStats.allTimeTotal / 1_000).toFixed(1).replace(/\.0$/, '')}K`
+                    : communityStats.allTimeTotal.toLocaleString()}
+                </span>
+              </div>
+            )}
+            <div className="p-1.5 sm:p-2 hover:bg-emerald-200/50 dark:hover:bg-emerald-800/50 rounded-lg transition-colors">
+              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 dark:text-emerald-400" />
+            </div>
           </div>
         </div>
       </div>
