@@ -9,7 +9,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronRight, Flame } from 'lucide-react';
-import { getRamadanInfo, type RamadanInfo } from '@/src/lib/hijri';
 import { useRamadanChallenges, createIstighfarChallenge } from '../store';
 import { formatNumber } from '../utils';
 import { useCommunityDhikr } from '../communityDhikrService';
@@ -45,26 +44,23 @@ export function RamadanBannerMini({ language = 'en' }: RamadanBannerMiniProps) {
   const t = translations[language];
   const { state, addChallenge, getTotalTodayProgress, getTotalProgress } = useRamadanChallenges();
   const communityStats = useCommunityDhikr();
-  const [ramadanInfo, setRamadanInfo] = useState<RamadanInfo | null>(null);
   const [mounted, setMounted] = useState(false);
 
   // ─── Hydration safety ───
   useEffect(() => {
     setMounted(true);
-    setRamadanInfo(getRamadanInfo());
   }, []);
 
   // ─── Auto-create Istighfār challenge if no challenges exist ───
   useEffect(() => {
-    if (!ramadanInfo?.isRamadan || !state.isHydrated || state.challenges.length > 0) return;
-    
+    if (!state.isHydrated || state.challenges.length > 0) return;
+
     const config = createIstighfarChallenge();
     addChallenge('ISTIGHFAR', config);
-  }, [ramadanInfo?.isRamadan, state.isHydrated, state.challenges.length, addChallenge]);
+  }, [state.isHydrated, state.challenges.length, addChallenge]);
 
   // Don't render if not mounted or not hydrated
   if (!mounted || !state.isHydrated) return null;
-  if (!ramadanInfo?.isRamadan) return null;
 
   // ─── Computed values ───
   const totalTodayProgress = getTotalTodayProgress();

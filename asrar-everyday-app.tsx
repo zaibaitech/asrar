@@ -10,7 +10,6 @@ import { CompatibilityPanel } from './src/features/compatibility';
 import { IstikharaPanel } from './src/features/istikhara';
 import { PlanetOfTheDay, PlanetaryHourCard, PlanetTransitCard } from './src/components/planetary';
 import { useRamadanChallenges } from './src/features/ramadanChallenges';
-import { getRamadanInfo } from './src/lib/hijri';
 import { getTotalAppDhikr } from './src/lib/getTotalAppDhikr';
 import { useCommunityDhikr } from './src/features/ramadanChallenges/communityDhikrService';
 import { analyzePatterns } from './src/features/ilm-huruf/patternRecognition';
@@ -1459,11 +1458,6 @@ function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: b
 
   const hasProgress = appDhikrTotal > 0;
   const hasCommunity = communityStats.allTimeTotal > 0;
-  const isRamadanActive = getRamadanInfo().isRamadan;
-
-  if (!isRamadanActive) {
-    return null;
-  }
 
   return (
     <Link

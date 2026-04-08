@@ -1,16 +1,28 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { PLANETARY_ZIKR } from '@/src/lib/planetaryZikr';
 import { translations } from '@/src/lib/translations';
+import { TasbihCounter } from '@/src/features/ramadanChallenges/components/TasbihCounter';
+import { queueDhikrIncrement } from '@/src/features/ramadanChallenges/communityDhikrService';
 
 type Props = {
   planetKey: string;
   context?: string;
   showWhen?: 'always' | 'auspicious-only';
   isAuspicious?: boolean;
-  language?: string;
+  language?: 'en' | 'fr';
 };
+
+// Parse the first number from a count string like "66 or 594", "298", "1000×"
+function parseTargetCount(countStr: string): number {
+  const match = countStr.match(/\d+/);
+  return match ? parseInt(match[0], 10) : 33;
+}
+
+function getStorageKey(planetKey: string, zikrName: string): string {
+  return `planetary_zikr_${planetKey}_${zikrName}`;
+}
 
 export function ZikrPracticePanel({
   planetKey,
@@ -20,14 +32,42 @@ export function ZikrPracticePanel({
   language = 'en',
 }: Props) {
   const [isOpen, setIsOpen] = useState(false);
+  const [openTasbihIndex, setOpenTasbihIndex] = useState<number | null>(null);
+  const [counts, setCounts] = useState<Record<string, number>>({});
+
   const data = PLANETARY_ZIKR[planetKey?.toLowerCase()];
-  const isFrench = language.toLowerCase().startsWith('fr');
-  const t = translations[isFrench ? 'fr' : 'en'].planetary.zikr;
-  const sectionNote = isFrench ? data?.sectionNoteFr ?? data?.sectionNote : data?.sectionNote;
+  const t = translations[language].planetary.zikr;
+  const tTasbih = translations[language].tasbih;
+
+  // Load persisted counts from localStorage
+  useEffect(() => {
+    if (!data) return;
+    const loaded: Record<string, number> = {};
+    for (const entry of data.zikr) {
+      const key = getStorageKey(planetKey, entry.name);
+      const stored = localStorage.getItem(key);
+      if (stored) loaded[entry.name] = parseInt(stored, 10) || 0;
+    }
+    setCounts(loaded);
+  }, [data, planetKey]);
+
+  const handleTasbihComplete = useCallback((zikrName: string, count: number) => {
+    if (count <= 0) return;
+    const key = getStorageKey(planetKey, zikrName);
+    setCounts((prev) => {
+      const updated = { ...prev, [zikrName]: (prev[zikrName] || 0) + count };
+      localStorage.setItem(key, String(updated[zikrName]));
+      return updated;
+    });
+    queueDhikrIncrement(count, `planetary_${planetKey}_${zikrName}`);
+    setOpenTasbihIndex(null);
+  }, [planetKey]);
 
   if (!data) return null;
   if (data.zikr.length === 0) return null;
   if (showWhen === 'auspicious-only' && !isAuspicious) return null;
+
+  const openEntry = openTasbihIndex !== null ? data.zikr[openTasbihIndex] : null;
 
   return (
     <div className="zikr-panel" style={{ borderColor: data.color }}>
@@ -49,8 +89,8 @@ export function ZikrPracticePanel({
 
       {isOpen && (
         <div className="zikr-panel-body">
-          {sectionNote && (
-            <p className="zikr-section-note">{sectionNote}</p>
+          {(language === 'fr' ? data.sectionNoteFr : data.sectionNote) && (
+            <p className="zikr-section-note">{language === 'fr' ? data.sectionNoteFr : data.sectionNote}</p>
           )}
           <ul className="zikr-list">
             {data.zikr.map((entry, index) => (
@@ -64,14 +104,30 @@ export function ZikrPracticePanel({
                       </span>
                     )}
                   </div>
-                  {(isFrench ? entry.noteFr ?? entry.note : entry.note) && (
-                    <span className="zikr-badge">{isFrench ? entry.noteFr ?? entry.note : entry.note}</span>
+                  {(language === 'fr' ? entry.noteFr : entry.note) && (
+                    <span className="zikr-badge">{language === 'fr' ? entry.noteFr : entry.note}</span>
                   )}
                   <span className="zikr-count" style={{ color: data.color }}>
                     {entry.count}x
                   </span>
                 </div>
-                <p className="zikr-benefit">{isFrench ? entry.benefitFr ?? entry.benefit : entry.benefit}</p>
+                <p className="zikr-benefit">{language === 'fr' && entry.benefitFr ? entry.benefitFr : entry.benefit}</p>
+                <div className="zikr-tasbih-row">
+                  <button
+                    type="button"
+                    className="zikr-tasbih-btn"
+                    onClick={() => setOpenTasbihIndex(index)}
+                    style={{ borderColor: data.color, color: data.color }}
+                  >
+                    <span>📿</span>
+                    <span>{tTasbih.openTasbih}</span>
+                  </button>
+                  {(counts[entry.name] || 0) > 0 && (
+                    <span className="zikr-tasbih-total" style={{ color: data.color }}>
+                      {(counts[entry.name] || 0).toLocaleString()} {language === 'fr' ? 'total' : 'total'}
+                    </span>
+                  )}
+                </div>
               </li>
             ))}
           </ul>
@@ -79,6 +135,18 @@ export function ZikrPracticePanel({
             {t.footerNote}
           </p>
         </div>
+      )}
+
+      {openEntry && (
+        <TasbihCounter
+          isOpen={openTasbihIndex !== null}
+          onClose={() => setOpenTasbihIndex(null)}
+          onComplete={(count) => handleTasbihComplete(openEntry.name, count)}
+          arabicText={openEntry.arabicName || openEntry.name}
+          transliteration={openEntry.name}
+          targetCount={parseTargetCount(openEntry.count)}
+          language={language}
+        />
       )}
     </div>
   );

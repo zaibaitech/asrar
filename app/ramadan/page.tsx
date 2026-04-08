@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { cookies } from 'next/headers';
-import { redirect } from 'next/navigation';
 import { Suspense } from 'react';
 import { RamadanPage } from './RamadanPage';
 import { bilingualMeta, challengeMeta, getChallengeOGMeta } from '@/src/lib/seoConfig';
@@ -154,12 +153,6 @@ function RamadanLoading() {
 }
 
 export default function Page() {
-  const ramadanInfo = getRamadanInfo();
-
-  if (!ramadanInfo.isRamadan) {
-    redirect('/');
-  }
-
   return (
     <Suspense fallback={<RamadanLoading />}>
       <RamadanPage />
