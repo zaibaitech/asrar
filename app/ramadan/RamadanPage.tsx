@@ -17,13 +17,11 @@ import type { ChallengeType, SessionTag } from '@/src/features/ramadanChallenges
 import { formatNumber } from '@/src/features/ramadanChallenges/utils';
 import { ChallengeCard } from '@/src/features/ramadanChallenges/components/ChallengeCard';
 import { PropheticNamesCard } from '@/src/features/ramadanChallenges/components/PropheticNamesCard';
-import { CommunityBanner } from '@/src/features/ramadanChallenges/components/CommunityBanner';
 import { RecommenderBanner } from '@/src/features/ramadanChallenges/components/RecommenderBanner';
 import { AddChallengeModal, type AddChallengeModalStep } from '@/src/features/ramadanChallenges/components/AddChallengeModal';
 import { ChallengeSettingsModal } from '@/src/features/ramadanChallenges/components/ChallengeSettingsModal';
 import { BadgeGrid, BadgeCelebration } from '@/src/features/ramadanChallenges/components';
 import { ShareButton } from '@/src/features/ramadanChallenges/components/ShareButton';
-import { useCommunityDhikr } from '@/src/features/ramadanChallenges/communityDhikrService';
 import { getEarnedBadges, getNewlyEarnedBadges, type Badge } from '@/src/features/ramadanChallenges/badges';
 import { generateProgressShareText } from '@/src/features/ramadanChallenges/sharing';
 
@@ -81,9 +79,6 @@ export function RamadanPage() {
   const [previousChallenges, setPreviousChallenges] = useState(state.challenges);
   const [celebratingBadge, setCelebratingBadge] = useState<Badge | null>(null);
 
-  // Live community stats (must be before any early returns)
-  const communityStats = useCommunityDhikr();
-  
   // Track badge unlocks
   useEffect(() => {
     if (!state.isHydrated) return;
@@ -418,16 +413,6 @@ export function RamadanPage() {
             </div>
           )}
 
-          {/* Community banner — subtle bottom strip */}
-          {communityStats.todayTotal > 0 && (
-            <div className="px-4 py-2 bg-gradient-to-r from-teal-50/80 to-emerald-50/80 dark:from-teal-900/20 dark:to-emerald-900/20 border-t border-teal-100 dark:border-teal-800/30 flex items-center justify-center gap-2 text-xs">
-              <span className="text-teal-600 dark:text-teal-400">🌍</span>
-              <span className="font-bold text-teal-700 dark:text-teal-300 tabular-nums">{communityStats.todayTotal.toLocaleString()}</span>
-              <span className="text-teal-600/80 dark:text-teal-400/60">
-                {language === 'fr' ? "dhikr communautaires aujourd'hui" : 'community dhikr today'}
-              </span>
-            </div>
-          )}
         </div>
       </div>
 
