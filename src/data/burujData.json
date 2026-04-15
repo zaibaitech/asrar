@@ -2196,12 +2196,12 @@
       "spiritual_practice": {
         "practice_night": {
           "primary": {
-            "en": "Saturday",
-            "fr": "Samedi"
+            "en": "Wednesday",
+            "fr": "Mercredi"
           },
           "note": {
-            "en": "Saturday, OR Sunday midnight (Monday night)",
-            "fr": "Samedi, OU dimanche minuit (nuit de lundi)"
+            "en": "Wednesday during the day, OR Sunday night (Mercury's night)",
+            "fr": "Mercredi pendant la journée, OU dimanche soir (nuit de Mercure)"
           }
         },
         "zodiac_sign": {
@@ -2555,12 +2555,12 @@
       "spiritual_practice": {
         "practice_night": {
           "primary": {
-            "en": "Monday night",
-            "fr": "Lundi soir"
+            "en": "Tuesday night",
+            "fr": "Mardi soir"
           },
           "note": {
-            "en": "After Isha, when the air is still and receptive",
-            "fr": "Après l'Isha, quand l'air est calme et réceptif"
+            "en": "Friday during the day, OR Tuesday night (Venus's night), after Isha when the air is still and receptive",
+            "fr": "Vendredi pendant la journée, OU mardi soir (nuit de Vénus), après l'Isha quand l'air est calme et réceptif"
           }
         },
         "zodiac_sign": {
@@ -3992,12 +3992,12 @@
       "spiritual_practice": {
         "practice_night": {
           "primary": {
-            "en": "Sunday night",
-            "fr": "Dimanche soir"
+            "en": "Wednesday night",
+            "fr": "Mercredi soir"
           },
           "note": {
-            "en": "After Isha prayer",
-            "fr": "Après la prière de l'Isha"
+            "en": "Saturday during the day, OR Wednesday night (Saturn's night), after Isha prayer",
+            "fr": "Samedi pendant la journée, OU mercredi soir (nuit de Saturne), après la prière de l'Isha"
           }
         },
         "zodiac_sign": {
@@ -4372,12 +4372,12 @@
       "spiritual_practice": {
         "practice_night": {
           "primary": {
-            "en": "Saturday night",
-            "fr": "Samedi soir"
+            "en": "Monday night",
+            "fr": "Lundi soir"
           },
           "note": {
-            "en": "After Isha prayer, in the last third of night for deeper connection",
-            "fr": "Après la prière de l'Isha, dans le dernier tiers de la nuit pour connexion plus profonde"
+            "en": "Thursday during the day, OR Monday night (Jupiter's night), after Isha prayer in the last third of night for deeper connection",
+            "fr": "Jeudi pendant la journée, OU lundi soir (nuit de Jupiter), après la prière de l'Isha dans le dernier tiers de la nuit pour connexion plus profonde"
           }
         },
         "zodiac_sign": {
