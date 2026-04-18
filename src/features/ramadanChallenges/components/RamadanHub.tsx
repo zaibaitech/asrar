@@ -46,6 +46,7 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
   const [ramadanInfo, setRamadanInfo] = useState<RamadanInfo | null>(null);
   const [mounted, setMounted] = useState(false);
   const [editingChallenge, setEditingChallenge] = useState<string | null>(null);
+  const [planetaryToday, setPlanetaryToday] = useState(0);
   const searchParams = useSearchParams();
 
   // Track which challenge to auto-expand based on deep-link
@@ -55,6 +56,22 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
   useEffect(() => {
     setMounted(true);
     setRamadanInfo(getRamadanInfo());
+  }, []);
+
+  // ─── Planetary zikr today counter ───
+  useEffect(() => {
+    const readPlanetaryToday = () => {
+      try {
+        const stored = JSON.parse(localStorage.getItem('planetary_zikr_today') || '{}');
+        const today = new Date().toISOString().slice(0, 10);
+        setPlanetaryToday(stored.date === today ? (stored.count || 0) : 0);
+      } catch {
+        setPlanetaryToday(0);
+      }
+    };
+    readPlanetaryToday();
+    window.addEventListener('planetaryZikrUpdate', readPlanetaryToday);
+    return () => window.removeEventListener('planetaryZikrUpdate', readPlanetaryToday);
   }, []);
 
   // ─── Deep-link handling: Show intro modal from shared link ───
@@ -223,7 +240,7 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
                     ? (state.challenges.length === 1 ? 'défi actif' : 'défis actifs')
                     : (state.challenges.length === 1 ? 'challenge' : 'challenges')
                   }
-                  {' · '}{language === 'fr' ? "Aujourd'hui:" : 'Today:'} {formatNumber(totalTodayProgress)}
+                  {' · '}{language === 'fr' ? "Aujourd'hui:" : 'Today:'} {formatNumber(totalTodayProgress + planetaryToday)}
                   {totalRamadanTarget > 0 && (
                     <span className="text-emerald-500 dark:text-emerald-500">
                       {' · '}{totalRamadanTarget > 0 ? Math.round((totalRamadanProgress / totalRamadanTarget) * 100) : 0}%

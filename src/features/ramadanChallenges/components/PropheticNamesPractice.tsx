@@ -11,7 +11,7 @@
 
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { 
   X, 
   ChevronRight, 
@@ -58,14 +58,29 @@ export function PropheticNamesPractice({
   const [showTranslation, setShowTranslation] = useState(true);
   const namesContainerRef = useRef<HTMLDivElement>(null);
 
-  // Reset on open
+  const jamiuStorageKey = `prophetic_names_jamiu_day_${day}`;
+
+  const saveJamiuProgress = useCallback((count: number) => {
+    try { localStorage.setItem(jamiuStorageKey, String(count)); } catch {}
+  }, [jamiuStorageKey]);
+
+  const clearJamiuProgress = useCallback(() => {
+    try { localStorage.removeItem(jamiuStorageKey); } catch {}
+  }, [jamiuStorageKey]);
+
+  // Restore or reset on open
   useEffect(() => {
     if (isOpen) {
       setStep('INTRO');
-      setJamiuCount(0);
       setCurrentNameIndex(0);
+      try {
+        const saved = localStorage.getItem(`prophetic_names_jamiu_day_${day}`);
+        setJamiuCount(saved ? Math.min(parseInt(saved, 10) || 0, YA_JAMIU.count) : 0);
+      } catch {
+        setJamiuCount(0);
+      }
     }
-  }, [isOpen]);
+  }, [isOpen, day]);
 
   // Scroll to current name
   useEffect(() => {
@@ -96,14 +111,19 @@ export function PropheticNamesPractice({
     }
   };
 
-  // Increment Jamiu counter
+  // Increment Jamiu counter — persist each tap so closing mid-session doesn't lose progress
   const incrementJamiu = (amount: number = 1) => {
-    setJamiuCount(prev => Math.min(prev + amount, YA_JAMIU.count));
+    setJamiuCount(prev => {
+      const next = Math.min(prev + amount, YA_JAMIU.count);
+      saveJamiuProgress(next);
+      return next;
+    });
   };
 
   // Reset Jamiu counter
   const resetJamiu = () => {
     setJamiuCount(0);
+    clearJamiuProgress();
   };
 
   // Navigate names
@@ -126,6 +146,7 @@ export function PropheticNamesPractice({
         setStep('YA_JAMIU');
         break;
       case 'YA_JAMIU':
+        clearJamiuProgress();
         setStep('NAMES');
         break;
       case 'NAMES':

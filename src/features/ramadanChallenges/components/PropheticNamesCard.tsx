@@ -27,9 +27,10 @@ import {
   Repeat
 } from 'lucide-react';
 import type { Challenge, SessionTag } from '../types';
-import { RIZQ_PRACTICE_INFO } from '../propheticNames201';
+import { RIZQ_PRACTICE_INFO, PROPHETIC_NAMES_201, YA_JAMIU } from '../propheticNames201';
 import { PropheticNamesPractice } from './PropheticNamesPractice';
 import { translations } from '@/src/lib/translations';
+import { queueDhikrIncrement } from '../communityDhikrService';
 
 // ─── Types ───────────────────────────────────────────────────────────────────────
 
@@ -238,6 +239,7 @@ export function PropheticNamesCard({
     storeContinueState(challenge.id, newState);
     const sessionTag: SessionTag = 'Ḍuḥā / Morning';
     onLogSession(challenge.id, 1, sessionTag);
+    queueDhikrIncrement(YA_JAMIU.count + PROPHETIC_NAMES_201.length, 'prophetic_names');
     setShowPractice(false);
   };
 
@@ -268,6 +270,7 @@ export function PropheticNamesCard({
     if (session && !session.completed) {
       const sessionTag: SessionTag = 'Ḍuḥā / Morning';
       onLogSession(challenge.id, 1, sessionTag);
+      queueDhikrIncrement(YA_JAMIU.count + PROPHETIC_NAMES_201.length, 'prophetic_names');
     }
   };
 

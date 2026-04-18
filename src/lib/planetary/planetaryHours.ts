@@ -165,9 +165,9 @@ export function calculatePlanetaryHours(
     isDaytime,
   };
   
-  // Calculate next hour
+  // Next planet is always the next step in the Chaldean sequence from the current one
   const nextHourNumber = (currentHourNumber + 1) % 24;
-  const nextPlanet = getPlanetForHour(dayRuler, nextHourNumber);
+  const nextPlanet = getNextPlanet(currentPlanet);
   const nextIsDaytime = nextHourNumber < 12;
   
   let nextStartTime: Date;
@@ -194,7 +194,7 @@ export function calculatePlanetaryHours(
   
   // Calculate after next hour
   const afterNextHourNumber = (nextHourNumber + 1) % 24;
-  const afterNextPlanet = getPlanetForHour(dayRuler, afterNextHourNumber);
+  const afterNextPlanet = getNextPlanet(nextPlanet);
   const afterNextIsDaytime = afterNextHourNumber < 12;
   
   let afterNextStartTime: Date;

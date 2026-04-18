@@ -102,8 +102,8 @@ export function ZikrPracticePanel({
 
       {isOpen && (
         <div className="zikr-panel-body">
-          {(language === 'fr' ? data.sectionNoteFr : data.sectionNote) && (
-            <p className="zikr-section-note">{language === 'fr' ? data.sectionNoteFr : data.sectionNote}</p>
+          {data.sectionNote && (
+            <p className="zikr-section-note">{data.sectionNote}</p>
           )}
           <ul className="zikr-list">
             {data.zikr.map((entry, index) => (
@@ -117,14 +117,12 @@ export function ZikrPracticePanel({
                       </span>
                     )}
                   </div>
-                  {(language === 'fr' ? entry.noteFr : entry.note) && (
-                    <span className="zikr-badge">{language === 'fr' ? entry.noteFr : entry.note}</span>
-                  )}
+                  {entry.note && <span className="zikr-badge">{entry.note}</span>}
                   <span className="zikr-count" style={{ color: data.color }}>
                     {entry.count}x
                   </span>
                 </div>
-                <p className="zikr-benefit">{language === 'fr' && entry.benefitFr ? entry.benefitFr : entry.benefit}</p>
+                <p className="zikr-benefit">{entry.benefit}</p>
                 <div className="zikr-tasbih-row">
                   <button
                     type="button"
@@ -137,7 +135,7 @@ export function ZikrPracticePanel({
                   </button>
                   {(counts[entry.name] || 0) > 0 && (
                     <span className="zikr-tasbih-total" style={{ color: data.color }}>
-                      {(counts[entry.name] || 0).toLocaleString()} {language === 'fr' ? 'total' : 'total'}
+                      {(counts[entry.name] || 0).toLocaleString()} total
                     </span>
                   )}
                 </div>
