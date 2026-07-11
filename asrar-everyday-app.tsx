@@ -28,6 +28,11 @@ import { findVersesByValue, getExactVerseMatch, type QuranicVerse } from './src/
 import { findDivineNameByValue, findSimilarDivineNames, type DivineName } from './src/data/divine-names';
 import AsrarLogo from './src/components/AsrarLogo';
 import { useAuth } from './src/contexts/AuthContext';
+import { CalculatorDisclaimerBanner } from './src/components/CalculatorDisclaimerBanner';
+import { GetTheAppBanner } from './src/components/GetTheAppBanner';
+import { ConfidenceMeter } from './src/components/ConfidenceMeter';
+import { TaMarbutaToggle } from './src/components/TaMarbutaToggle';
+import { DailyReflectionCard } from './src/components/DailyReflectionCard';
 
 // ============================================================================
 // DOMAIN RULES & CORE DATA
@@ -161,14 +166,6 @@ function abjadSum(text: string, abjadMap: Record<string, number>): number {
     return [...normalized].reduce((sum, char) => sum + (abjadMap[char] || 0), 0);
   }
 
-function digitalRoot(n: number): number {
-    return calcDigitalRoot(n);
-  }
-
-function hadathRemainder(n: number): 0 | 1 | 2 | 3 {
-    return calcHadathRemainder(n);
-  }
-
 // Advanced Calculation Methods
 function calculateWusta(n: number): number {
     const saghir = calcDigitalRoot(n);
@@ -201,255 +198,6 @@ function findSacredMatches(kabir: number) {
         confidence: s.num === kabir ? 'exact' as const : 'close' as const
       }));
   }
-
-function DisclaimerBanner({ onDismiss }: { onDismiss: () => void }) {
-    const { t } = useLanguage();
-
-    useEffect(() => {
-      const dismissedTime = localStorage.getItem('disclaimerDismissedAt');
-      if (dismissedTime) {
-        const hoursSinceDismissed = (Date.now() - Number.parseInt(dismissedTime)) / (1000 * 60 * 60);
-        if (hoursSinceDismissed < 24) {
-          onDismiss();
-        }
-      }
-    }, [onDismiss]);
-
-    const handleDismiss = () => {
-      localStorage.setItem('disclaimerDismissedAt', Date.now().toString());
-      onDismiss();
-    };
-
-    return (
-      <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-3 mb-2">
-        <div className="flex items-start gap-2">
-          <Info className="w-4 h-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
-          <div className="flex-1 min-w-0">
-            <p className="text-xs text-amber-900 dark:text-amber-100">
-              <strong>{t.disclaimer.title}</strong> {t.disclaimer.message}
-            </p>
-          </div>
-          <button
-            onClick={handleDismiss}
-            className="text-amber-600 dark:text-amber-400 hover:text-amber-800 dark:hover:text-amber-200 flex-shrink-0 p-1 rounded hover:bg-amber-100 dark:hover:bg-amber-900/40 transition-colors"
-            aria-label="Dismiss"
-          >
-            <X className="w-4 h-4" />
-          </button>
-        </div>
-      </div>
-    );
-  }
-
-function GetTheAppBanner() {
-    const { language } = useLanguage();
-    const [visible, setVisible] = useState(false);
-    const [isIOS, setIsIOS] = useState(false);
-
-    useEffect(() => {
-      // Don't show if already installed (running as standalone PWA)
-      const isStandalone =
-        ('standalone' in navigator && (navigator as { standalone?: boolean }).standalone === true) ||
-        window.matchMedia('(display-mode: standalone)').matches;
-      if (isStandalone) return;
-
-      const dismissed = sessionStorage.getItem('getAppBannerDismissed');
-      if (dismissed) return;
-
-      const ua = navigator.userAgent;
-      const isiOS = /iPad|iPhone|iPod/.test(ua) && !/MSStream/.test(ua);
-      setIsIOS(isiOS);
-      setVisible(true);
-    }, []);
-
-    const handleDismiss = () => {
-      sessionStorage.setItem('getAppBannerDismissed', '1');
-      setVisible(false);
-    };
-
-    if (!visible) return null;
-
-    // ── iOS Safari: show "Add to Home Screen" instructions ──
-    if (isIOS) {
-      const headline = language === 'fr'
-        ? 'Installer Asrār sur iPhone'
-        : 'Install Asrār on your iPhone';
-      const instruction = language === 'fr'
-        ? 'Appuyez sur'
-        : 'Tap';
-      const instruction2 = language === 'fr'
-        ? 'puis « Sur l\'écran d\'accueil »'
-        : 'then "Add to Home Screen"';
-
-      return (
-        <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-amber-400/30 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 shadow-2xl">
-          <div className="h-0.5 w-full bg-gradient-to-r from-transparent via-amber-400 to-transparent" />
-          <div className="max-w-6xl mx-auto px-4 py-3 flex items-center gap-3">
-            <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-indigo-800/60 border border-amber-400/20 flex items-center justify-center text-xl shadow-inner">
-              ✨
-            </div>
-            <div className="flex-1 min-w-0">
-              <p className="text-xs sm:text-sm font-bold text-amber-300 leading-tight">{headline}</p>
-              <p className="text-[11px] text-slate-300 mt-0.5 leading-snug flex items-center gap-1 flex-wrap">
-                <span>{instruction}</span>
-                {/* iOS Share icon */}
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" className="inline w-4 h-4 fill-amber-300 flex-shrink-0">
-                  <path d="M30.3 13.7L25 8.4l-5.3 5.3-1.4-1.4L25 5.6l6.7 6.7z"/>
-                  <path d="M24 7h2v21h-2z"/>
-                  <path d="M35 40H15c-1.7 0-3-1.3-3-3V19c0-1.7 1.3-3 3-3h7v2h-7c-.6 0-1 .4-1 1v18c0 .6.4 1 1 1h20c.6 0 1-.4 1-1V19c0-.6-.4-1-1-1h-7v-2h7c1.7 0 3 1.3 3 3v18c0 1.7-1.3 3-3 3z"/>
-                </svg>
-                <span>{instruction2}</span>
-              </p>
-            </div>
-            <button
-              onClick={handleDismiss}
-              className="flex-shrink-0 p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
-              aria-label="Dismiss"
-            >
-              <X className="w-4 h-4" />
-            </button>
-          </div>
-          {/* Arrow pointing to Safari bottom bar */}
-          <div className="flex justify-center pb-1">
-            <div className="w-3 h-3 border-b-2 border-r-2 border-amber-400/50 rotate-45 translate-y-[-2px]" />
-          </div>
-        </div>
-      );
-    }
-
-    // ── Android / desktop: show Google Play badge ──
-    const playUrl = 'https://play.google.com/store/apps/details?id=com.zaibaitech.asrariya';
-    const badgeSrc = language === 'fr'
-      ? 'https://play.google.com/intl/fr_fr/badges/static/images/badges/fr_badge_web_generic.png'
-      : 'https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png';
-    const headline = language === 'fr'
-      ? 'Téléchargez Asrāriya sur Android'
-      : 'Get the full experience — Download Asrāriya';
-    const sub = language === 'fr'
-      ? 'Guidance spirituelle personnalisée · Dhikr · Abjad · Heures planétaires'
-      : 'Personalised spiritual guidance · Dhikr · Abjad · Planetary Hours';
-
-    return (
-      <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-amber-400/30 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 shadow-2xl">
-        <div className="h-0.5 w-full bg-gradient-to-r from-transparent via-amber-400 to-transparent" />
-        <div className="max-w-6xl mx-auto px-4 py-2.5 sm:px-5 sm:py-3 flex items-center gap-3">
-          <div className="flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-indigo-800/60 border border-amber-400/20 flex items-center justify-center text-xl sm:text-2xl shadow-inner">
-            ✨
-          </div>
-          <div className="flex-1 min-w-0">
-            <p className="text-xs sm:text-sm font-bold text-amber-300 leading-tight">{headline}</p>
-            <p className="text-[11px] text-slate-400 mt-0.5 leading-snug hidden sm:block">{sub}</p>
-          </div>
-          <a
-            href={playUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-shrink-0"
-            aria-label="Get it on Google Play"
-          >
-            <img
-              src={badgeSrc}
-              alt="Get it on Google Play"
-              className="h-9 sm:h-10 w-auto"
-            />
-          </a>
-          <button
-            onClick={handleDismiss}
-            className="flex-shrink-0 p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
-            aria-label="Dismiss"
-          >
-            <X className="w-4 h-4" />
-          </button>
-        </div>
-      </div>
-    );
-  }
-
-function ConfidenceMeter({ confidence, warnings }: { confidence: number; warnings: string[] }) {
-  const color = confidence >= 80 ? 'green' : confidence >= 60 ? 'yellow' : 'red';
-  const colorClasses = {
-    green: 'bg-green-500 text-green-900 border-green-200',
-    yellow: 'bg-yellow-500 text-yellow-900 border-yellow-200',
-    red: 'bg-red-500 text-red-900 border-red-200'
-  };
-  
-  return (
-    <div className={`rounded-lg p-3 border ${
-      color === 'green' ? 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800' :
-      color === 'yellow' ? 'bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800' :
-      'bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800'
-    }`}>
-      <div className="flex items-center gap-2 mb-2">
-        {color === 'yellow' || color === 'red' ? (
-          <AlertTriangle className={`w-4 h-4 ${color === 'yellow' ? 'text-yellow-600' : 'text-red-600'}`} />
-        ) : (
-          <CheckCircle className="w-4 h-4 text-green-600" />
-        )}
-        <span className={`text-sm font-medium ${
-          color === 'green' ? 'text-green-900 dark:text-green-100' :
-          color === 'yellow' ? 'text-yellow-900 dark:text-yellow-100' :
-          'text-red-900 dark:text-red-100'
-        }`}>
-          Transliteration Confidence: {confidence}%
-        </span>
-      </div>
-      
-      {confidence < 80 && (
-        <div className={`text-xs ${
-          color === 'yellow' ? 'text-yellow-800 dark:text-yellow-200' : 'text-red-800 dark:text-red-200'
-        }`}>
-          {warnings.length > 0 ? (
-            <div>
-              {warnings.map((w, i) => (
-                <div key={i}>• {w}</div>
-              ))}
-            </div>
-          ) : (
-            <div>Please verify the Arabic spelling before calculating.</div>
-          )}
-        </div>
-      )}
-    </div>
-  );
-}
-
-function TaMarbutaToggle({ value, onChange }: { value: 'ه' | 'ة'; onChange: (v: 'ه' | 'ة') => void }) {
-  return (
-    <div className="flex items-center gap-2 text-sm">
-      <label className="text-slate-600 dark:text-slate-400">Tāʾ Marbūṭa:</label>
-      <div className="flex bg-slate-100 dark:bg-slate-700 rounded-lg p-1">
-        <button
-          onClick={() => onChange('ه')}
-          className={`px-3 py-1 rounded transition-colors ${
-            value === 'ه'
-              ? 'bg-white dark:bg-slate-600 shadow-sm'
-              : 'hover:bg-slate-200 dark:hover:bg-slate-600'
-          }`}
-          title="Maghrib practice (default)"
-        >
-          <span className="font-arabic text-lg">ه</span>
-        </button>
-        <button
-          onClick={() => onChange('ة')}
-          className={`px-3 py-1 rounded transition-colors ${
-            value === 'ة'
-              ? 'bg-white dark:bg-slate-600 shadow-sm'
-              : 'hover:bg-slate-200 dark:hover:bg-slate-600'
-          }`}
-          title="Mashreq practice"
-        >
-          <span className="font-arabic text-lg">ة</span>
-        </button>
-      </div>
-      <div 
-        title="Choose how tāʾ marbūṭa is counted: ه (hāʾ=5, Maghrib) or ة (tāʾ=400, Mashreq)"
-        className="flex items-center"
-      >
-        <Info className="w-4 h-4 text-slate-400 cursor-help" />
-      </div>
-    </div>
-  );
-}
 
 function SuggestionSection({ element }: { element: ElementType }) {
   const { t } = useLanguage();
@@ -870,8 +618,8 @@ function BatchCalculator({ onClose, abjad, analyzeElements }: {
     const batchResults = lines.map((line, index) => {
       const trimmed = line.trim();
       const kabir = abjadSum(trimmed, abjad);
-      const saghir = digitalRoot(kabir);
-      const hadathRem = hadathRemainder(kabir);
+      const saghir = calcDigitalRoot(kabir);
+      const hadathRem = calcHadathRemainder(kabir);
       const hadathElement = hadathToElement(hadathRem);
       const elementAnalysis = analyzeElements(trimmed);
       
@@ -1114,8 +862,8 @@ function ComparisonMode({ onClose, abjad, analyzeElements }: {
       display: name1 || input1,
       arabic: input1,
       kabir: abjadSum(input1, abjad),
-      saghir: digitalRoot(abjadSum(input1, abjad)),
-      hadathElement: hadathToElement(hadathRemainder(abjadSum(input1, abjad))),
+      saghir: calcDigitalRoot(abjadSum(input1, abjad)),
+      hadathElement: hadathToElement(calcHadathRemainder(abjadSum(input1, abjad))),
       ...analyzeElements(input1)
     };
     
@@ -1123,8 +871,8 @@ function ComparisonMode({ onClose, abjad, analyzeElements }: {
       display: name2 || input2,
       arabic: input2,
       kabir: abjadSum(input2, abjad),
-      saghir: digitalRoot(abjadSum(input2, abjad)),
-      hadathElement: hadathToElement(hadathRemainder(abjadSum(input2, abjad))),
+      saghir: calcDigitalRoot(abjadSum(input2, abjad)),
+      hadathElement: hadathToElement(calcHadathRemainder(abjadSum(input2, abjad))),
       ...analyzeElements(input2)
     };
     
@@ -1355,8 +1103,8 @@ function ComparisonMode({ onClose, abjad, analyzeElements }: {
                 <h4 className="font-semibold mb-3 text-violet-900 dark:text-violet-100">Combined Values</h4>
                 {(() => {
                   const combinedKabir = comparison.calc1.kabir + comparison.calc2.kabir;
-                  const combinedSaghir = digitalRoot(combinedKabir);
-                  const combinedHadath = hadathToElement(hadathRemainder(combinedKabir));
+                  const combinedSaghir = calcDigitalRoot(combinedKabir);
+                  const combinedHadath = hadathToElement(calcHadathRemainder(combinedKabir));
                   
                   return (
                     <div className="grid grid-cols-2 gap-3">
@@ -1429,168 +1177,6 @@ function ComparisonMode({ onClose, abjad, analyzeElements }: {
         </div>
       </div>
     </div>
-  );
-}
-
-// ─── Rotating Dhikr Preview for Header ────────────────────────────────────────────
-
-// Standard dhikr options to rotate through (shows variety even with 1 active challenge)
-const PREVIEW_DHIKR = [
-  { arabicText: 'أَسْتَغْفِرُ اللهَ', label: 'Istighfār' },
-  { arabicText: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّد', label: 'Ṣalawāt' },
-  { arabicText: 'يَا رَحْمَٰنُ', label: 'Divine Name' },
-  { arabicText: 'سُبْحَانَ اللهِ', label: 'Tasbīḥ' },
-];
-
-function RotatingDhikrPreview({ className }: { className?: string }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsVisible(false);
-      setTimeout(() => {
-        setCurrentIndex((prev) => (prev + 1) % PREVIEW_DHIKR.length);
-        setIsVisible(true);
-      }, 300);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const current = PREVIEW_DHIKR[currentIndex];
-  
-  return (
-    <div className={`flex flex-col items-end gap-1 ${className || ''}`}>
-      <p 
-        className={`text-base sm:text-lg font-arabic text-amber-800 dark:text-amber-200 transition-opacity duration-300 ${
-          isVisible ? 'opacity-100' : 'opacity-0'
-        }`}
-        dir="rtl"
-      >
-        {current.arabicText}
-      </p>
-      <div className="flex gap-1">
-        {PREVIEW_DHIKR.map((_, idx) => (
-          <span
-            key={idx}
-            className={`w-1.5 h-1.5 rounded-full transition-colors duration-300 ${
-              idx === currentIndex
-                ? 'bg-amber-600 dark:bg-amber-400'
-                : 'bg-amber-300 dark:bg-amber-700'
-            }`}
-          />
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: boolean; onToggleCollapse: () => void }) {
-  const { language } = useLanguage();
-
-  // Get Zikr challenge stats
-  const { getTotalTodayProgress, state } = useRamadanChallenges();
-  const communityStats = useCommunityDhikr();
-
-  // Challenges-only totals — consistent with what challenge cards display
-  const challengesTotal = state.challenges.reduce((sum, c) => sum + (c.totalProgress || 0), 0);
-  const totalTarget = state.challenges.reduce((sum, c) => sum + (c.totalTarget || 0), 0);
-  const progressPercent = totalTarget > 0 ? Math.round((challengesTotal / totalTarget) * 100) : 0;
-
-  // Today = challenges today + planetary zikr tasbih done today
-  const [todayDhikr, setTodayDhikr] = useState(0);
-  useEffect(() => {
-    const refresh = () => {
-      const challengesToday = getTotalTodayProgress();
-      let planetaryToday = 0;
-      try {
-        const stored = JSON.parse(localStorage.getItem('planetary_zikr_today') || '{}');
-        const today = new Date().toISOString().slice(0, 10);
-        if (stored.date === today) planetaryToday = stored.count || 0;
-      } catch { /* ignore */ }
-      setTodayDhikr(challengesToday + planetaryToday);
-    };
-    refresh();
-    window.addEventListener('planetaryZikrUpdate', refresh);
-    return () => window.removeEventListener('planetaryZikrUpdate', refresh);
-  }, [state.challenges, getTotalTodayProgress]);
-
-
-  const hasTotal = challengesTotal > 0;
-  const hasToday = todayDhikr > 0;
-
-  return (
-    <Link
-      href="/ramadan"
-      prefetch
-      className="block bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/40 dark:to-teal-950/30 rounded-xl border border-emerald-200 dark:border-emerald-700/50 overflow-hidden transition-all duration-300 hover:bg-emerald-100/40 dark:hover:bg-emerald-900/20 shadow-sm"
-    >
-      <div className="px-4 py-3.5 sm:px-5 sm:py-4">
-        <div className="flex items-center justify-between gap-3">
-          <div className="flex items-center gap-2.5 sm:gap-3 flex-1 min-w-0">
-            <div className="relative flex-shrink-0">
-              <div className="absolute inset-0 bg-emerald-400 rounded-full opacity-60 animate-pulse" style={{ width: '28px', height: '28px' }}></div>
-              <span className="relative z-10 text-xl sm:text-2xl">📿</span>
-            </div>
-
-            <div className="flex-1 min-w-0">
-              <div className="flex items-center gap-2 flex-wrap">
-                <h3 className="text-sm sm:text-base font-bold text-emerald-900 dark:text-emerald-100 leading-tight">
-                  {language === 'fr' ? 'Défi de Zikr' : 'Zikr Challenge'}
-                </h3>
-                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-medium bg-emerald-600 text-white font-arabic">
-                  ذِكْر
-                </span>
-              </div>
-
-              {hasTotal || hasToday ? (
-                <p className="text-xs sm:text-sm text-emerald-600 dark:text-emerald-400 mt-1 font-medium">
-                  {hasToday && (
-                    <>
-                      📿 {todayDhikr.toLocaleString()} {language === 'fr' ? "aujourd'hui" : 'today'}
-                      {hasTotal && <span className="mx-1.5 opacity-40">·</span>}
-                    </>
-                  )}
-                  {hasTotal && (
-                    <>
-                      {challengesTotal.toLocaleString()} {language === 'fr' ? 'total' : 'total'}
-                      {totalTarget > 0 && progressPercent > 0 && (
-                        <span className="text-emerald-500 dark:text-emerald-300 ml-1.5">({progressPercent}%)</span>
-                      )}
-                    </>
-                  )}
-                </p>
-              ) : (
-                <p className="text-xs sm:text-sm mt-1 font-medium text-emerald-600 dark:text-emerald-300">
-                  ✨ {language === 'fr' ? 'Commence ton zikr quotidien !' : 'Start your daily zikr!'}
-                </p>
-              )}
-            </div>
-          </div>
-
-          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-            {communityStats.allTimeTotal > 0 && (
-              <div className="flex flex-col items-end leading-tight">
-                <span className="text-[10px] sm:text-xs text-teal-600 dark:text-teal-400 font-medium">
-                  🌍 {language === 'fr' ? 'Communauté' : 'Community'}
-                </span>
-                <span className="text-lg sm:text-xl font-bold text-teal-700 dark:text-teal-300 tabular-nums">
-                  {communityStats.allTimeTotal >= 1_000_000
-                    ? `${(communityStats.allTimeTotal / 1_000_000).toFixed(1).replace(/\.0$/, '')}M`
-                    : communityStats.allTimeTotal >= 1_000
-                    ? `${(communityStats.allTimeTotal / 1_000).toFixed(1).replace(/\.0$/, '')}K`
-                    : communityStats.allTimeTotal.toLocaleString()}
-                </span>
-              </div>
-            )}
-            <div className="p-1.5 sm:p-2 hover:bg-emerald-200/50 dark:hover:bg-emerald-800/50 rounded-lg transition-colors">
-              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 dark:text-emerald-400" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </Link>
   );
 }
 
@@ -2156,7 +1742,7 @@ export default function AsrarEveryday() {
         {/* Main Content */}
         <main className="w-full mx-auto px-3 sm:px-4 py-2 sm:py-8">
           <div className="max-w-6xl mx-auto">
-            {showDisclaimer && <DisclaimerBanner onDismiss={() => setShowDisclaimer(false)} />}
+            {showDisclaimer && <CalculatorDisclaimerBanner onDismiss={() => setShowDisclaimer(false)} />}
             
             {/* Daily Reflection - Prominent Banner */}
             <div className="mb-2 sm:mb-8">
