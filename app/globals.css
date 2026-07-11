@@ -259,3 +259,51 @@ body {
   text-align: center;
   font-style: italic;
 }
+
+.zikr-tasbih-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.zikr-tasbih-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 1.5px solid;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.dark .zikr-tasbih-btn {
+  background: rgba(15, 23, 42, 0.4);
+}
+
+.zikr-tasbih-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.dark .zikr-tasbih-btn:hover {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+.zikr-tasbih-btn:active {
+  transform: scale(0.97);
+}
+
+.zikr-tasbih-total {
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
