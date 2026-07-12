@@ -10,19 +10,19 @@
 
 import umalqura from '@umalqura/core';
 
-export const HIJRI_MONTH_NAMES: { en: string; fr: string; ar: string }[] = [
-  { en: 'Muharram', fr: 'Mouharram', ar: 'محرم' },
-  { en: 'Safar', fr: 'Safar', ar: 'صفر' },
-  { en: "Rabi' al-Awwal", fr: 'Rabi al-Awwal', ar: 'ربيع الأول' },
-  { en: "Rabi' al-Thani", fr: 'Rabi al-Thani', ar: 'ربيع الثاني' },
-  { en: 'Jumada al-Awwal', fr: 'Joumada al-Awwal', ar: 'جمادى الأولى' },
-  { en: 'Jumada al-Thani', fr: 'Joumada al-Thani', ar: 'جمادى الآخرة' },
-  { en: 'Rajab', fr: 'Rajab', ar: 'رجب' },
-  { en: "Sha'ban", fr: 'Chaabane', ar: 'شعبان' },
-  { en: 'Ramadan', fr: 'Ramadan', ar: 'رمضان' },
-  { en: 'Shawwal', fr: 'Chawwal', ar: 'شوال' },
-  { en: "Dhu al-Qi'dah", fr: 'Dhou al-Qi`dah', ar: 'ذو القعدة' },
-  { en: 'Dhu al-Hijjah', fr: 'Dhou al-Hijjah', ar: 'ذو الحجة' },
+export const HIJRI_MONTH_NAMES: { en: string; fr: string; ar: string; wolof: string }[] = [
+  { en: 'Muharram', fr: 'Mouharram', ar: 'محرم', wolof: 'Tamxarit' },
+  { en: 'Safar', fr: 'Safar', ar: 'صفر', wolof: 'Diggi' },
+  { en: "Rabi' al-Awwal", fr: 'Rabi al-Awwal', ar: 'ربيع الأول', wolof: 'Gàmmu' },
+  { en: "Rabi' al-Thani", fr: 'Rabi al-Thani', ar: 'ربيع الثاني', wolof: 'Rakki Gàmmu' },
+  { en: 'Jumada al-Awwal', fr: 'Joumada al-Awwal', ar: 'جمادى الأولى', wolof: 'Rakkaati Gàmmu' },
+  { en: 'Jumada al-Thani', fr: 'Joumada al-Thani', ar: 'جمادى الآخرة', wolof: 'Maami Koor' },
+  { en: 'Rajab', fr: 'Rajab', ar: 'رجب', wolof: 'Ndeyi Koor' },
+  { en: "Sha'ban", fr: 'Chaabane', ar: 'شعبان', wolof: 'Baraxlu' },
+  { en: 'Ramadan', fr: 'Ramadan', ar: 'رمضان', wolof: 'Koor' },
+  { en: 'Shawwal', fr: 'Chawwal', ar: 'شوال', wolof: 'Kori' },
+  { en: "Dhu al-Qi'dah", fr: 'Dhou al-Qi`dah', ar: 'ذو القعدة', wolof: 'Diggi' },
+  { en: 'Dhu al-Hijjah', fr: 'Dhou al-Hijjah', ar: 'ذو الحجة', wolof: 'Tabaski' },
 ];
 
 export interface HijriDate {
@@ -32,7 +32,7 @@ export interface HijriDate {
   /** 1-30 */
   day: number;
   daysInMonth: number;
-  monthName: { en: string; fr: string; ar: string };
+  monthName: { en: string; fr: string; ar: string; wolof: string };
 }
 
 export function gregorianToHijri(date: Date): HijriDate {

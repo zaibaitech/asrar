@@ -77,7 +77,7 @@ export function CheckDateView({ language, location }: { language: UiLang; locati
             <TierBadge tierInfo={result.tierInfo} language={language} score={result.score} />
             {hijri && (
               <span className="text-xs text-slate-500 dark:text-slate-400">
-                {c.hijriDate}: {hijri.day} {hijri.monthName[language]} {hijri.year} {c.hijriEra}
+                {c.hijriDate}: {hijri.day} {hijri.monthName[language]} ({hijri.monthName.wolof}) {hijri.year} {c.hijriEra}
               </span>
             )}
           </div>

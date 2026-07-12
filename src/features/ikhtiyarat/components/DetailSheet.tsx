@@ -36,7 +36,7 @@ export function DetailSheet({ result, language, onClose }: DetailSheetProps) {
               {result.date.toLocaleDateString(language === 'fr' ? 'fr-FR' : 'en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
             </div>
             <div className="text-xs text-slate-500 dark:text-slate-400">
-              {c.hijriDate}: {hijri.day} {hijri.monthName[language]} {hijri.year} {c.hijriEra}
+              {c.hijriDate}: {hijri.day} {hijri.monthName[language]} ({hijri.monthName.wolof}) {hijri.year} {c.hijriEra}
             </div>
           </div>
           <button
