@@ -7,6 +7,7 @@
 
 import type { Challenge, SessionLog } from './types';
 import { generateId, STORAGE_KEYS } from './utils';
+import { toLocalDateString } from '../../lib/localDate';
 
 // ─── Legacy Data Shape ───────────────────────────────────────────────────────────
 
@@ -102,7 +103,7 @@ export function migrateExistingIstighfar(): Challenge | null {
     }
 
     // Calculate today's progress from daily log
-    const today = new Date().toISOString().slice(0, 10);
+    const today = toLocalDateString(new Date());
     const todayEntry = legacy.dailyLog.find((e) => e.date === today);
     const todayProgress = todayEntry?.total ?? 0;
 
@@ -118,7 +119,7 @@ export function migrateExistingIstighfar(): Challenge | null {
       let checkDate = new Date(todayDate);
 
       for (const dateStr of sortedDates) {
-        const checkDateStr = checkDate.toISOString().slice(0, 10);
+        const checkDateStr = toLocalDateString(checkDate);
         if (dateStr === checkDateStr) {
           streakDays++;
           checkDate.setDate(checkDate.getDate() - 1);

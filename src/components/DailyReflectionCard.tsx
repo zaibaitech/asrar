@@ -6,6 +6,7 @@ import { ChevronRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useRamadanChallenges } from '../features/ramadanChallenges';
 import { useCommunityDhikr } from '../features/ramadanChallenges/communityDhikrService';
+import { getLocalToday } from '../lib/localDate';
 
 export function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isCollapsed: boolean; onToggleCollapse: () => void }) {
   const { language } = useLanguage();
@@ -27,7 +28,7 @@ export function DailyReflectionCard({ isCollapsed, onToggleCollapse }: { isColla
       let planetaryToday = 0;
       try {
         const stored = JSON.parse(localStorage.getItem('planetary_zikr_today') || '{}');
-        const today = new Date().toISOString().slice(0, 10);
+        const today = getLocalToday();
         if (stored.date === today) planetaryToday = stored.count || 0;
       } catch { /* ignore */ }
       setTodayDhikr(challengesToday + planetaryToday);

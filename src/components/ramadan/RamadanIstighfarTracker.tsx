@@ -14,6 +14,7 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { getRamadanInfo, formatRamadanDay, type RamadanInfo } from '@/src/lib/hijri';
 import { translations } from '@/src/lib/translations';
 import { useLanguage } from '@/src/contexts/LanguageContext';
+import { getLocalToday, toLocalDateString } from '@/src/lib/localDate';
 import { ChevronDown, ChevronUp, Settings, Star, Check, Lock, Plus, Minus } from 'lucide-react';
 
 // ─── Constants ──────────────────────────────────────────────────────────────────
@@ -59,10 +60,6 @@ interface TrackerState {
 }
 
 const STORAGE_KEY = 'ramadan_istighfar_tracker';
-
-function getToday(): string {
-  return new Date().toISOString().slice(0, 10);
-}
 
 function loadState(): TrackerState {
   if (typeof window === 'undefined') {
@@ -117,7 +114,7 @@ export function RamadanIstighfarTracker({
   }, [state, mounted]);
 
   // ─── Derived values ───
-  const todayKey = useMemo(() => getToday(), []);
+  const todayKey = useMemo(() => getLocalToday(), []);
 
   const todayEntry = useMemo(
     () => state.dailyLog.find((e) => e.date === todayKey),
@@ -142,7 +139,7 @@ export function RamadanIstighfarTracker({
     if (!ramadanInfo?.isRamadan) return 0;
     let count = 0;
     const sorted = [...state.dailyLog].sort((a, b) => b.date.localeCompare(a.date));
-    const today = getToday();
+    const today = getLocalToday();
     for (const entry of sorted) {
       if (entry.date === today || count > 0) {
         if (entry.total > 0) count++;
@@ -164,7 +161,7 @@ export function RamadanIstighfarTracker({
 
   const logRecitation = useCallback((count: number, session: SessionKey) => {
     if (count <= 0) return;
-    const today = getToday();
+    const today = getLocalToday();
     setState((prev) => {
       const existing = prev.dailyLog.find((e) => e.date === today);
       const newSession = { session, count, timestamp: new Date().toISOString() };
@@ -600,7 +597,7 @@ function RamadanHeatmap({
   const days = Array.from({ length: RAMADAN_DAYS }, (_, i) => {
     const date = new Date(ramadanStart);
     date.setDate(date.getDate() + i);
-    const key = date.toISOString().slice(0, 10);
+    const key = toLocalDateString(date);
     const entry = dailyLog.find((e) => e.date === key);
     const total = entry?.total ?? 0;
     const isToday = i + 1 === dayOfRamadan;

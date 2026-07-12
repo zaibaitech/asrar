@@ -30,6 +30,7 @@ import type { Challenge, SessionTag } from '../types';
 import { RIZQ_PRACTICE_INFO, PROPHETIC_NAMES_201, YA_JAMIU } from '../propheticNames201';
 import { PropheticNamesPractice } from './PropheticNamesPractice';
 import { translations } from '@/src/lib/translations';
+import { getLocalToday } from '@/src/lib/localDate';
 import { queueDhikrIncrement } from '../communityDhikrService';
 
 // ─── Types ───────────────────────────────────────────────────────────────────────
@@ -76,10 +77,6 @@ function getStoredContinueState(challengeId: string): ContinueDailyState {
 function storeContinueState(challengeId: string, state: ContinueDailyState) {
   if (typeof window === 'undefined') return;
   localStorage.setItem(`${CONTINUE_DAILY_KEY}_${challengeId}`, JSON.stringify(state));
-}
-
-function getTodayDate(): string {
-  return new Date().toISOString().split('T')[0];
 }
 
 // ─── Helper Functions ────────────────────────────────────────────────────────────
@@ -214,7 +211,7 @@ export function PropheticNamesCard({
   const currentDayNumber = sessions.findIndex(s => !s.completed) + 1 || 7;
   const isComplete = completedSessions === totalSessions;
   const isContinueMode = continueState.enabled;
-  const todayDone = continueState.lastPracticeDate === getTodayDate();
+  const todayDone = continueState.lastPracticeDate === getLocalToday();
 
   // Enable continue daily mode
   const enableContinueDaily = () => {
@@ -232,7 +229,7 @@ export function PropheticNamesCard({
   const completeDailyPractice = () => {
     const newState: ContinueDailyState = {
       ...continueState,
-      lastPracticeDate: getTodayDate(),
+      lastPracticeDate: getLocalToday(),
       totalDailyPractices: continueState.totalDailyPractices + 1,
     };
     setContinueState(newState);

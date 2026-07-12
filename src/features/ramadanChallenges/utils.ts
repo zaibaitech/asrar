@@ -4,17 +4,19 @@
  * Helper functions for date handling, calculations, and formatting.
  */
 
+import { toLocalDateString } from '../../lib/localDate';
+
 // ─── Date Utilities ──────────────────────────────────────────────────────────────
 
 /**
- * Get today's date as ISO string "YYYY-MM-DD"
+ * Get today's date as a "YYYY-MM-DD" string in the local timezone.
  */
 export function getToday(): string {
-  return new Date().toISOString().slice(0, 10);
+  return toLocalDateString(new Date());
 }
 
 /**
- * Check if the given date string is today
+ * Check if the given date string is today (local timezone)
  */
 export function isToday(dateStr: string | null): boolean {
   if (!dateStr) return false;
@@ -22,13 +24,13 @@ export function isToday(dateStr: string | null): boolean {
 }
 
 /**
- * Check if the given date was yesterday
+ * Check if the given date was yesterday (local timezone)
  */
 export function isYesterday(dateStr: string | null): boolean {
   if (!dateStr) return false;
   const yesterday = new Date();
   yesterday.setDate(yesterday.getDate() - 1);
-  return dateStr === yesterday.toISOString().slice(0, 10);
+  return dateStr === toLocalDateString(yesterday);
 }
 
 /**

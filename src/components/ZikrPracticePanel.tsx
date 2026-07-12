@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { PLANETARY_ZIKR } from '@/src/lib/planetaryZikr';
 import { translations } from '@/src/lib/translations';
+import { getLocalToday } from '@/src/lib/localDate';
 import { TasbihCounter } from '@/src/features/ramadanChallenges/components/TasbihCounter';
 import { queueDhikrIncrement } from '@/src/features/ramadanChallenges/communityDhikrService';
 
@@ -53,7 +54,7 @@ export function ZikrPracticePanel({
 
   const handleTasbihComplete = useCallback((zikrName: string, count: number) => {
     if (count <= 0) return;
-    const today = new Date().toISOString().slice(0, 10);
+    const today = getLocalToday();
     const key = getStorageKey(planetKey, zikrName);
 
     // Write to localStorage synchronously BEFORE dispatching the event

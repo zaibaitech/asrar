@@ -13,6 +13,7 @@ import type { Challenge, SessionTag, ChallengeType } from '../types';
 import { SESSION_TAGS } from '../types';
 import { computePercent, formatNumber, formatPercent } from '../utils';
 import { getRamadanInfo } from '@/src/lib/hijri';
+import { toLocalDateString } from '@/src/lib/localDate';
 import { TasbihCounter } from './TasbihCounter';
 import { translations } from '@/src/lib/translations';
 
@@ -495,7 +496,7 @@ export function ChallengeCard({
                 {Array.from({ length: 30 }, (_, i) => {
                   const day = i + 1;
                   const dateStr = ramadanInfo?.ramadanStart
-                    ? new Date(new Date(ramadanInfo.ramadanStart).getTime() + i * 24 * 60 * 60 * 1000).toISOString().slice(0, 10)
+                    ? toLocalDateString(new Date(new Date(ramadanInfo.ramadanStart).getTime() + i * 24 * 60 * 60 * 1000))
                     : '';
                   const dayTotal = dailyBreakdown[dateStr] || 0;
                   const dayPct = challenge.dailyTarget > 0 ? Math.min(100, (dayTotal / challenge.dailyTarget) * 100) : 0;

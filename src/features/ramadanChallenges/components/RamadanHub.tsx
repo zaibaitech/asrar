@@ -17,6 +17,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { ChevronDown, ChevronUp, Plus, Compass } from 'lucide-react';
 import { getRamadanInfo, formatRamadanDay, type RamadanInfo } from '@/src/lib/hijri';
+import { getLocalToday } from '@/src/lib/localDate';
 import { useRamadanChallenges, createIstighfarChallenge, createSalawatChallenge, createDivineNameChallenge } from '../store';
 import { RIZQ_PRACTICE_INFO } from '../propheticNames201';
 import type { ChallengeType, SessionTag } from '../types';
@@ -63,7 +64,7 @@ export function RamadanHub({ language = 'en', defaultExpanded = false }: Ramadan
     const readPlanetaryToday = () => {
       try {
         const stored = JSON.parse(localStorage.getItem('planetary_zikr_today') || '{}');
-        const today = new Date().toISOString().slice(0, 10);
+        const today = getLocalToday();
         setPlanetaryToday(stored.date === today ? (stored.count || 0) : 0);
       } catch {
         setPlanetaryToday(0);

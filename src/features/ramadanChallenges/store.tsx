@@ -49,6 +49,7 @@ import {
   type SyncResult
 } from './sync';
 import { supabase } from '@/src/lib/supabase';
+import { toLocalDateString } from '@/src/lib/localDate';
 
 // ─── Initial State ───────────────────────────────────────────────────────────────
 
@@ -101,7 +102,7 @@ function reducer(
         if (logDates.length > 0) {
           const checkDate = new Date(today + 'T00:00:00');
           for (const dateStr of logDates) {
-            const checkStr = checkDate.toISOString().slice(0, 10);
+            const checkStr = toLocalDateString(checkDate);
             if (dateStr === checkStr) {
               streakDays++;
               checkDate.setDate(checkDate.getDate() - 1);
@@ -278,7 +279,15 @@ export function RamadanChallengesProvider({ children }: RamadanChallengesProvide
 
       // Load from localStorage
       const raw = localStorage.getItem(STORAGE_KEYS.CHALLENGES_V2);
-      const localChallenges: Challenge[] = raw ? JSON.parse(raw) : [];
+      let localChallenges: Challenge[] = [];
+      if (raw) {
+        try {
+          localChallenges = JSON.parse(raw);
+        } catch (error) {
+          console.error('[RamadanChallenges] Corrupted localStorage data, resetting:', error);
+          localChallenges = [];
+        }
+      }
       const today = getToday();
 
       try {
