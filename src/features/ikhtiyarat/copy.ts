@@ -1,0 +1,78 @@
+/**
+ * Page-scoped copy for the Ikhtiyārāt (Best Dates) feature.
+ * Follows the local-translations-object convention used by
+ * app/ramadan/RamadanPage.tsx and app/planetary-hours/PlanetaryHoursPage.tsx
+ * rather than growing the global src/lib/translations.ts dictionary.
+ */
+
+export type UiLang = 'en' | 'fr';
+
+export const ikhtiyaratCopy = {
+  en: {
+    title: 'Best Dates',
+    subtitle: 'Ikhtiyārāt · اختيارات',
+    tabCheck: 'Check My Date',
+    tabScan: 'Find Best Dates',
+    disclaimerTitle: 'Before you begin',
+    disclaimer:
+      'This tool reflects a refinement from the classical Islamic tradition of ʿIlm al-Nujūm (electional astrology). It is not a substitute for istikhāra, consultation (mashwara) with family and trusted scholars, and tawakkul (reliance on Allah). No date is religiously forbidden for nikāḥ — marriage is permitted at any time of the year.',
+    disclaimerAccept: "I understand — let's begin",
+    datePickerLabel: 'Date',
+    timePickerLabel: 'Time (optional)',
+    locationLabel: 'Location',
+    useMyLocation: 'Use my location',
+    checkButton: 'Check this date',
+    scanRangeStart: 'From',
+    scanRangeEnd: 'To',
+    scanButton: 'Scan this range',
+    bestWindow: 'Best time window',
+    hijriDate: 'Hijri date',
+    sunnahBadge: 'Sunnah & Tradition',
+    ruleBreakdown: 'Full breakdown',
+    nearestBetterDates: 'Nearest better dates',
+    topFive: 'Top 5 dates',
+    loading: 'Calculating…',
+    scoreLabel: 'Score',
+    hijriEra: 'AH',
+    close: 'Close',
+  },
+  fr: {
+    title: 'Meilleures Dates',
+    subtitle: 'Ikhtiyārāt · اختيارات',
+    tabCheck: 'Vérifier ma date',
+    tabScan: 'Trouver les meilleures dates',
+    disclaimerTitle: 'Avant de commencer',
+    disclaimer:
+      "Cet outil reflète un raffinement de la tradition islamique classique de ʿIlm al-Nujūm (astrologie électionnelle). Il ne remplace pas l'istikhāra, la consultation (mashwara) avec la famille et des savants de confiance, et le tawakkul (confiance en Allah). Aucune date n'est religieusement interdite pour le nikāḥ — le mariage est permis à tout moment de l'année.",
+    disclaimerAccept: "J'ai compris — commençons",
+    datePickerLabel: 'Date',
+    timePickerLabel: 'Heure (optionnel)',
+    locationLabel: 'Lieu',
+    useMyLocation: 'Utiliser ma position',
+    checkButton: 'Vérifier cette date',
+    scanRangeStart: 'Du',
+    scanRangeEnd: 'Au',
+    scanButton: 'Analyser cette période',
+    bestWindow: 'Meilleure fenêtre horaire',
+    hijriDate: 'Date hégirienne',
+    sunnahBadge: 'Sunna & Tradition',
+    ruleBreakdown: 'Détail complet',
+    nearestBetterDates: 'Dates plus favorables les plus proches',
+    topFive: 'Top 5 des dates',
+    loading: 'Calcul en cours…',
+    scoreLabel: 'Score',
+    hijriEra: 'AH',
+    close: 'Fermer',
+  },
+} as const;
+
+export const disclaimerArabic =
+  'يعكس هذا التطبيق تهذيبًا من التراث الإسلامي الكلاسيكي في علم النجوم (الاختيارات). وهو ليس بديلاً عن الاستخارة والمشورة مع الأهل والعلماء الثقات والتوكل على الله. لا يوجد تاريخ محرم شرعًا للزواج — فالنكاح جائز في أي وقت من العام.';
+
+export const ruleStatusLabel: Record<string, { en: string; fr: string }> = {
+  pass: { en: 'Pass', fr: 'Réussi' },
+  fail: { en: 'Fail', fr: 'Échec' },
+  bonus: { en: 'Bonus', fr: 'Bonus' },
+  penalty: { en: 'Penalty', fr: 'Pénalité' },
+  hardfail: { en: 'Hard fail', fr: 'Échec critique' },
+};
