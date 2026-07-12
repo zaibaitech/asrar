@@ -77,19 +77,30 @@ function evaluateWindow(datetime: Date, lat: number, lon: number, config: Electi
   return { time: datetime, score, rules, hasHardFail };
 }
 
-/** Start-of-day in the given IANA timezone, expressed as a UTC Date at local midnight. */
+/** Start-of-day in the given IANA timezone, expressed as the actual UTC instant of local midnight. */
 function startOfLocalDay(datetime: Date, tz: string): Date {
   const parts = new Intl.DateTimeFormat('en-US', {
     timeZone: tz,
     year: 'numeric',
     month: '2-digit',
     day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false,
   }).formatToParts(datetime);
-  const get = (type: string) => parts.find(p => p.type === type)!.value;
-  // Construct a UTC instant matching local midnight by finding the offset iteratively is overkill here;
-  // instead we anchor on the UTC calendar date components of the local time via a formatter round-trip.
-  const localMidnightGuess = new Date(`${get('year')}-${get('month')}-${get('day')}T00:00:00Z`);
-  return localMidnightGuess;
+  const get = (type: string) => Number(parts.find(p => p.type === type)!.value);
+
+  // `datetime` reinterpreted as if its tz wall-clock components were UTC —
+  // the delta between this and `datetime` itself is exactly tz's offset
+  // (including DST) at this instant.
+  const asIfUTC = new Date(Date.UTC(get('year'), get('month') - 1, get('day'), get('hour'), get('minute'), get('second')));
+  const offsetMs = asIfUTC.getTime() - datetime.getTime();
+
+  // Local midnight expressed as UTC calendar components, then shifted by
+  // that offset to land on the real UTC instant of local midnight.
+  const localMidnightAsUTCComponents = new Date(Date.UTC(get('year'), get('month') - 1, get('day'), 0, 0, 0));
+  return new Date(localMidnightAsUTCComponents.getTime() - offsetMs);
 }
 
 export function evaluateElection(input: ElectionInput, config: ElectionRulesConfig): ElectionResult {

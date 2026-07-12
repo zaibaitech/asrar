@@ -6,18 +6,15 @@ import { marriageElectionConfig } from '@/src/lib/ikhtiyarat/elections/marriage'
 import { ElectionResult } from '@/src/lib/ikhtiyarat/types';
 import { gregorianToHijri, getSunnahBadges } from '@/src/lib/ikhtiyarat/hijri';
 import { UserLocation } from '@/src/types/planetary';
+import { getLocalToday } from '@/src/lib/localDate';
 import { TierBadge } from './TierBadge';
 import { RuleRow } from './RuleRow';
 import { SunnahBadges } from './SunnahBadges';
 import { ikhtiyaratCopy, UiLang } from '../copy';
 
-function toDateInputValue(d: Date): string {
-  return d.toISOString().slice(0, 10);
-}
-
 export function CheckDateView({ language, location }: { language: UiLang; location: UserLocation }) {
   const c = ikhtiyaratCopy[language];
-  const [dateStr, setDateStr] = useState(toDateInputValue(new Date()));
+  const [dateStr, setDateStr] = useState(getLocalToday());
   const [result, setResult] = useState<ElectionResult | null>(null);
   const [nearestBetter, setNearestBetter] = useState<ElectionResult[]>([]);
   const [loading, setLoading] = useState(false);

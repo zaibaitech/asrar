@@ -12,7 +12,7 @@ interface CalendarHeatmapProps {
 function groupByMonth(results: ElectionResult[]): Map<string, ElectionResult[]> {
   const map = new Map<string, ElectionResult[]>();
   for (const r of results) {
-    const key = `${r.date.getUTCFullYear()}-${r.date.getUTCMonth()}`;
+    const key = `${r.date.getFullYear()}-${r.date.getMonth()}`;
     if (!map.has(key)) map.set(key, []);
     map.get(key)!.push(r);
   }
@@ -26,8 +26,8 @@ export function CalendarHeatmap({ results, language, onSelectDay }: CalendarHeat
     <div className="space-y-6">
       {Array.from(months.entries()).map(([key, days]) => {
         const first = days[0].date;
-        const monthLabel = first.toLocaleDateString(language === 'fr' ? 'fr-FR' : 'en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' });
-        const leadingBlanks = first.getUTCDay();
+        const monthLabel = first.toLocaleDateString(language === 'fr' ? 'fr-FR' : 'en-US', { month: 'long', year: 'numeric' });
+        const leadingBlanks = first.getDay();
 
         return (
           <div key={key}>
@@ -44,7 +44,7 @@ export function CalendarHeatmap({ results, language, onSelectDay }: CalendarHeat
                   style={{ backgroundColor: `${day.tierInfo.color}25`, color: day.tierInfo.color, border: `1px solid ${day.tierInfo.color}50` }}
                   title={`${language === 'fr' ? day.tierInfo.labelFr : day.tierInfo.labelEn} (${day.score})`}
                 >
-                  {day.date.getUTCDate()}
+                  {day.date.getDate()}
                 </button>
               ))}
             </div>

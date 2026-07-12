@@ -5,14 +5,11 @@ import { evaluateDateRange } from '@/src/lib/ikhtiyarat/engine';
 import { marriageElectionConfig } from '@/src/lib/ikhtiyarat/elections/marriage';
 import { ElectionResult } from '@/src/lib/ikhtiyarat/types';
 import { UserLocation } from '@/src/types/planetary';
+import { toLocalDateString } from '@/src/lib/localDate';
 import { CalendarHeatmap } from './CalendarHeatmap';
 import { DetailSheet } from './DetailSheet';
 import { TierBadge } from './TierBadge';
 import { ikhtiyaratCopy, UiLang } from '../copy';
-
-function toDateInputValue(d: Date): string {
-  return d.toISOString().slice(0, 10);
-}
 
 function addMonths(d: Date, months: number): Date {
   const copy = new Date(d);
@@ -25,8 +22,8 @@ const MAX_SCAN_MONTHS = 12;
 export function ScanDatesView({ language, location }: { language: UiLang; location: UserLocation }) {
   const c = ikhtiyaratCopy[language];
   const today = new Date();
-  const [startStr, setStartStr] = useState(toDateInputValue(today));
-  const [endStr, setEndStr] = useState(toDateInputValue(addMonths(today, 3)));
+  const [startStr, setStartStr] = useState(toLocalDateString(today));
+  const [endStr, setEndStr] = useState(toLocalDateString(addMonths(today, 3)));
   const [results, setResults] = useState<ElectionResult[]>([]);
   const [selectedDay, setSelectedDay] = useState<ElectionResult | null>(null);
   const [loading, setLoading] = useState(false);
@@ -104,7 +101,7 @@ export function ScanDatesView({ language, location }: { language: UiLang; locati
               className="w-full flex items-center justify-between rounded-xl border border-slate-200 dark:border-slate-700 px-3 py-2 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors"
             >
               <span className="text-sm text-slate-900 dark:text-slate-100">
-                {r.date.toLocaleDateString(language === 'fr' ? 'fr-FR' : 'en-US', { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'UTC' })}
+                {r.date.toLocaleDateString(language === 'fr' ? 'fr-FR' : 'en-US', { weekday: 'short', month: 'short', day: 'numeric' })}
               </span>
               <TierBadge tierInfo={r.tierInfo} language={language} score={r.score} />
             </button>

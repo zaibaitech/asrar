@@ -97,3 +97,57 @@ describe('property tests', () => {
     expect(marriageElectionConfig.scoreToTier(100, true).tier).toBe('avoid');
   });
 });
+
+describe('day-boundary correctness across timezones', () => {
+  // Regression test: evaluateElection's internal day-start calculation used
+  // to anchor to UTC midnight rather than the user's actual local midnight,
+  // so for any timezone with a non-trivial UTC offset, the 8 sub-daily
+  // windows it scored didn't actually span the user's real local day —
+  // for a timezone ahead of UTC (e.g. Sydney), the reported `date` and
+  // window times could land on the *previous* local calendar day entirely.
+
+  it('reports a date and windows that fall on the requested local calendar day (Los Angeles, UTC-7)', () => {
+    const input: ElectionInput = {
+      datetime: new Date('2026-07-13T14:00:00-07:00'), // 2pm PDT, user picked "2026-07-13"
+      lat: 34.05, lon: -118.24, tz: 'America/Los_Angeles',
+      electionType: 'marriage',
+    };
+    const result = evaluateElection(input, marriageElectionConfig);
+
+    const dateLocalDay = result.date.toLocaleDateString('en-US', { timeZone: 'America/Los_Angeles' });
+    expect(dateLocalDay).toBe('7/13/2026');
+
+    for (const window of result.allWindows) {
+      const windowLocalDay = window.time.toLocaleDateString('en-US', { timeZone: 'America/Los_Angeles' });
+      expect(windowLocalDay).toBe('7/13/2026');
+    }
+  });
+
+  it('reports a date and windows that fall on the requested local calendar day (Sydney, UTC+10)', () => {
+    const input: ElectionInput = {
+      datetime: new Date('2026-07-13T14:00:00+10:00'), // 2pm AEST, user picked "2026-07-13"
+      lat: -33.87, lon: 151.21, tz: 'Australia/Sydney',
+      electionType: 'marriage',
+    };
+    const result = evaluateElection(input, marriageElectionConfig);
+
+    const dateLocalDay = result.date.toLocaleDateString('en-US', { timeZone: 'Australia/Sydney' });
+    expect(dateLocalDay).toBe('7/13/2026');
+
+    for (const window of result.allWindows) {
+      const windowLocalDay = window.time.toLocaleDateString('en-US', { timeZone: 'Australia/Sydney' });
+      expect(windowLocalDay).toBe('7/13/2026');
+    }
+  });
+
+  it('reports a date that falls on the requested local calendar day for a half-hour offset (India, UTC+5:30)', () => {
+    const input: ElectionInput = {
+      datetime: new Date('2026-03-01T10:00:00+05:30'),
+      lat: 28.61, lon: 77.21, tz: 'Asia/Kolkata',
+      electionType: 'marriage',
+    };
+    const result = evaluateElection(input, marriageElectionConfig);
+    const dateLocalDay = result.date.toLocaleDateString('en-US', { timeZone: 'Asia/Kolkata' });
+    expect(dateLocalDay).toBe('3/1/2026');
+  });
+});
