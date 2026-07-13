@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import { ElectionResult } from '@/src/lib/ikhtiyarat/types';
 import { gregorianToHijri, getSunnahBadges } from '@/src/lib/ikhtiyarat/hijri';
+import { getDayDegradationNote } from '@/src/lib/ikhtiyarat/degradation';
 import { TierBadge } from './TierBadge';
 import { RuleRow } from './RuleRow';
 import { SunnahBadges } from './SunnahBadges';
@@ -18,6 +19,7 @@ export function DetailSheet({ result, language, onClose }: DetailSheetProps) {
   const c = ikhtiyaratCopy[language];
   const hijri = gregorianToHijri(result.date);
   const sunnahBadges = getSunnahBadges(result.date);
+  const degradationNote = getDayDegradationNote(result, language);
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -65,6 +67,9 @@ export function DetailSheet({ result, language, onClose }: DetailSheetProps) {
             <div className="text-sm font-medium text-slate-900 dark:text-slate-100">
               {result.bestWindow.time.toLocaleTimeString(language === 'fr' ? 'fr-FR' : 'en-US', { hour: '2-digit', minute: '2-digit' })}
             </div>
+            {degradationNote && (
+              <p className="text-xs text-amber-600 dark:text-amber-400 mt-2">{degradationNote}</p>
+            )}
           </div>
 
           <div>

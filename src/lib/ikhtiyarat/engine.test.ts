@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { evaluateElection } from './engine';
+import { evaluateElection, findNearestBetterDates } from './engine';
 import { marriageElectionConfig } from './elections/marriage';
 import { ElectionInput, ElectionRulesConfig } from './types';
 
@@ -225,4 +225,61 @@ describe('civil-hours constraint on best-window selection', () => {
     expect(badDate.hasHardFail).toBe(true);
     expect(badDate.isLeastAfflicted).toBe(true);
   });
+});
+
+describe('findNearestBetterDates', () => {
+  // A 20-day radius (vs. the 45-day production default) is enough to
+  // exercise the filtering/sorting logic below without the full scan's
+  // real-world runtime (each day requires 8 ephemeris-backed window
+  // evaluations against 21 rules — see item 8a's caching work for why
+  // the full 45-day default is otherwise slow enough to need a raised
+  // test timeout).
+  const TEST_RADIUS_DAYS = 20;
+
+  it('only returns dates reaching at least the acceptable tier, never merely "higher score than baseline"', () => {
+    const input = inputFor('2026-07-13T12:00:00+01:00'); // known Avoid date
+    const { dates } = findNearestBetterDates(input, marriageElectionConfig, 3, TEST_RADIUS_DAYS);
+    for (const d of dates) {
+      expect(d.hasHardFail).toBe(false);
+      expect(['excellent', 'good', 'acceptable']).toContain(d.tier);
+    }
+  });
+
+  it('sorts results by date-distance from the input date', () => {
+    const input = inputFor('2026-07-13T12:00:00+01:00');
+    const { dates } = findNearestBetterDates(input, marriageElectionConfig, 3, TEST_RADIUS_DAYS);
+    for (let i = 1; i < dates.length; i++) {
+      const prevDistance = Math.abs(dates[i - 1].date.getTime() - input.datetime.getTime());
+      const currDistance = Math.abs(dates[i].date.getTime() - input.datetime.getTime());
+      expect(currDistance).toBeGreaterThanOrEqual(prevDistance);
+    }
+  });
+
+  it('reports radiusExhausted and provides bestAvailable when no acceptable date exists within a tiny radius', () => {
+    const input = inputFor('2026-07-13T12:00:00+01:00');
+    const { dates, radiusExhausted, bestAvailable } = findNearestBetterDates(input, marriageElectionConfig, 3, 0);
+    expect(dates).toHaveLength(0);
+    expect(radiusExhausted).toBe(true);
+    expect(bestAvailable).toBeNull(); // searchRadiusDays=0 means the loop never runs, so nothing was scanned
+  });
+
+  it('bestAvailable is populated (not null) when the scan runs but nothing reaches acceptable', () => {
+    // A radius of 1 day around a known Avoid date is very unlikely to
+    // reach 'acceptable' (real astrology doesn't flip that fast), so this
+    // exercises the "scanned, found nothing acceptable, report the best
+    // candidate anyway" path without asserting exact scores.
+    const input = inputFor('2026-07-13T12:00:00+01:00');
+    const { dates, bestAvailable } = findNearestBetterDates(input, marriageElectionConfig, 3, 1);
+    if (dates.length === 0) {
+      expect(bestAvailable).not.toBeNull();
+    }
+  });
+
+  it('is deterministic for the same input', () => {
+    const input = inputFor('2026-07-13T12:00:00+01:00');
+    const a = findNearestBetterDates(input, marriageElectionConfig, 3, TEST_RADIUS_DAYS);
+    const b = findNearestBetterDates(input, marriageElectionConfig, 3, TEST_RADIUS_DAYS);
+    expect(a.dates.map(d => d.date.toISOString())).toEqual(b.dates.map(d => d.date.toISOString()));
+    expect(a.radiusExhausted).toBe(b.radiusExhausted);
+  }, 15000); // two full 20-day scans back-to-back; slower than vitest's 5s default
 });

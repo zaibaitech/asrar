@@ -5,6 +5,7 @@ import { evaluateElection, findNearestBetterDates } from '@/src/lib/ikhtiyarat/e
 import { marriageElectionConfig } from '@/src/lib/ikhtiyarat/elections/marriage';
 import { ElectionResult } from '@/src/lib/ikhtiyarat/types';
 import { gregorianToHijri, getSunnahBadges } from '@/src/lib/ikhtiyarat/hijri';
+import { getDayDegradationNote } from '@/src/lib/ikhtiyarat/degradation';
 import { UserLocation } from '@/src/types/planetary';
 import { getLocalToday } from '@/src/lib/localDate';
 import { TierBadge } from './TierBadge';
@@ -17,6 +18,7 @@ export function CheckDateView({ language, location }: { language: UiLang; locati
   const [dateStr, setDateStr] = useState(getLocalToday());
   const [result, setResult] = useState<ElectionResult | null>(null);
   const [nearestBetter, setNearestBetter] = useState<ElectionResult[]>([]);
+  const [bestAvailable, setBestAvailable] = useState<ElectionResult | null>(null);
   const [loading, setLoading] = useState(false);
 
   const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -30,10 +32,13 @@ export function CheckDateView({ language, location }: { language: UiLang; locati
       const input = { datetime, lat: location.latitude, lon: location.longitude, tz, electionType: 'marriage' as const };
       const r = evaluateElection(input, marriageElectionConfig);
       setResult(r);
-      if (r.tier === 'avoid') {
-        setNearestBetter(findNearestBetterDates(input, marriageElectionConfig, 3));
+      if (r.tier === 'avoid' || r.tier === 'weak') {
+        const { dates, bestAvailable: fallback } = findNearestBetterDates(input, marriageElectionConfig, 3);
+        setNearestBetter(dates);
+        setBestAvailable(dates.length === 0 ? fallback : null);
       } else {
         setNearestBetter([]);
+        setBestAvailable(null);
       }
       setLoading(false);
     }, 0);
@@ -46,6 +51,7 @@ export function CheckDateView({ language, location }: { language: UiLang; locati
 
   const hijri = result ? gregorianToHijri(result.date) : null;
   const sunnahBadges = result ? getSunnahBadges(result.date) : [];
+  const degradationNote = result ? getDayDegradationNote(result, language) : null;
 
   return (
     <div className="space-y-4">
@@ -91,6 +97,9 @@ export function CheckDateView({ language, location }: { language: UiLang; locati
             <div className="text-sm font-medium text-slate-900 dark:text-slate-100">
               {result.bestWindow.time.toLocaleTimeString(language === 'fr' ? 'fr-FR' : 'en-US', { hour: '2-digit', minute: '2-digit' })}
             </div>
+            {degradationNote && (
+              <p className="text-xs text-amber-600 dark:text-amber-400 mt-2">{degradationNote}</p>
+            )}
           </div>
 
           <div>
@@ -117,6 +126,20 @@ export function CheckDateView({ language, location }: { language: UiLang; locati
                     <TierBadge tierInfo={r.tierInfo} language={language} score={r.score} />
                   </div>
                 ))}
+              </div>
+            </div>
+          )}
+
+          {nearestBetter.length === 0 && bestAvailable && (
+            <div>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mb-2">
+                {c.noAcceptableDatesFound} {c.showingBestAvailable}
+              </p>
+              <div className="flex items-center justify-between rounded-xl border border-slate-200 dark:border-slate-700 px-3 py-2">
+                <span className="text-sm text-slate-900 dark:text-slate-100">
+                  {bestAvailable.date.toLocaleDateString(language === 'fr' ? 'fr-FR' : 'en-US', { weekday: 'short', month: 'short', day: 'numeric' })}
+                </span>
+                <TierBadge tierInfo={bestAvailable.tierInfo} language={language} score={bestAvailable.score} />
               </div>
             </div>
           )}

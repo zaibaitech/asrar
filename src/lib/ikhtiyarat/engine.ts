@@ -16,7 +16,7 @@ import { getAllPlanetPositions, getMoonElongation, getMoonPhaseDirection, getMoo
 import { getMoonApplyingAspects } from './aspects';
 import { getAllPlanetaryHoursForDay } from '../planetary/planetaryHours';
 import SunCalc from 'suncalc';
-import { ElectionInput, ElectionResult, ElectionRulesConfig, RuleContext, RuleResult, WindowScore } from './types';
+import { ElectionInput, ElectionResult, ElectionRulesConfig, RuleContext, RuleResult, Tier, WindowScore } from './types';
 
 const STEP_HOURS = 3;
 const DEFAULT_CIVIL_HOURS = { startHour: 8, endHour: 22 };
@@ -180,28 +180,68 @@ export function evaluateDateRange(
   return results;
 }
 
-/** Find the N nearest dates (searching both forward and backward from the given date) that beat a minimum tier threshold. */
+/** Tiers considered "genuinely better" — acceptable (Maqbūl) or above. Election-agnostic: any tier other than weak/avoid. */
+const ACCEPTABLE_OR_BETTER: ReadonlySet<Tier> = new Set(['excellent', 'good', 'acceptable']);
+
+const TIER_RANK: Record<Tier, number> = { excellent: 4, good: 3, acceptable: 2, weak: 1, avoid: 0 };
+
+export interface NearestBetterDatesResult {
+  /** Up to `count` dates reaching acceptable-or-better, sorted by date distance (ties broken by tier then score). */
+  dates: ElectionResult[];
+  /** True if the search radius was fully searched without finding `count` qualifying dates (dates[] may be shorter than requested, or empty). */
+  radiusExhausted: boolean;
+  /**
+   * The single best-scoring candidate seen during the scan, even if it
+   * didn't reach 'acceptable' — populated only when `dates` is empty, so
+   * the caller can offer "no acceptable dates found, here's the closest
+   * we found" without re-scanning. Null if the radius produced no
+   * candidates at all (shouldn't happen in practice with a 45-day scan).
+   */
+  bestAvailable: ElectionResult | null;
+}
+
+/**
+ * Find the nearest dates (searching both forward and backward from the
+ * given date, up to searchRadiusDays each direction) that reach at least
+ * the 'acceptable' tier — not just "higher score than today," since today
+ * could itself be Weak and a marginally-higher-scoring nearby date would
+ * still not be a genuinely good recommendation.
+ */
 export function findNearestBetterDates(
   input: ElectionInput,
   config: ElectionRulesConfig,
   count: number,
-  maxSearchDays = 60,
-): ElectionResult[] {
+  searchRadiusDays = 45,
+): NearestBetterDatesResult {
   const found: ElectionResult[] = [];
-  const baseline = evaluateElection(input, config);
+  let bestAvailable: ElectionResult | null = null;
 
-  for (let offset = 1; offset <= maxSearchDays && found.length < count; offset++) {
+  for (let offset = 1; offset <= searchRadiusDays; offset++) {
     for (const sign of [1, -1] as const) {
       const candidateDate = new Date(input.datetime.getTime() + sign * offset * 24 * 60 * 60 * 1000);
       const result = evaluateElection({ ...input, datetime: candidateDate }, config);
-      if (!result.hasHardFail && result.score > baseline.score) {
+      if (!result.hasHardFail && ACCEPTABLE_OR_BETTER.has(result.tier)) {
         found.push(result);
-        if (found.length >= count) break;
+      }
+      if (!bestAvailable || result.score > bestAvailable.score) {
+        bestAvailable = result;
       }
     }
   }
 
-  return found
-    .sort((a, b) => b.score - a.score || Math.abs(a.date.getTime() - input.datetime.getTime()) - Math.abs(b.date.getTime() - input.datetime.getTime()))
-    .slice(0, count);
+  const sorted = found.sort((a, b) => {
+    const distanceA = Math.abs(a.date.getTime() - input.datetime.getTime());
+    const distanceB = Math.abs(b.date.getTime() - input.datetime.getTime());
+    if (distanceA !== distanceB) return distanceA - distanceB;
+    // Equidistant: prefer the higher tier, then the higher score.
+    if (TIER_RANK[b.tier] !== TIER_RANK[a.tier]) return TIER_RANK[b.tier] - TIER_RANK[a.tier];
+    return b.score - a.score;
+  });
+
+  const dates = sorted.slice(0, count);
+  return {
+    dates,
+    radiusExhausted: dates.length < count,
+    bestAvailable: dates.length === 0 ? bestAvailable : null,
+  };
 }
