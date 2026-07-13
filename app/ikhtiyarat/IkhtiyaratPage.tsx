@@ -9,7 +9,7 @@ import { UserLocation } from '@/src/types/planetary';
 import { AdabDisclaimer } from '@/src/features/ikhtiyarat/components/AdabDisclaimer';
 import { CheckDateView } from '@/src/features/ikhtiyarat/components/CheckDateView';
 import { ScanDatesView } from '@/src/features/ikhtiyarat/components/ScanDatesView';
-import { ikhtiyaratCopy, UiLang } from '@/src/features/ikhtiyarat/copy';
+import { ikhtiyaratCopy, subtitleArabic, UiLang } from '@/src/features/ikhtiyarat/copy';
 
 type Mode = 'check' | 'scan';
 
@@ -37,7 +37,9 @@ export function IkhtiyaratPage() {
           </Link>
           <div className="text-center">
             <div className="text-sm font-semibold text-slate-900 dark:text-slate-100">{c.title}</div>
-            <div className="text-xs text-slate-500 dark:text-slate-400">{c.subtitle}</div>
+            <div className="text-xs text-slate-500 dark:text-slate-400">
+              {c.subtitle} · <span dir="rtl" lang="ar" className="font-arabic">{subtitleArabic}</span>
+            </div>
           </div>
           <button
             onClick={() => setShowAbout(true)}

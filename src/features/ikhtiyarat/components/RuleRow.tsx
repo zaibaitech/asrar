@@ -36,7 +36,7 @@ export function RuleRow({ rule, language }: { rule: RuleResult; language: UiLang
       <div className="flex-1 min-w-0">
         <div className="flex items-center justify-between gap-2">
           <span className="text-sm font-medium text-slate-900 dark:text-slate-100">
-            {label} <span className="font-arabic text-xs text-slate-400">{rule.label_ar}</span>
+            {label} <span dir="rtl" lang="ar" className="font-arabic text-xs text-slate-400">{rule.label_ar}</span>
           </span>
           <span className="text-xs font-semibold whitespace-nowrap" style={{ color }}>
             {rule.points > 0 ? `+${rule.points}` : rule.points}

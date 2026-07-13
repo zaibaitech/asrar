@@ -10,7 +10,7 @@ export type UiLang = 'en' | 'fr';
 export const ikhtiyaratCopy = {
   en: {
     title: 'Best Dates',
-    subtitle: 'Ikhtiyārāt · اختيارات',
+    subtitle: 'Ikhtiyārāt',
     tabCheck: 'Check My Date',
     tabScan: 'Find Best Dates',
     disclaimerTitle: 'Before you begin',
@@ -46,7 +46,7 @@ export const ikhtiyaratCopy = {
   },
   fr: {
     title: 'Meilleures Dates',
-    subtitle: 'Ikhtiyārāt · اختيارات',
+    subtitle: 'Ikhtiyārāt',
     tabCheck: 'Vérifier ma date',
     tabScan: 'Trouver les meilleures dates',
     disclaimerTitle: 'Avant de commencer',
@@ -81,6 +81,8 @@ export const ikhtiyaratCopy = {
     linkCopied: 'Lien copié !',
   },
 } as const;
+
+export const subtitleArabic = 'اختيارات';
 
 export const disclaimerArabic =
   'يعكس هذا التطبيق تهذيبًا من التراث الإسلامي الكلاسيكي في علم النجوم (الاختيارات). وهو ليس بديلاً عن الاستخارة والمشورة مع الأهل والعلماء الثقات والتوكل على الله. لا يوجد تاريخ محرم شرعًا للزواج — فالنكاح جائز في أي وقت من العام.';

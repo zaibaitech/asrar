@@ -14,7 +14,7 @@ export function TierBadge({ tierInfo, language, score }: { tierInfo: TierInfo; l
       <span className="text-sm font-semibold" style={{ color: tierInfo.color }}>
         {label}
       </span>
-      <span className="font-arabic text-xs opacity-70" style={{ color: tierInfo.color }}>
+      <span dir="rtl" lang="ar" className="font-arabic text-xs opacity-70" style={{ color: tierInfo.color }}>
         {tierInfo.labelAr}
       </span>
       <span className="text-xs opacity-60" style={{ color: tierInfo.color }}>
