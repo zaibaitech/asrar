@@ -21,6 +21,7 @@ import { isMoonVoidOfCourse, getSeparation, APPLYING_ORBS } from '../aspects';
 import { angleDiff } from '../ephemeris';
 import { ElectionRulesConfig, Rule, RuleContext, RuleResult, TierInfo, Tier } from '../types';
 import { getMansionMarriageFavorability, getMansionNumberFromLongitude } from '../manzil-favorability';
+import { isInFall, isInDetriment } from '../../planetary/dignities';
 
 function rule(
   id: string,
@@ -349,17 +350,55 @@ const dayOfWeekBonus = rule(
   },
 );
 
-const planetaryHourBonus = rule(
-  'planetary-hour',
-  { en: 'Favorable Planetary Hour', fr: 'Heure planétaire favorable', ar: 'الساعة الفلكية الموافقة' },
-  (ctx) => {
-    const favorable = ctx.planetaryHourPlanet === 'Venus' || ctx.planetaryHourPlanet === 'Moon' || ctx.planetaryHourPlanet === 'Jupiter';
-    const planetFr: Record<string, string> = { Venus: 'Vénus', Moon: 'la Lune', Jupiter: 'Jupiter' };
-    return favorable
-      ? { status: 'bonus', points: 6, detail_en: `This window falls in the planetary hour of ${ctx.planetaryHourPlanet}.`, detail_fr: `Cette fenêtre se situe dans l'heure planétaire de ${planetFr[ctx.planetaryHourPlanet!] ?? ctx.planetaryHourPlanet}.` }
-      : { status: 'pass', points: 0, detail_en: 'This window is not in a Venus, Moon, or Jupiter hour.', detail_fr: "Cette fenêtre ne se situe pas dans une heure de Vénus, de la Lune ou de Jupiter." };
-  },
-);
+// SCHOLAR-REVIEW: strictHourRuler additionally requires the ruling planet
+// itself not be afflicted (combust, retrograde, or in fall/detriment) at
+// that hour before granting the bonus — e.g. a Venus hour while Venus is
+// in Virgo (its fall) should arguably not earn +6. Defaults to false
+// (existing scoring unchanged) pending scholarly verification; built as a
+// factory closing over the flag at config-build time so the engine and
+// RuleContext don't need to carry config-specific state.
+function makePlanetaryHourBonus(strict: boolean): Rule {
+  return rule(
+    'planetary-hour',
+    { en: 'Favorable Planetary Hour', fr: 'Heure planétaire favorable', ar: 'الساعة الفلكية الموافقة' },
+    (ctx) => {
+      const planet = ctx.planetaryHourPlanet;
+      const favorable = planet === 'Venus' || planet === 'Moon' || planet === 'Jupiter';
+      const planetFr: Record<string, string> = { Venus: 'Vénus', Moon: 'la Lune', Jupiter: 'Jupiter' };
+
+      if (!favorable) {
+        return { status: 'pass', points: 0, detail_en: 'This window is not in a Venus, Moon, or Jupiter hour.', detail_fr: "Cette fenêtre ne se situe pas dans une heure de Vénus, de la Lune ou de Jupiter." };
+      }
+
+      if (strict) {
+        const pos = ctx.positions[planet!];
+        const isCombust = getSeparation(pos, ctx.positions.Sun) <= 8.5;
+        const isRetro = pos.isRetrograde;
+        // Direct fall/detriment table lookup (not the net isDebilitated()
+        // dignity score) — a planet in its classical fall disqualifies the
+        // bonus outright here, even if simultaneous minor dignities (terms,
+        // face, day-triplicity) would otherwise net its overall score
+        // positive. E.g. Venus in Virgo (its fall) nets +2 by day once
+        // terms/face/triplicity are added in, but is still "in fall" in
+        // the plain classical sense this flag is checking for.
+        const isFallOrDetriment = isInFall(planet!, pos.sign) || isInDetriment(planet!, pos.sign);
+        if (isCombust || isRetro || isFallOrDetriment) {
+          let reason = 'in fall/detriment';
+          let reasonFr = 'en chute/exil';
+          if (isCombust) { reason = 'combust'; reasonFr = 'combuste'; }
+          else if (isRetro) { reason = 'retrograde'; reasonFr = 'rétrograde'; }
+          return {
+            status: 'pass', points: 0,
+            detail_en: `This window is in the planetary hour of ${planet}, but ${planet} is ${reason} — no bonus. [SCHOLAR-REVIEW]`,
+            detail_fr: `Cette fenêtre se situe dans l'heure planétaire de ${planetFr[planet!] ?? planet}, mais ${planetFr[planet!] ?? planet} est ${reasonFr} — aucun bonus. [SCHOLAR-REVIEW]`,
+          };
+        }
+      }
+
+      return { status: 'bonus', points: 6, detail_en: `This window falls in the planetary hour of ${planet}.`, detail_fr: `Cette fenêtre se situe dans l'heure planétaire de ${planetFr[planet!] ?? planet}.` };
+    },
+  );
+}
 
 const lunarMansionBonus = rule(
   'lunar-mansion',
@@ -415,33 +454,45 @@ function scoreToTier(score: number, hasHardFail: boolean): TierInfo {
   return TIERS.find(t => t.tier === 'weak')!;
 }
 
-export const marriageElectionConfig: ElectionRulesConfig = {
-  electionType: 'marriage',
-  rules: [
-    darkMoon,
-    moonCombust,
-    moonVoidOfCourse,
-    moonMaleficSquareOrOpposition,
-    eclipseProximity,
-    underTheBeams,
-    moonWaning,
-    viaCombusta,
-    moonFallOrDetriment,
-    venusCombust,
-    venusRetrograde,
-    venusDebilitated,
-    mercuryRetrograde,
-    moonSeparatingFromBenefics,
-    moonWaxingClear,
-    moonDignity,
-    moonApplyingToBeneficBonus,
-    venusDignified,
-    dayOfWeekBonus,
-    planetaryHourBonus,
-    lunarMansionBonus,
-  ],
-  tiers: TIERS,
-  scoreToTier,
-  civilHoursRange: { startHour: 8, endHour: 22 },
-  strictHourRuler: false,
-};
+/**
+ * Builds the marriage election config. A function rather than a bare
+ * object because planetaryHourBonus needs to close over strictHourRuler
+ * at construction time (see makePlanetaryHourBonus above).
+ */
+function buildMarriageElectionConfig(strictHourRuler: boolean): ElectionRulesConfig {
+  return {
+    electionType: 'marriage',
+    rules: [
+      darkMoon,
+      moonCombust,
+      moonVoidOfCourse,
+      moonMaleficSquareOrOpposition,
+      eclipseProximity,
+      underTheBeams,
+      moonWaning,
+      viaCombusta,
+      moonFallOrDetriment,
+      venusCombust,
+      venusRetrograde,
+      venusDebilitated,
+      mercuryRetrograde,
+      moonSeparatingFromBenefics,
+      moonWaxingClear,
+      moonDignity,
+      moonApplyingToBeneficBonus,
+      venusDignified,
+      dayOfWeekBonus,
+      makePlanetaryHourBonus(strictHourRuler),
+      lunarMansionBonus,
+    ],
+    tiers: TIERS,
+    scoreToTier,
+    civilHoursRange: { startHour: 8, endHour: 22 },
+    strictHourRuler,
+  };
+}
+
+export const marriageElectionConfig: ElectionRulesConfig = buildMarriageElectionConfig(false);
+
+/** SCHOLAR-REVIEW variant with strictHourRuler enabled — use for testing/comparison until the flag's default is decided. */
+export const marriageElectionConfigStrictHourRuler: ElectionRulesConfig = buildMarriageElectionConfig(true);

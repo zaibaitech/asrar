@@ -130,6 +130,13 @@ export function getMoonSunSeparation(date: Date): number {
   return elong <= 180 ? elong : 360 - elong;
 }
 
+/** Unsigned angular separation between any planet and the Sun (0-180), for combustion checks beyond the Moon (e.g. a planetary-hour ruler). */
+export function getPlanetSunSeparation(planet: Planet, date: Date): number {
+  const sun = eclipticLongitudeOf('Sun', date);
+  const p = eclipticLongitudeOf(planet, date);
+  return Math.abs(angleDiff(p, sun));
+}
+
 export interface EclipseProximity {
   /** Hours to the nearest lunar or solar eclipse peak (signed: negative = in the past). */
   hoursToNearestEclipse: number;

@@ -192,14 +192,14 @@ function isExalted(planet: Planet, sign: ZodiacSign): boolean {
 /**
  * Check if a planet is in fall
  */
-function isInFall(planet: Planet, sign: ZodiacSign): boolean {
+export function isInFall(planet: Planet, sign: ZodiacSign): boolean {
   return FALLS[planet] === sign;
 }
 
 /**
  * Check if a planet is in detriment
  */
-function isInDetriment(planet: Planet, sign: ZodiacSign): boolean {
+export function isInDetriment(planet: Planet, sign: ZodiacSign): boolean {
   return DETRIMENTS[planet]?.includes(sign) ?? false;
 }
 
