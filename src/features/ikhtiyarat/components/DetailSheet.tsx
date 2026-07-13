@@ -3,10 +3,12 @@
 import { useEffect } from 'react';
 import { ElectionResult } from '@/src/lib/ikhtiyarat/types';
 import { gregorianToHijri, getSunnahBadges } from '@/src/lib/ikhtiyarat/hijri';
+import { getUrfBadgeForMonth } from '@/src/lib/ikhtiyarat/urf';
 import { getDayDegradationNote } from '@/src/lib/ikhtiyarat/degradation';
 import { TierBadge } from './TierBadge';
 import { RuleRow } from './RuleRow';
 import { SunnahBadges } from './SunnahBadges';
+import { UrfBadge } from './UrfBadge';
 import { ikhtiyaratCopy, UiLang } from '../copy';
 
 interface DetailSheetProps {
@@ -19,6 +21,7 @@ export function DetailSheet({ result, language, onClose }: DetailSheetProps) {
   const c = ikhtiyaratCopy[language];
   const hijri = gregorianToHijri(result.date);
   const sunnahBadges = getSunnahBadges(result.date);
+  const urfBadge = getUrfBadgeForMonth(hijri.month);
   const degradationNote = getDayDegradationNote(result, language);
 
   useEffect(() => {
@@ -51,12 +54,22 @@ export function DetailSheet({ result, language, onClose }: DetailSheetProps) {
         </div>
 
         <div className="p-5 space-y-4">
-          <TierBadge tierInfo={result.tierInfo} language={language} score={result.score} />
+          <div>
+            <div className="text-xs uppercase tracking-wide text-slate-400 mb-1">{c.starsLabel}</div>
+            <TierBadge tierInfo={result.tierInfo} language={language} score={result.score} />
+          </div>
 
           {sunnahBadges.length > 0 && (
             <div>
               <div className="text-xs uppercase tracking-wide text-slate-400 mb-2">{c.sunnahBadge}</div>
               <SunnahBadges badges={sunnahBadges} language={language} />
+            </div>
+          )}
+
+          {urfBadge && (
+            <div>
+              <div className="text-xs uppercase tracking-wide text-slate-400 mb-2">{c.urfLabel}</div>
+              <UrfBadge badge={urfBadge} language={language} />
             </div>
           )}
 

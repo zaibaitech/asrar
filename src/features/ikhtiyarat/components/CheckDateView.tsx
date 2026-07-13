@@ -5,12 +5,14 @@ import { evaluateElection, findNearestBetterDates } from '@/src/lib/ikhtiyarat/e
 import { marriageElectionConfig } from '@/src/lib/ikhtiyarat/elections/marriage';
 import { ElectionResult } from '@/src/lib/ikhtiyarat/types';
 import { gregorianToHijri, getSunnahBadges } from '@/src/lib/ikhtiyarat/hijri';
+import { getUrfBadgeForMonth } from '@/src/lib/ikhtiyarat/urf';
 import { getDayDegradationNote } from '@/src/lib/ikhtiyarat/degradation';
 import { UserLocation } from '@/src/types/planetary';
 import { getLocalToday } from '@/src/lib/localDate';
 import { TierBadge } from './TierBadge';
 import { RuleRow } from './RuleRow';
 import { SunnahBadges } from './SunnahBadges';
+import { UrfBadge } from './UrfBadge';
 import { ikhtiyaratCopy, UiLang } from '../copy';
 
 export function CheckDateView({ language, location }: { language: UiLang; location: UserLocation }) {
@@ -51,6 +53,7 @@ export function CheckDateView({ language, location }: { language: UiLang; locati
 
   const hijri = result ? gregorianToHijri(result.date) : null;
   const sunnahBadges = result ? getSunnahBadges(result.date) : [];
+  const urfBadge = hijri ? getUrfBadgeForMonth(hijri.month) : null;
   const degradationNote = result ? getDayDegradationNote(result, language) : null;
 
   return (
@@ -79,16 +82,31 @@ export function CheckDateView({ language, location }: { language: UiLang; locati
 
       {result && (
         <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40 p-4 space-y-4">
-          <div className="flex items-center justify-between flex-wrap gap-2">
-            <TierBadge tierInfo={result.tierInfo} language={language} score={result.score} />
-            {hijri && (
-              <span className="text-xs text-slate-500 dark:text-slate-400">
-                {c.hijriDate}: {hijri.day} {hijri.monthName[language]} ({hijri.monthName.wolof}) {hijri.year} {c.hijriEra}
-              </span>
-            )}
+          <div>
+            <div className="text-xs uppercase tracking-wide text-slate-400 mb-1">{c.starsLabel}</div>
+            <div className="flex items-center justify-between flex-wrap gap-2">
+              <TierBadge tierInfo={result.tierInfo} language={language} score={result.score} />
+              {hijri && (
+                <span className="text-xs text-slate-500 dark:text-slate-400">
+                  {c.hijriDate}: {hijri.day} {hijri.monthName[language]} ({hijri.monthName.wolof}) {hijri.year} {c.hijriEra}
+                </span>
+              )}
+            </div>
           </div>
 
-          {sunnahBadges.length > 0 && <SunnahBadges badges={sunnahBadges} language={language} />}
+          {sunnahBadges.length > 0 && (
+            <div>
+              <div className="text-xs uppercase tracking-wide text-slate-400 mb-2">{c.sunnahBadge}</div>
+              <SunnahBadges badges={sunnahBadges} language={language} />
+            </div>
+          )}
+
+          {urfBadge && (
+            <div>
+              <div className="text-xs uppercase tracking-wide text-slate-400 mb-2">{c.urfLabel}</div>
+              <UrfBadge badge={urfBadge} language={language} />
+            </div>
+          )}
 
           <div className="rounded-xl border border-slate-200 dark:border-slate-700 p-3">
             <div className="text-xs uppercase tracking-wide text-slate-400 mb-1">

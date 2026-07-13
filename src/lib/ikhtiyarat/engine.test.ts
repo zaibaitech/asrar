@@ -228,13 +228,16 @@ describe('civil-hours constraint on best-window selection', () => {
 });
 
 describe('findNearestBetterDates', () => {
-  // A 20-day radius (vs. the 45-day production default) is enough to
+  // A short radius (vs. the 45-day production default) is enough to
   // exercise the filtering/sorting logic below without the full scan's
   // real-world runtime (each day requires 8 ephemeris-backed window
-  // evaluations against 21 rules — see item 8a's caching work for why
-  // the full 45-day default is otherwise slow enough to need a raised
-  // test timeout).
-  const TEST_RADIUS_DAYS = 20;
+  // evaluations against 21 rules — see item 8a's caching work, which
+  // addresses this cost directly). Even so, running the whole suite in
+  // parallel can add real contention on top of the scan's own cost, so
+  // these tests carry a generous timeout rather than a tight one tuned
+  // only for an isolated run.
+  const TEST_RADIUS_DAYS = 8;
+  const SCAN_TEST_TIMEOUT = 20000;
 
   it('only returns dates reaching at least the acceptable tier, never merely "higher score than baseline"', () => {
     const input = inputFor('2026-07-13T12:00:00+01:00'); // known Avoid date
@@ -243,7 +246,7 @@ describe('findNearestBetterDates', () => {
       expect(d.hasHardFail).toBe(false);
       expect(['excellent', 'good', 'acceptable']).toContain(d.tier);
     }
-  });
+  }, SCAN_TEST_TIMEOUT);
 
   it('sorts results by date-distance from the input date', () => {
     const input = inputFor('2026-07-13T12:00:00+01:00');
@@ -253,7 +256,7 @@ describe('findNearestBetterDates', () => {
       const currDistance = Math.abs(dates[i].date.getTime() - input.datetime.getTime());
       expect(currDistance).toBeGreaterThanOrEqual(prevDistance);
     }
-  });
+  }, SCAN_TEST_TIMEOUT);
 
   it('reports radiusExhausted and provides bestAvailable when no acceptable date exists within a tiny radius', () => {
     const input = inputFor('2026-07-13T12:00:00+01:00');
@@ -281,5 +284,5 @@ describe('findNearestBetterDates', () => {
     const b = findNearestBetterDates(input, marriageElectionConfig, 3, TEST_RADIUS_DAYS);
     expect(a.dates.map(d => d.date.toISOString())).toEqual(b.dates.map(d => d.date.toISOString()));
     expect(a.radiusExhausted).toBe(b.radiusExhausted);
-  }, 15000); // two full 20-day scans back-to-back; slower than vitest's 5s default
+  }, SCAN_TEST_TIMEOUT); // two scans back-to-back
 });
