@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { getPlanetPosition, getMoonElongation, getMoonSunSeparation, getMoonPhaseDirection, angleDiff } from './ephemeris';
+import { getMoonApplyingAspects } from './aspects';
 
 const EDINBURGH = { lat: 55.95, lon: -3.19 };
 
@@ -79,5 +80,34 @@ describe('angleDiff', () => {
     expect(angleDiff(10, 350)).toBeCloseTo(20, 5);
     expect(angleDiff(350, 10)).toBeCloseTo(-20, 5);
     expect(angleDiff(180, 0)).toBeCloseTo(180, 5);
+  });
+});
+
+// Permanent JPL DE421 regression tests (item 8e). These figures are the
+// user's own external verification values, checked against this engine's
+// output before being hard-coded here — not independently re-derived from
+// JPL Horizons in this test. Two different times of day are used because
+// that is where each reference figure was found to match: 339.5° elongation
+// matches at 00:00 Edinburgh on 13 July (06:00 that day gives 343.08°,
+// a different instant), while 120.6° elongation and the 3.3° Jupiter trine
+// orb both match almost exactly at 06:00 on 24 July. If this ever fails
+// after an unrelated change, re-verify against fresh JPL data before
+// assuming the change under test is wrong.
+describe('JPL DE421 regression — 13 & 24 July 2026, Edinburgh', () => {
+  it('13 July 2026, 00:00 BST: Moon-Sun elongation ~339.5°, Mercury retrograde', () => {
+    const d = new Date('2026-07-13T00:00:00+01:00');
+    expect(getMoonElongation(d)).toBeCloseTo(339.5, 0);
+    expect(getPlanetPosition('Mercury', d).isRetrograde).toBe(true);
+  });
+
+  it('24 July 2026, 06:00 BST: Moon-Sun elongation ~120.6°, Mercury direct, Jupiter trine orb ~3.3°', () => {
+    const d = new Date('2026-07-24T06:00:00+01:00');
+    expect(getMoonElongation(d)).toBeCloseTo(120.6, 0);
+    expect(getPlanetPosition('Mercury', d).isRetrograde).toBe(false);
+
+    const aspects = getMoonApplyingAspects(d);
+    const jupiterTrine = aspects.find(a => a.planet === 'Jupiter' && a.aspect === 'trine');
+    expect(jupiterTrine).toBeDefined();
+    expect(jupiterTrine!.orb).toBeCloseTo(3.3, 0);
   });
 });
