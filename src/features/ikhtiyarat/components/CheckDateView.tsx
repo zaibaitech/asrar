@@ -1,12 +1,14 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { evaluateElection, findNearestBetterDates } from '@/src/lib/ikhtiyarat/engine';
 import { marriageElectionConfig } from '@/src/lib/ikhtiyarat/elections/marriage';
 import { ElectionResult } from '@/src/lib/ikhtiyarat/types';
 import { gregorianToHijri, getSunnahBadges } from '@/src/lib/ikhtiyarat/hijri';
 import { getUrfBadgeForMonth } from '@/src/lib/ikhtiyarat/urf';
 import { getDayDegradationNote } from '@/src/lib/ikhtiyarat/degradation';
+import { shareContent } from '@/src/features/ramadanChallenges/sharing';
 import { UserLocation } from '@/src/types/planetary';
 import { getLocalToday } from '@/src/lib/localDate';
 import { TierBadge } from './TierBadge';
@@ -15,13 +17,22 @@ import { SunnahBadges } from './SunnahBadges';
 import { UrfBadge } from './UrfBadge';
 import { ikhtiyaratCopy, UiLang } from '../copy';
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
+
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+
 export function CheckDateView({ language, location }: { language: UiLang; location: UserLocation }) {
   const c = ikhtiyaratCopy[language];
-  const [dateStr, setDateStr] = useState(getLocalToday());
+  const searchParams = useSearchParams();
+  const dateFromUrl = searchParams.get('date');
+  const [dateStr, setDateStr] = useState(
+    dateFromUrl && DATE_RE.test(dateFromUrl) ? dateFromUrl : getLocalToday(),
+  );
   const [result, setResult] = useState<ElectionResult | null>(null);
   const [nearestBetter, setNearestBetter] = useState<ElectionResult[]>([]);
   const [bestAvailable, setBestAvailable] = useState<ElectionResult | null>(null);
   const [loading, setLoading] = useState(false);
+  const [shareCopied, setShareCopied] = useState(false);
 
   const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
@@ -50,6 +61,22 @@ export function CheckDateView({ language, location }: { language: UiLang; locati
     handleCheck();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  async function handleShare() {
+    if (!result) return;
+    const tierLabel = language === 'fr' ? result.tierInfo.labelFr : result.tierInfo.labelEn;
+    const dateOnly = result.date.toISOString().slice(0, 10);
+    const url = `${BASE_URL}/ikhtiyarat/r/${dateOnly}?lat=${location.latitude}&lon=${location.longitude}&tz=${encodeURIComponent(tz)}${language === 'fr' ? '&lang=fr' : ''}`;
+    const shareResult = await shareContent({
+      title: c.title,
+      text: `${dateOnly} — ${tierLabel} (${result.score}/100)`,
+      url,
+    });
+    if (shareResult.success && shareResult.method === 'clipboard') {
+      setShareCopied(true);
+      setTimeout(() => setShareCopied(false), 2000);
+    }
+  }
 
   const hijri = result ? gregorianToHijri(result.date) : null;
   const sunnahBadges = result ? getSunnahBadges(result.date) : [];
@@ -83,7 +110,15 @@ export function CheckDateView({ language, location }: { language: UiLang; locati
       {result && (
         <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40 p-4 space-y-4">
           <div>
-            <div className="text-xs uppercase tracking-wide text-slate-400 mb-1">{c.starsLabel}</div>
+            <div className="flex items-center justify-between mb-1">
+              <div className="text-xs uppercase tracking-wide text-slate-400">{c.starsLabel}</div>
+              <button
+                onClick={handleShare}
+                className="text-xs font-medium text-emerald-700 dark:text-emerald-400 hover:underline"
+              >
+                {shareCopied ? c.linkCopied : c.shareButton}
+              </button>
+            </div>
             <div className="flex items-center justify-between flex-wrap gap-2">
               <TierBadge tierInfo={result.tierInfo} language={language} score={result.score} />
               {hijri && (

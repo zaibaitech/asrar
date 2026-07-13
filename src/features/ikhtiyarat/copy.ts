@@ -41,6 +41,8 @@ export const ikhtiyaratCopy = {
     hijriEra: 'AH',
     close: 'Close',
     aboutLink: 'About this feature / Adab',
+    shareButton: 'Share',
+    linkCopied: 'Link copied!',
   },
   fr: {
     title: 'Meilleures Dates',
@@ -75,6 +77,8 @@ export const ikhtiyaratCopy = {
     hijriEra: 'AH',
     close: 'Fermer',
     aboutLink: 'À propos de cette fonctionnalité / Adab',
+    shareButton: 'Partager',
+    linkCopied: 'Lien copié !',
   },
 } as const;
 
