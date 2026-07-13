@@ -45,6 +45,7 @@ export const ikhtiyaratCopy = {
     aboutLink: 'About this feature / Adab',
     shareButton: 'Share',
     linkCopied: 'Link copied!',
+    howScoringWorks: 'How scoring works: each rule adds or subtracts points; the total is scaled to a 0–100 score against that election type\'s own maximum achievable points, so the tier bands (Mumtāz, Jayyid, Maqbūl, Ḍaʿīf, Ijtanib) mean the same thing across marriage, travel, and any future election type.',
   },
   fr: {
     title: 'Meilleures Dates',
@@ -83,6 +84,7 @@ export const ikhtiyaratCopy = {
     aboutLink: 'À propos de cette fonctionnalité / Adab',
     shareButton: 'Partager',
     linkCopied: 'Lien copié !',
+    howScoringWorks: "Comment le score est calculé : chaque règle ajoute ou retire des points ; le total est ramené à une échelle de 0 à 100 par rapport au maximum de points réalisables pour ce type d'élection, afin que les paliers (Mumtāz, Jayyid, Maqbūl, Ḍaʿīf, Ijtanib) aient la même signification pour le mariage, le voyage et tout futur type d'élection.",
   },
 } as const;
 
@@ -90,6 +92,9 @@ export const subtitleArabic = 'اختيارات';
 
 export const disclaimerArabic =
   'يعكس هذا التطبيق تهذيبًا من التراث الإسلامي الكلاسيكي في علم النجوم (الاختيارات). وهو ليس بديلاً عن الاستخارة والمشورة مع الأهل والعلماء الثقات والتوكل على الله. لا يوجد تاريخ محرم شرعًا للزواج — فالنكاح جائز في أي وقت من العام.';
+
+export const howScoringWorksArabic =
+  'كيف يُحسب التقييم: كل قاعدة تضيف أو تطرح نقاطًا؛ ويُحوَّل المجموع إلى تقييم من 0 إلى 100 بالنسبة إلى أقصى عدد نقاط يمكن تحقيقه لهذا النوع من الاختيار، بحيث تحمل الفئات (ممتاز، جيد، مقبول، ضعيف، اجتناب) نفس المعنى في الزواج والسفر وأي نوع اختيار مستقبلي.';
 
 export const ruleStatusLabel: Record<string, { en: string; fr: string }> = {
   pass: { en: 'Pass', fr: 'Réussi' },

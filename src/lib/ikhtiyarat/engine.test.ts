@@ -1,5 +1,5 @@
-import { describe, it, expect } from 'vitest';
-import { evaluateElection, findNearestBetterDates } from './engine';
+import { describe, it, expect, vi } from 'vitest';
+import { evaluateElection, evaluateDateRange, findNearestBetterDates, computeMaxAchievable } from './engine';
 import { marriageElectionConfig } from './elections/marriage';
 import { ElectionInput, ElectionRulesConfig } from './types';
 
@@ -179,6 +179,7 @@ describe('civil-hours constraint on best-window selection', () => {
       tiers: [midnightPreferringTier],
       scoreToTier: () => midnightPreferringTier,
       civilHoursRange,
+      maxAchievable: () => 24,
     };
   }
 
@@ -285,4 +286,58 @@ describe('findNearestBetterDates', () => {
     expect(a.dates.map(d => d.date.toISOString())).toEqual(b.dates.map(d => d.date.toISOString()));
     expect(a.radiusExhausted).toBe(b.radiusExhausted);
   }, SCAN_TEST_TIMEOUT); // two scans back-to-back
+});
+
+describe('scan-sanity self-detecting calibration warning (Phase 3 Part 3)', () => {
+  // This test reconstructs the exact symptom that caught the original
+  // travel-election scoring bug: a config whose maxAchievable() is set
+  // (deliberately, here) below its own 'acceptable' threshold, so no day
+  // could ever normalize to Maqbūl no matter how many bonuses fire.
+  const uncappableTier = { tier: 'weak' as const, labelEn: 'Weak', labelFr: 'Faible', labelAr: 'ضعيف', color: '#000' };
+  const alwaysBonusRule = {
+    id: 'always-bonus',
+    label: { en: '', fr: '', ar: '' },
+    maxPoints: 10,
+    evaluate: () => ({ id: 'always-bonus', label_en: '', label_fr: '', label_ar: '', status: 'bonus' as const, points: 10, detail_en: '', detail_fr: '' }),
+  };
+  const uncappableConfig: ElectionRulesConfig = {
+    electionType: 'travel',
+    rules: [alwaysBonusRule],
+    tiers: [uncappableTier],
+    // scoreToTier here requires >=90 to reach anything but 'weak', while
+    // maxAchievable() only allows 100 (10/10 raw = fully normalized) at
+    // best — reconstructing the original bug's shape: a threshold the
+    // config's own point pool can realistically never clear.
+    scoreToTier: () => uncappableTier,
+    maxAchievable: () => computeMaxAchievable([alwaysBonusRule]),
+  };
+
+  it('warns in dev when a 90+ day scan finds no day reaching Maqbūl/Acceptable or better', () => {
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    const start = new Date('2026-01-01T12:00:00Z');
+    const end = new Date('2026-04-15T12:00:00Z'); // > 90 days
+    evaluateDateRange(start, end, EDINBURGH.lat, EDINBURGH.lon, EDINBURGH.tz, 'travel', uncappableConfig);
+    expect(warnSpy).toHaveBeenCalledTimes(1);
+    expect(warnSpy.mock.calls[0][0]).toContain('no day in a');
+    expect(warnSpy.mock.calls[0][0]).toContain('reached Maqbūl/Acceptable or better');
+    warnSpy.mockRestore();
+  });
+
+  it('does not warn for a well-calibrated config (marriage) over the same range', () => {
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    const start = new Date('2026-01-01T12:00:00Z');
+    const end = new Date('2026-04-15T12:00:00Z');
+    evaluateDateRange(start, end, EDINBURGH.lat, EDINBURGH.lon, EDINBURGH.tz, 'marriage', marriageElectionConfig);
+    expect(warnSpy).not.toHaveBeenCalled();
+    warnSpy.mockRestore();
+  });
+
+  it('does not warn for scans shorter than the 90-day sanity threshold, even if uncalibrated', () => {
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    const start = new Date('2026-01-01T12:00:00Z');
+    const end = new Date('2026-01-10T12:00:00Z'); // 10 days
+    evaluateDateRange(start, end, EDINBURGH.lat, EDINBURGH.lon, EDINBURGH.tz, 'travel', uncappableConfig);
+    expect(warnSpy).not.toHaveBeenCalled();
+    warnSpy.mockRestore();
+  });
 });

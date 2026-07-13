@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { ikhtiyaratCopy, disclaimerArabic, UiLang } from '../copy';
+import { ikhtiyaratCopy, disclaimerArabic, howScoringWorksArabic, UiLang } from '../copy';
 import { useAuth } from '../../../contexts/AuthContext';
 import { useProfile, useUpdateProfile } from '../../../hooks/useProfile';
 import { readLocalAck, writeLocalAck, readProfileAck, buildProfileAckUpdate } from '../disclaimerAck';
@@ -55,6 +55,12 @@ export function AdabDisclaimer({ language, forceOpen, onRequestClose }: AdabDisc
         <p className="text-sm text-amber-800 dark:text-amber-200/90 leading-relaxed">{c.disclaimer}</p>
         <p dir="rtl" lang="ar" className="font-arabic text-sm text-amber-800 dark:text-amber-200/90 leading-relaxed text-right">
           {disclaimerArabic}
+        </p>
+        <p className="text-xs text-amber-700/80 dark:text-amber-300/70 leading-relaxed border-t border-amber-200 dark:border-amber-800/50 pt-3">
+          {c.howScoringWorks}
+        </p>
+        <p dir="rtl" lang="ar" className="font-arabic text-xs text-amber-700/80 dark:text-amber-300/70 leading-relaxed text-right">
+          {howScoringWorksArabic}
         </p>
         <button
           onClick={forceOpen && acked ? onRequestClose : handleAccept}

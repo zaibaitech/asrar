@@ -95,6 +95,8 @@ export interface RuleContext {
   applyingAspects: import('./aspects').ApplyingAspect[];
   /** True when datetime falls between that day's sunrise and sunset — needed for day/night essential-dignity checks. */
   isDaytime: boolean;
+  /** Local hour-of-day (0-23) of this window, per the input's tz — equal to evaluateElection's loop offset `h` by construction (dayStart is local midnight). Lets rules key off time-of-day (e.g. the travel election's early-departure/bukūr bonus) without re-deriving timezone math themselves. */
+  localHour: number;
 }
 
 export interface Rule {
@@ -102,6 +104,21 @@ export interface Rule {
   label: LocalizedText;
   /** Evaluate this rule against a context. Return null if the rule does not apply at all (rare — most rules always apply and report pass/fail). */
   evaluate(ctx: RuleContext): RuleResult | null;
+  /**
+   * The most positive `points` this rule can ever return, used by
+   * ElectionRulesConfig.maxAchievable() to normalize scores across election
+   * types with different-sized bonus pools. Omit for rules that never award
+   * a bonus (hard-fail-only or penalty-only rules contribute 0).
+   */
+  maxPoints?: number;
+  /**
+   * Rules tagged with the same exclusiveGroup can never both fire at their
+   * max in the same window (e.g. "Moon in Cancer" and "Moon in Taurus" —
+   * the Moon is in exactly one sign). maxAchievable() takes the highest
+   * maxPoints within a group once, instead of summing every rule in it.
+   * Rules without a group are assumed independent and always summed.
+   */
+  exclusiveGroup?: string;
 }
 
 export interface ElectionRulesConfig {
@@ -118,4 +135,14 @@ export interface ElectionRulesConfig {
    * at that time. Defaults to false, preserving existing scoring exactly.
    */
   strictHourRuler?: boolean;
+  /**
+   * The maximum raw point total a single window could ever achieve under
+   * this config's rules — the denominator for normalizing final scores to
+   * a shared 0-100 scale across election types with different-sized bonus
+   * pools. Each election config supplies this directly (summing its own
+   * rules' declared maxPoints, deduplicated by exclusiveGroup) rather than
+   * the engine trying to infer it, since rule logic can't be introspected
+   * generically.
+   */
+  maxAchievable(): number;
 }

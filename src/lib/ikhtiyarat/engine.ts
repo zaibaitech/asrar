@@ -16,12 +16,38 @@ import { getAllPlanetPositions, getMoonElongation, getMoonPhaseDirection, getMoo
 import { getMoonApplyingAspects } from './aspects';
 import { getAllPlanetaryHoursForDay } from '../planetary/planetaryHours';
 import SunCalc from 'suncalc';
-import { ElectionInput, ElectionResult, ElectionRulesConfig, RuleContext, RuleResult, Tier, WindowScore } from './types';
+import { ElectionInput, ElectionResult, ElectionRulesConfig, Rule, RuleContext, RuleResult, Tier, WindowScore } from './types';
+
+/**
+ * Sums each rule's declared `maxPoints`, taking only the highest value once
+ * per `exclusiveGroup` (rules sharing a group can never all fire at once —
+ * e.g. mutually exclusive Moon-sign dignity tiers) and summing every
+ * ungrouped rule independently. Exported so each elections/*.ts config can
+ * implement `maxAchievable()` as `computeMaxAchievable(rules)` without
+ * duplicating the grouping logic.
+ */
+export function computeMaxAchievable(rules: Rule[]): number {
+  let total = 0;
+  const groupMax = new Map<string, number>();
+
+  for (const r of rules) {
+    if (!r.maxPoints) continue;
+    if (r.exclusiveGroup) {
+      const current = groupMax.get(r.exclusiveGroup) ?? 0;
+      groupMax.set(r.exclusiveGroup, Math.max(current, r.maxPoints));
+    } else {
+      total += r.maxPoints;
+    }
+  }
+
+  for (const max of groupMax.values()) total += max;
+  return total;
+}
 
 const STEP_HOURS = 3;
 const DEFAULT_CIVIL_HOURS = { startHour: 8, endHour: 22 };
 
-function buildRuleContext(datetime: Date, lat: number, lon: number): RuleContext {
+function buildRuleContext(datetime: Date, lat: number, lon: number, localHour: number): RuleContext {
   const positions = getAllPlanetPositions(datetime);
   const moonElongation = getMoonElongation(datetime);
   const moonSunSeparation = getMoonSunSeparation(datetime);
@@ -61,11 +87,12 @@ function buildRuleContext(datetime: Date, lat: number, lon: number): RuleContext
     nearestEclipseHours: nearestEclipse ? nearestEclipse.hoursToNearestEclipse : Infinity,
     applyingAspects,
     isDaytime,
+    localHour,
   };
 }
 
-function evaluateWindow(datetime: Date, lat: number, lon: number, config: ElectionRulesConfig): WindowScore {
-  const ctx = buildRuleContext(datetime, lat, lon);
+function evaluateWindow(datetime: Date, lat: number, lon: number, localHour: number, config: ElectionRulesConfig): WindowScore {
+  const ctx = buildRuleContext(datetime, lat, lon, localHour);
   const rules: RuleResult[] = [];
   let score = 0;
   let hasHardFail = false;
@@ -116,7 +143,7 @@ export function evaluateElection(input: ElectionInput, config: ElectionRulesConf
   // without any further timezone math.
   for (let h = 0; h < 24; h += STEP_HOURS) {
     const t = new Date(dayStart.getTime() + h * 60 * 60 * 1000);
-    windows.push(evaluateWindow(t, input.lat, input.lon, config));
+    windows.push(evaluateWindow(t, input.lat, input.lon, h, config));
   }
 
   windows.sort((a, b) => a.time.getTime() - b.time.getTime());
@@ -137,18 +164,31 @@ export function evaluateElection(input: ElectionInput, config: ElectionRulesConf
   // hard fail — a date is only truly "Avoid" if every candidate window
   // hard-fails. This is what lets a date be "good in the morning, bad by
   // evening" (or vice versa) resolve to its best window rather than being
-  // dragged down by its worst one.
+  // dragged down by its worst one. Ties go to the earlier window (e.g.
+  // favors an early-morning departure over an equally-scored evening one,
+  // per the travel election's bukūr/early-departure preference — applied
+  // engine-wide since exact ties are rare and "earlier" is a reasonable
+  // default for any election type).
+  const pickBest = (list: WindowScore[]) =>
+    list.reduce((best, w) => {
+      if (w.score > best.score) return w;
+      if (w.score === best.score && w.time.getTime() < best.time.getTime()) return w;
+      return best;
+    });
   const cleanWindows = candidateWindows.filter(w => !w.hasHardFail);
-  const bestWindow = cleanWindows.length > 0
-    ? cleanWindows.reduce((best, w) => (w.score > best.score ? w : best))
-    : candidateWindows.reduce((best, w) => (w.score > best.score ? w : best), candidateWindows[0]);
+  const bestWindow = cleanWindows.length > 0 ? pickBest(cleanWindows) : pickBest(candidateWindows);
 
-  const tierInfo = config.scoreToTier(bestWindow.score, bestWindow.hasHardFail);
+  const maxAchievable = config.maxAchievable();
+  const normalizedScore = maxAchievable > 0
+    ? Math.max(0, Math.min(100, Math.round((bestWindow.score / maxAchievable) * 100)))
+    : 0;
+
+  const tierInfo = config.scoreToTier(normalizedScore, bestWindow.hasHardFail);
 
   return {
     electionType: config.electionType,
     date: dayStart,
-    score: bestWindow.score,
+    score: normalizedScore,
     tier: tierInfo.tier,
     tierInfo,
     hasHardFail: bestWindow.hasHardFail,
@@ -158,6 +198,14 @@ export function evaluateElection(input: ElectionInput, config: ElectionRulesConf
     isLeastAfflicted: bestWindow.hasHardFail,
   };
 }
+
+/**
+ * Below this range length, a scan finding zero hard-fail-free Maqbūl-or-better
+ * days isn't necessarily a calibration problem — short windows can
+ * legitimately be unlucky. 90 days is long enough that "nothing acceptable
+ * anywhere" is a real signal, not noise.
+ */
+const SCAN_SANITY_MIN_DAYS = 90;
 
 /** Scan a date range (inclusive) and evaluate each day — used by the "Find Best Dates" scanner. */
 export function evaluateDateRange(
@@ -175,6 +223,24 @@ export function evaluateDateRange(
   while (t.getTime() <= endDate.getTime()) {
     results.push(evaluateElection({ datetime: t, lat, lon, tz, electionType }, config));
     t = new Date(t.getTime() + 24 * 60 * 60 * 1000);
+  }
+
+  // Self-detecting scoring-calibration check: this is the exact symptom
+  // that surfaced the travel-election normalization bug (a 3-month scan
+  // where every top-5 date landed at the same "Weak" score because the
+  // election's bonus pool structurally couldn't reach Maqbūl). Only checked
+  // in dev — this is a diagnostic for maintainers tuning a config, not
+  // production behavior, and must never throw or block the scan.
+  if (process.env.NODE_ENV !== 'production' && results.length >= SCAN_SANITY_MIN_DAYS) {
+    const anyAcceptableOrBetter = results.some(r => !r.hasHardFail && ACCEPTABLE_OR_BETTER.has(r.tier));
+    if (!anyAcceptableOrBetter) {
+      // eslint-disable-next-line no-console
+      console.warn(
+        `[ikhtiyarat] evaluateDateRange (${config.electionType}): no day in a ${results.length}-day scan reached Maqbūl/Acceptable or better. ` +
+        `This usually means the election config's maxAchievable() (${config.maxAchievable()}) is miscalibrated against its tier bands — ` +
+        `verify raw bonus totals can realistically clear the acceptable threshold.`,
+      );
+    }
   }
 
   return results;

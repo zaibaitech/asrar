@@ -22,15 +22,19 @@ import { angleDiff } from '../ephemeris';
 import { ElectionRulesConfig, Rule, RuleContext, RuleResult, TierInfo, Tier } from '../types';
 import { getMansionMarriageFavorability, getMansionNumberFromLongitude } from '../manzil-favorability';
 import { isInFall, isInDetriment } from '../../planetary/dignities';
+import { computeMaxAchievable } from '../engine';
 
 function rule(
   id: string,
   label: { en: string; fr: string; ar: string },
   fn: (ctx: RuleContext) => Omit<RuleResult, 'id' | 'label_en' | 'label_fr' | 'label_ar'> | null,
+  opts?: { maxPoints?: number; exclusiveGroup?: string },
 ): Rule {
   return {
     id,
     label,
+    maxPoints: opts?.maxPoints,
+    exclusiveGroup: opts?.exclusiveGroup,
     evaluate(ctx) {
       const r = fn(ctx);
       if (!r) return null;
@@ -267,6 +271,7 @@ const moonWaxingClear = rule(
       ? { status: 'bonus', points: 20, detail_en: `Moon elongation ${elong}° — waxing, clear of the beams, before full.`, detail_fr: `Élongation lunaire ${elong}° — croissante, dégagée des rayons, avant la pleine lune.` }
       : { status: 'pass', points: 0, detail_en: 'Moon is not in the favorable waxing band.', detail_fr: "La Lune n'est pas dans la zone croissante favorable." };
   },
+  { maxPoints: 20 },
 );
 
 const moonDignity = rule(
@@ -287,6 +292,7 @@ const moonDignity = rule(
     }
     return { status: 'pass', points: 0, detail_en: 'Moon has no marriage-favorable dignity bonus in this sign.', detail_fr: 'La Lune ne bénéficie d’aucune dignité favorable au mariage dans ce signe.' };
   },
+  { maxPoints: 15 },
 );
 
 const moonApplyingToBeneficBonus = rule(
@@ -318,6 +324,7 @@ const moonApplyingToBeneficBonus = rule(
     }
     return { status: 'pass', points: 0, detail_en: 'Moon is not applying to Venus or Jupiter by a favorable aspect.', detail_fr: "La Lune n'applique aucun aspect favorable à Vénus ou Jupiter." };
   },
+  { maxPoints: 12 },
 );
 
 const venusDignified = rule(
@@ -337,6 +344,7 @@ const venusDignified = rule(
     if (sign === 'pisces') return { status: 'bonus', points: 10, detail_en: 'Venus in Pisces — exaltation.', detail_fr: 'Vénus en Poissons — exaltation.' };
     return { status: 'pass', points: 0, detail_en: 'Venus has no dignity bonus in this sign.', detail_fr: "Vénus ne bénéficie d'aucune dignité dans ce signe." };
   },
+  { maxPoints: 10 },
 );
 
 const dayOfWeekBonus = rule(
@@ -348,6 +356,7 @@ const dayOfWeekBonus = rule(
     if (ctx.dayOfWeek === 1) return { status: 'bonus', points: 6, detail_en: 'Monday.', detail_fr: 'Lundi.' };
     return { status: 'pass', points: 0, detail_en: 'No day-of-week bonus.', detail_fr: 'Aucun bonus lié au jour de la semaine.' };
   },
+  { maxPoints: 10 },
 );
 
 // SCHOLAR-REVIEW: strictHourRuler additionally requires the ruling planet
@@ -397,6 +406,7 @@ function makePlanetaryHourBonus(strict: boolean): Rule {
 
       return { status: 'bonus', points: 6, detail_en: `This window falls in the planetary hour of ${planet}.`, detail_fr: `Cette fenêtre se situe dans l'heure planétaire de ${planetFr[planet!] ?? planet}.` };
     },
+    { maxPoints: 6 },
   );
 }
 
@@ -429,6 +439,7 @@ const lunarMansionBonus = rule(
       detail_fr: `Lune dans le manoir lunaire ${mansionNumber} — neutre pour le mariage.`,
     };
   },
+  { maxPoints: 6 },
 );
 
 // ============================================================================
@@ -460,35 +471,37 @@ function scoreToTier(score: number, hasHardFail: boolean): TierInfo {
  * at construction time (see makePlanetaryHourBonus above).
  */
 function buildMarriageElectionConfig(strictHourRuler: boolean): ElectionRulesConfig {
+  const rules = [
+    darkMoon,
+    moonCombust,
+    moonVoidOfCourse,
+    moonMaleficSquareOrOpposition,
+    eclipseProximity,
+    underTheBeams,
+    moonWaning,
+    viaCombusta,
+    moonFallOrDetriment,
+    venusCombust,
+    venusRetrograde,
+    venusDebilitated,
+    mercuryRetrograde,
+    moonSeparatingFromBenefics,
+    moonWaxingClear,
+    moonDignity,
+    moonApplyingToBeneficBonus,
+    venusDignified,
+    dayOfWeekBonus,
+    makePlanetaryHourBonus(strictHourRuler),
+    lunarMansionBonus,
+  ];
   return {
     electionType: 'marriage',
-    rules: [
-      darkMoon,
-      moonCombust,
-      moonVoidOfCourse,
-      moonMaleficSquareOrOpposition,
-      eclipseProximity,
-      underTheBeams,
-      moonWaning,
-      viaCombusta,
-      moonFallOrDetriment,
-      venusCombust,
-      venusRetrograde,
-      venusDebilitated,
-      mercuryRetrograde,
-      moonSeparatingFromBenefics,
-      moonWaxingClear,
-      moonDignity,
-      moonApplyingToBeneficBonus,
-      venusDignified,
-      dayOfWeekBonus,
-      makePlanetaryHourBonus(strictHourRuler),
-      lunarMansionBonus,
-    ],
+    rules,
     tiers: TIERS,
     scoreToTier,
     civilHoursRange: { startHour: 8, endHour: 22 },
     strictHourRuler,
+    maxAchievable: () => computeMaxAchievable(rules),
   };
 }
 
