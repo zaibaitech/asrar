@@ -100,6 +100,11 @@ export default async function SharedResultPage({
   const result = evaluateFromParams(resolvedParams.date, resolvedSearchParams);
   if (!result) notFound();
 
+  // Must match the tz evaluateFromParams used to compute result.date's local
+  // day (startOfLocalDay in engine.ts) — formatting in a different zone can
+  // display the wrong calendar date near a day boundary (e.g. BST midnight
+  // is still "yesterday" in UTC).
+  const displayTz = resolvedSearchParams.tz || 'UTC';
   const hijri = gregorianToHijri(result.date);
   const tierLabel = lang === 'fr' ? result.tierInfo.labelFr : result.tierInfo.labelEn;
 
@@ -107,7 +112,7 @@ export default async function SharedResultPage({
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-slate-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900 flex items-center justify-center p-4">
       <div className="w-full max-w-sm rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-800/60 p-6 space-y-4 text-center">
         <div className="text-sm font-semibold text-slate-900 dark:text-slate-100">
-          {result.date.toLocaleDateString(lang === 'fr' ? 'fr-FR' : 'en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })}
+          {result.date.toLocaleDateString(lang === 'fr' ? 'fr-FR' : 'en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', timeZone: displayTz })}
         </div>
         <div className="text-xs text-slate-500 dark:text-slate-400">
           {c.hijriDate}: {hijri.day} {hijri.monthName[lang]} ({hijri.monthName.wolof}) {hijri.year} AH
