@@ -20,8 +20,10 @@ interface DetailSheetProps {
 export function DetailSheet({ result, language, onClose }: DetailSheetProps) {
   const c = ikhtiyaratCopy[language];
   const hijri = gregorianToHijri(result.date);
-  const sunnahBadges = getSunnahBadges(result.date);
-  const urfBadge = getUrfBadgeForMonth(hijri.month);
+  // Sunnah/ʿUrf badges are written specifically about marriage/nikāḥ
+  // customs — not shown for other election types (e.g. travel).
+  const sunnahBadges = result.electionType === 'marriage' ? getSunnahBadges(result.date) : [];
+  const urfBadge = result.electionType === 'marriage' ? getUrfBadgeForMonth(hijri.month) : null;
   const degradationNote = getDayDegradationNote(result, language);
 
   useEffect(() => {

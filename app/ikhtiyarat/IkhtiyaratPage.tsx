@@ -10,6 +10,8 @@ import { AdabDisclaimer } from '@/src/features/ikhtiyarat/components/AdabDisclai
 import { CheckDateView } from '@/src/features/ikhtiyarat/components/CheckDateView';
 import { ScanDatesView } from '@/src/features/ikhtiyarat/components/ScanDatesView';
 import { ikhtiyaratCopy, subtitleArabic, UiLang } from '@/src/features/ikhtiyarat/copy';
+import { ElectionType } from '@/src/lib/ikhtiyarat/types';
+import { ENABLE_TRAVEL_ELECTION } from '@/src/lib/ikhtiyarat/elections/travel';
 
 type Mode = 'check' | 'scan';
 
@@ -19,6 +21,7 @@ export function IkhtiyaratPage() {
   const c = ikhtiyaratCopy[uiLang];
 
   const [mode, setMode] = useState<Mode>('check');
+  const [electionType, setElectionType] = useState<ElectionType>('marriage');
   const [location, setLocation] = useState<UserLocation | null>(null);
   const [showAbout, setShowAbout] = useState(false);
 
@@ -55,6 +58,27 @@ export function IkhtiyaratPage() {
       <div className="max-w-2xl mx-auto px-4 py-6 space-y-4">
         <AdabDisclaimer language={uiLang} forceOpen={showAbout} onRequestClose={() => setShowAbout(false)} />
 
+        {ENABLE_TRAVEL_ELECTION && (
+          <div className="flex rounded-xl border border-slate-200 dark:border-slate-700 p-1 bg-white/60 dark:bg-slate-800/40">
+            <button
+              onClick={() => setElectionType('marriage')}
+              className={`flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${
+                electionType === 'marriage' ? 'bg-teal-600 text-white' : 'text-slate-600 dark:text-slate-300'
+              }`}
+            >
+              {c.electionTypeMarriage}
+            </button>
+            <button
+              onClick={() => setElectionType('travel')}
+              className={`flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${
+                electionType === 'travel' ? 'bg-teal-600 text-white' : 'text-slate-600 dark:text-slate-300'
+              }`}
+            >
+              {c.electionTypeTravel}
+            </button>
+          </div>
+        )}
+
         <div className="flex rounded-xl border border-slate-200 dark:border-slate-700 p-1 bg-white/60 dark:bg-slate-800/40">
           <button
             onClick={() => setMode('check')}
@@ -76,9 +100,9 @@ export function IkhtiyaratPage() {
 
         {location ? (
           mode === 'check' ? (
-            <CheckDateView language={uiLang} location={location} />
+            <CheckDateView language={uiLang} location={location} electionType={electionType} />
           ) : (
-            <ScanDatesView language={uiLang} location={location} />
+            <ScanDatesView language={uiLang} location={location} electionType={electionType} />
           )
         ) : (
           <div className="h-40 rounded-2xl bg-white/60 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 animate-pulse" />

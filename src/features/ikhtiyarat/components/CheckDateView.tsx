@@ -4,7 +4,8 @@ import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { evaluateElection, findNearestBetterDates } from '@/src/lib/ikhtiyarat/engine';
 import { marriageElectionConfig } from '@/src/lib/ikhtiyarat/elections/marriage';
-import { ElectionResult } from '@/src/lib/ikhtiyarat/types';
+import { travelElectionConfig } from '@/src/lib/ikhtiyarat/elections/travel';
+import { ElectionResult, ElectionType, ElectionRulesConfig } from '@/src/lib/ikhtiyarat/types';
 import { gregorianToHijri, getSunnahBadges } from '@/src/lib/ikhtiyarat/hijri';
 import { getUrfBadgeForMonth } from '@/src/lib/ikhtiyarat/urf';
 import { getDayDegradationNote } from '@/src/lib/ikhtiyarat/degradation';
@@ -21,8 +22,22 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
 
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 
-export function CheckDateView({ language, location }: { language: UiLang; location: UserLocation }) {
+const CONFIG_BY_ELECTION_TYPE: Record<ElectionType, ElectionRulesConfig> = {
+  marriage: marriageElectionConfig,
+  travel: travelElectionConfig,
+};
+
+export function CheckDateView({
+  language,
+  location,
+  electionType = 'marriage',
+}: {
+  language: UiLang;
+  location: UserLocation;
+  electionType?: ElectionType;
+}) {
   const c = ikhtiyaratCopy[language];
+  const config = CONFIG_BY_ELECTION_TYPE[electionType];
   const searchParams = useSearchParams();
   const dateFromUrl = searchParams.get('date');
   const [dateStr, setDateStr] = useState(
@@ -42,11 +57,11 @@ export function CheckDateView({ language, location }: { language: UiLang; locati
     // (synchronous, CPU-bound) ephemeris scan blocks the main thread.
     setTimeout(() => {
       const datetime = new Date(`${dateStr}T12:00:00`);
-      const input = { datetime, lat: location.latitude, lon: location.longitude, tz, electionType: 'marriage' as const };
-      const r = evaluateElection(input, marriageElectionConfig);
+      const input = { datetime, lat: location.latitude, lon: location.longitude, tz, electionType };
+      const r = evaluateElection(input, config);
       setResult(r);
       if (r.tier === 'avoid' || r.tier === 'weak') {
-        const { dates, bestAvailable: fallback } = findNearestBetterDates(input, marriageElectionConfig, 3);
+        const { dates, bestAvailable: fallback } = findNearestBetterDates(input, config, 3);
         setNearestBetter(dates);
         setBestAvailable(dates.length === 0 ? fallback : null);
       } else {
@@ -60,7 +75,7 @@ export function CheckDateView({ language, location }: { language: UiLang; locati
   useEffect(() => {
     handleCheck();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [electionType]);
 
   async function handleShare() {
     if (!result) return;
@@ -79,8 +94,10 @@ export function CheckDateView({ language, location }: { language: UiLang; locati
   }
 
   const hijri = result ? gregorianToHijri(result.date) : null;
-  const sunnahBadges = result ? getSunnahBadges(result.date) : [];
-  const urfBadge = hijri ? getUrfBadgeForMonth(hijri.month) : null;
+  // Sunnah/ʿUrf badges are written specifically about marriage/nikāḥ customs
+  // (blessed-day framing, wedding-safar folklore) — not shown for travel.
+  const sunnahBadges = result && electionType === 'marriage' ? getSunnahBadges(result.date) : [];
+  const urfBadge = hijri && electionType === 'marriage' ? getUrfBadgeForMonth(hijri.month) : null;
   const degradationNote = result ? getDayDegradationNote(result, language) : null;
 
   return (
@@ -112,12 +129,14 @@ export function CheckDateView({ language, location }: { language: UiLang; locati
           <div>
             <div className="flex items-center justify-between mb-1">
               <div className="text-xs uppercase tracking-wide text-slate-400">{c.starsLabel}</div>
-              <button
-                onClick={handleShare}
-                className="text-xs font-medium text-emerald-700 dark:text-emerald-400 hover:underline"
-              >
-                {shareCopied ? c.linkCopied : c.shareButton}
-              </button>
+              {electionType === 'marriage' && (
+                <button
+                  onClick={handleShare}
+                  className="text-xs font-medium text-emerald-700 dark:text-emerald-400 hover:underline"
+                >
+                  {shareCopied ? c.linkCopied : c.shareButton}
+                </button>
+              )}
             </div>
             <div className="flex items-center justify-between flex-wrap gap-2">
               <TierBadge tierInfo={result.tierInfo} language={language} score={result.score} />

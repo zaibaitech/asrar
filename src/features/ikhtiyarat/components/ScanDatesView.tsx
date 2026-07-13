@@ -3,7 +3,8 @@
 import { useState } from 'react';
 import { evaluateDateRange } from '@/src/lib/ikhtiyarat/engine';
 import { marriageElectionConfig } from '@/src/lib/ikhtiyarat/elections/marriage';
-import { ElectionResult } from '@/src/lib/ikhtiyarat/types';
+import { travelElectionConfig } from '@/src/lib/ikhtiyarat/elections/travel';
+import { ElectionResult, ElectionType, ElectionRulesConfig } from '@/src/lib/ikhtiyarat/types';
 import { UserLocation } from '@/src/types/planetary';
 import { toLocalDateString } from '@/src/lib/localDate';
 import { CalendarHeatmap } from './CalendarHeatmap';
@@ -19,8 +20,22 @@ function addMonths(d: Date, months: number): Date {
 
 const MAX_SCAN_MONTHS = 12;
 
-export function ScanDatesView({ language, location }: { language: UiLang; location: UserLocation }) {
+const CONFIG_BY_ELECTION_TYPE: Record<ElectionType, ElectionRulesConfig> = {
+  marriage: marriageElectionConfig,
+  travel: travelElectionConfig,
+};
+
+export function ScanDatesView({
+  language,
+  location,
+  electionType = 'marriage',
+}: {
+  language: UiLang;
+  location: UserLocation;
+  electionType?: ElectionType;
+}) {
   const c = ikhtiyaratCopy[language];
+  const config = CONFIG_BY_ELECTION_TYPE[electionType];
   const today = new Date();
   const [startStr, setStartStr] = useState(toLocalDateString(today));
   const [endStr, setEndStr] = useState(toLocalDateString(addMonths(today, 3)));
@@ -47,7 +62,7 @@ export function ScanDatesView({ language, location }: { language: UiLang; locati
     setLoading(true);
 
     setTimeout(() => {
-      const scanResults = evaluateDateRange(start, end, location.latitude, location.longitude, tz, 'marriage', marriageElectionConfig);
+      const scanResults = evaluateDateRange(start, end, location.latitude, location.longitude, tz, electionType, config);
       setResults(scanResults);
       setLoading(false);
     }, 0);
