@@ -8,6 +8,7 @@ import { travelElectionConfig } from '@/src/lib/ikhtiyarat/elections/travel';
 import { ElectionResult, ElectionType, ElectionRulesConfig } from '@/src/lib/ikhtiyarat/types';
 import { gregorianToHijri, getSunnahBadges } from '@/src/lib/ikhtiyarat/hijri';
 import { getUrfBadgeForMonth } from '@/src/lib/ikhtiyarat/urf';
+import { getTravelBadges } from '@/src/lib/ikhtiyarat/travelBadges';
 import { getDayDegradationNote } from '@/src/lib/ikhtiyarat/degradation';
 import { shareContent } from '@/src/features/ramadanChallenges/sharing';
 import { UserLocation } from '@/src/types/planetary';
@@ -98,6 +99,10 @@ export function CheckDateView({
   // (blessed-day framing, wedding-safar folklore) — not shown for travel.
   const sunnahBadges = result && electionType === 'marriage' ? getSunnahBadges(result.date) : [];
   const urfBadge = hijri && electionType === 'marriage' ? getUrfBadgeForMonth(hijri.month) : null;
+  // Travel has its own score-neutral Sunnah/informational badges (bukūr,
+  // Thursday, Friday caution), keyed off the chosen window's time-of-day
+  // rather than the Hijri calendar — see travelBadges.ts.
+  const travelBadges = result && electionType === 'travel' ? getTravelBadges(result) : [];
   const degradationNote = result ? getDayDegradationNote(result, language) : null;
 
   return (
@@ -159,6 +164,13 @@ export function CheckDateView({
             <div>
               <div className="text-xs uppercase tracking-wide text-slate-400 mb-2">{c.urfLabel}</div>
               <UrfBadge badge={urfBadge} language={language} />
+            </div>
+          )}
+
+          {travelBadges.length > 0 && (
+            <div>
+              <div className="text-xs uppercase tracking-wide text-slate-400 mb-2">{c.sunnahBadge}</div>
+              <SunnahBadges badges={travelBadges} language={language} />
             </div>
           )}
 

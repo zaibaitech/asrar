@@ -10,14 +10,18 @@ describe('travelElectionConfig (config-driven-engine proof)', () => {
     );
 
     expect(result.electionType).toBe('travel');
-    expect(result.rules).toHaveLength(8);
+    expect(result.rules).toHaveLength(12);
     expect(result.rules.map(r => r.id)).toEqual([
       'travel-moon-void-of-course',
       'travel-moon-malefic-hard-aspect',
       'travel-moon-combust',
+      'travel-moon-modality',
       'travel-mercury-retrograde',
       'travel-moon-waxing',
       'travel-moon-applying-to-benefic',
+      'travel-planetary-hour',
+      'travel-sunnah-bukur',
+      'travel-lunar-mansion',
       'travel-mercury-dignified',
       'travel-day-of-week',
     ]);

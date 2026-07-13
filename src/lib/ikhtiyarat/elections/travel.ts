@@ -1,31 +1,57 @@
 /**
  * Travel (Safar) election rules config.
  *
- * Classical electional-astrology considerations for starting a journey —
- * a smaller ruleset than marriage.ts's, following the same shape:
- * Moon condition dominates (it is the universal significator of the
- * matter and of the traveler), Mercury governs travel plans/documents,
- * and hard aspects to the malefics (Mars, Saturn) warn of danger or
- * delay en route.
+ * Classical electional-astrology considerations for starting a journey,
+ * following the same shape as marriage.ts: Moon condition dominates (it
+ * is the universal significator of the matter and of the traveler),
+ * Mercury governs travel plans/documents, hard aspects to the malefics
+ * (Mars, Saturn) warn of danger or delay en route, and the Moon's sign
+ * modality (movable/fixed/mutable) and lunar mansion (a travel-specific
+ * table, manazilTravel.ts — NOT the marriage one) add further texture.
  *
  * Reuses the same primitives already verified in marriage.ts: isInFall/
- * isInDetriment (static dignity tables), getSeparation/APPLYING_ORBS
- * (aspect geometry) — no new astronomy, only a new rule selection.
+ * isInDetriment (static dignity tables), getSeparation (aspect geometry),
+ * getMansionNumberFromLongitude (shared, election-agnostic longitude
+ * math) — no new astronomy, only a new rule selection.
+ *
+ * Score-neutral Sunnah/fiqh badges for travel timing (bukūr, Thursday,
+ * Friday caution) live in travelBadges.ts, not here — they never affect
+ * the score, so they're kept out of the rules list entirely rather than
+ * awarding 0 points for a "rule" that's actually just informational UI.
  */
 
 import { ElectionRulesConfig, Rule, RuleContext, RuleResult, TierInfo } from '../types';
+import { ZodiacSign } from '../../planetary/types';
 import { isInFall, isInDetriment } from '../../planetary/dignities';
+import { computeMaxAchievable } from '../engine';
+import { getMansionNumberFromLongitude } from '../manzil-favorability';
+import { getMansionTravelFavorability } from '../manazilTravel';
+import { getSeparation } from '../aspects';
 
 export const ENABLE_TRAVEL_ELECTION = true;
+
+// SCHOLAR-REVIEW: modality (movable/fixed/mutable) classification, per
+// Sahl ibn Bishr's Kitāb al-Ikhtiyārāt on journeys — movable (cardinal)
+// signs favor swift movement and travel; fixed signs incline to delay
+// and being detained; mutable signs are neutral for this purpose.
+const MOVABLE_SIGNS: ZodiacSign[] = ['aries', 'cancer', 'libra', 'capricorn'];
+const FIXED_SIGNS: ZodiacSign[] = ['taurus', 'leo', 'scorpio', 'aquarius'];
+
+/** Civil-hours band for the "early departure" (bukūr) bonus — configurable, not tied to real sunrise. */
+const BUKUR_START_HOUR = 5;
+const BUKUR_END_HOUR = 10;
 
 function rule(
   id: string,
   label: { en: string; fr: string; ar: string },
   fn: (ctx: RuleContext) => Omit<RuleResult, 'id' | 'label_en' | 'label_fr' | 'label_ar'> | null,
+  opts?: { maxPoints?: number; exclusiveGroup?: string },
 ): Rule {
   return {
     id,
     label,
+    maxPoints: opts?.maxPoints,
+    exclusiveGroup: opts?.exclusiveGroup,
     evaluate(ctx) {
       const r = fn(ctx);
       if (!r) return null;
@@ -99,6 +125,37 @@ const moonCombust = rule(
 // PENALTIES / BONUSES
 // ============================================================================
 
+const moonModality = rule(
+  'travel-moon-modality',
+  { en: 'Moon Sign Modality (Movable/Fixed)', fr: 'Modalité du signe lunaire (cardinal/fixe)', ar: 'طبيعة برج القمر (منقلب أو ثابت)' },
+  (ctx) => {
+    const sign = ctx.positions.Moon.sign;
+    if (MOVABLE_SIGNS.includes(sign)) {
+      return {
+        status: 'bonus',
+        points: 12,
+        detail_en: `Moon in ${sign} — a movable sign (burj munqalib); movable signs favor journeys and swift movement. [SCHOLAR-REVIEW]`,
+        detail_fr: `Lune en ${sign} — un signe mobile (burj munqalib) ; les signes mobiles favorisent les voyages et les déplacements rapides. [À VÉRIFIER PAR UN SAVANT]`,
+      };
+    }
+    if (FIXED_SIGNS.includes(sign)) {
+      return {
+        status: 'penalty',
+        points: -8,
+        detail_en: `Moon in ${sign} — a fixed sign; fixed signs incline to delay and being detained. [SCHOLAR-REVIEW]`,
+        detail_fr: `Lune en ${sign} — un signe fixe ; les signes fixes inclinent au retard et à la rétention. [À VÉRIFIER PAR UN SAVANT]`,
+      };
+    }
+    return {
+      status: 'pass',
+      points: 0,
+      detail_en: `Moon in ${sign} — a mutable sign, neutral for travel timing.`,
+      detail_fr: `Lune en ${sign} — un signe mutable, neutre pour le choix du moment de voyage.`,
+    };
+  },
+  { maxPoints: 12 },
+);
+
 const mercuryRetrograde = rule(
   'travel-mercury-retrograde',
   { en: 'Mercury Retrograde (Travel Plans/Documents)', fr: 'Mercure rétrograde (plans/documents de voyage)', ar: 'عطارد في الرجوع' },
@@ -123,6 +180,7 @@ const moonWaxingIncreasingLight = rule(
         : `Élongation lunaire ${ctx.moonElongation.toFixed(1)}° — décroissante.`,
     };
   },
+  { maxPoints: 8 },
 );
 
 const moonApplyingToBenefic = rule(
@@ -143,6 +201,100 @@ const moonApplyingToBenefic = rule(
         : "La Lune n'applique pas d'aspect favorable à Vénus ou Jupiter.",
     };
   },
+  { maxPoints: 10 },
+);
+
+// Mirrors marriage.ts's makePlanetaryHourBonus: a factory closing over the
+// strictHourRuler flag at config-build time. Travel's favorable-hour
+// planets differ from marriage's (Jupiter/Moon/Mercury here vs.
+// Venus/Moon/Jupiter there) — Mercury governs travel plans/communication,
+// Jupiter governs safe/long journeys, Moon is the universal significator.
+function makeTravelPlanetaryHourBonus(strict: boolean): Rule {
+  return rule(
+    'travel-planetary-hour',
+    { en: 'Favorable Planetary Hour', fr: 'Heure planétaire favorable', ar: 'الساعة الفلكية الموافقة' },
+    (ctx) => {
+      const planet = ctx.planetaryHourPlanet;
+      const favorable = planet === 'Jupiter' || planet === 'Moon' || planet === 'Mercury';
+      const planetFr: Record<string, string> = { Jupiter: 'Jupiter', Moon: 'la Lune', Mercury: 'Mercure' };
+
+      if (!favorable) {
+        return { status: 'pass', points: 0, detail_en: 'This window is not in a Jupiter, Moon, or Mercury hour.', detail_fr: "Cette fenêtre ne se situe pas dans une heure de Jupiter, de la Lune ou de Mercure." };
+      }
+
+      if (strict) {
+        const pos = ctx.positions[planet!];
+        const isCombust = getSeparation(pos, ctx.positions.Sun) <= 8.5;
+        const isRetro = pos.isRetrograde;
+        const isFallOrDetriment = isInFall(planet!, pos.sign) || isInDetriment(planet!, pos.sign);
+        if (isCombust || isRetro || isFallOrDetriment) {
+          let reason = 'in fall/detriment';
+          let reasonFr = 'en chute/exil';
+          if (isCombust) { reason = 'combust'; reasonFr = 'combuste'; }
+          else if (isRetro) { reason = 'retrograde'; reasonFr = 'rétrograde'; }
+          return {
+            status: 'pass', points: 0,
+            detail_en: `This window is in the planetary hour of ${planet}, but ${planet} is ${reason} — no bonus. [SCHOLAR-REVIEW]`,
+            detail_fr: `Cette fenêtre se situe dans l'heure planétaire de ${planetFr[planet!] ?? planet}, mais ${planetFr[planet!] ?? planet} est ${reasonFr} — aucun bonus. [SCHOLAR-REVIEW]`,
+          };
+        }
+      }
+
+      return { status: 'bonus', points: 6, detail_en: `This window falls in the planetary hour of ${planet}.`, detail_fr: `Cette fenêtre se situe dans l'heure planétaire de ${planetFr[planet!] ?? planet}.` };
+    },
+    { maxPoints: 6 },
+  );
+}
+
+const sunnahBukur = rule(
+  'travel-sunnah-bukur',
+  { en: 'Early Departure (Bukūr)', fr: 'Départ matinal (Bukūr)', ar: 'التبكير في السفر' },
+  (ctx) => {
+    const inBukurBand = ctx.localHour >= BUKUR_START_HOUR && ctx.localHour < BUKUR_END_HOUR;
+    return {
+      status: inBukurBand ? 'bonus' : 'pass',
+      points: inBukurBand ? 8 : 0,
+      detail_en: inBukurBand
+        ? 'Early departure — "Allāhumma bārik li-ummatī fī bukūrihā" (O Allah, bless my ummah in its early mornings).'
+        : 'This window is not in the early-morning (bukūr) band.',
+      detail_fr: inBukurBand
+        ? 'Départ matinal — « Allāhumma bārik li-ummatī fī bukūrihā » (Ô Allah, bénis mon ummah dans ses matins).'
+        : "Cette fenêtre ne se situe pas dans la tranche matinale (bukūr).",
+    };
+  },
+  { maxPoints: 8 },
+);
+
+const travelManzilBonus = rule(
+  'travel-lunar-mansion',
+  { en: 'Lunar Mansion (Manzil) for Travel', fr: 'Manoir lunaire (Manzil) pour le voyage', ar: 'منزلة القمر للسفر' },
+  (ctx) => {
+    const mansionNumber = getMansionNumberFromLongitude(ctx.positions.Moon.longitude);
+    const favorability = getMansionTravelFavorability(mansionNumber);
+    if (favorability === 'favorable') {
+      return {
+        status: 'bonus',
+        points: 6,
+        detail_en: `Moon in lunar mansion ${mansionNumber} — favorable for travel. [SCHOLAR-REVIEW]`,
+        detail_fr: `Lune dans le manoir lunaire ${mansionNumber} — favorable au voyage. [À VÉRIFIER PAR UN SAVANT]`,
+      };
+    }
+    if (favorability === 'unfavorable') {
+      return {
+        status: 'penalty',
+        points: -6,
+        detail_en: `Moon in lunar mansion ${mansionNumber} — unfavorable for travel. [SCHOLAR-REVIEW]`,
+        detail_fr: `Lune dans le manoir lunaire ${mansionNumber} — défavorable au voyage. [À VÉRIFIER PAR UN SAVANT]`,
+      };
+    }
+    return {
+      status: 'pass',
+      points: 0,
+      detail_en: `Moon in lunar mansion ${mansionNumber} — neutral for travel.`,
+      detail_fr: `Lune dans le manoir lunaire ${mansionNumber} — neutre pour le voyage.`,
+    };
+  },
+  { maxPoints: 6 },
 );
 
 const mercuryDignified = rule(
@@ -162,6 +314,7 @@ const mercuryDignified = rule(
         : `Mercure est en ${pos.sign} — hors chute et exil, favorable aux plans et à la correspondance.`,
     };
   },
+  { maxPoints: 4 },
 );
 
 const dayOfWeekBonus = rule(
@@ -170,15 +323,23 @@ const dayOfWeekBonus = rule(
   (ctx) => {
     // Wednesday (Mercury) and Thursday (Jupiter) are the classical days
     // most associated with favorable travel/communication and safe
-    // long-distance journeys, respectively.
+    // long-distance journeys, respectively. Thursday's label cites the
+    // Prophet's ﷺ preference for setting out on journeys that day
+    // (Bukhārī) — informational sourcing, not a change to the +5 value.
     if (ctx.dayOfWeek === 3) {
       return { status: 'bonus', points: 5, detail_en: 'Wednesday (day of Mercury) — favorable for travel and communication.', detail_fr: 'Mercredi (jour de Mercure) — favorable au voyage et à la communication.' };
     }
     if (ctx.dayOfWeek === 4) {
-      return { status: 'bonus', points: 5, detail_en: 'Thursday (day of Jupiter) — favorable for long-distance and safe journeys.', detail_fr: 'Jeudi (jour de Jupiter) — favorable aux longs voyages et à la sécurité du trajet.' };
+      return {
+        status: 'bonus',
+        points: 5,
+        detail_en: 'Thursday — the Prophet ﷺ preferred to set out on journeys on Thursday (Bukhārī).',
+        detail_fr: 'Jeudi — le Prophète ﷺ préférait partir en voyage le jeudi (Bukhārī).',
+      };
     }
     return { status: 'pass', points: 0, detail_en: 'Not a day classically associated with favorable travel.', detail_fr: "Jour non associé de manière classique à un voyage favorable." };
   },
+  { maxPoints: 5 },
 );
 
 // ============================================================================
@@ -203,19 +364,39 @@ function scoreToTier(score: number, hasHardFail: boolean): TierInfo {
   return TIERS.find(t => t.tier === 'weak')!;
 }
 
-export const travelElectionConfig: ElectionRulesConfig = {
-  electionType: 'travel',
-  rules: [
+/**
+ * Builds the travel election config. A function rather than a bare object
+ * because makeTravelPlanetaryHourBonus needs to close over strictHourRuler
+ * at construction time — same reasoning as marriage.ts's
+ * buildMarriageElectionConfig.
+ */
+function buildTravelElectionConfig(strictHourRuler: boolean): ElectionRulesConfig {
+  const rules = [
     moonVoidOfCourse,
     moonMaleficHardAspect,
     moonCombust,
+    moonModality,
     mercuryRetrograde,
     moonWaxingIncreasingLight,
     moonApplyingToBenefic,
+    makeTravelPlanetaryHourBonus(strictHourRuler),
+    sunnahBukur,
+    travelManzilBonus,
     mercuryDignified,
     dayOfWeekBonus,
-  ],
-  tiers: TIERS,
-  scoreToTier,
-  civilHoursRange: { startHour: 6, endHour: 22 },
-};
+  ];
+  return {
+    electionType: 'travel',
+    rules,
+    tiers: TIERS,
+    scoreToTier,
+    civilHoursRange: { startHour: 6, endHour: 22 },
+    strictHourRuler,
+    maxAchievable: () => computeMaxAchievable(rules),
+  };
+}
+
+export const travelElectionConfig: ElectionRulesConfig = buildTravelElectionConfig(false);
+
+/** SCHOLAR-REVIEW variant with strictHourRuler enabled — parallels marriageElectionConfigStrictHourRuler. */
+export const travelElectionConfigStrictHourRuler: ElectionRulesConfig = buildTravelElectionConfig(true);

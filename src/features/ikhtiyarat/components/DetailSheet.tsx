@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { ElectionResult } from '@/src/lib/ikhtiyarat/types';
 import { gregorianToHijri, getSunnahBadges } from '@/src/lib/ikhtiyarat/hijri';
 import { getUrfBadgeForMonth } from '@/src/lib/ikhtiyarat/urf';
+import { getTravelBadges } from '@/src/lib/ikhtiyarat/travelBadges';
 import { getDayDegradationNote } from '@/src/lib/ikhtiyarat/degradation';
 import { TierBadge } from './TierBadge';
 import { RuleRow } from './RuleRow';
@@ -24,6 +25,7 @@ export function DetailSheet({ result, language, onClose }: DetailSheetProps) {
   // customs — not shown for other election types (e.g. travel).
   const sunnahBadges = result.electionType === 'marriage' ? getSunnahBadges(result.date) : [];
   const urfBadge = result.electionType === 'marriage' ? getUrfBadgeForMonth(hijri.month) : null;
+  const travelBadges = result.electionType === 'travel' ? getTravelBadges(result) : [];
   const degradationNote = getDayDegradationNote(result, language);
 
   useEffect(() => {
@@ -72,6 +74,13 @@ export function DetailSheet({ result, language, onClose }: DetailSheetProps) {
             <div>
               <div className="text-xs uppercase tracking-wide text-slate-400 mb-2">{c.urfLabel}</div>
               <UrfBadge badge={urfBadge} language={language} />
+            </div>
+          )}
+
+          {travelBadges.length > 0 && (
+            <div>
+              <div className="text-xs uppercase tracking-wide text-slate-400 mb-2">{c.sunnahBadge}</div>
+              <SunnahBadges badges={travelBadges} language={language} />
             </div>
           )}
 
