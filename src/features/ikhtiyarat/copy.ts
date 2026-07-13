@@ -26,6 +26,7 @@ export const ikhtiyaratCopy = {
     scanRangeEnd: 'To',
     scanButton: 'Scan this range',
     bestWindow: 'Best time window',
+    leastAfflictedWindow: 'Least-afflicted time',
     hijriDate: 'Hijri date',
     sunnahBadge: 'Sunnah & Tradition',
     ruleBreakdown: 'Full breakdown',
@@ -35,6 +36,7 @@ export const ikhtiyaratCopy = {
     scoreLabel: 'Score',
     hijriEra: 'AH',
     close: 'Close',
+    aboutLink: 'About this feature / Adab',
   },
   fr: {
     title: 'Meilleures Dates',
@@ -54,6 +56,7 @@ export const ikhtiyaratCopy = {
     scanRangeEnd: 'Au',
     scanButton: 'Analyser cette période',
     bestWindow: 'Meilleure fenêtre horaire',
+    leastAfflictedWindow: 'Moment le moins affecté',
     hijriDate: 'Date hégirienne',
     sunnahBadge: 'Sunna & Tradition',
     ruleBreakdown: 'Détail complet',
@@ -63,6 +66,7 @@ export const ikhtiyaratCopy = {
     scoreLabel: 'Score',
     hijriEra: 'AH',
     close: 'Fermer',
+    aboutLink: 'À propos de cette fonctionnalité / Adab',
   },
 } as const;
 

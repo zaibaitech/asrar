@@ -19,6 +19,7 @@ import SunCalc from 'suncalc';
 import { ElectionInput, ElectionResult, ElectionRulesConfig, RuleContext, RuleResult, WindowScore } from './types';
 
 const STEP_HOURS = 3;
+const DEFAULT_CIVIL_HOURS = { startHour: 8, endHour: 22 };
 
 function buildRuleContext(datetime: Date, lat: number, lon: number): RuleContext {
   const positions = getAllPlanetPositions(datetime);
@@ -30,9 +31,11 @@ function buildRuleContext(datetime: Date, lat: number, lon: number): RuleContext
   const applyingAspects = getMoonApplyingAspects(datetime);
 
   let planetaryHourPlanet: Planet | null = null;
+  let isDaytime = false;
   try {
     const sunTimes = SunCalc.getTimes(datetime, lat, lon);
     if (sunTimes.sunrise && sunTimes.sunset) {
+      isDaytime = datetime >= sunTimes.sunrise && datetime < sunTimes.sunset;
       const nextDay = new Date(datetime.getTime() + 24 * 60 * 60 * 1000);
       const nextSunTimes = SunCalc.getTimes(nextDay, lat, lon);
       const nextSunrise = nextSunTimes.sunrise ?? new Date(sunTimes.sunrise.getTime() + 24 * 60 * 60 * 1000);
@@ -57,6 +60,7 @@ function buildRuleContext(datetime: Date, lat: number, lon: number): RuleContext
     planetaryHourPlanet,
     nearestEclipseHours: nearestEclipse ? nearestEclipse.hoursToNearestEclipse : Infinity,
     applyingAspects,
+    isDaytime,
   };
 }
 
@@ -107,6 +111,9 @@ export function evaluateElection(input: ElectionInput, config: ElectionRulesConf
   const dayStart = startOfLocalDay(input.datetime, input.tz);
   const windows: WindowScore[] = [];
 
+  // h (the loop offset) equals local hour-of-day by construction, since
+  // dayStart is local midnight — used below to filter to civil hours
+  // without any further timezone math.
   for (let h = 0; h < 24; h += STEP_HOURS) {
     const t = new Date(dayStart.getTime() + h * 60 * 60 * 1000);
     windows.push(evaluateWindow(t, input.lat, input.lon, config));
@@ -114,15 +121,27 @@ export function evaluateElection(input: ElectionInput, config: ElectionRulesConf
 
   windows.sort((a, b) => a.time.getTime() - b.time.getTime());
 
-  // Prefer the best-scoring window that has no hard fail — a date is only
-  // truly "Avoid" if every sub-daily window that day hard-fails. This is
-  // what lets a date be "good in the morning, bad by evening" (or vice
-  // versa) resolve to its best window rather than being dragged down by
-  // its worst one.
-  const cleanWindows = windows.filter(w => !w.hasHardFail);
+  const { startHour, endHour } = config.civilHoursRange ?? DEFAULT_CIVIL_HOURS;
+  const inCivilHours = (w: WindowScore) => {
+    const h = Math.round((w.time.getTime() - dayStart.getTime()) / (60 * 60 * 1000));
+    return h >= startHour && h < endHour;
+  };
+
+  // Prefer windows within civil hours; fall back to the full day only if
+  // none fall in that range (shouldn't happen with the default 8-22 range
+  // and a 3-hour step, but kept defensive for narrower future configs).
+  const civilWindows = windows.filter(inCivilHours);
+  const candidateWindows = civilWindows.length > 0 ? civilWindows : windows;
+
+  // Within the candidate set, prefer the best-scoring window that has no
+  // hard fail — a date is only truly "Avoid" if every candidate window
+  // hard-fails. This is what lets a date be "good in the morning, bad by
+  // evening" (or vice versa) resolve to its best window rather than being
+  // dragged down by its worst one.
+  const cleanWindows = candidateWindows.filter(w => !w.hasHardFail);
   const bestWindow = cleanWindows.length > 0
     ? cleanWindows.reduce((best, w) => (w.score > best.score ? w : best))
-    : windows.reduce((best, w) => (w.score > best.score ? w : best), windows[0]);
+    : candidateWindows.reduce((best, w) => (w.score > best.score ? w : best), candidateWindows[0]);
 
   const tierInfo = config.scoreToTier(bestWindow.score, bestWindow.hasHardFail);
 
@@ -136,6 +155,7 @@ export function evaluateElection(input: ElectionInput, config: ElectionRulesConf
     rules: bestWindow.rules,
     bestWindow,
     allWindows: windows,
+    isLeastAfflicted: bestWindow.hasHardFail,
   };
 }
 

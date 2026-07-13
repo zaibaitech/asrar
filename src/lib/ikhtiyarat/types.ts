@@ -70,6 +70,14 @@ export interface ElectionResult {
   bestWindow: WindowScore;
   /** All evaluated sub-daily windows, sorted by time. */
   allWindows: WindowScore[];
+  /**
+   * True when every window within civilHoursRange hard-failed and the
+   * engine fell back to the least-bad window outside that range (or, if
+   * civilHoursRange is unset, when every window in the day hard-failed).
+   * UI should label the window "Least-afflicted time" instead of
+   * "Best time window" when this is true.
+   */
+  isLeastAfflicted: boolean;
 }
 
 /** One evaluation context handed to every rule — precomputed shared data so rules don't recompute ephemeris. */
@@ -85,6 +93,8 @@ export interface RuleContext {
   planetaryHourPlanet: Planet | null;
   nearestEclipseHours: number;
   applyingAspects: import('./aspects').ApplyingAspect[];
+  /** True when datetime falls between that day's sunrise and sunset — needed for day/night essential-dignity checks. */
+  isDaytime: boolean;
 }
 
 export interface Rule {
@@ -99,4 +109,13 @@ export interface ElectionRulesConfig {
   rules: Rule[];
   tiers: TierInfo[];
   scoreToTier(score: number, hasHardFail: boolean): TierInfo;
+  /** Local civil-hours range to prefer for the "best window" search, e.g. {startHour:8, endHour:22}. Defaults to 8-22 if omitted. */
+  civilHoursRange?: { startHour: number; endHour: number };
+  /**
+   * SCHOLAR-REVIEW: when true, bonus rules that key off the ruling
+   * planetary hour (e.g. planetaryHourBonus) additionally require that
+   * hour's ruling planet not be combust, retrograde, or in fall/detriment
+   * at that time. Defaults to false, preserving existing scoring exactly.
+   */
+  strictHourRuler?: boolean;
 }

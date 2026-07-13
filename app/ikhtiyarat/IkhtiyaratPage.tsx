@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { Info } from 'lucide-react';
 import { useLanguage } from '@/src/contexts/LanguageContext';
 import { getUserLocation, loadLocation } from '@/src/utils/location';
 import { UserLocation } from '@/src/types/planetary';
@@ -19,6 +20,7 @@ export function IkhtiyaratPage() {
 
   const [mode, setMode] = useState<Mode>('check');
   const [location, setLocation] = useState<UserLocation | null>(null);
+  const [showAbout, setShowAbout] = useState(false);
 
   useEffect(() => {
     const cached = loadLocation();
@@ -37,12 +39,19 @@ export function IkhtiyaratPage() {
             <div className="text-sm font-semibold text-slate-900 dark:text-slate-100">{c.title}</div>
             <div className="text-xs text-slate-500 dark:text-slate-400">{c.subtitle}</div>
           </div>
-          <div className="w-6" />
+          <button
+            onClick={() => setShowAbout(true)}
+            aria-label={c.aboutLink}
+            title={c.aboutLink}
+            className="w-6 h-6 flex items-center justify-center text-emerald-700 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-emerald-200 transition-colors"
+          >
+            <Info className="w-4 h-4" />
+          </button>
         </div>
       </div>
 
       <div className="max-w-2xl mx-auto px-4 py-6 space-y-4">
-        <AdabDisclaimer language={uiLang} />
+        <AdabDisclaimer language={uiLang} forceOpen={showAbout} onRequestClose={() => setShowAbout(false)} />
 
         <div className="flex rounded-xl border border-slate-200 dark:border-slate-700 p-1 bg-white/60 dark:bg-slate-800/40">
           <button

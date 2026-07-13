@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { evaluateElection } from './engine';
 import { marriageElectionConfig } from './elections/marriage';
-import { ElectionInput } from './types';
+import { ElectionInput, ElectionRulesConfig } from './types';
 
 const EDINBURGH = { lat: 55.95, lon: -3.19, tz: 'Europe/London' };
 
@@ -149,5 +149,80 @@ describe('day-boundary correctness across timezones', () => {
     const result = evaluateElection(input, marriageElectionConfig);
     const dateLocalDay = result.date.toLocaleDateString('en-US', { timeZone: 'Asia/Kolkata' });
     expect(dateLocalDay).toBe('3/1/2026');
+  });
+});
+
+describe('civil-hours constraint on best-window selection', () => {
+  // Synthetic config: score a window purely by how close its local hour is
+  // to midnight (00:00), so the "objectively best" window across the full
+  // day is always at h=0 (00:00) — outside any sane civil-hours range.
+  // This isolates the civil-hours mechanism from real ephemeris data.
+  const midnightPreferringTier = { tier: 'excellent' as const, labelEn: 'Excellent', labelFr: 'Excellent', labelAr: 'ممتاز', color: '#000' };
+  function makeMidnightPreferringConfig(civilHoursRange?: { startHour: number; endHour: number }): ElectionRulesConfig {
+    return {
+      electionType: 'marriage',
+      rules: [
+        {
+          id: 'closeness-to-midnight',
+          label: { en: '', fr: '', ar: '' },
+          evaluate(ctx) {
+            const localHour = ctx.datetime.getUTCHours(); // datetime windows are constructed at exact local-midnight-relative offsets in UTC test fixtures below
+            const distanceFromMidnight = Math.min(localHour, 24 - localHour);
+            return {
+              id: 'closeness-to-midnight', label_en: '', label_fr: '', label_ar: '',
+              status: 'bonus', points: 24 - distanceFromMidnight,
+              detail_en: '', detail_fr: '',
+            };
+          },
+        },
+      ],
+      tiers: [midnightPreferringTier],
+      scoreToTier: () => midnightPreferringTier,
+      civilHoursRange,
+    };
+  }
+
+  // UTC timezone so ctx.datetime's UTC hour equals the local hour directly,
+  // keeping the synthetic rule's math simple and unambiguous.
+  const utcInput: ElectionInput = {
+    datetime: new Date('2026-07-13T12:00:00Z'),
+    lat: 51.5, lon: 0, tz: 'UTC',
+    electionType: 'marriage',
+  };
+
+  it('with a full-day (0-24) civil-hours range, the best window is midnight (00:00) for this synthetic config', () => {
+    const result = evaluateElection(utcInput, makeMidnightPreferringConfig({ startHour: 0, endHour: 24 }));
+    expect(result.bestWindow.time.getUTCHours()).toBe(0);
+  });
+
+  it('a config with no civilHoursRange falls back to the engine default (8-22), excluding midnight', () => {
+    const result = evaluateElection(utcInput, makeMidnightPreferringConfig(undefined));
+    const hour = result.bestWindow.time.getUTCHours();
+    expect(hour).toBeGreaterThanOrEqual(8);
+    expect(hour).toBeLessThan(22);
+  });
+
+  it('with an explicit civil-hours range of 8-22, the best window is constrained to that range', () => {
+    const result = evaluateElection(utcInput, makeMidnightPreferringConfig({ startHour: 8, endHour: 22 }));
+    const hour = result.bestWindow.time.getUTCHours();
+    expect(hour).toBeGreaterThanOrEqual(8);
+    expect(hour).toBeLessThan(22);
+    // Within [8,22) on a 3-hour step, h=21 scores highest (closest to
+    // midnight among the allowed hours) — h=9 and h=21 are NOT equidistant
+    // (distance 9 vs 3), so this isn't a tie-break case.
+    expect(hour).toBe(21);
+  });
+
+  it('marriageElectionConfig defaults to the 8-22 civil-hours range', () => {
+    expect(marriageElectionConfig.civilHoursRange).toEqual({ startHour: 8, endHour: 22 });
+  });
+
+  it('isLeastAfflicted is true only when the chosen window still hard-fails', () => {
+    const clean = evaluateElection(inputFor('2026-07-17T09:00:00+01:00'), marriageElectionConfig);
+    expect(clean.isLeastAfflicted).toBe(clean.hasHardFail);
+
+    const badDate = evaluateElection(inputFor('2026-07-13T12:00:00+01:00'), marriageElectionConfig);
+    expect(badDate.hasHardFail).toBe(true);
+    expect(badDate.isLeastAfflicted).toBe(true);
   });
 });

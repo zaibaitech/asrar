@@ -404,11 +404,14 @@ const TIERS: TierInfo[] = [
   { tier: 'avoid', labelEn: 'Avoid', labelFr: 'À éviter', labelAr: 'اجتناب (Ijtanib)', color: '#EF4444' },
 ];
 
+/** Minimum score for the 'acceptable' (Maqbūl) tier — referenced by findNearestBetterDates too, so it isn't duplicated as a bare literal in engine.ts. */
+export const ACCEPTABLE_THRESHOLD = 40;
+
 function scoreToTier(score: number, hasHardFail: boolean): TierInfo {
   if (hasHardFail || score < 20) return TIERS.find(t => t.tier === 'avoid')!;
   if (score >= 80) return TIERS.find(t => t.tier === 'excellent')!;
   if (score >= 60) return TIERS.find(t => t.tier === 'good')!;
-  if (score >= 40) return TIERS.find(t => t.tier === 'acceptable')!;
+  if (score >= ACCEPTABLE_THRESHOLD) return TIERS.find(t => t.tier === 'acceptable')!;
   return TIERS.find(t => t.tier === 'weak')!;
 }
 
@@ -439,4 +442,6 @@ export const marriageElectionConfig: ElectionRulesConfig = {
   ],
   tiers: TIERS,
   scoreToTier,
+  civilHoursRange: { startHour: 8, endHour: 22 },
+  strictHourRuler: false,
 };

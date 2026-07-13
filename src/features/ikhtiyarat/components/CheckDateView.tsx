@@ -85,7 +85,9 @@ export function CheckDateView({ language, location }: { language: UiLang; locati
           {sunnahBadges.length > 0 && <SunnahBadges badges={sunnahBadges} language={language} />}
 
           <div className="rounded-xl border border-slate-200 dark:border-slate-700 p-3">
-            <div className="text-xs uppercase tracking-wide text-slate-400 mb-1">{c.bestWindow}</div>
+            <div className="text-xs uppercase tracking-wide text-slate-400 mb-1">
+              {result.isLeastAfflicted ? c.leastAfflictedWindow : c.bestWindow}
+            </div>
             <div className="text-sm font-medium text-slate-900 dark:text-slate-100">
               {result.bestWindow.time.toLocaleTimeString(language === 'fr' ? 'fr-FR' : 'en-US', { hour: '2-digit', minute: '2-digit' })}
             </div>
