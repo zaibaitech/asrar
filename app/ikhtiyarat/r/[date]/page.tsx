@@ -3,10 +3,16 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { evaluateElection } from '@/src/lib/ikhtiyarat/engine';
 import { marriageElectionConfig } from '@/src/lib/ikhtiyarat/elections/marriage';
+import { travelElectionConfig } from '@/src/lib/ikhtiyarat/elections/travel';
 import { gregorianToHijri } from '@/src/lib/ikhtiyarat/hijri';
-import { ElectionInput } from '@/src/lib/ikhtiyarat/types';
+import { ElectionInput, ElectionRulesConfig, ElectionType } from '@/src/lib/ikhtiyarat/types';
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
+
+const CONFIG_BY_ELECTION_TYPE: Record<ElectionType, ElectionRulesConfig> = {
+  marriage: marriageElectionConfig,
+  travel: travelElectionConfig,
+};
 
 interface PageParams {
   date: string; // YYYY-MM-DD
@@ -17,9 +23,15 @@ interface PageSearchParams {
   lon?: string;
   tz?: string;
   lang?: string;
+  /** Defaults to 'marriage' — keeps every pre-existing share link (minted before travel existed) resolving the same as before. */
+  election?: string;
 }
 
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+
+function electionTypeFromParams(searchParams: PageSearchParams): ElectionType {
+  return searchParams.election === 'travel' ? 'travel' : 'marriage';
+}
 
 /** Re-derive the election result from the URL alone — nothing is stored server-side. */
 function evaluateFromParams(dateStr: string, searchParams: PageSearchParams) {
@@ -33,8 +45,9 @@ function evaluateFromParams(dateStr: string, searchParams: PageSearchParams) {
   const datetime = new Date(`${dateStr}T12:00:00Z`);
   if (Number.isNaN(datetime.getTime())) return null;
 
-  const input: ElectionInput = { datetime, lat, lon, tz, electionType: 'marriage' };
-  return evaluateElection(input, marriageElectionConfig);
+  const electionType = electionTypeFromParams(searchParams);
+  const input: ElectionInput = { datetime, lat, lon, tz, electionType };
+  return evaluateElection(input, CONFIG_BY_ELECTION_TYPE[electionType]);
 }
 
 export async function generateMetadata({
@@ -47,15 +60,21 @@ export async function generateMetadata({
   const resolvedParams = await params;
   const resolvedSearchParams = await searchParams;
   const lang = resolvedSearchParams.lang === 'fr' ? 'fr' : 'en';
+  const electionType = electionTypeFromParams(resolvedSearchParams);
   const result = evaluateFromParams(resolvedParams.date, resolvedSearchParams);
+
+  const electionLabel = {
+    marriage: { en: 'marriage', fr: 'le mariage' },
+    travel: { en: 'travel', fr: 'le voyage' },
+  }[electionType];
 
   const title = lang === 'fr' ? 'Résultat Ikhtiyārāt — Asrār' : 'Ikhtiyārāt Result — Asrār';
   const tierLabel = result ? (lang === 'fr' ? result.tierInfo.labelFr : result.tierInfo.labelEn) : '';
   const description = result
     ? (lang === 'fr'
-        ? `${resolvedParams.date} — ${tierLabel} (${result.score}/100) pour le mariage, selon l'ikhtiyārāt classique.`
-        : `${resolvedParams.date} — ${tierLabel} (${result.score}/100) for marriage, per classical ikhtiyārāt.`)
-    : (lang === 'fr' ? 'Vérifiez une date pour le mariage selon l\'ikhtiyārāt classique.' : 'Check a date for marriage per classical ikhtiyārāt.');
+        ? `${resolvedParams.date} — ${tierLabel} (${result.score}/100) pour ${electionLabel.fr}, selon l'ikhtiyārāt classique.`
+        : `${resolvedParams.date} — ${tierLabel} (${result.score}/100) for ${electionLabel.en}, per classical ikhtiyārāt.`)
+    : (lang === 'fr' ? `Vérifiez une date pour ${electionLabel.fr} selon l'ikhtiyārāt classique.` : `Check a date for ${electionLabel.en} per classical ikhtiyārāt.`);
 
   const url = `${baseUrl}/ikhtiyarat/r/${resolvedParams.date}`;
   const imageUrl = `${baseUrl}/og/default.jpg`;
@@ -96,6 +115,7 @@ export default async function SharedResultPage({
   const resolvedSearchParams = await searchParams;
   const lang = resolvedSearchParams.lang === 'fr' ? 'fr' : 'en';
   const c = TIER_COPY[lang];
+  const electionType = electionTypeFromParams(resolvedSearchParams);
 
   const result = evaluateFromParams(resolvedParams.date, resolvedSearchParams);
   if (!result) notFound();
@@ -132,7 +152,7 @@ export default async function SharedResultPage({
         </div>
 
         <Link
-          href={`/ikhtiyarat?date=${resolvedParams.date}${resolvedSearchParams.lang ? `&lang=${resolvedSearchParams.lang}` : ''}`}
+          href={`/ikhtiyarat?date=${resolvedParams.date}&election=${electionType}${resolvedSearchParams.lang ? `&lang=${resolvedSearchParams.lang}` : ''}`}
           className="block w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold transition-colors"
         >
           {c.checkYourself}

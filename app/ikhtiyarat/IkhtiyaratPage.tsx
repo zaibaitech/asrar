@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Info } from 'lucide-react';
+import { useSearchParams } from 'next/navigation';
+import { Info, ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/src/contexts/LanguageContext';
 import { getUserLocation, loadLocation } from '@/src/utils/location';
 import { UserLocation } from '@/src/types/planetary';
@@ -11,17 +12,31 @@ import { CheckDateView } from '@/src/features/ikhtiyarat/components/CheckDateVie
 import { ScanDatesView } from '@/src/features/ikhtiyarat/components/ScanDatesView';
 import { ikhtiyaratCopy, subtitleArabic, UiLang } from '@/src/features/ikhtiyarat/copy';
 import { ElectionType } from '@/src/lib/ikhtiyarat/types';
-import { ENABLE_TRAVEL_ELECTION } from '@/src/lib/ikhtiyarat/elections/travel';
 
 type Mode = 'check' | 'scan';
+
+/**
+ * Every election type the dropdown offers, in display order. Adding a new
+ * election type (business, moving house, ...) means adding its id here
+ * plus an electionType<Id> copy key — no other change to this component.
+ */
+const ELECTION_TYPE_OPTIONS: ElectionType[] = ['marriage', 'travel'];
+
+function isElectionType(value: string | null): value is ElectionType {
+  return value !== null && (ELECTION_TYPE_OPTIONS as string[]).includes(value);
+}
 
 export function IkhtiyaratPage() {
   const { language } = useLanguage();
   const uiLang: UiLang = language === 'fr' ? 'fr' : 'en';
   const c = ikhtiyaratCopy[uiLang];
+  const searchParams = useSearchParams();
+  const electionFromUrl = searchParams.get('election');
 
   const [mode, setMode] = useState<Mode>('check');
-  const [electionType, setElectionType] = useState<ElectionType>('marriage');
+  const [electionType, setElectionType] = useState<ElectionType>(
+    isElectionType(electionFromUrl) ? electionFromUrl : 'marriage',
+  );
   const [location, setLocation] = useState<UserLocation | null>(null);
   const [showAbout, setShowAbout] = useState(false);
 
@@ -30,6 +45,11 @@ export function IkhtiyaratPage() {
     if (cached) setLocation(cached);
     getUserLocation().then(setLocation);
   }, []);
+
+  const electionTypeLabel: Record<ElectionType, string> = {
+    marriage: c.electionTypeMarriage,
+    travel: c.electionTypeTravel,
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-slate-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
@@ -58,26 +78,23 @@ export function IkhtiyaratPage() {
       <div className="max-w-2xl mx-auto px-4 py-6 space-y-4">
         <AdabDisclaimer language={uiLang} forceOpen={showAbout} onRequestClose={() => setShowAbout(false)} />
 
-        {ENABLE_TRAVEL_ELECTION && (
-          <div className="flex rounded-xl border border-slate-200 dark:border-slate-700 p-1 bg-white/60 dark:bg-slate-800/40">
-            <button
-              onClick={() => setElectionType('marriage')}
-              className={`flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${
-                electionType === 'marriage' ? 'bg-teal-600 text-white' : 'text-slate-600 dark:text-slate-300'
-              }`}
+        <label className="block">
+          <span className="text-xs font-medium text-slate-500 dark:text-slate-400">{c.electionTypeLabel}</span>
+          <div className="relative mt-1">
+            <select
+              value={electionType}
+              onChange={e => setElectionType(e.target.value as ElectionType)}
+              className="w-full appearance-none rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2.5 pr-9 text-sm font-medium text-slate-900 dark:text-slate-100"
             >
-              {c.electionTypeMarriage}
-            </button>
-            <button
-              onClick={() => setElectionType('travel')}
-              className={`flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${
-                electionType === 'travel' ? 'bg-teal-600 text-white' : 'text-slate-600 dark:text-slate-300'
-              }`}
-            >
-              {c.electionTypeTravel}
-            </button>
+              {ELECTION_TYPE_OPTIONS.map(type => (
+                <option key={type} value={type}>
+                  {electionTypeLabel[type]}
+                </option>
+              ))}
+            </select>
+            <ChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
           </div>
-        )}
+        </label>
 
         <div className="flex rounded-xl border border-slate-200 dark:border-slate-700 p-1 bg-white/60 dark:bg-slate-800/40">
           <button

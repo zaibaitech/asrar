@@ -82,7 +82,7 @@ export function CheckDateView({
     if (!result) return;
     const tierLabel = language === 'fr' ? result.tierInfo.labelFr : result.tierInfo.labelEn;
     const dateOnly = result.date.toISOString().slice(0, 10);
-    const url = `${BASE_URL}/ikhtiyarat/r/${dateOnly}?lat=${location.latitude}&lon=${location.longitude}&tz=${encodeURIComponent(tz)}${language === 'fr' ? '&lang=fr' : ''}`;
+    const url = `${BASE_URL}/ikhtiyarat/r/${dateOnly}?lat=${location.latitude}&lon=${location.longitude}&tz=${encodeURIComponent(tz)}&election=${electionType}${language === 'fr' ? '&lang=fr' : ''}`;
     const shareResult = await shareContent({
       title: c.title,
       text: `${dateOnly} — ${tierLabel} (${result.score}/100)`,
@@ -134,14 +134,12 @@ export function CheckDateView({
           <div>
             <div className="flex items-center justify-between mb-1">
               <div className="text-xs uppercase tracking-wide text-slate-400">{c.starsLabel}</div>
-              {electionType === 'marriage' && (
-                <button
-                  onClick={handleShare}
-                  className="text-xs font-medium text-emerald-700 dark:text-emerald-400 hover:underline"
-                >
-                  {shareCopied ? c.linkCopied : c.shareButton}
-                </button>
-              )}
+              <button
+                onClick={handleShare}
+                className="text-xs font-medium text-emerald-700 dark:text-emerald-400 hover:underline"
+              >
+                {shareCopied ? c.linkCopied : c.shareButton}
+              </button>
             </div>
             <div className="flex items-center justify-between flex-wrap gap-2">
               <TierBadge tierInfo={result.tierInfo} language={language} score={result.score} />

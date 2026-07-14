@@ -28,8 +28,6 @@ import { getMansionNumberFromLongitude } from '../manzil-favorability';
 import { getMansionTravelFavorability } from '../manazilTravel';
 import { getSeparation } from '../aspects';
 
-export const ENABLE_TRAVEL_ELECTION = true;
-
 // SCHOLAR-REVIEW: modality (movable/fixed/mutable) classification, per
 // Sahl ibn Bishr's Kitāb al-Ikhtiyārāt on journeys — movable (cardinal)
 // signs favor swift movement and travel; fixed signs incline to delay

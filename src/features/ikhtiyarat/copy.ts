@@ -11,6 +11,7 @@ export const ikhtiyaratCopy = {
   en: {
     title: 'Best Dates',
     subtitle: 'Ikhtiyārāt',
+    electionTypeLabel: 'Occasion',
     electionTypeMarriage: 'Marriage',
     electionTypeTravel: 'Travel',
     tabCheck: 'Check My Date',
@@ -50,6 +51,7 @@ export const ikhtiyaratCopy = {
   fr: {
     title: 'Meilleures Dates',
     subtitle: 'Ikhtiyārāt',
+    electionTypeLabel: 'Occasion',
     electionTypeMarriage: 'Mariage',
     electionTypeTravel: 'Voyage',
     tabCheck: 'Vérifier ma date',
