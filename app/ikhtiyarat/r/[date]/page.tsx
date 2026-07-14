@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { evaluateElection } from '@/src/lib/ikhtiyarat/engine';
 import { marriageElectionConfig } from '@/src/lib/ikhtiyarat/elections/marriage';
 import { travelElectionConfig } from '@/src/lib/ikhtiyarat/elections/travel';
+import { businessElectionConfig } from '@/src/lib/ikhtiyarat/elections/business';
 import { gregorianToHijri } from '@/src/lib/ikhtiyarat/hijri';
 import { ElectionInput, ElectionRulesConfig, ElectionType } from '@/src/lib/ikhtiyarat/types';
 
@@ -12,6 +13,7 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
 const CONFIG_BY_ELECTION_TYPE: Record<ElectionType, ElectionRulesConfig> = {
   marriage: marriageElectionConfig,
   travel: travelElectionConfig,
+  business: businessElectionConfig,
 };
 
 interface PageParams {
@@ -30,7 +32,9 @@ interface PageSearchParams {
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 
 function electionTypeFromParams(searchParams: PageSearchParams): ElectionType {
-  return searchParams.election === 'travel' ? 'travel' : 'marriage';
+  if (searchParams.election === 'travel') return 'travel';
+  if (searchParams.election === 'business') return 'business';
+  return 'marriage';
 }
 
 /** Re-derive the election result from the URL alone — nothing is stored server-side. */
@@ -66,6 +70,7 @@ export async function generateMetadata({
   const electionLabel = {
     marriage: { en: 'marriage', fr: 'le mariage' },
     travel: { en: 'travel', fr: 'le voyage' },
+    business: { en: 'business', fr: 'les affaires' },
   }[electionType];
 
   const title = lang === 'fr' ? 'Résultat Ikhtiyārāt — Asrār' : 'Ikhtiyārāt Result — Asrār';

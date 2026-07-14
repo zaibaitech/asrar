@@ -20,7 +20,7 @@ type Mode = 'check' | 'scan';
  * election type (business, moving house, ...) means adding its id here
  * plus an electionType<Id> copy key — no other change to this component.
  */
-const ELECTION_TYPE_OPTIONS: ElectionType[] = ['marriage', 'travel'];
+const ELECTION_TYPE_OPTIONS: ElectionType[] = ['marriage', 'travel', 'business'];
 
 function isElectionType(value: string | null): value is ElectionType {
   return value !== null && (ELECTION_TYPE_OPTIONS as string[]).includes(value);
@@ -49,6 +49,7 @@ export function IkhtiyaratPage() {
   const electionTypeLabel: Record<ElectionType, string> = {
     marriage: c.electionTypeMarriage,
     travel: c.electionTypeTravel,
+    business: c.electionTypeBusiness,
   };
 
   return (

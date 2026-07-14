@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { evaluateDateRange } from '@/src/lib/ikhtiyarat/engine';
 import { marriageElectionConfig } from '@/src/lib/ikhtiyarat/elections/marriage';
 import { travelElectionConfig } from '@/src/lib/ikhtiyarat/elections/travel';
+import { businessElectionConfig } from '@/src/lib/ikhtiyarat/elections/business';
 import { ElectionResult, ElectionType, ElectionRulesConfig } from '@/src/lib/ikhtiyarat/types';
 import { UserLocation } from '@/src/types/planetary';
 import { toLocalDateString } from '@/src/lib/localDate';
@@ -23,6 +24,7 @@ const MAX_SCAN_MONTHS = 12;
 const CONFIG_BY_ELECTION_TYPE: Record<ElectionType, ElectionRulesConfig> = {
   marriage: marriageElectionConfig,
   travel: travelElectionConfig,
+  business: businessElectionConfig,
 };
 
 export function ScanDatesView({

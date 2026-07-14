@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import { evaluateElection, findNearestBetterDates } from '@/src/lib/ikhtiyarat/engine';
 import { marriageElectionConfig } from '@/src/lib/ikhtiyarat/elections/marriage';
 import { travelElectionConfig } from '@/src/lib/ikhtiyarat/elections/travel';
+import { businessElectionConfig } from '@/src/lib/ikhtiyarat/elections/business';
 import { ElectionResult, ElectionType, ElectionRulesConfig } from '@/src/lib/ikhtiyarat/types';
 import { gregorianToHijri, getSunnahBadges } from '@/src/lib/ikhtiyarat/hijri';
 import { getUrfBadgeForMonth } from '@/src/lib/ikhtiyarat/urf';
@@ -26,6 +27,7 @@ const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 const CONFIG_BY_ELECTION_TYPE: Record<ElectionType, ElectionRulesConfig> = {
   marriage: marriageElectionConfig,
   travel: travelElectionConfig,
+  business: businessElectionConfig,
 };
 
 export function CheckDateView({
