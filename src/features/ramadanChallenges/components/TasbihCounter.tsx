@@ -35,12 +35,14 @@ export function TasbihCounter({
   language = 'en',
 }: TasbihCounterProps) {
   const [count, setCount] = useState(0);
+  const [saved, setSaved] = useState(false);
   const t = translations[language].tasbih;
 
   // Reset on open; lock body scroll while open
   useEffect(() => {
     if (isOpen) {
       setCount(0);
+      setSaved(false);
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
@@ -82,8 +84,6 @@ export function TasbihCounter({
   const reset = () => {
     setCount(0);
   };
-
-  const [saved, setSaved] = useState(false);
 
   const handleComplete = () => {
     setSaved(true);
