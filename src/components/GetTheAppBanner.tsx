@@ -45,7 +45,7 @@ export function GetTheAppBanner() {
       : 'then "Add to Home Screen"';
 
     return (
-      <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-amber-400/30 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 shadow-2xl">
+      <div className="fixed bottom-20 md:bottom-0 left-0 right-0 z-50 border-t border-amber-400/30 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 shadow-2xl">
         <div className="h-0.5 w-full bg-gradient-to-r from-transparent via-amber-400 to-transparent" />
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center gap-3">
           <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-indigo-800/60 border border-amber-400/20 flex items-center justify-center text-xl shadow-inner">
@@ -93,7 +93,7 @@ export function GetTheAppBanner() {
     : 'Personalised spiritual guidance · Dhikr · Abjad · Planetary Hours';
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-amber-400/30 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 shadow-2xl">
+    <div className="fixed bottom-20 md:bottom-0 left-0 right-0 z-50 border-t border-amber-400/30 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 shadow-2xl">
       <div className="h-0.5 w-full bg-gradient-to-r from-transparent via-amber-400 to-transparent" />
       <div className="max-w-6xl mx-auto px-4 py-2.5 sm:px-5 sm:py-3 flex items-center gap-3">
         <div className="flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-indigo-800/60 border border-amber-400/20 flex items-center justify-center text-xl sm:text-2xl shadow-inner">

@@ -16,6 +16,7 @@ import { generateWafqAnalysis } from './src/features/ilm-huruf/wafqGenerator';
 import { calculateOptimalTimingWindows } from './src/features/ilm-huruf/talismanTiming';
 import { OnboardingTutorial } from './src/components/OnboardingTutorial';
 import { MobileMenu } from './src/components/MobileMenu';
+import { MobileBottomNav } from './src/components/MobileBottomNav';
 import { UserMenu } from './src/components/UserMenu';
 import LanguageToggle from './src/components/LanguageToggle';
 import { useLanguage } from './src/contexts/LanguageContext';
@@ -1731,7 +1732,7 @@ export default function AsrarEveryday() {
         </header>
         
         {/* Main Content */}
-        <main className="w-full mx-auto px-3 sm:px-4 py-2 sm:py-8">
+        <main className="w-full mx-auto px-3 sm:px-4 py-2 sm:py-8 pb-24 md:pb-8">
           <div className="max-w-6xl mx-auto">
             {showDisclaimer && <CalculatorDisclaimerBanner onDismiss={() => setShowDisclaimer(false)} />}
             
@@ -1743,8 +1744,8 @@ export default function AsrarEveryday() {
             />
           </div>
           
-          {/* View Mode Tabs - Mobile Responsive */}
-          <div id="app-main-tabs" className="mb-2 sm:mb-8 overflow-x-auto scroll-mt-4">
+          {/* View Mode Tabs — desktop/tablet only; mobile uses the fixed MobileBottomNav instead */}
+          <div id="app-main-tabs" className="hidden md:block md:mb-8 overflow-x-auto scroll-mt-4">
             <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 p-1.5 sm:p-2 inline-flex gap-1.5 sm:gap-2 min-w-full sm:min-w-0">
               <button
                 onClick={() => setViewMode('planetary')}
@@ -3657,9 +3658,27 @@ export default function AsrarEveryday() {
             onShowTutorial={() => setShowOnboarding(true)}
             onShowHistory={() => setShowHistory(true)}
             historyCount={history.length}
+            onSelectAdvanced={() => setViewMode('advanced')}
+            onSelectGuidance={process.env.NODE_ENV === 'development' ? () => setViewMode('guidance') : undefined}
           />
         )}
-        
+
+        {/* Mobile Bottom Nav - fixed, always-labeled primary destinations */}
+        <MobileBottomNav
+          language={language}
+          activeTab={
+            showCompatibility
+              ? 'compatibility'
+              : viewMode === 'planetary' || viewMode === 'calculator'
+                ? viewMode
+                : null
+          }
+          onSelectPlanetary={() => setViewMode('planetary')}
+          onOpenCompatibility={() => setShowCompatibility(true)}
+          onSelectCalculator={() => setViewMode('calculator')}
+          onOpenMore={() => setShowMobileMenu(true)}
+        />
+
         {/* Footer - Professional */}
         <footer className="border-t border-slate-200 dark:border-slate-700 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-950 mt-12">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
