@@ -1800,7 +1800,7 @@ export default function AsrarEveryday() {
                 href="/ikhtiyarat"
                 className="px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all whitespace-nowrap text-sm sm:text-base text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 inline-flex items-center"
               >
-                <Heart className="w-4 sm:w-5 h-4 sm:h-5 inline mr-1 sm:mr-2" />
+                <Star className="w-4 sm:w-5 h-4 sm:h-5 inline mr-1 sm:mr-2" />
                 <span className="hidden sm:inline">{language === 'fr' ? 'Meilleures Dates' : 'Best Dates'}</span>
                 <span className="sm:hidden">{language === 'fr' ? 'Dates' : 'Dates'}</span>
               </Link>
