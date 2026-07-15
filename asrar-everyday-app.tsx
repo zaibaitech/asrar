@@ -1735,15 +1735,7 @@ export default function AsrarEveryday() {
         <main className="w-full mx-auto px-3 sm:px-4 py-2 sm:py-8 pb-24 md:pb-8">
           <div className="max-w-6xl mx-auto">
             {showDisclaimer && <CalculatorDisclaimerBanner onDismiss={() => setShowDisclaimer(false)} />}
-            
-            {/* Daily Reflection - Prominent Banner */}
-            <div className="mb-2 sm:mb-8">
-              <DailyReflectionCard 
-                isCollapsed={isDailyReflectionCollapsed}
-              onToggleCollapse={handleToggleDailyReflection}
-            />
-          </div>
-          
+
           {/* View Mode Tabs — desktop/tablet only; mobile uses the fixed MobileBottomNav instead */}
           <div id="app-main-tabs" className="hidden md:block md:mb-8 overflow-x-auto scroll-mt-4">
             <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 p-1.5 sm:p-2 inline-flex gap-1.5 sm:gap-2 min-w-full sm:min-w-0">
@@ -1821,7 +1813,15 @@ export default function AsrarEveryday() {
           
           {viewMode === 'planetary' ? (
             <div className="space-y-3 sm:space-y-6">
+              {/* Today's zikr progress leads the home tab, instead of floating above every tab */}
+              <DailyReflectionCard
+                isCollapsed={isDailyReflectionCollapsed}
+                onToggleCollapse={handleToggleDailyReflection}
+              />
               <div className="bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50 dark:from-indigo-900/20 dark:via-purple-900/20 dark:to-blue-900/20 rounded-xl p-3 md:p-6 shadow-md">
+                <div className="text-[11px] font-semibold uppercase tracking-wide text-indigo-500 dark:text-indigo-400 mb-1">
+                  {language === 'fr' ? "Aujourd'hui" : 'Today'}
+                </div>
                 <h3 className="text-base md:text-xl font-bold mb-0.5 sm:mb-2 text-slate-900 dark:text-slate-100 flex items-center gap-2">
                   <Moon className="w-4 h-4 sm:w-5 sm:h-5 text-indigo-500" />
                   {language === 'en' ? 'ʿIlm al-Nujūm – Planetary Alignment' : language === 'fr' ? 'ʿIlm al-Nujūm – Alignement Planétaire' : 'علم النجوم'}
