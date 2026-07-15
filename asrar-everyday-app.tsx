@@ -3636,7 +3636,6 @@ export default function AsrarEveryday() {
         {/* Modals */}
         {showComparison && <ComparisonMode onClose={() => setShowComparison(false)} abjad={abjad} analyzeElements={analyzeElements} />}
         {showBatchCalculator && <BatchCalculator onClose={() => setShowBatchCalculator(false)} abjad={abjad} analyzeElements={analyzeElements} />}
-        {showBatchCalculator && <BatchCalculator onClose={() => setShowBatchCalculator(false)} abjad={abjad} analyzeElements={analyzeElements} />}
         
         {showCompatibility && (
           <div className="fixed inset-0 bg-black/50 z-50 overflow-y-auto">
@@ -3756,7 +3755,9 @@ export default function AsrarEveryday() {
           </div>
         </footer>
       </div>
-      <GetTheAppBanner />
+      <GetTheAppBanner
+        suppressed={showCompatibility || showComparison || showBatchCalculator || showOnboarding || showMobileMenu}
+      />
     </div>
   );
 }
