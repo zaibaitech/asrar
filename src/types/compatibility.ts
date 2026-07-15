@@ -1,7 +1,8 @@
 import { ElementAlignment, TimeWindow } from './planetary';
+import { ZodiacSign, Element } from '../lib/planetary/types';
 
 // Compatibility calculation modes
-export type CompatibilityMode = 'transit' | 'relationship';
+export type CompatibilityMode = 'transit' | 'relationship' | 'astrological';
 
 // The calculation methods
 export type CompatibilityMethod = 'spiritual-destiny' | 'elemental-temperament' | 'planetary-cosmic' | 'daily-interaction';
@@ -277,4 +278,65 @@ export interface TransitCompatibility {
   };
   alignment: ElementAlignment; // Your existing type
   timeWindow: TimeWindow; // Your existing type
+}
+
+// ============================================================================
+// ASTROLOGICAL (DATE-OF-BIRTH) COMPATIBILITY
+//
+// A separate mode from RelationshipCompatibility (Names/Abjad-based). Not
+// presented as ʿIlm al-Nujūm/classical Islamic astrology — see the doc
+// comment in src/utils/astrologicalCompatibility.ts for why. Only Sun
+// sign, Moon sign, and Venus/Mars sign placements are used, since those
+// are the factors reliably computable from a date of birth alone (no
+// birth time) — the Ascendant/houses are deliberately never used.
+// ============================================================================
+
+type ElementRelation = 'same' | 'complementary' | 'opposing' | 'neutral';
+
+export interface SunSignResult {
+  method: 'sun-sign';
+  person1Sign: ZodiacSign;
+  person2Sign: ZodiacSign;
+  person1Element: Element;
+  person2Element: Element;
+  relation: ElementRelation;
+  score: number; // 0-100
+  description: string;
+}
+
+export interface MoonSignResult {
+  method: 'moon-sign';
+  person1Sign: ZodiacSign;
+  person2Sign: ZodiacSign;
+  person1Element: Element;
+  person2Element: Element;
+  relation: ElementRelation;
+  score: number; // 0-100
+  /** True if either person's date of birth falls within ~18h of a Moon sign change — the Moon sign shown may not be exact without a birth time. */
+  uncertain: boolean;
+  description: string;
+}
+
+export interface VenusMarsResult {
+  method: 'venus-mars';
+  person1VenusSign: ZodiacSign;
+  person1MarsSign: ZodiacSign;
+  person2VenusSign: ZodiacSign;
+  person2MarsSign: ZodiacSign;
+  score: number; // 0-100
+  relation: ElementRelation;
+  description: string;
+}
+
+export interface AstrologicalCompatibility {
+  mode: 'astrological';
+  person1: { name: string; dob: string; sunSign: ZodiacSign; moonSign: ZodiacSign };
+  person2: { name: string; dob: string; sunSign: ZodiacSign; moonSign: ZodiacSign };
+  methods: {
+    sunSign: SunSignResult;
+    moonSign: MoonSignResult;
+    venusMars: VenusMarsResult;
+  };
+  overallScore: number; // 0-100, weighted: sunSign(40%) + moonSign(35%) + venusMars(25%)
+  overallQuality: 'excellent' | 'very-good' | 'good' | 'moderate' | 'challenging';
 }

@@ -1,8 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { RelationshipCompatibility } from '../../types/compatibility';
+import { RelationshipCompatibility, AstrologicalCompatibility } from '../../types/compatibility';
 import { RelationshipInputForm } from '../../components/RelationshipInputForm';
 import { RelationshipCompatibilityView } from '../../components/RelationshipCompatibilityView';
+import { AstrologicalInputForm } from '../../components/AstrologicalInputForm';
+import { AstrologicalCompatibilityView } from '../../components/AstrologicalCompatibilityView';
 import { analyzeRelationshipCompatibility, getElementFromAbjadTotal } from '../../utils/relationshipCompatibility';
+import { analyzeAstrologicalCompatibility } from '../../utils/astrologicalCompatibility';
 import { useAbjad } from '../../contexts/AbjadContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 
@@ -12,18 +15,24 @@ function calculateAbjadTotal(text: string, abjadMap: Record<string, number>): nu
   return [...normalized].reduce((sum, char) => sum + (abjadMap[char] || 0), 0);
 }
 
+/** Which input the user is comparing two people by. */
+type InputMode = 'names' | 'dob';
+
 interface CompatibilityPanelProps {
   onBack?: () => void;
 }
 
 export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
+  const [inputMode, setInputMode] = useState<InputMode>('names');
   const [relationshipResult, setRelationshipResult] = useState<RelationshipCompatibility | null>(null);
+  const [astrologicalResult, setAstrologicalResult] = useState<AstrologicalCompatibility | null>(null);
   const [showResults, setShowResults] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const formRef = useRef<HTMLDivElement>(null);
   const { abjad } = useAbjad();
   const { language } = useLanguage();
-  
+  const lang = language as 'en' | 'fr' | 'ar';
+
   // Scroll to form on mount
   useEffect(() => {
     if (formRef.current && !showResults) {
@@ -32,7 +41,7 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
       }, 100);
     }
   }, []);
-  
+
   const handleRelationshipCalculate = async (
     person1Name: string,
     person1Arabic: string,
@@ -41,15 +50,15 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
   ) => {
     try {
       setIsTransitioning(true);
-      
+
       // Calculate Abjad totals using the context map
       const person1Total = calculateAbjadTotal(person1Arabic, abjad);
       const person2Total = calculateAbjadTotal(person2Arabic, abjad);
-      
+
       // Determine elements
       const person1Element = getElementFromAbjadTotal(person1Total);
       const person2Element = getElementFromAbjadTotal(person2Total);
-      
+
       // Analyze compatibility
       const result = analyzeRelationshipCompatibility(
         person1Name,
@@ -61,14 +70,14 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
         person2Total,
         person2Element
       );
-      
+
       // Smooth transition
       await new Promise(resolve => setTimeout(resolve, 300));
-      
+
       setRelationshipResult(result);
       setShowResults(true);
       setIsTransitioning(false);
-      
+
       // Scroll to top smoothly
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } catch (error) {
@@ -77,7 +86,32 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
       setIsTransitioning(false);
     }
   };
-  
+
+  const handleAstrologicalCalculate = async (
+    person1Name: string,
+    person1Dob: string,
+    person2Name: string,
+    person2Dob: string
+  ) => {
+    try {
+      setIsTransitioning(true);
+
+      const result = analyzeAstrologicalCompatibility(person1Name, person1Dob, person2Name, person2Dob, lang);
+
+      await new Promise(resolve => setTimeout(resolve, 300));
+
+      setAstrologicalResult(result);
+      setShowResults(true);
+      setIsTransitioning(false);
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (error) {
+      console.error('Error calculating astrological compatibility:', error);
+      alert('Error calculating compatibility. Please try again.');
+      setIsTransitioning(false);
+    }
+  };
+
   /**
    * Reset to form view
    */
@@ -86,19 +120,20 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
     setTimeout(() => {
       setShowResults(false);
       setRelationshipResult(null);
+      setAstrologicalResult(null);
       setIsTransitioning(false);
-      
+
       // Scroll to form
       setTimeout(() => {
         formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 100);
     }, 300);
   };
-  
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50 dark:from-slate-900 dark:to-purple-950 p-4 sm:p-6">
       <div className="max-w-4xl mx-auto space-y-6">
-        
+
         {/* Back Button */}
         {onBack && (
           <button
@@ -108,35 +143,91 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
             ← Back
           </button>
         )}
-        
+
         {/* Title */}
         <div className="text-center mb-6">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2">
             💫 Compatibility
           </h1>
           <p className="text-gray-600 dark:text-gray-400">
-            {language === 'fr' ? 'Explorez l\'harmonie relationnelle grâce à la numérologie islamique' : 'Explore relationship harmony through Islamic numerology'}
+            {inputMode === 'names'
+              ? (language === 'fr' ? "Explorez l'harmonie relationnelle grâce à la numérologie islamique" : 'Explore relationship harmony through Islamic numerology')
+              : (language === 'fr' ? "Explorez la compatibilité astrologique générale à partir des dates de naissance" : 'Explore general astrological compatibility from birth dates')}
           </p>
         </div>
 
+        {/* Names / Birth Date mode toggle */}
+        {!showResults && (
+          <div className="flex justify-center">
+            <div className="inline-flex p-1 bg-slate-100 dark:bg-slate-800 rounded-xl">
+              <button
+                onClick={() => setInputMode('names')}
+                className={`px-5 py-2 rounded-lg text-sm font-semibold transition-all ${
+                  inputMode === 'names'
+                    ? 'bg-white dark:bg-slate-700 text-purple-700 dark:text-purple-300 shadow'
+                    : 'text-slate-500 dark:text-slate-400'
+                }`}
+              >
+                {language === 'fr' ? 'Par Noms' : 'By Names'}
+              </button>
+              <button
+                onClick={() => setInputMode('dob')}
+                className={`px-5 py-2 rounded-lg text-sm font-semibold transition-all ${
+                  inputMode === 'dob'
+                    ? 'bg-white dark:bg-slate-700 text-purple-700 dark:text-purple-300 shadow'
+                    : 'text-slate-500 dark:text-slate-400'
+                }`}
+              >
+                {language === 'fr' ? 'Par Date de Naissance' : 'By Birth Date'}
+              </button>
+            </div>
+          </div>
+        )}
+
         {/* Main Content - Form or Results */}
-        <div 
+        <div
           ref={formRef}
           className={`transition-all duration-300 ${isTransitioning ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
         >
           {!showResults ? (
-            <RelationshipInputForm 
-              onCalculate={handleRelationshipCalculate}
-              language={language as 'en' | 'fr' | 'ar'}
-              isLoading={isTransitioning}
-            />
+            inputMode === 'names' ? (
+              <RelationshipInputForm
+                onCalculate={handleRelationshipCalculate}
+                language={lang}
+                isLoading={isTransitioning}
+              />
+            ) : (
+              <AstrologicalInputForm
+                onCalculate={handleAstrologicalCalculate}
+                language={lang}
+                isLoading={isTransitioning}
+              />
+            )
           ) : relationshipResult ? (
             <div className="space-y-6">
-              <RelationshipCompatibilityView 
+              <RelationshipCompatibilityView
                 compatibility={relationshipResult}
-                language={language as 'en' | 'fr' | 'ar'}
+                language={lang}
               />
-              
+
+              {/* Calculate Again Button */}
+              <button
+                onClick={handleReset}
+                className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-rose-600 hover:from-purple-700 hover:to-rose-700 text-white font-semibold rounded-xl transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+                {language === 'fr' ? 'Calculer un Autre Couple' : 'Calculate Another Pair'}
+              </button>
+            </div>
+          ) : astrologicalResult ? (
+            <div className="space-y-6">
+              <AstrologicalCompatibilityView
+                compatibility={astrologicalResult}
+                language={lang}
+              />
+
               {/* Calculate Again Button */}
               <button
                 onClick={handleReset}
@@ -150,7 +241,7 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
             </div>
           ) : null}
         </div>
-        
+
       </div>
     </div>
   );
