@@ -281,6 +281,28 @@ export interface TransitCompatibility {
 }
 
 // ============================================================================
+// SOUL CONNECTION (NAMES/ABJAD, MOD-9) — replaces the old 4-method
+// RelationshipCompatibility for the Names input mode. Ported from
+// asrar-mobile's actual "Soul Connection" screen (the archetype layer in
+// soulArchetypes.ts / translations.ts), not the old numeric scoreMap that
+// used to live in relationshipCompatibility.ts — the two disagree, and the
+// archetype layer is what the mobile app's real UI renders. Presented as
+// a single independent 1-9 metric, not blended into any weighted score,
+// matching the mobile app's "Independent metric" framing.
+// ============================================================================
+
+import { SoulConnectionSeverity } from '../constants/soulConnectionArchetypes';
+
+export interface SoulConnectionResult {
+  mode: 'soul-connection';
+  person1: { name: string; arabicName: string; kabir: number };
+  person2: { name: string; arabicName: string; kabir: number };
+  /** (kabir1 + kabir2 + 7) mod 9, with 0 mapped to 9 — always 1-9. */
+  soulNumber: number;
+  severity: SoulConnectionSeverity;
+}
+
+// ============================================================================
 // ASTROLOGICAL (DATE-OF-BIRTH) COMPATIBILITY
 //
 // A separate mode from RelationshipCompatibility (Names/Abjad-based). Not

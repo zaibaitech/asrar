@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { RelationshipCompatibility, AstrologicalCompatibility } from '../../types/compatibility';
+import { SoulConnectionResult, AstrologicalCompatibility } from '../../types/compatibility';
 import { RelationshipInputForm } from '../../components/RelationshipInputForm';
-import { RelationshipCompatibilityView } from '../../components/RelationshipCompatibilityView';
+import { SoulConnectionView } from '../../components/SoulConnectionView';
 import { AstrologicalInputForm } from '../../components/AstrologicalInputForm';
 import { AstrologicalCompatibilityView } from '../../components/AstrologicalCompatibilityView';
-import { analyzeRelationshipCompatibility, getElementFromAbjadTotal } from '../../utils/relationshipCompatibility';
+import { calculateSoulConnection } from '../../utils/soulConnection';
 import { analyzeAstrologicalCompatibility } from '../../utils/astrologicalCompatibility';
 import { useAbjad } from '../../contexts/AbjadContext';
 import { useLanguage } from '../../contexts/LanguageContext';
@@ -24,7 +24,7 @@ interface CompatibilityPanelProps {
 
 export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
   const [inputMode, setInputMode] = useState<InputMode>('names');
-  const [relationshipResult, setRelationshipResult] = useState<RelationshipCompatibility | null>(null);
+  const [soulConnectionResult, setSoulConnectionResult] = useState<SoulConnectionResult | null>(null);
   const [astrologicalResult, setAstrologicalResult] = useState<AstrologicalCompatibility | null>(null);
   const [showResults, setShowResults] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -51,30 +51,23 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
     try {
       setIsTransitioning(true);
 
-      // Calculate Abjad totals using the context map
-      const person1Total = calculateAbjadTotal(person1Arabic, abjad);
-      const person2Total = calculateAbjadTotal(person2Arabic, abjad);
+      // Calculate Abjad (kabir) totals using the context map
+      const person1Kabir = calculateAbjadTotal(person1Arabic, abjad);
+      const person2Kabir = calculateAbjadTotal(person2Arabic, abjad);
 
-      // Determine elements
-      const person1Element = getElementFromAbjadTotal(person1Total);
-      const person2Element = getElementFromAbjadTotal(person2Total);
-
-      // Analyze compatibility
-      const result = analyzeRelationshipCompatibility(
+      const result = calculateSoulConnection(
         person1Name,
         person1Arabic,
-        person1Total,
-        person1Element,
+        person1Kabir,
         person2Name,
         person2Arabic,
-        person2Total,
-        person2Element
+        person2Kabir,
       );
 
       // Smooth transition
       await new Promise(resolve => setTimeout(resolve, 300));
 
-      setRelationshipResult(result);
+      setSoulConnectionResult(result);
       setShowResults(true);
       setIsTransitioning(false);
 
@@ -119,7 +112,7 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
     setIsTransitioning(true);
     setTimeout(() => {
       setShowResults(false);
-      setRelationshipResult(null);
+      setSoulConnectionResult(null);
       setAstrologicalResult(null);
       setIsTransitioning(false);
 
@@ -203,10 +196,10 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
                 isLoading={isTransitioning}
               />
             )
-          ) : relationshipResult ? (
+          ) : soulConnectionResult ? (
             <div className="space-y-6">
-              <RelationshipCompatibilityView
-                compatibility={relationshipResult}
+              <SoulConnectionView
+                result={soulConnectionResult}
                 language={lang}
               />
 
