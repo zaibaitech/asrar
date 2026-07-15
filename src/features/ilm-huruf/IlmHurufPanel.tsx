@@ -646,29 +646,6 @@ export function IlmHurufPanel() {
             </div>
           </button>
           
-          {/* Compatibility Mode */}
-          <button
-            onClick={() => handleModeChange('compatibility')}
-            className={`relative group p-3 md:p-4 rounded-lg md:rounded-xl border-2 transition-all duration-300 transform ${
-              mode === 'compatibility'
-                ? 'border-pink-500 bg-gradient-to-br from-pink-50 to-pink-100 dark:from-pink-900/40 dark:to-pink-800/40 scale-[1.02] shadow-lg ring-2 ring-pink-500 ring-offset-1 dark:ring-offset-slate-900'
-                : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-pink-400 hover:shadow-md active:scale-95'
-            }`}
-            aria-pressed={mode === 'compatibility'}
-          >
-            <div className="relative">
-              <Users className={`w-5 h-5 md:w-6 md:h-6 mx-auto mb-1 md:mb-2 transition-colors ${mode === 'compatibility' ? 'text-pink-600' : 'text-pink-500 group-hover:text-pink-600'}`} />
-              <div className={`text-xs md:text-sm font-bold text-slate-900 dark:text-slate-100 transition-all leading-tight ${mode === 'compatibility' ? 'animate-scale-in' : ''}`}>
-                {t.ilmHuruf.compatibility}
-              </div>
-              {mode === 'compatibility' && (
-                <div className="absolute top-0 right-0 animate-scale-in">
-                  <CheckCircle2 className="w-3 h-3 md:w-4 md:h-4 text-pink-600" />
-                </div>
-              )}
-            </div>
-          </button>
-          
           {/* Life Path Mode */}
           <button
             onClick={() => handleModeChange('life-path')}
