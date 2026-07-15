@@ -8,6 +8,7 @@ import { calculateSoulConnection } from '../../utils/soulConnection';
 import { analyzeAstrologicalCompatibility } from '../../utils/astrologicalCompatibility';
 import { useAbjad } from '../../contexts/AbjadContext';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { COMPAT_THEME } from '../../constants/compatibilityTheme';
 
 // Helper to calculate Abjad total from Arabic text
 function calculateAbjadTotal(text: string, abjadMap: Record<string, number>): number {
@@ -124,25 +125,29 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50 dark:from-slate-900 dark:to-purple-950 p-4 sm:p-6">
+    <div className="min-h-screen p-4 sm:p-6" style={{ background: COMPAT_THEME.pageBg }}>
       <div className="max-w-4xl mx-auto space-y-6">
 
         {/* Back Button */}
         {onBack && (
           <button
             onClick={onBack}
-            className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 font-medium flex items-center gap-2"
+            className="font-technical text-sm font-semibold flex items-center gap-2 transition-opacity hover:opacity-70"
+            style={{ color: COMPAT_THEME.indigo }}
           >
-            ← Back
+            ← {language === 'fr' ? 'Retour' : 'Back'}
           </button>
         )}
 
         {/* Title */}
         <div className="text-center mb-6">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-            💫 Compatibility
+          <div className="font-technical text-[11px] tracking-[4px] font-bold" style={{ color: COMPAT_THEME.indigo }}>
+            {language === 'fr' ? 'ASRĀR · COMPATIBILITÉ' : 'ASRĀR · COMPATIBILITY'}
+          </div>
+          <h1 className="font-display font-semibold text-4xl mt-3.5 leading-tight" style={{ color: COMPAT_THEME.ink }}>
+            {language === 'fr' ? 'Compatibilité' : 'Compatibility'}
           </h1>
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className="text-sm mt-2.5" style={{ color: COMPAT_THEME.muted }}>
             {inputMode === 'names'
               ? (language === 'fr' ? "Explorez l'harmonie relationnelle grâce à la numérologie islamique" : 'Explore relationship harmony through Islamic numerology')
               : (language === 'fr' ? "Explorez la compatibilité astrologique générale à partir des dates de naissance" : 'Explore general astrological compatibility from birth dates')}
@@ -152,24 +157,22 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
         {/* Names / Birth Date mode toggle */}
         {!showResults && (
           <div className="flex justify-center">
-            <div className="inline-flex p-1 bg-slate-100 dark:bg-slate-800 rounded-xl">
+            <div className="inline-flex p-1 rounded-xl" style={{ background: COMPAT_THEME.cardBg, border: `1px solid ${COMPAT_THEME.cardBorder}` }}>
               <button
                 onClick={() => setInputMode('names')}
-                className={`px-5 py-2 rounded-lg text-sm font-semibold transition-all ${
-                  inputMode === 'names'
-                    ? 'bg-white dark:bg-slate-700 text-purple-700 dark:text-purple-300 shadow'
-                    : 'text-slate-500 dark:text-slate-400'
-                }`}
+                className="px-5 py-2 rounded-lg font-technical text-sm font-semibold transition-all"
+                style={inputMode === 'names'
+                  ? { background: COMPAT_THEME.indigo, color: '#fff' }
+                  : { color: COMPAT_THEME.muted }}
               >
                 {language === 'fr' ? 'Par Noms' : 'By Names'}
               </button>
               <button
                 onClick={() => setInputMode('dob')}
-                className={`px-5 py-2 rounded-lg text-sm font-semibold transition-all ${
-                  inputMode === 'dob'
-                    ? 'bg-white dark:bg-slate-700 text-purple-700 dark:text-purple-300 shadow'
-                    : 'text-slate-500 dark:text-slate-400'
-                }`}
+                className="px-5 py-2 rounded-lg font-technical text-sm font-semibold transition-all"
+                style={inputMode === 'dob'
+                  ? { background: COMPAT_THEME.indigo, color: '#fff' }
+                  : { color: COMPAT_THEME.muted }}
               >
                 {language === 'fr' ? 'Par Date de Naissance' : 'By Birth Date'}
               </button>
@@ -204,15 +207,7 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
               />
 
               {/* Calculate Again Button */}
-              <button
-                onClick={handleReset}
-                className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-rose-600 hover:from-purple-700 hover:to-rose-700 text-white font-semibold rounded-xl transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                </svg>
-                {language === 'fr' ? 'Calculer un Autre Couple' : 'Calculate Another Pair'}
-              </button>
+              <CalculateAgainButton onClick={handleReset} language={language} />
             </div>
           ) : astrologicalResult ? (
             <div className="space-y-6">
@@ -222,20 +217,27 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
               />
 
               {/* Calculate Again Button */}
-              <button
-                onClick={handleReset}
-                className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-rose-600 hover:from-purple-700 hover:to-rose-700 text-white font-semibold rounded-xl transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                </svg>
-                {language === 'fr' ? 'Calculer un Autre Couple' : 'Calculate Another Pair'}
-              </button>
+              <CalculateAgainButton onClick={handleReset} language={language} />
             </div>
           ) : null}
         </div>
 
       </div>
     </div>
+  );
+}
+
+function CalculateAgainButton({ onClick, language }: { onClick: () => void; language: string }) {
+  return (
+    <button
+      onClick={onClick}
+      className="w-full px-6 py-3 rounded-xl font-technical font-bold text-sm tracking-wide transition-opacity hover:opacity-90 flex items-center justify-center gap-2"
+      style={{ background: COMPAT_THEME.ctaGradient, color: '#fff' }}
+    >
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+      </svg>
+      {language === 'fr' ? 'Calculer un Autre Couple' : 'Calculate Another Pair'}
+    </button>
   );
 }

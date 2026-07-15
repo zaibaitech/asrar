@@ -1,4 +1,5 @@
 import React from 'react';
+import { COMPAT_THEME } from '../constants/compatibilityTheme';
 
 interface SoulConnectionRingProps {
   /** The result soul number, 1-9. */
@@ -11,16 +12,16 @@ interface SoulConnectionRingProps {
 /**
  * The "Abjad Dial" — nine numbered stations arranged like an astrolabe,
  * with tick marks and a glowing active station for the result number.
- * Ported from the user-supplied design (astrolabe theme, gold ticks,
- * center number "OF NINE").
+ * Light theme: white/parchment dots, indigo ticks, the archetype's
+ * severity color for the active station.
  */
-export function SoulConnectionRing({ value, size = 260, activeColor = '#3FB97C', revealed = true }: SoulConnectionRingProps) {
+export function SoulConnectionRing({ value, size = 250, activeColor = COMPAT_THEME.green, revealed = true }: SoulConnectionRingProps) {
   const c = size / 2;
-  const outerRing = size * 0.454; // 118/260
-  const innerRing = size * 0.292; // 76/260
-  const tickInner = size * 0.431; // 112/260
-  const tickOuter = size * 0.454; // 118/260
-  const dotRadius = size * 0.369; // 96/260
+  const outerRing = size * 0.456; // 114/250
+  const innerRing = size * 0.288; // 72/250
+  const tickInner = size * 0.432; // 108/250
+  const tickOuter = size * 0.456; // 114/250
+  const dotRadius = size * 0.368; // 92/250
 
   const positions = Array.from({ length: 9 }, (_, i) => {
     const angle = (i / 9) * Math.PI * 2 - Math.PI / 2;
@@ -41,22 +42,19 @@ export function SoulConnectionRing({ value, size = 260, activeColor = '#3FB97C',
       aria-label={`Soul connection result: ${value} of 9`}
       className="block mx-auto"
     >
-      {/* astrolabe rings */}
-      <circle cx={c} cy={c} r={outerRing} fill="none" stroke="rgba(200,165,91,0.18)" strokeWidth="1" />
-      <circle cx={c} cy={c} r={innerRing} fill="none" stroke="rgba(200,165,91,0.18)" strokeWidth="1" strokeDasharray="2 6" />
+      <circle cx={c} cy={c} r={outerRing} fill="none" stroke={COMPAT_THEME.line} strokeWidth="1.5" />
+      <circle cx={c} cy={c} r={innerRing} fill="none" stroke={COMPAT_THEME.line} strokeWidth="1" strokeDasharray="2 6" />
 
-      {/* tick marks */}
       {positions.map((p, i) => {
         const x1 = c + tickInner * Math.cos(p.angle);
         const y1 = c + tickInner * Math.sin(p.angle);
         const x2 = c + tickOuter * Math.cos(p.angle);
         const y2 = c + tickOuter * Math.sin(p.angle);
         return (
-          <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="rgba(200,165,91,0.4)" strokeWidth="1.5" />
+          <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke={COMPAT_THEME.indigoSoft} strokeWidth="1.5" />
         );
       })}
 
-      {/* the nine stations */}
       {positions.map(p => {
         const active = p.n === value;
         return (
@@ -64,21 +62,21 @@ export function SoulConnectionRing({ value, size = 260, activeColor = '#3FB97C',
             <circle
               cx={p.x}
               cy={p.y}
-              r={active ? size * 0.042 : size * 0.019}
-              fill={active ? activeColor : '#1C1631'}
-              stroke={active ? activeColor : 'rgba(200,165,91,0.18)'}
+              r={active ? size * 0.048 : size * 0.024}
+              fill={active ? activeColor : '#EFEDFA'}
+              stroke={active ? activeColor : COMPAT_THEME.line}
               strokeWidth="1"
               style={{
-                filter: active && revealed ? `drop-shadow(0 0 10px ${activeColor}88)` : 'none',
+                filter: active && revealed ? `drop-shadow(0 2px 8px ${activeColor}73)` : 'none',
                 transition: 'all 0.6s ease',
               }}
             />
             <text
               x={p.x}
-              y={p.y + size * 0.0135}
+              y={p.y + size * 0.014}
               textAnchor="middle"
-              fontSize={active ? size * 0.0423 : size * 0.0308}
-              fill={active ? '#0D0A1A' : '#8E86A3'}
+              fontSize={active ? size * 0.044 : size * 0.034}
+              fill={active ? '#fff' : COMPAT_THEME.muted}
               fontFamily="'Space Grotesk', sans-serif"
               fontWeight="700"
             >
@@ -88,12 +86,11 @@ export function SoulConnectionRing({ value, size = 260, activeColor = '#3FB97C',
         );
       })}
 
-      {/* central number */}
       <text
         x={c}
-        y={c + size * 0.0846}
+        y={c + size * 0.08}
         textAnchor="middle"
-        fontSize={size * 0.246}
+        fontSize={size * 0.248}
         fill={activeColor}
         fontFamily="'Cormorant Garamond', serif"
         fontWeight="600"
@@ -103,11 +100,11 @@ export function SoulConnectionRing({ value, size = 260, activeColor = '#3FB97C',
       </text>
       <text
         x={c}
-        y={c + size * 0.1615}
+        y={c + size * 0.16}
         textAnchor="middle"
-        fontSize={size * 0.0385}
+        fontSize={size * 0.04}
         letterSpacing="3"
-        fill="#8E86A3"
+        fill={COMPAT_THEME.muted}
         fontFamily="'Space Grotesk', sans-serif"
       >
         OF NINE

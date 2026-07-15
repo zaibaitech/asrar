@@ -1,9 +1,9 @@
 import React from 'react';
 import { AstrologicalCompatibility } from '../types/compatibility';
 import { CompatibilityGauge } from './CompatibilityGauge';
-import { Heart, Users, Info, AlertTriangle } from 'lucide-react';
 import { getScoreRange } from '../constants/compatibilitySimpleLanguage';
 import { ZODIAC_DATA } from '../lib/planetary/constants';
+import { COMPAT_THEME } from '../constants/compatibilityTheme';
 
 interface AstrologicalCompatibilityViewProps {
   compatibility: AstrologicalCompatibility;
@@ -12,6 +12,7 @@ interface AstrologicalCompatibilityViewProps {
 
 const COPY = {
   en: {
+    eyebrow: 'ASRĀR · COMPATIBILITY',
     title: 'How Well Do You Match?',
     disclaimer: 'General astrological compatibility (Sun sign, Moon sign, Venus-Mars) — not a classical ʿIlm al-Nujūm technique. Classical Islamic astrology times a marriage rather than scores two birthdates against each other; see the Ikhtiyārāt (Best Dates) feature for that.',
     matchStrength: 'Your Match Strength',
@@ -22,6 +23,7 @@ const COPY = {
     uncertainNote: "One birth date falls close to a Moon sign change — without an exact birth time, the Moon sign shown may not be exact.",
   },
   fr: {
+    eyebrow: 'ASRĀR · COMPATIBILITÉ',
     title: 'Quelle Est Votre Compatibilité ?',
     disclaimer: "Compatibilité astrologique générale (signe solaire, lunaire, Vénus-Mars) — ce n'est pas une technique classique de ʿIlm al-Nujūm. L'astrologie islamique classique choisit le moment du mariage plutôt que de comparer deux dates de naissance ; voir la fonctionnalité Ikhtiyārāt (Meilleures Dates) pour cela.",
     matchStrength: 'Force de Votre Compatibilité',
@@ -32,6 +34,7 @@ const COPY = {
     uncertainNote: "Une des dates de naissance est proche d'un changement de signe lunaire — sans heure de naissance exacte, le signe lunaire affiché pourrait être imprécis.",
   },
   ar: {
+    eyebrow: 'ASRĀR · COMPATIBILITY',
     title: 'ما مدى توافقكما؟',
     disclaimer: 'توافق فلكي عام (برج الشمس، برج القمر، الزهرة-المريخ) — وليس أسلوبًا كلاسيكيًا من علم النجوم. علم النجوم الإسلامي الكلاسيكي يختار وقت الزواج بدلاً من مقارنة تاريخي ميلاد — راجع ميزة الاختيارات (أفضل التواريخ) لذلك.',
     matchStrength: 'قوة التوافق',
@@ -43,130 +46,151 @@ const COPY = {
   },
 };
 
-const qualityColors: Record<AstrologicalCompatibility['overallQuality'], string> = {
-  'excellent': 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400 border-green-200 dark:border-green-800',
-  'very-good': 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400 border-blue-200 dark:border-blue-800',
-  'good': 'bg-sky-100 text-sky-800 dark:bg-sky-900/30 dark:text-sky-400 border-sky-200 dark:border-sky-800',
-  'moderate': 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400 border-yellow-200 dark:border-yellow-800',
-  'challenging': 'bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-400 border-orange-200 dark:border-orange-800',
+const qualityColor: Record<AstrologicalCompatibility['overallQuality'], string> = {
+  'excellent': '#16A34A',
+  'very-good': '#16A34A',
+  'good': COMPAT_THEME.indigo,
+  'moderate': COMPAT_THEME.amber,
+  'challenging': COMPAT_THEME.danger,
 };
 
 export function AstrologicalCompatibilityView({ compatibility, language = 'en' }: AstrologicalCompatibilityViewProps) {
-  const c = COPY[language];
+  const c = COPY[language] ?? COPY.en;
   const { person1, person2, methods, overallScore, overallQuality } = compatibility;
   const scoreRange = getScoreRange(overallScore, language);
+  const qColor = qualityColor[overallQuality];
 
   return (
-    <div className="space-y-8 p-8 bg-white dark:bg-slate-900 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700">
+    <div className="rounded-3xl overflow-hidden" style={{ background: COMPAT_THEME.cardBg, border: `1px solid ${COMPAT_THEME.cardBorder}`, boxShadow: '0 10px 40px rgba(49,46,129,.06)' }}>
+      <div className="max-w-2xl mx-auto px-6 py-14" style={{ color: COMPAT_THEME.ink }}>
 
-      {/* Header */}
-      <div className="text-center space-y-4">
-        <div className="flex items-center justify-center gap-3">
-          <Heart className="w-10 h-10 text-rose-500" />
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-slate-50">
-            {c.title}
+        {/* Header */}
+        <header className="text-center mb-10">
+          <div className="font-technical text-[11px] tracking-[4px] font-bold" style={{ color: COMPAT_THEME.indigo }}>
+            {c.eyebrow}
+          </div>
+          <h1 className="font-display font-semibold text-4xl mt-3.5 leading-tight">{c.title}</h1>
+          <div className="flex items-center justify-center gap-3.5 mt-4 text-lg font-technical">
+            <span>{person1.name}</span>
+            <span aria-hidden="true" style={{ color: COMPAT_THEME.indigo }}>۞</span>
+            <span>{person2.name}</span>
+          </div>
+        </header>
+
+        {/* Not-ʿIlm-al-Nujūm disclaimer */}
+        <div
+          className="px-5 py-4 rounded-xl text-center text-[13.5px] leading-relaxed mb-10"
+          style={{ background: COMPAT_THEME.surface, border: `1px solid ${COMPAT_THEME.surfaceBorder}`, color: COMPAT_THEME.muted }}
+        >
+          <span className="mr-2" aria-hidden="true">ⓘ</span>
+          {c.disclaimer}
+        </div>
+
+        {/* Overall Score */}
+        <section className="flex flex-col items-center text-center">
+          <div className="font-technical text-[11px] tracking-[3px] uppercase font-bold mb-4" style={{ color: COMPAT_THEME.indigo }}>
+            {c.matchStrength}
+          </div>
+
+          <CompatibilityGauge score={overallScore} size="lg" color={qColor} trackColor={COMPAT_THEME.line} showPercentage />
+
+          <h2 className="font-display font-semibold text-3xl mt-5 mb-1" style={{ color: qColor }}>
+            {scoreRange.icon} {scoreRange.label}
           </h2>
-        </div>
+          <p className="text-sm mt-1 max-w-md" style={{ color: COMPAT_THEME.muted }}>
+            {scoreRange.description}
+          </p>
+        </section>
 
-        <div className="flex items-center justify-center gap-4 text-2xl font-semibold">
-          <span className="text-purple-600 dark:text-purple-400">{person1.name}</span>
-          <Users className="w-6 h-6 text-slate-400 dark:text-slate-500" />
-          <span className="text-rose-600 dark:text-rose-400">{person2.name}</span>
-        </div>
+        <Rule />
+
+        {/* Breakdown */}
+        <section>
+          <h2 className="font-display font-semibold text-2xl mb-6">{c.breakdown}</h2>
+
+          <div className="space-y-5">
+
+            {/* Sun Sign */}
+            <MethodCard
+              icon="☀️"
+              title={c.sunSign}
+              score={methods.sunSign.score}
+              signLine={`${ZODIAC_DATA[methods.sunSign.person1Sign].symbol} ${methods.sunSign.person1Sign} × ${ZODIAC_DATA[methods.sunSign.person2Sign].symbol} ${methods.sunSign.person2Sign}`}
+              description={methods.sunSign.description}
+            />
+
+            {/* Moon Sign */}
+            <MethodCard
+              icon="🌙"
+              title={c.moonSign}
+              score={methods.moonSign.score}
+              signLine={`${ZODIAC_DATA[methods.moonSign.person1Sign].symbol} ${methods.moonSign.person1Sign} × ${ZODIAC_DATA[methods.moonSign.person2Sign].symbol} ${methods.moonSign.person2Sign}`}
+              description={methods.moonSign.description}
+            >
+              {methods.moonSign.uncertain && (
+                <div
+                  className="flex items-start gap-2 p-2.5 rounded-lg mt-3"
+                  style={{ background: '#FFF8EA', border: '1px solid #F6E4BC' }}
+                >
+                  <span className="flex-shrink-0" style={{ color: COMPAT_THEME.amber }}>⚠</span>
+                  <p className="text-xs" style={{ color: COMPAT_THEME.amber }}>{c.uncertainNote}</p>
+                </div>
+              )}
+            </MethodCard>
+
+            {/* Venus-Mars */}
+            <MethodCard
+              icon="💫"
+              title={c.venusMars}
+              score={methods.venusMars.score}
+              signLine={`♀ ${methods.venusMars.person1VenusSign} × ♂ ${methods.venusMars.person2MarsSign}`}
+              description={methods.venusMars.description}
+            />
+
+          </div>
+        </section>
+
       </div>
+    </div>
+  );
+}
 
-      {/* Not-ʿIlm-al-Nujūm disclaimer */}
-      <div className="flex items-start gap-3 p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700">
-        <Info className="w-5 h-5 text-slate-500 flex-shrink-0 mt-0.5" />
-        <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{c.disclaimer}</p>
+function MethodCard({
+  icon, title, score, signLine, description, children,
+}: {
+  icon: string;
+  title: string;
+  score: number;
+  signLine: string;
+  description: string;
+  children?: React.ReactNode;
+}) {
+  return (
+    <div
+      className="rounded-2xl p-6 flex flex-col sm:flex-row items-center sm:items-start gap-5"
+      style={{ background: COMPAT_THEME.surface, border: `1px solid ${COMPAT_THEME.surfaceBorder}` }}
+    >
+      <div className="flex-shrink-0">
+        <CompatibilityGauge score={score} size="sm" color={COMPAT_THEME.indigo} trackColor={COMPAT_THEME.line} showPercentage />
       </div>
-
-      {/* Overall Score */}
-      <div className="flex flex-col items-center py-8 bg-gradient-to-br from-purple-50 to-rose-50 dark:from-purple-950/30 dark:to-rose-950/30 rounded-xl border border-purple-200 dark:border-purple-800">
-        <h3 className="text-xl font-bold text-slate-900 dark:text-slate-50 mb-4">
-          {c.matchStrength}
+      <div className="text-center sm:text-left">
+        <h3 className="font-display font-semibold text-lg" style={{ color: COMPAT_THEME.ink }}>
+          {icon} {title}
         </h3>
-
-        <CompatibilityGauge score={overallScore} size="lg" />
-
-        <div className={`mt-5 px-6 py-3 rounded-full font-bold text-lg border-2 ${qualityColors[overallQuality]}`}>
-          {scoreRange.icon} {scoreRange.label}
-        </div>
-
-        <p className="mt-3 text-sm text-slate-600 dark:text-slate-400 text-center max-w-md">
-          {scoreRange.description}
-        </p>
+        <p className="text-sm mt-0.5" style={{ color: COMPAT_THEME.muted }}>{signLine}</p>
+        <p className="text-sm leading-relaxed mt-2.5" style={{ color: COMPAT_THEME.ink }}>{description}</p>
+        {children}
       </div>
+    </div>
+  );
+}
 
-      {/* Breakdown */}
-      <div className="space-y-5">
-        <h3 className="text-xl font-bold text-slate-900 dark:text-slate-50">{c.breakdown}</h3>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-          {/* Sun Sign */}
-          <div className="p-6 bg-amber-50 dark:bg-amber-950/30 rounded-xl border border-amber-200 dark:border-amber-800 space-y-4">
-            <div className="flex items-center justify-center">
-              <CompatibilityGauge score={methods.sunSign.score} size="md" />
-            </div>
-            <div className="text-center">
-              <h4 className="font-bold text-slate-900 dark:text-slate-50 text-lg mb-1">
-                ☀️ {c.sunSign}
-              </h4>
-              <p className="text-sm text-slate-600 dark:text-slate-400">
-                {ZODIAC_DATA[methods.sunSign.person1Sign].symbol} {methods.sunSign.person1Sign} × {ZODIAC_DATA[methods.sunSign.person2Sign].symbol} {methods.sunSign.person2Sign}
-              </p>
-            </div>
-            <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-              {methods.sunSign.description}
-            </p>
-          </div>
-
-          {/* Moon Sign */}
-          <div className="p-6 bg-indigo-50 dark:bg-indigo-950/30 rounded-xl border border-indigo-200 dark:border-indigo-800 space-y-4">
-            <div className="flex items-center justify-center">
-              <CompatibilityGauge score={methods.moonSign.score} size="md" />
-            </div>
-            <div className="text-center">
-              <h4 className="font-bold text-slate-900 dark:text-slate-50 text-lg mb-1">
-                🌙 {c.moonSign}
-              </h4>
-              <p className="text-sm text-slate-600 dark:text-slate-400">
-                {ZODIAC_DATA[methods.moonSign.person1Sign].symbol} {methods.moonSign.person1Sign} × {ZODIAC_DATA[methods.moonSign.person2Sign].symbol} {methods.moonSign.person2Sign}
-              </p>
-            </div>
-            <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-              {methods.moonSign.description}
-            </p>
-            {methods.moonSign.uncertain && (
-              <div className="flex items-start gap-2 p-2.5 bg-amber-100 dark:bg-amber-950/40 rounded-lg border border-amber-300 dark:border-amber-800">
-                <AlertTriangle className="w-4 h-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
-                <p className="text-xs text-amber-800 dark:text-amber-300">{c.uncertainNote}</p>
-              </div>
-            )}
-          </div>
-
-          {/* Venus-Mars */}
-          <div className="p-6 bg-rose-50 dark:bg-rose-950/30 rounded-xl border border-rose-200 dark:border-rose-800 space-y-4">
-            <div className="flex items-center justify-center">
-              <CompatibilityGauge score={methods.venusMars.score} size="md" />
-            </div>
-            <div className="text-center">
-              <h4 className="font-bold text-slate-900 dark:text-slate-50 text-lg mb-1">
-                💫 {c.venusMars}
-              </h4>
-              <p className="text-sm text-slate-600 dark:text-slate-400">
-                ♀ {methods.venusMars.person1VenusSign} × ♂ {methods.venusMars.person2MarsSign}
-              </p>
-            </div>
-            <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-              {methods.venusMars.description}
-            </p>
-          </div>
-
-        </div>
-      </div>
-
+function Rule() {
+  return (
+    <div className="flex items-center gap-3.5 my-9" aria-hidden="true">
+      <span className="flex-1 h-px" style={{ background: COMPAT_THEME.line }} />
+      <span className="text-[13px]" style={{ color: COMPAT_THEME.indigoSoft }}>۞</span>
+      <span className="flex-1 h-px" style={{ background: COMPAT_THEME.line }} />
     </div>
   );
 }

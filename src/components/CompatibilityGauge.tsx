@@ -4,16 +4,20 @@ interface CompatibilityGaugeProps {
   score: number; // 0-100
   size?: 'sm' | 'md' | 'lg';
   color?: string;
+  trackColor?: string;
   label?: string;
+  labelColor?: string;
   showPercentage?: boolean;
 }
 
-export function CompatibilityGauge({ 
-  score, 
-  size = 'md', 
-  color, 
+export function CompatibilityGauge({
+  score,
+  size = 'md',
+  color,
+  trackColor = '#e5e7eb',
   label,
-  showPercentage = true 
+  labelColor,
+  showPercentage = true
 }: CompatibilityGaugeProps) {
   
   // Determine color based on score if not provided
@@ -51,7 +55,7 @@ export function CompatibilityGauge({
             cy={config.height / 2}
             r={radius}
             fill="none"
-            stroke="#e5e7eb"
+            stroke={trackColor}
             strokeWidth={config.strokeWidth}
           />
           
@@ -83,9 +87,9 @@ export function CompatibilityGauge({
       
       {/* Label */}
       {label && (
-        <div 
-          className="text-center text-gray-700 dark:text-gray-300 font-medium"
-          style={{ fontSize: config.labelSize }}
+        <div
+          className={labelColor ? 'text-center font-medium' : 'text-center text-gray-700 dark:text-gray-300 font-medium'}
+          style={{ fontSize: config.labelSize, color: labelColor }}
         >
           {label}
         </div>
