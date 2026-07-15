@@ -1,11 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { CompatibilityMode, RelationshipCompatibility } from '../../types/compatibility';
-import { CompatibilityModeSwitcher } from '../../components/CompatibilityModeSwitcher';
+import { RelationshipCompatibility } from '../../types/compatibility';
 import { RelationshipInputForm } from '../../components/RelationshipInputForm';
 import { RelationshipCompatibilityView } from '../../components/RelationshipCompatibilityView';
 import { analyzeRelationshipCompatibility, getElementFromAbjadTotal } from '../../utils/relationshipCompatibility';
 import { useAbjad } from '../../contexts/AbjadContext';
-import AIChat from '../../components/AIChat';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 // Helper to calculate Abjad total from Arabic text
@@ -19,7 +17,6 @@ interface CompatibilityPanelProps {
 }
 
 export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
-  const [mode, setMode] = useState<CompatibilityMode>('relationship');
   const [relationshipResult, setRelationshipResult] = useState<RelationshipCompatibility | null>(null);
   const [showResults, setShowResults] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -99,7 +96,7 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
   };
   
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50 dark:from-slate-900 dark:to-indigo-950 p-4 sm:p-6">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50 dark:from-slate-900 dark:to-purple-950 p-4 sm:p-6">
       <div className="max-w-4xl mx-auto space-y-6">
         
         {/* Back Button */}
@@ -115,24 +112,13 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
         {/* Title */}
         <div className="text-center mb-6">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-            💫 Compatibility Analysis
+            💫 Compatibility
           </h1>
           <p className="text-gray-600 dark:text-gray-400">
-            Explore relationship harmony through Islamic numerology
+            {language === 'fr' ? 'Explorez l\'harmonie relationnelle grâce à la numérologie islamique' : 'Explore relationship harmony through Islamic numerology'}
           </p>
         </div>
-        
-        {/* Mode Switcher - Only show when not viewing results */}
-        {!showResults && (
-          <CompatibilityModeSwitcher 
-            currentMode={mode}
-            onModeChange={(newMode) => {
-              setMode(newMode);
-              setRelationshipResult(null);
-            }}
-          />
-        )}
-        
+
         {/* Main Content - Form or Results */}
         <div 
           ref={formRef}
@@ -154,25 +140,13 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
               {/* Calculate Again Button */}
               <button
                 onClick={handleReset}
-                className="w-full px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-rose-600 hover:from-purple-700 hover:to-rose-700 text-white font-semibold rounded-xl transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                 </svg>
                 {language === 'fr' ? 'Calculer un Autre Couple' : 'Calculate Another Pair'}
               </button>
-
-              {/* AI Chat Assistant */}
-              <AIChat
-                calculationData={{
-                  person1: relationshipResult.person1,
-                  person2: relationshipResult.person2,
-                  overallScore: relationshipResult.overallScore,
-                  compatibility: relationshipResult,
-                }}
-                analysisType="compatibility"
-                language={language as 'ar' | 'en' | 'fr'}
-              />
             </div>
           ) : null}
         </div>
