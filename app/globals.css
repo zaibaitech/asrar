@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Amiri:wght@400;700&family=Noto+Color+Emoji&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@500;600&family=Space+Grotesk:wght@500;700&family=Noto+Color+Emoji&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,6 +6,14 @@
 
 .font-arabic {
   font-family: 'Noto Naskh Arabic', 'Amiri', serif;
+}
+
+.font-display {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.font-technical {
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 /* Ensure emoji render properly across all browsers */
