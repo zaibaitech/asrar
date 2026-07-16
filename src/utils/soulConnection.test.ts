@@ -56,9 +56,13 @@ describe('SOUL_CONNECTION_ARCHETYPES data completeness', () => {
     for (let n = 1; n <= 9; n++) {
       const a = SOUL_CONNECTION_ARCHETYPES[n];
       expect(a.number).toBe(n);
-      for (const field of ['title', 'oneLine', 'meaning', 'marriageOutlook', 'watchOut', 'keyToSuccess'] as const) {
+      for (const field of ['title', 'oneLine', 'meaning', 'watchOut', 'keyToSuccess'] as const) {
         expect(a[field].en.length).toBeGreaterThan(0);
         expect(a[field].fr.length).toBeGreaterThan(0);
+      }
+      for (const ctx of ['universal', 'marriage', 'friendship', 'family', 'work'] as const) {
+        expect(a.outlook[ctx].en.length).toBeGreaterThan(0);
+        expect(a.outlook[ctx].fr.length).toBeGreaterThan(0);
       }
       expect(a.tags.length).toBeGreaterThan(0);
       for (const tag of a.tags) {

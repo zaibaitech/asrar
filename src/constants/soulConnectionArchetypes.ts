@@ -1,19 +1,51 @@
 /**
- * Soul Connection (Spiritual-Destiny, mod-9) archetype content — ported
- * verbatim from asrar-mobile's constants/translations.ts `soul.archetypes`
- * block (marriage context), NOT from the older numeric scoreMap that used
- * to live in relationshipCompatibility.ts. The mobile app treats these two
- * as separate systems; the archetype layer below is what its actual
- * "Soul Connection" screen renders, and is the one the user asked to match.
+ * Soul Connection (Spiritual-Destiny, mod-9) archetype content — the core
+ * fields (title, meaning, watchOut, keyToSuccess, tags, severity) were
+ * ported verbatim from asrar-mobile's constants/translations.ts
+ * `soul.archetypes` block (marriage context), NOT from the older numeric
+ * scoreMap that used to live in relationshipCompatibility.ts.
  *
- * English and French text is copied verbatim from the mobile source.
- * Arabic does not exist there (confirmed by exhaustive search of the
- * mobile repo's translations.ts) — omitted here rather than invented, per
- * explicit user direction. Do not add Arabic strings to this file without
- * a real source.
+ * The per-context `outlook` block (universal/marriage/friendship/family/work)
+ * is original content written for the web app — the mobile source only had
+ * the marriage framing. `outlook.marriage` reproduces that ported text
+ * unchanged; the other four contexts recast the same underlying archetype
+ * for that relationship type, keeping the core fields above (which describe
+ * the number's fundamental nature, not any one relationship type) as-is.
+ *
+ * English and French text for the ported fields is copied verbatim from
+ * the mobile source. Arabic does not exist there (confirmed by exhaustive
+ * search of the mobile repo's translations.ts) — omitted here rather than
+ * invented, per explicit user direction. Do not add Arabic strings to this
+ * file without a real source.
  */
 
 export type SoulConnectionSeverity = 'green' | 'amber' | 'red';
+
+export type RelationshipContext = 'universal' | 'marriage' | 'friendship' | 'family' | 'work';
+
+export interface RelationshipContextConfig {
+  id: RelationshipContext;
+  icon: string;
+  label: { en: string; fr: string };
+}
+
+/** Selector config for the context switcher shown on the Soul Connection result. */
+export const RELATIONSHIP_CONTEXTS: RelationshipContextConfig[] = [
+  { id: 'universal', icon: '✨', label: { en: 'Universal', fr: 'Universel' } },
+  { id: 'marriage', icon: '💍', label: { en: 'Marriage', fr: 'Mariage' } },
+  { id: 'friendship', icon: '🤝', label: { en: 'Friendship', fr: 'Amitié' } },
+  { id: 'family', icon: '👪', label: { en: 'Family', fr: 'Famille' } },
+  { id: 'work', icon: '💼', label: { en: 'Work', fr: 'Travail' } },
+];
+
+/** Section label shown above the outlook text, per context. */
+export const RELATIONSHIP_CONTEXT_OUTLOOK_LABEL: Record<RelationshipContext, { en: string; fr: string }> = {
+  universal: { en: 'Outlook', fr: 'Perspective' },
+  marriage: { en: 'Marriage Outlook', fr: 'Perspective du Mariage' },
+  friendship: { en: 'Friendship Outlook', fr: "Perspective de l'Amitié" },
+  family: { en: 'Family Outlook', fr: 'Perspective Familiale' },
+  work: { en: 'Work Outlook', fr: 'Perspective Professionnelle' },
+};
 
 export interface SoulConnectionArchetype {
   number: number; // 1-9
@@ -22,7 +54,7 @@ export interface SoulConnectionArchetype {
   title: { en: string; fr: string };
   oneLine: { en: string; fr: string };
   meaning: { en: string; fr: string };
-  marriageOutlook: { en: string; fr: string };
+  outlook: Record<RelationshipContext, { en: string; fr: string }>;
   watchOut: { en: string; fr: string };
   keyToSuccess: { en: string; fr: string };
 }
@@ -52,9 +84,27 @@ export const SOUL_CONNECTION_ARCHETYPES: Record<number, SoulConnectionArchetype>
       en: 'This pattern traditionally shows an easy beginning that may later feel stagnant, especially in growth and provision. Emotional connection can cool over time if not actively tended.',
       fr: "Ce motif montre traditionnellement un début facile qui peut plus tard sembler stagnant, surtout en croissance et provision. Le lien émotionnel peut se refroidir avec le temps s'il n'est pas activement entretenu.",
     },
-    marriageOutlook: {
-      en: 'Marriage may start smoothly but requires intentional renewal to avoid complacency. Focus on shared goals and gratitude practices.',
-      fr: 'Le mariage peut commencer en douceur mais nécessite un renouvellement intentionnel pour éviter la complaisance. Concentrez-vous sur des objectifs partagés et des pratiques de gratitude.',
+    outlook: {
+      universal: {
+        en: 'This connection often starts with ease and comfort, but can settle into routine if never renewed. Shared purpose and intentional effort keep it alive.',
+        fr: "Ce lien commence souvent avec aisance et confort, mais peut s'installer dans la routine s'il n'est jamais renouvelé. Un but partagé et un effort intentionnel le maintiennent vivant.",
+      },
+      marriage: {
+        en: 'Marriage may start smoothly but requires intentional renewal to avoid complacency. Focus on shared goals and gratitude practices.',
+        fr: 'Le mariage peut commencer en douceur mais nécessite un renouvellement intentionnel pour éviter la complaisance. Concentrez-vous sur des objectifs partagés et des pratiques de gratitude.',
+      },
+      friendship: {
+        en: 'Friendships under this pattern begin naturally and comfortably, but may drift into routine without shared activities or new experiences. Regular effort keeps the connection warm.',
+        fr: "Les amitiés sous ce motif commencent naturellement et confortablement, mais peuvent glisser vers la routine sans activités partagées ou nouvelles expériences. Un effort régulier garde le lien chaleureux.",
+      },
+      family: {
+        en: 'Family ties here tend to feel steady and dependable, though closeness can fade into distance if never actively nurtured. Checking in regularly keeps the bond warm.',
+        fr: "Les liens familiaux ici tendent à sembler stables et fiables, bien que la proximité puisse s'estomper en distance si jamais entretenue activement. Prendre régulièrement des nouvelles garde le lien chaleureux.",
+      },
+      work: {
+        en: 'Working relationships start smoothly and productively, but can grow stale without new goals or challenges. Revisit shared objectives regularly to avoid complacency.',
+        fr: "Les relations de travail commencent en douceur et de manière productive, mais peuvent stagner sans nouveaux objectifs ou défis. Revisitez régulièrement les objectifs partagés pour éviter la complaisance.",
+      },
     },
     watchOut: {
       en: 'Emotional coldness and taking each other for granted. Growth in provision may slow without conscious effort.',
@@ -82,9 +132,27 @@ export const SOUL_CONNECTION_ARCHETYPES: Record<number, SoulConnectionArchetype>
       en: 'Traditionally considered favorable for marriage. This pattern supports natural cooperation, companionship, and mutual understanding. Balance flows more easily than opposition.',
       fr: "Traditionnellement considéré comme favorable au mariage. Ce motif soutient la coopération naturelle, la camaraderie et la compréhension mutuelle. L'équilibre coule plus facilement que l'opposition.",
     },
-    marriageOutlook: {
-      en: 'Marriage is traditionally supported. Companionship and teamwork are natural strengths. Guard against dependency.',
-      fr: 'Le mariage est traditionnellement soutenu. La camaraderie et le travail d\'équipe sont des forces naturelles. Gardez-vous contre la dépendance.',
+    outlook: {
+      universal: {
+        en: 'This bond naturally supports cooperation and ease. Two people connected this way tend to understand each other quickly, though one may lean too heavily on the other.',
+        fr: "Ce lien soutient naturellement la coopération et l'aisance. Deux personnes ainsi liées ont tendance à se comprendre rapidement, bien que l'une puisse trop s'appuyer sur l'autre.",
+      },
+      marriage: {
+        en: 'Marriage is traditionally supported. Companionship and teamwork are natural strengths. Guard against dependency.',
+        fr: 'Le mariage est traditionnellement soutenu. La camaraderie et le travail d\'équipe sont des forces naturelles. Gardez-vous contre la dépendance.',
+      },
+      friendship: {
+        en: "A naturally easy, low-friction friendship — you tend to understand each other quickly and rarely clash. Watch that neither friend becomes overly reliant on the other.",
+        fr: "Une amitié naturellement facile et peu conflictuelle — vous avez tendance à vous comprendre rapidement et vous vous heurtez rarement. Veillez à ce qu'aucun des deux amis ne devienne trop dépendant de l'autre.",
+      },
+      family: {
+        en: 'Family members connected this way tend to get along with little friction and genuine mutual understanding. Encourage each other\'s independence alongside the closeness.',
+        fr: "Les membres de la famille ainsi liés ont tendance à bien s'entendre avec peu de friction et une compréhension mutuelle sincère. Encouragez l'indépendance de chacun aux côtés de la proximité.",
+      },
+      work: {
+        en: 'A cooperative, low-conflict working relationship where tasks divide naturally. Guard against one person carrying too much of the shared workload.',
+        fr: "Une relation de travail coopérative et peu conflictuelle où les tâches se répartissent naturellement. Veillez à ce qu'une seule personne ne porte pas trop la charge de travail partagée.",
+      },
     },
     watchOut: {
       en: 'Over-dependency and avoiding difficult conversations. One partner may lean too heavily on the other.',
@@ -112,9 +180,27 @@ export const SOUL_CONNECTION_ARCHETYPES: Record<number, SoulConnectionArchetype>
       en: 'This pattern is traditionally associated with difficulty. Tension, frequent disagreements, and financial pressure may arise. Requires significant patience and discipline.',
       fr: 'Ce motif est traditionnellement associé à la difficulté. Des tensions, des désaccords fréquents et des pressions financières peuvent surgir. Nécessite une patience et une discipline significatives.',
     },
-    marriageOutlook: {
-      en: 'Marriage may face continuous challenges. Strain in provision and emotional harmony often requires outside support and spiritual discipline.',
-      fr: 'Le mariage peut faire face à des défis continus. La pression en provision et harmonie émotionnelle nécessite souvent un soutien extérieur et une discipline spirituelle.',
+    outlook: {
+      universal: {
+        en: 'This connection often carries tension and frequent friction. Patience and structure are needed to keep disagreements from escalating.',
+        fr: "Ce lien porte souvent une tension et une friction fréquente. La patience et la structure sont nécessaires pour éviter que les désaccords ne s'intensifient.",
+      },
+      marriage: {
+        en: 'Marriage may face continuous challenges. Strain in provision and emotional harmony often requires outside support and spiritual discipline.',
+        fr: 'Le mariage peut faire face à des défis continus. La pression en provision et harmonie émotionnelle nécessite souvent un soutien extérieur et une discipline spirituelle.',
+      },
+      friendship: {
+        en: 'Friendships under this pattern can feel effortful — frequent small disagreements and mismatched expectations are common. The bond can hold, but needs conscious care.',
+        fr: "Les amitiés sous ce motif peuvent sembler exigeantes en effort — de fréquents petits désaccords et des attentes mal alignées sont courants. Le lien peut tenir, mais demande une attention consciente.",
+      },
+      family: {
+        en: 'Family ties here often carry recurring tension, sometimes over money or responsibilities. Structure, patience, and outside support help ease the strain.',
+        fr: "Les liens familiaux ici portent souvent une tension récurrente, parfois liée à l'argent ou aux responsabilités. Structure, patience et soutien extérieur aident à apaiser la pression.",
+      },
+      work: {
+        en: 'Professional partnerships under this pattern often hit friction over resources, deadlines, or decisions. Clear agreements and structured communication reduce the strain.',
+        fr: "Les partenariats professionnels sous ce motif rencontrent souvent des frictions concernant les ressources, les délais ou les décisions. Des accords clairs et une communication structurée réduisent la pression.",
+      },
     },
     watchOut: {
       en: 'Constant arguments, financial instability, and emotional burnout. This path tests endurance.',
@@ -142,9 +228,27 @@ export const SOUL_CONNECTION_ARCHETYPES: Record<number, SoulConnectionArchetype>
       en: 'Traditionally seen as a heavy path. Health concerns, emotional strain, and a sense of burden may be present, especially if one partner has unresolved emotional patterns.',
       fr: 'Traditionnellement vu comme un chemin lourd. Des préoccupations de santé, une pression émotionnelle et un sens de fardeau peuvent être présents, surtout si un partenaire a des schémas émotionnels non résolus.',
     },
-    marriageOutlook: {
-      en: 'Marriage may feel like a test. Health (physical or emotional) often becomes a central concern. Requires emotional maturity and calm.',
-      fr: 'Le mariage peut sembler une épreuve. La santé (physique ou émotionnelle) devient souvent une préoccupation centrale. Nécessite maturité émotionnelle et calme.',
+    outlook: {
+      universal: {
+        en: 'This bond often carries a sense of weight — health, stress, or emotional burden tend to surface. Maturity and calm help carry it well.',
+        fr: "Ce lien porte souvent un sentiment de poids — santé, stress ou fardeau émotionnel ont tendance à surgir. Maturité et calme aident à bien le porter.",
+      },
+      marriage: {
+        en: 'Marriage may feel like a test. Health (physical or emotional) often becomes a central concern. Requires emotional maturity and calm.',
+        fr: 'Le mariage peut sembler une épreuve. La santé (physique ou émotionnelle) devient souvent une préoccupation centrale. Nécessite maturité émotionnelle et calme.',
+      },
+      friendship: {
+        en: 'Friendships here can feel heavy at times, often surfacing one person\'s stress or unresolved struggles. Steady, patient support matters more than constant closeness.',
+        fr: "Les amitiés ici peuvent parfois sembler lourdes, faisant souvent surgir le stress ou les luttes non résolues de l'un des deux. Un soutien stable et patient compte plus qu'une proximité constante.",
+      },
+      family: {
+        en: 'Family bonds under this pattern often involve caretaking or shared hardship — health concerns are common threads. Calm routines and honest communication ease the load.',
+        fr: "Les liens familiaux sous ce motif impliquent souvent des soins ou une épreuve partagée — les préoccupations de santé sont un fil conducteur commun. Des routines calmes et une communication honnête allègent la charge.",
+      },
+      work: {
+        en: 'Working relationships here can feel draining, with stress or burnout as recurring risks. Clear boundaries and realistic workloads protect the partnership.',
+        fr: "Les relations de travail ici peuvent sembler épuisantes, le stress ou l'épuisement professionnel étant des risques récurrents. Des limites claires et une charge de travail réaliste protègent le partenariat.",
+      },
     },
     watchOut: {
       en: 'Burnout, neglecting physical or mental wellbeing, and resentment building from unspoken burdens.',
@@ -172,9 +276,27 @@ export const SOUL_CONNECTION_ARCHETYPES: Record<number, SoulConnectionArchetype>
       en: 'Traditionally considered very favorable. Associated with blessing, natural harmony, children, and spiritual growth. Balance and abundance may flow more easily.',
       fr: "Traditionnellement considéré comme très favorable. Associé à la bénédiction, l'harmonie naturelle, les enfants et la croissance spirituelle. L'équilibre et l'abondance peuvent couler plus facilement.",
     },
-    marriageOutlook: {
-      en: 'Marriage is traditionally blessed. Harmony, children, and shared spiritual life are often supported. Guard against excess and distraction.',
-      fr: "Le mariage est traditionnellement béni. L'harmonie, les enfants et la vie spirituelle partagée sont souvent soutenus. Gardez-vous contre l'excès et la distraction.",
+    outlook: {
+      universal: {
+        en: 'This connection is traditionally favorable — harmony, growth, and ease tend to flow naturally between the two. Gratitude keeps the blessing from being taken for granted.',
+        fr: "Ce lien est traditionnellement favorable — harmonie, croissance et aisance ont tendance à couler naturellement entre les deux. La gratitude évite que la bénédiction ne soit tenue pour acquise.",
+      },
+      marriage: {
+        en: 'Marriage is traditionally blessed. Harmony, children, and shared spiritual life are often supported. Guard against excess and distraction.',
+        fr: "Le mariage est traditionnellement béni. L'harmonie, les enfants et la vie spirituelle partagée sont souvent soutenus. Gardez-vous contre l'excès et la distraction.",
+      },
+      friendship: {
+        en: 'A genuinely blessed friendship — trust, ease, and mutual growth come naturally. Keep showing up for each other so the bond doesn\'t drift into complacency.',
+        fr: "Une amitié véritablement bénie — confiance, aisance et croissance mutuelle viennent naturellement. Continuez à être présents l'un pour l'autre pour que le lien ne glisse pas vers la complaisance.",
+      },
+      family: {
+        en: 'Family ties here tend to be a source of real blessing — warmth, support, and shared growth. Nurture the bond actively rather than assuming it as given.',
+        fr: "Les liens familiaux ici tendent à être une source de véritable bénédiction — chaleur, soutien et croissance partagée. Entretenez le lien activement plutôt que de le tenir pour acquis.",
+      },
+      work: {
+        en: 'A productive, mutually beneficial working relationship where success tends to come naturally. Stay grounded and avoid overconfidence as things go well.',
+        fr: "Une relation de travail productive et mutuellement bénéfique où le succès a tendance à venir naturellement. Restez ancré et évitez l'excès de confiance quand les choses vont bien.",
+      },
     },
     watchOut: {
       en: 'Distraction from blessings, excess in comfort, and taking abundance for granted.',
@@ -202,9 +324,27 @@ export const SOUL_CONNECTION_ARCHETYPES: Record<number, SoulConnectionArchetype>
       en: 'This pattern traditionally shows recurring quarrels and discord. Tests of anger, pride, and ego are common. Patterns may repeat until inner work is done.',
       fr: 'Ce motif montre traditionnellement des querelles récurrentes et de la discorde. Des tests de colère, d\'orgueil et d\'ego sont courants. Les schémas peuvent se répéter jusqu\'à ce que le travail intérieur soit fait.',
     },
-    marriageOutlook: {
-      en: 'Marriage often involves power struggles and repeated conflicts. Both partners must work on self-awareness and forgiveness.',
-      fr: 'Le mariage implique souvent des luttes de pouvoir et des conflits répétés. Les deux partenaires doivent travailler sur la conscience de soi et le pardon.',
+    outlook: {
+      universal: {
+        en: 'This bond tends to surface recurring friction tied to pride and ego. Self-awareness on both sides is what breaks the cycle.',
+        fr: "Ce lien tend à faire surgir une friction récurrente liée à l'orgueil et à l'ego. La conscience de soi des deux côtés est ce qui brise le cycle.",
+      },
+      marriage: {
+        en: 'Marriage often involves power struggles and repeated conflicts. Both partners must work on self-awareness and forgiveness.',
+        fr: 'Le mariage implique souvent des luttes de pouvoir et des conflits répétés. Les deux partenaires doivent travailler sur la conscience de soi et le pardon.',
+      },
+      friendship: {
+        en: "Friendships here often involve repeated small conflicts, sometimes over who's 'right.' Letting go of ego keeps the friendship from wearing thin.",
+        fr: "Les amitiés ici impliquent souvent des petits conflits répétés, parfois sur qui a « raison ». Lâcher l'ego évite que l'amitié ne s'use.",
+      },
+      family: {
+        en: 'Family relationships under this pattern often carry old, recurring disagreements. Forgiveness and honest self-reflection are what finally shift the pattern.',
+        fr: "Les relations familiales sous ce motif portent souvent de vieux désaccords récurrents. Le pardon et une réflexion honnête sur soi sont ce qui finit par changer le schéma.",
+      },
+      work: {
+        en: 'Working relationships here can involve power struggles or clashing egos. Clear roles and mutual respect prevent recurring conflict.',
+        fr: "Les relations de travail ici peuvent impliquer des luttes de pouvoir ou des egos qui s'affrontent. Des rôles clairs et un respect mutuel préviennent les conflits récurrents.",
+      },
     },
     watchOut: {
       en: 'Power struggles, recurring arguments, and cycles of blame. Pride and unresolved anger amplify friction.',
@@ -232,9 +372,27 @@ export const SOUL_CONNECTION_ARCHETYPES: Record<number, SoulConnectionArchetype>
       en: 'Traditionally considered the most favorable for marriage. May face obstacles before union, but strong blessings and alignment often follow. Spiritual harmony is deep.',
       fr: "Traditionnellement considéré comme le plus favorable au mariage. Peut faire face à des obstacles avant l'union, mais de fortes bénédictions et un alignement suivent souvent. L'harmonie spirituelle est profonde.",
     },
-    marriageOutlook: {
-      en: 'Marriage is traditionally highly blessed. Challenges before union often make the bond stronger. This path carries spiritual favor.',
-      fr: "Le mariage est traditionnellement très béni. Les défis avant l'union renforcent souvent le lien. Ce chemin porte une faveur spirituelle.",
+    outlook: {
+      universal: {
+        en: 'Traditionally the most favorable connection — early obstacles often give way to a deep, aligned bond. Trust the process rather than forcing it.',
+        fr: "Traditionnellement le lien le plus favorable — les obstacles précoces cèdent souvent la place à un lien profond et aligné. Faites confiance au processus plutôt que de le forcer.",
+      },
+      marriage: {
+        en: 'Marriage is traditionally highly blessed. Challenges before union often make the bond stronger. This path carries spiritual favor.',
+        fr: "Le mariage est traditionnellement très béni. Les défis avant l'union renforcent souvent le lien. Ce chemin porte une faveur spirituelle.",
+      },
+      friendship: {
+        en: 'One of the strongest friendship patterns — any early distance or misunderstanding tends to resolve into a deeply loyal bond. Let it develop at its own pace.',
+        fr: "L'un des motifs d'amitié les plus forts — toute distance ou malentendu précoce a tendance à se résoudre en un lien profondément loyal. Laissez-le se développer à son propre rythme.",
+      },
+      family: {
+        en: 'Family bonds here often carry real depth, even if the relationship faced early distance or difficulty. What follows tends to be lasting and meaningful.',
+        fr: "Les liens familiaux ici portent souvent une réelle profondeur, même si la relation a connu une distance ou une difficulté précoce. Ce qui suit tend à être durable et significatif.",
+      },
+      work: {
+        en: 'A strong working alliance — early friction or slow starts often lead to a highly effective, trusted partnership. Give it time to align.',
+        fr: "Une alliance de travail solide — les frictions précoces ou les débuts lents mènent souvent à un partenariat très efficace et de confiance. Donnez-lui le temps de s'aligner.",
+      },
     },
     watchOut: {
       en: 'Pride in the blessing, external interference before union, and assuming ease means no effort is needed.',
@@ -262,9 +420,27 @@ export const SOUL_CONNECTION_ARCHETYPES: Record<number, SoulConnectionArchetype>
       en: 'This pattern is traditionally very good for the long term, but early misunderstandings are common. Patience (sabr) transforms this into a strong, enduring bond.',
       fr: 'Ce motif est traditionnellement très bon à long terme, mais les malentendus précoces sont courants. La patience (sabr) transforme cela en un lien fort et durable.',
     },
-    marriageOutlook: {
-      en: "Marriage starts with confusion or misjudgment but becomes very strong over time. Patience is the key to unlocking this bond's strength.",
-      fr: 'Le mariage commence avec confusion ou mauvais jugement mais devient très fort avec le temps. La patience est la clé pour déverrouiller la force de ce lien.',
+    outlook: {
+      universal: {
+        en: 'This connection often starts with confusion or misjudgment but strengthens significantly with time. Patience is what unlocks its real depth.',
+        fr: "Ce lien commence souvent avec confusion ou mauvais jugement mais se renforce considérablement avec le temps. La patience est ce qui déverrouille sa véritable profondeur.",
+      },
+      marriage: {
+        en: "Marriage starts with confusion or misjudgment but becomes very strong over time. Patience is the key to unlocking this bond's strength.",
+        fr: 'Le mariage commence avec confusion ou mauvais jugement mais devient très fort avec le temps. La patience est la clé pour déverrouiller la force de ce lien.',
+      },
+      friendship: {
+        en: "Friendships here can start awkwardly or take time to click, but often become some of the most enduring bonds. Don't judge it too early.",
+        fr: "Les amitiés ici peuvent commencer maladroitement ou prendre du temps à s'installer, mais deviennent souvent parmi les liens les plus durables. Ne jugez pas trop tôt.",
+      },
+      family: {
+        en: 'Family relationships under this pattern may start with distance or misunderstanding but tend to deepen meaningfully over the years. Give the bond time.',
+        fr: "Les relations familiales sous ce motif peuvent commencer avec distance ou malentendu mais tendent à s'approfondir significativement au fil des années. Donnez du temps au lien.",
+      },
+      work: {
+        en: 'Working relationships here often start rocky — mismatched expectations or slow trust-building — but tend to become highly reliable partnerships over time.',
+        fr: "Les relations de travail ici commencent souvent difficilement — attentes mal alignées ou confiance lente à s'établir — mais tendent à devenir des partenariats très fiables avec le temps.",
+      },
     },
     watchOut: {
       en: 'Judging the relationship too quickly in the beginning. Early friction may cause premature endings.',
@@ -292,9 +468,27 @@ export const SOUL_CONNECTION_ARCHETYPES: Record<number, SoulConnectionArchetype>
       en: 'Traditionally warned against for binding marriage. Associated with severe hardship, sudden breaks, and recurring harm patterns. Requires extreme caution and guidance.',
       fr: 'Traditionnellement déconseillé pour le mariage contraignant. Associé à des difficultés sévères, des ruptures soudaines et des schémas de préjudice récurrents. Nécessite une extrême prudence et des conseils.',
     },
-    marriageOutlook: {
-      en: 'Marriage is traditionally discouraged under this pattern. If already in this bond, increase spiritual protection practices and seek wise counsel.',
-      fr: 'Le mariage est traditionnellement découragé sous ce motif. Si déjà dans ce lien, augmentez les pratiques de protection spirituelle et cherchez un conseil avisé.',
+    outlook: {
+      universal: {
+        en: 'Traditionally a difficult pattern, associated with sudden breaks and recurring strain. Extreme caution and spiritual protection are advised.',
+        fr: "Traditionnellement un motif difficile, associé à des ruptures soudaines et une pression récurrente. Une extrême prudence et une protection spirituelle sont conseillées.",
+      },
+      marriage: {
+        en: 'Marriage is traditionally discouraged under this pattern. If already in this bond, increase spiritual protection practices and seek wise counsel.',
+        fr: 'Le mariage est traditionnellement découragé sous ce motif. Si déjà dans ce lien, augmentez les pratiques de protection spirituelle et cherchez un conseil avisé.',
+      },
+      friendship: {
+        en: "Friendships under this pattern can be prone to sudden falling-outs or repeated hurt. Approach with awareness, and don't ignore recurring red flags.",
+        fr: "Les amitiés sous ce motif peuvent être sujettes à des ruptures soudaines ou des blessures répétées. Abordez-les avec conscience, et n'ignorez pas les signaux d'alarme récurrents.",
+      },
+      family: {
+        en: 'Family ties here can carry real difficulty, including estrangement or repeated conflict. Seek wise counsel and increase protective practices rather than forcing closeness.',
+        fr: "Les liens familiaux ici peuvent porter une réelle difficulté, y compris l'éloignement ou des conflits répétés. Cherchez un conseil avisé et augmentez les pratiques de protection plutôt que de forcer la proximité.",
+      },
+      work: {
+        en: 'Professional partnerships under this pattern carry real risk — sudden fallout or repeated breakdowns in trust are common. Proceed with caution and clear agreements.',
+        fr: "Les partenariats professionnels sous ce motif portent un risque réel — ruptures soudaines ou effondrements répétés de la confiance sont courants. Procédez avec prudence et des accords clairs.",
+      },
     },
     watchOut: {
       en: 'Sudden separations, recurring harm cycles, and patterns that repeat despite efforts. This path requires vigilance.',

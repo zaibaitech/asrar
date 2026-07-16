@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { SoulConnectionResult } from '../types/compatibility';
-import { SOUL_CONNECTION_ARCHETYPES, SOUL_CONNECTION_SEVERITY_COLOR } from '../constants/soulConnectionArchetypes';
+import {
+  SOUL_CONNECTION_ARCHETYPES,
+  SOUL_CONNECTION_SEVERITY_COLOR,
+  RELATIONSHIP_CONTEXTS,
+  RELATIONSHIP_CONTEXT_OUTLOOK_LABEL,
+  type RelationshipContext,
+} from '../constants/soulConnectionArchetypes';
 import { COMPAT_THEME, COMPAT_TINTS } from '../constants/compatibilityTheme';
 import { SoulConnectionRing } from './SoulConnectionRing';
 import { useAbjad } from '../contexts/AbjadContext';
@@ -17,7 +23,6 @@ const COPY = {
     subtitle: 'A traditional soul-resonance marker from ʿIlm al-Ḥurūf',
     independentMetric: 'Independent metric',
     meaning: 'Meaning',
-    marriageOutlook: 'Marriage Outlook',
     watchOut: 'Watch Out',
     keyToSuccess: 'Key to Success',
     howCalculated: 'How this number is calculated',
@@ -32,7 +37,6 @@ const COPY = {
     subtitle: "Un marqueur traditionnel de résonance de l'âme issu de ʿIlm al-Ḥurūf",
     independentMetric: 'Mesure indépendante',
     meaning: 'Signification',
-    marriageOutlook: 'Perspective du Mariage',
     watchOut: 'Attention',
     keyToSuccess: 'Clé du Succès',
     howCalculated: 'Comment ce nombre est calculé',
@@ -50,7 +54,6 @@ const COPY = {
     subtitle: 'A traditional soul-resonance marker from ʿIlm al-Ḥurūf',
     independentMetric: 'Independent metric',
     meaning: 'Meaning',
-    marriageOutlook: 'Marriage Outlook',
     watchOut: 'Watch Out',
     keyToSuccess: 'Key to Success',
     howCalculated: 'How this number is calculated',
@@ -70,6 +73,7 @@ function letterBreakdown(name: string, abjad: Record<string, number>): { letter:
 export function SoulConnectionView({ result, language = 'en' }: SoulConnectionViewProps) {
   const [showMath, setShowMath] = useState(false);
   const [revealed] = useState(true);
+  const [context, setContext] = useState<RelationshipContext>('universal');
   const { abjad } = useAbjad();
 
   const contentLang: 'en' | 'fr' = language === 'fr' ? 'fr' : 'en';
@@ -131,11 +135,40 @@ export function SoulConnectionView({ result, language = 'en' }: SoulConnectionVi
           </div>
         </section>
 
+        {/* Relationship context selector — same number, read through a different lens */}
+        <section className="mt-6">
+          <div className="flex justify-center gap-1.5 flex-wrap" role="tablist" aria-label={contentLang === 'fr' ? 'Contexte de relation' : 'Relationship context'}>
+            {RELATIONSHIP_CONTEXTS.map(ctx => {
+              const active = ctx.id === context;
+              return (
+                <button
+                  key={ctx.id}
+                  type="button"
+                  role="tab"
+                  aria-selected={active}
+                  onClick={() => setContext(ctx.id)}
+                  className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold font-technical transition-colors"
+                  style={active
+                    ? { background: COMPAT_THEME.ctaGradient, color: '#fff' }
+                    : { background: COMPAT_THEME.surface, border: `1px solid ${COMPAT_THEME.surfaceBorder}`, color: COMPAT_THEME.muted }}
+                >
+                  <span aria-hidden="true">{ctx.icon}</span>
+                  {ctx.label[contentLang]}
+                </button>
+              );
+            })}
+          </div>
+        </section>
+
         <Rule />
 
         {/* Interpretation */}
         <Section label={c.meaning} text={archetype.meaning[contentLang]} tint="blue" />
-        <Section label={c.marriageOutlook} text={archetype.marriageOutlook[contentLang]} tint="violet" />
+        <Section
+          label={RELATIONSHIP_CONTEXT_OUTLOOK_LABEL[context][contentLang]}
+          text={archetype.outlook[context][contentLang]}
+          tint="violet"
+        />
         <Section label={c.watchOut} text={archetype.watchOut[contentLang]} tint="amber" />
         <Section label={c.keyToSuccess} text={archetype.keyToSuccess[contentLang]} tint="green" />
 
