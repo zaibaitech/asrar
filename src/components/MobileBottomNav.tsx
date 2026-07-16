@@ -2,9 +2,9 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Moon, Heart, Star, Calculator as CalculatorIcon, Menu } from 'lucide-react';
+import { Moon, Heart, Star, Calculator as CalculatorIcon, Compass, Menu } from 'lucide-react';
 
-type PrimaryTab = 'planetary' | 'compatibility' | 'calculator';
+type PrimaryTab = 'planetary' | 'compatibility' | 'calculator' | 'advanced';
 
 interface MobileBottomNavProps {
   language: 'en' | 'fr' | 'ar';
@@ -12,6 +12,7 @@ interface MobileBottomNavProps {
   onSelectPlanetary: () => void;
   onOpenCompatibility: () => void;
   onSelectCalculator: () => void;
+  onSelectAdvanced: () => void;
   onOpenMore: () => void;
 }
 
@@ -27,6 +28,7 @@ export function MobileBottomNav({
   onSelectPlanetary,
   onOpenCompatibility,
   onSelectCalculator,
+  onSelectAdvanced,
   onOpenMore,
 }: MobileBottomNavProps) {
   const isFrench = language === 'fr';
@@ -37,7 +39,7 @@ export function MobileBottomNav({
       style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
       aria-label={isFrench ? 'Navigation principale' : 'Primary navigation'}
     >
-      <div className="grid grid-cols-5 items-stretch">
+      <div className="grid grid-cols-6 items-stretch">
         <TabButton
           onClick={onSelectPlanetary}
           active={activeTab === 'planetary'}
@@ -66,6 +68,14 @@ export function MobileBottomNav({
           activeText="text-indigo-600 dark:text-indigo-400"
           icon={<CalculatorIcon className="w-5 h-5" />}
           label={isFrench ? 'Calculateur' : 'Calculator'}
+        />
+        <TabButton
+          onClick={onSelectAdvanced}
+          active={activeTab === 'advanced'}
+          activeClasses="bg-gradient-to-br from-teal-600 to-cyan-600"
+          activeText="text-teal-600 dark:text-teal-400"
+          icon={<Compass className="w-5 h-5" />}
+          label={isFrench ? 'Qui Suis-Je ?' : 'Who Am I?'}
         />
         <TabButton
           onClick={onOpenMore}

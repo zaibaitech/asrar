@@ -11,7 +11,6 @@ interface MobileMenuProps {
   onShowTutorial: () => void;
   onShowHistory: () => void;
   historyCount: number;
-  onSelectAdvanced: () => void;
   /** Life Guidance is dev-only; omit to hide the entry entirely. */
   onSelectGuidance?: () => void;
 }
@@ -22,7 +21,6 @@ export function MobileMenu({
   onShowTutorial,
   onShowHistory,
   historyCount,
-  onSelectAdvanced,
   onSelectGuidance,
 }: MobileMenuProps) {
   const { t, language } = useLanguage();
@@ -103,37 +101,29 @@ export function MobileMenu({
             )}
           </button>
 
-          {/* Divider */}
-          <div className="h-px bg-slate-200 dark:bg-slate-700" />
+          {onSelectGuidance && (
+            <>
+              {/* Divider */}
+              <div className="h-px bg-slate-200 dark:bg-slate-700" />
 
-          {/* Explore - lower-frequency tools, moved off the primary mobile nav */}
-          <div className="space-y-2">
-            <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 px-1">
-              {language === 'fr' ? 'Explorer' : 'Explore'}
-            </label>
-            <button
-              onClick={() => {
-                onSelectAdvanced();
-                onClose();
-              }}
-              className="w-full flex items-center gap-3 px-4 py-3 sm:py-4 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors text-slate-900 dark:text-slate-100 min-h-[48px]"
-            >
-              <Compass className="w-5 h-5 flex-shrink-0 text-teal-500" />
-              <span className="font-medium text-base">{t.nav.advanced}</span>
-            </button>
-            {onSelectGuidance && (
-              <button
-                onClick={() => {
-                  onSelectGuidance();
-                  onClose();
-                }}
-                className="w-full flex items-center gap-3 px-4 py-3 sm:py-4 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors text-slate-900 dark:text-slate-100 min-h-[48px]"
-              >
-                <Compass className="w-5 h-5 flex-shrink-0 text-violet-500" />
-                <span className="font-medium text-base">{t.nav.guidance}</span>
-              </button>
-            )}
-          </div>
+              {/* Explore - lower-frequency tools, moved off the primary mobile nav */}
+              <div className="space-y-2">
+                <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 px-1">
+                  {language === 'fr' ? 'Explorer' : 'Explore'}
+                </label>
+                <button
+                  onClick={() => {
+                    onSelectGuidance();
+                    onClose();
+                  }}
+                  className="w-full flex items-center gap-3 px-4 py-3 sm:py-4 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors text-slate-900 dark:text-slate-100 min-h-[48px]"
+                >
+                  <Compass className="w-5 h-5 flex-shrink-0 text-violet-500" />
+                  <span className="font-medium text-base">{t.nav.guidance}</span>
+                </button>
+              </div>
+            </>
+          )}
 
           {/* Divider */}
           <div className="h-px bg-slate-200 dark:bg-slate-700" />

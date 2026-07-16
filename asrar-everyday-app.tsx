@@ -3657,7 +3657,6 @@ export default function AsrarEveryday() {
             onShowTutorial={() => setShowOnboarding(true)}
             onShowHistory={() => setShowHistory(true)}
             historyCount={history.length}
-            onSelectAdvanced={() => setViewMode('advanced')}
             onSelectGuidance={process.env.NODE_ENV === 'development' ? () => setViewMode('guidance') : undefined}
           />
         )}
@@ -3668,13 +3667,14 @@ export default function AsrarEveryday() {
           activeTab={
             showCompatibility
               ? 'compatibility'
-              : viewMode === 'planetary' || viewMode === 'calculator'
+              : viewMode === 'planetary' || viewMode === 'calculator' || viewMode === 'advanced'
                 ? viewMode
                 : null
           }
           onSelectPlanetary={() => setViewMode('planetary')}
           onOpenCompatibility={() => setShowCompatibility(true)}
           onSelectCalculator={() => setViewMode('calculator')}
+          onSelectAdvanced={() => setViewMode('advanced')}
           onOpenMore={() => setShowMobileMenu(true)}
         />
 
