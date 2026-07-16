@@ -1,23 +1,25 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { SoulConnectionResult, AstrologicalCompatibility } from '../../types/compatibility';
+import React, { useState, useRef } from 'react';
+import { SoulConnectionResult, AstrologicalCompatibility, DivineNameConnectionResult } from '../../types/compatibility';
 import { RelationshipInputForm } from '../../components/RelationshipInputForm';
 import { SoulConnectionView } from '../../components/SoulConnectionView';
 import { AstrologicalInputForm } from '../../components/AstrologicalInputForm';
 import { AstrologicalCompatibilityView } from '../../components/AstrologicalCompatibilityView';
-import { calculateSoulConnection } from '../../utils/soulConnection';
+import { DivineNameInputForm } from '../../components/DivineNameInputForm';
+import { DivineNameConnectionView } from '../../components/DivineNameConnectionView';
+import { DivineNameMatchesView } from '../../components/DivineNameMatchesView';
+import { calculateSoulConnection, calculateAbjadTotal } from '../../utils/soulConnection';
 import { analyzeAstrologicalCompatibility } from '../../utils/astrologicalCompatibility';
+import { calculateDivineNameConnection, findBestDivineNameMatches, DivineNameMatch } from '../../utils/divineNameConnection';
 import { useAbjad } from '../../contexts/AbjadContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { COMPAT_THEME } from '../../constants/compatibilityTheme';
 import type { RelationshipContext } from '../../constants/soulConnectionArchetypes';
+import type { DivineName } from '../../data/divine-names';
 
-// Helper to calculate Abjad total from Arabic text
-function calculateAbjadTotal(text: string, abjadMap: Record<string, number>): number {
-  const normalized = text.replace(/[ًٌٍَُِّْ\s]/g, '');
-  return [...normalized].reduce((sum, char) => sum + (abjadMap[char] || 0), 0);
-}
+/** Top-level: comparing two people, or a person against a Divine Name. */
+type CompatibilityCategory = 'person-to-person' | 'person-to-divine';
 
-/** Which input the user is comparing two people by. */
+/** Within Person-to-Person, which input the user is comparing two people by. */
 type InputMode = 'names' | 'dob';
 
 interface CompatibilityPanelProps {
@@ -25,25 +27,19 @@ interface CompatibilityPanelProps {
 }
 
 export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
+  const [category, setCategory] = useState<CompatibilityCategory>('person-to-person');
   const [inputMode, setInputMode] = useState<InputMode>('names');
   const [soulConnectionResult, setSoulConnectionResult] = useState<SoulConnectionResult | null>(null);
   const [selectedContext, setSelectedContext] = useState<RelationshipContext>('universal');
   const [astrologicalResult, setAstrologicalResult] = useState<AstrologicalCompatibility | null>(null);
+  const [divineNameResult, setDivineNameResult] = useState<DivineNameConnectionResult | null>(null);
+  const [divineNameMatches, setDivineNameMatches] = useState<{ person: { name: string; arabicName: string; kabir: number }; matches: DivineNameMatch[] } | null>(null);
   const [showResults, setShowResults] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const formRef = useRef<HTMLDivElement>(null);
   const { abjad } = useAbjad();
   const { language } = useLanguage();
   const lang = language as 'en' | 'fr' | 'ar';
-
-  // Scroll to form on mount
-  useEffect(() => {
-    if (formRef.current && !showResults) {
-      setTimeout(() => {
-        formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 100);
-    }
-  }, []);
 
   const handleRelationshipCalculate = async (
     person1Name: string,
@@ -110,6 +106,39 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
     }
   };
 
+  const handleDivineNameCalculate = async (
+    personName: string,
+    personArabic: string,
+    subMode: 'pick' | 'auto',
+    selectedDivineName: DivineName | null
+  ) => {
+    try {
+      setIsTransitioning(true);
+
+      const personKabir = calculateAbjadTotal(personArabic, abjad);
+
+      await new Promise(resolve => setTimeout(resolve, 300));
+
+      if (subMode === 'pick' && selectedDivineName) {
+        const result = calculateDivineNameConnection(personName, personArabic, personKabir, selectedDivineName);
+        setDivineNameResult(result);
+        setDivineNameMatches(null);
+      } else {
+        const matches = findBestDivineNameMatches(personKabir);
+        setDivineNameMatches({ person: { name: personName, arabicName: personArabic, kabir: personKabir }, matches });
+        setDivineNameResult(null);
+      }
+      setShowResults(true);
+      setIsTransitioning(false);
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (error) {
+      console.error('Error calculating Divine Name connection:', error);
+      alert('Error calculating compatibility. Please try again.');
+      setIsTransitioning(false);
+    }
+  };
+
   /**
    * Reset to form view
    */
@@ -119,6 +148,8 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
       setShowResults(false);
       setSoulConnectionResult(null);
       setAstrologicalResult(null);
+      setDivineNameResult(null);
+      setDivineNameMatches(null);
       setIsTransitioning(false);
 
       // Scroll to form
@@ -152,14 +183,42 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
             {language === 'fr' ? 'Compatibilité' : 'Compatibility'}
           </h1>
           <p className="text-sm mt-2.5" style={{ color: COMPAT_THEME.muted }}>
-            {inputMode === 'names'
+            {category === 'person-to-divine'
+              ? (language === 'fr' ? "Découvrez votre résonance spirituelle avec les 99 Noms d'Allah" : 'Discover your spiritual resonance with the 99 Names of Allah')
+              : inputMode === 'names'
               ? (language === 'fr' ? "Explorez l'harmonie relationnelle grâce à la numérologie islamique" : 'Explore relationship harmony through Islamic numerology')
               : (language === 'fr' ? "Explorez la compatibilité astrologique générale à partir des dates de naissance" : 'Explore general astrological compatibility from birth dates')}
           </p>
         </div>
 
-        {/* Names / Birth Date mode toggle */}
+        {/* Category selector: Person-to-Person vs Person-to-Divine-Name */}
         {!showResults && (
+          <div className="flex justify-center">
+            <div className="inline-flex p-1 rounded-xl" style={{ background: COMPAT_THEME.cardBg, border: `1px solid ${COMPAT_THEME.cardBorder}` }}>
+              <button
+                onClick={() => setCategory('person-to-person')}
+                className="px-5 py-2 rounded-lg font-technical text-sm font-semibold transition-all"
+                style={category === 'person-to-person'
+                  ? { background: COMPAT_THEME.ctaGradient, color: '#fff' }
+                  : { color: COMPAT_THEME.muted }}
+              >
+                {language === 'fr' ? 'Personne à Personne' : 'Person to Person'}
+              </button>
+              <button
+                onClick={() => setCategory('person-to-divine')}
+                className="px-5 py-2 rounded-lg font-technical text-sm font-semibold transition-all"
+                style={category === 'person-to-divine'
+                  ? { background: COMPAT_THEME.ctaGradient, color: '#fff' }
+                  : { color: COMPAT_THEME.muted }}
+              >
+                {language === 'fr' ? 'Personne à Nom Divin' : 'Person to Divine Name'}
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* By Names / By Birth Date sub-toggle — only within Person-to-Person */}
+        {!showResults && category === 'person-to-person' && (
           <div className="flex justify-center">
             <div className="inline-flex p-1 rounded-xl" style={{ background: COMPAT_THEME.cardBg, border: `1px solid ${COMPAT_THEME.cardBorder}` }}>
               <button
@@ -190,7 +249,13 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
           className={`transition-all duration-300 ${isTransitioning ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
         >
           {!showResults ? (
-            inputMode === 'names' ? (
+            category === 'person-to-divine' ? (
+              <DivineNameInputForm
+                onCalculate={handleDivineNameCalculate}
+                language={lang}
+                isLoading={isTransitioning}
+              />
+            ) : inputMode === 'names' ? (
               <RelationshipInputForm
                 onCalculate={handleRelationshipCalculate}
                 language={lang}
@@ -218,6 +283,27 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
             <div className="space-y-6">
               <AstrologicalCompatibilityView
                 compatibility={astrologicalResult}
+                language={lang}
+              />
+
+              {/* Calculate Again Button */}
+              <CalculateAgainButton onClick={handleReset} language={language} />
+            </div>
+          ) : divineNameResult ? (
+            <div className="space-y-6">
+              <DivineNameConnectionView
+                result={divineNameResult}
+                language={lang}
+              />
+
+              {/* Calculate Again Button */}
+              <CalculateAgainButton onClick={handleReset} language={language} />
+            </div>
+          ) : divineNameMatches ? (
+            <div className="space-y-6">
+              <DivineNameMatchesView
+                person={divineNameMatches.person}
+                matches={divineNameMatches.matches}
                 language={lang}
               />
 

@@ -303,6 +303,28 @@ export interface SoulConnectionResult {
 }
 
 // ============================================================================
+// PERSON <-> DIVINE NAME CONNECTION
+//
+// Same mod-9 formula as SoulConnectionResult (calculateSoulNumber), applied
+// between a person's kabīr and a Divine Name's abjadValue instead of a
+// second person's kabīr. The interpersonal archetypes (marriage/friendship/
+// etc.) don't apply to a person-Name pairing, so the reading pairs the
+// severity tier with the Divine Name's own real content (meaning +
+// spiritualPractice) rather than reusing SOUL_CONNECTION_ARCHETYPES.
+// ============================================================================
+
+import { DivineName } from '../data/divine-names';
+
+export interface DivineNameConnectionResult {
+  mode: 'divine-name-connection';
+  person: { name: string; arabicName: string; kabir: number };
+  divineName: DivineName;
+  /** (personKabir + divineName.abjadValue + 7) mod 9, with 0 mapped to 9 — always 1-9. */
+  soulNumber: number;
+  severity: SoulConnectionSeverity;
+}
+
+// ============================================================================
 // ASTROLOGICAL (DATE-OF-BIRTH) COMPATIBILITY
 //
 // A separate mode from RelationshipCompatibility (Names/Abjad-based). Not
