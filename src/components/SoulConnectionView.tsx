@@ -14,6 +14,8 @@ import { useAbjad } from '../contexts/AbjadContext';
 interface SoulConnectionViewProps {
   result: SoulConnectionResult;
   language?: 'en' | 'fr' | 'ar';
+  /** Context picked on the input form, if any — seeds the switcher below rather than always starting on Universal. */
+  initialContext?: RelationshipContext;
 }
 
 const COPY = {
@@ -70,10 +72,10 @@ function letterBreakdown(name: string, abjad: Record<string, number>): { letter:
     .map(ch => ({ letter: ch, value: abjad[ch] }));
 }
 
-export function SoulConnectionView({ result, language = 'en' }: SoulConnectionViewProps) {
+export function SoulConnectionView({ result, language = 'en', initialContext }: SoulConnectionViewProps) {
   const [showMath, setShowMath] = useState(false);
   const [revealed] = useState(true);
-  const [context, setContext] = useState<RelationshipContext>('universal');
+  const [context, setContext] = useState<RelationshipContext>(initialContext ?? 'universal');
   const { abjad } = useAbjad();
 
   const contentLang: 'en' | 'fr' = language === 'fr' ? 'fr' : 'en';
@@ -163,7 +165,7 @@ export function SoulConnectionView({ result, language = 'en' }: SoulConnectionVi
         <Rule />
 
         {/* Interpretation */}
-        <Section label={c.meaning} text={archetype.meaning[contentLang]} tint="blue" />
+        <Section label={c.meaning} text={archetype.meaning[context][contentLang]} tint="blue" />
         <Section
           label={RELATIONSHIP_CONTEXT_OUTLOOK_LABEL[context][contentLang]}
           text={archetype.outlook[context][contentLang]}

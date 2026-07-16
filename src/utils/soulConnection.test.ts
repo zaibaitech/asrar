@@ -56,11 +56,13 @@ describe('SOUL_CONNECTION_ARCHETYPES data completeness', () => {
     for (let n = 1; n <= 9; n++) {
       const a = SOUL_CONNECTION_ARCHETYPES[n];
       expect(a.number).toBe(n);
-      for (const field of ['title', 'oneLine', 'meaning', 'watchOut', 'keyToSuccess'] as const) {
+      for (const field of ['title', 'oneLine', 'watchOut', 'keyToSuccess'] as const) {
         expect(a[field].en.length).toBeGreaterThan(0);
         expect(a[field].fr.length).toBeGreaterThan(0);
       }
       for (const ctx of ['universal', 'marriage', 'friendship', 'family', 'work'] as const) {
+        expect(a.meaning[ctx].en.length).toBeGreaterThan(0);
+        expect(a.meaning[ctx].fr.length).toBeGreaterThan(0);
         expect(a.outlook[ctx].en.length).toBeGreaterThan(0);
         expect(a.outlook[ctx].fr.length).toBeGreaterThan(0);
       }
@@ -68,6 +70,19 @@ describe('SOUL_CONNECTION_ARCHETYPES data completeness', () => {
       for (const tag of a.tags) {
         expect(tag.en.length).toBeGreaterThan(0);
         expect(tag.fr.length).toBeGreaterThan(0);
+      }
+    }
+  });
+
+  it('non-marriage contexts never mention "marriage" or "mariage" (regression: meaning/outlook used to leak marriage-only wording into every context)', () => {
+    const nonMarriageContexts = ['universal', 'friendship', 'family', 'work'] as const;
+    for (let n = 1; n <= 9; n++) {
+      const a = SOUL_CONNECTION_ARCHETYPES[n];
+      for (const ctx of nonMarriageContexts) {
+        for (const field of ['meaning', 'outlook'] as const) {
+          expect(a[field][ctx].en.toLowerCase()).not.toContain('marriage');
+          expect(a[field][ctx].fr.toLowerCase()).not.toContain('mariage');
+        }
       }
     }
   });

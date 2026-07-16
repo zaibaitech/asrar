@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Keyboard, Info } from 'lucide-react';
 import { useProfile } from '../hooks/useProfile';
 import { COMPAT_THEME } from '../constants/compatibilityTheme';
+import { RELATIONSHIP_CONTEXTS, type RelationshipContext } from '../constants/soulConnectionArchetypes';
 import NameAutocomplete from './NameAutocomplete';
 import { ArabicKeyboard } from './ArabicKeyboard';
 
@@ -10,7 +11,8 @@ interface RelationshipInputFormProps {
     person1Name: string,
     person1Arabic: string,
     person2Name: string,
-    person2Arabic: string
+    person2Arabic: string,
+    context: RelationshipContext
   ) => void;
   language?: 'en' | 'fr' | 'ar';
   isLoading?: boolean;
@@ -25,6 +27,7 @@ export function RelationshipInputForm({ onCalculate, language = 'en', isLoading 
   const [person2Arabic, setPerson2Arabic] = useState('');
   const [showPerson1Keyboard, setShowPerson1Keyboard] = useState(false);
   const [showPerson2Keyboard, setShowPerson2Keyboard] = useState(false);
+  const [context, setContext] = useState<RelationshipContext>('universal');
 
   useEffect(() => {
     if (profile) {
@@ -46,7 +49,8 @@ export function RelationshipInputForm({ onCalculate, language = 'en', isLoading 
       person1Name || person1Arabic,
       person1Arabic,
       person2Name || person2Arabic,
-      person2Arabic
+      person2Arabic,
+      context
     );
   };
 
@@ -66,6 +70,33 @@ export function RelationshipInputForm({ onCalculate, language = 'en', isLoading 
               ? 'Calculez la Connexion d’Âme selon la numérologie islamique traditionnelle'
               : 'Calculate the Soul Connection using traditional Islamic numerology'}
           </p>
+        </div>
+
+        <div className="mb-8">
+          <label className="block text-xs mb-2 text-center" style={{ color: COMPAT_THEME.muted }}>
+            {isFrench ? 'Lisez ceci comme...' : 'Read this as...'}
+          </label>
+          <div className="flex justify-center gap-1.5 flex-wrap" role="tablist" aria-label={isFrench ? 'Contexte de relation' : 'Relationship context'}>
+            {RELATIONSHIP_CONTEXTS.map(ctx => {
+              const active = ctx.id === context;
+              return (
+                <button
+                  key={ctx.id}
+                  type="button"
+                  role="tab"
+                  aria-selected={active}
+                  onClick={() => setContext(ctx.id)}
+                  className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold font-technical transition-colors"
+                  style={active
+                    ? { background: COMPAT_THEME.ctaGradient, color: '#fff' }
+                    : { background: COMPAT_THEME.surface, border: `1px solid ${COMPAT_THEME.surfaceBorder}`, color: COMPAT_THEME.muted }}
+                >
+                  <span aria-hidden="true">{ctx.icon}</span>
+                  {ctx.label[isFrench ? 'fr' : 'en']}
+                </button>
+              );
+            })}
+          </div>
         </div>
 
         <PersonCard

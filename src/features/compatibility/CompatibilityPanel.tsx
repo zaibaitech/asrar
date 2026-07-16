@@ -9,6 +9,7 @@ import { analyzeAstrologicalCompatibility } from '../../utils/astrologicalCompat
 import { useAbjad } from '../../contexts/AbjadContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { COMPAT_THEME } from '../../constants/compatibilityTheme';
+import type { RelationshipContext } from '../../constants/soulConnectionArchetypes';
 
 // Helper to calculate Abjad total from Arabic text
 function calculateAbjadTotal(text: string, abjadMap: Record<string, number>): number {
@@ -26,6 +27,7 @@ interface CompatibilityPanelProps {
 export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
   const [inputMode, setInputMode] = useState<InputMode>('names');
   const [soulConnectionResult, setSoulConnectionResult] = useState<SoulConnectionResult | null>(null);
+  const [selectedContext, setSelectedContext] = useState<RelationshipContext>('universal');
   const [astrologicalResult, setAstrologicalResult] = useState<AstrologicalCompatibility | null>(null);
   const [showResults, setShowResults] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -47,7 +49,8 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
     person1Name: string,
     person1Arabic: string,
     person2Name: string,
-    person2Arabic: string
+    person2Arabic: string,
+    context: RelationshipContext
   ) => {
     try {
       setIsTransitioning(true);
@@ -68,6 +71,7 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
       // Smooth transition
       await new Promise(resolve => setTimeout(resolve, 300));
 
+      setSelectedContext(context);
       setSoulConnectionResult(result);
       setShowResults(true);
       setIsTransitioning(false);
@@ -204,6 +208,7 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
               <SoulConnectionView
                 result={soulConnectionResult}
                 language={lang}
+                initialContext={selectedContext}
               />
 
               {/* Calculate Again Button */}
