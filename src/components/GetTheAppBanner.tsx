@@ -7,9 +7,11 @@ import { useLanguage } from '../contexts/LanguageContext';
 interface GetTheAppBannerProps {
   /** Hide while a modal/panel/overlay is open so it can never cover their content or controls. */
   suppressed?: boolean;
+  /** Fires whenever the banner's actual rendered visibility changes, so the page can reserve space for it. */
+  onVisibleChange?: (visible: boolean) => void;
 }
 
-export function GetTheAppBanner({ suppressed = false }: GetTheAppBannerProps) {
+export function GetTheAppBanner({ suppressed = false, onVisibleChange }: GetTheAppBannerProps) {
   const { language } = useLanguage();
   const [visible, setVisible] = useState(false);
   const [isIOS, setIsIOS] = useState(false);
@@ -35,7 +37,13 @@ export function GetTheAppBanner({ suppressed = false }: GetTheAppBannerProps) {
     setVisible(false);
   };
 
-  if (!visible || suppressed) return null;
+  const rendered = visible && !suppressed;
+
+  useEffect(() => {
+    onVisibleChange?.(rendered);
+  }, [rendered, onVisibleChange]);
+
+  if (!rendered) return null;
 
   // ── iOS Safari: show "Add to Home Screen" instructions ──
   if (isIOS) {

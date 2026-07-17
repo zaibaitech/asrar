@@ -1287,6 +1287,10 @@ export default function AsrarEveryday() {
   // Mobile Menu State
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
+  // Tracks the "Get the App" banner's actual rendered visibility so page content
+  // can reserve bottom padding for it instead of being covered when scrolled to the end.
+  const [isAppBannerVisible, setIsAppBannerVisible] = useState(false);
+
   // Initialize onboarding on mount and ensure menu is closed
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -3679,7 +3683,9 @@ export default function AsrarEveryday() {
         />
 
         {/* Footer - Professional */}
-        <footer className="border-t border-slate-200 dark:border-slate-700 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-950 mt-12">
+        <footer
+          className={`border-t border-slate-200 dark:border-slate-700 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-950 mt-12 ${isAppBannerVisible ? 'pb-44 md:pb-24' : 'pb-24 md:pb-0'}`}
+        >
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
             {/* Main Footer Content */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -3757,6 +3763,7 @@ export default function AsrarEveryday() {
       </div>
       <GetTheAppBanner
         suppressed={showCompatibility || showComparison || showBatchCalculator || showOnboarding || showMobileMenu}
+        onVisibleChange={setIsAppBannerVisible}
       />
     </div>
   );
