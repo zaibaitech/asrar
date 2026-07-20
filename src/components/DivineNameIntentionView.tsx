@@ -2,6 +2,7 @@ import React from 'react';
 import { COMPAT_THEME, COMPAT_TINTS } from '../constants/compatibilityTheme';
 import { DIVINE_INTENTIONS, DivineIntention, INTENTION_NAME_MAP, INTENTION_COMPANION_DUA } from '../constants/divineNameIntentions';
 import { findDivineNameByNumber } from '../data/divine-names';
+import { AllDivineNamesBrowser } from './AllDivineNamesBrowser';
 
 interface DivineNameIntentionViewProps {
   intention: DivineIntention;
@@ -103,6 +104,8 @@ export function DivineNameIntentionView({ intention, language = 'en' }: DivineNa
               : 'Repeat the Name as often as you wish, with sincerity and proper adab — no fixed number is required. This is spiritual reflection, not a guarantee or an occult practice.'}
           </p>
         </div>
+
+        <AllDivineNamesBrowser language={language} />
       </div>
     </div>
   );
