@@ -7,6 +7,7 @@ import { marriageElectionConfig } from '@/src/lib/ikhtiyarat/elections/marriage'
 import { travelElectionConfig } from '@/src/lib/ikhtiyarat/elections/travel';
 import { businessElectionConfig } from '@/src/lib/ikhtiyarat/elections/business';
 import { medicalElectionConfig } from '@/src/lib/ikhtiyarat/elections/medical';
+import { homeElectionConfig } from '@/src/lib/ikhtiyarat/elections/home';
 import { ElectionResult, ElectionType, ElectionRulesConfig } from '@/src/lib/ikhtiyarat/types';
 import { gregorianToHijri, getSunnahBadges } from '@/src/lib/ikhtiyarat/hijri';
 import { getUrfBadgeForMonth } from '@/src/lib/ikhtiyarat/urf';
@@ -32,6 +33,7 @@ const CONFIG_BY_ELECTION_TYPE: Record<ElectionType, ElectionRulesConfig> = {
   travel: travelElectionConfig,
   business: businessElectionConfig,
   medical: medicalElectionConfig,
+  home: homeElectionConfig,
 };
 
 export function CheckDateView({

@@ -3,6 +3,7 @@ import { marriageElectionConfig } from './elections/marriage';
 import { travelElectionConfig } from './elections/travel';
 import { businessElectionConfig } from './elections/business';
 import { medicalElectionConfig } from './elections/medical';
+import { homeElectionConfig } from './elections/home';
 import { evaluateDateRange } from './engine';
 import { ElectionRulesConfig } from './types';
 
@@ -16,6 +17,7 @@ const ALL_ELECTION_CONFIGS: { name: string; config: ElectionRulesConfig }[] = [
   { name: 'travel', config: travelElectionConfig },
   { name: 'business', config: businessElectionConfig },
   { name: 'medical', config: medicalElectionConfig },
+  { name: 'home', config: homeElectionConfig },
 ];
 
 const EDINBURGH = { lat: 55.95, lon: -3.19, tz: 'Europe/London' };

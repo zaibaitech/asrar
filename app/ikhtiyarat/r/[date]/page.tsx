@@ -6,6 +6,7 @@ import { marriageElectionConfig } from '@/src/lib/ikhtiyarat/elections/marriage'
 import { travelElectionConfig } from '@/src/lib/ikhtiyarat/elections/travel';
 import { businessElectionConfig } from '@/src/lib/ikhtiyarat/elections/business';
 import { medicalElectionConfig } from '@/src/lib/ikhtiyarat/elections/medical';
+import { homeElectionConfig } from '@/src/lib/ikhtiyarat/elections/home';
 import { gregorianToHijri } from '@/src/lib/ikhtiyarat/hijri';
 import { ElectionInput, ElectionRulesConfig, ElectionType } from '@/src/lib/ikhtiyarat/types';
 
@@ -16,6 +17,7 @@ const CONFIG_BY_ELECTION_TYPE: Record<ElectionType, ElectionRulesConfig> = {
   travel: travelElectionConfig,
   business: businessElectionConfig,
   medical: medicalElectionConfig,
+  home: homeElectionConfig,
 };
 
 interface PageParams {
@@ -37,6 +39,7 @@ function electionTypeFromParams(searchParams: PageSearchParams): ElectionType {
   if (searchParams.election === 'travel') return 'travel';
   if (searchParams.election === 'business') return 'business';
   if (searchParams.election === 'medical') return 'medical';
+  if (searchParams.election === 'home') return 'home';
   return 'marriage';
 }
 
@@ -75,6 +78,7 @@ export async function generateMetadata({
     travel: { en: 'travel', fr: 'le voyage' },
     business: { en: 'business', fr: 'les affaires' },
     medical: { en: 'medical treatment', fr: 'un traitement médical' },
+    home: { en: 'moving or building', fr: 'un déménagement ou une construction' },
   }[electionType];
 
   const title = lang === 'fr' ? 'Résultat Ikhtiyārāt — Asrār' : 'Ikhtiyārāt Result — Asrār';
