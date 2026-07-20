@@ -12,6 +12,8 @@ import { TierBadge } from './TierBadge';
 import { RuleRow } from './RuleRow';
 import { SunnahBadges } from './SunnahBadges';
 import { UrfBadge } from './UrfBadge';
+import { SimpleModeToggle } from './SimpleModeToggle';
+import { useSimpleMode } from '../useSimpleMode';
 import { ikhtiyaratCopy, UiLang } from '../copy';
 
 interface DetailSheetProps {
@@ -32,6 +34,7 @@ export function DetailSheet({ result, language, onClose }: DetailSheetProps) {
     ? getMedicalBadges(result, getPlanetPosition('Moon', result.bestWindow.time).sign)
     : [];
   const degradationNote = getDayDegradationNote(result, language);
+  const [simpleMode, setSimpleMode] = useSimpleMode();
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -109,10 +112,13 @@ export function DetailSheet({ result, language, onClose }: DetailSheetProps) {
           </div>
 
           <div>
-            <div className="text-xs uppercase tracking-wide text-slate-400 mb-2">{c.ruleBreakdown}</div>
+            <div className="flex items-center justify-between mb-2">
+              <div className="text-xs uppercase tracking-wide text-slate-400">{c.ruleBreakdown}</div>
+              <SimpleModeToggle simple={simpleMode} onChange={setSimpleMode} language={language} />
+            </div>
             <div className="rounded-xl border border-slate-200 dark:border-slate-700 px-3">
               {result.rules.map(rule => (
-                <RuleRow key={rule.id} rule={rule} language={language} />
+                <RuleRow key={rule.id} rule={rule} language={language} simple={simpleMode} />
               ))}
             </div>
           </div>

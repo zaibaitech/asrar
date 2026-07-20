@@ -8,6 +8,7 @@ import { travelElectionConfig } from '@/src/lib/ikhtiyarat/elections/travel';
 import { businessElectionConfig } from '@/src/lib/ikhtiyarat/elections/business';
 import { medicalElectionConfig } from '@/src/lib/ikhtiyarat/elections/medical';
 import { homeElectionConfig } from '@/src/lib/ikhtiyarat/elections/home';
+import { educationElectionConfig } from '@/src/lib/ikhtiyarat/elections/education';
 import { ElectionResult, ElectionType, ElectionRulesConfig } from '@/src/lib/ikhtiyarat/types';
 import { gregorianToHijri, getSunnahBadges } from '@/src/lib/ikhtiyarat/hijri';
 import { getUrfBadgeForMonth } from '@/src/lib/ikhtiyarat/urf';
@@ -22,6 +23,8 @@ import { TierBadge } from './TierBadge';
 import { RuleRow } from './RuleRow';
 import { SunnahBadges } from './SunnahBadges';
 import { UrfBadge } from './UrfBadge';
+import { SimpleModeToggle } from './SimpleModeToggle';
+import { useSimpleMode } from '../useSimpleMode';
 import { ikhtiyaratCopy, UiLang } from '../copy';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
@@ -34,6 +37,7 @@ const CONFIG_BY_ELECTION_TYPE: Record<ElectionType, ElectionRulesConfig> = {
   business: businessElectionConfig,
   medical: medicalElectionConfig,
   home: homeElectionConfig,
+  education: educationElectionConfig,
 };
 
 export function CheckDateView({
@@ -57,6 +61,7 @@ export function CheckDateView({
   const [bestAvailable, setBestAvailable] = useState<ElectionResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [shareCopied, setShareCopied] = useState(false);
+  const [simpleMode, setSimpleMode] = useSimpleMode();
 
   const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
@@ -207,10 +212,13 @@ export function CheckDateView({
           </div>
 
           <div>
-            <div className="text-xs uppercase tracking-wide text-slate-400 mb-2">{c.ruleBreakdown}</div>
+            <div className="flex items-center justify-between mb-2">
+              <div className="text-xs uppercase tracking-wide text-slate-400">{c.ruleBreakdown}</div>
+              <SimpleModeToggle simple={simpleMode} onChange={setSimpleMode} language={language} />
+            </div>
             <div className="rounded-xl border border-slate-200 dark:border-slate-700 px-3">
               {result.rules.map(rule => (
-                <RuleRow key={rule.id} rule={rule} language={language} />
+                <RuleRow key={rule.id} rule={rule} language={language} simple={simpleMode} />
               ))}
             </div>
           </div>

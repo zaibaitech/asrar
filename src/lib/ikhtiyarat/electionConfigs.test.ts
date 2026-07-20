@@ -4,6 +4,7 @@ import { travelElectionConfig } from './elections/travel';
 import { businessElectionConfig } from './elections/business';
 import { medicalElectionConfig } from './elections/medical';
 import { homeElectionConfig } from './elections/home';
+import { educationElectionConfig } from './elections/education';
 import { evaluateDateRange } from './engine';
 import { ElectionRulesConfig } from './types';
 
@@ -18,6 +19,7 @@ const ALL_ELECTION_CONFIGS: { name: string; config: ElectionRulesConfig }[] = [
   { name: 'business', config: businessElectionConfig },
   { name: 'medical', config: medicalElectionConfig },
   { name: 'home', config: homeElectionConfig },
+  { name: 'education', config: educationElectionConfig },
 ];
 
 const EDINBURGH = { lat: 55.95, lon: -3.19, tz: 'Europe/London' };

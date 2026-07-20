@@ -7,6 +7,7 @@ import { travelElectionConfig } from '@/src/lib/ikhtiyarat/elections/travel';
 import { businessElectionConfig } from '@/src/lib/ikhtiyarat/elections/business';
 import { medicalElectionConfig } from '@/src/lib/ikhtiyarat/elections/medical';
 import { homeElectionConfig } from '@/src/lib/ikhtiyarat/elections/home';
+import { educationElectionConfig } from '@/src/lib/ikhtiyarat/elections/education';
 import { gregorianToHijri } from '@/src/lib/ikhtiyarat/hijri';
 import { ElectionInput, ElectionRulesConfig, ElectionType } from '@/src/lib/ikhtiyarat/types';
 
@@ -18,6 +19,7 @@ const CONFIG_BY_ELECTION_TYPE: Record<ElectionType, ElectionRulesConfig> = {
   business: businessElectionConfig,
   medical: medicalElectionConfig,
   home: homeElectionConfig,
+  education: educationElectionConfig,
 };
 
 interface PageParams {
@@ -40,6 +42,7 @@ function electionTypeFromParams(searchParams: PageSearchParams): ElectionType {
   if (searchParams.election === 'business') return 'business';
   if (searchParams.election === 'medical') return 'medical';
   if (searchParams.election === 'home') return 'home';
+  if (searchParams.election === 'education') return 'education';
   return 'marriage';
 }
 
@@ -79,6 +82,7 @@ export async function generateMetadata({
     business: { en: 'business', fr: 'les affaires' },
     medical: { en: 'medical treatment', fr: 'un traitement médical' },
     home: { en: 'moving or building', fr: 'un déménagement ou une construction' },
+    education: { en: 'education or studies', fr: 'des études ou une formation' },
   }[electionType];
 
   const title = lang === 'fr' ? 'Résultat Ikhtiyārāt — Asrār' : 'Ikhtiyārāt Result — Asrār';

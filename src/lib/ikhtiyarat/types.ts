@@ -9,7 +9,7 @@
 
 import { Planet, ZodiacSign } from '../planetary/types';
 
-export type ElectionType = 'marriage' | 'travel' | 'business' | 'medical' | 'home';
+export type ElectionType = 'marriage' | 'travel' | 'business' | 'medical' | 'home' | 'education';
 
 export type RuleStatus = 'pass' | 'fail' | 'bonus' | 'penalty' | 'hardfail';
 

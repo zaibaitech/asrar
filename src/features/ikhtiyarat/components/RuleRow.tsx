@@ -1,6 +1,7 @@
 'use client';
 
 import { RuleResult } from '@/src/lib/ikhtiyarat/types';
+import { getSimplifiedRuleText } from '@/src/lib/ikhtiyarat/ruleSimplification';
 import { UiLang, ruleStatusLabel } from '../copy';
 
 const STATUS_COLOR: Record<RuleResult['status'], string> = {
@@ -19,10 +20,12 @@ const STATUS_ICON: Record<RuleResult['status'], string> = {
   hardfail: '⛔',
 };
 
-export function RuleRow({ rule, language }: { rule: RuleResult; language: UiLang }) {
+export function RuleRow({ rule, language, simple = false }: { rule: RuleResult; language: UiLang; simple?: boolean }) {
   const color = STATUS_COLOR[rule.status];
   const label = language === 'fr' ? rule.label_fr : rule.label_en;
-  const detail = language === 'fr' ? rule.detail_fr : rule.detail_en;
+  const technicalDetail = language === 'fr' ? rule.detail_fr : rule.detail_en;
+  const simplified = simple ? getSimplifiedRuleText(rule, language) : null;
+  const detail = simplified ? simplified.text : technicalDetail;
   const statusLabel = ruleStatusLabel[rule.status][language];
 
   return (
@@ -36,16 +39,21 @@ export function RuleRow({ rule, language }: { rule: RuleResult; language: UiLang
       <div className="flex-1 min-w-0">
         <div className="flex items-center justify-between gap-2">
           <span className="text-sm font-medium text-slate-900 dark:text-slate-100">
-            {label} <span dir="rtl" lang="ar" className="font-arabic text-xs text-slate-400">{rule.label_ar}</span>
+            {label}
+            {!simple && (
+              <span dir="rtl" lang="ar" className="font-arabic text-xs text-slate-400"> {rule.label_ar}</span>
+            )}
           </span>
           <span className="text-xs font-semibold whitespace-nowrap" style={{ color }}>
             {rule.points > 0 ? `+${rule.points}` : rule.points}
           </span>
         </div>
         <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">{detail}</p>
-        <span className="text-[11px] uppercase tracking-wide" style={{ color }}>
-          {statusLabel}
-        </span>
+        {!simple && (
+          <span className="text-[11px] uppercase tracking-wide" style={{ color }}>
+            {statusLabel}
+          </span>
+        )}
       </div>
     </div>
   );

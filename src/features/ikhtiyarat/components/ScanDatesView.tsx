@@ -7,6 +7,7 @@ import { travelElectionConfig } from '@/src/lib/ikhtiyarat/elections/travel';
 import { businessElectionConfig } from '@/src/lib/ikhtiyarat/elections/business';
 import { medicalElectionConfig } from '@/src/lib/ikhtiyarat/elections/medical';
 import { homeElectionConfig } from '@/src/lib/ikhtiyarat/elections/home';
+import { educationElectionConfig } from '@/src/lib/ikhtiyarat/elections/education';
 import { ElectionResult, ElectionType, ElectionRulesConfig } from '@/src/lib/ikhtiyarat/types';
 import { UserLocation } from '@/src/types/planetary';
 import { toLocalDateString } from '@/src/lib/localDate';
@@ -29,6 +30,7 @@ const CONFIG_BY_ELECTION_TYPE: Record<ElectionType, ElectionRulesConfig> = {
   business: businessElectionConfig,
   medical: medicalElectionConfig,
   home: homeElectionConfig,
+  education: educationElectionConfig,
 };
 
 export function ScanDatesView({
