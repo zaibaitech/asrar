@@ -82,7 +82,7 @@ export async function generateMetadata({
     : (lang === 'fr' ? `Vérifiez une date pour ${electionLabel.fr} selon l'ikhtiyārāt classique.` : `Check a date for ${electionLabel.en} per classical ikhtiyārāt.`);
 
   const url = `${baseUrl}/ikhtiyarat/r/${resolvedParams.date}`;
-  const imageUrl = `${baseUrl}/og/default.jpg`;
+  const imageUrl = `${baseUrl}/opengraph-image`;
 
   return {
     title,

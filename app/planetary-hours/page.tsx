@@ -31,7 +31,7 @@ export async function generateMetadata({
   };
 
   const m = meta[lang];
-  const imageUrl = `${baseUrl}/og/default.jpg`;
+  const imageUrl = `${baseUrl}/opengraph-image`;
 
   return {
     title: m.title,
