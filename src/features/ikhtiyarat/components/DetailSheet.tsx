@@ -5,7 +5,9 @@ import { ElectionResult } from '@/src/lib/ikhtiyarat/types';
 import { gregorianToHijri, getSunnahBadges } from '@/src/lib/ikhtiyarat/hijri';
 import { getUrfBadgeForMonth } from '@/src/lib/ikhtiyarat/urf';
 import { getTravelBadges } from '@/src/lib/ikhtiyarat/travelBadges';
+import { getMedicalBadges } from '@/src/lib/ikhtiyarat/medicalBadges';
 import { getDayDegradationNote } from '@/src/lib/ikhtiyarat/degradation';
+import { getPlanetPosition } from '@/src/lib/ikhtiyarat/ephemeris';
 import { TierBadge } from './TierBadge';
 import { RuleRow } from './RuleRow';
 import { SunnahBadges } from './SunnahBadges';
@@ -26,6 +28,9 @@ export function DetailSheet({ result, language, onClose }: DetailSheetProps) {
   const sunnahBadges = result.electionType === 'marriage' ? getSunnahBadges(result.date) : [];
   const urfBadge = result.electionType === 'marriage' ? getUrfBadgeForMonth(hijri.month) : null;
   const travelBadges = result.electionType === 'travel' ? getTravelBadges(result) : [];
+  const medicalBadges = result.electionType === 'medical'
+    ? getMedicalBadges(result, getPlanetPosition('Moon', result.bestWindow.time).sign)
+    : [];
   const degradationNote = getDayDegradationNote(result, language);
 
   useEffect(() => {
@@ -81,6 +86,13 @@ export function DetailSheet({ result, language, onClose }: DetailSheetProps) {
             <div>
               <div className="text-xs uppercase tracking-wide text-slate-400 mb-2">{c.sunnahBadge}</div>
               <SunnahBadges badges={travelBadges} language={language} />
+            </div>
+          )}
+
+          {medicalBadges.length > 0 && (
+            <div>
+              <div className="text-xs uppercase tracking-wide text-slate-400 mb-2">{c.sunnahBadge}</div>
+              <SunnahBadges badges={medicalBadges} language={language} />
             </div>
           )}
 

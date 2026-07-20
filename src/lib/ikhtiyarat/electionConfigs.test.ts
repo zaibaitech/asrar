@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { marriageElectionConfig } from './elections/marriage';
 import { travelElectionConfig } from './elections/travel';
 import { businessElectionConfig } from './elections/business';
+import { medicalElectionConfig } from './elections/medical';
 import { evaluateDateRange } from './engine';
 import { ElectionRulesConfig } from './types';
 
@@ -14,6 +15,7 @@ const ALL_ELECTION_CONFIGS: { name: string; config: ElectionRulesConfig }[] = [
   { name: 'marriage', config: marriageElectionConfig },
   { name: 'travel', config: travelElectionConfig },
   { name: 'business', config: businessElectionConfig },
+  { name: 'medical', config: medicalElectionConfig },
 ];
 
 const EDINBURGH = { lat: 55.95, lon: -3.19, tz: 'Europe/London' };

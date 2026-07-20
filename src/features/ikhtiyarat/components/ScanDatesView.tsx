@@ -5,6 +5,7 @@ import { evaluateDateRange } from '@/src/lib/ikhtiyarat/engine';
 import { marriageElectionConfig } from '@/src/lib/ikhtiyarat/elections/marriage';
 import { travelElectionConfig } from '@/src/lib/ikhtiyarat/elections/travel';
 import { businessElectionConfig } from '@/src/lib/ikhtiyarat/elections/business';
+import { medicalElectionConfig } from '@/src/lib/ikhtiyarat/elections/medical';
 import { ElectionResult, ElectionType, ElectionRulesConfig } from '@/src/lib/ikhtiyarat/types';
 import { UserLocation } from '@/src/types/planetary';
 import { toLocalDateString } from '@/src/lib/localDate';
@@ -25,6 +26,7 @@ const CONFIG_BY_ELECTION_TYPE: Record<ElectionType, ElectionRulesConfig> = {
   marriage: marriageElectionConfig,
   travel: travelElectionConfig,
   business: businessElectionConfig,
+  medical: medicalElectionConfig,
 };
 
 export function ScanDatesView({

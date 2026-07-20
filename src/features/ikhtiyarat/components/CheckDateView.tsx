@@ -6,11 +6,14 @@ import { evaluateElection, findNearestBetterDates } from '@/src/lib/ikhtiyarat/e
 import { marriageElectionConfig } from '@/src/lib/ikhtiyarat/elections/marriage';
 import { travelElectionConfig } from '@/src/lib/ikhtiyarat/elections/travel';
 import { businessElectionConfig } from '@/src/lib/ikhtiyarat/elections/business';
+import { medicalElectionConfig } from '@/src/lib/ikhtiyarat/elections/medical';
 import { ElectionResult, ElectionType, ElectionRulesConfig } from '@/src/lib/ikhtiyarat/types';
 import { gregorianToHijri, getSunnahBadges } from '@/src/lib/ikhtiyarat/hijri';
 import { getUrfBadgeForMonth } from '@/src/lib/ikhtiyarat/urf';
 import { getTravelBadges } from '@/src/lib/ikhtiyarat/travelBadges';
+import { getMedicalBadges } from '@/src/lib/ikhtiyarat/medicalBadges';
 import { getDayDegradationNote } from '@/src/lib/ikhtiyarat/degradation';
+import { getPlanetPosition } from '@/src/lib/ikhtiyarat/ephemeris';
 import { shareContent } from '@/src/features/ramadanChallenges/sharing';
 import { UserLocation } from '@/src/types/planetary';
 import { getLocalToday } from '@/src/lib/localDate';
@@ -28,6 +31,7 @@ const CONFIG_BY_ELECTION_TYPE: Record<ElectionType, ElectionRulesConfig> = {
   marriage: marriageElectionConfig,
   travel: travelElectionConfig,
   business: businessElectionConfig,
+  medical: medicalElectionConfig,
 };
 
 export function CheckDateView({
@@ -105,6 +109,13 @@ export function CheckDateView({
   // Thursday, Friday caution), keyed off the chosen window's time-of-day
   // rather than the Hijri calendar — see travelBadges.ts.
   const travelBadges = result && electionType === 'travel' ? getTravelBadges(result) : [];
+  // Medical's Zodiac Man caution needs the Moon's sign at the chosen window —
+  // not stored on ElectionResult, so it's cheaply recomputed here (pure
+  // longitude math, no lat/lon dependency) rather than threading it through
+  // the engine's shared, election-agnostic result shape.
+  const medicalBadges = result && electionType === 'medical'
+    ? getMedicalBadges(result, getPlanetPosition('Moon', result.bestWindow.time).sign)
+    : [];
   const degradationNote = result ? getDayDegradationNote(result, language) : null;
 
   return (
@@ -171,6 +182,13 @@ export function CheckDateView({
             <div>
               <div className="text-xs uppercase tracking-wide text-slate-400 mb-2">{c.sunnahBadge}</div>
               <SunnahBadges badges={travelBadges} language={language} />
+            </div>
+          )}
+
+          {medicalBadges.length > 0 && (
+            <div>
+              <div className="text-xs uppercase tracking-wide text-slate-400 mb-2">{c.sunnahBadge}</div>
+              <SunnahBadges badges={medicalBadges} language={language} />
             </div>
           )}
 
