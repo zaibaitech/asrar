@@ -7,6 +7,8 @@ import { AstrologicalCompatibilityView } from '../../components/AstrologicalComp
 import { DivineNameInputForm } from '../../components/DivineNameInputForm';
 import { DivineNameConnectionView } from '../../components/DivineNameConnectionView';
 import { DivineNameMatchesView } from '../../components/DivineNameMatchesView';
+import { DivineNameIntentionForm } from '../../components/DivineNameIntentionForm';
+import { DivineNameIntentionView } from '../../components/DivineNameIntentionView';
 import { calculateSoulConnection, calculateAbjadTotal } from '../../utils/soulConnection';
 import { analyzeAstrologicalCompatibility } from '../../utils/astrologicalCompatibility';
 import { calculateDivineNameConnection, findBestDivineNameMatches, DivineNameMatch } from '../../utils/divineNameConnection';
@@ -15,9 +17,10 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import { COMPAT_THEME } from '../../constants/compatibilityTheme';
 import type { RelationshipContext } from '../../constants/soulConnectionArchetypes';
 import type { DivineName } from '../../data/divine-names';
+import type { DivineIntention } from '../../constants/divineNameIntentions';
 
-/** Top-level: comparing two people, or a person against a Divine Name. */
-type CompatibilityCategory = 'person-to-person' | 'person-to-divine';
+/** Top-level: comparing two people, a person against a Divine Name, or an intention against a Divine Name. */
+type CompatibilityCategory = 'person-to-person' | 'person-to-divine' | 'divine-to-intention';
 
 /** Within Person-to-Person, which input the user is comparing two people by. */
 type InputMode = 'names' | 'dob';
@@ -34,6 +37,7 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
   const [astrologicalResult, setAstrologicalResult] = useState<AstrologicalCompatibility | null>(null);
   const [divineNameResult, setDivineNameResult] = useState<DivineNameConnectionResult | null>(null);
   const [divineNameMatches, setDivineNameMatches] = useState<{ person: { name: string; arabicName: string; kabir: number }; matches: DivineNameMatch[] } | null>(null);
+  const [selectedIntention, setSelectedIntention] = useState<DivineIntention | null>(null);
   const [showResults, setShowResults] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const formRef = useRef<HTMLDivElement>(null);
@@ -139,6 +143,15 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
     }
   };
 
+  const handleIntentionSelect = async (intention: DivineIntention) => {
+    setIsTransitioning(true);
+    await new Promise(resolve => setTimeout(resolve, 300));
+    setSelectedIntention(intention);
+    setShowResults(true);
+    setIsTransitioning(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   /**
    * Reset to form view
    */
@@ -150,6 +163,7 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
       setAstrologicalResult(null);
       setDivineNameResult(null);
       setDivineNameMatches(null);
+      setSelectedIntention(null);
       setIsTransitioning(false);
 
       // Scroll to form
@@ -185,16 +199,18 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
           <p className="text-sm mt-2.5" style={{ color: COMPAT_THEME.muted }}>
             {category === 'person-to-divine'
               ? (language === 'fr' ? "Découvrez votre résonance spirituelle avec les 99 Noms d'Allah" : 'Discover your spiritual resonance with the 99 Names of Allah')
+              : category === 'divine-to-intention'
+              ? (language === 'fr' ? "Appelez Allah par le Nom dont le sens correspond à votre besoin" : 'Call upon Allah by the Name whose meaning matches your need')
               : inputMode === 'names'
               ? (language === 'fr' ? "Explorez l'harmonie relationnelle grâce à la numérologie islamique" : 'Explore relationship harmony through Islamic numerology')
               : (language === 'fr' ? "Explorez la compatibilité astrologique générale à partir des dates de naissance" : 'Explore general astrological compatibility from birth dates')}
           </p>
         </div>
 
-        {/* Category selector: Person-to-Person vs Person-to-Divine-Name */}
+        {/* Category selector: Person-to-Person vs Person-to-Divine-Name vs Divine-Name-to-Intention */}
         {!showResults && (
           <div className="flex justify-center">
-            <div className="inline-flex p-1 rounded-xl" style={{ background: COMPAT_THEME.cardBg, border: `1px solid ${COMPAT_THEME.cardBorder}` }}>
+            <div className="inline-flex flex-wrap justify-center p-1 rounded-xl gap-1" style={{ background: COMPAT_THEME.cardBg, border: `1px solid ${COMPAT_THEME.cardBorder}` }}>
               <button
                 onClick={() => setCategory('person-to-person')}
                 className="px-5 py-2 rounded-lg font-technical text-sm font-semibold transition-all"
@@ -212,6 +228,15 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
                   : { color: COMPAT_THEME.muted }}
               >
                 {language === 'fr' ? 'Personne à Nom Divin' : 'Person to Divine Name'}
+              </button>
+              <button
+                onClick={() => setCategory('divine-to-intention')}
+                className="px-5 py-2 rounded-lg font-technical text-sm font-semibold transition-all"
+                style={category === 'divine-to-intention'
+                  ? { background: COMPAT_THEME.ctaGradient, color: '#fff' }
+                  : { color: COMPAT_THEME.muted }}
+              >
+                {language === 'fr' ? 'Nom Divin selon une Intention' : 'Divine Name to Intention'}
               </button>
             </div>
           </div>
@@ -252,6 +277,12 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
             category === 'person-to-divine' ? (
               <DivineNameInputForm
                 onCalculate={handleDivineNameCalculate}
+                language={lang}
+                isLoading={isTransitioning}
+              />
+            ) : category === 'divine-to-intention' ? (
+              <DivineNameIntentionForm
+                onSelect={handleIntentionSelect}
                 language={lang}
                 isLoading={isTransitioning}
               />
@@ -304,6 +335,16 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
               <DivineNameMatchesView
                 person={divineNameMatches.person}
                 matches={divineNameMatches.matches}
+                language={lang}
+              />
+
+              {/* Calculate Again Button */}
+              <CalculateAgainButton onClick={handleReset} language={language} />
+            </div>
+          ) : selectedIntention ? (
+            <div className="space-y-6">
+              <DivineNameIntentionView
+                intention={selectedIntention}
                 language={lang}
               />
 

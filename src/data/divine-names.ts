@@ -1650,6 +1650,10 @@ export function findDivineNameByValue(value: number): DivineName | undefined {
   return DIVINE_NAMES.find(name => name.abjadValue === value);
 }
 
+export function findDivineNameByNumber(number: number): DivineName | undefined {
+  return DIVINE_NAMES.find(name => name.number === number);
+}
+
 export function findSimilarDivineNames(value: number, tolerance: number = 20): DivineName[] {
   return DIVINE_NAMES
     .filter(name => Math.abs(name.abjadValue - value) <= tolerance)
