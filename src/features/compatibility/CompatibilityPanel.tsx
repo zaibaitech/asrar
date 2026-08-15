@@ -7,17 +7,25 @@ import { AstrologicalCompatibilityView } from '../../components/AstrologicalComp
 import { DivineNameInputForm } from '../../components/DivineNameInputForm';
 import { DivineNameConnectionView } from '../../components/DivineNameConnectionView';
 import { DivineNameMatchesView } from '../../components/DivineNameMatchesView';
-import { DivineNameIntentionForm } from '../../components/DivineNameIntentionForm';
-import { DivineNameIntentionView } from '../../components/DivineNameIntentionView';
+import { DivineNameIntentionForm, type DivineIntentionSubMode } from '../../components/DivineNameIntentionForm';
+import { DivineNameIntentionResultView } from '../../components/DivineNameIntentionResultView';
+import { DivineNameIntentionMatchesView } from '../../components/DivineNameIntentionMatchesView';
 import { calculateSoulConnection, calculateAbjadTotal } from '../../utils/soulConnection';
 import { analyzeAstrologicalCompatibility } from '../../utils/astrologicalCompatibility';
 import { calculateDivineNameConnection, findBestDivineNameMatches, DivineNameMatch } from '../../utils/divineNameConnection';
+import { calculateDivineNameIntentionCompatibilityEnFr } from '../../utils/divineNameCompatibility';
 import { useAbjad } from '../../contexts/AbjadContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { COMPAT_THEME } from '../../constants/compatibilityTheme';
 import type { RelationshipContext } from '../../constants/soulConnectionArchetypes';
 import type { DivineName } from '../../data/divine-names';
 import type { DivineIntention } from '../../constants/divineNameIntentions';
+import {
+  DIVINE_NAME_METADATA,
+  DIVINE_INTENTION_TO_CATEGORY,
+  findDivineNameMetadataByNumber,
+  type DivineNameIntentionCompatibility,
+} from '../../constants/divineNameCompatibilityData';
 
 /** Top-level: comparing two people, a person against a Divine Name, or an intention against a Divine Name. */
 type CompatibilityCategory = 'person-to-person' | 'person-to-divine' | 'divine-to-intention';
@@ -37,7 +45,12 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
   const [astrologicalResult, setAstrologicalResult] = useState<AstrologicalCompatibility | null>(null);
   const [divineNameResult, setDivineNameResult] = useState<DivineNameConnectionResult | null>(null);
   const [divineNameMatches, setDivineNameMatches] = useState<{ person: { name: string; arabicName: string; kabir: number }; matches: DivineNameMatch[] } | null>(null);
-  const [selectedIntention, setSelectedIntention] = useState<DivineIntention | null>(null);
+  const [intentionResult, setIntentionResult] = useState<{
+    intention: DivineIntention;
+    result: DivineNameIntentionCompatibility;
+    guidance: { en: string; fr: string };
+  } | null>(null);
+  const [intentionMatches, setIntentionMatches] = useState<DivineIntention | null>(null);
   const [showResults, setShowResults] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const formRef = useRef<HTMLDivElement>(null);
@@ -143,12 +156,42 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
     }
   };
 
-  const handleIntentionSelect = async (intention: DivineIntention) => {
+  const runIntentionCalculation = (intention: DivineIntention, divineNameNumber: number) => {
+    const metadata = findDivineNameMetadataByNumber(divineNameNumber);
+    if (!metadata) return;
+    const category = DIVINE_INTENTION_TO_CATEGORY[intention];
+    const { result, sourceNote } = calculateDivineNameIntentionCompatibilityEnFr(metadata, category, DIVINE_NAME_METADATA);
+    setIntentionResult({ intention, result, guidance: sourceNote });
+    setIntentionMatches(null);
+  };
+
+  const handleIntentionCalculate = async (
+    intention: DivineIntention,
+    subMode: DivineIntentionSubMode,
+    divineName: DivineName | null,
+  ) => {
     setIsTransitioning(true);
     await new Promise(resolve => setTimeout(resolve, 300));
-    setSelectedIntention(intention);
+    if (subMode === 'pick' && divineName) {
+      runIntentionCalculation(intention, divineName.number);
+    } else {
+      setIntentionMatches(intention);
+      setIntentionResult(null);
+    }
     setShowResults(true);
     setIsTransitioning(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handlePickAlternative = (divineNameNumber: number) => {
+    if (!intentionResult) return;
+    runIntentionCalculation(intentionResult.intention, divineNameNumber);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleSelectFromMatches = (divineNameNumber: number) => {
+    if (!intentionMatches) return;
+    runIntentionCalculation(intentionMatches, divineNameNumber);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -163,7 +206,8 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
       setAstrologicalResult(null);
       setDivineNameResult(null);
       setDivineNameMatches(null);
-      setSelectedIntention(null);
+      setIntentionResult(null);
+      setIntentionMatches(null);
       setIsTransitioning(false);
 
       // Scroll to form
@@ -282,7 +326,7 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
               />
             ) : category === 'divine-to-intention' ? (
               <DivineNameIntentionForm
-                onSelect={handleIntentionSelect}
+                onCalculate={handleIntentionCalculate}
                 language={lang}
                 isLoading={isTransitioning}
               />
@@ -341,10 +385,24 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
               {/* Calculate Again Button */}
               <CalculateAgainButton onClick={handleReset} language={language} />
             </div>
-          ) : selectedIntention ? (
+          ) : intentionResult ? (
             <div className="space-y-6">
-              <DivineNameIntentionView
-                intention={selectedIntention}
+              <DivineNameIntentionResultView
+                intention={intentionResult.intention}
+                result={intentionResult.result}
+                guidance={intentionResult.guidance}
+                onPickAlternative={handlePickAlternative}
+                language={lang}
+              />
+
+              {/* Calculate Again Button */}
+              <CalculateAgainButton onClick={handleReset} language={language} />
+            </div>
+          ) : intentionMatches ? (
+            <div className="space-y-6">
+              <DivineNameIntentionMatchesView
+                intention={intentionMatches}
+                onSelectName={handleSelectFromMatches}
                 language={lang}
               />
 

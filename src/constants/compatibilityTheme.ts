@@ -29,4 +29,6 @@ export const COMPAT_TINTS = {
   violet: { bg: '#F5F0FE', border: '#E4D9FA', label: '#7C3AED' },
   amber: { bg: '#FFF8EA', border: '#F6E4BC', label: '#B45309' },
   green: { bg: '#EFFBF3', border: '#CDEEDA', label: '#15803D' },
+  /** Added for the Divine Name <-> Intention 4-tier alignment badge (not-recommended). */
+  red: { bg: '#FEF2F2', border: '#FCA5A5', label: '#DC2626' },
 } as const;
