@@ -23,19 +23,21 @@ import {
   type SadaqahForm,
 } from "../../../data/zodiacSadaqahData";
 
+type UiLang = "en" | "fr";
+
 interface SadaqaTabProps {
   result: IstikharaCalculationResult;
 }
 
 // Card for a single traditional sadaqah practice (title/body/optional bullets)
-function TraditionFormCard({ form, colors }: { form: SadaqahForm; colors: any }) {
+function TraditionFormCard({ form, language, colors }: { form: SadaqahForm; language: UiLang; colors: any }) {
   return (
     <div className="p-4 bg-white/5 rounded-lg space-y-2">
-      <h5 className="font-semibold text-white">{form.title}</h5>
-      <p className="text-white/90 text-sm leading-relaxed">{form.body}</p>
+      <h5 className="font-semibold text-white">{form.title[language]}</h5>
+      <p className="text-white/90 text-sm leading-relaxed">{form.body[language]}</p>
       {form.bullets && (
         <ul className="space-y-1.5 pt-1">
-          {form.bullets.map((bullet, i) => (
+          {form.bullets[language].map((bullet, i) => (
             <li key={i} className="flex items-start gap-2 text-sm text-white/90">
               <Check className={`w-4 h-4 ${colors.text} flex-shrink-0 mt-0.5`} />
               <span>{bullet}</span>
@@ -174,14 +176,14 @@ export function SadaqaTab({ result }: SadaqaTabProps) {
         {tradition.rulingPlanet && (
           <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full ${colors.iconBg}`}>
             <Sparkles className={`w-4 h-4 ${colors.text}`} />
-            <span className="text-sm text-white/90">{tradition.rulingPlanet}</span>
+            <span className="text-sm text-white/90">{tradition.rulingPlanet[language]}</span>
           </div>
         )}
       </div>
 
       {tradition.generalNote && (
         <div className="p-4 bg-white/5 border border-white/10 rounded-lg">
-          <p className="text-white/90 text-sm leading-relaxed italic">{tradition.generalNote}</p>
+          <p className="text-white/90 text-sm leading-relaxed italic">{tradition.generalNote[language]}</p>
         </div>
       )}
 
@@ -194,7 +196,7 @@ export function SadaqaTab({ result }: SadaqaTabProps) {
           colors={colors}
         >
           {tradition.generalForms.map((form, i) => (
-            <TraditionFormCard key={i} form={form} colors={colors} />
+            <TraditionFormCard key={i} form={form} language={language} colors={colors} />
           ))}
         </ExpandableSection>
       )}
@@ -207,7 +209,7 @@ export function SadaqaTab({ result }: SadaqaTabProps) {
         colors={colors}
       >
         {tradition.specificForms.map((form, i) => (
-          <TraditionFormCard key={i} form={form} colors={colors} />
+          <TraditionFormCard key={i} form={form} language={language} colors={colors} />
         ))}
       </ExpandableSection>
 
@@ -223,9 +225,9 @@ export function SadaqaTab({ result }: SadaqaTabProps) {
             <div className={`p-2 ${colors.iconBg} rounded-full`}>
               <Clock className={`w-4 h-4 ${colors.text}`} />
             </div>
-            <p className="text-white font-semibold">{tradition.timing.day}</p>
+            <p className="text-white font-semibold">{tradition.timing.day[language]}</p>
           </div>
-          <p className="text-white/90 text-sm leading-relaxed">{tradition.timing.note}</p>
+          <p className="text-white/90 text-sm leading-relaxed">{tradition.timing.note[language]}</p>
         </ExpandableSection>
       )}
 
@@ -234,21 +236,21 @@ export function SadaqaTab({ result }: SadaqaTabProps) {
           <div className="flex items-start gap-3">
             <AlertCircle className="w-6 h-6 text-amber-400 flex-shrink-0 mt-0.5" />
             <div className="space-y-2">
-              <h4 className="font-bold text-white">{tradition.guidance.title}</h4>
-              <p className="text-amber-100/90 text-sm leading-relaxed">{tradition.guidance.body}</p>
+              <h4 className="font-bold text-white">{tradition.guidance.title[language]}</h4>
+              <p className="text-amber-100/90 text-sm leading-relaxed">{tradition.guidance.body[language]}</p>
             </div>
           </div>
         </div>
       )}
 
-      {tradition.summary && tradition.summary.length > 0 && (
+      {tradition.summary && tradition.summary[language].length > 0 && (
         <div className={`p-5 bg-gradient-to-br ${colors.bgGradient} border-2 ${colors.border} rounded-xl space-y-3`}>
           <div className="flex items-center gap-2">
             <Heart className={`w-5 h-5 ${colors.text}`} />
             <h4 className="font-bold text-white">{language === "en" ? "Summary" : "Résumé"}</h4>
           </div>
           <ul className="space-y-2">
-            {tradition.summary.map((line, i) => (
+            {tradition.summary[language].map((line, i) => (
               <li key={i} className="flex items-start gap-2 text-sm text-white/90">
                 <Check className={`w-4 h-4 ${colors.text} flex-shrink-0 mt-0.5`} />
                 <span>{line}</span>
@@ -257,7 +259,7 @@ export function SadaqaTab({ result }: SadaqaTabProps) {
           </ul>
           {tradition.summaryNote && (
             <p className="text-white/70 text-xs leading-relaxed pt-2 border-t border-white/10">
-              {tradition.summaryNote}
+              {tradition.summaryNote[language]}
             </p>
           )}
         </div>
@@ -265,12 +267,12 @@ export function SadaqaTab({ result }: SadaqaTabProps) {
 
       {tradition.intention && (
         <div className="p-4 bg-white/5 border border-white/10 rounded-lg">
-          <p className="text-white/90 text-sm leading-relaxed italic">{tradition.intention}</p>
+          <p className="text-white/90 text-sm leading-relaxed italic">{tradition.intention[language]}</p>
         </div>
       )}
 
       <ExpandableSection
-        title={language === "en" ? "Teaching Video" : "Vidéo d'Enseignement"}
+        title={language === "en" ? "Teaching Video (in Wolof)" : "Vidéo d'Enseignement (en Wolof)"}
         icon={<BookOpen className={`w-5 h-5 ${colors.text}`} />}
         isExpanded={expandedSections.includes("video")}
         onToggle={() => toggleSection("video")}
@@ -281,7 +283,9 @@ export function SadaqaTab({ result }: SadaqaTabProps) {
           <VideoEmbed videoId={tradition.altVideoId} title={`${tradition.en} — Sadaqah (2)`} />
         )}
         <p className="text-white/50 text-xs italic text-center">
-          {language === "en" ? "By Seringe Mahdiou Niane" : "Par Seringe Mahdiou Niane"}
+          {language === "en"
+            ? "By Seringe Mahdiou Niane — spoken in Wolof"
+            : "Par Seringe Mahdiou Niane — parlé en wolof"}
         </p>
       </ExpandableSection>
 
