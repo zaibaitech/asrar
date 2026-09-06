@@ -36,8 +36,8 @@ export function CalculatorScreen({ appLanguage }: { appLanguage: 'en' | 'fr' }) 
             <CalculatorIcon size={18} aria-hidden />
           </span>
           <div>
-            <h1 className="text-xl font-semibold text-slate-900 dark:text-slate-100">{t('title')}</h1>
-            <p className="text-sm text-slate-500 dark:text-slate-400">{t('subtitle')}</p>
+            <h1 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">{t('title')}</h1>
+            <p className="text-base text-slate-500 dark:text-slate-400">{t('subtitle')}</p>
           </div>
         </div>
 
@@ -47,7 +47,7 @@ export function CalculatorScreen({ appLanguage }: { appLanguage: 'en' | 'fr' }) 
               key={l}
               type="button"
               onClick={() => setLocale(l)}
-              className={`rounded-full px-2.5 py-1 text-xs font-medium ${
+              className={`rounded-full px-2.5 py-1 text-sm font-medium ${
                 locale === l ? 'bg-indigo-600 text-white shadow-sm' : 'text-slate-500 dark:text-slate-400'
               }`}
             >

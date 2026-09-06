@@ -81,7 +81,7 @@ export function CalculatorTypeForm({
   if (profile || resonanceInput || dobSubmitted) {
     return (
       <div className="flex flex-col gap-3">
-        <button type="button" onClick={handleReset} className="flex items-center gap-1.5 self-start text-xs font-medium text-slate-400">
+        <button type="button" onClick={handleReset} className="flex items-center gap-1.5 self-start text-sm font-medium text-slate-400">
           <RotateCcw size={13} aria-hidden />
           {t('newCalculation')}
         </button>
@@ -96,7 +96,7 @@ export function CalculatorTypeForm({
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-      <button type="button" onClick={onBack} className="flex items-center gap-1.5 self-start text-xs font-medium text-slate-400">
+      <button type="button" onClick={onBack} className="flex items-center gap-1.5 self-start text-sm font-medium text-slate-400">
         <ArrowLeft size={14} className="rtl:rotate-180" aria-hidden />
         {t('backToCalculators')}
       </button>
@@ -106,15 +106,15 @@ export function CalculatorTypeForm({
           <ActiveIcon size={18} aria-hidden />
         </span>
         <div>
-          <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">{t(activeType.titleKey)}</h2>
-          <p className="text-xs text-slate-500">{t(activeType.subtitleKey)}</p>
+          <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100">{t(activeType.titleKey)}</h2>
+          <p className="text-sm text-slate-500">{t(activeType.subtitleKey)}</p>
         </div>
       </div>
 
       <Card className="flex flex-col gap-3">
         {isDobType ? (
           <label className="flex flex-col gap-1.5">
-            <span className="text-sm text-slate-700 dark:text-slate-300">{t('dobFieldLabel')}</span>
+            <span className="text-base text-slate-700 dark:text-slate-300">{t('dobFieldLabel')}</span>
             <input
               type="date"
               value={dob}
@@ -122,21 +122,21 @@ export function CalculatorTypeForm({
               max={new Date().toISOString().slice(0, 10)}
               className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-slate-900 outline-none focus:border-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:[color-scheme:dark]"
             />
-            <span className="text-xs text-slate-500">{t('dobFieldHelper')}</span>
+            <span className="text-sm text-slate-500">{t('dobFieldHelper')}</span>
           </label>
         ) : calcType === 'dhikr' ? (
           <div className="flex flex-col gap-1.5">
             <button
               type="button"
               onClick={() => setShowDivinePicker(true)}
-              className="flex items-center justify-between rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
+              className="flex items-center justify-between rounded-xl border border-slate-200 bg-white px-3 py-2 text-base text-slate-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
             >
               <span className="flex items-center gap-1.5">
                 <List size={14} aria-hidden />
                 {t('selectDivineName')}
               </span>
               {selectedDivineName && (
-                <span dir="rtl" className="text-base text-indigo-600 dark:text-indigo-400">
+                <span dir="rtl" className="text-lg text-indigo-600 dark:text-indigo-400">
                   {selectedDivineName.arabic}
                 </span>
               )}
@@ -175,11 +175,11 @@ export function CalculatorTypeForm({
         )}
       </Card>
 
-      {empty && <p className="text-xs text-red-500 dark:text-red-400">{t('noLetters')}</p>}
+      {empty && <p className="text-sm text-red-500 dark:text-red-400">{t('noLetters')}</p>}
       <button
         type="submit"
         disabled={isDobType ? !dob : isTwoNameType ? !text.trim() : !sourceText.trim()}
-        className="rounded-xl bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700 disabled:opacity-40"
+        className="rounded-xl bg-indigo-600 px-4 py-2 text-base font-medium text-white hover:bg-indigo-700 disabled:opacity-40"
       >
         {t('calculate')}
       </button>

@@ -29,12 +29,12 @@ export function NameField({
   return (
     <div className="flex flex-col gap-1.5">
       <div className="flex items-center justify-between">
-        <span className="text-sm text-slate-700 dark:text-slate-300">{label}</span>
+        <span className="text-base text-slate-700 dark:text-slate-300">{label}</span>
         {allowPicker && (
           <button
             type="button"
             onClick={() => setShowPicker(true)}
-            className="flex items-center gap-1 text-xs font-medium text-indigo-600 underline underline-offset-2 dark:text-indigo-400"
+            className="flex items-center gap-1 text-sm font-medium text-indigo-600 underline underline-offset-2 dark:text-indigo-400"
           >
             <List size={13} aria-hidden />
             {t('chooseFromList')}
@@ -54,7 +54,7 @@ export function NameField({
       <button
         type="button"
         onClick={() => setShowKeyboard((v) => !v)}
-        className="flex items-center gap-1.5 self-start text-xs font-medium text-slate-400"
+        className="flex items-center gap-1.5 self-start text-sm font-medium text-slate-400"
       >
         <Keyboard size={13} aria-hidden />
         {showKeyboard ? t('hideKeyboard') : t('showKeyboard')}

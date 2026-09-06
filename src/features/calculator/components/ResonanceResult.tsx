@@ -11,7 +11,7 @@ import type { CalculationType } from './calculatorTypes';
 import { useCalculatorTranslations, type CalculatorLocale } from '../i18n';
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
-  return <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400">{children}</p>;
+  return <p className="text-base font-semibold text-indigo-600 dark:text-indigo-400">{children}</p>;
 }
 
 export function ResonanceResult({
@@ -67,11 +67,11 @@ export function ResonanceResult({
     <div className="flex flex-col gap-3">
       {/* Header — name(s) analyzed */}
       <div className="flex flex-col items-center gap-1 rounded-2xl border border-indigo-200 dark:border-indigo-800 bg-white dark:bg-slate-800 px-4 py-5 text-center">
-        <p dir="rtl" lang="ar" className="text-3xl font-medium text-indigo-600 dark:text-indigo-400 font-arabic">
+        <p dir="rtl" lang="ar" className="text-4xl font-medium text-indigo-600 dark:text-indigo-400 font-arabic">
           {personName}
         </p>
         {motherName && (
-          <p dir="rtl" lang="ar" className="text-base text-slate-500 dark:text-slate-400 font-arabic">
+          <p dir="rtl" lang="ar" className="text-lg text-slate-500 dark:text-slate-400 font-arabic">
             {motherName}
           </p>
         )}
@@ -82,16 +82,16 @@ export function ResonanceResult({
           <>
             <Card className="flex flex-col items-center gap-2 text-center">
               <SectionTitle>{t('divineResonanceTitle')}</SectionTitle>
-              <p className="text-xs text-slate-500">{t('divineResonanceSubtitle')}</p>
-              <p dir="rtl" className="mt-2 text-4xl text-indigo-600 dark:text-indigo-400 font-arabic">
+              <p className="text-sm text-slate-500">{t('divineResonanceSubtitle')}</p>
+              <p dir="rtl" className="mt-2 text-5xl text-indigo-600 dark:text-indigo-400 font-arabic">
                 {divine.entry.nameTashkeel}
               </p>
-              <p className="text-lg font-semibold text-slate-900 dark:text-slate-100">{divine.entry.transliteration}</p>
-              <p className="text-sm text-slate-500 dark:text-slate-400">{pick(uiLocale, divine.entry.translation)}</p>
-              <span dir="rtl" className="mt-1 flex h-9 w-9 items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/40 text-lg text-indigo-600 dark:text-indigo-400 font-arabic">
+              <p className="text-xl font-semibold text-slate-900 dark:text-slate-100">{divine.entry.transliteration}</p>
+              <p className="text-base text-slate-500 dark:text-slate-400">{pick(uiLocale, divine.entry.translation)}</p>
+              <span dir="rtl" className="mt-1 flex h-9 w-9 items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-900/40 text-xl text-indigo-600 dark:text-indigo-400 font-arabic">
                 {divine.entry.letter}
               </span>
-              <p className="mt-1 text-xs italic text-slate-500">{t('divineResonanceAbjadNote')}</p>
+              <p className="mt-1 text-sm italic text-slate-500">{t('divineResonanceAbjadNote')}</p>
 
               <div className="mt-2 w-full border-t border-slate-100 dark:border-white/5 pt-2">
                 <InfoDisclosure label={t('howItWasDerived')} icon="chevron">
@@ -113,10 +113,10 @@ export function ResonanceResult({
                     <div className="mt-1 flex flex-wrap justify-center gap-1.5">
                       {divine.breakdown.map((lv, i) => (
                         <span key={i} className="flex flex-col items-center rounded-lg bg-indigo-50 dark:bg-indigo-900/30 px-2 py-1">
-                          <span dir="rtl" className="text-sm text-indigo-600 dark:text-indigo-400 font-arabic">
+                          <span dir="rtl" className="text-base text-indigo-600 dark:text-indigo-400 font-arabic">
                             {lv.char}
                           </span>
-                          <span className="text-[10px] text-slate-500 dark:text-slate-400">{lv.value}</span>
+                          <span className="text-xs text-slate-500 dark:text-slate-400">{lv.value}</span>
                         </span>
                       ))}
                     </div>
@@ -128,36 +128,36 @@ export function ResonanceResult({
             <Card className="flex flex-col gap-2">
               <SectionTitle>{t('dhikrOptionalLabel')}</SectionTitle>
               <div className="flex items-center gap-2">
-                <span className="text-xs text-slate-500 dark:text-slate-400">{t('dhikrSuggestedCountLabel')}:</span>
-                <span className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">{divine.dhikrCount}</span>
-                <span dir="rtl" className="text-lg text-slate-600 dark:text-slate-300 font-arabic">
+                <span className="text-sm text-slate-500 dark:text-slate-400">{t('dhikrSuggestedCountLabel')}:</span>
+                <span className="text-3xl font-bold text-indigo-600 dark:text-indigo-400">{divine.dhikrCount}</span>
+                <span dir="rtl" className="text-xl text-slate-600 dark:text-slate-300 font-arabic">
                   يا {divine.entry.name}
                 </span>
               </div>
-              <p className="text-xs leading-relaxed text-slate-500 dark:text-slate-400">{t('divineResonanceDhikrDescription')}</p>
-              <p className="text-xs leading-relaxed text-slate-500">{t('divineNameEsotericNote')}</p>
+              <p className="text-sm leading-relaxed text-slate-500 dark:text-slate-400">{t('divineResonanceDhikrDescription')}</p>
+              <p className="text-sm leading-relaxed text-slate-500">{t('divineNameEsotericNote')}</p>
             </Card>
           </>
         ) : (
-          <p className="text-sm text-slate-500">{t('noLetters')}</p>
+          <p className="text-base text-slate-500">{t('noLetters')}</p>
         ))}
 
       {calcType === 'quranicResonance' &&
         (quran ? (
           <Card className="flex flex-col items-center gap-2 text-center">
             <SectionTitle>{t('quranicResonanceTitle')}</SectionTitle>
-            <p className="text-xs text-slate-500">{t('quranicResonanceSubtitle')}</p>
-            <p dir="rtl" className="mt-2 text-3xl text-indigo-600 dark:text-indigo-400 font-arabic">
+            <p className="text-sm text-slate-500">{t('quranicResonanceSubtitle')}</p>
+            <p dir="rtl" className="mt-2 text-4xl text-indigo-600 dark:text-indigo-400 font-arabic">
               {quran.surahNameArabic}
             </p>
-            <p className="text-lg font-semibold text-slate-900 dark:text-slate-100">{quran.surahName}</p>
-            <span className="rounded-full border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs text-indigo-600 dark:text-indigo-400">
+            <p className="text-xl font-semibold text-slate-900 dark:text-slate-100">{quran.surahName}</p>
+            <span className="rounded-full border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-sm text-indigo-600 dark:text-indigo-400">
               {t('ayahOfLabel', { ayah: quran.ayahNumber, total: quran.totalAyahsInSurah })}
             </span>
 
             <div className="mt-3 w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-3 text-left">
               <div className="mb-2 flex items-center justify-between">
-                <span className="text-[10px] font-semibold uppercase tracking-wide text-slate-500">{t('arabicTextLabel')}</span>
+                <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">{t('arabicTextLabel')}</span>
                 {ayahText && (
                   <button
                     type="button"
@@ -169,29 +169,29 @@ export function ResonanceResult({
                   </button>
                 )}
               </div>
-              {ayahLoading && <p className="text-xs text-slate-500">{t('loadingVerse')}</p>}
+              {ayahLoading && <p className="text-sm text-slate-500">{t('loadingVerse')}</p>}
               {!ayahLoading && ayahText && (
-                <p dir="rtl" className="text-right text-xl leading-relaxed text-slate-900 dark:text-slate-100 font-arabic">
+                <p dir="rtl" className="text-right text-2xl leading-relaxed text-slate-900 dark:text-slate-100 font-arabic">
                   {ayahText}
                 </p>
               )}
-              {!ayahLoading && !ayahText && <p className="text-xs text-slate-500">{t('quranTextLoadError')}</p>}
+              {!ayahLoading && !ayahText && <p className="text-sm text-slate-500">{t('quranTextLoadError')}</p>}
             </div>
 
             <a
               href={quran.quranLink}
               target="_blank"
               rel="noreferrer"
-              className="mt-2 flex items-center gap-1.5 rounded-xl border border-indigo-200 dark:border-indigo-800 px-3 py-2 text-sm text-indigo-600 dark:text-indigo-400"
+              className="mt-2 flex items-center gap-1.5 rounded-xl border border-indigo-200 dark:border-indigo-800 px-3 py-2 text-base text-indigo-600 dark:text-indigo-400"
             >
               <ExternalLink size={14} aria-hidden />
               {t('readFullVerseLabel')}
             </a>
 
-            <p className="mt-2 text-xs italic leading-relaxed text-slate-500">{t('quranResonanceReflectionNote')}</p>
+            <p className="mt-2 text-sm italic leading-relaxed text-slate-500">{t('quranResonanceReflectionNote')}</p>
           </Card>
         ) : (
-          <p className="text-sm text-slate-500">{t('noLetters')}</p>
+          <p className="text-base text-slate-500">{t('noLetters')}</p>
         ))}
     </div>
   );

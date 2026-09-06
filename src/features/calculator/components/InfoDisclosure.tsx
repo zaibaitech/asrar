@@ -26,7 +26,7 @@ export function InfoDisclosure({
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="flex items-center gap-1 text-xs font-medium text-indigo-600 dark:text-indigo-400"
+        className="flex items-center gap-1 text-sm font-medium text-indigo-600 dark:text-indigo-400"
       >
         <Icon size={12} aria-hidden />
         {label}
@@ -35,7 +35,7 @@ export function InfoDisclosure({
         )}
       </button>
       {open && (
-        <div className="mt-1.5 rounded-lg bg-slate-100 p-2.5 text-xs leading-relaxed text-slate-600 dark:bg-slate-900/60 dark:text-slate-400">
+        <div className="mt-1.5 rounded-lg bg-slate-100 p-2.5 text-sm leading-relaxed text-slate-600 dark:bg-slate-900/60 dark:text-slate-400">
           {children}
         </div>
       )}
