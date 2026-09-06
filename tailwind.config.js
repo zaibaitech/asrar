@@ -13,6 +13,19 @@ module.exports = {
       screens: {
         'xs': '480px',
       },
+      colors: {
+        // Deftere calculator brand palette (scoped to that feature's UI).
+        navy: {
+          DEFAULT: '#0f172a',
+          light: '#1e293b',
+          card: '#16213a',
+        },
+        gold: {
+          DEFAULT: '#c9a24b',
+          light: '#e2c778',
+          dark: '#9c7a2f',
+        },
+      },
       fontFamily: {
         sans: [
           '-apple-system',
