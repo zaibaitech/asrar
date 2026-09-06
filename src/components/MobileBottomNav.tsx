@@ -35,7 +35,7 @@ export function MobileBottomNav({
 
   return (
     <nav
-      className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-navy/95 backdrop-blur-sm border-t border-white/10"
+      className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border-t border-slate-200 dark:border-slate-700"
       style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
       aria-label={isFrench ? 'Navigation principale' : 'Primary navigation'}
     >
@@ -43,16 +43,16 @@ export function MobileBottomNav({
         <TabButton
           onClick={onSelectPlanetary}
           active={activeTab === 'planetary'}
-          activeClasses="bg-gold"
-          activeText="text-gold"
+          activeClasses="bg-gradient-to-br from-indigo-600 to-purple-600"
+          activeText="text-indigo-600 dark:text-indigo-400"
           icon={<Moon className="w-5 h-5" />}
           label="ʿIlm Nujūm"
         />
         <TabButton
           onClick={onOpenCompatibility}
           active={activeTab === 'compatibility'}
-          activeClasses="bg-gold"
-          activeText="text-gold"
+          activeClasses="bg-gradient-to-br from-violet-600 to-pink-600"
+          activeText="text-violet-600 dark:text-violet-400"
           icon={<Heart className="w-5 h-5" />}
           label={isFrench ? 'Compatibilité' : 'Compatibility'}
         />
@@ -64,16 +64,16 @@ export function MobileBottomNav({
         <TabButton
           onClick={onSelectCalculator}
           active={activeTab === 'calculator'}
-          activeClasses="bg-gold"
-          activeText="text-gold"
+          activeClasses="bg-gradient-to-br from-indigo-600 to-blue-600"
+          activeText="text-indigo-600 dark:text-indigo-400"
           icon={<CalculatorIcon className="w-5 h-5" />}
           label={isFrench ? 'Calculateur' : 'Calculator'}
         />
         <TabButton
           onClick={onSelectAdvanced}
           active={activeTab === 'advanced'}
-          activeClasses="bg-gold"
-          activeText="text-gold"
+          activeClasses="bg-gradient-to-br from-teal-600 to-cyan-600"
+          activeText="text-teal-600 dark:text-teal-400"
           icon={<Compass className="w-5 h-5" />}
           label={isFrench ? 'Qui Suis-Je ?' : 'Who Am I?'}
         />
@@ -104,10 +104,10 @@ function TabButton({ onClick, active, activeClasses, activeText, icon, label }: 
       className="flex flex-col items-center justify-center gap-1 px-1 py-2.5 min-h-[58px] touch-manipulation"
       aria-current={active ? 'page' : undefined}
     >
-      <span className={`flex-shrink-0 flex items-center justify-center w-9 h-9 rounded-xl transition-colors ${active ? activeClasses + ' text-navy' : 'text-slate-400'}`}>
+      <span className={`flex-shrink-0 flex items-center justify-center w-9 h-9 rounded-xl transition-colors ${active ? activeClasses + ' text-white' : 'text-slate-500 dark:text-slate-400'}`}>
         {icon}
       </span>
-      <span className={`text-[10px] font-semibold leading-[1.15] text-center break-words ${active ? activeText : 'text-slate-400'}`}>
+      <span className={`text-[10px] font-semibold leading-[1.15] text-center break-words ${active ? activeText : 'text-slate-500 dark:text-slate-400'}`}>
         {label}
       </span>
     </button>
@@ -117,10 +117,10 @@ function TabButton({ onClick, active, activeClasses, activeText, icon, label }: 
 function TabLink({ href, icon, label }: { href: string; icon: React.ReactNode; label: string }) {
   return (
     <Link href={href} className="flex flex-col items-center justify-center gap-1 px-1 py-2.5 min-h-[58px] touch-manipulation">
-      <span className="flex-shrink-0 flex items-center justify-center w-9 h-9 rounded-xl text-slate-400">
+      <span className="flex-shrink-0 flex items-center justify-center w-9 h-9 rounded-xl text-slate-500 dark:text-slate-400">
         {icon}
       </span>
-      <span className="text-[10px] font-semibold leading-[1.15] text-center break-words text-slate-400">
+      <span className="text-[10px] font-semibold leading-[1.15] text-center break-words text-slate-500 dark:text-slate-400">
         {label}
       </span>
     </Link>

@@ -21,7 +21,7 @@ export function UserMenu() {
     return (
       <Link
         href="/auth"
-        className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 bg-gold hover:bg-gold-light text-navy rounded-lg transition-all text-xs sm:text-sm font-medium shadow-lg shadow-gold/20"
+        className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-lg transition-all text-xs sm:text-sm font-medium shadow-lg shadow-indigo-500/30"
       >
         <User className="w-4 h-4 sm:w-5 sm:h-5" />
         <span className="hidden xs:inline">Sign In</span>
@@ -38,7 +38,7 @@ export function UserMenu() {
     return (
       <Link
         href="/auth"
-        className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 bg-gold hover:bg-gold-light text-navy rounded-lg transition-all text-xs sm:text-sm font-medium shadow-lg shadow-gold/20"
+        className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-lg transition-all text-xs sm:text-sm font-medium shadow-lg shadow-indigo-500/30"
       >
         <User className="w-4 h-4 sm:w-5 sm:h-5" />
         <span className="hidden xs:inline">Sign In</span>
@@ -67,11 +67,11 @@ export function UserMenu() {
           />
           
           {/* Dropdown Menu */}
-          <div className="fixed top-16 right-3 left-3 sm:left-auto sm:absolute sm:top-auto sm:right-0 sm:mt-2 sm:w-72 bg-navy-card rounded-xl shadow-2xl border border-white/10 z-50 overflow-hidden">
-            <div className="p-5 border-b border-white/10">
+          <div className="fixed top-16 right-3 left-3 sm:left-auto sm:absolute sm:top-auto sm:right-0 sm:mt-2 sm:w-72 bg-white dark:bg-slate-800 rounded-xl shadow-2xl border border-slate-200 dark:border-slate-700 z-50 overflow-hidden">
+            <div className="p-5 border-b border-slate-200 dark:border-slate-700">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gold/15 rounded-full flex items-center justify-center flex-shrink-0">
-                  <UserCircle className="w-6 h-6 text-gold" />
+                <div className="w-10 h-10 bg-indigo-100 dark:bg-indigo-900/40 rounded-full flex items-center justify-center flex-shrink-0">
+                  <UserCircle className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
                 </div>
                 <div className="min-w-0 flex-1">
                   <p className="text-sm font-semibold text-slate-900 dark:text-white">
