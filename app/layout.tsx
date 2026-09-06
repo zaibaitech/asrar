@@ -16,10 +16,7 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#4f46e5' },
-    { media: '(prefers-color-scheme: dark)', color: '#312e81' },
-  ],
+  themeColor: '#0f172a',
 }
 
 export const metadata: Metadata = {
@@ -133,7 +130,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-192x192.png" />
         <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152x152.png" />
@@ -155,7 +152,7 @@ export default function RootLayout({
           gtag('config', 'G-VTWVCR2EJN');
         `}
       </Script>
-      <body className="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100">
+      <body className="bg-navy text-slate-100">
         <AuthProvider>
           <LanguageProvider>
             <AbjadProvider>

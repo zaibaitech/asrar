@@ -200,7 +200,6 @@ export default function AsrarEveryday() {
   // Add mounted state to prevent hydration mismatch
   const [mounted, setMounted] = useState(false);
   
-  const [darkMode, setDarkMode] = useState(false);
   const [showDisclaimer, setShowDisclaimer] = useState(true);
   const [viewMode, setViewMode] = useState<'planetary' | 'calculator' | 'guidance' | 'advanced'>('planetary');
   const [showCompatibility, setShowCompatibility] = useState(false);
@@ -303,22 +302,22 @@ export default function AsrarEveryday() {
   // Prevent hydration mismatch by showing loading state until mounted
   if (!mounted) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 flex items-center justify-center">
+      <div className="min-h-screen bg-navy flex items-center justify-center">
         <div className="text-center">
           <div className="flex justify-center mb-4">
             <AsrarLogo size={80} variant="icon" element="aether" animate={true} />
           </div>
-          <p className="text-xl font-semibold text-slate-700 dark:text-slate-300">Loading Asrār...</p>
+          <p className="text-xl font-semibold text-slate-300">Loading Asrār...</p>
         </div>
       </div>
     );
   }
-  
+
   return (
-    <div className={darkMode ? 'dark' : ''}>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 transition-colors">
+    <div>
+      <div className="min-h-screen bg-navy transition-colors">
         {/* Header */}
-        <header className="border-b border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm sticky top-0 z-40">
+        <header className="border-b border-white/10 bg-navy/80 backdrop-blur-sm sticky top-0 z-40">
           <div className="max-w-6xl mx-auto px-4 py-3 md:py-4">
             {/* Mobile Header (< 768px) */}
             <div className="flex md:hidden items-center justify-between gap-1">
@@ -326,8 +325,8 @@ export default function AsrarEveryday() {
               <div className="flex items-center gap-1.5 flex-1 min-w-0">
                 <AsrarLogo size={32} variant="icon" element="aether" animate={true} />
                 <div className="min-w-0">
-                  <h1 className="text-base font-bold text-slate-900 dark:text-slate-100 truncate">Asrār</h1>
-                  <p className="text-[10px] text-slate-600 dark:text-slate-400 truncate hidden xs:block">ʿIlm al-Ḥurūf</p>
+                  <h1 className="text-base font-bold text-gold truncate">Asrār</h1>
+                  <p className="text-[10px] text-slate-400 truncate hidden xs:block">ʿIlm al-Ḥurūf</p>
                 </div>
               </div>
 
@@ -342,7 +341,7 @@ export default function AsrarEveryday() {
                 {/* Hamburger Menu */}
                 <button
                   onClick={() => setShowMobileMenu(true)}
-                  className="flex md:hidden p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors min-h-[40px] touch-manipulation"
+                  className="flex md:hidden p-2 rounded-lg bg-navy-card hover:bg-white/10 transition-colors min-h-[40px] touch-manipulation"
                   aria-label="Open menu"
                 >
                   <Menu className="w-5 h-5" />
@@ -356,8 +355,8 @@ export default function AsrarEveryday() {
               <div className="flex items-center gap-3">
                 <AsrarLogo size={48} variant="icon" element="aether" animate={true} />
                 <div>
-                  <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100">Asrār</h1>
-                  <p className="text-xs text-slate-600 dark:text-slate-400">ʿIlm al-Ḥurūf & ʿIlm al-ʿAdad Explorer</p>
+                  <h1 className="text-2xl font-bold text-gold">Asrār</h1>
+                  <p className="text-xs text-slate-400">ʿIlm al-Ḥurūf & ʿIlm al-ʿAdad Explorer</p>
                 </div>
               </div>
 
@@ -374,7 +373,7 @@ export default function AsrarEveryday() {
                 {/* Help Button */}
                 <button
                   onClick={() => setShowOnboarding(true)}
-                  className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors hidden lg:flex"
+                  className="p-2 rounded-lg bg-navy-card hover:bg-white/10 transition-colors hidden lg:flex"
                   title="Help & Tutorial"
                 >
                   <HelpCircle className="w-5 h-5" />
@@ -394,13 +393,13 @@ export default function AsrarEveryday() {
 
           {/* View Mode Tabs — desktop/tablet only; mobile uses the fixed MobileBottomNav instead */}
           <div id="app-main-tabs" className="hidden md:block md:mb-8 overflow-x-auto scroll-mt-4">
-            <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 p-1.5 sm:p-2 inline-flex gap-1.5 sm:gap-2 min-w-full sm:min-w-0">
+            <div className="bg-navy-card rounded-xl shadow-lg border border-white/10 p-1.5 sm:p-2 inline-flex gap-1.5 sm:gap-2 min-w-full sm:min-w-0">
               <button
                 onClick={() => setViewMode('planetary')}
                 className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all whitespace-nowrap text-sm sm:text-base ${
                   viewMode === 'planetary'
-                    ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg'
-                    : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700'
+                    ? 'bg-gold text-navy shadow-lg'
+                    : 'text-slate-400 hover:bg-white/5'
                 }`}
               >
                 <Moon className="w-4 sm:w-5 h-4 sm:h-5 inline mr-1 sm:mr-2" />
@@ -413,8 +412,8 @@ export default function AsrarEveryday() {
                   onClick={() => setViewMode('guidance')}
                   className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all whitespace-nowrap text-sm sm:text-base ${
                     viewMode === 'guidance'
-                      ? 'bg-gradient-to-r from-violet-600 to-purple-700 text-white shadow-lg'
-                      : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700'
+                      ? 'bg-gold text-navy shadow-lg'
+                      : 'text-slate-400 hover:bg-white/5'
                   }`}
                 >
                   <Compass className="w-4 sm:w-5 h-4 sm:h-5 inline mr-1 sm:mr-2" />
@@ -427,8 +426,8 @@ export default function AsrarEveryday() {
                 onClick={() => setViewMode('advanced')}
                 className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all whitespace-nowrap text-sm sm:text-base ${
                   viewMode === 'advanced'
-                    ? 'bg-gradient-to-r from-teal-600 to-cyan-600 text-white shadow-lg'
-                    : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700'
+                    ? 'bg-gold text-navy shadow-lg'
+                    : 'text-slate-400 hover:bg-white/5'
                 }`}
               >
                 <Compass className="w-4 sm:w-5 h-4 sm:h-5 inline mr-1 sm:mr-2" />
@@ -438,7 +437,7 @@ export default function AsrarEveryday() {
               {/* Best Dates (Ikhtiyārāt) tab */}
               <Link
                 href="/ikhtiyarat"
-                className="px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all whitespace-nowrap text-sm sm:text-base text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 inline-flex items-center"
+                className="px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all whitespace-nowrap text-sm sm:text-base text-slate-400 hover:bg-white/5 inline-flex items-center"
               >
                 <Star className="w-4 sm:w-5 h-4 sm:h-5 inline mr-1 sm:mr-2" />
                 <span className="hidden sm:inline">{language === 'fr' ? 'Meilleures Dates' : 'Best Dates'}</span>
@@ -447,7 +446,7 @@ export default function AsrarEveryday() {
               {/* Compatibility tab */}
               <button
                 onClick={() => setShowCompatibility(true)}
-                className="px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all whitespace-nowrap text-sm sm:text-base text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 inline-flex items-center"
+                className="px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all whitespace-nowrap text-sm sm:text-base text-slate-400 hover:bg-white/5 inline-flex items-center"
               >
                 <Heart className="w-4 sm:w-5 h-4 sm:h-5 inline mr-1 sm:mr-2" />
                 <span>{language === 'fr' ? 'Compatibilité' : 'Compatibility'}</span>
@@ -456,8 +455,8 @@ export default function AsrarEveryday() {
                 onClick={() => setViewMode('calculator')}
                 className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all whitespace-nowrap text-sm sm:text-base ${
                   viewMode === 'calculator'
-                    ? 'bg-gradient-to-r from-indigo-600 to-blue-600 text-white shadow-lg'
-                    : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700'
+                    ? 'bg-gold text-navy shadow-lg'
+                    : 'text-slate-400 hover:bg-white/5'
                 }`}
               >
                 <Calculator className="w-4 sm:w-5 h-4 sm:h-5 inline mr-1 sm:mr-2" />
@@ -474,15 +473,15 @@ export default function AsrarEveryday() {
                 isCollapsed={isDailyReflectionCollapsed}
                 onToggleCollapse={handleToggleDailyReflection}
               />
-              <div className="bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50 dark:from-indigo-900/20 dark:via-purple-900/20 dark:to-blue-900/20 rounded-xl p-3 md:p-6 shadow-md">
-                <div className="text-[11px] font-semibold uppercase tracking-wide text-indigo-500 dark:text-indigo-400 mb-1">
+              <div className="bg-navy-card rounded-xl p-3 md:p-6 shadow-md border border-white/5">
+                <div className="text-[11px] font-semibold uppercase tracking-wide text-gold/80 mb-1">
                   {language === 'fr' ? "Aujourd'hui" : 'Today'}
                 </div>
-                <h3 className="text-base md:text-xl font-bold mb-0.5 sm:mb-2 text-slate-900 dark:text-slate-100 flex items-center gap-2">
-                  <Moon className="w-4 h-4 sm:w-5 sm:h-5 text-indigo-500" />
+                <h3 className="text-base md:text-xl font-bold mb-0.5 sm:mb-2 text-gold flex items-center gap-2">
+                  <Moon className="w-4 h-4 sm:w-5 sm:h-5 text-gold" />
                   {language === 'en' ? 'ʿIlm al-Nujūm – Planetary Alignment' : language === 'fr' ? 'ʿIlm al-Nujūm – Alignement Planétaire' : 'علم النجوم'}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mb-2 sm:mb-6 hidden sm:block">
+                <p className="text-xs sm:text-sm text-slate-400 mb-2 sm:mb-6 hidden sm:block">
                   {language === 'fr'
                     ? 'Aperçus en temps réel basés sur la science céleste islamique traditionnelle et les heures planétaires chaldéennes.'
                     : 'Real-time insights based on traditional Islamic celestial science and Chaldean planetary hours.'}
@@ -490,20 +489,20 @@ export default function AsrarEveryday() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
                   <div className="flex flex-col gap-2">
                     <PlanetaryHourCard language={language} />
-                    <Link href="/planetary-hours" className="self-end text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-1">
+                    <Link href="/planetary-hours" className="self-end text-xs font-semibold text-gold hover:underline flex items-center gap-1">
                       {language === 'fr' ? 'Guide complet →' : 'Full Guide →'}
                     </Link>
                   </div>
                   <div className="flex flex-col gap-2">
                     <PlanetOfTheDay language={language} />
-                    <Link href="/planet-of-the-day" className="self-end text-xs font-semibold text-amber-600 dark:text-amber-400 hover:underline flex items-center gap-1">
+                    <Link href="/planet-of-the-day" className="self-end text-xs font-semibold text-gold hover:underline flex items-center gap-1">
                       {language === 'fr' ? 'Guide complet →' : 'Full Guide →'}
                     </Link>
                   </div>
                 </div>
                 <div className="mt-4 flex flex-col gap-2">
                   <PlanetTransitCard language={language} onNavigate={() => {}} />
-                  <Link href="/planet-transit" className="self-end text-xs font-semibold text-violet-600 dark:text-violet-400 hover:underline flex items-center gap-1">
+                  <Link href="/planet-transit" className="self-end text-xs font-semibold text-gold hover:underline flex items-center gap-1">
                     {language === 'fr' ? 'Guide complet →' : 'Full Guide →'}
                   </Link>
                 </div>
@@ -561,7 +560,7 @@ export default function AsrarEveryday() {
 
         {/* Footer - Professional */}
         <footer
-          className={`border-t border-slate-200 dark:border-slate-700 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-950 mt-12 ${isAppBannerVisible ? 'pb-44 md:pb-24' : 'pb-24 md:pb-0'}`}
+          className={`border-t border-white/10 bg-navy mt-12 ${isAppBannerVisible ? 'pb-44 md:pb-24' : 'pb-24 md:pb-0'}`}
         >
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
             {/* Main Footer Content */}
@@ -571,8 +570,8 @@ export default function AsrarEveryday() {
                 <div className="flex items-center space-x-3">
                   <AsrarLogo size={48} variant="icon" element="aether" animate={true} />
                   <div>
-                    <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100">أسرار</h3>
-                    <p className="text-xs text-slate-500 dark:text-slate-400">Asrār</p>
+                    <h3 className="text-lg font-bold text-gold">أسرار</h3>
+                    <p className="text-xs text-slate-400">Asrār</p>
                   </div>
                 </div>
                 <p className="text-sm text-slate-600 dark:text-slate-400 text-center md:text-left max-w-xs">
@@ -613,14 +612,14 @@ export default function AsrarEveryday() {
                   className="group flex flex-col items-center md:items-end space-y-1 transition-transform hover:scale-105"
                 >
                   <div className="flex items-center space-x-2">
-                    <span className="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                    <span className="text-xl font-bold text-gold">
                       Zaibai Tech
                     </span>
-                    <svg className="w-4 h-4 text-purple-600 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-gold group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </div>
-                  <span className="text-xs text-slate-500 dark:text-slate-400 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                  <span className="text-xs text-slate-400 group-hover:text-gold transition-colors">
                     zaibaitech.com
                   </span>
                 </a>
