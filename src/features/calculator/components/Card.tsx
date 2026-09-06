@@ -10,7 +10,9 @@ export function Card({
   padding?: string;
 }) {
   return (
-    <div className={`rounded-2xl border border-white/5 bg-navy-card ${padding} shadow-lg shadow-black/20 ${className}`}>
+    <div
+      className={`rounded-2xl border border-slate-200 bg-slate-50 dark:border-slate-700 dark:bg-slate-900/60 ${padding} shadow-sm ${className}`}
+    >
       {children}
     </div>
   );

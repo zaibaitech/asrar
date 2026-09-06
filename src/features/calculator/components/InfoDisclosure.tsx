@@ -26,7 +26,7 @@ export function InfoDisclosure({
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="flex items-center gap-1 text-xs font-medium text-gold/80"
+        className="flex items-center gap-1 text-xs font-medium text-indigo-600 dark:text-indigo-400"
       >
         <Icon size={12} aria-hidden />
         {label}
@@ -34,7 +34,11 @@ export function InfoDisclosure({
           <ChevronDown size={12} className={`transition-transform ${open ? 'rotate-180' : ''}`} aria-hidden />
         )}
       </button>
-      {open && <div className="mt-1.5 rounded-lg bg-navy/60 p-2.5 text-xs leading-relaxed text-slate-400">{children}</div>}
+      {open && (
+        <div className="mt-1.5 rounded-lg bg-slate-100 p-2.5 text-xs leading-relaxed text-slate-600 dark:bg-slate-900/60 dark:text-slate-400">
+          {children}
+        </div>
+      )}
     </div>
   );
 }
@@ -46,7 +50,7 @@ export function InfoIconButton({ onClick, active }: { onClick: () => void; activ
       type="button"
       onClick={onClick}
       aria-label="More information"
-      className={`flex h-4 w-4 items-center justify-center rounded-full ${active ? 'text-gold' : 'text-slate-500'}`}
+      className={`flex h-4 w-4 items-center justify-center rounded-full ${active ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-500'}`}
     >
       <Info size={13} aria-hidden />
     </button>

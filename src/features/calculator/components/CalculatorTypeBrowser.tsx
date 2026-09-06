@@ -35,50 +35,50 @@ export function CalculatorTypeBrowser({ locale, onSelect }: { locale: Calculator
   return (
     <div className="flex flex-col gap-3">
       <div>
-        <p className="text-sm font-medium text-slate-200">{t('calculationType')}</p>
+        <p className="text-sm font-medium text-slate-800 dark:text-slate-200">{t('calculationType')}</p>
         <p className="text-xs text-slate-500">{t('calculationTypeHelper')}</p>
       </div>
 
-      <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-navy-card px-3 py-2">
+      <div className="flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-3 py-2 dark:border-slate-700 dark:bg-slate-900">
         <Search size={15} className="text-slate-500" aria-hidden />
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={t('calculatorSearchPlaceholder')}
-          className="w-full bg-transparent text-sm text-slate-100 outline-none placeholder:text-slate-500"
+          className="w-full bg-transparent text-sm text-slate-900 outline-none placeholder:text-slate-500 dark:text-slate-100"
         />
       </div>
 
       <p className="text-xs text-slate-500">{pluralCalculators(totalCount, locale)}</p>
 
       {grouped.length === 0 ? (
-        <p className="rounded-xl border border-white/5 bg-navy-card px-3 py-4 text-center text-sm text-slate-500">
+        <p className="rounded-xl border border-slate-200 bg-white px-3 py-4 text-center text-sm text-slate-500 dark:border-slate-700 dark:bg-slate-900">
           {t('noCalculatorsFound')}
         </p>
       ) : (
         <div className="flex flex-col gap-4">
           {grouped.map((cat) => (
             <div key={cat.key} className="flex flex-col gap-1.5">
-              <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-gold/80">
+              <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
                 <cat.Icon size={13} aria-hidden />
                 {t(cat.labelKey)}
               </div>
-              <div className="flex flex-col overflow-hidden rounded-xl border border-white/10 bg-navy-card">
+              <div className="flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900">
                 {cat.items.map(({ type, Icon, titleKey, subtitleKey }, i) => (
                   <button
                     key={type}
                     type="button"
                     onClick={() => onSelect(type)}
-                    className={`flex items-center gap-3 px-3 py-3 text-left active:bg-gold/5 ${i > 0 ? 'border-t border-white/5' : ''}`}
+                    className={`flex items-center gap-3 px-3 py-3 text-left hover:bg-slate-50 active:bg-indigo-50 dark:hover:bg-white/5 dark:active:bg-indigo-900/20 ${i > 0 ? 'border-t border-slate-100 dark:border-white/5' : ''}`}
                   >
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/5 text-slate-400">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-500 dark:bg-white/5 dark:text-slate-400">
                       <Icon size={16} aria-hidden />
                     </span>
                     <span className="flex-1">
-                      <span className="block text-sm font-medium text-slate-100">{t(titleKey)}</span>
+                      <span className="block text-sm font-medium text-slate-900 dark:text-slate-100">{t(titleKey)}</span>
                       <span className="block text-xs text-slate-500">{t(subtitleKey)}</span>
                     </span>
-                    <ChevronRight size={16} className="shrink-0 text-slate-600 rtl:rotate-180" aria-hidden />
+                    <ChevronRight size={16} className="shrink-0 text-slate-400 rtl:rotate-180" aria-hidden />
                   </button>
                 ))}
               </div>

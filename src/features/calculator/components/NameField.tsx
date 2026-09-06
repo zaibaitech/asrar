@@ -29,12 +29,12 @@ export function NameField({
   return (
     <div className="flex flex-col gap-1.5">
       <div className="flex items-center justify-between">
-        <span className="text-sm text-slate-300">{label}</span>
+        <span className="text-sm text-slate-700 dark:text-slate-300">{label}</span>
         {allowPicker && (
           <button
             type="button"
             onClick={() => setShowPicker(true)}
-            className="flex items-center gap-1 text-xs font-medium text-gold underline underline-offset-2"
+            className="flex items-center gap-1 text-xs font-medium text-indigo-600 underline underline-offset-2 dark:text-indigo-400"
           >
             <List size={13} aria-hidden />
             {t('chooseFromList')}
@@ -48,7 +48,7 @@ export function NameField({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="rounded-xl border border-white/10 bg-navy-card px-3 py-2 text-right text-slate-100 outline-none focus:border-gold font-arabic"
+        className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-right text-slate-900 outline-none focus:border-indigo-500 font-arabic dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
       />
 
       <button
