@@ -9,8 +9,9 @@ interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
   onShowTutorial: () => void;
-  onShowHistory: () => void;
-  historyCount: number;
+  /** History is optional; omit both to hide the entry entirely. */
+  onShowHistory?: () => void;
+  historyCount?: number;
   /** Life Guidance is dev-only; omit to hide the entry entirely. */
   onSelectGuidance?: () => void;
 }
@@ -20,7 +21,7 @@ export function MobileMenu({
   onClose,
   onShowTutorial,
   onShowHistory,
-  historyCount,
+  historyCount = 0,
   onSelectGuidance,
 }: MobileMenuProps) {
   const { t, language } = useLanguage();
@@ -79,27 +80,31 @@ export function MobileMenu({
             <span className="font-medium text-base">Help & Tutorial</span>
           </button>
 
-          {/* Divider */}
-          <div className="h-px bg-slate-200 dark:bg-slate-700" />
+          {onShowHistory && (
+            <>
+              {/* Divider */}
+              <div className="h-px bg-slate-200 dark:bg-slate-700" />
 
-          {/* History */}
-          <button
-            onClick={() => {
-              onShowHistory();
-              onClose();
-            }}
-            className="w-full flex items-center justify-between px-4 py-3 sm:py-4 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors text-slate-900 dark:text-slate-100 min-h-[48px]"
-          >
-            <div className="flex items-center gap-3">
-              <History className="w-5 h-5 flex-shrink-0 text-indigo-500" />
-              <span className="font-medium text-base">History</span>
-            </div>
-            {historyCount > 0 && (
-              <span className="bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-full ml-2 flex-shrink-0">
-                {historyCount > 99 ? '99+' : historyCount}
-              </span>
-            )}
-          </button>
+              {/* History */}
+              <button
+                onClick={() => {
+                  onShowHistory();
+                  onClose();
+                }}
+                className="w-full flex items-center justify-between px-4 py-3 sm:py-4 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors text-slate-900 dark:text-slate-100 min-h-[48px]"
+              >
+                <div className="flex items-center gap-3">
+                  <History className="w-5 h-5 flex-shrink-0 text-indigo-500" />
+                  <span className="font-medium text-base">History</span>
+                </div>
+                {historyCount > 0 && (
+                  <span className="bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-full ml-2 flex-shrink-0">
+                    {historyCount > 99 ? '99+' : historyCount}
+                  </span>
+                )}
+              </button>
+            </>
+          )}
 
           {onSelectGuidance && (
             <>
