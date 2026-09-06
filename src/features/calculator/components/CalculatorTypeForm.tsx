@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ArrowLeft, RotateCcw, List } from 'lucide-react';
 import { Card } from './Card';
 import { NameField } from './NameField';
@@ -43,6 +43,14 @@ export function CalculatorTypeForm({
   const [dob, setDob] = useState('');
   const [dobSubmitted, setDobSubmitted] = useState<string | null>(null);
   const [empty, setEmpty] = useState(false);
+  const topRef = useRef<HTMLFormElement>(null);
+
+  // The browse list can be scrolled far down when a type is picked; without
+  // this the page keeps that scroll position and the (shorter) form renders
+  // mostly below the fold instead of showing its input fields.
+  useEffect(() => {
+    topRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, []);
 
   const isTwoNameType = TWO_NAME_TYPES.includes(calcType);
   const isDobType = DATE_OF_BIRTH_TYPES.includes(calcType);
@@ -95,7 +103,7 @@ export function CalculatorTypeForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+    <form ref={topRef} onSubmit={handleSubmit} className="flex flex-col gap-4">
       <button type="button" onClick={onBack} className="flex items-center gap-1.5 self-start text-sm font-medium text-slate-400">
         <ArrowLeft size={14} className="rtl:rotate-180" aria-hidden />
         {t('backToCalculators')}
