@@ -27,8 +27,9 @@ const ELEMENT_BAR_COLOR: Record<ElementType, string> = {
   earth: '#34d399',
 };
 
-// divineResonance/quranicResonance/sadaqah never reach this component
-// (CalculatorTypeForm routes them elsewhere) — entries kept only for type safety.
+// divineResonance/quranicResonance/sadaqah/sadaqahDay never reach this
+// component (CalculatorTypeForm routes them elsewhere) — entries kept only
+// for type safety.
 const ANALYSIS_TITLE_KEY: Record<CalculationType, string> = {
   name: 'analysisTitleName',
   phrase: 'analysisTitlePhrase',
@@ -37,6 +38,7 @@ const ANALYSIS_TITLE_KEY: Record<CalculationType, string> = {
   divineResonance: 'typeDivineResonance',
   quranicResonance: 'typeQuranicResonance',
   sadaqah: 'typeSadaqah',
+  sadaqahDay: 'typeSadaqahDay',
 };
 
 function Pill({ children }: { children: React.ReactNode }) {
