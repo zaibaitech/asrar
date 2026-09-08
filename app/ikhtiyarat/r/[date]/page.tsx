@@ -17,6 +17,8 @@ const CONFIG_BY_ELECTION_TYPE: Record<ElectionType, ElectionRulesConfig> = {
   marriage: marriageElectionConfig,
   travel: travelElectionConfig,
   business: businessElectionConfig,
+  // Same rules as "Business / Contracts" — see CheckDateView.tsx.
+  businessStart: businessElectionConfig,
   medical: medicalElectionConfig,
   home: homeElectionConfig,
   education: educationElectionConfig,
@@ -40,6 +42,7 @@ const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 function electionTypeFromParams(searchParams: PageSearchParams): ElectionType {
   if (searchParams.election === 'travel') return 'travel';
   if (searchParams.election === 'business') return 'business';
+  if (searchParams.election === 'businessStart') return 'businessStart';
   if (searchParams.election === 'medical') return 'medical';
   if (searchParams.election === 'home') return 'home';
   if (searchParams.election === 'education') return 'education';
@@ -80,6 +83,7 @@ export async function generateMetadata({
     marriage: { en: 'marriage', fr: 'le mariage' },
     travel: { en: 'travel', fr: 'le voyage' },
     business: { en: 'business', fr: 'les affaires' },
+    businessStart: { en: 'starting a business', fr: 'la création d\'une entreprise' },
     medical: { en: 'medical treatment', fr: 'un traitement médical' },
     home: { en: 'moving or building', fr: 'un déménagement ou une construction' },
     education: { en: 'education or studies', fr: 'des études ou une formation' },

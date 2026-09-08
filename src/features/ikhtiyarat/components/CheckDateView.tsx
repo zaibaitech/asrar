@@ -35,6 +35,11 @@ const CONFIG_BY_ELECTION_TYPE: Record<ElectionType, ElectionRulesConfig> = {
   marriage: marriageElectionConfig,
   travel: travelElectionConfig,
   business: businessElectionConfig,
+  // "Starting a Business" is a distinct occasion in the UI but reuses the
+  // exact same classical business/contracts election rules — no separate
+  // calculation system, per the Business/Contracts config's own scope
+  // (buying/selling/partnership formation already covers new ventures).
+  businessStart: businessElectionConfig,
   medical: medicalElectionConfig,
   home: homeElectionConfig,
   education: educationElectionConfig,
