@@ -11,12 +11,19 @@ import { DivineNamePicker } from './DivineNamePicker';
 import { CalculatorResult } from './CalculatorResult';
 import { ResonanceResult } from './ResonanceResult';
 import { SadaqahResult } from './SadaqahResult';
+import { SadaqahDayResult } from './SadaqahDayResult';
 import { useCalculatorTranslations, type CalculatorLocale } from '../i18n';
 
 const FIELD_KEYS: Record<'name' | 'phrase' | 'general', { label: string; placeholder: string }> = {
   name: { label: 'nameFieldLabel', placeholder: 'nameFieldPlaceholder' },
   phrase: { label: 'phraseFieldLabel', placeholder: 'phraseFieldPlaceholder' },
   general: { label: 'generalFieldLabel', placeholder: 'generalFieldPlaceholder' },
+};
+
+/** The two date-of-birth-style types each need their own label/helper text. */
+const DOB_FIELD_KEYS: Record<'sadaqah' | 'sadaqahDay', { label: string; helper: string }> = {
+  sadaqah: { label: 'dobFieldLabel', helper: 'dobFieldHelper' },
+  sadaqahDay: { label: 'sadaqahDayFieldLabel', helper: 'sadaqahDayFieldHelper' },
 };
 
 /**
@@ -98,6 +105,7 @@ export function CalculatorTypeForm({
           <ResonanceResult locale={locale} calcType={calcType} personName={resonanceInput.person} motherName={resonanceInput.mother} />
         )}
         {dobSubmitted && calcType === 'sadaqah' && <SadaqahResult locale={locale} dob={dobSubmitted} />}
+        {dobSubmitted && calcType === 'sadaqahDay' && <SadaqahDayResult locale={locale} date={dobSubmitted} />}
       </div>
     );
   }
@@ -122,15 +130,19 @@ export function CalculatorTypeForm({
       <Card className="flex flex-col gap-3">
         {isDobType ? (
           <label className="flex flex-col gap-1.5">
-            <span className="text-base text-slate-700 dark:text-slate-300">{t('dobFieldLabel')}</span>
+            <span className="text-base text-slate-700 dark:text-slate-300">
+              {t(DOB_FIELD_KEYS[calcType as 'sadaqah' | 'sadaqahDay'].label)}
+            </span>
             <input
               type="date"
               value={dob}
               onChange={(e) => setDob(e.target.value)}
-              max={new Date().toISOString().slice(0, 10)}
+              // sadaqahDay also accepts a future "day I plan to give" date —
+              // only a strict date-of-birth field caps out at today.
+              max={calcType === 'sadaqah' ? new Date().toISOString().slice(0, 10) : undefined}
               className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-slate-900 outline-none focus:border-indigo-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:[color-scheme:dark]"
             />
-            <span className="text-sm text-slate-500">{t('dobFieldHelper')}</span>
+            <span className="text-sm text-slate-500">{t(DOB_FIELD_KEYS[calcType as 'sadaqah' | 'sadaqahDay'].helper)}</span>
           </label>
         ) : calcType === 'dhikr' ? (
           <div className="flex flex-col gap-1.5">

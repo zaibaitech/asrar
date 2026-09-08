@@ -1,6 +1,14 @@
-import { User, FileText, Hand, Type, Sparkles, BookOpen, HandCoins } from 'lucide-react';
+import { User, FileText, Hand, Type, Sparkles, BookOpen, HandCoins, CalendarHeart } from 'lucide-react';
 
-export type CalculationType = 'name' | 'phrase' | 'dhikr' | 'general' | 'divineResonance' | 'quranicResonance' | 'sadaqah';
+export type CalculationType =
+  | 'name'
+  | 'phrase'
+  | 'dhikr'
+  | 'general'
+  | 'divineResonance'
+  | 'quranicResonance'
+  | 'sadaqah'
+  | 'sadaqahDay';
 
 export const ALL_CALCULATION_TYPES: CalculationType[] = [
   'name',
@@ -10,13 +18,14 @@ export const ALL_CALCULATION_TYPES: CalculationType[] = [
   'divineResonance',
   'quranicResonance',
   'sadaqah',
+  'sadaqahDay',
 ];
 
 /** Types that need both a person's name and a mother's name, vs. the single-field types below. */
 export const TWO_NAME_TYPES: CalculationType[] = ['divineResonance', 'quranicResonance'];
 
 /** Types with their own dedicated input (not a name/phrase text field or the two-name form). */
-export const DATE_OF_BIRTH_TYPES: CalculationType[] = ['sadaqah'];
+export const DATE_OF_BIRTH_TYPES: CalculationType[] = ['sadaqah', 'sadaqahDay'];
 
 export type CategoryKey = 'textAnalysis' | 'divine' | 'quran' | 'guidance';
 
@@ -57,6 +66,13 @@ export const CALCULATION_TYPES: {
     Icon: HandCoins,
     titleKey: 'typeSadaqah',
     subtitleKey: 'typeSadaqahSubtitle',
+    category: 'guidance',
+  },
+  {
+    type: 'sadaqahDay',
+    Icon: CalendarHeart,
+    titleKey: 'typeSadaqahDay',
+    subtitleKey: 'typeSadaqahDaySubtitle',
     category: 'guidance',
   },
 ];

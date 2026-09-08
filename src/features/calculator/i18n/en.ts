@@ -173,7 +173,7 @@ export const calculatorEn = {
   dhikrWhyThese: 'Why these numbers?',
   dhikrWhyTheseBody:
     "33 and 99 are traditional tasbīḥ counts, independent of this name. Any other number here comes from this name's own Ṣaghīr (reduced) or Kabīr (total) value.",
-  categoryGuidance: 'Birth-Month Guidance',
+  categoryGuidance: 'Sadaqah Guidance',
   typeSadaqah: 'Sadaqah by Birth Month',
   typeSadaqahSubtitle: 'Finds the Islamic (Hijri) month of your birth date and its traditional sadaqah guidance.',
   dobFieldLabel: 'Date of birth',
@@ -185,6 +185,12 @@ export const calculatorEn = {
   sadaqahUnavailable: 'No sadaqah guidance available for this month.',
   sadaqahDisclaimer:
     'These are traditional suggestions for reflection and charity — sadaqah of any kind, at any time, is always welcome and is not limited to these specific forms.',
+  typeSadaqahDay: 'Sadaqah by Day of the Week',
+  typeSadaqahDaySubtitle: 'Finds traditional sadaqah guidance for a day of birth or a day you plan to give.',
+  sadaqahDayFieldLabel: 'Date of birth or date of giving',
+  sadaqahDayFieldHelper: "Enter either your date of birth or the day you plan to give sadaqah — its day of the week determines the guidance.",
+  sadaqahDayResultTitle: 'Day of the Week',
+  sadaqahDayUnavailable: 'No sadaqah guidance available for this day.',
 } as const;
 
 export const nameFieldEn = {
