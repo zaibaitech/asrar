@@ -28,6 +28,8 @@ const CONFIG_BY_ELECTION_TYPE: Record<ElectionType, ElectionRulesConfig> = {
   marriage: marriageElectionConfig,
   travel: travelElectionConfig,
   business: businessElectionConfig,
+  // Same rules as "Business / Contracts" — see CheckDateView.tsx.
+  businessStart: businessElectionConfig,
   medical: medicalElectionConfig,
   home: homeElectionConfig,
   education: educationElectionConfig,
