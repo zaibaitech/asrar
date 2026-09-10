@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { X, HelpCircle, History, Info, BookOpen, Compass } from 'lucide-react';
+import { X, HelpCircle, History, Info, BookOpen, Compass, MessageSquarePlus } from 'lucide-react';
 import { AbjadSystemSelector } from './AbjadSystemSelector';
+import { FeedbackModal } from './FeedbackModal';
 import { useLanguage } from '../contexts/LanguageContext';
 
 interface MobileMenuProps {
@@ -26,6 +27,7 @@ export function MobileMenu({
 }: MobileMenuProps) {
   const { t, language } = useLanguage();
   const [expandAbout, setExpandAbout] = useState(false);
+  const [showFeedback, setShowFeedback] = useState(false);
   return (
     <>
       {/* Backdrop */}
@@ -78,6 +80,18 @@ export function MobileMenu({
           >
             <HelpCircle className="w-5 h-5 flex-shrink-0 text-blue-500" />
             <span className="font-medium text-base">Help & Tutorial</span>
+          </button>
+
+          {/* Divider */}
+          <div className="h-px bg-slate-200 dark:bg-slate-700" />
+
+          {/* Send Feedback */}
+          <button
+            onClick={() => setShowFeedback(true)}
+            className="w-full flex items-center gap-3 px-4 py-3 sm:py-4 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors text-slate-900 dark:text-slate-100 min-h-[48px]"
+          >
+            <MessageSquarePlus className="w-5 h-5 flex-shrink-0 text-emerald-500" />
+            <span className="font-medium text-base">{language === 'fr' ? 'Envoyer un avis' : 'Send Feedback'}</span>
           </button>
 
           {onShowHistory && (
@@ -163,6 +177,8 @@ export function MobileMenu({
           </div>
         </div>
       </div>
+
+      <FeedbackModal open={showFeedback} onClose={() => setShowFeedback(false)} />
     </>
   );
 }

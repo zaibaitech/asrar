@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
-import { Calculator, Book, TrendingUp, Moon, Sun, Info, Sparkles, Flame, Droplet, Wind, Mountain, Star, X, Compass, Heart, ChevronUp, ChevronDown, ChevronRight, HelpCircle, Menu, BookOpen } from 'lucide-react';
+import { Calculator, Book, TrendingUp, Moon, Sun, Info, Sparkles, Flame, Droplet, Wind, Mountain, Star, X, Compass, Heart, ChevronUp, ChevronDown, ChevronRight, HelpCircle, Menu, BookOpen, MessageSquarePlus } from 'lucide-react';
 import { transliterateLatinToArabic } from './src/lib/text-normalize';
 import { HadadSummaryPanel } from './src/components/hadad-summary';
 import { IlmHurufPanel } from './src/features/ilm-huruf';
@@ -16,6 +16,7 @@ import { generateWafqAnalysis } from './src/features/ilm-huruf/wafqGenerator';
 import { calculateOptimalTimingWindows } from './src/features/ilm-huruf/talismanTiming';
 import { OnboardingTutorial } from './src/components/OnboardingTutorial';
 import { MobileMenu } from './src/components/MobileMenu';
+import { FeedbackModal } from './src/components/FeedbackModal';
 import { MobileBottomNav } from './src/components/MobileBottomNav';
 import { UserMenu } from './src/components/UserMenu';
 import LanguageToggle from './src/components/LanguageToggle';
@@ -249,6 +250,7 @@ export default function AsrarEveryday() {
 
   // Mobile Menu State
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [showFeedback, setShowFeedback] = useState(false);
 
   // Tracks the "Get the App" banner's actual rendered visibility so page content
   // can reserve bottom padding for it instead of being covered when scrolled to the end.
@@ -378,6 +380,15 @@ export default function AsrarEveryday() {
                   title="Help & Tutorial"
                 >
                   <HelpCircle className="w-5 h-5" />
+                </button>
+
+                {/* Feedback Button */}
+                <button
+                  onClick={() => setShowFeedback(true)}
+                  className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors hidden lg:flex"
+                  title={language === 'fr' ? 'Envoyer un avis' : 'Send Feedback'}
+                >
+                  <MessageSquarePlus className="w-5 h-5" />
                 </button>
 
                 {/* Language Toggle */}
@@ -541,6 +552,9 @@ export default function AsrarEveryday() {
             onSelectGuidance={process.env.NODE_ENV === 'development' ? () => setViewMode('guidance') : undefined}
           />
         )}
+
+        {/* Feedback (desktop entry point — mobile has its own inside MobileMenu) */}
+        <FeedbackModal open={showFeedback} onClose={() => setShowFeedback(false)} />
 
         {/* Mobile Bottom Nav - fixed, always-labeled primary destinations */}
         <MobileBottomNav
