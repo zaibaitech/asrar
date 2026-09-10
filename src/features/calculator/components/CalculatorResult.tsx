@@ -29,7 +29,8 @@ const ELEMENT_BAR_COLOR: Record<ElementType, string> = {
 
 // divineResonance/quranicResonance/sadaqah/sadaqahDay never reach this
 // component (CalculatorTypeForm routes them elsewhere) — entries kept only
-// for type safety.
+// for type safety. 'quran' does reach it, via QuranVerseResult wrapping this
+// component once the verse's own Arabic text has been fetched and analyzed.
 const ANALYSIS_TITLE_KEY: Record<CalculationType, string> = {
   name: 'analysisTitleName',
   phrase: 'analysisTitlePhrase',
@@ -37,6 +38,7 @@ const ANALYSIS_TITLE_KEY: Record<CalculationType, string> = {
   general: 'analysisTitleGeneral',
   divineResonance: 'typeDivineResonance',
   quranicResonance: 'typeQuranicResonance',
+  quran: 'typeQuran',
   sadaqah: 'typeSadaqah',
   sadaqahDay: 'typeSadaqahDay',
 };
@@ -78,7 +80,9 @@ export function CalculatorResult({
   const elements: ElementType[] = ['fire', 'water', 'air', 'earth'];
 
   const nameInsights = calcType === 'name' ? computeNameInsights(profile) : null;
-  const phraseInsights = calcType === 'phrase' ? computePhraseInsights(profile) : null;
+  // A Qur'an verse's own Arabic text is analyzed the same way a phrase is —
+  // repeated letters and sacred-number resonance apply just as well to it.
+  const phraseInsights = calcType === 'phrase' || calcType === 'quran' ? computePhraseInsights(profile) : null;
   const dhikrCounts = calcType === 'dhikr' ? computeDhikrCounts(profile) : null;
 
   const tellsItems = raw<string[]>('analysisTellsItems');

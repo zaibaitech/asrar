@@ -1,4 +1,4 @@
-import { User, FileText, Hand, Type, Sparkles, BookOpen, HandCoins, CalendarHeart } from 'lucide-react';
+import { User, FileText, Hand, Type, Sparkles, BookOpen, BookMarked, HandCoins, CalendarHeart } from 'lucide-react';
 
 export type CalculationType =
   | 'name'
@@ -7,6 +7,7 @@ export type CalculationType =
   | 'general'
   | 'divineResonance'
   | 'quranicResonance'
+  | 'quran'
   | 'sadaqah'
   | 'sadaqahDay';
 
@@ -17,6 +18,7 @@ export const ALL_CALCULATION_TYPES: CalculationType[] = [
   'general',
   'divineResonance',
   'quranicResonance',
+  'quran',
   'sadaqah',
   'sadaqahDay',
 ];
@@ -26,6 +28,9 @@ export const TWO_NAME_TYPES: CalculationType[] = ['divineResonance', 'quranicRes
 
 /** Types with their own dedicated input (not a name/phrase text field or the two-name form). */
 export const DATE_OF_BIRTH_TYPES: CalculationType[] = ['sadaqah', 'sadaqahDay'];
+
+/** Picks a specific Surah + Ayah rather than typing free text. */
+export const SURAH_AYAH_TYPES: CalculationType[] = ['quran'];
 
 export type CategoryKey = 'textAnalysis' | 'divine' | 'quran' | 'guidance';
 
@@ -59,6 +64,13 @@ export const CALCULATION_TYPES: {
     Icon: BookOpen,
     titleKey: 'typeQuranicResonance',
     subtitleKey: 'typeQuranicResonanceSubtitle',
+    category: 'quran',
+  },
+  {
+    type: 'quran',
+    Icon: BookMarked,
+    titleKey: 'typeQuran',
+    subtitleKey: 'typeQuranSubtitle',
     category: 'quran',
   },
   {
