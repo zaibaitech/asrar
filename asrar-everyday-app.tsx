@@ -519,6 +519,26 @@ export default function AsrarEveryday() {
                   </Link>
                 </div>
               </div>
+
+              <Link
+                href="/birth-profile"
+                className="flex items-center gap-3 rounded-xl border border-violet-200 dark:border-violet-800 bg-gradient-to-r from-violet-50 to-indigo-50 dark:from-violet-950/30 dark:to-indigo-950/30 p-3 md:p-4 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-violet-100 dark:bg-violet-900/40 text-lg">
+                  🌟
+                </span>
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-bold text-slate-900 dark:text-slate-100">
+                    {language === 'fr' ? 'Nouveau : Profil de Naissance' : 'New: Birth Profile'}
+                  </p>
+                  <p className="text-xs text-slate-600 dark:text-slate-400 truncate">
+                    {language === 'fr'
+                      ? 'Vos signes solaire et lunaire, votre demeure lunaire, et plus encore.'
+                      : 'Your Sun/Moon signs, lunar mansion, day ruler, and more.'}
+                  </p>
+                </div>
+                <span className="text-violet-600 dark:text-violet-400 text-sm font-semibold shrink-0">→</span>
+              </Link>
             </div>
           ) : viewMode === 'guidance' ? (
             <IlmHurufPanel />
