@@ -7,10 +7,11 @@
 'use client';
 
 import React from 'react';
-import { 
+import {
   getAllPlanetEphemeris,
   getZodiacInfo,
   calculateSimplifiedStatus,
+  isDaytimeNow,
   type PlanetEphemerisData,
   type ZodiacSystem,
   type Planet,
@@ -21,6 +22,7 @@ import { DignityDetailPanel } from './DignityDetailPanel';
 import { CompactPracticeHint } from './CompactPracticeHint';
 import { ZikrPracticePanel } from '../ZikrPracticePanel';
 import { translations } from '@/src/lib/translations';
+import { getUserLocation, loadLocation } from '@/src/utils/location';
 
 interface PlanetTransitCardProps {
   language?: 'en' | 'fr';
@@ -98,7 +100,23 @@ export function PlanetTransitCard({
   const [lastUpdated, setLastUpdated] = React.useState<Date | null>(null);
   const [isTransitioning, setIsTransitioning] = React.useState(false);
   const [showDetailFor, setShowDetailFor] = React.useState<string | null>(null);
-  const isDay = new Date().getHours() >= 6 && new Date().getHours() < 18;
+
+  // Resolve real coordinates (cache → live geolocation, background refine;
+  // Mecca default until resolved) so day/night — and therefore triplicity
+  // dignity — is based on the user's actual local sunrise/sunset rather
+  // than a fixed 6am-6pm guess.
+  const [coords, setCoords] = React.useState<{ lat: number; lon: number }>(() => {
+    const cached = loadLocation();
+    return cached ? { lat: cached.latitude, lon: cached.longitude } : { lat: 21.4225, lon: 39.8262 };
+  });
+
+  React.useEffect(() => {
+    getUserLocation().then((loc) => {
+      setCoords({ lat: loc.latitude, lon: loc.longitude });
+    }).catch(() => { /* keep current coords */ });
+  }, []);
+
+  const isDay = isDaytimeNow(new Date(), coords.lat, coords.lon);
 
   // Fetch real ephemeris data
   React.useEffect(() => {

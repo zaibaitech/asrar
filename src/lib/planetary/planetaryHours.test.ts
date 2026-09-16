@@ -7,8 +7,10 @@ import {
   getAllPlanetaryHoursForDay,
   formatCountdown,
   formatCountdownShort,
+  isDaytimeNow,
 } from './planetaryHours';
 import { CHALDEAN_ORDER } from './constants';
+import { calculateSimplifiedStatus } from './dignities';
 
 describe('getDayRuler', () => {
   it('maps each day of the week to its classical ruler', () => {
@@ -151,5 +153,43 @@ describe('formatCountdownShort', () => {
 
   it('formats hours:minutes:seconds over an hour', () => {
     expect(formatCountdownShort(3665)).toBe('1:01:05');
+  });
+});
+
+describe('isDaytimeNow', () => {
+  // Equatorial location (lat 0, lon 0) so UTC clock time tracks solar time
+  // closely, avoiding any timezone ambiguity in the test itself.
+  const EQUATOR = { lat: 0, lon: 0 };
+
+  it('recognizes midday UTC as daytime at the equator', () => {
+    expect(isDaytimeNow(new Date('2026-09-16T12:00:00Z'), EQUATOR.lat, EQUATOR.lon)).toBe(true);
+  });
+
+  it('recognizes midnight UTC as nighttime at the equator', () => {
+    expect(isDaytimeNow(new Date('2026-09-16T00:00:00Z'), EQUATOR.lat, EQUATOR.lon)).toBe(false);
+  });
+});
+
+describe('triplicity dignity depends on real day/night, not a fixed clock guess', () => {
+  // Regression for a live bug report: the Planet Transit / Planet of the Day
+  // cards used to derive "day" from a hardcoded `getHours() >= 6 && < 18`,
+  // ignoring the viewer's actual location. Triplicity rulership (a planet
+  // being the NIGHT ruler of its current sign's element) only applies when
+  // it is genuinely night there, so a wrong day/night guess silently caps a
+  // planet at "Moderate" when it should read "Auspicious" (or vice versa).
+  // Jupiter is the night triplicity ruler of fire signs (Leo included);
+  // Mercury is the night triplicity ruler of air signs (Libra included).
+  it('Jupiter in Leo reads Moderate by day and Auspicious by night', () => {
+    const day = calculateSimplifiedStatus('Jupiter', 'leo', 17, true, false);
+    const night = calculateSimplifiedStatus('Jupiter', 'leo', 17, false, false);
+    expect(day.tier).toBe('mutadil');
+    expect(night.tier).toBe('said');
+  });
+
+  it('Mercury in Libra reads Moderate by day and Auspicious by night', () => {
+    const day = calculateSimplifiedStatus('Mercury', 'libra', 10, true, false);
+    const night = calculateSimplifiedStatus('Mercury', 'libra', 10, false, false);
+    expect(day.tier).toBe('mutadil');
+    expect(night.tier).toBe('said');
   });
 });

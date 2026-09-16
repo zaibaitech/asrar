@@ -67,6 +67,22 @@ export function getPlanetInfo(planet: Planet): PlanetInfo {
 }
 
 /**
+ * True when `date` falls between that location's real sunrise and sunset —
+ * needed for essential dignity (triplicity day/night rulers differ) and any
+ * other day/night-sensitive calculation. Unlike a fixed clock-hour guess,
+ * this reflects the actual local horizon for the given coordinates.
+ */
+export function isDaytimeNow(date: Date, latitude: number, longitude: number): boolean {
+  try {
+    const times = SunCalc.getTimes(date, latitude, longitude);
+    if (!times.sunrise || !times.sunset) return true;
+    return date >= times.sunrise && date < times.sunset;
+  } catch {
+    return true;
+  }
+}
+
+/**
  * Get the next planet in the Chaldean sequence
  */
 function getNextPlanet(current: Planet): Planet {
