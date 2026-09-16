@@ -7,11 +7,12 @@
 'use client';
 
 import React from 'react';
-import { getDayRulerInfo, getAllPlanetEphemeris } from '@/src/lib/planetary';
+import { getDayRulerInfo, getAllPlanetEphemeris, isDaytimeNow } from '@/src/lib/planetary';
 import type { DayRulerInfo, PlanetEphemerisData, Planet, ZodiacSign } from '@/src/lib/planetary';
 import { SimplifiedStatusBadge } from './SimplifiedStatusBadge';
 import { ZikrPracticePanel } from '../ZikrPracticePanel';
 import { translations } from '@/src/lib/translations';
+import { getUserLocation, loadLocation } from '@/src/utils/location';
 
 interface PlanetOfTheDayProps {
   language?: 'en' | 'fr';
@@ -84,6 +85,21 @@ export function PlanetOfTheDay({ language = 'en' }: PlanetOfTheDayProps) {
   const [livePosition, setLivePosition] = React.useState<PlanetEphemerisData | null>(null);
   const [dataSource, setDataSource] = React.useState<'ephemeris' | 'fallback'>('fallback');
   const [hasError, setHasError] = React.useState(false);
+
+  // Resolve real coordinates (cache → live geolocation, background refine;
+  // Mecca default until resolved) so day/night — and therefore triplicity
+  // dignity — is based on the user's actual local sunrise/sunset rather
+  // than a fixed 6am-6pm guess.
+  const [coords, setCoords] = React.useState<{ lat: number; lon: number }>(() => {
+    const cached = loadLocation();
+    return cached ? { lat: cached.latitude, lon: cached.longitude } : { lat: 21.4225, lon: 39.8262 };
+  });
+
+  React.useEffect(() => {
+    getUserLocation().then((loc) => {
+      setCoords({ lat: loc.latitude, lon: loc.longitude });
+    }).catch(() => { /* keep current coords */ });
+  }, []);
 
   React.useEffect(() => {
     const updateDayInfo = async () => {
@@ -233,7 +249,7 @@ export function PlanetOfTheDay({ language = 'en' }: PlanetOfTheDayProps) {
               planet={dayInfo.planet as Planet}
               sign={livePosition.sign as ZodiacSign}
               degree={livePosition.signDegree}
-              isDay={new Date().getHours() >= 6 && new Date().getHours() < 18}
+              isDay={isDaytimeNow(new Date(), coords.lat, coords.lon)}
               isRetrograde={livePosition.isRetrograde}
               language={language}
             />
