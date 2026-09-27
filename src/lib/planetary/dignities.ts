@@ -204,14 +204,31 @@ export function isInDetriment(planet: Planet, sign: ZodiacSign): boolean {
 }
 
 /**
- * Check if a planet is a triplicity ruler for the sign's element
+ * Check if a planet is a triplicity ruler for the sign's element.
+ *
+ * Classically this is sect-based: a planet is *either* the day ruler or the
+ * night ruler of its element's triplicity, never both (the participating
+ * ruler counts at any time). That distinction matters for a chart tied to a
+ * fixed moment — a birth chart — where "day" or "night" is itself a fixed,
+ * meaningful fact about that moment. Pass `isDay` there.
+ *
+ * For a live "what's Jupiter's condition right now" reading, sect made the
+ * badge flip between Moderate and Auspicious at every sunset/sunrise, which
+ * read as inconsistent rather than informative. Omit `isDay` (leave it
+ * `undefined`) to instead credit the triplicity dignity whenever the planet
+ * is any of the three rulers (day, night, or participating) — the planet
+ * genuinely does rule that triplicity, just without the day/night split.
  */
-function isTriplicityRuler(planet: Planet, sign: ZodiacSign, isDay: boolean): boolean {
+function isTriplicityRuler(planet: Planet, sign: ZodiacSign, isDay?: boolean): boolean {
   const signElement = ZODIAC_DATA[sign]?.element;
   if (!signElement) return false;
 
   const rule = TRIPLICITY_RULERS.find(r => r.element === signElement);
   if (!rule) return false;
+
+  if (isDay === undefined) {
+    return rule.dayRuler === planet || rule.nightRuler === planet || rule.participatingRuler === planet;
+  }
 
   if (isDay && rule.dayRuler === planet) return true;
   if (!isDay && rule.nightRuler === planet) return true;
@@ -247,7 +264,12 @@ function getConditionTier(score: number): ConditionTier {
  * @param planet     - Planet name (e.g. 'Venus')
  * @param sign       - Zodiac sign key (e.g. 'pisces')
  * @param degree     - Degree within sign (0-29)
- * @param isDay      - Whether it is currently daytime (affects triplicity)
+ * @param isDay      - Whether it is daytime at the moment being charted. Pass
+ *                     a real boolean for a fixed moment (a birth chart) to get
+ *                     the classical sect-based triplicity split. Leave
+ *                     `undefined` for a live "current condition" reading —
+ *                     triplicity then counts for the planet regardless of
+ *                     day/night, so the result doesn't flip at every sunset.
  * @param isRetrograde - Whether the planet is retrograde (-2 penalty)
  * @returns Full dignity result with scores, labels, and condition tier
  */
@@ -255,7 +277,7 @@ export function calculateDignities(
   planet: Planet,
   sign: ZodiacSign,
   degree: number,
-  isDay: boolean = true,
+  isDay?: boolean,
   isRetrograde: boolean = false,
 ): DignityResult {
   const dignities: DignityEntry[] = [];
@@ -443,13 +465,14 @@ export function getSimplifiedStatus(
 }
 
 /**
- * Quick helper to get simplified status directly from planet position
+ * Quick helper to get simplified status directly from planet position.
+ * See `calculateDignities` for what passing (or omitting) `isDay` means.
  */
 export function calculateSimplifiedStatus(
   planet: Planet,
   sign: ZodiacSign,
   degree: number,
-  isDay: boolean = true,
+  isDay?: boolean,
   isRetrograde: boolean = false,
 ): SimplifiedStatus {
   const result = calculateDignities(planet, sign, degree, isDay, isRetrograde);
