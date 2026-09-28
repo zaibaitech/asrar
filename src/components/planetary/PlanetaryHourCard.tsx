@@ -25,6 +25,7 @@ import {
 import { IlmNujumBadge } from './IlmNujumBadge';
 import { SimplifiedStatusBadge } from './SimplifiedStatusBadge';
 import { CompactPracticeHint } from './CompactPracticeHint';
+import { CompactIncenseHint } from './CompactIncenseHint';
 import { ZikrPracticePanel } from '../ZikrPracticePanel';
 import { getUserLocation, loadLocation } from '@/src/utils/location';
 import { translations } from '@/src/lib/translations';
@@ -357,12 +358,19 @@ export function PlanetaryHourCard({
             livePosition.isRetrograde
           );
           return (
-            <CompactPracticeHint
-              tier={status.tier}
-              planet={currentHour.planet as Planet}
-              language={language}
-              className="mt-3"
-            />
+            <>
+              <CompactPracticeHint
+                tier={status.tier}
+                planet={currentHour.planet as Planet}
+                language={language}
+                className="mt-3"
+              />
+              <CompactIncenseHint
+                planet={currentHour.planet as Planet}
+                language={language}
+                className="mt-3"
+              />
+            </>
           );
         })()}
 
