@@ -1028,7 +1028,7 @@ export const translations = {
       },
 
       incense: {
-        recommendedBakhoor: "Recommended Bakhoor",
+        recommendedBakhoor: "Recommended Incense (Bakhoor)",
         footerNote: "A traditional aid for a reflective atmosphere — the real substance is in intention (niyyah) and dhikr.",
       },
 
@@ -4392,7 +4392,7 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
       },
 
       incense: {
-        recommendedBakhoor: "Encens recommandé",
+        recommendedBakhoor: "Encens recommandé (Bakhoor)",
         footerNote: "Une aide traditionnelle pour une atmosphère de recueillement — l'essentiel reste l'intention (niyyah) et le dhikr.",
       },
 
