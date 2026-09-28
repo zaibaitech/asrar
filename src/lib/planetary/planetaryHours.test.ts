@@ -7,7 +7,6 @@ import {
   getAllPlanetaryHoursForDay,
   formatCountdown,
   formatCountdownShort,
-  isDaytimeNow,
 } from './planetaryHours';
 import { CHALDEAN_ORDER } from './constants';
 import { calculateSimplifiedStatus } from './dignities';
@@ -156,40 +155,53 @@ describe('formatCountdownShort', () => {
   });
 });
 
-describe('isDaytimeNow', () => {
-  // Equatorial location (lat 0, lon 0) so UTC clock time tracks solar time
-  // closely, avoiding any timezone ambiguity in the test itself.
-  const EQUATOR = { lat: 0, lon: 0 };
-
-  it('recognizes midday UTC as daytime at the equator', () => {
-    expect(isDaytimeNow(new Date('2026-09-16T12:00:00Z'), EQUATOR.lat, EQUATOR.lon)).toBe(true);
-  });
-
-  it('recognizes midnight UTC as nighttime at the equator', () => {
-    expect(isDaytimeNow(new Date('2026-09-16T00:00:00Z'), EQUATOR.lat, EQUATOR.lon)).toBe(false);
-  });
-});
-
-describe('triplicity dignity depends on real day/night, not a fixed clock guess', () => {
-  // Regression for a live bug report: the Planet Transit / Planet of the Day
-  // cards used to derive "day" from a hardcoded `getHours() >= 6 && < 18`,
-  // ignoring the viewer's actual location. Triplicity rulership (a planet
-  // being the NIGHT ruler of its current sign's element) only applies when
-  // it is genuinely night there, so a wrong day/night guess silently caps a
-  // planet at "Moderate" when it should read "Auspicious" (or vice versa).
+describe('triplicity dignity: sect-based when isDay is a real boolean (birth charts)', () => {
+  // A birth chart is tied to one fixed moment, so "day" or "night" is itself
+  // a fixed, meaningful fact about that chart. calculateDignities keeps the
+  // classical sect split when the caller passes a real isDay boolean (as
+  // birthProfile.ts does, from the actual birth time/location).
   // Jupiter is the night triplicity ruler of fire signs (Leo included);
   // Mercury is the night triplicity ruler of air signs (Libra included).
-  it('Jupiter in Leo reads Moderate by day and Auspicious by night', () => {
+  it('Jupiter in Leo reads Moderate for a day birth and Auspicious for a night birth', () => {
     const day = calculateSimplifiedStatus('Jupiter', 'leo', 17, true, false);
     const night = calculateSimplifiedStatus('Jupiter', 'leo', 17, false, false);
     expect(day.tier).toBe('mutadil');
     expect(night.tier).toBe('said');
   });
 
-  it('Mercury in Libra reads Moderate by day and Auspicious by night', () => {
+  it('Mercury in Libra reads Moderate for a day birth and Auspicious for a night birth', () => {
     const day = calculateSimplifiedStatus('Mercury', 'libra', 10, true, false);
     const night = calculateSimplifiedStatus('Mercury', 'libra', 10, false, false);
     expect(day.tier).toBe('mutadil');
     expect(night.tier).toBe('said');
+  });
+});
+
+describe('triplicity dignity: stable across day/night when isDay is omitted (live "current condition" readings)', () => {
+  // Regression for a live bug report: a "what's Jupiter's status right now"
+  // badge that changed at every sunset/sunrise read as broken to users, even
+  // though it was classically correct sect-based behavior. Product decision:
+  // for a live reading (no fixed "isDay" moment to anchor sect to), a planet
+  // credits its triplicity dignity whenever it rules that triplicity at all
+  // (day, night, or participating ruler) — so the result no longer flips.
+  // Planet Transit, Planet of the Day, and Planetary Hours all now call
+  // calculateSimplifiedStatus / calculateDignities without an isDay argument.
+  it('Jupiter in Leo reads Auspicious the same way whether or not it is actually day', () => {
+    const withoutIsDay = calculateSimplifiedStatus('Jupiter', 'leo', 17);
+    expect(withoutIsDay.tier).toBe('said');
+  });
+
+  it('Mercury in Libra reads Auspicious the same way whether or not it is actually day', () => {
+    const withoutIsDay = calculateSimplifiedStatus('Mercury', 'libra', 10);
+    expect(withoutIsDay.tier).toBe('said');
+  });
+
+  it('a planet with no triplicity rulership at all is unaffected by omitting isDay', () => {
+    // Sun in Virgo (earth) has no triplicity rulership under any sect
+    // (earth's rulers are Venus/Moon/Mars), so it stays peregrine either way.
+    const withIsDay = calculateSimplifiedStatus('Sun', 'virgo', 29, true, false);
+    const withoutIsDay = calculateSimplifiedStatus('Sun', 'virgo', 29);
+    expect(withIsDay.tier).toBe('mutadil');
+    expect(withoutIsDay.tier).toBe('mutadil');
   });
 });

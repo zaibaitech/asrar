@@ -35,7 +35,10 @@ interface DignityDetailPanelProps {
   sign: ZodiacSign;
   degree: number;
   minute?: number;
-  isDay: boolean;
+  /** Daytime at a fixed moment (a birth chart) for the classical sect-based
+   * triplicity split. Omit for a live "current condition" reading, where
+   * triplicity dignity applies regardless of day/night. */
+  isDay?: boolean;
   isRetrograde?: boolean;
   language?: 'en' | 'fr';
   onClose?: () => void;

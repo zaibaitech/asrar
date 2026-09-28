@@ -271,7 +271,6 @@ export function PlanetaryHourCard({
             planet={currentHour.planet as Planet}
             sign={livePosition.sign as ZodiacSign}
             degree={livePosition.signDegree}
-            isDay={currentHour.isDaytime}
             isRetrograde={livePosition.isRetrograde}
             language={language}
           />
@@ -354,7 +353,7 @@ export function PlanetaryHourCard({
             currentHour.planet as Planet,
             livePosition.sign as ZodiacSign,
             livePosition.signDegree,
-            currentHour.isDaytime,
+            undefined,
             livePosition.isRetrograde
           );
           return (

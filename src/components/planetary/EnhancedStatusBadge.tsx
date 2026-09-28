@@ -38,8 +38,10 @@ interface EnhancedStatusBadgeProps {
   sign: ZodiacSign;
   /** Degree within the sign (0-29) */
   degree: number;
-  /** Whether it is currently daytime (affects triplicity) */
-  isDay: boolean;
+  /** Daytime at a fixed moment (a birth chart) for the classical sect-based
+   * triplicity split. Omit for a live "current condition" reading, where
+   * triplicity dignity applies regardless of day/night. */
+  isDay?: boolean;
   /** Whether the planet is retrograde */
   isRetrograde?: boolean;
   /** Show the detailed tooltip breakdown */
