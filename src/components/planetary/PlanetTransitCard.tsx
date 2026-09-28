@@ -25,6 +25,8 @@ import { translations } from '@/src/lib/translations';
 interface PlanetTransitCardProps {
   language?: 'en' | 'fr';
   onNavigate?: () => void;
+  /** Show all 7 planets in the grid by default instead of the single-planet carousel */
+  defaultShowAll?: boolean;
 }
 
 // ──────────────────────────────────────────────────────────────
@@ -84,13 +86,14 @@ function DataSourceBadge({ source }: { source: 'ephemeris' | 'fallback' }) {
   );
 }
 
-export function PlanetTransitCard({ 
+export function PlanetTransitCard({
   language = 'en',
-  onNavigate
+  onNavigate,
+  defaultShowAll = false
 }: PlanetTransitCardProps) {
   const [transits, setTransits] = React.useState<PlanetEphemerisData[]>([]);
   const [currentIndex, setCurrentIndex] = React.useState(0);
-  const [showAll, setShowAll] = React.useState(false);
+  const [showAll, setShowAll] = React.useState(defaultShowAll);
   const [isPaused, setIsPaused] = React.useState(false);
   const [zodiacSystem, setZodiacSystem] = React.useState<ZodiacSystem>('tropical');
   const [isLoading, setIsLoading] = React.useState(true);
