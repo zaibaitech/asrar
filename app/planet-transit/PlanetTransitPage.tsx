@@ -242,7 +242,7 @@ export function PlanetTransitPage() {
             </span>
             {isEn ? 'Live Planetary Positions' : 'Positions Planétaires en Direct'}
           </h2>
-          <PlanetTransitCard language={language} />
+          <PlanetTransitCard language={language} defaultShowAll />
         </div>
 
         {/* ─── How to Read ─── */}
