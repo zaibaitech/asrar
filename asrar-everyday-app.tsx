@@ -513,7 +513,7 @@ export default function AsrarEveryday() {
                   </div>
                 </div>
                 <div className="mt-4 flex flex-col gap-2">
-                  <PlanetTransitCard language={language} onNavigate={() => {}} />
+                  <PlanetTransitCard language={language} onNavigate={() => {}} defaultShowAll />
                   <Link href="/planet-transit" className="self-end text-xs font-semibold text-violet-600 dark:text-violet-400 hover:underline flex items-center gap-1">
                     {language === 'fr' ? 'Guide complet →' : 'Full Guide →'}
                   </Link>
