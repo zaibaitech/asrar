@@ -72,7 +72,7 @@ function PracticeHintSection({
   const incense = getPlanetIncense(planet);
 
   const sectionTitle = language === 'fr' ? 'Indication de Pratique' : 'Practice Hint';
-  const bakhoorLabel = language === 'fr' ? 'Encens recommandé' : 'Recommended Bakhoor';
+  const bakhoorLabel = language === 'fr' ? 'Encens recommandé (Bakhoor)' : 'Recommended Incense (Bakhoor)';
   const playUrl = 'https://play.google.com/store/apps/details?id=com.zaibaitech.asrariya';
   const appTeaser = language === 'fr'
     ? 'Télécharger Asrāriya sur Google Play'
