@@ -1027,6 +1027,11 @@ export const translations = {
         hourContext: "{planet} Hour",
       },
 
+      incense: {
+        recommendedBakhoor: "Recommended Bakhoor",
+        footerNote: "A traditional aid for a reflective atmosphere — the real substance is in intention (niyyah) and dhikr.",
+      },
+
       // Planetary Hour
       planetaryHour: {
         title: "Planetary Hour",
@@ -4384,6 +4389,11 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
         transitPractice: "Pratique du transit",
         planetOfTheDay: "Planète du Jour",
         hourContext: "Heure de {planet}",
+      },
+
+      incense: {
+        recommendedBakhoor: "Encens recommandé",
+        footerNote: "Une aide traditionnelle pour une atmosphère de recueillement — l'essentiel reste l'intention (niyyah) et le dhikr.",
       },
 
       // Heure Planétaire

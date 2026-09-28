@@ -19,6 +19,7 @@ import {
   calculateDignities,
   getSimplifiedStatus,
   getSimplePracticeHint,
+  getPlanetIncense,
   type Planet,
   type ZodiacSign,
   type SimplifiedTier,
@@ -68,8 +69,10 @@ function PracticeHintSection({
   language: 'en' | 'fr';
 }) {
   const practiceHint = getSimplePracticeHint(tier, planet);
-  
+  const incense = getPlanetIncense(planet);
+
   const sectionTitle = language === 'fr' ? 'Indication de Pratique' : 'Practice Hint';
+  const bakhoorLabel = language === 'fr' ? 'Encens recommandé' : 'Recommended Bakhoor';
   const playUrl = 'https://play.google.com/store/apps/details?id=com.zaibaitech.asrariya';
   const appTeaser = language === 'fr'
     ? 'Télécharger Asrāriya sur Google Play'
@@ -102,6 +105,22 @@ function PracticeHintSection({
           </div>
           <div className="text-xs text-slate-500 dark:text-slate-400">
             {practiceHint.hint}
+          </div>
+        </div>
+      </div>
+
+      {/* Incense recommendation */}
+      <div className="flex items-center gap-3 mb-3 pt-3 border-t border-slate-200/50 dark:border-slate-600/30">
+        <div className="text-xl leading-none">🪔</div>
+        <div className="flex-1 min-w-0">
+          <div className="text-[10px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-0.5">
+            {bakhoorLabel}
+          </div>
+          <div className="text-sm font-medium text-slate-700 dark:text-slate-300">
+            {incense.transliteration} <span className="text-slate-400 dark:text-slate-500 font-normal">— {incense.ingredients}</span>
+          </div>
+          <div className="text-xs text-slate-500 dark:text-slate-400">
+            {incense.purpose}
           </div>
         </div>
       </div>

@@ -19,6 +19,7 @@ import {
 import { SimplifiedStatusBadge } from './SimplifiedStatusBadge';
 import { DignityDetailPanel } from './DignityDetailPanel';
 import { CompactPracticeHint } from './CompactPracticeHint';
+import { CompactIncenseHint } from './CompactIncenseHint';
 import { ZikrPracticePanel } from '../ZikrPracticePanel';
 import { translations } from '@/src/lib/translations';
 
@@ -251,12 +252,19 @@ export function PlanetTransitCard({
             currentTransit.isRetrograde
           );
           return (
-            <CompactPracticeHint
-              tier={status.tier}
-              planet={currentTransit.planetName as Planet}
-              language={language}
-              className="mt-3"
-            />
+            <>
+              <CompactPracticeHint
+                tier={status.tier}
+                planet={currentTransit.planetName as Planet}
+                language={language}
+                className="mt-3"
+              />
+              <CompactIncenseHint
+                planet={currentTransit.planetName as Planet}
+                language={language}
+                className="mt-3"
+              />
+            </>
           );
         })()}
 
