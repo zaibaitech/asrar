@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 import { cookies } from 'next/headers';
 import { Suspense } from 'react';
 import { RamadanPage } from './RamadanPage';
-import { bilingualMeta, challengeMeta, getChallengeOGMeta } from '@/src/lib/seoConfig';
-import { getRamadanInfo } from '@/src/lib/hijri';
+import { challengeMeta, getChallengeOGMeta } from '@/src/lib/seoConfig';
+import { SITE_URL, absoluteUrl } from '@/src/lib/siteRoutes';
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
+const baseUrl = SITE_URL;
 
 /**
  * Ramadan Challenge Page
@@ -19,7 +19,6 @@ export async function generateMetadata({
 }: {
   searchParams: Promise<{ lang?: string; challenge?: string }>;
 }): Promise<Metadata> {
-  const ramadanInfo = getRamadanInfo();
   const params = await searchParams;
   
   // Check URL param first, then cookie for language
@@ -37,46 +36,17 @@ export async function generateMetadata({
     }
   }
 
-  if (!ramadanInfo.isRamadan) {
-    const meta = bilingualMeta[lang];
-    const imageUrl = meta.ogImage.startsWith('http') ? meta.ogImage : `${baseUrl}${meta.ogImage}`;
-
-    return {
-      title: meta.title,
-      description: meta.shortDescription,
-      openGraph: {
-        type: 'website',
-        locale: meta.locale,
-        url: `${baseUrl}${lang === 'fr' ? '?lang=fr' : ''}`,
-        siteName: 'Asrār Everyday',
-        title: meta.title,
-        description: meta.fullDescription,
-        images: [
-          {
-            url: imageUrl,
-            width: 1200,
-            height: 630,
-            alt: meta.title,
-          },
-        ],
-      },
-      twitter: {
-        card: 'summary_large_image',
-        title: meta.title,
-        description: meta.fullDescription,
-        images: [imageUrl],
-      },
-    };
-  }
+  // The zikr challenges are available year-round, so the page meta is too.
+  const canonical = absoluteUrl('/ramadan');
 
   const meta = {
     en: {
-      title: 'Zikr Challenges — Asrār',
-      description: 'Track your dhikr with Istighfār, Ṣalawāt, Divine Names, and the 201 Prophetic Names practice in Asrār.',
+      title: 'Zikr Challenges',
+      description: 'Track your daily dhikr all year with Istighfār, Ṣalawāt, Divine Names and the 201 Prophetic Names practice, plus dedicated Ramadan challenges.',
     },
     fr: {
-      title: 'Défis de Zikr — Asrār',
-      description: 'Suivez votre dhikr avec l\'Istighfār, les Ṣalawāt, les Noms Divins et la pratique des 201 Noms Prophétiques dans Asrār.',
+      title: 'Défis de Zikr',
+      description: 'Suivez votre dhikr quotidien toute l\'année avec l\'Istighfār, les Ṣalawāt, les Noms Divins et la pratique des 201 Noms Prophétiques, ainsi que des défis dédiés au Ramadan.',
     },
   };
 
@@ -87,16 +57,19 @@ export async function generateMetadata({
   if (challenge && challengeMeta[challenge]) {
     const challengeMetadata = getChallengeOGMeta(challenge, lang, baseUrl);
     if (challengeMetadata) {
-      return challengeMetadata;
+      return { ...challengeMetadata, alternates: { canonical } };
     }
   }
 
-  // Default Ramadan page metadata with absolute URL
+  // Default page metadata with absolute URL
   const defaultImageUrl = `${baseUrl}/opengraph-image`;
   
   return {
     title: currentMeta.title,
     description: currentMeta.description,
+    alternates: {
+      canonical,
+    },
     openGraph: {
       type: 'website',
       locale: lang === 'fr' ? 'fr_FR' : 'en_GB',

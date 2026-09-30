@@ -89,7 +89,7 @@ export async function generateMetadata({
     education: { en: 'education or studies', fr: 'des études ou une formation' },
   }[electionType];
 
-  const title = lang === 'fr' ? 'Résultat Ikhtiyārāt — Asrār' : 'Ikhtiyārāt Result — Asrār';
+  const title = lang === 'fr' ? 'Résultat Ikhtiyārāt' : 'Ikhtiyārāt Result';
   const tierLabel = result ? (lang === 'fr' ? result.tierInfo.labelFr : result.tierInfo.labelEn) : '';
   const description = result
     ? (lang === 'fr'

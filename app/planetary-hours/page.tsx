@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
+import { SITE_URL, absoluteUrl } from '@/src/lib/siteRoutes';
 import { cookies } from 'next/headers';
 import { Suspense } from 'react';
 import { PlanetaryHoursPage } from './PlanetaryHoursPage';
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
+const baseUrl = SITE_URL;
 
 export async function generateMetadata({
   searchParams,
@@ -21,11 +22,11 @@ export async function generateMetadata({
 
   const meta = {
     en: {
-      title: 'Planetary Hours Guide — Asrār',
+      title: 'Planetary Hours Guide',
       description: 'Real-time Chaldean planetary hours based on your location. Discover the ruling planet of the current hour, its spiritual significance, and the best activities to align with natural rhythms in ʿIlm al-Nujūm.',
     },
     fr: {
-      title: 'Guide des Heures Planétaires — Asrār',
+      title: 'Guide des Heures Planétaires',
       description: 'Heures planétaires chaldéennes en temps réel basées sur votre position. Découvrez la planète gouvernante de l\'heure actuelle, sa signification spirituelle et les meilleures activités pour s\'aligner avec les rythmes naturels.',
     },
   };
@@ -36,6 +37,9 @@ export async function generateMetadata({
   return {
     title: m.title,
     description: m.description,
+    alternates: {
+      canonical: absoluteUrl('/planetary-hours'),
+    },
     openGraph: {
       type: 'website',
       url: `${baseUrl}/planetary-hours`,

@@ -123,7 +123,7 @@ export async function generateMetadata({
 
   if (!validateVerseReference(surahNumber, ayahNumber)) {
     return {
-      title: 'Ayah Not Found | Asrariya',
+      title: 'Ayah Not Found',
       robots: {
         index: false,
         follow: false,

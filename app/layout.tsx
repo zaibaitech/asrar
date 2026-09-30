@@ -83,13 +83,8 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
     },
   },
-  alternates: {
-    canonical: baseUrl,
-    languages: {
-      'en-GB': baseUrl,
-      'fr-FR': `${baseUrl}?lang=fr`,
-    },
-  },
+  // No root canonical/hreflang: each public page sets its own self-canonical,
+  // and there are no locale routes yet to point hreflang at.
   openGraph: {
     type: 'website',
     locale: 'en_GB',

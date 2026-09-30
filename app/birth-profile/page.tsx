@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { cookies } from 'next/headers';
 import type { Metadata } from 'next';
+import { absoluteUrl } from '@/src/lib/siteRoutes';
 import { BirthProfilePage } from './BirthProfilePage';
 
 export async function generateMetadata({
@@ -13,7 +14,7 @@ export async function generateMetadata({
   const lang = searchParams?.lang ?? cookieLang ?? 'en';
   const isEn = lang !== 'fr';
 
-  const title = isEn ? 'Birth Profile | Asrar' : 'Profil de Naissance | Asrar';
+  const title = isEn ? 'Birth Profile' : 'Profil de Naissance';
   const description = isEn
     ? 'Your personal ʿIlm al-Nujūm birth profile: Sun and Moon signs, lunar mansion, day ruler, and the real dignity condition of each classical planet at your birth.'
     : "Votre profil de naissance personnel selon l'ʿIlm al-Nujūm : signes solaire et lunaire, demeure lunaire, régent du jour, et la condition de dignité réelle de chaque planète classique à votre naissance.";
@@ -21,10 +22,14 @@ export async function generateMetadata({
   return {
     title,
     description,
+    alternates: {
+      canonical: absoluteUrl('/birth-profile'),
+    },
     openGraph: {
       title,
       description,
-      images: [{ url: `${process.env.NEXT_PUBLIC_APP_URL ?? ''}/icons/icon-512.png` }],
+      url: absoluteUrl('/birth-profile'),
+      images: [{ url: absoluteUrl('/icons/icon-512x512.png') }],
     },
     twitter: { card: 'summary', title, description },
   };

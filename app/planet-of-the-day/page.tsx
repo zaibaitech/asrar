@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { cookies } from 'next/headers';
 import type { Metadata } from 'next';
+import { absoluteUrl } from '@/src/lib/siteRoutes';
 import { PlanetOfTheDayPage } from './PlanetOfTheDayPage';
 
 export async function generateMetadata({
@@ -13,7 +14,7 @@ export async function generateMetadata({
   const lang = searchParams?.lang ?? cookieLang ?? 'en';
   const isEn = lang !== 'fr';
 
-  const title = isEn ? 'Planet of the Day | Asrar' : 'Planète du Jour | Asrar';
+  const title = isEn ? 'Planet of the Day' : 'Planète du Jour';
   const description = isEn
     ? 'Discover the ruling planet of today, its spiritual qualities, recommended dhikr, and daily guidance inspired by Islamic ʿIlm al-Nujūm.'
     : 'Découvrez la planète gouvernante du jour, ses qualités spirituelles, le dhikr recommandé et les conseils quotidiens inspirés de l\'ʿIlm al-Nujūm islamique.';
@@ -21,10 +22,14 @@ export async function generateMetadata({
   return {
     title,
     description,
+    alternates: {
+      canonical: absoluteUrl('/planet-of-the-day'),
+    },
     openGraph: {
       title,
       description,
-      images: [{ url: `${process.env.NEXT_PUBLIC_APP_URL ?? ''}/icons/icon-512.png` }],
+      url: absoluteUrl('/planet-of-the-day'),
+      images: [{ url: absoluteUrl('/icons/icon-512x512.png') }],
     },
     twitter: { card: 'summary', title, description },
   };
