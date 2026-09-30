@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
+import { SITE_URL, absoluteUrl } from '@/src/lib/siteRoutes';
 import { cookies } from 'next/headers';
 import { Suspense } from 'react';
 import { IkhtiyaratPage } from './IkhtiyaratPage';
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
+const baseUrl = SITE_URL;
 
 export async function generateMetadata({
   searchParams,
@@ -21,11 +22,11 @@ export async function generateMetadata({
 
   const meta = {
     en: {
-      title: 'Best Dates (Ikhtiyārāt) — Asrār',
+      title: 'Best Dates (Ikhtiyārāt)',
       description: 'Classical Islamic electional astrology for choosing an auspicious date for marriage (nikāḥ), based on real planetary positions, lunar phase, and traditional ikhtiyārāt rules.',
     },
     fr: {
-      title: 'Meilleures Dates (Ikhtiyārāt) — Asrār',
+      title: 'Meilleures Dates (Ikhtiyārāt)',
       description: "Astrologie électionnelle islamique classique pour choisir une date propice au mariage (nikāḥ), basée sur les positions planétaires réelles, la phase lunaire et les règles traditionnelles de l'ikhtiyārāt.",
     },
   };
@@ -36,6 +37,9 @@ export async function generateMetadata({
   return {
     title: m.title,
     description: m.description,
+    alternates: {
+      canonical: absoluteUrl('/ikhtiyarat'),
+    },
     openGraph: {
       type: 'website',
       url: `${baseUrl}/ikhtiyarat`,

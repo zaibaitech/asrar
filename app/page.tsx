@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
 import { cookies } from 'next/headers';
 import { bilingualMeta } from '../src/lib/seoConfig';
+import { PUBLIC_TOOLS, SITE_URL, absoluteUrl } from '../src/lib/siteRoutes';
 import AsrarEveryday from '../asrar-everyday-app';
+import { HomeSeoShell } from './HomeSeoShell';
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
+const baseUrl = SITE_URL;
 
 /**
  * Generate dynamic metadata based on URL parameters and cookies
@@ -39,8 +41,11 @@ export async function generateMetadata({
   const defaultImageUrl = meta.ogImage.startsWith('http') ? meta.ogImage : `${baseUrl}${meta.ogImage}`;
   
   return {
-    title: meta.title,
+    title: { absolute: meta.title },
     description: meta.shortDescription,
+    alternates: {
+      canonical: absoluteUrl('/'),
+    },
     openGraph: {
       type: 'website',
       locale: meta.locale,
@@ -75,6 +80,33 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
       <AsrarEveryday />
+      <HomeSeoShell>
+        <main className="max-w-3xl mx-auto px-4 py-10">
+          <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100">
+            Asrār — Planetary Hours, Abjad &amp; Islamic Sacred Sciences
+          </h1>
+          <p className="mt-4 text-slate-700 dark:text-slate-300 leading-relaxed">
+            Asrār is a companion for the traditional Islamic sciences of ʿIlm al-Nujūm (celestial
+            timing) and ʿIlm al-Ḥurūf (the science of letters). Find the ruling planet of the current
+            hour and day, follow live planetary transits, build your birth profile, choose auspicious
+            dates with classical ikhtiyārāt, calculate Abjad values, and keep up your daily dhikr.
+          </p>
+          <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">
+            These tools are for reflection and education, not prediction. Only Allah knows the unseen.
+          </p>
+          <h2 className="mt-8 text-xl font-semibold text-slate-900 dark:text-slate-100">Explore the tools</h2>
+          <ul className="mt-4 space-y-3">
+            {PUBLIC_TOOLS.map((tool) => (
+              <li key={tool.path}>
+                <a href={tool.path} className="font-semibold text-indigo-700 dark:text-indigo-300 hover:underline">
+                  {tool.name}
+                </a>
+                <p className="text-sm text-slate-600 dark:text-slate-400">{tool.description}</p>
+              </li>
+            ))}
+          </ul>
+        </main>
+      </HomeSeoShell>
     </div>
   );
 }

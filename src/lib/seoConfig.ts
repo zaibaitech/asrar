@@ -189,7 +189,8 @@ export function getChallengeOGMeta(
   const imageUrl = meta.image.startsWith('http') ? meta.image : `${baseUrl}${meta.image}`;
 
   return {
-    title: meta.title,
+    // Challenge titles already carry the brand, so skip the root "%s | Asrār" template.
+    title: { absolute: meta.title },
     description: meta.description,
     openGraph: {
       type: 'website' as const,

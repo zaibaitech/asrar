@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { cookies } from 'next/headers';
 import type { Metadata } from 'next';
+import { absoluteUrl } from '@/src/lib/siteRoutes';
 import { PlanetTransitPage } from './PlanetTransitPage';
 
 export async function generateMetadata({
@@ -13,7 +14,7 @@ export async function generateMetadata({
   const lang = searchParams?.lang ?? cookieLang ?? 'en';
   const isEn = lang !== 'fr';
 
-  const title = isEn ? 'Planetary Transits | Asrar' : 'Transits Planétaires | Asrar';
+  const title = isEn ? 'Planetary Transits' : 'Transits Planétaires';
   const description = isEn
     ? 'Live positions of all 7 classical planets, essential dignities, retrograde status, and spiritual guidance inspired by Islamic ʿIlm al-Nujūm.'
     : 'Positions en direct des 7 planètes classiques, dignités essentielles, statut rétrograde et conseils spirituels inspirés de l\'ʿIlm al-Nujūm islamique.';
@@ -21,10 +22,14 @@ export async function generateMetadata({
   return {
     title,
     description,
+    alternates: {
+      canonical: absoluteUrl('/planet-transit'),
+    },
     openGraph: {
       title,
       description,
-      images: [{ url: `${process.env.NEXT_PUBLIC_APP_URL ?? ''}/icons/icon-512.png` }],
+      url: absoluteUrl('/planet-transit'),
+      images: [{ url: absoluteUrl('/icons/icon-512x512.png') }],
     },
     twitter: { card: 'summary', title, description },
   };
