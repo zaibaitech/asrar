@@ -16,7 +16,14 @@ import { useCalculatorTranslations } from './i18n';
  * renders above the tab bar for every view, so this screen doesn't render
  * its own.
  */
-export function CalculatorScreen({ appLanguage }: { appLanguage: 'en' | 'fr' }) {
+export function CalculatorScreen({
+  appLanguage,
+  headingAs: Heading = 'h1',
+}: {
+  appLanguage: 'en' | 'fr';
+  /** Use 'h2' when the host page already renders its own H1. */
+  headingAs?: 'h1' | 'h2';
+}) {
   const locale = appLanguage;
   const [selectedType, setSelectedType] = useState<CalculationType | null>(null);
   const { t } = useCalculatorTranslations(locale);
@@ -24,7 +31,7 @@ export function CalculatorScreen({ appLanguage }: { appLanguage: 'en' | 'fr' }) 
   return (
     <div className="rounded-2xl bg-white p-4 text-slate-900 shadow-xl border border-slate-200 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 sm:p-6">
       <div className="mb-4">
-        <h1 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">{t('title')}</h1>
+        <Heading className="text-2xl font-semibold text-slate-900 dark:text-slate-100">{t('title')}</Heading>
         <p className="text-base text-slate-500 dark:text-slate-400">{t('subtitle')}</p>
       </div>
 

@@ -25,6 +25,11 @@ export const PUBLIC_TOOLS: PublicTool[] = [
     description: 'Real-time Chaldean planetary hours for your location, with the ruling planet of each hour and what it favours.',
   },
   {
+    path: '/abjad',
+    name: 'Abjad Calculator',
+    description: 'Calculate the Abjad (ʿilm al-ḥurūf) value of any Arabic name or phrase, with elemental and letter analysis.',
+  },
+  {
     path: '/planet-of-the-day',
     name: 'Planet of the Day',
     description: "Today's ruling planet, its spiritual qualities, recommended dhikr and daily guidance.",

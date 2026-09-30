@@ -78,7 +78,7 @@
       "name": "Abjad Calculator",
       "short_name": "Abjad",
       "description": "Calculate Abjad values of Arabic letters",
-      "url": "/?shortcut=abjad",
+      "url": "/abjad",
       "icons": [{ "src": "/icons/icon-96x96.png", "sizes": "96x96" }]
     },
     {
