@@ -120,6 +120,9 @@ export const metadata: Metadata = {
   publisher: 'Zaibaitech Ltd',
   category: 'Education',
   classification: 'Islamic Sciences',
+  verification: {
+    google: 'cKJUPwjQfpSLgwfXAEShaT8kpfvMx1lQ06UNBPXCYgM',
+  },
 }
 
 export default function RootLayout({
