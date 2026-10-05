@@ -221,9 +221,9 @@ export function PlanetOfTheDayPage() {
           </button>
           <div className="flex items-center gap-2">
             <Sun className="w-5 h-5 text-amber-500" />
-            <h1 className="text-base sm:text-lg font-bold text-slate-900 dark:text-slate-100">
+            <div className="text-base sm:text-lg font-bold text-slate-900 dark:text-slate-100">
               {isEn ? 'Planet of the Day' : 'Planète du Jour'}
-            </h1>
+            </div>
             <span className="text-xs font-arabic text-slate-400 dark:text-slate-500 hidden sm:inline">كوكب اليوم</span>
           </div>
           <div className="w-16" />
