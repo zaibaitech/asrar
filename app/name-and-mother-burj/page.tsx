@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { BURJ_NAMES_AR, BURJ_NAMES_EN, BURJ_NAMES_FR, getBurujData } from '@/src/features/istikhara/calculations';
 import { ZODIAC_SADAQAH, ZODIAC_SIGN_ORDER, ZODIAC_SIGN_SYMBOL } from '@/src/data/zodiacSadaqahData';
-import { buildToolMetadata, resolvePageLang, type PageLang } from '@/src/lib/pageLang';
+import { buildToolMetadata, getRouteLang, resolvePageLang, type PageLang } from '@/src/lib/pageLang';
+import { localizeHref } from '@/src/lib/i18nRoutes';
 import { FaqSection, JsonLd, RelatedLinks, faqJsonLd, type FaqItem, type RelatedLink } from '@/src/components/seo/SeoSections';
 import { BurjCalculator } from './BurjCalculator';
 
@@ -179,6 +180,7 @@ export default async function Page({
   searchParams: Promise<{ lang?: string }>;
 }) {
   const lang = await resolvePageLang(searchParams);
+  const routeLang = await getRouteLang();
   const c = COPY[lang];
   const buruj = burujSummaries(lang);
 
@@ -236,13 +238,13 @@ export default async function Page({
               </article>
             ))}
           </div>
-          <a href="/sadaqa#by-burj" className="inline-block font-semibold text-purple-700 dark:text-purple-300 hover:underline">
+          <a href={localizeHref('/sadaqa#by-burj', routeLang)} className="inline-block font-semibold text-purple-700 dark:text-purple-300 hover:underline">
             {c.sadaqahLink}
           </a>
         </section>
 
         <FaqSection id="burj-faq-heading" title={c.faqTitle} faqs={c.faqs} />
-        <RelatedLinks title={c.relatedTitle} links={c.related} />
+        <RelatedLinks title={c.relatedTitle} links={c.related} routeLang={routeLang} />
       </div>
 
       <JsonLd data={faqJsonLd(c.faqs)} />

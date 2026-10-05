@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
-import { SITE_URL, absoluteUrl } from '@/src/lib/siteRoutes';
+import { SITE_URL } from '@/src/lib/siteRoutes';
+import { getRouteLang } from '@/src/lib/pageLang';
+import { localeAlternates, localizedUrl } from '@/src/lib/i18nRoutes';
 import { cookies } from 'next/headers';
 import { Suspense } from 'react';
 import { PlanetaryHoursPage } from './PlanetaryHoursPage';
@@ -9,6 +11,7 @@ const baseUrl = SITE_URL;
 type Lang = 'en' | 'fr';
 
 async function resolveLang(searchParams: Promise<{ lang?: string }>): Promise<Lang> {
+  if ((await getRouteLang()) === 'fr') return 'fr';
   const params = await searchParams;
   if (params?.lang === 'fr') return 'fr';
   if (params?.lang === 'en') return 'en';
@@ -35,17 +38,16 @@ export async function generateMetadata({
   };
 
   const m = meta[lang];
+  const routeLang = await getRouteLang();
   const imageUrl = `${baseUrl}/opengraph-image`;
 
   return {
     title: m.title,
     description: m.description,
-    alternates: {
-      canonical: absoluteUrl('/planetary-hours'),
-    },
+    alternates: localeAlternates('/planetary-hours', routeLang),
     openGraph: {
       type: 'website',
-      url: `${baseUrl}/planetary-hours`,
+      url: localizedUrl('/planetary-hours', routeLang),
       siteName: 'Asrār Everyday',
       title: m.title,
       description: m.description,

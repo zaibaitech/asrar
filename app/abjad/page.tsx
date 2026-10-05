@@ -1,11 +1,14 @@
 import type { Metadata } from 'next';
 import { cookies } from 'next/headers';
-import { SITE_URL, absoluteUrl } from '@/src/lib/siteRoutes';
+import { SITE_URL } from '@/src/lib/siteRoutes';
+import { getRouteLang } from '@/src/lib/pageLang';
+import { localeAlternates, localizeHref, localizedUrl } from '@/src/lib/i18nRoutes';
 import { AbjadCalculator } from './AbjadCalculator';
 
 type Lang = 'en' | 'fr';
 
 async function resolveLang(searchParams: Promise<{ lang?: string }>): Promise<Lang> {
+  if ((await getRouteLang()) === 'fr') return 'fr';
   const params = await searchParams;
   if (params?.lang === 'fr') return 'fr';
   if (params?.lang === 'en') return 'en';
@@ -32,13 +35,14 @@ export async function generateMetadata({
   searchParams: Promise<{ lang?: string }>;
 }): Promise<Metadata> {
   const m = META[await resolveLang(searchParams)];
-  const url = absoluteUrl('/abjad');
+  const routeLang = await getRouteLang();
+  const url = localizedUrl('/abjad', routeLang);
   const imageUrl = `${SITE_URL}/opengraph-image`;
 
   return {
     title: m.title,
     description: m.description,
-    alternates: { canonical: url },
+    alternates: localeAlternates('/abjad', routeLang),
     openGraph: {
       type: 'website',
       url,
@@ -101,6 +105,7 @@ export default async function Page({
   searchParams: Promise<{ lang?: string }>;
 }) {
   const c = COPY[await resolveLang(searchParams)];
+  const routeLang = await getRouteLang();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
@@ -125,7 +130,7 @@ export default async function Page({
           <ul className="space-y-3">
             {c.related.map(([href, name, desc]) => (
               <li key={href}>
-                <a href={href} className="font-semibold text-indigo-700 dark:text-indigo-300 hover:underline">
+                <a href={localizeHref(href, routeLang)} className="font-semibold text-indigo-700 dark:text-indigo-300 hover:underline">
                   {name}
                 </a>
                 <p className="text-sm text-slate-600 dark:text-slate-400">{desc}</p>

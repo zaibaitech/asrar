@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { buildToolMetadata, resolvePageLang } from '@/src/lib/pageLang';
+import { buildToolMetadata, getRouteLang, resolvePageLang } from '@/src/lib/pageLang';
 import { FaqSection, JsonLd, RelatedLinks, faqJsonLd, type FaqItem, type RelatedLink } from '@/src/components/seo/SeoSections';
 import { CompatibilityCalculator } from './CompatibilityCalculator';
 import { AbjadSystemSelector } from '@/src/components/AbjadSystemSelector';
@@ -132,6 +132,7 @@ export default async function Page({
   searchParams: Promise<{ lang?: string }>;
 }) {
   const c = COPY[await resolvePageLang(searchParams)];
+  const routeLang = await getRouteLang();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
@@ -160,7 +161,7 @@ export default async function Page({
           </ol>
         </section>
         <FaqSection id="compatibility-faq-heading" title={c.faqTitle} faqs={c.faqs} />
-        <RelatedLinks title={c.relatedTitle} links={c.related} />
+        <RelatedLinks title={c.relatedTitle} links={c.related} routeLang={routeLang} />
       </div>
 
       <JsonLd data={faqJsonLd(c.faqs)} />

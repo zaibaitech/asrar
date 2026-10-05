@@ -4,10 +4,14 @@
  * Handles:
  * 1. Language detection from URL params, cookies, or Accept-Language header
  * 2. Sets language cookie for server-side rendering of correct OG tags
+ * 3. French mirror routes: /fr/<path> is rewritten to the English route file
+ *    with ROUTE_LANG_HEADER=fr (FR copy, /fr canonical, hreflang), and
+ *    ?lang=fr on an EN page that has a mirror 301s to its /fr URL.
  */
 
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
+import { ROUTE_LANG_HEADER, frPath, isLocalizedPath, stripFrPrefix } from './src/lib/i18nRoutes';
 
 const SUPPORTED_LANGUAGES = ['en', 'fr'] as const;
 type Language = typeof SUPPORTED_LANGUAGES[number];
@@ -69,10 +73,46 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  const response = NextResponse.next();
-  
-  // Detect language
-  const language = detectLanguage(request);
+  const { pathname, searchParams } = request.nextUrl;
+  const langParam = searchParams.get('lang');
+
+  // Requests never get to choose the route language themselves.
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.delete(ROUTE_LANG_HEADER);
+
+  let response: NextResponse;
+  let language: Language;
+
+  const frTarget = stripFrPrefix(pathname);
+  if (frTarget !== null && isLocalizedPath(frTarget)) {
+    // /fr/... mirror. ?lang= on a /fr URL is redundant (fr) or a request for
+    // the English page (en): redirect so each language has one clean URL.
+    if (langParam === 'en' || langParam === 'fr') {
+      const url = request.nextUrl.clone();
+      url.searchParams.delete('lang');
+      if (langParam === 'en') url.pathname = frTarget;
+      response = NextResponse.redirect(url, 301);
+      language = langParam;
+    } else {
+      const url = request.nextUrl.clone();
+      url.pathname = frTarget;
+      requestHeaders.set(ROUTE_LANG_HEADER, 'fr');
+      response = NextResponse.rewrite(url, { request: { headers: requestHeaders } });
+      // The URL decides this page's language; keep the visitor's own
+      // preference cookie as it was (same detection as any other page).
+      language = detectLanguage(request);
+    }
+  } else if (langParam === 'fr' && isLocalizedPath(pathname)) {
+    // Legacy ?lang=fr on an EN URL that now has a French mirror.
+    const url = request.nextUrl.clone();
+    url.searchParams.delete('lang');
+    url.pathname = frPath(pathname);
+    response = NextResponse.redirect(url, 301);
+    language = 'fr';
+  } else {
+    response = NextResponse.next({ request: { headers: requestHeaders } });
+    language = detectLanguage(request);
+  }
   
   // Set language cookie for server-side rendering
   // This helps generateMetadata read the user's language preference

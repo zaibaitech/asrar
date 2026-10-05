@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { buildToolMetadata, resolvePageLang, type PageLang } from '@/src/lib/pageLang';
+import { buildToolMetadata, getRouteLang, resolvePageLang, type PageLang } from '@/src/lib/pageLang';
+import { localizeHref } from '@/src/lib/i18nRoutes';
 import { FaqSection, JsonLd, RelatedLinks, faqJsonLd, type RelatedLink } from '@/src/components/seo/SeoSections';
 import { PURPOSE_SLUGS, REFERENCE_LOCATION, type PurposeSlug } from '@/src/lib/ikhtiyarat/purposes';
 import { capitalise, formatDate, formatTime, getNextFavouredHours, getUpcomingDates, listJoin, planetName, purposeFacts } from '../data';
@@ -97,6 +98,7 @@ export default async function Page({ params, searchParams }: { params: Params; s
   const { purpose } = await params;
   if (!isPurpose(purpose)) notFound();
   const lang = await resolvePageLang(searchParams);
+  const routeLang = await getRouteLang();
   const ui = UI[lang];
   const facts = purposeFacts(purpose, lang);
   const c = purposeCopy(purpose, lang, facts);
@@ -104,13 +106,13 @@ export default async function Page({ params, searchParams }: { params: Params; s
   const [upcoming, nextHours] = [await getUpcomingDates(purpose, now), getNextFavouredHours(purpose, now)];
   const loc = lang === 'fr' ? REFERENCE_LOCATION.nameFr : REFERENCE_LOCATION.nameEn;
   const hoursList = listJoin(facts.planetNames, lang);
-  const toolHref = `/ikhtiyarat?election=${facts.def.toolElection}`;
+  const toolHref = localizeHref(`/ikhtiyarat?election=${facts.def.toolElection}`, routeLang);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-slate-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
       <main className="max-w-3xl mx-auto px-4 py-8 space-y-8">
         <nav aria-label="Breadcrumb" className="text-sm text-slate-500 dark:text-slate-400">
-          <a href="/" className="hover:underline">Asrār</a> › <a href="/best-day-for" className="hover:underline">{ui.breadcrumb}</a>
+          <a href={localizeHref('/', routeLang)} className="hover:underline">Asrār</a> › <a href={localizeHref('/best-day-for', routeLang)} className="hover:underline">{ui.breadcrumb}</a>
         </nav>
 
         <header className="space-y-3">
@@ -210,7 +212,7 @@ export default async function Page({ params, searchParams }: { params: Params; s
         </section>
 
         <FaqSection id="best-day-faq-heading" title={ui.faqTitle} faqs={c.faqs} />
-        <RelatedLinks title={ui.relatedTitle} links={related(purpose, lang)} />
+        <RelatedLinks title={ui.relatedTitle} links={related(purpose, lang)} routeLang={routeLang} />
       </main>
 
       <JsonLd data={faqJsonLd(c.faqs)} />

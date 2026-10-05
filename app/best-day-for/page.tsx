@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { buildToolMetadata, resolvePageLang, type PageLang } from '@/src/lib/pageLang';
+import { buildToolMetadata, getRouteLang, resolvePageLang, type PageLang } from '@/src/lib/pageLang';
+import { localizeHref } from '@/src/lib/i18nRoutes';
 import { FaqSection, JsonLd, RelatedLinks, faqJsonLd, type FaqItem, type RelatedLink } from '@/src/components/seo/SeoSections';
 import { PURPOSE_SLUGS, REFERENCE_LOCATION, type PurposeSlug } from '@/src/lib/ikhtiyarat/purposes';
 import { capitalise, formatDate, getUpcomingDates, listJoin, purposeFacts } from './data';
@@ -74,6 +75,7 @@ function copy(lang: PageLang, thursdayEverywhere: boolean) {
 
 export default async function Page({ searchParams }: { searchParams: Promise<{ lang?: string }> }) {
   const lang = await resolvePageLang(searchParams);
+  const routeLang = await getRouteLang();
   const now = new Date();
   const rows = await Promise.all(
     PURPOSE_SLUGS.map(async (slug: PurposeSlug) => {
@@ -97,7 +99,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ l
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-slate-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
       <main className="max-w-3xl mx-auto px-4 py-8 space-y-8">
         <nav aria-label="Breadcrumb" className="text-sm text-slate-500 dark:text-slate-400">
-          <a href="/" className="hover:underline">Asrār</a> › <a href="/ikhtiyarat" className="hover:underline">Ikhtiyārāt</a>
+          <a href={localizeHref('/', routeLang)} className="hover:underline">Asrār</a> › <a href={localizeHref('/ikhtiyarat', routeLang)} className="hover:underline">Ikhtiyārāt</a>
         </nav>
         <header className="space-y-3">
           <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100">{c.h1}</h1>
@@ -117,7 +119,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ l
                 {rows.map(({ slug, f, next }) => (
                   <tr key={slug} className="border-t border-slate-200 dark:border-slate-700 align-top">
                     <td className="px-3 py-2">
-                      <a href={`/best-day-for/${slug}`} className="font-semibold text-emerald-700 dark:text-emerald-300 hover:underline">{PURPOSE_NAV[slug][lang].name}</a>
+                      <a href={localizeHref(`/best-day-for/${slug}`, routeLang)} className="font-semibold text-emerald-700 dark:text-emerald-300 hover:underline">{PURPOSE_NAV[slug][lang].name}</a>
                     </td>
                     <td className="px-3 py-2 text-slate-700 dark:text-slate-300">{capitalise(listJoin(f.weekdayNames, lang))}</td>
                     <td className="px-3 py-2 text-slate-700 dark:text-slate-300">{listJoin(f.planetNames, lang)}</td>
@@ -133,7 +135,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ l
         </section>
 
         <FaqSection id="best-day-hub-faq-heading" title={c.faqTitle} faqs={c.faqs} />
-        <RelatedLinks title={c.relatedTitle} links={related} />
+        <RelatedLinks title={c.relatedTitle} links={related} routeLang={routeLang} />
       </main>
       <JsonLd data={faqJsonLd(c.faqs)} />
     </div>
