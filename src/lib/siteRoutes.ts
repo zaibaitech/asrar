@@ -58,6 +58,36 @@ export const PUBLIC_TOOLS: PublicTool[] = [
     description: 'Classical Islamic electional astrology for choosing an auspicious date for marriage, travel, business and more.',
   },
   {
+    path: '/best-day-for',
+    name: 'Best Day For…',
+    nameFr: 'Meilleur jour pour…',
+    description: 'Favourable weekdays and planetary hours for marriage, travel, moving home and business, with the next favourable dates.',
+  },
+  {
+    path: '/best-day-for/marriage',
+    name: 'Best Day for Nikah (Marriage)',
+    nameFr: 'Meilleur jour pour le nikāḥ',
+    description: 'The days and planetary hours the ikhtiyārāt rules favour for a nikāḥ, Sunnah notes and the next favourable dates.',
+  },
+  {
+    path: '/best-day-for/travel',
+    name: 'Best Day to Travel',
+    nameFr: 'Jour favorable pour voyager',
+    description: 'Thursday and early departure in the Sunnah, plus the favourable days and planetary hours for a journey.',
+  },
+  {
+    path: '/best-day-for/moving-home',
+    name: 'Best Day to Move Home',
+    nameFr: 'Jour favorable pour déménager',
+    description: 'The days and planetary hours the ikhtiyārāt rules favour for moving into a new home or laying a foundation.',
+  },
+  {
+    path: '/best-day-for/business',
+    name: 'Best Day to Start a Business',
+    nameFr: 'Jour favorable pour commencer une affaire',
+    description: 'The days and planetary hours the ikhtiyārāt rules favour for starting a business or signing a contract.',
+  },
+  {
     path: '/name-and-mother-burj',
     name: "Your Burj from Your Name & Mother's Name",
     nameFr: 'Votre burj par votre nom et celui de votre mère',
