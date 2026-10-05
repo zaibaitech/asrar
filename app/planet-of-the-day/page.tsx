@@ -2,11 +2,14 @@ import { Suspense } from 'react';
 import { cookies } from 'next/headers';
 import type { Metadata } from 'next';
 import { absoluteUrl } from '@/src/lib/siteRoutes';
+import { getRouteLang } from '@/src/lib/pageLang';
+import { localeAlternates, localizedUrl } from '@/src/lib/i18nRoutes';
 import { PlanetOfTheDayPage } from './PlanetOfTheDayPage';
 
 type Lang = 'en' | 'fr';
 
 async function resolveLang(searchParams: Promise<{ lang?: string }>): Promise<Lang> {
+  if ((await getRouteLang()) === 'fr') return 'fr';
   const params = await searchParams;
   if (params?.lang === 'fr') return 'fr';
   if (params?.lang === 'en') return 'en';
@@ -25,6 +28,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const lang = await resolveLang(searchParams);
   const isEn = lang !== 'fr';
+  const routeLang = await getRouteLang();
 
   const title = isEn ? 'Planet of the Day' : 'Planète du Jour';
   const description = isEn
@@ -34,13 +38,11 @@ export async function generateMetadata({
   return {
     title,
     description,
-    alternates: {
-      canonical: absoluteUrl('/planet-of-the-day'),
-    },
+    alternates: localeAlternates('/planet-of-the-day', routeLang),
     openGraph: {
       title,
       description,
-      url: absoluteUrl('/planet-of-the-day'),
+      url: localizedUrl('/planet-of-the-day', routeLang),
       images: [{ url: absoluteUrl('/icons/icon-512x512.png') }],
     },
     twitter: { card: 'summary', title, description },

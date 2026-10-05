@@ -5,6 +5,8 @@
  * a "Related tools" <nav> of plain links.
  */
 
+import { localizeHref, type RouteLang } from '@/src/lib/i18nRoutes';
+
 export interface FaqItem {
   q: string;
   a: string;
@@ -30,14 +32,23 @@ export function FaqSection({ id, title, faqs }: { id: string; title: string; faq
   );
 }
 
-export function RelatedLinks({ title, links }: { title: string; links: readonly RelatedLink[] }) {
+export function RelatedLinks({
+  title,
+  links,
+  routeLang = 'en',
+}: {
+  title: string;
+  links: readonly RelatedLink[];
+  /** Language of the URL being served; on /fr pages links point at /fr mirrors. */
+  routeLang?: RouteLang;
+}) {
   return (
     <nav aria-label={title} className="space-y-3">
       <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100">{title}</h2>
       <ul className="space-y-3">
         {links.map(([href, name, desc]) => (
           <li key={href}>
-            <a href={href} className="font-semibold text-emerald-700 dark:text-emerald-300 hover:underline">
+            <a href={localizeHref(href, routeLang)} className="font-semibold text-emerald-700 dark:text-emerald-300 hover:underline">
               {name}
             </a>
             <p className="text-sm text-slate-600 dark:text-slate-400">{desc}</p>

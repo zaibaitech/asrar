@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import { SADAQAH_BY_DAY } from '@/src/features/calculator/lib/sadaqahByDay';
 import { SADAQAH_BY_MONTH } from '@/src/features/calculator/lib/sadaqahByMonth';
 import { ZODIAC_SADAQAH, ZODIAC_SIGN_ORDER, ZODIAC_SIGN_SYMBOL } from '@/src/data/zodiacSadaqahData';
-import { buildToolMetadata, resolvePageLang, type PageLang } from '@/src/lib/pageLang';
+import { buildToolMetadata, getRouteLang, resolvePageLang, type PageLang } from '@/src/lib/pageLang';
+import { localizeHref } from '@/src/lib/i18nRoutes';
 import { FaqSection, JsonLd, RelatedLinks, faqJsonLd, type FaqItem, type RelatedLink } from '@/src/components/seo/SeoSections';
 import { SadaqaDateChecker } from '@/src/components/sadaqa/SadaqaDateChecker';
 
@@ -144,6 +145,7 @@ export default async function Page({
   searchParams: Promise<{ lang?: string }>;
 }) {
   const lang = await resolvePageLang(searchParams);
+  const routeLang = await getRouteLang();
   const c = COPY[lang];
 
   return (
@@ -174,7 +176,7 @@ export default async function Page({
               </li>
             ))}
           </ul>
-          <a href="/sadaqa-of-the-day" className="inline-block font-semibold text-emerald-700 dark:text-emerald-300 hover:underline">
+          <a href={localizeHref('/sadaqa-of-the-day', routeLang)} className="inline-block font-semibold text-emerald-700 dark:text-emerald-300 hover:underline">
             {c.dayLink}
           </a>
         </section>
@@ -206,7 +208,7 @@ export default async function Page({
         <section id="by-burj" className="space-y-4 scroll-mt-4">
           <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">{c.burjTitle}</h2>
           <p className="text-slate-700 dark:text-slate-300">{c.burjIntro}</p>
-          <a href="/name-and-mother-burj" className="inline-block font-semibold text-emerald-700 dark:text-emerald-300 hover:underline">
+          <a href={localizeHref('/name-and-mother-burj', routeLang)} className="inline-block font-semibold text-emerald-700 dark:text-emerald-300 hover:underline">
             {c.burjLink}
           </a>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -235,7 +237,7 @@ export default async function Page({
         </section>
 
         <FaqSection id="sadaqa-faq-heading" title={c.faqTitle} faqs={c.faqs} />
-        <RelatedLinks title={c.relatedTitle} links={c.related} />
+        <RelatedLinks title={c.relatedTitle} links={c.related} routeLang={routeLang} />
       </main>
 
       <JsonLd data={faqJsonLd(c.faqs)} />

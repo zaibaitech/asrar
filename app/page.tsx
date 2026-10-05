@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import { cookies } from 'next/headers';
 import { bilingualMeta } from '../src/lib/seoConfig';
-import { PUBLIC_TOOLS, SITE_URL, absoluteUrl } from '../src/lib/siteRoutes';
+import { PUBLIC_TOOLS, SITE_URL } from '../src/lib/siteRoutes';
+import { getRouteLang } from '../src/lib/pageLang';
+import { localeAlternates, localizeHref, localizedUrl } from '../src/lib/i18nRoutes';
 import AsrarEveryday from '../asrar-everyday-app';
 import { HomeSeoShell } from './HomeSeoShell';
 
@@ -19,10 +21,13 @@ export async function generateMetadata({
   // Await searchParams (Next.js 14.2+ requirement)
   const params = await searchParams;
   
-  // Check URL param first, then cookie
+  // /fr URL first, then URL param, then cookie
+  const routeLang = await getRouteLang();
   let lang: 'en' | 'fr' = 'en';
   
-  if (params?.lang === 'fr') {
+  if (routeLang === 'fr') {
+    lang = 'fr';
+  } else if (params?.lang === 'fr') {
     lang = 'fr';
   } else if (params?.lang === 'en') {
     lang = 'en';
@@ -43,14 +48,12 @@ export async function generateMetadata({
   return {
     title: { absolute: meta.title },
     description: meta.shortDescription,
-    alternates: {
-      canonical: absoluteUrl('/'),
-    },
+    alternates: localeAlternates('/', routeLang),
     openGraph: {
       type: 'website',
       locale: meta.locale,
       alternateLocale: lang === 'en' ? ['fr_FR'] : ['en_GB'],
-      url: `${baseUrl}${lang === 'fr' ? '?lang=fr' : ''}`,
+      url: localizedUrl('/', routeLang),
       siteName: 'Asrār Everyday',
       title: meta.title,
       description: meta.fullDescription,
@@ -76,7 +79,43 @@ export async function generateMetadata({
  * Home page component for Asrār Everyday
  * Server component that renders the client app
  */
-export default function Home() {
+/** French copy for the server-rendered SEO shell on /fr (hidden once the app mounts). */
+const SHELL_FR = {
+  h1: 'Asrār — Heures planétaires, Abjad et sciences sacrées islamiques',
+  intro:
+    "Asrār accompagne l'étude des sciences islamiques traditionnelles de l'ʿIlm al-Nujūm (le moment céleste) et de l'ʿIlm al-Ḥurūf (la science des lettres). Trouvez la planète gouvernante de l'heure et du jour, suivez les transits planétaires en direct, établissez votre profil de naissance, choisissez des dates propices avec l'ikhtiyārāt classique, calculez des valeurs Abjad et poursuivez votre dhikr quotidien.",
+  note: "Ces outils servent à la réflexion et à l'éducation, non à la prédiction. Seul Allah connaît l'invisible.",
+  toolsTitle: 'Explorer les outils',
+};
+
+export default async function Home() {
+  const routeLang = await getRouteLang();
+  if (routeLang === 'fr') {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+        <AsrarEveryday />
+        <HomeSeoShell>
+          <main lang="fr" className="max-w-3xl mx-auto px-4 py-10">
+            <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100">{SHELL_FR.h1}</h1>
+            <p className="mt-4 text-slate-700 dark:text-slate-300 leading-relaxed">{SHELL_FR.intro}</p>
+            <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">{SHELL_FR.note}</p>
+            <h2 className="mt-8 text-xl font-semibold text-slate-900 dark:text-slate-100">{SHELL_FR.toolsTitle}</h2>
+            <ul className="mt-4 space-y-3">
+              {PUBLIC_TOOLS.map((tool) => (
+                <li key={tool.path}>
+                  <a href={localizeHref(tool.path, 'fr')} className="font-semibold text-indigo-700 dark:text-indigo-300 hover:underline">
+                    {tool.nameFr}
+                  </a>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">{tool.descriptionFr}</p>
+                </li>
+              ))}
+            </ul>
+          </main>
+        </HomeSeoShell>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
       <AsrarEveryday />

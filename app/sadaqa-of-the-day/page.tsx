@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { SADAQAH_BY_DAY } from '@/src/features/calculator/lib/sadaqahByDay';
-import { buildToolMetadata, resolvePageLang, type PageLang } from '@/src/lib/pageLang';
+import { buildToolMetadata, getRouteLang, resolvePageLang, type PageLang } from '@/src/lib/pageLang';
+import { localizeHref } from '@/src/lib/i18nRoutes';
 import { FaqSection, JsonLd, RelatedLinks, faqJsonLd, type FaqItem, type RelatedLink } from '@/src/components/seo/SeoSections';
 import { WeekdaySadaqa } from '@/src/components/sadaqa/WeekdaySadaqa';
 import { SadaqaDateChecker } from '@/src/components/sadaqa/SadaqaDateChecker';
@@ -143,6 +144,7 @@ export default async function Page({
   searchParams: Promise<{ lang?: string }>;
 }) {
   const lang = await resolvePageLang(searchParams);
+  const routeLang = await getRouteLang();
   const c = copy(lang);
   // Server default for the highlight (UTC, i.e. Senegal time); the client re-checks local time.
   const serverDay = new Date().getUTCDay();
@@ -151,7 +153,7 @@ export default async function Page({
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-slate-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
       <main className="max-w-3xl mx-auto px-4 py-8 space-y-8">
         <nav aria-label="Breadcrumb" className="text-sm text-slate-500 dark:text-slate-400">
-          <a href="/" className="hover:underline">Asrār</a> › <a href="/sadaqa" className="hover:underline">Sadaqa</a>
+          <a href={localizeHref('/', routeLang)} className="hover:underline">Asrār</a> › <a href={localizeHref('/sadaqa', routeLang)} className="hover:underline">Sadaqa</a>
         </nav>
         <header className="space-y-3">
           <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100">{c.h1}</h1>
@@ -171,7 +173,7 @@ export default async function Page({
         </section>
 
         <FaqSection id="sadaqa-day-faq-heading" title={c.faqTitle} faqs={c.faqs} />
-        <RelatedLinks title={c.relatedTitle} links={c.related} />
+        <RelatedLinks title={c.relatedTitle} links={c.related} routeLang={routeLang} />
       </main>
 
       <JsonLd data={faqJsonLd(c.faqs)} />

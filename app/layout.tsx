@@ -83,8 +83,8 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
     },
   },
-  // No root canonical/hreflang: each public page sets its own self-canonical,
-  // and there are no locale routes yet to point hreflang at.
+  // No root canonical/hreflang: each public page sets its own self-canonical
+  // and, for pages with a /fr mirror, its own en/fr/x-default hreflang.
   openGraph: {
     type: 'website',
     locale: 'en_GB',

@@ -1,12 +1,15 @@
 import type { Metadata } from 'next';
 import { cookies } from 'next/headers';
 import { Suspense } from 'react';
-import { SITE_URL, absoluteUrl } from '@/src/lib/siteRoutes';
+import { SITE_URL } from '@/src/lib/siteRoutes';
+import { getRouteLang } from '@/src/lib/pageLang';
+import { localeAlternates, localizeHref, localizedUrl } from '@/src/lib/i18nRoutes';
 import { IkhtiyaratPage } from './IkhtiyaratPage';
 
 type Lang = 'en' | 'fr';
 
 async function resolveLang(searchParams: Promise<{ lang?: string }>): Promise<Lang> {
+  if ((await getRouteLang()) === 'fr') return 'fr';
   const params = await searchParams;
   if (params?.lang === 'fr') return 'fr';
   if (params?.lang === 'en') return 'en';
@@ -33,13 +36,14 @@ export async function generateMetadata({
   searchParams: Promise<{ lang?: string }>;
 }): Promise<Metadata> {
   const m = META[await resolveLang(searchParams)];
-  const url = absoluteUrl('/ikhtiyarat');
+  const routeLang = await getRouteLang();
+  const url = localizedUrl('/ikhtiyarat', routeLang);
   const imageUrl = `${SITE_URL}/opengraph-image`;
 
   return {
     title: m.title,
     description: m.description,
-    alternates: { canonical: url },
+    alternates: localeAlternates('/ikhtiyarat', routeLang),
     openGraph: {
       type: 'website',
       url,
@@ -166,6 +170,7 @@ export default async function Page({
   searchParams: Promise<{ lang?: string }>;
 }) {
   const lang = await resolveLang(searchParams);
+  const routeLang = await getRouteLang();
   const c = COPY[lang];
 
   const faqJsonLd = {
@@ -186,7 +191,7 @@ export default async function Page({
       {/* 1. Compact intro: one short H1 + a two-line lead, so the tool is in the first mobile viewport. */}
       <header className="max-w-2xl mx-auto px-4 pt-3 pb-4 sm:pt-8 sm:pb-5 space-y-1.5 sm:space-y-2">
         <nav aria-label="Breadcrumb" className="text-xs">
-          <a href="/" className="inline-flex items-center min-h-[24px] text-slate-500 dark:text-slate-400 hover:text-emerald-700 dark:hover:text-emerald-400 hover:underline">
+          <a href={localizeHref('/', routeLang)} className="inline-flex items-center min-h-[24px] text-slate-500 dark:text-slate-400 hover:text-emerald-700 dark:hover:text-emerald-400 hover:underline">
             ← {c.breadcrumbHome}
           </a>
         </nav>
@@ -229,7 +234,7 @@ export default async function Page({
           <ul className="space-y-3">
             {c.related.map(([href, name, desc]) => (
               <li key={href}>
-                <a href={href} className="font-semibold text-emerald-700 dark:text-emerald-300 hover:underline">
+                <a href={localizeHref(href, routeLang)} className="font-semibold text-emerald-700 dark:text-emerald-300 hover:underline">
                   {name}
                 </a>
                 <p className="text-sm text-slate-600 dark:text-slate-400">{desc}</p>
