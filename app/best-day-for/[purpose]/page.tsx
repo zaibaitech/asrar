@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { Suspense } from 'react';
 import { buildToolMetadata, resolvePageLang, type PageLang } from '@/src/lib/pageLang';
 import { FaqSection, JsonLd, RelatedLinks, faqJsonLd, type RelatedLink } from '@/src/components/seo/SeoSections';
 import { PURPOSE_SLUGS, REFERENCE_LOCATION, type PurposeSlug } from '@/src/lib/ikhtiyarat/purposes';
@@ -204,9 +203,7 @@ export default async function Page({ params, searchParams }: { params: Params; s
         <section className="space-y-3" aria-labelledby="tool-heading">
           <h2 id="tool-heading" className="text-xl font-semibold text-slate-900 dark:text-slate-100">{ui.toolTitle}</h2>
           <p className="text-slate-700 dark:text-slate-300">{ui.toolIntro}</p>
-          <Suspense fallback={<div className="h-40 rounded-2xl bg-white/60 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 animate-pulse" />}>
-            <ElectionToolEmbed lang={lang} electionType={facts.def.toolElection} />
-          </Suspense>
+          <ElectionToolEmbed electionType={facts.def.toolElection} />
           <p>
             <a href={toolHref} className="font-semibold text-emerald-700 dark:text-emerald-300 hover:underline">{ui.openTool}</a>
           </p>

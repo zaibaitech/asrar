@@ -89,9 +89,7 @@ export default function Home() {
             Asrār is a companion for the traditional Islamic sciences of ʿIlm al-Nujūm (celestial
             timing) and ʿIlm al-Ḥurūf (the science of letters). Find the ruling planet of the current
             hour and day, follow live planetary transits, build your birth profile, choose auspicious
-            dates with classical ikhtiyārāt, calculate Abjad values, find your burj from your name and
-            your mother&apos;s name, check name compatibility for marriage, see the sadaqa of the day, and
-            keep up your daily dhikr.
+            dates with classical ikhtiyārāt, calculate Abjad values, and keep up your daily dhikr.
           </p>
           <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">
             These tools are for reflection and education, not prediction. Only Allah knows the unseen.

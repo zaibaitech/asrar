@@ -49,9 +49,9 @@ export function DivineNameIntentionResultView({
             {isFrench ? 'ASRĀR · COMPATIBILITÉ' : 'ASRĀR · COMPATIBILITY'}
           </div>
           <div className="text-4xl mt-3.5">{INTENTION_EMOJI[intention]}</div>
-          <h2 className="font-display font-semibold text-3xl mt-2 leading-tight">
+          <h1 className="font-display font-semibold text-3xl mt-2 leading-tight">
             {info.label[contentLang]}
-          </h2>
+          </h1>
           <p className="text-sm mt-2" style={{ color: COMPAT_THEME.muted }}>{info.description[contentLang]}</p>
         </header>
 

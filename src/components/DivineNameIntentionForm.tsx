@@ -29,9 +29,9 @@ export function DivineNameIntentionForm({ onCalculate, language = 'en', isLoadin
           <div className="font-technical text-[11px] tracking-[4px] font-bold" style={{ color: COMPAT_THEME.indigo }}>
             {isFrench ? 'ASRĀR · COMPATIBILITÉ' : 'ASRĀR · COMPATIBILITY'}
           </div>
-          <h2 className="font-display font-semibold text-4xl mt-3.5 leading-tight">
+          <h1 className="font-display font-semibold text-4xl mt-3.5 leading-tight">
             {isFrench ? 'Nom Divin selon une Intention' : 'Divine Name to Intention'}
-          </h2>
+          </h1>
           <p className="text-sm mt-2.5" style={{ color: COMPAT_THEME.muted }}>
             {isFrench
               ? "Appelez Allah par le Nom dont le sens correspond à votre besoin — Coran 7:180"

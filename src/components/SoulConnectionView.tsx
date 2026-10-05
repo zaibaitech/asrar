@@ -100,7 +100,7 @@ export function SoulConnectionView({ result, language = 'en', initialContext }: 
           <div className="font-technical text-[11px] tracking-[4px] font-bold" style={{ color: COMPAT_THEME.indigo }}>
             {c.eyebrow}
           </div>
-          <h2 className="font-display font-semibold text-4xl mt-3.5 leading-tight">{c.title}</h2>
+          <h1 className="font-display font-semibold text-4xl mt-3.5 leading-tight">{c.title}</h1>
           <p className="text-sm mt-2.5" style={{ color: COMPAT_THEME.muted }}>{c.subtitle}</p>
           <span
             className="inline-block mt-3.5 text-[13px] font-semibold px-4 py-1.5 rounded-full"

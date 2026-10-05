@@ -69,7 +69,7 @@ export function AstrologicalCompatibilityView({ compatibility, language = 'en' }
           <div className="font-technical text-[11px] tracking-[4px] font-bold" style={{ color: COMPAT_THEME.indigo }}>
             {c.eyebrow}
           </div>
-          <h2 className="font-display font-semibold text-4xl mt-3.5 leading-tight">{c.title}</h2>
+          <h1 className="font-display font-semibold text-4xl mt-3.5 leading-tight">{c.title}</h1>
           <div className="flex items-center justify-center gap-3.5 mt-4 text-lg font-technical">
             <span>{person1.name}</span>
             <span aria-hidden="true" style={{ color: COMPAT_THEME.indigo }}>۞</span>

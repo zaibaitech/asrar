@@ -56,9 +56,9 @@ export function DivineNameInputForm({ onCalculate, language = 'en', isLoading = 
           <div className="font-technical text-[11px] tracking-[4px] font-bold" style={{ color: COMPAT_THEME.indigo }}>
             {isFrench ? 'ASRĀR · COMPATIBILITÉ' : 'ASRĀR · COMPATIBILITY'}
           </div>
-          <h2 className="font-display font-semibold text-4xl mt-3.5 leading-tight">
+          <h1 className="font-display font-semibold text-4xl mt-3.5 leading-tight">
             {isFrench ? 'Vous et un Nom Divin' : 'You and a Divine Name'}
-          </h2>
+          </h1>
           <p className="text-sm mt-2.5" style={{ color: COMPAT_THEME.muted }}>
             {isFrench
               ? "Découvrez votre résonance spirituelle avec les 99 Noms d'Allah"
