@@ -61,7 +61,7 @@ const COPY = {
   en: {
     h1: 'Ikhtiyārāt: Choose an Auspicious Date',
     lead:
-      'Check a date or find the best days for nikāḥ, travel, business or moving home with classical Islamic electional timing — for reflection, not prediction.',
+      'Check a date or find favourable days for nikāḥ, travel, business or moving home using classical Islamic timing.',
     breadcrumbHome: 'Asrār',
     aboutTitle: 'Ikhtiyārāt — Choose an Auspicious Date the Classical Islamic Way',
     intro1:
@@ -105,7 +105,7 @@ const COPY = {
   fr: {
     h1: 'Ikhtiyārāt : choisir une date propice',
     lead:
-      "Vérifiez une date ou trouvez les meilleurs jours pour un nikāḥ, un voyage, une affaire ou un déménagement, selon l'ikhtiyārāt islamique classique — pour la réflexion, pas la prédiction.",
+      "Vérifiez une date ou trouvez des jours favorables pour un nikāḥ, un voyage, une affaire ou un déménagement, selon la tradition islamique classique.",
     breadcrumbHome: 'Asrār',
     aboutTitle: 'Ikhtiyārāt — Choisir une date propice selon la voie islamique classique',
     intro1:
@@ -184,11 +184,13 @@ export default async function Page({
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-slate-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
       {/* 1. Compact intro: one short H1 + a two-line lead, so the tool is in the first mobile viewport. */}
-      <header className="max-w-2xl mx-auto px-4 pt-3 pb-3 sm:pt-6 space-y-1.5">
-        <nav aria-label="Breadcrumb" className="text-xs text-slate-500 dark:text-slate-400">
-          <a href="/" className="text-emerald-700 dark:text-emerald-400 hover:underline">← {c.breadcrumbHome}</a>
+      <header className="max-w-2xl mx-auto px-4 pt-3 pb-4 sm:pt-8 sm:pb-5 space-y-1.5 sm:space-y-2">
+        <nav aria-label="Breadcrumb" className="text-xs">
+          <a href="/" className="inline-flex items-center min-h-[24px] text-slate-500 dark:text-slate-400 hover:text-emerald-700 dark:hover:text-emerald-400 hover:underline">
+            ← {c.breadcrumbHome}
+          </a>
         </nav>
-        <h1 className="text-2xl sm:text-3xl font-bold leading-tight text-slate-900 dark:text-slate-100">{c.h1}</h1>
+        <h1 className="text-[1.375rem] sm:text-3xl font-bold leading-tight tracking-tight text-slate-900 dark:text-slate-100">{c.h1}</h1>
         <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-snug">{c.lead}</p>
       </header>
 
@@ -198,7 +200,7 @@ export default async function Page({
       </Suspense>
 
       {/* 4. Detailed educational / SEO content, moved below the tool (unchanged text). */}
-      <div className="max-w-3xl mx-auto px-4 py-8 space-y-8">
+      <div className="max-w-2xl mx-auto px-4 py-8 space-y-8">
         <section className="space-y-3" aria-labelledby="ikhtiyarat-about-heading">
           <h2 id="ikhtiyarat-about-heading" className="text-xl font-semibold text-slate-900 dark:text-slate-100">
             {c.aboutTitle}

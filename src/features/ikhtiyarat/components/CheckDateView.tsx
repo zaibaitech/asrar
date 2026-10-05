@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { evaluateElection, findNearestBetterDates } from '@/src/lib/ikhtiyarat/engine';
 import { marriageElectionConfig } from '@/src/lib/ikhtiyarat/elections/marriage';
@@ -49,10 +49,17 @@ export function CheckDateView({
   language,
   location,
   electionType = 'marriage',
+  onUseMyLocation,
 }: {
   language: UiLang;
   location: UserLocation;
   electionType?: ElectionType;
+  /**
+   * Optional: re-request the browser's geolocation (same getUserLocation()
+   * the host already calls on mount). When given, a "Use my location" link
+   * is shown while the default (Mecca) location is in use.
+   */
+  onUseMyLocation?: () => Promise<UserLocation>;
 }) {
   const c = ikhtiyaratCopy[language];
   const config = CONFIG_BY_ELECTION_TYPE[electionType];
@@ -67,6 +74,16 @@ export function CheckDateView({
   const [loading, setLoading] = useState(false);
   const [shareCopied, setShareCopied] = useState(false);
   const [simpleMode, setSimpleMode] = useSimpleMode();
+  const [locating, setLocating] = useState(false);
+  const [locationUnavailable, setLocationUnavailable] = useState(false);
+  // Set when the user asked for their location: re-run the check once the
+  // new coordinates arrive so the result matches the location shown.
+  const recheckOnLocation = useRef(false);
+  const isDefaultLocation = !location.isAccurate;
+  const locationName =
+    isDefaultLocation && (!location.cityName || location.cityName === 'Mecca (Default)')
+      ? c.locationDefault
+      : location.cityName ?? `${location.latitude.toFixed(2)}, ${location.longitude.toFixed(2)}`;
 
   const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
@@ -95,6 +112,26 @@ export function CheckDateView({
     handleCheck();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [electionType]);
+
+  useEffect(() => {
+    if (!recheckOnLocation.current) return;
+    recheckOnLocation.current = false;
+    handleCheck();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.latitude, location.longitude]);
+
+  async function handleUseMyLocation() {
+    if (!onUseMyLocation) return;
+    setLocating(true);
+    setLocationUnavailable(false);
+    recheckOnLocation.current = true;
+    const loc = await onUseMyLocation();
+    setLocating(false);
+    if (!loc.isAccurate) {
+      recheckOnLocation.current = false;
+      setLocationUnavailable(true);
+    }
+  }
 
   async function handleShare() {
     if (!result) return;
@@ -139,16 +176,35 @@ export function CheckDateView({
             type="date"
             value={dateStr}
             onChange={e => setDateStr(e.target.value)}
-            className="mt-1 w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2 text-sm text-slate-900 dark:text-slate-100"
+            className="mt-1 block w-full min-w-0 min-h-[44px] rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2 text-base sm:text-sm text-slate-900 dark:text-slate-100"
           />
         </label>
-        <div className="text-xs text-slate-500 dark:text-slate-400">
-          {c.locationLabel}: {location.cityName ?? `${location.latitude.toFixed(2)}, ${location.longitude.toFixed(2)}`}
+        <div className="space-y-0.5">
+          <div className="flex items-center justify-between gap-2 text-xs text-slate-500 dark:text-slate-400">
+            <span className="min-w-0">
+              {c.locationLabel}: <span className="font-medium text-slate-700 dark:text-slate-300">{locationName}</span>
+            </span>
+            {onUseMyLocation && isDefaultLocation && (
+              <button
+                type="button"
+                onClick={handleUseMyLocation}
+                disabled={locating}
+                className="shrink-0 -my-2 -mr-2 min-h-[36px] px-2 font-medium text-emerald-700 dark:text-emerald-400 hover:underline disabled:opacity-60"
+              >
+                {locating ? c.locating : c.useMyLocation}
+              </button>
+            )}
+          </div>
+          {isDefaultLocation && (
+            <p className="text-[11px] leading-snug text-slate-400 dark:text-slate-500">
+              {locationUnavailable ? c.locationUnavailable : c.locationDefaultHint}
+            </p>
+          )}
         </div>
         <button
           onClick={handleCheck}
           disabled={loading}
-          className="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 disabled:opacity-60 text-white text-sm font-semibold transition-colors active:scale-[0.98]"
+          className="w-full min-h-[48px] py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 disabled:opacity-60 text-white text-sm font-semibold shadow-sm transition-colors active:scale-[0.98]"
         >
           {loading ? c.loading : c.checkButton}
         </button>

@@ -57,6 +57,14 @@ export function IkhtiyaratPage({ hideHeader = false }: IkhtiyaratPageProps = {})
     getUserLocation().then(setLocation);
   }, []);
 
+  // Re-request the browser location (same call as on mount). Falls back to
+  // Mecca exactly as before if permission is denied or unavailable.
+  const handleUseMyLocation = async () => {
+    const loc = await getUserLocation();
+    setLocation(loc);
+    return loc;
+  };
+
   const electionTypeLabel: Record<ElectionType, string> = {
     marriage: c.electionTypeMarriage,
     travel: c.electionTypeTravel,
@@ -116,7 +124,7 @@ export function IkhtiyaratPage({ hideHeader = false }: IkhtiyaratPageProps = {})
             <select
               value={electionType}
               onChange={e => setElectionType(e.target.value as ElectionType)}
-              className="w-full appearance-none rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2.5 pr-9 text-sm font-medium text-slate-900 dark:text-slate-100"
+              className="w-full min-h-[44px] appearance-none rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2.5 pr-9 text-base sm:text-sm font-medium text-slate-900 dark:text-slate-100"
             >
               {ELECTION_TYPE_OPTIONS.map(type => (
                 <option key={type} value={type}>
@@ -132,16 +140,18 @@ export function IkhtiyaratPage({ hideHeader = false }: IkhtiyaratPageProps = {})
         <div className="flex rounded-xl border border-slate-200 dark:border-slate-700 p-1 bg-white/60 dark:bg-slate-800/40">
           <button
             onClick={() => setMode('check')}
-            className={`flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${
-              mode === 'check' ? 'bg-emerald-600 text-white' : 'text-slate-600 dark:text-slate-300'
+            aria-pressed={mode === 'check'}
+            className={`flex-1 min-h-[44px] px-2 py-2 rounded-lg text-sm font-medium leading-tight transition-colors ${
+              mode === 'check' ? 'bg-emerald-600 text-white shadow-sm' : 'text-slate-600 dark:text-slate-300 hover:bg-white/80 dark:hover:bg-slate-700/40'
             }`}
           >
             {c.tabCheck}
           </button>
           <button
             onClick={() => setMode('scan')}
-            className={`flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${
-              mode === 'scan' ? 'bg-emerald-600 text-white' : 'text-slate-600 dark:text-slate-300'
+            aria-pressed={mode === 'scan'}
+            className={`flex-1 min-h-[44px] px-2 py-2 rounded-lg text-sm font-medium leading-tight transition-colors ${
+              mode === 'scan' ? 'bg-emerald-600 text-white shadow-sm' : 'text-slate-600 dark:text-slate-300 hover:bg-white/80 dark:hover:bg-slate-700/40'
             }`}
           >
             {c.tabScan}
@@ -150,7 +160,12 @@ export function IkhtiyaratPage({ hideHeader = false }: IkhtiyaratPageProps = {})
 
         {location ? (
           mode === 'check' ? (
-            <CheckDateView language={uiLang} location={location} electionType={electionType} />
+            <CheckDateView
+              language={uiLang}
+              location={location}
+              electionType={electionType}
+              onUseMyLocation={handleUseMyLocation}
+            />
           ) : (
             <ScanDatesView language={uiLang} location={location} electionType={electionType} />
           )

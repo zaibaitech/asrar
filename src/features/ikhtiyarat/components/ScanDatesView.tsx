@@ -86,14 +86,14 @@ export function ScanDatesView({
   return (
     <div className="space-y-4">
       <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40 p-4 space-y-3">
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-2 sm:gap-3">
           <label className="block">
             <span className="text-xs font-medium text-slate-500 dark:text-slate-400">{c.scanRangeStart}</span>
             <input
               type="date"
               value={startStr}
               onChange={e => setStartStr(e.target.value)}
-              className="mt-1 w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2 text-sm text-slate-900 dark:text-slate-100"
+              className="mt-1 block w-full min-w-0 min-h-[44px] rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-2.5 py-2 text-sm text-slate-900 dark:text-slate-100"
             />
           </label>
           <label className="block">
@@ -102,7 +102,7 @@ export function ScanDatesView({
               type="date"
               value={endStr}
               onChange={e => setEndStr(e.target.value)}
-              className="mt-1 w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2 text-sm text-slate-900 dark:text-slate-100"
+              className="mt-1 block w-full min-w-0 min-h-[44px] rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-2.5 py-2 text-sm text-slate-900 dark:text-slate-100"
             />
           </label>
         </div>
@@ -110,7 +110,7 @@ export function ScanDatesView({
         <button
           onClick={handleScan}
           disabled={loading}
-          className="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 disabled:opacity-60 text-white text-sm font-semibold transition-colors active:scale-[0.98]"
+          className="w-full min-h-[48px] py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 disabled:opacity-60 text-white text-sm font-semibold shadow-sm transition-colors active:scale-[0.98]"
         >
           {loading ? c.loading : c.scanButton}
         </button>
