@@ -26,7 +26,18 @@ function isElectionType(value: string | null): value is ElectionType {
   return value !== null && (ELECTION_TYPE_OPTIONS as string[]).includes(value);
 }
 
-export function IkhtiyaratPage() {
+interface IkhtiyaratPageProps {
+  /**
+   * Hide the tool's own sticky "Best Dates · Ikhtiyārāt" bar and full-screen
+   * background when the host page already provides the heading (the
+   * /ikhtiyarat SEO page). The ⓘ About/Adab button moves next to the
+   * Occasion selector; everything else — labels, views, logic — is identical.
+   * Defaults to false, so other hosts render exactly as before.
+   */
+  hideHeader?: boolean;
+}
+
+export function IkhtiyaratPage({ hideHeader = false }: IkhtiyaratPageProps = {}) {
   const { language } = useLanguage();
   const uiLang: UiLang = language === 'fr' ? 'fr' : 'en';
   const c = ikhtiyaratCopy[uiLang];
@@ -46,6 +57,14 @@ export function IkhtiyaratPage() {
     getUserLocation().then(setLocation);
   }, []);
 
+  // Re-request the browser location (same call as on mount). Falls back to
+  // Mecca exactly as before if permission is denied or unavailable.
+  const handleUseMyLocation = async () => {
+    const loc = await getUserLocation();
+    setLocation(loc);
+    return loc;
+  };
+
   const electionTypeLabel: Record<ElectionType, string> = {
     marriage: c.electionTypeMarriage,
     travel: c.electionTypeTravel,
@@ -56,8 +75,26 @@ export function IkhtiyaratPage() {
     education: c.electionTypeEducation,
   };
 
+  const aboutButton = (sizeClass: string) => (
+    <button
+      onClick={() => setShowAbout(true)}
+      aria-label={c.aboutLink}
+      title={c.aboutLink}
+      className={`${sizeClass} flex items-center justify-center text-emerald-700 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-emerald-200 transition-colors`}
+    >
+      <Info className="w-4 h-4" />
+    </button>
+  );
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-slate-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
+    <div
+      className={
+        hideHeader
+          ? ''
+          : 'min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-slate-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900'
+      }
+    >
+      {!hideHeader && (
       <div className="sticky top-0 z-10 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm border-b border-emerald-200 dark:border-emerald-800/50 px-4 py-3">
         <div className="max-w-2xl mx-auto flex items-center justify-between">
           <Link href="/" className="text-sm text-emerald-700 dark:text-emerald-400 hover:underline">
@@ -69,27 +106,25 @@ export function IkhtiyaratPage() {
               {c.subtitle} · <span dir="rtl" lang="ar" className="font-arabic">{subtitleArabic}</span>
             </div>
           </div>
-          <button
-            onClick={() => setShowAbout(true)}
-            aria-label={c.aboutLink}
-            title={c.aboutLink}
-            className="w-6 h-6 flex items-center justify-center text-emerald-700 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-emerald-200 transition-colors"
-          >
-            <Info className="w-4 h-4" />
-          </button>
+          {aboutButton('w-6 h-6')}
         </div>
       </div>
+      )}
 
-      <div className="max-w-2xl mx-auto px-4 py-6 space-y-4">
+      <div className={`max-w-2xl mx-auto px-4 space-y-4 ${hideHeader ? 'pt-1 pb-6' : 'py-6'}`}>
         <AdabDisclaimer language={uiLang} forceOpen={showAbout} onRequestClose={() => setShowAbout(false)} />
 
+        <div className="relative">
+        {hideHeader && (
+          <div className="absolute -right-2 -top-2.5">{aboutButton('w-9 h-9')}</div>
+        )}
         <label className="block">
           <span className="text-xs font-medium text-slate-500 dark:text-slate-400">{c.electionTypeLabel}</span>
           <div className="relative mt-1">
             <select
               value={electionType}
               onChange={e => setElectionType(e.target.value as ElectionType)}
-              className="w-full appearance-none rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2.5 pr-9 text-sm font-medium text-slate-900 dark:text-slate-100"
+              className="w-full min-h-[44px] appearance-none rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2.5 pr-9 text-base sm:text-sm font-medium text-slate-900 dark:text-slate-100"
             >
               {ELECTION_TYPE_OPTIONS.map(type => (
                 <option key={type} value={type}>
@@ -100,20 +135,23 @@ export function IkhtiyaratPage() {
             <ChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
           </div>
         </label>
+        </div>
 
         <div className="flex rounded-xl border border-slate-200 dark:border-slate-700 p-1 bg-white/60 dark:bg-slate-800/40">
           <button
             onClick={() => setMode('check')}
-            className={`flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${
-              mode === 'check' ? 'bg-emerald-600 text-white' : 'text-slate-600 dark:text-slate-300'
+            aria-pressed={mode === 'check'}
+            className={`flex-1 min-h-[44px] px-2 py-2 rounded-lg text-sm font-medium leading-tight transition-colors ${
+              mode === 'check' ? 'bg-emerald-600 text-white shadow-sm' : 'text-slate-600 dark:text-slate-300 hover:bg-white/80 dark:hover:bg-slate-700/40'
             }`}
           >
             {c.tabCheck}
           </button>
           <button
             onClick={() => setMode('scan')}
-            className={`flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${
-              mode === 'scan' ? 'bg-emerald-600 text-white' : 'text-slate-600 dark:text-slate-300'
+            aria-pressed={mode === 'scan'}
+            className={`flex-1 min-h-[44px] px-2 py-2 rounded-lg text-sm font-medium leading-tight transition-colors ${
+              mode === 'scan' ? 'bg-emerald-600 text-white shadow-sm' : 'text-slate-600 dark:text-slate-300 hover:bg-white/80 dark:hover:bg-slate-700/40'
             }`}
           >
             {c.tabScan}
@@ -122,7 +160,12 @@ export function IkhtiyaratPage() {
 
         {location ? (
           mode === 'check' ? (
-            <CheckDateView language={uiLang} location={location} electionType={electionType} />
+            <CheckDateView
+              language={uiLang}
+              location={location}
+              electionType={electionType}
+              onUseMyLocation={handleUseMyLocation}
+            />
           ) : (
             <ScanDatesView language={uiLang} location={location} electionType={electionType} />
           )
