@@ -59,7 +59,11 @@ export async function generateMetadata({
 
 const COPY = {
   en: {
-    h1: 'Ikhtiyārāt — Choose an Auspicious Date the Classical Islamic Way',
+    h1: 'Ikhtiyārāt: Choose an Auspicious Date',
+    lead:
+      'Check a date or find the best days for nikāḥ, travel, business or moving home with classical Islamic electional timing — for reflection, not prediction.',
+    breadcrumbHome: 'Asrār',
+    aboutTitle: 'Ikhtiyārāt — Choose an Auspicious Date the Classical Islamic Way',
     intro1:
       'Ikhtiyārāt is the classical practice of electional timing in ʿIlm al-Nujūm: choosing a day and hour for an important act — nikāḥ (marriage), travel, business, moving home, or starting study — when the celestial indicators are favourable.',
     intro2:
@@ -99,7 +103,11 @@ const COPY = {
     ],
   },
   fr: {
-    h1: 'Ikhtiyārāt — Choisir une date propice selon la voie islamique classique',
+    h1: 'Ikhtiyārāt : choisir une date propice',
+    lead:
+      "Vérifiez une date ou trouvez les meilleurs jours pour un nikāḥ, un voyage, une affaire ou un déménagement, selon l'ikhtiyārāt islamique classique — pour la réflexion, pas la prédiction.",
+    breadcrumbHome: 'Asrār',
+    aboutTitle: 'Ikhtiyārāt — Choisir une date propice selon la voie islamique classique',
     intro1:
       'L\'ikhtiyārāt est la pratique classique du timing électif dans l\'ʿIlm al-Nujūm : choisir un jour et une heure pour un acte important — nikāḥ (mariage), voyage, affaires, déménagement ou début d\'études — lorsque les indicateurs célestes sont favorables.',
     intro2:
@@ -142,15 +150,8 @@ const COPY = {
 
 function Loading() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-slate-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
-      <div className="sticky top-0 bg-white/80 dark:bg-slate-900/80 border-b border-emerald-200 dark:border-emerald-800/50 px-4 py-3">
-        <div className="max-w-2xl mx-auto flex items-center justify-between">
-          <div className="w-6 h-6 rounded bg-slate-200 dark:bg-slate-700 animate-pulse" />
-          <div className="w-32 h-6 rounded bg-slate-200 dark:bg-slate-700 animate-pulse" />
-          <div className="w-6" />
-        </div>
-      </div>
-      <div className="max-w-2xl mx-auto px-4 py-6 space-y-4">
+    <div>
+      <div className="max-w-2xl mx-auto px-4 pt-1 pb-6 space-y-4">
         {[1, 2, 3].map(i => (
           <div key={i} className="h-32 rounded-2xl bg-white/60 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 animate-pulse" />
         ))}
@@ -182,20 +183,31 @@ export default async function Page({
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-teal-50 to-slate-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
-      <main className="max-w-3xl mx-auto px-4 py-8 space-y-8">
-        <header className="space-y-3">
-          <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100">{c.h1}</h1>
+      {/* 1. Compact intro: one short H1 + a two-line lead, so the tool is in the first mobile viewport. */}
+      <header className="max-w-2xl mx-auto px-4 pt-3 pb-3 sm:pt-6 space-y-1.5">
+        <nav aria-label="Breadcrumb" className="text-xs text-slate-500 dark:text-slate-400">
+          <a href="/" className="text-emerald-700 dark:text-emerald-400 hover:underline">← {c.breadcrumbHome}</a>
+        </nav>
+        <h1 className="text-2xl sm:text-3xl font-bold leading-tight text-slate-900 dark:text-slate-100">{c.h1}</h1>
+        <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-snug">{c.lead}</p>
+      </header>
+
+      {/* 2–3. Interactive tool and its results (component unchanged apart from its duplicate header bar). */}
+      <Suspense fallback={<Loading />}>
+        <IkhtiyaratPage hideHeader />
+      </Suspense>
+
+      {/* 4. Detailed educational / SEO content, moved below the tool (unchanged text). */}
+      <div className="max-w-3xl mx-auto px-4 py-8 space-y-8">
+        <section className="space-y-3" aria-labelledby="ikhtiyarat-about-heading">
+          <h2 id="ikhtiyarat-about-heading" className="text-xl font-semibold text-slate-900 dark:text-slate-100">
+            {c.aboutTitle}
+          </h2>
           <p className="text-slate-700 dark:text-slate-300 leading-relaxed">{c.intro1}</p>
           <p className="text-slate-700 dark:text-slate-300 leading-relaxed">{c.intro2}</p>
           <p className="text-sm text-slate-500 dark:text-slate-400">{c.intro3}</p>
-        </header>
-      </main>
+        </section>
 
-      <Suspense fallback={<Loading />}>
-        <IkhtiyaratPage />
-      </Suspense>
-
-      <div className="max-w-3xl mx-auto px-4 py-8 space-y-8">
         <section className="space-y-4" aria-labelledby="ikhtiyarat-faq-heading">
           <h2 id="ikhtiyarat-faq-heading" className="text-xl font-semibold text-slate-900 dark:text-slate-100">
             {c.faqTitle}
