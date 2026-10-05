@@ -29,6 +29,7 @@ import { CalculatorDisclaimerBanner } from './src/components/CalculatorDisclaime
 import { GetTheAppBanner } from './src/components/GetTheAppBanner';
 import { DailyReflectionCard } from './src/components/DailyReflectionCard';
 import { CalculatorScreen } from './src/features/calculator/CalculatorScreen';
+import { PUBLIC_TOOLS } from './src/lib/siteRoutes';
 
 // ============================================================================
 // DOMAIN RULES & CORE DATA
@@ -660,6 +661,25 @@ export default function AsrarEveryday() {
                 </a>
               </div>
             </div>
+
+            {/* Tool pages - plain links so every public page is reachable from the footer */}
+            <nav
+              aria-label={language === 'fr' ? 'Outils' : 'Tools'}
+              className="pt-6 pb-6 border-t border-slate-200 dark:border-slate-700"
+            >
+              <ul className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs">
+                {PUBLIC_TOOLS.map((tool) => (
+                  <li key={tool.path}>
+                    <a
+                      href={tool.path}
+                      className="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:underline"
+                    >
+                      {language === 'fr' ? tool.nameFr : tool.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
 
             {/* Bottom Bar */}
             <div className="pt-6 border-t border-slate-200 dark:border-slate-700">

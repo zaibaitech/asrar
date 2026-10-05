@@ -13,6 +13,19 @@ const nextConfig = {
   compress: true,
   productionBrowserSourceMaps: false,
 
+  // Permanent redirects for retired routes
+  async redirects() {
+    return [
+      {
+        // Old client-only showcase of the Planet of the Day / Planetary Hour /
+        // Transit cards — a near-duplicate of the homepage's Planetary tab.
+        source: '/planetary',
+        destination: '/',
+        permanent: true,
+      },
+    ];
+  },
+
   // Rewrites - Email verification redirect
   async rewrites() {
     return [

@@ -16,9 +16,11 @@ interface RelationshipInputFormProps {
   ) => void;
   language?: 'en' | 'fr' | 'ar';
   isLoading?: boolean;
+  /** Context tab selected on first render (e.g. 'marriage' on the /compatibility landing page). */
+  defaultContext?: RelationshipContext;
 }
 
-export function RelationshipInputForm({ onCalculate, language = 'en', isLoading = false }: RelationshipInputFormProps) {
+export function RelationshipInputForm({ onCalculate, language = 'en', isLoading = false, defaultContext = 'universal' }: RelationshipInputFormProps) {
   const isFrench = language === 'fr';
   const { profile } = useProfile();
   const [person1Name, setPerson1Name] = useState('');
@@ -27,7 +29,7 @@ export function RelationshipInputForm({ onCalculate, language = 'en', isLoading 
   const [person2Arabic, setPerson2Arabic] = useState('');
   const [showPerson1Keyboard, setShowPerson1Keyboard] = useState(false);
   const [showPerson2Keyboard, setShowPerson2Keyboard] = useState(false);
-  const [context, setContext] = useState<RelationshipContext>('universal');
+  const [context, setContext] = useState<RelationshipContext>(defaultContext);
 
   useEffect(() => {
     if (profile) {
@@ -62,9 +64,9 @@ export function RelationshipInputForm({ onCalculate, language = 'en', isLoading 
           <div className="font-technical text-[11px] tracking-[4px] font-bold" style={{ color: COMPAT_THEME.indigo }}>
             {isFrench ? 'ASRĀR · COMPATIBILITÉ' : 'ASRĀR · COMPATIBILITY'}
           </div>
-          <h1 className="font-display font-semibold text-4xl mt-3.5 leading-tight">
+          <h2 className="font-display font-semibold text-4xl mt-3.5 leading-tight">
             {isFrench ? 'Entrez Deux Noms' : 'Enter Two Names'}
-          </h1>
+          </h2>
           <p className="text-sm mt-2.5" style={{ color: COMPAT_THEME.muted }}>
             {isFrench
               ? 'Calculez la Connexion d’Âme selon la numérologie islamique traditionnelle'

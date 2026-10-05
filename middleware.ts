@@ -14,6 +14,12 @@ type Language = typeof SUPPORTED_LANGUAGES[number];
 const DEFAULT_LANGUAGE: Language = 'en';
 const LANGUAGE_COOKIE = 'asrar_lang';
 
+/** Old manifest shortcut ids -> the routes the shortcuts now point to directly. */
+const LEGACY_SHORTCUTS: Record<string, string> = {
+  'planetary-hours': '/planetary-hours',
+  zikr: '/ramadan',
+};
+
 /**
  * Detect language from request
  */
@@ -48,6 +54,19 @@ export function middleware(request: NextRequest) {
     url.pathname = '/ramadan';
     // searchParams (challenge, lang) are preserved automatically
     return NextResponse.redirect(url, 301);
+  }
+
+  // Legacy PWA manifest shortcuts (/?shortcut=planetary-hours, /?shortcut=zikr)
+  // that installed apps may still have cached: send them to the real pages.
+  const shortcutParam = request.nextUrl.searchParams.get('shortcut');
+  if (shortcutParam && request.nextUrl.pathname === '/') {
+    const target = LEGACY_SHORTCUTS[shortcutParam];
+    if (target) {
+      const url = request.nextUrl.clone();
+      url.pathname = target;
+      url.searchParams.delete('shortcut');
+      return NextResponse.redirect(url, 301);
+    }
   }
 
   const response = NextResponse.next();
