@@ -73,6 +73,9 @@ const COPY = {
       ['/planetary-hours', 'Planetary Hours', 'The ruling planet of the current hour at your location.'],
       ['/birth-profile', 'Birth Profile', 'Your Sun and Moon signs, lunar mansion and planetary dignities.'],
       ['/ikhtiyarat', 'Best Dates (Ikhtiyārāt)', 'Classical electional astrology for choosing an auspicious date.'],
+      ['/name-and-mother-burj', "Your Burj from Your Name & Mother's Name", "Your burj (ṭabʿ) from the Abjad value of your name and your mother's name."],
+      ['/compatibility', 'Name Compatibility for Marriage', 'Compare two names with the Abjad soul-connection method.'],
+      ['/sadaqa', 'Sadaqa Guide', 'Sadaqah by weekday, Hijri birth month and burj.'],
     ],
   },
   fr: {
@@ -91,6 +94,9 @@ const COPY = {
       ['/planetary-hours', 'Heures planétaires', "La planète gouvernante de l'heure actuelle à votre position."],
       ['/birth-profile', 'Profil de naissance', 'Vos signes solaire et lunaire, demeure lunaire et dignités planétaires.'],
       ['/ikhtiyarat', 'Meilleures dates (Ikhtiyārāt)', 'Astrologie électionnelle classique pour choisir une date propice.'],
+      ['/name-and-mother-burj', 'Votre burj par votre nom et celui de votre mère', "Votre burj (ṭabʿ) d'après la valeur abjad de votre prénom et de celui de votre mère."],
+      ['/compatibility', 'Compatibilité des prénoms pour le mariage', "Comparez deux prénoms avec la méthode abjad de connexion d'âme."],
+      ['/sadaqa', 'Guide de la sadaqa', 'Sadaqah par jour, mois hégirien de naissance et burj.'],
     ],
   },
 } as const;

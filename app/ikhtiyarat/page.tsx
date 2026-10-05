@@ -96,6 +96,8 @@ const COPY = {
       ['/planet-transit', 'Planetary Transits', 'Live positions of the seven classical planets and their dignities.'],
       ['/birth-profile', 'Birth Profile', 'Your Sun and Moon signs, lunar mansion and planetary dignities.'],
       ['/abjad', 'Abjad Calculator', 'ʿIlm al-ḥurūf letter numerology for Arabic names and phrases.'],
+      ['/compatibility', 'Name Compatibility for Marriage', 'Compare two names with the Abjad soul-connection method before a nikāḥ.'],
+      ['/sadaqa-of-the-day', 'Sadaqa of the Day', "Today's recommended sadaqah and the weekly table."],
     ],
   },
   fr: {
@@ -136,6 +138,8 @@ const COPY = {
       ['/planet-transit', 'Transits planétaires', 'Positions en direct des sept planètes classiques et leurs dignités.'],
       ['/birth-profile', 'Profil de naissance', 'Vos signes solaire et lunaire, demeure lunaire et dignités planétaires.'],
       ['/abjad', 'Calculateur Abjad', 'Numérologie des lettres (ʿilm al-ḥurūf) pour noms et phrases en arabe.'],
+      ['/compatibility', 'Compatibilité des prénoms pour le mariage', "Comparez deux prénoms avec la méthode abjad avant un nikāḥ."],
+      ['/sadaqa-of-the-day', 'Sadaqa du jour', "La sadaqah recommandée aujourd'hui et le tableau de la semaine."],
     ],
   },
 } as const;

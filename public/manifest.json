@@ -71,7 +71,7 @@
       "name": "Planetary Hours",
       "short_name": "Hours",
       "description": "View current planetary hour and guidance",
-      "url": "/?shortcut=planetary-hours",
+      "url": "/planetary-hours",
       "icons": [{ "src": "/icons/icon-96x96.png", "sizes": "96x96" }]
     },
     {
@@ -85,7 +85,7 @@
       "name": "Zikr Challenges",
       "short_name": "Zikr",
       "description": "Track your daily dhikr practice",
-      "url": "/?shortcut=zikr",
+      "url": "/ramadan",
       "icons": [{ "src": "/icons/icon-96x96.png", "sizes": "96x96" }]
     }
   ],
