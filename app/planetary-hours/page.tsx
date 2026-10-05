@@ -1,12 +1,10 @@
 import type { Metadata } from 'next';
-import { SITE_URL } from '@/src/lib/siteRoutes';
 import { getRouteLang } from '@/src/lib/pageLang';
+import { ogImageUrl } from '@/src/lib/og/urls';
 import { localeAlternates, localizedUrl } from '@/src/lib/i18nRoutes';
 import { cookies } from 'next/headers';
 import { Suspense } from 'react';
 import { PlanetaryHoursPage } from './PlanetaryHoursPage';
-
-const baseUrl = SITE_URL;
 
 type Lang = 'en' | 'fr';
 
@@ -39,7 +37,7 @@ export async function generateMetadata({
 
   const m = meta[lang];
   const routeLang = await getRouteLang();
-  const imageUrl = `${baseUrl}/opengraph-image`;
+  const imageUrl = ogImageUrl('planetary-hours', lang);
 
   return {
     title: m.title,

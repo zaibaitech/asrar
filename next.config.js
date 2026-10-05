@@ -13,6 +13,13 @@ const nextConfig = {
   compress: true,
   productionBrowserSourceMaps: false,
 
+  experimental: {
+    // Share-card images (app/og/**) read their fonts from disk at runtime.
+    outputFileTracingIncludes: {
+      '/og/**/*': ['./src/lib/og/fonts/**/*'],
+    },
+  },
+
   // Permanent redirects for retired routes
   async redirects() {
     return [

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { cookies, headers } from 'next/headers';
 import { SITE_URL } from './siteRoutes';
 import { ROUTE_LANG_HEADER, localeAlternates, localizedUrl, type RouteLang } from './i18nRoutes';
+import { ogImageUrl, ogKeyForPath, OG_SIZE } from './og/urls';
 
 export type PageLang = 'en' | 'fr';
 
@@ -37,10 +38,16 @@ export async function resolvePageLang(
  * served (EN path or its /fr mirror) with en/fr/x-default hreflang, and
  * Open Graph / Twitter cards — the same shape /abjad and /ikhtiyarat use.
  */
-export async function buildToolMetadata(path: string, m: { title: string; description: string }): Promise<Metadata> {
+export async function buildToolMetadata(
+  path: string,
+  m: { title: string; description: string },
+  /** Language of the page content; picks the EN or FR share card. */
+  lang: PageLang = 'en',
+): Promise<Metadata> {
   const routeLang = await getRouteLang();
   const url = localizedUrl(path, routeLang);
-  const imageUrl = `${SITE_URL}/opengraph-image`;
+  const ogKey = ogKeyForPath(path);
+  const imageUrl = ogKey ? ogImageUrl(ogKey, lang) : `${SITE_URL}/opengraph-image`;
 
   return {
     title: m.title,
@@ -54,7 +61,7 @@ export async function buildToolMetadata(path: string, m: { title: string; descri
       alternateLocale: routeLang === 'fr' ? ['en_GB'] : ['fr_FR'],
       title: m.title,
       description: m.description,
-      images: [{ url: imageUrl, width: 1200, height: 630, alt: m.title }],
+      images: [{ url: imageUrl, ...OG_SIZE, alt: m.title }],
     },
     twitter: {
       card: 'summary_large_image',

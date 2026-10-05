@@ -27,7 +27,8 @@ export async function generateMetadata({
 }: {
   searchParams: Promise<{ lang?: string }>;
 }): Promise<Metadata> {
-  return buildToolMetadata(PATH, META[await resolvePageLang(searchParams)]);
+  const lang = await resolvePageLang(searchParams);
+  return buildToolMetadata(PATH, META[lang], lang);
 }
 
 const WEEKDAY_FR = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];

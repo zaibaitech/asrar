@@ -25,7 +25,7 @@ export async function generateMetadata({ params, searchParams }: { params: Param
   if (!isPurpose(purpose)) return {};
   const lang = await resolvePageLang(searchParams);
   const c = purposeCopy(purpose, lang, purposeFacts(purpose, lang));
-  return buildToolMetadata(`/best-day-for/${purpose}`, { title: c.title, description: c.description });
+  return buildToolMetadata(`/best-day-for/${purpose}`, { title: c.title, description: c.description }, lang);
 }
 
 const UI = {

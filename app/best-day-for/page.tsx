@@ -25,7 +25,8 @@ const META = {
 };
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ lang?: string }> }): Promise<Metadata> {
-  return buildToolMetadata(PATH, META[await resolvePageLang(searchParams)]);
+  const lang = await resolvePageLang(searchParams);
+  return buildToolMetadata(PATH, META[lang], lang);
 }
 
 function copy(lang: PageLang, thursdayEverywhere: boolean) {
