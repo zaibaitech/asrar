@@ -1,8 +1,8 @@
 import { Suspense } from 'react';
 import { cookies } from 'next/headers';
 import type { Metadata } from 'next';
-import { absoluteUrl } from '@/src/lib/siteRoutes';
 import { getRouteLang } from '@/src/lib/pageLang';
+import { ogImageUrl } from '@/src/lib/og/urls';
 import { localeAlternates, localizedUrl } from '@/src/lib/i18nRoutes';
 import { PlanetOfTheDayPage } from './PlanetOfTheDayPage';
 
@@ -43,9 +43,9 @@ export async function generateMetadata({
       title,
       description,
       url: localizedUrl('/planet-of-the-day', routeLang),
-      images: [{ url: absoluteUrl('/icons/icon-512x512.png') }],
+      images: [{ url: ogImageUrl('planet-of-the-day', lang), width: 1200, height: 630, alt: title }],
     },
-    twitter: { card: 'summary', title, description },
+    twitter: { card: 'summary_large_image', title, description, images: [ogImageUrl('planet-of-the-day', lang)] },
   };
 }
 

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { cookies } from 'next/headers';
-import { SITE_URL } from '@/src/lib/siteRoutes';
+import { ogImageUrl } from '@/src/lib/og/urls';
 import { getRouteLang } from '@/src/lib/pageLang';
 import { localeAlternates, localizeHref, localizedUrl } from '@/src/lib/i18nRoutes';
 import { AbjadCalculator } from './AbjadCalculator';
@@ -34,10 +34,11 @@ export async function generateMetadata({
 }: {
   searchParams: Promise<{ lang?: string }>;
 }): Promise<Metadata> {
-  const m = META[await resolveLang(searchParams)];
+  const lang = await resolveLang(searchParams);
+  const m = META[lang];
   const routeLang = await getRouteLang();
   const url = localizedUrl('/abjad', routeLang);
-  const imageUrl = `${SITE_URL}/opengraph-image`;
+  const imageUrl = ogImageUrl('abjad', lang);
 
   return {
     title: m.title,

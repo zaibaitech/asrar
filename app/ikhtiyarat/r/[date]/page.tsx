@@ -1,70 +1,16 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { evaluateElection } from '@/src/lib/ikhtiyarat/engine';
-import { marriageElectionConfig } from '@/src/lib/ikhtiyarat/elections/marriage';
-import { travelElectionConfig } from '@/src/lib/ikhtiyarat/elections/travel';
-import { businessElectionConfig } from '@/src/lib/ikhtiyarat/elections/business';
-import { medicalElectionConfig } from '@/src/lib/ikhtiyarat/elections/medical';
-import { homeElectionConfig } from '@/src/lib/ikhtiyarat/elections/home';
-import { educationElectionConfig } from '@/src/lib/ikhtiyarat/elections/education';
 import { gregorianToHijri } from '@/src/lib/ikhtiyarat/hijri';
-import { ElectionInput, ElectionRulesConfig, ElectionType } from '@/src/lib/ikhtiyarat/types';
+import {
+  electionTypeFromParams,
+  evaluateFromParams,
+  type PageParams,
+  type PageSearchParams,
+} from '@/src/lib/ikhtiyarat/sharedResult';
+import { ogIkhtiyaratResultUrl, ogImageUrl } from '@/src/lib/og/urls';
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
-
-const CONFIG_BY_ELECTION_TYPE: Record<ElectionType, ElectionRulesConfig> = {
-  marriage: marriageElectionConfig,
-  travel: travelElectionConfig,
-  business: businessElectionConfig,
-  // Same rules as "Business / Contracts" — see CheckDateView.tsx.
-  businessStart: businessElectionConfig,
-  medical: medicalElectionConfig,
-  home: homeElectionConfig,
-  education: educationElectionConfig,
-};
-
-interface PageParams {
-  date: string; // YYYY-MM-DD
-}
-
-interface PageSearchParams {
-  lat?: string;
-  lon?: string;
-  tz?: string;
-  lang?: string;
-  /** Defaults to 'marriage' — keeps every pre-existing share link (minted before travel existed) resolving the same as before. */
-  election?: string;
-}
-
-const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
-
-function electionTypeFromParams(searchParams: PageSearchParams): ElectionType {
-  if (searchParams.election === 'travel') return 'travel';
-  if (searchParams.election === 'business') return 'business';
-  if (searchParams.election === 'businessStart') return 'businessStart';
-  if (searchParams.election === 'medical') return 'medical';
-  if (searchParams.election === 'home') return 'home';
-  if (searchParams.election === 'education') return 'education';
-  return 'marriage';
-}
-
-/** Re-derive the election result from the URL alone — nothing is stored server-side. */
-function evaluateFromParams(dateStr: string, searchParams: PageSearchParams) {
-  if (!DATE_RE.test(dateStr)) return null;
-
-  const lat = Number(searchParams.lat);
-  const lon = Number(searchParams.lon);
-  const tz = searchParams.tz || 'UTC';
-  if (!Number.isFinite(lat) || !Number.isFinite(lon) || lat < -90 || lat > 90 || lon < -180 || lon > 180) return null;
-
-  const datetime = new Date(`${dateStr}T12:00:00Z`);
-  if (Number.isNaN(datetime.getTime())) return null;
-
-  const electionType = electionTypeFromParams(searchParams);
-  const input: ElectionInput = { datetime, lat, lon, tz, electionType };
-  return evaluateElection(input, CONFIG_BY_ELECTION_TYPE[electionType]);
-}
 
 export async function generateMetadata({
   params,
@@ -98,7 +44,10 @@ export async function generateMetadata({
     : (lang === 'fr' ? `Vérifiez une date pour ${electionLabel.fr} selon l'ikhtiyārāt classique.` : `Check a date for ${electionLabel.en} per classical ikhtiyārāt.`);
 
   const url = `${baseUrl}/ikhtiyarat/r/${resolvedParams.date}`;
-  const imageUrl = `${baseUrl}/opengraph-image`;
+  // Result card for this exact share link (date, tier, score) — what WhatsApp shows.
+  const imageUrl = result
+    ? ogIkhtiyaratResultUrl(resolvedParams.date, resolvedSearchParams)
+    : ogImageUrl('ikhtiyarat', lang);
 
   return {
     title,

@@ -227,8 +227,9 @@ export function IstikharaPanel() {
     if (!calculationResult) return;
 
     const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
-    const langParam = language === 'fr' ? '?lang=fr' : '';
-    const shareUrl = `${BASE_URL}${langParam}`;
+    // This tool's own page (EN or /fr mirror): its share card shows in WhatsApp/Telegram previews.
+    const toolPath = language === 'fr' ? '/fr/name-and-mother-burj' : '/name-and-mother-burj';
+    const shareUrl = `${BASE_URL}${toolPath}`;
 
     const shareTitle = language === 'fr'
       ? 'Istikhara al-Asmāʾ — Mon Profil Spirituel'
@@ -259,8 +260,9 @@ export function IstikharaPanel() {
    */
   const handleInvite = async () => {
     const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
-    const langParam = language === 'fr' ? '?lang=fr' : '';
-    const inviteUrl = `${BASE_URL}${langParam}`;
+    // This tool's own page (EN or /fr mirror): its share card shows in WhatsApp/Telegram previews.
+    const toolPath = language === 'fr' ? '/fr/name-and-mother-burj' : '/name-and-mother-burj';
+    const inviteUrl = `${BASE_URL}${toolPath}`;
 
     const inviteTitle = language === 'fr'
       ? 'Découvrez Asrār — Sciences Sacrées & Timing Divin'
@@ -282,8 +284,9 @@ export function IstikharaPanel() {
 
   const handleInviteWhatsApp = () => {
     const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
-    const langParam = language === 'fr' ? '?lang=fr' : '';
-    const url = `${BASE_URL}${langParam}`;
+    // This tool's own page (EN or /fr mirror): its share card shows in WhatsApp/Telegram previews.
+    const toolPath = language === 'fr' ? '/fr/name-and-mother-burj' : '/name-and-mother-burj';
+    const url = `${BASE_URL}${toolPath}`;
     const text = language === 'fr'
       ? `🌙 Découvrez votre profil spirituel avec Istikhara al-Asmāʾ sur Asrār ! Numérologie Abjad, heures planétaires, défis de Zikr et plus encore.\n\n${url}`
       : `🌙 Discover your spiritual profile with Istikhara al-Asmāʾ on Asrār! Abjad numerology, planetary hours, Zikr challenges, and more.\n\n${url}`;
@@ -292,8 +295,9 @@ export function IstikharaPanel() {
 
   const handleInviteTelegram = () => {
     const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
-    const langParam = language === 'fr' ? '?lang=fr' : '';
-    const url = `${BASE_URL}${langParam}`;
+    // This tool's own page (EN or /fr mirror): its share card shows in WhatsApp/Telegram previews.
+    const toolPath = language === 'fr' ? '/fr/name-and-mother-burj' : '/name-and-mother-burj';
+    const url = `${BASE_URL}${toolPath}`;
     const text = language === 'fr'
       ? `🌙 Découvrez votre profil spirituel avec Istikhara al-Asmāʾ sur Asrār !`
       : `🌙 Discover your spiritual profile with Istikhara al-Asmāʾ on Asrār!`;
