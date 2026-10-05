@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { buildToolMetadata, resolvePageLang } from '@/src/lib/pageLang';
 import { FaqSection, JsonLd, RelatedLinks, faqJsonLd, type FaqItem, type RelatedLink } from '@/src/components/seo/SeoSections';
 import { CompatibilityCalculator } from './CompatibilityCalculator';
+import { AbjadSystemSelector } from '@/src/components/AbjadSystemSelector';
 
 const PATH = '/compatibility';
 
@@ -47,7 +48,7 @@ const COPY = {
     faqs: [
       {
         q: 'How do I check name compatibility for marriage?',
-        a: 'Enter both names, keep the "Marriage" context selected and calculate. The tool adds the Abjad values of the two names plus 7, divides by 9 and shows the meaning of the remainder for marriage.',
+        a: 'Enter both names, choose the "Marriage" context and calculate. The tool adds the Abjad values of the two names plus 7, divides by 9 and shows the meaning of the remainder for marriage.',
       },
       {
         q: 'Which Abjad system is used?',
@@ -95,7 +96,7 @@ const COPY = {
     faqs: [
       {
         q: 'Comment vérifier la compatibilité des prénoms pour le mariage ?',
-        a: "Entrez les deux prénoms, gardez le contexte « Mariage » et lancez le calcul. L'outil additionne les valeurs abjad des deux prénoms plus 7, divise par 9 et affiche le sens du reste pour le mariage.",
+        a: "Entrez les deux prénoms, choisissez le contexte « Mariage » et lancez le calcul. L'outil additionne les valeurs abjad des deux prénoms plus 7, divise par 9 et affiche le sens du reste pour le mariage.",
       },
       {
         q: 'Quel système abjad est utilisé ?',
@@ -142,11 +143,12 @@ export default async function Page({
           <h2 className="font-semibold text-amber-900 dark:text-amber-200">{c.adabTitle}</h2>
           <p className="text-sm text-amber-900/90 dark:text-amber-100/90 leading-relaxed">{c.adab}</p>
         </aside>
+        <div className="flex justify-end">
+          <AbjadSystemSelector compact />
+        </div>
       </main>
 
-      <div className="max-w-4xl mx-auto px-2 sm:px-4">
-        <CompatibilityCalculator />
-      </div>
+      <CompatibilityCalculator />
 
       <div className="max-w-3xl mx-auto px-4 py-8 space-y-8">
         <section className="space-y-3">

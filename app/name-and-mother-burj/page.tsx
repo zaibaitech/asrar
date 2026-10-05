@@ -183,7 +183,7 @@ export default async function Page({
   const buruj = burujSummaries(lang);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <main className="max-w-3xl mx-auto px-4 py-8 space-y-3">
         <p className="text-sm font-semibold text-purple-700 dark:text-purple-300">
           {c.kicker}
@@ -194,9 +194,7 @@ export default async function Page({
         <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{c.intro2}</p>
       </main>
 
-      <div className="max-w-6xl mx-auto px-3 sm:px-4">
-        <BurjCalculator />
-      </div>
+      <BurjCalculator />
 
       <div className="max-w-3xl mx-auto px-4 py-8 space-y-8">
         <section className="space-y-3">

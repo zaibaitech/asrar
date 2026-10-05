@@ -57,32 +57,12 @@ interface SavedCalculation {
  * - Mobile-optimized responsive design
  * - Accessibility features
  */
-export function IstikharaPanel({
-  headingAs: Heading = 'h1',
-  embedded = false,
-}: {
-  /** Use 'h2' when the host page already renders its own H1. */
-  headingAs?: 'h1' | 'h2';
-  /**
-   * Set when the panel sits inside a content page (e.g. /name-and-mother-burj):
-   * don't jump to the form on load, and scroll to the panel (not the page top)
-   * when results open or close.
-   */
-  embedded?: boolean;
-} = {}) {
+export function IstikharaPanel() {
   const { language } = useLanguage();
   const t = translations[language].istikhara;
   
   // Ref for scrolling to form
   const formRef = useRef<HTMLDivElement>(null);
-  const rootRef = useRef<HTMLDivElement>(null);
-  const scrollToPanelTop = () => {
-    if (embedded) {
-      rootRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  };
   
   // State management
   const [calculationResult, setCalculationResult] = useState<IstikharaCalculationResult | null>(null);
@@ -97,7 +77,7 @@ export function IstikharaPanel({
 
   // Scroll to form on mount
   useEffect(() => {
-    if (formRef.current && !showResults && !embedded) {
+    if (formRef.current && !showResults) {
       setTimeout(() => {
         formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 100);
@@ -165,7 +145,7 @@ export function IstikharaPanel({
     }
 
     // Scroll to top smoothly
-    scrollToPanelTop();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   /**
@@ -177,7 +157,7 @@ export function IstikharaPanel({
       setShowResults(false);
       setCalculationResult(null);
       setIsTransitioning(false);
-      scrollToPanelTop();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 300);
   };
 
@@ -188,7 +168,7 @@ export function IstikharaPanel({
     setCalculationResult(saved.result);
     setShowResults(true);
     setShowHistory(false);
-    scrollToPanelTop();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   /**
@@ -321,7 +301,7 @@ export function IstikharaPanel({
   };
 
   return (
-    <div ref={rootRef} className={`${embedded ? 'pb-4' : 'min-h-screen pb-20'} space-y-4 sm:space-y-6 scroll-mt-4`}>
+    <div className="min-h-screen space-y-4 sm:space-y-6 pb-20">
       {/* Floating Action Buttons */}
       {!showResults && (
         <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-40 flex flex-col gap-2 md:gap-3">
@@ -563,9 +543,9 @@ export function IstikharaPanel({
 
       {/* Simplified Header Section - Compact when results showing */}
       <div className={`text-center max-w-3xl mx-auto ${showResults ? 'space-y-0.5 pt-0' : 'space-y-2 pt-2 sm:pt-4'}`}>
-        <Heading className={`font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent ${showResults ? 'text-lg sm:text-xl' : 'text-2xl sm:text-3xl md:text-4xl'}`}>
+        <h1 className={`font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent ${showResults ? 'text-lg sm:text-xl' : 'text-2xl sm:text-3xl md:text-4xl'}`}>
           {t.title}
-        </Heading>
+        </h1>
         
         {!showResults && (
           <p className="text-lg sm:text-xl text-purple-200 font-arabic tracking-wide">

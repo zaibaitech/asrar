@@ -35,19 +35,13 @@ type InputMode = 'names' | 'dob';
 
 interface CompatibilityPanelProps {
   onBack?: () => void;
-  /** Use 'h2' when the host page already renders its own H1. */
-  headingAs?: 'h1' | 'h2';
-  /** Relationship context pre-selected in the names form (defaults to 'universal'). */
-  defaultContext?: RelationshipContext;
-  /** Set when embedded in a content page: scroll to the panel, not the page top, when switching views. */
-  embedded?: boolean;
 }
 
-export function CompatibilityPanel({ onBack, headingAs: Heading = 'h1', defaultContext = 'universal', embedded = false }: CompatibilityPanelProps) {
+export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
   const [category, setCategory] = useState<CompatibilityCategory>('person-to-person');
   const [inputMode, setInputMode] = useState<InputMode>('names');
   const [soulConnectionResult, setSoulConnectionResult] = useState<SoulConnectionResult | null>(null);
-  const [selectedContext, setSelectedContext] = useState<RelationshipContext>(defaultContext);
+  const [selectedContext, setSelectedContext] = useState<RelationshipContext>('universal');
   const [astrologicalResult, setAstrologicalResult] = useState<AstrologicalCompatibility | null>(null);
   const [divineNameResult, setDivineNameResult] = useState<DivineNameConnectionResult | null>(null);
   const [divineNameMatches, setDivineNameMatches] = useState<{ person: { name: string; arabicName: string; kabir: number }; matches: DivineNameMatch[] } | null>(null);
@@ -60,14 +54,6 @@ export function CompatibilityPanel({ onBack, headingAs: Heading = 'h1', defaultC
   const [showResults, setShowResults] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const formRef = useRef<HTMLDivElement>(null);
-  const rootRef = useRef<HTMLDivElement>(null);
-  const scrollToPanelTop = () => {
-    if (embedded) {
-      rootRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  };
   const { abjad } = useAbjad();
   const { language } = useLanguage();
   const lang = language as 'en' | 'fr' | 'ar';
@@ -104,7 +90,7 @@ export function CompatibilityPanel({ onBack, headingAs: Heading = 'h1', defaultC
       setIsTransitioning(false);
 
       // Scroll to top smoothly
-      scrollToPanelTop();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } catch (error) {
       console.error('Error calculating compatibility:', error);
       alert('Error calculating compatibility. Please try again.');
@@ -129,7 +115,7 @@ export function CompatibilityPanel({ onBack, headingAs: Heading = 'h1', defaultC
       setShowResults(true);
       setIsTransitioning(false);
 
-      scrollToPanelTop();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } catch (error) {
       console.error('Error calculating astrological compatibility:', error);
       alert('Error calculating compatibility. Please try again.');
@@ -162,7 +148,7 @@ export function CompatibilityPanel({ onBack, headingAs: Heading = 'h1', defaultC
       setShowResults(true);
       setIsTransitioning(false);
 
-      scrollToPanelTop();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } catch (error) {
       console.error('Error calculating Divine Name connection:', error);
       alert('Error calculating compatibility. Please try again.');
@@ -194,19 +180,19 @@ export function CompatibilityPanel({ onBack, headingAs: Heading = 'h1', defaultC
     }
     setShowResults(true);
     setIsTransitioning(false);
-    scrollToPanelTop();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handlePickAlternative = (divineNameNumber: number) => {
     if (!intentionResult) return;
     runIntentionCalculation(intentionResult.intention, divineNameNumber);
-    scrollToPanelTop();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleSelectFromMatches = (divineNameNumber: number) => {
     if (!intentionMatches) return;
     runIntentionCalculation(intentionMatches, divineNameNumber);
-    scrollToPanelTop();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   /**
@@ -232,7 +218,7 @@ export function CompatibilityPanel({ onBack, headingAs: Heading = 'h1', defaultC
   };
 
   return (
-    <div ref={rootRef} className={`${embedded ? '' : 'min-h-screen '}p-4 sm:p-6 scroll-mt-4`} style={{ background: COMPAT_THEME.pageBg }}>
+    <div className="min-h-screen p-4 sm:p-6" style={{ background: COMPAT_THEME.pageBg }}>
       <div className="max-w-4xl mx-auto space-y-6">
 
         {/* Back Button */}
@@ -251,9 +237,9 @@ export function CompatibilityPanel({ onBack, headingAs: Heading = 'h1', defaultC
           <div className="font-technical text-[11px] tracking-[4px] font-bold" style={{ color: COMPAT_THEME.indigo }}>
             {language === 'fr' ? 'ASRĀR · COMPATIBILITÉ' : 'ASRĀR · COMPATIBILITY'}
           </div>
-          <Heading className="font-display font-semibold text-4xl mt-3.5 leading-tight" style={{ color: COMPAT_THEME.ink }}>
+          <h1 className="font-display font-semibold text-4xl mt-3.5 leading-tight" style={{ color: COMPAT_THEME.ink }}>
             {language === 'fr' ? 'Compatibilité' : 'Compatibility'}
-          </Heading>
+          </h1>
           <p className="text-sm mt-2.5" style={{ color: COMPAT_THEME.muted }}>
             {category === 'person-to-divine'
               ? (language === 'fr' ? "Découvrez votre résonance spirituelle avec les 99 Noms d'Allah" : 'Discover your spiritual resonance with the 99 Names of Allah')
@@ -349,7 +335,6 @@ export function CompatibilityPanel({ onBack, headingAs: Heading = 'h1', defaultC
                 onCalculate={handleRelationshipCalculate}
                 language={lang}
                 isLoading={isTransitioning}
-                defaultContext={defaultContext}
               />
             ) : (
               <AstrologicalInputForm
