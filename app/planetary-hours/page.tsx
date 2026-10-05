@@ -6,19 +6,22 @@ import { PlanetaryHoursPage } from './PlanetaryHoursPage';
 
 const baseUrl = SITE_URL;
 
+type Lang = 'en' | 'fr';
+
+async function resolveLang(searchParams: Promise<{ lang?: string }>): Promise<Lang> {
+  const params = await searchParams;
+  if (params?.lang === 'fr') return 'fr';
+  if (params?.lang === 'en') return 'en';
+  const cookieStore = await cookies();
+  return cookieStore.get('asrar_lang')?.value === 'fr' ? 'fr' : 'en';
+}
+
 export async function generateMetadata({
   searchParams,
 }: {
   searchParams: Promise<{ lang?: string }>;
 }): Promise<Metadata> {
-  const params = await searchParams;
-  let lang: 'en' | 'fr' = 'en';
-  if (params?.lang === 'fr') {
-    lang = 'fr';
-  } else {
-    const cookieStore = await cookies();
-    if (cookieStore.get('asrar_lang')?.value === 'fr') lang = 'fr';
-  }
+  const lang = await resolveLang(searchParams);
 
   const meta = {
     en: {
@@ -57,6 +60,11 @@ export async function generateMetadata({
   };
 }
 
+const H1 = {
+  en: 'Planetary Hours Today — Chaldean Hours in Islamic ʿIlm al-Nujūm',
+  fr: 'Heures planétaires aujourd\'hui — Heures chaldéennes dans l\'ʿIlm al-Nujūm islamique',
+} as const;
+
 function Loading() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-slate-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
@@ -76,10 +84,25 @@ function Loading() {
   );
 }
 
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<{ lang?: string }>;
+}) {
+  const lang = await resolveLang(searchParams);
+
   return (
-    <Suspense fallback={<Loading />}>
-      <PlanetaryHoursPage />
-    </Suspense>
+    <>
+      <div className="bg-gradient-to-br from-indigo-50 via-purple-50 to-slate-50 dark:from-slate-900 dark:via-indigo-950/20 dark:to-slate-900">
+        <div className="max-w-3xl mx-auto px-4 pt-6 pb-2">
+          <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100">
+            {H1[lang]}
+          </h1>
+        </div>
+      </div>
+      <Suspense fallback={<Loading />}>
+        <PlanetaryHoursPage />
+      </Suspense>
+    </>
   );
 }

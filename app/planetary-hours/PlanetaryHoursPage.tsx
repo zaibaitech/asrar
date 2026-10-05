@@ -196,9 +196,9 @@ export function PlanetaryHoursPage() {
           </button>
           <div className="flex items-center gap-2">
             <Clock className="w-5 h-5 text-indigo-500" />
-            <h1 className="text-base sm:text-lg font-bold text-slate-900 dark:text-slate-100">
+            <div className="text-base sm:text-lg font-bold text-slate-900 dark:text-slate-100">
               {isEn ? 'Planetary Hours' : 'Heures Planétaires'}
-            </h1>
+            </div>
             <span className="text-xs font-arabic text-slate-400 dark:text-slate-500 hidden sm:inline">الساعات الفلكية</span>
           </div>
           <div className="w-16" />
