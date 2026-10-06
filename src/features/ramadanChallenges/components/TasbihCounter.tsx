@@ -8,6 +8,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { X, RotateCcw, Check } from 'lucide-react';
 import { translations } from '@/src/lib/translations';
 
@@ -99,17 +100,31 @@ export function TasbihCounter({
     onClose();
   };
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur animate-in fade-in duration-200">
-      <div className="w-full max-w-sm bg-white dark:bg-slate-900 rounded-2xl shadow-2xl overflow-hidden animate-in zoom-in-95 duration-200">
+  // Portal to document.body so a parent with backdrop-filter / overflow:hidden
+  // (e.g. .zikr-panel) cannot trap `position: fixed` and clip the counter —
+  // that bug left only a dim overlay over the Open Tasbih list.
+  const modal = (
+    <div
+      className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/70 backdrop-blur-sm animate-in fade-in duration-200"
+      role="dialog"
+      aria-modal="true"
+      aria-label={t.title}
+      onClick={handleClose}
+    >
+      <div
+        className="w-full max-w-sm max-h-[92dvh] overflow-y-auto bg-white dark:bg-slate-900 rounded-t-2xl sm:rounded-2xl shadow-2xl animate-in zoom-in-95 duration-200"
+        onClick={(e) => e.stopPropagation()}
+      >
         {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-700">
+        <div className="sticky top-0 z-10 flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900">
           <h3 className="font-bold text-slate-900 dark:text-slate-100">
             📿 {t.title}
           </h3>
           <button
+            type="button"
             onClick={handleClose}
-            className="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors"
+            aria-label="Close"
+            className="min-h-[44px] min-w-[44px] inline-flex items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
@@ -237,4 +252,7 @@ export function TasbihCounter({
       </div>
     </div>
   );
+
+  if (typeof document === 'undefined') return null;
+  return createPortal(modal, document.body);
 }
