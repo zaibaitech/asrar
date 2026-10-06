@@ -61,8 +61,31 @@ export const PLANETARY_ZIKR: Record<string, PlanetZikr> = {
       { name: 'Ya Qahhar', arabicName: 'يَا قَهَّارُ', count: '306', benefit: 'For overpowering enemies.' },
     ],
   },
-  moon: { label: 'Moon', planet: '🌙', color: '#A8B8D0', zikr: [] },
-  mercury: { label: 'Mercury', planet: '☿️', color: '#7EC8C8', zikr: [] },
+  moon: {
+    label: 'Moon',
+    planet: '🌙',
+    color: '#A8B8D0',
+    // Short list from practice-hints (Raḥmān) + planetGuides/SEO page (Laṭīf, Wadūd, Raḥīm).
+    // Counts = abjad values in src/data/divine-names.ts (#1, #2, #30, #47).
+    zikr: [
+      { name: 'Ya Latif', arabicName: 'يَا لَطِيفُ', count: '129', benefit: 'For gentleness, subtle ease, and calming the heart.' },
+      { name: 'Ya Rahman', arabicName: 'يَا رَحْمَانُ', count: '298', benefit: 'For mercy, ease in transitions, and emotional balance.' },
+      { name: 'Ya Raheem', arabicName: 'يَا رَحِيمُ', count: '258', benefit: 'For compassion and softness in family and home matters.' },
+      { name: 'Ya Wadud', arabicName: 'يَا وَدُودُ', count: '20', benefit: 'For affection, harmony, and softening of hearts.' },
+    ],
+  },
+  mercury: {
+    label: 'Mercury',
+    planet: '☿️',
+    color: '#7EC8C8',
+    // Matches practice-hints / planetGuides / planetary-hours SEO strings (ʿAlīm, Ḥakīm, Khabīr).
+    // Counts = abjad in divine-names.ts (#19, #46, #31).
+    zikr: [
+      { name: "Ya 'Alim", arabicName: 'يَا عَلِيمُ', count: '150', benefit: 'For clarity of mind and beneficial knowledge.' },
+      { name: 'Ya Hakim', arabicName: 'يَا حَكِيمُ', count: '78', benefit: 'For wisdom in speech, study, and decisions.' },
+      { name: 'Ya Khabir', arabicName: 'يَا خَبِيرُ', count: '812', benefit: 'For insight and awareness in learning and communication.' },
+    ],
+  },
   jupiter: {
     label: 'Jupiter',
     planet: '♃',
@@ -79,5 +102,17 @@ export const PLANETARY_ZIKR: Record<string, PlanetZikr> = {
       { name: 'Ya Baqi', count: '113', benefit: 'Career stability and establishing firm authority.' },
     ],
   },
-  saturn: { label: 'Saturn', planet: '♄', color: '#6B6B6B', zikr: [] },
+  saturn: {
+    label: 'Saturn',
+    planet: '♄',
+    color: '#6B6B6B',
+    // practice-hints (Ṣabūr) + planetGuides (Ḥakīm, Ḥalīm) + SEO Matīn; Ḥāfiẓ deferred (scholar review).
+    // Counts = abjad in divine-names.ts (#99, #46, #32, #54).
+    zikr: [
+      { name: 'Ya Sabur', arabicName: 'يَا صَبُورُ', count: '298', benefit: 'For patience and steadfastness in long work.' },
+      { name: 'Ya Hakim', arabicName: 'يَا حَكِيمُ', count: '78', benefit: 'For wise restraint and sound judgment.' },
+      { name: 'Ya Halim', arabicName: 'يَا حَلِيمُ', count: '88', benefit: 'For forbearance when progress feels slow.' },
+      { name: 'Ya Matin', arabicName: 'يَا مَتِينُ', count: '500', benefit: 'For firmness, discipline, and steady resolve.' },
+    ],
+  },
 };
