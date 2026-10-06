@@ -1,5 +1,15 @@
 import { describe, expect, it } from 'vitest';
-import { frPath, isLocalizedPath, localeAlternates, localizeHref, stripFrPrefix } from './i18nRoutes';
+import {
+  AR_PATHS,
+  LOCALIZED_PATHS,
+  arabicUrl,
+  frPath,
+  hreflangLanguages,
+  isLocalizedPath,
+  localeAlternates,
+  localizeHref,
+  stripFrPrefix,
+} from './i18nRoutes';
 
 describe('i18nRoutes', () => {
   it('maps EN paths to their /fr mirror and back', () => {
@@ -35,4 +45,24 @@ describe('i18nRoutes', () => {
     expect(fr.languages['x-default']).toBe(fr.languages.en);
     expect(localeAlternates('/abjad', 'en').canonical).toBe(fr.languages.en);
   });
+
+  it('adds an ar alternate only for pages with an Arabic landing page', () => {
+    const withAr = hreflangLanguages('/abjad');
+    expect(withAr.ar).toMatch(/\/ar\/abjad$/);
+    expect(withAr['x-default']).toBe(withAr.en);
+    expect(hreflangLanguages('/ikhtiyarat')).not.toHaveProperty('ar');
+    expect(hreflangLanguages('/best-day-for/travel')).not.toHaveProperty('ar');
+    for (const en of Object.keys(AR_PATHS)) {
+      expect(LOCALIZED_PATHS).toContain(en);
+      expect(arabicUrl(en)).toMatch(/\/ar\//);
+    }
+    expect(arabicUrl('/sadaqa')).toBeNull();
+  });
+
+  it('self-canonicalises the Arabic page', () => {
+    const ar = localeAlternates('/sadaqa-of-the-day', 'ar');
+    expect(ar.canonical).toMatch(/\/ar\/sadaqa-of-the-day$/);
+    expect(ar.languages.ar).toBe(ar.canonical);
+  });
 });
+
