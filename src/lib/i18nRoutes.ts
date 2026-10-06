@@ -70,19 +70,43 @@ export function localizedUrl(enPath: string, lang: RouteLang): string {
   return absoluteUrl(lang === 'fr' && isLocalizedPath(enPath) ? frPath(enPath) : enPath);
 }
 
-/** hreflang map (en, fr, x-default -> en) for a localized page. */
+/**
+ * Arabic landing pages (/ar/...). Unlike /fr these are dedicated route files
+ * (app/ar/**) with their own Arabic copy around the unchanged tool, so only
+ * the pages listed here get an `ar` hreflang alternate.
+ */
+export const AR_PATHS: Readonly<Record<string, string>> = {
+  '/abjad': '/ar/abjad',
+  '/planetary-hours': '/ar/planetary-hours',
+  '/name-and-mother-burj': '/ar/name-and-mother-burj',
+  '/sadaqa-of-the-day': '/ar/sadaqa-of-the-day',
+};
+
+/** Absolute URL of the Arabic landing page for an EN path, or null if there is none. */
+export function arabicUrl(enPath: string): string | null {
+  const ar = AR_PATHS[enPath];
+  return ar ? absoluteUrl(ar) : null;
+}
+
+/** hreflang map (en, fr, ar when it exists, x-default -> en) for a localized page. */
 export function hreflangLanguages(enPath: string): Record<string, string> {
+  const ar = arabicUrl(enPath);
   return {
     en: localizedUrl(enPath, 'en'),
     fr: localizedUrl(enPath, 'fr'),
+    ...(ar ? { ar } : {}),
     'x-default': localizedUrl(enPath, 'en'),
   };
 }
 
-/** Metadata `alternates` block: self-canonical for the served language + hreflang pairs. */
-export function localeAlternates(enPath: string, lang: RouteLang) {
+/**
+ * Metadata `alternates` block: self-canonical for the served language + hreflang pairs.
+ * 'ar' is only valid for paths in AR_PATHS (the Arabic landing pages).
+ */
+export function localeAlternates(enPath: string, lang: RouteLang | 'ar') {
+  const canonical = lang === 'ar' ? arabicUrl(enPath) ?? localizedUrl(enPath, 'en') : localizedUrl(enPath, lang);
   return {
-    canonical: localizedUrl(enPath, lang),
+    canonical,
     languages: hreflangLanguages(enPath),
   };
 }
