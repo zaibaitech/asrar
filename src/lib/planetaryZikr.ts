@@ -90,16 +90,21 @@ export const PLANETARY_ZIKR: Record<string, PlanetZikr> = {
     label: 'Jupiter',
     planet: '♃',
     color: '#4A90D9',
-    sectionNote: 'Recite with Kāfūr, ʿŪd, Jawiya, or Mastakā. Angel: Isrāfīl / Samhārūsī. Talisman: Murābaḥa.',
+    // Reflection only — Names from the prior list + practice-hints (Razzāq) /
+    // planetGuides & SEO (Wāsiʿ, Karīm). Counts = abjad in divine-names.ts.
+    // Duplicate Ya Muhayminu (135 / 108) collapsed to a single abjad count (145).
+    sectionNote: 'Thursday\'s planet in classical ʿIlm al-Nujūm — for remembrance, generosity, and reliance on Allah\'s provision. Not prediction.',
     zikr: [
-      { name: 'Ya Muhayminu', count: '135', benefit: 'Divine protection and guardianship.' },
-      { name: 'Ya Halimu', count: '150', benefit: 'Attracting favour and softening hearts (Taskhīr).' },
-      { name: 'Ya Muhsi', count: '117', benefit: 'Divine accounting and precision.' },
-      { name: "Ya Sami'u", count: '180', benefit: 'Having prayers answered (Ijābah).' },
-      { name: 'Ya Mutakabbiru', count: '662', benefit: 'Commanding respect and dignified presence (Haybah).' },
-      { name: "Ya 'Azizu", count: '93', benefit: 'Strength in leadership and personal growth.' },
-      { name: 'Ya Muhayminu', count: '108', benefit: 'Restoring respect and reclaiming what is rightfully yours.' },
-      { name: 'Ya Baqi', count: '113', benefit: 'Career stability and establishing firm authority.' },
+      { name: 'Ya Razzaq', arabicName: 'يَا رَزَّاقُ', count: '308', benefit: 'For provision, barakah, and trust in Allah as Provider.' },
+      { name: "Ya Wasi'", arabicName: 'يَا وَاسِعُ', count: '137', benefit: 'For spaciousness of heart and ease in what feels tight.' },
+      { name: 'Ya Karim', arabicName: 'يَا كَرِيمُ', count: '270', benefit: 'For generosity and noble character.' },
+      { name: 'Ya Muhaymin', arabicName: 'يَا مُهَيْمِنُ', count: '145', benefit: 'For mindful reliance on Allah\'s care and guardianship.' },
+      { name: 'Ya Halim', arabicName: 'يَا حَلِيمُ', count: '88', benefit: 'For forbearance and a softened heart.' },
+      { name: 'Ya Muhsi', arabicName: 'يَا مُحْصِي', count: '148', benefit: 'For care and precision in what one undertakes.' },
+      { name: "Ya Sami'", arabicName: 'يَا سَمِيعُ', count: '180', benefit: 'For turning to the All-Hearing in duʿāʾ.' },
+      { name: 'Ya Mutakabbir', arabicName: 'يَا مُتَكَبِّرُ', count: '662', benefit: 'For humility before the Most Great and dignity without arrogance.' },
+      { name: "Ya 'Aziz", arabicName: 'يَا عَزِيزُ', count: '94', benefit: 'For strength with honour in righteous effort.' },
+      { name: 'Ya Baqi', arabicName: 'يَا بَاقِي', count: '113', benefit: 'For steadfastness and what endures of good deeds.' },
     ],
   },
   saturn: {
