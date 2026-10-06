@@ -1,5 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { PUBLIC_TOOLS, absoluteUrl } from '../src/lib/siteRoutes';
+import { COMMON_NAMES } from '../src/lib/names/commonNames';
+import { NAME_PAGE_PATHS } from '../src/lib/names/seo';
 import { LOCALIZED_PATHS, arabicUrl, hreflangLanguages, localizedUrl } from '../src/lib/i18nRoutes';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -18,5 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ];
   };
 
-  return [...entry('/', 1), ...PUBLIC_TOOLS.flatMap((tool) => entry(tool.path, 0.8))];
+  // English-only name pages (no FR/AR versions yet, so no hreflang alternates).
+  const namePages = [...NAME_PAGE_PATHS, ...COMMON_NAMES.map((n) => `/names/${n.slug}`)].flatMap((p) => entry(p, 0.6));
+
+  return [...entry('/', 1), ...PUBLIC_TOOLS.flatMap((tool) => entry(tool.path, 0.8)), ...namePages];
 }
