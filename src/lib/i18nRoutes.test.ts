@@ -24,6 +24,7 @@ describe('i18nRoutes', () => {
 
   it('only mirrors the listed SEO pages', () => {
     expect(isLocalizedPath('/ikhtiyarat')).toBe(true);
+    expect(isLocalizedPath('/manazil')).toBe(true);
     expect(isLocalizedPath('/planet-transit')).toBe(false);
     expect(isLocalizedPath('/ikhtiyarat/r/2026-10-05')).toBe(false);
   });

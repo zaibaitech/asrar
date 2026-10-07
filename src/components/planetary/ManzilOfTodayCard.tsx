@@ -8,6 +8,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import {
   getCurrentLunarMansion,
   type CurrentMansion,
@@ -118,6 +119,13 @@ export function ManzilOfTodayCard({
             ? 'Stations traditionnelles pour la réflexion et l’adab du temps — non pour la prédiction. Allah seul connaît l’invisible.'
             : 'Traditional stations for reflection and timing adab — not prediction. Allah alone knows the unseen.'}
         </p>
+
+        <Link
+          href="/manazil"
+          className="inline-flex text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:underline mb-2"
+        >
+          {isFr ? 'Guide des 28 manāzil →' : 'Guide to all 28 manāzil →'}
+        </Link>
 
         {allowExpand && (
           <button

@@ -15,6 +15,7 @@ export const OG_PAGE_KEYS = [
   'abjad',
   'planetary-hours',
   'planet-of-the-day',
+  'manazil',
   'compatibility',
   'name-and-mother-burj',
   'sadaqa',
