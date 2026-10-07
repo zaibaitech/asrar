@@ -12,12 +12,19 @@
  * 
  * **UPGRADED:** Now uses astronomy-engine for precise lunar position calculations
  * 
- * Sources:
- * - Ibn ʿArabī's astronomical works
- * - Al-Bīrūnī's "Book of Instruction in the Elements of the Art of Astrology"
+ * Sources (prefer):
+ * - Al-Bīrūnī, Kitāb al-Tafhīm (names / instructional framing)
  * - Traditional Arab folk astronomy (Anwāʾ)
- * - Classical Islamic agricultural calendars
- * - Astronomy Engine (modern astronomical calculations)
+ * - Maghribi / classical ikhtiyārāt themes for activity adab (not guarantees)
+ * - Qurʾān 10:5; 36:39–40 (Moon’s stations as āyāt)
+ * - Astronomy Engine (modern tropical ecliptic calculation)
+ *
+ * Avoid as product copy: Picatrix/Ghāyat al-Ḥakīm talisman recipes, Būnī-style
+ * operative magic, taweez, compulsion language.
+ *
+ * Convention: 28 equal tropical sectors (~12.857°). See /workspace Phase A note.
+ * Phase B (2026-10): mansions 9–28 filled; fav/unfav remain SCHOLAR-REVIEW.
+ * Election tables (marriage/travel) stay separate in src/lib/ikhtiyarat/.
  */
 
 import * as Astronomy from 'astronomy-engine';
@@ -103,7 +110,7 @@ export const LUNAR_MANSIONS: LunarMansion[] = [
     },
     spiritualFocus: {
       en: 'Starting fresh with courage and trust in Allah',
-      fr: 'Commencer frais avec courage et confiance en Allah',
+      fr: 'Commencer à neuf avec courage et confiance en Allah',
     },
     favorableFor: {
       en: ['New ventures', 'Travel', 'Medical treatment', 'Marriage'],
@@ -114,9 +121,9 @@ export const LUNAR_MANSIONS: LunarMansion[] = [
       fr: ['Prêts', 'Partenariats avec des inconnus'],
     },
     classicalWisdom: {
-      quote: 'The beginning of the lunar journey mirrors the beginning of all spiritual journeys - with intention and divine remembrance.',
-      source: 'Classical Arabic Agricultural Calendar',
-      scholar: 'Traditional',
+      quote: 'Beginnings invite intention (niyyah) and remembrance — the Moon’s stations are signs, not decrees.',
+      source: 'Educational reflection (Qurʾān 10:5)',
+      scholar: 'Asrār framing',
     },
     emoji: '🌱',
     color: '#EF4444', // Red
@@ -150,9 +157,9 @@ export const LUNAR_MANSIONS: LunarMansion[] = [
       fr: ['Voyage en mer', 'Décisions hâtives'],
     },
     classicalWisdom: {
-      quote: 'As the belly nourishes the body, seek that which nourishes the soul.',
-      source: 'Anwāʾ Tradition',
-      scholar: 'Traditional',
+      quote: 'As the body needs nourishment, the heart needs what draws it nearer to Allah.',
+      source: 'Educational reflection (anwāʾ theme)',
+      scholar: 'Asrār framing',
     },
     emoji: '🌾',
     color: '#F59E0B', // Amber
@@ -186,9 +193,9 @@ export const LUNAR_MANSIONS: LunarMansion[] = [
       fr: ['Séparation', 'Conflit', 'Paroles dures'],
     },
     classicalWisdom: {
-      quote: 'The Pleiades are seven sisters in the sky, reminding us that unity in diversity reflects divine wisdom.',
-      source: 'Pre-Islamic Arab Astronomy',
-      scholar: 'Al-Bīrūnī',
+      quote: 'Al-Thurayyā was among the best-known stations in Arab star lore — a reminder to gather in beauty and good company.',
+      source: 'Educational reflection (anwāʾ / Al-Bīrūnī tradition of naming)',
+      scholar: 'Asrār framing',
     },
     emoji: '✨',
     color: '#8B5CF6', // Purple
@@ -222,9 +229,9 @@ export const LUNAR_MANSIONS: LunarMansion[] = [
       fr: ['Rompre des engagements', 'Changements impulsifs'],
     },
     classicalWisdom: {
-      quote: 'As Aldebaran follows the Pleiades across the sky, the seeker follows divine guidance through all seasons.',
-      source: 'Islamic Astronomical Tradition',
-      scholar: 'Traditional',
+      quote: 'Al-Dabarān “follows” Thurayyā across the sky — a picture of steadfast following, not blind haste.',
+      source: 'Educational reflection (star-name lore)',
+      scholar: 'Asrār framing',
     },
     emoji: '🌟',
     color: '#EC4899', // Pink
@@ -258,9 +265,9 @@ export const LUNAR_MANSIONS: LunarMansion[] = [
       fr: ['Tromperie', 'Contrats peu clairs', 'Confusion'],
     },
     classicalWisdom: {
-      quote: 'The white spot in Orion reminds us that even in darkness, divine light illuminates the truth.',
-      source: 'Anwāʾ Calendar',
-      scholar: 'Traditional',
+      quote: 'Clarity of intention softens confusion — seek light before you speak or sign.',
+      source: 'Educational reflection',
+      scholar: 'Asrār framing',
     },
     emoji: '💫',
     color: '#06B6D4', // Cyan
@@ -286,17 +293,17 @@ export const LUNAR_MANSIONS: LunarMansion[] = [
       fr: 'Reconnaître son but spirituel unique et son appel',
     },
     favorableFor: {
-      en: ['Establishing identity', 'Branding', 'Public speaking', 'Contracts'],
-      fr: ['Établir l\'identité', 'Image de marque', 'Prise de parole publique', 'Contrats'],
+      en: ['Establishing identity', 'Clear naming', 'Public speaking', 'Contracts'],
+      fr: ['Établir l\'identité', 'Nommer avec clarté', 'Prise de parole publique', 'Contrats'],
     },
     unfavorableFor: {
       en: ['Anonymity', 'Hiding truth', 'Dishonesty'],
       fr: ['Anonymat', 'Cacher la vérité', 'Malhonnêteté'],
     },
     classicalWisdom: {
-      quote: 'As livestock are marked to show ownership, the believer is marked by divine mercy.',
-      source: 'Traditional Arab Wisdom',
-      scholar: 'Folk Tradition',
+      quote: 'Names and marks in the old star calendar were for recognition — know yourself before Allah, not for show.',
+      source: 'Educational reflection',
+      scholar: 'Asrār framing',
     },
     emoji: '🔖',
     color: '#10B981', // Green
@@ -330,9 +337,9 @@ export const LUNAR_MANSIONS: LunarMansion[] = [
       fr: ['Égoïsme', 'Accumulation', 'Isolation'],
     },
     classicalWisdom: {
-      quote: 'The arm that extends in charity draws closer to divine favor.',
-      source: 'Hadith Commentary',
-      scholar: 'Traditional',
+      quote: 'The forearm that gives in charity teaches reach without grasping.',
+      source: 'Educational reflection',
+      scholar: 'Asrār framing',
     },
     emoji: '🤲',
     color: '#3B82F6', // Blue
@@ -366,53 +373,753 @@ export const LUNAR_MANSIONS: LunarMansion[] = [
       fr: ['Activité mondaine excessive', 'Bruit', 'Distraction'],
     },
     classicalWisdom: {
-      quote: 'In the gap between breaths, find the presence of the Divine.',
-      source: 'Sufi Teaching',
-      scholar: 'Traditional',
+      quote: 'In quiet gaps — between tasks, between breaths — remember the One who ordered the Moon’s phases.',
+      source: 'Educational reflection (Qurʾān 36:39)',
+      scholar: 'Asrār framing',
     },
     emoji: '🌊',
     color: '#14B8A6', // Teal
   },
 
-  // Continue with remaining 20 mansions...
-  // For brevity in this implementation, I'll create a simplified structure
-  // In production, all 28 would be fully detailed
+  // ========================================
+  // 9–28 — Phase B content fill (educational / reflection)
+  // Fav/unfav: SCHOLAR-REVIEW where tagged. No magic/taweez/Picatrix.
+  // Election tables remain in src/lib/ikhtiyarat/ (separate).
+  // ========================================
 
-  // 9-28: Simplified entries (would be fully detailed in production)
-  ...Array.from({ length: 20 }, (_, i) => ({
-    number: i + 9,
-    nameArabic: ['الطرف', 'الجبهة', 'الزبرة', 'الصرفة', 'العواء', 'السماك', 'الغفر', 'الزبانا', 'الإكليل', 'القلب', 'الشولة', 'النعائم', 'البلدة', 'سعد الذابح', 'سعد بلع', 'سعد السعود', 'سعد الأخبية', 'الفرغ المقدم', 'الفرغ المؤخر', 'بطن الحوت'][i],
-    nameTransliteration: ['Al-Ṭarf', 'Al-Jabhah', 'Al-Zubrah', 'Al-Ṣarfah', 'Al-ʿAwwāʾ', 'Al-Simāk', 'Al-Ghafr', 'Al-Zubānā', 'Al-Iklīl', 'Al-Qalb', 'Al-Shawlah', 'Al-Naʿāʾim', 'Al-Baldah', 'Saʿd al-Dhābiḥ', 'Saʿd Bulaʿ', 'Saʿd al-Suʿūd', 'Saʿd al-Akhbiyah', 'Al-Fargh al-Muqaddam', 'Al-Fargh al-Muʾakhkhar', 'Baṭn al-Ḥūt'][i],
-    nameEn: ['The Glance', 'The Forehead', 'The Mane', 'The Changer', 'The Barker', 'The Unarmed', 'The Covering', 'The Claws', 'The Crown', 'The Heart', 'The Sting', 'The Ostriches', 'The City', 'Lucky Slaughterer', 'Lucky Swallower', 'Luckiest of Luck', 'Lucky Tents', 'First Spout', 'Second Spout', 'Belly of Fish'][i],
-    nameFr: ['Le Regard', 'Le Front', 'La Crinière', 'Le Changeur', 'L\'Aboyeur', 'Le Désarmé', 'La Couverture', 'Les Griffes', 'La Couronne', 'Le Cœur', 'Le Dard', 'Les Autruches', 'La Ville', 'Chanceux Tueur', 'Chanceux Avaleur', 'Plus Chanceux', 'Tentes Chanceuses', 'Premier Bec', 'Second Bec', 'Ventre de Poisson'][i],
-    constellation: ['Leo', 'Leo', 'Leo', 'Virgo', 'Virgo', 'Virgo', 'Libra', 'Libra', 'Scorpio', 'Scorpio', 'Scorpio', 'Sagittarius', 'Sagittarius', 'Capricorn', 'Capricorn', 'Aquarius', 'Aquarius', 'Pisces', 'Pisces', 'Pisces'][i],
-    startDegree: 102.86 + (i * 12.86),
-    element: (['Fire', 'Fire', 'Fire', 'Earth', 'Earth', 'Earth', 'Air', 'Air', 'Water', 'Water', 'Water', 'Fire', 'Fire', 'Earth', 'Earth', 'Air', 'Air', 'Water', 'Water', 'Water'][i] as any),
-    planetaryRuler: ['Sun', 'Saturn', 'Jupiter', 'Mercury', 'Mars', 'Venus', 'Mercury', 'Jupiter', 'Mars', 'Saturn', 'Mercury', 'Sun', 'Saturn', 'Jupiter', 'Saturn', 'Jupiter', 'Saturn', 'Venus', 'Mercury', 'Saturn'][i],
+  // 9. Al-Ṭarf (The Glance)
+  // SCHOLAR-REVIEW: fav/unfav themes are educational first-pass — confirm before marketing elections.
+  {
+    number: 9,
+    nameArabic: 'الطرف',
+    nameTransliteration: 'Al-Ṭarf',
+    nameEn: 'The Glance',
+    nameFr: 'Le Regard',
+    constellation: 'Leo',
+    startDegree: 102.86,
+    element: 'Fire',
+    planetaryRuler: 'Sun',
     divineQuality: {
-      en: ['Vision', 'Authority', 'Majesty', 'Transformation', 'Service', 'Balance', 'Forgiveness', 'Justice', 'Honor', 'Courage', 'Defense', 'Freedom', 'Community', 'Sacrifice', 'Depth', 'Fortune', 'Shelter', 'Beginning', 'Completion', 'Wholeness'][i],
-      fr: ['Vision', 'Autorité', 'Majesté', 'Transformation', 'Service', 'Équilibre', 'Pardon', 'Justice', 'Honneur', 'Courage', 'Défense', 'Liberté', 'Communauté', 'Sacrifice', 'Profondeur', 'Fortune', 'Abri', 'Commencement', 'Achèvement', 'Totalité'][i],
+      en: 'Vision, Attentiveness',
+      fr: 'Vision, Attention',
     },
     spiritualFocus: {
-      en: `Mansion ${i + 9} spiritual focus`,
-      fr: `Focus spirituel du manoir ${i + 9}`,
+      en: 'Looking with care: notice what you see before you act, and ask Allah for insight without haste.',
+      fr: 'Regarder avec soin : remarquer avant d’agir, et demander à Allah la clairvoyance sans précipitation.',
     },
     favorableFor: {
-      en: ['General activities', 'Spiritual practice'],
-      fr: ['Activités générales', 'Pratique spirituelle'],
+      en: ['Careful observation', 'Study', 'Reviewing plans', 'Seeking counsel'],
+      fr: ['Observation attentive', 'Étude', 'Revoir des plans', 'Demander conseil'],
     },
     unfavorableFor: {
-      en: ['Heedlessness', 'Neglect'],
-      fr: ['Insouciance', 'Négligence'],
+      en: ['Hasty judgments', 'Gossip', 'Spying on others'],
+      fr: ['Jugements hâtifs', 'Médisance', 'Espionner autrui'],
     },
     classicalWisdom: {
-      quote: `Classical wisdom for mansion ${i + 9}`,
-      source: 'Traditional Sources',
-      scholar: 'Classical Scholars',
+      quote: 'Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.',
+      source: 'Educational framing (Qurʾān 10:5; 36:39)',
+      scholar: 'Asrār',
     },
-    emoji: ['👁️', '👑', '🦁', '🔄', '🤝', '⚖️', '🕊️', '⚖️', '👑', '❤️', '🦂', '🦅', '🏛️', '🐏', '🐋', '🍀', '⛺', '💧', '💧', '🐟'][i],
-    color: ['#F97316', '#DC2626', '#7C3AED', '#059669', '#0891B2', '#8B5CF6', '#6366F1', '#3B82F6', '#DC2626', '#EF4444', '#F59E0B', '#FBBF24', '#84CC16', '#22C55E', '#10B981', '#14B8A6', '#06B6D4', '#0EA5E9', '#3B82F6', '#6366F1'][i],
-  })),
+    emoji: '👁️',
+    color: '#F97316',
+  },
+
+  // 10. Al-Jabhah (The Forehead)
+  // SCHOLAR-REVIEW: fav/unfav themes are educational first-pass — confirm before marketing elections.
+  {
+    number: 10,
+    nameArabic: 'الجبهة',
+    nameTransliteration: 'Al-Jabhah',
+    nameEn: 'The Forehead',
+    nameFr: 'Le Front',
+    constellation: 'Leo',
+    startDegree: 115.71,
+    element: 'Fire',
+    planetaryRuler: 'Saturn',
+    divineQuality: {
+      en: 'Dignity, Responsibility',
+      fr: 'Dignité, Responsabilité',
+    },
+    spiritualFocus: {
+      en: 'Carry dignity with humility — leadership here means service and clear intention before Allah.',
+      fr: 'Porter la dignité avec humilité — diriger ici signifie servir et clarifier l’intention devant Allah.',
+    },
+    favorableFor: {
+      en: ['Formal commitments', 'Teaching', 'Public trust', 'Marriage discussions'],
+      fr: ['Engagements formels', 'Enseignement', 'Confiance publique', 'Discussions de mariage'],
+    },
+    unfavorableFor: {
+      en: ['Arrogance', 'Empty show', 'Neglecting counsel'],
+      fr: ['Arrogance', 'Ostentation', 'Négliger le conseil'],
+    },
+    classicalWisdom: {
+      quote: 'Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.',
+      source: 'Educational framing (Qurʾān 10:5; 36:39)',
+      scholar: 'Asrār',
+    },
+    emoji: '👑',
+    color: '#DC2626',
+  },
+
+  // 11. Al-Zubrah (The Mane)
+  {
+    number: 11,
+    nameArabic: 'الزبرة',
+    nameTransliteration: 'Al-Zubrah',
+    nameEn: 'The Mane',
+    nameFr: 'La Crinière',
+    constellation: 'Leo',
+    startDegree: 128.57,
+    element: 'Fire',
+    planetaryRuler: 'Jupiter',
+    divineQuality: {
+      en: 'Strength, Presence',
+      fr: 'Force, Présence',
+    },
+    spiritualFocus: {
+      en: 'Strength is a trust: use presence to protect and encourage, not to dominate.',
+      fr: 'La force est un dépôt : utiliser sa présence pour protéger et encourager, non pour dominer.',
+    },
+    favorableFor: {
+      en: ['Encouraging others', 'Steady work', 'Protecting the vulnerable', 'Long efforts'],
+      fr: ['Encourager autrui', 'Travail régulier', 'Protéger les vulnérables', 'Efforts de longue haleine'],
+    },
+    unfavorableFor: {
+      en: ['Boastfulness', 'Aggression', 'Wasting energy'],
+      fr: ['Fanfaronnade', 'Agressivité', 'Gaspiller son énergie'],
+    },
+    classicalWisdom: {
+      quote: 'Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.',
+      source: 'Educational framing (Qurʾān 10:5; 36:39)',
+      scholar: 'Asrār',
+    },
+    emoji: '🦁',
+    color: '#7C3AED',
+  },
+
+  // 12. Al-Ṣarfah (The Changer)
+  // SCHOLAR-REVIEW: fav/unfav themes are educational first-pass — confirm before marketing elections.
+  {
+    number: 12,
+    nameArabic: 'الصرفة',
+    nameTransliteration: 'Al-Ṣarfah',
+    nameEn: 'The Changer',
+    nameFr: 'Le Changeur',
+    constellation: 'Virgo',
+    startDegree: 141.43,
+    element: 'Earth',
+    planetaryRuler: 'Mercury',
+    divineQuality: {
+      en: 'Transition, Turning',
+      fr: 'Transition, Tournant',
+    },
+    spiritualFocus: {
+      en: 'Seasons turn: release what no longer serves, and turn toward what Allah has made clearer.',
+      fr: 'Les saisons tournent : lâcher ce qui ne sert plus, et se tourner vers ce qu’Allah a rendu plus clair.',
+    },
+    favorableFor: {
+      en: ['Course corrections', 'Ending harmful habits', 'Repentance', 'Reorganizing'],
+      fr: ['Corrections de trajectoire', 'Mettre fin aux mauvaises habitudes', 'Tawba', 'Réorganiser'],
+    },
+    unfavorableFor: {
+      en: ['Clinging to the obsolete', 'Forced abrupt breaks without counsel'],
+      fr: ['S’accrocher à l’obsolète', 'Ruptures forcées sans conseil'],
+    },
+    classicalWisdom: {
+      quote: 'Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.',
+      source: 'Educational framing (Qurʾān 10:5; 36:39)',
+      scholar: 'Asrār',
+    },
+    emoji: '🔄',
+    color: '#059669',
+  },
+
+  // 13. Al-ʿAwwāʾ (The Barker)
+  // SCHOLAR-REVIEW: fav/unfav themes are educational first-pass — confirm before marketing elections.
+  {
+    number: 13,
+    nameArabic: 'العواء',
+    nameTransliteration: 'Al-ʿAwwāʾ',
+    nameEn: 'The Barker',
+    nameFr: 'L\'Aboyeur',
+    constellation: 'Virgo',
+    startDegree: 154.29,
+    element: 'Earth',
+    planetaryRuler: 'Mars',
+    divineQuality: {
+      en: 'Gathering, Calling',
+      fr: 'Rassemblement, Appel',
+    },
+    spiritualFocus: {
+      en: 'Call others to what is good — a voice used for gathering and warning, not for needless noise.',
+      fr: 'Appeler au bien — une voix pour rassembler et avertir, non pour faire du bruit inutile.',
+    },
+    favorableFor: {
+      en: ['Gatherings', 'Reconciliation', 'Community work', 'Clear announcements'],
+      fr: ['Rassemblements', 'Réconciliation', 'Travail communautaire', 'Annonces claires'],
+    },
+    unfavorableFor: {
+      en: ['Spreading alarm without cause', 'Harsh speech', 'Division'],
+      fr: ['Alarmer sans cause', 'Paroles dures', 'Division'],
+    },
+    classicalWisdom: {
+      quote: 'Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.',
+      source: 'Educational framing (Qurʾān 10:5; 36:39)',
+      scholar: 'Asrār',
+    },
+    emoji: '🤝',
+    color: '#0891B2',
+  },
+
+  // 14. Al-Simāk (The Unarmed)
+  {
+    number: 14,
+    nameArabic: 'السماك',
+    nameTransliteration: 'Al-Simāk',
+    nameEn: 'The Unarmed',
+    nameFr: 'Le Désarmé',
+    constellation: 'Virgo',
+    startDegree: 167.14,
+    element: 'Earth',
+    planetaryRuler: 'Venus',
+    divineQuality: {
+      en: 'Balance, Harvest',
+      fr: 'Équilibre, Moisson',
+    },
+    spiritualFocus: {
+      en: 'Al-Simāk al-Aʿzal (“the unarmed”) invites fair measure — harvest with gratitude, without grasping.',
+      fr: 'Al-Simāk al-Aʿzal (« le désarmé ») invite à la juste mesure — moissonner avec gratitude, sans s’accrocher.',
+    },
+    favorableFor: {
+      en: ['Fair dealing', 'Harvest and completion of work', 'Partnerships', 'Beauty with restraint'],
+      fr: ['Commerce équitable', 'Moisson et achèvement du travail', 'Partenariats', 'Beauté avec retenue'],
+    },
+    unfavorableFor: {
+      en: ['Greed', 'Unfair advantage', 'Neglecting zakāh and rights'],
+      fr: ['Avidité', 'Avantage injuste', 'Négliger la zakāh et les droits'],
+    },
+    classicalWisdom: {
+      quote: 'Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.',
+      source: 'Educational framing (Qurʾān 10:5; 36:39)',
+      scholar: 'Asrār',
+    },
+    emoji: '⚖️',
+    color: '#8B5CF6',
+  },
+
+  // 15. Al-Ghafr (The Covering)
+  // SCHOLAR-REVIEW: fav/unfav themes are educational first-pass — confirm before marketing elections.
+  {
+    number: 15,
+    nameArabic: 'الغفر',
+    nameTransliteration: 'Al-Ghafr',
+    nameEn: 'The Covering',
+    nameFr: 'La Couverture',
+    constellation: 'Libra',
+    startDegree: 180.0,
+    element: 'Air',
+    planetaryRuler: 'Mercury',
+    divineQuality: {
+      en: 'Covering, Discretion',
+      fr: 'Couverture, Discrétion',
+    },
+    spiritualFocus: {
+      en: 'Cover faults — your own and others’ — and prefer discretion over exposure.',
+      fr: 'Couvrir les défauts — les siens et ceux d’autrui — et préférer la discrétion à l’exposition.',
+    },
+    favorableFor: {
+      en: ['Forgiveness', 'Private repentance', 'Protecting privacy', 'Quiet charity'],
+      fr: ['Pardon', 'Tawba privée', 'Protéger la vie privée', 'Charité discrète'],
+    },
+    unfavorableFor: {
+      en: ['Exposing others', 'Scandal', 'Public shaming'],
+      fr: ['Exposer autrui', 'Scandale', 'Humiliation publique'],
+    },
+    classicalWisdom: {
+      quote: 'Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.',
+      source: 'Educational framing (Qurʾān 10:5; 36:39)',
+      scholar: 'Asrār',
+    },
+    emoji: '🕊️',
+    color: '#6366F1',
+  },
+
+  // 16. Al-Zubānā (The Claws)
+  // SCHOLAR-REVIEW: fav/unfav themes are educational first-pass — confirm before marketing elections.
+  {
+    number: 16,
+    nameArabic: 'الزبانا',
+    nameTransliteration: 'Al-Zubānā',
+    nameEn: 'The Claws',
+    nameFr: 'Les Griffes',
+    constellation: 'Libra',
+    startDegree: 192.86,
+    element: 'Air',
+    planetaryRuler: 'Jupiter',
+    divineQuality: {
+      en: 'Boundaries, Careful Cuts',
+      fr: 'Limites, Coupures prudentes',
+    },
+    spiritualFocus: {
+      en: 'Set boundaries with justice: cut what harms, without cruelty.',
+      fr: 'Poser des limites avec justice : couper ce qui nuit, sans cruauté.',
+    },
+    favorableFor: {
+      en: ['Clear agreements', 'Ending harmful ties with adab', 'Legal clarity', 'Self-discipline'],
+      fr: ['Accords clairs', 'Mettre fin à des liens nuisibles avec adab', 'Clarté juridique', 'Autodiscipline'],
+    },
+    unfavorableFor: {
+      en: ['Spiteful severance', 'Ambiguous contracts', 'Unnecessary conflict'],
+      fr: ['Rupture vindicative', 'Contrats ambigus', 'Conflit inutile'],
+    },
+    classicalWisdom: {
+      quote: 'Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.',
+      source: 'Educational framing (Qurʾān 10:5; 36:39)',
+      scholar: 'Asrār',
+    },
+    emoji: '⚖️',
+    color: '#3B82F6',
+  },
+
+  // 17. Al-Iklīl (The Crown)
+  {
+    number: 17,
+    nameArabic: 'الإكليل',
+    nameTransliteration: 'Al-Iklīl',
+    nameEn: 'The Crown',
+    nameFr: 'La Couronne',
+    constellation: 'Scorpio',
+    startDegree: 205.71,
+    element: 'Water',
+    planetaryRuler: 'Mars',
+    divineQuality: {
+      en: 'Honor, Trust',
+      fr: 'Honneur, Confiance',
+    },
+    spiritualFocus: {
+      en: 'Honor is a trust worn lightly — crowns in the sky remind of responsibility, not entitlement.',
+      fr: 'L’honneur est un dépôt porté avec légèreté — les couronnes du ciel rappellent la responsabilité, non le droit.',
+    },
+    favorableFor: {
+      en: ['Keeping trusts', 'Formal roles', 'Guarding dignity', 'Responsible leadership'],
+      fr: ['Garder les dépôts', 'Rôles formels', 'Préserver la dignité', 'Leadership responsable'],
+    },
+    unfavorableFor: {
+      en: ['Pride', 'Betrayal of trust', 'Seeking status for its own sake'],
+      fr: ['Orgueil', 'Trahison de confiance', 'Chercher le statut pour lui-même'],
+    },
+    classicalWisdom: {
+      quote: 'Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.',
+      source: 'Educational framing (Qurʾān 10:5; 36:39)',
+      scholar: 'Asrār',
+    },
+    emoji: '👑',
+    color: '#DC2626',
+  },
+
+  // 18. Al-Qalb (The Heart)
+  // SCHOLAR-REVIEW: fav/unfav themes are educational first-pass — confirm before marketing elections.
+  {
+    number: 18,
+    nameArabic: 'القلب',
+    nameTransliteration: 'Al-Qalb',
+    nameEn: 'The Heart',
+    nameFr: 'Le Cœur',
+    constellation: 'Scorpio',
+    startDegree: 218.57,
+    element: 'Water',
+    planetaryRuler: 'Saturn',
+    divineQuality: {
+      en: 'Sincerity, Courage of Heart',
+      fr: 'Sincérité, Courage du cœur',
+    },
+    spiritualFocus: {
+      en: 'Return to the heart: sincerity (ikhlāṣ) before intensity — courage without crushing others.',
+      fr: 'Revenir au cœur : la sincérité (ikhlāṣ) avant l’intensité — du courage sans écraser autrui.',
+    },
+    favorableFor: {
+      en: ['Heartfelt duʿāʾ', 'Honest conversations', 'Courageous apology', 'Deep study'],
+      fr: ['Duʿāʾ sincère', 'Conversations honnêtes', 'Excuses courageuses', 'Étude approfondie'],
+    },
+    unfavorableFor: {
+      en: ['Hard-heartedness', 'Emotional recklessness', 'Crushing speech'],
+      fr: ['Endurcissement du cœur', 'Imprudence émotionnelle', 'Paroles écrasantes'],
+    },
+    classicalWisdom: {
+      quote: 'Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.',
+      source: 'Educational framing (Qurʾān 10:5; 36:39)',
+      scholar: 'Asrār',
+    },
+    emoji: '❤️',
+    color: '#EF4444',
+  },
+
+  // 19. Al-Shawlah (The Sting)
+  // SCHOLAR-REVIEW: fav/unfav themes are educational first-pass — confirm before marketing elections.
+  {
+    number: 19,
+    nameArabic: 'الشولة',
+    nameTransliteration: 'Al-Shawlah',
+    nameEn: 'The Sting',
+    nameFr: 'Le Dard',
+    constellation: 'Scorpio',
+    startDegree: 231.43,
+    element: 'Water',
+    planetaryRuler: 'Mercury',
+    divineQuality: {
+      en: 'Restraint, Defense of Dignity',
+      fr: 'Retenue, Défense de la dignité',
+    },
+    spiritualFocus: {
+      en: 'The sting is for defense, not attack — restrain the tongue and hand unless justice requires otherwise.',
+      fr: 'Le dard est pour se défendre, non pour attaquer — retenir la langue et la main sauf si la justice l’exige.',
+    },
+    favorableFor: {
+      en: ['Self-restraint', 'Protecting the weak', 'Cautious travel planning', 'Saying less'],
+      fr: ['Maîtrise de soi', 'Protéger les faibles', 'Planifier un voyage avec prudence', 'Dire moins'],
+    },
+    unfavorableFor: {
+      en: ['Retaliation for ego', 'Provocation', 'Reckless risk'],
+      fr: ['Représailles pour l’ego', 'Provocation', 'Risque imprudent'],
+    },
+    classicalWisdom: {
+      quote: 'Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.',
+      source: 'Educational framing (Qurʾān 10:5; 36:39)',
+      scholar: 'Asrār',
+    },
+    emoji: '🦂',
+    color: '#F59E0B',
+  },
+
+  // 20. Al-Naʿāʾim (The Ostriches)
+  {
+    number: 20,
+    nameArabic: 'النعائم',
+    nameTransliteration: 'Al-Naʿāʾim',
+    nameEn: 'The Ostriches',
+    nameFr: 'Les Autruches',
+    constellation: 'Sagittarius',
+    startDegree: 244.29,
+    element: 'Fire',
+    planetaryRuler: 'Sun',
+    divineQuality: {
+      en: 'Journey, Openness',
+      fr: 'Voyage, Ouverture',
+    },
+    spiritualFocus: {
+      en: 'Wide spaces invite travel of body and heart — move with tawakkul and good company.',
+      fr: 'Les grands espaces invitent au voyage du corps et du cœur — avancer avec tawakkul et bonne compagnie.',
+    },
+    favorableFor: {
+      en: ['Travel', 'Exploration of knowledge', 'Outdoor work', 'Expanding horizons with adab'],
+      fr: ['Voyage', 'Exploration du savoir', 'Travail en extérieur', 'Élargir ses horizons avec adab'],
+    },
+    unfavorableFor: {
+      en: ['Aimless wandering', 'Leaving duties unfinished', 'Isolation from good counsel'],
+      fr: ['Errance sans but', 'Laisser des devoirs inachevés', 'S’isoler du bon conseil'],
+    },
+    classicalWisdom: {
+      quote: 'Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.',
+      source: 'Educational framing (Qurʾān 10:5; 36:39)',
+      scholar: 'Asrār',
+    },
+    emoji: '🦅',
+    color: '#FBBF24',
+  },
+
+  // 21. Al-Baldah (The City)
+  // SCHOLAR-REVIEW: fav/unfav themes are educational first-pass — confirm before marketing elections.
+  {
+    number: 21,
+    nameArabic: 'البلدة',
+    nameTransliteration: 'Al-Baldah',
+    nameEn: 'The City',
+    nameFr: 'La Ville',
+    constellation: 'Sagittarius',
+    startDegree: 257.14,
+    element: 'Fire',
+    planetaryRuler: 'Saturn',
+    divineQuality: {
+      en: 'Settlement, Order',
+      fr: 'Établissement, Ordre',
+    },
+    spiritualFocus: {
+      en: 'Cities need order and neighbors’ rights — settle what is due before chasing the next road.',
+      fr: 'Les villes demandent de l’ordre et le droit des voisins — régler ce qui est dû avant de courir la route suivante.',
+    },
+    favorableFor: {
+      en: ['Settling affairs', 'Neighborhood care', 'Local commitments', 'Organizing home'],
+      fr: ['Régler ses affaires', 'Soin du voisinage', 'Engagements locaux', 'Organiser la maison'],
+    },
+    unfavorableFor: {
+      en: ['Neglecting neighbors\' rights', 'Chaos in commitments', 'Fleeing responsibility'],
+      fr: ['Négliger les droits des voisins', 'Chaos dans les engagements', 'Fuir la responsabilité'],
+    },
+    classicalWisdom: {
+      quote: 'Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.',
+      source: 'Educational framing (Qurʾān 10:5; 36:39)',
+      scholar: 'Asrār',
+    },
+    emoji: '🏛️',
+    color: '#84CC16',
+  },
+
+  // 22. Saʿd al-Dhābiḥ (The Fortunate Sacrificer)
+  // SCHOLAR-REVIEW: fav/unfav themes are educational first-pass — confirm before marketing elections.
+  {
+    number: 22,
+    nameArabic: 'سعد الذابح',
+    nameTransliteration: 'Saʿd al-Dhābiḥ',
+    nameEn: 'The Fortunate Sacrificer',
+    nameFr: 'Le Sacrificateur Fortune',
+    constellation: 'Capricorn',
+    startDegree: 270.0,
+    element: 'Earth',
+    planetaryRuler: 'Jupiter',
+    divineQuality: {
+      en: 'Offering, Commitment',
+      fr: 'Offrande, Engagement',
+    },
+    spiritualFocus: {
+      en: 'Named among the saʿd stations: reflect on what you are willing to offer — wealth, time, ego — for Allah’s sake. (Educational theme only; not a ritual prescription.)',
+      fr: 'Parmi les stations saʿd : réfléchir à ce que l’on offre — bien, temps, ego — pour Allah. (Thème éducatif seulement ; pas une prescription rituelle.)',
+    },
+    favorableFor: {
+      en: ['Charitable giving', 'Keeping vows', 'Serious commitments', 'Simplifying lifestyle'],
+      fr: ['Aumône', 'Tenir ses vœux', 'Engagements sérieux', 'Simplifier son mode de vie'],
+    },
+    unfavorableFor: {
+      en: ['Wasteful spending', 'Empty vows', 'Harming animals or people'],
+      fr: ['Dépenses gaspillées', 'Vœux vides', 'Nuire aux animaux ou aux personnes'],
+    },
+    classicalWisdom: {
+      quote: 'Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.',
+      source: 'Educational framing (Qurʾān 10:5; 36:39)',
+      scholar: 'Asrār',
+    },
+    emoji: '🐏',
+    color: '#22C55E',
+  },
+
+  // 23. Saʿd Bulaʿ (The Fortunate Swallower)
+  // SCHOLAR-REVIEW: fav/unfav themes are educational first-pass — confirm before marketing elections.
+  {
+    number: 23,
+    nameArabic: 'سعد بلع',
+    nameTransliteration: 'Saʿd Bulaʿ',
+    nameEn: 'The Fortunate Swallower',
+    nameFr: 'L\'Avaleur Fortune',
+    constellation: 'Capricorn',
+    startDegree: 282.86,
+    element: 'Earth',
+    planetaryRuler: 'Saturn',
+    divineQuality: {
+      en: 'Depth, Absorption',
+      fr: 'Profondeur, Absorption',
+    },
+    spiritualFocus: {
+      en: 'Absorb lessons slowly: take in knowledge and counsel, then digest before speaking.',
+      fr: 'Absorber les leçons lentement : prendre le savoir et le conseil, puis digérer avant de parler.',
+    },
+    favorableFor: {
+      en: ['Deep study', 'Listening', 'Patience with difficulty', 'Inner work'],
+      fr: ['Étude approfondie', 'Écoute', 'Patience dans la difficulté', 'Travail intérieur'],
+    },
+    unfavorableFor: {
+      en: ['Swallowing anger into resentment', 'Consuming without reflection', 'Overindulgence'],
+      fr: ['Avaler la colère en rancune', 'Consommer sans réflexion', 'Excès'],
+    },
+    classicalWisdom: {
+      quote: 'Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.',
+      source: 'Educational framing (Qurʾān 10:5; 36:39)',
+      scholar: 'Asrār',
+    },
+    emoji: '🐋',
+    color: '#10B981',
+  },
+
+  // 24. Saʿd al-Suʿūd (The Most Fortunate)
+  // SCHOLAR-REVIEW: fav/unfav themes are educational first-pass — confirm before marketing elections.
+  {
+    number: 24,
+    nameArabic: 'سعد السعود',
+    nameTransliteration: 'Saʿd al-Suʿūd',
+    nameEn: 'The Most Fortunate',
+    nameFr: 'Le Plus Fortune',
+    constellation: 'Aquarius',
+    startDegree: 295.71,
+    element: 'Air',
+    planetaryRuler: 'Jupiter',
+    divineQuality: {
+      en: 'Gratitude, Hope',
+      fr: 'Gratitude, Espoir',
+    },
+    spiritualFocus: {
+      en: 'Named “most fortunate” in the star calendar — meet ease with shukr, and hardship with hope in Allah alone.',
+      fr: 'Nommé « le plus fortune » dans le calendrier stellaire — accueillir l’aisance avec shukr, et l’épreuve avec espoir en Allah seul.',
+    },
+    favorableFor: {
+      en: ['Gratitude practices', 'Beginning hopeful works', 'Reconciliation', 'Sharing ease with others'],
+      fr: ['Pratiques de gratitude', 'Commencer des œuvres d’espoir', 'Réconciliation', 'Partager l’aisance'],
+    },
+    unfavorableFor: {
+      en: ['Taking ease for granted', 'Complacency', 'Forgetting the Giver'],
+      fr: ['Tenir l’aisance pour acquise', 'Complaisance', 'Oublier le Donateur'],
+    },
+    classicalWisdom: {
+      quote: 'Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.',
+      source: 'Educational framing (Qurʾān 10:5; 36:39)',
+      scholar: 'Asrār',
+    },
+    emoji: '🍀',
+    color: '#14B8A6',
+  },
+
+  // 25. Saʿd al-Akhbiyah (The Fortunate Tents)
+  {
+    number: 25,
+    nameArabic: 'سعد الأخبية',
+    nameTransliteration: 'Saʿd al-Akhbiyah',
+    nameEn: 'The Fortunate Tents',
+    nameFr: 'Les Tentes Fortunées',
+    constellation: 'Aquarius',
+    startDegree: 308.57,
+    element: 'Air',
+    planetaryRuler: 'Saturn',
+    divineQuality: {
+      en: 'Shelter, Hospitality',
+      fr: 'Abri, Hospitalité',
+    },
+    spiritualFocus: {
+      en: 'Tents mean shelter and guests: open your space with generosity and guard those who seek safety.',
+      fr: 'Les tentes signifient abri et hôtes : ouvrir son espace avec générosité et protéger qui cherche refuge.',
+    },
+    favorableFor: {
+      en: ['Hospitality', 'Shelter and housing matters', 'Protecting family', 'Welcoming the stranger with adab'],
+      fr: ['Hospitalité', 'Questions de logement', 'Protéger la famille', 'Accueillir l’étranger avec adab'],
+    },
+    unfavorableFor: {
+      en: ['Inhospitality', 'Neglecting dependents', 'Closing doors out of pride'],
+      fr: ['Inhospitalité', 'Négliger les personnes à charge', 'Fermer sa porte par orgueil'],
+    },
+    classicalWisdom: {
+      quote: 'Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.',
+      source: 'Educational framing (Qurʾān 10:5; 36:39)',
+      scholar: 'Asrār',
+    },
+    emoji: '⛺',
+    color: '#06B6D4',
+  },
+
+  // 26. Al-Fargh al-Muqaddam (The Former Spout)
+  // SCHOLAR-REVIEW: fav/unfav themes are educational first-pass — confirm before marketing elections.
+  {
+    number: 26,
+    nameArabic: 'الفرغ المقدم',
+    nameTransliteration: 'Al-Fargh al-Muqaddam',
+    nameEn: 'The Former Spout',
+    nameFr: 'Le Premier Déversoir',
+    constellation: 'Pisces',
+    startDegree: 321.43,
+    element: 'Water',
+    planetaryRuler: 'Venus',
+    divineQuality: {
+      en: 'Opening, Outflow',
+      fr: 'Ouverture, Écoulement',
+    },
+    spiritualFocus: {
+      en: 'The former spout of the bucket: begin letting good flow — speech, charity, and help — with measured opening.',
+      fr: 'Le premier déversoir du seau : commencer à laisser couler le bien — parole, aumône, aide — avec une ouverture mesurée.',
+    },
+    favorableFor: {
+      en: ['Starting helpful projects', 'Releasing stuck affairs', 'Marriage and union talks', 'Generosity'],
+      fr: ['Démarrer des projets utiles', 'Débloquer des affaires', 'Discussions de mariage et d’union', 'Générosité'],
+    },
+    unfavorableFor: {
+      en: ['Reckless disclosure', 'Draining resources without plan', 'Gossip as “release”'],
+      fr: ['Divulgation imprudente', 'Épuiser ses ressources sans plan', 'Médisance comme « libération »'],
+    },
+    classicalWisdom: {
+      quote: 'Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.',
+      source: 'Educational framing (Qurʾān 10:5; 36:39)',
+      scholar: 'Asrār',
+    },
+    emoji: '💧',
+    color: '#0EA5E9',
+  },
+
+  // 27. Al-Fargh al-Muʾakhkhar (The Latter Spout)
+  {
+    number: 27,
+    nameArabic: 'الفرغ المؤخر',
+    nameTransliteration: 'Al-Fargh al-Muʾakhkhar',
+    nameEn: 'The Latter Spout',
+    nameFr: 'Le Second Déversoir',
+    constellation: 'Pisces',
+    startDegree: 334.29,
+    element: 'Water',
+    planetaryRuler: 'Mercury',
+    divineQuality: {
+      en: 'Completion, Emptying',
+      fr: 'Achèvement, Vidage',
+    },
+    spiritualFocus: {
+      en: 'The latter spout completes the pouring — finish what you opened, and empty the heart of grudges.',
+      fr: 'Le second déversoir achève le versement — terminer ce que l’on a ouvert, et vider le cœur des rancunes.',
+    },
+    favorableFor: {
+      en: ['Completing projects', 'Settling debts', 'Forgiving leftovers', 'Closing cycles cleanly'],
+      fr: ['Achever des projets', 'Régler des dettes', 'Pardonner le reste', 'Clore des cycles proprement'],
+    },
+    unfavorableFor: {
+      en: ['Leaving ends untied', 'Hoarding grudges', 'Starting too many new things'],
+      fr: ['Laisser des fins en suspens', 'Garder des rancunes', 'Commencer trop de nouveautés'],
+    },
+    classicalWisdom: {
+      quote: 'Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.',
+      source: 'Educational framing (Qurʾān 10:5; 36:39)',
+      scholar: 'Asrār',
+    },
+    emoji: '💧',
+    color: '#3B82F6',
+  },
+
+  // 28. Baṭn al-Ḥūt (Belly of the Fish)
+  // SCHOLAR-REVIEW: fav/unfav themes are educational first-pass — confirm before marketing elections.
+  {
+    number: 28,
+    nameArabic: 'بطن الحوت',
+    nameTransliteration: 'Baṭn al-Ḥūt',
+    nameEn: 'Belly of the Fish',
+    nameFr: 'Ventre de Poisson',
+    constellation: 'Pisces',
+    startDegree: 347.14,
+    element: 'Water',
+    planetaryRuler: 'Saturn',
+    divineQuality: {
+      en: 'Wholeness, Hidden Depths',
+      fr: 'Totalité, Profondeurs cachées',
+    },
+    spiritualFocus: {
+      en: 'The belly of the fish closes the circuit of twenty-eight — honor what is hidden, and seek wholeness through tawakkul.',
+      fr: 'Le ventre du poisson clôt le cycle des vingt-huit — honorer ce qui est caché, et chercher la totalité par le tawakkul.',
+    },
+    favorableFor: {
+      en: ['Quiet reflection', 'Caring for the unseen needs of others', 'Patience with the hidden', 'Integrating lessons'],
+      fr: ['Réflexion tranquille', 'Soigner les besoins invisibles d’autrui', 'Patience face au caché', 'Intégrer les leçons'],
+    },
+    unfavorableFor: {
+      en: ['Forced exposure', 'Denying the unseen', 'Despair in darkness'],
+      fr: ['Exposition forcée', 'Nier l’invisible', 'Désespoir dans l’obscurité'],
+    },
+    classicalWisdom: {
+      quote: 'Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.',
+      source: 'Educational framing (Qurʾān 10:5; 36:39)',
+      scholar: 'Asrār',
+    },
+    emoji: '🐟',
+    color: '#6366F1',
+  },
 ];
 
 // ========================================
