@@ -31,6 +31,10 @@ const STATIC: Partial<Record<OgPageKey, Record<OgLang, StaticCopy>>> = {
     en: { accent: 'amber', eyebrow: 'ʿIlm al-Nujūm', title: 'Planet of the Day', subtitle: "Today's ruling planet, its spiritual qualities, recommended dhikr and daily guidance." },
     fr: { accent: 'amber', eyebrow: 'ʿIlm al-Nujūm', title: 'Planète du jour', subtitle: 'La planète gouvernante du jour, ses qualités spirituelles, le dhikr recommandé et les conseils quotidiens.' },
   },
+  manazil: {
+    en: { accent: 'indigo', eyebrow: 'Manāzil al-Qamar', title: 'The 28 Lunar Mansions', subtitle: 'Today’s manzil, Arabic names and spiritual focus for each station — for reflection, not prediction.' },
+    fr: { accent: 'indigo', eyebrow: 'Manāzil al-Qamar', title: 'Les 28 demeures lunaires', subtitle: 'Le manzil d’aujourd’hui, noms arabes et focus spirituel de chaque station — pour la réflexion, non la prédiction.' },
+  },
   compatibility: {
     en: { accent: 'pink', eyebrow: 'Abjad Soul Connection', title: 'Name Compatibility for Marriage', subtitle: 'Compare two names (marriage, family, friendship, work) or two dates of birth with the classical Abjad method.' },
     fr: { accent: 'pink', eyebrow: 'Connexion des âmes (Abjad)', title: 'Compatibilité des prénoms pour le mariage', subtitle: 'Comparez deux prénoms (mariage, famille, amitié, travail) ou deux dates de naissance avec la méthode abjad classique.' },

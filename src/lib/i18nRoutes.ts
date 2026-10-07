@@ -24,6 +24,7 @@ export const LOCALIZED_PATHS: readonly string[] = [
   '/abjad',
   '/planetary-hours',
   '/planet-of-the-day',
+  '/manazil',
   '/sadaqa',
   '/sadaqa-of-the-day',
   '/compatibility',

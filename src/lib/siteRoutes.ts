@@ -58,6 +58,13 @@ export const PUBLIC_TOOLS: PublicTool[] = [
     descriptionFr: "Votre profil de naissance en ʿIlm al-Nujūm : signes du Soleil et de la Lune, demeure lunaire, maître du jour et dignités planétaires.",
   },
   {
+    path: '/manazil',
+    name: 'Lunar Mansions (Manāzil)',
+    description: 'The 28 lunar mansions: today’s manzil, Arabic names, spiritual focus, and links to birth profile and ikhtiyārāt. For reflection.',
+    nameFr: "Demeures lunaires (Manāzil)",
+    descriptionFr: "Les 28 demeures lunaires : le manzil d'aujourd'hui, noms arabes, focus spirituel, et liens vers le profil de naissance et l'ikhtiyārāt. Pour la réflexion.",
+  },
+  {
     path: '/ikhtiyarat',
     name: 'Best Dates (Ikhtiyārāt)',
     description: 'Classical Islamic electional astrology for choosing an auspicious date for marriage, travel, business and more.',
