@@ -104,7 +104,7 @@ export const PLANET_GUIDES: Record<string, PlanetGuide> = {
           en: 'The Light - Source of all illumination and guidance',
           fr: 'La Lumière - Source de toute illumination et guidance',
         },
-        number: 92,
+        number: 93,
         dhikrCount: 100,
       },
       secondary: [
@@ -510,10 +510,10 @@ export const PLANET_GUIDES: Record<string, PlanetGuide> = {
     color: 'Red',
     divineNames: {
       primary: {
-        arabic: 'القوي',
+        arabic: 'الْقَوِيّ',
         transliteration: 'Al-Qawiyy',
         meaning: { en: 'The Strong', fr: 'Le Fort' },
-        number: 41,
+        number: 53,
         dhikrCount: 116,
       },
       secondary: [
@@ -563,10 +563,10 @@ export const PLANET_GUIDES: Record<string, PlanetGuide> = {
     color: 'Blue/Purple',
     divineNames: {
       primary: {
-        arabic: 'الواسع',
+        arabic: 'الْوَاسِع',
         transliteration: 'Al-Wāsiʿ',
         meaning: { en: 'The All-Encompassing', fr: 'Le Vaste' },
-        number: 59,
+        number: 45,
         dhikrCount: 136,
       },
       secondary: [
