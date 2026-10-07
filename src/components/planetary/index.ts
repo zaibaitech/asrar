@@ -12,3 +12,4 @@ export { DignityDetailPanel } from './DignityDetailPanel';
 export { PlanetOfTheDay } from './PlanetOfTheDay';
 export { PlanetaryHourCard } from './PlanetaryHourCard';
 export { PlanetTransitCard } from './PlanetTransitCard';
+export { ManzilOfTodayCard } from './ManzilOfTodayCard';

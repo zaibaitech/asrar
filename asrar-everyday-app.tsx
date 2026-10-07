@@ -8,7 +8,7 @@ import { HadadSummaryPanel } from './src/components/hadad-summary';
 import { IlmHurufPanel } from './src/features/ilm-huruf';
 import { CompatibilityPanel } from './src/features/compatibility';
 import { IstikharaPanel } from './src/features/istikhara';
-import { PlanetOfTheDay, PlanetaryHourCard, PlanetTransitCard } from './src/components/planetary';
+import { PlanetOfTheDay, PlanetaryHourCard, PlanetTransitCard, ManzilOfTodayCard } from './src/components/planetary';
 import { useRamadanChallenges } from './src/features/ramadanChallenges';
 import { useCommunityDhikr } from './src/features/ramadanChallenges/communityDhikrService';
 import { analyzePatterns } from './src/features/ilm-huruf/patternRecognition';
@@ -511,6 +511,10 @@ export default function AsrarEveryday() {
                       {language === 'fr' ? 'Guide complet →' : 'Full Guide →'}
                     </Link>
                   </div>
+                </div>
+                {/* Phase C: Manzil at same Today tier as hour + planet of the day */}
+                <div className="mt-4 flex flex-col gap-2">
+                  <ManzilOfTodayCard language={language === 'fr' ? 'fr' : 'en'} />
                 </div>
                 <div className="mt-4 flex flex-col gap-2">
                   <PlanetTransitCard language={language} onNavigate={() => {}} defaultShowAll />

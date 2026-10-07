@@ -17,6 +17,7 @@ import { MapPin, RefreshCw, Loader2, Calendar } from 'lucide-react';
 // Phase 2: Prayer, Lunar Mansions, Personal Alignment
 import PrayerTimeIntegration from './prayer/PrayerTimeIntegration';
 import LunarMansionDisplay from './lunar/LunarMansionDisplay';
+import { ManzilOfTodayCard } from '../planetary/ManzilOfTodayCard';
 import AlignmentScoreDisplay from './alignment/AlignmentScoreDisplay';
 import { calculatePersonalHadad } from '../../lib/hadadAlignment';
 // Phase 3: Educational Content
@@ -532,6 +533,9 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
         />
       )}
 
+      {/* Phase C: Manzil compact — same tier as current hour */}
+      <ManzilOfTodayCard language={isFr ? 'fr' : 'en'} />
+
       {/* Spiritual Components - Divine Name & Quranic Verse */}
       {currentHour && spiritualInfo && (
         <div className="grid md:grid-cols-2 gap-6">
@@ -552,10 +556,9 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
         </div>
       )}
 
-      {/* PHASE 2: Prayer Times & Lunar Mansions */}
+      {/* PHASE 2: Prayer Times (Manzil elevated above — compact card) */}
       {currentHour && location && (
-        <div className="grid md:grid-cols-2 gap-6">
-          {/* Prayer Time Integration */}
+        <div className="space-y-6">
           <PrayerTimeIntegration
             currentPlanet={currentHour.planet.name}
             userCoordinates={{
@@ -563,11 +566,17 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
               longitude: location.longitude,
             }}
           />
-
-          {/* Lunar Mansion Display */}
-          <LunarMansionDisplay
-            currentPlanet={currentHour.planet.name}
-          />
+          {/* Full mansion panel kept for synergy detail; compact card is primary */}
+          <details className="group rounded-xl border border-indigo-200 dark:border-indigo-800 bg-indigo-50/40 dark:bg-indigo-950/20">
+            <summary className="cursor-pointer list-none px-4 py-3 text-sm font-semibold text-indigo-800 dark:text-indigo-200 flex items-center justify-between">
+              <span>{isFr ? 'Détail manzil (synergie heure)' : 'Manzil detail (hour synergy)'}</span>
+              <span className="text-xs font-normal text-indigo-500 group-open:hidden">▶</span>
+              <span className="text-xs font-normal text-indigo-500 hidden group-open:inline">▼</span>
+            </summary>
+            <div className="px-2 pb-4">
+              <LunarMansionDisplay currentPlanet={currentHour.planet.name} />
+            </div>
+          </details>
         </div>
       )}
 
