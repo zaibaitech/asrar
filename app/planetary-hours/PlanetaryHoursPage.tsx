@@ -10,7 +10,7 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 import { ArrowLeft, Clock, Sun, Moon } from 'lucide-react';
 import { useLanguage } from '@/src/contexts/LanguageContext';
-import { PlanetaryHourCard } from '@/src/components/planetary';
+import { PlanetaryHourCard, ManzilOfTodayCard } from '@/src/components/planetary';
 import { getUserLocation, loadLocation } from '@/src/utils/location';
 
 // ─── Planet data for the guide ────────────────────────────────────────────────
@@ -244,6 +244,15 @@ export function PlanetaryHoursPage() {
             longitude={longitude}
             language={language}
           />
+        </div>
+
+        {/* Phase C: Manzil same Live tier as current hour */}
+        <div>
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3 flex items-center gap-2">
+            <span className="text-base">🌙</span>
+            {isEn ? 'Manzil of today / tonight' : 'Manzil d\'aujourd\'hui / ce soir'}
+          </h2>
+          <ManzilOfTodayCard language={isEn ? 'en' : 'fr'} />
         </div>
 
         {/* ─── How to Use ─── */}

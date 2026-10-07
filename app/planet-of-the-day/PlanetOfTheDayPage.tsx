@@ -10,7 +10,7 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 import { ArrowLeft, Sun } from 'lucide-react';
 import { useLanguage } from '@/src/contexts/LanguageContext';
-import { PlanetOfTheDay } from '@/src/components/planetary';
+import { PlanetOfTheDay, ManzilOfTodayCard } from '@/src/components/planetary';
 
 // ─── All 7 planets with their day, qualities, and detailed guidance ───────────
 
@@ -260,6 +260,15 @@ export function PlanetOfTheDayPage() {
             {isEn ? 'Today\'s Ruling Planet' : 'Planète Gouvernante d\'Aujourd\'hui'}
           </h2>
           <PlanetOfTheDay language={language} />
+        </div>
+
+        {/* Phase C: Manzil same Live tier as planet of the day */}
+        <div>
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3 flex items-center gap-2">
+            <span className="text-base">🌙</span>
+            {isEn ? 'Manzil of today / tonight' : 'Manzil d\'aujourd\'hui / ce soir'}
+          </h2>
+          <ManzilOfTodayCard language={isEn ? 'en' : 'fr'} />
         </div>
 
         {/* ─── Today's Detailed Guidance ─── */}
