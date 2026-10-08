@@ -670,6 +670,15 @@ export default function AsrarEveryday() {
               <div className="flex justify-center items-center">
                 <p className="text-xs text-slate-500 dark:text-slate-400">
                   © {new Date().getFullYear()} {language === 'fr' ? 'Tous droits réservés' : 'All rights reserved'}
+                  {' • '}
+                  <a
+                    href="https://www.facebook.com/people/Asrariya/61551898746499/"
+                    target="_blank"
+                    rel="noopener noreferrer me"
+                    className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                  >
+                    {language === 'fr' ? 'Suivez-nous sur Facebook' : 'Follow on Facebook'}
+                  </a>
                 </p>
               </div>
             </div>
