@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import { cookies } from 'next/headers';
-import { bilingualMeta } from '../src/lib/seoConfig';
+import { bilingualMeta, getSeoConfig } from '../src/lib/seoConfig';
 import { PUBLIC_TOOLS, SITE_URL } from '../src/lib/siteRoutes';
 import { getRouteLang } from '../src/lib/pageLang';
 import { localeAlternates, localizeHref, localizedUrl } from '../src/lib/i18nRoutes';
 import AsrarEveryday from '../asrar-everyday-app';
 import { HomeSeoShell } from './HomeSeoShell';
+import { JsonLd } from '../src/components/seo/SeoSections';
 
 const baseUrl = SITE_URL;
 
@@ -88,11 +89,43 @@ const SHELL_FR = {
   toolsTitle: 'Explorer les outils',
 };
 
+/**
+ * Organization + WebSite structured data for the homepage. `sameAs` links the
+ * site to its official social profiles (e.g. the Asrariya Facebook Page).
+ * Invisible: rendered only as a JSON-LD <script>.
+ */
+function homeJsonLd(lang: 'en' | 'fr') {
+  const { name, description, sameAs } = getSeoConfig(lang).getSchemaOrganization();
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': `${baseUrl}/#organization`,
+        name,
+        url: baseUrl,
+        logo: `${baseUrl}/icons/icon-512x512.png`,
+        description,
+        sameAs,
+      },
+      {
+        '@type': 'WebSite',
+        '@id': `${baseUrl}/#website`,
+        name: 'Asrār Everyday',
+        url: baseUrl,
+        inLanguage: ['en', 'fr', 'ar'],
+        publisher: { '@id': `${baseUrl}/#organization` },
+      },
+    ],
+  };
+}
+
 export default async function Home() {
   const routeLang = await getRouteLang();
   if (routeLang === 'fr') {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+        <JsonLd data={homeJsonLd('fr')} />
         <AsrarEveryday />
         <HomeSeoShell>
           <main lang="fr" className="max-w-3xl mx-auto px-4 py-10">
@@ -118,6 +151,7 @@ export default async function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+      <JsonLd data={homeJsonLd('en')} />
       <AsrarEveryday />
       <HomeSeoShell>
         <main className="max-w-3xl mx-auto px-4 py-10">

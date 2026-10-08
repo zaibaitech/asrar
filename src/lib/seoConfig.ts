@@ -217,6 +217,9 @@ export function getChallengeOGMeta(
   };
 }
 
+/** Official Asrariya Facebook Page, listed in Organization JSON-LD `sameAs`. */
+export const FACEBOOK_PAGE_URL = 'https://www.facebook.com/people/Asrariya/61551898746499/';
+
 /**
  * Get SEO configuration with language-specific titles
  * @param language - The current language ('en' or 'fr')
@@ -318,11 +321,9 @@ export const getSeoConfig = (language: Language = 'en') => {
       '@type': 'Organization',
       name: this.siteName,
       url: this.baseUrl,
-      logo: `${this.baseUrl}/logo.png`,
+      logo: `${this.baseUrl}/icons/icon-512x512.png`,
       description: this.siteDescription,
-      sameAs: [
-        // Add social media URLs here
-      ],
+      sameAs: [FACEBOOK_PAGE_URL],
     };
   },
 
