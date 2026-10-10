@@ -380,7 +380,7 @@ export function TrackingDashboard({ burujId }: TrackingDashboardProps) {
             <label className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors cursor-pointer">
               <Upload className="w-4 h-4" />
               <span className="hidden sm:inline">{language === 'en' ? 'Import' : 'Importer'}</span>
-              <input
+              <input data-clarity-mask="true"
                 type="file"
                 accept=".json"
                 onChange={importData}
@@ -1065,7 +1065,7 @@ function AddSadaqahModal({ onAdd, onClose, language }: any) {
             <label className="block text-sm text-gray-400 mb-2">
               {language === 'en' ? 'Date' : 'Date'}
             </label>
-            <input
+            <input data-clarity-mask="true"
               type="date"
               value={formData.date}
               onChange={(e) => setFormData({...formData, date: e.target.value})}
@@ -1077,7 +1077,7 @@ function AddSadaqahModal({ onAdd, onClose, language }: any) {
             <label className="block text-sm text-gray-400 mb-2">
               {language === 'en' ? 'Type' : 'Type'}
             </label>
-            <input
+            <input data-clarity-mask="true"
               type="text"
               value={formData.type}
               onChange={(e) => setFormData({...formData, type: e.target.value})}
@@ -1090,7 +1090,7 @@ function AddSadaqahModal({ onAdd, onClose, language }: any) {
             <label className="block text-sm text-gray-400 mb-2">
               {language === 'en' ? 'Notes (optional)' : 'Notes (optionnel)'}
             </label>
-            <textarea
+            <textarea data-clarity-mask="true"
               value={formData.notes}
               onChange={(e) => setFormData({...formData, notes: e.target.value})}
               className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white"
@@ -1145,7 +1145,7 @@ function AddPracticeModal({ onAdd, onClose, language }: any) {
             <label className="block text-sm text-gray-400 mb-2">
               {language === 'en' ? 'Date' : 'Date'}
             </label>
-            <input
+            <input data-clarity-mask="true"
               type="date"
               value={formData.date}
               onChange={(e) => setFormData({...formData, date: e.target.value})}
@@ -1157,7 +1157,7 @@ function AddPracticeModal({ onAdd, onClose, language }: any) {
             <label className="block text-sm text-gray-400 mb-2">
               {language === 'en' ? 'Recitation Count' : 'Nombre de Récitations'}
             </label>
-            <input
+            <input data-clarity-mask="true"
               type="number"
               value={formData.count}
               onChange={(e) => setFormData({...formData, count: Number(e.target.value)})}
@@ -1222,7 +1222,7 @@ function LifetimeOfferingModal({ offering, onSave, onClose, language }: any) {
             <label className="block text-sm text-gray-400 mb-2">
               {language === 'en' ? 'Date Completed' : 'Date Complétée'}
             </label>
-            <input
+            <input data-clarity-mask="true"
               type="date"
               value={formData.date}
               onChange={(e) => setFormData({...formData, date: e.target.value})}
@@ -1234,7 +1234,7 @@ function LifetimeOfferingModal({ offering, onSave, onClose, language }: any) {
             <label className="block text-sm text-gray-400 mb-2">
               {language === 'en' ? 'Location' : 'Lieu'}
             </label>
-            <input
+            <input data-clarity-mask="true"
               type="text"
               value={formData.location}
               onChange={(e) => setFormData({...formData, location: e.target.value})}
@@ -1245,7 +1245,7 @@ function LifetimeOfferingModal({ offering, onSave, onClose, language }: any) {
             <label className="block text-sm text-gray-400 mb-2">
               {language === 'en' ? 'Notes' : 'Notes'}
             </label>
-            <textarea
+            <textarea data-clarity-mask="true"
               value={formData.notes}
               onChange={(e) => setFormData({...formData, notes: e.target.value})}
               className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white"

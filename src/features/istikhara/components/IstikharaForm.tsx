@@ -652,7 +652,7 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
               </button>
             </div>
             
-            <input
+            <input data-clarity-mask="true"
               type="text"
               value={personName}
               onChange={(e) => {
@@ -752,7 +752,7 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
               </button>
             </div>
             
-            <input
+            <input data-clarity-mask="true"
               type="text"
               value={motherName}
               onChange={(e) => {
@@ -845,7 +845,7 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
                 <div className="relative">
                   <div className="flex items-center gap-2 p-3 bg-slate-800/70 border-2 border-slate-600 rounded-xl">
                     <span className="text-xl">📅</span>
-                    <input
+                    <input data-clarity-mask="true"
                       type="date"
                       value={dateOfBirth}
                       onChange={(e) => setDateOfBirth(e.target.value)}

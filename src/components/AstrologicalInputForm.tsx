@@ -133,7 +133,7 @@ function DobCard({
 
       <div>
         <label className="block text-xs mb-1.5" style={{ color: COMPAT_THEME.muted }}>{nameLabel}</label>
-        <input
+        <input data-clarity-mask="true"
           type="text"
           value={nameValue}
           onChange={e => onNameChange(e.target.value)}
@@ -151,7 +151,7 @@ function DobCard({
         <label className="block text-xs mb-1.5" style={{ color: COMPAT_THEME.muted }}>
           {dobLabel} <span style={{ color: COMPAT_THEME.danger }}>*</span>
         </label>
-        <input
+        <input data-clarity-mask="true"
           type="date"
           value={dobValue}
           onChange={e => onDobChange(e.target.value)}

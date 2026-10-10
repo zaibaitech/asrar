@@ -156,7 +156,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
             </label>
             <div className="relative">
               <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none" />
-              <input
+              <input data-clarity-mask="true"
                 id="email"
                 type="email"
                 value={email}
@@ -177,7 +177,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
               </label>
               <div className="relative">
                 <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none" />
-                <input
+                <input data-clarity-mask="true"
                   id="password"
                   type={showPassword ? 'text' : 'password'}
                   value={password}

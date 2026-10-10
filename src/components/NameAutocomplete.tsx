@@ -134,7 +134,7 @@ export default function NameAutocomplete({
         <div className="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none">
           <Search className="w-4 h-4 text-slate-400" />
         </div>
-        <input
+        <input data-clarity-mask="true"
           ref={inputRef}
           type="text"
           value={value}

@@ -172,7 +172,7 @@ export function FeedbackModal({ open, onClose }: { open: boolean; onClose: () =>
 
               <label className="flex flex-col gap-1.5">
                 <span className="text-sm font-medium text-slate-700 dark:text-slate-300">{c.messageLabel}</span>
-                <textarea
+                <textarea data-clarity-mask="true"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder={c.messagePlaceholder}
@@ -184,7 +184,7 @@ export function FeedbackModal({ open, onClose }: { open: boolean; onClose: () =>
 
               <label className="flex flex-col gap-1.5">
                 <span className="text-sm font-medium text-slate-700 dark:text-slate-300">{c.emailLabel}</span>
-                <input
+                <input data-clarity-mask="true"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}

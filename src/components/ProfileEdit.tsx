@@ -215,7 +215,7 @@ export default function ProfileEdit({ onCancel }: ProfileEditProps = {}) {
                 Full Name
               </label>
               <div className="relative">
-                <input
+                <input data-clarity-mask="true"
                   ref={fullNameInputRef}
                   type="text"
                   value={formData.fullName}
@@ -243,7 +243,7 @@ export default function ProfileEdit({ onCancel }: ProfileEditProps = {}) {
                 Mother's Name
               </label>
               <div className="relative">
-                <input
+                <input data-clarity-mask="true"
                   ref={motherNameInputRef}
                   type="text"
                   value={formData.motherName}
@@ -373,7 +373,7 @@ export default function ProfileEdit({ onCancel }: ProfileEditProps = {}) {
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Date of Birth
               </label>
-              <input
+              <input data-clarity-mask="true"
                 type="date"
                 value={formData.dateOfBirth}
                 onChange={(e) => handleChange('dateOfBirth', e.target.value)}
@@ -436,7 +436,7 @@ export default function ProfileEdit({ onCancel }: ProfileEditProps = {}) {
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Location Name
               </label>
-              <input
+              <input data-clarity-mask="true"
                 type="text"
                 value={formData.locationName}
                 onChange={(e) => handleChange('locationName', e.target.value)}

@@ -172,7 +172,7 @@ export function CheckDateView({
       <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40 p-4 space-y-3">
         <label className="block">
           <span className="text-xs font-medium text-slate-500 dark:text-slate-400">{c.datePickerLabel}</span>
-          <input
+          <input data-clarity-mask="true"
             type="date"
             value={dateStr}
             onChange={e => setDateStr(e.target.value)}

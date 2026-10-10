@@ -861,7 +861,7 @@ export function IlmHurufPanel() {
                   <label className="block text-sm font-medium mb-2 text-slate-700 dark:text-slate-300">
                     {t.ilmHuruf.birthDate}
                   </label>
-                  <input
+                  <input data-clarity-mask="true"
                     type="date"
                     value={birthDate}
                     onChange={(e) => setBirthDate(e.target.value)}
@@ -935,7 +935,7 @@ export function IlmHurufPanel() {
                             {showMotherKeyboard ? t.ilmHuruf.hideKeyboard : t.ilmHuruf.showKeyboard}
                           </button>
                         </div>
-                        <input
+                        <input data-clarity-mask="true"
                           type="text"
                           value={motherName}
                           onChange={(e) => {
@@ -1022,7 +1022,7 @@ export function IlmHurufPanel() {
                             {showMotherKeyboard ? t.ilmHuruf.hideKeyboard : t.ilmHuruf.showKeyboard}
                           </button>
                         </div>
-                        <input
+                        <input data-clarity-mask="true"
                           type="text"
                           value={motherName}
                           onChange={(e) => {
@@ -1089,7 +1089,7 @@ export function IlmHurufPanel() {
                     {showKeyboard ? t.ilmHuruf.hideKeyboard : t.ilmHuruf.showKeyboard}
                   </button>
                 </div>
-                <input
+                <input data-clarity-mask="true"
                   type="text"
                   value={name}
                   onChange={(e) => {
@@ -1172,7 +1172,7 @@ export function IlmHurufPanel() {
                       {showKeyboard ? t.ilmHuruf.hideKeyboard : t.ilmHuruf.showKeyboard}
                     </button>
                   </div>
-                  <input
+                  <input data-clarity-mask="true"
                     type="text"
                     value={name}
                     onChange={(e) => {
@@ -1246,7 +1246,7 @@ export function IlmHurufPanel() {
                     {showKeyboard2 ? t.ilmHuruf.hideKeyboard : t.ilmHuruf.showKeyboard}
                   </button>
                 </div>
-                <input
+                <input data-clarity-mask="true"
                   type="text"
                   value={name2}
                   onChange={(e) => {
@@ -1318,7 +1318,7 @@ export function IlmHurufPanel() {
                       {showKeyboard ? t.ilmHuruf.hideKeyboard : t.ilmHuruf.showKeyboard}
                     </button>
                   </div>
-                  <input
+                  <input data-clarity-mask="true"
                     type="text"
                     value={name}
                     onChange={(e) => {
@@ -1352,7 +1352,7 @@ export function IlmHurufPanel() {
                   <label className="block text-sm font-medium mb-2 text-slate-700 dark:text-slate-300">
                     {t.ilmHuruf.birthDate} <span className="text-red-500">*</span>
                   </label>
-                  <input
+                  <input data-clarity-mask="true"
                     type="date"
                     value={birthDate}
                     onChange={(e) => setBirthDate(e.target.value)}

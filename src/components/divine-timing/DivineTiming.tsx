@@ -505,7 +505,7 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
                 {isFr ? 'Aujourd\'hui' : 'Today'}
               </button>
             )}
-            <input
+            <input data-clarity-mask="true"
               type="date"
               value={selectedDate.toISOString().split('T')[0]}
               onChange={(e) => setSelectedDate(new Date(e.target.value + 'T12:00:00'))}

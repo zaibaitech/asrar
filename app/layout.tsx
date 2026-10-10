@@ -5,6 +5,7 @@ import { AbjadProvider } from '../src/contexts/AbjadContext'
 import { LanguageProvider } from '../src/contexts/LanguageContext'
 import { AuthProvider } from '../src/contexts/AuthContext'
 import { RamadanChallengesProvider } from '../src/features/ramadanChallenges'
+import ClarityScript from '../src/components/analytics/ClarityScript'
 import { getSeoConfig, bilingualMeta } from '../src/lib/seoConfig'
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app'
@@ -153,6 +154,7 @@ export default function RootLayout({
           gtag('config', 'G-VTWVCR2EJN');
         `}
       </Script>
+      <ClarityScript />
       <body className="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100">
         <AuthProvider>
           <LanguageProvider>

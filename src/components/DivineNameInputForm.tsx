@@ -107,7 +107,7 @@ export function DivineNameInputForm({ onCalculate, language = 'en', isLoading = 
                 {showKeyboard ? (isFrench ? 'Masquer Clavier' : 'Hide Keyboard') : (isFrench ? 'Afficher Clavier' : 'Show Keyboard')}
               </button>
             </div>
-            <input
+            <input data-clarity-mask="true"
               type="text"
               value={personArabic}
               onChange={e => { setPersonArabic(e.target.value); setPersonName(''); }}
