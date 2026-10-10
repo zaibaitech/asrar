@@ -241,7 +241,7 @@ function PersonCard({
               : (isFrench ? 'Afficher Clavier' : 'Show Keyboard')}
           </button>
         </div>
-        <input
+        <input data-clarity-mask="true"
           type="text"
           value={arabicValue}
           onChange={e => onArabicChange(e.target.value)}

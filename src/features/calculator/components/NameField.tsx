@@ -42,7 +42,7 @@ export function NameField({
         )}
       </div>
 
-      <input
+      <input data-clarity-mask="true"
         dir="rtl"
         lang="ar"
         value={value}

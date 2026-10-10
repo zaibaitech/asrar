@@ -190,7 +190,7 @@ export default function ProfileSetup({
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Full Name
                 </label>
-                <input
+                <input data-clarity-mask="true"
                   type="text"
                   value={formData.fullName}
                   onChange={(e) => handleChange('fullName', e.target.value)}
@@ -231,7 +231,7 @@ export default function ProfileSetup({
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Birth Date
               </label>
-              <input
+              <input data-clarity-mask="true"
                 type="date"
                 value={formData.dateOfBirth}
                 onChange={(e) => handleChange('dateOfBirth', e.target.value)}
@@ -277,7 +277,7 @@ export default function ProfileSetup({
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Enter Location Manually
                 </label>
-                <input
+                <input data-clarity-mask="true"
                   type="text"
                   value={formData.locationName}
                   onChange={(e) => handleChange('locationName', e.target.value)}

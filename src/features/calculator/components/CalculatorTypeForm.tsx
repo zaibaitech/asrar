@@ -169,7 +169,7 @@ export function CalculatorTypeForm({
             </label>
             <label className="flex flex-col gap-1.5">
               <span className="text-base text-slate-700 dark:text-slate-300">{t('quranAyahLabel')}</span>
-              <input
+              <input data-clarity-mask="true"
                 type="number"
                 min={1}
                 max={maxAyahs}
@@ -188,7 +188,7 @@ export function CalculatorTypeForm({
             <span className="text-base text-slate-700 dark:text-slate-300">
               {t(DOB_FIELD_KEYS[calcType as 'sadaqah' | 'sadaqahDay'].label)}
             </span>
-            <input
+            <input data-clarity-mask="true"
               type="date"
               value={dob}
               onChange={(e) => setDob(e.target.value)}

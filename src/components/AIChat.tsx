@@ -387,7 +387,7 @@ function AIChatInner({
           {/* Input */}
           <div className="p-4 bg-white dark:bg-slate-800 border-t border-purple-200 dark:border-purple-700">
             <div className="flex gap-2">
-              <input
+              <input data-clarity-mask="true"
                 ref={inputRef}
                 type="text"
                 value={inputMessage}

@@ -245,7 +245,7 @@ export function BirthProfilePage() {
           >
             <label className="block">
               <span className="text-sm font-medium text-slate-700 dark:text-slate-300">{c.dateLabel}</span>
-              <input
+              <input data-clarity-mask="true"
                 type="date"
                 required
                 max={todayIso}
@@ -269,7 +269,7 @@ export function BirthProfilePage() {
             {timeKnown && (
               <label className="block">
                 <span className="text-sm font-medium text-slate-700 dark:text-slate-300">{c.timeLabel}</span>
-                <input
+                <input data-clarity-mask="true"
                   type="time"
                   value={timeOfBirth}
                   onChange={(e) => setTimeOfBirth(e.target.value)}
@@ -295,7 +295,7 @@ export function BirthProfilePage() {
               <div className="grid grid-cols-2 gap-3">
                 <label className="block">
                   <span className="text-xs text-slate-500 dark:text-slate-400">{c.latLabel}</span>
-                  <input
+                  <input data-clarity-mask="true"
                     type="number"
                     step="any"
                     min={-90}
@@ -308,7 +308,7 @@ export function BirthProfilePage() {
                 </label>
                 <label className="block">
                   <span className="text-xs text-slate-500 dark:text-slate-400">{c.lonLabel}</span>
-                  <input
+                  <input data-clarity-mask="true"
                     type="number"
                     step="any"
                     min={-180}

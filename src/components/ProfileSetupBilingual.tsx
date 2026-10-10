@@ -226,7 +226,7 @@ export default function ProfileSetupBilingual({
                 {t.profile.fullName}
               </label>
               <div className="relative">
-                <input
+                <input data-clarity-mask="true"
                   ref={fullNameInputRef}
                   type="text"
                   value={formData.full_name || ''}
@@ -257,7 +257,7 @@ export default function ProfileSetupBilingual({
                 {language === 'en' ? "Mother's Name" : "Nom de la mère"}
               </label>
               <div className="relative">
-                <input
+                <input data-clarity-mask="true"
                   ref={motherNameInputRef}
                   type="text"
                   value={formData.mother_name || ''}
@@ -407,7 +407,7 @@ export default function ProfileSetupBilingual({
               <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                 {t.profile.dateOfBirth}
               </label>
-              <input
+              <input data-clarity-mask="true"
                 type="date"
                 value={formData.date_of_birth || ''}
                 onChange={(e) => setFormData(prev => ({ ...prev, date_of_birth: e.target.value }))}
@@ -427,7 +427,7 @@ export default function ProfileSetupBilingual({
                 {t.profile.locationName}
               </label>
               <div className="flex gap-2">
-                <input
+                <input data-clarity-mask="true"
                   type="text"
                   value={formData.location_name || ''}
                   onChange={(e) => setFormData(prev => ({ ...prev, location_name: e.target.value }))}
