@@ -1,6 +1,6 @@
 const { chromium } = require('playwright-core');
 (async()=>{const b=await chromium.launch({executablePath:'/usr/bin/google-chrome',args:['--no-sandbox']});
-const pages=[['/ar','home'],['/ar/abjad','abjad'],['/ar/planetary-hours','planetary-hours'],['/ar/best-day-for','best-day-for'],['/ar/ikhtiyarat','ikhtiyarat'],['/ar/compatibility','compatibility'],['/ar/name-and-mother-burj','burj'],['/ar/manazil','manazil'],['/ar/sadaqa-of-the-day','sadaqa-of-the-day'],['/ar/planet-of-the-day','planet-of-the-day']];
+const pages=[['/ar','home'],['/ar/ikhtiyarat','ikhtiyarat'],['/ar/best-day-for','best-day-for'],['/ar/compatibility','compatibility'],['/ar/manazil','manazil'],['/ar/planet-of-the-day','planet-of-the-day'],['/ar/sadaqa','sadaqa'],['/ar/99-names-of-allah','names'],['/ar/abjad','abjad-landing'],['/ar/planetary-hours','planetary-hours-landing']];
 let T={ar:0,lat:0},rows=[];
 for(const [path,n] of pages){const ctx=await b.newContext({viewport:{width:390,height:844},timezoneId:'Europe/London'});await ctx.addInitScript(()=>localStorage.setItem('hasSeenOnboarding','true'));
 const p=await ctx.newPage();await p.goto('http://localhost:3002'+path,{waitUntil:'networkidle',timeout:45000}).catch(()=>{});await p.waitForTimeout(3500);

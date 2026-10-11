@@ -4,7 +4,7 @@ Every row below is an **AI-draft** (hand-written by the assistant, not a machine
 
 Rules applied: Divine Names = canonical Arabic from `src/data/divine-names.ts`; Qur'ān = original Arabic text (verses listed separately below, verify against a muṣḥaf — the repo had only English renderings; note `30:48` in `asrar-everyday-app.tsx` is rendered with the wording of 30:46, which matches the English); standard terms (التصوف، علم الحروف، الأبجد، المنازل، الاستخارة، الصدقة، الذكر); reflective, non-predictive tone (a few 'destiny/influence' phrasings were deliberately softened).
 
-Counts: 2098 AI-draft strings, 512 Divine-Name mappings, 19 Qur'anic lines.
+Counts: 2219 AI-draft strings, 512 Divine-Name mappings, 19 Qur'anic lines.
 
 ## Qur'anic lines (AI-draft — verify)
 
@@ -2630,3 +2630,124 @@ Counts: 2098 AI-draft strings, 512 Divine-Name mappings, 19 Qur'anic lines.
 | 2096 | Manzil of today / tonight | منزلة اليوم / الليلة |
 | 2097 | Manāzil al-qamar · 28 stations | منازل القمر · 28 منزلة |
 | 2098 | · New Moon | · محاق |
+| 2099 | Gather children and give them food as sadaqah; Help anyone who is poor or in need | اجمع الأطفال وأطعمهم صدقةً؛ أعِن كل فقير أو محتاج |
+| 2100 | Give water as sadaqah; Help an elderly person, a woman, or children; Give food or sadaqah to children in the evening | تصدّق بالماء؛ أعِن مسنًّا أو امرأة أو أطفالًا؛ أعطِ الأطفال طعامًا أو صدقة في المساء |
+| 2101 | Giving food to children; Helping a person who is experiencing difficulties; Helping someone purchase their medication; Contributing toward someone's medical or medication expenses | إطعام الأطفال؛ إعانة من يمرّ بضائقة؛ مساعدة أحدهم في شراء دوائه؛ الإسهام في نفقات علاج أحدهم أو دوائه |
+| 2102 | Give white paper and pens; Provide food to children | أعطِ ورقًا أبيض وأقلامًا؛ أطعم الأطفال |
+| 2103 | Giving food to people in need; Giving money as sadaqah; Supporting a mosque; Helping to clean a mosque; Performing voluntary service in the mosque | إطعام المحتاجين؛ التصدّق بالمال؛ دعم مسجد؛ المساعدة في تنظيف مسجد؛ التطوّع بالخدمة في المسجد |
+| 2104 | Clothes; Soap; Perfume | ثياب؛ صابون؛ طيب |
+| 2105 | Giving essential food items such as rice, oil, and other necessities; Helping an elderly person with their needs; Providing financial assistance to someone in difficulty | إعطاء المواد الغذائية الأساسية كالأرز والزيت وسائر الضروريات؛ إعانة مسنّ في حاجاته؛ تقديم عون مالي لمن هو في ضيق |
+| 2106 | Enter your Gregorian date of birth to find the Hijri (Islamic) month you were born in. Wolof names are shown where they are commonly used (Tamxarit, Gamo, Korité, Tabaski…). | أدخل تاريخ ميلادك الميلادي لتعرف الشهر الهجري الذي وُلدت فيه. وتُعرض الأسماء الولوفية حيث يشيع استعمالها (تمخاريت، غامو، كوريتي، تباسكي…). |
+| 2107 | Muharram (Tamxarit) | محرّم (تمخاريت) |
+| 2108 | For anyone born in Muharram (Tamxarit), their sadaqah can include: | لمن وُلد في محرّم (تمخاريت)، يمكن أن تشمل صدقته: |
+| 2109 | Feeding someone who is fasting. | إطعام صائم. |
+| 2110 | Helping an orphan or orphans. | إعانة يتيم أو أيتام. |
+| 2111 | Giving other forms of charity according to their ability. | أنواع أخرى من الصدقة بحسب استطاعته. |
+| 2112 | For anyone born in Safar, their sadaqah can include: | لمن وُلد في صفر، يمكن أن تشمل صدقته: |
+| 2113 | Giving rice. | التصدّق بالأرز. |
+| 2114 | Giving flour. | التصدّق بالدقيق. |
+| 2115 | Giving cooking oil. | التصدّق بزيت الطبخ. |
+| 2116 | Giving clothes. | التصدّق بالثياب. |
+| 2117 | Helping sick people, financially or with whatever they need. | إعانة المرضى بالمال أو بما يحتاجون إليه. |
+| 2118 | Rabi al-Awwal (Gamo) | ربيع الأول (غامو) |
+| 2119 | For anyone born in Rabi al-Awwal (Gamo), their sadaqah can include: | لمن وُلد في ربيع الأول (غامو)، يمكن أن تشمل صدقته: |
+| 2120 | Giving sadaqah to children. | التصدّق على الأطفال. |
+| 2121 | Helping and supporting the mosque. | إعانة المسجد ودعمه. |
+| 2122 | Rabi al-Thani (Rabi al-Akhir) | ربيع الآخر (ربيع الثاني) |
+| 2123 | For anyone born in Rabi al-Thani (Rabi al-Akhir), their sadaqah can include: | لمن وُلد في ربيع الآخر (ربيع الثاني)، يمكن أن تشمل صدقته: |
+| 2124 | Giving soap. | التصدّق بالصابون. |
+| 2125 | Helping with necessities that can support a person or family. | الإعانة بالضروريات التي تسند شخصًا أو أسرة. |
+| 2126 | Jumada al-Awwal | جمادى الأولى |
+| 2127 | For anyone born in Jumada al-Awwal, their sadaqah can include: | لمن وُلد في جمادى الأولى، يمكن أن تشمل صدقته: |
+| 2128 | Giving hot, nourishing food. | التصدّق بطعام ساخن مغذٍّ. |
+| 2129 | Supporting hardworking people who are facing difficult circumstances. | إعانة الكادحين الذين يمرّون بظروف صعبة. |
+| 2130 | Jumada al-Akhirah (Jumada al-Thani) | جمادى الآخرة (جمادى الثانية) |
+| 2131 | For anyone born in Jumada al-Akhirah, their sadaqah is especially good when it is given discreetly and privately. | لمن وُلد في جمادى الآخرة، تحسن صدقته خاصةً إذا أُعطيت خفيةً وسرًّا. |
+| 2132 | Give food, money, or useful assistance. | أعطِ طعامًا أو مالًا أو عونًا نافعًا. |
+| 2133 | Rajab | رجب |
+| 2134 | For anyone born in Rajab, their sadaqah can focus on supporting people who learn and teach the Qur'an: | لمن وُلد في رجب، يمكن أن تتّجه صدقته إلى دعم من يتعلّمون القرآن ويعلّمونه: |
+| 2135 | Giving a complete Qur'an (Kamil) to a mosque or place of Qur'anic learning. | إهداء مصحف كامل إلى مسجد أو مكان لتعليم القرآن. |
+| 2136 | Providing Qur'ans for people to read and use. | توفير المصاحف للناس ليقرؤوا فيها. |
+| 2137 | Donating Qur'ans to daaras. | التبرّع بالمصاحف للكتاتيب (الدارات). |
+| 2138 | Helping mosques and places of Qur'anic learning. | إعانة المساجد وأماكن تعليم القرآن. |
+| 2139 | Supporting Qur'anic students and those who use these places. | دعم طلاب القرآن ومرتادي هذه الأماكن. |
+| 2140 | Sha'ban | شعبان |
+| 2141 | For anyone born in Sha'ban, their sadaqah can include: | لمن وُلد في شعبان، يمكن أن تشمل صدقته: |
+| 2142 | Sharing the meals prepared in their own home with a family in need. | مشاركة الطعام المطبوخ في بيته مع أسرة محتاجة. |
+| 2143 | Giving food and other necessities to people who are struggling. | إعطاء الطعام وسائر الضروريات لمن يعانون. |
+| 2144 | Ramadan (Werruk Korr) | رمضان (ورّوك كور) |
+| 2145 | For anyone born in Ramadan (Werruk Korr), their sadaqah can include: | لمن وُلد في رمضان (ورّوك كور)، يمكن أن تشمل صدقته: |
+| 2146 | Giving iftar to someone who is fasting. | تفطير صائم. |
+| 2147 | Not being reluctant or hesitant to give their zakat when it is due. | ألّا يتردّد أو يتباطأ في إخراج زكاته إذا وجبت. |
+| 2148 | Helping poor families and needy people with food, money, or necessities. | إعانة الأسر الفقيرة والمحتاجين بالطعام أو المال أو الضروريات. |
+| 2149 | Giving this support at night, particularly to those who are in need. | تقديم هذا العون ليلًا، لا سيما لمن هم في حاجة. |
+| 2150 | Shawwal (Korité) | شوال (كوريتي) |
+| 2151 | For anyone born in Shawwal (Korité), their sadaqah can include: | لمن وُلد في شوال (كوريتي)، يمكن أن تشمل صدقته: |
+| 2152 | Giving brand-new clothes to someone in need. | إعطاء ثياب جديدة لمحتاج. |
+| 2153 | Dhu al-Qi'dah (Diggi Kor) | ذو القعدة (ديغي كور) |
+| 2154 | For anyone born in Dhu al-Qi'dah (Diggi Kor), their sadaqah can include: | لمن وُلد في ذي القعدة (ديغي كور)، يمكن أن تشمل صدقته: |
+| 2155 | Helping a traveller, financially or in any other way that can make their journey easier. | إعانة مسافر بالمال أو بأي طريقة تيسّر سفره. |
+| 2156 | Giving food to poor and needy people. | إطعام الفقراء والمحتاجين. |
+| 2157 | Giving hot, nourishing food as sadaqah to those in need. | التصدّق بطعام ساخن مغذٍّ على المحتاجين. |
+| 2158 | Offering practical assistance to people experiencing hardship. | تقديم عون عملي لمن يمرّون بشدّة. |
+| 2159 | Dhu al-Hijjah (Tabaski) | ذو الحجة (تباسكي) |
+| 2160 | For anyone born in Dhu al-Hijjah (Tabaski), their sadaqah can include: | لمن وُلد في ذي الحجة (تباسكي)، يمكن أن تشمل صدقته: |
+| 2161 | Giving meat as sadaqah, especially to poor and needy people. | التصدّق باللحم، لا سيما على الفقراء والمحتاجين. |
+| 2162 | Helping pilgrims who have travelled to Makkah for Hajj, financially or in any other useful way. | إعانة الحجّاج المسافرين إلى مكة بالمال أو بأي طريقة نافعة. |
+| 2163 | Visiting and welcoming a pilgrim when they return from Makkah, through ziyar. | زيارة الحاجّ والترحيب به عند عودته من مكة. |
+| 2164 | Ḥamal | الحمل |
+| 2165 | Livestock Sadaqah | صدقة الماشية |
+| 2166 | Worn Clothing Sadaqah | صدقة الثياب الملبوسة |
+| 2167 | al-Thawr | الثور |
+| 2168 | One-Coloured Ram Sadaqah | صدقة كبش ذي لون واحد |
+| 2169 | Used Clothing Sadaqah — Protection | صدقة الثياب المستعملة — للحفظ |
+| 2170 | Grains and Agricultural Produce | الحبوب والمحاصيل الزراعية |
+| 2171 | Rice, Millet and Cooking Oil | الأرز والدخن وزيت الطبخ |
+| 2172 | Water Sadaqah | صدقة الماء |
+| 2173 | Supporting an Elderly Person — Provision | إعانة مسنّ — للرزق |
+| 2174 | Jawzāʾ | الجوزاء |
+| 2175 | Kola Nut Sadaqah | صدقة جوز الكولا |
+| 2176 | Money Sadaqah — Preservation of Wealth | صدقة المال — لحفظ المال |
+| 2177 | Three-Coloured Chicken Sadaqah | صدقة دجاجة ثلاثية الألوان |
+| 2178 | Guinea Fowl (Pintade) Sadaqah | صدقة دجاجة غينيا |
+| 2179 | Educational Materials Sadaqah | صدقة الأدوات التعليمية |
+| 2180 | Supporting Teachers and Qur'anic Teachers | دعم المعلّمين ومعلّمي القرآن |
+| 2181 | Feeding Children | إطعام الأطفال |
+| 2182 | Saraṭān | السرطان |
+| 2183 | Salt Sadaqah | صدقة الملح |
+| 2184 | Four Kilograms of Meat | أربعة كيلوغرامات من اللحم |
+| 2185 | Supporting an Elderly Woman | إعانة امرأة مسنّة |
+| 2186 | Giving Milk to Children | إعطاء الحليب للأطفال |
+| 2187 | al-Asad | الأسد |
+| 2188 | Raising and Giving a Ram | تربية كبش والتصدّق به |
+| 2189 | Three Bowls of Cheb Yap | ثلاث قصعات من «شب ياپ» |
+| 2190 | Three Bowls of Porridge with Yogurt | ثلاث قصعات من العصيدة باللبن |
+| 2191 | al-Sunbula | السنبلة |
+| 2192 | One Hundred Kola Nuts | مئة حبّة من جوز الكولا |
+| 2193 | Money Sadaqah | صدقة المال |
+| 2194 | Three Cereals Sadaqah | صدقة الحبوب الثلاثة |
+| 2195 | Secret Sadaqah of Virgo — Age 40 | صدقة السنبلة السرّية — في سنّ الأربعين |
+| 2196 | Seven Yogurts Sadaqah | صدقة سبعة أكواب من اللبن |
+| 2197 | Guinea Fowl Sadaqah | صدقة دجاجة غينيا |
+| 2198 | al-ʿAqrab | العقرب |
+| 2199 | Protective Ring Sadaqah | صدقة خاتم الحفظ |
+| 2200 | White Ram or Sheep Sadaqah | صدقة كبش أو خروف أبيض |
+| 2201 | Red Goat Sadaqah During a Favourable Mars Transit | صدقة ماعز أحمر عند عبور مناسب للمريخ |
+| 2202 | Water Sadaqah — For Patients | صدقة الماء — للمرضى |
+| 2203 | Rice and Fish Sadaqah | صدقة الأرز والسمك |
+| 2204 | al-Qaws | القوس |
+| 2205 | Nine Pieces of Bread | تسع قطع من الخبز |
+| 2206 | Three Bowls of Laakh | ثلاث قصعات من «لاخ» |
+| 2207 | One-Coloured White Ram | كبش أبيض ذو لون واحد |
+| 2208 | Open Sadaqah | صدقة مفتوحة |
+| 2209 | al-Jady | الجدي |
+| 2210 | Rice and Millet Sadaqah | صدقة الأرز والدخن |
+| 2211 | Kafan — Burial Shroud Sadaqah | صدقة الكفن |
+| 2212 | Cowries — Petaw Sadaqah | صدقة الودع (پيتاو) |
+| 2213 | al-Dalw | الدلو |
+| 2214 | Guinea Fowl or Chicken Sadaqah | صدقة دجاجة غينيا أو دجاجة |
+| 2215 | Fish Sadaqah | صدقة السمك |
+| 2216 | Seven-Chicken Food Sadaqah | صدقة طعام سبع دجاجات |
+| 2217 | Evening Food Sadaqah | صدقة طعام المساء |
+| 2218 | Supporting Someone Involved in Spiritual Work | إعانة من يشتغل بالعمل الروحي |
+| 2219 | Any of them, or none. They are complementary customs, not obligations. Sadaqah given sincerely on any day is good; these suggestions simply help you choose a form and a moment. | أيٌّ منها أو لا شيء. فهي عادات مكمّلة لا واجبات. والصدقة الخالصة في أي يوم خير؛ وهذه الاقتراحات تعينك فقط على اختيار صورة ووقت. |
