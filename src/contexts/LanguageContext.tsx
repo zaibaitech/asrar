@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { translations, Language, TranslationKeys, isRtl } from '../lib/translations';
+import ArabicDomTranslator from '../components/i18n/ArabicDomTranslator';
 import { arAppPath, frPath, isArAppPath, isLocalizedPath, stripArPrefix, stripFrPrefix } from '../lib/i18nRoutes';
 
 /** Languages with full inline/legacy copy (components that branch on en/fr). */
@@ -149,6 +150,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       }}
     >
       {children}
+      <ArabicDomTranslator />
     </LanguageContext.Provider>
   );
 }

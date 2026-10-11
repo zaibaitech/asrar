@@ -1,0 +1,6978 @@
+{
+"use client": {
+"ar": "استخدام العملاء",
+"score": 1.0
+},
+"Get Deep AI Analysis ✨": {
+"ar": "الحصول على تحليل عميق AI ✨",
+"score": 0.75
+},
+"Get New Analysis": {
+"ar": "الحصول على تحليل جديد",
+"score": 1.0
+},
+"Which planet rules the next hour?": {
+"ar": "أي كوكب يحكم الساعة القادمة؟",
+"score": 0.8
+},
+"What planet rules today?": {
+"ar": "أي كوكب يحكم اليوم؟",
+"score": 1.0
+},
+"Is this a good time to study?": {
+"ar": "هل هذا وقت جيد للدراسة؟",
+"score": 1.0
+},
+"What is the meaning of my buruj?": {
+"ar": "ما معنى \"بوروج\" خاصتي؟",
+"score": 0.75
+},
+"What does this result mean?": {
+"ar": "ماذا تعني هذه النتيجة؟",
+"score": 0.75
+},
+"How can I apply this in my life?": {
+"ar": "كيف يمكنني تطبيق هذا في حياتي؟",
+"score": 1.0
+},
+"Ask me": {
+"ar": "إسألني",
+"score": 1.0
+},
+"Online": {
+"ar": "على الإنترنت",
+"score": 1.0
+},
+"Send": {
+"ar": "أرسل",
+"score": 1.0
+},
+"Unable to determine current planetary hour": {
+"ar": "غير قادر على تحديد ساعة الكواكب الحالية",
+"score": 0.8
+},
+"Reload page to try again": {
+"ar": "إعادة تحميل الصفحة لمحاولة مرة أخرى",
+"score": 1.0
+},
+"uses traditional wisdom to help you choose the right moment. Trust your judgment and use this as one tool among many.": {
+"ar": "يستعمل الحكمة التقليدية لمساعدتك في اختيار اللحظة المناسبة. ثقي في حكمك واستخدمي هذا كأداة واحدة بين العديدين",
+"score": 0.86
+},
+"🔥 YOUR": {
+"ar": "🔥 أنت",
+"score": 1.0
+},
+"minutes •": {
+"ar": "دقائق •",
+"score": 1.0
+},
+"Creative Work": {
+"ar": "العمل الإبداعي",
+"score": 1.0
+},
+"Schedule for Later": {
+"ar": "الجدول الزمني في وقت لاحق",
+"score": 1.0
+},
+"Starting in": {
+"ar": "بدايةً",
+"score": 1.0
+},
+"Learn new concepts": {
+"ar": "تعلّم مفاهيم جديدة",
+"score": 1.0
+},
+"Deep reflection": {
+"ar": "الانعكاس العميق",
+"score": 1.0
+},
+"Creative flow": {
+"ar": "التدفق الإبداعي",
+"score": 1.0
+},
+"Physical work": {
+"ar": "العمل البدني",
+"score": 1.0
+},
+"Continue ongoing projects": {
+"ar": "مواصلة المشاريع الجارية",
+"score": 1.0
+},
+"Close keyboard": {
+"ar": "اغلق لوحة المفاتيح",
+"score": 1.0
+},
+"How Well Do You Match?": {
+"ar": "كيف تتطابقين؟",
+"score": 0.75
+},
+"Please enter the date of birth for both people": {
+"ar": "يرجى الدخول إلى تاريخ الميلاد لكلا الشعبين",
+"score": 0.83
+},
+"Successfully signed in!": {
+"ar": "تم التوقيع بنجاح!",
+"score": 1.0
+},
+"Hide password": {
+"ar": "إخفاء كلمة السر",
+"score": 1.0
+},
+"Remember your password?": {
+"ar": "هل تذكر كلمة السر؟",
+"score": 1.0
+},
+"to balance.": {
+"ar": "للتوازن",
+"score": 1.0
+},
+"You might feel: stuck in thoughts, low energy, avoiding decisions, emotionally heavy": {
+"ar": "قد تشعر: عالقة في الأفكار، الطاقة المنخفضة، تجنب القرارات، ثقيلة عاطفيا",
+"score": 0.8
+},
+"You might feel: stubborn, rigid, stuck in routine, resistant to change": {
+"ar": "قد تشعر: عنيد، صلب، عالق في الروتين، مقاومة للتغيير",
+"score": 0.75
+},
+"5min window gazing + 20 deep breaths": {
+"ar": "5 مين نافذة تهتز + 20 نفسا عميقا",
+"score": 0.8
+},
+"Open window, take 10 deep breaths": {
+"ar": "نافذة مفتوحة، خذ 10 نفس عميق",
+"score": 1.0
+},
+"You're Balanced!": {
+"ar": "أنت مُتوازن!",
+"score": 1.0
+},
+"Harmonious - Elements working together beautifully": {
+"ar": "المواساة - العناصر تعمل معا بشكل جميل",
+"score": 0.8
+},
+"Slight tension - Minor adjustments keep you flowing": {
+"ar": "توتر طفيف - تعديلات طفيفة تبقيك تتدفق -",
+"score": 1.0
+},
+"Strong opposition - Multiple actions needed for balance": {
+"ar": "المعارضة القوية - الإجراءات المتعددة اللازمة لتحقيق التوازن",
+"score": 1.0
+},
+"Mother of": {
+"ar": "الأم",
+"score": 1.0
+},
+"Weight: 30%": {
+"ar": "الوزن: 30%",
+"score": 1.0
+},
+"Weight: 15%": {
+"ar": "الوزن: 15%",
+"score": 1.0
+},
+"Today's Color Guidance": {
+"ar": "إرشادات اليوم",
+"score": 0.75
+},
+"Minimize These Colors": {
+"ar": "التقليل من هذه الألوان",
+"score": 1.0
+},
+"Based on elemental harmony principles": {
+"ar": "استنادا إلى مبادئ الانسجام الأساسية",
+"score": 0.75
+},
+"Analysis Method": {
+"ar": "طريقة التحليل",
+"score": 1.0
+},
+"Fire Element": {
+"ar": "عنصر النار",
+"score": 1.0
+},
+"Air people are intellectual, social, and adaptable. They love ideas and conversations but can overthink or avoid emotional depth. Think: 'Let me analyze this...' Air needs to ground in feelings and reality.": {
+"ar": "فالشعب الهوائي فكري واجتماعي وقابل للتكييف. إنهم يحبون الأفكار والمحادثات لكن يمكنهم الإفراط في التفكير أو تجنب العمق العاطفي دعني أحلل هذا... الهواء يحتاج إلى الأرض في المشاعر والحقيقة.",
+"score": 0.78
+},
+"People with Sun energy are confident, generous, and need to shine. They're natural leaders who inspire others but need appreciation and can dominate. In relationships: they bring warmth but need admiration.": {
+"ar": "الناس الذين لديهم طاقة الشمس واثقون وسخاء و يحتاجون للتلميع هم قادة طبيعيون الذين يلهمون الآخرين ولكنهم بحاجة للتقدير ويمكنهم الهيمنة في العلاقات، يجلبون الدفء ولكنهم بحاجة إلى الإعجاب",
+"score": 0.86
+},
+"Mercury Energy": {
+"ar": "الطاقة الزئبق",
+"score": 1.0
+},
+"Venus people are romantic, affectionate, and value harmony. They appreciate beauty and avoid conflict but can be people-pleasing. In relationships: they bring tenderness and romance but may avoid necessary confrontations.": {
+"ar": "الناس في الزهرة رومانسية، مودة، وقيمة الوئام. إنهم يُقدرون الجمال ويتجنبون النـزاعات ولكن يمكن أن يكونوا يبشرون بالناس في العلاقات: أنها تجلب المناقصة والرومانسية ولكنها قد تتجنب المواجهات اللازمة.",
+"score": 0.76
+},
+"How Well You Match (Percentage)": {
+"ar": "كيف يمكنك تطابق (النسبة المئوية)",
+"score": 0.75
+},
+"Natural Harmony (85-100%)": {
+"ar": "الوئام الطبيعي (85-10 في المائة)",
+"score": 1.0
+},
+"You're naturally in sync. Conversations flow easily, you understand each other's moods, conflicts resolve quickly. This doesn't mean no work is needed—all relationships need nurturing—but the foundation is strong.": {
+"ar": "أنت طبيعي في مزامنة. التناقضات تتدفق بسهولة، أنت تفهم مزاج بعضنا البعض، الصراعات تُحل بسرعة. هذا لا يعني أنه لا حاجة لعمل كل العلاقات تحتاج إلى رعاية لكن الأساس قوي",
+"score": 0.78
+},
+"Conflicting Elements": {
+"ar": "عناصر متضاربة",
+"score": 1.0
+},
+"The Right Time for Things to Happen": {
+"ar": "الوقت المناسب للأمور التي تحدث",
+"score": 0.75
+},
+"Philosophy": {
+"ar": "الفلسفة",
+"score": 1.0
+},
+"Conscious Relationship": {
+"ar": "العلاقة الواعية",
+"score": 1.0
+},
+"75-84: Very Good 💙": {
+"ar": "75-84: جيد جدا 💙",
+"score": 1.0
+},
+"Strong compatibility with minor friction points. You have great potential together—small adjustments in communication or understanding each other's needs will create beautiful harmony.": {
+"ar": "تطابق قوي مع نقاط الاحتكاك الصغيرة لديك إمكانيات كبيرة معاً - تعديلات بسيطة في التواصل أو فهم احتياجات بعضنا البعض سيخلق وئاماً جميلاً",
+"score": 0.86
+},
+"Significant differences that need deep work. Not impossible, but requires exceptional maturity, patience, and often professional support. Consider whether both partners are truly committed to the journey.": {
+"ar": "فروق كبيرة تحتاج إلى عمل عميق. ليس مستحيلاً، بل يتطلب نضجاً استثنائياً وصبرًا ودعماً مهنياً في كثير من الأحيان. النظر في ما إذا كان كلا الشريكين ملتزمين حقا بالرحلة.",
+"score": 0.86
+},
+"How to Use This Knowledge": {
+"ar": "كيفية استخدام هذه المعرفة",
+"score": 1.0
+},
+"For New Relationships": {
+"ar": "للعلاقات الجديدة",
+"score": 1.0
+},
+"For Existing Partnerships": {
+"ar": "للشراكات القائمة",
+"score": 1.0
+},
+"For Marriage Decisions": {
+"ar": "قرارات الزواج",
+"score": 1.0
+},
+"Even perfectly compatible couples need good communication. Even challenging combinations can thrive with excellent communication. Make it a daily practice to truly listen and express yourself honestly.": {
+"ar": "حتى الأزواج المتوافقين تماماً يحتاجون إلى اتصال جيد حتى الخلطات الصعبة يمكن أن تزدهر مع الاتصالات الممتازة. اجعلها ممارسة يومية للإستماع و التعبير عن نفسك بصراحة",
+"score": 0.8
+},
+"Respect Differences": {
+"ar": "احترام الاختلافات",
+"score": 1.0
+},
+"Please verify the Arabic spelling before calculating.": {
+"ar": "يرجى التحقق من التهجئة العربية قبل حسابها.",
+"score": 0.83
+},
+"⚠️ Try to avoid:": {
+"ar": "⚠️ حاول أن تتجنب:",
+"score": 1.0
+},
+"This is": {
+"ar": "هذا هو",
+"score": 1.0
+},
+"Your": {
+"ar": "أنت",
+"score": 1.0
+},
+"free will and personal choices": {
+"ar": "حرية الإرادة والخيارات الشخصية",
+"score": 0.75
+},
+"Use this for": {
+"ar": "إستخدم هذا",
+"score": 1.0
+},
+", not as substitute for professional advice": {
+"ar": ", ليس كبديل عن المشورة المهنية",
+"score": 0.75
+},
+"Always:": {
+"ar": "دائماً:",
+"score": 1.0
+},
+"• Uses": {
+"ar": "• الاستخدامات",
+"score": 1.0
+},
+"Learn more about how this works": {
+"ar": "تعلم المزيد عن كيفية عمل هذا",
+"score": 0.8
+},
+"Please enter your Arabic name": {
+"ar": "من فضلك أدخلي إسمك العربي",
+"score": 0.75
+},
+"Type to search: Muhammad, Fatima...": {
+"ar": "نوع البحث: محمد، فاطمة...",
+"score": 0.75
+},
+"Find My Best Names": {
+"ar": "ابحث عن أفضل أسماءي",
+"score": 1.0
+},
+"1. What is your intention?": {
+"ar": "1 ما هي نيتك؟",
+"score": 1.0
+},
+"Check a Name": {
+"ar": "تحقق من الاسم",
+"score": 1.0
+},
+"2. Which Name do you want to check?": {
+"ar": "2. أي اسم تريد التحقق منه؟",
+"score": 1.0
+},
+"found out of 99": {
+"ar": "إكتشفت من 99",
+"score": 1.0
+},
+"Your Best Names": {
+"ar": "أفضل أسماءكم",
+"score": 1.0
+},
+"Ocean Wave": {
+"ar": "موجة المحيط",
+"score": 1.0
+},
+"Star": {
+"ar": "ستار",
+"score": 1.0
+},
+"Element Test:": {
+"ar": "اختبار العنصر:",
+"score": 1.0
+},
+"Unknown": {
+"ar": "غير معروف",
+"score": 1.0
+},
+"Number Meanings": {
+"ar": "عدد المعاني",
+"score": 1.0
+},
+"Current Life Cycle": {
+"ar": "دورة الحياة الحالية",
+"score": 1.0
+},
+"Life Phase": {
+"ar": "مرحلة الحياة",
+"score": 1.0
+},
+"Age:": {
+"ar": "العمر:",
+"score": 1.0
+},
+"Month": {
+"ar": "الشهر",
+"score": 1.0
+},
+"Action Steps": {
+"ar": "خطوات العمل",
+"score": 1.0
+},
+"Past Life Pattern": {
+"ar": "نمط الحياة الماضي",
+"score": 1.0
+},
+"This Life Challenge": {
+"ar": "تحدي الحياة هذا",
+"score": 1.0
+},
+"-- Choose a number --": {
+"ar": "-- اختر رقم --",
+"score": 1.0
+},
+"in Year": {
+"ar": "في السنة",
+"score": 1.0
+},
+"This month brings the energy of": {
+"ar": "هذا الشهر يجلب الطاقة",
+"score": 1.0
+},
+"Monthly Focus": {
+"ar": "الشهري التركيز",
+"score": 1.0
+},
+"Focus on opportunities that align with this month's theme while keeping your year's goals in mind.": {
+"ar": "التركيز على الفرص التي تتواءم مع موضوع هذا الشهر مع إبقاء أهداف عامك في الاعتبار.",
+"score": 1.0
+},
+"Your life is divided into 4 major periods (Pinnacles) with corresponding challenges. Each period brings unique lessons and opportunities.": {
+"ar": "حياتك مقسمة إلى 4 فترات رئيسية (العمليات) مع تحديات مقابلة. وتجلب كل فترة دروسا وفرصا فريدة.",
+"score": 0.92
+},
+"Currently:": {
+"ar": "حالياً:",
+"score": 1.0
+},
+"Your name contains": {
+"ar": "اسمك يحتوي على",
+"score": 1.0
+},
+"The energy of your mother's number": {
+"ar": "طاقة رقم والدتك",
+"score": 0.75
+},
+") reveals your deepest desires. Your Personality (": {
+"ar": ") يكشف عن أعمق رغباتك شخصيتك (",
+"score": 1.0
+},
+"You are currently in Year": {
+"ar": "أنت حالياً في السنة",
+"score": 1.0
+},
+"of your nine-year cycle, with a focus on": {
+"ar": "من دورة التسع سنوات الخاصة بك، مع التركيز على",
+"score": 0.75
+},
+"Destiny": {
+"ar": "القدر",
+"score": 1.0
+},
+"💡 Advice for Growth:": {
+"ar": "💡 إسداء المشورة بشأن النمو:",
+"score": 1.0
+},
+"Your Current Position": {
+"ar": "موقفك الحالي",
+"score": 1.0
+},
+"Year": {
+"ar": "السنة",
+"score": 1.0
+},
+"🌱 Remedy:": {
+"ar": "🌱 الانتصاف:",
+"score": 1.0
+},
+"Thank you!": {
+"ar": "شكراً لك",
+"score": 1.0
+},
+"Please write a message before sending.": {
+"ar": "من فضلك اكتب رسالة قبل إرسالها",
+"score": 0.8
+},
+"Get it on Google Play": {
+"ar": "(أحصل عليه من (جوجل بلاي",
+"score": 1.0
+},
+"Calculated from birth date + current year. Changes annually (usually on birthday). Shows the theme and focus of the current year cycle. Ranges 1-9.": {
+"ar": "محسوبة من تاريخ الميلاد + السنة الحالية. التغيرات السنوية (عادة في عيد الميلاد). يبيّن موضوع دورة السنة الحالية ومحور تركيزها. راندجز 1-9.",
+"score": 0.79
+},
+"Four Element Classification": {
+"ar": "تصنيف العناصر الأربعة",
+"score": 1.0
+},
+"Rest Day": {
+"ar": "يوم الراحة",
+"score": 1.0
+},
+"Recovery Day": {
+"ar": "يوم التعافي",
+"score": 1.0
+},
+"Days when your personal energy is low and recovery is needed. Important for maintaining balance. Recommended for rest, reflection, and avoiding major initiatives.": {
+"ar": "أيام عندما تكون طاقتك الشخصية منخفضة والانتعاش مطلوب مهم للمحافظة على التوازن أوصي بالراحة والتفكير وتفادي المبادرات الرئيسية.",
+"score": 0.81
+},
+"Sun of Knowledge": {
+"ar": "شمس المعرفة",
+"score": 1.0
+},
+"Relationship Elements": {
+"ar": "عناصر العلاقة",
+"score": 1.0
+},
+"Try searching for different keywords": {
+"ar": "حاول البحث عن كلمات رئيسية مختلفة",
+"score": 0.75
+},
+"→ Easy flow today": {
+"ar": "→ تدفق سهل اليوم",
+"score": 1.0
+},
+"→ Steady progress with effort": {
+"ar": "→ إحراز تقدم مطرد في الجهود المبذولة",
+"score": 1.0
+},
+"EN": {
+"ar": "EN",
+"score": 1.0
+},
+"English": {
+"ar": "الإنكليزية",
+"score": 1.0
+},
+"FR": {
+"ar": "FR",
+"score": 1.0
+},
+"AR": {
+"ar": "AR",
+"score": 1.0
+},
+"The Three Analysis Methods Explained": {
+"ar": "أساليب التحليل الثلاثة الموضحة",
+"score": 0.75
+},
+"What High Compatibility Means": {
+"ar": "ما يعنيه المقارنات العالية",
+"score": 0.75
+},
+"What Challenges Look Like": {
+"ar": "ما تبدو عليه التحديات",
+"score": 1.0
+},
+"Real-Life Applications": {
+"ar": "تطبيقات الحياة الحقيقية",
+"score": 1.0
+},
+"🔥 Fire Element": {
+"ar": "🔥 عنصر النار",
+"score": 1.0
+},
+"Brings excitement, courage, leadership, and motivation to relationships": {
+"ar": "جلب الإثارة، والشجاعة، والقيادة، والدافع إلى العلاقات",
+"score": 1.0
+},
+"Water (emotional depth), Earth (grounding stability), Air (intellectual space)": {
+"ar": "المياه (العمق الافتراضي)، الأرض (الاستقرار الأرضي)، الهواء (الحيز المكاني)",
+"score": 0.78
+},
+"Brings fresh perspectives, good communication, flexibility, and social connections": {
+"ar": "يجلب منظورات جديدة، واتصالات جيدة، ومرونة، ووصلات اجتماعية",
+"score": 0.75
+},
+"Fire (spontaneity), Water (emotional expression), Air (new ideas)": {
+"ar": "الحريق (المسؤولية)، الماء (التعبير العاطفي)، الهواء (الأفكار الجديدة)",
+"score": 0.88
+},
+"Fire + Fire": {
+"ar": "النار + النار",
+"score": 1.0
+},
+"Exciting but potentially explosive": {
+"ar": "إثارة ولكن يحتمل أن تكون متفجرة",
+"score": 0.75
+},
+"Fire + Water": {
+"ar": "الحريق + الماء",
+"score": 1.0
+},
+"Fire + Air": {
+"ar": "الحريق + الهواء",
+"score": 1.0
+},
+"Highly compatible and dynamic": {
+"ar": "متوافقة ودينامية بدرجة عالية",
+"score": 1.0
+},
+"Fire + Earth": {
+"ar": "النار + الأرض",
+"score": 1.0
+},
+"Complementary but requires work": {
+"ar": "استكمال ولكن يتطلب عملاً",
+"score": 0.75
+},
+"Water + Water": {
+"ar": "المياه + المياه",
+"score": 1.0
+},
+"Deeply connected but may lack direction": {
+"ar": "متصلة اتصالا عميقا ولكنها قد تفتقر إلى التوجيه",
+"score": 0.83
+},
+"Water + Air": {
+"ar": "المياه + الهواء",
+"score": 1.0
+},
+"Water + Earth": {
+"ar": "المياه + الأرض",
+"score": 1.0
+},
+"Intellectually stimulating but emotionally light": {
+"ar": "الحفز الفكري ولكن النور العاطفي",
+"score": 0.8
+},
+"Air + Earth": {
+"ar": "الهواء + الأرض",
+"score": 1.0
+},
+"Balanced with mutual growth potential": {
+"ar": "المتوازنة مع إمكانات النمو المتبادل",
+"score": 1.0
+},
+"Earth + Earth": {
+"ar": "الأرض + الأرض",
+"score": 1.0
+},
+"The Seven Classical Planets": {
+"ar": "الكوكبات السبعة الكلاسيكية",
+"score": 1.0
+},
+"Love, beauty, harmony, diplomacy, appreciation": {
+"ar": "الحب والجمال والوئام والدبلوماسية والتقدير",
+"score": 1.0
+},
+"Mars people are dynamic, protective, and direct. They need physical activity and can be argumentative.": {
+"ar": "الناس المريخ ديناميكية وحمائية ومباشرة إنهم يحتاجون إلى نشاط مادي ويمكن أن يكونوا مجادلين",
+"score": 0.82
+},
+"Jupiter people are philosophical, generous, and see big pictures. They need freedom and meaning.": {
+"ar": "أناس المشترين فلسفيون وسخيون ورؤية صور كبيرة إنهم بحاجة للحرية والمعنى",
+"score": 0.91
+},
+"Discipline, responsibility, structure, patience, wisdom": {
+"ar": "الانضباط والمسؤولية والهيكل والصبر والحكمة",
+"score": 1.0
+},
+"The Four Elements": {
+"ar": "العناصر الأربعة",
+"score": 1.0
+},
+"Forces:": {
+"ar": "القوات:",
+"score": 1.0
+},
+"In relationships:": {
+"ar": "في العلاقات:",
+"score": 1.0
+},
+"Plus": {
+"ar": "زائد",
+"score": 1.0
+},
+"About This App": {
+"ar": "حول هذا التطبيق",
+"score": 1.0
+},
+"• Element classification - traditional four-element system": {
+"ar": "• تصنيف العناصر - النظام التقليدي المؤلف من أربعة عناصر",
+"score": 1.0
+},
+"🎯 Modern Interpretation": {
+"ar": "🎯 الترجمة الشفوية الحديثة",
+"score": 1.0
+},
+"• Action suggestions adapted for contemporary life": {
+"ar": "• مقترحات العمل المكيفة للحياة المعاصرة",
+"score": 0.8
+},
+"• Letter values: Very accurate (95%+)": {
+"ar": "• القيم الكتابية: دقيقة جدا (95 في المائة +)",
+"score": 0.75
+},
+"• Cultural exploration": {
+"ar": "• الاستكشاف الثقافي",
+"score": 1.0
+},
+"• Daily planning inspiration": {
+"ar": "• إلهام التخطيط اليومي",
+"score": 1.0
+},
+"❌ Don't Use For:": {
+"ar": "❌ لا تستخدم:",
+"score": 1.0
+},
+"Important Note": {
+"ar": "ملاحظة هامة",
+"score": 1.0
+},
+"Got it, thanks!": {
+"ar": "حصلت عليه، شكرا!",
+"score": 1.0
+},
+"Clear input": {
+"ar": "مدخلات واضحة",
+"score": 1.0
+},
+"Step": {
+"ar": "الخطوة",
+"score": 1.0
+},
+"Don't show this tutorial again": {
+"ar": "لا تظهر هذا التعليم مرة أخرى",
+"score": 0.8
+},
+"Location found, but unable to get location name": {
+"ar": "موقع وجدت، ولكن غير قادر على الحصول على اسم الموقع",
+"score": 0.83
+},
+"Personal Information": {
+"ar": "المعلومات الشخصية",
+"score": 1.0
+},
+"Enter mother's name": {
+"ar": "إدخلْ اسمَ الأمِّ",
+"score": 1.0
+},
+"Location Name": {
+"ar": "اسم الموقع",
+"score": 1.0
+},
+"Used for planetary hour calculations": {
+"ar": "مستعملة لحسابات ساعة الكواكب",
+"score": 1.0
+},
+"MB": {
+"ar": "MB",
+"score": 1.0
+},
+"Account Information": {
+"ar": "حساب المعلومات",
+"score": 1.0
+},
+"Read this as...": {
+"ar": "اقرأ هذا كـ...",
+"score": 1.0
+},
+"of 9": {
+"ar": "of 9",
+"score": 1.0
+},
+"These profiles are general tendencies, not absolute rules. Your experiences, skills, and choices shape your unique path.": {
+"ar": "وهذه النبذات هي اتجاهات عامة، وليس قواعد مطلقة. تجاربك ومهاراتك وخياراتك تشكل طريقك الفريد",
+"score": 0.85
+},
+"Signed in as": {
+"ar": "موقّع في",
+"score": 1.0
+},
+"Grants courage, strength, and ability to overcome challenges": {
+"ar": "منح الشجاعة والقوة والقدرة على التغلب على التحديات",
+"score": 0.83
+},
+"Increases wisdom, understanding, and clear communication": {
+"ar": "زيادة الحكمة والتفاهم والاتصال الواضح",
+"score": 1.0
+},
+"Opens doors of provision and brings abundance": {
+"ar": "يفتح أبواب الحكم ويجلب الوفرة",
+"score": 0.8
+},
+"Attracts love, harmony, and beautiful relationships": {
+"ar": "تجذب الحب والوئام والعلاقات الجميلة",
+"score": 1.0
+},
+"For this planetary hour": {
+"ar": "في هذه الساعة الكوكبية",
+"score": 1.0
+},
+"Information": {
+"ar": "المعلومات",
+"score": 1.0
+},
+"Traditionally, the hour of": {
+"ar": "تقليدياً، ساعة",
+"score": 1.0
+},
+"Location not available": {
+"ar": "الموقع غير متاح",
+"score": 1.0
+},
+"Good - Good Time": {
+"ar": "جيد - وقت جيد",
+"score": 1.0
+},
+"📅 Future planning": {
+"ar": "📅 التخطيط في المستقبل",
+"score": 1.0
+},
+"Manzil detail (hour synergy)": {
+"ar": "تفاصيل مانزيل (التآزر في ساعات العمل)",
+"score": 0.75
+},
+"📚 Educational Resources": {
+"ar": "📚 الموارد التعليمية",
+"score": 1.0
+},
+"Deepen your understanding of planetary hours": {
+"ar": "تعميق فهمك لساعات الكواكب",
+"score": 0.75
+},
+"Visualize daily energy patterns": {
+"ar": "تصور أنماط الطاقة اليومية",
+"score": 0.75
+},
+"💫 Good time to make steady progress": {
+"ar": "💫 وقت جيد لإحراز تقدم مطرد",
+"score": 1.0
+},
+"Start new projects": {
+"ar": "بدء مشاريع جديدة",
+"score": 1.0
+},
+"Work on important tasks": {
+"ar": "العمل على الاضطلاع بمهام هامة",
+"score": 1.0
+},
+"Avoid confrontations": {
+"ar": "تجنب المواجهات",
+"score": 1.0
+},
+"Spend time with family": {
+"ar": "قضاء الوقت مع الأسرة",
+"score": 1.0
+},
+"Creative activities": {
+"ar": "الأنشطة الإبداعية",
+"score": 1.0
+},
+"Avoid emotional decisions": {
+"ar": "تجنب القرارات العاطفية",
+"score": 1.0
+},
+"Study and learn": {
+"ar": "الدراسة والتعلم",
+"score": 1.0
+},
+"Read and research": {
+"ar": "القراءة والبحث",
+"score": 1.0
+},
+"Send important messages": {
+"ar": "إرسال رسائل مهمة",
+"score": 1.0
+},
+"Enjoy love and beauty": {
+"ar": "استمتع بالحب والجمال",
+"score": 1.0
+},
+"Avoid conflicts": {
+"ar": "تجنب الصراعات",
+"score": 1.0
+},
+"Plan for future": {
+"ar": "خطة المستقبل",
+"score": 1.0
+},
+"Long-term commitments": {
+"ar": "الالتزامات الطويلة الأجل",
+"score": 1.0
+},
+"Practice self-care": {
+"ar": "ممارسة الرعاية الذاتية",
+"score": 1.0
+},
+"Finance": {
+"ar": "المالية",
+"score": 1.0
+},
+"☀️ Excellent for leadership, decision-making, and starting important projects": {
+"ar": "☀️ ممتاز للقيادة وصنع القرار وبدء مشاريع هامة",
+"score": 1.0
+},
+"☀️ Good for routine tasks, but avoid major decisions": {
+"ar": "☀️ جيد للمهام الروتينية، ولكن تجنب القرارات الرئيسية",
+"score": 1.0
+},
+"☿️ Perfect for communication, writing, planning, and detailed work": {
+"ar": "☿️ مثالية للاتصال، والكتابة، والتخطيط، والعمل المفصل",
+"score": 1.0
+},
+"♃ Great for expansion, big picture planning, and learning new skills": {
+"ar": "♃ عظيم للتوسع، التخطيط للصورة الكبيرة، وتعلم مهارات جديدة",
+"score": 1.0
+},
+"♃ Good for moderate growth, but avoid overcommitting": {
+"ar": "♃ جيد للنمو المعتدل، ولكن تجنب الإفراط في الالتحام",
+"score": 0.83
+},
+"♃ Risk of overconfidence - be conservative in plans": {
+"ar": "♃ خطر الإفراط في الثقة - أن تكون متحفظة في الخطط",
+"score": 0.75
+},
+"♀️ Good for creative work, teamwork, and making things beautiful": {
+"ar": "♀️ جيد للعمل الإبداعي، والعمل الجماعي، وجعل الأمور جميلة",
+"score": 1.0
+},
+"♀️ Avoid important work - focus on rest and pleasure instead": {
+"ar": "♀️ تجنب العمل الهام - التركيز على الراحة والمتعة بدلا من ذلك",
+"score": 0.86
+},
+"♄ Good for steady work, but avoid being too rigid": {
+"ar": "♄ جيد للعمل المطّرد، لكن تجنّب أن تكون صارماً جداً",
+"score": 1.0
+},
+"✨ Good time for": {
+"ar": "✨ وقت جيد",
+"score": 1.0
+},
+"🎯 What do you need help with?": {
+"ar": "🎯 ما الذي تحتاجه من مساعدة؟",
+"score": 1.0
+},
+"Sit in stillness, breathe deeply, and simply be": {
+"ar": "اجلسوا في المزرعة، تنفسوا بعمق، وببساطة كونوا",
+"score": 0.8
+},
+"20 minutes": {
+"ar": "20 دقيقة",
+"score": 1.0
+},
+"15-30 minutes": {
+"ar": "15-30 دقيقة",
+"score": 1.0
+},
+"33 each": {
+"ar": "33 لكل منهما",
+"score": 1.0
+},
+"30 minutes": {
+"ar": "30 دقيقة",
+"score": 1.0
+},
+"15 minutes": {
+"ar": "15 دقيقة",
+"score": 1.0
+},
+"Write 3 things you're grateful for today": {
+"ar": "أكتب 3 أشياء أنت ممتنة لها اليوم",
+"score": 1.0
+},
+"10 minutes": {
+"ar": "10 دقائق",
+"score": 1.0
+},
+"🌙 Rest Day": {
+"ar": "🌙 يوم الراحة",
+"score": 1.0
+},
+"Today is a day for inner peace": {
+"ar": "اليوم هو يوم السلام الداخلي",
+"score": 0.75
+},
+"In about": {
+"ar": "في حوالي",
+"score": 1.0
+},
+", the hour of": {
+"ar": ", ساعة",
+"score": 1.0
+},
+") will bring better harmony.": {
+"ar": ") سيجلب وئام أفضل",
+"score": 0.75
+},
+"💡 Use this time to prepare yourself inwardly": {
+"ar": "💡 استخدم هذه المرة لتجهز نفسك للداخل",
+"score": 0.8
+},
+"🕊️ Recommended Practices": {
+"ar": "🕊️ الممارسات الموصى بها",
+"score": 1.0
+},
+"🌸 Rest is not weakness": {
+"ar": "🌸 الراحة ليست نقطة ضعف",
+"score": 1.0
+},
+"Energy Quality:": {
+"ar": "نوعية الطاقة:",
+"score": 1.0
+},
+"🌙 Weak - Time to Rest": {
+"ar": "🌙 ضعيف - حان وقت الراحة -",
+"score": 1.0
+},
+"Excellent (80-100)": {
+"ar": "ممتاز (80-100)",
+"score": 1.0
+},
+"Good (60-79)": {
+"ar": "جيد (60-79)",
+"score": 1.0
+},
+"Neutral (40-59)": {
+"ar": "محايد (40-59)",
+"score": 1.0
+},
+"Ends": {
+"ar": "النهايات",
+"score": 1.0
+},
+"Fire Element - Represents energy, passion, and transformation. Associated with Sun and Mars.": {
+"ar": "عنصر الإطفاء - يمثل الطاقة والعاطفة والتحول. مُرتبطة بـ(صن) و(مارس)",
+"score": 0.78
+},
+"from-gray-500 to-gray-600": {
+"ar": "من جراي-500 إلى غراي-600",
+"score": 1.0
+},
+"Purpose and Benefits": {
+"ar": "الغرض والفوائد",
+"score": 1.0
+},
+"How Planetary Hours Work": {
+"ar": "كيف تعمل ساعات الكوكب",
+"score": 0.75
+},
+"Unequal Hour System": {
+"ar": "نظام ساعات غير متكافئة",
+"score": 1.0
+},
+"Planetary hours are \"unequal hours\" - meaning they vary in length depending on season and location. The daytime is divided into 12 equal parts from sunrise to sunset, and nighttime into 12 equal parts from sunset to sunrise. This means summer day hours are longer than summer night hours, and vice versa in winter.": {
+"ar": "ساعات الطيران هي \"ساعات غير متساوية\" - بمعنى أنها تختلف باختلاف الموسم والموقع وينقسم الوقت النهاري إلى 12 جزئاً متساوياً من شروق الشمس إلى غروب الشمس، ووقت الليل إلى 12 جزئاً متكافئاً من غروب الشمس إلى شروق الشمس. هذا يعني أن ساعات الصيف أطول من ساعات الصيف ليلاً والعكس بالعكس في الشتاء",
+"score": 0.77
+},
+"Day Rulers": {
+"ar": "الحكام النهاريون",
+"score": 1.0
+},
+"Important Reminder": {
+"ar": "التذكير الهام",
+"score": 1.0
+},
+"Primary Support (": {
+"ar": "الدعم الابتدائي (",
+"score": 1.0
+},
+"For Balance (": {
+"ar": "الرصيد (",
+"score": 1.0
+},
+"Sunrise": {
+"ar": "شروق الشمس",
+"score": 1.0
+},
+"Dawn": {
+"ar": "داون",
+"score": 1.0
+},
+"The Strong": {
+"ar": "القوي",
+"score": 1.0
+},
+"Patience through transformation": {
+"ar": "الصبر من خلال التحول",
+"score": 1.0
+},
+"Creation through fire": {
+"ar": "الخلق من خلال النار",
+"score": 1.0
+},
+"Source of life": {
+"ar": "مصدر الحياة",
+"score": 1.0
+},
+"The winds that blow, the clouds between sky and earth": {
+"ar": "الرياح التي تهب، الغيوم بين السماء والأرض",
+"score": 0.83
+},
+"We send the winds to fertilize": {
+"ar": "نحن نرسل الرياح لتخصيب",
+"score": 1.0
+},
+"Communication and connection": {
+"ar": "الاتصالات والصلة",
+"score": 1.0
+},
+"Stability and grounding": {
+"ar": "الاستقرار والبري",
+"score": 1.0
+},
+"Empathy and emotional depth.": {
+"ar": "التعاطف و العمق العاطفي",
+"score": 1.0
+},
+"Intellectual clarity and communication.": {
+"ar": "-الوضوح الفكري والاتصال",
+"score": 1.0
+},
+"What are Life Path Numbers?": {
+"ar": "ما هي أرقام مسار الحياة؟",
+"score": 0.75
+},
+"How others see you and the impression you make": {
+"ar": "كيف يراك الآخرون و الانطباع الذي تصنعه",
+"score": 1.0
+},
+"Your higher purpose and life work": {
+"ar": "هدفك الأعلى وحياتك تعمل",
+"score": 0.75
+},
+"Nine-Year Life Cycles": {
+"ar": "مسلسلات الحياة لمدة تسع سنوات",
+"score": 0.75
+},
+"Years": {
+"ar": "السنوات",
+"score": 1.0
+},
+"ا (Alif)": {
+"ar": "ا (عليف)",
+"score": 1.0
+},
+"Example: June 15, 1990": {
+"ar": "مثال: 15 حزيران/يونيه 1990",
+"score": 1.0
+},
+"Note:": {
+"ar": "ملاحظة:",
+"score": 1.0
+},
+"If you encounter 11, 22, or 33 during reduction, stop! These are master numbers and should not be reduced further.": {
+"ar": "إذا واجهت 11، 22، أو 33 خلال التخفيض، توقف! وهذه أرقام رئيسية ولا ينبغي تخفيضها أكثر.",
+"score": 0.75
+},
+"Personality number is calculated from the consonants in your name. This represents the outer layer - how you present yourself to the world.": {
+"ar": "رقم الشخصية محسوب من المُتَخَلّقين باسمك هذا يمثل الطبقة الخارجية كيف تقدم نفسك للعالم",
+"score": 0.83
+},
+"What if I have a master number (11, 22, 33)?": {
+"ar": "ماذا لو كان لدي رقم رئيسي (11، 22، 33)؟",
+"score": 0.83
+},
+"How does the 9-year cycle work?": {
+"ar": "كيف تعمل دورة 9 سنوات؟",
+"score": 0.8
+},
+"Can my numbers change?": {
+"ar": "هل يمكن أن تتغير أرقامي؟",
+"score": 1.0
+},
+"A monthly refinement of your personal year energy, calculated by adding your personal year to the calendar month. Provides monthly guidance.": {
+"ar": "صقل شهري لطاقتك في السنة الشخصية، محسوبا بإضافة عامك الشخصي إلى الشهر التقويمي. يقدم التوجيه الشهري.",
+"score": 1.0
+},
+"Major life periods (4 in total) representing peak experiences and opportunities. Each pinnacle brings specific energies and lessons spanning years or decades.": {
+"ar": "وفترات الحياة الرئيسية (4 في المجموع) تمثل تجارب وفرص الذروة. وتجلب كل خلية طاقات محددة والدروس التي تمتد على سنوات أو عقود.",
+"score": 0.76
+},
+"Master Numbers": {
+"ar": "عدد الماجستير",
+"score": 1.0
+},
+"Definition:": {
+"ar": "التعريف:",
+"score": 1.0
+},
+"Relationship Dynamics": {
+"ar": "العلاقة الديناميكية",
+"score": 1.0
+},
+"Daily Practices for Balance": {
+"ar": "الممارسات اليومية للتوازن",
+"score": 1.0
+},
+"Practical Examples": {
+"ar": "أمثلة عملية",
+"score": 1.0
+},
+"Historical Context": {
+"ar": "السياق التاريخي",
+"score": 1.0
+},
+"Lead by example and integrity": {
+"ar": "الرصاص على سبيل المثال والنزاهة",
+"score": 1.0
+},
+"Start projects with courage": {
+"ar": "ابدأوا بالمشاريع بشجاعة",
+"score": 1.0
+},
+"Diplomacy": {
+"ar": "الدبلوماسية",
+"score": 1.0
+},
+"Build bridges between people": {
+"ar": "بناء الجسور بين الناس",
+"score": 0.75
+},
+"Share truth with joy": {
+"ar": "شارك الحقيقة مع الفرح",
+"score": 1.0
+},
+"Construction": {
+"ar": "التشييد",
+"score": 1.0
+},
+"Freedom": {
+"ar": "الحرية",
+"score": 1.0
+},
+"Authority": {
+"ar": "السلطة",
+"score": 1.0
+},
+"Inspiration": {
+"ar": "الإلهام",
+"score": 1.0
+},
+"Light the way for others": {
+"ar": "أضيء الطريق للآخرين",
+"score": 1.0
+},
+"Bridge": {
+"ar": "الجسر",
+"score": 1.0
+},
+"10 minutes reflecting on intentions": {
+"ar": "10دقائق تعكس النوايا",
+"score": 1.0
+},
+"Listen deeply to others without judgment": {
+"ar": "الاستماع عميقا للآخرين دون حكم",
+"score": 1.0
+},
+"Physical Work": {
+"ar": "العمل البدني",
+"score": 1.0
+},
+"Serve through practical work": {
+"ar": "العمل من خلال العمل العملي",
+"score": 0.75
+},
+"New Exploration": {
+"ar": "الاستكشاف الجديد",
+"score": 1.0
+},
+"30 minutes of silence daily": {
+"ar": "30 دقيقة صمت يوميا",
+"score": 1.0
+},
+"Give 10% of your income": {
+"ar": "أعط 10% من دخلك",
+"score": 1.0
+},
+"Contemplate life cycles and completion": {
+"ar": "النظر في دورات الحياة والانتهاء منها",
+"score": 0.75
+},
+"Light Meditation": {
+"ar": "التأمل الخفيف",
+"score": 1.0
+},
+"Plan projects serving humanity": {
+"ar": "مشاريع الخطة التي تخدم الإنسانية",
+"score": 0.75
+},
+"Community Building": {
+"ar": "بناء المجتمعات المحلية",
+"score": 1.0
+},
+"Mediator": {
+"ar": "وسيط",
+"score": 1.0
+},
+"Teacher": {
+"ar": "المعلم",
+"score": 1.0
+},
+"Designer": {
+"ar": "المصمم",
+"score": 1.0
+},
+"Speaker": {
+"ar": "المتكلم",
+"score": 1.0
+},
+"Accountant": {
+"ar": "المحاسب",
+"score": 1.0
+},
+"Engineer": {
+"ar": "المهندس",
+"score": 1.0
+},
+"Nurse": {
+"ar": "ممرضة",
+"score": 1.0
+},
+"Researcher": {
+"ar": "باحث",
+"score": 1.0
+},
+"Scientist": {
+"ar": "العلماء",
+"score": 1.0
+},
+"Analyst": {
+"ar": "محلل",
+"score": 1.0
+},
+"Lawyer": {
+"ar": "المحاماة",
+"score": 1.0
+},
+"Executive": {
+"ar": "تنفيذي",
+"score": 1.0
+},
+"Business Leader": {
+"ar": "زعيم الأعمال",
+"score": 1.0
+},
+"Humanitarian": {
+"ar": "المساعدة الإنسانية",
+"score": 1.0
+},
+"Therapist": {
+"ar": "المعالج النفسي",
+"score": 1.0
+},
+"Number 1 brings leadership energy to relationships. You need a partner who respects your independence while offering emotional support.": {
+"ar": "رقم 1 يجلب طاقة القيادة إلى العلاقات تحتاج إلى شريك يحترم استقلالك بينما تقدم الدعم العاطفي",
+"score": 0.79
+},
+"Number 3 brings joy and creativity to relationships. You need a partner who shares your love of life and encourages your creative expression.": {
+"ar": "رقم 3 يجلب الفرح والإبداع إلى العلاقات تحتاج إلى شريك يتشارك حبك للحياة ويشجع تعبيرك الإبداعي",
+"score": 1.0
+},
+"Number 4 builds solid foundations for relationships. You are loyal and reliable, seeking stability and long-term commitment.": {
+"ar": "رقم 4 يبني أسساً صلبة للعلاقات أنتم مخلصون وموثوقون، تسعىون إلى تحقيق الاستقرار والالتزام الطويل الأجل.",
+"score": 0.92
+},
+"Number 8 brings power and ambition to relationships. You need a partner who respects your goals and can match your strong energy.": {
+"ar": "رقم 8 يجلب القوة والطموح إلى العلاقات تحتاج إلى شريك يحترم أهدافك ويمكنه أن يضاهي طاقتك القوية",
+"score": 0.86
+},
+"Number 33 offers unconditional love in relationships. You are a natural healer, but remember you need nurturing too.": {
+"ar": "رقم 33 يعرض الحب الغير مشروط في العلاقات أنت معالج طبيعي، لكن تذكر أنك تحتاج إلى رعاية أيضا.",
+"score": 0.75
+},
+"Start your day with positive affirmations about your abilities": {
+"ar": "ابدأي يومك مع تأكيدات ايجابية عن قدراتك",
+"score": 0.83
+},
+"Build Bridges": {
+"ar": "بناء الجسور",
+"score": 1.0
+},
+"Listen to someone without interrupting": {
+"ar": "الاستماع إلى شخص ما دون مقاطعة",
+"score": 1.0
+},
+"Make someone smile": {
+"ar": "إجعل شخص ما يبتسم",
+"score": 1.0
+},
+"Practical Work": {
+"ar": "العمل العملي",
+"score": 1.0
+},
+"New Experience": {
+"ar": "الخبرة الجديدة",
+"score": 1.0
+},
+"Try something new weekly": {
+"ar": "جرب شيئاً أسبوعياً",
+"score": 0.75
+},
+"Free Movement": {
+"ar": "الحركة الحرة",
+"score": 1.0
+},
+"Do something kind for someone": {
+"ar": "أفعل شيئاً لطيفاً لشخص ما",
+"score": 0.75
+},
+"Add beauty to your space": {
+"ar": "أضف الجمال إلى الفضاء الخاص بك",
+"score": 1.0
+},
+"Sit in silence for 20 minutes": {
+"ar": "أجلس في صمت لمدة 20 دقيقة",
+"score": 1.0
+},
+"Strategic Planning": {
+"ar": "التخطيط الاستراتيجي",
+"score": 1.0
+},
+"Review long-term goals": {
+"ar": "استعراض الأهداف الطويلة الأجل",
+"score": 0.75
+},
+"Financial Management": {
+"ar": "الإدارة المالية",
+"score": 1.0
+},
+"Help someone without expectation": {
+"ar": "مساعدة شخص ما بدون توقع",
+"score": 0.75
+},
+"Release something that no longer serves": {
+"ar": "أطلقوا شيئاً لم يعد يخدم",
+"score": 0.8
+},
+"Record dreams upon waking": {
+"ar": "أحلام التسجيل عند الاستيقاظ",
+"score": 0.75
+},
+"Work on big project in small steps": {
+"ar": "العمل على تنفيذ مشروع كبير في خطوات صغيرة",
+"score": 0.8
+},
+"Give love without judgment": {
+"ar": "الحب بدون حكم",
+"score": 0.75
+},
+"Number 3 thrives through art. Write, paint, or speak to share your gifts.": {
+"ar": "رقم 3 يزدهر من خلال الفن أكتب، أرسم، أو أتحدث لتشارك هداياك.",
+"score": 0.78
+},
+"Foundation Building": {
+"ar": "مبنى المؤسسة",
+"score": 1.0
+},
+"Number 8 thrives in achievement. Take leadership roles and build legacy.": {
+"ar": "رقم 8 يزدهر في الإنجاز. الاضطلاع بأدوار القيادة وبناء الإرث.",
+"score": 0.75
+},
+"Number 11 lights the path. Share your visions and inspire others to rise.": {
+"ar": "رقم 11 يضيء الطريق شاركوا رؤاكم و إلهام الآخرين للارتفاع",
+"score": 0.88
+},
+"Partnership": {
+"ar": "الشراكة",
+"score": 1.0
+},
+"Start projects": {
+"ar": "مشاريع البدء",
+"score": 1.0
+},
+"Plant seeds": {
+"ar": "بذور النباتات",
+"score": 1.0
+},
+"Cooperation & Balance": {
+"ar": "رصيد التعاون",
+"score": 1.0
+},
+"Year of partnerships, diplomacy, and sensitivity. Focus on cooperation, building alliances, and emotional intelligence.": {
+"ar": "سنة الشراكات والدبلوماسية والحساسية. التركيز على التعاون وبناء التحالفات والاستخبارات العاطفية",
+"score": 0.8
+},
+"Enjoy life": {
+"ar": "تمتعوا بالحياة",
+"score": 1.0
+},
+"Work hard": {
+"ar": "العمل الشاق",
+"score": 1.0
+},
+"Year of discipline, hard work, and building solid foundations. Focus on practical matters, organization, and long-term planning.": {
+"ar": "سنة الانضباط، العمل الشاق، وبناء أسس صلبة. التركيز على المسائل العملية، والتنظيم، والتخطيط الطويل الأجل.",
+"score": 0.93
+},
+"Take adventures": {
+"ar": "خُذْ المغامرات",
+"score": 1.0
+},
+"Build wealth": {
+"ar": "بناء الثروة",
+"score": 1.0
+},
+"Let go": {
+"ar": "لنذهب",
+"score": 1.0
+},
+"Life moves in cycles, each year carrying a unique theme and lessons": {
+"ar": "الحياة تتحرك في الدورات، كل سنة تحمل موضوعا فريدا ودروسا",
+"score": 0.78
+},
+"Years 1-3": {
+"ar": "السنة 1-3",
+"score": 1.0
+},
+"Years 4-6": {
+"ar": "السنوات 4-6",
+"score": 1.0
+},
+"Expansion and development": {
+"ar": "التوسع والتنمية",
+"score": 1.0
+},
+"Years 7-9": {
+"ar": "السنوات 7-9",
+"score": 1.0
+},
+"Next Year": {
+"ar": "السنة المقبلة",
+"score": 1.0
+},
+"Ar": {
+"ar": "Ar",
+"score": 1.0
+},
+"Unable to load planetary data": {
+"ar": "غير قادر على تحميل البيانات الكوكبية",
+"score": 0.75
+},
+"Technical Details": {
+"ar": "التفاصيل التقنية",
+"score": 1.0
+},
+"Today is": {
+"ar": "اليوم",
+"score": 1.0
+},
+"Question": {
+"ar": "سؤال",
+"score": 1.0
+},
+"Sam": {
+"ar": "سام",
+"score": 1.0
+},
+"💡 Higher bars indicate better harmony. Schedule your important tasks during energy peaks.": {
+"ar": "💡 القضبان العليا تشير إلى وئام أفضل حددوا مهامكم المهمة خلال ذروة الطاقة",
+"score": 0.82
+},
+"8-10: Excellent": {
+"ar": "8-10: ممتاز",
+"score": 1.0
+},
+"7: Very Good": {
+"ar": "7: جيد جدا",
+"score": 1.0
+},
+"0-3: Rest": {
+"ar": "0-3: الراحة",
+"score": 1.0
+},
+"Smart planning based on your cosmic energy": {
+"ar": "التخطيط الذكي بناء على الطاقة الكونية",
+"score": 1.0
+},
+"Best Days": {
+"ar": "أفضل أيام",
+"score": 1.0
+},
+"Rest Days": {
+"ar": "أيام الراحة",
+"score": 1.0
+},
+"These days have high harmony. Perfect for important tasks, major decisions, and new beginnings.": {
+"ar": "هذه الأيام لها وئام كبير. مثالي للمهام الهامة، القرارات الرئيسية، والبدايات الجديدة.",
+"score": 0.75
+},
+"Planning Strategy": {
+"ar": "استراتيجية التخطيط",
+"score": 1.0
+},
+"Schedule": {
+"ar": "الجدول الزمني",
+"score": 1.0
+},
+"Important meetings, launches, negotiations": {
+"ar": "اجتماعات هامة، إطلاقات، مفاوضات",
+"score": 1.0
+},
+"Regular work, follow-ups, daily tasks": {
+"ar": "العمل المنتظم، والمتابعة، والمهام اليومية",
+"score": 1.0
+},
+"Rest time": {
+"ar": "وقت الراحة",
+"score": 1.0
+},
+"Week Quality": {
+"ar": "أسبوع الجودة",
+"score": 1.0
+},
+"Excellent week!": {
+"ar": "أسبوع ممتاز!",
+"score": 1.0
+},
+"Good week": {
+"ar": "أسبوع جيد",
+"score": 1.0
+},
+"Fixed earth, representing stability and fertility": {
+"ar": "الأرض الثابتة، التي تمثل الاستقرار والخصوبة",
+"score": 1.0
+},
+"Intellectual curiosity, adaptability, exchange": {
+"ar": "الفضول الفكري، والقدرة على التكيف، والتبادل",
+"score": 1.0
+},
+"Late Spring": {
+"ar": "أواخر الربيع",
+"score": 1.0
+},
+"The Lion - Majesty and creative expression": {
+"ar": "الأسد - الجلالة والتعبير الإبداعي",
+"score": 1.0
+},
+"Late Summer": {
+"ar": "أواخر الصيف",
+"score": 1.0
+},
+"The Scorpion - Transformation and depth": {
+"ar": "العقرب - التحول والعمق",
+"score": 1.0
+},
+"Intensity, regeneration, hidden wisdom": {
+"ar": "الكثافة، التجدد، الحكمة الخفية",
+"score": 0.75
+},
+"The Goat - Ambition and discipline": {
+"ar": "الماعز - الطموح والانضباط",
+"score": 1.0
+},
+"Late Winter": {
+"ar": "أواخر الشتاء",
+"score": 1.0
+},
+"How your natural temperaments (fire, water, air, earth) work together": {
+"ar": "كيف تعمل أعصابك الطبيعية (النار، الماء، الهواء، الأرض) معاً",
+"score": 0.89
+},
+"How your ruling planets and cosmic energies interact in your relationship": {
+"ar": "كيف تتفاعل الكواكب الحاكمة و الطاقات الكونية في علاقتك",
+"score": 0.86
+},
+"A plain-English explanation of your compatibility": {
+"ar": "تفسير واضح إنجليزي لمدى توافقك",
+"score": 0.75
+},
+"Three different ways we looked at your relationship": {
+"ar": "ثلاث طرق مختلفة نظرنا إلى علاقتك",
+"score": 1.0
+},
+"Practical advice based on your compatibility pattern": {
+"ar": "نصيحة عملية تستند إلى نمط التوافق الخاص بك",
+"score": 1.0
+},
+"Solid foundation - work together to strengthen the bond": {
+"ar": "المؤسسة الصلبة - العمل معا لتعزيز الرابطة",
+"score": 0.83
+},
+"Intellectual & Social": {
+"ar": "المثقفون الاجتماعيون",
+"score": 1.0
+},
+"Safety from harm and fear": {
+"ar": "السلامة من الأذى والخوف",
+"score": 1.0
+},
+"Harmony between spouses, love, and reconciliation": {
+"ar": "الوئام بين الزوجين، والحب، والمصالحة",
+"score": 0.8
+},
+"Independence": {
+"ar": "الاستقلال",
+"score": 1.0
+},
+"Courage": {
+"ar": "الشجاعة",
+"score": 1.0
+},
+"Learning humility": {
+"ar": "التواضع في التعلم",
+"score": 1.0
+},
+"To achieve and accomplish great things": {
+"ar": "تحقيق وإنجاز أشياء عظيمة",
+"score": 0.75
+},
+"Sensitivity": {
+"ar": "الحساسية",
+"score": 1.0
+},
+"To unite people and create bridges of understanding": {
+"ar": "لتوحيد الناس وخلق جسور التفاهم",
+"score": 1.0
+},
+"To find peace and belonging in relationships": {
+"ar": "إيجاد السلام والانتماء في العلاقات",
+"score": 0.75
+},
+"Lack of focus": {
+"ar": "الافتقار إلى التركيز",
+"score": 1.0
+},
+"To uplift humanity through creative expression": {
+"ar": "تعزيز البشرية من خلال التعبير الإبداعي",
+"score": 0.8
+},
+"Structure": {
+"ar": "الهيكل",
+"score": 1.0
+},
+"Reliability": {
+"ar": "الموثوقية",
+"score": 1.0
+},
+"Practical wisdom": {
+"ar": "الحكمة العملية",
+"score": 1.0
+},
+"Limitation": {
+"ar": "التقادم",
+"score": 1.0
+},
+"To build something that lasts and provides security": {
+"ar": "لبناء شيء يدوم ويوفر الأمن",
+"score": 1.0
+},
+"Adventure": {
+"ar": "المغامرة",
+"score": 1.0
+},
+"Curiosity": {
+"ar": "الفضول",
+"score": 1.0
+},
+"Responsibility": {
+"ar": "المسؤولية",
+"score": 1.0
+},
+"Care": {
+"ar": "الرعاية",
+"score": 1.0
+},
+"Loyalty": {
+"ar": "الولاء",
+"score": 1.0
+},
+"Martyr complex": {
+"ar": "مجمع الشهداء",
+"score": 1.0
+},
+"To be needed and to create harmony in relationships": {
+"ar": "الحاجة إلى خلق الانسجام في العلاقات",
+"score": 0.75
+},
+"Analysis": {
+"ar": "التحليل",
+"score": 1.0
+},
+"Withdrawal": {
+"ar": "الانسحاب",
+"score": 1.0
+},
+"Achievement": {
+"ar": "الإنجاز",
+"score": 1.0
+},
+"To demonstrate that success serves higher purpose": {
+"ar": "إثبات أن النجاح يخدم غرضا أعلى",
+"score": 0.8
+},
+"Loss of identity": {
+"ar": "فقدان الهوية",
+"score": 1.0
+},
+"We have honored the children of Adam (17:70)": {
+"ar": "لقد شرفنا أطفال (آدم) (17:70)",
+"score": 0.8
+},
+"Universal compassion and global service": {
+"ar": "الشفقة العالمية والخدمة العالمية",
+"score": 0.75
+},
+"Vision": {
+"ar": "الرؤية",
+"score": 1.0
+},
+"Mastery": {
+"ar": "ماستري",
+"score": 1.0
+},
+"Your Life Numbers Explained": {
+"ar": "عدد حياتكِ شرحت",
+"score": 1.0
+},
+"These numbers reveal your life purpose, inner desires, and how others see you": {
+"ar": "هذه الأرقام تكشف عن هدف حياتك، ورغبات داخلية، وكيف يراك الآخرون",
+"score": 0.8
+},
+"This number represents your main journey and natural talents in life": {
+"ar": "هذا الرقم يمثل رحلتك الرئيسية ومواهبك الطبيعية في الحياة",
+"score": 0.86
+},
+"How Others See You": {
+"ar": "كيف الآخرون يرونك",
+"score": 1.0
+},
+"The impression you make when people first meet you": {
+"ar": "الانطباع الذي تصنعه عندما يقابلك الناس أولا",
+"score": 1.0
+},
+"Your Life Mission": {
+"ar": "مهمتك في الحياة",
+"score": 1.0
+},
+"What you're meant to achieve and contribute to the world": {
+"ar": "ما قصدت أن تحققه وتسهم به في العالم",
+"score": 0.83
+},
+"Each number has a unique energy and color representing its essence": {
+"ar": "كل رقم لديه طاقة و لون فريدين يمثلان جوهره",
+"score": 0.89
+},
+"Leadership & Independence": {
+"ar": "استقلال القيادة",
+"score": 1.0
+},
+"Stability & Foundation": {
+"ar": "مؤسسة الاستقرار",
+"score": 1.0
+},
+"Freedom & Adventure": {
+"ar": "الحرية والمغامرة",
+"score": 1.0
+},
+"How your numbers work together to guide your life": {
+"ar": "كيف تعمل أعدادكم معا لتوجيه حياتكم",
+"score": 0.83
+},
+"Understanding the relationship between all your numbers": {
+"ar": "فهم العلاقة بين كل أرقامك",
+"score": 1.0
+},
+"Where you are in your 9-year cycle of growth": {
+"ar": "حيث أنت في دورة النمو التسعة سنوات",
+"score": 1.0
+},
+"Current Focus": {
+"ar": "التركيز الحالي",
+"score": 1.0
+},
+"Life Lessons": {
+"ar": "دروس الحياة",
+"score": 1.0
+},
+"Leadership, clarity, decisive action, inspiring others": {
+"ar": "القيادة، والوضوح، والعمل الحاسم، وحفز الآخرين",
+"score": 0.83
+},
+"Avoid arrogance. True light serves others, not the ego.": {
+"ar": "تجنب الغطرسة الضوء الحقيقي يخدم الآخرين، وليس الغرور.",
+"score": 0.75
+},
+"Learning, teaching, writing, communication, business, contracts": {
+"ar": "التعلم، التدريس، الكتابة، الاتصال، الأعمال التجارية، العقود",
+"score": 1.0
+},
+"Relationships, art, beauty, creativity, abundance, harmony, marriage": {
+"ar": "العلاقات، الفن، الجمال، الإبداع، الوفرة، الوئام، الزواج",
+"score": 0.86
+},
+"Growth, expansion, generosity, teaching, higher learning, travel, prosperity": {
+"ar": "النمو والتوسع والسخاء والتعليم والتعلم العالي والسفر والازدهار",
+"score": 0.75
+},
+"And advised each other to truth and advised each other to patience": {
+"ar": "ونصح بعضنا بالحقيقة ونصح بعضنا بالصبر",
+"score": 0.8
+},
+"Saturn hours teach that true wisdom (ḥikma) emerges through patience (ṣabr) and commitment to truth.": {
+"ar": "وتعلم ساعات العودة أن الحكمة الحقيقية (أيكما) تظهر من خلال الصبر والالتزام بالحقيقة.",
+"score": 0.75
+},
+"Discipline, structure, long-term planning, ancestral wisdom, mastery": {
+"ar": "الانضباط، الهيكل، التخطيط الطويل الأجل، حكمة الأجداد، الماجستير",
+"score": 0.75
+},
+"Gold": {
+"ar": "الذهب",
+"score": 1.0
+},
+"Silver": {
+"ar": "سيلفر",
+"score": 1.0
+},
+"During lunar hours, especially at night": {
+"ar": "خلال ساعات القمر خاصة في الليل",
+"score": 0.8
+},
+"Tuesday mornings or first hour after sunrise": {
+"ar": "صباح الثلاثاء أو الساعة الأولى بعد شروق الشمس",
+"score": 0.83
+},
+"Energy, conflict, transformation": {
+"ar": "الطاقة، الصراع، التحول",
+"score": 1.0
+},
+"Warriors, surgeons, those who act": {
+"ar": "المحاربون، الجراحون، أولئك الذين يعملون",
+"score": 0.8
+},
+"Learning, commerce, travel, language": {
+"ar": "التعلم، والتجارة، والسفر، واللغة",
+"score": 0.75
+},
+"Growth, prosperity, law, philosophy": {
+"ar": "النمو والازدهار والقانون والفلسفة",
+"score": 1.0
+},
+"Judges, teachers, religious leaders": {
+"ar": "القضاة والمعلمون والزعماء الدينيون",
+"score": 1.0
+},
+"Friday afternoons, for harmony and peace": {
+"ar": "بعد ظهر يوم الجمعة، من أجل الوئام والسلام",
+"score": 1.0
+},
+"Love, beauty, art, relationships": {
+"ar": "الحب والجمال والفن والعلاقات",
+"score": 1.0
+},
+"Artists, lovers, peacemakers": {
+"ar": "الفنانون، العشاق، صانعو السلام",
+"score": 1.0
+},
+"Lead": {
+"ar": "الرصاص",
+"score": 1.0
+},
+"Perspective": {
+"ar": "المنظور",
+"score": 1.0
+},
+"This pattern traditionally shows a working relationship that starts smoothly but can plateau without new goals.": {
+"ar": "ويظهر هذا النمط تقليديا علاقة عمل تبدأ بسلاسة ولكنها يمكن أن تضرب بدون أهداف جديدة.",
+"score": 0.85
+},
+"Traditionally considered a favorable pattern — natural cooperation and mutual understanding flow more easily than opposition.": {
+"ar": "وعادة ما يعتبر نمطا صالحا - التعاون الطبيعي والتفاهم المتبادل يتدفقان بسهولة أكبر من المعارضة.",
+"score": 0.77
+},
+"Traditionally considered a favorable pattern for family bonds — natural cooperation and understanding tend to prevail over conflict.": {
+"ar": "ويغلب أن يسود التعاون والتفاهم الطبيعيان على الصراع، ويُعتبران عادة نمطاً صالحاً للسندات الأسرية.",
+"score": 0.77
+},
+"Traditionally associated with difficulty — tension, frequent disagreements, and pressure may arise, requiring patience and discipline.": {
+"ar": "وقد تنشأ، عادة ما ترتبط بالصعوبة - التوتر، والخلافات المتكررة، والضغط، مما يتطلب الصبر والانضباط.",
+"score": 0.83
+},
+"Professional partnerships under this pattern often hit friction over resources, deadlines, or decisions. Clear agreements and structured communication reduce the strain.": {
+"ar": "وكثيرا ما تصطدم الشراكات المهنية في إطار هذا النمط بالاحتكاك بالموارد أو المواعيد النهائية أو القرارات. فالاتفاقات الواضحة والتواصل المنظم يقلل من الضغط.",
+"score": 0.76
+},
+"Traditionally seen as a heavy pattern — health concerns and emotional strain may be present, especially without emotional maturity.": {
+"ar": "وعادة ما ينظر إليها على أنها نمط ثقيل - قد تكون الشواغل الصحية والإجهاد العاطفي حاضرة، لا سيما بدون النضج العاطفي.",
+"score": 0.85
+},
+"Traditionally seen as a heavy path for marriage. Health concerns and emotional strain may be present.": {
+"ar": "يُنظر إليه تقليدياً على أنه طريق ثقيل للزواج. قد تكون الشواغل الصحية والإجهاد العاطفي حاضرة.",
+"score": 0.82
+},
+"Traditionally seen as a heavy pattern — stress or burnout risk may surface within the working relationship.": {
+"ar": "وعادة ما ينظر إليها على أنها نمط ثقيل - أو خطر الإجهاد أو الحرق قد يبرز في إطار علاقة العمل.",
+"score": 0.75
+},
+"This bond often carries a sense of weight — health, stress, or emotional burden tend to surface. Maturity and calm help carry it well.": {
+"ar": "وغالبا ما يكون لهذه الرابطة إحساس بالوزن - الصحة أو الإجهاد أو الأعباء العاطفية يميل إلى الظهور. النضج والهدوء يساعدان على حملها بشكل جيد",
+"score": 0.75
+},
+"Traditionally considered very favorable — trust, harmony, and mutual growth tend to flow naturally in this friendship.": {
+"ar": "فالثقة والانسجام والنمو المتبادل، التي تعتبر عادة مفضلة جدا، تميل إلى التدفق الطبيعي في هذه الصداقة.",
+"score": 0.75
+},
+"Traditionally considered very favorable — harmony and productive growth tend to flow naturally in this partnership.": {
+"ar": "فالانسجام والنمو الإنتاجي اللذين يعتبران تقليدياً صالحين جداً - يميلان إلى التدفق الطبيعي في هذه الشراكة.",
+"score": 0.82
+},
+"Working relationships here can involve power struggles or clashing egos. Clear roles and mutual respect prevent recurring conflict.": {
+"ar": "علاقات العمل هنا يمكن أن تنطوي على صراعات السلطة أو تصادم الغرور. فالأدوار الواضحة والاحترام المتبادل يحولان دون نشوب نزاعات متكررة.",
+"score": 1.0
+},
+"A strong working alliance — early friction or slow starts often lead to a highly effective, trusted partnership. Give it time to align.": {
+"ar": "وكثيرا ما يؤدي وجود تحالف عمل قوي - احتكاك مبكر أو بداية بطيئة إلى إقامة شراكة تتسم بالفعالية العالية والثقة. أعطه الوقت للمواءمة.",
+"score": 0.75
+},
+"Traditionally very good for the long term — early awkwardness is common, but patience often builds a lasting friendship.": {
+"ar": "وعادة ما يكون ذلك جيدا جدا على المدى الطويل - فالحرج المبكر أمر شائع، ولكن الصبر كثيرا ما يبني صداقة دائمة.",
+"score": 0.86
+},
+"Traditionally very good for the long term — early distance is common, but the family bond tends to deepen with time.": {
+"ar": "وعادة ما يكون ذلك جيدا جدا بالنسبة للأجل الطويل - فالمسافة المبكرة شائعة، ولكن رابطة الأسرة تميل إلى التعمق مع الوقت.",
+"score": 0.86
+},
+"The Source of Peace": {
+"ar": "مصدر السلام",
+"score": 1.0
+},
+"The One whose knowledge encompasses all things, past, present, and future.": {
+"ar": "الشخص الذي تشمل معرفته كل الأشياء الماضي والحاضر والمستقبل",
+"score": 0.78
+},
+"The Judge": {
+"ar": "القاضي",
+"score": 1.0
+},
+"The Just": {
+"ar": "فقط",
+"score": 1.0
+},
+"The Witness": {
+"ar": "الشاهد",
+"score": 1.0
+},
+"The Protecting Friend": {
+"ar": "\"الصديق المحمي\"",
+"score": 1.0
+},
+"Recite 56 times when starting something new and seeking a strong, blessed beginning. For a shorter practice, 33 or 99 repetitions is also a widely used count.": {
+"ar": "نكرر 56 مرة عندما نبدأ شيئا جديدا ونسعى إلى بداية قوية ومباركة. وبالنسبة لممارسة أقصر، فإن 33 أو 99 تكراراً هو أيضاً عدد مستعمل على نطاق واسع.",
+"score": 0.76
+},
+"The One of perfect nobility, generosity, and glory combined in absolute measure.": {
+"ar": "واحد من النبلة المثالية، الكرم، والمجد مجتمعة في القياس المطلق.",
+"score": 0.88
+},
+"The One": {
+"ar": "واحد",
+"score": 1.0
+},
+"The Unique": {
+"ar": "اليونيك",
+"score": 1.0
+},
+"Recite 846 times for patience and trust when something you want is delayed. For a shorter practice, 33 or 99 repetitions is also a widely used count.": {
+"ar": "نكرر 846 مرة للصبر والثقة عندما يكون هناك شيء تريده قد تأخر وبالنسبة لممارسة أقصر، فإن 33 أو 99 تكراراً هو أيضاً عدد مستعمل على نطاق واسع.",
+"score": 0.8
+},
+"The Hidden": {
+"ar": "المخفي",
+"score": 1.0
+},
+"The Governor": {
+"ar": "الحاكم",
+"score": 1.0
+},
+"Owner of All Sovereignty": {
+"ar": "مالك جميع السيادة",
+"score": 1.0
+},
+"The Gatherer": {
+"ar": "\"الغاثيرر\"",
+"score": 1.0
+},
+"Recite 1001 times for perspective when facing hardship, trusting the wisdom behind it. For a shorter practice, 33 or 99 repetitions is also a widely used count.": {
+"ar": "نكرر 1001 مرة للمنظور عند مواجهة المشقة، ونثق بالحكمة وراء ذلك. وبالنسبة لممارسة أقصر، فإن 33 أو 99 تكراراً هو أيضاً عدد مستعمل على نطاق واسع.",
+"score": 0.81
+},
+"The One from whom all true benefit flows, in this life and the next.": {
+"ar": "الشخص الذي تتدفق منه كل الفوائد الحقيقية في هذه الحياة والقادمة",
+"score": 0.75
+},
+"cheikh amadou": {
+"ar": "تشيخ أمادو",
+"score": 1.0
+},
+"Meeting with leaders or authorities": {
+"ar": "اجتماع مع القادة أو السلطات",
+"score": 1.0
+},
+"Seeking clarity on important matters": {
+"ar": "السعي إلى الوضوح بشأن المسائل الهامة",
+"score": 0.75
+},
+"The All-Hearing - Who hears all prayers": {
+"ar": "كل السمع الذي يسمع كل الصلاة",
+"score": 0.75
+},
+"Emotional healing and reconciliation": {
+"ar": "الشفاء العاطفي والمصالحة",
+"score": 1.0
+},
+"Intuitive practices and dream work": {
+"ar": "الممارسات الملائمة والعمل الأحلامي",
+"score": 0.75
+},
+"Water-related rituals (ablution, bathing)": {
+"ar": "الطقوس المتصلة بالمياه (الحل، الاستحمام)",
+"score": 0.8
+},
+"Learning new skills": {
+"ar": "تعلم المهارات الجديدة",
+"score": 1.0
+},
+"Mercury facilitates learning": {
+"ar": "الزئبق ييسر التعلُّم",
+"score": 1.0
+},
+"Beauty": {
+"ar": "الجمال",
+"score": 1.0
+},
+"Attraction": {
+"ar": "الجذب",
+"score": 1.0
+},
+"Art": {
+"ar": "الفن",
+"score": 1.0
+},
+"Action": {
+"ar": "الإجراء",
+"score": 1.0
+},
+"Overcoming addiction during Mars hour": {
+"ar": "تجاوز الإدمان خلال ساعة المريخ",
+"score": 0.8
+},
+"Time": {
+"ar": "الوقت",
+"score": 1.0
+},
+"Meditation": {
+"ar": "التأمل",
+"score": 1.0
+},
+"Deep study": {
+"ar": "دراسة عميقة",
+"score": 1.0
+},
+"Social activities": {
+"ar": "الأنشطة الاجتماعية",
+"score": 1.0
+},
+"Natural leadership": {
+"ar": "القيادة الطبيعية",
+"score": 1.0
+},
+"Courage to start new projects": {
+"ar": "التشجيع على بدء مشاريع جديدة",
+"score": 0.75
+},
+"Good in crisis situations": {
+"ar": "جيدة في حالات الأزمات",
+"score": 1.0
+},
+"Practice patience with slower processes": {
+"ar": "ممارسة الصبر مع بطء العمليات",
+"score": 0.75
+},
+"Count to 10 before big decisions": {
+"ar": "عد إلى 10 قبل اتخاذ القرارات الكبيرة",
+"score": 0.75
+},
+"Try calming activities like walking": {
+"ar": "محاولة تهدئة الأنشطة مثل المشي",
+"score": 1.0
+},
+"Business leadership": {
+"ar": "قيادة الأعمال",
+"score": 1.0
+},
+"Sales and business development": {
+"ar": "تنمية المبيعات والأعمال التجارية",
+"score": 1.0
+},
+"Security and emergency services": {
+"ar": "خدمات الأمن والطوارئ",
+"score": 1.0
+},
+"Operations management": {
+"ar": "إدارة العمليات",
+"score": 1.0
+},
+"Logistics coordination": {
+"ar": "التنسيق اللوجستي",
+"score": 1.0
+},
+"Project management": {
+"ar": "إدارة المشروع",
+"score": 1.0
+},
+"Crisis management roles": {
+"ar": "أدوار إدارة الأزمات",
+"score": 1.0
+},
+"Highly repetitive office work": {
+"ar": "العمل المكتبي المتكرر بدرجة عالية",
+"score": 0.75
+},
+"Deep thinker": {
+"ar": "المفكر العميق",
+"score": 1.0
+},
+"Strong emotional intelligence": {
+"ar": "الذكاء العاطفي القوي",
+"score": 1.0
+},
+"Natural at supporting others": {
+"ar": "الطبيعي في دعم الآخرين",
+"score": 1.0
+},
+"Good listener and counselor": {
+"ar": "مستمع جيد ومستشار",
+"score": 1.0
+},
+"May avoid confrontation when needed": {
+"ar": "قد تتجنب المواجهة عند الحاجة",
+"score": 1.0
+},
+"Take time alone to recharge": {
+"ar": "خذ وقتك لوحدك لإعادة الشحن",
+"score": 0.75
+},
+"Social work and community development": {
+"ar": "العمل الاجتماعي والتنمية المجتمعية",
+"score": 1.0
+},
+"Customer care and support": {
+"ar": "رعاية ودعم العملاء",
+"score": 1.0
+},
+"Hospitality and guest relations": {
+"ar": "علاقات الضيافة والضيوف",
+"score": 1.0
+},
+"Creative arts and writing": {
+"ar": "الفنون الإبداعية والكتابة",
+"score": 1.0
+},
+"High-pressure sales environments": {
+"ar": "بيئات المبيعات العالية الضغط",
+"score": 1.0
+},
+"Hot & Wet": {
+"ar": "مبتلة ساخنة",
+"score": 1.0
+},
+"Quick thinker": {
+"ar": "مفكر سريع",
+"score": 1.0
+},
+"Good at connecting people and ideas": {
+"ar": "جيد في ربط الناس والأفكار",
+"score": 1.0
+},
+"Can talk more than act": {
+"ar": "يمكن أن نتحدث أكثر من مجرد تمثيل",
+"score": 0.8
+},
+"Use lists and structure to stay focused": {
+"ar": "استخدام القوائم والهيكل لتبقى مركزة",
+"score": 0.8
+},
+"Finish one thing before starting another": {
+"ar": "أنهي شيئاً واحداً قبل أن أبدأ آخر",
+"score": 0.83
+},
+"Take breaks from screens and stimulation": {
+"ar": "خذ راحة من الشاشات و المحاكاة",
+"score": 0.75
+},
+"Set clear priorities for the day": {
+"ar": "تحديد أولويات واضحة لهذا اليوم",
+"score": 0.75
+},
+"IT and software development": {
+"ar": "تطوير تكنولوجيا المعلومات والبرامجيات",
+"score": 1.0
+},
+"Digital marketing and social media": {
+"ar": "التسويق الرقمي ووسائط الإعلام الاجتماعية",
+"score": 1.0
+},
+"Coordination and project support": {
+"ar": "التنسيق ودعم المشاريع",
+"score": 1.0
+},
+"Public relations and communications": {
+"ar": "العلاقات العامة والاتصالات",
+"score": 1.0
+},
+"Research and innovation roles": {
+"ar": "أدوار البحث والابتكار",
+"score": 1.0
+},
+"Isolated roles with minimal human contact": {
+"ar": "الأدوار المعزولة ذات الحد الأدنى من الاتصال البشري",
+"score": 0.8
+},
+"Reliable and consistent": {
+"ar": "موثوق بها واتساق",
+"score": 1.0
+},
+"Strong memory and attention to detail": {
+"ar": "الذاكرة القوية والاهتمام بالتفاصيل",
+"score": 1.0
+},
+"Good with details and systems": {
+"ar": "جيد مع التفاصيل والنظم",
+"score": 1.0
+},
+"Builds solid foundations": {
+"ar": "بناء أسس صلبة",
+"score": 1.0
+},
+"Can be slow to adapt to change": {
+"ar": "يمكن أن يكون بطيئا للتكيف مع التغيير",
+"score": 0.75
+},
+"Can resist new ideas or methods": {
+"ar": "يمكن أن يقاوم الأفكار أو الأساليب الجديدة",
+"score": 1.0
+},
+"Try small changes regularly": {
+"ar": "إجراء تغييرات صغيرة بانتظام",
+"score": 0.75
+},
+"Welcome new perspectives gently": {
+"ar": "مرحباً بالمنظورات الجديدة بلطف",
+"score": 1.0
+},
+"Take walks in nature to refresh": {
+"ar": "تمشي في الطبيعة لتنعش",
+"score": 0.75
+},
+"Engineering and technical roles": {
+"ar": "الأدوار الهندسية والتقنية",
+"score": 1.0
+},
+"Supply chain and procurement": {
+"ar": "سلسلة الإمداد والمشتريات",
+"score": 1.0
+},
+"Construction and project delivery": {
+"ar": "التشييد وإنجاز المشاريع",
+"score": 1.0
+},
+"Real estate and property management": {
+"ar": "إدارة العقارات والممتلكات",
+"score": 1.0
+},
+"Quality assurance and compliance": {
+"ar": "ضمان الجودة والامتثال",
+"score": 1.0
+},
+"Manufacturing and production": {
+"ar": "التصنيع والإنتاج",
+"score": 1.0
+},
+"Environments with zero processes or systems": {
+"ar": "البيئات ذات العمليات أو النظم الصفرية",
+"score": 0.75
+},
+"Other hot, nourishing meals": {
+"ar": "وجبات أخرى ساخنة ومغذية",
+"score": 0.75
+},
+"Helping with something needed for their training": {
+"ar": "المساعدة في شيء ما يحتاجه لتدريبهم",
+"score": 0.8
+},
+"Providing practical or financial assistance": {
+"ar": "تقديم المساعدة العملية أو المالية",
+"score": 0.75
+},
+"Encouraging and supporting them in their sporting activities": {
+"ar": "تشجيعهم ودعمهم في أنشطتهم الرياضية",
+"score": 0.83
+},
+"A sheep": {
+"ar": "خروف",
+"score": 1.0
+},
+"Cooking oil": {
+"ar": "زيت الطبخ",
+"score": 1.0
+},
+"Financial assistance": {
+"ar": "المساعدة المالية",
+"score": 1.0
+},
+"Food": {
+"ar": "الغذاء",
+"score": 1.0
+},
+"Medical or other essential expenses": {
+"ar": "المصروفات الطبية أو غيرها من النفقات الأساسية",
+"score": 0.75
+},
+"Giving a chicken of different colours, particularly a combination of black, white and red, to someone who can benefit from it.": {
+"ar": "إعطاء دجاجة من ألوان مختلفة، لا سيما مزيج من اللون الأسود والأبيض والأحمر، لشخص يمكن أن يستفيد منه.",
+"score": 0.77
+},
+"Notebooks": {
+"ar": "دفتر ملاحظات",
+"score": 1.0
+},
+"Pens": {
+"ar": "القلم",
+"score": 1.0
+},
+"Other basic school supplies": {
+"ar": "لوازم مدرسية أساسية أخرى",
+"score": 1.0
+},
+"Books": {
+"ar": "الكتب",
+"score": 1.0
+},
+"Writing materials": {
+"ar": "مواد الكتابة",
+"score": 1.0
+},
+"Educational resources": {
+"ar": "الموارد التعليمية",
+"score": 1.0
+},
+"Helping a Family in Need": {
+"ar": "مساعدة عائلة في حاجة",
+"score": 1.0
+},
+"Regularly helping a family in need. The support can be given from time to time, according to the family's needs and one's ability to help.": {
+"ar": "مساعدة عائلة محتاجة بشكل منتظم يمكن تقديم الدعم من وقت لآخر وفقاً لاحتياجات العائلة وقدرة المرء على المساعدة",
+"score": 0.85
+},
+"Paying for fish or other food": {
+"ar": "دفع ثمن السمك أو غيره من الأغذية",
+"score": 0.75
+},
+"Providing financial assistance when needed": {
+"ar": "تقديم المساعدة المالية عند الحاجة",
+"score": 0.8
+},
+"Any suitable milk that can be given to children": {
+"ar": "أي حليب مناسب يمكن إعطاؤه للأطفال",
+"score": 0.83
+},
+"White ram — raised to maturity, then slaughtered, divided and distributed": {
+"ar": "الترم الأبيض - الذي يرتفع إلى النضج، ثم يذبح ويقسم ويوزع",
+"score": 0.75
+},
+"Money": {
+"ar": "المال",
+"score": 1.0
+},
+"3 chickens — black, white and red": {
+"ar": "٣ دجاج - أسود وأبيض وأحمر",
+"score": 1.0
+},
+"Clothing": {
+"ar": "الملابس",
+"score": 1.0
+},
+"Animals": {
+"ar": "الحيوانات",
+"score": 1.0
+},
+"9 pieces of bread": {
+"ar": "9 قطع خبز",
+"score": 1.0
+},
+"Recommended day: Thursday": {
+"ar": "اليوم الموصى به: الخميس",
+"score": 1.0
+},
+"Helping Labourers and Low-Income Workers": {
+"ar": "عمال المساعدة والعمال ذوي الدخل المنخفض",
+"score": 0.8
+},
+"Construction workers": {
+"ar": "عمال البناء",
+"score": 1.0
+},
+"Other low-income workers": {
+"ar": "العمال ذوو الدخل المنخفض الآخرين",
+"score": 1.0
+},
+"Helping a Widow and Her Children": {
+"ar": "مساعدة الأرملة وأطفالها",
+"score": 1.0
+},
+"Financial assistance for the widow": {
+"ar": "المساعدة المالية للأرملة",
+"score": 1.0
+},
+"Supporting their education": {
+"ar": "دعم تعليمهم",
+"score": 1.0
+},
+"Supporting widows and their children": {
+"ar": "دعم الأرامل وأطفالهن",
+"score": 1.0
+},
+"The amount can be determined according to one's ability and circumstances. The money should be given sincerely to someone or a cause that can benefit from it.": {
+"ar": "يمكن تحديد المبلغ وفقاً لقدرة الشخص وظروفه وينبغي أن يُعطى المال بإخلاص لشخص أو سبب يمكن أن يستفيد منه.",
+"score": 0.8
+},
+"Supporting a Community or Group": {
+"ar": "دعم الجماعة أو المجموعة",
+"score": 1.0
+},
+"A voluntary group": {
+"ar": "مجموعة طوعية",
+"score": 1.0
+},
+"A community project": {
+"ar": "مشروع مجتمعي",
+"score": 1.0
+},
+"Giving water to someone who needs or can benefit from it.": {
+"ar": "إعطاء الماء لشخص يحتاجه أو يمكنه الاستفادة منه",
+"score": 0.86
+},
+"Money — according to one's ability": {
+"ar": "المال - وفقاً لقدرة الشخص",
+"score": 0.8
+},
+"Helping Someone Experiencing Mental Health Difficulties": {
+"ar": "مساعدة شخص ما يختبر صعوبات الصحة العقلية",
+"score": 0.83
+},
+"Helping with their basic needs": {
+"ar": "المساعدة في تلبية احتياجاتهم الأساسية",
+"score": 0.75
+},
+"A person engaged in religious study or service": {
+"ar": "الشخص المنخرط في الدراسة أو الخدمة الدينية",
+"score": 0.8
+},
+"More information": {
+"ar": "المزيد من المعلومات",
+"score": 1.0
+},
+"Mediation": {
+"ar": "الوساطة",
+"score": 1.0
+},
+"Organization": {
+"ar": "المنظمة",
+"score": 1.0
+},
+"The Judge, The Arbitrator": {
+"ar": "القاضي، المحكم",
+"score": 1.0
+},
+"The Absolute Truth": {
+"ar": "الحقيقة المطلقة",
+"score": 1.0
+},
+"The Only One": {
+"ar": "الوحيد",
+"score": 1.0
+},
+"The Governor, The Protecting Master": {
+"ar": "الحاكم، المعلم المحمي",
+"score": 1.0
+},
+"The Owner of All Sovereignty": {
+"ar": "مالك كل السيادة",
+"score": 1.0
+},
+"An Noor": {
+"ar": "\"نور\"",
+"score": 1.0
+},
+"The Unique, The One and Only": {
+"ar": "اليونيك، واحد وفقط",
+"score": 1.0
+},
+"The Rich, The Self-Sufficient": {
+"ar": "\"الريتش\", \"المكتفية ذاتيا\"",
+"score": 1.0
+},
+"Yusuf": {
+"ar": "يوسف",
+"score": 1.0
+},
+"Ibrahim": {
+"ar": "إبراهيم",
+"score": 1.0
+},
+"Muhammad": {
+"ar": "محمد",
+"score": 1.0
+},
+"Giving food to people in need.": {
+"ar": "إعطاء الطعام للأشخاص المحتاجين",
+"score": 0.75
+},
+"Clothes.": {
+"ar": "ملابس",
+"score": 1.0
+},
+"Soap.": {
+"ar": "صابون",
+"score": 1.0
+},
+"Perfume.": {
+"ar": "عطر",
+"score": 1.0
+},
+"Helping an elderly person with their needs.": {
+"ar": "مساعدة شخص مسن مع احتياجاته.",
+"score": 0.8
+},
+"Giving water to those in need.": {
+"ar": "إعطاء الماء لمن يحتاجونه",
+"score": 0.75
+},
+"Safar": {
+"ar": "سافار",
+"score": 1.0
+},
+"Helping poor families.": {
+"ar": "مساعدة الأسر الفقيرة.",
+"score": 1.0
+},
+"Providing food, money, or other useful assistance.": {
+"ar": "توفير الغذاء أو المال أو غير ذلك من المساعدة المفيدة.",
+"score": 0.83
+},
+"Helping a widow.": {
+"ar": "مساعدة أرملة",
+"score": 1.0
+},
+"Providing kitchen and food supplies.": {
+"ar": "توفير مطبخ وإمدادات غذائية",
+"score": 0.75
+},
+"Helping poor labourers and workers.": {
+"ar": "مساعدة العمال والعمال الفقراء.",
+"score": 0.75
+},
+"Help anyone who is in need.": {
+"ar": "مساعدة أي شخص في حاجة.",
+"score": 0.75
+},
+"Help someone quietly without seeking recognition or praise.": {
+"ar": "مساعدة شخص ما بهدوء دون السعي للاعتراف أو الثناء.",
+"score": 1.0
+},
+"Giving meals to poor families.": {
+"ar": "تقديم وجبات إلى الأسر الفقيرة.",
+"score": 0.75
+},
+"Helping and supporting the elderly, especially those who are alone or in need.": {
+"ar": "مساعدة ودعم المسنين، ولا سيما أولئك الذين هم بمفردهم أو في حاجة إليهم.",
+"score": 0.88
+},
+"Giving clean, good-quality clothing.": {
+"ar": "أعطى ملابس نظيفة و جيدة النوعية",
+"score": 0.8
+},
+"Helping people have suitable clothes that they can wear with dignity.": {
+"ar": "مساعدة الناس على الحصول على الملابس المناسبة التي يمكنهم إرتدائها بكرامة.",
+"score": 0.78
+},
+"Helping poor and needy people with food, money, clothing, or other necessities.": {
+"ar": "مساعدة الفقراء والمحتاجين على الحصول على الغذاء أو المال أو الملابس أو غير ذلك من الضرورات.",
+"score": 0.89
+},
+"Person to Person": {
+"ar": "الشخص إلى الشخص",
+"score": 1.0
+},
+"By Names": {
+"ar": "الأسماء",
+"score": 1.0
+},
+"End date must be after start date.": {
+"ar": "يجب أن يكون تاريخ نهاية بعد تاريخ بدء التشغيل.",
+"score": 1.0
+},
+"Business / Contracts": {
+"ar": "الأعمال التجارية/التعاقدات",
+"score": 1.0
+},
+"Medical Treatment": {
+"ar": "العلاج الطبي",
+"score": 1.0
+},
+"Education / Studies": {
+"ar": "التعليم/ الدراسات",
+"score": 1.0
+},
+"Find Best Dates": {
+"ar": "أعثر على أفضل التواريخ",
+"score": 1.0
+},
+"I understand — let's begin": {
+"ar": "أنا أفهم... دعنا نبدأ",
+"score": 0.8
+},
+"Time (optional)": {
+"ar": "الوقت (الاختياري)",
+"score": 1.0
+},
+"Use my location": {
+"ar": "استخدم موقعي",
+"score": 1.0
+},
+"Calculated for Mecca until you share your location.": {
+"ar": "محسوبة لـ(مكة) حتى تتشاركي موقعك",
+"score": 0.8
+},
+"Check this date": {
+"ar": "تحقق من هذا التاريخ",
+"score": 1.0
+},
+"From": {
+"ar": "من",
+"score": 1.0
+},
+"To": {
+"ar": "إلى",
+"score": 1.0
+},
+"Showing the best available option instead:": {
+"ar": "عرض أفضل الخيارات المتاحة بدلاً من ذلك:",
+"score": 0.8
+},
+"AH": {
+"ar": "AH",
+"score": 1.0
+},
+"Au": {
+"ar": "Au",
+"score": 1.0
+},
+"Or in Arabic": {
+"ar": "أو باللغة العربية",
+"score": 1.0
+},
+"Mother's name in Arabic": {
+"ar": "اسم الأم بالعربية",
+"score": 0.75
+},
+"Your name reveals your conscious self": {
+"ar": "اسمك يكشف عن نفسك الواعية",
+"score": 1.0
+},
+"Unable to calculate destiny. Please enter a name.": {
+"ar": "غير قادر على حساب القدر رجاءً إدخلْ a اسم.",
+"score": 0.83
+},
+"YOUR Personal Element": {
+"ar": "عنصرك الشخصي",
+"score": 1.0
+},
+"Your Desire": {
+"ar": "ديزيري",
+"score": 1.0
+},
+"Heart aspirations": {
+"ar": "تطلعات القلب",
+"score": 1.0
+},
+"How you appear - the first impression you give to others": {
+"ar": "كيف تظهر الانطباع الأول الذي تعطيه للآخرين",
+"score": 0.83
+},
+"First impression": {
+"ar": "الانطباع الأول",
+"score": 1.0
+},
+"Social image": {
+"ar": "الصورة الاجتماعية",
+"score": 1.0
+},
+") shows what your heart seeks. Your Persona (": {
+"ar": ") يظهر ما يسعى إليه قلبك شخصيتك (",
+"score": 0.8
+},
+") represents how the world sees you.": {
+"ar": ") تمثل كيف يراك العالم",
+"score": 1.0
+},
+"), but we're having trouble fetching it.": {
+"ar": "), لكننا نواجه مشكلة في جلبها",
+"score": 0.83
+},
+"English Translation": {
+"ar": "الترجمة التحريرية الإنكليزية",
+"score": 1.0
+},
+"Educational Materials": {
+"ar": "المواد التعليمية",
+"score": 1.0
+},
+"Realistic Expectation:": {
+"ar": "التوقعات الواقعية:",
+"score": 1.0
+},
+"• You \"get\" each other intuitively": {
+"ar": "• \"أنتم \"احصلوا على بعضكم البعض بشكل مناسب",
+"score": 0.75
+},
+"• Excellent long-term potential": {
+"ar": "• إمكانات طويلة الأجل ممتازة",
+"score": 1.0
+},
+"• Seek professional guidance if needed": {
+"ar": "• التماس التوجيه المهني إذا لزم الأمر",
+"score": 0.8
+},
+"š¨ Very Difficult": {
+"ar": "š¨ صعب جداً",
+"score": 1.0
+},
+"• Are you both fully committed to growth?": {
+"ar": "• هل كلاكما مُلتزمان تماماً بالنمو؟",
+"score": 1.0
+},
+"• Professional counseling is strongly recommended": {
+"ar": "• يوصى بشدة بتقديم المشورة المهنية",
+"score": 0.75
+},
+"Unable to calculate compatibility. Please ensure both names are entered.": {
+"ar": "غير قادر على حساب التوافق يرجى ضمان إدخال الاسمين معا.",
+"score": 0.75
+},
+"Daily Life Together": {
+"ar": "الحياة اليومية معا",
+"score": 1.0
+},
+"Growth Areas": {
+"ar": "مناطق النمو",
+"score": 1.0
+},
+"Red": {
+"ar": "أحمر",
+"score": 1.0
+},
+"Passion, vitality, courage, and transformation": {
+"ar": "العاطفة، الحيوية، الشجاعة، التحول",
+"score": 0.75
+},
+"Blue": {
+"ar": "الأزرق",
+"score": 1.0
+},
+"Yellow": {
+"ar": "أصفر",
+"score": 1.0
+},
+"Green": {
+"ar": "الأخضر",
+"score": 1.0
+},
+"Brown": {
+"ar": "براون",
+"score": 1.0
+},
+"Stability, grounding, growth, and practical wisdom": {
+"ar": "الاستقرار، الأساس، النمو، الحكمة العملية",
+"score": 0.8
+},
+"Use": {
+"ar": "الاستخدام",
+"score": 1.0
+},
+"accents to balance with your": {
+"ar": "اللهجات للتوازن مع",
+"score": 1.0
+},
+"Hot": {
+"ar": "ساخن",
+"score": 1.0
+},
+"Wet": {
+"ar": "رطبة",
+"score": 1.0
+},
+"Dry": {
+"ar": "جافة",
+"score": 1.0
+},
+"Initiative & courage": {
+"ar": "المبادرة المتعلقة بالشجاعة",
+"score": 1.0
+},
+"Serve with love. Reflect: \"The best of people are those who benefit others.\"": {
+"ar": "خدم بالحب. \"الأفضل من الناس هم من يستفيدون من الآخرين\"",
+"score": 0.78
+},
+"Help family, heal others, create beauty. Focus on home and community.": {
+"ar": "مساعدة الأسرة، شفاء الآخرين، خلق الجمال. ركزي على المنزل والمجتمع",
+"score": 0.78
+},
+") calls you to": {
+"ar": ") اتصل بك",
+"score": 1.0
+},
+"Integration comes when you align all three dimensions.": {
+"ar": "الاندماج يأتي عندما تنسق كل الأبعاد الثلاثة",
+"score": 0.86
+},
+"Mother's name cannot be empty": {
+"ar": "اسم الأم لا يمكن أن يكون فارغا",
+"score": 0.8
+},
+"roots. This creates dynamic tension - explains why you balance": {
+"ar": "الجذور هذا يخلق توتراً دينامياً يفسر لماذا تتوازن",
+"score": 0.86
+},
+"passion with depth or movement with stability": {
+"ar": "العاطفة مع العمق أو الحركة مع الاستقرار",
+"score": 0.75
+},
+"Round": {
+"ar": "الجولة",
+"score": 1.0
+},
+"Rond": {
+"ar": "روند",
+"score": 1.0
+},
+"You embrace with stability (round + flat). Grounded compassion - reliable emotional support with practical care. Creating safe, stable containers for others.": {
+"ar": "أنت تعانق بالاستقرار (حولاً و مسطحاً) الرأفة - الدعم العاطفي الموثوق به مع العناية العملية. إيجاد حاويات آمنة ومستقرة للآخرين.",
+"score": 0.75
+},
+"less than 1 minute": {
+"ar": "أقل من دقيقة واحدة",
+"score": 1.0
+},
+"1 minute": {
+"ar": "دقيقة واحدة",
+"score": 1.0
+},
+"1 hour": {
+"ar": "ساعة واحدة",
+"score": 1.0
+},
+"less than 1 hour": {
+"ar": "أقل من ساعة",
+"score": 1.0
+},
+"PM": {
+"ar": "PM",
+"score": 1.0
+},
+"AM": {
+"ar": "AM",
+"score": 1.0
+},
+"Today at": {
+"ar": "اليوم في",
+"score": 1.0
+},
+"Wait for": {
+"ar": "انتظر",
+"score": 1.0
+},
+"Take bold action": {
+"ar": "اتخاذ إجراءات جريئة",
+"score": 1.0
+},
+"Detailed planning": {
+"ar": "التخطيط التفصيلي",
+"score": 1.0
+},
+"Heavy physical work": {
+"ar": "العمل البدني الثقيل",
+"score": 1.0
+},
+"Quick decisions": {
+"ar": "اتخاذ قرارات سريعة",
+"score": 1.0
+},
+"Natural partnership": {
+"ar": "الشراكة الطبيعية",
+"score": 1.0
+},
+"Deep mutual understanding": {
+"ar": "الفهم المتبادل العميق",
+"score": 1.0
+},
+"Natural progression and growth together": {
+"ar": "التقدم والنمو الطبيعيان معا",
+"score": 0.75
+},
+"Learning through differences": {
+"ar": "التعلم من خلال الاختلافات",
+"score": 1.0
+},
+"Need external perspectives": {
+"ar": "الحاجة إلى منظورات خارجية",
+"score": 1.0
+},
+"Very different life approaches": {
+"ar": "نُهج مختلفة جداً",
+"score": 0.75
+},
+"Requires conscious effort to harmonize": {
+"ar": "يتطلب جهدا واعيا للمواءمة",
+"score": 1.0
+},
+"Seek promotions": {
+"ar": "التماس الترقيات",
+"score": 1.0
+},
+"Family matters": {
+"ar": "المسائل الأسرية",
+"score": 1.0
+},
+"Dream work": {
+"ar": "عمل الأحلام",
+"score": 1.0
+},
+"Short travel": {
+"ar": "السفر القصير الأجل",
+"score": 1.0
+},
+"Signing contracts if Mercury retrograde": {
+"ar": "التوقيع على عقود إذا كان الزئبق يتراجع",
+"score": 0.8
+},
+"Romance": {
+"ar": "الرومانسية",
+"score": 1.0
+},
+"Surgery": {
+"ar": "الجراحة",
+"score": 1.0
+},
+"Anger": {
+"ar": "الغضب",
+"score": 1.0
+},
+"Starting fights": {
+"ar": "بدء القتال",
+"score": 1.0
+},
+"Education": {
+"ar": "التعليم",
+"score": 1.0
+},
+"Hard work": {
+"ar": "العمل الشاق",
+"score": 1.0
+},
+"Dealing with authorities": {
+"ar": "التعامل مع السلطات",
+"score": 1.0
+},
+"New beginnings, planting seeds, independence": {
+"ar": "بدايات جديدة، زرع البذور، الاستقلال",
+"score": 0.8
+},
+"Partnerships, patience, cooperation": {
+"ar": "الشراكات والصبر والتعاون",
+"score": 1.0
+},
+"Creative expression, joy, social expansion": {
+"ar": "التعبير الإبداعي، الفرح، التوسع الاجتماعي",
+"score": 1.0
+},
+"Change, freedom, adventure, unexpected events": {
+"ar": "التغير، الحرية، المغامرة، الأحداث غير المتوقعة",
+"score": 1.0
+},
+"Responsibility, service, family matters, love": {
+"ar": "المسؤولية، الخدمة، شؤون الأسرة، الحب",
+"score": 0.8
+},
+"Transition": {
+"ar": "المرحلة الانتقالية",
+"score": 1.0
+},
+"Increases knowledge and clarity": {
+"ar": "زيادة المعرفة والوضوح",
+"score": 1.0
+},
+"No conflicts or confrontations today": {
+"ar": "لا نزاعات أو مواجهات اليوم",
+"score": 1.0
+},
+"Speak less, listen to silence": {
+"ar": "قلل من الكلام، والاستماع إلى الصمت",
+"score": 0.75
+},
+"Simple, single-focus tasks only": {
+"ar": "المهام البسيطة ذات التركيز الواحد فقط",
+"score": 0.8
+},
+"Small, contained activities only": {
+"ar": "أنشطة صغيرة لا تتضمن سوى أنشطة",
+"score": 0.75
+},
+"No relationship decisions today": {
+"ar": "لا قرارات علاقة اليوم",
+"score": 1.0
+},
+"Postpone long-term planning": {
+"ar": "التخطيط الطويل الأجل",
+"score": 0.75
+},
+"Trust the pause before discipline returns": {
+"ar": "ثق بالتوقف قبل عودة الانضباط",
+"score": 0.8
+},
+"Actions create immediate consequences": {
+"ar": "الإجراءات التي تؤدي إلى عواقب فورية",
+"score": 0.75
+},
+"What you give today takes time to return": {
+"ar": "ما تعطيه اليوم يستغرق وقتاً للعودة",
+"score": 0.83
+},
+"Plan carefully×results manifest in days": {
+"ar": "الخطة تُظهر بعناية نتائج الفحوصات في الأيام",
+"score": 0.8
+},
+"7-9 AM": {
+"ar": "7-9 AM",
+"score": 1.0
+},
+"Important decisions": {
+"ar": "قرارات هامة",
+"score": 1.0
+},
+"Strategic planning": {
+"ar": "التخطيط الاستراتيجي",
+"score": 1.0
+},
+"11 AM-1 PM": {
+"ar": "11 AM-1 PM",
+"score": 1.0
+},
+"Client meetings": {
+"ar": "اجتماعات العملاء",
+"score": 1.0
+},
+"Performance reviews": {
+"ar": "استعراضات الأداء",
+"score": 1.0
+},
+"Launch initiatives": {
+"ar": "مبادرات إطلاق",
+"score": 1.0
+},
+"Solar noon - maximum presence": {
+"ar": "الظهيرة الشمسية - الحد الأقصى للوجود",
+"score": 0.75
+},
+"3-5 PM": {
+"ar": "3-5 PM",
+"score": 1.0
+},
+"Delegation phase": {
+"ar": "مرحلة التفويض",
+"score": 1.0
+},
+"Review team work": {
+"ar": "عمل فريق الاستعراض",
+"score": 1.0
+},
+"6-8 PM": {
+"ar": "6-8 PM",
+"score": 1.0
+},
+"Reflect on achievements": {
+"ar": "تعكس الإنجازات",
+"score": 1.0
+},
+"Plan tomorrow": {
+"ar": "الخطة غداً",
+"score": 1.0
+},
+"Rest with dignity": {
+"ar": "الراحة بكرامة",
+"score": 1.0
+},
+"6-8 AM": {
+"ar": "6-8 AM",
+"score": 1.0
+},
+"Emotional clarity": {
+"ar": "الوضوح العاطفي",
+"score": 1.0
+},
+"Check in with feelings": {
+"ar": "تحقق من المشاعر",
+"score": 1.0
+},
+"Self-care routines": {
+"ar": "روتينات الرعاية الذاتية",
+"score": 1.0
+},
+"One-on-one conversations": {
+"ar": "محادثة واحدة على واحد",
+"score": 1.0
+},
+"Emotional support": {
+"ar": "الدعم العاطفي",
+"score": 1.0
+},
+"Cold logic": {
+"ar": "المنطق البارد",
+"score": 1.0
+},
+"Creative writing": {
+"ar": "الكتابة الإبداعية",
+"score": 1.0
+},
+"Art and music": {
+"ar": "الفن والموسيقى",
+"score": 1.0
+},
+"Dream interpretation": {
+"ar": "الترجمة الشفوية للأحلام",
+"score": 1.0
+},
+"7-9 PM": {
+"ar": "7-9 PM",
+"score": 1.0
+},
+"Light reading": {
+"ar": "قراءة الضوء",
+"score": 1.0
+},
+"Heavy meals": {
+"ar": "وجبات ثقيلة",
+"score": 1.0
+},
+"Physical challenges": {
+"ar": "التحديات المادية",
+"score": 1.0
+},
+"Negotiations": {
+"ar": "المفاوضات",
+"score": 1.0
+},
+"Push through obstacles": {
+"ar": "إدفعوا من خلال العقبات",
+"score": 1.0
+},
+"Power through resistance": {
+"ar": "القوة من خلال المقاومة",
+"score": 1.0
+},
+"New fights": {
+"ar": "قتالات جديدة",
+"score": 1.0
+},
+"Revenge planning": {
+"ar": "التخطيط للانتقام",
+"score": 1.0
+},
+"Plan communications": {
+"ar": "الاتصالات المتعلقة بالخطة",
+"score": 1.0
+},
+"Learn new skills": {
+"ar": "تعلم مهارات جديدة",
+"score": 1.0
+},
+"Communication peak": {
+"ar": "ذروة الاتصالات",
+"score": 1.0
+},
+"Presentations": {
+"ar": "العروض",
+"score": 1.0
+},
+"Networking": {
+"ar": "الربط الشبكي",
+"score": 1.0
+},
+"Silence": {
+"ar": "الصمت",
+"score": 1.0
+},
+"Quick meetings": {
+"ar": "الاجتماعات السريعة",
+"score": 1.0
+},
+"Social media": {
+"ar": "وسائط الإعلام الاجتماعية",
+"score": 1.0
+},
+"Deep focus": {
+"ar": "التركيز العميق",
+"score": 1.0
+},
+"Long commitments": {
+"ar": "الالتزامات الطويلة",
+"score": 1.0
+},
+"Integration time": {
+"ar": "وقت التكامل",
+"score": 1.0
+},
+"Review what you learned": {
+"ar": "استعراض ما تعلمته",
+"score": 1.0
+},
+"New information": {
+"ar": "معلومات جديدة",
+"score": 1.0
+},
+"Complex learning": {
+"ar": "التعلُّم المعقد",
+"score": 1.0
+},
+"8-10 AM": {
+"ar": "8-10 AM",
+"score": 1.0
+},
+"Expansion begins": {
+"ar": "يبدأ التوسع",
+"score": 1.0
+},
+"Think big picture": {
+"ar": "فكّر في الصورة الكبيرة",
+"score": 1.0
+},
+"Study philosophy": {
+"ar": "دراسة الفلسفة",
+"score": 1.0
+},
+"Opportunity window": {
+"ar": "نافذة الفرص",
+"score": 1.0
+},
+"Make connections": {
+"ar": "اصنعوا صلات",
+"score": 1.0
+},
+"Growth momentum": {
+"ar": "زخم النمو",
+"score": 1.0
+},
+"Travel planning": {
+"ar": "تخطيط السفر",
+"score": 1.0
+},
+"Cultural exploration": {
+"ar": "الاستكشاف الثقافي",
+"score": 1.0
+},
+"Fear-based decisions": {
+"ar": "القرارات القائمة على الخوف",
+"score": 1.0
+},
+"Self-care rituals": {
+"ar": "طقوس الرعاية الذاتية",
+"score": 1.0
+},
+"Relationship harmony": {
+"ar": "الوئام بين العلاقات",
+"score": 1.0
+},
+"Diplomatic meetings": {
+"ar": "الاجتماعات الدبلوماسية",
+"score": 1.0
+},
+"Collaborative work": {
+"ar": "العمل التعاوني",
+"score": 1.0
+},
+"Design work": {
+"ar": "أعمال التصميم",
+"score": 1.0
+},
+"Cooking": {
+"ar": "الطهي",
+"score": 1.0
+},
+"Analytical work": {
+"ar": "العمل التحليلي",
+"score": 1.0
+},
+"Enjoy good food": {
+"ar": "استمتعوا بالطعام الجيد",
+"score": 1.0
+},
+"Stress": {
+"ar": "الإجهاد",
+"score": 1.0
+},
+"Discipline peak": {
+"ar": "الذروة الانضباطية",
+"score": 1.0
+},
+"Build structures": {
+"ar": "هياكل البناء",
+"score": 1.0
+},
+"Focus on responsibilities": {
+"ar": "التركيز على المسؤوليات",
+"score": 1.0
+},
+"Play": {
+"ar": "\"لعبة\"",
+"score": 1.0
+},
+"Complex problem-solving": {
+"ar": "حل المشاكل المعقدة",
+"score": 1.0
+},
+"Quality control": {
+"ar": "مراقبة الجودة",
+"score": 1.0
+},
+"Professional duties": {
+"ar": "الواجبات المهنية",
+"score": 1.0
+},
+"Review time": {
+"ar": "وقت الاستعراض",
+"score": 1.0
+},
+"Plan improvements": {
+"ar": "التحسينات في الخطة",
+"score": 1.0
+},
+"Organize for tomorrow": {
+"ar": "نُظِّم غداً",
+"score": 1.0
+},
+"Channel carefully×physical activity helps, avoid conflicts and rushing": {
+"ar": "يساعد النشاط الفيزيائي الافتراضي بعناية على تجنب الصراعات والتسرع",
+"score": 0.75
+},
+"Social challenges×focus on self-care, solo creative work, gentle interactions": {
+"ar": "التحديات الاجتماعية: التركيز على الرعاية الذاتية، والعمل الإبداعي المنفرد، والتفاعلات اللطيفة",
+"score": 0.8
+},
+"Structure your week×discipline and planning bring good results": {
+"ar": "هيكل أسبوعك الـ 10 الانضباطي والتخطيط يجلب نتائج جيدة",
+"score": 0.86
+},
+"Channel warrior energy×protect boundaries, pursue goals with courage": {
+"ar": "قناة محارب الطاقة × الحدود المحمية، السعي إلى تحقيق الأهداف بشجاعة",
+"score": 0.75
+},
+"Seek wisdom and growth×mentor others or learn from teachers": {
+"ar": "التماس الحكمة والنمو للآخرين أو التعلم من المعلمين",
+"score": 0.86
+},
+"White": {
+"ar": "أبيض",
+"score": 1.0
+},
+"Light Blue": {
+"ar": "النور الأزرق",
+"score": 1.0
+},
+"Wear green, brown, or beige to ground today's energy.": {
+"ar": "ارتدي خضراء أو بني أو بيغ إلى الأرض طاقة اليوم",
+"score": 0.75
+},
+"nature. Wear your element colors for balance.": {
+"ar": "الطبيعة ارتدي ألوان عنصرك للتوازن",
+"score": 1.0
+},
+"tones. If you need variety, add": {
+"ar": "نغمات. إذا كنت بحاجة إلى مجموعة متنوعة، إضافة",
+"score": 0.8
+},
+"accents to stay grounded.": {
+"ar": "اللهجات للبقاء مُعاقبة",
+"score": 1.0
+},
+"energy is neutral to your": {
+"ar": "الطاقة محايدة لك",
+"score": 1.0
+},
+"nature. Your element colors remain your best choice.": {
+"ar": "الطبيعة ألوان عنصرك تبقى أفضل خيار لك",
+"score": 1.0
+},
+"Lemon": {
+"ar": "ليمون",
+"score": 1.0
+},
+"Tan": {
+"ar": "تان",
+"score": 1.0
+},
+"Light Grey": {
+"ar": "لايت غراي",
+"score": 1.0
+},
+"energy understand each other well. It's a good day for you.": {
+"ar": "الطاقة تفهم بعضها البعض جيداً إنه يوم جيد بالنسبة لك",
+"score": 1.0
+},
+"energy is different from your": {
+"ar": "الطاقة تختلف عن الطاقة الخاصة بك",
+"score": 1.0
+},
+"nature. Stay grounded and centered.": {
+"ar": "الطبيعة ابقوا محاصرين ومركزين",
+"score": 0.75
+},
+"Red or orange shirt, gold accents": {
+"ar": "قميص أحمر أو برتقالي، لهجات ذهبية",
+"score": 1.0
+},
+"Mix warm and light colors together": {
+"ar": "\"اللون الدافئ والخفيف معاً\"",
+"score": 0.8
+},
+"Great day for meetings and new things": {
+"ar": "يوم عظيم للجلسات والأشياء الجديدة",
+"score": 1.0
+},
+"Silver jewelry would be nice": {
+"ar": "المجوهرات الفضية ستكون لطيفة",
+"score": 1.0
+},
+"Calming colors for a smooth day": {
+"ar": "ألوان التهدئة ليوم سلس",
+"score": 0.75
+},
+"Mix blue with earth colors": {
+"ar": "أزرق مع ألوان الأرض",
+"score": 0.75
+},
+"Wear gold or warm colors": {
+"ar": "ألبس الذهب أو الألوان الدافئة",
+"score": 1.0
+},
+"Bright yellows and golds work well": {
+"ar": "الأصفر الراقي والذهب يعمل جيداً",
+"score": 0.8
+},
+"Perfect for thinking and talking": {
+"ar": "مثالية للتفكير والحديث",
+"score": 1.0
+},
+"Green with some blue touches": {
+"ar": "الأخضر مع بعض اللمسات الزرقاء",
+"score": 1.0
+},
+"Greens and browns are your friends": {
+"ar": "\"الخضراء والبنّاء\" هم أصدقائك",
+"score": 1.0
+},
+"Wear colors that make you happy": {
+"ar": "ألبسوا ألوان تجعلكم سعداء",
+"score": 0.75
+},
+"You'll feel good today": {
+"ar": "ستشعرين بخير اليوم",
+"score": 0.75
+},
+"Stick with your favorite colors - your natural choice": {
+"ar": "إبقى مع ألوانك المفضلة خيارك الطبيعي",
+"score": 0.8
+},
+"Add grey or beige if you need to feel more calm": {
+"ar": "أضف الرمادي أو النحل إذا كنت بحاجة إلى الشعور بمزيد من الهدوء",
+"score": 0.75
+},
+"Simple, neutral colors work best": {
+"ar": "الألوان المتواضعة المحايدة تعمل على أفضل",
+"score": 1.0
+},
+"Don't wear too much bright color today": {
+"ar": "لا تلبسي الكثير من اللون المشرق اليوم",
+"score": 0.75
+},
+"Add just a touch of your favorite color for strength": {
+"ar": "أضف فقط لمسة لونك المفضل للقوة",
+"score": 0.83
+},
+"Keep colors simple and natural today": {
+"ar": "أبقوا الألوان بسيطة و طبيعية اليوم",
+"score": 0.8
+},
+"Wear natural fabrics like cotton if you can": {
+"ar": "تلبس نسيج طبيعي مثل القطن إذا كنت تستطيع",
+"score": 0.86
+},
+"The color of the earth will help steady you": {
+"ar": "لون الأرض سوف يساعد على تثبيتك",
+"score": 0.8
+},
+"Morning (5-7 AM): Best time": {
+"ar": "صباحا (5-7 صباحا): أفضل وقت",
+"score": 0.75
+},
+"Evening (6-9 PM): Best time": {
+"ar": "المساء (6-9 PM): أفضل وقت",
+"score": 1.0
+},
+"Late night: Strong": {
+"ar": "وقت متأخر من الليل: قوي",
+"score": 1.0
+},
+"Afternoon (2-4 PM): Good": {
+"ar": "بعد الظهر (2-4 ف م): جيد",
+"score": 1.0
+},
+"Mid-morning (10 AM): Good": {
+"ar": "منتصف الصباح (10 أمتار): جيد",
+"score": 0.75
+},
+"Evening: Strong": {
+"ar": "المساء: قوي",
+"score": 1.0
+},
+"Before sunrise (3-5 AM): Best": {
+"ar": "قبل شروق الشمس (3-5 صباحاً): الأفضل",
+"score": 0.75
+},
+"Morning: Good": {
+"ar": "صباح الخير",
+"score": 1.0
+},
+"Afternoon: Strong": {
+"ar": "بعد الظهر: قوي",
+"score": 1.0
+},
+"The Sovereign King": {
+"ar": "الملك السيادي",
+"score": 1.0
+},
+"Leadership & Authority": {
+"ar": "السلطة القيادية",
+"score": 1.0
+},
+"Trust & Security": {
+"ar": "الثقة في الأمن",
+"score": 1.0
+},
+"Greatness & Majesty": {
+"ar": "العظمة، جلالة",
+"score": 1.0
+},
+"Opening & Victory": {
+"ar": "الافتتاح: النصر",
+"score": 1.0
+},
+"Expansion & Relief": {
+"ar": "التوسع في الإغاثة",
+"score": 1.0
+},
+"Know when to expand and grow - abundance comes through openness.": {
+"ar": "اعرف متى تتوسع وتنمو الوفرة تأتي من الانفتاح",
+"score": 0.75
+},
+"Understand that justice prevails - actions have consequences.": {
+"ar": "فهم أن العدالة سائدة - إن الإجراءات لها عواقب.",
+"score": 0.83
+},
+"Perfect Justice & Balance": {
+"ar": "توازن العدالة المثالية",
+"score": 1.0
+},
+"Think big and act boldly - greatness is your calling.": {
+"ar": "فكّر بعمق وتصرف بجرأة، العظمة هي من تناديك.",
+"score": 0.83
+},
+"Carry yourself with dignity - majesty is in your bearing.": {
+"ar": "احمل نفسك بكرامة جلالتك في متناولك",
+"score": 0.8
+},
+"Expand your heart and mind - embrace all possibilities.": {
+"ar": "اوسعي قلبك وعقلكِ و احتضن كل الاحتمالات",
+"score": 0.83
+},
+"Love unconditionally - your heart is a source of warmth.": {
+"ar": "الحب بدون شروط قلبك مصدر للدفء",
+"score": 0.8
+},
+"Pursue excellence in all endeavors - glory comes through effort.": {
+"ar": "السعي إلى تحقيق التفوق في جميع المساعي - المجد يأتي من خلال الجهد.",
+"score": 0.75
+},
+"Be a witness to truth - your presence matters.": {
+"ar": "كن شاهداً على الحقيقة حضورك مهم",
+"score": 0.75
+},
+"Absolute Truth": {
+"ar": "الحقيقة المطلقة",
+"score": 1.0
+},
+"Be trustworthy in all commitments - others depend on you.": {
+"ar": "كونوا جديرين بالثقة في جميع الالتزامات - الآخرون يعتمدون عليك.",
+"score": 1.0
+},
+"Friendship & Protection": {
+"ar": "حماية الصداقة",
+"score": 1.0
+},
+"Restore what has been broken - healing is your gift.": {
+"ar": "أعد ما تم كسره، الشفاء هو هديتك.",
+"score": 0.86
+},
+"Move things forward - be a catalyst for progress.": {
+"ar": "تحرك الأمور للأمام - كن محفزاً على التقدم",
+"score": 0.8
+},
+"Take the lead when needed - be a pioneer.": {
+"ar": "خذ زمام المبادرة عند الحاجة، كن رائداً",
+"score": 0.8
+},
+"Be clear and visible - let your light shine openly.": {
+"ar": "كن واضحاً ومرئياً دع ضوءك يشرق بشكل مفتوح",
+"score": 1.0
+},
+"Accept sincere apologies - everyone deserves a second chance.": {
+"ar": "تقبل اعتذارات صادقة - الجميع يستحق فرصة ثانية.",
+"score": 0.86
+},
+"Show kindness always - compassion heals wounds.": {
+"ar": "إظهار العطف دائماً الشفقة تشفى الجروح",
+"score": 0.83
+},
+"Master of the Kingdom": {
+"ar": "ماجستير المملكة",
+"score": 1.0
+},
+"Majesty with Grace": {
+"ar": "جلالتك مع (غرايس)",
+"score": 1.0
+},
+"Treat everyone fairly - equity creates harmony.": {
+"ar": "تعامل الجميع بإنصاف - الإنصاف يخلق الوئام.",
+"score": 1.0
+},
+"Bring people together - build bridges, not walls.": {
+"ar": "جمع الناس معاً - بناء الجسور، وليس الجدران",
+"score": 0.86
+},
+"Be useful to others - service brings meaning.": {
+"ar": "كن مفيداً للآخرين - الخدمة تُعطي معنى.",
+"score": 0.8
+},
+"Be a light in darkness - guide others with your presence.": {
+"ar": "كن ضوءاً في الظلام، أرشد الآخرين بوجودك",
+"score": 0.8
+},
+"Guide those who are lost - your wisdom shows the way.": {
+"ar": "إرشد أولئك الذين فقدوا حكمتك تظهر الطريق",
+"score": 1.0
+},
+"Grand Total - the sum of all letter values in a name": {
+"ar": "المجموع الكلي - مجموع جميع قيم الرسائل بالاسم",
+"score": 0.86
+},
+"Maghribi tradition: 28 letters divided equally into 4 elements (7 per element)": {
+"ar": "تقاليد المغرب: 28 رسالة مقسمة بالتساوي إلى 4 عناصر (7 عناصر لكل عنصر)",
+"score": 0.75
+},
+"How is this different from Western numerology?": {
+"ar": "كيف يكون هذا مختلفاً عن علم العدد الغربي؟",
+"score": 0.75
+},
+"What do the elements mean?": {
+"ar": "ماذا تعني العناصر؟",
+"score": 1.0
+},
+"Why does my name have a number?": {
+"ar": "لماذا اسمي لديه رقم؟",
+"score": 1.0
+},
+"Can I use any name?": {
+"ar": "هل يمكنني استخدام أي اسم؟",
+"score": 1.0
+},
+"Pure repetition - all digits are": {
+"ar": "التكرار النقي - كل الأرقام هي",
+"score": 0.75
+},
+"Fibonacci number - part of nature's sequence": {
+"ar": "رقم (فيبوناتشي) جزء من تسلسل الطبيعة",
+"score": 0.83
+},
+"Natural growth pattern - your value aligns with the mathematical pattern found throughout creation, from flowers to galaxies.": {
+"ar": "نمط النمو الطبيعي - قيمتك تتوافق مع النمط الرياضي الذي وجد في كل مكان من الخلق من الزهور إلى المجرات.",
+"score": 0.82
+},
+"Your value (": {
+"ar": "قيمتك (",
+"score": 1.0
+},
+") mirrors": {
+"ar": ") المرايا",
+"score": 1.0
+},
+") and": {
+"ar": ") و",
+"score": 1.0
+},
+"hour matches your planetary ruler": {
+"ar": "ساعة مطابقة لحاكمك الكوكبي",
+"score": 0.75
+},
+"Your Zodiac": {
+"ar": "زودياك",
+"score": 1.0
+},
+"Jupiter hour": {
+"ar": "ساعة المشتري",
+"score": 1.0
+},
+"Courage, strength, protection, victory": {
+"ar": "الشجاعة، القوّة، الحماية، النصر",
+"score": 0.75
+},
+"Sun hour": {
+"ar": "ساعة الشمس",
+"score": 1.0
+},
+"Vitality, success, leadership, enlightenment": {
+"ar": "الحيوية، النجاح، القيادة، التنوير",
+"score": 1.0
+},
+"Love, beauty, harmony, attraction": {
+"ar": "الحب والجمال والانسجام والجذب",
+"score": 1.0
+},
+"Mercury hour": {
+"ar": "ساعة الزئبق",
+"score": 1.0
+},
+"Person name is required": {
+"ar": "اسم الشخص مطلوب",
+"score": 1.0
+},
+"Let this principle guide your career decisions and professional journey.": {
+"ar": "دع هذا المبدأ يرشد قراراتك المهنية ورحلتك المهنية",
+"score": 0.86
+},
+"Traditional Guidance:": {
+"ar": "الإرشادات التقليدية:",
+"score": 1.0
+},
+"Modern Application:": {
+"ar": "التطبيق الحديث:",
+"score": 1.0
+},
+"Share Recommendations": {
+"ar": "توصيات بشأن الحصة",
+"score": 1.0
+},
+"Opportunities": {
+"ar": "الفرص",
+"score": 1.0
+},
+"Quarter": {
+"ar": "الربع",
+"score": 1.0
+},
+"Three Quarters": {
+"ar": "ثلاثة أرباع",
+"score": 1.0
+},
+"Practice Night:": {
+"ar": "الممارسة الليلية:",
+"score": 1.0
+},
+"Copy Arabic text": {
+"ar": "نسخة من النص العربي",
+"score": 1.0
+},
+"Estimated time remaining:": {
+"ar": "الوقت التقديري المتبقي:",
+"score": 1.0
+},
+"Manuel": {
+"ar": "مانويل",
+"score": 1.0
+},
+"Start": {
+"ar": "ابدأ",
+"score": 1.0
+},
+"Four Elements": {
+"ar": "أربعة عناصر",
+"score": 1.0
+},
+"Reading Results": {
+"ar": "قراءة النتائج",
+"score": 1.0
+},
+"Career and life path guidance": {
+"ar": "التوجيه الوظيفي والتوجيه المتعلق بمسار الحياة",
+"score": 0.75
+},
+"Optimal timing for important decisions": {
+"ar": "التوقيت الأمثل للقرارات الهامة",
+"score": 0.75
+},
+"Arts": {
+"ar": "الفنون",
+"score": 1.0
+},
+"Reliable": {
+"ar": "موثوق بها",
+"score": 1.0
+},
+"Patient": {
+"ar": "المريض",
+"score": 1.0
+},
+"Agriculture": {
+"ar": "الزراعة",
+"score": 1.0
+},
+"Engineering": {
+"ar": "الهندسة",
+"score": 1.0
+},
+"Intellectual": {
+"ar": "الفكري",
+"score": 1.0
+},
+"Social": {
+"ar": "الاجتماعية",
+"score": 1.0
+},
+"Technology": {
+"ar": "التكنولوجيا",
+"score": 1.0
+},
+"How to Read Your Results": {
+"ar": "كيف تقرأ نتائجك",
+"score": 1.0
+},
+"Understand your natural temperament, communication style, and social patterns. Use this for self-awareness and personal growth.": {
+"ar": "فهم مزاجك الطبيعي، أسلوب التواصل، والأنماط الاجتماعية استخدم هذا للوعي بالنفس والنمو الشخصي.",
+"score": 0.75
+},
+"One of the four classical elements: Fire, Earth, Air, Water": {
+"ar": "أحد العناصر الكلاسيكية الأربعة: النار، الأرض، الهواء، الماء",
+"score": 1.0
+},
+"Glossary of Terms": {
+"ar": "مسرد المصطلحات",
+"score": 1.0
+},
+"Omar": {
+"ar": "عمر",
+"score": 1.0
+},
+"Ali": {
+"ar": "علي",
+"score": 1.0
+},
+"Fatima": {
+"ar": "فاطمة",
+"score": 1.0
+},
+"Aisha": {
+"ar": "عائشة",
+"score": 1.0
+},
+"Please enter your name in Arabic": {
+"ar": "يرجى إدراج اسمك باللغة العربية",
+"score": 0.75
+},
+"Please enter mother's name in Arabic": {
+"ar": "من فضلك أدخلي اسم الأم بالعربية",
+"score": 1.0
+},
+"About This Science": {
+"ar": "حول هذا العلم",
+"score": 1.0
+},
+"Mother's Name Significance": {
+"ar": "اسم الأم علامة",
+"score": 0.75
+},
+"Traditional and modern career paths aligned with your energy": {
+"ar": "المسارات المهنية التقليدية والحديثة المتسقة مع طاقتك",
+"score": 0.83
+},
+"Full date": {
+"ar": "التاريخ الكامل",
+"score": 1.0
+},
+"Invitation copied!": {
+"ar": "تم نسخ الدعوة!",
+"score": 1.0
+},
+"Learn": {
+"ar": "التعلم",
+"score": 1.0
+},
+"Privacy First": {
+"ar": "الخصوصية أولا",
+"score": 1.0
+},
+"All calculations happen locally in your browser - no data is sent to servers": {
+"ar": "كل الحسابات تحدث محلياً في مصففكم لا توجد بيانات تُرسل إلى الخواديم",
+"score": 0.78
+},
+"Invite your loved ones": {
+"ar": "دعوة أحبائك",
+"score": 1.0
+},
+"Your blessed day is": {
+"ar": "يومك المبارك",
+"score": 1.0
+},
+"Give": {
+"ar": "أعطنى",
+"score": 1.0
+},
+"1-2 months": {
+"ar": "1-2 أشهر",
+"score": 1.0
+},
+"Quick summary": {
+"ar": "موجز سريع",
+"score": 1.0
+},
+"Forces Sociales": {
+"ar": "القوات الاجتماعية",
+"score": 1.0
+},
+"Social Dynamics": {
+"ar": "الديناميات الاجتماعية",
+"score": 1.0
+},
+"Social Challenges": {
+"ar": "التحديات الاجتماعية",
+"score": 1.0
+},
+"Life Challenges": {
+"ar": "تحديات الحياة",
+"score": 1.0
+},
+"Weekly Planning": {
+"ar": "التخطيط الأسبوعي",
+"score": 1.0
+},
+"Your Numbers": {
+"ar": "أرقامك",
+"score": 1.0
+},
+"Most auspicious for important decisions": {
+"ar": "الأكثر ريبة على القرارات الهامة",
+"score": 0.75
+},
+"Best practiced on": {
+"ar": "أفضل الممارسات",
+"score": 1.0
+},
+"Your Colors": {
+"ar": "ألوانك",
+"score": 1.0
+},
+"Key Recommendation": {
+"ar": "التوصية الرئيسية",
+"score": 1.0
+},
+"Priority": {
+"ar": "الأولوية",
+"score": 1.0
+},
+"Focus your energy on": {
+"ar": "ركّز طاقتك على",
+"score": 1.0
+},
+"Location Required": {
+"ar": "الموقع المطلوب",
+"score": 1.0
+},
+"Fair": {
+"ar": "عادل",
+"score": 1.0
+},
+"All Night Hours": {
+"ar": "جميع ساعات الليل",
+"score": 1.0
+},
+"General Forms": {
+"ar": "أشكال عامة",
+"score": 1.0
+},
+"Specific Forms": {
+"ar": "أشكال محددة",
+"score": 1.0
+},
+"Practice Night": {
+"ar": "الممارسة الليلية",
+"score": 1.0
+},
+"Frequency": {
+"ar": "التردد",
+"score": 1.0
+},
+"Context": {
+"ar": "السياق",
+"score": 1.0
+},
+"Traditional Practice": {
+"ar": "الممارسة التقليدية",
+"score": 1.0
+},
+"Modern Applications": {
+"ar": "التطبيقات الحديثة",
+"score": 1.0
+},
+"Set a monthly reminder on your calendar": {
+"ar": "وضع تذكير شهري على تقويمك",
+"score": 0.75
+},
+"Traditional Guidance": {
+"ar": "الإرشادات التقليدية",
+"score": 1.0
+},
+"Delete this record?": {
+"ar": "تحذف هذا المحضر؟",
+"score": 1.0
+},
+"This will replace all current data. Continue?": {
+"ar": "وسيحل ذلك محل جميع البيانات الحالية. أستمر؟",
+"score": 0.83
+},
+"Expert": {
+"ar": "خبير",
+"score": 1.0
+},
+"Export data": {
+"ar": "بيانات التصدير",
+"score": 1.0
+},
+"Import": {
+"ar": "الواردات",
+"score": 1.0
+},
+"Importer": {
+"ar": "المستورد",
+"score": 1.0
+},
+"Period:": {
+"ar": "الفترة:",
+"score": 1.0
+},
+"Practice Sessions": {
+"ar": "دورات الممارسة",
+"score": 1.0
+},
+"Average Quality": {
+"ar": "متوسط الجودة",
+"score": 1.0
+},
+"Total Time": {
+"ar": "مجموع الوقت",
+"score": 1.0
+},
+"Completion Rate": {
+"ar": "معدل الإنجاز",
+"score": 1.0
+},
+"days. Get back on track!": {
+"ar": "أيام. عد إلى المسار الصحيح!",
+"score": 0.75
+},
+"Your completion rate is low. Try setting smaller daily goals.": {
+"ar": "معدل إتمامك منخفض حاولي وضع أهداف يومية أصغر",
+"score": 0.75
+},
+"Completed on:": {
+"ar": "مكتملة:",
+"score": 1.0
+},
+"Witnesses:": {
+"ar": "الشهود:",
+"score": 1.0
+},
+"Total Recorded": {
+"ar": "المجموع المسجل",
+"score": 1.0
+},
+"All activities": {
+"ar": "جميع الأنشطة",
+"score": 1.0
+},
+"Success Rate": {
+"ar": "معدل النجاح",
+"score": 1.0
+},
+"Practice completion": {
+"ar": "إنجاز الممارسة",
+"score": 1.0
+},
+"Advanced Charts Coming Soon": {
+"ar": "\"الزهور المتطورة قادمة قريباً\"",
+"score": 0.75
+},
+"Type": {
+"ar": "النوع",
+"score": 1.0
+},
+"Notes (optional)": {
+"ar": "الحواشي (الاختيارية)",
+"score": 1.0
+},
+"Date Completed": {
+"ar": "التاريخ المكتمل",
+"score": 1.0
+},
+"Notes": {
+"ar": "الحواشي",
+"score": 1.0
+},
+"SPECIAL": {
+"ar": "الخاصة",
+"score": 1.0
+},
+"Week Warrior": {
+"ar": "الأسبوع المحارب",
+"score": 1.0
+},
+"Month Master": {
+"ar": "الشهر المعلم",
+"score": 1.0
+},
+"Congratulations!": {
+"ar": "تهانينا!",
+"score": 1.0
+},
+"Debt Relief": {
+"ar": "تخفيف عبء الديون",
+"score": 1.0
+},
+"Remember Me, and I will remember you.": {
+"ar": "تذكرني وسأتذكرك",
+"score": 0.75
+},
+"🤲 Join me in": {
+"ar": "🤲 انضم إليّ",
+"score": 1.0
+},
+"Today's target complete!": {
+"ar": "هدف اليوم اكتمل!",
+"score": 1.0
+},
+"Monthly Progress": {
+"ar": "التقدم الشهري",
+"score": 1.0
+},
+"on day": {
+"ar": "في اليوم",
+"score": 1.0
+},
+"Total Target (30 days)": {
+"ar": "المجموع المستهدف (30 يوما)",
+"score": 1.0
+},
+"Add a challenge to get started": {
+"ar": "أضف تحدي للبدء",
+"score": 0.75
+},
+"🇸🇳 Wave": {
+"ar": "🇸🇳 الموجة",
+"score": 1.0
+},
+"Relief from financial burden and debt": {
+"ar": "الإعفاء من العبء المالي والديون",
+"score": 0.75
+},
+"Opening of new sources of provision": {
+"ar": "فتح مصادر جديدة للحكم",
+"score": 0.75
+},
+"Peace of heart regarding financial matters": {
+"ar": "سلام القلب فيما يتعلق بالمسائل المالية",
+"score": 0.8
+},
+"The Good": {
+"ar": "جيد",
+"score": 1.0
+},
+"The Perfect": {
+"ar": "الكمال",
+"score": 1.0
+},
+"The Crown": {
+"ar": "التاج",
+"score": 1.0
+},
+"The Famous": {
+"ar": "الشهيرة",
+"score": 1.0
+},
+"The Warner": {
+"ar": "(وارنر)",
+"score": 1.0
+},
+"The Lamp": {
+"ar": "المصباح",
+"score": 1.0
+},
+"The Guidance": {
+"ar": "الإرشادات",
+"score": 1.0
+},
+"The Friend": {
+"ar": "الصديق",
+"score": 1.0
+},
+"The Trusted": {
+"ar": "\"الثقة\"",
+"score": 1.0
+},
+"The Honored": {
+"ar": "الشرف",
+"score": 1.0
+},
+"The Steadfast": {
+"ar": "ستيدفاست",
+"score": 1.0
+},
+"The Good News": {
+"ar": "الأخبار الجيدة",
+"score": 1.0
+},
+"The Rain": {
+"ar": "المطر",
+"score": 1.0
+},
+"The Conciliator": {
+"ar": "الموفّق",
+"score": 1.0
+},
+"The Adviser": {
+"ar": "المستشار",
+"score": 1.0
+},
+"The Tender": {
+"ar": "\"الـ \"تيندر",
+"score": 1.0
+},
+"The Healing": {
+"ar": "الشفاء",
+"score": 1.0
+},
+"The Driver": {
+"ar": "السائق",
+"score": 1.0
+},
+"The Key": {
+"ar": "المفتاح",
+"score": 1.0
+},
+"The Key to the Garden": {
+"ar": "مفتاح الحديقة",
+"score": 1.0
+},
+"Owner of the Sword": {
+"ar": "مالك السيف",
+"score": 1.0
+},
+"The Good Listener": {
+"ar": "المستمع الجيد",
+"score": 1.0
+},
+"The Spring of Beauty": {
+"ar": "ربيع الجمال",
+"score": 1.0
+},
+"The Teacher of Guidance": {
+"ar": "مدرّس الإرشاد",
+"score": 1.0
+},
+"The Raiser of Rank": {
+"ar": "(رايزر رانك)",
+"score": 1.0
+},
+"The Owner of Relief": {
+"ar": "مالك الإغاثة",
+"score": 1.0
+},
+"25-35 minutes": {
+"ar": "25-35 دقيقة",
+"score": 1.0
+},
+"💫 Join me in this transformative practice!": {
+"ar": "💫 انضم إلي في هذه الممارسة التحويلية!",
+"score": 0.75
+},
+"📊 Progress:": {
+"ar": "📊 التقدم:",
+"score": 1.0
+},
+"Join me in this challenge!": {
+"ar": "انضم إلي في هذا التحدي!",
+"score": 1.0
+},
+"Gift of gratitude to": {
+"ar": "هدية من الامتنان",
+"score": 1.0
+},
+"Copy number": {
+"ar": "رقم النسخ",
+"score": 1.0
+},
+"Failed to get AI analysis": {
+"ar": "فشل في الحصول على تحليل AI",
+"score": 0.75
+},
+"language is required": {
+"ar": "اللغة مطلوبة",
+"score": 1.0
+},
+"Work on personal projects": {
+"ar": "العمل في المشاريع الشخصية",
+"score": 1.0
+},
+"energy has a neutral relationship with your": {
+"ar": "الطاقة لها علاقة محايدة بك",
+"score": 1.0
+},
+"essence. Time for balanced activities and reflection.": {
+"ar": "جوهر. وقت الأنشطة المتوازنة والتفكير.",
+"score": 0.8
+},
+"Focus on routine tasks": {
+"ar": "التركيز على المهام الروتينية",
+"score": 1.0
+},
+"Prepare for better-aligned hours": {
+"ar": "الاستعداد لساعات منضبطة على نحو أفضل",
+"score": 0.75
+},
+"before ~": {
+"ar": "من قبل ~",
+"score": 1.0
+},
+"Moon has at least one applying aspect — not void of course.": {
+"ar": "وللقمر جانب واحد على الأقل من جوانب التطبيق - ليس فراغا بطبيعة الحال.",
+"score": 0.78
+},
+"Mercury is": {
+"ar": "الزئبق",
+"score": 1.0
+},
+"Moon Waxing, Increasing in Light": {
+"ar": "مون واكسينغ، زيادة في الضوء",
+"score": 0.75
+},
+"Mercury in": {
+"ar": "الزئبق في",
+"score": 1.0
+},
+"Mercury is in": {
+"ar": "الزئبق في",
+"score": 1.0
+},
+", but": {
+"ar": ", لكن",
+"score": 1.0
+},
+", mais": {
+"ar": ", مايس",
+"score": 1.0
+},
+"This window falls in the planetary hour of": {
+"ar": "هذه النافذة تسقط في ساعة الكوكب",
+"score": 0.75
+},
+"Moon has no applying aspect before leaving its current sign — void of course, study begun now tends to come to nothing.": {
+"ar": "وليس للقمر أي جانب من جوانب التطبيق قبل أن يترك لافتته الحالية - وبالطبع، فإن الدراسة التي بدأت الآن تميل إلى عدم شيء.",
+"score": 0.83
+},
+"Moon has no applying aspect before leaving its current sign — void of course, work begun now tends to come to nothing.": {
+"ar": "وليس للقمر أي جانب من جوانب التطبيق قبل أن يترك لافتته الحالية - وهذا لاغاء بالطبع، فإن العمل الذي بدأ الآن يميل إلى عدم شيء.",
+"score": 0.89
+},
+"Moon is": {
+"ar": "القمر",
+"score": 1.0
+},
+"° — traditionally warns of accident, damage, or fire risk during construction.": {
+"ar": "° — ويحذر تقليديا من مخاطر الحوادث أو التلف أو الحريق أثناء البناء.",
+"score": 0.88
+},
+"Moon in": {
+"ar": "القمر",
+"score": 1.0
+},
+"° — a settled, well-supported household.": {
+"ar": "° — أسرة معيشية مستقرة ومدعمة جيدا.",
+"score": 0.75
+},
+"Saturn in": {
+"ar": "زحل",
+"score": 1.0
+},
+"Saturn is in": {
+"ar": "زحل في",
+"score": 1.0
+},
+"Moon has at least one applying aspect before changing sign.": {
+"ar": "القمر له جانب واحد على الأقل تطبيق قبل تغيير اللافتة.",
+"score": 0.78
+},
+"A solar or lunar eclipse falls within 24 hours (": {
+"ar": "الكسوف الشمسي أو القمري يقع في غضون 24 ساعة (",
+"score": 0.83
+},
+"No eclipse within 24 hours.": {
+"ar": "لا كسوف في غضون 24 ساعة",
+"score": 0.75
+},
+"Moon is not under the beams.": {
+"ar": "القمر ليس تحت الشعاع",
+"score": 0.75
+},
+"Moon at": {
+"ar": "القمر",
+"score": 1.0
+},
+"Venus is": {
+"ar": "(فينوس)",
+"score": 1.0
+},
+"° — waxing, clear of the beams, before full.": {
+"ar": "° — الشمع، واضح من الشعاع، قبل كامل.",
+"score": 1.0
+},
+"— neutral for marriage.": {
+"ar": "— محايد للزواج",
+"score": 1.0
+},
+"Moon has no applying aspect before leaving its current sign — void of course, treatment begun now tends to come to nothing.": {
+"ar": "وليس للقمر أي جانب من جوانب التطبيق قبل أن يترك لافتته الحالية - فبالطبع، فإن المعالجة التي بدأت الآن لا تأتي إلى شيء.",
+"score": 0.78
+},
+"° — a smooth course of treatment and recovery.": {
+"ar": "° — مسار سلس للعلاج والتعافي.",
+"score": 1.0
+},
+"— free of fall or detriment, supporting a clear diagnosis.": {
+"ar": "— مجاناً من السقوط أو الضرر، يدعم تشخيصاً واضحاً.",
+"score": 0.83
+},
+"Mercury is retrograde — increased risk of a delayed, incomplete, or revised diagnosis.": {
+"ar": "والزئبق منتعش - ويزيد من خطر التشخيص المتأخر أو غير المكتمل أو المنقح.",
+"score": 0.75
+},
+"Moon has no applying aspect before leaving its current sign — void of course, nothing \"comes of\" a journey begun now.": {
+"ar": "القمر ليس له جانب تطبيقي قبل أن يترك لافتته الحالية - لا شيء بالطبع، لا شيء \"يأتي\" رحلة بدأت الآن.",
+"score": 0.76
+},
+"° — a smooth, well-supported journey.": {
+"ar": "° — رحلة سلسة ومدعمة جيداً",
+"score": 1.0
+},
+"— neutral for travel.": {
+"ar": "— محايد للسفر.",
+"score": 1.0
+},
+"Last days of the Hijri month": {
+"ar": "الأيام الأخيرة من شهر هيجري",
+"score": 1.0
+},
+"The Moon is shrinking in light right now (waning) — traditionally less favorable for starting something new.": {
+"ar": "إن القمر يتقلص في الضوء الآن (يريد) - وهو أقل تقليديا صالحا لبدء شيء جديد.",
+"score": 0.75
+},
+"The Moon is forming a supportive connection with Venus, the planet of love and harmony, right now.": {
+"ar": "القمر يُشكّلُ إتّصالاً داعماً مَع فينوس، كوكب الحبّ والوئام، الآن.",
+"score": 0.9
+},
+"This falls on Thursday, a day traditionally seen as favorable.": {
+"ar": "هذا يسقط يوم الخميس، ويوم يُنظر إليه تقليدياً على أنه صالح.",
+"score": 0.83
+},
+"Mercury is in a comfortable position right now, free of traditional weaknesses.": {
+"ar": "إن الزئبق في وضع مريح الآن، خالٍ من نقاط الضعف التقليدية.",
+"score": 0.88
+},
+"This specific time window aligns with a planetary hour traditionally seen as supportive for business.": {
+"ar": "هذه النوافذ الزمنية المحددة تتوافق مع ساعة كوكبية يُنظر إليها تقليدياً على أنها داعمة للأعمال التجارية.",
+"score": 0.8
+},
+"This falls on Wednesday or Thursday — days traditionally linked to negotiation and profit.": {
+"ar": "ويقع ذلك يوم الأربعاء أو يوم الخميس - أي أيام ترتبط تقليديا بالتفاوض والربح.",
+"score": 0.88
+},
+"This specific time window aligns with a planetary hour traditionally seen as supportive for health matters.": {
+"ar": "وتتواءم هذه النافذة الزمنية المحددة مع ساعة كوكبية تُعتبر تقليدياً داعمة للمسائل الصحية.",
+"score": 0.82
+},
+"The Moon is in a tense position with Mars right now — a traditional warning of accident or damage during construction.": {
+"ar": "إن القمر في موقف متوتر مع المريخ الآن - تحذير تقليدي من الحادث أو الضرر أثناء البناء.",
+"score": 0.92
+},
+"Saturn is in a comfortable position right now, supporting a solid foundation.": {
+"ar": "زحل في موقف مريح الآن، يدعم مؤسسة صلبة.",
+"score": 0.88
+},
+"This specific time window aligns with a planetary hour traditionally seen as supportive for study.": {
+"ar": "وتتوافق هذه النافذة الزمنية المحددة مع ساعة كوكبية تُعتبر تقليدياً داعمة للدراسة.",
+"score": 0.8
+},
+"No concern here — this factor looks neutral for this date.": {
+"ar": "ولا يوجد قلق هنا - هذا العامل يبدو محايدا لهذا التاريخ.",
+"score": 0.86
+},
+"head and face": {
+"ar": "الرأس والوجه",
+"score": 1.0
+},
+"neck and throat": {
+"ar": "الرقبة والحلق",
+"score": 1.0
+},
+"arms, hands, shoulders, and lungs": {
+"ar": "الأذرع، اليدين، الأكتاف، الرئتين",
+"score": 1.0
+},
+"kidneys and lower back": {
+"ar": "الكلى والخلف السفلي",
+"score": 1.0
+},
+"hips, thighs, and liver": {
+"ar": "الورك والفخذ والكبد",
+"score": 1.0
+},
+"Medical treatment": {
+"ar": "العلاج الطبي",
+"score": 1.0
+},
+"Loans": {
+"ar": "القروض",
+"score": 1.0
+},
+"Partnerships with strangers": {
+"ar": "الشراكات مع الغرباء",
+"score": 1.0
+},
+"Sea travel": {
+"ar": "السفر في البحر",
+"score": 1.0
+},
+"Reconciliation": {
+"ar": "المصالحة",
+"score": 1.0
+},
+"Art and beauty": {
+"ar": "الفن والجمال",
+"score": 1.0
+},
+"Separation": {
+"ar": "الانفصال",
+"score": 1.0
+},
+"Alliances": {
+"ar": "التحالفات",
+"score": 1.0
+},
+"Long-term projects": {
+"ar": "المشاريع الطويلة الأجل",
+"score": 1.0
+},
+"Seeking clarity and purifying intentions": {
+"ar": "السعي إلى الوضوح وتنقية النوايا",
+"score": 0.75
+},
+"Educational reflection": {
+"ar": "الانعكاس التعليمي",
+"score": 1.0
+},
+"The Brand": {
+"ar": "براند",
+"score": 1.0
+},
+"Contracts": {
+"ar": "العقود",
+"score": 1.0
+},
+"Building alliances": {
+"ar": "بناء التحالفات",
+"score": 1.0
+},
+"Selfishness": {
+"ar": "الأنانية",
+"score": 1.0
+},
+"Accumulation": {
+"ar": "التراكم",
+"score": 1.0
+},
+"Vision, Attention": {
+"ar": "الرؤية، الإنتباه",
+"score": 1.0
+},
+"Reviewing plans": {
+"ar": "استعراض الخطط",
+"score": 1.0
+},
+"Spying on others": {
+"ar": "التجسس على الآخرين",
+"score": 1.0
+},
+"Dignity, Responsibility": {
+"ar": "الكرامة والمسؤولية",
+"score": 1.0
+},
+"Public trust": {
+"ar": "ثقة الجمهور",
+"score": 1.0
+},
+"Marriage discussions": {
+"ar": "مناقشات الزواج",
+"score": 1.0
+},
+"Strength is a trust: use presence to protect and encourage, not to dominate.": {
+"ar": "والقوة هي ثقة: استخدام الوجود لحماية وتشجيع، وليس السيطرة.",
+"score": 0.75
+},
+"Long efforts": {
+"ar": "الجهود الطويلة",
+"score": 1.0
+},
+"Call others to what is good — a voice used for gathering and warning, not for needless noise.": {
+"ar": "دعوة الآخرين إلى ما هو جيد - صوت مستعمل للتجمع والإنذار، وليس للضوضاء غير الضرورية.",
+"score": 0.91
+},
+"Clear announcements": {
+"ar": "إعلانات واضحة",
+"score": 1.0
+},
+"Division": {
+"ar": "الشعبة",
+"score": 1.0
+},
+"The Unarmed": {
+"ar": "غير مسلح",
+"score": 1.0
+},
+"Balance, Harvest": {
+"ar": "الرصيد، الحصاد",
+"score": 1.0
+},
+"Partnerships": {
+"ar": "الشراكات",
+"score": 1.0
+},
+"Beauty with restraint": {
+"ar": "الجمال مع ضبط النفس",
+"score": 1.0
+},
+"Unfair advantage": {
+"ar": "الميزة غير العادلة",
+"score": 1.0
+},
+"Cover faults — your own and others’ — and prefer discretion over exposure.": {
+"ar": "- غلاف الأخطاء - الخاصة بك وغيرها - وتفضل السلطة التقديرية على التعرض.",
+"score": 0.75
+},
+"Clear agreements": {
+"ar": "اتفاقات واضحة",
+"score": 1.0
+},
+"Ending harmful ties with adab": {
+"ar": "إنهاء الروابط الضارة مع الأدب",
+"score": 0.75
+},
+"Legal clarity": {
+"ar": "الوضوح القانوني",
+"score": 1.0
+},
+"Unnecessary conflict": {
+"ar": "الصراع غير الضروري",
+"score": 1.0
+},
+"Honor, Trust": {
+"ar": "الشرف، الثقة",
+"score": 1.0
+},
+"Keeping trusts": {
+"ar": "الحفاظ على الثقة",
+"score": 1.0
+},
+"Responsible leadership": {
+"ar": "القيادة المسؤولة",
+"score": 1.0
+},
+"The Heart": {
+"ar": "القلب",
+"score": 1.0
+},
+"Honest conversations": {
+"ar": "محادثات صادقة",
+"score": 1.0
+},
+"The Sting": {
+"ar": "(ستينغ)",
+"score": 1.0
+},
+"Protecting the weak": {
+"ar": "حماية الضعفاء",
+"score": 1.0
+},
+"Provocation": {
+"ar": "الاستفزاز",
+"score": 1.0
+},
+"Exploration of knowledge": {
+"ar": "استكشاف المعارف",
+"score": 1.0
+},
+"The City": {
+"ar": "المدينة",
+"score": 1.0
+},
+"Settlement, Order": {
+"ar": "التسوية، النظام",
+"score": 1.0
+},
+"Cities need order and neighbors’ rights — settle what is due before chasing the next road.": {
+"ar": "فالمدن تحتاج إلى النظام وحقوق الجيران - وهي تسوي ما هو مستحق قبل مطاردة الطريق التالي.",
+"score": 0.83
+},
+"Local commitments": {
+"ar": "الالتزامات المحلية",
+"score": 1.0
+},
+"Empty vows": {
+"ar": "النذور الفارغة",
+"score": 1.0
+},
+"Listening": {
+"ar": "الاستماع",
+"score": 1.0
+},
+"Shelter, Hospitality": {
+"ar": "المأوى، الضيافة",
+"score": 1.0
+},
+"Tents mean shelter and guests: open your space with generosity and guard those who seek safety.": {
+"ar": "الخيام تعني الملجأ والضيوف افتحوا مساحتكم بالسخاء وأحرسوا من يسعون إلى الأمان",
+"score": 0.92
+},
+"Hospitality": {
+"ar": "الضيافة",
+"score": 1.0
+},
+"Marriage and union talks": {
+"ar": "الزواج والمحادثات النقابية",
+"score": 1.0
+},
+"Reckless disclosure": {
+"ar": "الإفصاح المتهور",
+"score": 1.0
+},
+"Draining resources without plan": {
+"ar": "تخصيص الموارد دون خطة",
+"score": 0.75
+},
+"The belly of the fish closes the circuit of twenty-eight — honor what is hidden, and seek wholeness through tawakkul.": {
+"ar": "وبطن السمك يغلق دائرة ثمانية وعشرين - يحترم ما هو مخبأ، ويسعى للكمال من خلال التواكول.",
+"score": 0.77
+},
+"Forced exposure": {
+"ar": "التعرض القسري",
+"score": 1.0
+},
+"New Moon": {
+"ar": "القمر الجديد",
+"score": 1.0
+},
+"Waxing Crescent": {
+"ar": "واكس الهلال",
+"score": 1.0
+},
+"First Quarter": {
+"ar": "الربع الأول",
+"score": 1.0
+},
+"Full Moon": {
+"ar": "القمر الكامل",
+"score": 1.0
+},
+"Good harmony!": {
+"ar": "وئام جيد!",
+"score": 1.0
+},
+"Khalid": {
+"ar": "خالد",
+"score": 1.0
+},
+"Abdullah": {
+"ar": "عبد الله",
+"score": 1.0
+},
+"Physical activities": {
+"ar": "الأنشطة المادية",
+"score": 1.0
+},
+"Financial matters": {
+"ar": "المسائل المالية",
+"score": 1.0
+},
+"Physical health": {
+"ar": "الصحة البدنية",
+"score": 1.0
+},
+"Easy": {
+"ar": "على مهلك",
+"score": 1.0
+},
+"Suitable for regular practice and reflection": {
+"ar": "مناسبة للممارسة والتفكير المنتظمين",
+"score": 0.75
+},
+"at home": {
+"ar": "في المنزل",
+"score": 1.0
+},
+"For clarity of mind and ease in speech": {
+"ar": "من أجل وضوح العقل والراحة في الكلام",
+"score": 0.75
+},
+"For ease in transitions and emotional balance": {
+"ar": "تيسيراً للانتقال والتوازن العاطفي",
+"score": 0.75
+},
+"For patience and steadfastness": {
+"ar": "للصبر والصمود",
+"score": 1.0
+},
+"Softens difficulties and eases hardship": {
+"ar": "الصعوبات ويخفف من المشقة",
+"score": 0.75
+},
+"66 or 594": {
+"ar": "66 أو 594",
+"score": 1.0
+},
+"For wisdom in speech, study, and decisions.": {
+"ar": "من أجل الحكمة في الكلام والدراسة والقرارات",
+"score": 1.0
+},
+"For insight and awareness in learning and communication.": {
+"ar": "للمعرفة والوعي في مجال التعلم والاتصال.",
+"score": 0.75
+},
+"For care and precision in what one undertakes.": {
+"ar": "من أجل العناية والدقة في ما يقوم به المرء.",
+"score": 0.8
+},
+"For patience and steadfastness in long work.": {
+"ar": "من أجل الصبر والصمود في العمل الطويل",
+"score": 1.0
+},
+"File size must be less than 2MB": {
+"ar": "حجم الملف يجب أن يكون أقل من 2MB",
+"score": 0.83
+},
+"The Protector": {
+"ar": "الحامي",
+"score": 1.0
+},
+"Analytical": {
+"ar": "تحليلي",
+"score": 1.0
+},
+"Boundary issues": {
+"ar": "المسائل المتعلقة بالحدود",
+"score": 1.0
+},
+"Supports transformation": {
+"ar": "دعم التحول",
+"score": 1.0
+},
+"Light Cyan": {
+"ar": "ضوء سيان",
+"score": 1.0
+},
+"Promotes clarity of thought": {
+"ar": "تعزيز وضوح الفكر",
+"score": 1.0
+},
+"Supports freedom and flexibility": {
+"ar": "دعم الحرية والمرونة",
+"score": 1.0
+},
+"Encourages intellectual growth": {
+"ar": "تشجع النمو الفكري",
+"score": 1.0
+},
+"Deep Blue": {
+"ar": "العميق الأزرق",
+"score": 1.0
+},
+"Promotes healing and cleansing": {
+"ar": "تشجيع الشفاء والتطهير",
+"score": 1.0
+},
+"Meditate near water (ocean, river, fountain)": {
+"ar": "ميدويت بالقرب من الماء (المحيط، النهر، النافورة)",
+"score": 0.83
+},
+"Take ritual baths with intention": {
+"ar": "خذ حمام الطقوس مع النية",
+"score": 0.75
+},
+"Use flowing water sounds for meditation": {
+"ar": "استخدام أصوات المياه التدفقية للتأمل",
+"score": 0.8
+},
+"Base of spine": {
+"ar": "قاعدة العمود الفقري",
+"score": 1.0
+},
+"Spend time in nature and forests": {
+"ar": "تمضية الوقت في الطبيعة والغابات",
+"score": 1.0
+},
+"Dark gray for Capricorn discipline": {
+"ar": "رمادي مظلم من أجل إنضباط (كبريكورن)",
+"score": 0.75
+},
+"Best Day For…": {
+"ar": "أفضل يوم…",
+"score": 1.0
+},
+"Best Day to Travel": {
+"ar": "أفضل يوم للسفر",
+"score": 1.0
+},
+"Best Day to Move Home": {
+"ar": "أفضل يوم لنقل البيت",
+"score": 1.0
+},
+"Best Day to Start a Business": {
+"ar": "أفضل يوم لبدء الأعمال التجارية",
+"score": 1.0
+},
+"Your Burj from Your Name & Mother's Name": {
+"ar": "(بورج) الخاص بك من اسمك (اسم الأم)",
+"score": 0.75
+},
+"Rahman": {
+"ar": "رحمان",
+"score": 1.0
+},
+"Rahman with nasal": {
+"ar": "راهمان مع ناسال",
+"score": 1.0
+},
+"Tehran": {
+"ar": "طهران",
+"score": 1.0
+},
+"Gulf": {
+"ar": "الخليج",
+"score": 1.0
+},
+"Kuwait": {
+"ar": "الكويت",
+"score": 1.0
+},
+"Qatar": {
+"ar": "قطر",
+"score": 1.0
+},
+"Singapore": {
+"ar": "سنغافورة",
+"score": 1.0
+},
+"France": {
+"ar": "فرنسا",
+"score": 1.0
+},
+"Turkey": {
+"ar": "تركيا",
+"score": 1.0
+},
+"Dubai": {
+"ar": "دبي",
+"score": 1.0
+},
+"Birth and early development of character and talents": {
+"ar": "الولادة والتطور المبكر للطبيعة والمواهب",
+"score": 0.8
+},
+"Education and development of skills": {
+"ar": "التعليم وتنمية المهارات",
+"score": 1.0
+},
+"Sharing knowledge and guiding others": {
+"ar": "تبادل المعارف وتوجيه الآخرين",
+"score": 0.75
+},
+"Preparation for transition and wisdom sharing": {
+"ar": "التحضير للانتقال وتقاسم الحكمة",
+"score": 1.0
+},
+"Less than 1 minute": {
+"ar": "أقل من دقيقة واحدة",
+"score": 1.0
+},
+"Tomorrow at": {
+"ar": "غداً",
+"score": 1.0
+},
+"emotional nature": {
+"ar": "الطبيعة العاطفية",
+"score": 1.0
+},
+"s naturally support each other.": {
+"ar": "الدعم الطبيعي لبعضهم البعض.",
+"score": 0.8
+},
+"s de": {
+"ar": "s de",
+"score": 1.0
+},
+"A mixed attraction dynamic, neither especially easy nor especially hard.": {
+"ar": "إنجذاب مختلط دينامي، لا سهل ولا صعب بشكل خاص.",
+"score": 0.75
+},
+"has no strong classical association with": {
+"ar": "ليس له علاقة كلاسيكية قوية مع",
+"score": 0.8
+},
+", and no closer alternative was found.": {
+"ar": ", ولم يعثر على بديل أقرب.",
+"score": 0.8
+},
+"The Peace": {
+"ar": "السلام",
+"score": 1.0
+},
+"The Aware": {
+"ar": "وإذ تدرك ما يلي:",
+"score": 1.0
+},
+"Be independent": {
+"ar": "كن مستقلاً",
+"score": 1.0
+},
+"Build partnerships": {
+"ar": "بناء الشراكات",
+"score": 1.0
+},
+"Share your gifts": {
+"ar": "اتشارك هداياك",
+"score": 1.0
+},
+"Building Foundation": {
+"ar": "مؤسسة البناء",
+"score": 1.0
+},
+"Be disciplined": {
+"ar": "كن منضبطاً",
+"score": 1.0
+},
+"Learning discipline, hard work, and positive focus through obstacles.": {
+"ar": "الانضباط في التعلم، والعمل الشاق، والتركيز الإيجابي من خلال العقبات.",
+"score": 1.0
+},
+"Repeated setbacks requiring perseverance": {
+"ar": "النكسات المتكررة التي تتطلب المثابرة",
+"score": 1.0
+},
+"Embrace hard work with a joyful heart. Transform obstacles into opportunities for growth.": {
+"ar": "تقبّل العمل الشاق مع قلب مبتهج. تحويل العقبات إلى فرص للنمو.",
+"score": 0.8
+},
+"Daily gratitude practice": {
+"ar": "الممارسة اليومية للامتنان",
+"score": 1.0
+},
+"Complete small tasks fully": {
+"ar": "إنجاز المهام الصغيرة بالكامل",
+"score": 0.75
+},
+"Learning to use freedom responsibly through moderation and balance.": {
+"ar": "تعلم استخدام الحرية على نحو مسؤول من خلال الاعتدال والتوازن.",
+"score": 1.0
+},
+"Addiction patterns": {
+"ar": "أنماط الإدمان",
+"score": 1.0
+},
+"Unstable relationships": {
+"ar": "العلاقات غير المستقرة",
+"score": 1.0
+},
+"Difficulty with commitment": {
+"ar": "صعوبة الالتزام",
+"score": 1.0
+},
+"Abuse of Love": {
+"ar": "إساءة استعمال الحب",
+"score": 1.0
+},
+"Dramatic life changes": {
+"ar": "تغيرات الحياة الدرامية",
+"score": 1.0
+},
+"Practice humility daily": {
+"ar": "ممارسة التواضع يوميا",
+"score": 1.0
+},
+"Abuse of Power": {
+"ar": "إساءة استعمال السلطة",
+"score": 1.0
+},
+"Power struggles": {
+"ar": "صراعات السلطة",
+"score": 1.0
+},
+"Isolation from community": {
+"ar": "عزل المجتمع",
+"score": 1.0
+},
+"Days of Creation, Completion": {
+"ar": "أيام الخلق، الإكمال",
+"score": 1.0
+},
+"Moses' forty nights, forty days of trials": {
+"ar": "أربعون ليلاً من موسى وأربعون يوماً من المحاكمات",
+"score": 0.8
+},
+"Transformation through trial. Your journey involves deep purification.": {
+"ar": "التحول من خلال المحاكمة رحلتك تنطوي على تنقية عميقة",
+"score": 0.86
+},
+"The decisive battle": {
+"ar": "المعركة الحاسمة",
+"score": 1.0
+},
+"Night of Qadr better than 1000 months": {
+"ar": "ليلة القدر أفضل من 1000 شهر",
+"score": 0.8
+},
+"Director": {
+"ar": "مدير",
+"score": 1.0
+},
+"Inventor": {
+"ar": "المخترع",
+"score": 1.0
+},
+"Group work without autonomy": {
+"ar": "عمل الفريق بدون استقلال ذاتي",
+"score": 0.75
+},
+"You're a natural leader who thrives when you can make independent decisions and pioneer new paths.": {
+"ar": "أنت قائد طبيعي يزدهر عندما يمكنك اتخاذ قرارات مستقلة وطريقات جديدة رائدة",
+"score": 0.92
+},
+"Social Worker": {
+"ar": "العامل الاجتماعي",
+"score": 1.0
+},
+"Team Coordinator": {
+"ar": "منسق فريق",
+"score": 1.0
+},
+"Peacekeeper": {
+"ar": "مدبرة السلام",
+"score": 1.0
+},
+"High-pressure competition": {
+"ar": "المنافسة العالية الضغط",
+"score": 1.0
+},
+"Conflict-heavy environments": {
+"ar": "البيئات الثقيلة للنزاعات",
+"score": 1.0
+},
+"Marketing Specialist": {
+"ar": "أخصائي التسويق",
+"score": 1.0
+},
+"Comedian": {
+"ar": "كوميديان",
+"score": 1.0
+},
+"Quality Control": {
+"ar": "مراقبة الجودة",
+"score": 1.0
+},
+"You're reliable and practical, excelling at building systems and creating stable foundations.": {
+"ar": "أنت موثوق وعملي، تتفوق في أنظمة البناء وخلق أسس مستقرة.",
+"score": 0.89
+},
+"Adventurer": {
+"ar": "المغامر",
+"score": 1.0
+},
+"Consultant": {
+"ar": "خبير استشاري",
+"score": 1.0
+},
+"Highly restrictive roles": {
+"ar": "الأدوار التقييدية العالية",
+"score": 1.0
+},
+"Community Organizer": {
+"ar": "منظم مجتمعي",
+"score": 1.0
+},
+"Work without human connection": {
+"ar": "العمل بدون ارتباط بشري",
+"score": 0.75
+},
+"Programmer": {
+"ar": "مبرمج",
+"score": 1.0
+},
+"Jobs without intellectual depth": {
+"ar": "وظائف بدون عمق فكري",
+"score": 1.0
+},
+"Jobs without growth potential": {
+"ar": "الوظائف التي لا تنطوي على إمكانات نمو",
+"score": 0.75
+},
+"Work without measurable results": {
+"ar": "العمل بدون نتائج قابلة للقياس",
+"score": 1.0
+},
+"Humanitarian Worker": {
+"ar": "العاملون في المجال الإنساني",
+"score": 1.0
+},
+"Life Coach": {
+"ar": "مدربة الحياة",
+"score": 1.0
+},
+"Light Worker": {
+"ar": "عامل خفيف",
+"score": 1.0
+},
+"Social Entrepreneur": {
+"ar": "منظمي المشاريع الاجتماعية",
+"score": 1.0
+},
+"Small-scale projects only": {
+"ar": "المشاريع الصغيرة النطاق فقط",
+"score": 1.0
+},
+"Jobs without global impact": {
+"ar": "الوظائف بدون تأثير عالمي",
+"score": 0.75
+},
+"Selfish, competitive environments": {
+"ar": "البيئات الأنانية والتنافسية",
+"score": 1.0
+},
+"Roles without service element": {
+"ar": "الأدوار التي لا تنطوي على عنصر خدمة",
+"score": 0.75
+},
+"Ask for help instead of doing everything alone": {
+"ar": "أطلب المساعدة بدلاً من فعل كل شيء بمفرده",
+"score": 1.0
+},
+"Take time to listen to others' ideas before deciding": {
+"ar": "خذ الوقت للإستماع لأفكار الآخرين قبل أن تقرر",
+"score": 0.86
+},
+"Practice self-care daily, not just when depleted": {
+"ar": "ممارسة الرعاية الذاتية يومياً، ليس فقط عندما يستنفد",
+"score": 0.75
+},
+"Build confidence in your own opinions": {
+"ar": "بناء الثقة في آرائك",
+"score": 0.75
+},
+"Spend time alone to reconnect with yourself": {
+"ar": "تمضية الوقت وحدك لتعيد التواصل مع نفسك",
+"score": 1.0
+},
+"Balance socializing with quiet reflection time": {
+"ar": "التوازن الاجتماعي مع وقت الانعكاس الهادئ",
+"score": 0.8
+},
+"Use your creativity with discipline and structure": {
+"ar": "إستخدم إبداعك مع الانضباط والهيكل",
+"score": 1.0
+},
+"Don't let perfectionism paralyze you": {
+"ar": "لا تدع الكمال يشلّك",
+"score": 0.8
+},
+"Balance work with play and rest": {
+"ar": "العمل المتوازن مع اللعب والراحة",
+"score": 0.75
+},
+"Trust the process even when you can't control everything": {
+"ar": "ثقي بالعملية حتى عندما لا يمكنك التحكم بكل شيء",
+"score": 0.88
+},
+"Create healthy routines for stability": {
+"ar": "إيجاد روتينات صحية للاستقرار",
+"score": 0.75
+},
+"Practice finishing what you start": {
+"ar": "التمرين على إنهاء ما تبدأ به",
+"score": 1.0
+},
+"Balance freedom with responsibility": {
+"ar": "توازن الحرية مع المسؤولية",
+"score": 1.0
+},
+"Give to yourself as much as you give to others": {
+"ar": "أعطِ نفسك بقدر ما تَعطي للآخرين",
+"score": 1.0
+},
+"Release perfectionism - good enough is enough": {
+"ar": "الإفراج عن الكمال - جيد بما فيه الكفاية",
+"score": 0.75
+},
+"Let others solve their own problems sometimes": {
+"ar": "دع الآخرين يحلون مشاكلهم في بعض الأحيان",
+"score": 0.86
+},
+"Don't take on responsibilities that aren't yours": {
+"ar": "لا تأخذي المسؤوليات التي ليست مسؤوليتك",
+"score": 0.83
+},
+"Practice receiving help graciously": {
+"ar": "التمرين على تلقي المساعدة بسخاء",
+"score": 0.75
+},
+"Balance alone time with meaningful social connection": {
+"ar": "توازن الوقت وحده مع وجود صلة اجتماعية ذات معنى",
+"score": 1.0
+},
+"Share your knowledge - don't keep it all inside": {
+"ar": "اتشارك معرفتك لا تبقي كل شيء في الداخل",
+"score": 0.86
+},
+"Trust your intuition, not just analysis": {
+"ar": "ثقي بحدسك، ليس فقط تحليل",
+"score": 0.8
+},
+"Practice being present instead of overthinking": {
+"ar": "الممارسة حاضرة بدلا من التفكير المفرط",
+"score": 0.8
+},
+"Connect with your body through movement or nature": {
+"ar": "اتصل بجسدك من خلال الحركة أو الطبيعة",
+"score": 0.8
+},
+"Remember that rest is productive too": {
+"ar": "تذكروا أن الراحة مثمرة جدا",
+"score": 0.75
+},
+"Don't sacrifice relationships for achievement": {
+"ar": "لا تضحي بالعلاقات من أجل الإنجاز",
+"score": 1.0
+},
+"Practice gratitude for what you have, not just what you want": {
+"ar": "ممارسة الامتنان على ما لديك ليس فقط ما تريد",
+"score": 0.86
+},
+"Don't expect others to understand everything you see": {
+"ar": "لا تتوقع من الآخرين أن يفهموا كل ما تراه",
+"score": 1.0
+},
+"Protect your energy - not everyone deserves access": {
+"ar": "احمي طاقتك ليس الجميع يستحق الوصول",
+"score": 1.0
+},
+"Start small - you don't have to build Rome in a day": {
+"ar": "ابدأي بالصغر ليس عليك بناء روما في اليوم",
+"score": 0.75
+},
+"Delegate instead of doing everything yourself": {
+"ar": "مندوب بدلاً من فعل كل شيء بنفسك",
+"score": 1.0
+},
+"Don't let the scale of your vision overwhelm you": {
+"ar": "لا تدع مقياس رؤيتك يطغى عليك",
+"score": 1.0
+},
+"You can't carry the world - release what's not yours": {
+"ar": "لا يمكنك حمل العالم - أطلق ما ليس ملكك -",
+"score": 0.89
+},
+"Balance universal love with self-love": {
+"ar": "موازنة الحب العالمي مع الحياة الذاتية",
+"score": 0.75
+},
+"Risk of arrogance or ego inflation": {
+"ar": "خطر الغطرسة أو التضخم",
+"score": 0.75
+},
+"May avoid conflict to the point of self-betrayal": {
+"ar": "قد تتجنب النزاع إلى نقطة التصويب الذاتي",
+"score": 0.83
+},
+"Tendency to lose yourself in relationships": {
+"ar": "العاطفة لفقدان نفسك في العلاقات",
+"score": 0.75
+},
+"Tendency to talk more than listen": {
+"ar": "توتر التحدث أكثر من الاستماع",
+"score": 0.8
+},
+"May struggle with discipline or commitment": {
+"ar": "قد نضال مع الانضباط أو الالتزام",
+"score": 1.0
+},
+"Can become rigid or resistant to change": {
+"ar": "يمكن أن يصبح صلبا أو مقاوما للتغيير",
+"score": 0.8
+},
+"May struggle with spontaneity or flexibility": {
+"ar": "قد يكافح بالعفو أو المرونة",
+"score": 0.75
+},
+"May avoid responsibility in pursuit of freedom": {
+"ar": "قد تتجنب المسؤولية في السعي إلى تحقيق الحرية",
+"score": 1.0
+},
+"Tendency to jump from one thing to another": {
+"ar": "العاطفة للقفز من شيء إلى آخر",
+"score": 0.8
+},
+"May struggle with stability or follow-through": {
+"ar": "قد يكافح بالاستقرار أو يتابع",
+"score": 0.8
+},
+"May interfere or try to control others \"for their good\"": {
+"ar": "قد تتدخل أو تحاول السيطرة على الآخرين \"لصالحهم\"",
+"score": 1.0
+},
+"May overthink to the point of paralysis": {
+"ar": "قد يبالغ في التفكير في نقطة الشلل",
+"score": 0.75
+},
+"Risk of workaholism or neglecting relationships": {
+"ar": "مخاطر العمل أو العلاقات المهملة",
+"score": 0.75
+},
+"May struggle with softness or vulnerability": {
+"ar": "قد نضال مع اللينة أو الضعف",
+"score": 0.75
+},
+"May struggle with boundaries and self-care": {
+"ar": "قد نضال مع الحدود والرعاية الذاتية",
+"score": 0.8
+},
+"Can feel crushed by the weight of your vision": {
+"ar": "يمكن أن تشعر بسحق من وزن رؤيتك",
+"score": 0.8
+},
+"Tendency to be disappointed by others' limitations": {
+"ar": "العاطفة التي تُخيب أملها بسبب قيود الآخرين",
+"score": 0.75
+},
+"May struggle with boundaries and self-sacrifice": {
+"ar": "قد نضال مع الحدود والتضحية بالنفس",
+"score": 0.8
+},
+"You are here to lead, innovate, and pioneer new paths with courage and independence.": {
+"ar": "أنت هنا لتقود، وتبتكر، وتقود مسارات جديدة شجاعة واستقلالية.",
+"score": 0.75
+},
+"Practice listening to someone else's idea fully": {
+"ar": "التمرين على الاستماع إلى فكرة شخص آخر تماما",
+"score": 0.86
+},
+"Take decisive action on something you've been delaying": {
+"ar": "اتخاذ إجراء حاسم على شيء كنت قد تم تأخير",
+"score": 1.0
+},
+"Reflect on how your leadership impacts others": {
+"ar": "انعكس على كيفية تأثير قيادتك على الآخرين",
+"score": 0.8
+},
+"You are here to create harmony, build partnerships, and bring people together with sensitivity and grace.": {
+"ar": "أنت هنا لخلق الوئام، وبناء الشراكات، وجلب الناس معا مع الحساسية والنعمة.",
+"score": 1.0
+},
+"Say \"no\" to one request that doesn't serve you": {
+"ar": "قل \"لا\" لطلب واحد لا يخدمك",
+"score": 1.0
+},
+"Meditate to reconnect with your own feelings": {
+"ar": "التأمل لإعادة التواصل مع مشاعرك الخاصة",
+"score": 0.75
+},
+"Do something kind for yourself, not just others": {
+"ar": "أفعل شيئاً لطيفاً لنفسك، ليس فقط الآخرين",
+"score": 0.86
+},
+"Practice making a decision without seeking approval": {
+"ar": "الممارسة في اتخاذ قرار دون طلب موافقة",
+"score": 0.83
+},
+"Avoid losing yourself in pleasing others. Your needs matter as much as anyone else's.": {
+"ar": "تجنب فقدان نفسك في مجاملة الآخرين. إحتياجاتكم تهم بقدر احتياجات أي شخص آخر.",
+"score": 0.82
+},
+"You are here to create, communicate, and bring joy to the world through your expressive gifts.": {
+"ar": "أنت هنا لتخلق وتتواصل وتجلب الفرح للعالم من خلال هداياك الصريحة",
+"score": 0.89
+},
+"Practice 30 minutes of focused work without distractions": {
+"ar": "ممارسة 30 دقيقة من العمل المركّز بدون إلهاء",
+"score": 0.83
+},
+"Share your creative work with others": {
+"ar": "شارك عملك الإبداعي مع الآخرين",
+"score": 0.75
+},
+"Balance social time with quiet reflection": {
+"ar": "موازنة الوقت الاجتماعي مع الانعكاس الهادئ",
+"score": 1.0
+},
+"Commit to one priority this week and see it through": {
+"ar": "ألتزم بأولوية واحدة هذا الأسبوع و شاهدها من خلال",
+"score": 0.83
+},
+"You are here to build solid foundations, create order, and manifest stability through hard work.": {
+"ar": "أنت هنا لبناء أسس صلبة، وخلق النظام، وتظهر الاستقرار من خلال العمل الشاق.",
+"score": 0.91
+},
+"Try one new approach or break one routine": {
+"ar": "حاولي إتباع نهج جديد أو كسر روتين واحد",
+"score": 1.0
+},
+"Take a small risk outside your comfort zone": {
+"ar": "خُذْ مخاطرةً صغيرة خارج منطقةِ راحتك",
+"score": 0.83
+},
+"Delegate one task instead of controlling everything": {
+"ar": "مندوب مهمة واحدة بدلا من السيطرة على كل شيء",
+"score": 0.83
+},
+"Practice saying \"good enough\" instead of perfect": {
+"ar": "ممارسة تقول \"جيد بما فيه الكفاية\" بدلا من مثالي",
+"score": 1.0
+},
+"Avoid rigidity or perfectionism that paralyzes progress. Flexibility brings resilience.": {
+"ar": "تجنب الجمود أو الكمال الذي يشل التقدم. المرونة تجلب القدرة على الصمود",
+"score": 0.75
+},
+"You are here to explore, experience variety, and teach others the value of freedom and adaptability.": {
+"ar": "أنت هنا لاستكشاف، وتجربة تنوع، وتعلم الآخرين قيمة الحرية والقدرة على التكيف.",
+"score": 0.78
+},
+"Finish something you started months ago": {
+"ar": "أنهي شيئاً بدأته منذ أشهر",
+"score": 1.0
+},
+"Practice being present in one moment without planning next move": {
+"ar": "الممارسة التي يجري حضورها في لحظة واحدة دون تخطيط الخطوة التالية",
+"score": 0.89
+},
+"You are here to nurture, create harmony, and serve your community with responsibility and love.": {
+"ar": "أنت هنا لرعاية، خلق الوئام، وخدمة مجتمعك مع المسؤولية والحب.",
+"score": 0.88
+},
+"Do something nurturing for yourself, not others": {
+"ar": "أفعل شيئاً ترعى نفسك، وليس الآخرين",
+"score": 0.83
+},
+"You are here to seek truth, develop wisdom, and share deep knowledge with the world.": {
+"ar": "أنت هنا لتبحث عن الحقيقة، وتطوّر الحكمة، وتتشارك مع العالم معرفة عميقة.",
+"score": 0.89
+},
+"Schedule social time with meaningful people": {
+"ar": "الجدول الزمني للزمن الاجتماعي مع أشخاص ذوي معنى",
+"score": 1.0
+},
+"Move your body - dance, walk, or exercise": {
+"ar": "حرك جسدك - الرقص، المشي، أو التمرين",
+"score": 0.8
+},
+"Be vulnerable with one person you trust": {
+"ar": "كن ضعيفاً مع شخص واحد تثق به",
+"score": 0.75
+},
+"Schedule rest time as seriously as work time": {
+"ar": "وقت الراحة في الجدول الزمني على محمل الجد مع وقت العمل",
+"score": 0.8
+},
+"Practice gratitude for what you have": {
+"ar": "ممارسة الامتنان على ما لديك",
+"score": 0.75
+},
+"You are here to serve humanity, inspire compassion, and create positive global change.": {
+"ar": "أنت هنا لخدمة الإنسانية، إلهام الشفقة، وخلق تغيير عالمي إيجابي.",
+"score": 1.0
+},
+"Take care of your own needs before helping others once": {
+"ar": "اعتني باحتياجاتك قبل مساعدة الآخرين",
+"score": 0.75
+},
+"Ground yourself through nature or physical activity": {
+"ar": "تدور حول نفسك من خلال الطبيعة أو النشاط البدني",
+"score": 0.83
+},
+"Break one big goal into three small steps": {
+"ar": "تحطيم هدف واحد كبير إلى ثلاث خطوات صغيرة",
+"score": 0.75
+},
+"Celebrate small progress, not just big wins": {
+"ar": "احتفل بتقدم صغير ليس فقط فوز كبير",
+"score": 1.0
+},
+"You are here to teach, heal, and guide humanity with unconditional love and wisdom.": {
+"ar": "أنت هنا لتدرس وتشفى وترشد البشرية بالحب والحكمة الغير مشروطين",
+"score": 0.75
+},
+"Remember you're human - be gentle with yourself": {
+"ar": "تذكّرْ بأنّك إنسان - يَكُونُ لطيف مَع نفسك",
+"score": 0.8
+},
+"Avoid carrying the world on your shoulders. Even master teachers need rest and support.": {
+"ar": "تجنب حمل العالم على كتفيك. حتى المعلمين المعلمين يحتاجون للراحة والدعم",
+"score": 0.9
+},
+"This is your year to start fresh, plant seeds, and initiate new projects. Take the lead and trust your instincts.": {
+"ar": "هذه سنتك لتبدأ بذور جديدة ونباتية وتبدأ مشاريع جديدة خُذْ الرصاصَ وثقْ بغرائزَكَ.",
+"score": 0.75
+},
+"Plant the seeds": {
+"ar": "نزرع البذور",
+"score": 1.0
+},
+"Build support": {
+"ar": "دعم البناء",
+"score": 1.0
+},
+"Release what doesn't serve": {
+"ar": "أطلقوا ما لا يخدم",
+"score": 0.8
+},
+"Start that project you've been delaying": {
+"ar": "ابدأ المشروع الذي كنت تؤخره",
+"score": 1.0
+},
+"Make a bold decision": {
+"ar": "اتخاذ قرار جريء",
+"score": 1.0
+},
+"Step into a leadership role": {
+"ar": "خطوة نحو دور قيادي",
+"score": 0.75
+},
+"Trust yourself and take the first step": {
+"ar": "ثقي بنفسك واتخذي الخطوة الأولى",
+"score": 1.0
+},
+"Partnerships & Cooperation": {
+"ar": "الشراكة من أجل التعاون",
+"score": 1.0
+},
+"This year emphasizes relationships, teamwork, and patience. Focus on building bridges and creating harmony.": {
+"ar": "هذا العام يركز على العلاقات والعمل الجماعي والصبر. التركيز على بناء الجسور وخلق الوئام.",
+"score": 0.8
+},
+"Strengthen existing relationships": {
+"ar": "تعزيز العلاقات القائمة",
+"score": 1.0
+},
+"Be patient with timing": {
+"ar": "كن صبوراً مع التوقيت",
+"score": 1.0
+},
+"This year invites you to create, communicate, and enjoy life. Share your gifts and let your personality shine.": {
+"ar": "هذا العام يدعوك لتخلق وتتواصل وتستمتع بالحياة اتشارك هداياك ودع شخصيتك تشرق",
+"score": 0.91
+},
+"Social life": {
+"ar": "الحياة الاجتماعية",
+"score": 1.0
+},
+"Build creative foundations": {
+"ar": "بناء أسس خلاقة",
+"score": 1.0
+},
+"Take a class in the arts": {
+"ar": "خذ حصة في الفنون",
+"score": 1.0
+},
+"Share your work publicly": {
+"ar": "شارك عملك علناً",
+"score": 1.0
+},
+"Building & Discipline": {
+"ar": "المبنى الانضباطي",
+"score": 1.0
+},
+"This year is about hard work, creating solid foundations, and establishing security. Focus on practical progress.": {
+"ar": "هذا العام يتعلق بالعمل الشاق، وخلق أسس صلبة، وإقامة الأمن. التركيز على التقدم العملي.",
+"score": 0.75
+},
+"Security": {
+"ar": "الأمن",
+"score": 1.0
+},
+"Perfect the details": {
+"ar": "مثالية التفاصيل",
+"score": 1.0
+},
+"Harvest results": {
+"ar": "نتائج الحصاد",
+"score": 1.0
+},
+"Work on long-term goals": {
+"ar": "العمل على تحقيق الأهداف الطويلة الأجل",
+"score": 1.0
+},
+"Understand the changes": {
+"ar": "فهم التغييرات",
+"score": 1.0
+},
+"Channel change productively": {
+"ar": "تغيير القناة بصورة مثمرة",
+"score": 1.0
+},
+"Try something completely new": {
+"ar": "جرب شيئا جديدا تماما",
+"score": 0.75
+},
+"Meet new people": {
+"ar": "قابلوا الناس الجدد",
+"score": 1.0
+},
+"Stay open to unexpected opportunities": {
+"ar": "البقاء مفتوحاً للفرص غير المتوقعة",
+"score": 1.0
+},
+"Balance duty and freedom": {
+"ar": "الموازنة بين الواجب والحرية",
+"score": 1.0
+},
+"Reflect on service": {
+"ar": "يعكس الخدمة",
+"score": 1.0
+},
+"Explore diverse wisdom": {
+"ar": "استكشاف الحكمة المتنوعة",
+"score": 1.0
+},
+"Apply your knowledge": {
+"ar": "تطبيق معرفتك",
+"score": 1.0
+},
+"Spend time in nature alone": {
+"ar": "قضاء الوقت في الطبيعة وحدها",
+"score": 1.0
+},
+"Invest in yourself or business": {
+"ar": "الاستثمار في نفسك أو الأعمال التجارية",
+"score": 1.0
+},
+"Negotiate for what you deserve": {
+"ar": "التفاوض على ما تستحقه",
+"score": 1.0
+},
+"This year brings endings, release, and compassion for all. Let go of what's complete and serve the world.": {
+"ar": "هذا العام يجلب النهايات والإفراج والتعاطف للجميع دع ما هو كامل وخدمة العالم.",
+"score": 0.77
+},
+"Prepare for a new 9-year cycle": {
+"ar": "إعداد دورة جديدة مدتها تسع سنوات",
+"score": 0.75
+},
+"Complete what you start, no matter how long it takes": {
+"ar": "أكمل ما ستبدأه مهما طال الوقت",
+"score": 0.75
+},
+"Take full responsibility without blaming others": {
+"ar": "تحمل المسؤولية الكاملة دون إلقاء اللوم على الآخرين",
+"score": 1.0
+},
+"Maintain optimism through challenges": {
+"ar": "الحفاظ على التفاؤل من خلال التحديات",
+"score": 0.75
+},
+"When you feel like giving up or cutting corners, remember: this is your karmic test. Push through with integrity.": {
+"ar": "عندما تشعر بأنك تستسلم أو تقطع الزوايا تذكر هذا هو إختبارك الكارميكي ادفعي من خلال النزاهة",
+"score": 0.92
+},
+"Practice moderation in all things": {
+"ar": "الاعتدال العملي في كل الاشياء",
+"score": 0.75
+},
+"Commit to one path long enough to see results": {
+"ar": "إلتزموا بمسار واحد لفترة طويلة بما يكفي لرؤية النتائج",
+"score": 0.86
+},
+"Rebuild on authentic truth, not illusion": {
+"ar": "إعادة البناء على الحقيقة الحقيقية، وليس الوهم",
+"score": 0.8
+},
+"Ask for help without feeling weak": {
+"ar": "أطلب المساعدة بدون الشعور بالضعف",
+"score": 1.0
+},
+"Mastered 19/1 becomes the compassionate pioneer. You lead by empowering others, not controlling them. Your strength inspires while your vulnerability connects.": {
+"ar": "المعلم 19/1 يصبح الرواد الرحيم أنت تقود من خلال تمكين الآخرين، وليس السيطرة عليهم. قوتك تلهم بينما ضعفك يتواصل",
+"score": 0.8
+},
+"Two strong leaders can clash or inspire each other to greatness.": {
+"ar": "قائدان قويان يستطيعان أن يصطدما ببعضهما أو يلهمان بعضهما إلى العظمة.",
+"score": 0.89
+},
+"Mutual respect for independence": {
+"ar": "الاحترام المتبادل للاستقلال",
+"score": 1.0
+},
+"Understand need for autonomy": {
+"ar": "فهم الحاجة إلى الاستقلال الذاتي",
+"score": 1.0
+},
+"Leader meets diplomat. A natural balance of yin and yang energy.": {
+"ar": "القائد يلتقي بالدبلوماسي توازن طبيعي في طاقة يين ويانغ",
+"score": 0.75
+},
+"High energy together": {
+"ar": "طاقة عالية معاً",
+"score": 1.0
+},
+"3 brings joy to 1's ambitions": {
+"ar": "3 يجلب الفرح إلى طموح 1",
+"score": 0.75
+},
+"Great for creative projects": {
+"ar": "عظيم للمشاريع الإبداعية",
+"score": 1.0
+},
+"1 may find 3 unfocused": {
+"ar": "1 قد يجد 3 غير مركزة",
+"score": 1.0
+},
+"Support each other's growth": {
+"ar": "دعم نمو بعضنا البعض",
+"score": 1.0
+},
+"Can lack stability": {
+"ar": "يمكن أن يفتقر إلى الاستقرار",
+"score": 1.0
+},
+"Can inspire humanitarian projects": {
+"ar": "يمكن أن يلهم المشاريع الإنسانية",
+"score": 1.0
+},
+"1: Expand your vision to include service. 9: Allow 1 space for personal ambitions.": {
+"ar": "1: توسيع نطاق رؤيتك لتشمل الخدمة. 9: السماح بحيز واحد للطموحات الشخصية.",
+"score": 1.0
+},
+"Deep emotional connection": {
+"ar": "الوصل العاطفي العميق",
+"score": 1.0
+},
+"Mutual sensitivity": {
+"ar": "الحساسية المتبادلة",
+"score": 1.0
+},
+"Peaceful harmony": {
+"ar": "الوئام السلمي",
+"score": 1.0
+},
+"Both avoid conflict": {
+"ar": "كلاهما تجنباً للصراع",
+"score": 1.0
+},
+"Work-life balance needed": {
+"ar": "الحاجة إلى تحقيق التوازن بين العمل والحياة",
+"score": 0.75
+},
+"8: Honor 2's emotional needs. 2: Trust 8's leadership without losing yourself.": {
+"ar": "8: احتياجات الشرف 2 العاطفية. الثقه الثامنه من القيادة بدون ان تخسر نفسك",
+"score": 0.78
+},
+"Social butterflies together": {
+"ar": "الفراشات الاجتماعية معاً",
+"score": 1.0
+},
+"Lack of discipline": {
+"ar": "الافتقار إلى الانضباط",
+"score": 1.0
+},
+"Build empire together": {
+"ar": "بناء الامبراطورية معا",
+"score": 1.0
+},
+"No stability": {
+"ar": "لا استقرار",
+"score": 1.0
+},
+"Commitment issues": {
+"ar": "قضايا الالتزام",
+"score": 1.0
+},
+"Financial chaos": {
+"ar": "الفوضى المالية",
+"score": 1.0
+},
+"Serve others but also nurture yourselves. Maintain individual identities and hobbies.": {
+"ar": "خدموا الآخرين ولكن أيضاً رعوا أنفسكم. الحفاظ على هويات و هواياات فردية.",
+"score": 0.8
+},
+"Material abundance": {
+"ar": "وفرة المواد",
+"score": 1.0
+},
+"Respect for success": {
+"ar": "احترام النجاح",
+"score": 1.0
+},
+"Competition": {
+"ar": "المنافسة",
+"score": 1.0
+},
+"Compassionate healers united in service. Beautiful but can burn out.": {
+"ar": "معالجين متعاطفين متحدين في الخدمة جميل ولكن يمكن أن يحترق.",
+"score": 0.78
+},
+"Deep compassion": {
+"ar": "تعاطف عميق",
+"score": 1.0
+},
+"Drama and intensity": {
+"ar": "الدراما والكثافة",
+"score": 1.0
+},
+"Build empires": {
+"ar": "إمبراطوريات البناء",
+"score": 1.0
+},
+"Pressure to achieve": {
+"ar": "الضغط لتحقيق ذلك",
+"score": 1.0
+},
+"Stress and burden": {
+"ar": "الإجهاد والأعباء",
+"score": 1.0
+},
+"Forget to enjoy life": {
+"ar": "أنسى أن أستمتع بالحياة",
+"score": 1.0
+},
+"Remember: the journey matters, not just the destination. Celebrate small wins together.": {
+"ar": "تذكري، الرحلة مهمة، ليس فقط الوجهة. يحتفلون بالفوزات الصغيرة معاً",
+"score": 0.8
+},
+"World service": {
+"ar": "الخدمة العالمية",
+"score": 1.0
+},
+"You can't save everyone. Practice radical self-care to sustain your healing work.": {
+"ar": "لا يمكنك إنقاذ الجميع ممارسة العناية الذاتية الراديكالية للحفاظ على عملك الشفاء.",
+"score": 0.82
+},
+"This combination has potential with effort and understanding.": {
+"ar": "وهذه المجموعة تنطوي على إمكانات بجهد وفهم.",
+"score": 0.8
+},
+"Can learn from differences": {
+"ar": "يمكن أن يتعلم من الاختلافات",
+"score": 1.0
+},
+"Growth through challenge": {
+"ar": "النمو من خلال التحدي",
+"score": 1.0
+},
+"Different approaches to life": {
+"ar": "نُهُج مختلفة للحياة",
+"score": 1.0
+},
+"Focus on communication and finding common ground.": {
+"ar": "التركيز على الاتصال وإيجاد أرضية مشتركة.",
+"score": 0.8
+},
+"Water + Earth: Nurturing Growth": {
+"ar": "المياه + الأرض: تعزيز النمو",
+"score": 0.75
+},
+"Earth + Earth: The Solid Foundation": {
+"ar": "الأرض + الأرض: مؤسسة الصلب",
+"score": 1.0
+},
+"May compete or burn out without rest. Both want to lead.": {
+"ar": "قد تتنافس أو تحترق بدون راحة كلاهما يريد أن يقود",
+"score": 0.78
+},
+"Passion meets depth. This creates either steam (transformation) or evaporation (conflict).": {
+"ar": "العاطفة تلتقي بعمق وهذا يخلق إما البخار (التحويل) أو التبخر (الصراع).",
+"score": 0.78
+},
+"Fire may overwhelm Water. Water may withdraw from Fire. Communication styles clash.": {
+"ar": "النار قد تطغى على الماء الماء قد ينسحب من النار تصادم أساليب الاتصال.",
+"score": 0.75
+},
+"Fire: Practice active listening and patience. Water: Express needs clearly and directly.": {
+"ar": "النار: ممارسة الاستماع والصبر النشطين. المياه: الاحتياجات العاجلة بشكل واضح ومباشر.",
+"score": 0.8
+},
+"Endless conversations, shared curiosity, and mental stimulation. You understand how each other thinks.": {
+"ar": "محادثات لا نهاية لها، فضول مشترك، وتحفيز ذهني. أنت تفهم كيف يفكر كل من الآخر.",
+"score": 0.82
+},
+"Air gives words to Water's feelings. Water adds depth to Air's ideas. Beautiful when balanced.": {
+"ar": "الهواء يعطي الكلمات لمشاعر الماء. الماء يضيف العمق لأفكار الهواء جميلة عندما تكون متوازنة",
+"score": 0.83
+},
+"Air: Write love letters, use your words for emotion. Water: Share dreams aloud. Trust Air to listen.": {
+"ar": "اكتب رسائل حب واستخدم كلماتك للعاطفة نتقاسم الأحلام بصوت عال ثقي بالهواء لكي تستمعي",
+"score": 0.77
+},
+"A look says everything. You nurture each other instinctively. Emotional safety comes naturally.": {
+"ar": "نظرة تقول كل شيء. ترعى بعضكم البعض بشكل غريزي السلامة العاطفية تأتي بشكل طبيعي.",
+"score": 0.82
+},
+"You support each other's growth effortlessly. Water brings feelings, Earth brings stability. Balanced and peaceful.": {
+"ar": "تدعمون نمو بعضكم البعض بلا مجهود الماء يجلب المشاعر الأرض تجلب الاستقرار متوازنة وسلمية",
+"score": 0.92
+},
+"Rock-solid stability. Loyalty, consistency, and shared practical goals. You build together brick by brick.": {
+"ar": "استقرار صخري صلب الولاء، والاتساق، والأهداف العملية المشتركة. تَبْني معاً الطوبِ مِنْ الطوبِ.",
+"score": 0.91
+},
+"Schedule monthly 'new experiences.' Break routines together intentionally. Invite Air and Fire energy.": {
+"ar": "جدول شهري \"خبرات جديدة\" روتينات الكسر معا عمداً دعوة طاقة الهواء والنار.",
+"score": 0.75
+},
+"Interaction": {
+"ar": "التفاعل",
+"score": 1.0
+},
+"%): Your mothers' energies create natural harmony. You feel \"at home\" with each other emotionally, which provides a stable base for the relationship.": {
+"ar": "%): طاقات أمهاتك تخلق وئام طبيعي أنت تشعر بالبيت مع بعضكم البعض عاطفياً مما يوفر قاعدة مستقرة للعلاقة",
+"score": 0.8
+},
+"Alternate decision-making - Fire chooses adventures, Water chooses restoration": {
+"ar": "صنع القرار البديل - النار تختار المغامرات، الماء يختار الاستعادة",
+"score": 0.75
+},
+"Teach each other - Air shares logic, Water shares intuition": {
+"ar": "تدريس بعضها البعض - تشاطر الهواء المنطق، ونصيب الماء",
+"score": 0.88
+},
+"Responsibility and service. May require effort but builds strong commitment.": {
+"ar": "المسؤولية والخدمة قد يتطلب جهدا ولكن يبني التزاما قويا.",
+"score": 1.0
+},
+"Passionate and energetic chemistry. Both partners bring enthusiasm and drive.": {
+"ar": "الكيمياء المتعة و الكيمياء الحماسية كلا الشريكين يجلبان الحماس ويقودان",
+"score": 0.75
+},
+"maintain balanced cosmic positions. Requires conscious effort for alignment.": {
+"ar": "الحفاظ على التوازن في المواقف الكونية. يتطلب جهدا واعيا للمواءمة.",
+"score": 0.75
+},
+"demonstrate strong compatibility with excellent alignment in most areas. Minor differences can be easily harmonized.": {
+"ar": ":: إظهار التوافق القوي مع المواءمة الممتازة في معظم المجالات. ويمكن بسهولة مواءمة الفروق الطفيفة.",
+"score": 0.83
+},
+"show moderate compatibility with both strengths and challenges. Conscious communication is key to success.": {
+"ar": ":: إظهار التوافق المعتدل مع كل من مواطن القوة والتحديات. الاتصال الواعي هو مفتاح النجاح.",
+"score": 1.0
+},
+"face notable differences that require patience and mutual respect. Growth comes through embracing complementary perspectives.": {
+"ar": "وتواجه اختلافات ملحوظة تتطلب الصبر والاحترام المتبادل. ويأتي النمو من خلال إشاعة منظورات تكميلية.",
+"score": 0.85
+},
+"connection provides stability. Build a strong foundation through consistent routines.": {
+"ar": "فالصلة توفر الاستقرار. بناء أساس قوي من خلال الروتينات المتسقة",
+"score": 0.89
+},
+"Both partners share Earth energy. Daily life is practical, stable, and grounded. Remember to embrace spontaneity and change.": {
+"ar": "كلا الشريكين يتشاركان طاقة الأرض الحياة اليومية عملية ومستقرة ومعاقبة. تذكري أن تتقبلي التلقائية والتغير",
+"score": 0.79
+},
+"Fire and Water create steam and tension. Daily interactions may alternate between passion and cooling. Requires patience and understanding.": {
+"ar": "النار والمياه تخلق البخار والتوتر. التفاعلات اليومية قد تتبدل بين الشغف والتبريد. يتطلب الصبر والتفاهم.",
+"score": 0.87
+},
+"Why does the Abjad calculator show a different number for a Name?": {
+"ar": "لمَ يظهر حاسب الأبجد رقماً مختلفاً لإسم؟",
+"score": 0.75
+},
+"Burj from Your Name & Mother's Name": {
+"ar": "(بيرج) من اسمكِ (اسم الأم)",
+"score": 0.75
+},
+"About this list": {
+"ar": "عن هذه القائمة",
+"score": 1.0
+},
+"See All Hours": {
+"ar": "شاهدْ جميع ساعاتِ",
+"score": 1.0
+},
+"Key:": {
+"ar": "المفتاح:",
+"score": 1.0
+},
+"Your time:": {
+"ar": "وقتك:",
+"score": 1.0
+},
+"Best day for…": {
+"ar": "أفضل يوم…",
+"score": 1.0
+},
+"A window in an hour of": {
+"ar": "نافذة خلال ساعة",
+"score": 1.0
+},
+"Other factors the tool weighs": {
+"ar": "العوامل الأخرى التي تزنها الأداة",
+"score": 1.0
+},
+"best window": {
+"ar": "أفضل نافذة",
+"score": 1.0
+},
+"Check dates for your own location": {
+"ar": "تواريخ التحقق لموقعك الخاص",
+"score": 1.0
+},
+"Favourable days and hours, and the next favourable dates.": {
+"ar": "أيام وساعات مواتية، والتواريخ المؤاتية القادمة.",
+"score": 0.8
+},
+"Best Day For… (all purposes)": {
+"ar": "أفضل يوم لـ... (جميع الأغراض)",
+"score": 0.75
+},
+"Business & contracts": {
+"ar": "عقود الأعمال التجارية",
+"score": 1.0
+},
+"These conditions rule a window out entirely:": {
+"ar": "هذه الشروط تستبعد النافذة تماماً:",
+"score": 0.83
+},
+") and planetary hours (": {
+"ar": ") والساعات الكوكبية (",
+"score": 1.0
+},
+"The hours of": {
+"ar": "ساعات العمل",
+"score": 1.0
+},
+"Is there a recommended month for marriage?": {
+"ar": "هل هناك شهر يوصى به للزواج؟",
+"score": 1.0
+},
+"Can I travel on a Friday?": {
+"ar": "هل يمكنني السفر يوم الجمعة؟",
+"score": 1.0
+},
+"What is the best day to move house?": {
+"ar": "ما هو أفضل يوم لنقل المنزل؟",
+"score": 1.0
+},
+"Do the same rules apply to building?": {
+"ar": "هل تنطبق نفس القواعد على البناء؟",
+"score": 0.8
+},
+"What is the best day to start a business?": {
+"ar": "ما هو أفضل يوم لبدء العمل؟",
+"score": 0.8
+},
+"Why does Mercury matter so much?": {
+"ar": "لماذا (ميركوري) يهم كثيراً؟",
+"score": 1.0
+},
+"Is there one best day for everything?": {
+"ar": "هل هناك يوم واحد أفضل لكل شيء؟",
+"score": 0.8
+},
+"Should I wait for a \"perfect\" date?": {
+"ar": "هل يجب أن أنتظر موعداً مناسباً؟",
+"score": 0.8
+},
+"Use my current location": {
+"ar": "استخدم موقعي الحالي",
+"score": 1.0
+},
+"New profile": {
+"ar": "نبذة جديدة",
+"score": 1.0
+},
+"Birth Summary": {
+"ar": "موجز المواليد",
+"score": 1.0
+},
+"of 28": {
+"ar": "of 28",
+"score": 1.0
+},
+"Moon phase at birth": {
+"ar": "مرحلة القمر عند الولادة",
+"score": 1.0
+},
+"Dominant planet": {
+"ar": "كوكب مهيمن",
+"score": 1.0
+},
+"Can I compare by date of birth instead of names?": {
+"ar": "هل يمكنني مقارنة تاريخ الميلاد بدلاً من الأسماء؟",
+"score": 1.0
+},
+"What if our result is low?": {
+"ar": "ماذا لو كانت نتائجنا منخفضة؟",
+"score": 1.0
+},
+"How do I pick a date for nikāḥ?": {
+"ar": "كيف أختار موعداً لـ(نيكا)؟",
+"score": 0.83
+},
+"starting a business": {
+"ar": "بدء عمل",
+"score": 1.0
+},
+"medical treatment": {
+"ar": "العلاج الطبي",
+"score": 1.0
+},
+"education or studies": {
+"ar": "التعليم أو الدراسات",
+"score": 1.0
+},
+"Check a date for": {
+"ar": "تحقق من تاريخ",
+"score": 1.0
+},
+"201 names": {
+"ar": "201 اسما",
+"score": 1.0
+},
+"Where do I find my birth manzil?": {
+"ar": "أين أجد مينزل ولادتي؟",
+"score": 0.86
+},
+"Live positions of the seven classical planets.": {
+"ar": "مواقع حية من الكواكب الكلاسيكية السبعة",
+"score": 0.8
+},
+"Find Your Burj from Your Name and Your Mother's Name": {
+"ar": "ابحث عن (بورج) من اسمك واسم أمك",
+"score": 0.8
+},
+"Don't know your mother's name in Arabic? The tool can also work from your date of birth (tropical zodiac).": {
+"ar": "ألا تعرف اسم أمك بالعربية؟ ويمكن للأداة أيضا أن تعمل من تاريخ ميلادك (الحديقة الحيوانية).",
+"score": 0.87
+},
+"How do I find my burj from my name and my mother's name?": {
+"ar": "كيف أعثر على (بورج) من اسمي واسم والدتي؟",
+"score": 0.89
+},
+"Why is the mother's name used?": {
+"ar": "لماذا اسم الأم مستعمل؟",
+"score": 1.0
+},
+"is written": {
+"ar": "مكتوب",
+"score": 1.0
+},
+"in Arabic:": {
+"ar": "بالعربية:",
+"score": 1.0
+},
+"How do I find my burj with the name": {
+"ar": "كيف أعثر على \"بورج\" بإسمي",
+"score": 0.86
+},
+"give the same result as": {
+"ar": "أعطى نفس النتيجة",
+"score": 1.0
+},
+", not the Latin letters, so every Latin spelling of this name gives the same value,": {
+"ar": ", ليس الخطابات اللاتينية، لذا كل تهجئة لاتينية من هذا الاسم تعطي نفس القيمة,",
+"score": 0.9
+},
+") is": {
+"ar": ") هو",
+"score": 1.0
+},
+"Arabic, meaning and Abjad value of each Name.": {
+"ar": "العربية، ومعنى وقيمة الأبجد لكل اسم.",
+"score": 0.83
+},
+"Names": {
+"ar": "الأسماء",
+"score": 1.0
+},
+"The Mashriqi table gives the same total for this name.": {
+"ar": "ويعطي الجدول المشرقي نفس المجموع لهذا الاسم.",
+"score": 0.83
+},
+"You can check any spelling in the": {
+"ar": "يمكنك التحقق من أي تهجئة في",
+"score": 0.75
+},
+"Other names": {
+"ar": "أسماء أخرى",
+"score": 1.0
+},
+"All names →": {
+"ar": "جميع الأسماء →",
+"score": 1.0
+},
+"What is the Abjad value of a name?": {
+"ar": "ما قيمة اسم الأبجد؟",
+"score": 0.75
+},
+"Is this a prediction?": {
+"ar": "هل هذا تنبؤ؟",
+"score": 1.0
+},
+"Girls’ names": {
+"ar": "أسماء الفتيات",
+"score": 1.0
+},
+"› Names": {
+"ar": "› الأسماء",
+"score": 1.0
+},
+"Why a name has a number": {
+"ar": "لماذا الاسم لديه رقم",
+"score": 0.75
+},
+"Heart, eyes, spine": {
+"ar": "القلب، العيون، العمود الفقري",
+"score": 1.0
+},
+"Lion ♌": {
+"ar": "الأسد ♌",
+"score": 1.0
+},
+"Brain, stomach, uterus, fluids": {
+"ar": "الدماغ، المعدة، الرحم، السوائل",
+"score": 1.0
+},
+"Nervous system, hands, lungs": {
+"ar": "النظام العصبي، اليدين، الرئتين",
+"score": 0.75
+},
+"Liver, hips, thighs": {
+"ar": "الكبد، الورك، الفخذان",
+"score": 1.0
+},
+"Love, beauty, harmony, art, pleasure, relationships, grace": {
+"ar": "الحب والجمال والوئام والفن والمتعة والعلاقات والنعمة",
+"score": 0.86
+},
+"Discipline, structure, patience, endurance, limitation, mastery, wisdom through hardship": {
+"ar": "الانضباط والهيكل والصبر والتحمل والحد والتحكم والحكمة من خلال المشقة",
+"score": 0.78
+},
+"Bones, teeth, joints, skin": {
+"ar": "العظام، الأسنان، المفاصل، الجلد",
+"score": 0.75
+},
+"Saturday is governed by the slowest and most disciplined of the classical planets. It is a day for long-term commitments, serious study, and patient effort. Engage in property matters, legal affairs, and building lasting structures. Avoid rushing — Saturn rewards consistent, sustained effort over time.": {
+"ar": "يوم السبت يحكمه أبطأ وأشد الكواكب الكلاسيكية انضباطاً إنه يوم للالتزامات الطويلة الأجل، ودراسة جادة، وجهد صبور. المشاركة في مسائل الملكية والشؤون القانونية وبناء هياكل دائمة. تجنب الاندفاع - يكافئ زحل جهدا ثابتا ومستمرا على مر الزمن.",
+"score": 0.84
+},
+"Check the Dignity": {
+"ar": "تحقق من الكرامة",
+"score": 1.0
+},
+"Tropical Zodiac": {
+"ar": "زودياك الاستوائية",
+"score": 1.0
+},
+"This page shows the live positions of all 7 classical planets (Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn) in the zodiac, calculated using NASA JPL-based ephemeris data. Tap any planet to see its detailed dignity status, sign meaning, and guidance for that planetary energy right now.": {
+"ar": "وتبين هذه الصفحة المواقع الحية لجميع الكواكب الكلاسيكية السبعة (سون، مون، ميركوري، فينوس، المريخ، المشتري، زحل) في حديقة الحيوان، المحسوبة باستخدام بيانات الغلاف الجوي التي تستند إليها حركة ناسا. تُخطّطُ أيّ كوكب لرُؤية مركز كرامته المفصّل، إشارة معنى، وإرشادات لتلك الطاقة الكواكبيةِ الآن.",
+"score": 0.75
+},
+"🗺️ How to Read Transits": {
+"ar": "🗺️ كيفية قراءة المرور العابر",
+"score": 1.0
+},
+"🌐 Zodiac Systems": {
+"ar": "🌐 نظم زودياك",
+"score": 1.0
+},
+"Knowing Your Timing": {
+"ar": "معرفة توقيتك",
+"score": 1.0
+},
+"Leadership decisions": {
+"ar": "قرارات القيادة",
+"score": 1.0
+},
+"Official matters": {
+"ar": "المسائل الرسمية",
+"score": 1.0
+},
+"Travel & movement": {
+"ar": "حركة السفر",
+"score": 1.0
+},
+"Starting long projects": {
+"ar": "بدء مشاريع طويلة",
+"score": 1.0
+},
+"Marriage proposals": {
+"ar": "مقترحات الزواج",
+"score": 1.0
+},
+"Peace negotiations": {
+"ar": "مفاوضات السلام",
+"score": 1.0
+},
+"Financial decisions": {
+"ar": "القرارات المالية",
+"score": 1.0
+},
+"Study & learning": {
+"ar": "الدراسة: التعلم",
+"score": 1.0
+},
+"Trade & contracts": {
+"ar": "عقود التجارة",
+"score": 1.0
+},
+"Wealth & abundance": {
+"ar": "وفرة الثروة",
+"score": 1.0
+},
+"Higher education": {
+"ar": "التعليم العالي",
+"score": 1.0
+},
+"Restrictive work": {
+"ar": "العمل التقييدي",
+"score": 1.0
+},
+"Love & relationships": {
+"ar": "العلاقات بين الحب",
+"score": 1.0
+},
+"Beauty & art": {
+"ar": "فن الجمال",
+"score": 1.0
+},
+"Discipline & structure": {
+"ar": "الهيكل الانضباطي",
+"score": 1.0
+},
+"Social events": {
+"ar": "المناسبات الاجتماعية",
+"score": 1.0
+},
+"🗓 How to Use Planetary Hours": {
+"ar": "🗓 كيفية استخدام ساعات الكوكب",
+"score": 0.75
+},
+"After Saturn, the cycle repeats from ♄ → ♃ → ♂ → ☉ → ♀ → ☿ → ☽ → ♄...": {
+"ar": "بعد (ساتر)، تُكرّر الدورة من...",
+"score": 0.75
+},
+"Progress": {
+"ar": "التقدم",
+"score": 1.0
+},
+"What is sarax?": {
+"ar": "ما هو (ساراكس)؟",
+"score": 1.0
+},
+"How do I know my burj?": {
+"ar": "كيف لي أن أعرف زهرتي؟",
+"score": 0.83
+},
+"For Monday the tradition recommends:": {
+"ar": "لليوم الاثنين، التقليد يوصي:",
+"score": 1.0
+},
+"Can I use the weekday I was born on?": {
+"ar": "هل يمكنني أن أستخدم يوم الأسبوع الذي ولدت فيه؟",
+"score": 0.83
+},
+"Check another date": {
+"ar": "تحقق من تاريخ آخر",
+"score": 1.0
+},
+"Asrariya for iOS is coming soon.": {
+"ar": "(أسريا) من أجل (أيوس) قادم قريباً",
+"score": 0.75
+},
+"I embrace transformation with wisdom and patience": {
+"ar": "أَحتضنُ التحوّلَ بالحكمةِ والصبرِ",
+"score": 1.0
+},
+"If your water were to sink away": {
+"ar": "إذا كان ماءك يغرق بعيدا",
+"score": 0.8
+},
+"After sunset": {
+"ar": "بعد غروب الشمس",
+"score": 1.0
+},
+"I seek knowledge with clarity and share wisdom freely": {
+"ar": "أنا أسعى إلى معرفة واضحة و أتشارك الحكمة بحرية",
+"score": 0.86
+},
+"All rights reserved": {
+"ar": "جميع الحقوق المحجوزة",
+"score": 1.0
+},
+"Total Target": {
+"ar": "المجموع المستهدف",
+"score": 1.0
+},
+"Intensive": {
+"ar": "المكثف",
+"score": 1.0
+},
+"Light": {
+"ar": "الضوء",
+"score": 1.0
+},
+"Your daily goal": {
+"ar": "هدفك اليومي",
+"score": 1.0
+},
+"Change Plan": {
+"ar": "خطة التغيير",
+"score": 1.0
+},
+"Today's target completed ✓": {
+"ar": "هدف اليوم اكتمل ✓",
+"score": 0.75
+},
+"Special": {
+"ar": "خاصة",
+"score": 1.0
+},
+"Already Added": {
+"ar": "أضيفت بالفعل",
+"score": 1.0
+},
+"Show Meaning": {
+"ar": "إظهار معنى",
+"score": 1.0
+},
+"Recommended Daily Target": {
+"ar": "الهدف اليومي الموصى به",
+"score": 1.0
+},
+"30-day total": {
+"ar": "المجموع 30 يوما",
+"score": 1.0
+},
+"Steps:": {
+"ar": "الخطوات:",
+"score": 1.0
+},
+"Estimated time": {
+"ar": "الوقت التقديري",
+"score": 1.0
+},
+"25-35 minutes per session": {
+"ar": "٢٥-٣٥ دقيقة لكل دورة",
+"score": 1.0
+},
+"Come back tomorrow for your next session": {
+"ar": "عُد غداً لدورتك القادمة",
+"score": 1.0
+},
+"Practice Steps": {
+"ar": "خطوات الممارسة",
+"score": 1.0
+},
+"Steps for this session:": {
+"ar": "خطوات هذه الدورة:",
+"score": 1.0
+},
+"Step 2: The 201 Names": {
+"ar": "الخطوة 2: الأسماء الـ 201",
+"score": 1.0
+},
+"The 201 Names": {
+"ar": "الأسماء الـ 201",
+"score": 1.0
+},
+"Hide meaning": {
+"ar": "إخفاء معنى",
+"score": 1.0
+},
+"Tonight:": {
+"ar": "الليلة:",
+"score": 1.0
+},
+"Evening session": {
+"ar": "جلسة المساء",
+"score": 1.0
+},
+"Special Practice": {
+"ar": "الممارسة الخاصة",
+"score": 1.0
+},
+"Start 7-Day Challenge": {
+"ar": "ابدأوا التحدي 7 أيام",
+"score": 1.0
+},
+"Remove this challenge?": {
+"ar": "إزالة هذا التحدي؟",
+"score": 1.0
+},
+"Your progress will be lost.": {
+"ar": "تقدمك سيضيع",
+"score": 1.0
+},
+"Benefits": {
+"ar": "الاستحقاقات",
+"score": 1.0
+},
+"The Number": {
+"ar": "العدد",
+"score": 1.0
+},
+"Partnership, balance, cooperation and harmony": {
+"ar": "الشراكة والتوازن والتعاون والوئام",
+"score": 1.0
+},
+"Creativity, expression, joy and communication": {
+"ar": "الإبداع والتعبير والفرح والاتصال",
+"score": 0.75
+},
+"Stability, foundation, security and structure": {
+"ar": "الاستقرار والمؤسسة والأمن والهيكل",
+"score": 1.0
+},
+"Freedom, adventure, change and adaptability": {
+"ar": "الحرية والمغامرة والتغيير والقدرة على التكيف",
+"score": 0.75
+},
+"Service, responsibility, nurturing and love": {
+"ar": "الخدمة، المسؤولية، الرعاية والحب",
+"score": 0.75
+},
+"Daily Energy": {
+"ar": "الطاقة اليومية",
+"score": 1.0
+},
+"Current Position": {
+"ar": "المنصب الحالي",
+"score": 1.0
+},
+"Transit Practice": {
+"ar": "الممارسة في مجال النقل العابر",
+"score": 1.0
+},
+"In fall in": {
+"ar": "في السقوط",
+"score": 1.0
+},
+"in fall in": {
+"ar": "في السقوط",
+"score": 1.0
+},
+"Coming Soon": {
+"ar": "قادم قريباً",
+"score": 1.0
+},
+"Your Balance Today": {
+"ar": "رصيدك اليوم",
+"score": 1.0
+},
+"Need more:": {
+"ar": "الحاجة إلى المزيد:",
+"score": 1.0
+},
+"What does my score mean?": {
+"ar": "ماذا تعني نتائجي؟",
+"score": 0.8
+},
+"0-39: Conflict": {
+"ar": "0-39: النزاع",
+"score": 1.0
+},
+"You express with Air but have Fire roots. Your Fire foundation energizes your Air movement×like heat creating wind.": {
+"ar": "أنتِ تعبرين عن الهواء لكن لديكِ جذور النار مؤسستك النارية تُنقّط حركتك الجوية مثل الحرارة التي تخلق الرياح.",
+"score": 0.77
+},
+"You express with Water but have Earth roots. Your Earth foundation contains your Water flow×like a riverbed holding water.": {
+"ar": "أنتِ تُعبرين عن الماء لكن لديكِ جذور أرضية مؤسستك الأرضية تحتوي على تدفق الماء × مثل النهر الذي يمسك الماء.",
+"score": 0.75
+},
+"You express with Earth but have Water roots. Your Water foundation nourishes your Earth structure×like rain feeding soil.": {
+"ar": "أنت تعبر مع الأرض لكن لديك جذور الماء مؤسسة المياه الخاصة بك لا حرق هيكل الأرض الخاص بك مثل تغذي التربة المطرية.",
+"score": 0.85
+},
+"You express with Fire but have Water roots. This creates dynamic tension×passion balanced by emotional depth.": {
+"ar": "أنت تُعبر مع النار لكن لديك جذور الماء. هذا يخلق توتراً دينامياً متوازناً بالعمق العاطفي",
+"score": 0.77
+},
+"You express with Water but have Fire roots. This creates dynamic tension×emotional depth fueled by inner passion.": {
+"ar": "أنتِ تُعبرين عن الماء لكن لديكِ جذور النار وهذا يخلق توتراً دينامياً × العمق العاطفي الذي يغذيه العاطفة الداخلية.",
+"score": 0.79
+},
+"Energy Type": {
+"ar": "نوع الطاقة",
+"score": 1.0
+},
+"Social Energy": {
+"ar": "الطاقة الاجتماعية",
+"score": 1.0
+},
+"Review Time": {
+"ar": "استعراض الوقت",
+"score": 1.0
+},
+"For everything there is a time": {
+"ar": "لكل شيء هناك وقت",
+"score": 1.0
+},
+"Success comes from right action at the right time": {
+"ar": "النجاح يأتي من العمل الصحيح في الوقت المناسب",
+"score": 0.8
+},
+"Three Analysis Methods": {
+"ar": "ثلاثة أساليب تحليل",
+"score": 1.0
+},
+"Nurture creative rest together. Cook, garden, or create beauty.": {
+"ar": "الحركات الإبداعية ترتاح معا الكوك، حديقة، أو خلق الجمال.",
+"score": 0.75
+},
+"Build stability together, but leave room for spontaneity.": {
+"ar": "بناء الاستقرار معا، ولكن ترك المجال لل العفوية.",
+"score": 1.0
+},
+"Focuses the mind, brings wisdom": {
+"ar": "يركّز العقل، يجلب الحكمة",
+"score": 0.75
+},
+"🏠 In Daily Life:": {
+"ar": "🏠 الحياة اليومية:",
+"score": 1.0
+},
+"70-75% accuracy": {
+"ar": "70-75% دقة",
+"score": 1.0
+},
+"90-95% accuracy": {
+"ar": "90-95 في المائة دقة",
+"score": 1.0
+},
+"⚠️ May compete or burn out without rest. Both want to lead.": {
+"ar": "⚠️ قد تتنافس أو تحترق بدون راحة كلاهما يريد أن يقود",
+"score": 0.78
+},
+"💡 Schedule calm time together. Practice listening, not just doing.": {
+"ar": "💡 وقت الهدوء مع بعض. ممارسة الاستماع، وليس مجرد القيام.",
+"score": 0.78
+},
+"⚠️ Fire may overwhelm Water. Water may withdraw from Fire. Communication styles clash.": {
+"ar": "⚠️ النار قد تطغى على الماء الماء قد ينسحب من النار تصادم أساليب الاتصال.",
+"score": 0.75
+},
+"💡 Fire: Practice active listening and patience. Water: Express needs clearly and directly.": {
+"ar": "💡 النار: ممارسة الاستماع والصبر النشطين. المياه: الاحتياجات العاجلة بشكل واضح ومباشر.",
+"score": 0.9
+},
+"💡 Schedule monthly 'new experiences.' Break routines together intentionally. Invite Air and Fire energy.": {
+"ar": "💡 جدول شهري \"خبرات جديدة\" روتينات الكسر معا عمداً دعوة طاقة الهواء والنار.",
+"score": 0.83
+},
+"Your Life Numbers": {
+"ar": "عدد حياتك",
+"score": 1.0
+},
+"Where You Are Now": {
+"ar": "أين أنت الآن",
+"score": 1.0
+},
+"Growth Area": {
+"ar": "منطقة النمو",
+"score": 1.0
+},
+"Your current strength": {
+"ar": "قوتك الحالية",
+"score": 1.0
+},
+"Currently working on": {
+"ar": "العمل حاليا على",
+"score": 1.0
+},
+"Your main focus": {
+"ar": "تركيزك الرئيسي",
+"score": 1.0
+},
+"Unable to calculate planetary hour. Please try again.": {
+"ar": "غير قادر على حساب ساعة الكواكب أرجوك حاول مرة أخرى.",
+"score": 0.86
+},
+"Today is a Rest Day": {
+"ar": "اليوم هو يوم الراحة",
+"score": 1.0
+},
+"Planetary hours below are shown for reference, but minimize activities today.": {
+"ar": "وتُعرض ساعات الطيران الواردة أدناه كمرجع، ولكنها تقلل إلى أدنى حد الأنشطة اليوم.",
+"score": 0.89
+},
+"Window closes in:": {
+"ar": "ويندو يغلق في:",
+"score": 1.0
+},
+"Best for when your element returns:": {
+"ar": "أفضل عندما يعود عنصرك:",
+"score": 0.75
+},
+"Your Personal Year": {
+"ar": "عامك الشخصي",
+"score": 1.0
+},
+"Real-time Guidance": {
+"ar": "التوجيه في الوقت الحقيقي",
+"score": 1.0
+},
+"What to Wear Today": {
+"ar": "ما الذي يلبس اليوم؟",
+"score": 1.0
+},
+"Try this:": {
+"ar": "جرب هذا:",
+"score": 1.0
+},
+"Going well": {
+"ar": "تسير على ما يرام",
+"score": 1.0
+},
+"Need care": {
+"ar": "الحاجة لرعاية",
+"score": 1.0
+},
+"Act Now - Real-Time Guidance": {
+"ar": "الآن - التوجيه في الوقت الحقيقي -",
+"score": 0.8
+},
+"Use this time for:": {
+"ar": "إستخدم هذا الوقت:",
+"score": 1.0
+},
+"Ancient wisdom says colors and energy work together. Wear what feels right to you! 🌀": {
+"ar": "الحكمة القديمة تقول الألوان و الطاقة تعمل معاً إرتدي ما هو شعورك الصحيح 🌀",
+"score": 0.82
+},
+"Creative work": {
+"ar": "العمل الإبداعي",
+"score": 1.0
+},
+"Harmony Level": {
+"ar": "مستوى الانسجام",
+"score": 1.0
+},
+"Energy Message": {
+"ar": "رسالة الطاقة",
+"score": 1.0
+},
+"Relationship": {
+"ar": "العلاقة",
+"score": 1.0
+},
+"Both names are required for accurate guidance": {
+"ar": "كلا الاسمين مطلوبين لإرشاد دقيق",
+"score": 0.8
+},
+"About This Analysis": {
+"ar": "حول هذا التحليل",
+"score": 1.0
+}
+}

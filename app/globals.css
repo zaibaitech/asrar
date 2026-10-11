@@ -10,6 +10,15 @@
 
 /* Arabic UI: one central font stack. The next/font face (app/layout.tsx) only covers Arabic
    glyphs, so Latin text keeps the app's normal system sans. */
+/* Hide the first paint of /ar pages until the Arabic catalog is applied (max 1.5s). */
+html[data-ar-pending] body {
+  visibility: hidden;
+  animation: ar-reveal 0s linear 2s forwards; /* failsafe if JS never runs */
+}
+@keyframes ar-reveal {
+  to { visibility: visible; }
+}
+
 html[lang="ar"] body {
   font-family: var(--font-arabic-ui), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
