@@ -939,7 +939,7 @@ export const ar: DeepPartial<typeof en> = {
     planetTransit: {
       skyNow: "السماء",
       longTerm: "طويل المدى",
-      tropical: "استوائي",
+      tropical: "مداري",
       updated: "تم التحديث",
       planet: "الكوكب",
       sign: "البرج",
@@ -1770,7 +1770,7 @@ export const ar: DeepPartial<typeof en> = {
     today: "اليوم",
     balanced: "توازن",
     waitForBetterTiming: "انتظر توقيتًا أفضل",
-    dayRuler: "حاكم اليوم:",
+    dayRuler: "صاحب اليوم:",
     unableToCalculate: "غير قادر على حساب ساعة الكواكب أرجوك حاول مرة أخرى.", // TODO review (machine draft)
     deepRestNeededToday: "تحتاج اليوم إلى راحة عميقة", // TODO review (hand draft, not from mobile)
     todayIsRestDay: "اليوم هو يوم الراحة", // TODO review (machine draft)
