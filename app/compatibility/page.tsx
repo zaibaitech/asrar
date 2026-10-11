@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { arabicMetadata } from '@/src/lib/arMetadata';
 import { buildToolMetadata, getRouteLang, resolvePageLang } from '@/src/lib/pageLang';
 import { FaqSection, JsonLd, RelatedLinks, faqJsonLd, type FaqItem, type RelatedLink } from '@/src/components/seo/SeoSections';
 import { CompatibilityCalculator } from './CompatibilityCalculator';
@@ -24,6 +25,8 @@ export async function generateMetadata({
 }: {
   searchParams: Promise<{ lang?: string }>;
 }): Promise<Metadata> {
+  const arMeta = await arabicMetadata('/compatibility');
+  if (arMeta) return arMeta;
   const lang = await resolvePageLang(searchParams);
   return buildToolMetadata(PATH, META[lang], lang);
 }

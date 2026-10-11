@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { arabicMetadata } from '@/src/lib/arMetadata';
 import { SADAQAH_BY_DAY } from '@/src/features/calculator/lib/sadaqahByDay';
 import { SADAQAH_BY_MONTH } from '@/src/features/calculator/lib/sadaqahByMonth';
 import { ZODIAC_SADAQAH, ZODIAC_SIGN_ORDER, ZODIAC_SIGN_SYMBOL } from '@/src/data/zodiacSadaqahData';
@@ -27,6 +28,8 @@ export async function generateMetadata({
 }: {
   searchParams: Promise<{ lang?: string }>;
 }): Promise<Metadata> {
+  const arMeta = await arabicMetadata('/sadaqa');
+  if (arMeta) return arMeta;
   const lang = await resolvePageLang(searchParams);
   return buildToolMetadata(PATH, META[lang], lang);
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { arabicMetadata } from '@/src/lib/arMetadata';
 import { cookies } from 'next/headers';
 import { bilingualMeta } from '../src/lib/seoConfig';
 import { PUBLIC_TOOLS, SITE_URL } from '../src/lib/siteRoutes';
@@ -18,6 +19,8 @@ export async function generateMetadata({
 }: {
   searchParams: Promise<{ lang?: string; challenge?: string }>;
 }): Promise<Metadata> {
+  const arMeta = await arabicMetadata('/');
+  if (arMeta) return arMeta;
   // Await searchParams (Next.js 14.2+ requirement)
   const params = await searchParams;
   

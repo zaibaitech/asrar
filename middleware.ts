@@ -11,7 +11,7 @@
 
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { ROUTE_LANG_HEADER, frPath, isArAppPath, isLocalizedPath, stripArPrefix, stripFrPrefix } from './src/lib/i18nRoutes';
+import { ROUTE_LANG_HEADER, frPath, isArAppPath, isIndexableArAppPath, isLocalizedPath, stripArPrefix, stripFrPrefix } from './src/lib/i18nRoutes';
 
 const SUPPORTED_LANGUAGES = ['en', 'fr', 'ar'] as const;
 type Language = typeof SUPPORTED_LANGUAGES[number];
@@ -86,8 +86,8 @@ export function middleware(request: NextRequest) {
   const frTarget = stripFrPrefix(pathname);
   const arTarget = stripArPrefix(pathname);
   if (arTarget !== null && isArAppPath(arTarget)) {
-    // /ar/... app mirror: same EN route file, Arabic UI, RTL. noindex until
-    // the Arabic copy has had native-speaker review.
+    // /ar/... app mirror: same EN route file, Arabic UI, RTL. Mirrors of the
+    // localized SEO pages are indexable; the others (birth profile etc.) stay noindex.
     if (langParam) {
       const url = request.nextUrl.clone();
       url.searchParams.delete('lang');
@@ -100,7 +100,7 @@ export function middleware(request: NextRequest) {
       url.pathname = arTarget;
       requestHeaders.set(ROUTE_LANG_HEADER, 'ar');
       response = NextResponse.rewrite(url, { request: { headers: requestHeaders } });
-      response.headers.set('X-Robots-Tag', 'noindex, follow');
+      if (!isIndexableArAppPath(arTarget)) response.headers.set('X-Robots-Tag', 'noindex, follow');
       language = detectLanguage(request);
     }
   } else if (frTarget !== null && isLocalizedPath(frTarget)) {

@@ -1,4 +1,5 @@
 import { Suspense } from 'react';
+import { arabicMetadata } from '@/src/lib/arMetadata';
 import { cookies } from 'next/headers';
 import type { Metadata } from 'next';
 import { getRouteLang } from '@/src/lib/pageLang';
@@ -26,6 +27,8 @@ export async function generateMetadata({
 }: {
   searchParams: Promise<{ lang?: string }>;
 }): Promise<Metadata> {
+  const arMeta = await arabicMetadata('/planet-of-the-day');
+  if (arMeta) return arMeta;
   const lang = await resolveLang(searchParams);
   const isEn = lang !== 'fr';
   const routeLang = await getRouteLang();

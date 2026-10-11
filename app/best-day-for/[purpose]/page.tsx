@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { arabicMetadata } from '@/src/lib/arMetadata';
 import { notFound } from 'next/navigation';
 import { buildToolMetadata, getRouteLang, resolvePageLang, type PageLang } from '@/src/lib/pageLang';
 import { localizeHref } from '@/src/lib/i18nRoutes';
@@ -23,6 +24,8 @@ function isPurpose(s: string): s is PurposeSlug {
 export async function generateMetadata({ params, searchParams }: { params: Params; searchParams: Search }): Promise<Metadata> {
   const { purpose } = await params;
   if (!isPurpose(purpose)) return {};
+  const arMeta = await arabicMetadata(`/best-day-for/${purpose}`);
+  if (arMeta) return arMeta;
   const lang = await resolvePageLang(searchParams);
   const c = purposeCopy(purpose, lang, purposeFacts(purpose, lang));
   return buildToolMetadata(`/best-day-for/${purpose}`, { title: c.title, description: c.description }, lang);

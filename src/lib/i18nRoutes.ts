@@ -86,10 +86,15 @@ export const AR_PATHS: Readonly<Record<string, string>> = {
   '/sadaqa-of-the-day': '/ar/sadaqa-of-the-day',
 };
 
-/** Absolute URL of the Arabic landing page for an EN path, or null if there is none. */
+/**
+ * Absolute URL of the Arabic version of an EN path: its dedicated landing page
+ * (AR_PATHS), or for every other localized page its /ar app mirror. null otherwise.
+ */
 export function arabicUrl(enPath: string): string | null {
   const ar = AR_PATHS[enPath];
-  return ar ? absoluteUrl(ar) : null;
+  if (ar) return absoluteUrl(ar);
+  if (isLocalizedPath(enPath)) return absoluteUrl(enPath === '/' ? '/ar' : `/ar${enPath}`);
+  return null;
 }
 
 /** hreflang map (en, fr, ar when it exists, x-default -> en) for a localized page. */
@@ -105,7 +110,7 @@ export function hreflangLanguages(enPath: string): Record<string, string> {
 
 /**
  * Metadata `alternates` block: self-canonical for the served language + hreflang pairs.
- * 'ar' is only valid for paths in AR_PATHS (the Arabic landing pages).
+ * 'ar' is valid for every localized path (landing page or /ar app mirror).
  */
 export function localeAlternates(enPath: string, lang: RouteLang | 'ar') {
   const canonical = lang === 'ar' ? arabicUrl(enPath) ?? localizedUrl(enPath, 'en') : localizedUrl(enPath, lang);
@@ -121,9 +126,10 @@ export function localeAlternates(enPath: string, lang: RouteLang | 'ar') {
 /* /ar/<path> for a localized page WITHOUT a dedicated Arabic landing file   */
 /* (AR_PATHS) is rewritten by middleware to the English route with           */
 /* ROUTE_LANG_HEADER=ar: the same page with the Arabic UI strings, RTL.      */
-/* These URLs are noindex (X-Robots-Tag) until the Arabic copy is reviewed,  */
-/* so they get no hreflang / sitemap entries yet. The 4 AR_PATHS landing     */
-/* pages keep their own route files and stay indexable.                      */
+/* Mirrors of LOCALIZED_PATHS pages are indexable, with Arabic metadata,     */
+/* self-canonical, hreflang and sitemap entries. The AR_MIRROR_EXTRA mirrors */
+/* (personal / EN-only pages) stay noindex (X-Robots-Tag). The 4 AR_PATHS    */
+/* landing pages keep their own route files.                                 */
 /* ------------------------------------------------------------------------ */
 
 export const AR_PREFIX = '/ar';
@@ -136,8 +142,13 @@ export function stripArPrefix(pathname: string): string | null {
 }
 
 /** Localized EN paths served through the /ar app mirror (everything except the dedicated landing pages). */
-/** EN-only pages (no /fr mirror) that also get an /ar app mirror (noindex). */
+/** EN-only pages (no /fr mirror) that also get an /ar app mirror (noindex: personal or not yet localized). */
 export const AR_MIRROR_EXTRA: readonly string[] = ['/99-names-of-allah', '/planet-transit', '/birth-profile'];
+
+/** /ar app mirrors that are indexable: the localized pages (not AR_MIRROR_EXTRA). */
+export function isIndexableArAppPath(enPath: string): boolean {
+  return isLocalizedPath(enPath) && !(enPath in AR_PATHS);
+}
 
 export function isArAppPath(enPath: string): boolean {
   return (isLocalizedPath(enPath) || AR_MIRROR_EXTRA.includes(enPath)) && !(enPath in AR_PATHS);

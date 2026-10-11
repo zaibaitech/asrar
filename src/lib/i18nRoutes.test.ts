@@ -47,17 +47,26 @@ describe('i18nRoutes', () => {
     expect(localeAlternates('/abjad', 'en').canonical).toBe(fr.languages.en);
   });
 
-  it('adds an ar alternate only for pages with an Arabic landing page', () => {
+  it('adds an ar alternate for every localized page (landing page or /ar mirror)', () => {
     const withAr = hreflangLanguages('/abjad');
     expect(withAr.ar).toMatch(/\/ar\/abjad$/);
     expect(withAr['x-default']).toBe(withAr.en);
-    expect(hreflangLanguages('/ikhtiyarat')).not.toHaveProperty('ar');
-    expect(hreflangLanguages('/best-day-for/travel')).not.toHaveProperty('ar');
+    expect(hreflangLanguages('/ikhtiyarat').ar).toMatch(/\/ar\/ikhtiyarat$/);
+    expect(hreflangLanguages('/best-day-for/travel').ar).toMatch(/\/ar\/best-day-for\/travel$/);
+    expect(hreflangLanguages('/').ar).toMatch(/\/ar$/);
+    for (const en of LOCALIZED_PATHS) expect(arabicUrl(en)).toMatch(/\/ar(\/|$)/);
     for (const en of Object.keys(AR_PATHS)) {
       expect(LOCALIZED_PATHS).toContain(en);
       expect(arabicUrl(en)).toMatch(/\/ar\//);
     }
-    expect(arabicUrl('/sadaqa')).toBeNull();
+    expect(arabicUrl('/birth-profile')).toBeNull();
+    expect(arabicUrl('/names/fatima')).toBeNull();
+  });
+
+  it('self-canonicalises an /ar mirror page', () => {
+    const ar = localeAlternates('/manazil', 'ar');
+    expect(ar.canonical).toMatch(/\/ar\/manazil$/);
+    expect(ar.languages.ar).toBe(ar.canonical);
   });
 
   it('self-canonicalises the Arabic page', () => {
