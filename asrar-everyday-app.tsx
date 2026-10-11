@@ -246,6 +246,9 @@ export default function AsrarEveryday() {
   };
 
   // Onboarding Tutorial State
+  // Auto-open on first visit is switched off: visitors land straight on the home/dashboard.
+  // The tutorial stays available from the Help button. Set to true to bring back the first-visit pop-up.
+  const ONBOARDING_ENABLED = false;
   const [showOnboarding, setShowOnboarding] = useState(false);
 
   // Mobile Menu State
@@ -267,7 +270,7 @@ export default function AsrarEveryday() {
       const hasDeepLink = urlParams.get('challenge') !== null;
       
       const hasSeenOnboarding = localStorage.getItem('hasSeenOnboarding');
-      if (!hasSeenOnboarding && !hasDeepLink) {
+      if (ONBOARDING_ENABLED && !hasSeenOnboarding && !hasDeepLink) {
         // Small delay for smoother UX
         const timer = setTimeout(() => setShowOnboarding(true), 500);
         return () => clearTimeout(timer);
