@@ -24,7 +24,8 @@ type Catalog = { get(key: string): string | undefined };
  * Exact matches first; then a few sentence patterns whose parts are
  * themselves catalog entries (e.g. "Sun is weakened in Libra").
  * In the JSON, keys starting with "re:" are patterns and $1..$n in the value
- * are replaced by the catalog translation of each captured group.
+ * are replaced by the catalog translation of each captured group ($pN keeps
+ * the captured text as is).
  */
 function makeCatalog(o: Record<string, string>): Catalog {
   const exact = new Map<string, string>();
@@ -41,8 +42,9 @@ function makeCatalog(o: Record<string, string>): Catalog {
         const m = key.match(p.re);
         if (!m) continue;
         let ok = true;
-        const out = p.ar.replace(/\$(\d)/g, (_, i) => {
+        const out = p.ar.replace(/\$(p?)(\d)/g, (_, raw, i) => {
           const part = m[Number(i)] ?? '';
+          if (raw) return part; // $pN: pass the captured text through unchanged (times, zone names)
           const tr = exact.get(part.trim()) ?? (/[A-Za-z]{3}/.test(part) ? undefined : part);
           if (tr === undefined) ok = false;
           return tr ?? part;
