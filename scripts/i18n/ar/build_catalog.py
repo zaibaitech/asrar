@@ -13,6 +13,11 @@ for k,v in r.items():
     held.append(k);stats['held']+=1;continue
   for x,y in GLOSS: a=a.replace(x,y)
   cat[k]=a;stats['mt']+=1
+ai={}
+for f in ('ai_divine.json','ai_drafts.json'):
+  if __import__('os').path.exists(f): ai.update(json.load(open(f)))
+for k,v in ai.items():
+  if k not in manual: cat[k]=v;stats['ai']=stats.get('ai',0)+1
 for k,v in manual.items(): cat[k]=v;stats['manual']+=1
 PAT={
  r"re:^(\S+) (\w+) — (\w+) is weakened in (\w+)$":"$1 $2 — $3 ضعيف في برج $4",
@@ -30,4 +35,5 @@ PAT={
 cat.update(PAT)
 json.dump(cat,open('/workspace/asrar/public/i18n/ar-ui.json','w'),ensure_ascii=False,separators=(',',':'))
 json.dump(held,open('held.json','w'),ensure_ascii=False)
+json.dump([h for h in held if h not in ai],open('held-remaining.json','w'),ensure_ascii=False)
 print(stats,len(cat))
