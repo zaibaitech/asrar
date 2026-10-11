@@ -14,6 +14,8 @@ module.exports = {
         'xs': '480px',
       },
       fontFamily: {
+        arabic: ['"Noto Naskh Arabic"', 'Amiri', 'serif'],
+        'arabic-display': ['Amiri', '"Noto Naskh Arabic"', 'serif'],
         sans: [
           '-apple-system',
           'BlinkMacSystemFont',

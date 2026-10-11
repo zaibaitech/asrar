@@ -12,6 +12,9 @@ import { absoluteUrl } from './siteRoutes';
 
 export type RouteLang = 'en' | 'fr';
 
+/** Every language a route can be served in (ar = /ar app mirror, noindex for now). */
+export type AnyRouteLang = RouteLang | 'ar';
+
 /** Request header set by middleware on rewritten /fr requests. */
 export const ROUTE_LANG_HEADER = 'x-asrar-route-lang';
 
@@ -110,4 +113,35 @@ export function localeAlternates(enPath: string, lang: RouteLang | 'ar') {
     canonical,
     languages: hreflangLanguages(enPath),
   };
+}
+
+/* ------------------------------------------------------------------------ */
+/* /ar app mirror (Stage 0).                                                 */
+/*                                                                           */
+/* /ar/<path> for a localized page WITHOUT a dedicated Arabic landing file   */
+/* (AR_PATHS) is rewritten by middleware to the English route with           */
+/* ROUTE_LANG_HEADER=ar: the same page with the Arabic UI strings, RTL.      */
+/* These URLs are noindex (X-Robots-Tag) until the Arabic copy is reviewed,  */
+/* so they get no hreflang / sitemap entries yet. The 4 AR_PATHS landing     */
+/* pages keep their own route files and stay indexable.                      */
+/* ------------------------------------------------------------------------ */
+
+export const AR_PREFIX = '/ar';
+
+/** '/ar/ikhtiyarat' -> '/ikhtiyarat', '/ar' -> '/'; null if not under /ar. */
+export function stripArPrefix(pathname: string): string | null {
+  if (pathname === AR_PREFIX || pathname === `${AR_PREFIX}/`) return '/';
+  if (pathname.startsWith(`${AR_PREFIX}/`)) return pathname.slice(AR_PREFIX.length).replace(/\/+$/, '') || '/';
+  return null;
+}
+
+/** Localized EN paths served through the /ar app mirror (everything except the dedicated landing pages). */
+export function isArAppPath(enPath: string): boolean {
+  return isLocalizedPath(enPath) && !(enPath in AR_PATHS);
+}
+
+/** '/ikhtiyarat' -> '/ar/ikhtiyarat', '/' -> '/ar'. For dedicated landing pages, their AR_PATHS URL. */
+export function arAppPath(enPath: string): string {
+  if (AR_PATHS[enPath]) return AR_PATHS[enPath];
+  return enPath === '/' ? AR_PREFIX : `${AR_PREFIX}${enPath}`;
 }

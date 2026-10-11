@@ -66,7 +66,7 @@ export function NamePicker({
                 key={item.arabic}
                 type="button"
                 onClick={() => onSelect(item.arabic)}
-                className="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left hover:bg-slate-100 dark:hover:bg-white/5"
+                className="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-start hover:bg-slate-100 dark:hover:bg-white/5"
               >
                 <span className="text-base text-slate-600 dark:text-slate-300">{item.latin}</span>
                 <span dir="rtl" className="text-lg text-slate-900 dark:text-slate-100">

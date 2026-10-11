@@ -147,7 +147,7 @@ export function CalculatorResult({
                   <span dir="rtl" className="w-5 shrink-0 text-center text-lg text-slate-900 dark:text-slate-100 font-arabic">
                     {f.letter}
                   </span>
-                  <span className="w-8 shrink-0 text-right text-sm text-slate-500">{f.value}</span>
+                  <span className="w-8 shrink-0 text-end text-sm text-slate-500">{f.value}</span>
                   <div className="h-2 flex-1 overflow-hidden rounded-full bg-slate-100 dark:bg-white/5">
                     <div className="h-full rounded-full bg-indigo-600" style={{ width: `${(f.count / max) * 100}%` }} />
                   </div>
@@ -180,7 +180,7 @@ export function CalculatorResult({
                 openMetric === n.key ? 'border-indigo-400 dark:border-indigo-600 bg-indigo-50 dark:bg-indigo-900/30' : 'border-slate-100 dark:border-white/5 bg-white dark:bg-slate-900'
               }`}
             >
-              <span className="absolute right-1.5 top-1.5 text-slate-500">
+              <span className="absolute end-1.5 top-1.5 text-slate-500">
                 <InfoIconButton onClick={() => setOpenMetric((cur) => (cur === n.key ? null : n.key))} active={openMetric === n.key} />
               </span>
               <p className="text-xl font-semibold text-indigo-600 dark:text-indigo-400">{n.value}</p>
@@ -213,7 +213,7 @@ export function CalculatorResult({
               <div className="h-2 flex-1 overflow-hidden rounded-full bg-slate-100 dark:bg-white/5">
                 <div className="h-full rounded-full" style={{ width: `${profile.elemental.percents[el]}%`, backgroundColor: ELEMENT_BAR_COLOR[el] }} />
               </div>
-              <span className="w-9 shrink-0 text-right text-sm text-slate-500 dark:text-slate-400">{profile.elemental.percents[el]}%</span>
+              <span className="w-9 shrink-0 text-end text-sm text-slate-500 dark:text-slate-400">{profile.elemental.percents[el]}%</span>
             </div>
           ))}
         </div>
@@ -239,7 +239,7 @@ export function CalculatorResult({
                 <span dir="rtl" className="text-2xl text-indigo-600 dark:text-indigo-400 font-arabic">
                   {f.letter}
                 </span>
-                <div className="text-right text-sm text-slate-500 dark:text-slate-400">
+                <div className="text-end text-sm text-slate-500 dark:text-slate-400">
                   <p>
                     {t('abjadValueLabel')}: <span className="text-slate-700 dark:text-slate-200">{f.value}</span> · {t('frequencyLabel')}: {f.count}×
                   </p>
@@ -509,7 +509,7 @@ export function CalculatorResult({
           ].map(([label, value]) => (
             <div key={label} className="flex items-center justify-between gap-2">
               <dt className="text-slate-500">{label}</dt>
-              <dd className="text-right text-slate-600 dark:text-slate-300">{value}</dd>
+              <dd className="text-end text-slate-600 dark:text-slate-300">{value}</dd>
             </div>
           ))}
         </dl>

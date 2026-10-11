@@ -67,3 +67,24 @@ describe('i18nRoutes', () => {
   });
 });
 
+
+import { arAppPath, isArAppPath, stripArPrefix } from './i18nRoutes';
+
+describe('/ar app mirror', () => {
+  it('strips the /ar prefix', () => {
+    expect(stripArPrefix('/ar')).toBe('/');
+    expect(stripArPrefix('/ar/ikhtiyarat')).toBe('/ikhtiyarat');
+    expect(stripArPrefix('/arabic')).toBeNull();
+    expect(stripArPrefix('/abjad')).toBeNull();
+  });
+  it('keeps the 4 dedicated Arabic landing pages out of the mirror', () => {
+    for (const p of ['/abjad', '/planetary-hours', '/name-and-mother-burj', '/sadaqa-of-the-day']) {
+      expect(isArAppPath(p)).toBe(false);
+      expect(arAppPath(p)).toBe(`/ar${p}`);
+    }
+    expect(isArAppPath('/')).toBe(true);
+    expect(isArAppPath('/ikhtiyarat')).toBe(true);
+    expect(isArAppPath('/names/fatima')).toBe(false);
+    expect(arAppPath('/')).toBe('/ar');
+  });
+});

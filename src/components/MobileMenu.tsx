@@ -112,7 +112,7 @@ export function MobileMenu({
                   <span className="font-medium text-base">History</span>
                 </div>
                 {historyCount > 0 && (
-                  <span className="bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-full ml-2 flex-shrink-0">
+                  <span className="bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-full ms-2 flex-shrink-0">
                     {historyCount > 99 ? '99+' : historyCount}
                   </span>
                 )}

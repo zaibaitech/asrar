@@ -196,7 +196,7 @@ function getDailyReflection() {
 // ============================================================================
 
 export default function AsrarEveryday() {
-  const { t, language } = useLanguage(); // Get translations and current language
+  const { t, language, uiLanguage } = useLanguage(); // Get translations and current language
   
   // Add mounted state to prevent hydration mismatch
   const [mounted, setMounted] = useState(false);
@@ -414,7 +414,7 @@ export default function AsrarEveryday() {
                     : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700'
                 }`}
               >
-                <Moon className="w-4 sm:w-5 h-4 sm:h-5 inline mr-1 sm:mr-2" />
+                <Moon className="w-4 sm:w-5 h-4 sm:h-5 inline me-1 sm:me-2" />
                 <span className="hidden sm:inline">{t.nav.planetary}</span>
                 <span className="sm:hidden">ʿIlm Nujūm</span>
               </button>
@@ -428,7 +428,7 @@ export default function AsrarEveryday() {
                       : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700'
                   }`}
                 >
-                  <Compass className="w-4 sm:w-5 h-4 sm:h-5 inline mr-1 sm:mr-2" />
+                  <Compass className="w-4 sm:w-5 h-4 sm:h-5 inline me-1 sm:me-2" />
                   <span className="hidden sm:inline">{t.nav.guidance}</span>
                   <span className="sm:hidden">{t.nav.guidance}</span>
                 </button>
@@ -442,7 +442,7 @@ export default function AsrarEveryday() {
                     : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700'
                 }`}
               >
-                <Compass className="w-4 sm:w-5 h-4 sm:h-5 inline mr-1 sm:mr-2" />
+                <Compass className="w-4 sm:w-5 h-4 sm:h-5 inline me-1 sm:me-2" />
                 <span className="hidden sm:inline">{t.nav.advanced}</span>
                 <span className="sm:hidden">{t.nav.advanced}</span>
               </button>
@@ -451,7 +451,7 @@ export default function AsrarEveryday() {
                 href="/ikhtiyarat"
                 className="px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all whitespace-nowrap text-sm sm:text-base text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 inline-flex items-center"
               >
-                <Star className="w-4 sm:w-5 h-4 sm:h-5 inline mr-1 sm:mr-2" />
+                <Star className="w-4 sm:w-5 h-4 sm:h-5 inline me-1 sm:me-2" />
                 <span className="hidden sm:inline">{language === 'fr' ? 'Meilleures Dates' : 'Best Dates'}</span>
                 <span className="sm:hidden">{language === 'fr' ? 'Dates' : 'Dates'}</span>
               </Link>
@@ -460,7 +460,7 @@ export default function AsrarEveryday() {
                 onClick={() => setShowCompatibility(true)}
                 className="px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all whitespace-nowrap text-sm sm:text-base text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 inline-flex items-center"
               >
-                <Heart className="w-4 sm:w-5 h-4 sm:h-5 inline mr-1 sm:mr-2" />
+                <Heart className="w-4 sm:w-5 h-4 sm:h-5 inline me-1 sm:me-2" />
                 <span>{language === 'fr' ? 'Compatibilité' : 'Compatibility'}</span>
               </button>
               <button
@@ -471,7 +471,7 @@ export default function AsrarEveryday() {
                     : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700'
                 }`}
               >
-                <Calculator className="w-4 sm:w-5 h-4 sm:h-5 inline mr-1 sm:mr-2" />
+                <Calculator className="w-4 sm:w-5 h-4 sm:h-5 inline me-1 sm:me-2" />
                 <span className="hidden sm:inline">{t.calculator.title}</span>
                 <span className="sm:hidden">{t.common.calculate}</span>
               </button>
@@ -549,7 +549,7 @@ export default function AsrarEveryday() {
           ) : viewMode === 'advanced' ? (
             <IstikharaPanel />
           ) : (
-          <CalculatorScreen appLanguage={language} />
+          <CalculatorScreen appLanguage={uiLanguage} />
           )}
           </div>
         </main>
@@ -606,14 +606,14 @@ export default function AsrarEveryday() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               {/* Logo & App Info */}
               <div className="flex flex-col items-center md:items-start space-y-4">
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-3 rtl:space-x-reverse">
                   <AsrarLogo size={48} variant="icon" element="aether" animate={true} />
                   <div>
                     <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100">أسرار</h3>
                     <p className="text-xs text-slate-500 dark:text-slate-400">Asrār</p>
                   </div>
                 </div>
-                <p className="text-sm text-slate-600 dark:text-slate-400 text-center md:text-left max-w-xs">
+                <p className="text-sm text-slate-600 dark:text-slate-400 text-center md:text-start max-w-xs">
                   {language === 'fr' 
                     ? 'Une plateforme pour explorer la sagesse spirituelle et le timing divin'
                     : 'A platform for spiritual wisdom and divine timing exploration'
@@ -623,7 +623,7 @@ export default function AsrarEveryday() {
 
               {/* Important Notice */}
               <div className="flex flex-col items-center space-y-3">
-                <div className="inline-flex items-center space-x-2 px-4 py-2 bg-amber-100 dark:bg-amber-900/30 rounded-lg">
+                <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-4 py-2 bg-amber-100 dark:bg-amber-900/30 rounded-lg">
                   <svg className="w-5 h-5 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                   </svg>
@@ -650,7 +650,7 @@ export default function AsrarEveryday() {
                   rel="noopener noreferrer"
                   className="group flex flex-col items-center md:items-end space-y-1 transition-transform hover:scale-105"
                 >
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-2 rtl:space-x-reverse">
                     <span className="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
                       Zaibai Tech
                     </span>

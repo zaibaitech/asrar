@@ -1,14 +1,26 @@
 'use client';
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { translations, Language, TranslationKeys } from '../lib/translations';
-import { frPath, isLocalizedPath, stripFrPrefix } from '../lib/i18nRoutes';
+import { translations, Language, TranslationKeys, isRtl } from '../lib/translations';
+import { arAppPath, frPath, isArAppPath, isLocalizedPath, stripArPrefix, stripFrPrefix } from '../lib/i18nRoutes';
+
+/** Languages with full inline/legacy copy (components that branch on en/fr). */
+export type ContentLanguage = 'en' | 'fr';
 
 interface LanguageContextType {
-  language: Language;
+  /**
+   * Content language for code that only knows en/fr (inline `language === 'fr'`
+   * ternaries, en/fr-only props). Arabic falls back to English here.
+   */
+  language: ContentLanguage;
+  /** The language the visitor chose for the UI: en, fr or ar. Drives `t`, the toggle and dir. */
+  uiLanguage: Language;
   setLanguage: (lang: Language) => void;
   t: TranslationKeys;
+  dir: 'ltr' | 'rtl';
 }
+
+const SUPPORTED: readonly Language[] = ['en', 'fr', 'ar'];
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
@@ -50,12 +62,24 @@ function currentFrMirrorTarget(): string | null {
  * page has a /fr mirror (e.g. "/" <-> "/fr"). replaceState only: no reload,
  * no navigation, the app keeps its state.
  */
+/** /ar/... app mirror (not the 4 dedicated Arabic landing pages). */
+function currentArMirrorTarget(): string | null {
+  if (typeof window === 'undefined') return null;
+  const target = stripArPrefix(window.location.pathname);
+  return target !== null && isArAppPath(target) ? target : null;
+}
+
 function syncUrlWithLanguage(lang: Language) {
   if (typeof window === 'undefined') return;
   const { pathname, search, hash } = window.location;
-  const enPath = stripFrPrefix(pathname) ?? pathname;
+  const fromFr = stripFrPrefix(pathname);
+  const fromAr = stripArPrefix(pathname);
+  const enPath = (fromFr !== null && isLocalizedPath(fromFr) ? fromFr : null)
+    ?? (fromAr !== null && isArAppPath(fromAr) ? fromAr : null)
+    ?? pathname;
   if (!isLocalizedPath(enPath)) return;
-  const target = lang === 'fr' ? frPath(enPath) : enPath;
+  const target =
+    lang === 'fr' ? frPath(enPath) : lang === 'ar' ? (isArAppPath(enPath) ? arAppPath(enPath) : enPath) : enPath;
   if (target !== pathname) {
     window.history.replaceState(window.history.state, '', `${target}${search}${hash}`);
   }
@@ -71,11 +95,15 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       setLanguage('fr');
       return;
     }
+    if (currentArMirrorTarget() !== null) {
+      setLanguage('ar');
+      return;
+    }
 
     // Check if user has manually selected a language before
     const saved = localStorage.getItem('preferred-language') as Language | null;
     
-    if (saved === 'en' || saved === 'fr') {
+    if (saved && SUPPORTED.includes(saved)) {
       // User has previously chosen a language - respect their choice
       setLanguage(saved);
       // Sync with cookie for server-side metadata
@@ -99,11 +127,27 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   };
 
   useEffect(() => {
-    document.documentElement.lang = language;
+    // The /ar app mirror is Arabic/RTL at document level regardless of the
+    // toggle; the dedicated /ar landing pages manage lang/dir per container.
+    const onArLanding = stripArPrefix(window.location.pathname) !== null && currentArMirrorTarget() === null;
+    if (onArLanding) return;
+    const docLang = currentArMirrorTarget() !== null ? 'ar' : language;
+    document.documentElement.lang = docLang;
+    document.documentElement.dir = isRtl(docLang) ? 'rtl' : 'ltr';
   }, [language]);
 
+  const contentLanguage: ContentLanguage = language === 'fr' ? 'fr' : 'en';
+
   return (
-    <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage, t: translations[language] }}>
+    <LanguageContext.Provider
+      value={{
+        language: contentLanguage,
+        uiLanguage: language,
+        setLanguage: handleSetLanguage,
+        t: translations[language] as TranslationKeys,
+        dir: isRtl(language) ? 'rtl' : 'ltr',
+      }}
+    >
       {children}
     </LanguageContext.Provider>
   );
