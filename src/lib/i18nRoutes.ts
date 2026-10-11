@@ -136,8 +136,11 @@ export function stripArPrefix(pathname: string): string | null {
 }
 
 /** Localized EN paths served through the /ar app mirror (everything except the dedicated landing pages). */
+/** EN-only pages (no /fr mirror) that also get an /ar app mirror (noindex). */
+export const AR_MIRROR_EXTRA: readonly string[] = ['/99-names-of-allah', '/planet-transit', '/birth-profile'];
+
 export function isArAppPath(enPath: string): boolean {
-  return isLocalizedPath(enPath) && !(enPath in AR_PATHS);
+  return (isLocalizedPath(enPath) || AR_MIRROR_EXTRA.includes(enPath)) && !(enPath in AR_PATHS);
 }
 
 /** '/ikhtiyarat' -> '/ar/ikhtiyarat', '/' -> '/ar'. For dedicated landing pages, their AR_PATHS URL. */

@@ -53,7 +53,7 @@ export default function Page() {
       />
 
       {/* The same calculator as /abjad, unchanged (its UI is English/French). */}
-      <div dir="ltr" className="max-w-3xl mx-auto px-4">
+      <div lang="ar" dir="rtl" className="max-w-3xl mx-auto px-4">
         <AbjadCalculator />
       </div>
 

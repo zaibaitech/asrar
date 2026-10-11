@@ -79,7 +79,7 @@ export default function Page() {
           </p>
         </div>
         {/* The same date checker as /sadaqa-of-the-day, unchanged (English UI). */}
-        <div dir="ltr">
+        <div lang="ar" dir="rtl">
           <SadaqaDateChecker lang="en" mode="day" />
         </div>
       </section>

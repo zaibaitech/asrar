@@ -78,7 +78,8 @@ function syncUrlWithLanguage(lang: Language) {
   const enPath = (fromFr !== null && isLocalizedPath(fromFr) ? fromFr : null)
     ?? (fromAr !== null && isArAppPath(fromAr) ? fromAr : null)
     ?? pathname;
-  if (!isLocalizedPath(enPath)) return;
+  if (!isLocalizedPath(enPath) && !isArAppPath(enPath)) return;
+  if (lang === 'fr' && !isLocalizedPath(enPath)) return;
   const target =
     lang === 'fr' ? frPath(enPath) : lang === 'ar' ? (isArAppPath(enPath) ? arAppPath(enPath) : enPath) : enPath;
   if (target !== pathname) {
@@ -97,6 +98,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       return;
     }
     if (currentArMirrorTarget() !== null) {
+      setLanguage('ar');
+      return;
+    }
+    // The 4 dedicated /ar landing pages: their embedded tool UI is Arabic too.
+    if (stripArPrefix(window.location.pathname) !== null) {
       setLanguage('ar');
       return;
     }

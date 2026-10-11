@@ -73,7 +73,7 @@ export default function Page() {
       />
 
       {/* The same "Who Am I?" calculator as /name-and-mother-burj, unchanged (its UI is English/French). */}
-      <div dir="ltr">
+      <div lang="ar" dir="rtl">
         <BurjCalculator />
       </div>
 

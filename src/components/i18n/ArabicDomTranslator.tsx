@@ -49,9 +49,63 @@ function makeCatalog(o: Record<string, string>): Catalog {
         });
         if (ok) return out;
       }
-      return undefined;
+      return arabicDate(key);
     },
   };
+}
+
+/* ---------------------------------------------------------------------- */
+/* Dates: while Arabic is active, Intl / toLocale*String calls that ask for */
+/* an English or French (or default) locale format in 'ar' instead. EN/FR   */
+/* never install this, and leaving Arabic restores the originals.           */
+/* ---------------------------------------------------------------------- */
+const AR_LOCALE = 'ar-u-nu-latn';
+const mapLocale = (l: unknown) => {
+  const first = Array.isArray(l) ? l[0] : l;
+  return first === undefined || (typeof first === 'string' && /^(en|fr)\b/i.test(first)) ? AR_LOCALE : l;
+};
+let dateRestore: (() => void) | null = null;
+function installArabicDates() {
+  if (dateRestore) return;
+  const D = Date.prototype;
+  const orig = { ds: D.toLocaleDateString, ts: D.toLocaleTimeString, s: D.toLocaleString, DTF: Intl.DateTimeFormat };
+  D.toLocaleDateString = function (l?: any, o?: any) { return orig.ds.call(this, mapLocale(l) as any, o); };
+  D.toLocaleTimeString = function (l?: any, o?: any) { return orig.ts.call(this, mapLocale(l) as any, o); };
+  D.toLocaleString = function (l?: any, o?: any) { return orig.s.call(this, mapLocale(l) as any, o); };
+  const Wrapped = function (this: unknown, l?: any, o?: any) { return new orig.DTF(mapLocale(l) as any, o); } as unknown as typeof Intl.DateTimeFormat;
+  Object.setPrototypeOf(Wrapped, orig.DTF);
+  (Wrapped as any).prototype = orig.DTF.prototype;
+  (Intl as any).DateTimeFormat = Wrapped;
+  dateRestore = () => {
+    D.toLocaleDateString = orig.ds; D.toLocaleTimeString = orig.ts; D.toLocaleString = orig.s;
+    (Intl as any).DateTimeFormat = orig.DTF; dateRestore = null;
+  };
+}
+
+/** Server-rendered English dates ("Monday, 16 November 2026", "Thu, Sep 24", "16 November 2026") -> Arabic. */
+const MONTHS = 'January|February|March|April|May|June|July|August|September|October|November|December';
+const MON = 'Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec';
+const WD = 'Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|Mon|Tue|Wed|Thu|Fri|Sat|Sun';
+const DATE_RES: RegExp[] = [
+  new RegExp(`^(?:(${WD}),? )?(\\d{1,2}) (${MONTHS}|${MON})\\.?(?: (\\d{4}))?$`),
+  new RegExp(`^(?:(${WD}),? )?(${MONTHS}|${MON})\\.? (\\d{1,2})(?:, (\\d{4}))?$`),
+];
+function arabicDate(key: string): string | undefined {
+  for (let i = 0; i < DATE_RES.length; i++) {
+    const m = key.match(DATE_RES[i]);
+    if (!m) continue;
+    const [wd, a, b, y] = [m[1], m[2], m[3], m[4]];
+    const day = i === 0 ? a : b;
+    const mon = i === 0 ? b : a;
+    const year = y ?? String(new Date().getFullYear());
+    const d = new Date(`${mon} ${day}, ${year} 12:00`);
+    if (Number.isNaN(d.getTime())) return undefined;
+    const opts: Intl.DateTimeFormatOptions = { day: 'numeric', month: mon.length > 3 ? 'long' : 'short' };
+    if (wd) opts.weekday = wd.length > 3 ? 'long' : 'short';
+    if (y) opts.year = 'numeric';
+    return new Date(d).toLocaleDateString(AR_LOCALE, opts);
+  }
+  return undefined;
 }
 
 let catalogPromise: Promise<Catalog> | null = null;
@@ -149,10 +203,12 @@ export default function ArabicDomTranslator() {
   useEffect(() => {
     const html = document.documentElement;
     if (uiLanguage !== 'ar') {
+      dateRestore?.();
       restoreAll();
       html.removeAttribute('data-ar-pending');
       return;
     }
+    installArabicDates();
     let observer: MutationObserver | null = null;
     let cancelled = false;
     const reveal = window.setTimeout(() => html.removeAttribute('data-ar-pending'), 1500);
