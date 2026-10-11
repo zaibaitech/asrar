@@ -5,9 +5,9 @@
  * (short H1 + 2–3 line intro), then the existing tool component unchanged,
  * then the Arabic educational text, FAQ and links.
  *
- * Only the Arabic containers carry lang="ar" dir="rtl"; the embedded tool is
- * wrapped in dir="ltr" because its own UI is English/French (the app has no
- * Arabic UI), so its layout is exactly the same as on its English page.
+ * The Arabic containers carry lang="ar" dir="rtl"; the embedded tool is also
+ * wrapped in lang="ar" dir="rtl" and rendered with the Arabic UI (the language
+ * context switches to 'ar' on /ar landing pages).
  */
 import type { Metadata } from 'next';
 import { localeAlternates } from '@/src/lib/i18nRoutes';

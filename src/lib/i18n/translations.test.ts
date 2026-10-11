@@ -34,7 +34,11 @@ describe('translations: missing keys', () => {
     const bad = [...ar.entries()].filter(
       ([k, v]) =>
         typeof v === 'string' &&
-        (v.trim() === '' || (/[A-Za-z]{3}/.test(String(en.get(k))) && !/[\u0600-\u06FF]/.test(v))),
+        (v.trim() === '' ||
+          (/[A-Za-z]{3}/.test(String(en.get(k))) &&
+            !/[\u0600-\u06FF]/.test(v) &&
+            // kept identical on purpose: transliterations and brand names
+            !(v === en.get(k) && (/[āīūḥṣḍṭẓʿʾ]/.test(v) || /^(Telegram|X \(Twitter\))$/.test(v))))),
     );
     expect(bad.map(([k]) => k)).toEqual([]);
   });
@@ -54,9 +58,8 @@ describe('translations: missing keys', () => {
     }
   });
 
-  it('reports ar coverage', () => {
-    const pct = Math.round((1000 * ar.size) / en.size) / 10;
-    // Raise this floor as reviewed Arabic copy lands; it must never drop.
-    expect(pct).toBeGreaterThanOrEqual(63);
+  it('ar covers every en key', () => {
+    const missing = [...en.keys()].filter((k) => !ar.has(k));
+    expect(missing).toEqual([]);
   });
 });

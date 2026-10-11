@@ -83,7 +83,7 @@ export default function Page() {
       </div>
 
       {/* The same planetary-hours tool as /planetary-hours, unchanged (its UI is English/French). */}
-      <div dir="ltr">
+      <div lang="ar" dir="rtl">
         <Suspense fallback={<Loading />}>
           <PlanetaryHoursPage />
         </Suspense>

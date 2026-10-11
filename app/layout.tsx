@@ -161,7 +161,7 @@ export default function RootLayout({
         */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var L=${JSON.stringify(Object.values(AR_PATHS))},p=location.pathname.replace(/\\/+$/,'')||'/',d=document.documentElement;if((p==='/ar'||p.indexOf('/ar/')===0)&&L.indexOf(p)<0){d.lang='ar';d.dir='rtl'}else if(p==='/fr'||p.indexOf('/fr/')===0){d.lang='fr'}}catch(e){}})();`,
+            __html: `(function(){try{var L=${JSON.stringify(Object.values(AR_PATHS))},p=location.pathname.replace(/\\/+$/,'')||'/',d=document.documentElement;if((p==='/ar'||p.indexOf('/ar/')===0)&&L.indexOf(p)<0){d.lang='ar';d.dir='rtl';d.setAttribute('data-ar-pending','')}else if(p==='/fr'||p.indexOf('/fr/')===0){d.lang='fr'}}catch(e){}})();`,
           }}
         />
         <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-192x192.png" />
