@@ -4,7 +4,7 @@ Every row below is an **AI-draft** (hand-written by the assistant, not a machine
 
 Rules applied: Divine Names = canonical Arabic from `src/data/divine-names.ts`; Qur'ān = original Arabic text (verses listed separately below, verify against a muṣḥaf — the repo had only English renderings; note `30:48` in `asrar-everyday-app.tsx` is rendered with the wording of 30:46, which matches the English); standard terms (التصوف، علم الحروف، الأبجد، المنازل، الاستخارة، الصدقة، الذكر); reflective, non-predictive tone (a few 'destiny/influence' phrasings were deliberately softened).
 
-Counts: 1975 AI-draft strings, 512 Divine-Name mappings, 19 Qur'anic lines.
+Counts: 2098 AI-draft strings, 512 Divine-Name mappings, 19 Qur'anic lines.
 
 ## Qur'anic lines (AI-draft — verify)
 
@@ -2507,3 +2507,126 @@ Counts: 1975 AI-draft strings, 512 Divine-Name mappings, 19 Qur'anic lines.
 | 1973 | Recite 514 times when seeking sound judgment and the right decision in a complex matter. For a shorter practice, 33 or 99 repetitions is also a widely used count. | يُذكر 514 مرّة عند طلب الرأي السديد والقرار الصائب في أمر معقّد. وللممارسة الأقصر، فإن 33 أو 99 مرّة عدد شائع أيضًا. |
 | 1974 | The One who withholds swift punishment with perfect patience, giving time for return. | الذي يمهل ولا يعجّل العقوبة بصبر تامّ، ليفسح للرجوع. |
 | 1975 | Recite 298 times for patience (ṣabr) in prolonged hardship or waiting. For a shorter practice, 33 or 99 repetitions is also a widely used count. | يُذكر 298 مرّة للصبر في الشدّة الطويلة أو الانتظار. وللممارسة الأقصر، فإن 33 أو 99 مرّة عدد شائع أيضًا. |
+| 1976 | O Most Subtle, Most Kind | يا لطيف |
+| 1977 | Misk wa Ward | مسك وورد |
+| 1978 | Musk + Rose | مسك + ورد |
+| 1979 | For harmony and softened hearts | للانسجام وتليين القلوب |
+| 1980 | Lubān wa Misk | لبان ومسك |
+| 1981 | Al-Iklīl | الإكليل |
+| 1982 | Honor is a trust worn lightly — crowns in the sky remind of responsibility, not entitlement. | الشرف أمانة تُحمل بخفّة — والتيجان في السماء تذكّر بالمسؤولية لا بالاستحقاق. |
+| 1983 | Lunar Mansions (Manāzil) | المنازل القمرية |
+| 1984 | The 28 lunar mansions: today’s manzil, Arabic names, spiritual focus, and links to birth profile and ikhtiyārāt. For reflection. | المنازل القمرية الثماني والعشرون: منزلة اليوم، والأسماء العربية، والمحور الروحي، وروابط ملف الميلاد والاختيارات. للتأمّل. |
+| 1985 | Best Dates (Ikhtiyārāt) | أفضل التواريخ (الاختيارات) |
+| 1986 | The days and planetary hours the ikhtiyārāt rules favour for a nikāḥ, Sunnah notes and the next favourable dates. | الأيام والساعات الكوكبية التي ترجّحها قواعد الاختيارات لعقد النكاح، مع ملاحظات من السنّة وأقرب التواريخ المناسبة. |
+| 1987 | Thursday and early departure in the Sunnah, plus the favourable days and planetary hours for a journey. | الخميس والبكور في السنّة، مع الأيام والساعات الكوكبية المناسبة للسفر. |
+| 1988 | The days and planetary hours the ikhtiyārāt rules favour for moving into a new home or laying a foundation. | الأيام والساعات الكوكبية التي ترجّحها قواعد الاختيارات للانتقال إلى منزل جديد أو وضع الأساس. |
+| 1989 | The days and planetary hours the ikhtiyārāt rules favour for starting a business or signing a contract. | الأيام والساعات الكوكبية التي ترجّحها قواعد الاختيارات لبدء مشروع تجاري أو توقيع عقد. |
+| 1990 | Sadaqah by day of the week, by Hijri birth month (Tamxarit, Gamo, Korité, Tabaski…) and by burj. | الصدقة بحسب يوم الأسبوع وشهر الميلاد الهجري (تمخاريت، غامو، كوريتي، تباسكي…) والبرج. |
+| 1991 | Maghribi | المغربي |
+| 1992 | Mashriqi | المشرقي |
+| 1993 | Ikhtiyārāt | الاختيارات |
+| 1994 | For reflection, not prediction. No timing replaces istikhāra, consultation (mashwara) with family and trusted scholars, and tawakkul (reliance on Allah); Allah alone knows the unseen. | للتأمّل لا للتنبّؤ. لا يغني أي توقيت عن الاستخارة ومشاورة الأهل وأهل العلم الثقات والتوكّل على الله؛ والله وحده يعلم الغيب. |
+| 1995 | Planetary hours and the Moon depend on location. This page uses Makkah, the app's default location; the Best Dates tool computes for your own location. | تتوقّف الساعات الكوكبية والقمر على الموقع. تستعمل هذه الصفحة مكة المكرمة، الموقع الافتراضي للتطبيق؛ أما أداة أفضل التواريخ فتحسب لموقعك أنت. |
+| 1996 | This tool reflects a refinement from the classical Islamic tradition of ʿIlm al-Nujūm (electional astrology). It is not a substitute for istikhāra, consultation (mashwara) with family and trusted scholars, and tawakkul (reliance on Allah). No date is religiously forbidden for nikāḥ — marriage is permitted at any time of the year. | تعكس هذه الأداة تهذيبًا من التراث الإسلامي الكلاسيكي في علم النجوم (علم الاختيارات). ولا تغني عن الاستخارة ومشاورة الأهل وأهل العلم الثقات والتوكّل على الله. ولا يوجد تاريخ محرّم شرعًا للنكاح — فالزواج جائز في أي وقت من السنة. |
+| 1997 | How scoring works: each rule adds or subtracts points; the total is scaled to a 0–100 score against that election type's own maximum achievable points, so the tier bands (Mumtāz, Jayyid, Maqbūl, Ḍaʿīf, Ijtanib) mean the same thing across marriage, travel, and any future election type. | كيف يجري التقدير: كل قاعدة تضيف نقاطًا أو تنقص منها؛ ثم يُحوَّل المجموع إلى درجة من 0 إلى 100 نسبةً إلى أقصى ما يمكن بلوغه في نوع الاختيار نفسه، فتعني المراتب (ممتاز، جيد، مقبول، ضعيف، اجتنب) الشيء نفسه في الزواج والسفر وأي نوع اختيار لاحق. |
+| 1998 | Stars (Ikhtiyārāt) | النجوم (الاختيارات) |
+| 1999 | Rabi' al-Thani | ربيع الآخر |
+| 2000 | Conditions worsen later this day — Moon Applying to Saturn/Mars (Hard Aspect) after ~21:00. | تسوء الأحوال لاحقًا في هذا اليوم — القمر متّصل بزحل/المريخ (نظر نحس) بعد نحو الساعة 21:00. |
+| 2001 | The Moon is in its darkest phase right before a new moon — traditionally a time to wait, not begin. | القمر في أشدّ أطواره ظلمة قبيل المحاق — وهو تقليديًا وقت للانتظار لا للابتداء. |
+| 2002 | Moon Combust (Muḥtaraq) | القمر محترق |
+| 2003 | The Moon is too close to the Sun right now and appears "hidden" — this weakens its influence. | القمر قريب جدًا من الشمس الآن ويبدو «مختفيًا» — وهذا يضعف دلالته. |
+| 2004 | The Moon isn't forming any meaningful connection with another planet right now — traditionally, things begun in this state tend to fizzle out. | القمر لا يتّصل الآن بأي كوكب اتصالًا معتبرًا (خالي السير) — وما يُبدأ في هذه الحال يميل تقليديًا إلى أن يتلاشى. |
+| 2005 | The Moon is in a tense position with Saturn or Mars right now — a traditional warning sign for this kind of start. | القمر الآن في نظر متوتّر مع زحل أو المريخ — وهي علامة تحذير تقليدية لهذا النوع من الابتداء. |
+| 2006 | A solar or lunar eclipse is happening within a day of this date — traditionally treated as an unsettled period to avoid for major beginnings. | كسوف أو خسوف يقع في غضون يوم من هذا التاريخ — ويُعدّ تقليديًا وقتًا مضطربًا تُجتنب فيه البدايات الكبرى. |
+| 2007 | The Moon is close enough to the Sun to be dimmed, though not fully hidden — a mild weakening. | القمر قريب من الشمس بما يكفي ليخفت، وإن لم يختفِ تمامًا — ضعف خفيف. |
+| 2008 | Via Combusta (Al-Ṭarīqa al-Muḥtariqa) | الطريقة المحترقة |
+| 2009 | The Moon is passing through a stretch of the zodiac traditionally considered turbulent (the "burning path"). | القمر يمرّ بقطاع من البروج يُعدّ تقليديًا مضطربًا («الطريقة المحترقة»). |
+| 2010 | Venus appears to be moving backward right now — traditionally a caution for matters of love and relationships. | الزهرة تبدو راجعة الآن — وهو تقليديًا تنبيه في أمور المحبّة والعلاقات. |
+| 2011 | Venus is in a sign where it traditionally expresses its qualities less comfortably. | الزهرة في برج تُظهر فيه صفاتها تقليديًا بارتياح أقل. |
+| 2012 | The Moon is in a sign that gives it a mild traditional boost here. | القمر في برج يمنحه هنا قوة تقليدية خفيفة. |
+| 2013 | This specific time window aligns with a planetary hour traditionally seen as supportive. | هذه النافذة الزمنية توافق ساعة كوكبية تُعدّ تقليديًا داعمة. |
+| 2014 | Travel often suits hours of the Moon or Mercury when those planets are well placed; business and trade lean toward Mercury, Jupiter or Venus hours depending on the aim (contracts, growth, or harmony). Always read the hour together with the day ruler and the Moon's condition rather than in isolation. | يناسب السفر غالبًا ساعات القمر أو عطارد إذا حسن موضعهما؛ وتميل التجارة إلى ساعات عطارد أو المشتري أو الزهرة بحسب الغاية (العقود، النموّ، الانسجام). واقرأ الساعة دائمًا مع حاكم اليوم وحال القمر، لا منفردة. |
+| 2015 | A name number cannot tell you whether a marriage will succeed. Ask about dīn and character, consult both families, pray ṣalāt al-istikhāra and put your trust in Allah. Use this tool for reflection and conversation, not as a verdict; Allah alone knows the unseen. | لا يستطيع عدد الاسم أن يخبرك بنجاح الزواج. اسأل عن الدين والخُلق، واستشر الأسرتين، وصلِّ صلاة الاستخارة، وتوكّل على الله. واستعمل هذه الأداة للتأمّل والحديث، لا حكمًا؛ والله وحده يعلم الغيب. |
+| 2016 | The two totals are added together with 7 and divided by 9; the remainder (1–9, with 0 counted as 9) is the soul-connection number. | يُجمع المجموعان مع 7 ويُقسم الناتج على 9؛ والباقي (1–9، والصفر يُعدّ 9) هو عدد صلة الأرواح. |
+| 2017 | You can switch between the Maghribi order (North and West Africa) and the Mashriqi order (the East). Most names give the same total in both; names with letters such as ṣād, sīn, shīn, ḍād, ẓāʾ or ghayn can differ. | يمكنك التبديل بين الترتيب المغربي (شمال أفريقيا وغربها) والترتيب المشرقي. وأكثر الأسماء تعطي المجموع نفسه في الترتيبين؛ أما الأسماء التي فيها حروف كالصاد والسين والشين والضاد والظاء والغين فقد تختلف. |
+| 2018 | Treat it as cultural reflection, not prediction. Choosing a spouse rests on dīn, character, family counsel and ṣalāt al-istikhāra. No number decides a marriage; Allah alone knows the unseen. | اجعله تأمّلًا ثقافيًا لا تنبّؤًا. فاختيار الزوج قائم على الدين والخُلق ومشورة الأهل وصلاة الاستخارة. ولا يحسم عددٌ زواجًا؛ والله وحده يعلم الغيب. |
+| 2019 | Asrār divides the ecliptic into twenty-eight equal tropical sectors (~12°51′ each) from the Moon’s longitude — a clear computational convention for education and reflection. Classical star-tied (sidereal) bounds differ; we document the equal tropical method so the live card stays consistent with our planetary ephemeris. | يقسم أسرار فلك البروج إلى ثمانية وعشرين قطاعًا استوائيًا متساويًا (نحو 12°51′ لكل منها) بحسب طول القمر — اصطلاحٌ حسابي واضح للتعليم والتأمّل. وتختلف الحدود الكلاسيكية المرتبطة بالنجوم (النجمية)؛ ونوثّق الطريقة الاستوائية المتساوية لتبقى البطاقة الحيّة متّسقة مع تقويمنا الكوكبي. |
+| 2020 | Browse all 28 manāzil | تصفّح المنازل الثماني والعشرين |
+| 2021 | Al-Sharaṭān | الشرطين |
+| 2022 | The Two Signs | العلامتان |
+| 2023 | Starting fresh with courage and trust in Allah | بداية جديدة بشجاعة وتوكّل على الله |
+| 2024 | Al-Buṭayn | البطين |
+| 2025 | The Little Belly | البطن الصغير |
+| 2026 | Cultivating inner strength and spiritual nourishment | تنمية القوة الباطنة والغذاء الروحي |
+| 2027 | Al-Thurayyā | الثريا |
+| 2028 | The Pleiades | الثريا |
+| 2029 | Appreciating divine beauty in creation and community | تذوّق جمال صنع الله في الخلق والجماعة |
+| 2030 | Al-Dabarān | الدبران |
+| 2031 | The Follower | التابع |
+| 2032 | Following the prophetic example with steadfastness | اتّباع الهدي النبوي بثبات |
+| 2033 | Al-Haqʿah | الهقعة |
+| 2034 | The White Spot | البقعة البيضاء |
+| 2035 | Al-Hanʿah | الهنعة |
+| 2036 | Recognizing one's unique spiritual purpose and calling | إدراك الغاية الروحية الخاصة والنداء الخاص |
+| 2037 | Al-Dhirāʿ | الذراع |
+| 2038 | The Forearm | الذراع |
+| 2039 | Extending help to others and reaching for higher wisdom | مدّ يد العون للآخرين والتطلّع إلى حكمة أعلى |
+| 2040 | Al-Nathrah | النثرة |
+| 2041 | The Gap | الفُرجة |
+| 2042 | Contemplating the mysteries of faith and divine wisdom | التأمّل في أسرار الإيمان والحكمة الإلهية |
+| 2043 | Al-Ṭarf | الطرف |
+| 2044 | The Glance | النظرة |
+| 2045 | Looking with care: notice what you see before you act, and ask Allah for insight without haste. | انظر بعناية: تأمّل ما تراه قبل أن تعمل، واسأل الله البصيرة دون عجلة. |
+| 2046 | Al-Jabhah | الجبهة |
+| 2047 | The Forehead | الجبهة |
+| 2048 | Carry dignity with humility — leadership here means service and clear intention before Allah. | احمل الكرامة بتواضع — فالقيادة هنا خدمة ونيّة واضحة بين يدي الله. |
+| 2049 | Al-Zubrah | الزبرة |
+| 2050 | The Mane | العُرف |
+| 2051 | Al-Ṣarfah | الصرفة |
+| 2052 | The Changer | المنصرف |
+| 2053 | Seasons turn: release what no longer serves, and turn toward what Allah has made clearer. | تدور الفصول: تخلَّ عمّا لم يعد نافعًا، وتوجّه إلى ما جعله الله أوضح. |
+| 2054 | Al-ʿAwwāʾ | العوّاء |
+| 2055 | The Barker | العوّاء |
+| 2056 | Al-Simāk | السماك |
+| 2057 | Al-Simāk al-Aʿzal (“the unarmed”) invites fair measure — harvest with gratitude, without grasping. | السماك الأعزل يدعو إلى الوفاء بالكيل — احصد بشكر دون تشبّث. |
+| 2058 | Al-Ghafr | الغفر |
+| 2059 | The Covering | الغطاء |
+| 2060 | Al-Zubānā | الزبانى |
+| 2061 | The Claws | المخلبان |
+| 2062 | Set boundaries with justice: cut what harms, without cruelty. | ضع الحدود بالعدل: اقطع ما يضرّ، دون قسوة. |
+| 2063 | Al-Qalb | القلب |
+| 2064 | Return to the heart: sincerity (ikhlāṣ) before intensity — courage without crushing others. | عُد إلى القلب: الإخلاص قبل الشدّة — شجاعة دون سحق الآخرين. |
+| 2065 | Al-Shawlah | الشولة |
+| 2066 | The sting is for defense, not attack — restrain the tongue and hand unless justice requires otherwise. | الحُمة للدفاع لا للهجوم — أمسك لسانك ويدك إلا أن يقتضي العدل غير ذلك. |
+| 2067 | The Ostriches | النعائم |
+| 2068 | Wide spaces invite travel of body and heart — move with tawakkul and good company. | الفسحة تدعو إلى سفر البدن والقلب — سِر بتوكّل وصحبة صالحة. |
+| 2069 | Al-Baldah | البلدة |
+| 2070 | The Fortunate Sacrificer | سعد الذابح |
+| 2071 | Named among the saʿd stations: reflect on what you are willing to offer — wealth, time, ego — for Allah’s sake. (Educational theme only; not a ritual prescription.) | من منازل السعود: تأمّل ما أنت مستعدّ لبذله — المال والوقت والأنا — لوجه الله. (موضوع تعليمي فقط؛ لا وصفة شعائرية.) |
+| 2072 | Saʿd Bulaʿ | سعد بلع |
+| 2073 | The Fortunate Swallower | سعد بلع |
+| 2074 | Absorb lessons slowly: take in knowledge and counsel, then digest before speaking. | استوعب الدروس على مهل: خذ العلم والنصح، ثم تدبّرهما قبل الكلام. |
+| 2075 | The Most Fortunate | سعد السعود |
+| 2076 | Named “most fortunate” in the star calendar — meet ease with shukr, and hardship with hope in Allah alone. | سُمّي «سعد السعود» في تقويم النجوم — فاستقبل اليسر بالشكر، والعسر بالرجاء في الله وحده. |
+| 2077 | Saʿd al-Akhbiyah | سعد الأخبية |
+| 2078 | The Fortunate Tents | سعد الأخبية |
+| 2079 | Al-Fargh al-Muqaddam | الفرغ المقدّم |
+| 2080 | The Former Spout | الفرغ المقدّم |
+| 2081 | The former spout of the bucket: begin letting good flow — speech, charity, and help — with measured opening. | الفرغ المقدّم من الدلو: ابدأ بإجراء الخير — الكلام والصدقة والعون — بانفتاح موزون. |
+| 2082 | Al-Fargh al-Muʾakhkhar | الفرغ المؤخّر |
+| 2083 | The Latter Spout | الفرغ المؤخّر |
+| 2084 | The latter spout completes the pouring — finish what you opened, and empty the heart of grudges. | الفرغ المؤخّر يُتمّ الإفراغ — أتمّ ما فتحت، وأفرغ القلب من الضغائن. |
+| 2085 | Belly of the Fish | بطن الحوت |
+| 2086 | Date of birth or date of giving | تاريخ الميلاد أو تاريخ العطاء |
+| 2087 | Enter either your date of birth or the day you plan to give sadaqah — its day of the week determines the guidance. | أدخل تاريخ ميلادك أو اليوم الذي تنوي التصدّق فيه — ويوم الأسبوع الذي يوافقه هو الذي يحدّد الإرشاد. |
+| 2088 | Calculate | احسب |
+| 2089 | Cautious | حذر |
+| 2090 | Venus is weakened in Scorpio | الزهرة ضعيفة في برج العقرب |
+| 2091 | The Crown | الإكليل |
+| 2092 | Focus | المحور |
+| 2093 | Traditional stations for reflection and timing adab — not prediction. Allah alone knows the unseen. | منازل تقليدية للتأمّل وأدب التوقيت — لا للتنبّؤ. والله وحده يعلم الغيب. |
+| 2094 | Guide to all 28 manāzil → | دليل المنازل الثماني والعشرين ← |
+| 2095 | ▶ Activities & wisdom (educational) | ▶ الأنشطة والحكمة (تعليمي) |
+| 2096 | Manzil of today / tonight | منزلة اليوم / الليلة |
+| 2097 | Manāzil al-qamar · 28 stations | منازل القمر · 28 منزلة |
+| 2098 | · New Moon | · محاق |
