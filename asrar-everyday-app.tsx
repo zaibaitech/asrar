@@ -99,7 +99,7 @@ const ELEMENT_SUGGESTIONS = {
     verses: [
       { ref: '2:164', text: 'The winds that blow, the clouds between sky and earth', context: 'Divine signs' },
       { ref: '15:22', text: 'We send the winds to fertilize', context: 'Communication and connection' },
-      { ref: '30:48', text: 'He sends the winds as bearers of good news', context: 'Messages and guidance' }
+      { ref: '30:46', text: 'He sends the winds as bearers of good news', context: 'Messages and guidance' }
     ],
     names: [
       { arabic: 'يَا عَلِيم', transliteration: 'Yā ʿAlīm', meaning: 'The All-Knowing', counts: [150, 300] },
