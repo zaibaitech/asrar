@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { arabicMetadata } from '@/src/lib/arMetadata';
 import { cookies } from 'next/headers';
 import { Suspense } from 'react';
 import { FaqSection, JsonLd, RelatedLinks, faqJsonLd } from '@/src/components/seo/SeoSections';
@@ -37,6 +38,8 @@ export async function generateMetadata({
 }: {
   searchParams: Promise<{ lang?: string }>;
 }): Promise<Metadata> {
+  const arMeta = await arabicMetadata('/manazil');
+  if (arMeta) return arMeta;
   const lang = await resolveLang(searchParams);
   const m = META[lang];
   const routeLang = await getRouteLang();

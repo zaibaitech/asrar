@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return [
       { url: localizedUrl(path, 'en'), ...base, alternates },
       { url: localizedUrl(path, 'fr'), ...base, alternates },
-      // Arabic landing page, only where one exists (src/lib/i18nRoutes.ts AR_PATHS).
+      // Arabic version: dedicated landing page (AR_PATHS) or the /ar app mirror.
       ...(ar ? [{ url: ar, ...base, alternates }] : []),
     ];
   };
