@@ -4,7 +4,7 @@ Every row below is an **AI-draft** (hand-written by the assistant, not a machine
 
 Rules applied: Divine Names = canonical Arabic from `src/data/divine-names.ts`; Qur'ān = original Arabic text (verses listed separately below, verify against a muṣḥaf — the repo had only English renderings; note `30:48` in `asrar-everyday-app.tsx` is rendered with the wording of 30:46, which matches the English); standard terms (التصوف، علم الحروف، الأبجد، المنازل، الاستخارة، الصدقة، الذكر); reflective, non-predictive tone (a few 'destiny/influence' phrasings were deliberately softened).
 
-Counts: 831 AI-draft strings, 512 Divine-Name mappings, 12 Qur'anic lines.
+Counts: 1777 AI-draft strings, 512 Divine-Name mappings, 19 Qur'anic lines.
 
 ## Qur'anic lines (AI-draft — verify)
 
@@ -22,6 +22,13 @@ Counts: 831 AI-draft strings, 512 Divine-Name mappings, 12 Qur'anic lines.
 | And the earth He has laid for all beings | وَالْأَرْضَ وَضَعَهَا لِلْأَنَامِ |
 | Who made the earth a resting place | الَّذِي جَعَلَ لَكُمُ الْأَرْضَ مَهْدًا |
 | The earth We have spread out | وَالْأَرْضَ مَدَدْنَاهَا |
+| And in the sky is your provision and whatever you are promised | وَفِي السَّمَاءِ رِزْقُكُمْ وَمَا تُوعَدُونَ |
+| Wa fī as-samāʾi rizqukum wa mā tūʿadūn | وَفِي السَّمَاءِ رِزْقُكُمْ وَمَا تُوعَدُونَ |
+| Allah will bring about ease after hardship | سَيَجْعَلُ اللَّهُ بَعْدَ عُسْرٍ يُسْرًا |
+| Be patient, for Allah does not waste the reward | وَاصْبِرْ فَإِنَّ اللَّهَ لَا يُضِيعُ أَجْرَ الْمُحْسِنِينَ |
+| Hearts find rest in the remembrance of Allah. | أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ |
+| The dhikr of Allah is the greatest. | وَلَذِكْرُ اللَّهِ أَكْبَرُ |
+| Glorify Allah morning and evening. | وَسَبِّحُوهُ بُكْرَةً وَأَصِيلًا |
 
 ## Divine-Name mappings (from divine-names.ts)
 
@@ -1363,3 +1370,942 @@ Counts: 831 AI-draft strings, 512 Divine-Name mappings, 12 Qur'anic lines.
 | 829 | ⛰️ Earth Element | ⛰️ عنصر التراب |
 | 830 | 💧 Water Element | 💧 عنصر الماء |
 | 831 | 💨 Air Element | 💨 عنصر الهواء |
+| 832 | (Science of Letters) and | (علم الحروف) و |
+| 833 | (Science of Numbers). | (علم العدد). |
+| 834 | Discover the sacred numerical values and elemental associations within Arabic text, connecting language to the deeper patterns of creation. | اكتشف القيم العددية والمناسبات العنصرية في النصّ العربي، وصلة اللغة بأنماط الخلق الأعمق. |
+| 835 | Explore | استكشف |
+| 836 | Version 1.0 • © 2025 | الإصدار 1.0 • © 2025 |
+| 837 | is your guide to the Islamic sciences of | دليلك إلى العلوم الإسلامية: |
+| 838 | How This Guidance Works | كيف يعمل هذا الإرشاد |
+| 839 | This app is based on traditional Islamic letter science (ʿIlm al-Ḥurūf), a centuries-old practice that explores the spiritual meanings and energies associated with Arabic letters and planetary cycles. | يقوم هذا التطبيق على علم الحروف التقليدي، وهو ممارسة عمرها قرون تستكشف المعاني الروحية المرتبطة بالحروف العربية والدورات الكوكبية. |
+| 840 | This is a cultural practice tool for self-reflection, not a religious requirement or fortune-telling service. Always use your own judgment and consult qualified professionals for important decisions. | هذه أداة لممارسة ثقافية للتأمّل في النفس، لا واجب ديني ولا خدمة عرافة. استعمل دائمًا حكمك الخاص، وارجع إلى المختصّين المؤهّلين في القرارات المهمّة. |
+| 841 | • Absolute predictions | • التنبّؤات المطلقة |
+| 842 | • Countdown timers and urgency indicators | • عدّادات تنازلية ومؤشّرات استعجال |
+| 843 | • Element compatibility theory - classical principles | • نظرية توافق العناصر - مبادئ كلاسيكية |
+| 844 | • Letter values (Abjad system) - from classical texts | • قيم الحروف (نظام الأبجد) - من النصوص الكلاسيكية |
+| 845 | • Mindfulness & reflection | • الوعي والتأمّل |
+| 846 | • Modern language and interface | • لغة وواجهة حديثتان |
+| 847 | • Pattern recognition | • التعرّف على الأنماط |
+| 848 | • Personal guidance: Directionally helpful (~70%) | • الإرشاد الشخصي: مفيد في الاتجاه (~70%) |
+| 849 | • Planetary hour system - ancient astronomy | • نظام الساعات الكوكبية - علم فلك قديم |
+| 850 | • Planetary hours: Accurate with location (90%+) | • الساعات الكوكبية: دقيقة مع الموقع (90%+) |
+| 851 | • Professional advice | • المشورة المتخصّصة |
+| 852 | • Religious obligation | • الواجب الديني |
+| 853 | • Replacing judgment | • أن يحلّ محلّ حكمك |
+| 854 | ✅ Do Use For: | ✅ استعمله لـ: |
+| 855 | ✅ What's Authentic | ✅ ما هو أصيل |
+| 856 | 💡 How to Use This Tool | 💡 كيف تستعمل هذه الأداة |
+| 857 | 📏 Accuracy Levels | 📏 مستويات الدقّة |
+| 858 | 📜 Traditional Foundation | 📜 الأساس التقليدي |
+| 859 | Discover Quranic verses, Divine Names, and spiritual guidance based on your elemental profile. Use History to save calculations, and Comparison mode to explore relationships! | اكتشف آيات قرآنية وأسماء حسنى وإرشادًا روحيًا بحسب ملفك العنصري. استعمل السجلّ لحفظ الحسابات، ووضع المقارنة لاستكشاف العلاقات! |
+| 860 | Explore Deeper | تعمّق أكثر |
+| 861 | Explore the beautiful tradition of ʿIlm al-Ḥurūf (Science of Letters) - an Islamic science that reveals numerical values and elemental associations in Arabic text. | استكشف تراث علم الحروف الجميل — علمٌ إسلامي يكشف القيم العددية والمناسبات العنصرية في النصّ العربي. |
+| 862 | Let's Begin! | لنبدأ! |
+| 863 | Type in English/French (like 'Rahim' or 'Fatou') and we'll transliterate to Arabic. Or use the Arabic keyboard for direct input. Always verify the Arabic spelling for accuracy! | اكتب بالإنجليزية أو الفرنسية (مثل «Rahim» أو «Fatou») وسنحوّله إلى العربية، أو استعمل لوحة المفاتيح العربية للإدخال المباشر. وتحقّق دائمًا من صحّة الكتابة العربية! |
+| 864 | • Kabīr (الكبير): Total numerical value • Ṣaghīr (الصغير): Digital root (1-9) • Elements: Fire 🔥 Water 💧 Air 🌬 Earth 🌍 • Ḥadath: Elemental influence pattern | • الكبير: القيمة العددية الكلية • الصغير: الجذر الرقمي (1-9) • العناصر: النار 🔥 الماء 💧 الهواء 🌬 التراب 🌍 • الحدث: نمط الأثر العنصري |
+| 865 | Coordinates: | الإحداثيات: |
+| 866 | Failed to delete avatar: | تعذّر حذف الصورة: |
+| 867 | Failed to update profile: | تعذّر تحديث الملف: |
+| 868 | Failed to upload avatar: | تعذّر رفع الصورة: |
+| 869 | Getting Location... | جارٍ تحديد الموقع... |
+| 870 | Location & Timezone | الموقع والمنطقة الزمنية |
+| 871 | Profile updated successfully! | حُدِّث الملف بنجاح! |
+| 872 | Remove current picture | إزالة الصورة الحالية |
+| 873 | UTC | UTC |
+| 874 | Used for Name Destiny calculations | يُستعمل في حسابات مسار الاسم |
+| 875 | Used for enhanced numerology calculations | يُستعمل في حسابات علم العدد المحسّنة |
+| 876 | 📍 Update to Current Location | 📍 التحديث إلى الموقع الحالي |
+| 877 | Change Picture | تغيير الصورة |
+| 878 | File size must be less than | يجب أن يكون حجم الملف أقل من |
+| 879 | JPEG, PNG, WebP, or GIF. Max | JPEG أو PNG أو WebP أو GIF. الحدّ الأقصى |
+| 880 | Please select a JPEG, PNG, WebP, or GIF image | يُرجى اختيار صورة JPEG أو PNG أو WebP أو GIF |
+| 881 | Profile preview | معاينة الملف |
+| 882 | Remove picture | إزالة الصورة |
+| 883 | Upload Picture | رفع صورة |
+| 884 | Add a profile picture to personalize your account | أضف صورة شخصية لتخصيص حسابك |
+| 885 | Enter Location Manually | أدخل الموقع يدويًا |
+| 886 | Profile Picture (Optional) | الصورة الشخصية (اختيارية) |
+| 887 | This helps us personalize your experience with Asrār Everyday | يساعدنا هذا على تخصيص تجربتك مع أسرار |
+| 888 | Used for Name Destiny calculations and personalized guidance | يُستعمل في حسابات مسار الاسم والإرشاد الشخصي |
+| 889 | Used for accurate planetary hour calculations and prayer times | يُستعمل لحساب الساعات الكوكبية ومواقيت الصلاة بدقّة |
+| 890 | Welcome! Let's set up your profile | مرحبًا! لنُعِدّ ملفك |
+| 891 | 📍 Use Current Location | 📍 استعمل الموقع الحالي |
+| 892 | Complete your profile to unlock all features and get personalized guidance. | أكمل ملفك لتفتح كل الميزات وتحصل على إرشاد شخصي. |
+| 893 | Coordinates | الإحداثيات |
+| 894 | Creating your profile... | جارٍ إنشاء ملفك... |
+| 895 | No profile found | لم يُعثر على ملف |
+| 896 | Not set | غير مضبوط |
+| 897 | Set Up Profile | إعداد الملف |
+| 898 | Please enter Arabic names for both people | يُرجى إدخال الاسمين بالعربية لكلا الشخصين |
+| 899 | OF NINE | من تسعة |
+| 900 | Soul connection result: | نتيجة صلة الأرواح: |
+| 901 | A traditional soul-resonance marker from ʿIlm al-Ḥurūf | علامة تقليدية لرنين الأرواح من علم الحروف |
+| 902 | We sum each name’s abjad letter values, add 7, then reduce the total to a number from 1 to 9. Multiples of nine resolve to 9, never 0. | نجمع قيم حروف كل اسم في الأبجد، ونضيف 7، ثم نختزل المجموع إلى عدد من 1 إلى 9. ومضاعفات التسعة تصير 9، لا 0 أبدًا. |
+| 903 | Maghrib practice (default) | الممارسة المغربية (افتراضي) |
+| 904 | Mashreq practice | الممارسة المشرقية |
+| 905 | ". This dhikr amplifies the positive energy of this hour. | ». وهذا الذكر يقوّي الأثر الطيب لهذه الساعة. |
+| 906 | ) resonates with the divine qualities of " | ) يتّصل بمعاني « |
+| 907 | Complete! Maasha Allah! | اكتمل! ما شاء الله! |
+| 908 | Develops patience, discipline, and steady perseverance | ينمّي الصبر والانضباط والمثابرة الثابتة |
+| 909 | Illuminates the heart and brings clarity to your path | ينير القلب ويوضّح طريقك |
+| 910 | O Light | يا نور |
+| 911 | O Most Generous | يا كريم |
+| 912 | O Most Gentle | يا لطيف |
+| 913 | O Most Loving | يا ودود |
+| 914 | O Most Patient | يا صبور |
+| 915 | O Most Strong | يا قوي |
+| 916 | O Most Wise | يا حكيم |
+| 917 | Soothes difficulties and opens doors gently | يلطّف الصعاب ويفتح الأبواب برفق |
+| 918 | Why this dhikr? | لماذا هذا الذكر؟ |
+| 919 | 💡 Tip: Recite with presence and sincerity. Quality matters more than quantity. | 💡 نصيحة: اذكر بحضور وإخلاص. فالجودة أهمّ من الكثرة. |
+| 920 | 💡 Tip: Use buttons or count on your fingers for traditional practice | 💡 نصيحة: استعمل الأزرار أو العدّ بالأصابع على الطريقة التقليدية |
+| 921 | Arabic terms and spiritual concepts | المصطلحات العربية والمفاهيم الروحية |
+| 922 | Back to Divine Timing | العودة إلى التوقيت الإلهي |
+| 923 | Complete introduction to Islamic planetary hours | مقدّمة كاملة للساعات الكوكبية في التراث الإسلامي |
+| 924 | Default: Makkah | الافتراضي: مكة المكرمة |
+| 925 | Excellent - Perfect Time! | ممتاز - وقت مثالي! |
+| 926 | Explore all 7 planets with Islamic context | استكشف الكواكب السبعة في سياقها الإسلامي |
+| 927 | Full day view | عرض اليوم كاملًا |
+| 928 | Getting your location... | جارٍ تحديد موقعك... |
+| 929 | Low - Time to Rest | منخفض - وقت للراحة |
+| 930 | Makkah | مكة المكرمة |
+| 931 | Neutral - Be Mindful | محايد - كن واعيًا |
+| 932 | Refresh location | تحديث الموقع |
+| 933 | This helps us calculate accurate planetary hours | يساعدنا هذا على حساب الساعات الكوكبية بدقّة |
+| 934 | Unable to get your location. Using Makkah as default. | تعذّر تحديد موقعك. سنستعمل مكة المكرمة افتراضيًا. |
+| 935 | View Timeline | عرض الخطّ الزمني |
+| 936 | 🌙 Planetary hours are calculated according to classical Islamic traditions. Use this guidance with your own discernment. | 🌙 تُحسب الساعات الكوكبية وفق التراث الإسلامي الكلاسيكي. استعمل هذا الإرشاد بتمييزك الخاص. |
+| 937 | Act with courage | اعمل بشجاعة |
+| 938 | Acts of generosity | أعمال الكرم |
+| 939 | Avoid excessive spending | اجتنب الإسراف في الإنفاق |
+| 940 | Avoid misunderstandings | اجتنب سوء الفهم |
+| 941 | Avoid overconfidence | اجتنب الثقة المفرطة |
+| 942 | Avoid rigidity | اجتنب الجمود |
+| 943 | Channel energy positively | وجّه الطاقة توجيهًا إيجابيًا |
+| 944 | Create art | اصنع فنًّا |
+| 945 | Disciplined work | عمل منضبط |
+| 946 | Double-check messages | راجع الرسائل مرتين |
+| 947 | Ended | انتهت |
+| 948 | Improve relationships | حسّن العلاقات |
+| 949 | Intense physical exercise | تمارين بدنية شديدة |
+| 950 | Learn and teach | تعلّم وعلّم |
+| 951 | Meditate and pray | تأمّل وصلِّ |
+| 952 | Meet influential people | قابل أصحاب التأثير |
+| 953 | Negotiate and plan | فاوض وخطّط |
+| 954 | Pleasant activities | أنشطة لطيفة |
+| 955 | Postpone romantic decisions | أجّل القرارات العاطفية |
+| 956 | Practice modesty | تحلَّ بالتواضع |
+| 957 | Rest and recharge | استرح واستعد نشاطك |
+| 958 | Set boundaries | ضع حدودًا |
+| 959 | Socialize | اختلط بالناس |
+| 960 | Stand your ground | اثبت على موقفك |
+| 961 | Structured tasks | مهامّ منظّمة |
+| 962 | Study sacred texts | ادرس النصوص الشرعية |
+| 963 | Take a step back | تراجع خطوة |
+| 964 | Take initiative | بادر |
+| 965 | Tasks requiring energy | مهامّ تتطلّب طاقة |
+| 966 | Travel and explore | سافر واستكشف |
+| 967 | Trust your intuition | ثق بحدسك |
+| 968 | Write and communicate | اكتب وتواصل |
+| 969 | min remaining | دقيقة متبقّية |
+| 970 | minutes remaining | دقائق متبقّية |
+| 971 | ✨ Perfect time to act with confidence | ✨ وقت مثالي للعمل بثقة |
+| 972 | 🌙 Time to rest and reflect | 🌙 وقت للراحة والتأمّل |
+| 973 | 🌟 Balanced energy - proceed thoughtfully | 🌟 طاقة متوازنة - تقدّم بتروٍّ |
+| 974 | Conversations | المحادثات |
+| 975 | Prayer & Worship | الصلاة والعبادة |
+| 976 | Work & Projects | العمل والمشاريع |
+| 977 | ☀️ Not ideal for work - consider rescheduling important tasks | ☀️ ليس مثاليًا للعمل - فكّر في تأجيل المهامّ المهمّة |
+| 978 | ☿️ High risk of miscommunication - double-check everything | ☿️ احتمال كبير لسوء التواصل - راجع كل شيء |
+| 979 | ☿️ Okay for routine communication and simple tasks | ☿️ لا بأس به للتواصل الروتيني والمهامّ البسيطة |
+| 980 | ♀️ Focus on beauty may distract from spiritual essence | ♀️ قد يصرف التركيز على الجمال عن الجوهر الروحي |
+| 981 | ♀️ Good for gentle worship, but may lack depth | ♀️ جيد للعبادة اللطيفة، لكنه قد يفتقر إلى العمق |
+| 982 | ♀️ Okay for pleasant tasks, but not for hard decisions | ♀️ لا بأس به للمهامّ اللطيفة، لا للقرارات الصعبة |
+| 983 | ♀️ Perfect for loving devotion, gratitude, and heart-centered prayer | ♀️ مثالي للعبادة بمحبّة وشكر ودعاء من القلب |
+| 984 | ♂️ Excellent for tackling challenges, physical work, and assertive action | ♂️ ممتاز لمواجهة التحدّيات والعمل البدني والعمل الحازم |
+| 985 | ♂️ Good for moderate effort, but pace yourself | ♂️ جيد للجهد المعتدل، لكن خذ وقتك |
+| 986 | ♂️ High conflict risk - avoid confrontations and aggressive moves | ♂️ احتمال كبير للصراع - اجتنب المواجهات والخطوات العدوانية |
+| 987 | ♃ Excellent for studying sacred texts, seeking knowledge, and gratitude | ♃ ممتاز لدراسة النصوص الشرعية وطلب العلم والشكر |
+| 988 | ♃ Good for learning, but avoid spiritual pride | ♃ جيد للتعلّم، لكن احذر العُجب الروحي |
+| 989 | ♃ Risk of spiritual arrogance - practice humility | ♃ خطر الكِبر الروحي - تحلَّ بالتواضع |
+| 990 | ♄ Energy feels heavy - take breaks and be gentle with yourself | ♄ الطاقة ثقيلة - خذ فترات راحة وترفّق بنفسك |
+| 991 | ♄ Excellent for disciplined practice, fasting, and serious contemplation | ♄ ممتاز للممارسة المنضبطة والصيام والتأمّل الجادّ |
+| 992 | ♄ Good for structured prayer, but avoid rigidity | ♄ جيد للصلاة المنتظمة، لكن اجتنب الجمود |
+| 993 | ♄ May feel burdensome - remember divine mercy and compassion | ♄ قد يبدو ثقيلًا - تذكّر رحمة الله ولطفه |
+| 994 | ♄ Perfect for disciplined work, structure, and long-term commitments | ♄ مثالي للعمل المنضبط والبنية والالتزامات البعيدة |
+| 995 | 🌙 Beautiful time for deep prayer, dhikr, and spiritual connection | 🌙 وقت جميل للدعاء العميق والذكر والصلة الروحية |
+| 996 | 🌙 Emotions may cloud your focus - seek simplicity | 🌙 قد تحجب المشاعر تركيزك - اطلب البساطة |
+| 997 | 🌙 Good for intuitive work, caring professions, and emotional intelligence | 🌙 جيد للعمل الحدسيّ ومهن الرعاية والذكاء العاطفي |
+| 998 | 🌙 Good for prayer, though distractions may arise | 🌙 جيد للدعاء، وإن قد تعرض المشتّتات |
+| 999 | 🌙 Okay for routine work, but emotions may interfere | 🌙 لا بأس به للعمل الروتيني، لكن قد تتدخّل المشاعر |
+| 1000 | 🌙 Too emotional for work - rest and reflect instead | 🌙 عاطفي جدًا للعمل - استرح وتأمّل بدلًا من ذلك |
+| 1001 | 💫 Neutral time - proceed thoughtfully | 💫 وقت محايد - تقدّم بتروٍّ |
+| 1002 | Connect with Nature | اتّصل بالطبيعة |
+| 1003 | Even the mightiest trees need periods of rest to grow stronger. Honor this sacred time. | حتى أعظم الأشجار تحتاج إلى فترات راحة لتزداد قوة. فأكرِم هذا الوقت. |
+| 1004 | Gentle Quran Reading | تلاوة هادئة للقرآن |
+| 1005 | Gentle walk, feel the breeze, observe creation | مشيٌ هادئ، استشعر النسيم، وتأمّل الخلق |
+| 1006 | Gratitude Journal | دفتر الشكر |
+| 1007 | Mindful Tea | شاي بتأمّل |
+| 1008 | Quran 2:152 | البقرة 152 |
+| 1009 | Quran 51:22 | الذاريات 22 |
+| 1010 | Quran 94:6 | الشرح 6 |
+| 1011 | Read slowly for comfort, not quantity | اقرأ ببطء للسكينة لا للكثرة |
+| 1012 | Sacred Silence | صمتٌ خاشع |
+| 1013 | Selected - Begin when ready | تمّ الاختيار - ابدأ متى كنت مستعدًا |
+| 1014 | Slowly sip tea while reflecting on blessings | ارتشف الشاي ببطء متأمّلًا في النعم |
+| 1015 | Soft Dhikr | ذكر هادئ |
+| 1016 | SubhanAllah, Alhamdulillah, Allahu Akbar - whispered gently | سبحان الله، الحمد لله، الله أكبر - همسًا برفق |
+| 1017 | Today's planetary energy invites rest and reflection. This is not a day of weakness, but a sacred day to recharge your soul. | طاقة اليوم الكوكبية تدعو إلى الراحة والتأمّل. وليس هذا يوم ضعف، بل يوم لتجديد روحك. |
+| 1018 | ⏰ When Energy Improves: | ⏰ حين تتحسّن الطاقة: |
+| 1019 | 💫 Trust in divine timing. Everything comes in its perfect time. | 💫 ثق بتوقيت الله. فكل شيء يأتي في وقته. |
+| 1020 | Favorable timing for steady progress. Good for teamwork, planning, and following through. | توقيت مناسب للتقدّم الثابت. جيد للعمل الجماعي والتخطيط والمتابعة. |
+| 1021 | Perfect time for important actions! Your energy aligns beautifully with this hour. Take initiative. | وقت مثالي للأعمال المهمّة! طاقتك منسجمة مع هذه الساعة. بادر. |
+| 1022 | Proceed with awareness. Good for routine tasks and preparation, but save major decisions for better timing. | تقدّم بوعي. جيد للمهامّ الروتينية والتحضير، لكن أجّل القرارات الكبرى لوقت أنسب. |
+| 1023 | Time to rest and recharge. Avoid important decisions. Use this for reflection, journaling, or gentle activities. | وقت للراحة واستعادة النشاط. اجتنب القرارات المهمّة. واستعمله للتأمّل أو التدوين أو الأنشطة اللطيفة. |
+| 1024 | Today's Timeline | الخطّ الزمني لليوم |
+| 1025 | View 24h | عرض 24 ساعة |
+| 1026 | ⚡ Moderate - Proceed with Awareness | ⚡ معتدل - تقدّم بوعي |
+| 1027 | ✅ Good - Favorable Timing | ✅ جيد - توقيت مناسب |
+| 1028 | ✨ Excellent - Perfect Time! | ✨ ممتاز - وقت مثالي! |
+| 1029 | 👁️ View all 24 hours | 👁️ عرض الساعات الأربع والعشرين |
+| 1030 | 💡 Quick Tip: | 💡 نصيحة سريعة: |
+| 1031 | Challenging (0-39) | صعب (0-39) |
+| 1032 | Visualization of your harmony with each planetary hour | تصوير انسجامك مع كل ساعة كوكبية |
+| 1033 | Air Element - Represents thought, communication, and spirituality. Associated with Mercury and Jupiter. | عنصر الهواء - يمثّل الفكر والتواصل والروحانية. ويرتبط بعطارد والمشتري. |
+| 1034 | Barakah | البركة |
+| 1035 | Beauty - Divine beauty and grace. One of the two primary aspects of Allah's attributes (Jamāl and Jalāl). | الجمال - الجمال الإلهي واللطف. وهو أحد وجهي صفات الله الأساسيين (الجمال والجلال). |
+| 1036 | Divine Blessing - Spiritual abundance and grace that comes from Allah. Increase in goodness beyond material measure. | البركة الإلهية - الوفرة الروحية والنعمة من الله. زيادة في الخير تتجاوز المقاييس المادية. |
+| 1037 | Earth Element - Represents stability, manifestation, and practicality. Associated with Venus and Saturn. | عنصر التراب - يمثّل الثبات والتحقّق والعملية. ويرتبط بالزهرة وزحل. |
+| 1038 | Intention - The sincere intention behind an action. In Islam, actions are judged by intentions. | النيّة - القصد الصادق وراء العمل. وفي الإسلام إنما الأعمال بالنيّات. |
+| 1039 | Jupiter - Represents divine expansion, generosity, and wisdom. Associated with the Divine Name Al-Wāsi' (The All-Encompassing). | المشتري - يمثّل السعة والكرم والحكمة. ويرتبط باسم الواسع. |
+| 1040 | Key Arabic terms and concepts with transliterations and explanations | المصطلحات العربية الأساسية مع النقل الحرفي والشرح |
+| 1041 | Knowledge - Especially divine and sacred knowledge. A central concept in Islam emphasizing the pursuit of both worldly and spiritual understanding. | العلم - لا سيما العلم الشرعي. مفهوم محوري في الإسلام يحثّ على طلب الفهم الدنيوي والروحي معًا. |
+| 1042 | Lunar Mansions - The 28 stations of the Moon through its monthly cycle. Each has specific spiritual significance and favorable/unfavorable activities. | المنازل القمرية - منازل القمر الثماني والعشرون في دورته الشهرية. ولكل منها دلالة روحية وأنشطة مناسبة وغير مناسبة. |
+| 1043 | Mars - Represents divine strength, courage, and action. Associated with the Divine Name Al-Qawiyy (The Strong). | المريخ - يمثّل القوة والشجاعة والعمل. ويرتبط باسم القوي. |
+| 1044 | Mercury - Represents divine knowledge, communication, and mental clarity. Associated with the Divine Name Al-'Alīm (The All-Knowing). | عطارد - يمثّل العلم والتواصل ووضوح الذهن. ويرتبط باسم العليم. |
+| 1045 | Niyyah | النيّة |
+| 1046 | Patience - Endurance and perseverance in face of difficulty. A fundamental virtue in Islam, especially associated with Saturn. | الصبر - التحمّل والمثابرة أمام الشدائد. فضيلة أساسية في الإسلام، ترتبط خصوصًا بزحل. |
+| 1047 | Planetary Hours - The ancient system of dividing day and night into 24 unequal hours, each ruled by a classical planet. | الساعات الكوكبية - النظام القديم لتقسيم النهار والليل إلى 24 ساعة غير متساوية، يحكم كلًّا منها كوكب كلاسيكي. |
+| 1048 | Reliance on Allah - Complete trust and dependence on Allah while taking appropriate worldly action. | التوكّل على الله - الثقة التامّة بالله والاعتماد عليه مع الأخذ بالأسباب. |
+| 1049 | Remembrance - The practice of remembering and invoking Allah, often through repetition of Divine Names or Quranic phrases. | الذكر - ممارسة ذكر الله ودعائه، غالبًا بتكرار الأسماء الحسنى أو العبارات القرآنية. |
+| 1050 | Saturn - Represents divine wisdom, patience, and structure. Associated with the Divine Name Al-Ḥakīm (The Wise). | زحل - يمثّل الحكمة والصبر والبنية. ويرتبط باسم الحكيم. |
+| 1051 | Spiritual Glossary | معجم المصطلحات الروحية |
+| 1052 | Supplication - Personal prayer and petition to Allah. Can be optimized by choosing appropriate planetary hours. | الدعاء - مناجاة العبد ربّه وسؤاله. ويمكن تحرّي الساعات الكوكبية المناسبة له. |
+| 1053 | Tawakkul | التوكّل |
+| 1054 | The Light - One of the 99 Names of Allah. The source of all illumination and guidance. Associated with the Sun. | النور - من أسماء الله الحسنى. مصدر كل إنارة وهداية. ويرتبط بالشمس. |
+| 1055 | The Moon - Represents divine mercy, intuition, and emotional wisdom. Associated with the Divine Name Al-Laṭīf (The Subtle). | القمر - يمثّل الرحمة والحدس والحكمة العاطفية. ويرتبط باسم اللطيف. |
+| 1056 | The Subtle - One of the 99 Names of Allah. The Gentle, Kind, and All-Perceiving. Associated with the Moon. | اللطيف - من أسماء الله الحسنى: الرفيق بعباده، الخبير بدقائق الأمور. ويرتبط بالقمر. |
+| 1057 | The Sun - Represents divine light, leadership, and consciousness. Associated with the Divine Name An-Nūr (The Light). | الشمس - تمثّل النور والقيادة والوعي. وترتبط باسم النور. |
+| 1058 | Venus - Represents divine love, beauty, and harmony. Associated with the Divine Name Al-Wadūd (The Loving). | الزهرة - تمثّل المحبّة والجمال والانسجام. وترتبط باسم الودود. |
+| 1059 | Water Element - Represents emotions, intuition, and purification. Associated with the Moon. | عنصر الماء - يمثّل العاطفة والحدس والطهارة. ويرتبط بالقمر. |
+| 1060 | Wisdom - Deep understanding combined with right action. The ability to apply knowledge appropriately. | الحكمة - الفهم العميق مع العمل الصحيح. والقدرة على وضع العلم في موضعه. |
+| 1061 | Absolutely! Many traditional practices complement planetary hours: performing specific dhikr during aligned hours, timing optional prayers (nafl), scheduling spiritual retreats, choosing times for Quran study, and planning charitable activities. Integration enhances, not replaces, core Islamic practices. | بالتأكيد! كثير من الممارسات التقليدية تُكمّل الساعات الكوكبية: الذكر في الساعات المناسبة، وتوقيت النوافل، وترتيب الخلوات، واختيار أوقات تدبّر القرآن، والتخطيط لأعمال البرّ. والدمج يُثري الشعائر الأساسية ولا يحلّ محلّها. |
+| 1062 | Ahmad al-Būnī (d. 1225) wrote extensively about the spiritual significance of planetary hours in his famous work "Shams al-Maʿārif" (The Sun of Knowledge). He connected each planet with specific Divine Names and taught methods for spiritual practice aligned with planetary influences. His work remains influential in Islamic esotericism today. | كتب أحمد البوني (ت. 622هـ/1225م) كثيرًا عن الدلالة الروحية للساعات الكوكبية في كتابه الشهير «شمس المعارف». وربط كل كوكب بأسماء حسنى معيّنة، وعلّم طرقًا للممارسة الروحية الموافقة لصلات الكواكب. ولا يزال لعمله أثر في التراث الباطني الإسلامي اليوم. |
+| 1063 | Al-Būnī and Shams al-Maʿārif | البوني و«شمس المعارف» |
+| 1064 | Are planetary hours the same as clock hours? | هل الساعات الكوكبية مثل ساعات الساعة؟ |
+| 1065 | Can I combine planetary hours with other Islamic practices? | هل يمكنني الجمع بين الساعات الكوكبية وممارسات إسلامية أخرى؟ |
+| 1066 | Classical Islamic scholars like Al-Būnī and Ibn ʿArabī integrated planetary knowledge with Islamic spirituality. The key is intention (niyyah): using this knowledge to optimize worship and beneficial activities is acceptable, while believing planets have independent power apart from Allah is prohibited (shirk). Always maintain proper Islamic creed (ʿaqīdah). | جمع علماء مسلمون كلاسيكيون مثل البوني وابن عربي بين المعرفة الكوكبية والروحانية الإسلامية. والمدار على النيّة: فاستعمال هذه المعرفة لتحسين العبادة والأعمال النافعة مقبول، أما اعتقاد أن للكواكب قوة مستقلة عن الله فشرك محرّم. وحافظ دائمًا على العقيدة الصحيحة. |
+| 1067 | Do I need to follow planetary hours strictly? | هل يجب أن ألتزم بالساعات الكوكبية التزامًا صارمًا؟ |
+| 1068 | Don't worry! The most important factors are sincere intention, proper action, and trust in Allah (tawakkul). Planetary hours provide optimization, not limitation. If you must act during an "unfavorable" hour, proceed with bismillah (in Allah's name) and rely on divine guidance. | لا تقلق! أهمّ العوامل: النيّة الصادقة، والعمل الصحيح، والتوكّل على الله. فالساعات الكوكبية تحسينٌ لا تقييد. وإن اضطررت إلى العمل في ساعة «غير مناسبة» فابدأ باسم الله واعتمد على هدايته. |
+| 1069 | Each day is ruled by a planet: Sunday (Sun), Monday (Moon), Tuesday (Mars), Wednesday (Mercury), Thursday (Jupiter), Friday (Venus), Saturday (Saturn). The first planetary hour of each day matches its ruling planet, creating a harmonic resonance for that day's energy. | لكل يوم كوكب حاكم: الأحد (الشمس)، الاثنين (القمر)، الثلاثاء (المريخ)، الأربعاء (عطارد)، الخميس (المشتري)، الجمعة (الزهرة)، السبت (زحل). وأول ساعة كوكبية في كل يوم توافق كوكبه الحاكم، فيتناغم طابع ذلك اليوم. |
+| 1070 | Each planet reflects specific attributes of Allah found in His 99 Beautiful Names (Asmāʾ Allāh al-Ḥusnā). For example, the Sun reflects An-Nūr (The Light), and the Moon reflects Al-Laṭīf (The Subtle). Reciting these names during corresponding planetary hours can deepen spiritual connection. | كل كوكب يذكّر بصفات من صفات الله الواردة في أسمائه الحسنى. فالشمس تذكّر بالنور، والقمر باللطيف. وذكر هذه الأسماء في الساعات الكوكبية الموافقة قد يعمّق الصلة الروحية. |
+| 1071 | Frequently Asked Questions | الأسئلة الشائعة |
+| 1072 | How do planetary hours relate to Divine Names? | ما صلة الساعات الكوكبية بالأسماء الحسنى؟ |
+| 1073 | In Islamic tradition, the seven classical "planets" include the Sun and Moon (luminaries) along with Mercury, Venus, Mars, Jupiter, and Saturn. Each represents specific divine qualities (reflected in the 99 Names of Allah) and governs particular aspects of life and spiritual practice. | في التراث الإسلامي تشمل «الكواكب» السبعة الكلاسيكية الشمس والقمر (النيّرين) مع عطارد والزهرة والمريخ والمشتري وزحل. وكلٌّ منها يذكّر بصفات (تنعكس في الأسماء الحسنى) ويرتبط بجوانب من الحياة والممارسة الروحية. |
+| 1074 | Introduction to Planetary Hours | مقدّمة إلى الساعات الكوكبية |
+| 1075 | Is using planetary hours permissible in Islam? | هل استعمال الساعات الكوكبية جائز في الإسلام؟ |
+| 1076 | Islamic scholars made tremendous contributions to astronomy during the Golden Age of Islam (8th-14th centuries). Great astronomers like Al-Battani, Ibn al-Haytham, and Nasir al-Din al-Tusi refined planetary calculations and integrated them with spiritual practice. The concept of planetary hours (Sāʿāt al-Falakiyya) became part of Islamic spiritual science. | قدّم العلماء المسلمون إسهامات عظيمة في علم الفلك في العصر الذهبي للإسلام (القرن الثامن إلى الرابع عشر الميلادي). وقد أتقن فلكيون كبار كالبتاني وابن الهيثم ونصير الدين الطوسي الحسابات الكوكبية. وصار مفهوم الساعات الفلكية جزءًا من العلوم الروحية الإسلامية. |
+| 1077 | No. Planetary hours are "unequal hours" based on sunrise/sunset, so they vary in length. A summer day hour might be 75 minutes, while a winter day hour might be 45 minutes. Clock hours are always 60 minutes. Our app shows you the exact times for each planetary hour. | لا. الساعات الكوكبية «ساعات زمانية» مبنية على الشروق والغروب، فيختلف طولها. فقد تكون ساعة النهار في الصيف 75 دقيقة، وفي الشتاء 45 دقيقة، بينما ساعة الساعة دائمًا 60 دقيقة. ويعرض لك تطبيقنا الأوقات الدقيقة لكل ساعة كوكبية. |
+| 1078 | No. Planetary hours are a spiritual tool, not an obligation. The five daily prayers (salat) are performed at their prescribed times regardless of planetary hours. Use this knowledge as supplementary guidance for optional activities and spiritual practices, not as a rigid requirement. | لا. الساعات الكوكبية أداة روحية لا واجب. فالصلوات الخمس تُؤدّى في أوقاتها المشروعة بصرف النظر عن الساعات الكوكبية. استعمل هذه المعرفة إرشادًا مكمّلًا للأنشطة الاختيارية والممارسات الروحية، لا شرطًا صارمًا. |
+| 1079 | Planetary Sequence | التسلسل الكوكبي |
+| 1080 | Planetary hours are ancient divisions of time based on the classical seven planets (Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn). Each hour of the day and night is ruled by one of these planets, cycling in a specific order. This system has been used for centuries in Islamic spiritual traditions to optimize activities according to celestial influences. | الساعات الكوكبية تقسيمات قديمة للوقت مبنية على الكواكب السبعة الكلاسيكية (الشمس، القمر، عطارد، الزهرة، المريخ، المشتري، زحل). يحكم كلَّ ساعة من النهار والليل أحدُ هذه الكواكب في ترتيب معيّن. وقد استُعمل هذا النظام قرونًا في التراث الروحي الإسلامي لتحرّي الأوقات المناسبة للأعمال. |
+| 1081 | Sufi orders have long used planetary hours for spiritual exercises. Different tariqas (spiritual paths) developed specific practices: certain dhikr (remembrance) during particular planetary hours, meditation aligned with celestial rhythms, and timing of spiritual retreats (khalwa) according to planetary influences. | استعملت الطرق الصوفية الساعات الكوكبية في الرياضات الروحية زمنًا طويلًا. وطوّرت الطرق المختلفة ممارسات معيّنة: أذكارًا في ساعات كوكبية محدّدة، وتأمّلًا موافقًا للإيقاعات السماوية، وتوقيت الخلوات. |
+| 1082 | The great Sufi master Ibn ʿArabī (1165-1240) developed a comprehensive cosmology integrating planetary spheres with spiritual stations (maqāmāt). In his "Futūḥāt al-Makkiyya" (Meccan Illuminations), he explained how each planet corresponds to prophetic qualities and Divine Names, creating a bridge between astronomy and spirituality. | وضع الشيخ الأكبر ابن عربي (560-638هـ / 1165-1240م) رؤية كونية شاملة تربط الأفلاك الكوكبية بالمقامات الروحية. وفي «الفتوحات المكية» بيّن كيف يناسب كلُّ فلك صفاتٍ نبوية وأسماءً حسنى، فجعل جسرًا بين الفلك والروح. |
+| 1083 | This knowledge is a spiritual tool to optimize beneficial activities. It does not replace core Islamic obligations (fard) or replace reliance on Allah (tawakkul). Always maintain proper Islamic creed (aqīdah) and consult knowledgeable scholars for guidance. | هذه المعرفة أداة روحية لتحسين الأعمال النافعة. ولا تحلّ محلّ الفرائض ولا محلّ التوكّل على الله. وحافظ دائمًا على العقيدة الصحيحة، وارجع إلى أهل العلم. |
+| 1084 | To calculate planetary hours: 1) Determine sunrise and sunset times for your location, 2) Divide daylight into 12 equal parts, 3) Divide nighttime into 12 equal parts, 4) Apply the planetary sequence starting with the day's ruler. Our app does this automatically using precise astronomical calculations. | لحساب الساعات الكوكبية: 1) حدّد وقتي الشروق والغروب لموقعك، 2) اقسم النهار إلى 12 جزءًا متساويًا، 3) اقسم الليل إلى 12 جزءًا متساويًا، 4) طبّق التسلسل الكوكبي بدءًا بحاكم اليوم. ويفعل تطبيقنا ذلك آليًا بحسابات فلكية دقيقة. |
+| 1085 | Traditional Sufi Practice | الممارسة الصوفية التقليدية |
+| 1086 | Understanding planetary hours helps align daily activities with cosmic rhythms, enhancing spiritual practices and improving outcomes. This knowledge allows practitioners to choose optimal times for prayer, study, business, healing, and other important activities according to traditional Islamic wisdom. | فهم الساعات الكوكبية يعين على مواءمة الأنشطة اليومية مع الإيقاعات الكونية، فيُثري الممارسات الروحية. وتتيح هذه المعرفة اختيار أوقات مناسبة للدعاء والدراسة والتجارة والتداوي وغيرها من الأعمال المهمّة وفق الحكمة الإسلامية التقليدية. |
+| 1087 | What Are Planetary Hours? | ما الساعات الكوكبية؟ |
+| 1088 | What if I can't perform activities during "favorable" hours? | ماذا لو لم أستطع العمل في الساعات «المناسبة»؟ |
+| 1089 | Calculating prayer times... | جارٍ حساب مواقيت الصلاة... |
+| 1090 | Based on: 33 (base), 66 (double), 99 (Ḥusnā), | بناءً على: 33 (الأساس)، 66 (الضعف)، 99 (الحسنى)، |
+| 1091 | Copy JSON | نسخ JSON |
+| 1092 | Counts: | الأعداد: |
+| 1093 | Educational & Traditional: | تعليمي وتقليدي: |
+| 1094 | Educational display only × Sequential grid starting from Kabīr ( | عرض تعليمي فقط × شبكة متتابعة تبدأ من الكبير ( |
+| 1095 | Element Distribution: | توزيع العناصر: |
+| 1096 | Exact match: | تطابق تام: |
+| 1097 | Magic Grid | الوفق |
+| 1098 | Per-Letter Values: | قيم كل حرف: |
+| 1099 | Reflections & Guidance | تأمّلات وإرشاد |
+| 1100 | Root | الجذر |
+| 1101 | Root: | الجذر: |
+| 1102 | Signature Sequence (Digital Roots): | تسلسل البصمة (الجذور الرقمية): |
+| 1103 | Suggested Counts: | الأعداد المقترحة: |
+| 1104 | This analysis is for cultural exploration and reflection only. Not for predictions, rulings, medical, or financial decisions. Always consult qualified scholars for religious guidance. | هذا التحليل للاستكشاف الثقافي والتأمّل فقط. ليس للتنبّؤ ولا للفتوى ولا للقرارات الطبية أو المالية. وارجع دائمًا إلى أهل العلم المؤهّلين في المسائل الشرعية. |
+| 1105 | Um Ḥadad (Combined with Mother) | أمّ الحدد (مع اسم الأم) |
+| 1106 | Ḥadath (÷4) | الحدث (÷4) |
+| 1107 | Balance by scheduling gentle breaks. | وازن بأخذ فترات راحة لطيفة. |
+| 1108 | Channel your energy into focused practice. | وجّه طاقتك إلى ممارسة مركّزة. |
+| 1109 | Clarity and discernment | الوضوح والتمييز |
+| 1110 | Divine signs | آيات الله |
+| 1111 | Dusk | الغسق |
+| 1112 | Flow and adaptation | الانسياب والتكيّف |
+| 1113 | Flowing, Adaptive | منساب، متكيّف |
+| 1114 | Foundation and sustenance | الأساس والرزق |
+| 1115 | Grounding, Stable | متجذّر، ثابت |
+| 1116 | Intellectual, Communicative | فكريّ، تواصليّ |
+| 1117 | Maintain equilibrium through regular reflection. | حافظ على التوازن بالتأمّل المنتظم. |
+| 1118 | Noon | الظهر |
+| 1119 | Perseverance | المثابرة |
+| 1120 | Purification and renewal | الطهارة والتجدّد |
+| 1121 | Stability and practical grounding. | الثبات والتجذّر العملي. |
+| 1122 | The Firm | المتين |
+| 1123 | Transformative drive and creativity. | دافع محوِّل وإبداع. |
+| 1124 | Transformative, Initiating | محوِّل، مبادر |
+| 1125 | Verify before acting on information | تحقّق قبل العمل بالمعلومة |
+| 1126 | Abjad: Arabic Numerical System | الأبجد: النظام العددي العربي |
+| 1127 | Asceticism | الزهد |
+| 1128 | Calculating Destiny Number | حساب عدد المسار |
+| 1129 | Calculating Personality Number | حساب عدد الشخصية |
+| 1130 | Calculating Soul Urge Number | حساب عدد رغبة الروح |
+| 1131 | Calculations | الحسابات |
+| 1132 | Connected ʿIlm al-Ḥurūf to Sufi stations and cosmology | ربط علم الحروف بالمقامات الصوفية والرؤية الكونية |
+| 1133 | Core Principles: | المبادئ الأساسية: |
+| 1134 | Destiny number is calculated from all letters in your full name (vowels + consonants). This represents your overall life purpose and the work you came to accomplish. | يُحسب عدد المسار من كل حروف اسمك الكامل (العلّة والصامتة). ويمثّل غاية حياتك العامة والعمل الذي جئت لتؤدّيه. |
+| 1135 | Discover the spiritual wisdom encoded in numbers | اكتشف الحكمة الروحية المكنونة في الأعداد |
+| 1136 | Discussed contemplation of numerical mysteries as path to divine knowledge | تناول التأمّل في أسرار الأعداد طريقًا إلى المعرفة بالله |
+| 1137 | Divine Contentment | الرضا |
+| 1138 | Divine Love | المحبّة الإلهية |
+| 1139 | Each Arabic letter has a numerical value (Abjad system) | لكل حرف عربي قيمة عددية (نظام الأبجد) |
+| 1140 | Faqr | الفقر |
+| 1141 | Foundational work on ʿIlm al-Ḥurūf, exploring spiritual powers of Arabic letters and numbers | عمل تأسيسي في علم الحروف يستكشف خواصّ الحروف والأعداد العربية الروحية |
+| 1142 | Historical Scholars and Their Works | علماء التراث ومؤلّفاتهم |
+| 1143 | How to Calculate Your Life Path Number | كيف تحسب عدد مسار حياتك |
+| 1144 | In Islamic Sufism, life path numbers correspond to maqāmāt (spiritual stations) on the path to Allah. Each number represents a unique lesson and quality to develop. | في التصوّف الإسلامي تُقابل أعداد مسار الحياة المقامات الروحية في الطريق إلى الله. وكل عدد يمثّل درسًا وصفة ينبغي تنميتها. |
+| 1145 | Is numerology halal in Islam? | هل علم العدد حلال في الإسلام؟ |
+| 1146 | Karmic debts are special numbers appearing in your calculations indicating important life lessons to be learned. In Islamic terms, these are ibtilāʾāt (trials) that teach important spiritual qualities like patience, humility, and trust. They are opportunities for growth, not punishments. | الديون الكارمية أعداد خاصة تظهر في حساباتك تشير إلى دروس مهمّة في الحياة. وبالمصطلح الإسلامي هي ابتلاءات تعلّم صفات روحية مهمّة كالصبر والتواضع والتوكّل. وهي فرص للنموّ لا عقوبات. |
+| 1147 | Life Path (from birth date) represents your overall mission and spiritual path - what you came to learn and become. Soul Urge (from name vowels) reveals your deep inner desires - what motivates and fulfills you at a soul level. | مسار الحياة (من تاريخ الميلاد) يمثّل رسالتك العامة وطريقك الروحي — ما جئت لتتعلّمه وتصيره. ورغبة الروح (من حروف العلّة في الاسم) تكشف رغباتك الباطنة العميقة — ما يحرّكك ويُرضيك على مستوى الروح. |
+| 1148 | Life Path Learning Center | مركز تعلّم مسار الحياة |
+| 1149 | Life Path Number: 4 | عدد مسار الحياة: 4 |
+| 1150 | Life Path number is calculated from your birth date by reducing each component (day, month, year) to a single digit, then adding them together. | يُحسب عدد مسار الحياة من تاريخ ميلادك باختزال كل جزء (اليوم، الشهر، السنة) إلى رقم واحد، ثم جمعها. |
+| 1151 | Life Path numbers are an ancient spiritual system revealing the meaning and purpose encoded in your birth date and name. In Islamic traditions, this is known as ʿIlm al-Ḥurūf - the science of letters and numbers connecting numerical values to spiritual truths. | أعداد مسار الحياة نظام روحي قديم يتأمّل المعنى والغاية في تاريخ ميلادك واسمك. وفي التراث الإسلامي يُعرف هذا بعلم الحروف — علم الحروف والأعداد الذي يربط القيم العددية بالحقائق الروحية. |
+| 1152 | Life moves in 9-year cycles, each carrying a unique theme and lessons. Understanding your current cycle helps you align your actions with the natural rhythm of your spiritual growth. | تسير الحياة في دورات من تسع سنوات، لكل منها موضوعها ودروسها. وفهم دورتك الحالية يعينك على مواءمة أعمالك مع الإيقاع الطبيعي لنموّك الروحي. |
+| 1153 | Life moves in repeating 9-year cycles, each carrying a unique theme. Years 1-3 are for foundation (building groundwork), 4-6 for growth (expansion), and 7-9 for completion (harvest and release). After the 9th year, a new cycle begins. Your current personal year is calculated by adding birth day and month + current year. | تسير الحياة في دورات متكرّرة من تسع سنوات، لكل منها موضوعها. فالسنوات 1-3 للتأسيس، و4-6 للنموّ، و7-9 للاكتمال (الحصاد والتخلّي). وبعد السنة التاسعة تبدأ دورة جديدة. وتُحسب سنتك الشخصية الحالية بجمع يوم الميلاد وشهره مع السنة الحالية. |
+| 1154 | Manifesting spiritual dreams | تحقيق الأحلام الروحية |
+| 1155 | Master Numbers (11, 22, 33) | الأعداد الرئيسية (11، 22، 33) |
+| 1156 | Master numbers are double-digit numbers (11, 22, 33) carrying heightened spiritual energy. They are not reduced to a single digit because they represent amplified power and deeper spiritual responsibility. | الأعداد الرئيسية أعداد من رقمين (11، 22، 33) تحمل طاقة روحية مضاعفة. ولا تُختزل إلى رقم واحد لأنها تمثّل قوة مضاعفة ومسؤولية روحية أعمق. |
+| 1157 | Master numbers carry heightened spiritual energy and greater responsibility. If you have a master number, you have higher spiritual potential but also greater challenges. You can work at the double-digit level (11, 22, 33) or the reduced single-digit level (2, 4, 6) depending on your spiritual growth. | تحمل الأعداد الرئيسية طاقة روحية مضاعفة ومسؤولية أكبر. فإن كان لك عدد رئيسي فلك إمكانات روحية أعلى وتحدّيات أكبر. ويمكنك العمل على مستوى الرقمين (11، 22، 33) أو المستوى المختزل (2، 4، 6) بحسب نموّك الروحي. |
+| 1158 | Names and dates reveal spiritual patterns | الأسماء والتواريخ تكشف أنماطًا روحية |
+| 1159 | Numbers carry spiritual symbolism and connect to Divine Names | للأعداد رمزية روحية وصلة بالأسماء الحسنى |
+| 1160 | Numerology is a tool for spiritual reflection, not a substitute for reliance on Allah. Use it to contemplate divine creation and wisdom. | علم العدد أداة للتأمّل الروحي، لا بديل عن التوكّل على الله. استعمله للتأمّل في خلق الله وحكمته. |
+| 1161 | Repentance | التوبة |
+| 1162 | Scrupulousness | الورع |
+| 1163 | Shukr | الشكر |
+| 1164 | Soul Urge number is calculated from the vowels in your full name. In Arabic, this includes ḥarakāt (diacritics) and elongation letters. | يُحسب عدد رغبة الروح من حروف العلّة في اسمك الكامل. وفي العربية يشمل ذلك الحركات وحروف المدّ. |
+| 1165 | Spiritual Poverty | الفقر إلى الله |
+| 1166 | Spiritual Stations and Numbers | المقامات الروحية والأعداد |
+| 1167 | Spiritual insight and unveiling | البصيرة الروحية والكشف |
+| 1168 | Tawbah | التوبة |
+| 1169 | The Abjad system assigns each Arabic letter a numerical value. This is used to calculate the value of names, words, and dates, revealing their hidden spiritual meanings. | يجعل نظام الأبجد لكل حرف عربي قيمة عددية. ويُستعمل لحساب قيم الأسماء والكلمات والتواريخ وتأمّل معانيها الروحية. |
+| 1170 | The Four Core Numbers: | الأعداد الأساسية الأربعة: |
+| 1171 | The four elements (Fire, Water, Air, Earth) correspond to numbers | العناصر الأربعة (النار، الماء، الهواء، التراب) تقابل أعدادًا |
+| 1172 | Trust in Allah | التوكّل على الله |
+| 1177 | Universal love and healing | المحبّة الشاملة والشفاء |
+| 1178 | Vowels: ُ (u) + َ (a) + َ (a) → Calculate their Abjad values | الحركات: ُ (ضمّة) + َ (فتحة) + َ (فتحة) ← احسب قيمها في الأبجد |
+| 1179 | What are karmic debts (13, 14, 16, 19)? | ما الديون الكارمية (13، 14، 16، 19)؟ |
+| 1180 | What is the difference between Life Path and Soul Urge? | ما الفرق بين مسار الحياة ورغبة الروح؟ |
+| 1181 | Your Life Path number (from birth date) never changes - it's fixed for life. However, your name numbers can change if you legally change your name or adopt a new name (like after marriage or spiritual transformation). Your personal year and month change annually/monthly, bringing new themes and lessons. | عدد مسار حياتك (من تاريخ الميلاد) لا يتغيّر — فهو ثابت مدى الحياة. أما أعداد اسمك فقد تتغيّر إن غيّرت اسمك رسميًا أو اتّخذت اسمًا جديدًا (كما بعد الزواج أو تحوّل روحي). وسنتك وشهرك الشخصيان يتغيّران سنويًا وشهريًا، بموضوعات ودروس جديدة. |
+| 1182 | Your deepest desires and what fulfills you spiritually | أعمق رغباتك وما يُرضيك روحيًا |
+| 1183 | Your spiritual essence and life mission | جوهرك الروحي ورسالة حياتك |
+| 1184 | Zuhd | الزهد |
+| 1185 | ʿIlm al-Ḥurūf has a long history in Islamic scholarship, studied by scholars like Imam al-Ghazālī and Ibn ʿArabī. When used as a tool for spiritual reflection (not fortune-telling), it is acceptable as a study of divine patterns in creation. Always remember: Only Allah knows the unseen, and numbers are tools for contemplation, not divination. | لعلم الحروف تاريخ طويل في التراث العلمي الإسلامي، وتناوله علماء مثل الإمام الغزالي وابن عربي. وحين يُستعمل أداةً للتأمّل الروحي (لا للعرافة) فهو دراسة لأنماط الحكمة في الخلق. وتذكّر دائمًا: لا يعلم الغيب إلا الله، والأعداد أدوات للتأمّل لا للكهانة. |
+| 1186 | ʿIlm al-Ḥurūf is a traditional Islamic science exploring the spiritual meanings encoded in Arabic letters and numbers. It dates back to the Islamic Golden Age and is associated with great scholars like Imam al-Ghazālī, Ibn ʿArabī, and al-Būnī. | علم الحروف علم إسلامي تقليدي يستكشف المعاني الروحية في الحروف والأعداد العربية. ويعود إلى العصر الذهبي للإسلام، ويرتبط بأعلام كالإمام الغزالي وابن عربي والبوني. |
+| 1187 | ʿIlm al-Ḥurūf: Islamic Science of Letters and Numbers | علم الحروف: العلم الإسلامي للحروف والأعداد |
+| 1188 | A number from 1-9 calculated for each calendar year, indicating the theme and energy of that year in your personal 9-year cycle. Changes annually. | عدد من 1 إلى 9 يُحسب لكل سنة ميلادية، يشير إلى موضوع تلك السنة وطاقتها في دورتك الشخصية ذات التسع سنوات. ويتغيّر سنويًا. |
+| 1189 | Abuse of freedom - teaching moderation and balance. The lesson is to use freedom responsibly, avoid excess, and find spiritual grounding through discipline. | إساءة استعمال الحرية — درسٌ في الاعتدال والتوازن. والدرس أن تستعمل الحرية بمسؤولية، وتجتنب الإفراط، وتجد التجذّر الروحي بالانضباط. |
+| 1190 | Abuse of love - teaching humility and ego dissolution. The lesson is to love selflessly, release ego attachments, and serve with pure intentions. | إساءة استعمال المحبّة — درسٌ في التواضع وتذويب الأنا. والدرس أن تحبّ بإيثار، وتتخلّى عن تعلّقات الأنا، وتخدم بنيّة خالصة. |
+| 1191 | Abuse of power - teaching independence without arrogance. The lesson is to stand alone spiritually while serving others, balancing power with compassion. | إساءة استعمال السلطة — درسٌ في الاستقلال دون كِبر. والدرس أن تقف وحدك روحيًا مع خدمة الآخرين، موازنًا القوة بالرحمة. |
+| 1192 | Associated with numbers 1, 3, 9 - represents passion, creativity, inspiration, leadership, and spiritual drive. Fire element brings transformative energy. | يرتبط بالأعداد 1 و3 و9 — ويمثّل الشغف والإبداع والإلهام والقيادة والدافع الروحي. وعنصر النار يجلب طاقة محوِّلة. |
+| 1193 | Associated with numbers 2, 5 - represents emotions, intuition, healing, adaptability, and spiritual flow. Water element brings emotional depth. | يرتبط بالعددين 2 و5 — ويمثّل العاطفة والحدس والشفاء والتكيّف والانسياب الروحي. وعنصر الماء يجلب عمقًا عاطفيًا. |
+| 1194 | Associated with numbers 3, 5, 7 - represents intellect, communication, freedom, wisdom, and spiritual insight. Air element brings mental clarity. | يرتبط بالأعداد 3 و5 و7 — ويمثّل العقل والتواصل والحرية والحكمة والبصيرة الروحية. وعنصر الهواء يجلب وضوحًا ذهنيًا. |
+| 1195 | Associated with numbers 4, 6, 8 - represents stability, practicality, material manifestation, grounding, and physical reality. Earth element brings structure. | يرتبط بالأعداد 4 و6 و8 — ويمثّل الثبات والعملية والتحقّق المادي والتجذّر والواقع المحسوس. وعنصر التراب يجلب البنية. |
+| 1196 | Calculated from all letters in your full name, this number reveals your life's purpose, the work you came to accomplish, and your overarching spiritual mission. | يُحسب من كل حروف اسمك الكامل، ويكشف غاية حياتك والعمل الذي جئت لتؤدّيه ورسالتك الروحية الشاملة. |
+| 1197 | Calculated from the consonants in your name, this number represents how others perceive you, your outer personality, and the first impression you make. | يُحسب من الحروف الصامتة في اسمك، ويمثّل كيف يراك الآخرون وشخصيتك الظاهرة والانطباع الأول الذي تتركه. |
+| 1198 | Calculated from the vowels in your name, this number reveals your heart's deepest desires, what motivates you at a soul level, and what truly fulfills you spiritually. | يُحسب من حروف العلّة في اسمك، ويكشف أعمق رغبات قلبك وما يحرّكك على مستوى الروح وما يُرضيك روحيًا حقًّا. |
+| 1199 | Comprehensive dictionary of numerology terms | معجم شامل لمصطلحات علم العدد |
+| 1200 | Core Numbers | الأعداد الأساسية |
+| 1201 | Karmic Debts | الديون الكارمية |
+| 1202 | Life Path Glossary | معجم مسار الحياة |
+| 1203 | No terms found | لم يُعثر على مصطلحات |
+| 1204 | Obstacles and lessons corresponding to each pinnacle period. Challenges are opportunities for growth, teaching resilience and spiritual development. | العقبات والدروس الموافقة لكل مرحلة قمّة. والتحدّيات فرص للنموّ تعلّم الصمود والنموّ الروحي. |
+| 1205 | Raqm al-Qimmah | رقم القمّة |
+| 1206 | Related Terms: | مصطلحات ذات صلة: |
+| 1207 | Represents laziness and negativity from past patterns. The lesson is to transform through hard work, discipline, and positive focus. Overcome through perseverance. | يمثّل الكسل والسلبية من أنماط سابقة. والدرس هو التحوّل بالعمل الجادّ والانضباط والتركيز الإيجابي، والتغلّب بالمثابرة. |
+| 1208 | Search for a term... | ابحث عن مصطلح... |
+| 1209 | Spiritual station in Sufi tradition. Each life path number corresponds to a maqām representing a stage on the journey to Allah (e.g., Tawbah, Sabr, Maḥabbah). | المقام الروحي في التراث الصوفي. كل عدد من أعداد مسار الحياة يقابل مقامًا يمثّل مرحلة في الطريق إلى الله (مثل التوبة والصبر والمحبّة). |
+| 1210 | The Illuminator - A master number carrying heightened spiritual energy. Represents intuition, spiritual insight, and the ability to inspire others through visionary leadership. | المنير — عدد رئيسي يحمل طاقة روحية مضاعفة. يمثّل الحدس والبصيرة الروحية والقدرة على إلهام الآخرين بقيادة ذات رؤية. |
+| 1211 | The Islamic science of letters and numbers, connecting numerical values to spiritual truths. Studied by classical scholars like al-Būnī and Ibn ʿArabī. | العلم الإسلامي للحروف والأعداد، يربط القيم العددية بالحقائق الروحية. وتناوله علماء كلاسيكيون كالبوني وابن عربي. |
+| 1212 | The Master Builder - Combines spiritual vision with practical manifestation. Represents the ability to turn dreams into reality and build lasting spiritual legacies. | البنّاء الأكبر — يجمع بين الرؤية الروحية والتحقّق العملي. يمثّل القدرة على تحويل الأحلام إلى واقع وبناء إرث روحي دائم. |
+| 1213 | The Master Teacher - The highest master number, representing universal love, compassion, and the ability to heal and guide humanity toward spiritual unity. | المعلّم الأكبر — أعلى الأعداد الرئيسية، يمثّل المحبّة الشاملة والرحمة والقدرة على الشفاء وإرشاد الناس نحو الوحدة الروحية. |
+| 1214 | The most important number in numerology, calculated from your birth date. It represents your spiritual essence, life mission, and the lessons you came to learn. | أهمّ عدد في علم العدد، ويُحسب من تاريخ ميلادك. يمثّل جوهرك الروحي ورسالة حياتك والدروس التي جئت لتتعلّمها. |
+| 1215 | ʿUnṣur an-Nār | عنصر النار |
+| 1216 | Abundance Practice | ممارسة الوفرة |
+| 1217 | Act of Love | عمل محبّة |
+| 1218 | Adaptability | التكيّف |
+| 1219 | Architect | مهندس معماري |
+| 1220 | Artist | فنّان |
+| 1221 | Banker | مصرفي |
+| 1222 | Beautify Home | تجميل البيت |
+| 1223 | Beginning | البداية |
+| 1224 | Builder | بنّاء |
+| 1225 | Building Legacy | بناء الإرث |
+| 1226 | CEO | رئيس تنفيذي |
+| 1227 | Channel for divine guidance | قناة للهداية |
+| 1228 | Collective Healing | شفاء جماعي |
+| 1229 | Commit to consistent practice | التزم بممارسة منتظمة |
+| 1230 | Complete a practical task | أنجز مهمّة عملية |
+| 1231 | Complete cycles with grace | أتمّ الدورات بلطف |
+| 1232 | Connect People | اجمع بين الناس |
+| 1233 | Connect spiritual to material | اربط الروحي بالمادي |
+| 1234 | Contemplate Quran or Sufi texts | تدبّر القرآن أو نصوص التصوّف |
+| 1235 | Contemplate true spiritual freedom | تأمّل الحرية الروحية الحقّة |
+| 1236 | Contemplation | التأمّل |
+| 1237 | Counselor | مستشار |
+| 1238 | Create balance and beauty | اصنع التوازن والجمال |
+| 1239 | Create solid foundations | ابنِ أسسًا متينة |
+| 1240 | Create something beautiful daily | اصنع شيئًا جميلًا كل يوم |
+| 1241 | Create something each day | اصنع شيئًا كل يوم |
+| 1242 | Create spaces for spiritual gathering | هيّئ أماكن للمجالس الروحية |
+| 1243 | Daily Creativity | الإبداع اليومي |
+| 1244 | Daily Healing | الشفاء اليومي |
+| 1245 | Deep Spiritual Qualities | صفات روحية عميقة |
+| 1246 | Dhikr of Completion | ذكر التمام |
+| 1247 | Dhikr of Freedom | ذكر الحرية |
+| 1248 | Dhikr of Joy | ذكر الفرح |
+| 1249 | Dhikr of Love | ذكر المحبّة |
+| 1250 | Dhikr of Mercy | ذكر الرحمة |
+| 1251 | Dhikr of Perfect Love | ذكر المحبّة الكاملة |
+| 1252 | Dhikr of Strength | ذكر القوة |
+| 1253 | Dhikr of Unity | ذكر الوحدة |
+| 1254 | Diplomat | دبلوماسي |
+| 1255 | Discover the deep meanings of each life path number | اكتشف المعاني العميقة لكل عدد من أعداد مسار الحياة |
+| 1256 | Dive into inner mysteries | تعمّق في الأسرار الباطنة |
+| 1257 | Dream Journaling | تدوين الرؤى |
+| 1258 | Duality | الثنائية |
+| 1259 | Embracing Change | تقبّل التغيير |
+| 1260 | Empire Builder | باني الإمبراطوريات |
+| 1261 | Energy Healer | معالج بالطاقة |
+| 1262 | Entrepreneur | رائد أعمال |
+| 1263 | Explore infinite possibilities | استكشف الإمكانات اللامحدودة |
+| 1264 | Express divine beauty | عبّر عن الجمال الإلهي |
+| 1265 | Famous Archetypes | نماذج مشهورة |
+| 1266 | Flow with divine change | انسجم مع تقلّب الأحوال بقدر الله |
+| 1267 | Follow intuition in a decision | اتّبع حدسك في قرار |
+| 1268 | Goal Setting | تحديد الأهداف |
+| 1269 | Grand Building | البناء الكبير |
+| 1270 | Grand Planning | التخطيط الكبير |
+| 1271 | Guide | مرشد |
+| 1272 | Heal others with divine love | اشفِ الآخرين بالمحبّة |
+| 1273 | Healer | معالج |
+| 1274 | Healing and Teaching | الشفاء والتعليم |
+| 1275 | Help resolve a small conflict daily | ساعد في حلّ خلاف صغير كل يوم |
+| 1276 | Help someone daily without expectation | ساعد أحدًا كل يوم دون انتظار مقابل |
+| 1277 | Humanitarian Servant | خادم للإنسانية |
+| 1278 | Humanitarian Work | العمل الإنساني |
+| 1279 | Ideal Career Paths | المسارات المهنية المثالية |
+| 1280 | Innovator | مبتكر |
+| 1281 | Inspirational Teacher | معلّم ملهِم |
+| 1282 | Inspiring Others | إلهام الآخرين |
+| 1283 | Introduce two people who could collaborate | عرّف شخصين يمكنهما التعاون |
+| 1284 | Intuition | الحدس |
+| 1285 | Intuitive Practice | الممارسة الحدسية |
+| 1286 | Journalist | صحفي |
+| 1287 | Lead healing circles for community | قُد حلقات شفاء للمجتمع |
+| 1288 | Lead with wisdom and integrity | قُد بحكمة ونزاهة |
+| 1289 | Leader | قائد |
+| 1290 | Leading with Power | القيادة بقوة |
+| 1291 | Learn something new each week | تعلّم شيئًا جديدًا كل أسبوع |
+| 1292 | Life Path Number Guide | دليل أعداد مسار الحياة |
+| 1293 | Listen to inner guidance | أصغِ إلى الإرشاد الباطن |
+| 1294 | Listening Practice | ممارسة الإصغاء |
+| 1295 | Maintain a regular prayer schedule | حافظ على مواقيت صلاة منتظمة |
+| 1296 | Maintain organized daily routine | حافظ على روتين يومي منظّم |
+| 1297 | Manifest spiritual dreams | حقّق الأحلام الروحية |
+| 1298 | Master Organizer | المنظّم الأكبر |
+| 1299 | Master the material world | أتقِن العالم المادي |
+| 1300 | Morning Affirmations | الأذكار الصباحية |
+| 1301 | Morning Contemplation | التأمّل الصباحي |
+| 1302 | Most Compatible With: | الأكثر توافقًا مع: |
+| 1303 | Number 1 thrives when initiating new ventures. Start that project you've been postponing. | يزدهر العدد 1 حين يبتدئ مشاريع جديدة. ابدأ المشروع الذي تؤجّله. |
+| 1304 | Number 11 seeks deep spiritual connection. You need a partner who understands your sensitivity and shares your spiritual journey. | يطلب العدد 11 صلة روحية عميقة. تحتاج إلى شريك يفهم حساسيتك ويشاركك رحلتك الروحية. |
+| 1305 | Number 2 excels at bridge-building. Use your diplomacy to unite two opposing parties. | يتفوّق العدد 2 في بناء الجسور. استعمل دبلوماسيتك لجمع طرفين متخاصمين. |
+| 1306 | Number 2 thrives in partnerships. You are a natural peacemaker, seeking harmony and deep connection in relationships. | يزدهر العدد 2 في الشراكات. أنت صانع سلام بطبعك، تطلب الانسجام والصلة العميقة في العلاقات. |
+| 1307 | Number 22 builds for generations. Create institutions or projects that endure. | يبني العدد 22 للأجيال. أنشئ مؤسسات أو مشاريع تدوم. |
+| 1308 | Number 22 builds lasting relationships with shared purpose. You need a partner who shares your grand vision and helps manifest it. | يبني العدد 22 علاقات دائمة بغاية مشتركة. تحتاج إلى شريك يشاركك رؤيتك الكبرى ويعينك على تحقيقها. |
+| 1309 | Number 33 teaches with love. Heal through compassion and teach by example. | يعلّم العدد 33 بالمحبّة. اشفِ بالرحمة وعلّم بالقدوة. |
+| 1310 | Number 4 excels at structuring. Create a system that lasts. | يتفوّق العدد 4 في التنظيم. اصنع نظامًا يدوم. |
+| 1311 | Number 5 needs freedom in relationships. You are adventurous, needing a partner who loves new experiences and respects your need for space. | يحتاج العدد 5 إلى الحرية في العلاقات. أنت مغامر، تحتاج إلى شريك يحبّ التجارب الجديدة ويحترم حاجتك إلى المساحة. |
+| 1312 | Number 5 thrives on variety. Explore new paths fearlessly. | يزدهر العدد 5 بالتنوّع. استكشف طرقًا جديدة دون خوف. |
+| 1313 | Number 6 is nurturing and loving in relationships. You give generously, but beware of becoming overextended or controlling. | العدد 6 راعٍ محبّ في العلاقات. تعطي بسخاء، لكن احذر الإجهاد أو التحكّم. |
+| 1314 | Number 6 shines in caregiving. Create a warm home or help those in need. | يتألّق العدد 6 في الرعاية. اصنع بيتًا دافئًا أو ساعد المحتاجين. |
+| 1315 | Number 7 needs depth. Dive into spiritual or scientific studies. | يحتاج العدد 7 إلى العمق. تعمّق في الدراسات الروحية أو العلمية. |
+| 1316 | Number 7 needs spiritual depth in relationships. You value alone time, but seek deep, meaningful connection. | يحتاج العدد 7 إلى عمق روحي في العلاقات. تقدّر وقت الخلوة، لكنك تطلب صلة عميقة ذات معنى. |
+| 1317 | Number 9 completes cycles. Release what no longer serves and serve a greater cause. | يُتمّ العدد 9 الدورات. تخلَّ عمّا لم يعد نافعًا، واخدم قضية أكبر. |
+| 1318 | Number 9 is compassionate and humanitarian in relationships. You give freely, but beware of losing yourself in service to others. | العدد 9 رحيم إنساني في العلاقات. تعطي بلا حساب، لكن احذر أن تفقد نفسك في خدمة الآخرين. |
+| 1319 | Nurture and heal others | ارعَ الآخرين واشفِهم |
+| 1320 | Nurturing Others | رعاية الآخرين |
+| 1321 | Organized Schedule | جدول منظّم |
+| 1322 | Project Manager | مدير مشروع |
+| 1323 | Read spiritual text | اقرأ نصًا روحيًا |
+| 1324 | Record dreams and spiritual visions | دوّن الرؤى والمنامات |
+| 1325 | Related Concepts | مفاهيم ذات صلة |
+| 1326 | Repeat "Al-Qawī Al-ʿAzīz" for strength | ردّد «يا قوي يا عزيز» للقوة |
+| 1327 | Repeat "Al-Wadūd" for divine love | ردّد «يا ودود» للمحبّة |
+| 1328 | Repeat "Ar-Raḥmān Ar-Raḥīm" for mercy | ردّد «يا رحمن يا رحيم» للرحمة |
+| 1329 | Repeat "Lā ilāha illā Allāh" 100 times daily | ردّد «لا إله إلا الله» مئة مرّة يوميًا |
+| 1330 | Sacred Text Study | دراسة النصوص الشرعية |
+| 1331 | Salesperson | مندوب مبيعات |
+| 1332 | Seek deep truth | اطلب الحقيقة العميقة |
+| 1333 | Seeking Truth | طلب الحقيقة |
+| 1334 | Select a Number: | اختر عددًا: |
+| 1335 | Selfless Service | خدمة بإيثار |
+| 1336 | Send healing energy to someone in need | ادعُ بالشفاء لمن يحتاج إليه |
+| 1337 | Serve humanity with love | اخدم الناس بمحبّة |
+| 1338 | Service to Others | خدمة الآخرين |
+| 1339 | Serving Humanity | خدمة الإنسانية |
+| 1340 | Set one clear goal for each day | حدّد هدفًا واضحًا لكل يوم |
+| 1341 | Silent Meditation | تأمّل صامت |
+| 1342 | Spiritual Advisor | ناصح روحي |
+| 1343 | Spiritual Counselor | مرشد روحي |
+| 1344 | Spiritual Leader | قائد روحي |
+| 1345 | Spiritual Station | المقام الروحي |
+| 1346 | Spiritual Study | دراسة روحية |
+| 1347 | Spiritual Teacher | معلّم روحي |
+| 1348 | Spread Joy | انشر الفرح |
+| 1349 | Starting a Project | بدء مشروع |
+| 1350 | Structured Routine | روتين منظّم |
+| 1351 | Systematic Building | بناء منهجي |
+| 1352 | Tawhid | التوحيد |
+| 1353 | Teach spiritual truths | علّم الحقائق الروحية |
+| 1354 | Thank Allah for blessings with joy | احمد الله على النعم بفرح |
+| 1355 | The One is the origin of all numbers, as Allah is the origin of all existence | الواحد أصل الأعداد كلها، كما أن الله سبحانه مبدئ كل موجود |
+| 1356 | The number one holds special significance in Islam as a symbol of Tawhid - the oneness of Allah. Classical scholars like al-Būnī and Ibn ʿArabī studied number 1 as the expression of divine unity and beginning. | للعدد واحد دلالة خاصة في الإسلام رمزًا للتوحيد. وقد درس علماء كلاسيكيون كالبوني وابن عربي العدد 1 تعبيرًا عن الوحدانية والبداية. |
+| 1357 | The number two represents duality and partnership in Islamic traditions - night and day, earth and sky. It teaches us about balance and harmony in creation. | يمثّل العدد اثنان الزوجية والشراكة في التراث الإسلامي — الليل والنهار، الأرض والسماء. ويعلّمنا التوازن والانسجام في الخلق. |
+| 1358 | Track finances daily | تابع أموالك يوميًا |
+| 1359 | Traveler | رحّالة |
+| 1360 | Unconditional Love | محبّة بلا شروط |
+| 1361 | Urban Planner | مخطّط مدن |
+| 1362 | Vision Journaling | تدوين الرؤية |
+| 1363 | Visualize Allah's light filling you | استحضر نور الله يملأ قلبك |
+| 1364 | Volunteer at a charity | تطوّع في جمعية خيرية |
+| 1365 | Walk without destination | امشِ بلا وجهة |
+| 1366 | Writer | كاتب |
+| 1367 | 9-Year Life Cycle | دورة الحياة ذات التسع سنوات |
+| 1368 | Achievement & Power | الإنجاز والقوة |
+| 1369 | Build relationships | ابنِ العلاقات |
+| 1370 | Building Foundations | بناء الأسس |
+| 1371 | Building foundation and planting seeds | بناء الأساس وغرس البذور |
+| 1372 | Change & Freedom | التغيير والحرية |
+| 1373 | Communicate ideas | عبّر عن الأفكار |
+| 1374 | Completion & Release | الاكتمال والتخلّي |
+| 1375 | Create harmony | اصنع الانسجام |
+| 1376 | Create structure | اصنع البنية |
+| 1377 | Embrace change | تقبّل التغيير |
+| 1378 | Exercise leadership | مارس القيادة |
+| 1379 | Express yourself | عبّر عن نفسك |
+| 1380 | Harvest and release | الحصاد والتخلّي |
+| 1381 | Inner Wisdom | الحكمة الباطنة |
+| 1382 | Love & Responsibility | المحبّة والمسؤولية |
+| 1383 | Manifest goals | حقّق الأهداف |
+| 1384 | Nurture connections | ارعَ الصلات |
+| 1385 | Nurture others | ارعَ الآخرين |
+| 1386 | Organize | نظّم |
+| 1387 | Practice patience | تحلَّ بالصبر |
+| 1388 | Prev | السابق |
+| 1389 | Previous Year | السنة السابقة |
+| 1390 | Reflect deeply | تأمّل بعمق |
+| 1391 | Remember: Cycles are tools for reflection and planning, not fixed destiny. Only Allah knows the unseen. | تذكّر: الدورات أدوات للتأمّل والتخطيط، لا قدر محتوم. ولا يعلم الغيب إلا الله. |
+| 1392 | Seek truth | اطلب الحقيقة |
+| 1393 | Serve community | اخدم المجتمع |
+| 1394 | Serve humanity | اخدم الإنسانية |
+| 1395 | Set intentions | اعقد النيّات |
+| 1396 | Study spirituality | ادرس الروحانيات |
+| 1397 | Time for changes, travel, new experiences, and personal freedom. Adaptability and flexibility are key. Expect the unexpected. | وقت للتغيير والسفر والتجارب الجديدة والحرية الشخصية. والتكيّف والمرونة هما المفتاح. وتهيّأ لغير المتوقّع. |
+| 1398 | Time for creative projects, self-expression, and social activities. Communication, joy, and artistic pursuits are highlighted. | وقت للمشاريع الإبداعية والتعبير عن الذات والأنشطة الاجتماعية. ويبرز فيه التواصل والفرح والفنون. |
+| 1399 | Time for endings, completion, and preparation for new beginnings. Release what no longer serves. Humanitarian service and universal love are emphasized. | وقت للخواتيم والاكتمال والاستعداد لبدايات جديدة. تخلَّ عمّا لم يعد نافعًا. ويبرز فيه العمل الإنساني والمحبّة الشاملة. |
+| 1400 | Time for fresh starts, new initiatives, and planting seeds for the future. Bold action and independent thinking are favored. | وقت للبدايات الجديدة والمبادرات وغرس البذور للمستقبل. ويُستحسن فيه العمل الجريء والتفكير المستقل. |
+| 1401 | Time for introspection, spiritual growth, and inner development. Retreat, study, and deepen your connection with the Divine. | وقت لمحاسبة النفس والنموّ الروحي والتهذيب الباطن. اعتزل وادرس، وعمّق صلتك بالله. |
+| 1402 | Year of family, home, service, and relationships. Focus on responsibility, nurturing, and creating harmonious environments. | سنة الأسرة والبيت والخدمة والعلاقات. ركّز على المسؤولية والرعاية وصنع بيئات منسجمة. |
+| 1403 | Year of manifestation, material success, and personal power. Reap rewards from past efforts. Financial and career achievements are highlighted. | سنة التحقّق والنجاح المادي والقوة الشخصية. اجنِ ثمار جهودك السابقة. وتبرز فيها الإنجازات المالية والمهنية. |
+| 1404 | ← Scroll to see all 9 years → | ← مرّر لترى السنوات التسع كلها → |
+| 1405 | Download Asrāriya on Google Play | نزّل أسرارية من Google Play |
+| 1406 | Retrograde — inner reflection encouraged | راجع — يُستحسن التأمّل الباطن |
+| 1407 | Retrograde (−2) | راجع (−2) |
+| 1408 | Caution themes | موضوعات الحذر |
+| 1409 | Favourable themes (adab) | موضوعات المناسبة (أدب) |
+| 1410 | Live | مباشر |
+| 1411 | View | عرض |
+| 1412 | Makkah (Default) | مكة المكرمة (افتراضي) |
+| 1413 | Desc | الوصف |
+| 1414 | Based on the date on your device. | بحسب التاريخ في جهازك. |
+| 1415 | Recommended sadaqa | الصدقة الموصى بها |
+| 1416 | Recommended sadaqa for each day of the week | الصدقة الموصى بها لكل يوم من أيام الأسبوع |
+| 1417 | Today's sadaqa | صدقة اليوم |
+| 1418 | Answer | الجواب |
+| 1419 | Energy Return | عودة الطاقة |
+| 1420 | Rest Day Recommended | يُستحسن يوم راحة |
+| 1421 | Use this day to recharge your spiritual energy. | استعمل هذا اليوم لتجديد طاقتك الروحية. |
+| 1422 | Weekly Energy Flow | انسياب الطاقة الأسبوعي |
+| 1423 | 4-6: Moderate | 4-6: معتدل |
+| 1424 | OK | حسنًا |
+| 1425 | Rest Needed | يلزم الراحة |
+| 1426 | Top | الأعلى |
+| 1427 | Based on classical ʿIlm al-Ḥurūf and Islamic astrology principles | مبنيّ على مبادئ علم الحروف الكلاسيكي وعلم النجوم الإسلامي |
+| 1428 | Today's Tip | نصيحة اليوم |
+| 1429 | 📅 Your Spiritual Week | 📅 أسبوعك الروحي |
+| 1430 | Low energies. Ideal for meditation, reflection, and recharging your spiritual energy. Avoid major decisions. | طاقات منخفضة. مثالية للتأمّل والمراجعة وتجديد طاقتك الروحية. اجتنب القرارات الكبرى. |
+| 1431 | Rest and reflection week | أسبوع راحة وتأمّل |
+| 1432 | Use for reflection, planning, spiritual practices | استعمله للتأمّل والتخطيط والممارسات الروحية |
+| 1433 | Very good week | أسبوع جيد جدًا |
+| 1434 | Weekly Insights | لمحات أسبوعية |
+| 1435 | work well | تنجح جيدًا |
+| 1436 | 🌙 Spiritual Rest Days | 🌙 أيام الراحة الروحية |
+| 1437 | 🌟 Best Days for Action | 🌟 أفضل أيام العمل |
+| 1438 | Supabase not configured | Supabase غير مُعدّ |
+| 1439 | Starting new ventures | بدء مشاريع جديدة |
+| 1440 | Entrepreneurship | ريادة الأعمال |
+| 1441 | Maryam | مريم |
+| 1442 | Maximum range is 12 months. | الحدّ الأقصى للمدّة 12 شهرًا. |
+| 1443 | Aggressive negotiations | المفاوضات العدوانية |
+| 1444 | Confrontations | المواجهات |
+| 1445 | Legal matters | المسائل القانونية |
+| 1446 | Aligned Path | طريق منسجم |
+| 1447 | Career Fields | المجالات المهنية |
+| 1448 | Career guidance data is being compiled for your profile | يجري إعداد بيانات الإرشاد المهني لملفك |
+| 1449 | Career paths that resonate with your spiritual energy and elemental nature | مسارات مهنية تتناغم مع طاقتك الروحية وطبيعتك العنصرية |
+| 1450 | Collapse All | طيّ الكل |
+| 1451 | Copied to clipboard! | نُسخ إلى الحافظة! |
+| 1452 | Despite being a Water element, you receive special blessings from Earth industries. This unique spiritual gift allows you to thrive in both water-related AND earth-based careers—giving you more pathways to success than most other elements. | مع أنك من عنصر الماء، فلك نصيب خاص من مجالات التراب. فتستطيع بفضل الله أن تزدهر في المهن المتّصلة بالماء والتراب معًا — فأمامك طرق أكثر من غيرك. |
+| 1453 | Discovered my career path through Istikhara al-Asmāʾ! My | اكتشفت مساري المهني عبر استخارة الأسماء! عنصري |
+| 1454 | Download Career Guide PDF | تنزيل دليل المهن PDF |
+| 1455 | Expand All | توسيع الكل |
+| 1456 | Fields to Consider Carefully | مجالات تُدرَس بعناية |
+| 1457 | Generating PDF... | جارٍ إنشاء PDF... |
+| 1458 | Guiding Principle | المبدأ الموجّه |
+| 1459 | Istikhara Career Guidance | إرشاد مهني من استخارة الأسماء |
+| 1460 | PDF content | محتوى PDF |
+| 1461 | Recommended Career Fields | المجالات المهنية الموصى بها |
+| 1462 | Special Spiritual Blessing | نصيب روحي خاص |
+| 1463 | These industries may not align optimally with your spiritual energy. While not forbidden, they may present more challenges or require extra effort. | قد لا تنسجم هذه المجالات انسجامًا أمثل مع طاقتك الروحية. وليست محرّمة، لكنها قد تحمل تحدّيات أكثر أو تتطلّب جهدًا إضافيًا. |
+| 1464 | This doesn't mean complete avoidance—some individuals still succeed in these fields. However, the spiritual alignment suggests focusing your primary efforts on the recommended fields above for optimal results. | ولا يعني هذا اجتنابها كليًا — فبعض الناس ينجحون فيها. لكن الانسجام الروحي يقترح تركيز جهودك الأساسية على المجالات الموصى بها أعلاه. |
+| 1465 | This guidance comes from traditional Islamic texts on ʿIlm al-Ḥurūf (Science of Letters), preserved by scholars across generations. | هذا الإرشاد من نصوص إسلامية تقليدية في علم الحروف، حفظها العلماء عبر الأجيال. |
+| 1466 | Traditional Islamic Guidance | إرشاد إسلامي تقليدي |
+| 1467 | Traditional Wisdom | حكمة تقليدية |
+| 1468 | career paths in this category | مسارات مهنية في هذه الفئة |
+| 1469 | element aligns with | عنصر منسجم مع |
+| 1470 | (Use Name for exact count) | (استعمل الاسم للعدد الدقيق) |
+| 1471 | Are you sure you want to reset? Your progress will be lost. | هل أنت متأكد من إعادة التعيين؟ سيضيع تقدّمك. |
+| 1472 | Associated Angel | الملَك المرتبط |
+| 1473 | Associated Jinn King | ملك الجنّ المرتبط |
+| 1474 | Auto Counting... | عدّ تلقائي... |
+| 1475 | Auto Speed: | سرعة العدّ التلقائي: |
+| 1476 | Avg Pace | متوسط الوتيرة |
+| 1477 | Best practiced after prayer in a quiet space | يُستحسن بعد الصلاة في مكان هادئ |
+| 1478 | Dhikr Progress | تقدّم الذكر |
+| 1479 | Halfway | المنتصف |
+| 1480 | I've completed | أتممت |
+| 1481 | Pause | إيقاف مؤقت |
+| 1482 | Play pronunciation | تشغيل النطق |
+| 1483 | Quart | الربع |
+| 1484 | Recite with presence and sincerity | اذكر بحضور وإخلاص |
+| 1485 | Session Completed! | اكتملت الجلسة! |
+| 1486 | Session History | سجلّ الجلسات |
+| 1487 | Start Auto Count | ابدأ العدّ التلقائي |
+| 1488 | Step-by-Step Practice Guide | دليل الممارسة خطوة بخطوة |
+| 1489 | recitations of | تلاوات من |
+| 1490 | 1. Overview Tab | 1. تبويب النظرة العامة |
+| 1491 | 2. Personality Tab | 2. تبويب الشخصية |
+| 1492 | 3. Career Tab | 3. تبويب المهنة |
+| 1493 | 4. Blessed Day Tab | 4. تبويب اليوم المبارك |
+| 1494 | 5. Spiritual Tab | 5. التبويب الروحي |
+| 1495 | Adaptable | متكيّف |
+| 1496 | Bold | جريء |
+| 1497 | Buruj | البروج |
+| 1498 | Career Paths | المسارات المهنية |
+| 1499 | Communicative | تواصليّ |
+| 1500 | Counseling | الاستشارة |
+| 1501 | Creative | مبدع |
+| 1502 | Discover career paths that align with your elemental nature. Note both traditional and modern recommendations. | اكتشف مسارات مهنية تنسجم مع طبيعتك العنصرية، ولاحظ التوصيات التقليدية والحديثة معًا. |
+| 1503 | Emotional | عاطفي |
+| 1504 | Empathetic | متعاطف |
+| 1505 | Energetic | نشيط |
+| 1506 | Follow the recommended spiritual practices, Divine Names, and Quranic verses for protection and balance. | اتّبع الممارسات الروحية والأسماء الحسنى والآيات القرآنية الموصى بها للحفظ والتوازن. |
+| 1507 | Healthcare | الرعاية الصحية |
+| 1508 | History & Significance | التاريخ والدلالة |
+| 1509 | Ilm al-Huruf | علم الحروف |
+| 1510 | Integrates Arabic letter numerology (Abjad) with celestial correspondences | يجمع بين عدد الحروف العربية (الأبجد) والمناسبات السماوية |
+| 1511 | Intuitive | حدسيّ |
+| 1512 | Istikharah al-Asmā' (Spiritual Guidance Through Names) is a classical Islamic tradition rooted in the science of Ilm al-Huruf (Science of Letters) and ancient astrological wisdom. This practice combines the numerical values of names with the Buruj (zodiacal mansions) to provide spiritual insight and guidance. | استخارة الأسماء (الإرشاد الروحي بالأسماء) تقليد إسلامي كلاسيكي متجذّر في علم الحروف والحكمة الفلكية القديمة. وتجمع هذه الممارسة بين القيم العددية للأسماء والبروج لتقديم تبصّر وإرشاد روحي. |
+| 1513 | Key Traits | السمات الأساسية |
+| 1514 | Numerical value derived from Arabic letters (Abjad numerology) | قيمة عددية مستخرجة من الحروف العربية (الأبجد) |
+| 1515 | Passionate | شغوف |
+| 1516 | Practical | عمليّ |
+| 1517 | Purpose & Applications | الغاية والتطبيقات |
+| 1518 | Remembrance of Allah through repetition of sacred phrases | ذكر الله بتكرار العبارات المباركة |
+| 1519 | Schedule important decisions, meetings, and new ventures on your blessed day for optimal spiritual alignment. | اجعل القرارات المهمّة والاجتماعات والمشاريع الجديدة في يومك المبارك لأفضل انسجام روحي. |
+| 1520 | Seeking guidance or consultation, traditionally through prayer | طلب الخيرة أو المشورة، تقليديًا بالصلاة |
+| 1521 | Spiritual practices aligned with personal nature | ممارسات روحية منسجمة مع الطبيعة الشخصية |
+| 1522 | Start here for quick, actionable guidance. This tab highlights the most important insights for immediate application. | ابدأ هنا لإرشاد سريع قابل للتطبيق. يبرز هذا التبويب أهمّ اللمحات للتطبيق الفوري. |
+| 1523 | The 99 Names of Allah, each with specific spiritual qualities | أسماء الله الحسنى، لكل منها معانٍ روحية |
+| 1524 | The Ancient Practice of Istikharah al-Asmā' | الممارسة العريقة لاستخارة الأسماء |
+| 1525 | The Buruj System | نظام البروج |
+| 1526 | The Buruj system divides the celestial sphere into 12 sections, each associated with specific elements and qualities. Your personal Buruj is determined by the remainder when dividing the sum of names by 12. | يقسم نظام البروج الفلك إلى 12 قسمًا، لكل منها عناصر وصفات. ويُحدَّد برجك الشخصي بباقي قسمة مجموع الأسماء على 12. |
+| 1527 | The Four Classical Elements | العناصر الأربعة الكلاسيكية |
+| 1528 | The Science of Letters - study of Arabic letters and their mystical meanings | علم الحروف - دراسة الحروف العربية ومعانيها الباطنة |
+| 1529 | The Twelve Buruj (Zodiacal Mansions) | البروج الاثنا عشر |
+| 1530 | The twelve zodiacal mansions or constellations | البروج أو الكوكبات الاثنا عشر |
+| 1531 | Traced back to classical Islamic scholars and practitioners of Ilm al-Huruf | يعود إلى علماء مسلمين كلاسيكيين وممارسين لعلم الحروف |
+| 1532 | Understanding personality traits and temperament | فهم سمات الشخصية والطبع |
+| 1533 | Used for personal guidance, name selection, and spiritual counseling | يُستعمل للإرشاد الشخصي واختيار الأسماء والنصح الروحي |
+| 1534 | Voluntary charity given as an act of worship | صدقة تطوّع تُعطى عبادةً |
+| 1535 | Amina | أمينة |
+| 1536 | Best when using your own saved profile. | الأفضل عند استعمال ملفك المحفوظ. |
+| 1537 | Both names must be in Arabic script for accurate spiritual analysis | يجب أن يكون الاسمان بالحروف العربية لتحليل روحي دقيق |
+| 1538 | Common Female Names | أسماء إناث شائعة |
+| 1539 | Common Male Names | أسماء ذكور شائعة |
+| 1540 | Database-backed suggestions | اقتراحات من قاعدة البيانات |
+| 1541 | Detailed traits, social dynamics, and dream symbolism | سمات مفصّلة وديناميكيات اجتماعية ورموز المنامات |
+| 1542 | Discover your core temperament (Fire, Earth, Air, or Water) | اكتشف طبعك الأساسي (نار أو تراب أو هواء أو ماء) |
+| 1543 | Hassan | حسن |
+| 1544 | Khadija | خديجة |
+| 1545 | Month & day only | الشهر واليوم فقط |
+| 1546 | Name must contain only Arabic letters | يجب أن يحتوي الاسم على حروف عربية فقط |
+| 1547 | Need help? See example names | تحتاج مساعدة؟ انظر أسماء مثالية |
+| 1548 | No Data Storage | لا تخزين للبيانات |
+| 1549 | Optional lunar timing baselines (requires full DOB year) | أسس توقيت قمرية اختيارية (تتطلّب سنة الميلاد كاملة) |
+| 1550 | Privacy & Security | الخصوصية والأمان |
+| 1551 | Ready to calculate! | جاهز للحساب! |
+| 1552 | Sacred Tradition | تراث أصيل |
+| 1553 | Scholarly Foundation | أساس علمي |
+| 1554 | The mother's influence shapes the soul's entry into this world, making her name essential for accurate spiritual calculation. | لاسم الأم أثر في التأمّل في دخول الروح إلى هذا العالم، ولذا كان أساسيًا لدقّة الحساب. |
+| 1555 | This field is required | هذا الحقل مطلوب |
+| 1556 | This practice is rooted in classical Islamic texts and has been preserved by scholars across generations. | هذه الممارسة متجذّرة في نصوص إسلامية كلاسيكية، وحفظها العلماء عبر الأجيال. |
+| 1557 | This tool is created with respect for Islamic tradition and scholarly heritage. All calculations follow authentic classical methods. | صُنعت هذه الأداة باحترام للتراث الإسلامي والإرث العلمي، وكل الحسابات تتبع طرقًا كلاسيكية أصيلة. |
+| 1558 | Your Burj (zodiac sign) | برجك |
+| 1559 | Your names are calculated in real-time and never stored on our servers. All calculations happen locally in your browser. | تُحسب أسماؤك آنيًا ولا تُخزَّن أبدًا على خوادمنا. وكل الحسابات تجري محليًا في متصفحك. |
+| 1560 | ʿIlm al-Ḥurūf (Science of Letters) is an ancient Islamic tradition that explores the spiritual significance of Arabic letters and their numerical values. Each letter corresponds to a number in the Abjad system, revealing hidden meanings and divine connections. | علم الحروف تراث إسلامي عريق يستكشف الدلالة الروحية للحروف العربية وقيمها العددية. فكل حرف يقابل عددًا في نظام الأبجد، فتنكشف معانٍ خفيّة وصلات روحية. |
+| 1561 | Arabic Script Required | الحروف العربية مطلوبة |
+| 1562 | Are you sure you want to clear all saved calculations? | هل أنت متأكد من مسح كل الحسابات المحفوظة؟ |
+| 1563 | Auto-Save Feature | ميزة الحفظ التلقائي |
+| 1564 | Both names must be entered in Arabic letters for accurate calculation | يجب إدخال الاسمين بالحروف العربية لحساب دقيق |
+| 1565 | Calculation History | سجلّ الحسابات |
+| 1566 | Discover Asrār — Sacred Sciences & Divine Timing | اكتشف أسرار — العلوم الإسلامية والتوقيت الإلهي |
+| 1567 | Invite | دعوة |
+| 1568 | Mother's Name Importance | أهمّية اسم الأم |
+| 1569 | No saved calculations yet | لا حسابات محفوظة بعد |
+| 1570 | Quick Tips | نصائح سريعة |
+| 1571 | Share sacred wisdom — invite friends to discover their spiritual profile | شارك الحكمة — ادعُ أصدقاءك ليكتشفوا ملفهم الروحي |
+| 1572 | Step 1: Enter Names | الخطوة 1: أدخل الأسماء |
+| 1573 | Step 2: View Results | الخطوة 2: اعرض النتائج |
+| 1574 | The mother's name is essential as it represents the soul's entry into this world | اسم الأم أساسي لأنه يمثّل دخول الروح إلى هذا العالم |
+| 1575 | View History | عرض السجلّ |
+| 1576 | Your calculations are automatically saved for quick access later | تُحفظ حساباتك تلقائيًا للرجوع إليها سريعًا |
+| 1577 | element. Discover yours on Asrār! | . اكتشف عنصرك على أسرار! |
+| 1578 | saved calculations | حسابات محفوظة |
+| 1579 | ✨🌙 I discovered my spiritual profile through Istikhara al-Asmāʾ! I'm a | ✨🌙 اكتشفت ملفي الروحي عبر استخارة الأسماء! عنصري |
+| 1580 | 🌙 Discover your spiritual profile with Istikhara al-Asmāʾ on Asrār! | 🌙 اكتشف ملفك الروحي باستخارة الأسماء على أسرار! |
+| 1581 | 🌙 Discover your spiritual profile with Istikhara al-Asmāʾ on Asrār! Abjad numerology, planetary hours, Zikr challenges, and more. | 🌙 اكتشف ملفك الروحي باستخارة الأسماء على أسرار! حساب الأبجد والساعات الكوكبية وتحدّيات الذكر وأكثر. |
+| 1582 | Align your work with your elemental nature for fulfillment. | وافِق عملك طبيعتك العنصرية لتجد الرضا. |
+| 1583 | Career Direction | التوجّه المهني |
+| 1584 | Combine these practices consistently for 40 days to see meaningful spiritual and practical results. Start small and build gradually. | داوم على هذه الممارسات أربعين يومًا لتلمس أثرًا روحيًا وعمليًا بإذن الله. ابدأ بالقليل وزِد تدريجيًا. |
+| 1585 | Monthly Sadaqah | الصدقة الشهرية |
+| 1586 | Pro Tip | نصيحة متقدّمة |
+| 1587 | Quick Action Guide | دليل العمل السريع |
+| 1588 | Schedule Important Tasks | رتّب المهامّ المهمّة |
+| 1589 | for spiritual balance and protection. | للتوازن الروحي والحفظ. |
+| 1590 | the recommended Divine Names | الأسماء الحسنى الموصى بها |
+| 1591 | to maintain spiritual balance. | للمحافظة على التوازن الروحي. |
+| 1592 | Anger Pattern | نمط الغضب |
+| 1593 | Career paths | المسارات المهنية |
+| 1594 | Charity | الصدقة |
+| 1595 | Communication Style | أسلوب التواصل |
+| 1596 | Deep insights into your temperament and character traits | لمحات عميقة عن طبعك وسمات شخصيتك |
+| 1597 | Divine Support | العون الإلهي |
+| 1598 | Dream Symbolism | رموز المنامات |
+| 1599 | Explore career guidance in the Career tab | استكشف الإرشاد المهني في تبويب المهنة |
+| 1600 | Explore spiritual practices in the Spiritual tab | استكشف الممارسات الروحية في التبويب الروحي |
+| 1601 | Explore the tabs above to dive deeper into your personality traits, career guidance, blessed day details, and spiritual practices. Each section provides comprehensive insights tailored to your spiritual profile. | استكشف التبويبات أعلاه للتعمّق في سمات شخصيتك والإرشاد المهني وتفاصيل يومك المبارك والممارسات الروحية. وكل قسم يقدّم لمحات شاملة لملفك الروحي. |
+| 1602 | I discovered my spiritual profile through Istikhara al-Asmāʾ! | اكتشفت ملفي الروحي عبر استخارة الأسماء! |
+| 1603 | Life Blessings | نِعَم الحياة |
+| 1604 | Mark this day in your calendar every week. Consider setting a recurring reminder to help you align important activities with your power day. | علّم هذا اليوم في تقويمك كل أسبوع، وفكّر في تذكير متكرّر يعينك على مواءمة أنشطتك المهمّة مع يومك المبارك. |
+| 1605 | My Istikhara Profile | ملفي في الاستخارة |
+| 1606 | Power day | يوم القوة |
+| 1607 | Quick Summary | ملخّص سريع |
+| 1608 | Recite daily for spiritual balance | اذكر يوميًا للتوازن الروحي |
+| 1609 | Schedule your most important meetings, critical decisions, and new ventures on this day when possible. Your spiritual energy and divine support are at their peak. | اجعل أهمّ اجتماعاتك وقراراتك ومشاريعك الجديدة في هذا اليوم ما أمكن، فهو يوم يُرجى فيه التيسير. |
+| 1610 | Social Strengths | نقاط القوة الاجتماعية |
+| 1611 | Special Significance | دلالة خاصة |
+| 1612 | These colors resonate with your elemental energy. Use them in your environment for spiritual balance. | تتناغم هذه الألوان مع طاقتك العنصرية. استعملها في محيطك للتوازن الروحي. |
+| 1613 | This is your most spiritually auspicious day of the week. Your energy peaks and divine support is strongest on this day. | هذا أبرك أيامك في الأسبوع بحسب التراث، يُرجى فيه مزيد من التيسير. |
+| 1614 | Your Personality Profile | ملف شخصيتك |
+| 1615 | Your spiritual profile at a glance | ملفك الروحي في لمحة |
+| 1616 | more traits | سمات أخرى |
+| 1617 | Career Match | التوافق المهني |
+| 1618 | Core Trait | السمة الأساسية |
+| 1619 | ID Number | الرقم التعريفي |
+| 1620 | Key Insights | لمحات أساسية |
+| 1621 | Overall Alignment | الانسجام الكلي |
+| 1622 | Your Divine Name | اسمك من الأسماء الحسنى |
+| 1623 | Ḥadad Value | قيمة الحدد |
+| 1624 | Alignment with your element | الانسجام مع عنصرك |
+| 1625 | Allow location access to calculate precise planetary hours. | اسمح بالوصول إلى الموقع لحساب الساعات الكوكبية بدقّة. |
+| 1626 | Calculating optimal timing... | جارٍ حساب التوقيت الأمثل... |
+| 1627 | Classical Islamic tradition | التراث الإسلامي الكلاسيكي |
+| 1628 | How this timing is calculated: | كيف يُحسب هذا التوقيت: |
+| 1629 | Perfect | مثالي |
+| 1630 | Planetary hours based on sunrise/sunset | ساعات كوكبية بحسب الشروق والغروب |
+| 1631 | Resonance with your zodiac planet | الرنين مع كوكب برجك |
+| 1632 | See all 12 hours | عرض الساعات الاثنتي عشرة |
+| 1633 | alignment with your | الانسجام مع |
+| 1634 | ⏰ Precise Timing | ⏰ توقيت دقيق |
+| 1635 | 🌙 Top 3 Night Hours | 🌙 أفضل 3 ساعات ليلية |
+| 1636 | According to the teachings of Seringe Mahdiou Niane | بحسب تعاليم الشيخ سرين مهديو نيان |
+| 1637 | By Seringe Mahdiou Niane — spoken in Wolof | للشيخ سرين مهديو نيان — بالولوفية |
+| 1638 | Getting Started with Sadaqah | البدء بالصدقة |
+| 1639 | Give secretly when possible, as it purifies the heart | أعطِ سرًّا ما أمكن، فذلك يطهّر القلب |
+| 1640 | Guidance Sadaqah — | إرشاد الصدقة — |
+| 1641 | Sadaqah Guidance — | إرشاد الصدقة — |
+| 1642 | Set a monthly reminder for your regular sadaqah | اضبط تذكيرًا شهريًا لصدقتك المنتظمة |
+| 1643 | Start small and increase gradually as you establish the habit | ابدأ بالقليل وزِد تدريجيًا حتى تثبت العادة |
+| 1644 | Teaching Video (in Wolof) | مقطع تعليمي (بالولوفية) |
+| 1645 | The intention (niyyah) is as important as the action itself | النيّة لا تقلّ أهمّية عن العمل نفسه |
+| 1646 | Traditional charity forms associated with your sign, for ongoing blessings and spiritual balance. | صور الصدقة التقليدية المرتبطة ببرجك، للبركة الدائمة والتوازن الروحي. |
+| 1647 | — Sadaqah | — الصدقة |
+| 1648 | — Sadaqah (2) | — الصدقة (2) |
+| 1649 | About Angels | عن الملائكة |
+| 1650 | About Jinn | عن الجنّ |
+| 1651 | Angel | الملَك |
+| 1652 | Angels (Malāʾika) are celestial beings of light who serve as divine messengers and guardians. Each element is associated with specific angelic forces that can be invoked for spiritual support. | الملائكة خلقٌ من نور، يرسلهم الله رسلًا وحفظة. وفي التراث يرتبط كل عنصر بأسماء ملائكة معيّنة. |
+| 1653 | Associated Zodiac | البرج المرتبط |
+| 1654 | Celestial Guardian | حارس سماوي |
+| 1655 | Choose one modern alternative that fits your lifestyle | اختر بديلًا حديثًا واحدًا يناسب نمط حياتك |
+| 1656 | Complete daily | يوميًا |
+| 1657 | Dhikr Count | عدد الذكر |
+| 1658 | Divine Names & Dhikr Practice | الأسماء الحسنى وممارسة الذكر |
+| 1659 | Element Alignment | انسجام العنصر |
+| 1660 | Elemental Force | القوة العنصرية |
+| 1661 | For Dhikr Count | لعدد الذكر |
+| 1662 | For dhikr count | لعدد الذكر |
+| 1663 | Getting Started | البداية |
+| 1664 | Jinn King | ملك الجنّ |
+| 1665 | Jinn are beings created from smokeless fire, existing in a parallel realm. In Islamic mystical tradition, certain Jinn kings govern elemental forces and can be understood through spiritual knowledge. | الجنّ خلقٌ من مارج من نار، يعيشون في عالم موازٍ. وفي بعض كتب التراث الباطني تُنسب إلى ملوك من الجنّ صلاتٌ بالعناصر؛ ويُذكر هذا هنا للمعرفة التاريخية فقط. |
+| 1666 | Listen to recitation | استمع إلى التلاوة |
+| 1667 | Make intention (niyyah) before each practice | اعقد النيّة قبل كل ممارسة |
+| 1668 | Monthly Spiritual Balance | التوازن الروحي الشهري |
+| 1669 | Performed ONCE in Your Lifetime | تُؤدّى مرّة واحدة في العمر |
+| 1670 | Regular practice for ongoing spiritual growth | ممارسة منتظمة للنموّ الروحي المستمرّ |
+| 1671 | Repetition Count | عدد التكرار |
+| 1672 | Required Components | المكوّنات المطلوبة |
+| 1673 | Sacred Lifetime Offering | صدقة العمر |
+| 1674 | Spiritual Guardians & Forces | الحفظة والقوى الروحية |
+| 1675 | This is a profound spiritual commitment that should be undertaken with careful preparation and sincere intention. | هذا التزام روحي عميق ينبغي أن يُقدَم عليه باستعداد وعناية ونيّة صادقة. |
+| 1676 | This verse resonates with your elemental nature and can be recited for spiritual guidance and protection. Reflect on its meaning as part of your daily practice. | تتناغم هذه الآية مع طبيعتك العنصرية، ويمكن تلاوتها طلبًا للهداية والحفظ. وتدبّر معناها جزءًا من وردك اليومي. |
+| 1677 | Use Name | استعمل الاسم |
+| 1678 | View Practice History & Progress | عرض سجلّ الممارسة والتقدّم |
+| 1679 | Your core energy | طاقتك الجوهرية |
+| 1680 | Your personalized dhikr guidance with Divine Names tailored to your spiritual profile | إرشاد ذكرك الشخصي بأسماء حسنى مناسبة لملفك الروحي |
+| 1681 | Add Practice Session | إضافة جلسة ممارسة |
+| 1682 | Add Record | إضافة سجلّ |
+| 1683 | Add Sadaqah Record | إضافة سجلّ صدقة |
+| 1684 | Add Session | إضافة جلسة |
+| 1685 | Amazing! You've maintained a | رائع! حافظت على |
+| 1686 | Analytics & Trends | التحليلات والاتجاهات |
+| 1687 | Best Streak | أفضل سلسلة |
+| 1688 | Committed | ملتزم |
+| 1689 | Complete Lifetime Offering | إتمام صدقة العمر |
+| 1690 | Completed full session | أتمّ الجلسة كاملة |
+| 1691 | Current Streak | السلسلة الحالية |
+| 1692 | Insights & Recommendations | لمحات وتوصيات |
+| 1693 | Invalid file format | تنسيق ملف غير صالح |
+| 1694 | Keep it up! | واصل! |
+| 1695 | Legend | مفتاح الرموز |
+| 1696 | Mark Complete | علّم كمكتمل |
+| 1697 | Mark as Completed | علّم كمكتمل |
+| 1698 | Monitor your spiritual journey | تابع رحلتك الروحية |
+| 1699 | Monthly Sadaqah Records | سجلّات الصدقة الشهرية |
+| 1700 | No practice sessions yet | لا جلسات ممارسة بعد |
+| 1701 | No sadaqah records yet | لا سجلّات صدقة بعد |
+| 1702 | Not Yet Completed | لم يكتمل بعد |
+| 1703 | Practice Tracking & Analytics | تتبّع الممارسة والتحليلات |
+| 1704 | Recent Activity | النشاط الأخير |
+| 1705 | Sadaqah Total | مجموع الصدقة |
+| 1706 | This sacred offering should be performed once in your lifetime at the appropriate time. | تُؤدّى هذه الصدقة مرّة واحدة في العمر في الوقت المناسب. |
+| 1707 | Total Recitations | مجموع التلاوات |
+| 1708 | Total Sadaqah | مجموع الصدقة |
+| 1709 | Visual charts and graphs will be available in the next update | ستتوفّر الرسوم البيانية في التحديث القادم |
+| 1710 | You haven't practiced in | لم تمارس منذ |
+| 1711 | consecutive days | أيام متتالية |
+| 1712 | e.g., Food donation | مثلًا: التبرّع بطعام |
+| 1713 | 25-35 min | 25-35 دقيقة |
+| 1714 | Asmāʾ an-Nabī ﷺ | أسماء النبي ﷺ |
+| 1715 | SALAWAT | الصلاة على النبي |
+| 1716 | " badge on Asrār! | » على أسرار! |
+| 1717 | Join me in this spiritual challenge! | شاركني هذا التحدّي الروحي! |
+| 1718 | Share Achievement | شارك الإنجاز |
+| 1719 | You earned a new badge: | نلت شارة جديدة: |
+| 1720 | 🎖️ I just earned the " | 🎖️ نلت للتوّ شارة « |
+| 1721 | No badges earned yet. Keep going! | لم تنل شارات بعد. واصل! |
+| 1722 | 201 Names | الأسماء المئتان والواحد |
+| 1723 | Custom count input | إدخال عدد مخصّص |
+| 1724 | Remove challenge | إزالة التحدّي |
+| 1725 | Track your daily dhikr and transform your spiritual practice. | تابع ذكرك اليومي وارتقِ بممارستك الروحية. |
+| 1726 | Track your daily dhikr: | تابع ذكرك اليومي: |
+| 1727 | 🎯 1000× daily for fast debt repayment 💫 Join this transformative practice! Towards financial freedom through Allah's grace... 🤲 | 🎯 ألف مرّة يوميًا رجاء قضاء الدَّين 💫 شاركني هذا الورد! نسأل الله من فضله التيسير... 🤲 |
+| 1728 | 💰✨ Miraculous Debt Relief 🌙 What seems IMPOSSIBLE for us is EFFORTLESS for Allah! 📿 Recite with me after ʿIshāʾ: " | 💰✨ ورد لقضاء الدَّين 🌙 ما يبدو صعبًا علينا يسيرٌ على الله! 📿 اذكر معي بعد العشاء: « |
+| 1729 | 🤲 Join me in this spiritual challenge! | 🤲 شاركني هذا التحدّي الروحي! |
+| 1730 | Adjust your daily goal based on your capacity | عدّل هدفك اليومي بحسب طاقتك |
+| 1731 | Auto-calculate from daily | احسب تلقائيًا من اليومي |
+| 1732 | Challenge Settings | إعدادات التحدّي |
+| 1733 | Enter daily target | أدخل الهدف اليومي |
+| 1734 | Total goal | الهدف الكلي |
+| 1735 | All-time total: | المجموع الكلي: |
+| 1736 | dhikr completed by the community today | ذكرًا أتمّه المجتمع اليوم |
+| 1737 | dhikr today | ذكر اليوم |
+| 1738 | NAMES | الأسماء |
+| 1739 | ISTIGHFAR | الاستغفار |
+| 1740 | View Challenges | عرض التحدّيات |
+| 1741 | community dhikr | ذكر المجتمع |
+| 1742 | Add Challenge | إضافة تحدٍّ |
+| 1743 | Explore Asrar | استكشف أسرار |
+| 1744 | Best dhikr now: | أفضل ذكر الآن: |
+| 1745 | Link copied to clipboard | نُسخ الرابط إلى الحافظة |
+| 1746 | Share Progress | شارك التقدّم |
+| 1747 | Hide QR Code | إخفاء رمز QR |
+| 1748 | Scan Wave Senegal QR | امسح رمز Wave السنغال |
+| 1749 | Scan with Wave Senegal app | امسح بتطبيق Wave السنغال |
+| 1750 | The Prophet ﷺ preferred to set out on journeys on Thursday (Bukhārī). | كان النبي ﷺ يحبّ أن يخرج في سفره يوم الخميس (البخاري). |
+| 1751 | Islamic Sciences | العلوم الإسلامية |
+| 1752 | Choose your expertise level: 🔰 Beginner: Learn the basics of Abjad calculations 🎓 Intermediate: Explore Burj, planets, and divine names 👑 Scholar: Access advanced research tools | اختر مستوى خبرتك: 🔰 مبتدئ: تعلّم أساسيات حساب الأبجد 🎓 متوسط: استكشف البروج والكواكب والأسماء الحسنى 👑 باحث: أدوات بحث متقدّمة |
+| 1753 | Autumn Equinox | الاعتدال الخريفي |
+| 1754 | Cardinal air, initiating social balance | هواء منقلب، يبتدئ التوازن الاجتماعي |
+| 1755 | Cardinal earth, initiating structured manifestation | تراب منقلب، يبتدئ التحقّق المنظّم |
+| 1756 | Cardinal water, initiating emotional tides | ماء منقلب، يبتدئ مدّ العواطف |
+| 1757 | Cold & Dry (Melancholic) | بارد يابس (سوداوي) |
+| 1758 | Cold & Moist (Phlegmatic) | بارد رطب (بلغمي) |
+| 1759 | Courage, pioneering spirit, leadership | الشجاعة، روح الريادة، القيادة |
+| 1760 | Discernment, refinement, dedication | التمييز، التهذيب، التفاني |
+| 1761 | Emotional depth, intuition, caring | العمق العاطفي، الحدس، الرعاية |
+| 1762 | First of the fire triplicity, initiating the zodiacal cycle | أول المثلّثة النارية، يبتدئ دورة البروج |
+| 1763 | Fixed air, pouring forth divine knowledge | هواء ثابت، يفيض بالمعرفة |
+| 1764 | Fixed fire, representing the heart of solar power | نار ثابتة، قلب القوة الشمسية |
+| 1765 | Fixed water, representing deep spiritual transformation | ماء ثابت، يمثّل التحوّل الروحي العميق |
+| 1766 | Hot & Dry (Choleric) | حارّ يابس (صفراوي) |
+| 1767 | Hot & Moist (Sanguine) | حارّ رطب (دموي) |
+| 1768 | Humanitarianism, vision, revolution | الإنسانية، الرؤية، التجديد |
+| 1769 | Justice, equilibrium, beauty | العدل، التوازن، الجمال |
+| 1770 | Late Autumn | أواخر الخريف |
+| 1771 | Mastery, responsibility, endurance | الإتقان، المسؤولية، التحمّل |
+| 1772 | Mutable air, facilitating communication between realms | هواء ذو جسدين، ييسّر التواصل بين العوالم |
+| 1773 | Mutable earth, the harvest and practical wisdom | تراب ذو جسدين، الحصاد والحكمة العملية |
+| 1774 | Mutable fire, the arrow of divine aspiration | نار ذات جسدين، سهم التطلّع الروحي |
