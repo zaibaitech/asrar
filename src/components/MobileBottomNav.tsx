@@ -35,7 +35,7 @@ export function MobileBottomNav({
 
   return (
     <nav
-      className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border-t border-slate-200 dark:border-slate-700"
+      className="md:hidden fixed bottom-0 start-0 end-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border-t border-slate-200 dark:border-slate-700"
       style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
       aria-label={isFrench ? 'Navigation principale' : 'Primary navigation'}
     >

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { CalculatorTypeBrowser } from './components/CalculatorTypeBrowser';
 import { CalculatorTypeForm } from './components/CalculatorTypeForm';
 import type { CalculationType } from './components/calculatorTypes';
-import { useCalculatorTranslations } from './i18n';
+import { useCalculatorTranslations, type CalculatorLocale } from './i18n';
 
 /**
  * Top-level calculator screen: browse -> type form -> result. Clones
@@ -20,7 +20,7 @@ export function CalculatorScreen({
   appLanguage,
   headingAs: Heading = 'h1',
 }: {
-  appLanguage: 'en' | 'fr';
+  appLanguage: CalculatorLocale;
   /** Use 'h2' when the host page already renders its own H1. */
   headingAs?: 'h1' | 'h2';
 }) {

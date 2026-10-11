@@ -11,9 +11,9 @@
 
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { ROUTE_LANG_HEADER, frPath, isLocalizedPath, stripFrPrefix } from './src/lib/i18nRoutes';
+import { ROUTE_LANG_HEADER, frPath, isArAppPath, isLocalizedPath, stripArPrefix, stripFrPrefix } from './src/lib/i18nRoutes';
 
-const SUPPORTED_LANGUAGES = ['en', 'fr'] as const;
+const SUPPORTED_LANGUAGES = ['en', 'fr', 'ar'] as const;
 type Language = typeof SUPPORTED_LANGUAGES[number];
 const DEFAULT_LANGUAGE: Language = 'en';
 const LANGUAGE_COOKIE = 'asrar_lang';
@@ -84,7 +84,26 @@ export function middleware(request: NextRequest) {
   let language: Language;
 
   const frTarget = stripFrPrefix(pathname);
-  if (frTarget !== null && isLocalizedPath(frTarget)) {
+  const arTarget = stripArPrefix(pathname);
+  if (arTarget !== null && isArAppPath(arTarget)) {
+    // /ar/... app mirror: same EN route file, Arabic UI, RTL. noindex until
+    // the Arabic copy has had native-speaker review.
+    if (langParam) {
+      const url = request.nextUrl.clone();
+      url.searchParams.delete('lang');
+      if (langParam === 'en') url.pathname = arTarget;
+      if (langParam === 'fr') url.pathname = frPath(arTarget);
+      response = NextResponse.redirect(url, 301);
+      language = (SUPPORTED_LANGUAGES as readonly string[]).includes(langParam) ? (langParam as Language) : 'ar';
+    } else {
+      const url = request.nextUrl.clone();
+      url.pathname = arTarget;
+      requestHeaders.set(ROUTE_LANG_HEADER, 'ar');
+      response = NextResponse.rewrite(url, { request: { headers: requestHeaders } });
+      response.headers.set('X-Robots-Tag', 'noindex, follow');
+      language = detectLanguage(request);
+    }
+  } else if (frTarget !== null && isLocalizedPath(frTarget)) {
     // /fr/... mirror. ?lang= on a /fr URL is redundant (fr) or a request for
     // the English page (en): redirect so each language has one clean URL.
     if (langParam === 'en' || langParam === 'fr') {

@@ -155,7 +155,7 @@ export function ResonanceResult({
               {t('ayahOfLabel', { ayah: quran.ayahNumber, total: quran.totalAyahsInSurah })}
             </span>
 
-            <div className="mt-3 w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-3 text-left">
+            <div className="mt-3 w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-3 text-start">
               <div className="mb-2 flex items-center justify-between">
                 <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">{t('arabicTextLabel')}</span>
                 {ayahText && (
