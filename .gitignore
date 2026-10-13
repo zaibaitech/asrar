@@ -55,3 +55,7 @@ zap-*.log
 # Security tool cache
 .snyk
 .trivyignore
+
+# next-pwa custom worker bundle (generated at build from worker/)
+public/worker-*.js
+public/worker-*.js.map
