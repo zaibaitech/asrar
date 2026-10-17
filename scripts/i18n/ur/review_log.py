@@ -87,7 +87,7 @@ ANSWERS = [
     ('Planet-of-the-day intro', 'Do not make the planet the agent; use the fuller wording.', A + ' (fuller wording).'),
     ('Astro terms', 'محترق، تحت الشعاع، ہبوط، وبال، رجعت، شرف are understood. Gloss خالی السیر and الطریقۃ المحترقۃ; use اتصال / انصراف for Applying/Separating.', A),
     ('Urdu letters in Abjad', 'Recommends normalising ی→ي، ک→ك، ہ/ۃ→ه/ة (ے→ي) before counting, or until then an inline warning.',
-     '⏳ waiting for Mario: a calculation change, not done in this PR. The spelling note stays.'),
+     '✅ applied (approved by Mario, Oct 2026): src/lib/urduLetters.ts converts ی ے→ي, ک→ك, ھ ۂ→ه, ہ ۃ→ه (ة at the end of a word, so فاطمہ = فاطمة = 135) before every name/Abjad count (burj, compatibility, Abjad calculator, ʿilm al-ḥurūf). ٹ ڈ ڑ ں stay uncounted, per the reviewer. علی = 110 (was 100), فاطمہ = 135 (was 130), کریم = 270 (was 240). Arabic input is untouched, so EN/FR/AR results are unchanged (src/lib/urduLetters.test.ts). The spelling note now says Urdu spelling works; the inline warning is no longer needed. New note wording: please review.'),
     ('English interpretive content', 'OK for a noindex phase 1 with UR_COMMON.toolUiNote; translate burj career texts and soul-connection meanings before indexing.',
      '⏳ not done in this PR (separate task). toolUiNote stays visible; /ur stays noindex.'),
 ]

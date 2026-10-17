@@ -28,10 +28,10 @@ export const UR_COMMON = {
   linksTitle: t('Related pages', 'متعلقہ صفحات'),
   inEnglish: t('(in English)', '(انگریزی میں)'),
   inEnglishDesc: t('The same tool with the explanation in English.', 'یہی ٹول، انگریزی وضاحت کے ساتھ۔'),
-  /** Arabic-script names: Urdu-only letters have no Abjad value. */
+  /** Urdu letters are read as their Arabic equivalents before the count (src/lib/urduLetters.ts). */
   spellingNote: t(
-    'Write names in their Arabic spelling for the Abjad count, using Arabic ي، ك، ة/ه (for example فاطمة rather than فاطمہ, علي rather than علی). Urdu letters such as ی، ک، ہ، ٹ، ڈ، ڑ، ں، ھ، ے are not counted.',
-    'ابجد کے حساب کے لیے نام عربی املا میں، عربی ي، ك اور ة/ه کے ساتھ لکھیں (مثلاً فاطمہ کے بجائے فاطمة، علی کے بجائے علي)۔ اردو حروف جیسے ی، ک، ہ، ٹ، ڈ، ڑ، ں، ھ، ے شمار نہیں ہوتے۔',
+    'You can type names in Urdu or Arabic spelling. For the Abjad count, ی and ے are read as ي, ک as ك, ھ as ه, and ہ as ه (ة at the end of a word), so فاطمہ counts the same as فاطمة and علی the same as علي. ٹ، ڈ، ڑ and ں have no Abjad value and are not counted.',
+    'نام اردو یا عربی املا میں لکھ سکتے ہیں۔ ابجد کے حساب میں ی اور ے کو ي، ک کو ك، ھ کو ه، اور ہ کو ه (لفظ کے آخر میں ة) شمار کیا جاتا ہے، اس لیے فاطمہ کا عدد فاطمة کے برابر اور علی کا علي کے برابر ہے۔ ٹ، ڈ، ڑ اور ں کی ابجد میں کوئی قیمت نہیں، اس لیے یہ شمار نہیں ہوتے۔',
   ),
 };
 
@@ -148,8 +148,8 @@ export const UR_BURJ = {
   howTitle: t('How is the burj calculated?', 'برج کا حساب کیسے ہوتا ہے؟'),
   how: [
     t(
-      "Write your name and your mother's name in Arabic letters (or in Latin letters, then choose the Arabic spelling).",
-      'اپنا نام اور والدہ کا نام عربی حروف میں لکھیں (یا رومن حروف میں لکھ کر عربی املا منتخب کریں)۔',
+      "Write your name and your mother's name in Urdu or Arabic letters (or in Latin letters, then choose the Arabic spelling).",
+      'اپنا نام اور والدہ کا نام اردو یا عربی حروف میں لکھیں (یا رومن حروف میں لکھ کر عربی املا منتخب کریں)۔',
     ),
     t(
       'Each name is converted to its Abjad total using the Maghribi letter values.',
@@ -239,8 +239,8 @@ export const UR_COMPAT = {
   howTitle: t('How the names method works', 'ناموں کا طریقہ کیسے کام کرتا ہے'),
   how: [
     t(
-      'Write both names in Arabic letters (or type them in Latin letters and pick the Arabic spelling).',
-      'دونوں نام عربی حروف میں لکھیں (یا رومن حروف میں لکھ کر عربی املا منتخب کریں)۔',
+      'Write both names in Urdu or Arabic letters (or type them in Latin letters and pick the Arabic spelling).',
+      'دونوں نام اردو یا عربی حروف میں لکھیں (یا رومن حروف میں لکھ کر عربی املا منتخب کریں)۔',
     ),
     t(
       'Each name is converted to its Abjad (kabīr) total, using the Maghribi or Mashriqi letter values you select.',

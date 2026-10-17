@@ -6,6 +6,7 @@ import {
 } from '../types/compatibility';
 import { PLANETARY_RULERS, PLANETARY_RELATIONSHIPS } from '../constants/compatibility';
 import { modIndex } from '../features/ilm-huruf/core';
+import { urduToArabicLetters } from '../lib/urduLetters';
 
 // ============================================================================
 // 1️⃣ SPIRITUAL-DESTINY METHOD (Mod-9)
@@ -631,7 +632,7 @@ export interface ElementDistribution {
  * Returns percentage of each element in the name
  */
 export function calculateLetterElementDistribution(arabicText: string): ElementDistribution {
-  const normalized = arabicText.replace(/[ًٌٍَُِّْ\s]/g, '');
+  const normalized = urduToArabicLetters(arabicText).replace(/[ًٌٍَُِّْ\s]/g, '');
   const letters = [...normalized];
   const total = letters.length;
   

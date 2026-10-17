@@ -6,6 +6,7 @@
 import { digitalRoot, hadathRemainder } from '../../components/hadad-summary/hadad-core';
 import { ABJAD_MAGHRIBI, validateAndWarnAboutHamza } from '../../contexts/AbjadContext';
 import { computeQuranResonance, type QuranResonance } from './quranResonance';
+import { urduToArabicLetters } from '../../lib/urduLetters';
 
 // ============================================================================
 // CLASSICAL LETTER SCIENCE - Core Methodology
@@ -138,7 +139,7 @@ export function calculateAbjadValue(
   }
   
   // Remove diacritics and normalize whitespace
-  const normalized = text.replace(/[ًٌٍَُِّْ]/g, '').replace(/\s+/g, '');
+  const normalized = urduToArabicLetters(text).replace(/[ًٌٍَُِّْ]/g, '').replace(/\s+/g, '');
   const letters = [...normalized];
   
   return letters.reduce((sum, ch) => sum + (abjad[ch] || 0), 0);
@@ -524,7 +525,7 @@ export function analyzeNameDestiny(name: string, abjad: Record<string, number> =
   // Check for hamza and warn if present
   validateAndWarnAboutHamza(name);
   
-  const normalized = name.replace(/[ًٌٍَُِّْ]/g, '').replace(/\s+/g, '');
+  const normalized = urduToArabicLetters(name).replace(/[ًٌٍَُِّْ]/g, '').replace(/\s+/g, '');
   const letters = [...normalized];
   
   // Safety check - ensure we have valid input
@@ -654,7 +655,7 @@ function getElementArabic(element: ElementType): string {
  * Uses same Ḥadad calculation as main name analysis
  */
 export function analyzeMotherName(arabicName: string, abjad: Record<string, number> = ABJAD_MAGHRIBI): MotherAnalysis {
-  const normalized = arabicName.replace(/[ًٌٍَُِّْ]/g, '').replace(/\s+/g, '');
+  const normalized = urduToArabicLetters(arabicName).replace(/[ًٌٍَُِّْ]/g, '').replace(/\s+/g, '');
   const letters = [...normalized];
   
   if (letters.length === 0) {
@@ -729,13 +730,13 @@ function abjadTotalWithMother(
   motherName: string | undefined,
   abjad: Record<string, number> = ABJAD_MAGHRIBI
 ): { p: number; m: number; total: number } {
-  const normalized = personName.replace(/[ًٌٍَُِّْ]/g, '').replace(/\s+/g, '');
+  const normalized = urduToArabicLetters(personName).replace(/[ًٌٍَُِّْ]/g, '').replace(/\s+/g, '');
   const letters = [...normalized];
   const p = letters.reduce((sum, ch) => sum + (abjad[ch] || 0), 0);
   
   let m = 0;
   if (motherName && motherName.trim() !== '') {
-    const normalizedMother = motherName.replace(/[ًٌٍَُِّْ]/g, '').replace(/\s+/g, '');
+    const normalizedMother = urduToArabicLetters(motherName).replace(/[ًٌٍَُِّْ]/g, '').replace(/\s+/g, '');
     const motherLetters = [...normalizedMother];
     m = motherLetters.reduce((sum, ch) => sum + (abjad[ch] || 0), 0);
   }
@@ -934,7 +935,7 @@ function calculateElementDistributionFromName(arabicText: string): Record<'fire'
     'ة': 'earth' // Tā' marbūṭa (feminine ending) = same as ت
   };
 
-  const normalized = arabicText.replace(/[ًٌٍَُِّْ\s]/g, '');
+  const normalized = urduToArabicLetters(arabicText).replace(/[ًٌٍَُِّْ\s]/g, '');
   const letters = [...normalized];
   const total = letters.length;
   
@@ -1088,7 +1089,7 @@ export const GEOMETRY_KEYWORDS: Record<GeometryType, string[]> = {
  * Analyze the geometric composition of a name
  */
 export function analyzeGeometry(arabicName: string): GeometryAnalysis {
-  const normalized = arabicName.replace(/[ًٌٍَُِّْ]/g, '').replace(/\s+/g, '');
+  const normalized = urduToArabicLetters(arabicName).replace(/[ًٌٍَُِّْ]/g, '').replace(/\s+/g, '');
   const letters = [...normalized];
   
   const result: Record<GeometryType, GeometryTypeData> = {

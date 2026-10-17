@@ -26,6 +26,7 @@ import { DIVINE_NAMES, type DivineName } from '../data/divine-names';
 import { ABJAD_MAGHRIBI } from '../contexts/AbjadContext';
 import { PLANETARY_RULERS } from './compatibility';
 import type { DivineIntention } from './divineNameIntentions';
+import { urduToArabicLetters } from '../lib/urduLetters';
 
 // ============================================================================
 // TYPES (per mobile spec)
@@ -238,7 +239,7 @@ const CLASSICAL_FUNCTION_BY_NUMBER: Record<number, IntentionCategory[]> = {
 };
 
 function stripDefiniteArticle(arabic: string): string {
-  const noDiacritics = arabic.replace(/[ًٌٍَُِّْ\s]/g, '');
+  const noDiacritics = urduToArabicLetters(arabic).replace(/[ًٌٍَُِّْ\s]/g, '');
   return noDiacritics.startsWith('ال') ? noDiacritics.slice(2) : noDiacritics;
 }
 

@@ -76,6 +76,7 @@ import { CompatibilityGlossary } from '../../components/CompatibilityGlossary';
 import { NameDestinyLearningCenter, LetterGuidePanel, NameDestinyGlossary } from './education';
 import { BookMarked, ChevronLeft, ChevronRight, Fingerprint, Eye } from 'lucide-react';
 import { useTrackResult } from '@/src/lib/useAnalytics';
+import { urduToArabicLetters } from '../../lib/urduLetters';
 
 // ============================================================================
 // MOTHER'S NAME STRATEGY - TYPE DEFINITIONS
@@ -194,7 +195,7 @@ const DHIKR_NAMES: Record<'fire' | 'air' | 'water' | 'earth', { name: string; na
 
 // Helper function to calculate element distribution from Arabic text
 function calculateElementDistribution(arabicText: string): Record<'fire' | 'air' | 'water' | 'earth', number> {
-  const normalized = arabicText.replace(/[Ù‹ÙŒÙÙŽÙÙÙ‘Ù’\s]/g, '');
+  const normalized = urduToArabicLetters(arabicText).replace(/[Ù‹ÙŒÙÙŽÙÙÙ‘Ù’\s]/g, '');
   const letters = [...normalized];
   const total = letters.length;
   
@@ -525,7 +526,7 @@ export function IlmHurufPanel() {
       } else if (mode === 'compatibility' && name && name2) {
         // Calculate Abjad totals
         const calculateAbjadTotal = (text: string, abjadMap: Record<string, number>): number => {
-          const normalized = text.replace(/[Ù‹ÙŒÙÙŽÙÙÙ‘Ù’\s]/g, '');
+          const normalized = urduToArabicLetters(text).replace(/[Ù‹ÙŒÙÙŽÙÙÙ‘Ù’\s]/g, '');
           return [...normalized].reduce((sum, char) => sum + (abjadMap[char] || 0), 0);
         };
         
@@ -576,7 +577,7 @@ export function IlmHurufPanel() {
         // Calculate user's element from their name for personalized timing
         // Use simple Abjad calculation to avoid complex dependencies
         const calculateAbjadTotal = (text: string, abjadMap: Record<string, number>): number => {
-          const normalized = text.replace(/[ًٌٍَُِّْ\s]/g, '');
+          const normalized = urduToArabicLetters(text).replace(/[ًٌٍَُِّْ\s]/g, '');
           return [...normalized].reduce((sum, char) => sum + (abjadMap[char] || 0), 0);
         };
         

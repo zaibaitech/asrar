@@ -4,10 +4,11 @@
  */
 
 import { ABJAD_MAGHRIBI } from './abjadMaps';
+import { urduToArabicLetters } from '../../../lib/urduLetters';
 
 export function normalizeArabic(text: string): string {
   if (!text) return '';
-  const normalized = text.replace(/[ًٌٍَُِّْـ]/g, '');
+  const normalized = urduToArabicLetters(text).replace(/[ًٌٍَُِّْـ]/g, '');
   return normalized.replace(/\s+/g, ' ').trim();
 }
 
