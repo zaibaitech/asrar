@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
+import { RelatedTools } from '@/src/components/seo/RelatedTools';
 import { arabicMetadata } from '@/src/lib/arMetadata';
-import { buildToolMetadata, getRouteLang, resolvePageLang } from '@/src/lib/pageLang';
+import { buildToolMetadata, getRouteLang, getServedLang, resolvePageLang } from '@/src/lib/pageLang';
 import { FaqSection, JsonLd, RelatedLinks, faqJsonLd, type FaqItem, type RelatedLink } from '@/src/components/seo/SeoSections';
 import { CompatibilityCalculator } from './CompatibilityCalculator';
 import { AbjadSystemSelector } from '@/src/components/AbjadSystemSelector';
@@ -135,8 +136,10 @@ export default async function Page({
 }: {
   searchParams: Promise<{ lang?: string }>;
 }) {
-  const c = COPY[await resolvePageLang(searchParams)];
+  const lang = await resolvePageLang(searchParams);
+  const c = COPY[lang];
   const routeLang = await getRouteLang();
+  const served = await getServedLang();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
@@ -156,6 +159,7 @@ export default async function Page({
       <CompatibilityCalculator />
 
       <div className="max-w-3xl mx-auto px-4 py-8 space-y-8">
+        <RelatedTools pagePath="/compatibility" lang={served === 'ar' ? 'ar' : lang} routeLang={served} />
         <section className="space-y-3">
           <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100">{c.howTitle}</h2>
           <ol className="list-decimal pl-5 space-y-1 text-slate-700 dark:text-slate-300">

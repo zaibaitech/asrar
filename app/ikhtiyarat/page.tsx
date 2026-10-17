@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
+import { RelatedTools } from '@/src/components/seo/RelatedTools';
 import { arabicMetadata } from '@/src/lib/arMetadata';
 import { cookies } from 'next/headers';
 import { Suspense } from 'react';
 import { ogImageUrl } from '@/src/lib/og/urls';
-import { getRouteLang } from '@/src/lib/pageLang';
+import { getRouteLang, getServedLang } from '@/src/lib/pageLang';
 import { localeAlternates, localizeHref, localizedUrl } from '@/src/lib/i18nRoutes';
 import { IkhtiyaratPage } from './IkhtiyaratPage';
 
@@ -175,6 +176,7 @@ export default async function Page({
 }) {
   const lang = await resolveLang(searchParams);
   const routeLang = await getRouteLang();
+  const served = await getServedLang();
   const c = COPY[lang];
 
   const faqJsonLd = {
@@ -210,6 +212,9 @@ export default async function Page({
 
       {/* 4. Detailed educational / SEO content, moved below the tool (unchanged text). */}
       <div className="max-w-2xl mx-auto px-4 py-8 space-y-8">
+        {/* Related tools: below the tool and its results, never above the fold. */}
+        <RelatedTools pagePath="/ikhtiyarat" lang={served === 'ar' ? 'ar' : lang} routeLang={served} />
+
         <section className="space-y-3" aria-labelledby="ikhtiyarat-about-heading">
           <h2 id="ikhtiyarat-about-heading" className="text-xl font-semibold text-slate-900 dark:text-slate-100">
             {c.aboutTitle}

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { getRouteLang } from '@/src/lib/pageLang';
+import { RelatedTools } from '@/src/components/seo/RelatedTools';
+import { getRouteLang, getServedLang } from '@/src/lib/pageLang';
 import { ogImageUrl } from '@/src/lib/og/urls';
 import { localeAlternates, localizedUrl } from '@/src/lib/i18nRoutes';
 import { cookies } from 'next/headers';
@@ -90,6 +91,7 @@ export default async function Page({
   searchParams: Promise<{ lang?: string }>;
 }) {
   const lang = await resolveLang(searchParams);
+  const served = await getServedLang();
 
   return (
     <>
@@ -103,6 +105,7 @@ export default async function Page({
       <Suspense fallback={<Loading />}>
         <PlanetaryHoursPage />
       </Suspense>
+      <RelatedTools pagePath="/planetary-hours" lang={served === 'ar' ? 'ar' : lang} routeLang={served} className="max-w-3xl mx-auto px-4 pt-2 pb-8" />
     </>
   );
 }

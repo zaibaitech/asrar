@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
+import { RelatedTools } from '@/src/components/seo/RelatedTools';
 import { cookies } from 'next/headers';
 import { ogImageUrl } from '@/src/lib/og/urls';
-import { getRouteLang } from '@/src/lib/pageLang';
+import { getRouteLang, getServedLang } from '@/src/lib/pageLang';
 import { localeAlternates, localizeHref, localizedUrl } from '@/src/lib/i18nRoutes';
 import { AbjadCalculator } from './AbjadCalculator';
 
@@ -105,8 +106,10 @@ export default async function Page({
 }: {
   searchParams: Promise<{ lang?: string }>;
 }) {
-  const c = COPY[await resolveLang(searchParams)];
+  const lang = await resolveLang(searchParams);
+  const c = COPY[lang];
   const routeLang = await getRouteLang();
+  const served = await getServedLang();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
@@ -117,6 +120,8 @@ export default async function Page({
         </header>
 
         <AbjadCalculator />
+
+        <RelatedTools pagePath="/abjad" lang={served === 'ar' ? 'ar' : lang} routeLang={served} />
 
         <section className="space-y-3">
           <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100">{c.aboutTitle}</h2>

@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
+import { RelatedTools } from '@/src/components/seo/RelatedTools';
 import { arabicMetadata } from '@/src/lib/arMetadata';
 import { notFound } from 'next/navigation';
-import { buildToolMetadata, getRouteLang, resolvePageLang, type PageLang } from '@/src/lib/pageLang';
+import { buildToolMetadata, getRouteLang, getServedLang, resolvePageLang, type PageLang } from '@/src/lib/pageLang';
 import { localizeHref } from '@/src/lib/i18nRoutes';
 import { FaqSection, JsonLd, RelatedLinks, faqJsonLd, type RelatedLink } from '@/src/components/seo/SeoSections';
 import { PURPOSE_SLUGS, REFERENCE_LOCATION, type PurposeSlug } from '@/src/lib/ikhtiyarat/purposes';
@@ -102,6 +103,7 @@ export default async function Page({ params, searchParams }: { params: Params; s
   if (!isPurpose(purpose)) notFound();
   const lang = await resolvePageLang(searchParams);
   const routeLang = await getRouteLang();
+  const served = await getServedLang();
   const ui = UI[lang];
   const facts = purposeFacts(purpose, lang);
   const c = purposeCopy(purpose, lang, facts);
@@ -214,6 +216,7 @@ export default async function Page({ params, searchParams }: { params: Params; s
           </p>
         </section>
 
+        <RelatedTools pagePath={`/best-day-for/${purpose}`} lang={served === 'ar' ? 'ar' : lang} routeLang={served} />
         <FaqSection id="best-day-faq-heading" title={ui.faqTitle} faqs={c.faqs} />
         <RelatedLinks title={ui.relatedTitle} links={related(purpose, lang)} routeLang={routeLang} />
       </main>

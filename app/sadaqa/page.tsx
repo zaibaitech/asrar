@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
+import { RelatedTools } from '@/src/components/seo/RelatedTools';
 import { arabicMetadata } from '@/src/lib/arMetadata';
 import { SADAQAH_BY_DAY } from '@/src/features/calculator/lib/sadaqahByDay';
 import { SADAQAH_BY_MONTH } from '@/src/features/calculator/lib/sadaqahByMonth';
 import { ZODIAC_SADAQAH, ZODIAC_SIGN_ORDER, ZODIAC_SIGN_SYMBOL } from '@/src/data/zodiacSadaqahData';
-import { buildToolMetadata, getRouteLang, resolvePageLang, type PageLang } from '@/src/lib/pageLang';
+import { buildToolMetadata, getRouteLang, getServedLang, resolvePageLang, type PageLang } from '@/src/lib/pageLang';
 import { localizeHref } from '@/src/lib/i18nRoutes';
 import { FaqSection, JsonLd, RelatedLinks, faqJsonLd, type FaqItem, type RelatedLink } from '@/src/components/seo/SeoSections';
 import { SadaqaDateChecker } from '@/src/components/sadaqa/SadaqaDateChecker';
@@ -150,6 +151,7 @@ export default async function Page({
 }) {
   const lang = await resolvePageLang(searchParams);
   const routeLang = await getRouteLang();
+  const served = await getServedLang();
   const c = COPY[lang];
 
   return (
@@ -240,6 +242,7 @@ export default async function Page({
           </div>
         </section>
 
+        <RelatedTools pagePath="/sadaqa" lang={served === 'ar' ? 'ar' : lang} routeLang={served} />
         <FaqSection id="sadaqa-faq-heading" title={c.faqTitle} faqs={c.faqs} />
         <RelatedLinks title={c.relatedTitle} links={c.related} routeLang={routeLang} />
       </main>

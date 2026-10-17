@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { RelatedTools } from '@/src/components/seo/RelatedTools';
 import type { FaqItem } from '@/src/components/seo/SeoSections';
 import { SadaqaDateChecker } from '@/src/components/sadaqa/SadaqaDateChecker';
 import { ArabicTodaySadaqa } from './ArabicTodaySadaqa';
@@ -83,6 +84,8 @@ export default function Page() {
           <SadaqaDateChecker lang="en" mode="day" />
         </div>
       </section>
+
+      <RelatedTools pagePath={EN_PATH} lang="ar" className="max-w-2xl mx-auto px-4 pt-6" />
 
       <ArabicBody>
         <ArabicSection id="sadaqa-about" title="عن هذا الدليل">
