@@ -9,6 +9,7 @@ import ClarityScript from '../src/components/analytics/ClarityScript'
 import { getSeoConfig, bilingualMeta } from '../src/lib/seoConfig'
 import { AR_PATHS } from '../src/lib/i18nRoutes'
 import localFont from 'next/font/local'
+import AnalyticsClickTracker from '@/src/components/analytics/AnalyticsClickTracker';
 
 // Central Arabic UI font: Noto Naskh Arabic (Arabic subset, variable weight),
 // self-hosted and restricted by unicode-range to Arabic glyphs so Latin text
@@ -185,6 +186,7 @@ export default function RootLayout({
         `}
       </Script>
       <ClarityScript />
+      <AnalyticsClickTracker />
       <body className="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100">
         <AuthProvider>
           <LanguageProvider>

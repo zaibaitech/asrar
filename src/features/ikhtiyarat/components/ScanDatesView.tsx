@@ -15,6 +15,7 @@ import { CalendarHeatmap } from './CalendarHeatmap';
 import { DetailSheet } from './DetailSheet';
 import { TierBadge } from './TierBadge';
 import { ikhtiyaratCopy, UiLang } from '../copy';
+import { useIkhtiyaratTool, useTrackCalculation } from '@/src/lib/useAnalytics';
 
 function addMonths(d: Date, months: number): Date {
   const copy = new Date(d);
@@ -53,6 +54,7 @@ export function ScanDatesView({
   const [selectedDay, setSelectedDay] = useState<ElectionResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [rangeError, setRangeError] = useState<string | null>(null);
+  const trackCalculation = useTrackCalculation(useIkhtiyaratTool());
 
   const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
@@ -74,6 +76,7 @@ export function ScanDatesView({
     setTimeout(() => {
       const scanResults = evaluateDateRange(start, end, location.latitude, location.longitude, tz, electionType, config);
       setResults(scanResults);
+      trackCalculation();
       setLoading(false);
     }, 0);
   }

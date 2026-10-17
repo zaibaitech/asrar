@@ -24,6 +24,7 @@ import { BadgeGrid, BadgeCelebration } from '@/src/features/ramadanChallenges/co
 import { ShareButton } from '@/src/features/ramadanChallenges/components/ShareButton';
 import { getEarnedBadges, getNewlyEarnedBadges, type Badge } from '@/src/features/ramadanChallenges/badges';
 import { generateProgressShareText } from '@/src/features/ramadanChallenges/sharing';
+import { nativeOrCopy, trackEvent } from '@/src/lib/analytics';
 
 // ─── Translations ────────────────────────────────────────────────────────────────
 
@@ -262,6 +263,7 @@ export function RamadanPage() {
 
   // ─── Share functionality ───
   const handleShare = async () => {
+    trackEvent('share_click', { tool: 'ramadan', method: nativeOrCopy() });
     const shareUrl = `${process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app'}/ramadan${language === 'fr' ? '?lang=fr' : ''}`;
     const shareTitle = t.title;
     const shareText = language === 'fr'

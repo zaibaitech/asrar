@@ -3,7 +3,7 @@
  * crawlable SEO pages (links and names: ./relatedTools.ts). Same card classes
  * the SEO pages already use; RTL + Arabic font on Arabic pages.
  */
-import { RELATED_TOOLS_TITLE as TITLE, relatedToolLinks, type ToolsLang } from './relatedTools';
+import { RELATED_TOOLS_TITLE as TITLE, pageEventId, relatedToolLinksWithIds, type ToolsLang } from './relatedTools';
 
 export function RelatedTools({
   pagePath,
@@ -20,7 +20,8 @@ export function RelatedTools({
   /** Optional wrapper classes (width/padding) when placed outside a page's own container. */
   className?: string;
 }) {
-  const links = relatedToolLinks(pagePath, lang, routeLang);
+  const links = relatedToolLinksWithIds(pagePath, lang, routeLang);
+  const fromTool = pageEventId(pagePath);
   if (!links.length) return null;
   const ar = lang === 'ar';
   const nav = (
@@ -32,10 +33,13 @@ export function RelatedTools({
     >
       <h2 className="text-base font-semibold text-slate-900 dark:text-slate-100">{TITLE[lang]}</h2>
       <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-        {links.map(([href, name]) => (
+        {links.map(([href, name, toTool]) => (
           <li key={href}>
             <a
               href={href}
+              // Read by AnalyticsClickTracker (related_tool_click); fixed tool ids only.
+              data-rt-from={fromTool}
+              data-rt-to={toTool}
               className="flex items-center min-h-[44px] rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-2 text-sm font-semibold text-emerald-700 dark:text-emerald-300 hover:underline"
             >
               {name}

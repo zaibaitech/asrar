@@ -75,6 +75,7 @@ import { MethodGuidePanel } from '../../components/MethodGuidePanel';
 import { CompatibilityGlossary } from '../../components/CompatibilityGlossary';
 import { NameDestinyLearningCenter, LetterGuidePanel, NameDestinyGlossary } from './education';
 import { BookMarked, ChevronLeft, ChevronRight, Fingerprint, Eye } from 'lucide-react';
+import { useTrackResult } from '@/src/lib/useAnalytics';
 
 // ============================================================================
 // MOTHER'S NAME STRATEGY - TYPE DEFINITIONS
@@ -262,6 +263,8 @@ export function IlmHurufPanel() {
   const [translitWarnings, setTranslitWarnings] = useState<string[]>([]);
   const [birthDate, setBirthDate] = useState('');
   const [results, setResults] = useState<any>(null);
+  // calculation_complete for each new (non-error) result; the result itself is never sent.
+  useTrackResult('ilm_huruf', results && !results.error ? results : null);
   
   // Mother's name feature (Um Ḥadad)
   const [motherName, setMotherName] = useState('');

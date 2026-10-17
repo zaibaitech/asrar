@@ -37,3 +37,17 @@ describe('Related tools links', () => {
     ]);
   });
 });
+
+describe('Related tools analytics ids', () => {
+  it('maps every page and link to a GA4 tool id from the allow-list', async () => {
+    const { pageEventId, relatedToolLinksWithIds } = await import('./relatedTools');
+    const { TOOLS } = await import('@/src/lib/analytics');
+    for (const page of Object.keys(RELATED_TOOLS)) {
+      expect(TOOLS).toContain(pageEventId(page));
+      for (const [, , id] of relatedToolLinksWithIds(page, 'ar')) expect(TOOLS).toContain(id);
+    }
+    expect(pageEventId('/name-and-mother-burj')).toBe('burj');
+    expect(pageEventId('/best-day-for/travel')).toBe('best_day_for');
+    expect(pageEventId('/planetary-hours')).toBe('planetary_hours');
+  });
+});

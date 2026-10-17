@@ -30,6 +30,7 @@ import {
   type Element,
 } from '@/src/lib/planetary';
 import { DignityDetailPanel } from '@/src/components/planetary';
+import { useTrackCalculation } from '@/src/lib/useAnalytics';
 
 const COPY = {
   en: {
@@ -145,6 +146,7 @@ export function BirthProfilePage() {
   const { language } = useLanguage();
   const lang: 'en' | 'fr' = language === 'fr' ? 'fr' : 'en';
   const c = COPY[lang];
+  const trackCalculation = useTrackCalculation('birth_profile');
 
   const todayIso = new Date().toISOString().slice(0, 10);
   const [dateOfBirth, setDateOfBirth] = useState('');
@@ -187,6 +189,7 @@ export function BirthProfilePage() {
     const [year, month, day] = dateOfBirth.split('-').map(Number);
     const [hour, minute] = timeOfBirth.split(':').map(Number);
 
+    trackCalculation();
     setResult(
       computeBirthProfile({
         dateOfBirth: new Date(year, month - 1, day),

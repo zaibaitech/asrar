@@ -10,6 +10,7 @@ import React, { useEffect, useState } from 'react';
 import { X, Sparkles } from 'lucide-react';
 import type { Badge } from '../badges';
 import { BadgeDisplay } from './BadgeDisplay';
+import { nativeOrCopy, trackEvent } from '@/src/lib/analytics';
 
 interface BadgeCelebrationProps {
   badge: Badge;
@@ -47,6 +48,7 @@ export function BadgeCelebration({ badge, language = 'en', onClose }: BadgeCeleb
   };
 
   const handleShare = async () => {
+    trackEvent('share_click', { tool: 'ramadan', method: nativeOrCopy() });
     const badgeName = language === 'fr' ? badge.nameFr : badge.nameEn;
     const badgeDesc = language === 'fr' ? badge.descriptionFr : badge.descriptionEn;
     

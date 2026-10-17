@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { SadaqahDayResult } from '@/src/features/calculator/components/SadaqahDayResult';
 import { SadaqahResult } from '@/src/features/calculator/components/SadaqahResult';
 import { useCalculatorTranslations } from '@/src/features/calculator/i18n';
+import { useTrackCalculation } from '@/src/lib/useAnalytics';
 
 /**
  * Minimal date form around the calculator's existing result cards:
@@ -15,6 +16,7 @@ export function SadaqaDateChecker({ lang, mode }: { lang: 'en' | 'fr'; mode: 'da
   const { t } = useCalculatorTranslations(lang);
   const [value, setValue] = useState('');
   const [submitted, setSubmitted] = useState<string | null>(null);
+  const trackCalculation = useTrackCalculation('sadaqa');
 
   const label = mode === 'day' ? t('sadaqahDayFieldLabel') : t('dobFieldLabel');
   const helper = mode === 'day' ? t('sadaqahDayFieldHelper') : t('dobFieldHelper');
@@ -25,7 +27,10 @@ export function SadaqaDateChecker({ lang, mode }: { lang: 'en' | 'fr'; mode: 'da
         className="flex flex-col gap-3"
         onSubmit={(e) => {
           e.preventDefault();
-          if (value) setSubmitted(value);
+          if (value) {
+            setSubmitted(value);
+            trackCalculation();
+          }
         }}
       >
         <label className="flex flex-col gap-1.5">

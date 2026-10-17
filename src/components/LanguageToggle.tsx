@@ -2,6 +2,7 @@
 
 import { useLanguage } from '../contexts/LanguageContext';
 import type { Language } from '../lib/translations';
+import { toLang, trackEvent } from '../lib/analytics';
 
 const OPTIONS: { code: Language; label: string; title: string }[] = [
   { code: 'en', label: 'EN', title: 'English' },
@@ -17,7 +18,10 @@ export default function LanguageToggle() {
       {OPTIONS.map((o) => (
         <button
           key={o.code}
-          onClick={() => setLanguage(o.code)}
+          onClick={() => {
+            if (o.code !== uiLanguage) trackEvent('language_switch', { from: toLang(uiLanguage), to: toLang(o.code) });
+            setLanguage(o.code);
+          }}
           title={o.title}
           aria-pressed={uiLanguage === o.code}
           className={`px-3 py-1.5 rounded-md font-medium text-sm transition-all ${

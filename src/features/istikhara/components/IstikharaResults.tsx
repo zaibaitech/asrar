@@ -38,6 +38,7 @@ import {
   Target,
   BookOpen
 } from "lucide-react";
+import { nativeOrCopy, trackEvent } from '@/src/lib/analytics';
 
 interface IstikharaResultsProps {
   result: IstikharaCalculationResult;
@@ -214,6 +215,7 @@ export function IstikharaResults({ result, onReset }: IstikharaResultsProps) {
    * Share results
    */
   const handleShare = async () => {
+    trackEvent('share_click', { tool: 'burj', method: nativeOrCopy() });
     const shareText = language === 'en'
       ? `I discovered my spiritual profile through Istikhara al-Asmāʾ!\n\n${result.burujProfile.element_emoji} Element: ${result.burujProfile.element}\n📅 Blessed Day: ${result.burujProfile.blessed_day.day[language]}\n\n✨🌙`
       : `J'ai découvert mon profil spirituel avec Istikhara al-Asmāʾ!\n\n${result.burujProfile.element_emoji} Élément: ${result.burujProfile.element}\n📅 Jour Béni: ${result.burujProfile.blessed_day.day[language]}\n\n✨🌙`;
