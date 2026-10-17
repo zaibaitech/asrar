@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { RelatedTools } from '@/src/components/seo/RelatedTools';
 import { Suspense } from 'react';
 import type { FaqItem } from '@/src/components/seo/SeoSections';
 import { PlanetaryHoursPage } from '@/app/planetary-hours/PlanetaryHoursPage';
@@ -90,6 +91,7 @@ export default function Page() {
       </div>
 
       <div className="bg-gradient-to-br from-indigo-50 via-purple-50 to-slate-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
+        <RelatedTools pagePath={EN_PATH} lang="ar" className="max-w-2xl mx-auto px-4 pt-6" />
         <ArabicBody>
           <ArabicSection id="hours-what" title="ما هي ساعات الكواكب؟">
             <p>

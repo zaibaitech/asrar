@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
+import { RelatedTools } from '@/src/components/seo/RelatedTools';
 import { arabicMetadata } from '@/src/lib/arMetadata';
 import { cookies } from 'next/headers';
 import { Suspense } from 'react';
 import { FaqSection, JsonLd, RelatedLinks, faqJsonLd } from '@/src/components/seo/SeoSections';
 import { LUNAR_MANSIONS } from '@/src/lib/lunarMansions';
 import { ogImageUrl } from '@/src/lib/og/urls';
-import { getRouteLang } from '@/src/lib/pageLang';
+import { getRouteLang, getServedLang } from '@/src/lib/pageLang';
 import { localeAlternates, localizeHref, localizedUrl } from '@/src/lib/i18nRoutes';
 import { ManazilHubClient } from './ManazilHubClient';
 
@@ -186,6 +187,7 @@ export default async function Page({
 }) {
   const lang = await resolveLang(searchParams);
   const routeLang = await getRouteLang();
+  const served = await getServedLang();
   const c = COPY[lang];
   const isFr = lang === 'fr';
 
@@ -215,6 +217,8 @@ export default async function Page({
             <ManazilHubClient language={lang} />
           </Suspense>
         </section>
+
+        <RelatedTools pagePath="/manazil" lang={served === 'ar' ? 'ar' : lang} routeLang={served} />
 
         <section className="space-y-3" aria-labelledby="manazil-about-heading">
           <h2 id="manazil-about-heading" className="text-xl font-semibold text-slate-900 dark:text-slate-100">

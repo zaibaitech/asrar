@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { RelatedTools } from '@/src/components/seo/RelatedTools';
 import type { FaqItem } from '@/src/components/seo/SeoSections';
 import { BurjCalculator } from '@/app/name-and-mother-burj/BurjCalculator';
 import { BURJ_NAMES_AR, getBurujData } from '@/src/features/istikhara/calculations';
@@ -76,6 +77,8 @@ export default function Page() {
       <div lang="ar" dir="rtl">
         <BurjCalculator />
       </div>
+
+      <RelatedTools pagePath={EN_PATH} lang="ar" className="max-w-2xl mx-auto px-4 pt-6" />
 
       <ArabicBody>
         <ArabicSection id="burj-how" title="كيف يُحسب البرج؟">

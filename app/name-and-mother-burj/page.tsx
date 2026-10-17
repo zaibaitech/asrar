@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
+import { RelatedTools } from '@/src/components/seo/RelatedTools';
 import { BURJ_NAMES_AR, BURJ_NAMES_EN, BURJ_NAMES_FR, getBurujData } from '@/src/features/istikhara/calculations';
 import { ZODIAC_SADAQAH, ZODIAC_SIGN_ORDER, ZODIAC_SIGN_SYMBOL } from '@/src/data/zodiacSadaqahData';
-import { buildToolMetadata, getRouteLang, resolvePageLang, type PageLang } from '@/src/lib/pageLang';
+import { buildToolMetadata, getRouteLang, getServedLang, resolvePageLang, type PageLang } from '@/src/lib/pageLang';
 import { localizeHref } from '@/src/lib/i18nRoutes';
 import { FaqSection, JsonLd, RelatedLinks, faqJsonLd, type FaqItem, type RelatedLink } from '@/src/components/seo/SeoSections';
 import { BurjCalculator } from './BurjCalculator';
@@ -182,6 +183,7 @@ export default async function Page({
 }) {
   const lang = await resolvePageLang(searchParams);
   const routeLang = await getRouteLang();
+  const served = await getServedLang();
   const c = COPY[lang];
   const buruj = burujSummaries(lang);
 
@@ -200,6 +202,7 @@ export default async function Page({
       <BurjCalculator />
 
       <div className="max-w-3xl mx-auto px-4 py-8 space-y-8">
+        <RelatedTools pagePath="/name-and-mother-burj" lang={served === 'ar' ? 'ar' : lang} routeLang={served} />
         <section className="space-y-3">
           <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100">{c.howTitle}</h2>
           <ol className="list-decimal pl-5 space-y-1 text-slate-700 dark:text-slate-300">

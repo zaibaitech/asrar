@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { RelatedTools } from '@/src/components/seo/RelatedTools';
 import type { FaqItem } from '@/src/components/seo/SeoSections';
 import { AbjadCalculator } from '@/app/abjad/AbjadCalculator';
 import {
@@ -56,6 +57,8 @@ export default function Page() {
       <div lang="ar" dir="rtl" className="max-w-3xl mx-auto px-4">
         <AbjadCalculator />
       </div>
+
+      <RelatedTools pagePath={EN_PATH} lang="ar" className="max-w-2xl mx-auto px-4 pt-6" />
 
       <ArabicBody>
         <ArabicSection id="abjad-what" title="ما هو حساب الجمل؟">

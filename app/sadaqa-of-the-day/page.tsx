@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
+import { RelatedTools } from '@/src/components/seo/RelatedTools';
 import { SADAQAH_BY_DAY } from '@/src/features/calculator/lib/sadaqahByDay';
-import { buildToolMetadata, getRouteLang, resolvePageLang, type PageLang } from '@/src/lib/pageLang';
+import { buildToolMetadata, getRouteLang, getServedLang, resolvePageLang, type PageLang } from '@/src/lib/pageLang';
 import { localizeHref } from '@/src/lib/i18nRoutes';
 import { FaqSection, JsonLd, RelatedLinks, faqJsonLd, type FaqItem, type RelatedLink } from '@/src/components/seo/SeoSections';
 import { WeekdaySadaqa } from '@/src/components/sadaqa/WeekdaySadaqa';
@@ -146,6 +147,7 @@ export default async function Page({
 }) {
   const lang = await resolvePageLang(searchParams);
   const routeLang = await getRouteLang();
+  const served = await getServedLang();
   const c = copy(lang);
   // Server default for the highlight (UTC, i.e. Senegal time); the client re-checks local time.
   const serverDay = new Date().getUTCDay();
@@ -173,6 +175,7 @@ export default async function Page({
           <SadaqaDateChecker lang={lang} mode="day" />
         </section>
 
+        <RelatedTools pagePath="/sadaqa-of-the-day" lang={served === 'ar' ? 'ar' : lang} routeLang={served} />
         <FaqSection id="sadaqa-day-faq-heading" title={c.faqTitle} faqs={c.faqs} />
         <RelatedLinks title={c.relatedTitle} links={c.related} routeLang={routeLang} />
       </main>

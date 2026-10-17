@@ -17,6 +17,16 @@ export async function getRouteLang(): Promise<RouteLang> {
 }
 
 /**
+ * Language of the URL being served, including the /ar app mirrors ('ar' when
+ * middleware rewrote /ar/... onto this route). Used for internal links that
+ * must stay in the visitor's language (e.g. the Related tools block).
+ */
+export async function getServedLang(): Promise<RouteLang | 'ar'> {
+  const v = (await headers()).get(ROUTE_LANG_HEADER);
+  return v === 'fr' || v === 'ar' ? v : 'en';
+}
+
+/**
  * Resolve the page language the same way /abjad and /ikhtiyarat do:
  * /fr URL first, then ?lang= param, then the asrar_lang cookie set by
  * middleware, else EN.
