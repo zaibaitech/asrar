@@ -11,6 +11,7 @@ import { useRouter } from 'next/navigation';
 import { ArrowLeft, Sun } from 'lucide-react';
 import { useLanguage } from '@/src/contexts/LanguageContext';
 import { PlanetOfTheDay, ManzilOfTodayCard } from '@/src/components/planetary';
+import { useTrackResult } from '@/src/lib/useAnalytics';
 
 // ─── All 7 planets with their day, qualities, and detailed guidance ───────────
 
@@ -204,6 +205,7 @@ export function PlanetOfTheDayPage() {
   const dayPlanetMap = [0, 1, 2, 3, 4, 5, 6]; // Sun=0→Sun planet, Mon=1→Moon...
   const planetOrder = ['Sun', 'Moon', 'Mars', 'Mercury', 'Jupiter', 'Venus', 'Saturn'];
   const todayPlanetKey = planetOrder[dayOfWeek];
+  useTrackResult('planet_of_the_day', true, { once: true });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-slate-50 dark:from-slate-900 dark:via-amber-950/10 dark:to-slate-900">

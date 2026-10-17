@@ -16,6 +16,7 @@ import { getRamadanInfo } from '@/src/lib/hijri';
 import { toLocalDateString } from '@/src/lib/localDate';
 import { TasbihCounter } from './TasbihCounter';
 import { translations } from '@/src/lib/translations';
+import { nativeOrCopy, trackEvent } from '@/src/lib/analytics';
 
 // ─── Type Badge Colors ───────────────────────────────────────────────────────────
 
@@ -166,6 +167,8 @@ export function ChallengeCard({
   };
 
   const handleNativeShare = async () => {
+    // Without the Web Share API this only opens the share sheet; its buttons are tracked below.
+    if (typeof navigator.share === 'function') trackEvent('share_click', { tool: 'ramadan', method: 'native' });
     const shareUrl = getShareUrl();
     
     // Special captivating message for Debt Relief Wird
@@ -219,6 +222,7 @@ export function ChallengeCard({
   };
 
   const copyLink = async () => {
+    trackEvent('share_click', { tool: 'ramadan', method: 'copy_link' });
     const shareUrl = getShareUrl();
     try {
       await navigator.clipboard.writeText(shareUrl);
@@ -238,6 +242,7 @@ export function ChallengeCard({
   };
 
   const shareWhatsApp = () => {
+    trackEvent('share_click', { tool: 'ramadan', method: 'whatsapp' });
     const shareUrl = getShareUrl();
     const text = language === 'fr'
       ? `🤲 Rejoignez-moi dans ${challenge.title}!\n\n${challenge.arabicText}\n\nSuivez votre dhikr quotidien:`
@@ -246,6 +251,7 @@ export function ChallengeCard({
   };
 
   const shareTelegram = () => {
+    trackEvent('share_click', { tool: 'ramadan', method: 'telegram' });
     const shareUrl = getShareUrl();
     const text = language === 'fr'
       ? `🤲 Rejoignez-moi dans ${challenge.title}!\n\n${challenge.arabicText}`

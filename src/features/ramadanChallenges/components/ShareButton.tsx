@@ -10,6 +10,7 @@ import React, { useState } from 'react';
 import { Share2, Check, MessageCircle, Twitter as X, Facebook, Send } from 'lucide-react';
 import type { ShareData } from '../sharing';
 import { shareContent, getSocialShareUrls } from '../sharing';
+import { nativeOrCopy, trackEvent } from '@/src/lib/analytics';
 
 interface ShareButtonProps {
   shareData: ShareData;
@@ -54,6 +55,7 @@ export function ShareButton({
   const [copied, setCopied] = useState(false);
 
   const handleShare = async () => {
+    trackEvent('share_click', { tool: 'ramadan', method: nativeOrCopy() });
     const result = await shareContent(shareData);
     
     if (result.success && result.method === 'clipboard') {
@@ -65,6 +67,7 @@ export function ShareButton({
   };
 
   const handleSocialShare = (platform: 'whatsapp' | 'twitter' | 'facebook' | 'telegram') => {
+    trackEvent('share_click', { tool: 'ramadan', method: platform });
     const urls = getSocialShareUrls(shareData);
     window.open(urls[platform], '_blank', 'noopener,noreferrer,width=600,height=600');
     setShowMenu(false);

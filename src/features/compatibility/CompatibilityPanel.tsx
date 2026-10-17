@@ -26,6 +26,7 @@ import {
   findDivineNameMetadataByNumber,
   type DivineNameIntentionCompatibility,
 } from '../../constants/divineNameCompatibilityData';
+import { useTrackResult } from '@/src/lib/useAnalytics';
 
 /** Top-level: comparing two people, a person against a Divine Name, or an intention against a Divine Name. */
 type CompatibilityCategory = 'person-to-person' | 'person-to-divine' | 'divine-to-intention';
@@ -56,6 +57,8 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
   const formRef = useRef<HTMLDivElement>(null);
   const { abjad } = useAbjad();
   const { language } = useLanguage();
+  // calculation_complete when a result screen appears (no names or results are sent).
+  useTrackResult('compatibility', showResults);
   const lang = language as 'en' | 'fr' | 'ar';
 
   const handleRelationshipCalculate = async (

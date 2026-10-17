@@ -15,6 +15,7 @@ import { SadaqahDayResult } from './SadaqahDayResult';
 import { QuranVerseResult } from './QuranVerseResult';
 import { QURAN_META } from '../lib/quranMeta';
 import { useCalculatorTranslations, type CalculatorLocale } from '../i18n';
+import { useTrackCalculation } from '@/src/lib/useAnalytics';
 
 const FIELD_KEYS: Record<'name' | 'phrase' | 'general', { label: string; placeholder: string }> = {
   name: { label: 'nameFieldLabel', placeholder: 'nameFieldPlaceholder' },
@@ -55,6 +56,7 @@ export function CalculatorTypeForm({
   const [ayahNumber, setAyahNumber] = useState(1);
   const [quranSubmitted, setQuranSubmitted] = useState<{ surah: number; ayah: number } | null>(null);
   const [empty, setEmpty] = useState(false);
+  const trackCalculation = useTrackCalculation('abjad');
   const topRef = useRef<HTMLFormElement>(null);
 
   // The browse list can be scrolled far down when a type is picked; without
@@ -74,6 +76,10 @@ export function CalculatorTypeForm({
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    // Only the tool family is sent, never the text, names or date entered.
+    if (isSurahAyahType || isDobType || isTwoNameType || sourceText.trim()) {
+      trackCalculation(calcType === 'sadaqah' || calcType === 'sadaqahDay' ? 'sadaqa' : calcType === 'dhikr' ? 'dhikr' : 'abjad');
+    }
     if (isSurahAyahType) {
       setQuranSubmitted({ surah: surahNumber, ayah: ayahNumber });
       setEmpty(false);

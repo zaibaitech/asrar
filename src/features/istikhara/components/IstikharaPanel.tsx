@@ -33,6 +33,8 @@ import {
 import { IstikharaForm } from "./IstikharaForm";
 import { IstikharaResults } from "./IstikharaResults";
 import { IstikharaEducation } from "./IstikharaEducation";
+import { nativeOrCopy, trackEvent } from '@/src/lib/analytics';
+import { useTrackCalculation } from '@/src/lib/useAnalytics';
 
 interface SavedCalculation {
   id: string;
@@ -59,6 +61,7 @@ interface SavedCalculation {
  */
 export function IstikharaPanel() {
   const { language } = useLanguage();
+  const trackCalculation = useTrackCalculation('burj');
   const t = translations[language].istikhara;
   
   // Ref for scrolling to form
@@ -126,6 +129,7 @@ export function IstikharaPanel() {
    * Handle calculation from form submission
    */
   const handleCalculate = async (result: IstikharaCalculationResult) => {
+    trackCalculation();
     setIsTransitioning(true);
     
     // Save to history
@@ -225,6 +229,7 @@ export function IstikharaPanel() {
    */
   const handleShare = async () => {
     if (!calculationResult) return;
+    trackEvent('share_click', { tool: 'burj', method: nativeOrCopy() });
 
     const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
     // This tool's own page (EN or /fr mirror): its share card shows in WhatsApp/Telegram previews.
@@ -259,6 +264,7 @@ export function IstikharaPanel() {
    * Invite a friend to try Who Am I
    */
   const handleInvite = async () => {
+    trackEvent('share_click', { tool: 'burj', method: nativeOrCopy() });
     const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
     // This tool's own page (EN or /fr mirror): its share card shows in WhatsApp/Telegram previews.
     const toolPath = language === 'fr' ? '/fr/name-and-mother-burj' : '/name-and-mother-burj';
@@ -283,6 +289,7 @@ export function IstikharaPanel() {
   };
 
   const handleInviteWhatsApp = () => {
+    trackEvent('share_click', { tool: 'burj', method: 'whatsapp' });
     const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
     // This tool's own page (EN or /fr mirror): its share card shows in WhatsApp/Telegram previews.
     const toolPath = language === 'fr' ? '/fr/name-and-mother-burj' : '/name-and-mother-burj';
@@ -294,6 +301,7 @@ export function IstikharaPanel() {
   };
 
   const handleInviteTelegram = () => {
+    trackEvent('share_click', { tool: 'burj', method: 'telegram' });
     const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
     // This tool's own page (EN or /fr mirror): its share card shows in WhatsApp/Telegram previews.
     const toolPath = language === 'fr' ? '/fr/name-and-mother-burj' : '/name-and-mother-burj';

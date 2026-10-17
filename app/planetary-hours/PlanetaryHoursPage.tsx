@@ -12,6 +12,7 @@ import { ArrowLeft, Clock, Sun, Moon } from 'lucide-react';
 import { useLanguage } from '@/src/contexts/LanguageContext';
 import { PlanetaryHourCard, ManzilOfTodayCard } from '@/src/components/planetary';
 import { getUserLocation, loadLocation } from '@/src/utils/location';
+import { useTrackResult } from '@/src/lib/useAnalytics';
 
 // ─── Planet data for the guide ────────────────────────────────────────────────
 
@@ -179,6 +180,8 @@ export function PlanetaryHoursPage() {
   }, []);
 
   const isEn = language === 'en';
+  // Hours appear once a location (cached, detected or default) is known; the location itself is never sent.
+  useTrackResult('planetary_hours', latitude !== undefined, { once: true });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-slate-50 dark:from-slate-900 dark:via-indigo-950/20 dark:to-slate-900">

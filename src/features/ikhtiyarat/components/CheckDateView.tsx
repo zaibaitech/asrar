@@ -26,6 +26,8 @@ import { UrfBadge } from './UrfBadge';
 import { SimpleModeToggle } from './SimpleModeToggle';
 import { useSimpleMode } from '../useSimpleMode';
 import { ikhtiyaratCopy, UiLang } from '../copy';
+import { nativeOrCopy, trackEvent } from '@/src/lib/analytics';
+import { useIkhtiyaratTool, useTrackCalculation } from '@/src/lib/useAnalytics';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
 
@@ -62,6 +64,10 @@ export function CheckDateView({
   onUseMyLocation?: () => Promise<UserLocation>;
 }) {
   const c = ikhtiyaratCopy[language];
+  const tool = useIkhtiyaratTool();
+  const trackCalculation = useTrackCalculation(tool);
+  // Set by the Check button so the automatic first check on load is not counted.
+  const userCheck = useRef(false);
   const config = CONFIG_BY_ELECTION_TYPE[electionType];
   const searchParams = useSearchParams();
   const dateFromUrl = searchParams.get('date');
@@ -96,6 +102,10 @@ export function CheckDateView({
       const input = { datetime, lat: location.latitude, lon: location.longitude, tz, electionType };
       const r = evaluateElection(input, config);
       setResult(r);
+      if (userCheck.current) {
+        userCheck.current = false;
+        trackCalculation();
+      }
       if (r.tier === 'avoid' || r.tier === 'weak') {
         const { dates, bestAvailable: fallback } = findNearestBetterDates(input, config, 3);
         setNearestBetter(dates);
@@ -138,6 +148,7 @@ export function CheckDateView({
     const tierLabel = language === 'fr' ? result.tierInfo.labelFr : result.tierInfo.labelEn;
     const dateOnly = result.date.toISOString().slice(0, 10);
     const url = `${BASE_URL}/ikhtiyarat/r/${dateOnly}?lat=${location.latitude}&lon=${location.longitude}&tz=${encodeURIComponent(tz)}&election=${electionType}${language === 'fr' ? '&lang=fr' : ''}`;
+    trackEvent('share_click', { tool, method: nativeOrCopy() });
     const shareResult = await shareContent({
       title: c.title,
       text: `${dateOnly} — ${tierLabel} (${result.score}/100)`,
@@ -202,7 +213,10 @@ export function CheckDateView({
           )}
         </div>
         <button
-          onClick={handleCheck}
+          onClick={() => {
+            userCheck.current = true;
+            handleCheck();
+          }}
           disabled={loading}
           className="w-full min-h-[48px] py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 disabled:opacity-60 text-white text-sm font-semibold shadow-sm transition-colors active:scale-[0.98]"
         >

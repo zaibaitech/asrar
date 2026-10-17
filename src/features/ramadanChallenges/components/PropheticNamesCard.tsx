@@ -32,6 +32,7 @@ import { PropheticNamesPractice } from './PropheticNamesPractice';
 import { translations } from '@/src/lib/translations';
 import { getLocalToday } from '@/src/lib/localDate';
 import { queueDhikrIncrement } from '../communityDhikrService';
+import { nativeOrCopy, trackEvent } from '@/src/lib/analytics';
 
 // ─── Types ───────────────────────────────────────────────────────────────────────
 
@@ -133,6 +134,7 @@ export function PropheticNamesCard({
 
   // Handle native share (Web Share API)
   const handleNativeShare = async () => {
+    if (typeof navigator.share === 'function') trackEvent('share_click', { tool: 'ramadan', method: 'native' });
     const shareUrl = getShareUrl();
     if (navigator.share) {
       try {
@@ -151,6 +153,7 @@ export function PropheticNamesCard({
 
   // Share via WhatsApp
   const shareWhatsApp = () => {
+    trackEvent('share_click', { tool: 'ramadan', method: 'whatsapp' });
     const shareUrl = getShareUrl();
     const text = encodeURIComponent(`${t.shareText}\n\n${shareUrl}`);
     window.open(`whatsapp://send?text=${text}`, '_blank');
@@ -159,6 +162,7 @@ export function PropheticNamesCard({
 
   // Share via Telegram
   const shareTelegram = () => {
+    trackEvent('share_click', { tool: 'ramadan', method: 'telegram' });
     const shareUrl = getShareUrl();
     const text = encodeURIComponent(t.shareText);
     window.open(`tg://msg_url?url=${encodeURIComponent(shareUrl)}&text=${text}`, '_blank');
@@ -167,6 +171,7 @@ export function PropheticNamesCard({
 
   // Share via Twitter/X
   const shareTwitter = () => {
+    trackEvent('share_click', { tool: 'ramadan', method: 'twitter' });
     const shareUrl = getShareUrl();
     const text = encodeURIComponent(t.shareText);
     window.open(`https://twitter.com/intent/tweet?text=${text}&url=${encodeURIComponent(shareUrl)}`, '_blank');
@@ -175,6 +180,7 @@ export function PropheticNamesCard({
 
   // Copy link to clipboard
   const copyLink = async () => {
+    trackEvent('share_click', { tool: 'ramadan', method: 'copy_link' });
     const shareUrl = getShareUrl();
     try {
       await navigator.clipboard.writeText(shareUrl);

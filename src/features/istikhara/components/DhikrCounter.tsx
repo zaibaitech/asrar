@@ -25,6 +25,7 @@ import {
   Heart,
   Save
 } from "lucide-react";
+import { nativeOrCopy, trackEvent } from '@/src/lib/analytics';
 
 interface DhikrCounterProps {
   targetCount: number;
@@ -365,6 +366,7 @@ export function DhikrCounter({
   
   // Share progress
   const handleShare = async () => {
+    trackEvent('share_click', { tool: 'burj', method: nativeOrCopy() });
     const shareText = language === 'en'
       ? `I've completed ${count} of ${targetCount} recitations of ${divineNames.transliteration} 🌙✨`
       : `J'ai complété ${count} de ${targetCount} récitations de ${divineNames.transliteration} 🌙✨`;

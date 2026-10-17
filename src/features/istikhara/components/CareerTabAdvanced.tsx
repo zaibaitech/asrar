@@ -16,6 +16,7 @@ import {
   MessageCircle
 } from "lucide-react";
 import type { IstikharaCalculationResult } from "../types";
+import { nativeOrCopy, trackEvent } from '@/src/lib/analytics';
 
 interface CareerTabAdvancedProps {
   result: IstikharaCalculationResult;
@@ -129,6 +130,7 @@ export function CareerTabAdvanced({ result }: CareerTabAdvancedProps) {
   };
 
   const handleShare = async () => {
+    trackEvent('share_click', { tool: 'burj', method: nativeOrCopy() });
     const shareText = language === 'en' 
       ? `Discovered my career path through Istikhara al-Asmāʾ! My ${profile.element} element aligns with ${categories?.[0]?.category || 'various'} industries.`
       : `J'ai découvert ma voie professionnelle avec Istikhara al-Asmāʾ! Mon élément ${profile.element} s'aligne avec ${categories?.[0]?.category || 'diverses'} industries.`;

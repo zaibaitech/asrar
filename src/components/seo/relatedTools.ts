@@ -10,6 +10,7 @@
  * the repo (Arabic landing links, AR_META and public/i18n/ar-ui.json).
  */
 import { arAppPath, isLocalizedPath, localizeHref, AR_PATHS } from '@/src/lib/i18nRoutes';
+import type { Tool } from '@/src/lib/analytics';
 
 export type ToolsLang = 'en' | 'fr' | 'ar';
 
@@ -111,4 +112,33 @@ export function relatedToolHref(enPath: string, routeLang: ToolsLang): string {
 /** The links for a page: [href, name] pairs, in the page's language. */
 export function relatedToolLinks(pagePath: string, lang: ToolsLang, routeLang: ToolsLang = lang): [string, string][] {
   return (RELATED_TOOLS[pagePath] ?? []).map((k) => [relatedToolHref(TOOLS[k].path, routeLang), TOOLS[k].name[lang]]);
+}
+
+/** GA4 tool id of each link target (for related_tool_click). */
+export const TOOL_EVENT_ID: Record<ToolKey, Tool> = {
+  burj: 'burj',
+  compatibility: 'compatibility',
+  abjad: 'abjad',
+  hours: 'planetary_hours',
+  planetOfDay: 'planet_of_the_day',
+  ikhtiyarat: 'ikhtiyarat',
+  manazil: 'manazil',
+  sadaqa: 'sadaqa',
+  sadaqaDay: 'sadaqa',
+  marriage: 'best_day_for',
+  travel: 'best_day_for',
+  moving: 'best_day_for',
+  business: 'best_day_for',
+};
+
+/** GA4 tool id of the page a block is on (keyed by its English path). */
+export function pageEventId(pagePath: string): Tool | undefined {
+  if (pagePath.startsWith('/best-day-for')) return 'best_day_for';
+  const key = (Object.keys(TOOLS) as ToolKey[]).find((k) => TOOLS[k].path === pagePath);
+  return key ? TOOL_EVENT_ID[key] : undefined;
+}
+
+/** The links for a page with their GA4 target id: [href, name, toolId]. */
+export function relatedToolLinksWithIds(pagePath: string, lang: ToolsLang, routeLang: ToolsLang = lang): [string, string, Tool][] {
+  return (RELATED_TOOLS[pagePath] ?? []).map((k) => [relatedToolHref(TOOLS[k].path, routeLang), TOOLS[k].name[lang], TOOL_EVENT_ID[k]]);
 }
