@@ -1,6 +1,6 @@
 # Urdu (/ur) — native review sheet
 
-Phase 1 Urdu pages for asrar.app. **All /ur pages are noindex and are not in the sitemap or hreflang** until this review is done.
+Phase 1 Urdu pages for asrar.app. **All /ur pages are noindex and are not in the sitemap or hreflang** until Mario approves indexing. The native review is done and its corrections are applied (see below).
 
 Pages: `/ur`, `/ur/name-and-mother-burj`, `/ur/compatibility`, `/ur/abjad`, `/ur/planetary-hours`, `/ur/planet-of-the-day`, `/ur/ikhtiyarat`.
 
@@ -27,6 +27,83 @@ Sources (edit there, then regenerate this file with `python3 scripts/i18n/ur/bui
 7. Urdu-typed names (VERIFIED, needs a product decision): the Abjad logic gives Urdu letters no value. Urdu ی (U+06CC), ک (U+06A9) and ہ (U+06C1) count as 0, and so do ٹ ڈ ڑ ں ھ ے. So فاطمہ = 130 but فاطمة = 135, علی = 100 but علي = 110, and کریم = 240 but كريم = 270 (name/mother burj, calculateAbjadValue). Calculation logic was deliberately NOT changed in this PR. The /ur pages tell users to type the Arabic spelling. A follow-up could normalise ی→ي, ک→ك, ہ→ه/ة before counting, which would need Mario’s approval as a calculation change. Please also check the wording of the note.
 8. Interpretive result content (soul-connection archetype meanings, burj career texts, per-date rule explanations, manzil descriptions, day guidance paragraphs) is NOT translated yet and still shows in English; the pages say “ٹول کے کچھ حصے ابھی انگریزی میں ہیں۔”
 
+### Reviewer answers (native review, Oct 2026)
+
+| # | Question | Reviewer answer | Status |
+|---|---|---|---|
+| 1 | آج کے ساعات | Change to the feminine آج کی ساعتیں / آج کی ساعاتِ کواکب. | ✅ applied: /planetary-hours meta description and the first FAQ now read «آج کی ساعاتِ کواکب»; glossary updated. |
+| 2 | اختیارات | Keep, but plain language first in SEO titles; never alone as a nav label or button (use «بہترین تاریخیں»). | ✅ applied: /ikhtiyarat title now leads with «نکاح، سفر اور کاروبار کے لیے مناسب تاریخ». The H1 stays «مناسب تاریخوں کا انتخاب (اختیارات)». Nav and buttons already use «بہترین تاریخیں»; no label uses اختیارات on its own. |
+| 3 | بدھ کی رات | Confirm the intended meaning in the source. Night before Wednesday → «شبِ بدھ (منگل کی شام)»; night after → «بدھ کی شام / رات (جمعرات کی شب)»; default «بدھ کی رات (مغرب کے بعد)». | ✅ applied: the source data means the night before Wednesday (burujData.json: “Wednesday night (Saturn’s night), after Isha” and “Tuesday midnight (Wednesday night)”; the first night hour of Tuesday evening is Saturn’s). So «Wednesday night» → «شبِ بدھ (منگل کی شام)», per the reviewer’s rule for that meaning. Note the French data says “Mercredi soir”, which looks like the same ambiguity in French. |
+| 4 | تعلقات ختم کرنا | Change to «نقصان دہ معاملات یا شراکتیں ختم کرنا». | ✅ applied |
+| 5 | Planet-of-the-day intro | Do not make the planet the agent; use the fuller wording. | ✅ applied (fuller wording). |
+| 6 | Astro terms | محترق، تحت الشعاع، ہبوط، وبال، رجعت، شرف are understood. Gloss خالی السیر and الطریقۃ المحترقۃ; use اتصال / انصراف for Applying/Separating. | ✅ applied |
+| 7 | Urdu letters in Abjad | Recommends normalising ی→ي، ک→ك، ہ/ۃ→ه/ة (ے→ي) before counting, or until then an inline warning. | ⏳ waiting for Mario: a calculation change, not done in this PR. The spelling note stays. |
+| 8 | English interpretive content | OK for a noindex phase 1 with UR_COMMON.toolUiNote; translate burj career texts and soul-connection meanings before indexing. | ⏳ not done in this PR (separate task). toolUiNote stays visible; /ur stays noindex. |
+
+
+## Review corrections (55 of 56 applied)
+
+From the native reviewer (Language Reviewer, Oct 2026). The tables further down show the strings as they are now, with the corrections in place. /ur stays noindex and out of the sitemap and hreflang until Mario approves indexing (Q7 and Q8 are still open).
+
+| Batch | String | Before | After | Status |
+|---|---|---|---|---|
+| 0 | Divine Names list, English label “Yā Wudd” | Yā Laṭīf (يا لطيف) · Yā Wudd (يا ودود) | Yā Laṭīf (يا لطيف) · Yā Wadūd (يا ودود) | ⏸ not applied in source: the /ur page already shows the correct Arabic «يا لطيف · يا ودود». The typo is in the English/French tool text (app/planetary-hours/PlanetaryHoursPage.tsx), which this PR leaves unchanged (EN/FR unaffected); the Urdu catalog key has to match that English text exactly. Fix it in a separate EN/FR change. |
+| 0 | Burj table (burujData.json): all 12 rows | 6 rows vocalised, 6 bare | all 12 fully vocalised (يَا رَحْمٰنُ with dagger alif) | ✅ applied (display only: urDhikrDisplay() in urPages.ts; burujData.json, the calculator and EN/FR/AR unchanged) |
+| 1 | UR_POTD.rulers | نبی کریم ﷺ پر کثرت سے درود اور دعا کا دن ہے | نبی کریم ﷺ پر کثرت سے درود شریف پڑھنے اور دعا کا دن ہے | ✅ applied (+ glossary entry) |
+| 1 | catalog «Jumada al-Awwal» | جمادی الاول | جمادی الاولیٰ | ✅ applied |
+| 1 | catalog «Jumada al-Thani» | جمادی الثانی | جمادی الثانیہ | ✅ applied |
+| 1 | catalog «جيد (Jayyid)» | جيد | جیّد | ✅ applied |
+| 1 | catalog «ضعيف (Ḍaʿīf)» | ضعيف | ضعیف | ✅ applied |
+| 1 | catalog «O Most Subtle, Most Kind» | اے باریک بین، نہایت مہربان | اے لطیف، اے باریک بین و مہربان | ✅ applied |
+| 1 | catalog «O Most High, O Most Great» | اے سب سے بلند، اے سب سے عظیم | اے بلند و برتر، اے عظمت والے | ✅ applied |
+| 1 | catalog «I understand — let's begin» | میں سمجھ گیا — شروع کریں | ٹھیک ہے، شروع کریں | ✅ applied |
+| 1 | catalog «All outcomes are determined by Allah alone (Qadr)» | ہر انجام کا فیصلہ صرف اللہ کی تقدیر سے ہوتا ہے۔ | ہر نتیجہ اللہ ہی کی تقدیر سے ہے۔ | ✅ applied |
+| 2 | / title | اسرار — ابجد، نام سے برج، ساعاتِ کواکب اور علم الاعداد اردو میں | اسرار — ابجد، نام سے برج، علم الاعداد اور ساعاتِ کواکب | ✅ applied |
+| 2 | / description | اسلامی روایت سے غور و فکر کے ٹولز: … | نام اور والدہ کے نام سے برج، ناموں کی مطابقت، ابجد، آج کی ساعاتِ کواکب اور اختیارات۔ … | ✅ applied |
+| 2 | /name-and-mother-burj title | نام اور والدہ کے نام سے برج معلوم کریں: ابجد سے برج کا حساب | نام اور امی کے نام سے برج معلوم کریں (ابجد) | ✅ applied |
+| 2 | /name-and-mother-burj description | اپنے نام اور امی (والدہ) کے نام کے ابجد اعداد سے … | اپنے اور امی کے نام کے ابجد اعداد سے برج معلوم کریں: … | ✅ applied |
+| 2 | /compatibility description | علم الحروف کے “روحانی ربط” کے طریقے سے ابجد کے ذریعے … | ابجد اور علم الحروف کے “روحانی ربط” سے شادی، دوستی یا کام کے لیے … | ✅ applied |
+| 2 | /abjad title | ابجد کیلکولیٹر: نام کے اعداد معلوم کریں (علم الاعداد) | ابجد کیلکولیٹر: نام کے اعداد معلوم کریں | ✅ applied |
+| 2 | /abjad description | کسی بھی نام یا عربی عبارت کی ابجد (حسابِ جمل) قیمت … | کسی بھی نام یا عربی عبارت کے ابجد اعداد (حسابِ جمل) … | ✅ applied |
+| 2 | /planetary-hours description | آج کے ساعات معلوم کریں: … | آج کی ساعاتِ کواکب: آپ کے شہر میں … | ✅ applied (also Q1) |
+| 2 | /ikhtiyarat title | علمِ اختیارات: نکاح، سفر اور کاروبار کے لیے مناسب تاریخ کا انتخاب | نکاح، سفر اور کاروبار کے لیے مناسب تاریخ (اختیارات) | ✅ applied (also Q2) |
+| 2 | /ikhtiyarat description | علمِ اختیارات کی روایت کے مطابق … | نکاح، سفر، نئے گھر میں منتقلی اور کاروبار کے لیے روایتی علمِ اختیارات کے مطابق … | ✅ applied |
+| 3A | catalog «Cutting ties» | تعلقات ختم کرنا | نقصان دہ معاملات یا شراکتیں ختم کرنا | ✅ applied (also Q4) |
+| 3A | catalog «Seeking authority» | عہدے کی طلب | منصب اور ذمہ داری کے معاملات | ✅ applied |
+| 3A | catalog planet-of-the-day intro | …اس دن کی کیفیت کا رنگ متعین کرتا ہے | علم النجوم کی روایت میں ہفتے کے ہر دن کو ایک سیارے سے منسوب کیا جاتا ہے، اور اسی نسبت سے … اس دن کی کیفیت بیان کی جاتی ہے۔ | ✅ applied (fuller Q5 wording) |
+| 3A | catalog «Auspicious» | سعد | موافق | ✅ applied |
+| 3A | catalog «Outlook» + Marriage/Friendship/Family/Work | منظرنامہ / شادی کا منظرنامہ… | پہلو / شادی کے پہلو، دوستی کے پہلو، خاندانی پہلو، کام کے پہلو | ✅ applied |
+| 3A | catalog «Watch Out» | خبردار رہیں | احتیاط کے پہلو | ✅ applied |
+| 3A | catalog «Most auspicious for important decisions» | اہم فیصلوں کے لیے سب سے موزوں | روایت میں اہم کاموں کے لیے موزوں سمجھا جاتا ہے | ✅ applied |
+| 3B | catalog «Air ♦ Neutral» | ہوا ♦ خنثیٰ | ہوا ♦ ممتزج | ✅ applied |
+| 3B | catalog «No concern here — this factor looks neutral…» | …یہ عنصر غیر جانبدار ہے۔ | …یہ عنصر معتدل ہے۔ | ✅ applied |
+| 3B | catalog re: «is neutral in» (both patterns) | $1 برجِ $2 میں معتدل حالت میں ہے | $1 برجِ $2 میں معتدل ہے | ✅ applied |
+| 3B | catalog re: «is comfortable in» (both patterns) | $1 برجِ $2 میں آرام کی حالت میں ہے | $1 برجِ $2 میں موافق حالت میں ہے | ✅ applied |
+| 3B | catalog «Moon Applying to Saturn/Mars (Hard Aspect)» | قمر کا زحل/مریخ سے سخت نظر کی طرف بڑھنا | قمر کا زحل/مریخ سے اتصال (سخت نظر) | ✅ applied |
+| 3B | catalog «Moon Applying to Venus or Jupiter» | قمر کا زہرہ یا مشتری کی طرف بڑھنا | قمر کا زہرہ یا مشتری سے اتصال | ✅ applied |
+| 3B | catalog «Moon Separating from Benefics» | قمر کا سعد سیاروں سے جدا ہونا | قمر کا سعد سیاروں سے انصراف (جدا ہونا) | ✅ applied |
+| 3B | catalog «Moon Void of Course» | قمر خالی السیر | قمر خالی السیر (کسی سیارے سے اتصال نہیں) | ✅ applied (Q6 gloss) |
+| 3B | catalog «Via Combusta» | الطریقۃ المحترقۃ | الطریقۃ المحترقۃ (میزان و عقرب کا مخصوص حصہ) | ✅ applied (Q6 gloss) |
+| 3B | catalog «Venus Dignified» | زہرہ قوت میں | زہرہ اپنی قوت میں | ✅ applied |
+| 3B | catalog «Person to Person» | فرد سے فرد | دو افراد کا موازنہ | ✅ applied |
+| 3B | catalog «Moment Alignment» | لمحے کی ہم آہنگی | اس وقت کی موافقت | ✅ applied |
+| 3B | catalog «Live positions» | براہِ راست مقامات | سیاروں کے موجودہ مقامات | ✅ applied |
+| 3B | catalog «Updated» | تازہ کاری | تازہ ترین | ✅ applied |
+| 3B | catalog «Quick Tips» | فوری مشورے | مختصر مشورے | ✅ applied |
+| 3B | catalog «Starts» | شروع | آغاز | ✅ applied |
+| 3B | catalog «· Waxing Gibbous» / «· Waning Gibbous» | بڑھتا ہوا چاند / گھٹتا ہوا چاند | بڑھتا محدب چاند / گھٹتا محدب چاند | ✅ applied (native check still recommended) |
+| 3B | catalog «Tropical» / «Sidereal» | ٹراپیکل / سائیڈریل | مداری (ٹراپیکل) / نجومی (سائیڈریل) | ✅ applied (native check still recommended) |
+| 3B | UR_BURJ.dobNote | (ٹراپیکل بروج) | (مداری / ٹراپیکل بروج) | ✅ applied |
+| 3B | UR_ABJAD.orders, faqs[1].a | …دونوں ترتیبوں کو سپورٹ کرتا ہے… / …دونوں کو سپورٹ کرتا ہے… | …دونوں ترتیبوں سے حساب کرتا ہے… | ✅ applied |
+| 3B | UR_HOME.intro | …اوقات کے روایتی اسلامی علوم کا ساتھی ہے۔ | …فلکی اوقات کے روایتی اسلامی علوم میں آپ کا رہنما ہے۔ | ✅ applied |
+| 3B | catalog «Avoid» / rating «اجتناب (Ijtanib)» | اجتناب کریں / اجتناب | اجتناب (both) | ✅ applied |
+| 3C | catalog «Best For» / «Best for» | کس کام کے لیے بہتر | موزوں کام | ✅ applied |
+| 3C | ur.ts nav.calculator | حساب | کیلکولیٹر | ✅ applied |
+| 3C | catalog «Type to search: Muhammad…» / «…Fatima…» | تلاش کے لیے لکھیں: Muhammad, Ali, Hassan... | تلاش کے لیے لکھیں: ⁦Muhammad, Ali, Hassan…⁩ (LRI…PDI) | ✅ applied |
+| 3C | catalog «Get it on Google Play» | Google Play سے حاصل کریں | ⁦Google Play⁩ سے حاصل کریں (LRI…PDI) | ✅ applied (the only other catalog value mixing Latin and Urdu were the two search placeholders above) |
+| 3C | catalog «Ḥadad Value» | حدد کی قیمت | عدد کی قیمت | ✅ applied: the source confirms it is the count, burujData.json says “repeat Hadad times: your name + mother’s name”. Native check of the label still welcome. |
+| 3C | UR_COMPAT.faqs[4].a | …دعوت ہو سکتا ہے۔ | …دعوت ہو سکتی ہے۔ | ✅ applied |
+
 ## 1. Qur'an / Divine Names
 
 Kept in Arabic script. The tool shows transliterations; on /ur they are replaced by the Arabic the tool itself writes. Divine Names in the Urdu page copy (burj table) are marked lang="ar" and rendered in Naskh; inside the tool they use the page font.
@@ -45,19 +122,19 @@ Kept in Arabic script. The tool shows transliterations; on /ur they are replaced
 | Yā ʿAliyyu Yā ʿAẓīm | يا علي يا عظيم |
 
 
-### Burj table: dhikr per burj (Arabic, unchanged from `burujData.json`)
+### Burj table: dhikr per burj (from `burujData.json`; shown fully vocalised on /ur, the data file is unchanged)
 
-| Burj | Arabic (shown) | Transliteration | English meaning |
+| Burj | Arabic (shown on /ur, vocalised) | Transliteration | English meaning |
 |---|---|---|---|
-| Aries (Ḥamal) | يا مالك يا قدوس | Ya Maliku Ya Quddus |  |
-| Taurus (Thawr) | يا كافي يا غني | Ya Kafi Ya Ghani |  |
-| Gemini (Jawzāʾ) | يا علي يا عظيم | Ya 'Aliyyu Ya 'Azim |  |
-| Cancer (Saraṭān) | يا رحمن يا رحيم | Ya Rahmanu Ya Rahim |  |
-| Leo (Asad) | يا حي يا قيوم | Ya Hayyu Ya Qayyum |  |
-| Virgo (Sunbula) | يا فتاح يا رزاق | Ya Fattah Ya Razzaq |  |
+| Aries (Ḥamal) | يَا مَالِكُ يَا قُدُّوسُ | Ya Maliku Ya Quddus |  |
+| Taurus (Thawr) | يَا كَافِي يَا غَنِيُّ | Ya Kafi Ya Ghani |  |
+| Gemini (Jawzāʾ) | يَا عَلِيُّ يَا عَظِيمُ | Ya 'Aliyyu Ya 'Azim |  |
+| Cancer (Saraṭān) | يَا رَحْمٰنُ يَا رَحِيمُ | Ya Rahmanu Ya Rahim |  |
+| Leo (Asad) | يَا حَيُّ يَا قَيُّومُ | Ya Hayyu Ya Qayyum |  |
+| Virgo (Sunbula) | يَا فَتَّاحُ يَا رَزَّاقُ | Ya Fattah Ya Razzaq |  |
 | Libra (Mīzān) | يَا عَلِيُّ يَا عَظِيمُ | Yā ʿAliyyu Yā ʿAẓīm |  |
 | Scorpio (ʿAqrab) | يَا مَالِكُ يَا قُدُّوسُ | Yā Māliku Yā Quddūs |  |
-| Sagittarius (Qaws) | يا كبير يا متعالي | Ya Kabiru Ya Muta'ali |  |
+| Sagittarius (Qaws) | يَا كَبِيرُ يَا مُتَعَالِي | Ya Kabiru Ya Muta'ali |  |
 | Capricorn (Jady) | يَا فَتَّاحُ يَا رَزَّاقُ | Yā Fattāḥu Yā Razzāq |  |
 | Aquarius (Dalw) | يَا عَلِيُّ يَا عَظِيمُ | Yā ʿAliyyu Yā ʿAẓīm |  |
 | Pisces (Ḥūt) | يَا كَبِيرُ يَا مُتَعَالِي | Yā Kabīru Yā Mutaʿālī |  |
@@ -74,13 +151,14 @@ Also in Arabic inside the Urdu copy: ﷺ (after نبی کریم), the example sp
 |---|---|---|
 | Allah | اللہ | Urdu orthography (ہ). Divine Names in lists/tables stay in Arabic script. |
 | the Prophet ﷺ | نبی کریم ﷺ |  |
+| ṣalawāt on the Prophet ﷺ | درود شریف (پڑھنا) | Review batch 1. |
 | Bismillāh | بسم اللہ |  |
 | Abjad (ḥisāb al-jummal) | ابجد (حسابِ جمل) |  |
 | ʿilm al-ḥurūf | علم الحروف |  |
 | ʿilm al-aʿdād (numerology) | علم الاعداد | Target search phrase. |
 | ʿilm al-nujūm (science of the stars) | علم النجوم / علمِ نجوم | In everyday Urdu this also means astrology; always framed as “روایتی” and “غور و فکر”. |
 | burj / burūj | برج / بروج |  |
-| planetary hours | ساعاتِ کواکب | Singular: ساعت (feminine). The SEO description and one FAQ use the colloquial search phrase “آج کے ساعات”. |
+| planetary hours | ساعاتِ کواکب | Singular: ساعت (feminine): آج کی ساعتیں / آج کی ساعاتِ کواکب (review Q1; the masculine “آج کے ساعات” is no longer used). |
 | planet | سیارہ | کوکب kept in the compound ساعاتِ کواکب. |
 | istikhāra / ṣalāt al-istikhāra | استخارہ / نمازِ استخارہ | Oblique: استخارے سے / استخارے کے ساتھ. |
 | ṣadaqa | صدقہ | Oblique: صدقے کی رہنمائی. |
@@ -92,7 +170,7 @@ Also in Arabic inside the Urdu copy: ﷺ (after نبی کریم), the example sp
 | the unseen (al-ghayb) | غیب | Disclaimer: غیب کا علم صرف اللہ کو ہے۔ |
 | kahāna (fortune-telling) | کہانت |  |
 | Beautiful Names of Allah | اسمائے حسنیٰ | Single Name: اسمِ الٰہی. |
-| ikhtiyārāt (electional timing) | اختیارات / علمِ اختیارات | Caution: in everyday Urdu اختیارات means “powers/authority”; always glossed (“مناسب تاریخوں کا انتخاب”). |
+| ikhtiyārāt (electional timing) | اختیارات / علمِ اختیارات | Caution: in everyday Urdu اختیارات means “powers/authority”; always glossed (“مناسب تاریخوں کا انتخاب”), plain language first in SEO titles, never alone as a nav label or button (“بہترین تاریخیں”). Review Q2. |
 | lunar mansions (manāzil) | منازلِ قمر / منزلِ قمر |  |
 | soul connection | روحانی ربط | Compatibility metric name. |
 | Mashriqi / Maghribi order | مشرقی / مغربی ترتیب | مغربی also means “Western”; glossed once as “(شمالی افریقی)”. |
@@ -113,16 +191,16 @@ Also in Arabic inside the Urdu copy: ﷺ (after نبی کریم), the example sp
 | Safar | صفر |
 | Rabi' al-Awwal | ربیع الاول |
 | Rabi' al-Thani | ربیع الثانی |
-| Jumada al-Awwal | جمادی الاول |
-| Jumada al-Thani | جمادی الثانی |
+| Jumada al-Awwal | جمادی الاولیٰ |
+| Jumada al-Thani | جمادی الثانیہ |
 | Rajab | رجب |
 | Sha'ban | شعبان |
 | Ramadan | رمضان |
 | Shawwal | شوال |
 | Dhu al-Qi'dah | ذوالقعدہ |
 | Dhu al-Hijjah | ذوالحجہ |
-| O Most Subtle, Most Kind | اے باریک بین، نہایت مہربان |
-| O Most High, O Most Great | اے سب سے بلند، اے سب سے عظیم |
+| O Most Subtle, Most Kind | اے لطیف، اے باریک بین و مہربان |
+| O Most High, O Most Great | اے بلند و برتر، اے عظمت والے |
 | Recommended Zikr | تجویز کردہ ذکر |
 | Recommended Dhikr | تجویز کردہ ذکر |
 | Zikr Challenge | ذکر چیلنج |
@@ -163,23 +241,23 @@ Also in Arabic inside the Urdu copy: ﷺ (after نبی کریم), the example sp
 | Frankincense + Liquid Storax | لوبان + میعۂ سائلہ |
 | Frankincense + Musk | لوبان + مشک |
 | اجتناب (Ijtanib) | اجتناب |
-| جيد (Jayyid) | جيد |
+| جيد (Jayyid) | جیّد |
 | مقبول (Maqbūl) | مقبول |
 | ممتاز (Mumtāz) | ممتاز |
-| ضعيف (Ḍaʿīf) | ضعيف |
+| ضعيف (Ḍaʿīf) | ضعیف |
 | Traditional stations for reflection and timing adab — not prediction. Allah alone knows the unseen. | غور و فکر اور اوقات کے ادب کے لیے روایتی منازل — پیش گوئی نہیں۔ غیب کا علم صرف اللہ کو ہے۔ |
 | This app explores the traditional Islamic sciences of ʿIlm al-Ḥurūf and ʿIlm al-ʿAdad for cultural and historical reflection. It is not for fortune-telling, medical advice, or religious rulings. Always consult qualified scholars for religious guidance. | یہ ایپ علم الحروف اور علم الاعداد کے روایتی اسلامی علوم کو ثقافتی اور تاریخی غور و فکر کے لیے پیش کرتی ہے۔ یہ قسمت کا حال بتانے، طبی مشورے یا شرعی فتووں کے لیے نہیں ہے۔ دینی رہنمائی کے لیے ہمیشہ مستند علما سے رجوع کریں۔ |
 | For educational and cultural exploration only • Always consult qualified scholars for religious guidance | صرف تعلیمی اور ثقافتی مطالعے کے لیے • دینی رہنمائی کے لیے ہمیشہ مستند علما سے رجوع کریں |
-| This tool provides spiritual reflection based on traditional Islamic sciences. It is NOT fortune-telling (kāhana), which is prohibited. Use it as a guide for self-reflection, always combined with prayer (duʿāʾ), practical wisdom (ḥikma), and consultation with qualified scholars. All outcomes are determined by Allah alone (Qadr). | یہ ٹول روایتی اسلامی علوم کی بنیاد پر روحانی غور و فکر پیش کرتا ہے۔ یہ کہانت (قسمت کا حال بتانا) نہیں ہے، جو ممنوع ہے۔ اسے خود احتسابی کے لیے رہنما سمجھیں، ہمیشہ دعا، عملی حکمت اور مستند علما سے مشورے کے ساتھ۔ ہر انجام کا فیصلہ صرف اللہ کی تقدیر سے ہوتا ہے۔ |
+| This tool provides spiritual reflection based on traditional Islamic sciences. It is NOT fortune-telling (kāhana), which is prohibited. Use it as a guide for self-reflection, always combined with prayer (duʿāʾ), practical wisdom (ḥikma), and consultation with qualified scholars. All outcomes are determined by Allah alone (Qadr). | یہ ٹول روایتی اسلامی علوم کی بنیاد پر روحانی غور و فکر پیش کرتا ہے۔ یہ کہانت (قسمت کا حال بتانا) نہیں ہے، جو ممنوع ہے۔ اسے خود احتسابی کے لیے رہنما سمجھیں، ہمیشہ دعا، عملی حکمت اور مستند علما سے مشورے کے ساتھ۔ ہر نتیجہ اللہ ہی کی تقدیر سے ہے۔ |
 | ⚠️ For reflection & spiritual timing — not prediction. Only Allah knows the unseen. | ⚠️ غور و فکر اور روحانی اوقات کے لیے — پیش گوئی نہیں۔ غیب کا علم صرف اللہ کو ہے۔ |
 | Begin with Bismillah and the relevant dhikr for that planet. Your intention (niyyah) is what matters most. | بسم اللہ اور اس سیارے کے مناسب ذکر سے آغاز کریں۔ اصل اہمیت آپ کی نیت کی ہے۔ |
 | ⚠️ Planetary hours are a traditional tool for reflection and spiritual timing used by Islamic scholars (ʿulamā'). They are not a form of divination (kahanah). Use them to align your efforts with natural rhythms, always relying on tawakkul (trust in Allah). Consult qualified scholars for religious rulings. | ⚠️ ساعاتِ کواکب غور و فکر اور روحانی اوقات کا ایک روایتی ذریعہ ہیں جو اسلامی علما استعمال کرتے رہے ہیں۔ یہ کہانت نہیں ہیں۔ انہیں اپنی کوششوں کو فطری اوقات سے ہم آہنگ کرنے کے لیے استعمال کریں، ہمیشہ اللہ پر توکل کے ساتھ۔ شرعی احکام کے لیے مستند علما سے رجوع کریں۔ |
 | ⚠️ This tool provides spiritual context inspired by Islamic ʿIlm al-Nujūm. It is for reflection, not divination (kahanah) or superstition. Every day is blessed — use this as a framework to align your intentions and channel your energy mindfully. Consult qualified scholars for religious guidance. | ⚠️ یہ ٹول اسلامی علم النجوم سے ماخوذ روحانی پس منظر پیش کرتا ہے۔ یہ غور و فکر کے لیے ہے، کہانت یا توہم پرستی کے لیے نہیں۔ ہر دن بابرکت ہے — اسے اپنی نیتوں کو درست سمت دینے اور اپنی توانائی کو سوچ سمجھ کر استعمال کرنے کا ایک خاکہ سمجھیں۔ دینی رہنمائی کے لیے مستند علما سے رجوع کریں۔ |
 | In ʿIlm al-Nujūm (Islamic celestial science), each day and night is divided into 12 unequal hours ruled by the seven classical planets in the Chaldean order: Saturn → Jupiter → Mars → Sun → Venus → Mercury → Moon. The length of each hour changes daily with sunrise and sunset. | علم النجوم (اسلامی فلکیاتی علم) میں ہر دن اور رات کو بارہ بارہ غیر مساوی ساعتوں میں تقسیم کیا جاتا ہے، جن پر سات کلاسیکی سیارے کلدانی ترتیب سے حاکم ہوتے ہیں: زحل ← مشتری ← مریخ ← شمس ← زہرہ ← عطارد ← قمر۔ ہر ساعت کی مدت طلوع و غروبِ آفتاب کے ساتھ روز بدلتی ہے۔ |
-| In ʿIlm al-Nujūm, each day of the week is assigned a ruling planet that colours its energy from sunrise to sunrise. This was well-known to classical Islamic scholars. The day starts at the first planetary hour after sunrise — not midnight. | علم النجوم میں ہفتے کے ہر دن کے لیے ایک حاکم سیارہ مقرر ہے، جو روایت کے مطابق طلوعِ آفتاب سے اگلے طلوع تک اس دن کی کیفیت کا رنگ متعین کرتا ہے۔ یہ بات کلاسیکی اسلامی علما میں معروف تھی۔ دن آدھی رات سے نہیں بلکہ طلوعِ آفتاب کے بعد کی پہلی ساعت سے شروع ہوتا ہے۔ |
+| In ʿIlm al-Nujūm, each day of the week is assigned a ruling planet that colours its energy from sunrise to sunrise. This was well-known to classical Islamic scholars. The day starts at the first planetary hour after sunrise — not midnight. | علم النجوم کی روایت میں ہفتے کے ہر دن کو ایک سیارے سے منسوب کیا جاتا ہے، اور اسی نسبت سے طلوعِ آفتاب سے اگلے طلوع تک اس دن کی کیفیت بیان کی جاتی ہے۔ یہ بات کلاسیکی اسلامی علما میں معروف تھی۔ دن آدھی رات سے نہیں بلکہ طلوعِ آفتاب کے بعد کی پہلی ساعت سے شروع ہوتا ہے۔ |
 | Before you begin | شروع کرنے سے پہلے |
 | This tool reflects a refinement from the classical Islamic tradition of ʿIlm al-Nujūm (electional astrology). It is not a substitute for istikhāra, consultation (mashwara) with family and trusted scholars, and tawakkul (reliance on Allah). No date is religiously forbidden for nikāḥ — marriage is permitted at any time of the year. | یہ ٹول علم النجوم (اوقات کے انتخاب کا علم) کی کلاسیکی اسلامی روایت سے ماخوذ ہے۔ یہ استخارے، گھر والوں اور معتبر علما سے مشورے، اور اللہ پر توکل کا متبادل نہیں۔ شریعت میں نکاح کے لیے کوئی تاریخ ممنوع نہیں — نکاح سال کے کسی بھی وقت جائز ہے۔ |
-| I understand — let's begin | میں سمجھ گیا — شروع کریں |
+| I understand — let's begin | ٹھیک ہے، شروع کریں |
 | About this feature / Adab | اس فیچر کے بارے میں / ادب |
 | A reflection tool from traditional teachings — it does not replace faith, free will, or wise counsel. | روایتی تعلیمات سے غور و فکر کا ایک ذریعہ — یہ ایمان، انسان کے اختیار اور دانشمندانہ مشورے کا متبادل نہیں۔ |
 
@@ -190,20 +268,20 @@ Titles and descriptions (`urMetadata.ts`). The title gets “ | اسرار” ap
 
 | Page / field | English | Urdu |
 |---|---|---|
-| / title | Asrār — Abjad, Burj by Name, Planetary Hours and ʿIlm al-Aʿdād in Urdu | اسرار — ابجد، نام سے برج، ساعاتِ کواکب اور علم الاعداد اردو میں |
-| / description | Reflective tools from the Islamic tradition: your burj from your name and your mother's name, name compatibility, Abjad, today's planetary hours, the planet of the day and ikhtiyārāt. For learning and reflection, not prediction. | اسلامی روایت سے غور و فکر کے ٹولز: نام اور والدہ کے نام سے برج، ناموں کی مطابقت، ابجد، آج کی ساعاتِ کواکب، آج کا سیارہ اور اختیارات۔ سیکھنے اور غور و فکر کے لیے، پیش گوئی کے لیے نہیں۔ |
-| /name-and-mother-burj title | Find Your Burj from Your Name and Your Mother's Name (Abjad) | نام اور والدہ کے نام سے برج معلوم کریں: ابجد سے برج کا حساب |
-| /name-and-mother-burj description | Find your burj from the Abjad values of your name and your mother's (ammi's) name: element, temperament, blessed day, dhikr and sadaqa. A free calculator for reflection, not prediction. | اپنے نام اور امی (والدہ) کے نام کے ابجد اعداد سے اپنا برج معلوم کریں: عنصر، مزاج، مبارک دن، ذکر اور صدقہ۔ مفت کیلکولیٹر، غور و فکر کے لیے، پیش گوئی کے لیے نہیں۔ |
+| / title | Asrār — Abjad, Burj by Name, Planetary Hours and ʿIlm al-Aʿdād in Urdu | اسرار — ابجد، نام سے برج، علم الاعداد اور ساعاتِ کواکب |
+| / description | Reflective tools from the Islamic tradition: your burj from your name and your mother's name, name compatibility, Abjad, today's planetary hours, the planet of the day and ikhtiyārāt. For learning and reflection, not prediction. | نام اور والدہ کے نام سے برج، ناموں کی مطابقت، ابجد، آج کی ساعاتِ کواکب اور اختیارات۔ اسلامی روایت سے غور و فکر کے ٹولز، پیش گوئی نہیں۔ |
+| /name-and-mother-burj title | Find Your Burj from Your Name and Your Mother's Name (Abjad) | نام اور امی کے نام سے برج معلوم کریں (ابجد) |
+| /name-and-mother-burj description | Find your burj from the Abjad values of your name and your mother's (ammi's) name: element, temperament, blessed day, dhikr and sadaqa. A free calculator for reflection, not prediction. | اپنے اور امی کے نام کے ابجد اعداد سے برج معلوم کریں: عنصر، مزاج، مبارک دن، ذکر اور صدقہ۔ مفت، غور و فکر کے لیے، پیش گوئی نہیں۔ |
 | /compatibility title | Name Compatibility for Marriage: Abjad Calculator | شادی کے لیے ناموں کی مطابقت: ابجد کیلکولیٹر |
-| /compatibility description | Compare two names with the Abjad 'soul connection' method of ʿilm al-ḥurūf, for marriage, friendship or work. For reflection, not a verdict: choose by dīn, character and istikhāra. | علم الحروف کے “روحانی ربط” کے طریقے سے ابجد کے ذریعے دو ناموں کا موازنہ کریں، شادی، دوستی یا کام کے لیے۔ یہ غور و فکر کے لیے ہے، فیصلہ نہیں؛ رشتے کا انتخاب دین، اخلاق اور استخارے سے کریں۔ |
-| /abjad title | Abjad Calculator: The Numerical Value of Names (ʿIlm al-Aʿdād) | ابجد کیلکولیٹر: نام کے اعداد معلوم کریں (علم الاعداد) |
-| /abjad description | Find the Abjad (ḥisāb al-jummal) value of any name or Arabic phrase in the Mashriqi or Maghribi order, with each letter's value and the balance of the four elements. For reflection and learning. | کسی بھی نام یا عربی عبارت کی ابجد (حسابِ جمل) قیمت مشرقی یا مغربی ترتیب میں معلوم کریں، ہر حرف کی قیمت اور چار عناصر کے توازن کے ساتھ۔ غور و فکر اور سیکھنے کے لیے۔ |
+| /compatibility description | Compare two names with the Abjad 'soul connection' method of ʿilm al-ḥurūf, for marriage, friendship or work. For reflection, not a verdict: choose by dīn, character and istikhāra. | ابجد اور علم الحروف کے “روحانی ربط” سے شادی، دوستی یا کام کے لیے دو ناموں کا موازنہ کریں۔ فیصلہ نہیں؛ رشتہ دین، اخلاق اور استخارے سے طے کریں۔ |
+| /abjad title | Abjad Calculator: The Numerical Value of Names (ʿIlm al-Aʿdād) | ابجد کیلکولیٹر: نام کے اعداد معلوم کریں |
+| /abjad description | Find the Abjad (ḥisāb al-jummal) value of any name or Arabic phrase in the Mashriqi or Maghribi order, with each letter's value and the balance of the four elements. For reflection and learning. | کسی بھی نام یا عربی عبارت کے ابجد اعداد (حسابِ جمل) مشرقی یا مغربی ترتیب میں، ہر حرف کی قیمت اور عناصر کے توازن کے ساتھ معلوم کریں۔ |
 | /planetary-hours title | Today's Planetary Hours (Sāʿāt al-Kawākib) for Your Location | آج کی ساعاتِ کواکب: آپ کے مقام کے مطابق ساعتیں |
-| /planetary-hours description | Find today's planetary hours: the planet ruling the current hour where you are, the times of the twelve day and twelve night hours in the Chaldean order, and what suits each planet. For reflection and planning your time. | آج کے ساعات معلوم کریں: آپ کے مقام پر اس وقت کی ساعت کا حاکم سیارہ، کلدانی ترتیب کے مطابق دن اور رات کی بارہ بارہ ساعتوں کے اوقات، اور ہر سیارے کے مناسب کام۔ غور و فکر اور وقت کی منصوبہ بندی کے لیے۔ |
+| /planetary-hours description | Find today's planetary hours: the planet ruling the current hour where you are, the times of the twelve day and twelve night hours in the Chaldean order, and what suits each planet. For reflection and planning your time. | آج کی ساعاتِ کواکب: آپ کے شہر میں اس وقت کی ساعت کا سیارہ، دن اور رات کی بارہ بارہ ساعتوں کے اوقات اور ہر ساعت کے مناسب کام، غور و فکر کے لیے۔ |
 | /planet-of-the-day title | Planet of the Day: The Day's Ruler and Its Hours | آج کا سیارہ: دن کا حاکم سیارہ اور اس کی ساعتیں |
 | /planet-of-the-day description | Learn which planet rules today in the tradition, the deeds, dhikr and sadaqa that suit it, and its planetary hours for your location. | جانیں کہ روایت کے مطابق آج کے دن کا حاکم سیارہ کون سا ہے، اس کے مناسب اعمال، ذکر اور صدقہ کیا ہیں، اور آپ کے مقام کے مطابق اس کی ساعتیں کب ہیں۔ |
-| /ikhtiyarat title | Ikhtiyārāt: Choosing Suitable Dates for Nikāḥ, Travel and Business | علمِ اختیارات: نکاح، سفر اور کاروبار کے لیے مناسب تاریخ کا انتخاب |
-| /ikhtiyarat description | Suitable dates for nikāḥ, travel, moving home and business according to the traditional science of ikhtiyārāt: the day's ruler, the planetary hour and the lunar mansion. For reflection alongside istikhāra and tawakkul. | علمِ اختیارات کی روایت کے مطابق نکاح، سفر، نئے گھر میں منتقلی اور کاروبار کے لیے مناسب تاریخیں: دن کا حاکم سیارہ، ساعت اور منزلِ قمر۔ استخارے اور توکل کے ساتھ غور و فکر کے لیے۔ |
+| /ikhtiyarat title | Ikhtiyārāt: Choosing Suitable Dates for Nikāḥ, Travel and Business | نکاح، سفر اور کاروبار کے لیے مناسب تاریخ (اختیارات) |
+| /ikhtiyarat description | Suitable dates for nikāḥ, travel, moving home and business according to the traditional science of ikhtiyārāt: the day's ruler, the planetary hour and the lunar mansion. For reflection alongside istikhāra and tawakkul. | نکاح، سفر، نئے گھر میں منتقلی اور کاروبار کے لیے روایتی علمِ اختیارات کے مطابق مناسب تاریخیں۔ استخارے اور توکل کے ساتھ غور و فکر کے لیے۔ |
 
 
 ### Page copy (H1, intro, sections, FAQ)
@@ -255,7 +333,7 @@ Titles and descriptions (`urMetadata.ts`). The title gets “ | اسرار” ap
 | UR_BURUJ[10] | Aquarius (Dalw) | دلو |
 | UR_BURUJ[11] | Pisces (Ḥūt) | حوت |
 | UR_HOME.h1 | Asrār — Abjad, Burj and Planetary Hours | اسرار — ابجد، برج اور ساعاتِ کواکب |
-| UR_HOME.intro | Asrār is a companion for the traditional Islamic sciences of ʿilm al-ḥurūf (the science of letters) and celestial timing. Find your burj from your name and your mother's name, compare two names, calculate Abjad values, see the planet ruling the current hour and day, and choose suitable dates with classical ikhtiyārāt. | اسرار علم الحروف (حروف کا علم) اور اوقات کے روایتی اسلامی علوم کا ساتھی ہے۔ نام اور والدہ کے نام سے اپنا برج معلوم کریں، دو ناموں کا موازنہ کریں، ابجد کی قیمتیں نکالیں، موجودہ ساعت اور دن کا حاکم سیارہ دیکھیں، اور کلاسیکی اختیارات کے ذریعے مناسب تاریخیں منتخب کریں۔ |
+| UR_HOME.intro | Asrār is a companion for the traditional Islamic sciences of ʿilm al-ḥurūf (the science of letters) and celestial timing. Find your burj from your name and your mother's name, compare two names, calculate Abjad values, see the planet ruling the current hour and day, and choose suitable dates with classical ikhtiyārāt. | اسرار علم الحروف (حروف کا علم) اور فلکی اوقات کے روایتی اسلامی علوم میں آپ کا رہنما ہے۔ نام اور والدہ کے نام سے اپنا برج معلوم کریں، دو ناموں کا موازنہ کریں، ابجد کی قیمتیں نکالیں، موجودہ ساعت اور دن کا حاکم سیارہ دیکھیں، اور کلاسیکی اختیارات کے ذریعے مناسب تاریخیں منتخب کریں۔ |
 | UR_HOME.toolsTitle | Tools in Urdu | اردو میں ٹولز |
 | UR_BURJ.h1 | Your Burj from Your Name and Your Mother's Name | نام اور والدہ کے نام سے برج |
 | UR_BURJ.lead | Write your name and your mother's name to find your burj by the Abjad count, with its element, temperament, blessed day, dhikr and the sadaqa suited to it. | اپنا نام اور اپنی والدہ کا نام لکھیں اور ابجد کے حساب سے اپنا برج معلوم کریں، ساتھ ہی اس کا عنصر، مزاج، مبارک دن، ذکر اور اس کے مناسب صدقہ بھی۔ |
@@ -266,7 +344,7 @@ Titles and descriptions (`urMetadata.ts`). The title gets “ | اسرار” ap
 | UR_BURJ.how[3] | The burj points to your element (fire, earth, air or water), which describes your temperament, and is linked to a blessed day, a dhikr and a sadaqa. | برج آپ کے عنصر (آگ، مٹی، ہوا یا پانی) کی نشان دہی کرتا ہے جو آپ کے مزاج کو بیان کرتا ہے، اور اس کے ساتھ ایک مبارک دن، ایک ذکر اور ایک صدقہ وابستہ ہے۔ |
 | UR_BURJ.exampleTitle | Worked example | حل شدہ مثال |
 | UR_BURJ.example | Muḥammad (محمد) = 92 and Fāṭima (فاطمة) = 135. The total is 92 + 135 = 227; 227 ÷ 12 = 18 remainder 11, so the burj is 11: Aquarius (Dalw), an air sign. | محمد = 92 اور فاطمہ (فاطمة) = 135۔ مجموعہ 92 + 135 = 227؛ 227 ÷ 12 = 18، باقی 11، لہٰذا برج 11 ہے: دلو، جو ہوائی برج ہے۔ |
-| UR_BURJ.dobNote | Don't know how to write your mother's name in Arabic? The tool can also find your burj from your date of birth (tropical zodiac). | والدہ کا نام عربی میں لکھنا نہیں آتا؟ یہ ٹول آپ کی تاریخِ پیدائش سے بھی برج (ٹراپیکل بروج) نکال سکتا ہے۔ |
+| UR_BURJ.dobNote | Don't know how to write your mother's name in Arabic? The tool can also find your burj from your date of birth (tropical zodiac). | والدہ کا نام عربی میں لکھنا نہیں آتا؟ یہ ٹول آپ کی تاریخِ پیدائش سے بھی برج (مداری / ٹراپیکل بروج) نکال سکتا ہے۔ |
 | UR_BURJ.istikharaTitle | This is not ṣalāt al-istikhāra | یہ نمازِ استخارہ نہیں ہے |
 | UR_BURJ.istikhara | The traditional name of this reflection is 'istikhāra of names', but it is not istikhāra: true istikhāra is ṣalāt al-istikhāra, the two rakʿas and the duʿāʾ taught by the Prophet ﷺ. Use this tool for reflection and learning, not prediction; only Allah knows the unseen. | اس غور و فکر کا روایتی نام “ناموں کا استخارہ” ہے، لیکن یہ استخارہ نہیں۔ اصل استخارہ نمازِ استخارہ ہے، یعنی وہ دو رکعتیں اور دعا جو نبی کریم ﷺ نے سکھائیں۔ اس ٹول کو غور و فکر اور سیکھنے کے لیے استعمال کریں، پیش گوئی کے لیے نہیں؛ غیب کا علم صرف اللہ کو ہے۔ |
 | UR_BURJ.tableTitle | The twelve burūj at a glance | بارہ بروج ایک نظر میں |
@@ -302,20 +380,20 @@ Titles and descriptions (`urMetadata.ts`). The title gets “ | اسرار” ap
 | UR_COMPAT.faqs[3].q | Is it permissible to rely on name compatibility? | کیا ناموں کی مطابقت پر بھروسا کرنا درست ہے؟ |
 | UR_COMPAT.faqs[3].a | Treat it as cultural reflection, not prediction. Choosing a spouse rests on dīn, character, family counsel and ṣalāt al-istikhāra. No number decides a marriage; Allah alone knows the unseen. | اسے ثقافتی غور و فکر سمجھیں، پیش گوئی نہیں۔ رشتے کا انتخاب دین، اخلاق، خاندان کے مشورے اور نمازِ استخارہ پر ہوتا ہے۔ کوئی عدد شادی کا فیصلہ نہیں کرتا؛ غیب کا علم صرف اللہ کو ہے۔ |
 | UR_COMPAT.faqs[4].q | What if our result is low? | اگر نتیجہ کم آئے تو کیا کریں؟ |
-| UR_COMPAT.faqs[4].a | A low number is not a prohibition and not a bad omen. It can be an invitation to talk about expectations and patience. Many happy marriages would 'fail' a numeric test. | کم عدد نہ تو ممانعت ہے اور نہ بدشگونی۔ یہ توقعات اور صبر کے بارے میں بات کرنے کی دعوت ہو سکتا ہے۔ بہت سی خوشگوار شادیاں کسی عددی امتحان میں “ناکام” ہو جاتیں۔ |
+| UR_COMPAT.faqs[4].a | A low number is not a prohibition and not a bad omen. It can be an invitation to talk about expectations and patience. Many happy marriages would 'fail' a numeric test. | کم عدد نہ تو ممانعت ہے اور نہ بدشگونی۔ یہ توقعات اور صبر کے بارے میں بات کرنے کی دعوت ہو سکتی ہے۔ بہت سی خوشگوار شادیاں کسی عددی امتحان میں “ناکام” ہو جاتیں۔ |
 | UR_ABJAD.h1 | Abjad Calculator: The Numerical Value of Your Name | ابجد کیلکولیٹر: نام کے اعداد |
 | UR_ABJAD.lead | Calculate the Abjad value of your name or any Arabic phrase, choose the Mashriqi or Maghribi order, and see each letter's value and the balance of the elements. | اپنے نام یا کسی بھی عربی عبارت کی ابجد قیمت نکالیں، مشرقی یا مغربی ترتیب منتخب کریں، اور ہر حرف کی قیمت اور عناصر کا توازن دیکھیں۔ |
 | UR_ABJAD.whatTitle | What is Abjad (ḥisāb al-jummal)? | ابجد (حسابِ جمل) کیا ہے؟ |
 | UR_ABJAD.what | The Abjad system gives every Arabic letter a number: alif 1, bāʾ 2, jīm 3, and so on up to ghayn 1000. The sum of a word's letter values is its ḥisāb al-jummal, a count used for centuries in the Islamic sciences and, in the subcontinent, also for chronograms (tārīkh-goʾī). | ابجد کے نظام میں عربی کے ہر حرف کی ایک عددی قیمت ہے: الف 1، ب 2، ج 3، اور اسی طرح غ 1000 تک۔ کسی لفظ کے حروف کی قیمتوں کا مجموعہ اس کا “حسابِ جمل” کہلاتا ہے، جو صدیوں سے اسلامی علوم میں، اور برصغیر میں تاریخ گوئی (مادۂ تاریخ) میں بھی استعمال ہوتا رہا ہے۔ |
 | UR_ABJAD.ordersTitle | The Mashriqi and Maghribi orders | مشرقی اور مغربی ترتیب |
-| UR_ABJAD.orders | In ʿilm al-ḥurūf and ʿilm al-aʿdād scholars studied the numerical values of the Divine Names, Qur'anic phrases and people's names, and linked the letters to the four elements: fire, air, water and earth. There are two common orders: the Mashriqi order used in the East, including Pakistan and India, and the Maghribi order used in North and West Africa. This calculator supports both so you can compare the results. | علم الحروف اور علم الاعداد میں علما نے اسمائے حسنیٰ، قرآنی عبارات اور لوگوں کے ناموں کی عددی قیمتوں کا مطالعہ کیا اور حروف کو چار عناصر سے جوڑا: آگ، ہوا، پانی اور مٹی۔ دو ترتیبیں عام ہیں: مشرقی ترتیب، جو پاکستان اور ہندوستان سمیت مشرق میں رائج ہے، اور مغربی ترتیب، جو شمالی اور مغربی افریقہ میں رائج ہے۔ یہ کیلکولیٹر دونوں ترتیبوں کو سپورٹ کرتا ہے تاکہ آپ نتائج کا موازنہ کر سکیں۔ |
+| UR_ABJAD.orders | In ʿilm al-ḥurūf and ʿilm al-aʿdād scholars studied the numerical values of the Divine Names, Qur'anic phrases and people's names, and linked the letters to the four elements: fire, air, water and earth. There are two common orders: the Mashriqi order used in the East, including Pakistan and India, and the Maghribi order used in North and West Africa. This calculator supports both so you can compare the results. | علم الحروف اور علم الاعداد میں علما نے اسمائے حسنیٰ، قرآنی عبارات اور لوگوں کے ناموں کی عددی قیمتوں کا مطالعہ کیا اور حروف کو چار عناصر سے جوڑا: آگ، ہوا، پانی اور مٹی۔ دو ترتیبیں عام ہیں: مشرقی ترتیب، جو پاکستان اور ہندوستان سمیت مشرق میں رائج ہے، اور مغربی ترتیب، جو شمالی اور مغربی افریقہ میں رائج ہے۔ یہ کیلکولیٹر دونوں ترتیبوں سے حساب کرتا ہے تاکہ آپ نتائج کا موازنہ کر سکیں۔ |
 | UR_ABJAD.howTitle | How to use the calculator | کیلکولیٹر کیسے استعمال کریں |
 | UR_ABJAD.how | Choose the type of calculation, write the name or phrase in Arabic letters (or in Latin letters for the tool to convert), then read the total, the value of each letter and the element analysis. | حساب کی قسم منتخب کریں، نام یا عبارت عربی حروف میں لکھیں (یا رومن حروف میں، تاکہ ٹول اسے عربی میں بدل دے)، پھر مجموعہ، ہر حرف کی قیمت اور عناصر کا تجزیہ دیکھیں۔ |
 | UR_ABJAD.example | Example: Muḥammad = mīm (40) + ḥāʾ (8) + mīm (40) + dāl (4) = 92. | مثال: محمد = م (40) + ح (8) + م (40) + د (4) = 92۔ |
 | UR_ABJAD.faqs[0].q | What is ʿilm al-aʿdād? | علم الاعداد کیا ہے؟ |
 | UR_ABJAD.faqs[0].a | ʿIlm al-aʿdād is the traditional study of the numbers of letters and words through Abjad. In this tool it is a subject of reflection and learning about names, not fortune-telling. | علم الاعداد حروف اور الفاظ کے اعداد کا روایتی مطالعہ ہے، جو ابجد کے ذریعے کیا جاتا ہے۔ اس ٹول میں یہ ناموں کے بارے میں غور و فکر اور سیکھنے کا موضوع ہے، قسمت کا حال بتانا نہیں۔ |
 | UR_ABJAD.faqs[1].q | What is the difference between the Mashriqi and Maghribi Abjad? | مشرقی اور مغربی ابجد میں کیا فرق ہے؟ |
-| UR_ABJAD.faqs[1].a | They are two traditional orders of the Abjad letters. They differ in the values of a few letters, so the same name can give two different totals. The calculator supports both; switch with the button above it. | یہ ابجد حروف کی دو روایتی ترتیبیں ہیں۔ چند حروف کی قیمتوں میں فرق ہے، اس لیے ایک ہی نام کے دو مختلف مجموعے آ سکتے ہیں۔ کیلکولیٹر دونوں کو سپورٹ کرتا ہے؛ اس کے اوپر دیے گئے بٹن سے ترتیب بدلیں۔ |
+| UR_ABJAD.faqs[1].a | They are two traditional orders of the Abjad letters. They differ in the values of a few letters, so the same name can give two different totals. The calculator supports both; switch with the button above it. | یہ ابجد حروف کی دو روایتی ترتیبیں ہیں۔ چند حروف کی قیمتوں میں فرق ہے، اس لیے ایک ہی نام کے دو مختلف مجموعے آ سکتے ہیں۔ کیلکولیٹر دونوں ترتیبوں سے حساب کرتا ہے؛ اس کے اوپر دیے گئے بٹن سے ترتیب بدلیں۔ |
 | UR_ABJAD.faqs[2].q | How do I calculate the numbers of my name? | اپنے نام کے اعداد کیسے نکالیں؟ |
 | UR_ABJAD.faqs[2].a | Write your name in Arabic letters in the calculator; it adds up the letter values, ignoring vowel marks. Example: Muḥammad = 40 + 8 + 40 + 4 = 92. You can also type the name in Latin letters and the tool will convert it to Arabic letters. | کیلکولیٹر میں اپنا نام عربی حروف میں لکھیں؛ یہ اعراب کو چھوڑ کر حروف کی قیمتیں جمع کرتا ہے۔ مثال: محمد = 40 + 8 + 40 + 4 = 92۔ آپ نام رومن حروف میں بھی لکھ سکتے ہیں، ٹول اسے عربی حروف میں بدل دے گا۔ |
 | UR_ABJAD.faqs[3].q | How is tāʾ marbūṭa counted? | تائے مربوطہ (ة) کیسے شمار ہوتی ہے؟ |
@@ -350,7 +428,7 @@ Titles and descriptions (`urMetadata.ts`). The title gets “ | اسرار” ap
 | UR_HOURS.colDay | Its day | دن |
 | UR_HOURS.colElement | Element | عنصر |
 | UR_HOURS.colBestFor | Suits | مناسب کام |
-| UR_HOURS.faqs[0].q | How do I find today's planetary hours? | آج کے ساعات کیسے معلوم کریں؟ |
+| UR_HOURS.faqs[0].q | How do I find today's planetary hours? | آج کی ساعاتِ کواکب کیسے معلوم کریں؟ |
 | UR_HOURS.faqs[0].a | Open the tool above and allow your location. It calculates today's sunrise and sunset where you are and shows the twelve day hours and twelve night hours, with the planet ruling each one. | اوپر والا ٹول کھولیں اور اپنے مقام (لوکیشن) کی اجازت دیں۔ یہ آپ کے مقام پر آج کے طلوع اور غروبِ آفتاب کا حساب کر کے دن کی بارہ اور رات کی بارہ ساعتیں، ہر ایک کے حاکم سیارے کے ساتھ دکھاتا ہے۔ |
 | UR_HOURS.faqs[1].q | How long is a planetary hour? | ایک ساعت کتنی دیر کی ہوتی ہے؟ |
 | UR_HOURS.faqs[1].a | The time from sunrise to sunset is divided by 12 to give the day hours, and the time from sunset to the next sunrise by 12 to give the night hours, so the length of an hour changes from day to day and from place to place. | طلوعِ آفتاب سے غروب تک کے وقت کو 12 پر تقسیم کرنے سے دن کی ساعتیں بنتی ہیں، اور غروب سے اگلے طلوع تک کے وقت کو 12 پر تقسیم کرنے سے رات کی ساعتیں؛ اس لیے ساعت کی مدت ہر دن اور ہر جگہ مختلف ہوتی ہے۔ |
@@ -363,7 +441,7 @@ Titles and descriptions (`urMetadata.ts`). The title gets “ | اسرار” ap
 | UR_POTD.h1 | Planet of the Day | آج کا سیارہ |
 | UR_POTD.lead | Each weekday has a ruling planet in the tradition. See today's planet, what suits it, and when its hours fall where you are. | روایت میں ہفتے کے ہر دن کا ایک حاکم سیارہ ہے۔ آج کا سیارہ، اس کے مناسب کام، اور آپ کے مقام پر اس کی ساعتوں کے اوقات دیکھیں۔ |
 | UR_POTD.rulersTitle | The rulers of the seven days | ساتوں دنوں کے حاکم سیارے |
-| UR_POTD.rulers | Sunday: the Sun; Monday: the Moon; Tuesday: Mars; Wednesday: Mercury; Thursday: Jupiter; Friday: Venus; Saturday: Saturn. Whatever its planet, Friday keeps its own special status in Islam: it is the day of jumuʿa, of abundant ṣalawāt on the Prophet ﷺ and of duʿāʾ. | اتوار: شمس؛ پیر: قمر؛ منگل: مریخ؛ بدھ: عطارد؛ جمعرات: مشتری؛ جمعہ: زہرہ؛ ہفتہ: زحل۔ سیارہ کوئی بھی ہو، جمعہ کا دن اسلام میں اپنی الگ فضیلت رکھتا ہے: یہ نمازِ جمعہ، نبی کریم ﷺ پر کثرت سے درود اور دعا کا دن ہے۔ |
+| UR_POTD.rulers | Sunday: the Sun; Monday: the Moon; Tuesday: Mars; Wednesday: Mercury; Thursday: Jupiter; Friday: Venus; Saturday: Saturn. Whatever its planet, Friday keeps its own special status in Islam: it is the day of jumuʿa, of abundant ṣalawāt on the Prophet ﷺ and of duʿāʾ. | اتوار: شمس؛ پیر: قمر؛ منگل: مریخ؛ بدھ: عطارد؛ جمعرات: مشتری؛ جمعہ: زہرہ؛ ہفتہ: زحل۔ سیارہ کوئی بھی ہو، جمعہ کا دن اسلام میں اپنی الگ فضیلت رکھتا ہے: یہ نمازِ جمعہ، نبی کریم ﷺ پر کثرت سے درود شریف پڑھنے اور دعا کا دن ہے۔ |
 | UR_POTD.faqs[0].q | Which planet rules today? | آج کس سیارے کا دن ہے؟ |
 | UR_POTD.faqs[0].a | The tool above shows it. In the tradition each weekday is ruled by one of the seven classical planets, and the first planetary hour after sunrise belongs to that planet. | اوپر والا ٹول یہ دکھاتا ہے۔ روایت میں ہفتے کے ہر دن پر سات کلاسیکی سیاروں میں سے ایک حاکم ہوتا ہے، اور طلوعِ آفتاب کے بعد پہلی ساعت اسی سیارے کی ہوتی ہے۔ |
 | UR_POTD.faqs[1].q | Does the planet of the day decide whether my day will be good? | کیا آج کا سیارہ طے کرتا ہے کہ میرا دن اچھا گزرے گا؟ |
@@ -385,7 +463,7 @@ Titles and descriptions (`urMetadata.ts`). The title gets “ | اسرار” ap
 | Key | English | Urdu |
 |---|---|---|
 | ur.ts nav.home | Home | ہوم |
-| ur.ts nav.calculator | Calculator | حساب |
+| ur.ts nav.calculator | Calculator | کیلکولیٹر |
 | ur.ts nav.letterCalculator | Letter Calculator | حروف کا حساب |
 | ur.ts nav.compatibility | Compatibility | مطابقت |
 | ur.ts nav.planetaryHours | Planetary Hours | ساعاتِ کواکب |
@@ -513,10 +591,10 @@ Exact-match English text in the tools → Urdu. `re:` keys are patterns; `$1`…
 | re:^(\w+) is weakened in (\w+)$ | $1 برجِ $2 میں کمزور ہے |
 | re:^(\S+) (\w+) — (\w+) is strong in (\w+)$ | $1 $2 — $3 برجِ $4 میں قوی ہے |
 | re:^(\w+) is strong in (\w+)$ | $1 برجِ $2 میں قوی ہے |
-| re:^(\S+) (\w+) — (\w+) is neutral in (\w+)$ | $1 $2 — $3 برجِ $4 میں معتدل حالت میں ہے |
-| re:^(\w+) is neutral in (\w+)$ | $1 برجِ $2 میں معتدل حالت میں ہے |
-| re:^(\S+) (\w+) — (\w+) is comfortable in (\w+)$ | $1 $2 — $3 برجِ $4 میں آرام کی حالت میں ہے |
-| re:^(\w+) is comfortable in (\w+)$ | $1 برجِ $2 میں آرام کی حالت میں ہے |
+| re:^(\S+) (\w+) — (\w+) is neutral in (\w+)$ | $1 $2 — $3 برجِ $4 میں معتدل ہے |
+| re:^(\w+) is neutral in (\w+)$ | $1 برجِ $2 میں معتدل ہے |
+| re:^(\S+) (\w+) — (\w+) is comfortable in (\w+)$ | $1 $2 — $3 برجِ $4 میں موافق حالت میں ہے |
+| re:^(\w+) is comfortable in (\w+)$ | $1 برجِ $2 میں موافق حالت میں ہے |
 | re:^(\w+) status: (\w+)$ | $1 کی حالت: $2 |
 | re:^(\d{1,2}:\d\d (?:AM\|PM)) → (\d{1,2}:\d\d (?:AM\|PM))$ | ⁦$p1 → $p2⁩ |
 | re:^(\d{1,2}:\d\d (?:AM\|PM))$ | ⁦$p1⁩ |
@@ -534,9 +612,9 @@ Exact-match English text in the tools → Urdu. `re:` keys are patterns; `$1`…
 | Today | آج |
 | Real-time insights based on traditional Islamic celestial science and Chaldean planetary hours. | روایتی اسلامی فلکیاتی علم اور کلدانی ساعاتِ کواکب پر مبنی بروقت معلومات۔ |
 | Planetary Hour | سیارے کی ساعت |
-| Moment Alignment | لمحے کی ہم آہنگی |
+| Moment Alignment | اس وقت کی موافقت |
 | Cautious | محتاط |
-| Auspicious | سعد |
+| Auspicious | موافق |
 | Moderate | معتدل |
 | Night | رات |
 | Day | دن |
@@ -556,15 +634,15 @@ Exact-match English text in the tools → Urdu. `re:` keys are patterns; `$1`…
 | fire | آگ |
 | water | پانی |
 | earth | مٹی |
-| Starts | شروع |
+| Starts | آغاز |
 | See All Hours | تمام ساعتیں دیکھیں |
 | Full Guide → | مکمل رہنمائی ← |
 | Planet of the Day | آج کا سیارہ |
 | Planet of the Day - | آج کا سیارہ - |
 | Passionate & energizing | پرجوش اور توانائی بخش |
 | Current Position | موجودہ مقام |
-| Best For | کس کام کے لیے بہتر |
-| Best for | کس کام کے لیے بہتر |
+| Best For | موزوں کام |
+| Best for | موزوں کام |
 | Leadership | قیادت |
 | Starting projects | نئے منصوبے شروع کرنا |
 | Physical activities | جسمانی سرگرمیاں |
@@ -573,18 +651,18 @@ Exact-match English text in the tools → Urdu. `re:` keys are patterns; `$1`…
 | Focus | توجہ |
 | · Waxing Crescent | · بڑھتا ہلال |
 | · First Quarter | · پہلی چوتھائی |
-| · Waxing Gibbous | · بڑھتا ہوا چاند |
+| · Waxing Gibbous | · بڑھتا محدب چاند |
 | · Full Moon | · بدر (پورا چاند) |
-| · Waning Gibbous | · گھٹتا ہوا چاند |
+| · Waning Gibbous | · گھٹتا محدب چاند |
 | · Last Quarter | · آخری چوتھائی |
 | · Waning Crescent | · گھٹتا ہلال |
 | · New Moon | · نیا چاند |
 | ▶ Activities & wisdom (educational) | ▶ سرگرمیاں اور حکمت (تعلیمی) |
 | Planet Transits | سیاروں کی گردش |
-| Live positions | براہِ راست مقامات |
-| Tropical | ٹراپیکل |
-| Sidereal | سائیڈریل |
-| Updated | تازہ کاری |
+| Live positions | سیاروں کے موجودہ مقامات |
+| Tropical | مداری (ٹراپیکل) |
+| Sidereal | نجومی (سائیڈریل) |
+| Updated | تازہ ترین |
 | New: Birth Profile | نیا: پیدائشی پروفائل |
 | Your Sun/Moon signs, lunar mansion, day ruler, and more. | آپ کے شمسی/قمری بروج، منزلِ قمر، دن کا حاکم اور بہت کچھ۔ |
 | Who Am I? | میں کون ہوں؟ |
@@ -600,8 +678,8 @@ Exact-match English text in the tools → Urdu. `re:` keys are patterns; `$1`…
 | Send Feedback | رائے بھیجیں |
 | Dismiss | بند کریں |
 | Primary navigation | مرکزی نیویگیشن |
-| Get it on Google Play | Google Play سے حاصل کریں |
-| Quick Tips | فوری مشورے |
+| Get it on Google Play | ⁦Google Play⁩ سے حاصل کریں |
+| Quick Tips | مختصر مشورے |
 | Learn | سیکھیں |
 | Discover Your Spiritual Profile | اپنا روحانی پروفائل دریافت کریں |
 | Step 1: Enter Names | مرحلہ 1: نام لکھیں |
@@ -635,8 +713,8 @@ Exact-match English text in the tools → Urdu. `re:` keys are patterns; `$1`…
 | Invite | دعوت دیں |
 | Share | شیئر کریں |
 | Learning Center | سیکھنے کا مرکز |
-| Type to search: Muhammad, Ali, Hassan... | تلاش کے لیے لکھیں: Muhammad, Ali, Hassan... |
-| Type to search: Fatima, Aisha, Khadija... | تلاش کے لیے لکھیں: Fatima, Aisha, Khadija... |
+| Type to search: Muhammad, Ali, Hassan... | تلاش کے لیے لکھیں: ⁦Muhammad, Ali, Hassan…⁩ |
+| Type to search: Fatima, Aisha, Khadija... | تلاش کے لیے لکھیں: ⁦Fatima, Aisha, Khadija…⁩ |
 | Export | ایکسپورٹ |
 | Overview | جائزہ |
 | Quick summary | مختصر خلاصہ |
@@ -658,16 +736,16 @@ Exact-match English text in the tools → Urdu. `re:` keys are patterns; `$1`…
 | Your Numbers | آپ کے اعداد |
 | ID Number | شناختی عدد |
 | Total | کل |
-| Ḥadad Value | حدد کی قیمت |
+| Ḥadad Value | عدد کی قیمت |
 | Count | تعداد |
 | Repetitions | تکرار |
 | Your Power Day | آپ کا خاص دن |
-| Most auspicious for important decisions | اہم فیصلوں کے لیے سب سے موزوں |
+| Most auspicious for important decisions | روایت میں اہم کاموں کے لیے موزوں سمجھا جاتا ہے |
 | Core Trait | بنیادی خصوصیت |
 | Key Insights | اہم نکات |
 | categories | زمرے |
 | Best practiced on | بہتر وقت |
-| Wednesday night | بدھ کی رات |
+| Wednesday night | شبِ بدھ (منگل کی شام) |
 | Social Strengths | سماجی خوبیاں |
 | Your Colors | آپ کے رنگ |
 | Key Recommendation | اہم مشورہ |
@@ -679,7 +757,7 @@ Exact-match English text in the tools → Urdu. `re:` keys are patterns; `$1`…
 | Next Steps | اگلے قدم |
 | ASRĀR · COMPATIBILITY | اسرار · مطابقت |
 | Explore relationship harmony through Islamic numerology | اسلامی علم الاعداد کے ذریعے رشتوں کی ہم آہنگی پر غور کریں |
-| Person to Person | فرد سے فرد |
+| Person to Person | دو افراد کا موازنہ |
 | By Names | ناموں سے |
 | By Birth Date | تاریخِ پیدائش سے |
 | Enter Two Names | دو نام لکھیں |
@@ -702,12 +780,12 @@ Exact-match English text in the tools → Urdu. `re:` keys are patterns; `$1`…
 | Guidance | رہنمائی |
 | Protection | حفاظت |
 | Meaning | مفہوم |
-| Outlook | منظرنامہ |
-| Marriage Outlook | شادی کا منظرنامہ |
-| Friendship Outlook | دوستی کا منظرنامہ |
-| Family Outlook | خاندانی منظرنامہ |
-| Work Outlook | کام کا منظرنامہ |
-| Watch Out | خبردار رہیں |
+| Outlook | پہلو |
+| Marriage Outlook | شادی کے پہلو |
+| Friendship Outlook | دوستی کے پہلو |
+| Family Outlook | خاندانی پہلو |
+| Work Outlook | کام کے پہلو |
+| Watch Out | احتیاط کے پہلو |
 | Key to Success | کامیابی کی کنجی |
 | How this number is calculated | یہ عدد کیسے نکالا جاتا ہے |
 | Calculate Another Pair | ایک اور جوڑے کا حساب کریں |
@@ -744,7 +822,7 @@ Exact-match English text in the tools → Urdu. `re:` keys are patterns; `$1`…
 | Leadership decisions | قیادت کے فیصلے |
 | Visibility & reputation | شہرت اور ساکھ |
 | Official matters | سرکاری معاملات |
-| Seeking authority | عہدے کی طلب |
+| Seeking authority | منصب اور ذمہ داری کے معاملات |
 | Spiritual elevation | روحانی بلندی |
 | Travel & movement | سفر اور نقل و حرکت |
 | Emotional healing | جذباتی شفا |
@@ -755,7 +833,7 @@ Exact-match English text in the tools → Urdu. `re:` keys are patterns; `$1`…
 | Physical work | جسمانی کام |
 | Overcoming obstacles | رکاوٹوں پر قابو |
 | Surgery (if needed) | سرجری (اگر ضروری ہو) |
-| Cutting ties | تعلقات ختم کرنا |
+| Cutting ties | نقصان دہ معاملات یا شراکتیں ختم کرنا |
 | Study & learning | پڑھائی اور سیکھنا |
 | Writing & communication | تحریر اور رابطہ |
 | Trade & contracts | تجارت اور معاہدے |
@@ -781,7 +859,7 @@ Exact-match English text in the tools → Urdu. `re:` keys are patterns; `$1`…
 | Today's Ruling Planet | آج کا حاکم سیارہ |
 | Fire ♦ Masculine | آگ ♦ مذکر |
 | Water ♦ Feminine | پانی ♦ مؤنث |
-| Air ♦ Neutral | ہوا ♦ خنثیٰ |
+| Air ♦ Neutral | ہوا ♦ ممتزج |
 | Air ♦ Masculine | ہوا ♦ مذکر |
 | Earth ♦ Feminine | مٹی ♦ مؤنث |
 | Earth ♦ Masculine | مٹی ♦ مذکر |
@@ -833,26 +911,26 @@ Exact-match English text in the tools → Urdu. `re:` keys are patterns; `$1`…
 | Good | اچھا |
 | Acceptable | قابلِ قبول |
 | Weak | کمزور |
-| Avoid | اجتناب کریں |
+| Avoid | اجتناب |
 | Day of the Week | ہفتے کا دن |
 | Favorable Planetary Hour | موافق ساعت |
-| No concern here — this factor looks neutral for this date. | یہاں کوئی تشویش نہیں — اس تاریخ کے لیے یہ عنصر غیر جانبدار ہے۔ |
+| No concern here — this factor looks neutral for this date. | یہاں کوئی تشویش نہیں — اس تاریخ کے لیے یہ عنصر معتدل ہے۔ |
 | Dark of the Moon (Muḥāq) | محاق (چاند کی تاریک راتیں) |
 | Moon Combust (Muḥtaraq) | قمر محترق |
-| Moon Void of Course (Khāliya al-Sayr) | قمر خالی السیر |
-| Moon Applying to Saturn/Mars (Hard Aspect) | قمر کا زحل/مریخ سے سخت نظر کی طرف بڑھنا |
+| Moon Void of Course (Khāliya al-Sayr) | قمر خالی السیر (کسی سیارے سے اتصال نہیں) |
+| Moon Applying to Saturn/Mars (Hard Aspect) | قمر کا زحل/مریخ سے اتصال (سخت نظر) |
 | Eclipse Proximity | گرہن کی قربت |
 | Moon Under the Sun’s Beams (Taḥt al-Shuʿāʿ) | قمر تحت الشعاع |
 | Moon Waning | گھٹتا چاند |
-| Via Combusta (Al-Ṭarīqa al-Muḥtariqa) | الطریقۃ المحترقۃ |
+| Via Combusta (Al-Ṭarīqa al-Muḥtariqa) | الطریقۃ المحترقۃ (میزان و عقرب کا مخصوص حصہ) |
 | Moon in Fall or Detriment | قمر ہبوط یا وبال میں |
 | Venus Combust | زہرہ محترق |
 | Venus Retrograde | زہرہ رجعت میں |
 | Venus in Fall or Detriment | زہرہ ہبوط یا وبال میں |
 | Mercury Retrograde (Contract Signing) | عطارد رجعت میں (معاہدے پر دستخط) |
-| Moon Separating from Benefics | قمر کا سعد سیاروں سے جدا ہونا |
+| Moon Separating from Benefics | قمر کا سعد سیاروں سے انصراف (جدا ہونا) |
 | Moon Waxing, Clear of the Beams | بڑھتا چاند، شعاعوں سے باہر |
 | Moon Essential Dignity | قمر کی ذاتی قوت |
-| Moon Applying to Venus or Jupiter | قمر کا زہرہ یا مشتری کی طرف بڑھنا |
-| Venus Dignified | زہرہ قوت میں |
+| Moon Applying to Venus or Jupiter | قمر کا زہرہ یا مشتری سے اتصال |
+| Venus Dignified | زہرہ اپنی قوت میں |
 

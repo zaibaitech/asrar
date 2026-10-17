@@ -88,6 +88,27 @@ export const UR_WEEKDAYS: readonly T[] = [
   t('Saturday', 'ہفتہ'),
 ];
 /** The twelve burūj, 1 = Aries (Ḥamal) … 12 = Pisces (Ḥūt). */
+/**
+ * Display form of the burj dhikr on /ur (Urdu review, batch 0): burujData.json
+ * vocalises 6 of the 12 pairs and leaves 6 bare, so the /ur burj table shows
+ * one fully vocalised style for all 12. Display only: the data file, the
+ * calculator and the EN/FR/AR pages are unchanged. Keyed by the bare form.
+ */
+const UR_DHIKR_VOCALISED: Readonly<Record<string, string>> = {
+  'يا مالك يا قدوس': 'يَا مَالِكُ يَا قُدُّوسُ',
+  'يا كافي يا غني': 'يَا كَافِي يَا غَنِيُّ',
+  'يا علي يا عظيم': 'يَا عَلِيُّ يَا عَظِيمُ',
+  'يا رحمن يا رحيم': 'يَا رَحْمٰنُ يَا رَحِيمُ',
+  'يا حي يا قيوم': 'يَا حَيُّ يَا قَيُّومُ',
+  'يا فتاح يا رزاق': 'يَا فَتَّاحُ يَا رَزَّاقُ',
+  'يا كبير يا متعالي': 'يَا كَبِيرُ يَا مُتَعَالِي',
+};
+const stripHarakat = (s: string) => s.replace(/[\u064B-\u0652\u0670]/g, '').replace(/\s+/g, ' ').trim();
+/** The vocalised display form of a burj dhikr (falls back to the data as is). */
+export function urDhikrDisplay(arabic: string): string {
+  return UR_DHIKR_VOCALISED[stripHarakat(arabic)] ?? arabic;
+}
+
 export const UR_BURUJ: readonly T[] = [
   t('Aries (Ḥamal)', 'حمل'),
   t('Taurus (Thawr)', 'ثور'),
@@ -110,7 +131,7 @@ export const UR_HOME = {
   h1: t('Asrār — Abjad, Burj and Planetary Hours', 'اسرار — ابجد، برج اور ساعاتِ کواکب'),
   intro: t(
     "Asrār is a companion for the traditional Islamic sciences of ʿilm al-ḥurūf (the science of letters) and celestial timing. Find your burj from your name and your mother's name, compare two names, calculate Abjad values, see the planet ruling the current hour and day, and choose suitable dates with classical ikhtiyārāt.",
-    'اسرار علم الحروف (حروف کا علم) اور اوقات کے روایتی اسلامی علوم کا ساتھی ہے۔ نام اور والدہ کے نام سے اپنا برج معلوم کریں، دو ناموں کا موازنہ کریں، ابجد کی قیمتیں نکالیں، موجودہ ساعت اور دن کا حاکم سیارہ دیکھیں، اور کلاسیکی اختیارات کے ذریعے مناسب تاریخیں منتخب کریں۔',
+    'اسرار علم الحروف (حروف کا علم) اور فلکی اوقات کے روایتی اسلامی علوم میں آپ کا رہنما ہے۔ نام اور والدہ کے نام سے اپنا برج معلوم کریں، دو ناموں کا موازنہ کریں، ابجد کی قیمتیں نکالیں، موجودہ ساعت اور دن کا حاکم سیارہ دیکھیں، اور کلاسیکی اختیارات کے ذریعے مناسب تاریخیں منتخب کریں۔',
   ),
   toolsTitle: t('Tools in Urdu', 'اردو میں ٹولز'),
 };
@@ -150,7 +171,7 @@ export const UR_BURJ = {
   ),
   dobNote: t(
     "Don't know how to write your mother's name in Arabic? The tool can also find your burj from your date of birth (tropical zodiac).",
-    'والدہ کا نام عربی میں لکھنا نہیں آتا؟ یہ ٹول آپ کی تاریخِ پیدائش سے بھی برج (ٹراپیکل بروج) نکال سکتا ہے۔',
+    'والدہ کا نام عربی میں لکھنا نہیں آتا؟ یہ ٹول آپ کی تاریخِ پیدائش سے بھی برج (مداری / ٹراپیکل بروج) نکال سکتا ہے۔',
   ),
   istikharaTitle: t('This is not ṣalāt al-istikhāra', 'یہ نمازِ استخارہ نہیں ہے'),
   istikhara: t(
@@ -267,7 +288,7 @@ export const UR_COMPAT = {
       q: t('What if our result is low?', 'اگر نتیجہ کم آئے تو کیا کریں؟'),
       a: t(
         "A low number is not a prohibition and not a bad omen. It can be an invitation to talk about expectations and patience. Many happy marriages would 'fail' a numeric test.",
-        'کم عدد نہ تو ممانعت ہے اور نہ بدشگونی۔ یہ توقعات اور صبر کے بارے میں بات کرنے کی دعوت ہو سکتا ہے۔ بہت سی خوشگوار شادیاں کسی عددی امتحان میں “ناکام” ہو جاتیں۔',
+        'کم عدد نہ تو ممانعت ہے اور نہ بدشگونی۔ یہ توقعات اور صبر کے بارے میں بات کرنے کی دعوت ہو سکتی ہے۔ بہت سی خوشگوار شادیاں کسی عددی امتحان میں “ناکام” ہو جاتیں۔',
       ),
     },
   ] as Faq[],
@@ -290,7 +311,7 @@ export const UR_ABJAD = {
   ordersTitle: t('The Mashriqi and Maghribi orders', 'مشرقی اور مغربی ترتیب'),
   orders: t(
     "In ʿilm al-ḥurūf and ʿilm al-aʿdād scholars studied the numerical values of the Divine Names, Qur'anic phrases and people's names, and linked the letters to the four elements: fire, air, water and earth. There are two common orders: the Mashriqi order used in the East, including Pakistan and India, and the Maghribi order used in North and West Africa. This calculator supports both so you can compare the results.",
-    'علم الحروف اور علم الاعداد میں علما نے اسمائے حسنیٰ، قرآنی عبارات اور لوگوں کے ناموں کی عددی قیمتوں کا مطالعہ کیا اور حروف کو چار عناصر سے جوڑا: آگ، ہوا، پانی اور مٹی۔ دو ترتیبیں عام ہیں: مشرقی ترتیب، جو پاکستان اور ہندوستان سمیت مشرق میں رائج ہے، اور مغربی ترتیب، جو شمالی اور مغربی افریقہ میں رائج ہے۔ یہ کیلکولیٹر دونوں ترتیبوں کو سپورٹ کرتا ہے تاکہ آپ نتائج کا موازنہ کر سکیں۔',
+    'علم الحروف اور علم الاعداد میں علما نے اسمائے حسنیٰ، قرآنی عبارات اور لوگوں کے ناموں کی عددی قیمتوں کا مطالعہ کیا اور حروف کو چار عناصر سے جوڑا: آگ، ہوا، پانی اور مٹی۔ دو ترتیبیں عام ہیں: مشرقی ترتیب، جو پاکستان اور ہندوستان سمیت مشرق میں رائج ہے، اور مغربی ترتیب، جو شمالی اور مغربی افریقہ میں رائج ہے۔ یہ کیلکولیٹر دونوں ترتیبوں سے حساب کرتا ہے تاکہ آپ نتائج کا موازنہ کر سکیں۔',
   ),
   howTitle: t('How to use the calculator', 'کیلکولیٹر کیسے استعمال کریں'),
   how: t(
@@ -310,7 +331,7 @@ export const UR_ABJAD = {
       q: t('What is the difference between the Mashriqi and Maghribi Abjad?', 'مشرقی اور مغربی ابجد میں کیا فرق ہے؟'),
       a: t(
         'They are two traditional orders of the Abjad letters. They differ in the values of a few letters, so the same name can give two different totals. The calculator supports both; switch with the button above it.',
-        'یہ ابجد حروف کی دو روایتی ترتیبیں ہیں۔ چند حروف کی قیمتوں میں فرق ہے، اس لیے ایک ہی نام کے دو مختلف مجموعے آ سکتے ہیں۔ کیلکولیٹر دونوں کو سپورٹ کرتا ہے؛ اس کے اوپر دیے گئے بٹن سے ترتیب بدلیں۔',
+        'یہ ابجد حروف کی دو روایتی ترتیبیں ہیں۔ چند حروف کی قیمتوں میں فرق ہے، اس لیے ایک ہی نام کے دو مختلف مجموعے آ سکتے ہیں۔ کیلکولیٹر دونوں ترتیبوں سے حساب کرتا ہے؛ اس کے اوپر دیے گئے بٹن سے ترتیب بدلیں۔',
       ),
     },
     {
@@ -379,7 +400,7 @@ export const UR_HOURS = {
   colBestFor: t('Suits', 'مناسب کام'),
   faqs: [
     {
-      q: t("How do I find today's planetary hours?", 'آج کے ساعات کیسے معلوم کریں؟'),
+      q: t("How do I find today's planetary hours?", 'آج کی ساعاتِ کواکب کیسے معلوم کریں؟'),
       a: t(
         "Open the tool above and allow your location. It calculates today's sunrise and sunset where you are and shows the twelve day hours and twelve night hours, with the planet ruling each one.",
         'اوپر والا ٹول کھولیں اور اپنے مقام (لوکیشن) کی اجازت دیں۔ یہ آپ کے مقام پر آج کے طلوع اور غروبِ آفتاب کا حساب کر کے دن کی بارہ اور رات کی بارہ ساعتیں، ہر ایک کے حاکم سیارے کے ساتھ دکھاتا ہے۔',
@@ -428,7 +449,7 @@ export const UR_POTD = {
   rulersTitle: t('The rulers of the seven days', 'ساتوں دنوں کے حاکم سیارے'),
   rulers: t(
     'Sunday: the Sun; Monday: the Moon; Tuesday: Mars; Wednesday: Mercury; Thursday: Jupiter; Friday: Venus; Saturday: Saturn. Whatever its planet, Friday keeps its own special status in Islam: it is the day of jumuʿa, of abundant ṣalawāt on the Prophet ﷺ and of duʿāʾ.',
-    'اتوار: شمس؛ پیر: قمر؛ منگل: مریخ؛ بدھ: عطارد؛ جمعرات: مشتری؛ جمعہ: زہرہ؛ ہفتہ: زحل۔ سیارہ کوئی بھی ہو، جمعہ کا دن اسلام میں اپنی الگ فضیلت رکھتا ہے: یہ نمازِ جمعہ، نبی کریم ﷺ پر کثرت سے درود اور دعا کا دن ہے۔',
+    'اتوار: شمس؛ پیر: قمر؛ منگل: مریخ؛ بدھ: عطارد؛ جمعرات: مشتری؛ جمعہ: زہرہ؛ ہفتہ: زحل۔ سیارہ کوئی بھی ہو، جمعہ کا دن اسلام میں اپنی الگ فضیلت رکھتا ہے: یہ نمازِ جمعہ، نبی کریم ﷺ پر کثرت سے درود شریف پڑھنے اور دعا کا دن ہے۔',
   ),
   faqs: [
     {

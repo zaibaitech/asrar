@@ -3,7 +3,7 @@ import { RelatedTools } from '@/src/components/seo/RelatedTools';
 import { BurjCalculator } from '@/app/name-and-mother-burj/BurjCalculator';
 import { getBurujData } from '@/src/features/istikhara/calculations';
 import { urduMetadata } from '@/src/lib/urMetadata';
-import { UR_BURJ as C, UR_BURUJ, UR_COMMON, UR_ELEMENTS, UR_WEEKDAYS } from '@/src/lib/i18n/urPages';
+import { UR_BURJ as C, UR_BURUJ, UR_COMMON, UR_ELEMENTS, UR_WEEKDAYS, urDhikrDisplay } from '@/src/lib/i18n/urPages';
 import { Ar, UrduBody, UrduFaq, UrduHeader, UrduLinks, UrduSection, englishPageLink, otherUrduPages } from '../_shared/UrduLanding';
 
 const EN_PATH = '/name-and-mother-burj';
@@ -22,7 +22,7 @@ function burujRows() {
       name: UR_BURUJ[i].ur,
       element: UR_ELEMENTS[p.element]?.ur ?? p.element,
       day: dayNumber != null ? UR_WEEKDAYS[dayNumber]?.ur ?? '' : '',
-      dhikr: 'arabic' in names ? names.arabic : '',
+      dhikr: 'arabic' in names ? urDhikrDisplay(names.arabic) : '',
     };
   });
 }

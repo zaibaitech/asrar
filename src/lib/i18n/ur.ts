@@ -15,7 +15,7 @@ import type { en } from './en';
 export const ur: DeepPartial<typeof en> = {
   nav: {
     home: "ہوم",
-    calculator: "حساب",
+    calculator: "کیلکولیٹر",
     letterCalculator: "حروف کا حساب",
     compatibility: "مطابقت",
     planetaryHours: "ساعاتِ کواکب",

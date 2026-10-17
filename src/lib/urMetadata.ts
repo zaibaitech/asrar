@@ -21,21 +21,21 @@ export const UR_META: Readonly<Record<string, UrMeta>> = {
   '/': {
     title: {
       en: 'Asrār — Abjad, Burj by Name, Planetary Hours and ʿIlm al-Aʿdād in Urdu',
-      ur: 'اسرار — ابجد، نام سے برج، ساعاتِ کواکب اور علم الاعداد اردو میں',
+      ur: 'اسرار — ابجد، نام سے برج، علم الاعداد اور ساعاتِ کواکب',
     },
     description: {
       en: "Reflective tools from the Islamic tradition: your burj from your name and your mother's name, name compatibility, Abjad, today's planetary hours, the planet of the day and ikhtiyārāt. For learning and reflection, not prediction.",
-      ur: 'اسلامی روایت سے غور و فکر کے ٹولز: نام اور والدہ کے نام سے برج، ناموں کی مطابقت، ابجد، آج کی ساعاتِ کواکب، آج کا سیارہ اور اختیارات۔ سیکھنے اور غور و فکر کے لیے، پیش گوئی کے لیے نہیں۔',
+      ur: 'نام اور والدہ کے نام سے برج، ناموں کی مطابقت، ابجد، آج کی ساعاتِ کواکب اور اختیارات۔ اسلامی روایت سے غور و فکر کے ٹولز، پیش گوئی نہیں۔',
     },
   },
   '/name-and-mother-burj': {
     title: {
       en: "Find Your Burj from Your Name and Your Mother's Name (Abjad)",
-      ur: 'نام اور والدہ کے نام سے برج معلوم کریں: ابجد سے برج کا حساب',
+      ur: 'نام اور امی کے نام سے برج معلوم کریں (ابجد)',
     },
     description: {
       en: "Find your burj from the Abjad values of your name and your mother's (ammi's) name: element, temperament, blessed day, dhikr and sadaqa. A free calculator for reflection, not prediction.",
-      ur: 'اپنے نام اور امی (والدہ) کے نام کے ابجد اعداد سے اپنا برج معلوم کریں: عنصر، مزاج، مبارک دن، ذکر اور صدقہ۔ مفت کیلکولیٹر، غور و فکر کے لیے، پیش گوئی کے لیے نہیں۔',
+      ur: 'اپنے اور امی کے نام کے ابجد اعداد سے برج معلوم کریں: عنصر، مزاج، مبارک دن، ذکر اور صدقہ۔ مفت، غور و فکر کے لیے، پیش گوئی نہیں۔',
     },
   },
   '/compatibility': {
@@ -45,17 +45,17 @@ export const UR_META: Readonly<Record<string, UrMeta>> = {
     },
     description: {
       en: "Compare two names with the Abjad 'soul connection' method of ʿilm al-ḥurūf, for marriage, friendship or work. For reflection, not a verdict: choose by dīn, character and istikhāra.",
-      ur: 'علم الحروف کے “روحانی ربط” کے طریقے سے ابجد کے ذریعے دو ناموں کا موازنہ کریں، شادی، دوستی یا کام کے لیے۔ یہ غور و فکر کے لیے ہے، فیصلہ نہیں؛ رشتے کا انتخاب دین، اخلاق اور استخارے سے کریں۔',
+      ur: 'ابجد اور علم الحروف کے “روحانی ربط” سے شادی، دوستی یا کام کے لیے دو ناموں کا موازنہ کریں۔ فیصلہ نہیں؛ رشتہ دین، اخلاق اور استخارے سے طے کریں۔',
     },
   },
   '/abjad': {
     title: {
       en: 'Abjad Calculator: The Numerical Value of Names (ʿIlm al-Aʿdād)',
-      ur: 'ابجد کیلکولیٹر: نام کے اعداد معلوم کریں (علم الاعداد)',
+      ur: 'ابجد کیلکولیٹر: نام کے اعداد معلوم کریں',
     },
     description: {
       en: "Find the Abjad (ḥisāb al-jummal) value of any name or Arabic phrase in the Mashriqi or Maghribi order, with each letter's value and the balance of the four elements. For reflection and learning.",
-      ur: 'کسی بھی نام یا عربی عبارت کی ابجد (حسابِ جمل) قیمت مشرقی یا مغربی ترتیب میں معلوم کریں، ہر حرف کی قیمت اور چار عناصر کے توازن کے ساتھ۔ غور و فکر اور سیکھنے کے لیے۔',
+      ur: 'کسی بھی نام یا عربی عبارت کے ابجد اعداد (حسابِ جمل) مشرقی یا مغربی ترتیب میں، ہر حرف کی قیمت اور عناصر کے توازن کے ساتھ معلوم کریں۔',
     },
   },
   '/planetary-hours': {
@@ -65,7 +65,7 @@ export const UR_META: Readonly<Record<string, UrMeta>> = {
     },
     description: {
       en: "Find today's planetary hours: the planet ruling the current hour where you are, the times of the twelve day and twelve night hours in the Chaldean order, and what suits each planet. For reflection and planning your time.",
-      ur: 'آج کے ساعات معلوم کریں: آپ کے مقام پر اس وقت کی ساعت کا حاکم سیارہ، کلدانی ترتیب کے مطابق دن اور رات کی بارہ بارہ ساعتوں کے اوقات، اور ہر سیارے کے مناسب کام۔ غور و فکر اور وقت کی منصوبہ بندی کے لیے۔',
+      ur: 'آج کی ساعاتِ کواکب: آپ کے شہر میں اس وقت کی ساعت کا سیارہ، دن اور رات کی بارہ بارہ ساعتوں کے اوقات اور ہر ساعت کے مناسب کام، غور و فکر کے لیے۔',
     },
   },
   '/planet-of-the-day': {
@@ -81,11 +81,11 @@ export const UR_META: Readonly<Record<string, UrMeta>> = {
   '/ikhtiyarat': {
     title: {
       en: 'Ikhtiyārāt: Choosing Suitable Dates for Nikāḥ, Travel and Business',
-      ur: 'علمِ اختیارات: نکاح، سفر اور کاروبار کے لیے مناسب تاریخ کا انتخاب',
+      ur: 'نکاح، سفر اور کاروبار کے لیے مناسب تاریخ (اختیارات)',
     },
     description: {
       en: "Suitable dates for nikāḥ, travel, moving home and business according to the traditional science of ikhtiyārāt: the day's ruler, the planetary hour and the lunar mansion. For reflection alongside istikhāra and tawakkul.",
-      ur: 'علمِ اختیارات کی روایت کے مطابق نکاح، سفر، نئے گھر میں منتقلی اور کاروبار کے لیے مناسب تاریخیں: دن کا حاکم سیارہ، ساعت اور منزلِ قمر۔ استخارے اور توکل کے ساتھ غور و فکر کے لیے۔',
+      ur: 'نکاح، سفر، نئے گھر میں منتقلی اور کاروبار کے لیے روایتی علمِ اختیارات کے مطابق مناسب تاریخیں۔ استخارے اور توکل کے ساتھ غور و فکر کے لیے۔',
     },
   },
 };

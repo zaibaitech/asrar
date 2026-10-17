@@ -46,7 +46,7 @@ for (const [e, u] of rt) ui.push({ en: e, ur: u, where: 'Related tools link' });
 const dhikr = Array.from({ length: 12 }, (_, i) => {
   const names = getBurujData(i + 1).spiritual_practice.divine_names as unknown as Record<string, unknown>;
   const meaning = names.meaning as { en?: string } | string | undefined;
-  return { burj: P.UR_BURUJ[i].en, arabic: String(names.arabic ?? ''), transliteration: String(names.transliteration ?? ''), meaning: typeof meaning === 'string' ? meaning : meaning?.en ?? '' };
+  return { burj: P.UR_BURUJ[i].en, arabic: P.urDhikrDisplay(String(names.arabic ?? '')), transliteration: String(names.transliteration ?? ''), meaning: typeof meaning === 'string' ? meaning : meaning?.en ?? '' };
 });
 
 console.log(JSON.stringify({ seo, pages: pairs, ui, dhikr }));

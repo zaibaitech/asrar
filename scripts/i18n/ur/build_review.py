@@ -6,6 +6,7 @@ English source, grouped for the native reviewer. Run from the repo root:
 import json, os, subprocess, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from catalog_source import ENTRIES
+from review_log import ANSWERS, CORRECTIONS
 
 dump = json.loads(subprocess.check_output(['npx', 'tsx', 'scripts/i18n/ur/dump_ts.ts'], text=True))
 
@@ -13,13 +14,14 @@ dump = json.loads(subprocess.check_output(['npx', 'tsx', 'scripts/i18n/ur/dump_t
 GLOSSARY = [
     ('Allah', 'اللہ', 'Urdu orthography (ہ). Divine Names in lists/tables stay in Arabic script.'),
     ('the Prophet ﷺ', 'نبی کریم ﷺ', ''),
+    ('ṣalawāt on the Prophet ﷺ', 'درود شریف (پڑھنا)', 'Review batch 1.'),
     ('Bismillāh', 'بسم اللہ', ''),
     ('Abjad (ḥisāb al-jummal)', 'ابجد (حسابِ جمل)', ''),
     ('ʿilm al-ḥurūf', 'علم الحروف', ''),
     ('ʿilm al-aʿdād (numerology)', 'علم الاعداد', 'Target search phrase.'),
     ('ʿilm al-nujūm (science of the stars)', 'علم النجوم / علمِ نجوم', 'In everyday Urdu this also means astrology; always framed as “روایتی” and “غور و فکر”.'),
     ('burj / burūj', 'برج / بروج', ''),
-    ('planetary hours', 'ساعاتِ کواکب', 'Singular: ساعت (feminine). The SEO description and one FAQ use the colloquial search phrase “آج کے ساعات”.'),
+    ('planetary hours', 'ساعاتِ کواکب', 'Singular: ساعت (feminine): آج کی ساعتیں / آج کی ساعاتِ کواکب (review Q1; the masculine “آج کے ساعات” is no longer used).'),
     ('planet', 'سیارہ', 'کوکب kept in the compound ساعاتِ کواکب.'),
     ('istikhāra / ṣalāt al-istikhāra', 'استخارہ / نمازِ استخارہ', 'Oblique: استخارے سے / استخارے کے ساتھ.'),
     ('ṣadaqa', 'صدقہ', 'Oblique: صدقے کی رہنمائی.'),
@@ -31,7 +33,7 @@ GLOSSARY = [
     ('the unseen (al-ghayb)', 'غیب', 'Disclaimer: غیب کا علم صرف اللہ کو ہے۔'),
     ('kahāna (fortune-telling)', 'کہانت', ''),
     ('Beautiful Names of Allah', 'اسمائے حسنیٰ', 'Single Name: اسمِ الٰہی.'),
-    ('ikhtiyārāt (electional timing)', 'اختیارات / علمِ اختیارات', 'Caution: in everyday Urdu اختیارات means “powers/authority”; always glossed (“مناسب تاریخوں کا انتخاب”).'),
+    ('ikhtiyārāt (electional timing)', 'اختیارات / علمِ اختیارات', 'Caution: in everyday Urdu اختیارات means “powers/authority”; always glossed (“مناسب تاریخوں کا انتخاب”), plain language first in SEO titles, never alone as a nav label or button (“بہترین تاریخیں”). Review Q2.'),
     ('lunar mansions (manāzil)', 'منازلِ قمر / منزلِ قمر', ''),
     ('soul connection', 'روحانی ربط', 'Compatibility metric name.'),
     ('Mashriqi / Maghribi order', 'مشرقی / مغربی ترتیب', 'مغربی also means “Western”; glossed once as “(شمالی افریقی)”.'),
@@ -83,7 +85,7 @@ total = n_meta + n_pages + n_ui + n_cat
 
 md = []
 md.append('# Urdu (/ur) — native review sheet\n')
-md.append('Phase 1 Urdu pages for asrar.app. **All /ur pages are noindex and are not in the sitemap or hreflang** until this review is done.\n')
+md.append('Phase 1 Urdu pages for asrar.app. **All /ur pages are noindex and are not in the sitemap or hreflang** until Mario approves indexing. The native review is done and its corrections are applied (see below).\n')
 md.append('Pages: `/ur`, `/ur/name-and-mother-burj`, `/ur/compatibility`, `/ur/abjad`, `/ur/planetary-hours`, `/ur/planet-of-the-day`, `/ur/ikhtiyarat`.\n')
 md.append('Every string was translated by hand (no machine translation). The mobile app (zaibaitech/asrar-mobile) has no Urdu, so nothing was reused. Qur\'an and Divine Names stay in Arabic.\n')
 md.append(f'**String count: {total}** ({n_meta} SEO metadata, {n_pages} page copy, {n_ui} shared UI in TypeScript, {n_cat} tool-UI catalog entries incl. {sum(1 for k in cat if k.startswith("re:"))} patterns).\n')
@@ -92,11 +94,17 @@ md.append('- SEO metadata: `src/lib/urMetadata.ts`\n- Page copy: `src/lib/i18n/u
 md.append('\n## Open questions for the reviewer\n')
 for i, n in enumerate(NOTES, 1):
     md.append(f'{i}. {n}')
+md.append('\n### Reviewer answers (native review, Oct 2026)\n')
+md.append(table([(i, q, a, st) for i, (q, a, st) in enumerate(ANSWERS, 1)], ('#', 'Question', 'Reviewer answer', 'Status')))
+n_applied = sum(1 for c in CORRECTIONS if c[4].startswith('✅'))
+md.append(f'\n\n## Review corrections ({n_applied} of {len(CORRECTIONS)} applied)\n')
+md.append('From the native reviewer (Language Reviewer, Oct 2026). The tables further down show the strings as they are now, with the corrections in place. /ur stays noindex and out of the sitemap and hreflang until Mario approves indexing (Q7 and Q8 are still open).\n')
+md.append(table([c[:5] for c in CORRECTIONS], ('Batch', 'String', 'Before', 'After', 'Status')))
 md.append('\n## 1. Qur\'an / Divine Names\n')
 md.append('Kept in Arabic script. The tool shows transliterations; on /ur they are replaced by the Arabic the tool itself writes. Divine Names in the Urdu page copy (burj table) are marked lang="ar" and rendered in Naskh; inside the tool they use the page font.\n')
 md.append(table(quran, ('English (tool text)', 'Shown on /ur')))
-md.append('\n\n### Burj table: dhikr per burj (Arabic, unchanged from `burujData.json`)\n')
-md.append(table([(d['burj'], d['arabic'], d['transliteration'], d['meaning'].get('en') if isinstance(d['meaning'], dict) else d['meaning']) for d in dump['dhikr']], ('Burj', 'Arabic (shown)', 'Transliteration', 'English meaning')))
+md.append('\n\n### Burj table: dhikr per burj (from `burujData.json`; shown fully vocalised on /ur, the data file is unchanged)\n')
+md.append(table([(d['burj'], d['arabic'], d['transliteration'], d['meaning'].get('en') if isinstance(d['meaning'], dict) else d['meaning']) for d in dump['dhikr']], ('Burj', 'Arabic (shown on /ur, vocalised)', 'Transliteration', 'English meaning')))
 md.append('\n\nAlso in Arabic inside the Urdu copy: ﷺ (after نبی کریم), the example spelling فاطمة, the letter ة.\n')
 md.append('\n## 2. Religious terms\n')
 md.append('### Glossary (used consistently on every page)\n')
