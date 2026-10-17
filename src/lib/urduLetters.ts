@@ -9,8 +9,10 @@
  *   ی ے → ي      ک → ك      ھ ۂ → ه
  *   ہ ۃ → ة at the end of a word (the Urdu spelling of tāʾ marbūṭa, so
  *          فاطمہ counts exactly like فاطمة), ه elsewhere (مہر → مهر)
+ *   except اللہ (also inside names: عبداللہ، اللہ دتہ): the root hāʾ of
+ *          the Name → ه, so it counts exactly like الله (total and elements)
  *
- * ٹ ڈ ڑ ں (and پ چ ژ گ) have no Abjad value and stay uncounted, as before.
+ * ٹ ڈ ڑ ں and پ چ ژ گ have no Abjad value and stay uncounted (Mario, Oct 2026).
  *
  * Only those Urdu code points are touched: any text without them (every
  * Arabic or Latin input) is returned unchanged, so existing results do not
@@ -30,6 +32,16 @@ const SIMPLE: Readonly<Record<string, string>> = {
   '\u06C2': '\u0647', // ۂ → ه
 };
 
+/** True when the letters before position i (marks skipped) are «الل», i.e. chars[i] ends «اللہ». */
+function endsWithAllahStem(chars: string[], i: number): boolean {
+  const prev: string[] = [];
+  for (let k = i - 1; k >= 0 && prev.length < 3; k--) {
+    if (MARK.test(chars[k])) continue;
+    prev.unshift(chars[k]);
+  }
+  return prev.length === 3 && (prev[0] === '\u0627' || prev[0] === '\u0671') && prev[1] === '\u0644' && prev[2] === '\u0644';
+}
+
 export function urduToArabicLetters(text: string): string {
   if (!text || !URDU_LETTERS.test(text)) return text;
   const chars = [...text];
@@ -44,7 +56,7 @@ export function urduToArabicLetters(text: string): string {
       let j = i + 1;
       while (j < chars.length && MARK.test(chars[j])) j++;
       const final = j >= chars.length || !LETTER.test(chars[j]);
-      out += final ? '\u0629' : '\u0647';
+      out += final && !endsWithAllahStem(chars, i) ? '\u0629' : '\u0647';
     } else {
       out += ch;
     }

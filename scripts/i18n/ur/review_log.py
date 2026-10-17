@@ -80,6 +80,8 @@ CORRECTIONS = [
     ('4', 'UR_ABJAD.faqs[2].a', 'کیلکولیٹر میں اپنا نام عربی حروف میں لکھیں؛ …', 'کیلکولیٹر میں اپنا نام اردو یا عربی حروف میں لکھیں؛ …', A),
     ('4', 'catalog «Both names must be in Arabic script…»', 'درست تجزیے کے لیے دونوں نام عربی رسم الخط میں ہونے چاہییں', 'درست تجزیے کے لیے دونوں نام اردو یا عربی حروف میں لکھیں', A),
     ('4', 'docs Q7 note', 'old pre-change text', 'trimmed; status updated', A),
+    ('4', 'code A: word-final ہ in اللہ', 'اللہ → اللة (same total, different elements)', 'اللہ / عبداللہ → الله / عبدالله', A + ' (approved by Mario)'),
+    ('4', 'code C: پ چ ژ گ ٹ ڈ ڑ', 'uncounted', 'kept at 0 (Mario’s decision); the spelling note says so', A),
 ]
 
 # Reviewer's answers to the 8 open questions and what was done.
@@ -94,7 +96,7 @@ ANSWERS = [
     ('Planet-of-the-day intro', 'Do not make the planet the agent; use the fuller wording.', A + ' (fuller wording).'),
     ('Astro terms', 'محترق، تحت الشعاع، ہبوط، وبال، رجعت، شرف are understood. Gloss خالی السیر and الطریقۃ المحترقۃ; use اتصال / انصراف for Applying/Separating.', A),
     ('Urdu letters in Abjad', 'Recommends normalising ی→ي، ک→ك، ہ/ۃ→ه/ة (ے→ي) before counting, or until then an inline warning.',
-     '✅ applied (approved by Mario, Oct 2026): src/lib/urduLetters.ts converts ی ے→ي, ک→ك, ھ ۂ→ه, ہ ۃ→ه (ة at the end of a word, so فاطمہ = فاطمة = 135) before every name/Abjad count (burj, compatibility, Abjad calculator, ʿilm al-ḥurūf). علی = 110, فاطمہ = 135, کریم = 270. ٹ ڈ ڑ ں and پ چ ژ گ have no value (0). Arabic input is untouched (src/lib/urduLetters.test.ts). The spelling note says so (batch 4 wording; Arabic letters in a Naskh span). Still for Mario (batch 4): chronogram values for پ چ ژ گ ٹ ڈ ڑ; an exception so اللہ counts like الله in the elements (the total is already the same, 66); the hamza/ى rule, which differs between the map sets already on main (not caused by this change).'),
+     '✅ applied (approved by Mario, Oct 2026): src/lib/urduLetters.ts converts ی ے→ي, ک→ك, ھ ۂ→ه, ہ ۃ→ه (ة at the end of a word, so فاطمہ = فاطمة = 135) before every name/Abjad count (burj, compatibility, Abjad calculator, ʿilm al-ḥurūf). علی = 110, فاطمہ = 135, کریم = 270. ٹ ڈ ڑ ں and پ چ ژ گ have no value (0). Arabic input is untouched (src/lib/urduLetters.test.ts). The spelling note says so (batch 4 wording; Arabic letters in a Naskh span). Batch 4 decisions (Mario, Oct 2026): اللہ, also inside names (عبداللہ), → الله, so total (66) and elements match الله exactly; پ چ ژ گ ٹ ڈ ڑ ں stay at 0 (strict Arabic Abjad, no chronogram values); the hamza/ى rule and the differing letter tables, already on main, are fixed in a separate PR.'),
     ('English interpretive content', 'OK for a noindex phase 1 with UR_COMMON.toolUiNote; translate burj career texts and soul-connection meanings before indexing.',
      '⏳ not done in this PR (separate task). toolUiNote stays visible; /ur stays noindex.'),
 ]
