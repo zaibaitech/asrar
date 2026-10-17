@@ -3,7 +3,7 @@ import { RelatedTools } from '@/src/components/seo/RelatedTools';
 import { AbjadCalculator } from '@/app/abjad/AbjadCalculator';
 import { urduMetadata } from '@/src/lib/urMetadata';
 import { UR_ABJAD as C, UR_COMMON } from '@/src/lib/i18n/urPages';
-import { UrduBody, UrduFaq, UrduHeader, UrduLinks, UrduSection, englishPageLink, otherUrduPages } from '../_shared/UrduLanding';
+import { UrduBody, UrduFaq, UrduHeader, UrduLinks, UrduSection, englishPageLink, otherUrduPages, UrduSpellingNote } from '../_shared/UrduLanding';
 
 const EN_PATH = '/abjad';
 
@@ -31,7 +31,7 @@ export default function Page() {
         <UrduSection id="abjad-how" title={C.howTitle.ur}>
           <p>{C.how.ur}</p>
           <p>{C.example.ur}</p>
-          <p className="text-sm text-slate-500 dark:text-slate-400">{UR_COMMON.spellingNote.ur}</p>
+          <UrduSpellingNote />
           <p className="text-sm text-slate-500 dark:text-slate-400">{UR_COMMON.disclaimer.ur}</p>
         </UrduSection>
         <UrduFaq id="abjad-faq" faqs={C.faqs} />

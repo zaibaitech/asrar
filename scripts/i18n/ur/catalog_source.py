@@ -202,7 +202,7 @@ U = [
     ("Traditional ʿIlm al-Ḥurūf method using your name + mother's name", 'علم الحروف کا روایتی طریقہ: آپ کا نام + والدہ کا نام'),
     ('Birth Date', 'تاریخِ پیدائش'), ('QUICK', 'فوری'),
     ('Simpler method using only your date of birth', 'آسان طریقہ: صرف آپ کی تاریخِ پیدائش سے'),
-    ('Both names must be in Arabic script for accurate spiritual analysis', 'درست تجزیے کے لیے دونوں نام عربی رسم الخط میں ہونے چاہییں'),
+    ('Both names must be in Arabic script for accurate spiritual analysis', 'درست تجزیے کے لیے دونوں نام اردو یا عربی حروف میں لکھیں'),
     ('Your Name', 'آپ کا نام'), ('Search by Latin Name', 'رومن نام سے تلاش کریں'), ('(optional)', '(اختیاری)'),
     ('Database-backed suggestions as you type', 'لکھتے وقت ڈیٹا بیس سے تجاویز'), ('Database-backed suggestions', 'ڈیٹا بیس سے تجاویز'),
     ('Arabic Name', 'عربی نام'), ('Show Keyboard', 'کی بورڈ دکھائیں'), ('Show keyboard', 'کی بورڈ دکھائیں'),

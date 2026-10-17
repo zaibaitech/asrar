@@ -73,6 +73,13 @@ CORRECTIONS = [
     ('3C', 'catalog «Get it on Google Play»', 'Google Play سے حاصل کریں', '⁦Google Play⁩ سے حاصل کریں (LRI…PDI)', A + ' (the only other catalog value mixing Latin and Urdu were the two search placeholders above)'),
     ('3C', 'catalog «Ḥadad Value»', 'حدد کی قیمت', 'عدد کی قیمت', A + ': the source confirms it is the count, burujData.json says “repeat Hadad times: your name + mother’s name”. Native check of the label still welcome.'),
     ('3C', 'UR_COMPAT.faqs[4].a', '…دعوت ہو سکتا ہے۔', '…دعوت ہو سکتی ہے۔', A),
+    # Batch 4: wording after the Urdu-letter conversion
+    ('4', 'UR_COMMON.spellingNote', 'نام اردو یا عربی املا میں لکھ سکتے ہیں۔ … ٹ، ڈ، ڑ اور ں کی ابجد میں کوئی قیمت نہیں …', 'آپ نام اردو یا عربی املا میں لکھ سکتے ہیں۔ … فاطمہ اور فاطمة کا عدد ایک ہی آتا ہے، اور علی اور علي کا بھی۔ ٹ، ڈ، ڑ، ں اور پ، چ، ژ، گ کی ابجد میں کوئی قیمت نہیں …', A),
+    ('4', 'UR_COMMON.spellingNote rendering (/ur/abjad, /ur/compatibility, /ur/name-and-mother-burj)', 'Arabic ي ك ه ة فاطمة علي in the Nastaliq text', 'each in <span lang="ar" class="font-arabic"> (UrduSpellingNote)', A),
+    ('4', 'UR_ABJAD.how', '…نام یا عبارت عربی حروف میں لکھیں…', '…نام یا عبارت اردو یا عربی حروف میں لکھیں…', A),
+    ('4', 'UR_ABJAD.faqs[2].a', 'کیلکولیٹر میں اپنا نام عربی حروف میں لکھیں؛ …', 'کیلکولیٹر میں اپنا نام اردو یا عربی حروف میں لکھیں؛ …', A),
+    ('4', 'catalog «Both names must be in Arabic script…»', 'درست تجزیے کے لیے دونوں نام عربی رسم الخط میں ہونے چاہییں', 'درست تجزیے کے لیے دونوں نام اردو یا عربی حروف میں لکھیں', A),
+    ('4', 'docs Q7 note', 'old pre-change text', 'trimmed; status updated', A),
 ]
 
 # Reviewer's answers to the 8 open questions and what was done.
@@ -87,7 +94,7 @@ ANSWERS = [
     ('Planet-of-the-day intro', 'Do not make the planet the agent; use the fuller wording.', A + ' (fuller wording).'),
     ('Astro terms', 'محترق، تحت الشعاع، ہبوط، وبال، رجعت، شرف are understood. Gloss خالی السیر and الطریقۃ المحترقۃ; use اتصال / انصراف for Applying/Separating.', A),
     ('Urdu letters in Abjad', 'Recommends normalising ی→ي، ک→ك، ہ/ۃ→ه/ة (ے→ي) before counting, or until then an inline warning.',
-     '✅ applied (approved by Mario, Oct 2026): src/lib/urduLetters.ts converts ی ے→ي, ک→ك, ھ ۂ→ه, ہ ۃ→ه (ة at the end of a word, so فاطمہ = فاطمة = 135) before every name/Abjad count (burj, compatibility, Abjad calculator, ʿilm al-ḥurūf). ٹ ڈ ڑ ں stay uncounted, per the reviewer. علی = 110 (was 100), فاطمہ = 135 (was 130), کریم = 270 (was 240). Arabic input is untouched, so EN/FR/AR results are unchanged (src/lib/urduLetters.test.ts). The spelling note now says Urdu spelling works; the inline warning is no longer needed. New note wording: please review.'),
+     '✅ applied (approved by Mario, Oct 2026): src/lib/urduLetters.ts converts ی ے→ي, ک→ك, ھ ۂ→ه, ہ ۃ→ه (ة at the end of a word, so فاطمہ = فاطمة = 135) before every name/Abjad count (burj, compatibility, Abjad calculator, ʿilm al-ḥurūf). علی = 110, فاطمہ = 135, کریم = 270. ٹ ڈ ڑ ں and پ چ ژ گ have no value (0). Arabic input is untouched (src/lib/urduLetters.test.ts). The spelling note says so (batch 4 wording; Arabic letters in a Naskh span). Still for Mario (batch 4): chronogram values for پ چ ژ گ ٹ ڈ ڑ; an exception so اللہ counts like الله in the elements (the total is already the same, 66); the hamza/ى rule, which differs between the map sets already on main (not caused by this change).'),
     ('English interpretive content', 'OK for a noindex phase 1 with UR_COMMON.toolUiNote; translate burj career texts and soul-connection meanings before indexing.',
      '⏳ not done in this PR (separate task). toolUiNote stays visible; /ur stays noindex.'),
 ]

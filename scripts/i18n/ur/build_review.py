@@ -53,7 +53,7 @@ NOTES = [
     'Planetary-hour guide item “Cutting ties” → “تعلقات ختم کرنا”. Should be checked so it never reads as encouraging قطع رحمی.',
     'Planet-of-the-day intro: “a ruling planet that colours its energy” → softened to “روایت کے مطابق … اس دن کی کیفیت کا رنگ متعین کرتا ہے”. Check that the wording does not attribute independent influence to planets.',
     'Astro technical terms in the Ikhtiyārāt breakdown (محترق، خالی السیر، تحت الشعاع، ہبوط، وبال، رجعت، الطریقۃ المحترقۃ) follow classical Arabic/Persian usage; please confirm they are understood by Urdu readers.',
-    'Urdu-typed names (RESOLVED, see the reviewer answers below: Urdu letters are now converted before counting). Originally: the Abjad logic gave Urdu letters no value. Urdu ی (U+06CC), ک (U+06A9) and ہ (U+06C1) count as 0, and so do ٹ ڈ ڑ ں ھ ے. So فاطمہ = 130 but فاطمة = 135, علی = 100 but علي = 110, and کریم = 240 but كريم = 270 (name/mother burj, calculateAbjadValue). Calculation logic was deliberately NOT changed in this PR. The /ur pages tell users to type the Arabic spelling. A follow-up could normalise ی→ي, ک→ك, ہ→ه/ة before counting, which would need Mario’s approval as a calculation change. Please also check the wording of the note.',
+    'Urdu-typed names in the Abjad count: RESOLVED. Urdu letters are converted before counting (see the reviewer answers below, Q7).',
     'Interpretive result content (soul-connection archetype meanings, burj career texts, per-date rule explanations, manzil descriptions, day guidance paragraphs) is NOT translated yet and still shows in English; the pages say “ٹول کے کچھ حصے ابھی انگریزی میں ہیں۔”',
 ]
 
@@ -98,7 +98,7 @@ md.append('\n### Reviewer answers (native review, Oct 2026)\n')
 md.append(table([(i, q, a, st) for i, (q, a, st) in enumerate(ANSWERS, 1)], ('#', 'Question', 'Reviewer answer', 'Status')))
 n_applied = sum(1 for c in CORRECTIONS if c[4].startswith('✅'))
 md.append(f'\n\n## Review corrections ({n_applied} of {len(CORRECTIONS)} applied)\n')
-md.append('From the native reviewer (Language Reviewer, Oct 2026). The tables further down show the strings as they are now, with the corrections in place. /ur stays noindex and out of the sitemap and hreflang until Mario approves indexing (Q7 and Q8 are still open).\n')
+md.append('From the native reviewer (Language Reviewer, Oct 2026). The tables further down show the strings as they are now, with the corrections in place. /ur stays noindex and out of the sitemap and hreflang until Mario approves indexing (Q8, the untranslated result texts, is still open).\n')
 md.append(table([c[:5] for c in CORRECTIONS], ('Batch', 'String', 'Before', 'After', 'Status')))
 md.append('\n## 1. Qur\'an / Divine Names\n')
 md.append('Kept in Arabic script. The tool shows transliterations; on /ur they are replaced by the Arabic the tool itself writes. Divine Names in the Urdu page copy (burj table) are marked lang="ar" and rendered in Naskh; inside the tool they use the page font.\n')

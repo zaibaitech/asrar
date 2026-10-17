@@ -4,7 +4,7 @@ import { CompatibilityCalculator } from '@/app/compatibility/CompatibilityCalcul
 import { AbjadSystemSelector } from '@/src/components/AbjadSystemSelector';
 import { urduMetadata } from '@/src/lib/urMetadata';
 import { UR_COMMON, UR_COMPAT as C } from '@/src/lib/i18n/urPages';
-import { UrduBody, UrduFaq, UrduHeader, UrduLinks, UrduSection, englishPageLink, otherUrduPages } from '../_shared/UrduLanding';
+import { UrduBody, UrduFaq, UrduHeader, UrduLinks, UrduSection, englishPageLink, otherUrduPages, UrduSpellingNote } from '../_shared/UrduLanding';
 
 const EN_PATH = '/compatibility';
 
@@ -36,7 +36,7 @@ export default function Page() {
               <li key={s.en}>{s.ur}</li>
             ))}
           </ol>
-          <p className="text-sm text-slate-500 dark:text-slate-400">{UR_COMMON.spellingNote.ur}</p>
+          <UrduSpellingNote />
           <p className="text-sm text-slate-500 dark:text-slate-400">{UR_COMMON.disclaimer.ur}</p>
         </UrduSection>
         <UrduFaq id="compat-faq" faqs={C.faqs} />

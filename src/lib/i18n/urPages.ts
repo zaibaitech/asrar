@@ -28,10 +28,14 @@ export const UR_COMMON = {
   linksTitle: t('Related pages', 'متعلقہ صفحات'),
   inEnglish: t('(in English)', '(انگریزی میں)'),
   inEnglishDesc: t('The same tool with the explanation in English.', 'یہی ٹول، انگریزی وضاحت کے ساتھ۔'),
-  /** Urdu letters are read as their Arabic equivalents before the count (src/lib/urduLetters.ts). */
+  /**
+   * Urdu letters are read as their Arabic equivalents before the count
+   * (src/lib/urduLetters.ts). Rendered with UrduSpellingNote, which puts the
+   * Arabic letters and words (ي ك ه ة فاطمة علي) in a lang="ar" Naskh span.
+   */
   spellingNote: t(
-    'You can type names in Urdu or Arabic spelling. For the Abjad count, ی and ے are read as ي, ک as ك, ھ as ه, and ہ as ه (ة at the end of a word), so فاطمہ counts the same as فاطمة and علی the same as علي. ٹ، ڈ، ڑ and ں have no Abjad value and are not counted.',
-    'نام اردو یا عربی املا میں لکھ سکتے ہیں۔ ابجد کے حساب میں ی اور ے کو ي، ک کو ك، ھ کو ه، اور ہ کو ه (لفظ کے آخر میں ة) شمار کیا جاتا ہے، اس لیے فاطمہ کا عدد فاطمة کے برابر اور علی کا علي کے برابر ہے۔ ٹ، ڈ، ڑ اور ں کی ابجد میں کوئی قیمت نہیں، اس لیے یہ شمار نہیں ہوتے۔',
+    'You can type names in Urdu or Arabic spelling. For the Abjad count, ی and ے are read as ي, ک as ك, ھ as ه, and ہ as ه (ة at the end of a word), so فاطمہ and فاطمة give the same number, as do علی and علي. ٹ، ڈ، ڑ، ں and پ، چ، ژ، گ have no Abjad value and are not counted.',
+    'آپ نام اردو یا عربی املا میں لکھ سکتے ہیں۔ ابجد کے حساب میں ی اور ے کو ي، ک کو ك، ھ کو ه، اور ہ کو ه (لفظ کے آخر میں ة) شمار کیا جاتا ہے، اس لیے فاطمہ اور فاطمة کا عدد ایک ہی آتا ہے، اور علی اور علي کا بھی۔ ٹ، ڈ، ڑ، ں اور پ، چ، ژ، گ کی ابجد میں کوئی قیمت نہیں، اس لیے یہ شمار نہیں ہوتے۔',
   ),
 };
 
@@ -315,8 +319,8 @@ export const UR_ABJAD = {
   ),
   howTitle: t('How to use the calculator', 'کیلکولیٹر کیسے استعمال کریں'),
   how: t(
-    'Choose the type of calculation, write the name or phrase in Arabic letters (or in Latin letters for the tool to convert), then read the total, the value of each letter and the element analysis.',
-    'حساب کی قسم منتخب کریں، نام یا عبارت عربی حروف میں لکھیں (یا رومن حروف میں، تاکہ ٹول اسے عربی میں بدل دے)، پھر مجموعہ، ہر حرف کی قیمت اور عناصر کا تجزیہ دیکھیں۔',
+    'Choose the type of calculation, write the name or phrase in Urdu or Arabic letters (or in Latin letters for the tool to convert), then read the total, the value of each letter and the element analysis.',
+    'حساب کی قسم منتخب کریں، نام یا عبارت اردو یا عربی حروف میں لکھیں (یا رومن حروف میں، تاکہ ٹول اسے عربی میں بدل دے)، پھر مجموعہ، ہر حرف کی قیمت اور عناصر کا تجزیہ دیکھیں۔',
   ),
   example: t('Example: Muḥammad = mīm (40) + ḥāʾ (8) + mīm (40) + dāl (4) = 92.', 'مثال: محمد = م (40) + ح (8) + م (40) + د (4) = 92۔'),
   faqs: [
@@ -337,8 +341,8 @@ export const UR_ABJAD = {
     {
       q: t('How do I calculate the numbers of my name?', 'اپنے نام کے اعداد کیسے نکالیں؟'),
       a: t(
-        'Write your name in Arabic letters in the calculator; it adds up the letter values, ignoring vowel marks. Example: Muḥammad = 40 + 8 + 40 + 4 = 92. You can also type the name in Latin letters and the tool will convert it to Arabic letters.',
-        'کیلکولیٹر میں اپنا نام عربی حروف میں لکھیں؛ یہ اعراب کو چھوڑ کر حروف کی قیمتیں جمع کرتا ہے۔ مثال: محمد = 40 + 8 + 40 + 4 = 92۔ آپ نام رومن حروف میں بھی لکھ سکتے ہیں، ٹول اسے عربی حروف میں بدل دے گا۔',
+        'Write your name in Urdu or Arabic letters in the calculator; it adds up the letter values, ignoring vowel marks. Example: Muḥammad = 40 + 8 + 40 + 4 = 92. You can also type the name in Latin letters and the tool will convert it to Arabic letters.',
+        'کیلکولیٹر میں اپنا نام اردو یا عربی حروف میں لکھیں؛ یہ اعراب کو چھوڑ کر حروف کی قیمتیں جمع کرتا ہے۔ مثال: محمد = 40 + 8 + 40 + 4 = 92۔ آپ نام رومن حروف میں بھی لکھ سکتے ہیں، ٹول اسے عربی حروف میں بدل دے گا۔',
       ),
     },
     {

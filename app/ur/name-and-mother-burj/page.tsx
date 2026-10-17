@@ -3,8 +3,8 @@ import { RelatedTools } from '@/src/components/seo/RelatedTools';
 import { BurjCalculator } from '@/app/name-and-mother-burj/BurjCalculator';
 import { getBurujData } from '@/src/features/istikhara/calculations';
 import { urduMetadata } from '@/src/lib/urMetadata';
-import { UR_BURJ as C, UR_BURUJ, UR_COMMON, UR_ELEMENTS, UR_WEEKDAYS, urDhikrDisplay } from '@/src/lib/i18n/urPages';
-import { Ar, UrduBody, UrduFaq, UrduHeader, UrduLinks, UrduSection, englishPageLink, otherUrduPages } from '../_shared/UrduLanding';
+import { UR_BURJ as C, UR_BURUJ, UR_ELEMENTS, UR_WEEKDAYS, urDhikrDisplay } from '@/src/lib/i18n/urPages';
+import { Ar, UrduBody, UrduFaq, UrduHeader, UrduLinks, UrduSection, englishPageLink, otherUrduPages, UrduSpellingNote } from '../_shared/UrduLanding';
 
 const EN_PATH = '/name-and-mother-burj';
 
@@ -47,7 +47,7 @@ export default function Page() {
           </ol>
           <h3 className="font-semibold text-slate-900 dark:text-slate-100">{C.exampleTitle.ur}</h3>
           <p>{C.example.ur}</p>
-          <p className="text-sm text-slate-500 dark:text-slate-400">{UR_COMMON.spellingNote.ur}</p>
+          <UrduSpellingNote />
           <p className="text-sm text-slate-500 dark:text-slate-400">{C.dobNote.ur}</p>
         </UrduSection>
 

@@ -10,6 +10,23 @@
 import { FaqSection, JsonLd, faqJsonLd } from '@/src/components/seo/SeoSections';
 import { UR_COMMON, UR_TOOLS, type Faq, type UrToolKey } from '@/src/lib/i18n/urPages';
 
+/** Arabic letters/words: they contain ي ك ه or ة, which Urdu text never uses (Urdu writes ی ک ہ). */
+const ARABIC_TOKEN = /([\u0621-\u064A\u064B-\u0652\u0670\u0671-\u06D3\u06D5]*[\u0629\u0643\u0647\u064A][\u0621-\u064A\u064B-\u0652\u0670\u0671-\u06D3\u06D5]*)/;
+
+/**
+ * The /ur spelling note, with its Arabic letters and words in a lang="ar"
+ * Naskh span: in Nastaliq, Arabic ه/ي look like Urdu ہ/ی, so the pairs the
+ * note contrasts would otherwise look identical.
+ */
+export function UrduSpellingNote({ className = 'text-sm text-slate-500 dark:text-slate-400' }: { className?: string }) {
+  const parts = UR_COMMON.spellingNote.ur.split(ARABIC_TOKEN);
+  return (
+    <p className={className}>
+      {parts.map((part, i) => (i % 2 === 1 ? <Ar key={i}>{part}</Ar> : part))}
+    </p>
+  );
+}
+
 /** Compact RTL header: back link, H1, short lead, tool-language note. */
 export function UrduHeader({ h1, lead, note = UR_COMMON.toolUiNote.ur }: { h1: string; lead: string; note?: string | null }) {
   return (

@@ -24,7 +24,7 @@ Sources (edit there, then regenerate this file with `python3 scripts/i18n/ur/bui
 4. Planetary-hour guide item “Cutting ties” → “تعلقات ختم کرنا”. Should be checked so it never reads as encouraging قطع رحمی.
 5. Planet-of-the-day intro: “a ruling planet that colours its energy” → softened to “روایت کے مطابق … اس دن کی کیفیت کا رنگ متعین کرتا ہے”. Check that the wording does not attribute independent influence to planets.
 6. Astro technical terms in the Ikhtiyārāt breakdown (محترق، خالی السیر، تحت الشعاع، ہبوط، وبال، رجعت، الطریقۃ المحترقۃ) follow classical Arabic/Persian usage; please confirm they are understood by Urdu readers.
-7. Urdu-typed names (RESOLVED, see the reviewer answers below: Urdu letters are now converted before counting). Originally: the Abjad logic gave Urdu letters no value. Urdu ی (U+06CC), ک (U+06A9) and ہ (U+06C1) count as 0, and so do ٹ ڈ ڑ ں ھ ے. So فاطمہ = 130 but فاطمة = 135, علی = 100 but علي = 110, and کریم = 240 but كريم = 270 (name/mother burj, calculateAbjadValue). Calculation logic was deliberately NOT changed in this PR. The /ur pages tell users to type the Arabic spelling. A follow-up could normalise ی→ي, ک→ك, ہ→ه/ة before counting, which would need Mario’s approval as a calculation change. Please also check the wording of the note.
+7. Urdu-typed names in the Abjad count: RESOLVED. Urdu letters are converted before counting (see the reviewer answers below, Q7).
 8. Interpretive result content (soul-connection archetype meanings, burj career texts, per-date rule explanations, manzil descriptions, day guidance paragraphs) is NOT translated yet and still shows in English; the pages say “ٹول کے کچھ حصے ابھی انگریزی میں ہیں۔”
 
 ### Reviewer answers (native review, Oct 2026)
@@ -37,13 +37,13 @@ Sources (edit there, then regenerate this file with `python3 scripts/i18n/ur/bui
 | 4 | تعلقات ختم کرنا | Change to «نقصان دہ معاملات یا شراکتیں ختم کرنا». | ✅ applied |
 | 5 | Planet-of-the-day intro | Do not make the planet the agent; use the fuller wording. | ✅ applied (fuller wording). |
 | 6 | Astro terms | محترق، تحت الشعاع، ہبوط، وبال، رجعت، شرف are understood. Gloss خالی السیر and الطریقۃ المحترقۃ; use اتصال / انصراف for Applying/Separating. | ✅ applied |
-| 7 | Urdu letters in Abjad | Recommends normalising ی→ي، ک→ك، ہ/ۃ→ه/ة (ے→ي) before counting, or until then an inline warning. | ✅ applied (approved by Mario, Oct 2026): src/lib/urduLetters.ts converts ی ے→ي, ک→ك, ھ ۂ→ه, ہ ۃ→ه (ة at the end of a word, so فاطمہ = فاطمة = 135) before every name/Abjad count (burj, compatibility, Abjad calculator, ʿilm al-ḥurūf). ٹ ڈ ڑ ں stay uncounted, per the reviewer. علی = 110 (was 100), فاطمہ = 135 (was 130), کریم = 270 (was 240). Arabic input is untouched, so EN/FR/AR results are unchanged (src/lib/urduLetters.test.ts). The spelling note now says Urdu spelling works; the inline warning is no longer needed. New note wording: please review. |
+| 7 | Urdu letters in Abjad | Recommends normalising ی→ي، ک→ك، ہ/ۃ→ه/ة (ے→ي) before counting, or until then an inline warning. | ✅ applied (approved by Mario, Oct 2026): src/lib/urduLetters.ts converts ی ے→ي, ک→ك, ھ ۂ→ه, ہ ۃ→ه (ة at the end of a word, so فاطمہ = فاطمة = 135) before every name/Abjad count (burj, compatibility, Abjad calculator, ʿilm al-ḥurūf). علی = 110, فاطمہ = 135, کریم = 270. ٹ ڈ ڑ ں and پ چ ژ گ have no value (0). Arabic input is untouched (src/lib/urduLetters.test.ts). The spelling note says so (batch 4 wording; Arabic letters in a Naskh span). Still for Mario (batch 4): chronogram values for پ چ ژ گ ٹ ڈ ڑ; an exception so اللہ counts like الله in the elements (the total is already the same, 66); the hamza/ى rule, which differs between the map sets already on main (not caused by this change). |
 | 8 | English interpretive content | OK for a noindex phase 1 with UR_COMMON.toolUiNote; translate burj career texts and soul-connection meanings before indexing. | ⏳ not done in this PR (separate task). toolUiNote stays visible; /ur stays noindex. |
 
 
-## Review corrections (55 of 56 applied)
+## Review corrections (61 of 62 applied)
 
-From the native reviewer (Language Reviewer, Oct 2026). The tables further down show the strings as they are now, with the corrections in place. /ur stays noindex and out of the sitemap and hreflang until Mario approves indexing (Q7 and Q8 are still open).
+From the native reviewer (Language Reviewer, Oct 2026). The tables further down show the strings as they are now, with the corrections in place. /ur stays noindex and out of the sitemap and hreflang until Mario approves indexing (Q8, the untranslated result texts, is still open).
 
 | Batch | String | Before | After | Status |
 |---|---|---|---|---|
@@ -103,6 +103,12 @@ From the native reviewer (Language Reviewer, Oct 2026). The tables further down 
 | 3C | catalog «Get it on Google Play» | Google Play سے حاصل کریں | ⁦Google Play⁩ سے حاصل کریں (LRI…PDI) | ✅ applied (the only other catalog value mixing Latin and Urdu were the two search placeholders above) |
 | 3C | catalog «Ḥadad Value» | حدد کی قیمت | عدد کی قیمت | ✅ applied: the source confirms it is the count, burujData.json says “repeat Hadad times: your name + mother’s name”. Native check of the label still welcome. |
 | 3C | UR_COMPAT.faqs[4].a | …دعوت ہو سکتا ہے۔ | …دعوت ہو سکتی ہے۔ | ✅ applied |
+| 4 | UR_COMMON.spellingNote | نام اردو یا عربی املا میں لکھ سکتے ہیں۔ … ٹ، ڈ، ڑ اور ں کی ابجد میں کوئی قیمت نہیں … | آپ نام اردو یا عربی املا میں لکھ سکتے ہیں۔ … فاطمہ اور فاطمة کا عدد ایک ہی آتا ہے، اور علی اور علي کا بھی۔ ٹ، ڈ، ڑ، ں اور پ، چ، ژ، گ کی ابجد میں کوئی قیمت نہیں … | ✅ applied |
+| 4 | UR_COMMON.spellingNote rendering (/ur/abjad, /ur/compatibility, /ur/name-and-mother-burj) | Arabic ي ك ه ة فاطمة علي in the Nastaliq text | each in <span lang="ar" class="font-arabic"> (UrduSpellingNote) | ✅ applied |
+| 4 | UR_ABJAD.how | …نام یا عبارت عربی حروف میں لکھیں… | …نام یا عبارت اردو یا عربی حروف میں لکھیں… | ✅ applied |
+| 4 | UR_ABJAD.faqs[2].a | کیلکولیٹر میں اپنا نام عربی حروف میں لکھیں؛ … | کیلکولیٹر میں اپنا نام اردو یا عربی حروف میں لکھیں؛ … | ✅ applied |
+| 4 | catalog «Both names must be in Arabic script…» | درست تجزیے کے لیے دونوں نام عربی رسم الخط میں ہونے چاہییں | درست تجزیے کے لیے دونوں نام اردو یا عربی حروف میں لکھیں | ✅ applied |
+| 4 | docs Q7 note | old pre-change text | trimmed; status updated | ✅ applied |
 
 ## 1. Qur'an / Divine Names
 
@@ -296,7 +302,7 @@ Titles and descriptions (`urMetadata.ts`). The title gets “ | اسرار” ap
 | UR_COMMON.linksTitle | Related pages | متعلقہ صفحات |
 | UR_COMMON.inEnglish | (in English) | (انگریزی میں) |
 | UR_COMMON.inEnglishDesc | The same tool with the explanation in English. | یہی ٹول، انگریزی وضاحت کے ساتھ۔ |
-| UR_COMMON.spellingNote | You can type names in Urdu or Arabic spelling. For the Abjad count, ی and ے are read as ي, ک as ك, ھ as ه, and ہ as ه (ة at the end of a word), so فاطمہ counts the same as فاطمة and علی the same as علي. ٹ، ڈ، ڑ and ں have no Abjad value and are not counted. | نام اردو یا عربی املا میں لکھ سکتے ہیں۔ ابجد کے حساب میں ی اور ے کو ي، ک کو ك، ھ کو ه، اور ہ کو ه (لفظ کے آخر میں ة) شمار کیا جاتا ہے، اس لیے فاطمہ کا عدد فاطمة کے برابر اور علی کا علي کے برابر ہے۔ ٹ، ڈ، ڑ اور ں کی ابجد میں کوئی قیمت نہیں، اس لیے یہ شمار نہیں ہوتے۔ |
+| UR_COMMON.spellingNote | You can type names in Urdu or Arabic spelling. For the Abjad count, ی and ے are read as ي, ک as ك, ھ as ه, and ہ as ه (ة at the end of a word), so فاطمہ and فاطمة give the same number, as do علی and علي. ٹ، ڈ، ڑ، ں and پ، چ، ژ، گ have no Abjad value and are not counted. | آپ نام اردو یا عربی املا میں لکھ سکتے ہیں۔ ابجد کے حساب میں ی اور ے کو ي، ک کو ك، ھ کو ه، اور ہ کو ه (لفظ کے آخر میں ة) شمار کیا جاتا ہے، اس لیے فاطمہ اور فاطمة کا عدد ایک ہی آتا ہے، اور علی اور علي کا بھی۔ ٹ، ڈ، ڑ، ں اور پ، چ، ژ، گ کی ابجد میں کوئی قیمت نہیں، اس لیے یہ شمار نہیں ہوتے۔ |
 | UR_TOOLS.burj.name | Your Burj from Your Name and Your Mother's Name | اپنے نام اور والدہ کے نام سے برج |
 | UR_TOOLS.burj.desc | Your burj, element, blessed day, dhikr and sadaqa from the Abjad count. | ابجد کے حساب سے آپ کا برج، عنصر، مبارک دن، ذکر اور صدقہ۔ |
 | UR_TOOLS.compatibility.name | Name Compatibility for Marriage | شادی کے لیے ناموں کی مطابقت |
@@ -388,14 +394,14 @@ Titles and descriptions (`urMetadata.ts`). The title gets “ | اسرار” ap
 | UR_ABJAD.ordersTitle | The Mashriqi and Maghribi orders | مشرقی اور مغربی ترتیب |
 | UR_ABJAD.orders | In ʿilm al-ḥurūf and ʿilm al-aʿdād scholars studied the numerical values of the Divine Names, Qur'anic phrases and people's names, and linked the letters to the four elements: fire, air, water and earth. There are two common orders: the Mashriqi order used in the East, including Pakistan and India, and the Maghribi order used in North and West Africa. This calculator supports both so you can compare the results. | علم الحروف اور علم الاعداد میں علما نے اسمائے حسنیٰ، قرآنی عبارات اور لوگوں کے ناموں کی عددی قیمتوں کا مطالعہ کیا اور حروف کو چار عناصر سے جوڑا: آگ، ہوا، پانی اور مٹی۔ دو ترتیبیں عام ہیں: مشرقی ترتیب، جو پاکستان اور ہندوستان سمیت مشرق میں رائج ہے، اور مغربی ترتیب، جو شمالی اور مغربی افریقہ میں رائج ہے۔ یہ کیلکولیٹر دونوں ترتیبوں سے حساب کرتا ہے تاکہ آپ نتائج کا موازنہ کر سکیں۔ |
 | UR_ABJAD.howTitle | How to use the calculator | کیلکولیٹر کیسے استعمال کریں |
-| UR_ABJAD.how | Choose the type of calculation, write the name or phrase in Arabic letters (or in Latin letters for the tool to convert), then read the total, the value of each letter and the element analysis. | حساب کی قسم منتخب کریں، نام یا عبارت عربی حروف میں لکھیں (یا رومن حروف میں، تاکہ ٹول اسے عربی میں بدل دے)، پھر مجموعہ، ہر حرف کی قیمت اور عناصر کا تجزیہ دیکھیں۔ |
+| UR_ABJAD.how | Choose the type of calculation, write the name or phrase in Urdu or Arabic letters (or in Latin letters for the tool to convert), then read the total, the value of each letter and the element analysis. | حساب کی قسم منتخب کریں، نام یا عبارت اردو یا عربی حروف میں لکھیں (یا رومن حروف میں، تاکہ ٹول اسے عربی میں بدل دے)، پھر مجموعہ، ہر حرف کی قیمت اور عناصر کا تجزیہ دیکھیں۔ |
 | UR_ABJAD.example | Example: Muḥammad = mīm (40) + ḥāʾ (8) + mīm (40) + dāl (4) = 92. | مثال: محمد = م (40) + ح (8) + م (40) + د (4) = 92۔ |
 | UR_ABJAD.faqs[0].q | What is ʿilm al-aʿdād? | علم الاعداد کیا ہے؟ |
 | UR_ABJAD.faqs[0].a | ʿIlm al-aʿdād is the traditional study of the numbers of letters and words through Abjad. In this tool it is a subject of reflection and learning about names, not fortune-telling. | علم الاعداد حروف اور الفاظ کے اعداد کا روایتی مطالعہ ہے، جو ابجد کے ذریعے کیا جاتا ہے۔ اس ٹول میں یہ ناموں کے بارے میں غور و فکر اور سیکھنے کا موضوع ہے، قسمت کا حال بتانا نہیں۔ |
 | UR_ABJAD.faqs[1].q | What is the difference between the Mashriqi and Maghribi Abjad? | مشرقی اور مغربی ابجد میں کیا فرق ہے؟ |
 | UR_ABJAD.faqs[1].a | They are two traditional orders of the Abjad letters. They differ in the values of a few letters, so the same name can give two different totals. The calculator supports both; switch with the button above it. | یہ ابجد حروف کی دو روایتی ترتیبیں ہیں۔ چند حروف کی قیمتوں میں فرق ہے، اس لیے ایک ہی نام کے دو مختلف مجموعے آ سکتے ہیں۔ کیلکولیٹر دونوں ترتیبوں سے حساب کرتا ہے؛ اس کے اوپر دیے گئے بٹن سے ترتیب بدلیں۔ |
 | UR_ABJAD.faqs[2].q | How do I calculate the numbers of my name? | اپنے نام کے اعداد کیسے نکالیں؟ |
-| UR_ABJAD.faqs[2].a | Write your name in Arabic letters in the calculator; it adds up the letter values, ignoring vowel marks. Example: Muḥammad = 40 + 8 + 40 + 4 = 92. You can also type the name in Latin letters and the tool will convert it to Arabic letters. | کیلکولیٹر میں اپنا نام عربی حروف میں لکھیں؛ یہ اعراب کو چھوڑ کر حروف کی قیمتیں جمع کرتا ہے۔ مثال: محمد = 40 + 8 + 40 + 4 = 92۔ آپ نام رومن حروف میں بھی لکھ سکتے ہیں، ٹول اسے عربی حروف میں بدل دے گا۔ |
+| UR_ABJAD.faqs[2].a | Write your name in Urdu or Arabic letters in the calculator; it adds up the letter values, ignoring vowel marks. Example: Muḥammad = 40 + 8 + 40 + 4 = 92. You can also type the name in Latin letters and the tool will convert it to Arabic letters. | کیلکولیٹر میں اپنا نام اردو یا عربی حروف میں لکھیں؛ یہ اعراب کو چھوڑ کر حروف کی قیمتیں جمع کرتا ہے۔ مثال: محمد = 40 + 8 + 40 + 4 = 92۔ آپ نام رومن حروف میں بھی لکھ سکتے ہیں، ٹول اسے عربی حروف میں بدل دے گا۔ |
 | UR_ABJAD.faqs[3].q | How is tāʾ marbūṭa counted? | تائے مربوطہ (ة) کیسے شمار ہوتی ہے؟ |
 | UR_ABJAD.faqs[3].a | In this calculator tāʾ marbūṭa (ة) counts as hāʾ (5), not as tāʾ (400). | اس کیلکولیٹر میں تائے مربوطہ (ة) کو ہ (5) شمار کیا جاتا ہے، ت (400) نہیں۔ |
 | UR_ABJAD.faqs[4].q | Is Abjad a way of knowing the unseen? | کیا ابجد غیب جاننے کا ذریعہ ہے؟ |
@@ -693,7 +699,7 @@ Exact-match English text in the tools → Urdu. `re:` keys are patterns; `$1`…
 | Birth Date | تاریخِ پیدائش |
 | QUICK | فوری |
 | Simpler method using only your date of birth | آسان طریقہ: صرف آپ کی تاریخِ پیدائش سے |
-| Both names must be in Arabic script for accurate spiritual analysis | درست تجزیے کے لیے دونوں نام عربی رسم الخط میں ہونے چاہییں |
+| Both names must be in Arabic script for accurate spiritual analysis | درست تجزیے کے لیے دونوں نام اردو یا عربی حروف میں لکھیں |
 | Your Name | آپ کا نام |
 | Search by Latin Name | رومن نام سے تلاش کریں |
 | (optional) | (اختیاری) |
