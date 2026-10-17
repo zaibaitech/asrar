@@ -116,7 +116,7 @@ export function IkhtiyaratPage({ hideHeader = false }: IkhtiyaratPageProps = {})
 
         <div className="relative">
         {hideHeader && (
-          <div className="absolute -right-2 -top-2.5">{aboutButton('w-9 h-9')}</div>
+          <div className="absolute -end-2 -top-2.5">{aboutButton('w-9 h-9')}</div>
         )}
         <label className="block">
           <span className="text-xs font-medium text-slate-500 dark:text-slate-400">{c.electionTypeLabel}</span>

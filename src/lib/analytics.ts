@@ -31,7 +31,7 @@ export const TOOLS = [
 ] as const;
 export type Tool = (typeof TOOLS)[number];
 
-export const LANGS = ['en', 'fr', 'ar'] as const;
+export const LANGS = ['en', 'fr', 'ar', 'ur'] as const;
 export type Lang = (typeof LANGS)[number];
 
 export const SHARE_METHODS = ['native', 'copy_link', 'whatsapp', 'telegram', 'twitter', 'facebook'] as const;
@@ -90,7 +90,7 @@ export function trackEvent<E extends EventName>(name: E, params: EventParams<E>)
 
 /** UI language for event params: en, fr or ar (anything else counts as en). */
 export function toLang(lang: string | undefined | null): Lang {
-  return lang === 'fr' || lang === 'ar' ? lang : 'en';
+  return lang === 'fr' || lang === 'ar' || lang === 'ur' ? lang : 'en';
 }
 
 /** Share method for the common "navigator.share, else copy to clipboard" pattern. */

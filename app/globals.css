@@ -23,6 +23,30 @@ html[lang="ar"] body {
   font-family: var(--font-arabic-ui), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+/* Urdu (/ur only). Noto Nastaliq Urdu is loaded by app/ur/layout.tsx (only on /ur)
+   and applied by .font-urdu on the /ur page wrapper; Noto Naskh Arabic is the
+   fallback (and the body font for anything rendered outside the wrapper, such
+   as portals). Nastaliq needs a taller line box, so the wrapper raises the
+   inherited line-height; elements with their own leading-* keep it. */
+html[lang="ur"] body {
+  font-family: var(--font-arabic-ui), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.font-urdu {
+  font-family: var(--font-urdu), var(--font-arabic-ui), 'Noto Naskh Arabic', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 1.9;
+}
+/* Nastaliq's tall ascenders/descenders overlap in Tailwind's tight text-* line boxes. */
+.font-urdu :is(.text-xs, .text-sm, .text-base) {
+  line-height: 1.9;
+}
+.font-urdu :is(.text-lg, .text-xl, .text-2xl, .text-3xl, .text-4xl) {
+  line-height: 1.7;
+}
+/* Qur'an and Divine Names on Urdu pages stay in Arabic script (Naskh). */
+.font-urdu [lang="ar"] {
+  font-family: var(--font-arabic-ui), 'Noto Naskh Arabic', 'Amiri', serif;
+}
+
 .font-display {
   font-family: 'Cormorant Garamond', serif;
 }

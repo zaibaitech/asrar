@@ -10,6 +10,7 @@ function langFor(uiLanguage: string): Lang {
   if (typeof window !== 'undefined') {
     const p = window.location.pathname;
     if (p === '/ar' || p.startsWith('/ar/')) return 'ar';
+    if (p === '/ur' || p.startsWith('/ur/')) return 'ur';
     if (p === '/fr' || p.startsWith('/fr/')) return 'fr';
   }
   return toLang(uiLanguage);

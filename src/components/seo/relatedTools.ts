@@ -7,12 +7,13 @@
  * Links stay in the language of the URL being served: /ar pages link to /ar
  * pages, /fr pages to /fr mirrors, falling back to English only where a page
  * has no localized version. Names reuse the tool names already translated in
- * the repo (Arabic landing links, AR_META and public/i18n/ar-ui.json).
+ * the repo (Arabic landing links, AR_META and public/i18n/ar-ui.json); Urdu
+ * names are hand-translated (docs/i18n/ur-review.md).
  */
-import { arAppPath, isLocalizedPath, localizeHref, AR_PATHS } from '@/src/lib/i18nRoutes';
+import { arAppPath, isLocalizedPath, localizeHref, AR_PATHS, UR_PATHS } from '@/src/lib/i18nRoutes';
 import type { Tool } from '@/src/lib/analytics';
 
-export type ToolsLang = 'en' | 'fr' | 'ar';
+export type ToolsLang = 'en' | 'fr' | 'ar' | 'ur';
 
 export type ToolKey =
   | 'burj'
@@ -32,55 +33,55 @@ export type ToolKey =
 const TOOLS: Record<ToolKey, { path: string; name: Record<ToolsLang, string> }> = {
   burj: {
     path: '/name-and-mother-burj',
-    name: { en: "Your Burj from Your Name & Mother's Name", fr: 'Votre burj par votre nom et celui de votre mère', ar: 'برجك من اسمك واسم أمك' },
+    name: { en: "Your Burj from Your Name & Mother's Name", fr: 'Votre burj par votre nom et celui de votre mère', ar: 'برجك من اسمك واسم أمك', ur: 'اپنے نام اور والدہ کے نام سے برج' },
   },
   compatibility: {
     path: '/compatibility',
-    name: { en: 'Name Compatibility for Marriage', fr: 'Compatibilité des prénoms pour le mariage', ar: 'توافق الأسماء للزواج' },
+    name: { en: 'Name Compatibility for Marriage', fr: 'Compatibilité des prénoms pour le mariage', ar: 'توافق الأسماء للزواج', ur: 'شادی کے لیے ناموں کی مطابقت' },
   },
   abjad: {
     path: '/abjad',
-    name: { en: 'Abjad Calculator', fr: 'Calculateur Abjad', ar: 'حساب الجمل' },
+    name: { en: 'Abjad Calculator', fr: 'Calculateur Abjad', ar: 'حساب الجمل', ur: 'ابجد کیلکولیٹر' },
   },
   hours: {
     path: '/planetary-hours',
-    name: { en: 'Planetary Hours Today', fr: "Heures planétaires aujourd'hui", ar: 'ساعات الكواكب اليوم' },
+    name: { en: 'Planetary Hours Today', fr: "Heures planétaires aujourd'hui", ar: 'ساعات الكواكب اليوم', ur: 'آج کی ساعاتِ کواکب' },
   },
   planetOfDay: {
     path: '/planet-of-the-day',
-    name: { en: 'Planet of the Day', fr: 'Planète du jour', ar: 'كوكب اليوم' },
+    name: { en: 'Planet of the Day', fr: 'Planète du jour', ar: 'كوكب اليوم', ur: 'آج کا سیارہ' },
   },
   ikhtiyarat: {
     path: '/ikhtiyarat',
-    name: { en: 'Best Dates (Ikhtiyārāt)', fr: 'Meilleures dates (Ikhtiyārāt)', ar: 'أفضل التواريخ (الاختيارات)' },
+    name: { en: 'Best Dates (Ikhtiyārāt)', fr: 'Meilleures dates (Ikhtiyārāt)', ar: 'أفضل التواريخ (الاختيارات)', ur: 'مناسب تاریخوں کا انتخاب (اختیارات)' },
   },
   manazil: {
     path: '/manazil',
-    name: { en: 'Lunar Mansions (Manāzil)', fr: 'Demeures lunaires (Manāzil)', ar: 'منازل القمر' },
+    name: { en: 'Lunar Mansions (Manāzil)', fr: 'Demeures lunaires (Manāzil)', ar: 'منازل القمر', ur: 'منازلِ قمر' },
   },
   sadaqa: {
     path: '/sadaqa',
-    name: { en: 'Sadaqa Guide', fr: 'Guide de la sadaqa', ar: 'دليل الصدقة' },
+    name: { en: 'Sadaqa Guide', fr: 'Guide de la sadaqa', ar: 'دليل الصدقة', ur: 'صدقے کی رہنمائی' },
   },
   sadaqaDay: {
     path: '/sadaqa-of-the-day',
-    name: { en: 'Sadaqa of the Day', fr: 'Sadaqa du jour', ar: 'صدقة اليوم' },
+    name: { en: 'Sadaqa of the Day', fr: 'Sadaqa du jour', ar: 'صدقة اليوم', ur: 'آج کا صدقہ' },
   },
   marriage: {
     path: '/best-day-for/marriage',
-    name: { en: 'Best Day for Nikah (Marriage)', fr: 'Meilleur jour pour le nikāḥ', ar: 'أفضل يوم لعقد النكاح' },
+    name: { en: 'Best Day for Nikah (Marriage)', fr: 'Meilleur jour pour le nikāḥ', ar: 'أفضل يوم لعقد النكاح', ur: 'نکاح کے لیے بہترین دن' },
   },
   travel: {
     path: '/best-day-for/travel',
-    name: { en: 'Best Day to Travel', fr: 'Jour favorable pour voyager', ar: 'أفضل يوم للسفر' },
+    name: { en: 'Best Day to Travel', fr: 'Jour favorable pour voyager', ar: 'أفضل يوم للسفر', ur: 'سفر کے لیے بہترین دن' },
   },
   moving: {
     path: '/best-day-for/moving-home',
-    name: { en: 'Best Day to Move Home', fr: 'Jour favorable pour déménager', ar: 'أفضل يوم للانتقال إلى بيت جديد' },
+    name: { en: 'Best Day to Move Home', fr: 'Jour favorable pour déménager', ar: 'أفضل يوم للانتقال إلى بيت جديد', ur: 'نئے گھر میں منتقل ہونے کا بہترین دن' },
   },
   business: {
     path: '/best-day-for/business',
-    name: { en: 'Best Day to Start a Business', fr: 'Jour favorable pour commencer une affaire', ar: 'أفضل يوم لبدء التجارة والعقود' },
+    name: { en: 'Best Day to Start a Business', fr: 'Jour favorable pour commencer une affaire', ar: 'أفضل يوم لبدء التجارة والعقود', ur: 'کاروبار شروع کرنے کا بہترین دن' },
   },
 };
 
@@ -101,11 +102,13 @@ export const RELATED_TOOLS: Readonly<Record<string, readonly ToolKey[]>> = {
   '/sadaqa-of-the-day': ['sadaqa', 'planetOfDay', 'burj', 'hours'],
 };
 
-export const RELATED_TOOLS_TITLE: Record<ToolsLang, string> = { en: 'Related tools', fr: 'Outils associés', ar: 'أدوات ذات صلة' };
+export const RELATED_TOOLS_TITLE: Record<ToolsLang, string> = { en: 'Related tools', fr: 'Outils associés', ar: 'أدوات ذات صلة', ur: 'متعلقہ ٹولز' };
 
 /** URL of `enPath` for a page served in `routeLang` (English when there is no localized version). */
 export function relatedToolHref(enPath: string, routeLang: ToolsLang): string {
   if (routeLang === 'ar') return enPath in AR_PATHS || isLocalizedPath(enPath) ? arAppPath(enPath) : enPath;
+  // /ur pages link to the other /ur pages (English where there is no Urdu page yet).
+  if (routeLang === 'ur') return UR_PATHS[enPath] ?? enPath;
   return localizeHref(enPath, routeLang);
 }
 

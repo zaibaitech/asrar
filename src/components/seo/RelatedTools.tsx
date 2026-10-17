@@ -24,11 +24,13 @@ export function RelatedTools({
   const fromTool = pageEventId(pagePath);
   if (!links.length) return null;
   const ar = lang === 'ar';
+  // Urdu: RTL, and the Urdu font is inherited from the /ur layout.
+  const rtl = ar || lang === 'ur';
   const nav = (
     <nav
       aria-label={TITLE[lang]}
-      lang={ar ? 'ar' : undefined}
-      dir={ar ? 'rtl' : undefined}
+      lang={rtl ? lang : undefined}
+      dir={rtl ? 'rtl' : undefined}
       className={`rounded-xl border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-800/40 p-4 space-y-3${ar ? ' font-arabic' : ''}`}
     >
       <h2 className="text-base font-semibold text-slate-900 dark:text-slate-100">{TITLE[lang]}</h2>

@@ -11,7 +11,7 @@
 
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { ROUTE_LANG_HEADER, frPath, isArAppPath, isIndexableArAppPath, isLocalizedPath, stripArPrefix, stripFrPrefix } from './src/lib/i18nRoutes';
+import { ROUTE_LANG_HEADER, frPath, isArAppPath, isIndexableArAppPath, isLocalizedPath, isUrPath, stripArPrefix, stripFrPrefix } from './src/lib/i18nRoutes';
 
 const SUPPORTED_LANGUAGES = ['en', 'fr', 'ar'] as const;
 type Language = typeof SUPPORTED_LANGUAGES[number];
@@ -130,6 +130,8 @@ export function middleware(request: NextRequest) {
     language = 'fr';
   } else {
     response = NextResponse.next({ request: { headers: requestHeaders } });
+    // Urdu pages (app/ur/**) are under native review: noindex (also set in their metadata).
+    if (isUrPath(pathname)) response.headers.set('X-Robots-Tag', 'noindex, follow');
     language = detectLanguage(request);
   }
   

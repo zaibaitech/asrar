@@ -159,3 +159,38 @@ export function arAppPath(enPath: string): string {
   if (AR_PATHS[enPath]) return AR_PATHS[enPath];
   return enPath === '/' ? AR_PREFIX : `${AR_PREFIX}${enPath}`;
 }
+
+/* ------------------------------------------------------------------------ */
+/* Urdu (/ur/...), phase 1 — under native review.                            */
+/*                                                                           */
+/* Dedicated route files (app/ur/**) with Urdu copy around the unchanged     */
+/* tool component, like the /ar landing pages. Until the Urdu copy has been  */
+/* reviewed every /ur page is noindex and deliberately left OUT of the       */
+/* sitemap and of hreflang (hreflangLanguages / localeAlternates above do    */
+/* not know about Urdu).                                                     */
+/* ------------------------------------------------------------------------ */
+
+export const UR_PREFIX = '/ur';
+
+/** EN path -> its Urdu page. */
+export const UR_PATHS: Readonly<Record<string, string>> = {
+  '/': '/ur',
+  '/name-and-mother-burj': '/ur/name-and-mother-burj',
+  '/compatibility': '/ur/compatibility',
+  '/abjad': '/ur/abjad',
+  '/planetary-hours': '/ur/planetary-hours',
+  '/planet-of-the-day': '/ur/planet-of-the-day',
+  '/ikhtiyarat': '/ur/ikhtiyarat',
+};
+
+/** '/ur/abjad' -> '/abjad', '/ur' -> '/'; null if the path is not under /ur. */
+export function stripUrPrefix(pathname: string): string | null {
+  if (pathname === UR_PREFIX || pathname === `${UR_PREFIX}/`) return '/';
+  if (pathname.startsWith(`${UR_PREFIX}/`)) return pathname.slice(UR_PREFIX.length).replace(/\/+$/, '') || '/';
+  return null;
+}
+
+/** True for any URL under /ur (all of them noindex for now). */
+export function isUrPath(pathname: string): boolean {
+  return stripUrPrefix(pathname) !== null;
+}

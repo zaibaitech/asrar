@@ -3,7 +3,7 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { translations, Language, TranslationKeys, isRtl } from '../lib/translations';
 import ArabicDomTranslator from '../components/i18n/ArabicDomTranslator';
-import { arAppPath, frPath, isArAppPath, isLocalizedPath, stripArPrefix, stripFrPrefix } from '../lib/i18nRoutes';
+import { arAppPath, frPath, isArAppPath, isLocalizedPath, isUrPath, stripArPrefix, stripFrPrefix } from '../lib/i18nRoutes';
 
 /** Languages with full inline/legacy copy (components that branch on en/fr). */
 export type ContentLanguage = 'en' | 'fr';
@@ -14,14 +14,14 @@ interface LanguageContextType {
    * ternaries, en/fr-only props). Arabic falls back to English here.
    */
   language: ContentLanguage;
-  /** The language the visitor chose for the UI: en, fr or ar. Drives `t`, the toggle and dir. */
+  /** The language the visitor chose for the UI: en, fr, ar or ur. Drives `t`, the toggle and dir. */
   uiLanguage: Language;
   setLanguage: (lang: Language) => void;
   t: TranslationKeys;
   dir: 'ltr' | 'rtl';
 }
 
-const SUPPORTED: readonly Language[] = ['en', 'fr', 'ar'];
+const SUPPORTED: readonly Language[] = ['en', 'fr', 'ar', 'ur'];
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
@@ -104,6 +104,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     // The 4 dedicated /ar landing pages: their embedded tool UI is Arabic too.
     if (stripArPrefix(window.location.pathname) !== null) {
       setLanguage('ar');
+      return;
+    }
+    // The /ur pages (app/ur/**): Urdu UI for the embedded tool.
+    if (isUrPath(window.location.pathname)) {
+      setLanguage('ur');
       return;
     }
 

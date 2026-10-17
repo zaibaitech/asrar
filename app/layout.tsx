@@ -156,13 +156,14 @@ export default function RootLayout({
           Document language/direction from the URL, applied before first paint.
           Done here instead of reading headers() so the 15 static routes
           (/names/*, /99-names-of-allah, /ar landing pages…) stay static.
-          /ar app mirror -> ar + rtl, /fr/* -> fr; everything else keeps en/ltr.
+          /ar app mirror -> ar + rtl, /fr/* -> fr, /ur/* -> ur + rtl; everything
+          else keeps en/ltr.
           The 4 dedicated Arabic landing pages (app/ar/**) set their own
           lang/dir per container and are left exactly as they were.
         */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var L=${JSON.stringify(Object.values(AR_PATHS))},p=location.pathname.replace(/\\/+$/,'')||'/',d=document.documentElement;if((p==='/ar'||p.indexOf('/ar/')===0)&&L.indexOf(p)<0){d.lang='ar';d.dir='rtl';d.setAttribute('data-ar-pending','')}else if(p==='/fr'||p.indexOf('/fr/')===0){d.lang='fr'}}catch(e){}})();`,
+            __html: `(function(){try{var L=${JSON.stringify(Object.values(AR_PATHS))},p=location.pathname.replace(/\\/+$/,'')||'/',d=document.documentElement;if((p==='/ar'||p.indexOf('/ar/')===0)&&L.indexOf(p)<0){d.lang='ar';d.dir='rtl';d.setAttribute('data-ar-pending','')}else if(p==='/fr'||p.indexOf('/fr/')===0){d.lang='fr'}else if(p==='/ur'||p.indexOf('/ur/')===0){d.lang='ur';d.dir='rtl'}}catch(e){}})();`,
           }}
         />
         <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-192x192.png" />
