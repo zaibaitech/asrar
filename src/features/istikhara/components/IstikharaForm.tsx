@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useLanguage } from "../../../contexts/LanguageContext";
 import { useProfile } from "../../../hooks/useProfile";
 import { translations } from "../../../lib/translations";
-import { validateName, calculateIstikhara, calculateIstikharaFromBirthDate } from "../calculations";
+import { validateName as validateRawName, calculateIstikhara, calculateIstikharaFromBirthDate } from "../calculations";
+import { normalizeNameInput } from "../nameInput";
 import type { IstikharaCalculationResult } from "../types";
 import { 
   Keyboard, 
@@ -47,7 +48,46 @@ interface IstikharaFormProps {
  * - Cultural context and scholarly references
  */
 export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
-  const { language } = useLanguage();
+  const { language, uiLanguage } = useLanguage();
+
+  /** Same check as before, on the name with invisible keyboard marks / presentation forms cleaned up. */
+  const validateName = (name: string) => validateRawName(normalizeNameInput(name));
+
+  /**
+   * Validation messages. Arabic visitors get Arabic directly (gender-neutral,
+   * with an example), instead of the auto-translated English strings.
+   */
+  const ar = uiLanguage === 'ar';
+  const msg = {
+    personEmpty: ar ? 'اكتب اسمك بالحروف العربية، مثل: محمد' : language === 'en' ? 'Please enter your name in Arabic' : 'Veuillez entrer votre nom en arabe',
+    motherEmpty: ar ? 'اكتب اسم أمك بالحروف العربية، مثل: فاطمة' : language === 'en' ? 'Please enter mother\'s name in Arabic' : 'Veuillez entrer le nom de la mère en arabe',
+    invalid: ar
+      ? 'اكتب الاسم بالحروف العربية فقط، بلا أرقام أو رموز (الحركات والهمزة والتاء المربوطة مقبولة).'
+      : language === 'en' ? 'Name must contain only Arabic letters' : 'Le nom ne doit contenir que des lettres arabes',
+  };
+
+  // Form fields the page scrolls to / focuses (method card taps, submit with an error).
+  const personInputRef = useRef<HTMLInputElement>(null);
+  const motherInputRef = useRef<HTMLInputElement>(null);
+  const birthDateSectionRef = useRef<HTMLDivElement>(null);
+  const goToField = (el: HTMLElement | null | undefined) => {
+    if (!el) return;
+    const reduce = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+    el.focus({ preventScroll: true });
+  };
+  const firstEmptyBirthField = () =>
+    Array.from(birthDateSectionRef.current?.querySelectorAll<HTMLInputElement | HTMLSelectElement>('input, select') ?? []).find((f) => !f.value) ??
+    birthDateSectionRef.current?.querySelector<HTMLElement>('input, select');
+
+  /** Tapping a method card: select it, or if it is already selected, take the visitor to its first field. */
+  const chooseMethod = (method: 'name-based' | 'birth-date') => {
+    if (calculationMethod !== method) {
+      setCalculationMethod(method);
+      return;
+    }
+    goToField(method === 'name-based' ? personInputRef.current : firstEmptyBirthField());
+  };
   const { profile } = useProfile(); // Get user profile for auto-fill
   const t = translations[language].istikhara;
   
@@ -179,27 +219,22 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
     
     // Validate person's name
     if (!personName.trim()) {
-      newErrors.person = language === 'en' 
-        ? 'Please enter your name in Arabic' 
-        : 'Veuillez entrer votre nom en arabe';
+      newErrors.person = msg.personEmpty;
     } else if (!validateName(personName)) {
-      newErrors.person = language === 'en'
-        ? 'Name must contain only Arabic letters'
-        : 'Le nom ne doit contenir que des lettres arabes';
+      newErrors.person = msg.invalid;
     }
     
     // Validate mother's name
     if (!motherName.trim()) {
-      newErrors.mother = language === 'en'
-        ? 'Please enter mother\'s name in Arabic'
-        : 'Veuillez entrer le nom de la mère en arabe';
+      newErrors.mother = msg.motherEmpty;
     } else if (!validateName(motherName)) {
-      newErrors.mother = language === 'en'
-        ? 'Name must contain only Arabic letters'
-        : 'Le nom ne doit contenir que des lettres arabes';
+      newErrors.mother = msg.invalid;
     }
     
     setErrors(newErrors);
+    // Take the visitor to the first field that needs attention.
+    if (newErrors.person) goToField(personInputRef.current);
+    else if (newErrors.mother) goToField(motherInputRef.current);
     return Object.keys(newErrors).length === 0;
   };
 
@@ -213,13 +248,11 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
     const newErrors = { ...errors };
     
     if (!value.trim()) {
-      newErrors[field] = language === 'en'
-        ? 'This field is required'
-        : 'Ce champ est requis';
+      // An empty field that was only tapped is not an error yet: the
+      // "required" message appears on submit, not as soon as focus leaves.
+      delete newErrors[field];
     } else if (!validateName(value)) {
-      newErrors[field] = language === 'en'
-        ? 'Name must contain only Arabic letters'
-        : 'Le nom ne doit contenir que des lettres arabes';
+      newErrors[field] = msg.invalid;
     } else {
       delete newErrors[field];
     }
@@ -245,6 +278,10 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
     if (calculationMethod === 'name-based' && !validateInputs()) {
       return;
     }
+    if (calculationMethod === 'birth-date' && !isBirthDateValid) {
+      goToField(firstEmptyBirthField());
+      return;
+    }
     
     // Start calculation
     setIsCalculating(true);
@@ -255,7 +292,7 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
       
       if (calculationMethod === 'name-based') {
         // Name-based calculation (Classical ʿIlm al-Ḥurūf)
-        const result = calculateIstikhara(personName, motherName);
+        const result = calculateIstikhara(normalizeNameInput(personName), normalizeNameInput(motherName));
         onCalculate(result);
       } else {
         // Birth-date calculation (ʿIlm al-Nujūm - Tropical Zodiac)
@@ -458,6 +495,9 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
       {/* Main Form */}
       <form 
         onSubmit={handleSubmit} 
+        // Our own validation shows the message in the visitor's language and
+        // takes them to the field; the browser's "required" bubble would block it.
+        noValidate
         className="p-3 sm:p-4 md:p-5 bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-2 border-white/10 rounded-lg sm:rounded-xl shadow-2xl space-y-3 sm:space-y-4"
         onKeyDown={(e) => {
           if (e.key === 'Enter') {
@@ -509,7 +549,7 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
             {/* Name-Based Method */}
             <button
               type="button"
-              onClick={() => setCalculationMethod('name-based')}
+              onClick={() => chooseMethod('name-based')}
               className={`relative p-4 rounded-xl border-2 transition-all text-left ${
                 calculationMethod === 'name-based'
                   ? 'bg-slate-800/60 border-purple-500 shadow-lg shadow-purple-500/20'
@@ -546,7 +586,7 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
             {/* Birth Date Method */}
             <button
               type="button"
-              onClick={() => setCalculationMethod('birth-date')}
+              onClick={() => chooseMethod('birth-date')}
               className={`relative p-4 rounded-xl border-2 transition-all text-left ${
                 calculationMethod === 'birth-date'
                   ? 'bg-slate-800/60 border-teal-500 shadow-lg shadow-teal-500/20'
@@ -653,6 +693,7 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
             </div>
             
             <input data-clarity-mask="true"
+              ref={personInputRef}
               type="text"
               value={personName}
               onChange={(e) => {
@@ -753,6 +794,7 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
             </div>
             
             <input data-clarity-mask="true"
+              ref={motherInputRef}
               type="text"
               value={motherName}
               onChange={(e) => {
@@ -800,7 +842,7 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
         {calculationMethod === 'birth-date' && (
           <div className="space-y-4">
             {/* Select Your Birth Date Header */}
-            <div className="p-4 bg-gradient-to-br from-teal-900/30 to-cyan-900/20 border-2 border-teal-400/40 rounded-xl">
+            <div ref={birthDateSectionRef} className="p-4 bg-gradient-to-br from-teal-900/30 to-cyan-900/20 border-2 border-teal-400/40 rounded-xl">
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-2xl">📅</span>
                 <h4 className="font-bold text-teal-200 text-lg">
@@ -992,7 +1034,10 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
         <div className="flex gap-2 sm:gap-3 pt-2 sm:pt-3">
           <button
             type="submit"
-            disabled={isCalculating || !isFormValid}
+            // Only disabled while calculating: a tap with missing/invalid input now
+            // runs validation and takes the visitor to the field (same grey look).
+            disabled={isCalculating}
+            aria-disabled={isCalculating || !isFormValid}
             tabIndex={-1}
             className={`flex-1 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg sm:rounded-xl font-bold text-sm sm:text-base transition-all transform ${
               isFormValid && !isCalculating
