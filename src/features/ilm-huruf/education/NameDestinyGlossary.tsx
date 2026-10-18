@@ -53,8 +53,8 @@ export default function NameDestinyGlossary({ language = 'en' }: GlossaryProps) 
       term: "Maghribi",
       arabic: "مغربي",
       definition: isFrench
-        ? "Tradition d'Afrique du Nord/Ouest qui classe 28 lettres en 4 éléments (7 par élément)"
-        : "North/West African tradition that classifies 28 letters into 4 elements (7 per element)"
+        ? "Tradition du Maghreb et d'Afrique de l'Ouest qui classe 28 lettres en 4 éléments (7 par élément)"
+        : "Tradition of the Maghreb and West Africa that classifies 28 letters into 4 elements (7 per element)"
     },
     {
       term: "Al-Ḥurūf al-Muqaṭṭaʿa",

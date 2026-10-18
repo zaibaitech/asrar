@@ -27,14 +27,12 @@ Sources (edit there, then regenerate this file with `python3 scripts/i18n/ur/bui
 7. Urdu-typed names in the Abjad count: RESOLVED. Urdu letters are converted before counting (see the reviewer answers below, Q7).
 8. Interpretive result content (soul-connection archetype meanings, burj career texts, per-date rule explanations, manzil descriptions, day guidance paragraphs) is NOT translated yet and still shows in English; the pages say “ٹول کے کچھ حصے ابھی انگریزی میں ہیں۔”
 
-### New strings for the Language Reviewer (2 pending)
+### New strings for the Language Reviewer (0 pending)
 
 Added after the native review; please check these.
 
 | Where | English | Urdu | Note |
 |---|---|---|---|
-| catalog (abjad system selector note, all calculators; English source from PR #89) | Maghribi (North & West Africa) · Mashriqi (Middle East & Asia) | مغربی (شمالی و مغربی افریقہ) · مشرقی (مشرقِ وسطیٰ اور ایشیا) | Short regional hint under the Maghribi/Mashriqi switch. Check “مغربی” is not read as “Western” here, and the geography wording. |
-| page copy UR_ABJAD.what (/ur/abjad, “ابجد (حسابِ جمل) کیا ہے؟”) | … and so on up to shīn 1000 in the Maghribi order used here by default (in the Mashriqi order, also available, ghayn is 1000). | الف 1، ب 2، ج 3، اور اسی طرح ش 1000 تک، اس مغربی ترتیب میں جو یہاں پہلے سے منتخب ہے (مشرقی ترتیب میں، جو یہاں دستیاب بھی ہے، غ 1000 ہے)۔ | Was “… غ 1000 تک”, which is the Mashriqi value; the site now defaults to Maghribi (ش = 1000). Check the sentence flow. |
 
 
 
@@ -52,7 +50,7 @@ Added after the native review; please check these.
 | 8 | English interpretive content | OK for a noindex phase 1 with UR_COMMON.toolUiNote; translate burj career texts and soul-connection meanings before indexing. | ⏳ not done in this PR (separate task). toolUiNote stays visible; /ur stays noindex. |
 
 
-## Review corrections (63 of 64 applied)
+## Review corrections (68 of 69 applied)
 
 From the native reviewer (Language Reviewer, Oct 2026). The tables further down show the strings as they are now, with the corrections in place. /ur stays noindex and out of the sitemap and hreflang until Mario approves indexing (Q8, the untranslated result texts, is still open).
 
@@ -122,6 +120,11 @@ From the native reviewer (Language Reviewer, Oct 2026). The tables further down 
 | 4 | docs Q7 note | old pre-change text | trimmed; status updated | ✅ applied |
 | 4 | code A: word-final ہ in اللہ | اللہ → اللة (same total, different elements) | اللہ / عبداللہ → الله / عبدالله | ✅ applied (approved by Mario) |
 | 4 | code C: پ چ ژ گ ٹ ڈ ڑ | uncounted | kept at 0 (Mario’s decision); the spelling note says so | ✅ applied |
+| 5 | catalog abjad system selector note (English source updated too) | مغربی (شمالی و مغربی افریقہ) · مشرقی (مشرقِ وسطیٰ اور ایشیا) | مغربی (مراکش تا لیبیا، اندلس اور مغربی افریقہ) · مشرقی (مصر، مشرقِ وسطیٰ اور برصغیر سمیت ایشیا) | ✅ applied; English source is now “Maghribi (the Maghreb, al-Andalus & West Africa) · Mashriqi (Egypt, the Middle East & Asia)” |
+| 5 | UR_ABJAD.what | الف 1، ب 2، ج 3، اور اسی طرح ش 1000 تک، اس مغربی ترتیب میں جو یہاں پہلے سے منتخب ہے (مشرقی ترتیب میں، جو یہاں دستیاب بھی ہے، غ 1000 ہے)۔ … “حسابِ جمل” | الف 1، ب 2، ج 3، اور اسی طرح آخری حرف تک: یہاں پہلے سے منتخب مغربی ترتیب میں آخری حرف شین (ش) ہے جس کی قیمت 1000 ہے، جبکہ مشرقی ترتیب میں، جو یہاں بھی دستیاب ہے، غین (غ) کی قیمت 1000 ہے۔ … “حسابِ جُمَّل” | ✅ applied |
+| 5 | UR_COMPAT.faqs[1].a | آپ مغربی ترتیب (شمالی اور مغربی افریقہ) اور مشرقی ترتیب (مشرق، بشمول برصغیر) … جن ناموں میں ص، س، ش، ض، ظ یا غ جیسے حروف ہوں ان میں فرق ہو سکتا ہے۔ | آپ مغربی ترتیب (مراکش تا لیبیا اور مغربی افریقہ) اور مشرقی ترتیب (مصر، عرب ممالک اور برصغیر) … جن ناموں میں ص، ض، س، ظ، غ یا ش میں سے کوئی حرف ہو ان کا مجموعہ مختلف آ سکتا ہے۔ | ✅ applied; English source updated to match |
+| 5 | UR_ABJAD.orders | …اور مغربی ترتیب، جو شمالی اور مغربی افریقہ میں رائج ہے۔ | …اور مغربی ترتیب، جو مراکش سے لیبیا تک کے مغربِ عربی، تاریخی اندلس اور مغربی افریقہ میں رائج ہے۔ | ✅ applied; English source updated to match |
+| 5 | UR_BURJ.how[1] | ہر نام کو مغربی (شمالی افریقی) ترتیب کے حروف کی قیمتوں سے… | ہر نام کو مغربی ترتیب (مراکش و مغربی افریقہ) کے حروف کی قیمتوں سے… | ✅ applied |
 
 ## 1. Qur'an / Divine Names
 
@@ -358,7 +361,7 @@ Titles and descriptions (`urMetadata.ts`). The title gets “ | اسرار” ap
 | UR_BURJ.lead | Write your name and your mother's name to find your burj by the Abjad count, with its element, temperament, blessed day, dhikr and the sadaqa suited to it. | اپنا نام اور اپنی والدہ کا نام لکھیں اور ابجد کے حساب سے اپنا برج معلوم کریں، ساتھ ہی اس کا عنصر، مزاج، مبارک دن، ذکر اور اس کے مناسب صدقہ بھی۔ |
 | UR_BURJ.howTitle | How is the burj calculated? | برج کا حساب کیسے ہوتا ہے؟ |
 | UR_BURJ.how[0] | Write your name and your mother's name in Urdu or Arabic letters (or in Latin letters, then choose the Arabic spelling). | اپنا نام اور والدہ کا نام اردو یا عربی حروف میں لکھیں (یا رومن حروف میں لکھ کر عربی املا منتخب کریں)۔ |
-| UR_BURJ.how[1] | Each name is converted to its Abjad total using the Maghribi letter values. | ہر نام کو مغربی (شمالی افریقی) ترتیب کے حروف کی قیمتوں سے اس کے ابجد مجموعے میں بدلا جاتا ہے۔ |
+| UR_BURJ.how[1] | Each name is converted to its Abjad total using the Maghribi letter values. | ہر نام کو مغربی ترتیب (مراکش و مغربی افریقہ) کے حروف کی قیمتوں سے اس کے ابجد مجموعے میں بدلا جاتا ہے۔ |
 | UR_BURJ.how[2] | Add the two totals and divide by 12; the remainder (1 to 12, with 0 counted as 12) is your burj, from 1 = Aries (Ḥamal) to 12 = Pisces (Ḥūt). | دونوں مجموعے جمع کر کے 12 سے تقسیم کریں؛ باقی (1 سے 12 تک، اور صفر کو 12 شمار کیا جاتا ہے) آپ کا برج ہے: 1 = حمل سے 12 = حوت تک۔ |
 | UR_BURJ.how[3] | The burj points to your element (fire, earth, air or water), which describes your temperament, and is linked to a blessed day, a dhikr and a sadaqa. | برج آپ کے عنصر (آگ، مٹی، ہوا یا پانی) کی نشان دہی کرتا ہے جو آپ کے مزاج کو بیان کرتا ہے، اور اس کے ساتھ ایک مبارک دن، ایک ذکر اور ایک صدقہ وابستہ ہے۔ |
 | UR_BURJ.exampleTitle | Worked example | حل شدہ مثال |
@@ -393,7 +396,7 @@ Titles and descriptions (`urMetadata.ts`). The title gets “ | اسرار” ap
 | UR_COMPAT.faqs[0].q | How do I check name compatibility for marriage? | شادی کے لیے نام کیسے ملائیں؟ |
 | UR_COMPAT.faqs[0].a | Enter both names, choose the 'Marriage' context and calculate. The tool adds the Abjad values of the two names plus 7, divides by 9 and shows the meaning of the remainder for marriage. | دونوں نام لکھیں، “شادی” کا انتخاب کریں اور حساب کریں۔ ٹول دونوں ناموں کی ابجد قیمتوں میں 7 جمع کر کے 9 سے تقسیم کرتا ہے اور باقی کا مفہوم شادی کے لحاظ سے دکھاتا ہے۔ |
 | UR_COMPAT.faqs[1].q | Which Abjad system is used? | کون سا ابجد نظام استعمال ہوتا ہے؟ |
-| UR_COMPAT.faqs[1].a | You can switch between the Maghribi order (North and West Africa) and the Mashriqi order (the East, including South Asia). Most names give the same total in both; names with letters such as ṣād, sīn, shīn, ḍād, ẓāʾ or ghayn can differ. | آپ مغربی ترتیب (شمالی اور مغربی افریقہ) اور مشرقی ترتیب (مشرق، بشمول برصغیر) کے درمیان انتخاب کر سکتے ہیں۔ اکثر ناموں کا مجموعہ دونوں میں یکساں آتا ہے؛ جن ناموں میں ص، س، ش، ض، ظ یا غ جیسے حروف ہوں ان میں فرق ہو سکتا ہے۔ |
+| UR_COMPAT.faqs[1].a | You can switch between the Maghribi order (Morocco to Libya and West Africa) and the Mashriqi order (Egypt, the Arab countries and South Asia). Most names give the same total in both; names containing any of the six letters ṣād, ḍād, sīn, ẓāʾ, ghayn or shīn can differ. | آپ مغربی ترتیب (مراکش تا لیبیا اور مغربی افریقہ) اور مشرقی ترتیب (مصر، عرب ممالک اور برصغیر) کے درمیان انتخاب کر سکتے ہیں۔ اکثر ناموں کا مجموعہ دونوں میں یکساں آتا ہے؛ جن ناموں میں ص، ض، س، ظ، غ یا ش میں سے کوئی حرف ہو ان کا مجموعہ مختلف آ سکتا ہے۔ |
 | UR_COMPAT.faqs[2].q | Can I compare by date of birth instead of names? | کیا ناموں کے بجائے تاریخِ پیدائش سے موازنہ ہو سکتا ہے؟ |
 | UR_COMPAT.faqs[2].a | Yes. Choose 'By Birth Date' to compare two people's Sun, Moon, Venus and Mars signs. This is a general, modern astrological comparison, not a classical Islamic method. | جی ہاں۔ “تاریخِ پیدائش سے” منتخب کریں تاکہ دو افراد کے سورج، چاند، زہرہ اور مریخ کے بروج کا موازنہ ہو۔ یہ ایک عمومی، جدید علمِ نجوم کا موازنہ ہے، کوئی کلاسیکی اسلامی طریقہ نہیں۔ |
 | UR_COMPAT.faqs[3].q | Is it permissible to rely on name compatibility? | کیا ناموں کی مطابقت پر بھروسا کرنا درست ہے؟ |
@@ -403,9 +406,9 @@ Titles and descriptions (`urMetadata.ts`). The title gets “ | اسرار” ap
 | UR_ABJAD.h1 | Abjad Calculator: The Numerical Value of Your Name | ابجد کیلکولیٹر: نام کے اعداد |
 | UR_ABJAD.lead | Calculate the Abjad value of your name or any Arabic phrase, choose the Mashriqi or Maghribi order, and see each letter's value and the balance of the elements. | اپنے نام یا کسی بھی عربی عبارت کی ابجد قیمت نکالیں، مشرقی یا مغربی ترتیب منتخب کریں، اور ہر حرف کی قیمت اور عناصر کا توازن دیکھیں۔ |
 | UR_ABJAD.whatTitle | What is Abjad (ḥisāb al-jummal)? | ابجد (حسابِ جمل) کیا ہے؟ |
-| UR_ABJAD.what | The Abjad system gives every Arabic letter a number: alif 1, bāʾ 2, jīm 3, and so on up to shīn 1000 in the Maghribi order used here by default (in the Mashriqi order, also available, ghayn is 1000). The sum of a word's letter values is its ḥisāb al-jummal, a count used for centuries in the Islamic sciences and, in the subcontinent, also for chronograms (tārīkh-goʾī). | ابجد کے نظام میں عربی کے ہر حرف کی ایک عددی قیمت ہے: الف 1، ب 2، ج 3، اور اسی طرح ش 1000 تک، اس مغربی ترتیب میں جو یہاں پہلے سے منتخب ہے (مشرقی ترتیب میں، جو یہاں دستیاب بھی ہے، غ 1000 ہے)۔ کسی لفظ کے حروف کی قیمتوں کا مجموعہ اس کا “حسابِ جمل” کہلاتا ہے، جو صدیوں سے اسلامی علوم میں، اور برصغیر میں تاریخ گوئی (مادۂ تاریخ) میں بھی استعمال ہوتا رہا ہے۔ |
+| UR_ABJAD.what | The Abjad system gives every Arabic letter a number: alif 1, bāʾ 2, jīm 3, and so on to the last letter: in the Maghribi order selected here by default the last letter is shīn, worth 1000, while in the Mashriqi order, also available here, ghayn is 1000. The sum of a word's letter values is its ḥisāb al-jummal, a count used for centuries in the Islamic sciences and, in the subcontinent, also for chronograms (tārīkh-goʾī). | ابجد کے نظام میں عربی کے ہر حرف کی ایک عددی قیمت ہے: الف 1، ب 2، ج 3، اور اسی طرح آخری حرف تک: یہاں پہلے سے منتخب مغربی ترتیب میں آخری حرف شین (ش) ہے جس کی قیمت 1000 ہے، جبکہ مشرقی ترتیب میں، جو یہاں بھی دستیاب ہے، غین (غ) کی قیمت 1000 ہے۔ کسی لفظ کے حروف کی قیمتوں کا مجموعہ اس کا “حسابِ جُمَّل” کہلاتا ہے، جو صدیوں سے اسلامی علوم میں، اور برصغیر میں تاریخ گوئی (مادۂ تاریخ) میں بھی استعمال ہوتا رہا ہے۔ |
 | UR_ABJAD.ordersTitle | The Mashriqi and Maghribi orders | مشرقی اور مغربی ترتیب |
-| UR_ABJAD.orders | In ʿilm al-ḥurūf and ʿilm al-aʿdād scholars studied the numerical values of the Divine Names, Qur'anic phrases and people's names, and linked the letters to the four elements: fire, air, water and earth. There are two common orders: the Mashriqi order used in the East, including Pakistan and India, and the Maghribi order used in North and West Africa. This calculator supports both so you can compare the results. | علم الحروف اور علم الاعداد میں علما نے اسمائے حسنیٰ، قرآنی عبارات اور لوگوں کے ناموں کی عددی قیمتوں کا مطالعہ کیا اور حروف کو چار عناصر سے جوڑا: آگ، ہوا، پانی اور مٹی۔ دو ترتیبیں عام ہیں: مشرقی ترتیب، جو پاکستان اور ہندوستان سمیت مشرق میں رائج ہے، اور مغربی ترتیب، جو شمالی اور مغربی افریقہ میں رائج ہے۔ یہ کیلکولیٹر دونوں ترتیبوں سے حساب کرتا ہے تاکہ آپ نتائج کا موازنہ کر سکیں۔ |
+| UR_ABJAD.orders | In ʿilm al-ḥurūf and ʿilm al-aʿdād scholars studied the numerical values of the Divine Names, Qur'anic phrases and people's names, and linked the letters to the four elements: fire, air, water and earth. There are two common orders: the Mashriqi order used in the East, including Pakistan and India, and the Maghribi order used in the Maghreb from Morocco to Libya, historically in al-Andalus, and in West Africa. This calculator supports both so you can compare the results. | علم الحروف اور علم الاعداد میں علما نے اسمائے حسنیٰ، قرآنی عبارات اور لوگوں کے ناموں کی عددی قیمتوں کا مطالعہ کیا اور حروف کو چار عناصر سے جوڑا: آگ، ہوا، پانی اور مٹی۔ دو ترتیبیں عام ہیں: مشرقی ترتیب، جو پاکستان اور ہندوستان سمیت مشرق میں رائج ہے، اور مغربی ترتیب، جو مراکش سے لیبیا تک کے مغربِ عربی، تاریخی اندلس اور مغربی افریقہ میں رائج ہے۔ یہ کیلکولیٹر دونوں ترتیبوں سے حساب کرتا ہے تاکہ آپ نتائج کا موازنہ کر سکیں۔ |
 | UR_ABJAD.howTitle | How to use the calculator | کیلکولیٹر کیسے استعمال کریں |
 | UR_ABJAD.how | Choose the type of calculation, write the name or phrase in Urdu or Arabic letters (or in Latin letters for the tool to convert), then read the total, the value of each letter and the element analysis. | حساب کی قسم منتخب کریں، نام یا عبارت اردو یا عربی حروف میں لکھیں (یا رومن حروف میں، تاکہ ٹول اسے عربی میں بدل دے)، پھر مجموعہ، ہر حرف کی قیمت اور عناصر کا تجزیہ دیکھیں۔ |
 | UR_ABJAD.example | Example: Muḥammad = mīm (40) + ḥāʾ (8) + mīm (40) + dāl (4) = 92. | مثال: محمد = م (40) + ح (8) + م (40) + د (4) = 92۔ |
@@ -623,7 +626,7 @@ Exact-match English text in the tools → Urdu. `re:` keys are patterns; `$1`…
 | Sign In | سائن ان |
 | Maghribi | مغربی |
 | Mashriqi | مشرقی |
-| Maghribi (North & West Africa) · Mashriqi (Middle East & Asia) | مغربی (شمالی و مغربی افریقہ) · مشرقی (مشرقِ وسطیٰ اور ایشیا) |
+| Maghribi (the Maghreb, al-Andalus & West Africa) · Mashriqi (Egypt, the Middle East & Asia) | مغربی (مراکش تا لیبیا، اندلس اور مغربی افریقہ) · مشرقی (مصر، مشرقِ وسطیٰ اور برصغیر سمیت ایشیا) |
 | Educational Tool: | تعلیمی ٹول: |
 | Best Dates | بہترین تاریخیں |
 | Dates | تاریخیں |

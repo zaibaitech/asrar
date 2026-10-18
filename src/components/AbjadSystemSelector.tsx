@@ -16,7 +16,7 @@ import { Globe2 } from 'lucide-react';
 export function AbjadSystemSelector({ compact = false, showNote = true }: { compact?: boolean; showNote?: boolean } = {}) {
   const { system, setSystem } = useAbjad();
   const { t } = useLanguage();
-  const note = t.abjadSystem?.note ?? 'Maghribi (North & West Africa) · Mashriqi (Middle East & Asia)';
+  const note = t.abjadSystem?.note ?? 'Maghribi (the Maghreb, al-Andalus & West Africa) · Mashriqi (Egypt, the Middle East & Asia)';
 
   if (compact) {
     const toggle = (
@@ -105,11 +105,11 @@ export function AbjadSystemSelector({ compact = false, showNote = true }: { comp
         <div className="text-xs text-slate-600 dark:text-slate-400">
           {system === 'Maghribi' ? (
             <>
-              <span className="font-medium">Maghribi System:</span> Traditional North African method (ش=1000, غ=900)
+              <span className="font-medium">Maghribi System:</span> Traditional method of the Maghreb (Morocco to Libya), al-Andalus and West Africa (ش=1000, غ=900)
             </>
           ) : (
             <>
-              <span className="font-medium">Mashriqi System:</span> Standard Eastern method (ش=300, غ=1000)
+              <span className="font-medium">Mashriqi System:</span> Eastern method used in Egypt, the Middle East and Asia (ش=300, غ=1000)
             </>
           )}
         </div>

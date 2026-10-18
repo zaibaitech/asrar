@@ -57,7 +57,7 @@ const COPY = {
       },
       {
         q: 'Which Abjad system is used?',
-        a: 'You can switch between the Maghribi order (North and West Africa) and the Mashriqi order (the East). Most names give the same total in both; names with letters such as ṣād, sīn, shīn, ḍād, ẓāʾ or ghayn can differ.',
+        a: 'You can switch between the Maghribi order (the Maghreb, al-Andalus and West Africa) and the Mashriqi order (Egypt, the Middle East and Asia). Most names give the same total in both; names containing any of the six letters ṣād, ḍād, sīn, ẓāʾ, ghayn or shīn can differ.',
       },
       {
         q: 'Can I compare by date of birth instead of names?',
@@ -105,7 +105,7 @@ const COPY = {
       },
       {
         q: 'Quel système abjad est utilisé ?',
-        a: "Vous pouvez choisir l'ordre maghribi (Afrique du Nord et de l'Ouest) ou l'ordre mashriqi (Orient). La plupart des prénoms donnent le même total ; ceux qui contiennent ṣād, sīn, shīn, ḍād, ẓāʾ ou ghayn peuvent différer.",
+        a: "Vous pouvez choisir l'ordre maghribi (Maghreb, al-Andalus et Afrique de l'Ouest) ou l'ordre mashriqi (Égypte, Moyen-Orient et Asie). La plupart des prénoms donnent le même total ; ceux qui contiennent l'une des six lettres ṣād, ḍād, sīn, ẓāʾ, ghayn ou shīn peuvent différer.",
       },
       {
         q: 'Peut-on comparer par date de naissance ?',

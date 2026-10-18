@@ -137,7 +137,7 @@ const ELEMENT_HARMONY: Record<string, Record<string, number>> = {
 };
 
 // Letter to Element mapping (28 Arabic letters)
-// MAGHRIBI SYSTEM - Authentic West/North African tradition (7 letters per element)
+// MAGHRIBI SYSTEM - tradition of the Maghreb and West Africa (7 letters per element)
 const LETTER_ELEMENTS: Record<string, 'fire' | 'air' | 'water' | 'earth'> = {
   // 🔥 Fire (Nār/نار) - Hot & Dry - 7 letters
   'ا': 'fire', 'ه': 'fire', 'ط': 'fire', 'م': 'fire', 'ف': 'fire', 'ش': 'fire', 'ذ': 'fire',

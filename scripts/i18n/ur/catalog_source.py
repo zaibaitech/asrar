@@ -162,8 +162,8 @@ for en, ur in R:
 U = [
     # home app
     ('Asrār', 'اسرار'), ('Sign In', 'سائن ان'), ('Maghribi', 'مغربی'), ('Mashriqi', 'مشرقی'),
-    # abjad system note under the selector (PR #89); pending Language Reviewer
-    ('Maghribi (North & West Africa) · Mashriqi (Middle East & Asia)', 'مغربی (شمالی و مغربی افریقہ) · مشرقی (مشرقِ وسطیٰ اور ایشیا)'),
+    # abjad system note under the selector (PR #89); Language Reviewer batch 5
+    ('Maghribi (the Maghreb, al-Andalus & West Africa) · Mashriqi (Egypt, the Middle East & Asia)', 'مغربی (مراکش تا لیبیا، اندلس اور مغربی افریقہ) · مشرقی (مصر، مشرقِ وسطیٰ اور برصغیر سمیت ایشیا)'),
     ('Educational Tool:', 'تعلیمی ٹول:'), ('Best Dates', 'بہترین تاریخیں'), ('Dates', 'تاریخیں'),
     ('Compatibility', 'مطابقت'), ('Calculator', 'کیلکولیٹر'), ('Today', 'آج'),
     ('Real-time insights based on traditional Islamic celestial science and Chaldean planetary hours.',
