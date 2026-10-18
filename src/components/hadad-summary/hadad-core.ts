@@ -236,7 +236,7 @@ export const VERSES_BY_ELEMENT = {
   Water: [
     { ref: '21:30', text: 'We made every living thing from water', context: 'Source of life' },
     { ref: '25:48', text: 'We send the winds as glad tidings', context: 'Purification and renewal' },
-    { ref: '65:2', text: 'Allah will bring about ease after hardship', context: 'Flow and adaptation' }
+    { ref: '65:7', text: 'Allah will bring about ease after hardship', context: 'Flow and adaptation' }
   ],
   Air: [
     { ref: '2:164', text: 'The winds that blow, the clouds between sky and earth', context: 'Divine signs' },
