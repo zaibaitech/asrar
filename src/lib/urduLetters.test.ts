@@ -57,6 +57,12 @@ describe('Urdu-typed names count like their Arabic spelling', () => {
     }
   });
 
+  it('Urdu-typed totals with the shared table (#88): Maghribi / Mashriqi', () => {
+    expect([calculateAbjadValue('یوسف'), calculateAbjadValue('یوسف', ABJAD_MASHRIQI)]).toEqual([396, 156]);
+    expect([calculateAbjadValue('عائشہ'), calculateAbjadValue('عائشہ', ABJAD_MASHRIQI)]).toEqual([1086, 386]);
+    expect(calculateHadadKabir('یوسف')).toBe(396);
+  });
+
   it('the burj from names typed in Urdu matches the Arabic spelling', () => {
     const ur = calculateIstikhara('علی', 'فاطمہ');
     const ar = calculateIstikhara('علي', 'فاطمة');
@@ -120,7 +126,8 @@ describe('regression: Arabic input is unchanged', () => {
     expect(calculateAbjadValue('كريم')).toBe(270);
     expect(calculateAbjadValue('خديجة')).toBe(622);
     expect(calculateAbjadValue('عبد الرحمن')).toBe(405);
-    expect(calculateAbjadValue('أحمد')).toBe(52);
+    // أحمد: 52 before the shared table (#88), which counts أ as ا
+    expect(calculateAbjadValue('أحمد')).toBe(53);
     expect(calculateHadadKabir('أحمد', ABJAD_MAGHRIBI)).toBe(53);
     expect(calculateIstikhara('علي', 'فاطمة').combinedTotal).toBe(245);
   });
