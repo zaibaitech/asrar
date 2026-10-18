@@ -794,7 +794,7 @@ export function buildDestiny(
   let divineNameResonance;
   try {
     const { calculateDivineNameResonance } = require('../../utils/divineNameResonance');
-    const resonanceResult = calculateDivineNameResonance(personName);
+    const resonanceResult = calculateDivineNameResonance(personName, abjad);
     
     // Map to the expected format for UI compatibility
     if (resonanceResult) {

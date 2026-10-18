@@ -6,6 +6,7 @@
  */
 
 import { ABJAD_MAGHRIBI } from './abjadMaps';
+import { abjadSystemOfMap, getAbjadMap, type AbjadSystemKey } from '../../../lib/abjad-maps';
 import { calculateHadadKabir, calculateSaghir, calculateBurj, normalizeArabic } from './coreCalculations';
 import { zodiacFromBurjIndex, type ZodiacIdentity } from './zodiac';
 import { nearestDivineNames, type DivineName } from './divineNames';
@@ -58,6 +59,8 @@ export interface ElementalComposition {
 
 export interface TextProfile {
   normalizedText: string;
+  /** The Abjad system the profile was computed with (the app-wide choice). */
+  system: AbjadSystemKey;
   kabir: number;
   saghir: number;
   hadad: number;
@@ -72,12 +75,12 @@ export interface TextProfile {
   letterFrequency: LetterFrequencyEntry[];
 }
 
-function analyzeElementalComposition(text: string): { composition: ElementalComposition; frequencies: LetterFrequencyEntry[] } {
+function analyzeElementalComposition(text: string, abjad: Record<string, number>): { composition: ElementalComposition; frequencies: LetterFrequencyEntry[] } {
   const letterMap = new Map<string, { count: number; value: number; element: ElementType }>();
 
   for (const char of text) {
     if (!LETTER_ELEMENTS[char]) continue;
-    const value = ABJAD_MAGHRIBI[char] ?? 0;
+    const value = abjad[char] ?? 0;
     const element = elementOfLetter(char);
     const existing = letterMap.get(char);
     letterMap.set(char, existing ? { ...existing, count: existing.count + 1 } : { count: 1, value, element });
@@ -132,21 +135,22 @@ function analyzeElementalComposition(text: string): { composition: ElementalComp
   };
 }
 
-export function analyzeText(rawText: string): TextProfile | null {
+export function analyzeText(rawText: string, abjad: Record<string, number> = ABJAD_MAGHRIBI): TextProfile | null {
   const normalizedText = normalizeArabic(rawText);
   if (!normalizedText) return null;
 
-  const kabir = calculateHadadKabir(normalizedText, ABJAD_MAGHRIBI);
+  const kabir = calculateHadadKabir(normalizedText, abjad);
   const saghir = calculateSaghir(kabir);
   const hadad = kabir % 4;
   const element = hadathToElement(hadad);
   const burjIndex = calculateBurj(kabir);
   const zodiac = zodiacFromBurjIndex(burjIndex);
 
-  const { composition, frequencies } = analyzeElementalComposition(normalizedText);
+  const { composition, frequencies } = analyzeElementalComposition(normalizedText, abjad);
 
   return {
     normalizedText,
+    system: abjadSystemOfMap(abjad),
     kabir,
     saghir,
     hadad,
@@ -183,7 +187,7 @@ export function computeNameInsights(profile: TextProfile): NameInsights {
   return {
     archetype: ARCHETYPES[profile.saghir] ?? ARCHETYPES[1],
     guidance: ELEMENT_GUIDANCE[profile.element],
-    divineNameMatches: nearestDivineNames(profile.kabir, 3),
+    divineNameMatches: nearestDivineNames(profile.kabir, 3, getAbjadMap(profile.system)),
     dhikrCounts,
     bestTime: BEST_TIME[profile.element],
     powerDay: POWER_DAY[profile.element],

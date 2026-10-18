@@ -30,7 +30,8 @@ import type {
   ApiErrorCode 
 } from '../../../../src/types/api';
 import type { ApiError } from '../../../../src/types/api';
-import { validateCoordinates, validateLanguage, validateDate } from '../../../../src/lib/api-validation';
+import { validateCoordinates, validateLanguage, validateDate, validateAbjadSystem } from '../../../../src/lib/api-validation';
+import { getAbjadMap } from '../../../../src/lib/abjad-maps';
 import { calculateAccuratePlanetaryHours, getCurrentPlanetaryHour } from '../../../../src/utils/planetaryHours';
 import { getCurrentLunarMansion } from '../../../../src/lib/lunarMansions';
 import { calculateSimpleDestiny } from '../../../../src/lib/server-calculations';
@@ -53,6 +54,16 @@ export async function POST(request: Request) {
       return NextResponse.json<ApiResponse<null>>({
         success: false,
         error: langValidation.error as ApiError,
+        timestamp: new Date().toISOString(),
+      }, { status: 400 });
+    }
+
+    // Abjad system for the personal alignment (default Maghribi)
+    const abjadValidation = validateAbjadSystem(body.abjadSystem, false);
+    if (!abjadValidation.isValid) {
+      return NextResponse.json<ApiResponse<null>>({
+        success: false,
+        error: abjadValidation.error as ApiError,
         timestamp: new Date().toISOString(),
       }, { status: 400 });
     }
@@ -124,7 +135,7 @@ export async function POST(request: Request) {
     
     if (body.name) {
       try {
-        const destiny = calculateSimpleDestiny(body.name);
+        const destiny = calculateSimpleDestiny(body.name, undefined, getAbjadMap(body.abjadSystem));
         const userElement = destiny.element.en.toLowerCase();
         const hourElement = currentHour.planet.element;
         

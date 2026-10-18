@@ -5,6 +5,7 @@ import { Star, Link2 } from 'lucide-react';
 import { Card } from './Card';
 import { pick, ELEMENT_NAME, type Locale } from '../lib/i18nText';
 import { getLetterBreakdown, calculateSaghir } from '../lib/coreCalculations';
+import { getAbjadMap } from '../../../lib/abjad-maps';
 import { findLatinForArabic } from '../lib/nameTransliterations';
 import { DIVINE_NAME_MEANING } from '../lib/divineNameMeanings';
 import {
@@ -64,7 +65,7 @@ export function CalculatorResult({
   const uiLocale = locale as Locale;
   const [openMetric, setOpenMetric] = useState<string | null>(null);
 
-  const letterBreakdown = getLetterBreakdown(profile.normalizedText);
+  const letterBreakdown = getLetterBreakdown(profile.normalizedText, getAbjadMap(profile.system));
   const latin = findLatinForArabic(profile.normalizedText);
 
   const numbers: { key: string; label: string; value: number; kind: 'classical' | 'traditional'; formula: string }[] = [

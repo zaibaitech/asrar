@@ -466,6 +466,23 @@ export function IlmHurufPanel() {
     }
   };
 
+  // One app-wide Abjad system: when the user switches it, re-run the analysis
+  // that is on screen (same inputs, new letter table) without scrolling.
+  const silentRerunRef = useRef(false);
+  const lastAbjadRef = useRef(abjad);
+  useEffect(() => {
+    if (lastAbjadRef.current === abjad) return;
+    lastAbjadRef.current = abjad;
+    if (!results || results.error) return;
+    silentRerunRef.current = true;
+    try {
+      handleAnalyze();
+    } finally {
+      silentRerunRef.current = false;
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [abjad]);
+
   const handleAnalyze = () => {
     try {
       // VALIDATION: Name Destiny Personal mode requires mother's name
@@ -517,7 +534,7 @@ export function IlmHurufPanel() {
         setResults(result);
         
         // Scroll to results section after state update
-        setTimeout(() => {
+        if (!silentRerunRef.current) setTimeout(() => {
           resultsSectionRef.current?.scrollIntoView({ 
             behavior: 'smooth', 
             block: 'start'
@@ -551,7 +568,7 @@ export function IlmHurufPanel() {
         setResults(result);
         
         // Scroll to results section after state update
-        setTimeout(() => {
+        if (!silentRerunRef.current) setTimeout(() => {
           resultsSectionRef.current?.scrollIntoView({ 
             behavior: 'smooth', 
             block: 'start'
@@ -562,12 +579,13 @@ export function IlmHurufPanel() {
           name, 
           new Date(birthDate),
           undefined, // fatherName (not used yet)
-          motherName || undefined // Pass mother's name if provided
+          motherName || undefined, // Pass mother's name if provided
+          abjad
         );
         setResults(result);
         
         // Scroll to results section after state update
-        setTimeout(() => {
+        if (!silentRerunRef.current) setTimeout(() => {
           resultsSectionRef.current?.scrollIntoView({ 
             behavior: 'smooth', 
             block: 'start'
@@ -597,7 +615,7 @@ export function IlmHurufPanel() {
         });
         
         // Scroll to results section after state update
-        setTimeout(() => {
+        if (!silentRerunRef.current) setTimeout(() => {
           resultsSectionRef.current?.scrollIntoView({ 
             behavior: 'smooth', 
             block: 'start'

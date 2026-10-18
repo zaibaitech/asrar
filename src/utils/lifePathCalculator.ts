@@ -5,12 +5,10 @@
 
 import type { Element } from '../types/planetary';
 
-// Mashriqi (Eastern) Abjad - Standard Abjad Hawwaz order
-const ABJAD_MASHRIQI: Record<string, number> = {
-  'ا': 1, 'ب': 2, 'ج': 3, 'د': 4, 'ه': 5, 'و': 6, 'ز': 7, 'ح': 8, 'ط': 9,
-  'ي': 10, 'ك': 20, 'ل': 30, 'م': 40, 'ن': 50, 'س': 60, 'ع': 70, 'ف': 80, 'ص': 90,
-  'ق': 100, 'ر': 200, 'ش': 300, 'ت': 400, 'ث': 500, 'خ': 600, 'ذ': 700, 'ض': 800, 'ظ': 900, 'غ': 1000
-};
+// Letter values come from the app's one shared table (src/lib/abjad-maps.ts)
+// and follow the selected Abjad system; every function takes the table as
+// its last argument and defaults to Maghribi. The formulas are unchanged.
+import { ABJAD_MAGHRIBI } from '../lib/abjad-maps';
 
 /**
  * Reduce a number to a single digit or Master Number (11, 22, 33)
@@ -48,9 +46,9 @@ export function reduceToSingleDigit(num: number): number {
 /**
  * Get Abjad value for a character
  */
-function getAbjadValue(char: string): number {
+function getAbjadValue(char: string, abjad: Record<string, number>): number {
   const normalized = char.toUpperCase();
-  return (ABJAD_MASHRIQI as Record<string, number>)[normalized] || 0;
+  return abjad[normalized] || 0;
 }
 
 /**
@@ -109,11 +107,11 @@ export function calculateTrueLifePath(birthDate: Date): number {
  * Example: Muhammad
  * م(40) + ح(8) + م(40) + د(4) = 92 → 9+2 = 11 (Master Number)
  */
-export function calculateExpressionNumber(name: string): number {
+export function calculateExpressionNumber(name: string, abjad: Record<string, number> = ABJAD_MAGHRIBI): number {
   let total = 0;
   
   for (const char of name) {
-    total += getAbjadValue(char);
+    total += getAbjadValue(char, abjad);
   }
   
   return reduceToSingleDigit(total);
@@ -123,8 +121,8 @@ export function calculateExpressionNumber(name: string): number {
  * @deprecated Use calculateExpressionNumber() instead.
  * This function name was misleading - Life Path should come from birth date, not name.
  */
-export function calculateLifePathNumber(name: string): number {
-  return calculateExpressionNumber(name);
+export function calculateLifePathNumber(name: string, abjad: Record<string, number> = ABJAD_MAGHRIBI): number {
+  return calculateExpressionNumber(name, abjad);
 }
 
 /**
@@ -135,12 +133,12 @@ export function calculateLifePathNumber(name: string): number {
  * Example: Ali (علي)
  * ع(70) + ي(10) = 80 → 8+0 = 8
  */
-export function calculateSoulUrgeNumber(name: string): number {
+export function calculateSoulUrgeNumber(name: string, abjad: Record<string, number> = ABJAD_MAGHRIBI): number {
   let total = 0;
   
   for (const char of name) {
     if (isVowel(char)) {
-      total += getAbjadValue(char);
+      total += getAbjadValue(char, abjad);
     }
   }
   
@@ -155,12 +153,12 @@ export function calculateSoulUrgeNumber(name: string): number {
  * Example: Ali (علي)
  * ع(70) + ل(30) = 100 → 1+0+0 = 1
  */
-export function calculatePersonalityNumber(name: string): number {
+export function calculatePersonalityNumber(name: string, abjad: Record<string, number> = ABJAD_MAGHRIBI): number {
   let total = 0;
   
   for (const char of name) {
     if (isConsonant(char)) {
-      total += getAbjadValue(char);
+      total += getAbjadValue(char, abjad);
     }
   }
   
@@ -183,14 +181,15 @@ export function calculatePersonalityNumber(name: string): number {
  */
 export function calculateDestinyNumber(
   firstName: string,
-  fatherName?: string
+  fatherName?: string,
+  abjad: Record<string, number> = ABJAD_MAGHRIBI
 ): number {
   let total = 0;
   const fullName = fatherName ? `${firstName}${fatherName}` : firstName;
   // ✅ Mother's name deliberately excluded from core destiny calculation
   
   for (const char of fullName) {
-    total += getAbjadValue(char);
+    total += getAbjadValue(char, abjad);
   }
   
   return reduceToSingleDigit(total);
@@ -207,13 +206,14 @@ export function calculateDestinyNumber(
  */
 export function calculateMaternalInfluence(
   firstName: string,
-  motherName: string
+  motherName: string,
+  abjad: Record<string, number> = ABJAD_MAGHRIBI
 ): number {
   let total = 0;
   const combined = `${firstName}${motherName}`;
   
   for (const char of combined) {
-    total += getAbjadValue(char);
+    total += getAbjadValue(char, abjad);
   }
   
   return reduceToSingleDigit(total);
@@ -374,22 +374,23 @@ export function calculateAllLifePathNumbers(
   firstName: string,
   motherName: string,
   fatherName: string,
-  birthDate: Date
+  birthDate: Date,
+  abjad: Record<string, number> = ABJAD_MAGHRIBI
 ) {
   const age = calculateAge(birthDate);
   const cyclePosition = calculateLifeCyclePosition(age);
   
   return {
     lifePathNumber: calculateTrueLifePath(birthDate),              // ✅ NEW: From birth date
-    expressionNumber: calculateExpressionNumber(firstName),        // ✅ RENAMED: From name
-    soulUrgeNumber: calculateSoulUrgeNumber(firstName),
-    personalityNumber: calculatePersonalityNumber(firstName),
-    destinyNumber: calculateDestinyNumber(firstName, fatherName), // ✅ Fixed: No mother's name
+    expressionNumber: calculateExpressionNumber(firstName, abjad),        // ✅ RENAMED: From name
+    soulUrgeNumber: calculateSoulUrgeNumber(firstName, abjad),
+    personalityNumber: calculatePersonalityNumber(firstName, abjad),
+    destinyNumber: calculateDestinyNumber(firstName, fatherName, abjad), // ✅ Fixed: No mother's name
     cyclePosition,
     currentAge: age,
     currentStation: getSpiritualStationForCycle(cyclePosition),
     // Add maternal influence as separate field (optional)
-    maternalInfluence: motherName ? calculateMaternalInfluence(firstName, motherName) : undefined
+    maternalInfluence: motherName ? calculateMaternalInfluence(firstName, motherName, abjad) : undefined
   };
 }
 

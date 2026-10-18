@@ -15,7 +15,8 @@
  */
 
 import { DivineNameConnectionResult } from '../types/compatibility';
-import { DIVINE_NAMES, DivineName } from '../data/divine-names';
+import { DivineName, getDivineNames, getDivineNameForSystem } from '../data/divine-names';
+import { ABJAD_MAGHRIBI } from '../lib/abjad-maps';
 import { SoulConnectionSeverity } from '../constants/soulConnectionArchetypes';
 import {
   findDivineNameMetadataByNumber,
@@ -30,8 +31,12 @@ const EFFECT_TO_SEVERITY: Record<NameActionEffect, SoulConnectionSeverity> = {
   challenges: 'red',
 };
 
-function connectionForName(personKabir: number, divineName: DivineName): { soulNumber: number; severity: SoulConnectionSeverity } {
-  const metadata = findDivineNameMetadataByNumber(divineName.number);
+function connectionForName(
+  personKabir: number,
+  divineName: DivineName,
+  abjad: Record<string, number>
+): { soulNumber: number; severity: SoulConnectionSeverity } {
+  const metadata = findDivineNameMetadataByNumber(divineName.number, abjad);
   if (!metadata) {
     // Should never happen — DIVINE_NAME_METADATA is built from the same DIVINE_NAMES array.
     return { soulNumber: 0, severity: 'amber' };
@@ -45,13 +50,16 @@ export function calculateDivineNameConnection(
   personArabic: string,
   personKabir: number,
   divineName: DivineName,
+  abjad: Record<string, number> = ABJAD_MAGHRIBI,
 ): DivineNameConnectionResult {
-  const { soulNumber, severity } = connectionForName(personKabir, divineName);
+  // Show the Name with its value in the same (selected) Abjad system as the person's kabīr.
+  const shownName = getDivineNameForSystem(divineName.number, abjad) ?? divineName;
+  const { soulNumber, severity } = connectionForName(personKabir, shownName, abjad);
 
   return {
     mode: 'divine-name-connection',
     person: { name: personName, arabicName: personArabic, kabir: personKabir },
-    divineName,
+    divineName: shownName,
     soulNumber,
     severity,
   };
@@ -70,10 +78,13 @@ const SEVERITY_RANK: Record<SoulConnectionSeverity, number> = { green: 0, amber:
  * best resonance first (green tier, then amber, then red; ties broken by
  * Name number so the order is stable).
  */
-export function findBestDivineNameMatches(personKabir: number): DivineNameMatch[] {
-  return DIVINE_NAMES
+export function findBestDivineNameMatches(
+  personKabir: number,
+  abjad: Record<string, number> = ABJAD_MAGHRIBI
+): DivineNameMatch[] {
+  return getDivineNames(abjad)
     .map((divineName): DivineNameMatch => {
-      const { soulNumber, severity } = connectionForName(personKabir, divineName);
+      const { soulNumber, severity } = connectionForName(personKabir, divineName, abjad);
       return { divineName, soulNumber, severity };
     })
     .sort((a, b) => {

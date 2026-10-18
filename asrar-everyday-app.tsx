@@ -368,7 +368,7 @@ export default function AsrarEveryday() {
 
               {/* Abjad System Selector */}
               <div className="flex-shrink-0">
-                <AbjadSystemSelector compact={true} />
+                <AbjadSystemSelector compact={true} showNote={false} />
               </div>
 
               {/* Desktop Controls */}

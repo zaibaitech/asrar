@@ -5,31 +5,29 @@
  */
 
 // ============================================================================
-// ABJAD VALUES (Mashriqi - Eastern System)
+// ABJAD VALUES: the app's one shared table (src/lib/abjad-maps.ts), following
+// the selected Abjad system. Every function that totals letters takes the
+// table as its last argument and defaults to Maghribi. Formulas unchanged.
 // ============================================================================
 
-const ABJAD_MASHRIQI: Record<string, number> = {
-  'ا': 1, 'ب': 2, 'ج': 3, 'د': 4, 'ه': 5, 'و': 6, 'ز': 7, 'ح': 8, 'ط': 9,
-  'ي': 10, 'ك': 20, 'ل': 30, 'م': 40, 'ن': 50, 'س': 60, 'ع': 70, 'ف': 80, 'ص': 90,
-  'ق': 100, 'ر': 200, 'ش': 300, 'ت': 400, 'ث': 500, 'خ': 600, 'ذ': 700, 'ض': 800, 'ظ': 900, 'غ': 1000
-};
+import { ABJAD_MAGHRIBI } from '../lib/abjad-maps';
 
 // ============================================================================
 // HELPER: Get Abjad Value for Character
 // ============================================================================
 
-function getAbjadValue(char: string): number {
-  return ABJAD_MASHRIQI[char] || 0;
+function getAbjadValue(char: string, abjad: Record<string, number>): number {
+  return abjad[char] || 0;
 }
 
 // ============================================================================
 // HELPER: Calculate Total Abjad Value for String
 // ============================================================================
 
-export function calculateAbjadTotal(text: string): number {
+export function calculateAbjadTotal(text: string, abjad: Record<string, number> = ABJAD_MAGHRIBI): number {
   let total = 0;
   for (const char of text) {
-    total += getAbjadValue(char);
+    total += getAbjadValue(char, abjad);
   }
   return total;
 }
@@ -103,8 +101,8 @@ export function calculateTrueLifePath(birthDate: Date): number {
  * 
  * Uses Abjad (Mashriqi) values to calculate the spiritual essence of your name.
  */
-export function calculateExpressionNumber(arabicName: string): number {
-  const total = calculateAbjadTotal(arabicName);
+export function calculateExpressionNumber(arabicName: string, abjad: Record<string, number> = ABJAD_MAGHRIBI): number {
+  const total = calculateAbjadTotal(arabicName, abjad);
   return reduceToSingleDigit(total, true);
 }
 
@@ -112,22 +110,22 @@ export function calculateExpressionNumber(arabicName: string): number {
  * @deprecated Use calculateExpressionNumber() instead.
  * This function name was misleading - Life Path should come from birth date, not name.
  */
-export function calculateLifePathNumber(arabicName: string): number {
-  return calculateExpressionNumber(arabicName);
+export function calculateLifePathNumber(arabicName: string, abjad: Record<string, number> = ABJAD_MAGHRIBI): number {
+  return calculateExpressionNumber(arabicName, abjad);
 }
 
 // ============================================================================
 // METHOD 3: Soul Urge Number (Dāfiʿ al-Rūḥ)
 // ============================================================================
 
-export function calculateSoulUrgeNumber(arabicName: string): number {
+export function calculateSoulUrgeNumber(arabicName: string, abjad: Record<string, number> = ABJAD_MAGHRIBI): number {
   // Vowels in Arabic: ا (alif), و (waw), ي (ya)
   const vowels = ['ا', 'و', 'ي'];
   
   let vowelSum = 0;
   for (const char of arabicName) {
     if (vowels.includes(char)) {
-      vowelSum += getAbjadValue(char);
+      vowelSum += getAbjadValue(char, abjad);
     }
   }
   
@@ -138,13 +136,13 @@ export function calculateSoulUrgeNumber(arabicName: string): number {
 // METHOD 4: Personality Number (Ẓāhir)
 // ============================================================================
 
-export function calculatePersonalityNumber(arabicName: string): number {
+export function calculatePersonalityNumber(arabicName: string, abjad: Record<string, number> = ABJAD_MAGHRIBI): number {
   const vowels = ['ا', 'و', 'ي'];
   
   let consonantSum = 0;
   for (const char of arabicName) {
     if (!vowels.includes(char) && char !== ' ') {
-      consonantSum += getAbjadValue(char);
+      consonantSum += getAbjadValue(char, abjad);
     }
   }
   
@@ -169,13 +167,14 @@ export function calculatePersonalityNumber(arabicName: string): number {
  */
 export function calculateDestinyNumber(
   givenName: string,
-  fatherName?: string
+  fatherName?: string,
+  abjad: Record<string, number> = ABJAD_MAGHRIBI
 ): number {
   let fullName = givenName;
   if (fatherName) fullName += ' ' + fatherName;
   // ✅ Mother's name deliberately excluded from core destiny calculation
   
-  const total = calculateAbjadTotal(fullName);
+  const total = calculateAbjadTotal(fullName, abjad);
   return reduceToSingleDigit(total, true);
 }
 
@@ -190,10 +189,11 @@ export function calculateDestinyNumber(
  */
 export function calculateMaternalInfluence(
   givenName: string,
-  motherName: string
+  motherName: string,
+  abjad: Record<string, number> = ABJAD_MAGHRIBI
 ): number {
   const combined = givenName + ' ' + motherName;
-  const total = calculateAbjadTotal(combined);
+  const total = calculateAbjadTotal(combined, abjad);
   return reduceToSingleDigit(total, true);
 }
 
@@ -299,9 +299,9 @@ export function calculatePersonalMonth(
 // METHOD 9: Karmic Debt Detection
 // ============================================================================
 
-export function detectKarmicDebts(arabicName: string, birthDate?: Date): number[] {
+export function detectKarmicDebts(arabicName: string, birthDate?: Date, abjad: Record<string, number> = ABJAD_MAGHRIBI): number[] {
   const karmicDebts: number[] = [];
-  const total = calculateAbjadTotal(arabicName);
+  const total = calculateAbjadTotal(arabicName, abjad);
   
   // Check for karmic debt numbers: 13, 14, 16, 19
   if ([13, 14, 16, 19].includes(total)) {
@@ -334,8 +334,8 @@ export function detectKarmicDebts(arabicName: string, birthDate?: Date): number[
 // METHOD 10: Sacred Number Detection
 // ============================================================================
 
-export function detectSacredNumbers(arabicName: string): number[] {
-  const total = calculateAbjadTotal(arabicName);
+export function detectSacredNumbers(arabicName: string, abjad: Record<string, number> = ABJAD_MAGHRIBI): number[] {
+  const total = calculateAbjadTotal(arabicName, abjad);
   const sacredNumbers: number[] = [];
   
   const sacredValues = [
@@ -3085,7 +3085,8 @@ export function calculateEnhancedLifePath(
   arabicName: string,
   birthDate: Date,
   fatherName?: string,
-  motherName?: string
+  motherName?: string,
+  abjad: Record<string, number> = ABJAD_MAGHRIBI
 ): EnhancedLifePathResult {
   const currentDate = new Date();
   const age = currentDate.getFullYear() - birthDate.getFullYear() -
@@ -3095,17 +3096,17 @@ export function calculateEnhancedLifePath(
   return {
     birthDate,
     lifePathNumber: calculateTrueLifePath(birthDate),              // ✅ NEW: From birth date
-    expressionNumber: calculateExpressionNumber(arabicName),       // ✅ RENAMED: From name
-    soulUrgeNumber: calculateSoulUrgeNumber(arabicName),
-    personalityNumber: calculatePersonalityNumber(arabicName),
-    destinyNumber: calculateDestinyNumber(arabicName, fatherName), // ✅ Fixed: No mother's name
+    expressionNumber: calculateExpressionNumber(arabicName, abjad),       // ✅ RENAMED: From name
+    soulUrgeNumber: calculateSoulUrgeNumber(arabicName, abjad),
+    personalityNumber: calculatePersonalityNumber(arabicName, abjad),
+    destinyNumber: calculateDestinyNumber(arabicName, fatherName, abjad), // ✅ Fixed: No mother's name
     personalYear: calculatePersonalYear(birthDate),
     personalMonth: calculatePersonalMonth(birthDate),
     cycle: calculateLifeCycle(birthDate, currentDate),
-    karmicDebts: detectKarmicDebts(arabicName, birthDate),
-    sacredNumbers: detectSacredNumbers(arabicName),
+    karmicDebts: detectKarmicDebts(arabicName, birthDate, abjad),
+    sacredNumbers: detectSacredNumbers(arabicName, abjad),
     pinnaclesAndChallenges: calculatePinnaclesAndChallenges(birthDate, age),
     // Add maternal influence as separate field (optional)
-    maternalInfluence: motherName ? calculateMaternalInfluence(arabicName, motherName) : undefined
+    maternalInfluence: motherName ? calculateMaternalInfluence(arabicName, motherName, abjad) : undefined
   };
 }

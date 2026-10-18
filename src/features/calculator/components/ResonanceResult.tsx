@@ -5,6 +5,7 @@ import { Copy, ExternalLink } from 'lucide-react';
 import { Card } from './Card';
 import { pick, type Locale } from '../lib/i18nText';
 import { computeDivineResonance } from '../lib/divineResonance';
+import { useAbjad } from '../../../contexts/AbjadContext';
 import { computeQuranResonance } from '../lib/quranResonance';
 import { InfoDisclosure } from './InfoDisclosure';
 import type { CalculationType } from './calculatorTypes';
@@ -31,7 +32,8 @@ export function ResonanceResult({
   // Both calculators key off the person's own Kabīr (mother's name is
   // collected for consistency with the traditional two-name input pattern,
   // but isn't consumed by either of these two specific calculations).
-  const personResonance = useMemo(() => computeDivineResonance(personName), [personName]);
+  const { abjad } = useAbjad();
+  const personResonance = useMemo(() => computeDivineResonance(personName, abjad), [personName, abjad]);
   const divine = calcType === 'divineResonance' ? personResonance : null;
 
   const quran = useMemo(
