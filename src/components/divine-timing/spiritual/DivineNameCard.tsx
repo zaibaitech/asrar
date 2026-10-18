@@ -34,8 +34,11 @@ export function DivineNameCard({
   secondaryNames,
   onOpenDhikr
 }: DivineNameCardProps) {
-  const { t, language } = useLanguage();
+  const { t, language, uiLanguage } = useLanguage();
   const isFr = language === 'fr';
+  // On /ar the verified Arabic from the data is shown directly; the English gloss
+  // is not machine-translated through the runtime catalog.
+  const isArabicUi = uiLanguage === 'ar';
   const [showDetails, setShowDetails] = useState(false);
 
   return (
@@ -74,9 +77,11 @@ export function DivineNameCard({
           <div className="text-xl md:text-2xl text-purple-700 dark:text-purple-300 font-medium mb-1">
             {divineNameData.transliteration}
           </div>
-          <div className="text-lg text-purple-600 dark:text-purple-400">
-            {isFr ? divineNameData.meaningFr : divineNameData.meaningEn}
-          </div>
+          {!isArabicUi && (
+            <div className="text-lg text-purple-600 dark:text-purple-400">
+              {isFr ? divineNameData.meaningFr : divineNameData.meaningEn}
+            </div>
+          )}
         </div>
 
         {/* Spiritual Quality */}
@@ -118,7 +123,7 @@ export function DivineNameCard({
                     {secondaryNames.map((name) => (
                       <div key={name.number} className="flex items-center gap-2 text-xs">
                         <span className="font-arabic text-base">{name.arabic}</span>
-                        <span>({name.transliteration} - {isFr ? name.meaningFr : name.meaningEn})</span>
+                        <span>({name.transliteration}{!isArabicUi && <> - {isFr ? name.meaningFr : name.meaningEn}</>})</span>
                       </div>
                     ))}
                   </div>

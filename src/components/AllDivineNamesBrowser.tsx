@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 import { ChevronDown, ChevronUp, Search } from 'lucide-react';
 import { DIVINE_NAMES } from '../data/divine-names';
 import { COMPAT_THEME, COMPAT_TINTS } from '../constants/compatibilityTheme';
@@ -25,6 +26,9 @@ function foldDiacritics(s: string): string {
 export function AllDivineNamesBrowser({ language = 'en' }: AllDivineNamesBrowserProps) {
   const contentLang: 'en' | 'fr' = language === 'fr' ? 'fr' : 'en';
   const isFrench = contentLang === 'fr';
+  // On /ar the verified Arabic from the data is shown directly; the English gloss
+  // is not machine-translated through the runtime catalog.
+  const isArabicUi = useLanguage().uiLanguage === 'ar';
   const [expanded, setExpanded] = useState(false);
   const [query, setQuery] = useState('');
   const [openNumber, setOpenNumber] = useState<number | null>(null);
@@ -100,7 +104,7 @@ export function AllDivineNamesBrowser({ language = 'en' }: AllDivineNamesBrowser
                           <span className="font-technical text-sm font-bold" style={{ color: COMPAT_THEME.indigo }}>{name.transliteration}</span>
                           <span dir="rtl" lang="ar" className="font-arabic text-lg">{name.arabic}</span>
                         </div>
-                        <div className="text-xs truncate" style={{ color: COMPAT_THEME.muted }}>{name.translation[contentLang]}</div>
+                        {!isArabicUi && <div className="text-xs truncate" style={{ color: COMPAT_THEME.muted }}>{name.translation[contentLang]}</div>}
                       </div>
                     </div>
                     {isOpen ? <ChevronUp className="w-4 h-4 flex-shrink-0" style={{ color: COMPAT_THEME.muted }} /> : <ChevronDown className="w-4 h-4 flex-shrink-0" style={{ color: COMPAT_THEME.muted }} />}

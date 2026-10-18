@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 import { Search } from 'lucide-react';
 import { DIVINE_NAMES, DivineName } from '../data/divine-names';
 import { COMPAT_THEME } from '../constants/compatibilityTheme';
@@ -18,6 +19,9 @@ function foldDiacritics(s: string): string {
 
 export function DivineNamePicker({ selected, onSelect, language = 'en' }: DivineNamePickerProps) {
   const isFrench = language === 'fr';
+  // On /ar the verified Arabic from the data is shown directly; the English gloss
+  // is not machine-translated through the runtime catalog.
+  const isArabicUi = useLanguage().uiLanguage === 'ar';
   const [query, setQuery] = useState('');
 
   const results = useMemo(() => {
@@ -78,9 +82,11 @@ export function DivineNamePicker({ selected, onSelect, language = 'en' }: Divine
                     {name.arabic}
                   </span>
                 </div>
-                <div className="text-xs truncate" style={{ color: COMPAT_THEME.muted }}>
-                  {name.translation[isFrench ? 'fr' : 'en']}
-                </div>
+                {!isArabicUi && (
+                  <div className="text-xs truncate" style={{ color: COMPAT_THEME.muted }}>
+                    {name.translation[isFrench ? 'fr' : 'en']}
+                  </div>
+                )}
               </div>
               {active && (
                 <span

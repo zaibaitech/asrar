@@ -117,8 +117,11 @@ const SACRED_QUOTES = [
 ];
 
 export function RestDayView({ userElement, hours, nextGoodHour }: RestDayViewProps) {
-  const { language } = useLanguage();
+  const { language, uiLanguage } = useLanguage();
   const isFr = language === 'fr';
+  // On /ar the verified Arabic from the data is shown directly; the English translation
+  // is not machine-translated through the runtime catalog.
+  const isArabicUi = uiLanguage === 'ar';
   const [selectedPractice, setSelectedPractice] = useState<string | null>(null);
   const [quoteIndex] = useState(Math.floor(Math.random() * SACRED_QUOTES.length));
 
@@ -181,9 +184,11 @@ export function RestDayView({ userElement, hours, nextGoodHour }: RestDayViewPro
             <div className="text-lg md:text-xl text-indigo-300 mb-3 italic">
               "{quote.transliteration}"
             </div>
-            <div className="text-base md:text-lg text-white font-semibold mb-2">
-              {isFr ? quote.meaningFr : quote.meaningEn}
-            </div>
+            {!isArabicUi && (
+              <div className="text-base md:text-lg text-white font-semibold mb-2">
+                {isFr ? quote.meaningFr : quote.meaningEn}
+              </div>
+            )}
             <div className="text-sm text-indigo-400">
               — {quote.reference}
             </div>

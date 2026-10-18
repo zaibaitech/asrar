@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 import { DivineNameConnectionResult } from '../types/compatibility';
 import { SOUL_CONNECTION_SEVERITY_COLOR } from '../constants/soulConnectionArchetypes';
 import { DIVINE_NAME_RESONANCE_FRAMING } from '../constants/divineNameResonance';
@@ -47,6 +48,9 @@ const COPY = {
 
 export function DivineNameConnectionView({ result, language = 'en', compact = false }: DivineNameConnectionViewProps) {
   const contentLang: 'en' | 'fr' = language === 'fr' ? 'fr' : 'en';
+  // On /ar the verified Arabic from the data is shown directly; the English gloss
+  // is not machine-translated through the runtime catalog.
+  const isArabicUi = useLanguage().uiLanguage === 'ar';
   const c = COPY[language] ?? COPY.en;
   const color = SOUL_CONNECTION_SEVERITY_COLOR[result.severity];
   const framing = DIVINE_NAME_RESONANCE_FRAMING[result.severity];
@@ -71,7 +75,7 @@ export function DivineNameConnectionView({ result, language = 'en', compact = fa
       <section className="text-center">
         <SoulConnectionRing value={result.soulNumber} size={compact ? 190 : 250} activeColor={color} revealed />
         <h2 className="font-display font-semibold text-3xl mt-3.5 mb-0.5" style={{ color }}>
-          {divineName.translation[contentLang]}
+          {isArabicUi ? <span dir="rtl" lang="ar" className="font-arabic">{divineName.arabic}</span> : divineName.translation[contentLang]}
         </h2>
         <p className="text-sm mt-2" style={{ color: COMPAT_THEME.muted }}>
           {divineName.transliteration} · {c.resonance} {result.soulNumber}/9

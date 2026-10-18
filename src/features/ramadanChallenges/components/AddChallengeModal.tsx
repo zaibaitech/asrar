@@ -18,6 +18,7 @@ import { SALAWAT_PRESETS, DIVINE_NAME_OPTIONS, DEFAULT_QUICK_ADD_PRESETS } from 
 import { RIZQ_PRACTICE_INFO } from '../propheticNames201';
 import { DEBT_RELIEF_PRACTICE_INFO } from '../debtRelief1000';
 import { translations } from '@/src/lib/translations';
+import { useLanguage } from '@/src/contexts/LanguageContext';
 
 // ─── Types ───────────────────────────────────────────────────────────────────────
 
@@ -52,6 +53,9 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
   const modalT = translations[language].ramadan.addChallenge;
   const propheticT = translations[language].propheticNames;
   const debtReliefT = translations[language].debtRelief;
+  // On /ar the Arabic Divine Names and the verse are shown directly from the data;
+  // their English glosses are not machine-translated through the catalog.
+  const isArabicUi = useLanguage().uiLanguage === 'ar';
   const [step, setStep] = useState<ModalStep>(initialStep);
   const [selectedSalawat, setSelectedSalawat] = useState<SalawatPreset>(SALAWAT_PRESETS[0]);
   const [selectedDivineName, setSelectedDivineName] = useState<DivineNameOption>(DIVINE_NAME_OPTIONS[0]);
@@ -246,7 +250,7 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
   const handleAddDebtRelief = () => {
     onAdd('DEBT_RELIEF', {
       title: language === 'fr' ? DEBT_RELIEF_PRACTICE_INFO.titleFr : DEBT_RELIEF_PRACTICE_INFO.title,
-      arabicText: 'وَمَا ذَٰلِكَ عَلَى اللهِ بِعَزِيزٍ',
+      arabicText: 'وَمَا ذَٰلِكَ عَلَى اللَّهِ بِعَزِيزٍ',
       transliteration: 'Wamā dhālika ʿalā llāhi bi-ʿAzīzin',
       meaning: language === 'fr' ? DEBT_RELIEF_PRACTICE_INFO.descriptionFr : DEBT_RELIEF_PRACTICE_INFO.description,
       dailyTarget: 1000,
@@ -505,9 +509,11 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
                   <p className="text-xs text-slate-600 dark:text-slate-400 mt-1">
                     {name.transliteration}
                   </p>
-                  <p className="text-xs text-slate-500 dark:text-slate-400">
-                    {getDivineNameMeaning(name)}
-                  </p>
+                  {!isArabicUi && (
+                    <p className="text-xs text-slate-500 dark:text-slate-400">
+                      {getDivineNameMeaning(name)}
+                    </p>
+                  )}
                 </button>
               ))}
             </div>
@@ -703,14 +709,16 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
             {/* Verse display */}
             <div className="p-4 rounded-xl bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-teal-900/20 dark:to-cyan-900/20 border border-teal-200 dark:border-teal-800/50 text-center">
               <p className="text-2xl font-arabic text-teal-900 dark:text-teal-100 mb-2 leading-loose">
-                وَمَا ذَٰلِكَ عَلَى اللهِ بِعَزِيزٍ
+                وَمَا ذَٰلِكَ عَلَى اللَّهِ بِعَزِيزٍ
               </p>
               <p className="text-sm text-slate-700 dark:text-slate-300 italic mb-1">
                 Wamā dhālika ʿalā llāhi bi-ʿAzīzin
               </p>
-              <p className="text-xs text-slate-600 dark:text-slate-400">
-                "{debtReliefT.meaning}"
-              </p>
+              {!isArabicUi && (
+                <p className="text-xs text-slate-600 dark:text-slate-400">
+                  "{debtReliefT.meaning}"
+                </p>
+              )}
             </div>
 
             {/* Description */}

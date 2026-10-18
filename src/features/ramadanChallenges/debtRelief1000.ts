@@ -16,7 +16,7 @@
 
 /** The sacred wird text */
 export const DEBT_RELIEF_WIRD = {
-  arabic: 'وَمَا ذَٰلِكَ عَلَى اللهِ بِعَزِيزٍ',
+  arabic: 'وَمَا ذَٰلِكَ عَلَى اللَّهِ بِعَزِيزٍ',
   transliteration: 'Wamā dhālika ʿalā llāhi bi-ʿAzīzin',
   meaning: 'And that is not difficult for Allah',
   meaningFr: 'Et cela n\'est pas difficile pour Allah',

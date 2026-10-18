@@ -1530,7 +1530,7 @@ const SacredGeometryBackground = ({ colors }: { colors: typeof elementColors.fir
 );
 
 function DestinyResults({ results }: { results: any }) {
-  const { t, language } = useLanguage();
+  const { t, language, uiLanguage } = useLanguage();
   const [verseText, setVerseText] = useState<VerseText | null>(null);
   const [loadingVerse, setLoadingVerse] = useState(false);
   const [verseError, setVerseError] = useState<string | null>(null);
@@ -1553,7 +1553,7 @@ function DestinyResults({ results }: { results: any }) {
           console.log('œ… Successfully fetched verse:', verse);
           setVerseText(verse);
         } else {
-          console.warn('š ï¸ Verse fetch returned null');
+          console.warn('⚠️ Verse fetch returned null');
           setVerseError('Unable to load verse at this moment. Please refresh or visit Quran.com directly.');
         }
         setLoadingVerse(false);
@@ -2694,9 +2694,12 @@ function DestinyResults({ results }: { results: any }) {
                       <div className="text-xl sm:text-2xl md:text-3xl font-semibold mb-2 tracking-wide">
                         {results.nameDestiny.divineNameResonance.transliteration}
                       </div>
-                      <div className="text-base sm:text-lg md:text-xl opacity-95">
-                        {isFr ? results.nameDestiny.divineNameResonance.meaningFr : results.nameDestiny.divineNameResonance.meaningEn}
-                      </div>
+                      {/* On /ar the Arabic Name above is the text; its English gloss is not machine-translated. */}
+                      {uiLanguage !== 'ar' && (
+                        <div className="text-base sm:text-lg md:text-xl opacity-95">
+                          {isFr ? results.nameDestiny.divineNameResonance.meaningFr : results.nameDestiny.divineNameResonance.meaningEn}
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -4411,7 +4414,7 @@ function CompatibilityResults({ results }: { results: any }) {
         ];
       } else if (score >= 40) {
         return [
-          'š ï¸ Compatibilité difficile',
+          '⚠️ Compatibilité difficile',
           '',
           'Ce que cela signifie :',
           'Différences significatives d\'énergie et d\'approche. Cette relation nécessite un effort substantiel, de la patience et une croissance mutuelle. Possible, mais les deux partenaires doivent ªtre pleinement engagés.',
@@ -4424,7 +4427,7 @@ function CompatibilityResults({ results }: { results: any }) {
         ];
       } else {
         return [
-          'š¨ Tr¨s difficile',
+          '🚨 Très difficile',
           '',
           'Ce que cela signifie :',
           'Conflits élémentaires majeurs. Bien que non impossible, ce jumelage fait face   des défis fondamentaux qui nécessitent un engagement profond pour ªtre surmontés.',
@@ -4477,7 +4480,7 @@ function CompatibilityResults({ results }: { results: any }) {
         ];
       } else if (score >= 40) {
         return [
-          'š ï¸ Challenging Compatibility',
+          '⚠️ Challenging Compatibility',
           '',
           'What This Means:',
           'Significant differences in energy and approach. This relationship requires substantial effort, patience, and mutual growth. Possible, but both partners must be fully committed.',
@@ -4490,7 +4493,7 @@ function CompatibilityResults({ results }: { results: any }) {
         ];
       } else {
         return [
-          'š¨ Very Difficult',
+          '🚨 Very Difficult',
           '',
           'What This Means:',
           'Major elemental conflicts. While not impossible, this pairing faces fundamental challenges that require deep commitment to overcome.',
@@ -5247,7 +5250,7 @@ function CompatibilityResults({ results }: { results: any }) {
           <ul className="space-y-2">
             {results.challenges.map((challenge: string, idx: number) => (
               <li key={idx} className="text-sm text-slate-700 dark:text-slate-300 flex items-start gap-2">
-                <span className="text-amber-500 mt-0.5">š¡</span>
+                <span className="text-amber-500 mt-0.5">⚡</span>
                 {challenge}
               </li>
             ))}

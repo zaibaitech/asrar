@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 import { COMPAT_THEME, COMPAT_TINTS } from '../constants/compatibilityTheme';
 import { DIVINE_INTENTIONS, DivineIntention, INTENTION_EMOJI, INTENTION_NAME_MAP, INTENTION_COMPANION_DUA } from '../constants/divineNameIntentions';
 import { findDivineNameByNumber } from '../data/divine-names';
@@ -30,6 +31,9 @@ const GRADE_LABEL: Record<'optimal' | 'suitable' | 'hadith-or-quran' | 'meaning-
 export function DivineNameIntentionMatchesView({ intention, onSelectName, language = 'en' }: DivineNameIntentionMatchesViewProps) {
   const contentLang: 'en' | 'fr' = language === 'fr' ? 'fr' : 'en';
   const isFrench = contentLang === 'fr';
+  // On /ar the verified Arabic from the data is shown directly; the English gloss
+  // is not machine-translated through the runtime catalog.
+  const isArabicUi = useLanguage().uiLanguage === 'ar';
   const info = DIVINE_INTENTIONS.find(i => i.id === intention)!;
   const entries = INTENTION_NAME_MAP[intention];
   const dua = INTENTION_COMPANION_DUA[intention];
@@ -80,7 +84,7 @@ export function DivineNameIntentionMatchesView({ intention, onSelectName, langua
                   <span dir="rtl" lang="ar" className="font-arabic text-2xl flex-shrink-0">{name.arabic}</span>
                   <div className="min-w-0">
                     <div className="font-technical text-sm font-bold" style={{ color: COMPAT_THEME.indigo }}>{name.transliteration}</div>
-                    <div className="text-xs truncate" style={{ color: COMPAT_THEME.muted }}>{name.translation[contentLang]}</div>
+                    {!isArabicUi && <div className="text-xs truncate" style={{ color: COMPAT_THEME.muted }}>{name.translation[contentLang]}</div>}
                   </div>
                   <span
                     className="ml-auto flex-shrink-0 text-[10px] font-semibold px-2.5 py-1 rounded-full whitespace-nowrap"

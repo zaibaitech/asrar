@@ -30,6 +30,7 @@ import {
 } from '../propheticNames201';
 import { WaveHadiyyaCard } from './WaveHadiyyaCard';
 import { translations } from '@/src/lib/translations';
+import { useLanguage } from '@/src/contexts/LanguageContext';
 
 // ─── Types ───────────────────────────────────────────────────────────────────────
 
@@ -95,6 +96,9 @@ export function PropheticNamesPractice({
   if (!isOpen) return null;
 
   const t = translations[language].propheticNames;
+  // On /ar the Arabic names and duʿāʾ from the data are shown directly; their
+  // English glosses are not machine-translated through the catalog.
+  const isArabicUi = useLanguage().uiLanguage === 'ar';
   const isJamiuComplete = jamiuCount >= YA_JAMIU.count;
   const isNamesComplete = currentNameIndex >= PROPHETIC_NAMES_201.length - 1;
   const currentName = PROPHETIC_NAMES_201[currentNameIndex];
@@ -190,9 +194,11 @@ export function PropheticNamesPractice({
               <p className="text-sm text-slate-600 dark:text-slate-400 italic">
                 {RIZQ_DUA.transliteration}
               </p>
-              <p className="text-xs text-slate-500 dark:text-slate-500 mt-2">
-                {language === 'fr' ? RIZQ_DUA.meaningFr : RIZQ_DUA.meaning}
-              </p>
+              {!isArabicUi && (
+                <p className="text-xs text-slate-500 dark:text-slate-500 mt-2">
+                  {language === 'fr' ? RIZQ_DUA.meaningFr : RIZQ_DUA.meaning}
+                </p>
+              )}
             </div>
 
             {/* Practice steps */}
@@ -207,7 +213,7 @@ export function PropheticNamesPractice({
                     <span className="font-arabic">{YA_JAMIU.arabic}</span> ({YA_JAMIU.transliteration})
                   </p>
                   <p className="text-sm text-slate-500 dark:text-slate-400">
-                    {YA_JAMIU.count}× — {language === 'fr' ? YA_JAMIU.meaningFr : YA_JAMIU.meaning}
+                    {YA_JAMIU.count}×{!isArabicUi && <> — {language === 'fr' ? YA_JAMIU.meaningFr : YA_JAMIU.meaning}</>}
                   </p>
                 </div>
               </div>
@@ -253,7 +259,7 @@ export function PropheticNamesPractice({
                 {YA_JAMIU.arabic}
               </p>
               <p className="text-sm text-slate-500 dark:text-slate-400 italic">
-                {YA_JAMIU.transliteration} — {language === 'fr' ? YA_JAMIU.meaningFr : YA_JAMIU.meaning}
+                {YA_JAMIU.transliteration}{!isArabicUi && <> — {language === 'fr' ? YA_JAMIU.meaningFr : YA_JAMIU.meaning}</>}
               </p>
             </div>
 
@@ -417,7 +423,7 @@ export function PropheticNamesPractice({
                 <p className="text-xl text-slate-700 dark:text-slate-300 italic">
                   {currentName.transliteration}
                 </p>
-                {showTranslation && (
+                {showTranslation && !isArabicUi && (
                   <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">
                     {language === 'fr' ? currentName.meaningFr : currentName.meaning}
                   </p>
@@ -514,9 +520,11 @@ export function PropheticNamesPractice({
                 {CLOSING_DUA.transliteration}
               </p>
               <div className="border-t border-emerald-200 dark:border-emerald-700/50 pt-4">
-                <p className="text-sm text-slate-500 dark:text-slate-400 mb-3">
-                  {language === 'fr' ? CLOSING_DUA.meaningFr : CLOSING_DUA.meaning}
-                </p>
+                {!isArabicUi && (
+                  <p className="text-sm text-slate-500 dark:text-slate-400 mb-3">
+                    {language === 'fr' ? CLOSING_DUA.meaningFr : CLOSING_DUA.meaning}
+                  </p>
+                )}
                 <p className="text-xs text-emerald-600 dark:text-emerald-400 italic">
                   {language === 'fr' ? CLOSING_DUA.source.fr : CLOSING_DUA.source.en}
                 </p>
