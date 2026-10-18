@@ -82,6 +82,12 @@ CORRECTIONS = [
     ('4', 'docs Q7 note', 'old pre-change text', 'trimmed; status updated', A),
     ('4', 'code A: word-final ہ in اللہ', 'اللہ → اللة (same total, different elements)', 'اللہ / عبداللہ → الله / عبدالله', A + ' (approved by Mario)'),
     ('4', 'code C: پ چ ژ گ ٹ ڈ ڑ', 'uncounted', 'kept at 0 (Mario’s decision); the spelling note says so', A),
+    # Batch 5: Abjad region wording and the last-letter sentence (Maghribi = the Maghreb from Morocco to Libya, al-Andalus, West Africa; Mashriqi = Egypt, the Middle East, Asia)
+    ('5', 'catalog abjad system selector note (English source updated too)', 'مغربی (شمالی و مغربی افریقہ) · مشرقی (مشرقِ وسطیٰ اور ایشیا)', 'مغربی (مراکش تا لیبیا، اندلس اور مغربی افریقہ) · مشرقی (مصر، مشرقِ وسطیٰ اور برصغیر سمیت ایشیا)', A + '; English source is now “Maghribi (the Maghreb, al-Andalus & West Africa) · Mashriqi (Egypt, the Middle East & Asia)”'),
+    ('5', 'UR_ABJAD.what', 'الف 1، ب 2، ج 3، اور اسی طرح ش 1000 تک، اس مغربی ترتیب میں جو یہاں پہلے سے منتخب ہے (مشرقی ترتیب میں، جو یہاں دستیاب بھی ہے، غ 1000 ہے)۔ … “حسابِ جمل”', 'الف 1، ب 2، ج 3، اور اسی طرح آخری حرف تک: یہاں پہلے سے منتخب مغربی ترتیب میں آخری حرف شین (ش) ہے جس کی قیمت 1000 ہے، جبکہ مشرقی ترتیب میں، جو یہاں بھی دستیاب ہے، غین (غ) کی قیمت 1000 ہے۔ … “حسابِ جُمَّل”', A),
+    ('5', 'UR_COMPAT.faqs[1].a', 'آپ مغربی ترتیب (شمالی اور مغربی افریقہ) اور مشرقی ترتیب (مشرق، بشمول برصغیر) … جن ناموں میں ص، س، ش، ض، ظ یا غ جیسے حروف ہوں ان میں فرق ہو سکتا ہے۔', 'آپ مغربی ترتیب (مراکش تا لیبیا اور مغربی افریقہ) اور مشرقی ترتیب (مصر، عرب ممالک اور برصغیر) … جن ناموں میں ص، ض، س، ظ، غ یا ش میں سے کوئی حرف ہو ان کا مجموعہ مختلف آ سکتا ہے۔', A + '; English source updated to match'),
+    ('5', 'UR_ABJAD.orders', '…اور مغربی ترتیب، جو شمالی اور مغربی افریقہ میں رائج ہے۔', '…اور مغربی ترتیب، جو مراکش سے لیبیا تک کے مغربِ عربی، تاریخی اندلس اور مغربی افریقہ میں رائج ہے۔', A + '; English source updated to match'),
+    ('5', 'UR_BURJ.how[1]', 'ہر نام کو مغربی (شمالی افریقی) ترتیب کے حروف کی قیمتوں سے…', 'ہر نام کو مغربی ترتیب (مراکش و مغربی افریقہ) کے حروف کی قیمتوں سے…', A),
 ]
 
 # Reviewer's answers to the 8 open questions and what was done.
@@ -105,12 +111,5 @@ ANSWERS = [
 # New strings added after the native review; not yet seen by the Language Reviewer.
 # (where, English source, Urdu, note)
 PENDING_REVIEW = [
-    ('catalog (abjad system selector note, all calculators; English source from PR #89)',
-     'Maghribi (North & West Africa) · Mashriqi (Middle East & Asia)',
-     'مغربی (شمالی و مغربی افریقہ) · مشرقی (مشرقِ وسطیٰ اور ایشیا)',
-     'Short regional hint under the Maghribi/Mashriqi switch. Check “مغربی” is not read as “Western” here, and the geography wording.'),
-    ('page copy UR_ABJAD.what (/ur/abjad, “ابجد (حسابِ جمل) کیا ہے؟”)',
-     "… and so on up to shīn 1000 in the Maghribi order used here by default (in the Mashriqi order, also available, ghayn is 1000).",
-     'الف 1، ب 2، ج 3، اور اسی طرح ش 1000 تک، اس مغربی ترتیب میں جو یہاں پہلے سے منتخب ہے (مشرقی ترتیب میں، جو یہاں دستیاب بھی ہے، غ 1000 ہے)۔',
-     'Was “… غ 1000 تک”, which is the Mashriqi value; the site now defaults to Maghribi (ش = 1000). Check the sentence flow.'),
+    # Batch 5 reviewed the two strings that were pending here; see CORRECTIONS batch 5.
 ]

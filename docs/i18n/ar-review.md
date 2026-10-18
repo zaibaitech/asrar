@@ -2,14 +2,19 @@
 
 Everything below is a draft that needs native-speaker review (religious terms especially) before /ar is indexed.
 
-## 0. New strings for the Language Reviewer (Abjad system selector, Oct 2026)
+## 0. Abjad system wording: Language Reviewer batch 5 (applied, Oct 2026)
 
-Hand drafts, marked `// TODO review` in src/lib/i18n/ar.ts. Please check the regional wording.
+Region wording: Maghribi = the Maghreb (Morocco to Libya), al-Andalus and West Africa; Mashriqi = Egypt, the Middle East and Asia. “North Africa” is no longer used for Maghribi. Arabic review (PR91-1..8) applied: «وسائر آسيا» everywhere for Mashriqi, al-Andalus last with «قديمًا», «تصنيفًا عنصريًا» (reads as ‘racist’) → «تصنيفًا خاصًا … بحسب العناصر», list punctuation in the Maghribi paragraph, «بالضبط» → «تمامًا»; the TODO marker on the ar.ts note is removed.
 
-| Key | English | Arabic draft |
+| Key | English | Arabic (reviewer wording, applied) |
 |---|---|---|
-| `abjadSystem.note` | Maghribi (North & West Africa) · Mashriqi (Middle East & Asia) | المغربي (شمال أفريقيا وغربها) · المشرقي (الشرق الأوسط وآسيا) |
-| /ar/abjad FAQ «ما هو حساب الجمل؟» and the “ما هو حساب الجمل” section (app/ar/abjad/page.tsx) | … up to shīn at 1000 in the Maghribi order used here by default (in the Mashriqi order, also available, ghayn is 1000). | وهكذا حتى الشين 1000 في الترتيب المغربي المعتمد هنا افتراضيًا (وفي الترتيب المشرقي، المتاح أيضًا، تكون الغين 1000). |
+| `abjadSystem.note` | Maghribi (the Maghreb, al-Andalus & West Africa) · Mashriqi (Egypt, the Middle East & Asia) | المغربي (المغرب العربي والأندلس وغرب أفريقيا) · المشرقي (مصر والمشرق وسائر آسيا) |
+| /ar/abjad FAQ «ما هو حساب الجمل؟» and the «ما هو حساب الجُمَّل؟» section | … and so on to the last letter: shīn is 1000 in the Maghribi order (the default here); in the Mashriqi order, also available, ghayn is 1000. | وهكذا إلى آخر الحروف: الشين وقيمتها 1000 في الترتيب المغربي، وهو الترتيب الافتراضي في هذه الحاسبة، أما في الترتيب المشرقي، المتاح أيضًا، فالغين هي 1000. |
+| /ar/abjad FAQ «ما الفرق بين حساب الجمل المغربي والمشرقي؟» | The two orders and the six letters that differ | هما ترتيبان تقليديان لحروف الأبجد: المشرقي المستعمل في المشرق ومصر وسائر العالم الإسلامي شرقًا، والمغربي المستعمل في المغرب العربي والأندلس قديمًا وغرب أفريقيا. ويختلفان في قيم ستة أحرف: ففي المشرقي س 60، ص 90، ش 300، ض 800، ظ 900، غ 1000، وفي المغربي ص 60، ض 90، س 300، ظ 800، غ 900، ش 1000، فقد يعطي الاسم الواحد مجموعين مختلفين… |
+| /ar/abjad section «الترتيب المغربي والترتيب المشرقي» | Mashriqi in the East and Egypt; Maghribi in the Maghreb and West Africa | …الترتيب المشرقي المستعمل في المشرق ومصر، والترتيب المغربي المستعمل في المغرب العربي وغرب أفريقيا… |
+| Vocalisation | ḥisāb al-jummal | «حساب الجُمَّل» vocalised once, in the first section heading; the page title stays unvocalised. |
+
+Runtime catalog entries whose English source changed with the region fix (now in scripts/i18n/ar/manual.json; reviewed in the Arabic review, PR91-1..6): the /abjad “traditions” paragraph, the /compatibility “Which Abjad system” answer, the glossary “Abjad” and “Maghribi” definitions, and two Name Destiny learning-centre paragraphs. All now use «المغرب العربي (والأندلس) وغرب أفريقيا» and «مصر والمشرق وآسيا».
 
 ## 1. Translation keys (src/lib/i18n/ar.ts): 165 machine drafts, 571 hand drafts
 Marked inline with `// TODO review`.

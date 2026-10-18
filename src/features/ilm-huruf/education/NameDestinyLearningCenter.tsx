@@ -137,8 +137,8 @@ function IntroductionTab({ isFrench }: { isFrench: boolean }) {
         </h3>
         <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
           {isFrench
-            ? "Le système Abjad est antérieur à l'Islam et était utilisé dans tout le monde sémitique. Les érudits musulmans l'ont développé en une discipline spirituelle sophistiquée. La tradition maghrébine (Afrique du Nord/Ouest) a développé sa propre classification élémentale unique de 28 lettres."
-            : "The Abjad system predates Islam and was used throughout the Semitic world. Muslim scholars developed it into a sophisticated spiritual discipline. The Maghribi (North/West African) tradition developed its own unique elemental classification of the 28 letters."}
+            ? "Le système Abjad est antérieur à l'Islam et était utilisé dans tout le monde sémitique. Les érudits musulmans l'ont développé en une discipline spirituelle sophistiquée. La tradition maghrébine (Maghreb et Afrique de l'Ouest) a développé sa propre classification élémentale unique de 28 lettres."
+            : "The Abjad system predates Islam and was used throughout the Semitic world. Muslim scholars developed it into a sophisticated spiritual discipline. The Maghribi tradition (the Maghreb and West Africa) developed its own unique elemental classification of the 28 letters."}
         </p>
       </div>
     </div>
@@ -278,15 +278,15 @@ function CalculationsTab({ isFrench }: { isFrench: boolean }) {
           <div className="bg-white dark:bg-slate-800 p-2 rounded">ا=1, ب=2, ج=3, د=4, ه=5</div>
           <div className="bg-white dark:bg-slate-800 p-2 rounded">و=6, ز=7, ح=8, ط=9</div>
           <div className="bg-white dark:bg-slate-800 p-2 rounded">ي=10, ك=20, ل=30, م=40</div>
-          <div className="bg-white dark:bg-slate-800 p-2 rounded">ن=50, س=60, ع=70, ف=80</div>
-          <div className="bg-white dark:bg-slate-800 p-2 rounded">ص=300*, ق=100, ر=200, ش=300</div>
+          <div className="bg-white dark:bg-slate-800 p-2 rounded">ن=50, ص=60*, ع=70, ف=80</div>
+          <div className="bg-white dark:bg-slate-800 p-2 rounded">ض=90*, ق=100, ر=200, س=300*</div>
           <div className="bg-white dark:bg-slate-800 p-2 rounded">ت=400, ث=500, خ=600, ذ=700</div>
-          <div className="bg-white dark:bg-slate-800 p-2 rounded">ض=800, ظ=900, غ=1000</div>
+          <div className="bg-white dark:bg-slate-800 p-2 rounded">ظ=800*, غ=900*, ش=1000*</div>
         </div>
         <p className="text-xs text-slate-500 dark:text-slate-400 italic mt-2">
           {isFrench 
-            ? '*Maghribi: ص=300 (diffère du Mashriqi où ص=90)'
-            : '*Maghribi: ص=300 (differs from Mashriqi where ص=90)'}
+            ? '*Valeurs maghribi : six lettres diffèrent : ص60 ض90 س300 ظ800 غ900 ش1000 (Mashriqi : س60 ص90 ش300 ض800 ظ900 غ1000)'
+            : '*Maghribi values differ for six letters: ص60 ض90 س300 ظ800 غ900 ش1000 (Mashriqi: س60 ص90 ش300 ض800 ظ900 غ1000)'}
         </p>
       </div>
 
@@ -386,8 +386,8 @@ function FAQTab({ isFrench }: { isFrench: boolean }) {
     {
       q: isFrench ? "Qu'est-ce que la tradition maghrébine?" : "What is the Maghribi tradition?",
       a: isFrench
-        ? "La tradition maghrébine (Afrique du Nord/Ouest - Sénégal, Gambie, Mali, Mauritanie) a développé un système unique de classification des 28 lettres arabes en 4 éléments, avec exactement 7 lettres par élément. Ce système équilibré est basé sur les qualités thermiques et d'humidité."
-        : "The Maghribi tradition (North/West Africa - Senegal, Gambia, Mali, Mauritania) developed a unique system of classifying the 28 Arabic letters into 4 elements, with exactly 7 letters per element. This balanced system is based on thermal and moisture qualities."
+        ? "La tradition maghrébine (Maghreb et Afrique de l'Ouest - Sénégal, Gambie, Mali, Mauritanie) a développé un système unique de classification des 28 lettres arabes en 4 éléments, avec exactement 7 lettres par élément. Ce système équilibré est basé sur les qualités thermiques et d'humidité."
+        : "The Maghribi tradition (the Maghreb and West Africa - Senegal, Gambia, Mali, Mauritania) developed a unique system of classifying the 28 Arabic letters into 4 elements, with exactly 7 letters per element. This balanced system is based on thermal and moisture qualities."
     },
     {
       q: isFrench ? "Que signifient les éléments?" : "What do the elements mean?",

@@ -321,8 +321,29 @@ describe('static SEO copy matches the Maghribi default', () => {
     for (const rel of ['app/abjad/page.tsx', 'app/ar/abjad/page.tsx', 'app/names/page.tsx', 'src/lib/i18n/urPages.ts']) {
       const text = src(rel);
       expect(text, rel).not.toMatch(/up to ghayn (at )?1000\.|jusqu\\'à ghayn à 1000\.|حتى الغين 1000\.|غ 1000 تک۔|… ghayn 1000\)/);
-      expect(text, rel).toMatch(/shīn (at )?1000|الشين 1000|ش 1000|shīn à 1000/);
+      expect(text, rel).toMatch(/shīn (at )?1000|shīn, worth 1000|الشين وقيمتها 1000|شین \(ش\) ہے جس کی قیمت 1000|shīn à 1000/);
     }
+  });
+
+  it('region wording: Maghribi is the Maghreb/al-Andalus/West Africa, never "North Africa"', () => {
+    const files = [
+      'src/lib/i18n/en.ts', 'src/lib/i18n/fr.ts', 'src/lib/i18n/ar.ts', 'src/lib/i18n/urPages.ts',
+      'src/components/AbjadSystemSelector.tsx', 'src/components/GlossaryModal.tsx',
+      'app/abjad/page.tsx', 'app/ar/abjad/page.tsx', 'app/compatibility/page.tsx',
+      'src/features/ilm-huruf/education/NameDestinyLearningCenter.tsx',
+      'src/features/ilm-huruf/education/NameDestinyGlossary.tsx',
+      'scripts/i18n/ur/catalog_source.py',
+    ];
+    for (const rel of files) {
+      expect(src(rel), rel).not.toMatch(/North(ern)?[ /&-]*(and |& )?(West )?Africa|Afrique du Nord|شمال أفريقيا|شمالی (و|اور) مغربی افریقہ|شمالی افریقی/);
+    }
+    expect(src('src/lib/i18n/en.ts')).toContain('Maghribi (the Maghreb, al-Andalus & West Africa) · Mashriqi (Egypt, the Middle East & Asia)');
+  });
+
+  it('Name Destiny learning centre shows the shared Maghribi table', () => {
+    const lc = src('src/features/ilm-huruf/education/NameDestinyLearningCenter.tsx');
+    for (const v of ['ص=60*', 'ض=90*', 'س=300*', 'ظ=800*', 'غ=900*', 'ش=1000*']) expect(lc).toContain(v);
+    expect(lc).not.toMatch(/ص=300|ش=300,|غ=1000<|س=60,/);
   });
 
   it('/99-names-of-allah lists Maghribi values and states the table', () => {
