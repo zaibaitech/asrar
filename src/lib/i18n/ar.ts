@@ -11,7 +11,7 @@ import type { en } from './en';
 
 export const ar: DeepPartial<typeof en> = {
   abjadSystem: {
-    note: "المغربي (المغرب العربي والأندلس وغرب أفريقيا) · المشرقي (مصر والمشرق وسائر آسيا)", // TODO review (Language Reviewer batch 5 wording; not from mobile)
+    note: "المغربي (المغرب العربي والأندلس وغرب أفريقيا) · المشرقي (مصر والمشرق وسائر آسيا)", // Language Reviewer batch 5 wording (reviewed)
   },
 
   nav: {

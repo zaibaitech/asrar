@@ -4,7 +4,7 @@ Everything below is a draft that needs native-speaker review (religious terms es
 
 ## 0. Abjad system wording: Language Reviewer batch 5 (applied, Oct 2026)
 
-Region wording: Maghribi = the Maghreb (Morocco to Libya), al-Andalus and West Africa; Mashriqi = Egypt, the Middle East and Asia. “North Africa” is no longer used for Maghribi. The note in src/lib/i18n/ar.ts keeps a `// TODO review` marker.
+Region wording: Maghribi = the Maghreb (Morocco to Libya), al-Andalus and West Africa; Mashriqi = Egypt, the Middle East and Asia. “North Africa” is no longer used for Maghribi. Arabic review (PR91-1..8) applied: «وسائر آسيا» everywhere for Mashriqi, al-Andalus last with «قديمًا», «تصنيفًا عنصريًا» (reads as ‘racist’) → «تصنيفًا خاصًا … بحسب العناصر», list punctuation in the Maghribi paragraph, «بالضبط» → «تمامًا»; the TODO marker on the ar.ts note is removed.
 
 | Key | English | Arabic (reviewer wording, applied) |
 |---|---|---|
@@ -14,7 +14,7 @@ Region wording: Maghribi = the Maghreb (Morocco to Libya), al-Andalus and West A
 | /ar/abjad section «الترتيب المغربي والترتيب المشرقي» | Mashriqi in the East and Egypt; Maghribi in the Maghreb and West Africa | …الترتيب المشرقي المستعمل في المشرق ومصر، والترتيب المغربي المستعمل في المغرب العربي وغرب أفريقيا… |
 | Vocalisation | ḥisāb al-jummal | «حساب الجُمَّل» vocalised once, in the first section heading; the page title stays unvocalised. |
 
-Runtime catalog entries whose English source changed with the region fix (now in scripts/i18n/ar/manual.json; hand drafts, review welcome): the /abjad “traditions” paragraph, the /compatibility “Which Abjad system” answer, the glossary “Abjad” and “Maghribi” definitions, and two Name Destiny learning-centre paragraphs. All now use «المغرب العربي (والأندلس) وغرب أفريقيا» and «مصر والمشرق وآسيا».
+Runtime catalog entries whose English source changed with the region fix (now in scripts/i18n/ar/manual.json; reviewed in the Arabic review, PR91-1..6): the /abjad “traditions” paragraph, the /compatibility “Which Abjad system” answer, the glossary “Abjad” and “Maghribi” definitions, and two Name Destiny learning-centre paragraphs. All now use «المغرب العربي (والأندلس) وغرب أفريقيا» and «مصر والمشرق وآسيا».
 
 ## 1. Translation keys (src/lib/i18n/ar.ts): 165 machine drafts, 571 hand drafts
 Marked inline with `// TODO review`.
