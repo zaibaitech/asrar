@@ -1,6 +1,11 @@
 import type { Metadata } from 'next';
 import { FaqSection, JsonLd, RelatedLinks, faqJsonLd, type FaqItem, type RelatedLink } from '@/src/components/seo/SeoSections';
-import { DIVINE_NAMES } from '@/src/data/divine-names';
+import { getDivineNames } from '@/src/data/divine-names';
+import { ABJAD_MAGHRIBI, ABJAD_MASHRIQI } from '@/src/lib/abjad-maps';
+
+// Maghribi is the default system across Asrār; the Mashriqi value is shown next to it where it differs.
+const NAMES = getDivineNames(ABJAD_MAGHRIBI);
+const MASHRIQI_VALUE = new Map(getDivineNames(ABJAD_MASHRIQI).map((n) => [n.number, n.abjadValue]));
 import { englishPageMetadata } from '@/src/lib/names/seo';
 
 export const metadata: Metadata = englishPageMetadata('/99-names-of-allah', 'abjad', {
@@ -16,11 +21,11 @@ const FAQS: FaqItem[] = [
   },
   {
     q: 'How are the Abjad values of the Names calculated here?',
-    a: 'The leading definite article "al-" is dropped and the remaining letters are summed with the standard Mashriqi table; hamza is counted by its seat (ؤ as wāw, ئ as yāʾ, أ/إ/آ as alif). The two compound Names, Mālik al-Mulk and Dhū al-Jalāli wa al-Ikrām, keep their full spelling.',
+    a: 'The leading definite article "al-" is dropped and the remaining letters are summed with the Maghribi table, the default across Asrār; hamza is counted by its seat (ؤ as wāw, ئ as yāʾ, أ/إ/آ as alif). The two compound Names, Mālik al-Mulk and Dhū al-Jalāli wa al-Ikrām, keep their full spelling. Where the Mashriqi table (used in the Middle East and Asia) gives a different total, it is shown next to the value, and you can switch the calculators to Mashriqi.',
   },
   {
     q: 'Why does the Abjad calculator show a different number for a Name?',
-    a: 'The Abjad calculator counts every letter you type, including "al-", and uses the Maghribi table by default, so its total can differ from the value listed here.',
+    a: 'The Abjad calculator counts every letter you type, including "al-", so its total can differ from the value listed here. Both use the Maghribi table by default, and both can be switched to Mashriqi.',
   },
   {
     q: 'How are the Names linked to my burj?',
@@ -59,7 +64,7 @@ export default function Page() {
         </header>
 
         <ol className="space-y-2" aria-label="The 99 Names of Allah">
-          {DIVINE_NAMES.map((n) => (
+          {NAMES.map((n) => (
             <li
               key={n.number}
               id={`name-${n.number}`}
@@ -75,7 +80,10 @@ export default function Page() {
                 </span>
               </div>
               <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">{n.meaning.en}</p>
-              <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">Abjad value: {n.abjadValue}</p>
+              <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
+                Abjad value: {n.abjadValue}
+                {MASHRIQI_VALUE.get(n.number) !== n.abjadValue && <> · Mashriqi: {MASHRIQI_VALUE.get(n.number)}</>}
+              </p>
             </li>
           ))}
         </ol>
@@ -84,7 +92,7 @@ export default function Page() {
           <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100">About this list</h2>
           <p className="text-slate-700 dark:text-slate-300">
             The Names are given in the order of the compilation drawn from the hadith of al-Walīd in Jāmiʿ al-Tirmidhī
-            (no. 3507). Abjad values drop the article &ldquo;al-&rdquo; and use the Mashriqi table. They are listed for learning
+            (no. 3507). Abjad values drop the article &ldquo;al-&rdquo; and use the Maghribi table, the default across Asrār (the Mashriqi value is shown where it differs). They are listed for learning
             and reflection, not prediction.
           </p>
         </section>

@@ -9,6 +9,7 @@ Hand drafts, marked `// TODO review` in src/lib/i18n/ar.ts. Please check the reg
 | Key | English | Arabic draft |
 |---|---|---|
 | `abjadSystem.note` | Maghribi (North & West Africa) · Mashriqi (Middle East & Asia) | المغربي (شمال أفريقيا وغربها) · المشرقي (الشرق الأوسط وآسيا) |
+| /ar/abjad FAQ «ما هو حساب الجمل؟» and the “ما هو حساب الجمل” section (app/ar/abjad/page.tsx) | … up to shīn at 1000 in the Maghribi order used here by default (in the Mashriqi order, also available, ghayn is 1000). | وهكذا حتى الشين 1000 في الترتيب المغربي المعتمد هنا افتراضيًا (وفي الترتيب المشرقي، المتاح أيضًا، تكون الغين 1000). |
 
 ## 1. Translation keys (src/lib/i18n/ar.ts): 165 machine drafts, 571 hand drafts
 Marked inline with `// TODO review`.

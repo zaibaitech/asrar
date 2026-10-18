@@ -27,13 +27,14 @@ Sources (edit there, then regenerate this file with `python3 scripts/i18n/ur/bui
 7. Urdu-typed names in the Abjad count: RESOLVED. Urdu letters are converted before counting (see the reviewer answers below, Q7).
 8. Interpretive result content (soul-connection archetype meanings, burj career texts, per-date rule explanations, manzil descriptions, day guidance paragraphs) is NOT translated yet and still shows in English; the pages say “ٹول کے کچھ حصے ابھی انگریزی میں ہیں۔”
 
-### New strings for the Language Reviewer (1 pending)
+### New strings for the Language Reviewer (2 pending)
 
 Added after the native review; please check these.
 
 | Where | English | Urdu | Note |
 |---|---|---|---|
 | catalog (abjad system selector note, all calculators; English source from PR #89) | Maghribi (North & West Africa) · Mashriqi (Middle East & Asia) | مغربی (شمالی و مغربی افریقہ) · مشرقی (مشرقِ وسطیٰ اور ایشیا) | Short regional hint under the Maghribi/Mashriqi switch. Check “مغربی” is not read as “Western” here, and the geography wording. |
+| page copy UR_ABJAD.what (/ur/abjad, “ابجد (حسابِ جمل) کیا ہے؟”) | … and so on up to shīn 1000 in the Maghribi order used here by default (in the Mashriqi order, also available, ghayn is 1000). | الف 1، ب 2، ج 3، اور اسی طرح ش 1000 تک، اس مغربی ترتیب میں جو یہاں پہلے سے منتخب ہے (مشرقی ترتیب میں، جو یہاں دستیاب بھی ہے، غ 1000 ہے)۔ | Was “… غ 1000 تک”, which is the Mashriqi value; the site now defaults to Maghribi (ش = 1000). Check the sentence flow. |
 
 
 
@@ -402,7 +403,7 @@ Titles and descriptions (`urMetadata.ts`). The title gets “ | اسرار” ap
 | UR_ABJAD.h1 | Abjad Calculator: The Numerical Value of Your Name | ابجد کیلکولیٹر: نام کے اعداد |
 | UR_ABJAD.lead | Calculate the Abjad value of your name or any Arabic phrase, choose the Mashriqi or Maghribi order, and see each letter's value and the balance of the elements. | اپنے نام یا کسی بھی عربی عبارت کی ابجد قیمت نکالیں، مشرقی یا مغربی ترتیب منتخب کریں، اور ہر حرف کی قیمت اور عناصر کا توازن دیکھیں۔ |
 | UR_ABJAD.whatTitle | What is Abjad (ḥisāb al-jummal)? | ابجد (حسابِ جمل) کیا ہے؟ |
-| UR_ABJAD.what | The Abjad system gives every Arabic letter a number: alif 1, bāʾ 2, jīm 3, and so on up to ghayn 1000. The sum of a word's letter values is its ḥisāb al-jummal, a count used for centuries in the Islamic sciences and, in the subcontinent, also for chronograms (tārīkh-goʾī). | ابجد کے نظام میں عربی کے ہر حرف کی ایک عددی قیمت ہے: الف 1، ب 2، ج 3، اور اسی طرح غ 1000 تک۔ کسی لفظ کے حروف کی قیمتوں کا مجموعہ اس کا “حسابِ جمل” کہلاتا ہے، جو صدیوں سے اسلامی علوم میں، اور برصغیر میں تاریخ گوئی (مادۂ تاریخ) میں بھی استعمال ہوتا رہا ہے۔ |
+| UR_ABJAD.what | The Abjad system gives every Arabic letter a number: alif 1, bāʾ 2, jīm 3, and so on up to shīn 1000 in the Maghribi order used here by default (in the Mashriqi order, also available, ghayn is 1000). The sum of a word's letter values is its ḥisāb al-jummal, a count used for centuries in the Islamic sciences and, in the subcontinent, also for chronograms (tārīkh-goʾī). | ابجد کے نظام میں عربی کے ہر حرف کی ایک عددی قیمت ہے: الف 1، ب 2، ج 3، اور اسی طرح ش 1000 تک، اس مغربی ترتیب میں جو یہاں پہلے سے منتخب ہے (مشرقی ترتیب میں، جو یہاں دستیاب بھی ہے، غ 1000 ہے)۔ کسی لفظ کے حروف کی قیمتوں کا مجموعہ اس کا “حسابِ جمل” کہلاتا ہے، جو صدیوں سے اسلامی علوم میں، اور برصغیر میں تاریخ گوئی (مادۂ تاریخ) میں بھی استعمال ہوتا رہا ہے۔ |
 | UR_ABJAD.ordersTitle | The Mashriqi and Maghribi orders | مشرقی اور مغربی ترتیب |
 | UR_ABJAD.orders | In ʿilm al-ḥurūf and ʿilm al-aʿdād scholars studied the numerical values of the Divine Names, Qur'anic phrases and people's names, and linked the letters to the four elements: fire, air, water and earth. There are two common orders: the Mashriqi order used in the East, including Pakistan and India, and the Maghribi order used in North and West Africa. This calculator supports both so you can compare the results. | علم الحروف اور علم الاعداد میں علما نے اسمائے حسنیٰ، قرآنی عبارات اور لوگوں کے ناموں کی عددی قیمتوں کا مطالعہ کیا اور حروف کو چار عناصر سے جوڑا: آگ، ہوا، پانی اور مٹی۔ دو ترتیبیں عام ہیں: مشرقی ترتیب، جو پاکستان اور ہندوستان سمیت مشرق میں رائج ہے، اور مغربی ترتیب، جو شمالی اور مغربی افریقہ میں رائج ہے۔ یہ کیلکولیٹر دونوں ترتیبوں سے حساب کرتا ہے تاکہ آپ نتائج کا موازنہ کر سکیں۔ |
 | UR_ABJAD.howTitle | How to use the calculator | کیلکولیٹر کیسے استعمال کریں |

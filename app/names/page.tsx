@@ -12,7 +12,7 @@ export const metadata: Metadata = englishPageMetadata('/names', 'name-and-mother
 const FAQS: FaqItem[] = [
   {
     q: 'What is the Abjad value of a name?',
-    a: 'In ḥisāb al-jummal every Arabic letter has a number (alif 1, bāʾ 2, jīm 3 … ghayn 1000). The Abjad value of a name is the sum of its letters, counted from its Arabic spelling; vowel marks are not counted.',
+    a: 'In ḥisāb al-jummal every Arabic letter has a number (alif 1, bāʾ 2, jīm 3 … shīn 1000 in the Maghribi order used here by default; in the Mashriqi order, also available, ghayn is 1000). The Abjad value of a name is the sum of its letters, counted from its Arabic spelling; vowel marks are not counted.',
   },
   {
     q: "How is the burj found from my name and my mother's name?",

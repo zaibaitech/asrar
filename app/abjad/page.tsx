@@ -66,7 +66,7 @@ const COPY = {
   en: {
     h1: 'Abjad Calculator — ʿIlm al-Ḥurūf Letter Numerology',
     intro:
-      'The Abjad system assigns a number to each letter of the Arabic alphabet: alif is 1, bāʾ is 2, jīm is 3, and so on up to ghayn at 1000. Adding the values of the letters in a word gives its ḥisāb al-jummal, the "sum total" used for centuries in the Islamic sciences.',
+      'The Abjad system assigns a number to each letter of the Arabic alphabet: alif is 1, bāʾ is 2, jīm is 3, and so on up to shīn at 1000 in the Maghribi order used here by default (in the Mashriqi order, which you can switch to, ghayn is 1000). Adding the values of the letters in a word gives its ḥisāb al-jummal, the "sum total" used for centuries in the Islamic sciences.',
     aboutTitle: 'How Abjad relates to Islamic letter-numerology',
     about:
       'In ʿilm al-ḥurūf (the science of letters) and ʿilm al-ʿadad (the science of numbers), scholars studied the numerical value of divine names, Qurʾānic phrases and personal names, and linked letters to the four elements: fire, air, water and earth. Two traditions are common: the Mashriqi order used in the East and the Maghribi order used in North and West Africa. This calculator supports both, so you can compare results.',
@@ -84,7 +84,7 @@ const COPY = {
   fr: {
     h1: 'Calculateur Abjad — Numérologie des lettres (ʿIlm al-Ḥurūf)',
     intro:
-      'Le système Abjad attribue un nombre à chaque lettre de l\'alphabet arabe : alif vaut 1, bāʾ 2, jīm 3, et ainsi de suite jusqu\'à ghayn à 1000. La somme des valeurs des lettres d\'un mot donne son ḥisāb al-jummal, le « total » utilisé depuis des siècles dans les sciences islamiques.',
+      'Le système Abjad attribue un nombre à chaque lettre de l\'alphabet arabe : alif vaut 1, bāʾ 2, jīm 3, et ainsi de suite jusqu\'à shīn à 1000 dans l\'ordre maghribi utilisé ici par défaut (dans l\'ordre mashriqi, que vous pouvez choisir, c\'est ghayn qui vaut 1000). La somme des valeurs des lettres d\'un mot donne son ḥisāb al-jummal, le « total » utilisé depuis des siècles dans les sciences islamiques.',
     aboutTitle: 'Abjad et la numérologie islamique des lettres',
     about:
       'Dans l\'ʿilm al-ḥurūf (science des lettres) et l\'ʿilm al-ʿadad (science des nombres), les savants étudiaient la valeur numérique des Noms divins, des expressions coraniques et des prénoms, et reliaient les lettres aux quatre éléments : feu, air, eau et terre. Deux traditions existent : l\'ordre mashriqi, utilisé en Orient, et l\'ordre maghribi, utilisé en Afrique du Nord et de l\'Ouest. Ce calculateur prend en charge les deux pour comparer les résultats.',

@@ -312,3 +312,25 @@ describe('inventory guards', () => {
     }
   });
 });
+
+describe('static SEO copy matches the Maghribi default', () => {
+  const root = path.resolve(__dirname, '..', '..');
+  const src = (rel: string) => fs.readFileSync(path.join(root, rel), 'utf8');
+
+  it('no page says ghayn is the 1000 letter without naming the Mashriqi order', () => {
+    for (const rel of ['app/abjad/page.tsx', 'app/ar/abjad/page.tsx', 'app/names/page.tsx', 'src/lib/i18n/urPages.ts']) {
+      const text = src(rel);
+      expect(text, rel).not.toMatch(/up to ghayn (at )?1000\.|jusqu\\'à ghayn à 1000\.|حتى الغين 1000\.|غ 1000 تک۔|… ghayn 1000\)/);
+      expect(text, rel).toMatch(/shīn (at )?1000|الشين 1000|ش 1000|shīn à 1000/);
+    }
+  });
+
+  it('/99-names-of-allah lists Maghribi values and states the table', () => {
+    const page = src('app/99-names-of-allah/page.tsx');
+    expect(page).toMatch(/getDivineNames\(ABJAD_MAGHRIBI\)/);
+    expect(page).not.toMatch(/standard Mashriqi table|and use the Mashriqi table\./);
+    // الصبور (99) without "al-": Maghribi 268, Mashriqi 298 (the stored value)
+    expect(getDivineNameForSystem(99, M)?.abjadValue).toBe(268);
+    expect(getDivineNameForSystem(99, E)?.abjadValue).toBe(DIVINE_NAMES.find((n) => n.number === 99)?.abjadValue);
+  });
+});

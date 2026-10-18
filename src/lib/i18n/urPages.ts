@@ -309,8 +309,8 @@ export const UR_ABJAD = {
   ),
   whatTitle: t('What is Abjad (ḥisāb al-jummal)?', 'ابجد (حسابِ جمل) کیا ہے؟'),
   what: t(
-    "The Abjad system gives every Arabic letter a number: alif 1, bāʾ 2, jīm 3, and so on up to ghayn 1000. The sum of a word's letter values is its ḥisāb al-jummal, a count used for centuries in the Islamic sciences and, in the subcontinent, also for chronograms (tārīkh-goʾī).",
-    'ابجد کے نظام میں عربی کے ہر حرف کی ایک عددی قیمت ہے: الف 1، ب 2، ج 3، اور اسی طرح غ 1000 تک۔ کسی لفظ کے حروف کی قیمتوں کا مجموعہ اس کا “حسابِ جمل” کہلاتا ہے، جو صدیوں سے اسلامی علوم میں، اور برصغیر میں تاریخ گوئی (مادۂ تاریخ) میں بھی استعمال ہوتا رہا ہے۔',
+    "The Abjad system gives every Arabic letter a number: alif 1, bāʾ 2, jīm 3, and so on up to shīn 1000 in the Maghribi order used here by default (in the Mashriqi order, also available, ghayn is 1000). The sum of a word's letter values is its ḥisāb al-jummal, a count used for centuries in the Islamic sciences and, in the subcontinent, also for chronograms (tārīkh-goʾī).",
+    'ابجد کے نظام میں عربی کے ہر حرف کی ایک عددی قیمت ہے: الف 1، ب 2، ج 3، اور اسی طرح ش 1000 تک، اس مغربی ترتیب میں جو یہاں پہلے سے منتخب ہے (مشرقی ترتیب میں، جو یہاں دستیاب بھی ہے، غ 1000 ہے)۔ کسی لفظ کے حروف کی قیمتوں کا مجموعہ اس کا “حسابِ جمل” کہلاتا ہے، جو صدیوں سے اسلامی علوم میں، اور برصغیر میں تاریخ گوئی (مادۂ تاریخ) میں بھی استعمال ہوتا رہا ہے۔',
   ),
   ordersTitle: t('The Mashriqi and Maghribi orders', 'مشرقی اور مغربی ترتیب'),
   orders: t(
