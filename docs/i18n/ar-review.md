@@ -2,6 +2,14 @@
 
 Everything below is a draft that needs native-speaker review (religious terms especially) before /ar is indexed.
 
+## 0. New strings for the Language Reviewer (Abjad system selector, Oct 2026)
+
+Hand drafts, marked `// TODO review` in src/lib/i18n/ar.ts. Please check the regional wording.
+
+| Key | English | Arabic draft |
+|---|---|---|
+| `abjadSystem.note` | Maghribi (North & West Africa) · Mashriqi (Middle East & Asia) | المغربي (شمال أفريقيا وغربها) · المشرقي (الشرق الأوسط وآسيا) |
+
 ## 1. Translation keys (src/lib/i18n/ar.ts): 165 machine drafts, 571 hand drafts
 Marked inline with `// TODO review`.
 

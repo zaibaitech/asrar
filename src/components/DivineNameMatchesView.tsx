@@ -5,6 +5,7 @@ import { DivineNameConnectionResult } from '../types/compatibility';
 import { calculateDivineNameConnection } from '../utils/divineNameConnection';
 import { SOUL_CONNECTION_SEVERITY_COLOR, SoulConnectionSeverity } from '../constants/soulConnectionArchetypes';
 import { COMPAT_THEME } from '../constants/compatibilityTheme';
+import { useAbjad } from '../contexts/AbjadContext';
 import { DivineNameConnectionView } from './DivineNameConnectionView';
 
 interface DivineNameMatchesViewProps {
@@ -22,6 +23,7 @@ const SEVERITY_LABEL: Record<SoulConnectionSeverity, { en: string; fr: string }>
 export function DivineNameMatchesView({ person, matches, language = 'en' }: DivineNameMatchesViewProps) {
   const contentLang: 'en' | 'fr' = language === 'fr' ? 'fr' : 'en';
   const isFrench = language === 'fr';
+  const { abjad } = useAbjad();
   const [expandedNumber, setExpandedNumber] = useState<number | null>(matches[0]?.divineName.number ?? null);
 
   const greenMatches = matches.filter(m => m.severity === 'green');
@@ -52,7 +54,7 @@ export function DivineNameMatchesView({ person, matches, language = 'en' }: Divi
             const isExpanded = expandedNumber === match.divineName.number;
             const color = SOUL_CONNECTION_SEVERITY_COLOR[match.severity];
             const result: DivineNameConnectionResult = calculateDivineNameConnection(
-              person.name, person.arabicName, person.kabir, match.divineName
+              person.name, person.arabicName, person.kabir, match.divineName, abjad
             );
             return (
               <div key={match.divineName.number} className="rounded-2xl overflow-hidden" style={{ border: `1px solid ${COMPAT_THEME.surfaceBorder}` }}>

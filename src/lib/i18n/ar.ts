@@ -10,6 +10,10 @@ import type { DeepPartial } from './types';
 import type { en } from './en';
 
 export const ar: DeepPartial<typeof en> = {
+  abjadSystem: {
+    note: "المغربي (شمال أفريقيا وغربها) · المشرقي (الشرق الأوسط وآسيا)", // TODO review (hand draft, not from mobile)
+  },
+
   nav: {
     home: "الرئيسية",
     calculator: "الحاسبة",

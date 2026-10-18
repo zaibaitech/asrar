@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { useAbjad } from '../../../contexts/AbjadContext';
 import { ArrowLeft, RotateCcw, List } from 'lucide-react';
 import { Card } from './Card';
 import { NameField } from './NameField';
@@ -48,7 +49,14 @@ export function CalculatorTypeForm({
   const [motherText, setMotherText] = useState('');
   const [selectedDivineName, setSelectedDivineName] = useState<DivineName | null>(null);
   const [showDivinePicker, setShowDivinePicker] = useState(false);
-  const [profile, setProfile] = useState<TextProfile | null>(null);
+  // The submitted text; the profile is derived from it with the app-wide
+  // Abjad system, so switching the system updates the result on screen.
+  const [submittedText, setSubmittedText] = useState<string | null>(null);
+  const { abjad } = useAbjad();
+  const profile: TextProfile | null = useMemo(
+    () => (submittedText === null ? null : analyzeText(submittedText, abjad)),
+    [submittedText, abjad]
+  );
   const [resonanceInput, setResonanceInput] = useState<{ person: string; mother: string } | null>(null);
   const [dob, setDob] = useState('');
   const [dobSubmitted, setDobSubmitted] = useState<string | null>(null);
@@ -95,13 +103,13 @@ export function CalculatorTypeForm({
       setEmpty(false);
       return;
     }
-    const result = analyzeText(sourceText);
-    setProfile(result);
+    const result = analyzeText(sourceText, abjad);
+    setSubmittedText(result ? sourceText : null);
     setEmpty(!result);
   }
 
   function handleReset() {
-    setProfile(null);
+    setSubmittedText(null);
     setResonanceInput(null);
     setDobSubmitted(null);
     setQuranSubmitted(null);

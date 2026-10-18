@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 import { CalculatorResult } from './CalculatorResult';
 import { analyzeText } from '../lib/textAnalysis';
+import { useAbjad } from '../../../contexts/AbjadContext';
 import { QURAN_META } from '../lib/quranMeta';
 import { useCalculatorTranslations, type CalculatorLocale } from '../i18n';
 
@@ -42,7 +43,8 @@ export function QuranVerseResult({ locale, surah, ayah }: { locale: CalculatorLo
     };
   }, [surah, ayah]);
 
-  const profile = useMemo(() => (ayahText ? analyzeText(ayahText) : null), [ayahText]);
+  const { abjad } = useAbjad();
+  const profile = useMemo(() => (ayahText ? analyzeText(ayahText, abjad) : null), [ayahText, abjad]);
 
   return (
     <div className="flex flex-col gap-3">

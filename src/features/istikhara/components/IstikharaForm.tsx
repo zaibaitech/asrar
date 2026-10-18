@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { useLanguage } from "../../../contexts/LanguageContext";
+import { useAbjad } from "../../../contexts/AbjadContext";
 import { useProfile } from "../../../hooks/useProfile";
 import { translations } from "../../../lib/translations";
 import { validateName as validateRawName, calculateIstikhara, calculateIstikharaFromBirthDate } from "../calculations";
@@ -49,6 +50,7 @@ interface IstikharaFormProps {
  */
 export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
   const { language, uiLanguage } = useLanguage();
+  const { abjad } = useAbjad();
 
   /** Same check as before, on the name with invisible keyboard marks / presentation forms cleaned up. */
   const validateName = (name: string) => validateRawName(normalizeNameInput(name));
@@ -292,7 +294,7 @@ export function IstikharaForm({ onCalculate }: IstikharaFormProps) {
       
       if (calculationMethod === 'name-based') {
         // Name-based calculation (Classical ʿIlm al-Ḥurūf)
-        const result = calculateIstikhara(normalizeNameInput(personName), normalizeNameInput(motherName));
+        const result = calculateIstikhara(normalizeNameInput(personName), normalizeNameInput(motherName), abjad);
         onCalculate(result);
       } else {
         // Birth-date calculation (ʿIlm al-Nujūm - Tropical Zodiac)

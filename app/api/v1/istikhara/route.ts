@@ -20,10 +20,11 @@ import {
 import {
   validateName,
   validateLanguage,
+  validateAbjadSystem,
   combineValidations
 } from '@/src/lib/api-validation';
 import { calculateAbjadTotal } from '@/src/lib/server-calculations';
-import { ABJAD_MAGHRIBI } from '@/src/lib/abjad-maps';
+import { getAbjadMap } from '@/src/lib/abjad-maps';
 import { transliterateLatinToArabic } from '@/src/lib/text-normalize';
 
 // ============================================================================
@@ -52,7 +53,7 @@ export async function POST(request: NextRequest) {
   try {
     // Parse request body
     const body: IstikharaRequest = await request.json();
-    const { personName, motherName, language = 'en' } = body;
+    const { personName, motherName, language = 'en', abjadSystem = 'maghribi' } = body;
 
     // ========================================================================
     // INPUT VALIDATION
@@ -61,7 +62,8 @@ export async function POST(request: NextRequest) {
     const validationResult = combineValidations(
       validateName(personName, 'personName', true),
       validateName(motherName, 'motherName', true), // Mother name is required for Istikhara
-      validateLanguage(language, false)
+      validateLanguage(language, false),
+      validateAbjadSystem(abjadSystem, false)
     );
 
     if (!validationResult.isValid) {
@@ -86,8 +88,9 @@ export async function POST(request: NextRequest) {
       ? motherName
       : transliterateLatinToArabic(motherName).primary;
 
-    const personTotal = calculateAbjadTotal(personArabic, ABJAD_MAGHRIBI);
-    const motherTotal = calculateAbjadTotal(motherArabic, ABJAD_MAGHRIBI);
+    const abjadMap = getAbjadMap(abjadSystem); // default Maghribi
+    const personTotal = calculateAbjadTotal(personArabic, abjadMap);
+    const motherTotal = calculateAbjadTotal(motherArabic, abjadMap);
     const combinedTotal = personTotal + motherTotal;
     const burujRemainder = (combinedTotal % 12) || 12; // 1-12
     const repetitionCount = combinedTotal;

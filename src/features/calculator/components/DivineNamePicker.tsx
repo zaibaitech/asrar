@@ -2,7 +2,8 @@
 
 import { useMemo, useState } from 'react';
 import { X, Search } from 'lucide-react';
-import { DIVINE_NAMES, type DivineName } from '../lib/divineNames';
+import { getCalculatorDivineNames, type DivineName } from '../lib/divineNames';
+import { useAbjad } from '../../../contexts/AbjadContext';
 import { useCalculatorTranslations, type CalculatorLocale } from '../i18n';
 
 export function DivineNamePicker({
@@ -17,11 +18,14 @@ export function DivineNamePicker({
   const { t } = useCalculatorTranslations(locale, 'divineNamePicker');
   const [query, setQuery] = useState('');
 
+  const { abjad } = useAbjad();
   const results = useMemo(() => {
+    // values shown in the selected Abjad system
+    const names = getCalculatorDivineNames(abjad);
     const q = query.trim().toLowerCase();
-    if (!q) return DIVINE_NAMES;
-    return DIVINE_NAMES.filter((n) => n.transliteration.toLowerCase().includes(q) || n.arabic.includes(query));
-  }, [query]);
+    if (!q) return names;
+    return names.filter((n) => n.transliteration.toLowerCase().includes(q) || n.arabic.includes(query));
+  }, [query, abjad]);
 
   return (
     <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/60 sm:items-center" onClick={onClose}>

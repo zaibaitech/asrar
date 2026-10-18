@@ -1,6 +1,11 @@
 /* eslint-disable */
 // Split out of src/lib/translations.ts (no content changes).
 export const fr = {
+  // Sélecteur du système Abjad (un seul choix pour tous les calculateurs)
+  abjadSystem: {
+    note: "Maghribi (Afrique du Nord et de l'Ouest) · Mashriqi (Moyen-Orient et Asie)",
+  },
+
   nav: {
     home: "Accueil",
     calculator: "Calculatrice",
