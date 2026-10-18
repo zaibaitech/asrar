@@ -50,13 +50,13 @@ Added after the native review; please check these.
 | 8 | English interpretive content | OK for a noindex phase 1 with UR_COMMON.toolUiNote; translate burj career texts and soul-connection meanings before indexing. | ⏳ not done in this PR (separate task). toolUiNote stays visible; /ur stays noindex. |
 
 
-## Review corrections (68 of 69 applied)
+## Review corrections (69 of 69 applied)
 
 From the native reviewer (Language Reviewer, Oct 2026). The tables further down show the strings as they are now, with the corrections in place. /ur stays noindex and out of the sitemap and hreflang until Mario approves indexing (Q8, the untranslated result texts, is still open).
 
 | Batch | String | Before | After | Status |
 |---|---|---|---|---|
-| 0 | Divine Names list, English label “Yā Wudd” | Yā Laṭīf (يا لطيف) · Yā Wudd (يا ودود) | Yā Laṭīf (يا لطيف) · Yā Wadūd (يا ودود) | ⏸ not applied in source: the /ur page already shows the correct Arabic «يا لطيف · يا ودود». The typo is in the English/French tool text (app/planetary-hours/PlanetaryHoursPage.tsx), which this PR leaves unchanged (EN/FR unaffected); the Urdu catalog key has to match that English text exactly. Fix it in a separate EN/FR change. |
+| 0 | Divine Names list, English label “Yā Wudd” | Yā Laṭīf (يا لطيف) · Yā Wudd (يا ودود) | Yā Laṭīf (يا لطيف) · Yā Wadūd (يا ودود) | ✅ applied (typo fixed in app/planetary-hours/PlanetaryHoursPage.tsx for EN and FR; the Urdu and Arabic catalog keys were updated to match the new English text). |
 | 0 | Burj table (burujData.json): all 12 rows | 6 rows vocalised, 6 bare | all 12 fully vocalised (يَا رَحْمٰنُ with dagger alif) | ✅ applied (display only: urDhikrDisplay() in urPages.ts; burujData.json, the calculator and EN/FR/AR unchanged) |
 | 1 | UR_POTD.rulers | نبی کریم ﷺ پر کثرت سے درود اور دعا کا دن ہے | نبی کریم ﷺ پر کثرت سے درود شریف پڑھنے اور دعا کا دن ہے | ✅ applied (+ glossary entry) |
 | 1 | catalog «Jumada al-Awwal» | جمادی الاول | جمادی الاولیٰ | ✅ applied |
@@ -134,7 +134,7 @@ Kept in Arabic script. The tool shows transliterations; on /ur they are replaced
 |---|---|
 | Yā Laṭīf | يا لطيف |
 | Yā Nūr (يا نور) · Yā Ḥayy (يا حي) | يا نور · يا حي |
-| Yā Laṭīf (يا لطيف) · Yā Wudd (يا ودود) | يا لطيف · يا ودود |
+| Yā Laṭīf (يا لطيف) · Yā Wadūd (يا ودود) | يا لطيف · يا ودود |
 | Yā Qawiyy (يا قوي) · Yā Qahhār (يا قهار) | يا قوي · يا قهار |
 | Yā ʿAlīm (يا عليم) · Yā Ḥakīm (يا حكيم) | يا عليم · يا حكيم |
 | Yā Karīm (يا كريم) · Yā Wahhāb (يا وهاب) | يا كريم · يا وهاب |
