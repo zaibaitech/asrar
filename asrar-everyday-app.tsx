@@ -2,21 +2,11 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { Calculator, Book, TrendingUp, Moon, Sun, Info, Sparkles, Flame, Droplet, Wind, Mountain, Star, X, Compass, Heart, ChevronUp, ChevronDown, ChevronRight, HelpCircle, Menu, BookOpen, MessageSquarePlus } from 'lucide-react';
-import { transliterateLatinToArabic } from './src/lib/text-normalize';
-import { HadadSummaryPanel } from './src/components/hadad-summary';
-import { IlmHurufPanel } from './src/features/ilm-huruf';
-import { CompatibilityPanel } from './src/features/compatibility';
-import { IstikharaPanel } from './src/features/istikhara';
 import { PlanetOfTheDay, PlanetaryHourCard, PlanetTransitCard, ManzilOfTodayCard } from './src/components/planetary';
 import { useRamadanChallenges } from './src/features/ramadanChallenges';
 import { useCommunityDhikr } from './src/features/ramadanChallenges/communityDhikrService';
-import { analyzePatterns } from './src/features/ilm-huruf/patternRecognition';
-import { generateWafqAnalysis } from './src/features/ilm-huruf/wafqGenerator';
-import { calculateOptimalTimingWindows } from './src/features/ilm-huruf/talismanTiming';
-import { OnboardingTutorial } from './src/components/OnboardingTutorial';
-import { MobileMenu } from './src/components/MobileMenu';
-import { FeedbackModal } from './src/components/FeedbackModal';
 import { MobileBottomNav } from './src/components/MobileBottomNav';
 import { UserMenu } from './src/components/UserMenu';
 import LanguageToggle from './src/components/LanguageToggle';
@@ -28,7 +18,16 @@ import { useAuth } from './src/contexts/AuthContext';
 import { CalculatorDisclaimerBanner } from './src/components/CalculatorDisclaimerBanner';
 import { GetTheAppBanner } from './src/components/GetTheAppBanner';
 import { DailyReflectionCard } from './src/components/DailyReflectionCard';
-import { CalculatorScreen } from './src/features/calculator/CalculatorScreen';
+
+// Only the default (planetary) view and the shell are needed for first paint; the other views and
+// modals load on demand so the home page ships less JavaScript to parse before it is interactive.
+const IlmHurufPanel = dynamic(() => import('./src/features/ilm-huruf').then((m) => m.IlmHurufPanel));
+const CompatibilityPanel = dynamic(() => import('./src/features/compatibility').then((m) => m.CompatibilityPanel));
+const IstikharaPanel = dynamic(() => import('./src/features/istikhara').then((m) => m.IstikharaPanel));
+const OnboardingTutorial = dynamic(() => import('./src/components/OnboardingTutorial').then((m) => m.OnboardingTutorial), { ssr: false });
+const MobileMenu = dynamic(() => import('./src/components/MobileMenu').then((m) => m.MobileMenu), { ssr: false });
+const FeedbackModal = dynamic(() => import('./src/components/FeedbackModal').then((m) => m.FeedbackModal), { ssr: false });
+const CalculatorScreen = dynamic(() => import('./src/features/calculator/CalculatorScreen').then((m) => m.CalculatorScreen));
 
 // ============================================================================
 // DOMAIN RULES & CORE DATA
@@ -305,10 +304,11 @@ export default function AsrarEveryday() {
   }, [showMobileMenu]);
   
   
-  // Prevent hydration mismatch by showing loading state until mounted
+  // Prevent hydration mismatch by showing loading state until mounted.
+  // The distinct keys make React replace (not reuse and resize) the splash element, which would count as a layout shift.
   if (!mounted) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 flex items-center justify-center">
+      <div key="splash" className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 flex items-center justify-center">
         <div className="text-center">
           <div className="flex justify-center mb-4">
             <AsrarLogo size={80} variant="icon" element="aether" animate={true} />
@@ -320,7 +320,7 @@ export default function AsrarEveryday() {
   }
   
   return (
-    <div className={darkMode ? 'dark' : ''}>
+    <div key="app" className={darkMode ? 'dark' : ''}>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 transition-colors">
         {/* Header */}
         <header className="border-b border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm sticky top-0 z-40">
