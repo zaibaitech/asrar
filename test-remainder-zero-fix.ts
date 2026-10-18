@@ -133,7 +133,7 @@ console.log('━━━━━━━━━━━━━━━━━━━━━━�
 console.log('TEST 3: Maghribi System Element Order Verification');
 console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
 
-console.log('MAGHRIBI SYSTEM (West/North African):');
+console.log('MAGHRIBI SYSTEM (Maghreb/West African):');
 console.log('  1 = Fire   (نار)   🔥');
 console.log('  2 = Earth  (تراب)  🌍');
 console.log('  3 = Air    (هواء)  💨');

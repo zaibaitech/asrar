@@ -157,7 +157,7 @@ export const UR_BURJ = {
     ),
     t(
       'Each name is converted to its Abjad total using the Maghribi letter values.',
-      'ہر نام کو مغربی (شمالی افریقی) ترتیب کے حروف کی قیمتوں سے اس کے ابجد مجموعے میں بدلا جاتا ہے۔',
+      'ہر نام کو مغربی ترتیب (مراکش و مغربی افریقہ) کے حروف کی قیمتوں سے اس کے ابجد مجموعے میں بدلا جاتا ہے۔',
     ),
     t(
       'Add the two totals and divide by 12; the remainder (1 to 12, with 0 counted as 12) is your burj, from 1 = Aries (Ḥamal) to 12 = Pisces (Ḥūt).',
@@ -270,8 +270,8 @@ export const UR_COMPAT = {
     {
       q: t('Which Abjad system is used?', 'کون سا ابجد نظام استعمال ہوتا ہے؟'),
       a: t(
-        'You can switch between the Maghribi order (North and West Africa) and the Mashriqi order (the East, including South Asia). Most names give the same total in both; names with letters such as ṣād, sīn, shīn, ḍād, ẓāʾ or ghayn can differ.',
-        'آپ مغربی ترتیب (شمالی اور مغربی افریقہ) اور مشرقی ترتیب (مشرق، بشمول برصغیر) کے درمیان انتخاب کر سکتے ہیں۔ اکثر ناموں کا مجموعہ دونوں میں یکساں آتا ہے؛ جن ناموں میں ص، س، ش، ض، ظ یا غ جیسے حروف ہوں ان میں فرق ہو سکتا ہے۔',
+        'You can switch between the Maghribi order (Morocco to Libya and West Africa) and the Mashriqi order (Egypt, the Arab countries and South Asia). Most names give the same total in both; names containing any of the six letters ṣād, ḍād, sīn, ẓāʾ, ghayn or shīn can differ.',
+        'آپ مغربی ترتیب (مراکش تا لیبیا اور مغربی افریقہ) اور مشرقی ترتیب (مصر، عرب ممالک اور برصغیر) کے درمیان انتخاب کر سکتے ہیں۔ اکثر ناموں کا مجموعہ دونوں میں یکساں آتا ہے؛ جن ناموں میں ص، ض، س، ظ، غ یا ش میں سے کوئی حرف ہو ان کا مجموعہ مختلف آ سکتا ہے۔',
       ),
     },
     {
@@ -309,13 +309,13 @@ export const UR_ABJAD = {
   ),
   whatTitle: t('What is Abjad (ḥisāb al-jummal)?', 'ابجد (حسابِ جمل) کیا ہے؟'),
   what: t(
-    "The Abjad system gives every Arabic letter a number: alif 1, bāʾ 2, jīm 3, and so on up to shīn 1000 in the Maghribi order used here by default (in the Mashriqi order, also available, ghayn is 1000). The sum of a word's letter values is its ḥisāb al-jummal, a count used for centuries in the Islamic sciences and, in the subcontinent, also for chronograms (tārīkh-goʾī).",
-    'ابجد کے نظام میں عربی کے ہر حرف کی ایک عددی قیمت ہے: الف 1، ب 2، ج 3، اور اسی طرح ش 1000 تک، اس مغربی ترتیب میں جو یہاں پہلے سے منتخب ہے (مشرقی ترتیب میں، جو یہاں دستیاب بھی ہے، غ 1000 ہے)۔ کسی لفظ کے حروف کی قیمتوں کا مجموعہ اس کا “حسابِ جمل” کہلاتا ہے، جو صدیوں سے اسلامی علوم میں، اور برصغیر میں تاریخ گوئی (مادۂ تاریخ) میں بھی استعمال ہوتا رہا ہے۔',
+    "The Abjad system gives every Arabic letter a number: alif 1, bāʾ 2, jīm 3, and so on to the last letter: in the Maghribi order selected here by default the last letter is shīn, worth 1000, while in the Mashriqi order, also available here, ghayn is 1000. The sum of a word's letter values is its ḥisāb al-jummal, a count used for centuries in the Islamic sciences and, in the subcontinent, also for chronograms (tārīkh-goʾī).",
+    'ابجد کے نظام میں عربی کے ہر حرف کی ایک عددی قیمت ہے: الف 1، ب 2، ج 3، اور اسی طرح آخری حرف تک: یہاں پہلے سے منتخب مغربی ترتیب میں آخری حرف شین (ش) ہے جس کی قیمت 1000 ہے، جبکہ مشرقی ترتیب میں، جو یہاں بھی دستیاب ہے، غین (غ) کی قیمت 1000 ہے۔ کسی لفظ کے حروف کی قیمتوں کا مجموعہ اس کا “حسابِ جُمَّل” کہلاتا ہے، جو صدیوں سے اسلامی علوم میں، اور برصغیر میں تاریخ گوئی (مادۂ تاریخ) میں بھی استعمال ہوتا رہا ہے۔',
   ),
   ordersTitle: t('The Mashriqi and Maghribi orders', 'مشرقی اور مغربی ترتیب'),
   orders: t(
-    "In ʿilm al-ḥurūf and ʿilm al-aʿdād scholars studied the numerical values of the Divine Names, Qur'anic phrases and people's names, and linked the letters to the four elements: fire, air, water and earth. There are two common orders: the Mashriqi order used in the East, including Pakistan and India, and the Maghribi order used in North and West Africa. This calculator supports both so you can compare the results.",
-    'علم الحروف اور علم الاعداد میں علما نے اسمائے حسنیٰ، قرآنی عبارات اور لوگوں کے ناموں کی عددی قیمتوں کا مطالعہ کیا اور حروف کو چار عناصر سے جوڑا: آگ، ہوا، پانی اور مٹی۔ دو ترتیبیں عام ہیں: مشرقی ترتیب، جو پاکستان اور ہندوستان سمیت مشرق میں رائج ہے، اور مغربی ترتیب، جو شمالی اور مغربی افریقہ میں رائج ہے۔ یہ کیلکولیٹر دونوں ترتیبوں سے حساب کرتا ہے تاکہ آپ نتائج کا موازنہ کر سکیں۔',
+    "In ʿilm al-ḥurūf and ʿilm al-aʿdād scholars studied the numerical values of the Divine Names, Qur'anic phrases and people's names, and linked the letters to the four elements: fire, air, water and earth. There are two common orders: the Mashriqi order used in the East, including Pakistan and India, and the Maghribi order used in the Maghreb from Morocco to Libya, historically in al-Andalus, and in West Africa. This calculator supports both so you can compare the results.",
+    'علم الحروف اور علم الاعداد میں علما نے اسمائے حسنیٰ، قرآنی عبارات اور لوگوں کے ناموں کی عددی قیمتوں کا مطالعہ کیا اور حروف کو چار عناصر سے جوڑا: آگ، ہوا، پانی اور مٹی۔ دو ترتیبیں عام ہیں: مشرقی ترتیب، جو پاکستان اور ہندوستان سمیت مشرق میں رائج ہے، اور مغربی ترتیب، جو مراکش سے لیبیا تک کے مغربِ عربی، تاریخی اندلس اور مغربی افریقہ میں رائج ہے۔ یہ کیلکولیٹر دونوں ترتیبوں سے حساب کرتا ہے تاکہ آپ نتائج کا موازنہ کر سکیں۔',
   ),
   howTitle: t('How to use the calculator', 'کیلکولیٹر کیسے استعمال کریں'),
   how: t(

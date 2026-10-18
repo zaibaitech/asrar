@@ -21,7 +21,7 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
     term: 'Abjad',
     arabic: 'أبجد',
     meaning: 'Letter Numerical System',
-    definition: 'The system of assigning numerical values to Arabic letters. Each letter from ا to غ has a specific number. Two main systems exist: Maghribi (North African) and Mashriqi (Eastern).'
+    definition: 'The system of assigning numerical values to Arabic letters. Each of the 28 letters has a specific number. Two main systems exist: Maghribi (the Maghreb, al-Andalus and West Africa) and Mashriqi (Egypt, the Middle East and Asia).'
   },
   {
     term: 'Kabīr',

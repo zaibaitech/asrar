@@ -3,7 +3,7 @@
 export const en = {
   // App-wide Abjad system selector (one choice for every calculator)
   abjadSystem: {
-    note: "Maghribi (North & West Africa) · Mashriqi (Middle East & Asia)",
+    note: "Maghribi (the Maghreb, al-Andalus & West Africa) · Mashriqi (Egypt, the Middle East & Asia)",
   },
 
   // Navigation
