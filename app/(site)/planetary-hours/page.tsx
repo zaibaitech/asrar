@@ -6,6 +6,8 @@ import { localeAlternates, localizedUrl } from '@/src/lib/i18nRoutes';
 import { cookies } from 'next/headers';
 import { Suspense } from 'react';
 import { PlanetaryHoursPage } from './PlanetaryHoursPage';
+import { FaqSection, JsonLd, faqJsonLd } from '@/src/components/seo/SeoSections';
+import { FAQ_TITLE, PLANETARY_HOURS_FAQS } from '@/src/lib/seo/toolFaqs';
 
 type Lang = 'en' | 'fr';
 
@@ -106,6 +108,10 @@ export default async function Page({
         <PlanetaryHoursPage />
       </Suspense>
       <RelatedTools pagePath="/planetary-hours" lang={served === 'ar' ? 'ar' : lang} routeLang={served} className="max-w-3xl mx-auto px-4 pt-2 pb-8" />
+      <div className="max-w-3xl mx-auto px-4 pb-8">
+        <FaqSection id="planetary-hours-faq-heading" title={FAQ_TITLE[lang]} faqs={PLANETARY_HOURS_FAQS[lang]} />
+      </div>
+      <JsonLd data={faqJsonLd(PLANETARY_HOURS_FAQS[lang])} />
     </>
   );
 }

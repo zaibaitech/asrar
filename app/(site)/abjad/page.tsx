@@ -5,6 +5,8 @@ import { ogImageUrl } from '@/src/lib/og/urls';
 import { getRouteLang, getServedLang } from '@/src/lib/pageLang';
 import { localeAlternates, localizeHref, localizedUrl } from '@/src/lib/i18nRoutes';
 import { AbjadCalculator } from './AbjadCalculator';
+import { FaqSection, JsonLd, faqJsonLd } from '@/src/components/seo/SeoSections';
+import { FAQ_TITLE, ABJAD_FAQS } from '@/src/lib/seo/toolFaqs';
 
 type Lang = 'en' | 'fr';
 
@@ -131,6 +133,8 @@ export default async function Page({
           <p className="text-sm text-slate-500 dark:text-slate-400">{c.note}</p>
         </section>
 
+        <FaqSection id="abjad-faq-heading" title={FAQ_TITLE[lang]} faqs={ABJAD_FAQS[lang]} />
+
         <nav aria-label={c.relatedTitle} className="space-y-3">
           <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100">{c.relatedTitle}</h2>
           <ul className="space-y-3">
@@ -145,6 +149,7 @@ export default async function Page({
           </ul>
         </nav>
       </main>
+      <JsonLd data={faqJsonLd(ABJAD_FAQS[lang])} />
     </div>
   );
 }

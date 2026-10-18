@@ -7,6 +7,8 @@ import { getRouteLang, getServedLang } from '@/src/lib/pageLang';
 import { ogImageUrl } from '@/src/lib/og/urls';
 import { localeAlternates, localizedUrl } from '@/src/lib/i18nRoutes';
 import { PlanetOfTheDayPage } from './PlanetOfTheDayPage';
+import { FaqSection, JsonLd, faqJsonLd } from '@/src/components/seo/SeoSections';
+import { FAQ_TITLE, PLANET_OF_THE_DAY_FAQS } from '@/src/lib/seo/toolFaqs';
 
 type Lang = 'en' | 'fr';
 
@@ -91,6 +93,15 @@ export default async function Page({
         <PlanetOfTheDayPage />
       </Suspense>
       <RelatedTools pagePath="/planet-of-the-day" lang={served === 'ar' ? 'ar' : lang} routeLang={served} className="max-w-3xl mx-auto px-4 pt-2 pb-8" />
+      {/* The /ar mirror has no Arabic FAQ copy yet, so it is not rendered there (no English text on an Arabic page). */}
+      {served !== 'ar' && (
+        <>
+          <div className="max-w-3xl mx-auto px-4 pb-8">
+            <FaqSection id="planet-of-the-day-faq-heading" title={FAQ_TITLE[lang]} faqs={PLANET_OF_THE_DAY_FAQS[lang]} />
+          </div>
+          <JsonLd data={faqJsonLd(PLANET_OF_THE_DAY_FAQS[lang])} />
+        </>
+      )}
     </>
   );
 }
