@@ -552,7 +552,7 @@ export default function AsrarEveryday() {
           ) : viewMode === 'advanced' ? (
             <IstikharaPanel />
           ) : (
-          <CalculatorScreen appLanguage={uiLanguage} />
+          <CalculatorScreen appLanguage={uiLanguage === 'ur' ? 'en' : uiLanguage} />
           )}
           </div>
         </main>

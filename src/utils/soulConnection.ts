@@ -15,10 +15,11 @@
 
 import { SoulConnectionResult } from '../types/compatibility';
 import { getSoulConnectionSeverity } from '../constants/soulConnectionArchetypes';
+import { urduToArabicLetters } from '../lib/urduLetters';
 
 /** Sums the abjad value of each letter in an Arabic string, stripping tashkīl/whitespace first. Shared by every mode that needs a name's kabīr total (person-to-person, person-to-Divine-Name). */
 export function calculateAbjadTotal(text: string, abjadMap: Record<string, number>): number {
-  const normalized = text.replace(/[ًٌٍَُِّْ\s]/g, '');
+  const normalized = urduToArabicLetters(text).replace(/[ًٌٍَُِّْ\s]/g, '');
   return [...normalized].reduce((sum, char) => sum + (abjadMap[char] || 0), 0);
 }
 

@@ -1,14 +1,15 @@
 'use client';
 
 /**
- * Arabic string catalog for UI text that does not go through `t` yet
+ * Arabic (and Urdu) string catalog for UI text that does not go through `t` yet
  * (inline en/fr ternaries, hardcoded strings, en/fr data objects).
  *
- * Only active when the UI language is Arabic. It loads /i18n/ar-ui.json
- * (English source text -> Arabic, built by scripts/i18n/build-ar-catalog) and
- * swaps exact-match text nodes and placeholder/title/aria-label attributes.
- * EN and FR never load the catalog and are never touched; switching away from
- * Arabic restores every original string. No component markup or logic changes.
+ * Only active when the UI language is Arabic or Urdu. It loads /i18n/ar-ui.json
+ * (English source text -> Arabic, built by scripts/i18n/build-ar-catalog) or
+ * /i18n/ur-ui.json (English -> Urdu, hand-translated, see docs/i18n/ur-review.md)
+ * and swaps exact-match text nodes and placeholder/title/aria-label attributes.
+ * EN and FR never load a catalog and are never touched; switching away
+ * restores every original string. No component markup or logic changes.
  *
  * Opt out for a subtree with data-no-ar (e.g. user input echoes, names).
  */
@@ -61,10 +62,14 @@ function makeCatalog(o: Record<string, string>): Catalog {
 /* an English or French (or default) locale format in 'ar' instead. EN/FR   */
 /* never install this, and leaving Arabic restores the originals.           */
 /* ---------------------------------------------------------------------- */
-const AR_LOCALE = 'ar-u-nu-latn';
+/** Catalog languages and the date locale used while each is active. */
+const DATE_LOCALES = { ar: 'ar-u-nu-latn', ur: 'ur-u-nu-latn' } as const;
+type DomLang = keyof typeof DATE_LOCALES;
+const isDomLang = (l: string): l is DomLang => Object.prototype.hasOwnProperty.call(DATE_LOCALES, l);
+let activeDateLocale: string = DATE_LOCALES.ar;
 const mapLocale = (l: unknown) => {
   const first = Array.isArray(l) ? l[0] : l;
-  return first === undefined || (typeof first === 'string' && /^(en|fr)\b/i.test(first)) ? AR_LOCALE : l;
+  return first === undefined || (typeof first === 'string' && /^(en|fr)\b/i.test(first)) ? activeDateLocale : l;
 };
 let dateRestore: (() => void) | null = null;
 function installArabicDates() {
@@ -105,21 +110,23 @@ function arabicDate(key: string): string | undefined {
     const opts: Intl.DateTimeFormatOptions = { day: 'numeric', month: mon.length > 3 ? 'long' : 'short' };
     if (wd) opts.weekday = wd.length > 3 ? 'long' : 'short';
     if (y) opts.year = 'numeric';
-    return new Date(d).toLocaleDateString(AR_LOCALE, opts);
+    return new Date(d).toLocaleDateString(activeDateLocale, opts);
   }
   return undefined;
 }
 
-let catalogPromise: Promise<Catalog> | null = null;
-function loadCatalog(): Promise<Catalog> {
-  if (!catalogPromise) {
-    catalogPromise = fetch('/i18n/ar-ui.json', { cache: 'force-cache' })
+const catalogPromises: Partial<Record<DomLang, Promise<Catalog>>> = {};
+function loadCatalog(lang: DomLang): Promise<Catalog> {
+  if (!catalogPromises[lang]) {
+    catalogPromises[lang] = fetch(`/i18n/${lang}-ui.json`, { cache: 'force-cache' })
       .then((r) => (r.ok ? r.json() : {}))
       .then((o: Record<string, string>) => makeCatalog(o))
       .catch(() => makeCatalog({}));
   }
-  return catalogPromise;
+  return catalogPromises[lang]!;
 }
+/** Catalog language whose strings are currently in the DOM. */
+let appliedLang: DomLang | null = null;
 
 const collapse = (s: string) => s.replace(/\s+/g, ' ').trim();
 
@@ -204,17 +211,25 @@ export default function ArabicDomTranslator() {
 
   useEffect(() => {
     const html = document.documentElement;
-    if (uiLanguage !== 'ar') {
+    if (!isDomLang(uiLanguage)) {
       dateRestore?.();
       restoreAll();
+      appliedLang = null;
       html.removeAttribute('data-ar-pending');
       return;
     }
+    if (appliedLang !== uiLanguage) {
+      // Switching between Arabic and Urdu: back to the originals first.
+      dateRestore?.();
+      restoreAll();
+      appliedLang = uiLanguage;
+    }
+    activeDateLocale = DATE_LOCALES[uiLanguage];
     installArabicDates();
     let observer: MutationObserver | null = null;
     let cancelled = false;
     const reveal = window.setTimeout(() => html.removeAttribute('data-ar-pending'), 1500);
-    loadCatalog().then((cat) => {
+    loadCatalog(uiLanguage).then((cat) => {
       if (cancelled) return;
       walk(document.body, cat);
       html.removeAttribute('data-ar-pending');

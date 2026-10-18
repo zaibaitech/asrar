@@ -8,6 +8,7 @@ const OPTIONS: { code: Language; label: string; title: string }[] = [
   { code: 'en', label: 'EN', title: 'English' },
   { code: 'fr', label: 'FR', title: 'Français' },
   { code: 'ar', label: 'AR', title: 'العربية' },
+  { code: 'ur', label: 'اردو', title: 'اردو' },
 ];
 
 export default function LanguageToggle() {

@@ -6,10 +6,11 @@ import {
   CalculationBreakdown
 } from '../types/compatibility';
 import { getElementFromAbjadTotal } from './relationshipCompatibility';
+import { urduToArabicLetters } from '../lib/urduLetters';
 
 // Helper: Calculate Abjad value from Arabic text
 function calculateAbjadValue(text: string, abjadMap: Record<string, number>): number {
-  const normalized = text.replace(/[ًٌٍَُِّْ\s]/g, '');
+  const normalized = urduToArabicLetters(text).replace(/[ًٌٍَُِّْ\s]/g, '');
   return [...normalized].reduce((sum, char) => sum + (abjadMap[char] || 0), 0);
 }
 

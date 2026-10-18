@@ -10,6 +10,7 @@ import {
 import { COMPAT_THEME, COMPAT_TINTS } from '../constants/compatibilityTheme';
 import { SoulConnectionRing } from './SoulConnectionRing';
 import { useAbjad } from '../contexts/AbjadContext';
+import { urduToArabicLetters } from '../lib/urduLetters';
 
 interface SoulConnectionViewProps {
   result: SoulConnectionResult;
@@ -67,7 +68,7 @@ const COPY = {
 };
 
 function letterBreakdown(name: string, abjad: Record<string, number>): { letter: string; value: number }[] {
-  return [...name]
+  return [...urduToArabicLetters(name)]
     .filter(ch => abjad[ch] !== undefined)
     .map(ch => ({ letter: ch, value: abjad[ch] }));
 }
