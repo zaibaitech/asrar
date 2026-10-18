@@ -103,7 +103,7 @@ export const DIVINE_NAMES: DivineName[] = [
   { number: 88, arabic: "الْغَنِيُّ", transliteration: "Al Ghaniyy", abjadValue: 1091 },
   { number: 89, arabic: "الْمُغْنِي", transliteration: "Al Mughi", abjadValue: 1131 },
   { number: 90, arabic: "اَلْمَانِعُ", transliteration: "Al Maani'", abjadValue: 192 },
-  { number: 91, arabic: "الضَّارَّ", transliteration: "Ad Daaarr", abjadValue: 1032 },
+  { number: 91, arabic: "الضَّارُّ", transliteration: "Ad Daaarr", abjadValue: 1032 },
   { number: 92, arabic: "النَّافِعُ", transliteration: "An Naafi’", abjadValue: 232 },
   { number: 93, arabic: "النُّورُ", transliteration: "An Noor", abjadValue: 287 },
   { number: 94, arabic: "الْهَادِي", transliteration: "Al Haadi", abjadValue: 51 },

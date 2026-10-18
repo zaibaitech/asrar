@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { useDivineNames } from '../hooks/useDivineNames';
 import { COMPAT_THEME, COMPAT_TINTS } from '../constants/compatibilityTheme';
 import { DIVINE_INTENTIONS, DivineIntention, INTENTION_EMOJI, INTENTION_COMPANION_DUA } from '../constants/divineNameIntentions';
 import type { DivineNameIntentionCompatibility, DivineNameMetadata, AlignmentTier } from '../constants/divineNameCompatibilityData';
@@ -35,6 +36,8 @@ export function DivineNameIntentionResultView({
   onPickAlternative,
   language = 'en',
 }: DivineNameIntentionResultViewProps) {
+  // The Names (values and practice counts) for the selected Abjad system.
+  const divineNames = useDivineNames();
   const contentLang: 'en' | 'fr' = language === 'fr' ? 'fr' : 'en';
   const isFrench = contentLang === 'fr';
   const info = DIVINE_INTENTIONS.find(i => i.id === intention)!;
@@ -139,7 +142,7 @@ export function DivineNameIntentionResultView({
           </p>
         </div>
 
-        <AllDivineNamesBrowser language={language} />
+        <AllDivineNamesBrowser language={language} names={divineNames} />
       </div>
     </div>
   );

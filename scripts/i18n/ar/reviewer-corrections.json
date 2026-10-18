@@ -1,0 +1,5400 @@
+{
+ "Burj from Your Name & Mother's Name": {
+  "id": "b1-000",
+  "batch": 1,
+  "ar": "البرج من اسمك واسم أمك"
+ },
+ "See All Hours": {
+  "id": "b1-009",
+  "batch": 1,
+  "ar": "اعرض جميع الساعات"
+ },
+ "Safar": {
+  "id": "b1-011",
+  "batch": 1,
+  "ar": "صفر"
+ },
+ "Moon in": {
+  "id": "b1-012",
+  "batch": 1,
+  "ar": "القمر في"
+ },
+ "Best Day to Move Home": {
+  "id": "b1-014",
+  "batch": 1,
+  "ar": "أفضل يوم للانتقال إلى بيت جديد"
+ },
+ "Best Day to Start a Business": {
+  "id": "b1-015",
+  "batch": 1,
+  "ar": "أفضل يوم لبدء التجارة"
+ },
+ "starting a business": {
+  "id": "b1-016",
+  "batch": 1,
+  "ar": "بدء مشروع تجاري"
+ },
+ "on day": {
+  "id": "b1-018",
+  "batch": 1,
+  "ar": "في يوم"
+ },
+ "201 names": {
+  "id": "b1-021",
+  "batch": 1,
+  "ar": "201 اسم"
+ },
+ "at home": {
+  "id": "b1-024",
+  "batch": 1,
+  "ar": "في بيته"
+ },
+ "Get it on Google Play": {
+  "id": "b1-031",
+  "batch": 1,
+  "ar": "احصل عليه من ⁨Google Play⁩"
+ },
+ "use client": {
+  "id": "b1-032",
+  "batch": 1,
+  "remove": true
+ },
+ "Your": {
+  "id": "b1-034",
+  "batch": 1,
+  "remove": true
+ },
+ "Star": {
+  "id": "b1-035",
+  "batch": 1,
+  "ar": "نجمة"
+ },
+ "Dawn": {
+  "id": "b1-042",
+  "batch": 1,
+  "ar": "الفجر"
+ },
+ "Communication and connection": {
+  "id": "b1-047",
+  "batch": 1,
+  "ar": "التواصل والصلة"
+ },
+ "Stability and grounding": {
+  "id": "b1-048",
+  "batch": 1,
+  "ar": "الاستقرار والرسوخ"
+ },
+ "Ar": {
+  "id": "b1-049",
+  "batch": 1,
+  "remove": true
+ },
+ "Au": {
+  "id": "b1-053",
+  "batch": 1,
+  "remove": true
+ },
+ "AM": {
+  "id": "b1-055",
+  "batch": 1,
+  "ar": "ص"
+ },
+ "PM": {
+  "id": "b1-101",
+  "batch": 1,
+  "ar": "م"
+ },
+ "AH": {
+  "id": "b1-131",
+  "batch": 1,
+  "ar": "هـ"
+ },
+ "Patient": {
+  "id": "b1-056",
+  "batch": 1,
+  "ar": "الصبور"
+ },
+ "Import": {
+  "id": "b1-060",
+  "batch": 1,
+  "ar": "استيراد"
+ },
+ "s de": {
+  "id": "b1-062",
+  "batch": 1,
+  "remove": true
+ },
+ "The Aware": {
+  "id": "b1-063",
+  "batch": 1,
+  "ar": "الخبير"
+ },
+ "I seek knowledge with clarity and share wisdom freely": {
+  "id": "b1-067",
+  "batch": 1,
+  "ar": "أطلبُ العلمَ بوضوح وأشاركُ الحكمةَ بسخاء"
+ },
+ "All rights reserved": {
+  "id": "b1-068",
+  "batch": 1,
+  "ar": "جميع الحقوق محفوظة"
+ },
+ "Rahman": {
+  "id": "b1-069",
+  "batch": 1,
+  "ar": "الرحمن"
+ },
+ "Blue": {
+  "id": "b1-074",
+  "batch": 1,
+  "ar": "أزرق"
+ },
+ "Green": {
+  "id": "b1-076",
+  "batch": 1,
+  "ar": "أخضر"
+ },
+ "SPECIAL": {
+  "id": "b1-079",
+  "batch": 1,
+  "ar": "خاص"
+ },
+ "Division": {
+  "id": "b1-080",
+  "batch": 1,
+  "ar": "القسمة"
+ },
+ "Play": {
+  "id": "b1-090",
+  "batch": 1,
+  "remove": true
+ },
+ "Silver": {
+  "id": "b1-097",
+  "batch": 1,
+  "ar": "فضي"
+ },
+ "Brown": {
+  "id": "b1-100",
+  "batch": 1,
+  "ar": "بني"
+ },
+ "What you give today takes time to return": {
+  "id": "b1-102",
+  "batch": 1,
+  "ar": "ما تعطيه اليوم يعود إليك بعد حين"
+ },
+ "Performance reviews": {
+  "id": "b1-104",
+  "batch": 1,
+  "ar": "تقييمات الأداء"
+ },
+ "Review team work": {
+  "id": "b1-105",
+  "batch": 1,
+  "ar": "مراجعة عمل الفريق"
+ },
+ "Review what you learned": {
+  "id": "b1-106",
+  "batch": 1,
+  "ar": "مراجعة ما تعلّمته"
+ },
+ "Red or orange shirt, gold accents": {
+  "id": "b1-109",
+  "batch": 1,
+  "ar": "قميص أحمر أو برتقالي مع لمسات ذهبية"
+ },
+ "Mix warm and light colors together": {
+  "id": "b1-110",
+  "batch": 1,
+  "ar": "امزج الألوان الدافئة والفاتحة معًا"
+ },
+ "Great day for meetings and new things": {
+  "id": "b1-111",
+  "batch": 1,
+  "ar": "يوم مناسب للاجتماعات والبدايات الجديدة"
+ },
+ "Silver jewelry would be nice": {
+  "id": "b1-112",
+  "batch": 1,
+  "ar": "الحليّ الفضية تناسبك"
+ },
+ "Calming colors for a smooth day": {
+  "id": "b1-113",
+  "batch": 1,
+  "ar": "ألوان هادئة ليوم سلس"
+ },
+ "Wear gold or warm colors": {
+  "id": "b1-114",
+  "batch": 1,
+  "ar": "البس الذهبي أو الألوان الدافئة"
+ },
+ "Greens and browns are your friends": {
+  "id": "b1-115",
+  "batch": 1,
+  "ar": "الأخضر والبني يناسبانك"
+ },
+ "Stick with your favorite colors - your natural choice": {
+  "id": "b1-116",
+  "batch": 1,
+  "ar": "ابقَ على ألوانك المفضلة، فهي اختيارك الطبيعي"
+ },
+ "Add grey or beige if you need to feel more calm": {
+  "id": "b1-117",
+  "batch": 1,
+  "ar": "أضف الرمادي أو البيج إن احتجت إلى مزيد من الهدوء"
+ },
+ "Add just a touch of your favorite color for strength": {
+  "id": "b1-118",
+  "batch": 1,
+  "ar": "أضف لمسة خفيفة من لونك المفضل لتستمدّ القوة"
+ },
+ "Keep colors simple and natural today": {
+  "id": "b1-119",
+  "batch": 1,
+  "ar": "اجعل الألوان بسيطة وطبيعية اليوم"
+ },
+ "Morning (5-7 AM): Best time": {
+  "id": "b1-120",
+  "batch": 1,
+  "ar": "الصباح (5–7 ص): أفضل وقت"
+ },
+ "Evening (6-9 PM): Best time": {
+  "id": "b1-121",
+  "batch": 1,
+  "ar": "المساء (6–9 م): أفضل وقت"
+ },
+ "Afternoon (2-4 PM): Good": {
+  "id": "b1-123",
+  "batch": 1,
+  "ar": "بعد الظهر (2–4 م): جيد"
+ },
+ "Give": {
+  "id": "b1-125",
+  "batch": 1,
+  "ar": "العطاء"
+ },
+ "Easy": {
+  "id": "b1-126",
+  "batch": 1,
+  "ar": "سهل"
+ },
+ ", but": {
+  "id": "b1-133",
+  "batch": 1,
+  "ar": "، لكن"
+ },
+ "Schedule for Later": {
+  "id": "b1-135",
+  "batch": 1,
+  "ar": "جدولة لوقت لاحق"
+ },
+ "Deep reflection": {
+  "id": "b1-137",
+  "batch": 1,
+  "ar": "التأمّل العميق"
+ },
+ "Limitation": {
+  "id": "b1-144",
+  "batch": 1,
+  "ar": "حدود الاستعمال"
+ },
+ "Mastery": {
+  "id": "b1-146",
+  "batch": 1,
+  "ar": "الإتقان"
+ },
+ "Don't show this tutorial again": {
+  "id": "b1-150",
+  "batch": 1,
+  "ar": "لا تعرض هذا الدليل مرة أخرى"
+ },
+ "Signed in as": {
+  "id": "b1-151",
+  "batch": 1,
+  "ar": "مسجَّل الدخول باسم"
+ },
+ "Primary Support (": {
+  "id": "b1-158",
+  "batch": 1,
+  "ar": "الدعم الأساسي ("
+ },
+ "For Balance (": {
+  "id": "b1-159",
+  "batch": 1,
+  "ar": "للتوازن ("
+ },
+ "Empathy and emotional depth.": {
+  "id": "b1-160",
+  "batch": 1,
+  "ar": "التعاطف والعمق العاطفي."
+ },
+ "Intellectual clarity and communication.": {
+  "id": "b1-161",
+  "batch": 1,
+  "ar": "الوضوح الفكري والتواصل."
+ },
+ "Speaker": {
+  "id": "b1-167",
+  "batch": 1,
+  "ar": "الخطيب"
+ },
+ "Humanitarian": {
+  "id": "b1-168",
+  "batch": 1,
+  "ar": "صاحب النزعة الإنسانية"
+ },
+ "Let go": {
+  "id": "b1-171",
+  "batch": 1,
+  "ar": "التخلّي"
+ },
+ "Unable to load planetary data": {
+  "id": "b1-174",
+  "batch": 1,
+  "ar": "تعذّر تحميل البيانات الكوكبية"
+ },
+ "Fixed earth, representing stability and fertility": {
+  "id": "b1-177",
+  "batch": 1,
+  "ar": "ترابيّ ثابت، يمثّل الاستقرار والخصوبة"
+ },
+ "The Lion - Majesty and creative expression": {
+  "id": "b1-180",
+  "batch": 1,
+  "ar": "الأسد: المهابة والتعبير الإبداعي"
+ },
+ "Intensity, regeneration, hidden wisdom": {
+  "id": "b1-183",
+  "batch": 1,
+  "ar": "الشدّة والتجدّد والحكمة الخفية"
+ },
+ "The Goat - Ambition and discipline": {
+  "id": "b1-184",
+  "batch": 1,
+  "ar": "الجدي: الطموح والانضباط"
+ },
+ "Mercury hour": {
+  "id": "b1-191",
+  "batch": 1,
+  "ar": "ساعة عطارد"
+ },
+ "Warriors, surgeons, those who act": {
+  "id": "b1-195",
+  "batch": 1,
+  "ar": "المحاربون والجرّاحون وأهل الإقدام"
+ },
+ "Judges, teachers, religious leaders": {
+  "id": "b1-198",
+  "batch": 1,
+  "ar": "القضاة والمعلّمون وعلماء الدين"
+ },
+ "Artists, lovers, peacemakers": {
+  "id": "b1-200",
+  "batch": 1,
+  "ar": "الفنانون والمحبّون وصانعو السلام"
+ },
+ "Organization": {
+  "id": "b1-202",
+  "batch": 1,
+  "ar": "التنظيم"
+ },
+ "Networking": {
+  "id": "b1-203",
+  "batch": 1,
+  "ar": "بناء العلاقات المهنية"
+ },
+ "Social media": {
+  "id": "b1-204",
+  "batch": 1,
+  "ar": "وسائل التواصل الاجتماعي"
+ },
+ "The Perfect": {
+  "id": "b1-206",
+  "batch": 1,
+  "ar": "الكامل"
+ },
+ "Reliable": {
+  "id": "b1-208",
+  "batch": 1,
+  "ar": "موثوق به"
+ },
+ "The Steadfast": {
+  "id": "b1-210",
+  "batch": 1,
+  "ar": "المتين"
+ },
+ "Round": {
+  "id": "b1-212",
+  "batch": 1,
+  "ar": "مستدير"
+ },
+ "Light Blue": {
+  "id": "b1-213",
+  "batch": 1,
+  "ar": "أزرق فاتح"
+ },
+ "accents to balance with your": {
+  "id": "b1-216",
+  "batch": 1,
+  "ar": "لمسات توازن"
+ },
+ "Initiative & courage": {
+  "id": "b1-217",
+  "batch": 1,
+  "ar": "المبادرة والشجاعة"
+ },
+ "Serve with love. Reflect: \"The best of people are those who benefit others.\"": {
+  "id": "b1-218",
+  "batch": 1,
+  "ar": "اخدم بمحبة. وتأمّل: «خيرُ الناس أنفعُهم للناس»."
+ },
+ "Help family, heal others, create beauty. Focus on home and community.": {
+  "id": "b1-219",
+  "batch": 1,
+  "ar": "ساعد أسرتك، وخفّف عن الآخرين، واصنع الجمال. ركّز على البيت والمجتمع."
+ },
+ ") calls you to": {
+  "id": "b1-220",
+  "batch": 1,
+  "ar": ") يدعوك إلى"
+ },
+ "Integration comes when you align all three dimensions.": {
+  "id": "b1-221",
+  "batch": 1,
+  "ar": "يتحقّق التكامل حين تنسجم الأبعاد الثلاثة كلها."
+ },
+ "roots. This creates dynamic tension - explains why you balance": {
+  "id": "b1-223",
+  "batch": 1,
+  "ar": "الجذور. وهذا يولّد توترًا حيويًا يفسّر لماذا توازن بين"
+ },
+ "Rond": {
+  "id": "b1-225",
+  "batch": 1,
+  "ar": "مستدير"
+ },
+ "You embrace with stability (round + flat). Grounded compassion - reliable emotional support with practical care. Creating safe, stable containers for others.": {
+  "id": "b1-226",
+  "batch": 1,
+  "ar": "تحتضن بثبات (مستدير + مسطّح). رأفة راسخة: سندٌ عاطفي يُعتمد عليه مع عناية عملية، وتهيئة مساحات آمنة ومستقرة للآخرين."
+ },
+ "Today at": {
+  "id": "b1-231",
+  "batch": 1,
+  "ar": "اليوم الساعة"
+ },
+ "Very different life approaches": {
+  "id": "b1-240",
+  "batch": 1,
+  "ar": "مقاربات للحياة مختلفة جدًا"
+ },
+ "Seek promotions": {
+  "id": "b1-242",
+  "batch": 1,
+  "ar": "السعي إلى الترقية"
+ },
+ "Dream work": {
+  "id": "b1-243",
+  "batch": 1,
+  "ar": "التأمّل في الرؤى"
+ },
+ "Short travel": {
+  "id": "b1-244",
+  "batch": 1,
+  "ar": "الأسفار القصيرة"
+ },
+ "Signing contracts if Mercury retrograde": {
+  "id": "b1-245",
+  "batch": 1,
+  "ar": "توقيع العقود إذا كان عطارد راجعًا"
+ },
+ "Starting fights": {
+  "id": "b1-247",
+  "batch": 1,
+  "ar": "افتعال الخصومات"
+ },
+ "Speak less, listen to silence": {
+  "id": "b1-257",
+  "batch": 1,
+  "ar": "قلّل الكلام، وأنصت إلى الصمت"
+ },
+ "Small, contained activities only": {
+  "id": "b1-259",
+  "batch": 1,
+  "ar": "أنشطة صغيرة ومحدودة فقط"
+ },
+ "No relationship decisions today": {
+  "id": "b1-260",
+  "batch": 1,
+  "ar": "يُستحسن تأجيل قرارات العلاقات اليوم"
+ },
+ "Postpone long-term planning": {
+  "id": "b1-261",
+  "batch": 1,
+  "ar": "أجّل التخطيط بعيد المدى"
+ },
+ "Trust the pause before discipline returns": {
+  "id": "b1-262",
+  "batch": 1,
+  "ar": "ثق بفترة السكون قبل أن يعود الانضباط"
+ },
+ "Actions create immediate consequences": {
+  "id": "b1-263",
+  "batch": 1,
+  "ar": "للأفعال عواقب فورية"
+ },
+ "Plan carefully×results manifest in days": {
+  "id": "b1-264",
+  "batch": 1,
+  "ar": "خطّط بعناية؛ قد تظهر النتائج في غضون أيام"
+ },
+ "7-9 AM": {
+  "id": "b1-265",
+  "batch": 1,
+  "ar": "7–9 ص"
+ },
+ "Launch initiatives": {
+  "id": "b1-269",
+  "batch": 1,
+  "ar": "إطلاق المبادرات"
+ },
+ "Solar noon - maximum presence": {
+  "id": "b1-270",
+  "batch": 1,
+  "ar": "الزوال: ذروة الحضور"
+ },
+ "Reflect on achievements": {
+  "id": "b1-274",
+  "batch": 1,
+  "ar": "تأمّل إنجازاتك"
+ },
+ "Plan tomorrow": {
+  "id": "b1-275",
+  "batch": 1,
+  "ar": "خطّط للغد"
+ },
+ "Check in with feelings": {
+  "id": "b1-279",
+  "batch": 1,
+  "ar": "تفقّد مشاعرك"
+ },
+ "Self-care routines": {
+  "id": "b1-280",
+  "batch": 1,
+  "ar": "عادات العناية بالنفس"
+ },
+ "One-on-one conversations": {
+  "id": "b1-281",
+  "batch": 1,
+  "ar": "محادثات ثنائية"
+ },
+ "Dream interpretation": {
+  "id": "b1-286",
+  "batch": 1,
+  "ar": "تعبير الرؤى"
+ },
+ "Light reading": {
+  "id": "b1-288",
+  "batch": 1,
+  "ar": "قراءة خفيفة"
+ },
+ "Physical challenges": {
+  "id": "b1-290",
+  "batch": 1,
+  "ar": "التحديات البدنية"
+ },
+ "Push through obstacles": {
+  "id": "b1-292",
+  "batch": 1,
+  "ar": "تجاوز العقبات بإصرار"
+ },
+ "New fights": {
+  "id": "b1-294",
+  "batch": 1,
+  "ar": "خصومات جديدة"
+ },
+ "Plan communications": {
+  "id": "b1-296",
+  "batch": 1,
+  "ar": "خطّط لتواصلك"
+ },
+ "Communication peak": {
+  "id": "b1-298",
+  "batch": 1,
+  "ar": "ذروة التواصل"
+ },
+ "Opportunity window": {
+  "id": "b1-310",
+  "batch": 1,
+  "ar": "فرصة سانحة"
+ },
+ "Make connections": {
+  "id": "b1-311",
+  "batch": 1,
+  "ar": "ابنِ علاقات"
+ },
+ "Self-care rituals": {
+  "id": "b1-315",
+  "batch": 1,
+  "ar": "عادات العناية بالنفس"
+ },
+ "Relationship harmony": {
+  "id": "b1-316",
+  "batch": 1,
+  "ar": "الانسجام في العلاقات"
+ },
+ "Enjoy good food": {
+  "id": "b1-321",
+  "batch": 1,
+  "ar": "استمتع بالطعام الطيب"
+ },
+ "Discipline peak": {
+  "id": "b1-323",
+  "batch": 1,
+  "ar": "ذروة الانضباط"
+ },
+ "Build structures": {
+  "id": "b1-324",
+  "batch": 1,
+  "ar": "ابنِ الأسس"
+ },
+ "Review time": {
+  "id": "b1-329",
+  "batch": 1,
+  "ar": "وقت المراجعة"
+ },
+ "Plan improvements": {
+  "id": "b1-330",
+  "batch": 1,
+  "ar": "خطّط للتحسينات"
+ },
+ "Organize for tomorrow": {
+  "id": "b1-331",
+  "batch": 1,
+  "ar": "نظّم أمورك للغد"
+ },
+ "Channel carefully×physical activity helps, avoid conflicts and rushing": {
+  "id": "b1-332",
+  "batch": 1,
+  "ar": "وجّه طاقتك بحذر: النشاط البدني يساعد، وتجنّب الخصومات والتسرّع"
+ },
+ "Structure your week×discipline and planning bring good results": {
+  "id": "b1-334",
+  "batch": 1,
+  "ar": "نظّم أسبوعك: الانضباط والتخطيط يعينان على نتائج طيبة"
+ },
+ "Channel warrior energy×protect boundaries, pursue goals with courage": {
+  "id": "b1-335",
+  "batch": 1,
+  "ar": "وجّه طاقة المحارب: احمِ حدودك واسعَ إلى أهدافك بشجاعة"
+ },
+ "Seek wisdom and growth×mentor others or learn from teachers": {
+  "id": "b1-336",
+  "batch": 1,
+  "ar": "اطلب الحكمة والنمو: أرشد غيرك أو تعلّم من المعلّمين"
+ },
+ "Wear green, brown, or beige to ground today's energy.": {
+  "id": "b1-337",
+  "batch": 1,
+  "ar": "البس الأخضر أو البني أو البيج لتثبيت طاقة اليوم."
+ },
+ "nature. Wear your element colors for balance.": {
+  "id": "b1-338",
+  "batch": 1,
+  "ar": "طبيعة. البس ألوان عنصرك للتوازن."
+ },
+ "tones. If you need variety, add": {
+  "id": "b1-339",
+  "batch": 1,
+  "ar": "نغمات. وإن احتجت إلى التنويع فأضف"
+ },
+ "accents to stay grounded.": {
+  "id": "b1-340",
+  "batch": 1,
+  "ar": "لمسات لتبقى ثابتًا."
+ },
+ "nature. Your element colors remain your best choice.": {
+  "id": "b1-341",
+  "batch": 1,
+  "ar": "طبيعة. وتبقى ألوان عنصرك أفضل خيار لك."
+ },
+ "Lemon": {
+  "id": "b1-342",
+  "batch": 1,
+  "ar": "ليموني"
+ },
+ "Light Grey": {
+  "id": "b1-343",
+  "batch": 1,
+  "ar": "رمادي فاتح"
+ },
+ "energy understand each other well. It's a good day for you.": {
+  "id": "b1-344",
+  "batch": 1,
+  "ar": "الطاقة تتفاهمان جيدًا. إنه يوم مناسب لك."
+ },
+ "nature. Stay grounded and centered.": {
+  "id": "b1-345",
+  "batch": 1,
+  "ar": "طبيعة. ابقَ ثابتًا ومتّزنًا."
+ },
+ "Mix blue with earth colors": {
+  "id": "b1-346",
+  "batch": 1,
+  "ar": "امزج الأزرق بألوان التراب"
+ },
+ "Bright yellows and golds work well": {
+  "id": "b1-347",
+  "batch": 1,
+  "ar": "الأصفر الزاهي والذهبي يناسبانك"
+ },
+ "Wear colors that make you happy": {
+  "id": "b1-350",
+  "batch": 1,
+  "ar": "البس ألوانًا تُسعدك"
+ },
+ "You'll feel good today": {
+  "id": "b1-351",
+  "batch": 1,
+  "ar": "قد تشعر بالارتياح اليوم"
+ },
+ "Simple, neutral colors work best": {
+  "id": "b1-352",
+  "batch": 1,
+  "ar": "الألوان البسيطة المحايدة أنسب"
+ },
+ "Don't wear too much bright color today": {
+  "id": "b1-353",
+  "batch": 1,
+  "ar": "لا تُكثر من الألوان الزاهية اليوم"
+ },
+ "Wear natural fabrics like cotton if you can": {
+  "id": "b1-354",
+  "batch": 1,
+  "ar": "البس أقمشة طبيعية كالقطن إن استطعت"
+ },
+ "The color of the earth will help steady you": {
+  "id": "b1-355",
+  "batch": 1,
+  "ar": "لون التراب يعينك على الثبات"
+ },
+ "Mid-morning (10 AM): Good": {
+  "id": "b1-356",
+  "batch": 1,
+  "ar": "منتصف الصباح (10 ص): جيد"
+ },
+ "Morning: Good": {
+  "id": "b1-359",
+  "batch": 1,
+  "ar": "الصباح: جيد"
+ },
+ "Pure repetition - all digits are": {
+  "id": "b1-365",
+  "batch": 1,
+  "ar": "تكرار تام: كل الأرقام"
+ },
+ "Fibonacci number - part of nature's sequence": {
+  "id": "b1-366",
+  "batch": 1,
+  "ar": "عدد من متتالية فيبوناتشي، جزء من نَسَق الطبيعة"
+ },
+ "Natural growth pattern - your value aligns with the mathematical pattern found throughout creation, from flowers to galaxies.": {
+  "id": "b1-367",
+  "batch": 1,
+  "ar": "نمط النمو الطبيعي: قيمتك توافق النمط الرياضي الموجود في الخلق كله، من الأزهار إلى المجرات."
+ },
+ ") mirrors": {
+  "id": "b1-369",
+  "batch": 1,
+  "ar": ") يعكس"
+ },
+ "hour matches your planetary ruler": {
+  "id": "b1-370",
+  "batch": 1,
+  "ar": "الساعة توافق كوكبك الحاكم"
+ },
+ "Your Zodiac": {
+  "id": "b1-371",
+  "batch": 1,
+  "ar": "برجك"
+ },
+ "Week Warrior": {
+  "id": "b1-376",
+  "batch": 1,
+  "ar": "محارب الأسبوع"
+ },
+ "Month Master": {
+  "id": "b1-377",
+  "batch": 1,
+  "ar": "متقن الشهر"
+ },
+ "Remember Me, and I will remember you.": {
+  "id": "b1-379",
+  "batch": 1,
+  "ar": "﴿فَاذْكُرُونِي أَذْكُرْكُمْ﴾ (البقرة 152)"
+ },
+ "Today's target complete!": {
+  "id": "b1-381",
+  "batch": 1,
+  "ar": "اكتمل هدف اليوم!"
+ },
+ "Add a challenge to get started": {
+  "id": "b1-385",
+  "batch": 1,
+  "ar": "أضف تحدّيًا للبدء"
+ },
+ "🇸🇳 Wave": {
+  "id": "b1-386",
+  "batch": 1,
+  "ar": "🇸🇳 Wave"
+ },
+ "Debt Relief": {
+  "id": "b1-387",
+  "batch": 1,
+  "ar": "قضاء الدَّين"
+ },
+ "Relief from financial burden and debt": {
+  "id": "b1-388",
+  "batch": 1,
+  "ar": "الفرج من الضيق المالي والدَّين"
+ },
+ "Opening of new sources of provision": {
+  "id": "b1-389",
+  "batch": 1,
+  "ar": "فتح أبواب جديدة للرزق"
+ },
+ "Peace of heart regarding financial matters": {
+  "id": "b1-390",
+  "batch": 1,
+  "ar": "طمأنينة القلب في الأمور المالية"
+ },
+ "The Good": {
+  "id": "b1-391",
+  "batch": 1,
+  "ar": "الطيّب"
+ },
+ "The Crown": {
+  "id": "b1-392",
+  "batch": 1,
+  "ar": "الإكليل"
+ },
+ "The Famous": {
+  "id": "b1-393",
+  "batch": 1,
+  "ar": "الشهير"
+ },
+ "The Warner": {
+  "id": "b1-394",
+  "batch": 1,
+  "ar": "النذير"
+ },
+ "The Lamp": {
+  "id": "b1-395",
+  "batch": 1,
+  "ar": "السراج"
+ },
+ "The Guidance": {
+  "id": "b1-396",
+  "batch": 1,
+  "ar": "الهُدى"
+ },
+ "The Friend": {
+  "id": "b1-397",
+  "batch": 1,
+  "ar": "الوليّ"
+ },
+ "The Trusted": {
+  "id": "b1-398",
+  "batch": 1,
+  "ar": "المأمون"
+ },
+ "The Honored": {
+  "id": "b1-399",
+  "batch": 1,
+  "ar": "المكرَّم"
+ },
+ "The Good News": {
+  "id": "b1-400",
+  "batch": 1,
+  "ar": "البُشرى"
+ },
+ "The Rain": {
+  "id": "b1-401",
+  "batch": 1,
+  "ar": "الغيث"
+ },
+ "The Conciliator": {
+  "id": "b1-402",
+  "batch": 1,
+  "ar": "المُصلِح"
+ },
+ "The Adviser": {
+  "id": "b1-403",
+  "batch": 1,
+  "ar": "النصيح"
+ },
+ "The Tender": {
+  "id": "b1-404",
+  "batch": 1,
+  "ar": "الشفيق"
+ },
+ "The Healing": {
+  "id": "b1-405",
+  "batch": 1,
+  "ar": "الشافي"
+ },
+ "The Key to the Garden": {
+  "id": "b1-408",
+  "batch": 1,
+  "ar": "مفتاح الجنّة"
+ },
+ "Owner of the Sword": {
+  "id": "b1-409",
+  "batch": 1,
+  "ar": "صاحب السيف"
+ },
+ "The Good Listener": {
+  "id": "b1-410",
+  "batch": 1,
+  "ar": "أُذُنُ خير"
+ },
+ "The Spring of Beauty": {
+  "id": "b1-411",
+  "batch": 1,
+  "ar": "عين الغُرّ"
+ },
+ "The Teacher of Guidance": {
+  "id": "b1-412",
+  "batch": 1,
+  "ar": "عَلَم الهدى"
+ },
+ "The Raiser of Rank": {
+  "id": "b1-413",
+  "batch": 1,
+  "ar": "رافع الرُّتب"
+ },
+ "The Owner of Relief": {
+  "id": "b1-414",
+  "batch": 1,
+  "ar": "صاحب الفرج"
+ },
+ "💫 Join me in this transformative practice!": {
+  "id": "b1-416",
+  "batch": 1,
+  "ar": "💫 شاركني هذا الورد المبارك!"
+ },
+ "Join me in this challenge!": {
+  "id": "b1-418",
+  "batch": 1,
+  "ar": "شاركني في هذا التحدّي!"
+ },
+ "Gift of gratitude to": {
+  "id": "b1-419",
+  "batch": 1,
+  "ar": "هدية شكر إلى"
+ },
+ "Copy number": {
+  "id": "b1-420",
+  "batch": 1,
+  "ar": "نسخ الرقم"
+ },
+ "Educational reflection": {
+  "id": "b1-429",
+  "batch": 1,
+  "ar": "التأمّل التعليمي"
+ },
+ "Vision, Attention": {
+  "id": "b1-433",
+  "batch": 1,
+  "ar": "الرؤية والانتباه"
+ },
+ "Reviewing plans": {
+  "id": "b1-434",
+  "batch": 1,
+  "ar": "مراجعة الخطط"
+ },
+ "Strength is a trust: use presence to protect and encourage, not to dominate.": {
+  "id": "b1-439",
+  "batch": 1,
+  "ar": "القوة أمانة: استعمل حضورك للحماية والتشجيع لا للتسلّط."
+ },
+ "Call others to what is good — a voice used for gathering and warning, not for needless noise.": {
+  "id": "b1-441",
+  "batch": 1,
+  "ar": "ادعُ الآخرين إلى الخير: صوتٌ يُرفع للجمع والإنذار لا للضجيج."
+ },
+ "Balance, Harvest": {
+  "id": "b1-443",
+  "batch": 1,
+  "ar": "الميزان والحصاد"
+ },
+ "Cover faults — your own and others’ — and prefer discretion over exposure.": {
+  "id": "b1-446",
+  "batch": 1,
+  "ar": "استر العيوب، عيوبك وعيوب غيرك، وقدّم الستر على الفضح."
+ },
+ "Ending harmful ties with adab": {
+  "id": "b1-447",
+  "batch": 1,
+  "ar": "إنهاء الروابط الضارة بأدب"
+ },
+ "Keeping trusts": {
+  "id": "b1-451",
+  "batch": 1,
+  "ar": "حفظ الأمانات"
+ },
+ "Settlement, Order": {
+  "id": "b1-458",
+  "batch": 1,
+  "ar": "الاستقرار والنظام"
+ },
+ "Cities need order and neighbors’ rights — settle what is due before chasing the next road.": {
+  "id": "b1-459",
+  "batch": 1,
+  "ar": "المدن تحتاج إلى النظام وحفظ حقوق الجيران: أدِّ ما عليك قبل أن تطلب الطريق التالي."
+ },
+ "Empty vows": {
+  "id": "b1-461",
+  "batch": 1,
+  "ar": "النذور الجوفاء"
+ },
+ "Tents mean shelter and guests: open your space with generosity and guard those who seek safety.": {
+  "id": "b1-463",
+  "batch": 1,
+  "ar": "الخيمة مأوى وضيافة: افتح مكانك بسخاء، واحمِ من يطلب الأمان."
+ },
+ "Marriage and union talks": {
+  "id": "b1-464",
+  "batch": 1,
+  "ar": "مباحثات الزواج والارتباط"
+ },
+ "Draining resources without plan": {
+  "id": "b1-466",
+  "batch": 1,
+  "ar": "استنزاف الموارد بلا خطة"
+ },
+ "The belly of the fish closes the circuit of twenty-eight — honor what is hidden, and seek wholeness through tawakkul.": {
+  "id": "b1-467",
+  "batch": 1,
+  "ar": "بطن الحوت يُتمّ دائرة المنازل الثماني والعشرين: احترم ما خفي، واطلب التمام بالتوكّل."
+ },
+ "Waxing Crescent": {
+  "id": "b1-470",
+  "batch": 1,
+  "ar": "هلال متزايد"
+ },
+ "Full Moon": {
+  "id": "b1-472",
+  "batch": 1,
+  "ar": "البدر"
+ },
+ "New Moon": {
+  "id": "b1-469",
+  "batch": 1,
+  "ar": "المحاق"
+ },
+ "Physical activities": {
+  "id": "b1-474",
+  "batch": 1,
+  "ar": "الأنشطة البدنية"
+ },
+ "Suitable for regular practice and reflection": {
+  "id": "b1-477",
+  "batch": 1,
+  "ar": "مناسب للممارسة المنتظمة والتأمّل"
+ },
+ "For clarity of mind and ease in speech": {
+  "id": "b1-478",
+  "batch": 1,
+  "ar": "لصفاء الذهن وتيسير الكلام"
+ },
+ "Softens difficulties and eases hardship": {
+  "id": "b1-480",
+  "batch": 1,
+  "ar": "يليّن الصعاب ويخفّف المشقّة"
+ },
+ "For insight and awareness in learning and communication.": {
+  "id": "b1-483",
+  "batch": 1,
+  "ar": "للبصيرة والوعي في التعلّم والتواصل."
+ },
+ "Hot & Wet": {
+  "id": "b1-486",
+  "batch": 1,
+  "ar": "حار رطب"
+ },
+ "Hot": {
+  "id": "b1-487",
+  "batch": 1,
+  "ar": "حار"
+ },
+ "Wet": {
+  "id": "b1-488",
+  "batch": 1,
+  "ar": "رطب"
+ },
+ "Dry": {
+  "id": "b1-132",
+  "batch": 1,
+  "ar": "يابس"
+ },
+ ", mais": {
+  "id": "b2-001",
+  "batch": 2,
+  "ar": "، لكن"
+ },
+ "Find Your Burj from Your Name and Your Mother's Name": {
+  "id": "b2-002",
+  "batch": 2,
+  "ar": "اعرف برجك من اسمك واسم أمك"
+ },
+ "Don't know your mother's name in Arabic? The tool can also work from your date of birth (tropical zodiac).": {
+  "id": "b2-003",
+  "batch": 2,
+  "ar": "لا تعرف كيف تكتب اسم أمك بالعربية؟ يمكن للأداة أيضًا أن تحسب برجك من تاريخ ميلادك (البروج المدارية)."
+ },
+ "How do I find my burj from my name and my mother's name?": {
+  "id": "b2-004",
+  "batch": 2,
+  "ar": "كيف أعرف برجي من اسمي واسم أمي؟"
+ },
+ "Why is the mother's name used?": {
+  "id": "b2-005",
+  "batch": 2,
+  "ar": "لماذا يُستعمل اسم الأم؟"
+ },
+ "Pens": {
+  "id": "b2-006",
+  "batch": 2,
+  "ar": "الأقلام"
+ },
+ "Tropical Zodiac": {
+  "id": "b2-007",
+  "batch": 2,
+  "ar": "دائرة البروج المدارية"
+ },
+ "Close keyboard": {
+  "id": "b2-012",
+  "batch": 2,
+  "ar": "أغلق لوحة المفاتيح"
+ },
+ "What is the meaning of my buruj?": {
+  "id": "b2-020",
+  "batch": 2,
+  "ar": "ما معنى برجي؟"
+ },
+ "Ask me": {
+  "id": "b2-023",
+  "batch": 2,
+  "ar": "اسألني"
+ },
+ "Use this for": {
+  "id": "b2-025",
+  "batch": 2,
+  "ar": "استخدم هذا لـ"
+ },
+ "Clear input": {
+  "id": "b2-027",
+  "batch": 2,
+  "ar": "مسح الإدخال"
+ },
+ "Benefits": {
+  "id": "b2-030",
+  "batch": 2,
+  "ar": "الفوائد"
+ },
+ "Executive": {
+  "id": "b2-032",
+  "batch": 2,
+  "ar": "مدير تنفيذي"
+ },
+ "Sales and business development": {
+  "id": "b2-034",
+  "batch": 2,
+  "ar": "المبيعات وتطوير الأعمال"
+ },
+ "Project management": {
+  "id": "b2-035",
+  "batch": 2,
+  "ar": "إدارة المشاريع"
+ },
+ "cheikh amadou": {
+  "id": "b2-041",
+  "batch": 2,
+  "ar": "الشيخ أحمدو"
+ },
+ "Helping with something needed for their training": {
+  "id": "b2-043",
+  "batch": 2,
+  "ar": "المساعدة في شيء يحتاجون إليه لتدريبهم"
+ },
+ "Giving a chicken of different colours, particularly a combination of black, white and red, to someone who can benefit from it.": {
+  "id": "b2-050",
+  "batch": 2,
+  "ar": "إعطاء دجاجة متعددة الألوان، ولا سيما ما اجتمع فيها الأسود والأبيض والأحمر، لمن ينتفع بها."
+ },
+ "Notebooks": {
+  "id": "b2-051",
+  "batch": 2,
+  "ar": "دفاتر"
+ },
+ "White ram — raised to maturity, then slaughtered, divided and distributed": {
+  "id": "b2-060",
+  "batch": 2,
+  "ar": "كبش أبيض يُربّى حتى يكتمل، ثم يُذبح ويُقسَّم ويُوزَّع"
+ },
+ "3 chickens — black, white and red": {
+  "id": "b2-062",
+  "batch": 2,
+  "ar": "ثلاث دجاجات: سوداء وبيضاء وحمراء"
+ },
+ "9 pieces of bread": {
+  "id": "b2-064",
+  "batch": 2,
+  "ar": "9 أرغفة خبز"
+ },
+ "Helping Labourers and Low-Income Workers": {
+  "id": "b2-066",
+  "batch": 2,
+  "ar": "مساعدة العمّال وذوي الدخل المحدود"
+ },
+ "Other low-income workers": {
+  "id": "b2-068",
+  "batch": 2,
+  "ar": "وغيرهم من العمّال ذوي الدخل المحدود"
+ },
+ "The amount can be determined according to one's ability and circumstances. The money should be given sincerely to someone or a cause that can benefit from it.": {
+  "id": "b2-073",
+  "batch": 2,
+  "ar": "يُحدَّد المبلغ بحسب قدرة المرء وظروفه، ويُعطى المال بإخلاص لشخص أو جهة تنتفع به."
+ },
+ "Helping Someone Experiencing Mental Health Difficulties": {
+  "id": "b2-079",
+  "batch": 2,
+  "ar": "مساعدة شخص يعاني صعوبات نفسية"
+ },
+ "Venus is": {
+  "id": "b2-083",
+  "batch": 2,
+  "ar": "الزهرة"
+ },
+ "Growth Areas": {
+  "id": "b2-084",
+  "batch": 2,
+  "ar": "مجالات النمو"
+ },
+ "Growth Area": {
+  "id": "b2-085",
+  "batch": 2,
+  "ar": "مجال النمو"
+ },
+ "Let this principle guide your career decisions and professional journey.": {
+  "id": "b2-087",
+  "batch": 2,
+  "ar": "دع هذا المبدأ يرشد قراراتك ومسيرتك المهنية."
+ },
+ "Share Recommendations": {
+  "id": "b2-090",
+  "batch": 2,
+  "ar": "شارك التوصيات"
+ },
+ "Practice Night:": {
+  "id": "b2-093",
+  "batch": 2,
+  "ar": "ليلة الورد:"
+ },
+ "Copy Arabic text": {
+  "id": "b2-094",
+  "batch": 2,
+  "ar": "نسخ النص العربي"
+ },
+ "Manuel": {
+  "id": "b2-096",
+  "batch": 2,
+  "ar": "يدوي"
+ },
+ "Practice Night": {
+  "id": "b2-097",
+  "batch": 2,
+  "ar": "ليلة الورد"
+ },
+ "Your progress will be lost.": {
+  "id": "b2-099",
+  "batch": 2,
+  "ar": "سيُفقد تقدّمك."
+ },
+ "Career and life path guidance": {
+  "id": "b2-101",
+  "batch": 2,
+  "ar": "الإرشاد في المسار المهني ومسار الحياة"
+ },
+ "Optimal timing for important decisions": {
+  "id": "b2-102",
+  "batch": 2,
+  "ar": "أوقات مناسبة للتأمّل قبل القرارات المهمة"
+ },
+ "Understand your natural temperament, communication style, and social patterns. Use this for self-awareness and personal growth.": {
+  "id": "b2-104",
+  "batch": 2,
+  "ar": "افهم مزاجك الطبيعي وأسلوب تواصلك وأنماطك الاجتماعية، واستعمل ذلك لمعرفة نفسك والنمو الشخصي."
+ },
+ "One of the four classical elements: Fire, Earth, Air, Water": {
+  "id": "b2-105",
+  "batch": 2,
+  "ar": "أحد العناصر الكلاسيكية الأربعة: النار والتراب والهواء والماء"
+ },
+ "Please enter your name in Arabic": {
+  "id": "b2-107",
+  "batch": 2,
+  "ar": "يُرجى إدخال اسمك بالعربية"
+ },
+ "Please enter mother's name in Arabic": {
+  "id": "b2-108",
+  "batch": 2,
+  "ar": "يُرجى إدخال اسم الأم بالعربية"
+ },
+ "Mother's Name Significance": {
+  "id": "b2-110",
+  "batch": 2,
+  "ar": "أهمية اسم الأم"
+ },
+ "Traditional and modern career paths aligned with your energy": {
+  "id": "b2-111",
+  "batch": 2,
+  "ar": "مسارات مهنية تقليدية وحديثة تناسب طبعك"
+ },
+ "All calculations happen locally in your browser - no data is sent to servers": {
+  "id": "b2-115",
+  "batch": 2,
+  "ar": "تجري كل الحسابات محليًا في متصفحك، ولا تُرسَل أي بيانات إلى الخوادم"
+ },
+ "Invite your loved ones": {
+  "id": "b2-116",
+  "batch": 2,
+  "ar": "ادعُ أحبّاءك"
+ },
+ "Quick summary": {
+  "id": "b2-118",
+  "batch": 2,
+  "ar": "ملخّص سريع"
+ },
+ "Forces Sociales": {
+  "id": "b2-119",
+  "batch": 2,
+  "ar": "نقاط القوة الاجتماعية"
+ },
+ "Notes": {
+  "id": "b2-124",
+  "batch": 2,
+  "ar": "ملاحظات"
+ },
+ "Most auspicious for important decisions": {
+  "id": "b2-126",
+  "batch": 2,
+  "ar": "يُعدّ تقليديًا مناسبًا للقرارات المهمة"
+ },
+ "Best practiced on": {
+  "id": "b2-127",
+  "batch": 2,
+  "ar": "يُستحسن أداؤه يوم"
+ },
+ "Location Required": {
+  "id": "b2-131",
+  "batch": 2,
+  "ar": "الموقع مطلوب"
+ },
+ "Set a monthly reminder on your calendar": {
+  "id": "b2-137",
+  "batch": 2,
+  "ar": "ضع تذكيرًا شهريًا في تقويمك"
+ },
+ "Delete this record?": {
+  "id": "b2-138",
+  "batch": 2,
+  "ar": "حذف هذا السجل؟"
+ },
+ "This will replace all current data. Continue?": {
+  "id": "b2-139",
+  "batch": 2,
+  "ar": "سيستبدل هذا جميع البيانات الحالية. هل تريد المتابعة؟"
+ },
+ "Export data": {
+  "id": "b2-140",
+  "batch": 2,
+  "ar": "تصدير البيانات"
+ },
+ "Importer": {
+  "id": "b2-141",
+  "batch": 2,
+  "ar": "استيراد"
+ },
+ "Practice Sessions": {
+  "id": "b2-143",
+  "batch": 2,
+  "ar": "جلسات الورد"
+ },
+ "days. Get back on track!": {
+  "id": "b2-147",
+  "batch": 2,
+  "ar": "أيام. عُد إلى المواظبة!"
+ },
+ "Your completion rate is low. Try setting smaller daily goals.": {
+  "id": "b2-148",
+  "batch": 2,
+  "ar": "نسبة الإتمام منخفضة. جرّب أهدافًا يومية أصغر."
+ },
+ "Completed on:": {
+  "id": "b2-149",
+  "batch": 2,
+  "ar": "اكتمل في:"
+ },
+ "Advanced Charts Coming Soon": {
+  "id": "b2-154",
+  "batch": 2,
+  "ar": "الرسوم البيانية المتقدمة قريبًا"
+ },
+ "Notes (optional)": {
+  "id": "b2-155",
+  "batch": 2,
+  "ar": "ملاحظات (اختياري)"
+ },
+ "Date Completed": {
+  "id": "b2-156",
+  "batch": 2,
+  "ar": "تاريخ الإكمال"
+ },
+ "Coming Soon": {
+  "id": "b2-157",
+  "batch": 2,
+  "ar": "قريبًا"
+ },
+ "File size must be less than 2MB": {
+  "id": "b2-158",
+  "batch": 2,
+  "ar": "يجب أن يكون حجم الملف أقل من 2 ميغابايت"
+ },
+ "Frequency": {
+  "id": "b2-160",
+  "batch": 2,
+  "ar": "عدد المرات"
+ },
+ "Get Deep AI Analysis ✨": {
+  "id": "b3-000",
+  "batch": 3,
+  "ar": "احصل على تحليل معمّق بالذكاء الاصطناعي ✨"
+ },
+ "Get New Analysis": {
+  "id": "b3-001",
+  "batch": 3,
+  "ar": "احصل على تحليل جديد"
+ },
+ "Unable to determine current planetary hour": {
+  "id": "b3-002",
+  "batch": 3,
+  "ar": "تعذّر تحديد الساعة الكوكبية الحالية"
+ },
+ "Reload page to try again": {
+  "id": "b3-003",
+  "batch": 3,
+  "ar": "أعد تحميل الصفحة للمحاولة مرة أخرى"
+ },
+ "uses traditional wisdom to help you choose the right moment. Trust your judgment and use this as one tool among many.": {
+  "id": "b3-004",
+  "batch": 3,
+  "ar": "يستند إلى الحكمة التقليدية لمساعدتك على اختيار الوقت المناسب. ثق بتقديرك، واعتبر هذا أداةً من أدوات كثيرة."
+ },
+ "🔥 YOUR": {
+  "id": "b3-005",
+  "batch": 3,
+  "remove": true
+ },
+ "Starting in": {
+  "id": "b3-008",
+  "batch": 3,
+  "ar": "يبدأ بعد"
+ },
+ "How Well Do You Match?": {
+  "id": "b3-010",
+  "batch": 3,
+  "ar": "ما مدى توافقكما؟"
+ },
+ "Please enter the date of birth for both people": {
+  "id": "b3-011",
+  "batch": 3,
+  "ar": "يُرجى إدخال تاريخ ميلاد الشخصين"
+ },
+ "Successfully signed in!": {
+  "id": "b3-012",
+  "batch": 3,
+  "ar": "تم تسجيل الدخول بنجاح!"
+ },
+ "Remember your password?": {
+  "id": "b3-014",
+  "batch": 3,
+  "ar": "هل تذكّرت كلمة المرور؟"
+ },
+ "You might feel: stuck in thoughts, low energy, avoiding decisions, emotionally heavy": {
+  "id": "b3-016",
+  "batch": 3,
+  "ar": "قد تشعر بأنك عالق في أفكارك، قليل النشاط، تتجنّب القرارات، مثقل عاطفيًا"
+ },
+ "You might feel: stubborn, rigid, stuck in routine, resistant to change": {
+  "id": "b3-017",
+  "batch": 3,
+  "ar": "قد تشعر بأنك عنيد، متصلّب، عالق في الروتين، تقاوم التغيير"
+ },
+ "5min window gazing + 20 deep breaths": {
+  "id": "b3-018",
+  "batch": 3,
+  "ar": "تأمّل من النافذة 5 دقائق + 20 نفَسًا عميقًا"
+ },
+ "Open window, take 10 deep breaths": {
+  "id": "b3-019",
+  "batch": 3,
+  "ar": "افتح النافذة وخذ 10 أنفاس عميقة"
+ },
+ "Harmonious - Elements working together beautifully": {
+  "id": "b3-021",
+  "batch": 3,
+  "ar": "منسجم: العناصر تعمل معًا بانسجام جميل"
+ },
+ "Slight tension - Minor adjustments keep you flowing": {
+  "id": "b3-022",
+  "batch": 3,
+  "ar": "توتر طفيف: تعديلات بسيطة تحفظ انسيابك"
+ },
+ "Strong opposition - Multiple actions needed for balance": {
+  "id": "b3-023",
+  "batch": 3,
+  "ar": "تعارض قوي: يلزم عدّة خطوات لاستعادة التوازن"
+ },
+ "Today's Color Guidance": {
+  "id": "b3-027",
+  "batch": 3,
+  "ar": "إرشادات ألوان اليوم"
+ },
+ "Minimize These Colors": {
+  "id": "b3-028",
+  "batch": 3,
+  "ar": "قلّل من هذه الألوان"
+ },
+ "Based on elemental harmony principles": {
+  "id": "b3-029",
+  "batch": 3,
+  "ar": "استنادًا إلى مبادئ الانسجام بين العناصر"
+ },
+ "Air people are intellectual, social, and adaptable. They love ideas and conversations but can overthink or avoid emotional depth. Think: 'Let me analyze this...' Air needs to ground in feelings and reality.": {
+  "id": "b3-032",
+  "batch": 3,
+  "ar": "أهل الهواء أصحاب فكر واجتماع ومرونة. يحبون الأفكار والحوار، لكنهم قد يُفرطون في التفكير أو يتجنبون العمق العاطفي. شعارهم: «دعني أحلّل هذا...». ويحتاج الهواء إلى أن يرسخ في المشاعر والواقع."
+ },
+ "People with Sun energy are confident, generous, and need to shine. They're natural leaders who inspire others but need appreciation and can dominate. In relationships: they bring warmth but need admiration.": {
+  "id": "b3-033",
+  "batch": 3,
+  "ar": "أصحاب طاقة الشمس واثقون كرماء، ويحتاجون إلى أن يسطعوا. هم قادة بالفطرة يُلهمون غيرهم، لكنهم يحتاجون إلى التقدير وقد يميلون إلى الهيمنة. وفي العلاقات: يجلبون الدفء لكنهم يحتاجون إلى الإعجاب."
+ },
+ "Mercury Energy": {
+  "id": "b3-034",
+  "batch": 3,
+  "ar": "طاقة عطارد"
+ },
+ "Venus people are romantic, affectionate, and value harmony. They appreciate beauty and avoid conflict but can be people-pleasing. In relationships: they bring tenderness and romance but may avoid necessary confrontations.": {
+  "id": "b3-035",
+  "batch": 3,
+  "ar": "أهل الزهرة رومانسيون حنونون يقدّرون الانسجام. يحبّون الجمال ويتجنبون الخلاف، وقد يُفرطون في إرضاء الآخرين. وفي العلاقات: يجلبون الرقة والرومانسية، لكنهم قد يتجنبون مواجهات ضرورية."
+ },
+ "How Well You Match (Percentage)": {
+  "id": "b3-036",
+  "batch": 3,
+  "ar": "ما مدى توافقكما (النسبة المئوية)"
+ },
+ "Natural Harmony (85-100%)": {
+  "id": "b3-037",
+  "batch": 3,
+  "ar": "الانسجام الطبيعي (85–100%)"
+ },
+ "You're naturally in sync. Conversations flow easily, you understand each other's moods, conflicts resolve quickly. This doesn't mean no work is needed—all relationships need nurturing—but the foundation is strong.": {
+  "id": "b3-038",
+  "batch": 3,
+  "ar": "بينكما انسجام فطري. الحديث يجري بسهولة، ويفهم كلٌّ منكما مزاج الآخر، وتُحلّ الخلافات بسرعة. ولا يعني هذا أنه لا حاجة إلى جهد، فكل علاقة تحتاج إلى رعاية، لكن الأساس متين."
+ },
+ "The Right Time for Things to Happen": {
+  "id": "b3-040",
+  "batch": 3,
+  "ar": "الوقت المناسب لحدوث الأمور"
+ },
+ "Strong compatibility with minor friction points. You have great potential together—small adjustments in communication or understanding each other's needs will create beautiful harmony.": {
+  "id": "b3-043",
+  "batch": 3,
+  "ar": "توافق قوي مع نقاط احتكاك بسيطة. لديكما إمكانات كبيرة معًا، وتعديلات صغيرة في التواصل أو في فهم احتياجات كلٍّ منكما تصنع انسجامًا جميلًا."
+ },
+ "Significant differences that need deep work. Not impossible, but requires exceptional maturity, patience, and often professional support. Consider whether both partners are truly committed to the journey.": {
+  "id": "b3-044",
+  "batch": 3,
+  "ar": "فروق كبيرة تحتاج إلى جهد عميق. ليس الأمر مستحيلًا، لكنه يتطلب نضجًا استثنائيًا وصبرًا، وكثيرًا ما يحتاج إلى دعم متخصص. تأمّلا هل كلاكما ملتزم حقًّا بهذا الطريق."
+ },
+ "For Marriage Decisions": {
+  "id": "b3-048",
+  "batch": 3,
+  "ar": "لقرارات الزواج"
+ },
+ "Even perfectly compatible couples need good communication. Even challenging combinations can thrive with excellent communication. Make it a daily practice to truly listen and express yourself honestly.": {
+  "id": "b3-049",
+  "batch": 3,
+  "ar": "حتى الزوجان المتوافقان تمامًا يحتاجان إلى تواصل جيد، وحتى التركيبات الصعبة قد تزدهر بتواصل ممتاز. اجعل الإصغاء الصادق والتعبير الصريح عن نفسك عادة يومية."
+ },
+ "Please verify the Arabic spelling before calculating.": {
+  "id": "b3-051",
+  "batch": 3,
+  "ar": "يُرجى التحقق من الإملاء العربي قبل الحساب"
+ },
+ ", not as substitute for professional advice": {
+  "id": "b3-054",
+  "batch": 3,
+  "ar": "، لا بديلًا عن المشورة المتخصصة"
+ },
+ "• Uses": {
+  "id": "b3-056",
+  "batch": 3,
+  "ar": "• يستعمل"
+ },
+ "Learn more about how this works": {
+  "id": "b3-057",
+  "batch": 3,
+  "ar": "اعرف المزيد عن طريقة عمل هذا"
+ },
+ "Please enter your Arabic name": {
+  "id": "b3-058",
+  "batch": 3,
+  "ar": "يُرجى إدخال اسمك العربي"
+ },
+ "Type to search: Muhammad, Fatima...": {
+  "id": "b3-059",
+  "batch": 3,
+  "ar": "اكتب للبحث: محمد، فاطمة..."
+ },
+ "Find My Best Names": {
+  "id": "b3-060",
+  "batch": 3,
+  "ar": "اعرف الأسماء الأنسب لي"
+ },
+ "1. What is your intention?": {
+  "id": "b3-061",
+  "batch": 3,
+  "ar": "1. ما نيّتك؟"
+ },
+ "found out of 99": {
+  "id": "b3-064",
+  "batch": 3,
+  "ar": "وُجد من أصل 99"
+ },
+ "Your Best Names": {
+  "id": "b3-065",
+  "batch": 3,
+  "ar": "الأسماء الأنسب لك"
+ },
+ "Number Meanings": {
+  "id": "b3-068",
+  "batch": 3,
+  "ar": "معاني الأعداد"
+ },
+ "-- Choose a number --": {
+  "id": "b3-074",
+  "batch": 3,
+  "ar": "-- اختر عددًا --"
+ },
+ "This month brings the energy of": {
+  "id": "b3-076",
+  "batch": 3,
+  "ar": "يحمل هذا الشهر طاقة"
+ },
+ "Monthly Focus": {
+  "id": "b3-077",
+  "batch": 3,
+  "ar": "تركيز الشهر"
+ },
+ "Focus on opportunities that align with this month's theme while keeping your year's goals in mind.": {
+  "id": "b3-078",
+  "batch": 3,
+  "ar": "ركّز على الفرص التي تتوافق مع موضوع هذا الشهر، مع إبقاء أهداف سنتك في ذهنك."
+ },
+ "Your life is divided into 4 major periods (Pinnacles) with corresponding challenges. Each period brings unique lessons and opportunities.": {
+  "id": "b3-079",
+  "batch": 3,
+  "ar": "حياتك مقسّمة إلى 4 مراحل رئيسية (القمم)، ولكل منها تحدٍّ مقابل. وكل مرحلة تحمل دروسًا وفرصًا خاصة."
+ },
+ ") reveals your deepest desires. Your Personality (": {
+  "id": "b3-083",
+  "batch": 3,
+  "ar": ") يكشف عن أعمق رغباتك. وشخصيتك ("
+ },
+ "💡 Advice for Growth:": {
+  "id": "b3-086",
+  "batch": 3,
+  "ar": "💡 نصيحة للنمو:"
+ },
+ "Your Current Position": {
+  "id": "b3-087",
+  "batch": 3,
+  "ar": "موضعك الحالي"
+ },
+ "🌱 Remedy:": {
+  "id": "b3-088",
+  "batch": 3,
+  "ar": "🌱 العلاج:"
+ },
+ "Calculated from birth date + current year. Changes annually (usually on birthday). Shows the theme and focus of the current year cycle. Ranges 1-9.": {
+  "id": "b3-089",
+  "batch": 3,
+  "ar": "يُحسب من تاريخ الميلاد + السنة الحالية، ويتغير كل سنة (عادةً في يوم الميلاد). يبيّن موضوع دورة السنة الحالية ومحور تركيزها. يتراوح بين 1 و9."
+ },
+ "Days when your personal energy is low and recovery is needed. Important for maintaining balance. Recommended for rest, reflection, and avoiding major initiatives.": {
+  "id": "b3-093",
+  "batch": 3,
+  "ar": "أيام تنخفض فيها طاقتك الشخصية وتحتاج إلى التعافي. مهمة لحفظ التوازن. يُستحسن فيها الراحة والتأمّل وتجنّب المبادرات الكبرى."
+ },
+ "→ Easy flow today": {
+  "id": "b3-097",
+  "batch": 3,
+  "ar": "→ يوم سهل الانسياب"
+ },
+ "→ Steady progress with effort": {
+  "id": "b3-098",
+  "batch": 3,
+  "ar": "→ تقدّم ثابت مع بذل الجهد"
+ },
+ "The Three Analysis Methods Explained": {
+  "id": "b3-099",
+  "batch": 3,
+  "ar": "شرح أساليب التحليل الثلاثة"
+ },
+ "What High Compatibility Means": {
+  "id": "b3-100",
+  "batch": 3,
+  "ar": "ما معنى التوافق العالي"
+ },
+ "What Challenges Look Like": {
+  "id": "b3-101",
+  "batch": 3,
+  "ar": "كيف تبدو التحديات"
+ },
+ "Real-Life Applications": {
+  "id": "b3-102",
+  "batch": 3,
+  "ar": "تطبيقات من الحياة الواقعية"
+ },
+ "Brings excitement, courage, leadership, and motivation to relationships": {
+  "id": "b3-104",
+  "batch": 3,
+  "ar": "يجلب الحماسة والشجاعة والقيادة والدافع إلى العلاقات"
+ },
+ "Water (emotional depth), Earth (grounding stability), Air (intellectual space)": {
+  "id": "b3-105",
+  "batch": 3,
+  "ar": "الماء (العمق العاطفي)، التراب (الاستقرار والرسوخ)، الهواء (فسحة فكرية)"
+ },
+ "Brings fresh perspectives, good communication, flexibility, and social connections": {
+  "id": "b3-106",
+  "batch": 3,
+  "ar": "يجلب وجهات نظر جديدة وتواصلًا جيدًا ومرونة وصلات اجتماعية"
+ },
+ "Fire (spontaneity), Water (emotional expression), Air (new ideas)": {
+  "id": "b3-107",
+  "batch": 3,
+  "ar": "النار (العفوية)، الماء (التعبير العاطفي)، الهواء (الأفكار الجديدة)"
+ },
+ "Exciting but potentially explosive": {
+  "id": "b3-109",
+  "batch": 3,
+  "ar": "مثير، لكنه قد يكون متفجّرًا"
+ },
+ "Fire + Water": {
+  "id": "b3-110",
+  "batch": 3,
+  "ar": "النار + الماء"
+ },
+ "Fire + Air": {
+  "id": "b3-111",
+  "batch": 3,
+  "ar": "النار + الهواء"
+ },
+ "Highly compatible and dynamic": {
+  "id": "b3-112",
+  "batch": 3,
+  "ar": "متوافقان جدًا ومفعمان بالحيوية"
+ },
+ "Fire + Earth": {
+  "id": "b3-113",
+  "batch": 3,
+  "ar": "النار + التراب"
+ },
+ "Complementary but requires work": {
+  "id": "b3-114",
+  "batch": 3,
+  "ar": "متكاملان لكن يتطلبان جهدًا"
+ },
+ "Water + Water": {
+  "id": "b3-115",
+  "batch": 3,
+  "ar": "الماء + الماء"
+ },
+ "Deeply connected but may lack direction": {
+  "id": "b3-116",
+  "batch": 3,
+  "ar": "ارتباط عميق، لكن قد ينقصه الاتجاه"
+ },
+ "Water + Air": {
+  "id": "b3-117",
+  "batch": 3,
+  "ar": "الماء + الهواء"
+ },
+ "Water + Earth": {
+  "id": "b3-118",
+  "batch": 3,
+  "ar": "الماء + التراب"
+ },
+ "Intellectually stimulating but emotionally light": {
+  "id": "b3-119",
+  "batch": 3,
+  "ar": "محفّز فكريًا لكنه خفيف عاطفيًا"
+ },
+ "Air + Earth": {
+  "id": "b3-120",
+  "batch": 3,
+  "ar": "الهواء + التراب"
+ },
+ "Balanced with mutual growth potential": {
+  "id": "b3-121",
+  "batch": 3,
+  "ar": "متوازن مع إمكانات للنمو المتبادل"
+ },
+ "Earth + Earth": {
+  "id": "b3-122",
+  "batch": 3,
+  "ar": "التراب + التراب"
+ },
+ "The Seven Classical Planets": {
+  "id": "b3-123",
+  "batch": 3,
+  "ar": "الكواكب السبعة التقليدية"
+ },
+ "Mars people are dynamic, protective, and direct. They need physical activity and can be argumentative.": {
+  "id": "b3-125",
+  "batch": 3,
+  "ar": "أهل المريخ حيويون حماة صرحاء، يحتاجون إلى نشاط بدني وقد يميلون إلى الجدال."
+ },
+ "Jupiter people are philosophical, generous, and see big pictures. They need freedom and meaning.": {
+  "id": "b3-126",
+  "batch": 3,
+  "ar": "أهل المشتري ذوو نزعة فلسفية، كرماء، ينظرون إلى الصورة الكاملة، ويحتاجون إلى الحرية والمعنى."
+ },
+ "Discipline, responsibility, structure, patience, wisdom": {
+  "id": "b3-127",
+  "batch": 3,
+  "ar": "الانضباط والمسؤولية والبنية والصبر والحكمة"
+ },
+ "Forces:": {
+  "id": "b3-129",
+  "batch": 3,
+  "ar": "نقاط القوة:"
+ },
+ "🎯 Modern Interpretation": {
+  "id": "b3-132",
+  "batch": 3,
+  "ar": "🎯 التفسير المعاصر"
+ },
+ "• Action suggestions adapted for contemporary life": {
+  "id": "b3-133",
+  "batch": 3,
+  "ar": "• اقتراحات عملية مكيّفة للحياة المعاصرة"
+ },
+ "• Letter values: Very accurate (95%+)": {
+  "id": "b3-134",
+  "batch": 3,
+  "ar": "• قيم الحروف: دقيقة جدًا (أكثر من 95%)"
+ },
+ "❌ Don't Use For:": {
+  "id": "b3-137",
+  "batch": 3,
+  "ar": "❌ لا تستعمله في:"
+ },
+ "Got it, thanks!": {
+  "id": "b3-139",
+  "batch": 3,
+  "ar": "فهمت، شكرًا!"
+ },
+ "Location found, but unable to get location name": {
+  "id": "b3-140",
+  "batch": 3,
+  "ar": "تم تحديد الموقع، لكن تعذّر الحصول على اسمه"
+ },
+ "Enter mother's name": {
+  "id": "b3-142",
+  "batch": 3,
+  "ar": "أدخل اسم الأم"
+ },
+ "Used for planetary hour calculations": {
+  "id": "b3-144",
+  "batch": 3,
+  "ar": "يُستعمل لحساب الساعات الكوكبية"
+ },
+ "Account Information": {
+  "id": "b3-145",
+  "batch": 3,
+  "ar": "معلومات الحساب"
+ },
+ "Read this as...": {
+  "id": "b3-146",
+  "batch": 3,
+  "ar": "اقرأ هذا على أنه..."
+ },
+ "of 9": {
+  "id": "b3-147",
+  "batch": 3,
+  "ar": "من 9"
+ },
+ "These profiles are general tendencies, not absolute rules. Your experiences, skills, and choices shape your unique path.": {
+  "id": "b3-148",
+  "batch": 3,
+  "ar": "هذه الملامح ميول عامة لا قواعد مطلقة؛ فتجاربك ومهاراتك واختياراتك هي التي ترسم طريقك الخاص."
+ },
+ "Grants courage, strength, and ability to overcome challenges": {
+  "id": "b3-149",
+  "batch": 3,
+  "ar": "يمنح الشجاعة والقوة والقدرة على تجاوز التحديات"
+ },
+ "Increases wisdom, understanding, and clear communication": {
+  "id": "b3-150",
+  "batch": 3,
+  "ar": "يزيد الحكمة والفهم ووضوح التواصل"
+ },
+ "Opens doors of provision and brings abundance": {
+  "id": "b3-151",
+  "batch": 3,
+  "ar": "يفتح أبواب الرزق ويجلب البركة والسعة"
+ },
+ "Good - Good Time": {
+  "id": "b3-156",
+  "batch": 3,
+  "ar": "جيد: وقت مناسب"
+ },
+ "📅 Future planning": {
+  "id": "b3-157",
+  "batch": 3,
+  "ar": "📅 التخطيط للمستقبل"
+ },
+ "Manzil detail (hour synergy)": {
+  "id": "b3-158",
+  "batch": 3,
+  "ar": "تفاصيل المنزلة (توافقها مع الساعة)"
+ },
+ "Deepen your understanding of planetary hours": {
+  "id": "b3-160",
+  "batch": 3,
+  "ar": "عمّق فهمك للساعات الكوكبية"
+ },
+ "Work on important tasks": {
+  "id": "b3-163",
+  "batch": 3,
+  "ar": "اعمل على المهام المهمة"
+ },
+ "Plan for future": {
+  "id": "b3-173",
+  "batch": 3,
+  "ar": "خطّط للمستقبل"
+ },
+ "☿️ Perfect for communication, writing, planning, and detailed work": {
+  "id": "b3-177",
+  "batch": 3,
+  "ar": "☿️ مثالي للتواصل والكتابة والتخطيط والعمل الدقيق"
+ },
+ "♃ Great for expansion, big picture planning, and learning new skills": {
+  "id": "b3-178",
+  "batch": 3,
+  "ar": "♃ ممتاز للتوسّع والتخطيط الشامل وتعلّم مهارات جديدة"
+ },
+ "♃ Good for moderate growth, but avoid overcommitting": {
+  "id": "b3-179",
+  "batch": 3,
+  "ar": "♃ جيد للنمو المعتدل، لكن تجنّب الإكثار من الالتزامات"
+ },
+ "♃ Risk of overconfidence - be conservative in plans": {
+  "id": "b3-180",
+  "batch": 3,
+  "ar": "♃ خطر الثقة الزائدة: كن متحفظًا في خططك"
+ },
+ "♀️ Avoid important work - focus on rest and pleasure instead": {
+  "id": "b3-182",
+  "batch": 3,
+  "ar": "♀️ تجنّب الأعمال المهمة، وركّز على الراحة والمتعة"
+ },
+ "✨ Good time for": {
+  "id": "b3-184",
+  "batch": 3,
+  "ar": "✨ وقت مناسب لـ"
+ },
+ "🎯 What do you need help with?": {
+  "id": "b3-185",
+  "batch": 3,
+  "ar": "🎯 بمَ تحتاج إلى مساعدة؟"
+ },
+ "Sit in stillness, breathe deeply, and simply be": {
+  "id": "b3-186",
+  "batch": 3,
+  "ar": "اجلس في سكون، وتنفّس بعمق، وكن حاضرًا فحسب"
+ },
+ "33 each": {
+  "id": "b3-188",
+  "batch": 3,
+  "ar": "33 مرة لكلٍّ منها"
+ },
+ "Write 3 things you're grateful for today": {
+  "id": "b3-191",
+  "batch": 3,
+  "ar": "اكتب 3 أشياء أنت ممتنّ لها اليوم"
+ },
+ "Today is a day for inner peace": {
+  "id": "b3-194",
+  "batch": 3,
+  "ar": "اليوم يوم للسكينة الداخلية"
+ },
+ "In about": {
+  "id": "b3-195",
+  "batch": 3,
+  "ar": "بعد نحو"
+ },
+ ", the hour of": {
+  "id": "b3-196",
+  "batch": 3,
+  "ar": "، ساعة"
+ },
+ ") will bring better harmony.": {
+  "id": "b3-197",
+  "batch": 3,
+  "ar": ") قد يجلب انسجامًا أفضل."
+ },
+ "💡 Use this time to prepare yourself inwardly": {
+  "id": "b3-198",
+  "batch": 3,
+  "ar": "💡 استعمل هذا الوقت لتهيئة نفسك باطنيًا"
+ },
+ "🌸 Rest is not weakness": {
+  "id": "b3-200",
+  "batch": 3,
+  "ar": "🌸 الراحة ليست ضعفًا"
+ },
+ "🌙 Weak - Time to Rest": {
+  "id": "b3-202",
+  "batch": 3,
+  "ar": "🌙 ضعيف: وقت للراحة"
+ },
+ "Ends": {
+  "id": "b3-206",
+  "batch": 3,
+  "ar": "ينتهي"
+ },
+ "Fire Element - Represents energy, passion, and transformation. Associated with Sun and Mars.": {
+  "id": "b3-207",
+  "batch": 3,
+  "ar": "عنصر النار: يمثّل الطاقة والحماسة والتحوّل، ويرتبط بالشمس والمريخ."
+ },
+ "from-gray-500 to-gray-600": {
+  "id": "b3-208",
+  "batch": 3,
+  "remove": true
+ },
+ "How Planetary Hours Work": {
+  "id": "b3-210",
+  "batch": 3,
+  "ar": "كيف تعمل الساعات الكوكبية"
+ },
+ "Unequal Hour System": {
+  "id": "b3-211",
+  "batch": 3,
+  "ar": "نظام الساعات الزمانية (غير المتساوية)"
+ },
+ "Planetary hours are \"unequal hours\" - meaning they vary in length depending on season and location. The daytime is divided into 12 equal parts from sunrise to sunset, and nighttime into 12 equal parts from sunset to sunrise. This means summer day hours are longer than summer night hours, and vice versa in winter.": {
+  "id": "b3-212",
+  "batch": 3,
+  "ar": "الساعات الكوكبية ساعات زمانية غير متساوية، أي يختلف طولها باختلاف الفصل والموقع. يُقسم النهار من الشروق إلى الغروب اثني عشر جزءًا متساويًا، والليل من الغروب إلى الشروق اثني عشر جزءًا متساويًا. لذلك تكون ساعات النهار في الصيف أطول من ساعات الليل، والعكس في الشتاء."
+ },
+ "Day Rulers": {
+  "id": "b3-213",
+  "batch": 3,
+  "ar": "أصحاب الأيام"
+ },
+ "Important Reminder": {
+  "id": "b3-214",
+  "batch": 3,
+  "ar": "تذكير مهم"
+ },
+ "Your higher purpose and life work": {
+  "id": "b3-217",
+  "batch": 3,
+  "ar": "هدفك الأسمى ورسالة حياتك"
+ },
+ "Nine-Year Life Cycles": {
+  "id": "b3-218",
+  "batch": 3,
+  "ar": "دورات الحياة ذات السنوات التسع"
+ },
+ "ا (Alif)": {
+  "id": "b3-220",
+  "batch": 3,
+  "ar": "ا (ألف)"
+ },
+ "If you encounter 11, 22, or 33 during reduction, stop! These are master numbers and should not be reduced further.": {
+  "id": "b3-222",
+  "batch": 3,
+  "ar": "إذا ظهر لك 11 أو 22 أو 33 أثناء الاختزال فتوقّف! فهذه أعداد رئيسية لا تُختزل أكثر."
+ },
+ "Personality number is calculated from the consonants in your name. This represents the outer layer - how you present yourself to the world.": {
+  "id": "b3-223",
+  "batch": 3,
+  "ar": "يُحسب عدد الشخصية من الحروف الساكنة في اسمك، ويمثّل الطبقة الظاهرة: كيف تقدّم نفسك للعالم."
+ },
+ "What if I have a master number (11, 22, 33)?": {
+  "id": "b3-224",
+  "batch": 3,
+  "ar": "ماذا لو كان لديّ عدد رئيسي (11، 22، 33)؟"
+ },
+ "How does the 9-year cycle work?": {
+  "id": "b3-225",
+  "batch": 3,
+  "ar": "كيف تعمل دورة السنوات التسع؟"
+ },
+ "A monthly refinement of your personal year energy, calculated by adding your personal year to the calendar month. Provides monthly guidance.": {
+  "id": "b3-227",
+  "batch": 3,
+  "ar": "تفصيل شهري لطاقة سنتك الشخصية، يُحسب بجمع عدد سنتك الشخصية مع رقم الشهر الميلادي، ويقدّم إرشادًا شهريًا."
+ },
+ "Major life periods (4 in total) representing peak experiences and opportunities. Each pinnacle brings specific energies and lessons spanning years or decades.": {
+  "id": "b3-228",
+  "batch": 3,
+  "ar": "مراحل الحياة الكبرى (4 في المجموع)، تمثّل ذروة التجارب والفرص. وتحمل كل قمّة طاقات ودروسًا تمتد سنوات أو عقودًا."
+ },
+ "Master Numbers": {
+  "id": "b3-229",
+  "batch": 3,
+  "ar": "الأعداد الرئيسية"
+ },
+ "Relationship Dynamics": {
+  "id": "b3-231",
+  "batch": 3,
+  "ar": "حركية العلاقة"
+ },
+ "Lead by example and integrity": {
+  "id": "b3-234",
+  "batch": 3,
+  "ar": "كن قدوة، والتزم النزاهة"
+ },
+ "Start projects with courage": {
+  "id": "b3-235",
+  "batch": 3,
+  "ar": "ابدأ المشاريع بشجاعة"
+ },
+ "Build bridges between people": {
+  "id": "b3-236",
+  "batch": 3,
+  "ar": "ابنِ الجسور بين الناس"
+ },
+ "Share truth with joy": {
+  "id": "b3-237",
+  "batch": 3,
+  "ar": "شارك الحق بفرح"
+ },
+ "10 minutes reflecting on intentions": {
+  "id": "b3-240",
+  "batch": 3,
+  "ar": "10 دقائق للتأمّل في النوايا"
+ },
+ "Listen deeply to others without judgment": {
+  "id": "b3-241",
+  "batch": 3,
+  "ar": "أنصت بعمق إلى الآخرين دون أن تحكم عليهم"
+ },
+ "Serve through practical work": {
+  "id": "b3-243",
+  "batch": 3,
+  "ar": "اخدم من خلال العمل العملي"
+ },
+ "New Exploration": {
+  "id": "b3-244",
+  "batch": 3,
+  "ar": "استكشاف جديد"
+ },
+ "Contemplate life cycles and completion": {
+  "id": "b3-247",
+  "batch": 3,
+  "ar": "تأمّل دورات الحياة واكتمالها"
+ },
+ "Plan projects serving humanity": {
+  "id": "b3-249",
+  "batch": 3,
+  "ar": "خطّط لمشاريع تخدم الإنسانية"
+ },
+ "Community Building": {
+  "id": "b3-250",
+  "batch": 3,
+  "ar": "بناء المجتمع"
+ },
+ "Scientist": {
+  "id": "b3-256",
+  "batch": 3,
+  "ar": "عالِم"
+ },
+ "Lawyer": {
+  "id": "b3-258",
+  "batch": 3,
+  "ar": "محامٍ"
+ },
+ "Business Leader": {
+  "id": "b3-259",
+  "batch": 3,
+  "ar": "قائد أعمال"
+ },
+ "Number 1 brings leadership energy to relationships. You need a partner who respects your independence while offering emotional support.": {
+  "id": "b3-261",
+  "batch": 3,
+  "ar": "العدد 1 يجلب طاقة القيادة إلى العلاقات. تحتاج إلى شريك يحترم استقلالك ويقدّم لك الدعم العاطفي."
+ },
+ "Number 3 brings joy and creativity to relationships. You need a partner who shares your love of life and encourages your creative expression.": {
+  "id": "b3-262",
+  "batch": 3,
+  "ar": "العدد 3 يجلب الفرح والإبداع إلى العلاقات. تحتاج إلى شريك يشاركك حبّ الحياة ويشجّع تعبيرك الإبداعي."
+ },
+ "Number 4 builds solid foundations for relationships. You are loyal and reliable, seeking stability and long-term commitment.": {
+  "id": "b3-263",
+  "batch": 3,
+  "ar": "العدد 4 يبني أسسًا متينة للعلاقات. أنت مخلص وموثوق، تسعى إلى الاستقرار والالتزام الطويل."
+ },
+ "Number 8 brings power and ambition to relationships. You need a partner who respects your goals and can match your strong energy.": {
+  "id": "b3-264",
+  "batch": 3,
+  "ar": "العدد 8 يجلب القوة والطموح إلى العلاقات. تحتاج إلى شريك يحترم أهدافك ويواكب طاقتك القوية."
+ },
+ "Number 33 offers unconditional love in relationships. You are a natural healer, but remember you need nurturing too.": {
+  "id": "b3-265",
+  "batch": 3,
+  "ar": "العدد 33 يقدّم حبًّا غير مشروط في العلاقات. أنت معالج بالفطرة، لكن تذكّر أنك تحتاج إلى الرعاية أيضًا."
+ },
+ "Start your day with positive affirmations about your abilities": {
+  "id": "b3-266",
+  "batch": 3,
+  "ar": "ابدأ يومك بتوكيدات إيجابية عن قدراتك"
+ },
+ "Listen to someone without interrupting": {
+  "id": "b3-268",
+  "batch": 3,
+  "ar": "أنصت إلى أحدٍ دون مقاطعته"
+ },
+ "Make someone smile": {
+  "id": "b3-269",
+  "batch": 3,
+  "ar": "اجعل أحدًا يبتسم"
+ },
+ "New Experience": {
+  "id": "b3-271",
+  "batch": 3,
+  "ar": "تجربة جديدة"
+ },
+ "Try something new weekly": {
+  "id": "b3-272",
+  "batch": 3,
+  "ar": "جرّب شيئًا جديدًا كل أسبوع"
+ },
+ "Do something kind for someone": {
+  "id": "b3-274",
+  "batch": 3,
+  "ar": "افعل شيئًا لطيفًا لأحد"
+ },
+ "Add beauty to your space": {
+  "id": "b3-275",
+  "batch": 3,
+  "ar": "أضف لمسة جمال إلى مكانك"
+ },
+ "Sit in silence for 20 minutes": {
+  "id": "b3-276",
+  "batch": 3,
+  "ar": "اجلس في صمت 20 دقيقة"
+ },
+ "Review long-term goals": {
+  "id": "b3-278",
+  "batch": 3,
+  "ar": "راجع أهدافك بعيدة المدى"
+ },
+ "Help someone without expectation": {
+  "id": "b3-280",
+  "batch": 3,
+  "ar": "ساعد أحدًا دون انتظار مقابل"
+ },
+ "Release something that no longer serves": {
+  "id": "b3-281",
+  "batch": 3,
+  "ar": "تخلَّ عن شيء لم يعد ينفعك"
+ },
+ "Record dreams upon waking": {
+  "id": "b3-282",
+  "batch": 3,
+  "ar": "دوّن أحلامك عند الاستيقاظ"
+ },
+ "Work on big project in small steps": {
+  "id": "b3-283",
+  "batch": 3,
+  "ar": "اعمل على مشروع كبير بخطوات صغيرة"
+ },
+ "Give love without judgment": {
+  "id": "b3-284",
+  "batch": 3,
+  "ar": "أعطِ الحب دون أحكام"
+ },
+ "Number 3 thrives through art. Write, paint, or speak to share your gifts.": {
+  "id": "b3-285",
+  "batch": 3,
+  "ar": "العدد 3 يزدهر بالفن. اكتب أو ارسم أو تحدّث لتشارك مواهبك."
+ },
+ "Foundation Building": {
+  "id": "b3-286",
+  "batch": 3,
+  "ar": "بناء الأسس"
+ },
+ "Number 8 thrives in achievement. Take leadership roles and build legacy.": {
+  "id": "b3-287",
+  "batch": 3,
+  "ar": "العدد 8 يزدهر بالإنجاز. تولَّ أدوار القيادة وابنِ إرثًا."
+ },
+ "Number 11 lights the path. Share your visions and inspire others to rise.": {
+  "id": "b3-288",
+  "batch": 3,
+  "ar": "العدد 11 يضيء الطريق. شارك رؤاك وألهم الآخرين للنهوض."
+ },
+ "Start projects": {
+  "id": "b3-289",
+  "batch": 3,
+  "ar": "ابدأ المشاريع"
+ },
+ "Plant seeds": {
+  "id": "b3-290",
+  "batch": 3,
+  "ar": "ازرع البذور"
+ },
+ "Cooperation & Balance": {
+  "id": "b3-291",
+  "batch": 3,
+  "ar": "التعاون والتوازن"
+ },
+ "Year of partnerships, diplomacy, and sensitivity. Focus on cooperation, building alliances, and emotional intelligence.": {
+  "id": "b3-292",
+  "batch": 3,
+  "ar": "سنة الشراكات والدبلوماسية والحساسية. ركّز على التعاون وبناء التحالفات والذكاء العاطفي."
+ },
+ "Enjoy life": {
+  "id": "b3-293",
+  "batch": 3,
+  "ar": "استمتع بالحياة"
+ },
+ "Work hard": {
+  "id": "b3-294",
+  "batch": 3,
+  "ar": "اعمل بجد"
+ },
+ "Year of discipline, hard work, and building solid foundations. Focus on practical matters, organization, and long-term planning.": {
+  "id": "b3-295",
+  "batch": 3,
+  "ar": "سنة الانضباط والعمل الجاد وبناء أسس متينة. ركّز على الأمور العملية والتنظيم والتخطيط بعيد المدى."
+ },
+ "Take adventures": {
+  "id": "b3-296",
+  "batch": 3,
+  "ar": "خُض المغامرات"
+ },
+ "Build wealth": {
+  "id": "b3-297",
+  "batch": 3,
+  "ar": "ابنِ ثروتك"
+ },
+ "Life moves in cycles, each year carrying a unique theme and lessons": {
+  "id": "b3-298",
+  "batch": 3,
+  "ar": "الحياة تسير في دورات، وكل سنة تحمل موضوعًا ودروسًا خاصة"
+ },
+ "Years 1-3": {
+  "id": "b3-299",
+  "batch": 3,
+  "ar": "السنوات 1–3"
+ },
+ "💡 Higher bars indicate better harmony. Schedule your important tasks during energy peaks.": {
+  "id": "b3-305",
+  "batch": 3,
+  "ar": "💡 الأعمدة الأعلى تدل على انسجام أفضل. رتّب مهامك المهمة في أوقات ذروة الطاقة."
+ },
+ "0-3: Rest": {
+  "id": "b3-308",
+  "batch": 3,
+  "ar": "0-3: راحة"
+ },
+ "Best Days": {
+  "id": "b3-310",
+  "batch": 3,
+  "ar": "أفضل الأيام"
+ },
+ "These days have high harmony. Perfect for important tasks, major decisions, and new beginnings.": {
+  "id": "b3-312",
+  "batch": 3,
+  "ar": "هذه أيام عالية الانسجام، مناسبة للمهام المهمة والقرارات الكبرى والبدايات الجديدة."
+ },
+ "Week Quality": {
+  "id": "b3-317",
+  "batch": 3,
+  "ar": "جودة الأسبوع"
+ },
+ "How your natural temperaments (fire, water, air, earth) work together": {
+  "id": "b3-320",
+  "batch": 3,
+  "ar": "كيف تعمل طباعكما الطبيعية (النار، الماء، الهواء، التراب) معًا"
+ },
+ "How your ruling planets and cosmic energies interact in your relationship": {
+  "id": "b3-321",
+  "batch": 3,
+  "ar": "كيف تتفاعل كواكبكما الحاكمة وطاقاتكما الكونية في علاقتكما"
+ },
+ "A plain-English explanation of your compatibility": {
+  "id": "b3-322",
+  "batch": 3,
+  "ar": "شرح مبسّط لمدى توافقكما"
+ },
+ "Three different ways we looked at your relationship": {
+  "id": "b3-323",
+  "batch": 3,
+  "ar": "ثلاث طرق مختلفة نظرنا بها إلى علاقتكما"
+ },
+ "Solid foundation - work together to strengthen the bond": {
+  "id": "b3-325",
+  "batch": 3,
+  "ar": "أساس متين: اعملا معًا لتقوية الرابطة"
+ },
+ "Intellectual & Social": {
+  "id": "b3-326",
+  "batch": 3,
+  "ar": "فكري واجتماعي"
+ },
+ "Learning humility": {
+  "id": "b3-329",
+  "batch": 3,
+  "ar": "تعلّم التواضع"
+ },
+ "To uplift humanity through creative expression": {
+  "id": "b3-335",
+  "batch": 3,
+  "ar": "الارتقاء بالإنسانية من خلال التعبير الإبداعي"
+ },
+ "Martyr complex": {
+  "id": "b3-340",
+  "batch": 3,
+  "ar": "عقدة التضحية الدائمة"
+ },
+ "To be needed and to create harmony in relationships": {
+  "id": "b3-341",
+  "batch": 3,
+  "ar": "أن يُحتاج إليك، وأن تصنع الانسجام في العلاقات"
+ },
+ "We have honored the children of Adam (17:70)": {
+  "id": "b3-345",
+  "batch": 3,
+  "ar": "﴿وَلَقَدْ كَرَّمْنَا بَنِي آدَمَ﴾ (الإسراء 70)"
+ },
+ "Universal compassion and global service": {
+  "id": "b3-346",
+  "batch": 3,
+  "ar": "الرحمة الشاملة وخدمة الإنسانية"
+ },
+ "Your Life Numbers Explained": {
+  "id": "b3-347",
+  "batch": 3,
+  "ar": "شرح أعداد حياتك"
+ },
+ "These numbers reveal your life purpose, inner desires, and how others see you": {
+  "id": "b3-348",
+  "batch": 3,
+  "ar": "هذه الأعداد تكشف عن غاية حياتك ورغباتك الداخلية وكيف يراك الآخرون"
+ },
+ "How Others See You": {
+  "id": "b3-350",
+  "batch": 3,
+  "ar": "كيف يراك الآخرون"
+ },
+ "The impression you make when people first meet you": {
+  "id": "b3-351",
+  "batch": 3,
+  "ar": "الانطباع الذي تتركه حين يلقاك الناس أول مرة"
+ },
+ "What you're meant to achieve and contribute to the world": {
+  "id": "b3-353",
+  "batch": 3,
+  "ar": "ما أنت مهيّأ لتحقيقه والإسهام به في العالم"
+ },
+ "Each number has a unique energy and color representing its essence": {
+  "id": "b3-354",
+  "batch": 3,
+  "ar": "لكل عدد طاقة ولون فريدان يمثّلان جوهره"
+ },
+ "Leadership & Independence": {
+  "id": "b3-355",
+  "batch": 3,
+  "ar": "القيادة والاستقلال"
+ },
+ "Stability & Foundation": {
+  "id": "b3-356",
+  "batch": 3,
+  "ar": "الاستقرار والأساس"
+ },
+ "How your numbers work together to guide your life": {
+  "id": "b3-358",
+  "batch": 3,
+  "ar": "كيف تعمل أعدادك معًا لإرشاد حياتك"
+ },
+ "Where you are in your 9-year cycle of growth": {
+  "id": "b3-360",
+  "batch": 3,
+  "ar": "موقعك في دورة النمو ذات السنوات التسع"
+ },
+ "Avoid arrogance. True light serves others, not the ego.": {
+  "id": "b3-364",
+  "batch": 3,
+  "ar": "تجنّب الكِبر. النور الحقيقي يخدم الآخرين لا النفس."
+ },
+ "Learning, teaching, writing, communication, business, contracts": {
+  "id": "b3-365",
+  "batch": 3,
+  "ar": "التعلّم، التدريس، الكتابة، التواصل، التجارة، العقود"
+ },
+ "And advised each other to truth and advised each other to patience": {
+  "id": "b3-368",
+  "batch": 3,
+  "ar": "﴿وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ﴾ (العصر 3)"
+ },
+ "Saturn hours teach that true wisdom (ḥikma) emerges through patience (ṣabr) and commitment to truth.": {
+  "id": "b3-369",
+  "batch": 3,
+  "ar": "تعلّمنا ساعات زحل أن الحكمة الحقّة تنبع من الصبر والالتزام بالحق."
+ },
+ "Discipline, structure, long-term planning, ancestral wisdom, mastery": {
+  "id": "b3-370",
+  "batch": 3,
+  "ar": "الانضباط، البنية، التخطيط بعيد المدى، حكمة الأجداد، الإتقان"
+ },
+ "This pattern traditionally shows a working relationship that starts smoothly but can plateau without new goals.": {
+  "id": "b3-371",
+  "batch": 3,
+  "ar": "يدل هذا النمط تقليديًا على علاقة عمل تبدأ بسلاسة، لكنها قد تتوقف عن التقدّم دون أهداف جديدة."
+ },
+ "Traditionally considered a favorable pattern — natural cooperation and mutual understanding flow more easily than opposition.": {
+  "id": "b3-372",
+  "batch": 3,
+  "ar": "يُعدّ تقليديًا نمطًا محمودًا: التعاون الفطري والتفاهم المتبادل يجريان بسهولة أكبر من التعارض."
+ },
+ "Traditionally considered a favorable pattern for family bonds — natural cooperation and understanding tend to prevail over conflict.": {
+  "id": "b3-373",
+  "batch": 3,
+  "ar": "يُعدّ تقليديًا نمطًا محمودًا للروابط الأسرية: يغلب فيه التعاون والتفاهم الفطريان على الخلاف."
+ },
+ "Traditionally associated with difficulty — tension, frequent disagreements, and pressure may arise, requiring patience and discipline.": {
+  "id": "b3-374",
+  "batch": 3,
+  "ar": "يرتبط تقليديًا بالصعوبة: قد ينشأ توتر وخلافات متكررة وضغط، مما يتطلب الصبر والانضباط."
+ },
+ "Professional partnerships under this pattern often hit friction over resources, deadlines, or decisions. Clear agreements and structured communication reduce the strain.": {
+  "id": "b3-375",
+  "batch": 3,
+  "ar": "كثيرًا ما تواجه الشراكات المهنية في هذا النمط احتكاكًا بشأن الموارد أو المواعيد أو القرارات، والاتفاقات الواضحة والتواصل المنظَّم يخففان الضغط."
+ },
+ "Traditionally seen as a heavy pattern — health concerns and emotional strain may be present, especially without emotional maturity.": {
+  "id": "b3-376",
+  "batch": 3,
+  "ar": "يُرى تقليديًا نمطًا ثقيلًا: قد تحضر هموم صحية وضغط عاطفي، لا سيما مع غياب النضج العاطفي."
+ },
+ "Traditionally seen as a heavy path for marriage. Health concerns and emotional strain may be present.": {
+  "id": "b3-377",
+  "batch": 3,
+  "ar": "يُرى تقليديًا طريقًا ثقيلًا للزواج، وقد تحضر فيه هموم صحية وضغط عاطفي."
+ },
+ "Traditionally seen as a heavy pattern — stress or burnout risk may surface within the working relationship.": {
+  "id": "b3-378",
+  "batch": 3,
+  "ar": "يُرى تقليديًا نمطًا ثقيلًا: قد يظهر في علاقة العمل ضغط أو خطر الاحتراق النفسي."
+ },
+ "This bond often carries a sense of weight — health, stress, or emotional burden tend to surface. Maturity and calm help carry it well.": {
+  "id": "b3-379",
+  "batch": 3,
+  "ar": "كثيرًا ما تحمل هذه الرابطة إحساسًا بالثقل، إذ تميل أعباء الصحة أو الضغط أو المشاعر إلى الظهور. والنضج والهدوء يعينان على حملها."
+ },
+ "Traditionally considered very favorable — trust, harmony, and mutual growth tend to flow naturally in this friendship.": {
+  "id": "b3-380",
+  "batch": 3,
+  "ar": "يُعدّ تقليديًا محمودًا جدًا: تجري الثقة والانسجام والنمو المتبادل بطبيعية في هذه الصداقة."
+ },
+ "Traditionally considered very favorable — harmony and productive growth tend to flow naturally in this partnership.": {
+  "id": "b3-381",
+  "batch": 3,
+  "ar": "يُعدّ تقليديًا محمودًا جدًا: يجري الانسجام والنمو المثمر بطبيعية في هذه الشراكة."
+ },
+ "Working relationships here can involve power struggles or clashing egos. Clear roles and mutual respect prevent recurring conflict.": {
+  "id": "b3-382",
+  "batch": 3,
+  "ar": "قد تشهد علاقات العمل هنا صراعًا على السلطة أو تصادمًا بين الأنانيات، والأدوار الواضحة والاحترام المتبادل يمنعان تكرار الخلاف."
+ },
+ "A strong working alliance — early friction or slow starts often lead to a highly effective, trusted partnership. Give it time to align.": {
+  "id": "b3-383",
+  "batch": 3,
+  "ar": "تحالف عمل قوي: كثيرًا ما يؤدي الاحتكاك المبكر أو البداية البطيئة إلى شراكة فعّالة جدًا وموثوقة. امنحها وقتًا لتنسجم."
+ },
+ "Traditionally very good for the long term — early awkwardness is common, but patience often builds a lasting friendship.": {
+  "id": "b3-384",
+  "batch": 3,
+  "ar": "يُعدّ تقليديًا جيدًا جدًا على المدى الطويل: الحرج في البداية شائع، لكن الصبر كثيرًا ما يبني صداقة دائمة."
+ },
+ "Traditionally very good for the long term — early distance is common, but the family bond tends to deepen with time.": {
+  "id": "b3-385",
+  "batch": 3,
+  "ar": "يُعدّ تقليديًا جيدًا جدًا على المدى الطويل: البُعد في البداية شائع، لكن الرابطة الأسرية تميل إلى التعمّق مع الوقت."
+ },
+ "Meeting with leaders or authorities": {
+  "id": "b3-386",
+  "batch": 3,
+  "ar": "لقاء القادة أو أصحاب السلطة"
+ },
+ "The All-Hearing - Who hears all prayers": {
+  "id": "b3-388",
+  "batch": 3,
+  "ar": "السميع: الذي يسمع كل دعاء"
+ },
+ "Intuitive practices and dream work": {
+  "id": "b3-390",
+  "batch": 3,
+  "ar": "الممارسات الحدسية والتأمّل في الرؤى"
+ },
+ "Water-related rituals (ablution, bathing)": {
+  "id": "b3-391",
+  "batch": 3,
+  "ar": "الأعمال المتصلة بالماء (الوضوء، الاغتسال)"
+ },
+ "Learning new skills": {
+  "id": "b3-392",
+  "batch": 3,
+  "ar": "تعلّم مهارات جديدة"
+ },
+ "Mercury facilitates learning": {
+  "id": "b3-393",
+  "batch": 3,
+  "ar": "عطارد ييسّر التعلّم"
+ },
+ "Courage to start new projects": {
+  "id": "b3-398",
+  "batch": 3,
+  "ar": "الشجاعة على بدء مشاريع جديدة"
+ },
+ "Good in crisis situations": {
+  "id": "b3-399",
+  "batch": 3,
+  "ar": "يُحسن التصرّف في الأزمات"
+ },
+ "Practice patience with slower processes": {
+  "id": "b3-400",
+  "batch": 3,
+  "ar": "تحلَّ بالصبر مع الأمور البطيئة"
+ },
+ "Count to 10 before big decisions": {
+  "id": "b3-401",
+  "batch": 3,
+  "ar": "عُدَّ حتى 10 قبل القرارات الكبيرة"
+ },
+ "Try calming activities like walking": {
+  "id": "b3-402",
+  "batch": 3,
+  "ar": "جرّب أنشطة مهدّئة كالمشي"
+ },
+ "Natural at supporting others": {
+  "id": "b3-411",
+  "batch": 3,
+  "ar": "يدعم الآخرين بالفطرة"
+ },
+ "May avoid confrontation when needed": {
+  "id": "b3-413",
+  "batch": 3,
+  "ar": "قد يتجنب المواجهة حتى عند الحاجة إليها"
+ },
+ "Take time alone to recharge": {
+  "id": "b3-414",
+  "batch": 3,
+  "ar": "خذ وقتًا بمفردك لتستعيد نشاطك"
+ },
+ "Customer care and support": {
+  "id": "b3-416",
+  "batch": 3,
+  "ar": "خدمة العملاء ودعمهم"
+ },
+ "Hospitality and guest relations": {
+  "id": "b3-417",
+  "batch": 3,
+  "ar": "الضيافة والعلاقات مع الضيوف"
+ },
+ "Can talk more than act": {
+  "id": "b3-422",
+  "batch": 3,
+  "ar": "قد يُكثر الكلام ويُقلّ الفعل"
+ },
+ "Use lists and structure to stay focused": {
+  "id": "b3-423",
+  "batch": 3,
+  "ar": "استعمل القوائم والتنظيم لتبقى مركّزًا"
+ },
+ "Finish one thing before starting another": {
+  "id": "b3-424",
+  "batch": 3,
+  "ar": "أنهِ أمرًا قبل أن تبدأ آخر"
+ },
+ "Take breaks from screens and stimulation": {
+  "id": "b3-425",
+  "batch": 3,
+  "ar": "خذ استراحة من الشاشات والمثيرات"
+ },
+ "Set clear priorities for the day": {
+  "id": "b3-426",
+  "batch": 3,
+  "ar": "حدّد أولويات واضحة لليوم"
+ },
+ "Digital marketing and social media": {
+  "id": "b3-428",
+  "batch": 3,
+  "ar": "التسويق الرقمي ووسائل التواصل الاجتماعي"
+ },
+ "Public relations and communications": {
+  "id": "b3-430",
+  "batch": 3,
+  "ar": "العلاقات العامة والتواصل"
+ },
+ "Isolated roles with minimal human contact": {
+  "id": "b3-432",
+  "batch": 3,
+  "ar": "أدوار منعزلة قليلة التواصل مع الناس"
+ },
+ "Reliable and consistent": {
+  "id": "b3-433",
+  "batch": 3,
+  "ar": "موثوق ومتّسق"
+ },
+ "Builds solid foundations": {
+  "id": "b3-436",
+  "batch": 3,
+  "ar": "يبني أسسًا متينة"
+ },
+ "Can be slow to adapt to change": {
+  "id": "b3-437",
+  "batch": 3,
+  "ar": "قد يكون بطيئًا في التكيّف مع التغيير"
+ },
+ "Can resist new ideas or methods": {
+  "id": "b3-438",
+  "batch": 3,
+  "ar": "قد يقاوم الأفكار أو الأساليب الجديدة"
+ },
+ "Try small changes regularly": {
+  "id": "b3-439",
+  "batch": 3,
+  "ar": "أجرِ تغييرات صغيرة بانتظام"
+ },
+ "Welcome new perspectives gently": {
+  "id": "b3-440",
+  "batch": 3,
+  "ar": "تقبّل وجهات النظر الجديدة بلطف"
+ },
+ "Take walks in nature to refresh": {
+  "id": "b3-441",
+  "batch": 3,
+  "ar": "تمشَّ في الطبيعة لتنتعش"
+ },
+ "Environments with zero processes or systems": {
+  "id": "b3-448",
+  "batch": 3,
+  "ar": "بيئات تخلو تمامًا من الإجراءات أو الأنظمة"
+ },
+ "The Judge, The Arbitrator": {
+  "id": "b3-451",
+  "batch": 3,
+  "ar": "الحاكم الفاصل بين الخلق بالعدل"
+ },
+ "The Absolute Truth": {
+  "id": "b3-452",
+  "batch": 3,
+  "ar": "الحق الثابت الذي لا يزول"
+ },
+ "The Only One": {
+  "id": "b3-453",
+  "batch": 3,
+  "ar": "الواحد"
+ },
+ "The Governor, The Protecting Master": {
+  "id": "b3-454",
+  "batch": 3,
+  "ar": "الوالي المتولّي لتدبير الخلق"
+ },
+ "The Owner of All Sovereignty": {
+  "id": "b3-455",
+  "batch": 3,
+  "ar": "مالك الملك المتصرّف فيه كيف يشاء"
+ },
+ "An Noor": {
+  "id": "b3-456",
+  "batch": 3,
+  "ar": "النُّور"
+ },
+ "The Unique, The One and Only": {
+  "id": "b3-457",
+  "batch": 3,
+  "ar": "الفرد، الواحد الأحد"
+ },
+ "The Rich, The Self-Sufficient": {
+  "id": "b3-458",
+  "batch": 3,
+  "ar": "الغني، المستغني عن كل ما سواه"
+ },
+ "Giving food to people in need.": {
+  "id": "b3-459",
+  "batch": 3,
+  "ar": "إطعام المحتاجين."
+ },
+ "Helping an elderly person with their needs.": {
+  "id": "b3-463",
+  "batch": 3,
+  "ar": "مساعدة مسنٍّ في قضاء حاجاته."
+ },
+ "Providing kitchen and food supplies.": {
+  "id": "b3-468",
+  "batch": 3,
+  "ar": "توفير أدوات المطبخ والمؤن الغذائية."
+ },
+ "Helping poor labourers and workers.": {
+  "id": "b3-469",
+  "batch": 3,
+  "ar": "مساعدة العمّال والكادحين الفقراء."
+ },
+ "Help someone quietly without seeking recognition or praise.": {
+  "id": "b3-471",
+  "batch": 3,
+  "ar": "مساعدة شخص في الخفاء دون طلب اعتراف أو ثناء."
+ },
+ "Helping and supporting the elderly, especially those who are alone or in need.": {
+  "id": "b3-473",
+  "batch": 3,
+  "ar": "مساعدة المسنّين ودعمهم، ولا سيما من يعيشون وحدهم أو يحتاجون إلى العون."
+ },
+ "Giving clean, good-quality clothing.": {
+  "id": "b3-474",
+  "batch": 3,
+  "ar": "إعطاء ملابس نظيفة جيدة."
+ },
+ "Helping people have suitable clothes that they can wear with dignity.": {
+  "id": "b3-475",
+  "batch": 3,
+  "ar": "مساعدة الناس على الحصول على ملابس لائقة يرتدونها بكرامة."
+ },
+ "Person to Person": {
+  "id": "b3-477",
+  "batch": 3,
+  "ar": "من شخص إلى شخص"
+ },
+ "By Names": {
+  "id": "b3-478",
+  "batch": 3,
+  "ar": "بالأسماء"
+ },
+ "End date must be after start date.": {
+  "id": "b3-479",
+  "batch": 3,
+  "ar": "يجب أن يكون تاريخ النهاية بعد تاريخ البداية."
+ },
+ "Business / Contracts": {
+  "id": "b3-480",
+  "batch": 3,
+  "ar": "التجارة / العقود"
+ },
+ "Find Best Dates": {
+  "id": "b3-483",
+  "batch": 3,
+  "ar": "اعثر على أفضل التواريخ"
+ },
+ "I understand — let's begin": {
+  "id": "b3-484",
+  "batch": 3,
+  "ar": "فهمت، لنبدأ"
+ },
+ "Time (optional)": {
+  "id": "b3-485",
+  "batch": 3,
+  "ar": "الوقت (اختياري)"
+ },
+ "Calculated for Mecca until you share your location.": {
+  "id": "b3-487",
+  "batch": 3,
+  "ar": "محسوب لمكة إلى أن تشارك موقعك."
+ },
+ "Showing the best available option instead:": {
+  "id": "b3-489",
+  "batch": 3,
+  "ar": "يُعرض أفضل خيار متاح بدلًا من ذلك:"
+ },
+ "Unable to calculate destiny. Please enter a name.": {
+  "id": "b3-493",
+  "batch": 3,
+  "ar": "تعذّر إجراء الحساب. يُرجى إدخال اسم."
+ },
+ "Your Desire": {
+  "id": "b3-495",
+  "batch": 3,
+  "ar": "رغبتك"
+ },
+ "How you appear - the first impression you give to others": {
+  "id": "b3-497",
+  "batch": 3,
+  "ar": "كيف تبدو: الانطباع الأول الذي تتركه لدى الآخرين"
+ },
+ ") shows what your heart seeks. Your Persona (": {
+  "id": "b3-500",
+  "batch": 3,
+  "ar": ") يُظهر ما يسعى إليه قلبك. وشخصيتك الظاهرة ("
+ },
+ ") represents how the world sees you.": {
+  "id": "b3-501",
+  "batch": 3,
+  "ar": ") يمثّل كيف يراك العالم."
+ },
+ "), but we're having trouble fetching it.": {
+  "id": "b3-502",
+  "batch": 3,
+  "ar": "، لكننا نواجه مشكلة في جلبها."
+ },
+ "English Translation": {
+  "id": "b3-503",
+  "batch": 3,
+  "ar": "الترجمة الإنجليزية"
+ },
+ "Realistic Expectation:": {
+  "id": "b3-504",
+  "batch": 3,
+  "ar": "التوقّع الواقعي:"
+ },
+ "• You \"get\" each other intuitively": {
+  "id": "b3-505",
+  "batch": 3,
+  "ar": "• تفهمان بعضكما بالفطرة"
+ },
+ "• Seek professional guidance if needed": {
+  "id": "b3-507",
+  "batch": 3,
+  "ar": "• اطلبا مساعدة متخصصة عند الحاجة"
+ },
+ "• Professional counseling is strongly recommended": {
+  "id": "b3-510",
+  "batch": 3,
+  "ar": "• يُنصح بشدة باللجوء إلى استشارة متخصصة"
+ },
+ "Unable to calculate compatibility. Please ensure both names are entered.": {
+  "id": "b3-511",
+  "batch": 3,
+  "ar": "تعذّر حساب التوافق. يُرجى التأكد من إدخال الاسمين."
+ },
+ "The Sovereign King": {
+  "id": "b3-513",
+  "batch": 3,
+  "ar": "الملك"
+ },
+ "Leadership & Authority": {
+  "id": "b3-514",
+  "batch": 3,
+  "ar": "القيادة والسلطة"
+ },
+ "Trust & Security": {
+  "id": "b3-515",
+  "batch": 3,
+  "ar": "الثقة والأمان"
+ },
+ "Greatness & Majesty": {
+  "id": "b3-516",
+  "batch": 3,
+  "ar": "العظمة والجلال"
+ },
+ "Opening & Victory": {
+  "id": "b3-517",
+  "batch": 3,
+  "ar": "الفتح والنصر"
+ },
+ "Expansion & Relief": {
+  "id": "b3-518",
+  "batch": 3,
+  "ar": "البسط والفرج"
+ },
+ "Know when to expand and grow - abundance comes through openness.": {
+  "id": "b3-519",
+  "batch": 3,
+  "ar": "اعرف متى تتوسّع وتنمو؛ فالسعة تأتي مع الانفتاح."
+ },
+ "Understand that justice prevails - actions have consequences.": {
+  "id": "b3-520",
+  "batch": 3,
+  "ar": "اعلم أن العدل غالب، وأن للأفعال عواقب."
+ },
+ "Perfect Justice & Balance": {
+  "id": "b3-521",
+  "batch": 3,
+  "ar": "العدل التام والميزان"
+ },
+ "Think big and act boldly - greatness is your calling.": {
+  "id": "b3-522",
+  "batch": 3,
+  "ar": "تطلّع إلى معالي الأمور وتصرّف بجرأة؛ فالعظمة نداؤك."
+ },
+ "Carry yourself with dignity - majesty is in your bearing.": {
+  "id": "b3-523",
+  "batch": 3,
+  "ar": "احمل نفسك بوقار؛ فالمهابة في سمتك."
+ },
+ "Expand your heart and mind - embrace all possibilities.": {
+  "id": "b3-524",
+  "batch": 3,
+  "ar": "وسّع قلبك وعقلك، وتقبّل كل الاحتمالات."
+ },
+ "Love unconditionally - your heart is a source of warmth.": {
+  "id": "b3-525",
+  "batch": 3,
+  "ar": "أحبَّ بلا شروط؛ فقلبك مصدر دفء."
+ },
+ "Pursue excellence in all endeavors - glory comes through effort.": {
+  "id": "b3-526",
+  "batch": 3,
+  "ar": "اسعَ إلى الإتقان في كل عمل؛ فالمجد يأتي بالجهد."
+ },
+ "Be a witness to truth - your presence matters.": {
+  "id": "b3-527",
+  "batch": 3,
+  "ar": "كن شاهدًا للحق؛ فحضورك مهم."
+ },
+ "Absolute Truth": {
+  "id": "b3-528",
+  "batch": 3,
+  "ar": "الحق"
+ },
+ "Be trustworthy in all commitments - others depend on you.": {
+  "id": "b3-529",
+  "batch": 3,
+  "ar": "كن أهلًا للثقة في كل التزاماتك؛ فالآخرون يعتمدون عليك."
+ },
+ "Friendship & Protection": {
+  "id": "b3-530",
+  "batch": 3,
+  "ar": "الولاية والحماية"
+ },
+ "Restore what has been broken - healing is your gift.": {
+  "id": "b3-531",
+  "batch": 3,
+  "ar": "أصلح ما انكسر؛ فجبر الكسر موهبتك."
+ },
+ "Move things forward - be a catalyst for progress.": {
+  "id": "b3-532",
+  "batch": 3,
+  "ar": "ادفع الأمور إلى الأمام، وكن حافزًا للتقدّم."
+ },
+ "Be clear and visible - let your light shine openly.": {
+  "id": "b3-534",
+  "batch": 3,
+  "ar": "كن واضحًا ظاهرًا، ودع نورك يسطع علانية."
+ },
+ "Accept sincere apologies - everyone deserves a second chance.": {
+  "id": "b3-535",
+  "batch": 3,
+  "ar": "اقبل الاعتذار الصادق؛ فكل إنسان يستحق فرصة ثانية."
+ },
+ "Show kindness always - compassion heals wounds.": {
+  "id": "b3-536",
+  "batch": 3,
+  "ar": "أظهر اللطف دائمًا؛ فالرحمة تشفي الجراح."
+ },
+ "Master of the Kingdom": {
+  "id": "b3-537",
+  "batch": 3,
+  "ar": "مالك الملك"
+ },
+ "Majesty with Grace": {
+  "id": "b3-538",
+  "batch": 3,
+  "ar": "ذو الجلال والإكرام"
+ },
+ "Treat everyone fairly - equity creates harmony.": {
+  "id": "b3-539",
+  "batch": 3,
+  "ar": "عامِل الجميع بإنصاف؛ فالعدل يصنع الوئام."
+ },
+ "Bring people together - build bridges, not walls.": {
+  "id": "b3-540",
+  "batch": 3,
+  "ar": "اجمع الناس؛ وابنِ الجسور لا الجدران."
+ },
+ "Be a light in darkness - guide others with your presence.": {
+  "id": "b3-542",
+  "batch": 3,
+  "ar": "كن نورًا في الظلام، وأرشد الآخرين بحضورك."
+ },
+ "Guide those who are lost - your wisdom shows the way.": {
+  "id": "b3-543",
+  "batch": 3,
+  "ar": "أرشد التائهين؛ فحكمتك تدلّ على الطريق."
+ },
+ "Grand Total - the sum of all letter values in a name": {
+  "id": "b3-544",
+  "batch": 3,
+  "ar": "المجموع الكلي: مجموع قيم جميع الحروف في الاسم"
+ },
+ "Maghribi tradition: 28 letters divided equally into 4 elements (7 per element)": {
+  "id": "b3-545",
+  "batch": 3,
+  "ar": "التراث المغربي: 28 حرفًا مقسّمة بالتساوي على 4 عناصر (7 حروف لكل عنصر)"
+ },
+ "How is this different from Western numerology?": {
+  "id": "b3-546",
+  "batch": 3,
+  "ar": "كيف يختلف هذا عن علم الأعداد الغربي؟"
+ },
+ "Why does my name have a number?": {
+  "id": "b3-548",
+  "batch": 3,
+  "ar": "لماذا لاسمي عدد؟"
+ },
+ "Failed to get AI analysis": {
+  "id": "b3-550",
+  "batch": 3,
+  "ar": "تعذّر الحصول على تحليل الذكاء الاصطناعي"
+ },
+ "Work on personal projects": {
+  "id": "b3-552",
+  "batch": 3,
+  "ar": "العمل على المشاريع الشخصية"
+ },
+ "energy has a neutral relationship with your": {
+  "id": "b3-553",
+  "batch": 3,
+  "ar": "الطاقة على علاقة محايدة مع"
+ },
+ "essence. Time for balanced activities and reflection.": {
+  "id": "b3-554",
+  "batch": 3,
+  "ar": "جوهر. وقت للأنشطة المتوازنة والتأمّل."
+ },
+ "Focus on routine tasks": {
+  "id": "b3-555",
+  "batch": 3,
+  "ar": "ركّز على المهام الروتينية"
+ },
+ "Prepare for better-aligned hours": {
+  "id": "b3-556",
+  "batch": 3,
+  "ar": "استعدّ لساعات أكثر توافقًا"
+ },
+ "before ~": {
+  "id": "b3-557",
+  "batch": 3,
+  "ar": "قبل ~"
+ },
+ "Moon has at least one applying aspect — not void of course.": {
+  "id": "b3-558",
+  "batch": 3,
+  "ar": "للقمر اتصال مقبل واحد على الأقل، فليس خالي السير."
+ },
+ "Mercury is": {
+  "id": "b3-559",
+  "batch": 3,
+  "ar": "عطارد"
+ },
+ "Moon Waxing, Increasing in Light": {
+  "id": "b3-560",
+  "batch": 3,
+  "ar": "القمر متزايد، يزداد نورًا"
+ },
+ "Mercury in": {
+  "id": "b3-561",
+  "batch": 3,
+  "ar": "عطارد في"
+ },
+ "Mercury is in": {
+  "id": "b3-562",
+  "batch": 3,
+  "ar": "عطارد في"
+ },
+ "This window falls in the planetary hour of": {
+  "id": "b3-563",
+  "batch": 3,
+  "ar": "تقع هذه الفترة في ساعة كوكب"
+ },
+ "Moon has no applying aspect before leaving its current sign — void of course, study begun now tends to come to nothing.": {
+  "id": "b3-564",
+  "batch": 3,
+  "ar": "ليس للقمر اتصال مقبل قبل مغادرة برجه الحالي، فهو خالي السير؛ والدراسة التي تُبدأ الآن تميل إلى ألا تثمر."
+ },
+ "Moon has no applying aspect before leaving its current sign — void of course, work begun now tends to come to nothing.": {
+  "id": "b3-565",
+  "batch": 3,
+  "ar": "ليس للقمر اتصال مقبل قبل مغادرة برجه الحالي، فهو خالي السير؛ والعمل الذي يُبدأ الآن يميل إلى ألا يثمر."
+ },
+ "° — a settled, well-supported household.": {
+  "id": "b3-567",
+  "batch": 3,
+  "ar": "° — بيت مستقر حسن الدعم."
+ },
+ "Saturn in": {
+  "id": "b3-568",
+  "batch": 3,
+  "ar": "زحل في"
+ },
+ "Moon has at least one applying aspect before changing sign.": {
+  "id": "b3-570",
+  "batch": 3,
+  "ar": "للقمر اتصال مقبل واحد على الأقل قبل أن يغيّر برجه."
+ },
+ "Moon at": {
+  "id": "b3-574",
+  "batch": 3,
+  "ar": "القمر في"
+ },
+ "° — waxing, clear of the beams, before full.": {
+  "id": "b3-575",
+  "batch": 3,
+  "ar": "° — متزايد، خارج الشعاع، قبل الامتلاء."
+ },
+ "Moon has no applying aspect before leaving its current sign — void of course, treatment begun now tends to come to nothing.": {
+  "id": "b3-577",
+  "batch": 3,
+  "ar": "ليس للقمر اتصال مقبل قبل مغادرة برجه الحالي، فهو خالي السير؛ والعلاج الذي يُبدأ الآن يميل إلى ألا يثمر."
+ },
+ "— free of fall or detriment, supporting a clear diagnosis.": {
+  "id": "b3-579",
+  "batch": 3,
+  "ar": "— سالم من الهبوط والوبال، مما يدعم وضوح التشخيص."
+ },
+ "Mercury is retrograde — increased risk of a delayed, incomplete, or revised diagnosis.": {
+  "id": "b3-580",
+  "batch": 3,
+  "ar": "عطارد راجع: ويُرى تقليديًا أن ذلك يزيد احتمال تأخر التشخيص أو نقصه أو تعديله."
+ },
+ "Moon has no applying aspect before leaving its current sign — void of course, nothing \"comes of\" a journey begun now.": {
+  "id": "b3-581",
+  "batch": 3,
+  "ar": "ليس للقمر اتصال مقبل قبل مغادرة برجه الحالي، فهو خالي السير؛ ويُرى أن الرحلة التي تُبدأ الآن لا يأتي منها شيء."
+ },
+ "Last days of the Hijri month": {
+  "id": "b3-584",
+  "batch": 3,
+  "ar": "الأيام الأخيرة من الشهر الهجري"
+ },
+ "The Moon is shrinking in light right now (waning) — traditionally less favorable for starting something new.": {
+  "id": "b3-585",
+  "batch": 3,
+  "ar": "القمر الآن متناقص النور، وهو تقليديًا أقل ملاءمة لبدء أمر جديد."
+ },
+ "The Moon is forming a supportive connection with Venus, the planet of love and harmony, right now.": {
+  "id": "b3-586",
+  "batch": 3,
+  "ar": "القمر الآن في اتصال داعم مع الزهرة، كوكب المحبة والانسجام."
+ },
+ "This falls on Thursday, a day traditionally seen as favorable.": {
+  "id": "b3-587",
+  "batch": 3,
+  "ar": "يوافق هذا يوم الخميس، وهو يوم يُعدّ تقليديًا محمودًا."
+ },
+ "Mercury is in a comfortable position right now, free of traditional weaknesses.": {
+  "id": "b3-588",
+  "batch": 3,
+  "ar": "عطارد في وضع مريح الآن، سالم من مواطن الضعف التقليدية."
+ },
+ "This specific time window aligns with a planetary hour traditionally seen as supportive for business.": {
+  "id": "b3-589",
+  "batch": 3,
+  "ar": "توافق هذه الفترة الزمنية ساعةً كوكبية تُعدّ تقليديًا داعمة للتجارة."
+ },
+ "This falls on Wednesday or Thursday — days traditionally linked to negotiation and profit.": {
+  "id": "b3-590",
+  "batch": 3,
+  "ar": "يوافق هذا يوم الأربعاء أو الخميس، وهما يومان يرتبطان تقليديًا بالتفاوض والربح."
+ },
+ "This specific time window aligns with a planetary hour traditionally seen as supportive for health matters.": {
+  "id": "b3-591",
+  "batch": 3,
+  "ar": "توافق هذه الفترة الزمنية ساعةً كوكبية تُعدّ تقليديًا داعمة للشؤون الصحية."
+ },
+ "The Moon is in a tense position with Mars right now — a traditional warning of accident or damage during construction.": {
+  "id": "b3-592",
+  "batch": 3,
+  "ar": "القمر الآن في نظر متوتر مع المريخ، وهو تحذير تقليدي من حادث أو ضرر أثناء البناء."
+ },
+ "Saturn is in a comfortable position right now, supporting a solid foundation.": {
+  "id": "b3-593",
+  "batch": 3,
+  "ar": "زحل في وضع مريح الآن، مما يدعم أساسًا متينًا."
+ },
+ "This specific time window aligns with a planetary hour traditionally seen as supportive for study.": {
+  "id": "b3-594",
+  "batch": 3,
+  "ar": "توافق هذه الفترة الزمنية ساعةً كوكبية تُعدّ تقليديًا داعمة للدراسة."
+ },
+ "No concern here — this factor looks neutral for this date.": {
+  "id": "b3-595",
+  "batch": 3,
+  "ar": "لا إشكال هنا؛ هذا العامل محايد لهذا التاريخ."
+ },
+ "arms, hands, shoulders, and lungs": {
+  "id": "b3-598",
+  "batch": 3,
+  "ar": "الذراعان واليدان والكتفان والرئتان"
+ },
+ "kidneys and lower back": {
+  "id": "b3-599",
+  "batch": 3,
+  "ar": "الكليتان وأسفل الظهر"
+ },
+ "hips, thighs, and liver": {
+  "id": "b3-600",
+  "batch": 3,
+  "ar": "الوركان والفخذان والكبد"
+ },
+ "Light Cyan": {
+  "id": "b3-606",
+  "batch": 3,
+  "ar": "سماوي فاتح"
+ },
+ "Encourages intellectual growth": {
+  "id": "b3-609",
+  "batch": 3,
+  "ar": "يشجّع النمو الفكري"
+ },
+ "Deep Blue": {
+  "id": "b3-610",
+  "batch": 3,
+  "ar": "أزرق داكن"
+ },
+ "Meditate near water (ocean, river, fountain)": {
+  "id": "b3-612",
+  "batch": 3,
+  "ar": "تأمّل قرب الماء (البحر، النهر، النافورة)"
+ },
+ "Take ritual baths with intention": {
+  "id": "b3-613",
+  "batch": 3,
+  "ar": "اغتسل مع استحضار النية"
+ },
+ "Use flowing water sounds for meditation": {
+  "id": "b3-614",
+  "batch": 3,
+  "ar": "استعن بصوت الماء الجاري في التأمّل"
+ },
+ "Dark gray for Capricorn discipline": {
+  "id": "b3-617",
+  "batch": 3,
+  "ar": "رمادي داكن لانضباط الجدي"
+ },
+ "Rahman with nasal": {
+  "id": "b3-618",
+  "batch": 3,
+  "remove": true
+ },
+ "Birth and early development of character and talents": {
+  "id": "b3-626",
+  "batch": 3,
+  "ar": "الولادة ونشأة الطبع والمواهب"
+ },
+ "Sharing knowledge and guiding others": {
+  "id": "b3-628",
+  "batch": 3,
+  "ar": "مشاركة المعرفة وإرشاد الآخرين"
+ },
+ "Preparation for transition and wisdom sharing": {
+  "id": "b3-629",
+  "batch": 3,
+  "ar": "التهيّؤ للانتقال ومشاركة الحكمة"
+ },
+ "Tomorrow at": {
+  "id": "b3-631",
+  "batch": 3,
+  "ar": "غدًا الساعة"
+ },
+ "s naturally support each other.": {
+  "id": "b3-633",
+  "batch": 3,
+  "ar": "تتساند بطبيعتها."
+ },
+ "A mixed attraction dynamic, neither especially easy nor especially hard.": {
+  "id": "b3-634",
+  "batch": 3,
+  "ar": "انجذاب متفاوت، لا هو سهل جدًا ولا صعب جدًا."
+ },
+ ", and no closer alternative was found.": {
+  "id": "b3-636",
+  "batch": 3,
+  "ar": "، ولم يُعثر على بديل أقرب."
+ },
+ "Share your gifts": {
+  "id": "b3-638",
+  "batch": 3,
+  "ar": "شارك مواهبك"
+ },
+ "Building Foundation": {
+  "id": "b3-639",
+  "batch": 3,
+  "ar": "بناء الأساس"
+ },
+ "Learning discipline, hard work, and positive focus through obstacles.": {
+  "id": "b3-641",
+  "batch": 3,
+  "ar": "تعلّم الانضباط والعمل الجاد والتركيز الإيجابي في مواجهة العقبات."
+ },
+ "Repeated setbacks requiring perseverance": {
+  "id": "b3-642",
+  "batch": 3,
+  "ar": "انتكاسات متكررة تتطلب المثابرة"
+ },
+ "Embrace hard work with a joyful heart. Transform obstacles into opportunities for growth.": {
+  "id": "b3-643",
+  "batch": 3,
+  "ar": "تقبّل العمل الجاد بقلب مبتهج، وحوّل العقبات إلى فرص للنمو."
+ },
+ "Complete small tasks fully": {
+  "id": "b3-645",
+  "batch": 3,
+  "ar": "أنجز المهام الصغيرة إنجازًا كاملًا"
+ },
+ "Dramatic life changes": {
+  "id": "b3-651",
+  "batch": 3,
+  "ar": "تحوّلات كبيرة في الحياة"
+ },
+ "Practice humility daily": {
+  "id": "b3-652",
+  "batch": 3,
+  "ar": "مارس التواضع يوميًا"
+ },
+ "Isolation from community": {
+  "id": "b3-655",
+  "batch": 3,
+  "ar": "العزلة عن المجتمع"
+ },
+ "Days of Creation, Completion": {
+  "id": "b3-656",
+  "batch": 3,
+  "ar": "أيام الخلق والإتمام"
+ },
+ "Moses' forty nights, forty days of trials": {
+  "id": "b3-657",
+  "batch": 3,
+  "ar": "أربعون ليلة لموسى عليه السلام، وأربعون يومًا من الابتلاء"
+ },
+ "Transformation through trial. Your journey involves deep purification.": {
+  "id": "b3-658",
+  "batch": 3,
+  "ar": "التحوّل عبر الابتلاء. رحلتك تتضمن تزكية عميقة."
+ },
+ "Night of Qadr better than 1000 months": {
+  "id": "b3-660",
+  "batch": 3,
+  "ar": "﴿لَيْلَةُ الْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ﴾"
+ },
+ "Group work without autonomy": {
+  "id": "b3-663",
+  "batch": 3,
+  "ar": "عمل جماعي بلا استقلالية"
+ },
+ "You're a natural leader who thrives when you can make independent decisions and pioneer new paths.": {
+  "id": "b3-664",
+  "batch": 3,
+  "ar": "أنت قائد بالفطرة، تزدهر حين تستطيع اتخاذ قرارات مستقلة وشقّ طرق جديدة."
+ },
+ "Social Worker": {
+  "id": "b3-665",
+  "batch": 3,
+  "ar": "أخصائي اجتماعي"
+ },
+ "Peacekeeper": {
+  "id": "b3-667",
+  "batch": 3,
+  "ar": "صانع السلام"
+ },
+ "Conflict-heavy environments": {
+  "id": "b3-669",
+  "batch": 3,
+  "ar": "بيئات كثيرة النزاعات"
+ },
+ "Comedian": {
+  "id": "b3-671",
+  "batch": 3,
+  "ar": "ممثل كوميدي"
+ },
+ "You're reliable and practical, excelling at building systems and creating stable foundations.": {
+  "id": "b3-673",
+  "batch": 3,
+  "ar": "أنت موثوق وعملي، تتفوّق في بناء الأنظمة وإرساء أسس مستقرة."
+ },
+ "Consultant": {
+  "id": "b3-675",
+  "batch": 3,
+  "ar": "مستشار"
+ },
+ "Highly restrictive roles": {
+  "id": "b3-676",
+  "batch": 3,
+  "ar": "أدوار شديدة التقييد"
+ },
+ "Work without human connection": {
+  "id": "b3-678",
+  "batch": 3,
+  "ar": "عمل بلا تواصل إنساني"
+ },
+ "Humanitarian Worker": {
+  "id": "b3-683",
+  "batch": 3,
+  "ar": "عامل في المجال الإنساني"
+ },
+ "Life Coach": {
+  "id": "b3-684",
+  "batch": 3,
+  "ar": "مدرّب حياة"
+ },
+ "Light Worker": {
+  "id": "b3-685",
+  "batch": 3,
+  "ar": "ناشر النور (عامل روحاني)"
+ },
+ "Social Entrepreneur": {
+  "id": "b3-686",
+  "batch": 3,
+  "ar": "رائد أعمال اجتماعي"
+ },
+ "Ask for help instead of doing everything alone": {
+  "id": "b3-691",
+  "batch": 3,
+  "ar": "اطلب المساعدة بدلًا من أن تفعل كل شيء وحدك"
+ },
+ "Take time to listen to others' ideas before deciding": {
+  "id": "b3-692",
+  "batch": 3,
+  "ar": "خذ وقتك للإصغاء إلى أفكار الآخرين قبل أن تقرّر"
+ },
+ "Practice self-care daily, not just when depleted": {
+  "id": "b3-693",
+  "batch": 3,
+  "ar": "اعتنِ بنفسك يوميًا، لا عند الإنهاك فقط"
+ },
+ "Build confidence in your own opinions": {
+  "id": "b3-694",
+  "batch": 3,
+  "ar": "ابنِ الثقة بآرائك"
+ },
+ "Spend time alone to reconnect with yourself": {
+  "id": "b3-695",
+  "batch": 3,
+  "ar": "اقضِ وقتًا وحدك لتعيد التواصل مع نفسك"
+ },
+ "Balance socializing with quiet reflection time": {
+  "id": "b3-696",
+  "batch": 3,
+  "ar": "وازن بين الاختلاط بالناس ووقت التأمّل الهادئ"
+ },
+ "Use your creativity with discipline and structure": {
+  "id": "b3-697",
+  "batch": 3,
+  "ar": "استعمل إبداعك بانضباط وتنظيم"
+ },
+ "Don't let perfectionism paralyze you": {
+  "id": "b3-698",
+  "batch": 3,
+  "ar": "لا تدع السعي إلى الكمال يشلّك"
+ },
+ "Balance work with play and rest": {
+  "id": "b3-699",
+  "batch": 3,
+  "ar": "وازن بين العمل واللعب والراحة"
+ },
+ "Trust the process even when you can't control everything": {
+  "id": "b3-700",
+  "batch": 3,
+  "ar": "ثق بالمسار حتى حين لا تستطيع التحكم في كل شيء"
+ },
+ "Create healthy routines for stability": {
+  "id": "b3-701",
+  "batch": 3,
+  "ar": "اصنع عادات صحية للاستقرار"
+ },
+ "Practice finishing what you start": {
+  "id": "b3-702",
+  "batch": 3,
+  "ar": "تدرّب على إتمام ما تبدأ"
+ },
+ "Balance freedom with responsibility": {
+  "id": "b3-703",
+  "batch": 3,
+  "ar": "وازن بين الحرية والمسؤولية"
+ },
+ "Give to yourself as much as you give to others": {
+  "id": "b3-704",
+  "batch": 3,
+  "ar": "أعطِ نفسك بقدر ما تعطي الآخرين"
+ },
+ "Release perfectionism - good enough is enough": {
+  "id": "b3-705",
+  "batch": 3,
+  "ar": "تخلَّ عن السعي إلى الكمال؛ فالجيد يكفي"
+ },
+ "Don't take on responsibilities that aren't yours": {
+  "id": "b3-707",
+  "batch": 3,
+  "ar": "لا تحمل مسؤوليات ليست لك"
+ },
+ "Practice receiving help graciously": {
+  "id": "b3-708",
+  "batch": 3,
+  "ar": "تدرّب على قبول المساعدة بلطف"
+ },
+ "Balance alone time with meaningful social connection": {
+  "id": "b3-709",
+  "batch": 3,
+  "ar": "وازن بين وقتك وحدك والصلة الاجتماعية ذات المعنى"
+ },
+ "Share your knowledge - don't keep it all inside": {
+  "id": "b3-710",
+  "batch": 3,
+  "ar": "شارك معرفتك، ولا تحبسها في داخلك"
+ },
+ "Trust your intuition, not just analysis": {
+  "id": "b3-711",
+  "batch": 3,
+  "ar": "ثق بحدسك، لا بالتحليل وحده"
+ },
+ "Practice being present instead of overthinking": {
+  "id": "b3-712",
+  "batch": 3,
+  "ar": "تدرّب على الحضور بدل الإفراط في التفكير"
+ },
+ "Connect with your body through movement or nature": {
+  "id": "b3-713",
+  "batch": 3,
+  "ar": "تواصل مع جسدك عبر الحركة أو الطبيعة"
+ },
+ "Remember that rest is productive too": {
+  "id": "b3-714",
+  "batch": 3,
+  "ar": "تذكّر أن الراحة مثمرة أيضًا"
+ },
+ "Don't sacrifice relationships for achievement": {
+  "id": "b3-715",
+  "batch": 3,
+  "ar": "لا تضحِّ بالعلاقات من أجل الإنجاز"
+ },
+ "Practice gratitude for what you have, not just what you want": {
+  "id": "b3-716",
+  "batch": 3,
+  "ar": "مارس الامتنان لما لديك، لا لما تريده فقط"
+ },
+ "Protect your energy - not everyone deserves access": {
+  "id": "b3-718",
+  "batch": 3,
+  "ar": "احمِ طاقتك؛ فليس كل أحد يستحق الوصول إليها"
+ },
+ "Start small - you don't have to build Rome in a day": {
+  "id": "b3-719",
+  "batch": 3,
+  "ar": "ابدأ صغيرًا؛ لست مضطرًا إلى بناء روما في يوم واحد"
+ },
+ "Delegate instead of doing everything yourself": {
+  "id": "b3-720",
+  "batch": 3,
+  "ar": "فوّض غيرك بدلًا من أن تفعل كل شيء بنفسك"
+ },
+ "Don't let the scale of your vision overwhelm you": {
+  "id": "b3-721",
+  "batch": 3,
+  "ar": "لا تدع اتساع رؤيتك يطغى عليك"
+ },
+ "You can't carry the world - release what's not yours": {
+  "id": "b3-722",
+  "batch": 3,
+  "ar": "لا يمكنك أن تحمل العالم؛ فتخلَّ عمّا ليس لك"
+ },
+ "Balance universal love with self-love": {
+  "id": "b3-723",
+  "batch": 3,
+  "ar": "وازن بين المحبة الشاملة ومحبة النفس"
+ },
+ "Risk of arrogance or ego inflation": {
+  "id": "b3-724",
+  "batch": 3,
+  "ar": "خطر الكِبر أو تضخّم الأنا"
+ },
+ "May avoid conflict to the point of self-betrayal": {
+  "id": "b3-725",
+  "batch": 3,
+  "ar": "قد تتجنب النزاع حتى تخون نفسك"
+ },
+ "Tendency to lose yourself in relationships": {
+  "id": "b3-726",
+  "batch": 3,
+  "ar": "الميل إلى فقدان نفسك في العلاقات"
+ },
+ "Tendency to talk more than listen": {
+  "id": "b3-727",
+  "batch": 3,
+  "ar": "الميل إلى الكلام أكثر من الإصغاء"
+ },
+ "May struggle with discipline or commitment": {
+  "id": "b3-728",
+  "batch": 3,
+  "ar": "قد تعاني صعوبة في الانضباط أو الالتزام"
+ },
+ "Can become rigid or resistant to change": {
+  "id": "b3-729",
+  "batch": 3,
+  "ar": "قد تصبح متصلّبًا أو مقاومًا للتغيير"
+ },
+ "May struggle with spontaneity or flexibility": {
+  "id": "b3-730",
+  "batch": 3,
+  "ar": "قد تعاني صعوبة في العفوية أو المرونة"
+ },
+ "May avoid responsibility in pursuit of freedom": {
+  "id": "b3-731",
+  "batch": 3,
+  "ar": "قد تتهرّب من المسؤولية سعيًا إلى الحرية"
+ },
+ "Tendency to jump from one thing to another": {
+  "id": "b3-732",
+  "batch": 3,
+  "ar": "الميل إلى القفز من أمر إلى آخر"
+ },
+ "May struggle with stability or follow-through": {
+  "id": "b3-733",
+  "batch": 3,
+  "ar": "قد تعاني صعوبة في الثبات أو في إتمام ما تبدأ"
+ },
+ "May interfere or try to control others \"for their good\"": {
+  "id": "b3-734",
+  "batch": 3,
+  "ar": "قد تتدخّل أو تحاول السيطرة على الآخرين «لمصلحتهم»"
+ },
+ "May overthink to the point of paralysis": {
+  "id": "b3-735",
+  "batch": 3,
+  "ar": "قد تُفرط في التفكير حتى الشلل"
+ },
+ "Risk of workaholism or neglecting relationships": {
+  "id": "b3-736",
+  "batch": 3,
+  "ar": "خطر إدمان العمل أو إهمال العلاقات"
+ },
+ "May struggle with softness or vulnerability": {
+  "id": "b3-737",
+  "batch": 3,
+  "ar": "قد تعاني صعوبة في اللين أو في إظهار الضعف"
+ },
+ "May struggle with boundaries and self-care": {
+  "id": "b3-738",
+  "batch": 3,
+  "ar": "قد تعاني صعوبة في وضع الحدود والعناية بنفسك"
+ },
+ "Can feel crushed by the weight of your vision": {
+  "id": "b3-739",
+  "batch": 3,
+  "ar": "قد تشعر بأن ثقل رؤيتك يسحقك"
+ },
+ "Tendency to be disappointed by others' limitations": {
+  "id": "b3-740",
+  "batch": 3,
+  "ar": "الميل إلى خيبة الأمل من قصور الآخرين"
+ },
+ "May struggle with boundaries and self-sacrifice": {
+  "id": "b3-741",
+  "batch": 3,
+  "ar": "قد تعاني صعوبة في وضع الحدود وفي التضحية بالنفس"
+ },
+ "You are here to lead, innovate, and pioneer new paths with courage and independence.": {
+  "id": "b3-742",
+  "batch": 3,
+  "ar": "أنت هنا لتقود وتبتكر وتشقّ طرقًا جديدة بشجاعة واستقلال."
+ },
+ "Practice listening to someone else's idea fully": {
+  "id": "b3-743",
+  "batch": 3,
+  "ar": "تدرّب على الإصغاء إلى فكرة غيرك حتى النهاية"
+ },
+ "Take decisive action on something you've been delaying": {
+  "id": "b3-744",
+  "batch": 3,
+  "ar": "اتخذ خطوة حاسمة في أمر كنت تؤجّله"
+ },
+ "Reflect on how your leadership impacts others": {
+  "id": "b3-745",
+  "batch": 3,
+  "ar": "تأمّل كيف تؤثّر قيادتك في الآخرين"
+ },
+ "You are here to create harmony, build partnerships, and bring people together with sensitivity and grace.": {
+  "id": "b3-746",
+  "batch": 3,
+  "ar": "أنت هنا لتصنع الوئام، وتبني الشراكات، وتجمع الناس برقة ولطف."
+ },
+ "Meditate to reconnect with your own feelings": {
+  "id": "b3-748",
+  "batch": 3,
+  "ar": "تأمّل لتعيد التواصل مع مشاعرك"
+ },
+ "Do something kind for yourself, not just others": {
+  "id": "b3-749",
+  "batch": 3,
+  "ar": "افعل شيئًا لطيفًا لنفسك، لا للآخرين فقط"
+ },
+ "Practice making a decision without seeking approval": {
+  "id": "b3-750",
+  "batch": 3,
+  "ar": "تدرّب على اتخاذ قرار دون طلب موافقة أحد"
+ },
+ "Avoid losing yourself in pleasing others. Your needs matter as much as anyone else's.": {
+  "id": "b3-751",
+  "batch": 3,
+  "ar": "تجنّب أن تفقد نفسك في إرضاء الآخرين؛ فاحتياجاتك مهمة كاحتياجات أي شخص آخر."
+ },
+ "You are here to create, communicate, and bring joy to the world through your expressive gifts.": {
+  "id": "b3-752",
+  "batch": 3,
+  "ar": "أنت هنا لتُبدع وتتواصل وتجلب الفرح للعالم بمواهبك التعبيرية."
+ },
+ "Practice 30 minutes of focused work without distractions": {
+  "id": "b3-753",
+  "batch": 3,
+  "ar": "مارس 30 دقيقة من العمل المركّز دون مشتّتات"
+ },
+ "Balance social time with quiet reflection": {
+  "id": "b3-755",
+  "batch": 3,
+  "ar": "وازن بين الوقت الاجتماعي والتأمّل الهادئ"
+ },
+ "Commit to one priority this week and see it through": {
+  "id": "b3-756",
+  "batch": 3,
+  "ar": "التزم بأولوية واحدة هذا الأسبوع وأتمّها"
+ },
+ "You are here to build solid foundations, create order, and manifest stability through hard work.": {
+  "id": "b3-757",
+  "batch": 3,
+  "ar": "أنت هنا لتبني أسسًا متينة، وتُرسي النظام، وتحقّق الاستقرار بالعمل الجاد."
+ },
+ "Try one new approach or break one routine": {
+  "id": "b3-758",
+  "batch": 3,
+  "ar": "جرّب نهجًا جديدًا أو اكسر روتينًا واحدًا"
+ },
+ "Take a small risk outside your comfort zone": {
+  "id": "b3-759",
+  "batch": 3,
+  "ar": "خُض مخاطرة صغيرة خارج منطقة راحتك"
+ },
+ "Delegate one task instead of controlling everything": {
+  "id": "b3-760",
+  "batch": 3,
+  "ar": "فوّض مهمة واحدة بدلًا من التحكم في كل شيء"
+ },
+ "Practice saying \"good enough\" instead of perfect": {
+  "id": "b3-761",
+  "batch": 3,
+  "ar": "تدرّب على أن تقول «جيد بما يكفي» بدلًا من السعي إلى الكمال"
+ },
+ "Avoid rigidity or perfectionism that paralyzes progress. Flexibility brings resilience.": {
+  "id": "b3-762",
+  "batch": 3,
+  "ar": "تجنّب الجمود أو السعي إلى الكمال الذي يشلّ التقدّم؛ فالمرونة تمنح الصلابة."
+ },
+ "You are here to explore, experience variety, and teach others the value of freedom and adaptability.": {
+  "id": "b3-763",
+  "batch": 3,
+  "ar": "أنت هنا لتستكشف، وتخوض تجارب متنوعة، وتعلّم الآخرين قيمة الحرية والقدرة على التكيّف."
+ },
+ "Finish something you started months ago": {
+  "id": "b3-764",
+  "batch": 3,
+  "ar": "أنهِ شيئًا بدأته منذ أشهر"
+ },
+ "Practice being present in one moment without planning next move": {
+  "id": "b3-765",
+  "batch": 3,
+  "ar": "تدرّب على الحضور في اللحظة دون التخطيط للخطوة التالية"
+ },
+ "You are here to nurture, create harmony, and serve your community with responsibility and love.": {
+  "id": "b3-766",
+  "batch": 3,
+  "ar": "أنت هنا لترعى وتصنع الوئام وتخدم مجتمعك بمسؤولية ومحبة."
+ },
+ "Do something nurturing for yourself, not others": {
+  "id": "b3-767",
+  "batch": 3,
+  "ar": "افعل شيئًا ترعى به نفسك، لا الآخرين"
+ },
+ "You are here to seek truth, develop wisdom, and share deep knowledge with the world.": {
+  "id": "b3-768",
+  "batch": 3,
+  "ar": "أنت هنا لتطلب الحق، وتنمّي الحكمة، وتشارك العالم معرفة عميقة."
+ },
+ "Schedule social time with meaningful people": {
+  "id": "b3-769",
+  "batch": 3,
+  "ar": "خصّص وقتًا اجتماعيًا مع أشخاص يهمّونك"
+ },
+ "Be vulnerable with one person you trust": {
+  "id": "b3-771",
+  "batch": 3,
+  "ar": "كن صريحًا في ضعفك مع شخص تثق به"
+ },
+ "Schedule rest time as seriously as work time": {
+  "id": "b3-772",
+  "batch": 3,
+  "ar": "خصّص للراحة وقتًا بجدية ما تخصّصه للعمل"
+ },
+ "Practice gratitude for what you have": {
+  "id": "b3-773",
+  "batch": 3,
+  "ar": "مارس الامتنان لما لديك"
+ },
+ "You are here to serve humanity, inspire compassion, and create positive global change.": {
+  "id": "b3-774",
+  "batch": 3,
+  "ar": "أنت هنا لتخدم الإنسانية، وتبعث على الرحمة، وتصنع تغييرًا إيجابيًا في العالم."
+ },
+ "Take care of your own needs before helping others once": {
+  "id": "b3-775",
+  "batch": 3,
+  "ar": "اعتنِ باحتياجاتك قبل مساعدة الآخرين"
+ },
+ "Ground yourself through nature or physical activity": {
+  "id": "b3-776",
+  "batch": 3,
+  "ar": "ارسخ وتوازن عبر الطبيعة أو النشاط البدني"
+ },
+ "Break one big goal into three small steps": {
+  "id": "b3-777",
+  "batch": 3,
+  "ar": "قسّم هدفًا كبيرًا إلى ثلاث خطوات صغيرة"
+ },
+ "Celebrate small progress, not just big wins": {
+  "id": "b3-778",
+  "batch": 3,
+  "ar": "احتفِ بالتقدم الصغير، لا بالانتصارات الكبيرة فقط"
+ },
+ "You are here to teach, heal, and guide humanity with unconditional love and wisdom.": {
+  "id": "b3-779",
+  "batch": 3,
+  "ar": "أنت هنا لتعلّم وتداوي وترشد الناس بالمحبة والحكمة غير المشروطة."
+ },
+ "Remember you're human - be gentle with yourself": {
+  "id": "b3-780",
+  "batch": 3,
+  "ar": "تذكّر أنك إنسان، وكن رفيقًا بنفسك"
+ },
+ "Avoid carrying the world on your shoulders. Even master teachers need rest and support.": {
+  "id": "b3-781",
+  "batch": 3,
+  "ar": "لا تحمل العالم على كتفيك؛ فحتى كبار المعلّمين يحتاجون إلى الراحة والدعم."
+ },
+ "This is your year to start fresh, plant seeds, and initiate new projects. Take the lead and trust your instincts.": {
+  "id": "b3-782",
+  "batch": 3,
+  "ar": "هذه سنتك لتبدأ من جديد، وتزرع البذور، وتطلق مشاريع جديدة. تولَّ القيادة وثق بحدسك."
+ },
+ "Plant the seeds": {
+  "id": "b3-783",
+  "batch": 3,
+  "ar": "ازرع البذور"
+ },
+ "Build support": {
+  "id": "b3-784",
+  "batch": 3,
+  "ar": "ابنِ شبكة دعم"
+ },
+ "Release what doesn't serve": {
+  "id": "b3-785",
+  "batch": 3,
+  "ar": "تخلَّ عمّا لا ينفعك"
+ },
+ "Make a bold decision": {
+  "id": "b3-787",
+  "batch": 3,
+  "ar": "اتخذ قرارًا جريئًا"
+ },
+ "Step into a leadership role": {
+  "id": "b3-788",
+  "batch": 3,
+  "ar": "تقدّم إلى دور قيادي"
+ },
+ "Trust yourself and take the first step": {
+  "id": "b3-789",
+  "batch": 3,
+  "ar": "ثق بنفسك واتخذ الخطوة الأولى"
+ },
+ "Partnerships & Cooperation": {
+  "id": "b3-790",
+  "batch": 3,
+  "ar": "الشراكة والتعاون"
+ },
+ "This year emphasizes relationships, teamwork, and patience. Focus on building bridges and creating harmony.": {
+  "id": "b3-791",
+  "batch": 3,
+  "ar": "هذه السنة تركّز على العلاقات والعمل الجماعي والصبر. ركّز على بناء الجسور وصنع الوئام."
+ },
+ "Strengthen existing relationships": {
+  "id": "b3-792",
+  "batch": 3,
+  "ar": "قوِّ العلاقات القائمة"
+ },
+ "Be patient with timing": {
+  "id": "b3-793",
+  "batch": 3,
+  "ar": "تحلَّ بالصبر في التوقيت"
+ },
+ "This year invites you to create, communicate, and enjoy life. Share your gifts and let your personality shine.": {
+  "id": "b3-794",
+  "batch": 3,
+  "ar": "هذه السنة تدعوك إلى الإبداع والتواصل والاستمتاع بالحياة. شارك مواهبك ودع شخصيتك تتألق."
+ },
+ "Build creative foundations": {
+  "id": "b3-796",
+  "batch": 3,
+  "ar": "ابنِ أسسًا إبداعية"
+ },
+ "Take a class in the arts": {
+  "id": "b3-797",
+  "batch": 3,
+  "ar": "التحق بدرس في الفنون"
+ },
+ "Building & Discipline": {
+  "id": "b3-799",
+  "batch": 3,
+  "ar": "البناء والانضباط"
+ },
+ "This year is about hard work, creating solid foundations, and establishing security. Focus on practical progress.": {
+  "id": "b3-800",
+  "batch": 3,
+  "ar": "هذه السنة سنة العمل الجاد وبناء الأسس المتينة وتحقيق الأمان. ركّز على التقدّم العملي."
+ },
+ "Perfect the details": {
+  "id": "b3-801",
+  "batch": 3,
+  "ar": "أتقن التفاصيل"
+ },
+ "Harvest results": {
+  "id": "b3-802",
+  "batch": 3,
+  "ar": "اجنِ الثمار"
+ },
+ "Work on long-term goals": {
+  "id": "b3-803",
+  "batch": 3,
+  "ar": "اعمل على أهدافك بعيدة المدى"
+ },
+ "Understand the changes": {
+  "id": "b3-804",
+  "batch": 3,
+  "ar": "افهم التغييرات"
+ },
+ "Channel change productively": {
+  "id": "b3-805",
+  "batch": 3,
+  "ar": "وجّه التغيير توجيهًا مثمرًا"
+ },
+ "Meet new people": {
+  "id": "b3-807",
+  "batch": 3,
+  "ar": "تعرّف إلى أناس جدد"
+ },
+ "Stay open to unexpected opportunities": {
+  "id": "b3-808",
+  "batch": 3,
+  "ar": "ابقَ منفتحًا على الفرص غير المتوقعة"
+ },
+ "Reflect on service": {
+  "id": "b3-810",
+  "batch": 3,
+  "ar": "تأمّل في الخدمة"
+ },
+ "Spend time in nature alone": {
+  "id": "b3-813",
+  "batch": 3,
+  "ar": "اقضِ وقتًا وحدك في الطبيعة"
+ },
+ "Invest in yourself or business": {
+  "id": "b3-814",
+  "batch": 3,
+  "ar": "استثمر في نفسك أو في عملك"
+ },
+ "Negotiate for what you deserve": {
+  "id": "b3-815",
+  "batch": 3,
+  "ar": "فاوض على ما تستحقه"
+ },
+ "This year brings endings, release, and compassion for all. Let go of what's complete and serve the world.": {
+  "id": "b3-816",
+  "batch": 3,
+  "ar": "هذه السنة سنة الختام والتخلّي والرحمة بالجميع. دع ما اكتمل، واخدم العالم."
+ },
+ "Prepare for a new 9-year cycle": {
+  "id": "b3-817",
+  "batch": 3,
+  "ar": "استعدّ لدورة جديدة مدتها تسع سنوات"
+ },
+ "Complete what you start, no matter how long it takes": {
+  "id": "b3-818",
+  "batch": 3,
+  "ar": "أكمل ما تبدؤه مهما طال الوقت"
+ },
+ "Maintain optimism through challenges": {
+  "id": "b3-820",
+  "batch": 3,
+  "ar": "حافظ على التفاؤل في مواجهة التحديات"
+ },
+ "When you feel like giving up or cutting corners, remember: this is your karmic test. Push through with integrity.": {
+  "id": "b3-821",
+  "batch": 3,
+  "ar": "حين تشعر برغبة في الاستسلام أو التهاون، تذكّر أن هذا امتحانك. امضِ قُدُمًا بنزاهة."
+ },
+ "Practice moderation in all things": {
+  "id": "b3-822",
+  "batch": 3,
+  "ar": "التزم الاعتدال في كل شيء"
+ },
+ "Commit to one path long enough to see results": {
+  "id": "b3-823",
+  "batch": 3,
+  "ar": "التزم مسارًا واحدًا مدةً تكفي لرؤية النتائج"
+ },
+ "Rebuild on authentic truth, not illusion": {
+  "id": "b3-824",
+  "batch": 3,
+  "ar": "أعد البناء على الحق الصادق لا على الوهم"
+ },
+ "Ask for help without feeling weak": {
+  "id": "b3-825",
+  "batch": 3,
+  "ar": "اطلب المساعدة دون أن تشعر بالضعف"
+ },
+ "Mastered 19/1 becomes the compassionate pioneer. You lead by empowering others, not controlling them. Your strength inspires while your vulnerability connects.": {
+  "id": "b3-826",
+  "batch": 3,
+  "ar": "إذا أتقن صاحب 19/1 درسه صار رائدًا رحيمًا: يقود بتمكين الآخرين لا بالسيطرة عليهم. قوته تُلهم، وصدقه في ضعفه يقرّبه من الناس."
+ },
+ "Two strong leaders can clash or inspire each other to greatness.": {
+  "id": "b3-827",
+  "batch": 3,
+  "ar": "قائدان قويان قد يتصادمان، وقد يلهم كلٌّ منهما الآخر إلى العظمة."
+ },
+ "Understand need for autonomy": {
+  "id": "b3-829",
+  "batch": 3,
+  "ar": "افهم الحاجة إلى الاستقلالية"
+ },
+ "Leader meets diplomat. A natural balance of yin and yang energy.": {
+  "id": "b3-830",
+  "batch": 3,
+  "ar": "القائد يلتقي بالدبلوماسي: توازن فطري بين طاقتين متكاملتين."
+ },
+ "3 brings joy to 1's ambitions": {
+  "id": "b3-832",
+  "batch": 3,
+  "ar": "3 يجلب الفرح إلى طموحات 1"
+ },
+ "Great for creative projects": {
+  "id": "b3-833",
+  "batch": 3,
+  "ar": "ممتاز للمشاريع الإبداعية"
+ },
+ "1 may find 3 unfocused": {
+  "id": "b3-834",
+  "batch": 3,
+  "ar": "قد يرى 1 أن 3 مشتّت التركيز"
+ },
+ "Support each other's growth": {
+  "id": "b3-835",
+  "batch": 3,
+  "ar": "ادعما نموّ كلٍّ منكما"
+ },
+ "Can lack stability": {
+  "id": "b3-836",
+  "batch": 3,
+  "ar": "قد ينقصه الاستقرار"
+ },
+ "Can inspire humanitarian projects": {
+  "id": "b3-837",
+  "batch": 3,
+  "ar": "قد يُلهم مشاريع إنسانية"
+ },
+ "1: Expand your vision to include service. 9: Allow 1 space for personal ambitions.": {
+  "id": "b3-838",
+  "batch": 3,
+  "ar": "1: وسّع رؤيتك لتشمل الخدمة. 9: امنح 1 مساحة لطموحاته الشخصية."
+ },
+ "Deep emotional connection": {
+  "id": "b3-839",
+  "batch": 3,
+  "ar": "صلة عاطفية عميقة"
+ },
+ "Peaceful harmony": {
+  "id": "b3-841",
+  "batch": 3,
+  "ar": "وئام هادئ"
+ },
+ "Both avoid conflict": {
+  "id": "b3-842",
+  "batch": 3,
+  "ar": "كلاهما يتجنب الخلاف"
+ },
+ "Work-life balance needed": {
+  "id": "b3-843",
+  "batch": 3,
+  "ar": "يلزم التوازن بين العمل والحياة"
+ },
+ "8: Honor 2's emotional needs. 2: Trust 8's leadership without losing yourself.": {
+  "id": "b3-844",
+  "batch": 3,
+  "ar": "8: راعِ احتياجات 2 العاطفية. 2: ثق بقيادة 8 دون أن تفقد نفسك."
+ },
+ "Social butterflies together": {
+  "id": "b3-845",
+  "batch": 3,
+  "ar": "اجتماعيان منفتحان معًا"
+ },
+ "Build empire together": {
+  "id": "b3-847",
+  "batch": 3,
+  "ar": "ابنيا معًا إمبراطورية"
+ },
+ "Commitment issues": {
+  "id": "b3-849",
+  "batch": 3,
+  "ar": "صعوبة الالتزام"
+ },
+ "Serve others but also nurture yourselves. Maintain individual identities and hobbies.": {
+  "id": "b3-851",
+  "batch": 3,
+  "ar": "اخدما الآخرين، لكن اعتنيا بنفسيكما أيضًا، وحافظا على هويتكما وهواياتكما الفردية."
+ },
+ "Material abundance": {
+  "id": "b3-852",
+  "batch": 3,
+  "ar": "وفرة مادية"
+ },
+ "Compassionate healers united in service. Beautiful but can burn out.": {
+  "id": "b3-854",
+  "batch": 3,
+  "ar": "معالجان رحيمان متحدان في الخدمة: علاقة جميلة، لكنها قد تستنزفهما."
+ },
+ "Drama and intensity": {
+  "id": "b3-856",
+  "batch": 3,
+  "ar": "الانفعال والحدّة"
+ },
+ "Build empires": {
+  "id": "b3-857",
+  "batch": 3,
+  "ar": "بناء الإمبراطوريات"
+ },
+ "Pressure to achieve": {
+  "id": "b3-858",
+  "batch": 3,
+  "ar": "ضغط الإنجاز"
+ },
+ "Forget to enjoy life": {
+  "id": "b3-860",
+  "batch": 3,
+  "ar": "نسيان الاستمتاع بالحياة"
+ },
+ "Remember: the journey matters, not just the destination. Celebrate small wins together.": {
+  "id": "b3-861",
+  "batch": 3,
+  "ar": "تذكّرا: الرحلة مهمة لا الوجهة فقط. احتفلا معًا بالإنجازات الصغيرة."
+ },
+ "World service": {
+  "id": "b3-862",
+  "batch": 3,
+  "ar": "خدمة العالم"
+ },
+ "You can't save everyone. Practice radical self-care to sustain your healing work.": {
+  "id": "b3-863",
+  "batch": 3,
+  "ar": "لا يمكنك إنقاذ الجميع. اعتنِ بنفسك عناية جادة لتستطيع مواصلة عملك في المداواة."
+ },
+ "This combination has potential with effort and understanding.": {
+  "id": "b3-864",
+  "batch": 3,
+  "ar": "لهذه التركيبة إمكانات مع الجهد والتفاهم."
+ },
+ "Can learn from differences": {
+  "id": "b3-865",
+  "batch": 3,
+  "ar": "يمكن التعلّم من الاختلافات"
+ },
+ "Different approaches to life": {
+  "id": "b3-867",
+  "batch": 3,
+  "ar": "مقاربات مختلفة للحياة"
+ },
+ "Focus on communication and finding common ground.": {
+  "id": "b3-868",
+  "batch": 3,
+  "ar": "ركّزا على التواصل وإيجاد أرضية مشتركة."
+ },
+ "Water + Earth: Nurturing Growth": {
+  "id": "b3-869",
+  "batch": 3,
+  "ar": "الماء + التراب: نموّ برعاية"
+ },
+ "Earth + Earth: The Solid Foundation": {
+  "id": "b3-870",
+  "batch": 3,
+  "ar": "التراب + التراب: الأساس المتين"
+ },
+ "May compete or burn out without rest. Both want to lead.": {
+  "id": "b3-871",
+  "batch": 3,
+  "ar": "قد تتنافسان أو تُنهكان دون راحة؛ فكلاكما يريد القيادة."
+ },
+ "Passion meets depth. This creates either steam (transformation) or evaporation (conflict).": {
+  "id": "b3-872",
+  "batch": 3,
+  "ar": "الشغف يلتقي بالعمق، فينتج إما بخارًا (تحوّلًا) وإما تبخّرًا (خلافًا)."
+ },
+ "Fire may overwhelm Water. Water may withdraw from Fire. Communication styles clash.": {
+  "id": "b3-873",
+  "batch": 3,
+  "ar": "قد تطغى النار على الماء، وقد ينسحب الماء من النار، وتتصادم أساليب التواصل."
+ },
+ "Fire: Practice active listening and patience. Water: Express needs clearly and directly.": {
+  "id": "b3-874",
+  "batch": 3,
+  "ar": "النار: تدرّب على الإصغاء الفعّال والصبر. الماء: عبّر عن احتياجاتك بوضوح ومباشرة."
+ },
+ "Endless conversations, shared curiosity, and mental stimulation. You understand how each other thinks.": {
+  "id": "b3-875",
+  "batch": 3,
+  "ar": "أحاديث لا تنتهي، وفضول مشترك، وتحفيز ذهني. يفهم كلٌّ منكما كيف يفكّر الآخر."
+ },
+ "Air gives words to Water's feelings. Water adds depth to Air's ideas. Beautiful when balanced.": {
+  "id": "b3-876",
+  "batch": 3,
+  "ar": "الهواء يمنح مشاعر الماء كلمات، والماء يضيف إلى أفكار الهواء عمقًا. جميل حين يتوازنان."
+ },
+ "Air: Write love letters, use your words for emotion. Water: Share dreams aloud. Trust Air to listen.": {
+  "id": "b3-877",
+  "batch": 3,
+  "ar": "الهواء: اكتب رسائل محبة، وعبّر بكلماتك عن مشاعرك. الماء: شارك أحلامك بصوت مسموع، وثق بأن الهواء سيصغي."
+ },
+ "A look says everything. You nurture each other instinctively. Emotional safety comes naturally.": {
+  "id": "b3-878",
+  "batch": 3,
+  "ar": "نظرة واحدة تقول كل شيء. يرعى كلٌّ منكما الآخر بالفطرة، والأمان العاطفي يأتي طبيعيًا."
+ },
+ "You support each other's growth effortlessly. Water brings feelings, Earth brings stability. Balanced and peaceful.": {
+  "id": "b3-879",
+  "batch": 3,
+  "ar": "تدعمان نموّ بعضكما دون عناء: الماء يجلب المشاعر، والتراب يجلب الاستقرار. علاقة متوازنة هادئة."
+ },
+ "Rock-solid stability. Loyalty, consistency, and shared practical goals. You build together brick by brick.": {
+  "id": "b3-880",
+  "batch": 3,
+  "ar": "استقرار راسخ كالصخر: وفاء وثبات وأهداف عملية مشتركة. تبنيان معًا لبنةً لبنة."
+ },
+ "Schedule monthly 'new experiences.' Break routines together intentionally. Invite Air and Fire energy.": {
+  "id": "b3-881",
+  "batch": 3,
+  "ar": "خصّصا كل شهر «تجارب جديدة». اكسرا الروتين معًا عن قصد، وادعوا طاقة الهواء والنار."
+ },
+ "%): Your mothers' energies create natural harmony. You feel \"at home\" with each other emotionally, which provides a stable base for the relationship.": {
+  "id": "b3-883",
+  "batch": 3,
+  "ar": "%): طاقتا أمّيكما تصنعان انسجامًا طبيعيًا. تشعران عاطفيًا بأنكما «في البيت» معًا، مما يمنح العلاقة قاعدة مستقرة."
+ },
+ "Alternate decision-making - Fire chooses adventures, Water chooses restoration": {
+  "id": "b3-884",
+  "batch": 3,
+  "ar": "تبادلا اتخاذ القرار: النار تختار المغامرة، والماء يختار الاستراحة"
+ },
+ "Teach each other - Air shares logic, Water shares intuition": {
+  "id": "b3-885",
+  "batch": 3,
+  "ar": "علّما بعضكما: الهواء يشارك المنطق، والماء يشارك الحدس"
+ },
+ "Passionate and energetic chemistry. Both partners bring enthusiasm and drive.": {
+  "id": "b3-887",
+  "batch": 3,
+  "ar": "كيمياء شغوفة ونشيطة؛ كلا الشريكين يجلب الحماسة والاندفاع."
+ },
+ "maintain balanced cosmic positions. Requires conscious effort for alignment.": {
+  "id": "b3-888",
+  "batch": 3,
+  "ar": "يحافظان على مواضع كونية متوازنة، ويتطلب ذلك جهدًا واعيًا للتوافق."
+ },
+ "demonstrate strong compatibility with excellent alignment in most areas. Minor differences can be easily harmonized.": {
+  "id": "b3-889",
+  "batch": 3,
+  "ar": "يُظهران توافقًا قويًا وانسجامًا ممتازًا في معظم الجوانب، ويمكن تجاوز الفروق الطفيفة بسهولة."
+ },
+ "show moderate compatibility with both strengths and challenges. Conscious communication is key to success.": {
+  "id": "b3-890",
+  "batch": 3,
+  "ar": "يُظهران توافقًا معتدلًا فيه نقاط قوة وتحديات، والتواصل الواعي مفتاح النجاح."
+ },
+ "face notable differences that require patience and mutual respect. Growth comes through embracing complementary perspectives.": {
+  "id": "b3-891",
+  "batch": 3,
+  "ar": "يواجهان اختلافات واضحة تتطلب الصبر والاحترام المتبادل، ويأتي النمو من تقبّل وجهات النظر المتكاملة."
+ },
+ "connection provides stability. Build a strong foundation through consistent routines.": {
+  "id": "b3-892",
+  "batch": 3,
+  "ar": "الصلة تمنح الاستقرار. ابنيا أساسًا متينًا بعادات ثابتة."
+ },
+ "Both partners share Earth energy. Daily life is practical, stable, and grounded. Remember to embrace spontaneity and change.": {
+  "id": "b3-893",
+  "batch": 3,
+  "ar": "كلا الشريكين يحمل طاقة التراب؛ الحياة اليومية عملية مستقرة راسخة. تذكّرا أن تتقبّلا العفوية والتغيير."
+ },
+ "Fire and Water create steam and tension. Daily interactions may alternate between passion and cooling. Requires patience and understanding.": {
+  "id": "b3-894",
+  "batch": 3,
+  "ar": "النار والماء يولّدان البخار والتوتر؛ قد تتراوح التفاعلات اليومية بين الشغف والفتور، ويتطلب ذلك الصبر والتفاهم."
+ },
+ "Why does the Abjad calculator show a different number for a Name?": {
+  "id": "b3-895",
+  "batch": 3,
+  "ar": "لماذا تُظهر حاسبة الأبجد عددًا مختلفًا لاسم ما؟"
+ },
+ "A window in an hour of": {
+  "id": "b3-899",
+  "batch": 3,
+  "ar": "فترة في ساعة"
+ },
+ "Other factors the tool weighs": {
+  "id": "b3-900",
+  "batch": 3,
+  "ar": "عوامل أخرى تأخذها الأداة في الحسبان"
+ },
+ "best window": {
+  "id": "b3-901",
+  "batch": 3,
+  "ar": "أفضل فترة"
+ },
+ "Check dates for your own location": {
+  "id": "b3-902",
+  "batch": 3,
+  "ar": "تحقّق من التواريخ لموقعك"
+ },
+ "Favourable days and hours, and the next favourable dates.": {
+  "id": "b3-903",
+  "batch": 3,
+  "ar": "الأيام والساعات المناسبة، والتواريخ المناسبة القادمة."
+ },
+ "Business & contracts": {
+  "id": "b3-905",
+  "batch": 3,
+  "ar": "التجارة والعقود"
+ },
+ "These conditions rule a window out entirely:": {
+  "id": "b3-906",
+  "batch": 3,
+  "ar": "هذه الشروط تستبعد الفترة تمامًا:"
+ },
+ "The hours of": {
+  "id": "b3-908",
+  "batch": 3,
+  "ar": "ساعات"
+ },
+ "Is there a recommended month for marriage?": {
+  "id": "b3-909",
+  "batch": 3,
+  "ar": "هل هناك شهر مستحب للزواج؟"
+ },
+ "What is the best day to move house?": {
+  "id": "b3-911",
+  "batch": 3,
+  "ar": "ما أفضل يوم للانتقال إلى بيت جديد؟"
+ },
+ "Do the same rules apply to building?": {
+  "id": "b3-912",
+  "batch": 3,
+  "ar": "هل تنطبق القواعد نفسها على البناء؟"
+ },
+ "What is the best day to start a business?": {
+  "id": "b3-913",
+  "batch": 3,
+  "ar": "ما أفضل يوم لبدء التجارة؟"
+ },
+ "Why does Mercury matter so much?": {
+  "id": "b3-914",
+  "batch": 3,
+  "ar": "لماذا لعطارد كل هذه الأهمية؟"
+ },
+ "Is there one best day for everything?": {
+  "id": "b3-915",
+  "batch": 3,
+  "ar": "هل هناك يوم واحد هو الأفضل لكل شيء؟"
+ },
+ "Should I wait for a \"perfect\" date?": {
+  "id": "b3-916",
+  "batch": 3,
+  "ar": "هل يجب أن أنتظر تاريخًا «مثاليًا»؟"
+ },
+ "New profile": {
+  "id": "b3-918",
+  "batch": 3,
+  "ar": "ملف جديد"
+ },
+ "Birth Summary": {
+  "id": "b3-919",
+  "batch": 3,
+  "ar": "ملخّص الميلاد"
+ },
+ "of 28": {
+  "id": "b3-920",
+  "batch": 3,
+  "ar": "من 28"
+ },
+ "Moon phase at birth": {
+  "id": "b3-921",
+  "batch": 3,
+  "ar": "طور القمر عند الولادة"
+ },
+ "Dominant planet": {
+  "id": "b3-922",
+  "batch": 3,
+  "ar": "الكوكب الغالب"
+ },
+ "Can I compare by date of birth instead of names?": {
+  "id": "b3-923",
+  "batch": 3,
+  "ar": "هل يمكنني المقارنة بتاريخ الميلاد بدلًا من الأسماء؟"
+ },
+ "What if our result is low?": {
+  "id": "b3-924",
+  "batch": 3,
+  "ar": "ماذا لو كانت نتيجتنا منخفضة؟"
+ },
+ "How do I pick a date for nikāḥ?": {
+  "id": "b3-925",
+  "batch": 3,
+  "ar": "كيف أختار موعدًا لعقد النكاح؟"
+ },
+ "education or studies": {
+  "id": "b3-927",
+  "batch": 3,
+  "ar": "التعليم أو الدراسة"
+ },
+ "Where do I find my birth manzil?": {
+  "id": "b3-929",
+  "batch": 3,
+  "ar": "أين أجد منزلة ميلادي؟"
+ },
+ "Live positions of the seven classical planets.": {
+  "id": "b3-930",
+  "batch": 3,
+  "ar": "المواقع الحية للكواكب السبعة التقليدية."
+ },
+ "How do I find my burj with the name": {
+  "id": "b3-933",
+  "batch": 3,
+  "ar": "كيف أعرف برجي من الاسم"
+ },
+ "give the same result as": {
+  "id": "b3-934",
+  "batch": 3,
+  "ar": "يعطي النتيجة نفسها التي يعطيها"
+ },
+ ", not the Latin letters, so every Latin spelling of this name gives the same value,": {
+  "id": "b3-935",
+  "batch": 3,
+  "ar": "، لا الحروف اللاتينية، لذلك تعطي كل تهجئة لاتينية لهذا الاسم القيمة نفسها،"
+ },
+ "Arabic, meaning and Abjad value of each Name.": {
+  "id": "b3-936",
+  "batch": 3,
+  "ar": "الاسم بالعربية، ومعناه، وقيمته الأبجدية."
+ },
+ "The Mashriqi table gives the same total for this name.": {
+  "id": "b3-937",
+  "batch": 3,
+  "ar": "ويعطي الجدول المشرقي المجموع نفسه لهذا الاسم."
+ },
+ "What is the Abjad value of a name?": {
+  "id": "b3-941",
+  "batch": 3,
+  "ar": "ما القيمة الأبجدية للاسم؟"
+ },
+ "Is this a prediction?": {
+  "id": "b3-942",
+  "batch": 3,
+  "ar": "هل هذا تنبّؤ؟"
+ },
+ "Why a name has a number": {
+  "id": "b3-945",
+  "batch": 3,
+  "ar": "لماذا للاسم عدد"
+ },
+ "Heart, eyes, spine": {
+  "id": "b3-946",
+  "batch": 3,
+  "ar": "القلب، العينان، العمود الفقري"
+ },
+ "Nervous system, hands, lungs": {
+  "id": "b3-949",
+  "batch": 3,
+  "ar": "الجهاز العصبي، اليدان، الرئتان"
+ },
+ "Liver, hips, thighs": {
+  "id": "b3-950",
+  "batch": 3,
+  "ar": "الكبد، الوركان، الفخذان"
+ },
+ "Love, beauty, harmony, art, pleasure, relationships, grace": {
+  "id": "b3-951",
+  "batch": 3,
+  "ar": "المحبة والجمال والوئام والفن والمتعة والعلاقات واللطف"
+ },
+ "Discipline, structure, patience, endurance, limitation, mastery, wisdom through hardship": {
+  "id": "b3-952",
+  "batch": 3,
+  "ar": "الانضباط والبنية والصبر والتحمّل والحدود والإتقان والحكمة المكتسبة من المشقة"
+ },
+ "Saturday is governed by the slowest and most disciplined of the classical planets. It is a day for long-term commitments, serious study, and patient effort. Engage in property matters, legal affairs, and building lasting structures. Avoid rushing — Saturn rewards consistent, sustained effort over time.": {
+  "id": "b3-954",
+  "batch": 3,
+  "ar": "يوم السبت صاحبه أبطأ الكواكب التقليدية وأشدّها انضباطًا. وهو يوم للالتزامات البعيدة، والدراسة الجادة، والجهد الصبور. يُستحسن فيه النظر في شؤون العقار والأمور القانونية وبناء ما يدوم. وتجنّب العجلة، فزحل يكافئ الجهد الثابت المتواصل."
+ },
+ "Check the Dignity": {
+  "id": "b3-955",
+  "batch": 3,
+  "ar": "تحقّق من حظّ الكوكب"
+ },
+ "This page shows the live positions of all 7 classical planets (Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn) in the zodiac, calculated using NASA JPL-based ephemeris data. Tap any planet to see its detailed dignity status, sign meaning, and guidance for that planetary energy right now.": {
+  "id": "b3-956",
+  "batch": 3,
+  "ar": "تعرض هذه الصفحة المواقع الحية للكواكب السبعة التقليدية (الشمس، القمر، عطارد، الزهرة، المريخ، المشتري، زحل) في دائرة البروج، محسوبة ببيانات تقويم فلكي (إفيميريس) مبنية على ⁨NASA JPL⁩. اضغط على أي كوكب لترى حظّه بالتفصيل، ومعنى برجه، والإرشاد المتعلق بطاقته الآن."
+ },
+ "🗺️ How to Read Transits": {
+  "id": "b3-957",
+  "batch": 3,
+  "ar": "🗺️ كيف تقرأ العبور"
+ },
+ "🌐 Zodiac Systems": {
+  "id": "b3-958",
+  "batch": 3,
+  "ar": "🌐 أنظمة دائرة البروج"
+ },
+ "Travel & movement": {
+  "id": "b3-962",
+  "batch": 3,
+  "ar": "السفر والتنقّل"
+ },
+ "Starting long projects": {
+  "id": "b3-963",
+  "batch": 3,
+  "ar": "بدء المشاريع الطويلة"
+ },
+ "Marriage proposals": {
+  "id": "b3-964",
+  "batch": 3,
+  "ar": "طلب الزواج (الخِطبة)"
+ },
+ "Peace negotiations": {
+  "id": "b3-965",
+  "batch": 3,
+  "ar": "مفاوضات الصلح"
+ },
+ "Study & learning": {
+  "id": "b3-967",
+  "batch": 3,
+  "ar": "الدراسة والتعلّم"
+ },
+ "Trade & contracts": {
+  "id": "b3-968",
+  "batch": 3,
+  "ar": "التجارة والعقود"
+ },
+ "Wealth & abundance": {
+  "id": "b3-969",
+  "batch": 3,
+  "ar": "الثروة والوفرة"
+ },
+ "Restrictive work": {
+  "id": "b3-970",
+  "batch": 3,
+  "ar": "الأعمال المقيِّدة"
+ },
+ "Love & relationships": {
+  "id": "b3-971",
+  "batch": 3,
+  "ar": "المحبة والعلاقات"
+ },
+ "Beauty & art": {
+  "id": "b3-972",
+  "batch": 3,
+  "ar": "الجمال والفن"
+ },
+ "Discipline & structure": {
+  "id": "b3-973",
+  "batch": 3,
+  "ar": "الانضباط والبنية"
+ },
+ "🗓 How to Use Planetary Hours": {
+  "id": "b3-975",
+  "batch": 3,
+  "ar": "🗓 كيف تستعمل الساعات الكوكبية"
+ },
+ "What is sarax?": {
+  "id": "b3-976",
+  "batch": 3,
+  "ar": "ما الـ⁨sarax⁩ (الصدقة)؟"
+ },
+ "How do I know my burj?": {
+  "id": "b3-977",
+  "batch": 3,
+  "ar": "كيف أعرف برجي؟"
+ },
+ "For Monday the tradition recommends:": {
+  "id": "b3-978",
+  "batch": 3,
+  "ar": "ليوم الاثنين يوصي التقليد بما يلي:"
+ },
+ "Can I use the weekday I was born on?": {
+  "id": "b3-979",
+  "batch": 3,
+  "ar": "هل يمكنني أن أعتمد يوم الأسبوع الذي وُلدت فيه؟"
+ },
+ "Asrariya for iOS is coming soon.": {
+  "id": "b3-981",
+  "batch": 3,
+  "ar": "تطبيق أسرارية لنظام ⁨iOS⁩ قريبًا."
+ },
+ "Current Position": {
+  "id": "b3-983",
+  "batch": 3,
+  "ar": "الموضع الحالي"
+ },
+ "Your Balance Today": {
+  "id": "b3-984",
+  "batch": 3,
+  "ar": "توازنك اليوم"
+ },
+ "For everything there is a time": {
+  "id": "b3-985",
+  "batch": 3,
+  "ar": "لكلّ شيء وقت"
+ },
+ "Success comes from right action at the right time": {
+  "id": "b3-986",
+  "batch": 3,
+  "ar": "النجاح يأتي من العمل الصحيح في وقته"
+ },
+ "Three Analysis Methods": {
+  "id": "b3-987",
+  "batch": 3,
+  "ar": "ثلاثة أساليب للتحليل"
+ },
+ "Your Life Numbers": {
+  "id": "b3-988",
+  "batch": 3,
+  "ar": "أعداد حياتك"
+ },
+ "Use this time for:": {
+  "id": "b3-989",
+  "batch": 3,
+  "ar": "استعمل هذا الوقت في:"
+ },
+ "Intensive": {
+  "id": "b4-000",
+  "batch": 4,
+  "ar": "مكثّف"
+ },
+ "Change Plan": {
+  "id": "b4-002",
+  "batch": 4,
+  "ar": "تغيير الخطة"
+ },
+ "Today's target completed ✓": {
+  "id": "b4-003",
+  "batch": 4,
+  "ar": "اكتمل هدف اليوم ✓"
+ },
+ "Already Added": {
+  "id": "b4-004",
+  "batch": 4,
+  "ar": "مُضاف بالفعل"
+ },
+ "Show Meaning": {
+  "id": "b4-005",
+  "batch": 4,
+  "ar": "إظهار المعنى"
+ },
+ "30-day total": {
+  "id": "b4-007",
+  "batch": 4,
+  "ar": "مجموع 30 يومًا"
+ },
+ "25-35 minutes per session": {
+  "id": "b4-008",
+  "batch": 4,
+  "ar": "25–35 دقيقة لكل جلسة"
+ },
+ "Come back tomorrow for your next session": {
+  "id": "b4-009",
+  "batch": 4,
+  "ar": "عُد غدًا لجلستك التالية"
+ },
+ "Steps for this session:": {
+  "id": "b4-011",
+  "batch": 4,
+  "ar": "خطوات هذه الجلسة:"
+ },
+ "Hide meaning": {
+  "id": "b4-014",
+  "batch": 4,
+  "ar": "إخفاء المعنى"
+ },
+ "Special Practice": {
+  "id": "b4-017",
+  "batch": 4,
+  "ar": "ممارسة خاصة"
+ },
+ "Start 7-Day Challenge": {
+  "id": "b4-018",
+  "batch": 4,
+  "ar": "ابدأ تحدّي 7 أيام"
+ },
+ "Creativity, expression, joy and communication": {
+  "id": "b4-022",
+  "batch": 4,
+  "ar": "الإبداع والتعبير والفرح والتواصل"
+ },
+ "Stability, foundation, security and structure": {
+  "id": "b4-023",
+  "batch": 4,
+  "ar": "الاستقرار والأساس والأمان والبنية"
+ },
+ "Service, responsibility, nurturing and love": {
+  "id": "b4-025",
+  "batch": 4,
+  "ar": "الخدمة والمسؤولية والرعاية والمحبة"
+ },
+ "Transit Practice": {
+  "id": "b4-026",
+  "batch": 4,
+  "ar": "ممارسة في وقت العبور"
+ },
+ "In fall in": {
+  "id": "b4-027",
+  "batch": 4,
+  "ar": "في هبوطه في"
+ },
+ "in fall in": {
+  "id": "b4-028",
+  "batch": 4,
+  "ar": "في هبوطه في"
+ },
+ "Need more:": {
+  "id": "b4-029",
+  "batch": 4,
+  "ar": "يحتاج إلى المزيد:"
+ },
+ "What does my score mean?": {
+  "id": "b4-030",
+  "batch": 4,
+  "ar": "ماذا تعني نتيجتي؟"
+ },
+ "0-39: Conflict": {
+  "id": "b4-031",
+  "batch": 4,
+  "ar": "0-39: تعارض"
+ },
+ "You express with Air but have Fire roots. Your Fire foundation energizes your Air movement×like heat creating wind.": {
+  "id": "b4-032",
+  "batch": 4,
+  "ar": "تعبّر بالهواء لكن جذورك نارية. أساسك الناري يمدّ حركتك الهوائية بالطاقة، كالحرارة التي تولّد الريح."
+ },
+ "You express with Water but have Earth roots. Your Earth foundation contains your Water flow×like a riverbed holding water.": {
+  "id": "b4-033",
+  "batch": 4,
+  "ar": "تعبّر بالماء لكن جذورك ترابية. أساسك الترابي يحتضن جريان مائك، كمجرى النهر الذي يحفظ الماء."
+ },
+ "You express with Earth but have Water roots. Your Water foundation nourishes your Earth structure×like rain feeding soil.": {
+  "id": "b4-034",
+  "batch": 4,
+  "ar": "تعبّر بالتراب لكن جذورك مائية. أساسك المائي يغذّي بنيتك الترابية، كالمطر الذي يروي التربة."
+ },
+ "You express with Fire but have Water roots. This creates dynamic tension×passion balanced by emotional depth.": {
+  "id": "b4-035",
+  "batch": 4,
+  "ar": "تعبّر بالنار لكن جذورك مائية. وهذا يولّد توترًا حيويًا: شغف يوازنه عمق عاطفي."
+ },
+ "You express with Water but have Fire roots. This creates dynamic tension×emotional depth fueled by inner passion.": {
+  "id": "b4-036",
+  "batch": 4,
+  "ar": "تعبّر بالماء لكن جذورك نارية. وهذا يولّد توترًا حيويًا: عمق عاطفي يغذّيه شغف داخلي."
+ },
+ "Review Time": {
+  "id": "b4-039",
+  "batch": 4,
+  "ar": "وقت المراجعة"
+ },
+ "Nurture creative rest together. Cook, garden, or create beauty.": {
+  "id": "b4-040",
+  "batch": 4,
+  "ar": "اصنعا معًا راحة مبدعة: اطبخا، أو ازرعا، أو اصنعا جمالًا."
+ },
+ "Build stability together, but leave room for spontaneity.": {
+  "id": "b4-041",
+  "batch": 4,
+  "ar": "ابنيا الاستقرار معًا، واتركا مجالًا للعفوية."
+ },
+ "Focuses the mind, brings wisdom": {
+  "id": "b4-042",
+  "batch": 4,
+  "ar": "يجمع الذهن ويجلب الحكمة"
+ },
+ "🏠 In Daily Life:": {
+  "id": "b4-043",
+  "batch": 4,
+  "ar": "🏠 في الحياة اليومية:"
+ },
+ "70-75% accuracy": {
+  "id": "b4-044",
+  "batch": 4,
+  "ar": "دقة 70–75%"
+ },
+ "90-95% accuracy": {
+  "id": "b4-045",
+  "batch": 4,
+  "ar": "دقة 90–95%"
+ },
+ "⚠️ May compete or burn out without rest. Both want to lead.": {
+  "id": "b4-046",
+  "batch": 4,
+  "ar": "⚠️ قد تتنافسان أو تُنهكان دون راحة؛ فكلاكما يريد القيادة."
+ },
+ "💡 Schedule calm time together. Practice listening, not just doing.": {
+  "id": "b4-047",
+  "batch": 4,
+  "ar": "💡 خصّصا وقتًا هادئًا معًا. تدرّبا على الإصغاء لا على الفعل فقط."
+ },
+ "⚠️ Fire may overwhelm Water. Water may withdraw from Fire. Communication styles clash.": {
+  "id": "b4-048",
+  "batch": 4,
+  "ar": "⚠️ قد تطغى النار على الماء، وقد ينسحب الماء من النار، وتتصادم أساليب التواصل."
+ },
+ "💡 Fire: Practice active listening and patience. Water: Express needs clearly and directly.": {
+  "id": "b4-049",
+  "batch": 4,
+  "ar": "💡 النار: تدرّب على الإصغاء الفعّال والصبر. الماء: عبّر عن احتياجاتك بوضوح ومباشرة."
+ },
+ "💡 Schedule monthly 'new experiences.' Break routines together intentionally. Invite Air and Fire energy.": {
+  "id": "b4-050",
+  "batch": 4,
+  "ar": "💡 خصّصا كل شهر «تجارب جديدة». اكسرا الروتين معًا عن قصد، وادعوا طاقة الهواء والنار."
+ },
+ "Currently working on": {
+  "id": "b4-053",
+  "batch": 4,
+  "ar": "تعمل حاليًا على"
+ },
+ "Unable to calculate planetary hour. Please try again.": {
+  "id": "b4-055",
+  "batch": 4,
+  "ar": "تعذّر حساب الساعة الكوكبية. يُرجى المحاولة مرة أخرى."
+ },
+ "Today is a Rest Day": {
+  "id": "b4-056",
+  "batch": 4,
+  "ar": "اليوم يوم راحة"
+ },
+ "Planetary hours below are shown for reference, but minimize activities today.": {
+  "id": "b4-057",
+  "batch": 4,
+  "ar": "تُعرض الساعات الكوكبية أدناه للاستئناس، لكن قلّل من أنشطتك اليوم."
+ },
+ "Window closes in:": {
+  "id": "b4-058",
+  "batch": 4,
+  "ar": "تنتهي الفترة بعد:"
+ },
+ "Best for when your element returns:": {
+  "id": "b4-059",
+  "batch": 4,
+  "ar": "الأنسب حين يعود عنصرك:"
+ },
+ "Your Personal Year": {
+  "id": "b4-060",
+  "batch": 4,
+  "ar": "سنتك الشخصية"
+ },
+ "Real-time Guidance": {
+  "id": "b4-061",
+  "batch": 4,
+  "ar": "إرشاد آني"
+ },
+ "What to Wear Today": {
+  "id": "b4-062",
+  "batch": 4,
+  "ar": "ماذا تلبس اليوم"
+ },
+ "Try this:": {
+  "id": "b4-063",
+  "batch": 4,
+  "ar": "جرّب هذا:"
+ },
+ "Need care": {
+  "id": "b4-065",
+  "batch": 4,
+  "ar": "يحتاج إلى عناية"
+ },
+ "Act Now - Real-Time Guidance": {
+  "id": "b4-066",
+  "batch": 4,
+  "ar": "اعمل الآن: إرشاد آني"
+ },
+ "Ancient wisdom says colors and energy work together. Wear what feels right to you! 🌀": {
+  "id": "b4-067",
+  "batch": 4,
+  "ar": "تقول الحكمة القديمة إن الألوان والطاقة تعملان معًا. البس ما تشعر أنه يناسبك! 🌀"
+ },
+ "Both names are required for accurate guidance": {
+  "id": "b4-070",
+  "batch": 4,
+  "ar": "الاسمان كلاهما مطلوبان لإرشاد دقيق"
+ },
+ "About This Analysis": {
+  "id": "b4-071",
+  "batch": 4,
+  "ar": "عن هذا التحليل"
+ },
+ "11 AM-1 PM": {
+  "id": "b1-265",
+  "batch": 1,
+  "ar": "11 ص–1 م",
+  "note": "AM/PM range, same rule as b1-265"
+ },
+ "3-5 PM": {
+  "id": "b1-265",
+  "batch": 1,
+  "ar": "3–5 م",
+  "note": "AM/PM range, same rule as b1-265"
+ },
+ "6-8 PM": {
+  "id": "b1-265",
+  "batch": 1,
+  "ar": "6–8 م",
+  "note": "AM/PM range, same rule as b1-265"
+ },
+ "6-8 AM": {
+  "id": "b1-265",
+  "batch": 1,
+  "ar": "6–8 ص",
+  "note": "AM/PM range, same rule as b1-265"
+ },
+ "7-9 PM": {
+  "id": "b1-265",
+  "batch": 1,
+  "ar": "7–9 م",
+  "note": "AM/PM range, same rule as b1-265"
+ },
+ "8-10 AM": {
+  "id": "b1-265",
+  "batch": 1,
+  "ar": "8–10 ص",
+  "note": "AM/PM range, same rule as b1-265"
+ },
+ "🚨 Very Difficult": {
+  "id": "b3-508",
+  "batch": 3,
+  "ar": "🚨 صعب جدًا",
+  "note": "source key was mojibake «š¨ Very Difficult»; emoji fixed in IlmHurufPanel.tsx"
+ },
+ "After Saturn, the cycle repeats from ♄ → ♃ → ♂ → ☉ → ♀ → ☿ → ☽ → ♄...": {
+  "id": "b5-5a",
+  "batch": 5,
+  "ar": "بعد زحل تعود الدورة من جديد: ♄ ← ♃ ← ♂ ← ☉ ← ♀ ← ☿ ← ☽ ← ♄…",
+  "note": "RTL: ← instead of →"
+ },
+ "Based on your four core numbers, here's the elemental balance in your life path:": {
+  "id": "b5-E00",
+  "batch": 5,
+  "ar": "بناءً على أرقامك الأساسية الأربعة، إليك توازن العناصر في مسار حياتك:"
+ },
+ "Element Harmony": {
+  "id": "b5-E01",
+  "batch": 5,
+  "ar": "انسجام العناصر"
+ },
+ "Elemental Harmony": {
+  "id": "b5-E01",
+  "batch": 5,
+  "ar": "انسجام العناصر"
+ },
+ "Elemental harmony (": {
+  "id": "b5-E01",
+  "batch": 5,
+  "ar": "انسجام العناصر"
+ },
+ "Elemental Balance": {
+  "id": "b5-E02",
+  "batch": 5,
+  "ar": "توازن العناصر"
+ },
+ "Elemental Composition": {
+  "id": "b5-E03",
+  "batch": 5,
+  "ar": "تركيب العناصر"
+ },
+ "Elemental Composition & Balance": {
+  "id": "b5-E04",
+  "batch": 5,
+  "ar": "تركيب العناصر وتوازنها"
+ },
+ "Elemental Forces": {
+  "id": "b5-E05",
+  "batch": 5,
+  "ar": "قوى العناصر"
+ },
+ "Elemental Temperament": {
+  "id": "b5-E06",
+  "batch": 5,
+  "ar": "مزاج العناصر"
+ },
+ "🌊 Elemental Temperament": {
+  "id": "b5-E06",
+  "batch": 5,
+  "ar": "مزاج العناصر"
+ },
+ "In the Senegalese tradition of ʿIlm al-Ḥurūf, your full spiritual identity (Aṣl al-Rūḥānī) is formed from your name + your mother's name. This creates a unique numerical and elemental signature that is yours alone.": {
+  "id": "b5-E07",
+  "batch": 5,
+  "ar": "في التقليد السنغالي لعلم الحروف، تتشكل هويتك الروحية الكاملة (الأصل الروحاني) من اسمك + اسم والدتك. ويصنع ذلك بصمةً فريدة لك وحدك في الأعداد والعناصر."
+ },
+ "Major elemental conflicts. While not impossible, this pairing faces fundamental challenges that require deep commitment to overcome.": {
+  "id": "b5-E08",
+  "batch": 5,
+  "ar": "تعارضات كبيرة بين العناصر. رغم أنه ليس مستحيلًا، يواجه هذا الاقتران تحديات جوهرية تتطلب التزامًا عميقًا لتجاوزها."
+ },
+ "Marriage of Letters × The compatibility analysis between two names based on their elemental harmony. How the letters 'marry' or interact between two people.": {
+  "id": "b5-E09",
+  "batch": 5,
+  "ar": "زواج الحروف × تحليل التوافق بين اسمين بناءً على انسجام عناصرهما. كيف 'تتزوج' الحروف أو تتفاعل بين شخصين."
+ },
+ "The elemental temperaments from both of your mothers' names (calculated using Ḥadath ÷ 4 method)": {
+  "id": "b5-E10",
+  "batch": 5,
+  "ar": "أمزجة العناصر من اسمي والدتيكما (محسوبة باستخدام طريقة الحدث ÷ 4)"
+ },
+ "The elemental temperaments from both of your names (calculated using Ḥadath ÷ 4 method)": {
+  "id": "b5-E11",
+  "batch": 5,
+  "ar": "أمزجة العناصر من كلا اسميكما (محسوبة باستخدام طريقة الحدث ÷ 4)"
+ },
+ "These sacred phrases help harmonize your elemental energies:": {
+  "id": "b5-E12",
+  "batch": 5,
+  "ar": "تساعد هذه العبارات المقدسة على التوفيق بين طاقات عناصركما:"
+ },
+ "Try these activities to balance your elemental dynamics:": {
+  "id": "b5-E13",
+  "batch": 5,
+  "ar": "جرّبا هذه الأنشطة لموازنة حركية عناصركما:"
+ },
+ "Your Elemental Composition": {
+  "id": "b5-E14",
+  "batch": 5,
+  "ar": "تركيبة عناصرك"
+ },
+ "Your Elemental Nature": {
+  "id": "b5-E15",
+  "batch": 5,
+  "ar": "طبيعة عنصرك"
+ },
+ "Your elemental nature": {
+  "id": "b5-E15",
+  "batch": 5,
+  "ar": "طبيعة عنصرك"
+ },
+ "Your Elemental Imprint": {
+  "id": "b5-E16",
+  "batch": 5,
+  "ar": "بصمة عناصرك"
+ },
+ "Analyzes the interaction of your elemental natures (Fire, Water, Air, Earth). Fire brings passion, Water brings emotion, Air brings intellect, Earth brings stability. Understanding your elemental blend helps navigate daily interactions.": {
+  "id": "b5-E17",
+  "batch": 5,
+  "ar": "يحلّل تفاعل طبيعة عنصر كلٍّ منكما (النار، الماء، الهواء، التراب). فالنار تجلب الشغف، والماء العاطفة، والهواء العقل، والتراب الثبات. وفهم مزيج عناصركما يعين على التعامل اليومي."
+ },
+ "Discover why certain patterns exist in your relationship. Understanding your elemental and planetary dynamics can transform conflicts into opportunities for deeper connection and growth.": {
+  "id": "b5-E18",
+  "batch": 5,
+  "ar": "اكتشف لماذا توجد أنماط معيّنة في علاقتكما. ففهم حركية العناصر والكواكب بينكما قد يحوّل الصراعات إلى فرص لصلة أعمق ونموّ."
+ },
+ "We analyze compatibility through three complementary lenses: Soul Connection (spiritual alignment), Personality Balance (elemental harmony), and Cosmic Harmony (planetary influences). Each reveals different aspects of your relationship potential.": {
+  "id": "b5-E19",
+  "batch": 5,
+  "ar": "نحلّل التوافق من ثلاث زوايا متكاملة: صلة الأرواح (الانسجام الروحي)، وتوازن الشخصية (انسجام العناصر)، والانسجام الكوني (الصلات الكوكبية). وكل منها يكشف جانبًا مختلفًا من إمكانات علاقتكما."
+ },
+ "Your elemental and planetary differences aren't problems to fix—they're complementary strengths. Fire needs Water's depth, Air needs Earth's grounding. Appreciate what your partner brings.": {
+  "id": "b5-E20",
+  "batch": 5,
+  "ar": "اختلافاتكما في العناصر والكواكب ليست مشكلات تُصلَح — بل قوى متكاملة. فالنار تحتاج إلى عمق الماء، والهواء يحتاج إلى ثبات التراب. قدّر ما يأتي به شريكك."
+ },
+ "🎨 Personality Balance (Elemental Temperament)": {
+  "id": "b5-E21",
+  "batch": 5,
+  "ar": "🎨 توازن الشخصية (مزاج العناصر)"
+ },
+ "🌙 Spiritual Destiny | 🌊 Elemental Temperament | ⭐ Planetary Cosmic | 🤝 Daily Interaction": {
+  "id": "b5-E22",
+  "batch": 5,
+  "ar": "🌙 المسار الروحي | 🌊 مزاج العناصر | ⭐ الكوني الكوكبي | 🤝 التفاعل اليومي"
+ },
+ "Elemental Event/Classification": {
+  "id": "b5-E23",
+  "batch": 5,
+  "ar": "التصنيف بحسب العناصر"
+ },
+ "Elemental Type": {
+  "id": "b5-E24",
+  "batch": 5,
+  "ar": "نوع العنصر"
+ },
+ "Personality Balance (Elemental Temperament)": {
+  "id": "b5-E25",
+  "batch": 5,
+  "ar": "توازن الشخصية (مزاج العناصر)"
+ },
+ "The four elements—Fire, Water, Air, Earth—represent fundamental personality types. Your elemental makeup determines how you approach life, relationships, and challenges.": {
+  "id": "b5-E26",
+  "batch": 5,
+  "ar": "العناصر الأربعة — النار والماء والهواء والتراب — تمثّل أنماط الشخصية الأساسية. وتركيب عناصرك يصف طريقتك في مواجهة الحياة والعلاقات والتحدّيات."
+ },
+ "Understanding Your Elemental Dance": {
+  "id": "b5-E27",
+  "batch": 5,
+  "ar": "فهم رقصة عناصركما"
+ },
+ "Discover the sacred numerical values and elemental associations within Arabic text, connecting language to the deeper patterns of creation.": {
+  "id": "b5-E28",
+  "batch": 5,
+  "ar": "اكتشف القيم العددية للحروف وصلاتها بالعناصر في النصّ العربي، وصلة اللغة بأنماط الخلق الأعمق."
+ },
+ "Discover Quranic verses, Divine Names, and spiritual guidance based on your elemental profile. Use History to save calculations, and Comparison mode to explore relationships!": {
+  "id": "b5-E29",
+  "batch": 5,
+  "ar": "اكتشف آيات قرآنية وأسماء حسنى وإرشادًا روحيًا بحسب ملف عناصرك. استعمل السجلّ لحفظ الحسابات، ووضع المقارنة لاستكشاف العلاقات!"
+ },
+ "Explore the beautiful tradition of ʿIlm al-Ḥurūf (Science of Letters) - an Islamic science that reveals numerical values and elemental associations in Arabic text.": {
+  "id": "b5-E30",
+  "batch": 5,
+  "ar": "استكشف تراث علم الحروف الجميل — علمٌ إسلامي يكشف القيم العددية للحروف وصلاتها بالعناصر في النصّ العربي."
+ },
+ "• Kabīr (الكبير): Total numerical value • Ṣaghīr (الصغير): Digital root (1-9) • Elements: Fire 🔥 Water 💧 Air 🌬 Earth 🌍 • Ḥadath: Elemental influence pattern": {
+  "id": "b5-E31",
+  "batch": 5,
+  "ar": "• الكبير: القيمة العددية الكلية • الصغير: الجذر الرقمي (1-9) • العناصر: النار 🔥 الماء 💧 الهواء 🌬 التراب 🌍 • الحدث: نمط أثر العناصر"
+ },
+ "Career paths that resonate with your spiritual energy and elemental nature": {
+  "id": "b5-E32",
+  "batch": 5,
+  "ar": "مسارات مهنية تتناغم مع طاقتك الروحية وطبيعة عنصرك"
+ },
+ "Discovered my career path through Istikhara al-Asmāʾ! My": {
+  "id": "b5-E33",
+  "batch": 5,
+  "ar": "اكتشفت مساري المهني عبر استخارة الأسماء! العنصر الغالب عندي"
+ },
+ "Discover career paths that align with your elemental nature. Note both traditional and modern recommendations.": {
+  "id": "b5-E34",
+  "batch": 5,
+  "ar": "اكتشف مسارات مهنية تنسجم مع طبيعة عنصرك، ولاحظ التوصيات التقليدية والحديثة معًا."
+ },
+ "✨🌙 I discovered my spiritual profile through Istikhara al-Asmāʾ! I'm a": {
+  "id": "b5-E35",
+  "batch": 5,
+  "ar": "✨🌙 اكتشفت ملفي الروحي عبر استخارة الأسماء! العنصر الغالب عندي"
+ },
+ "Align your work with your elemental nature for fulfillment.": {
+  "id": "b5-E36",
+  "batch": 5,
+  "ar": "وافِق بين عملك وطبيعة عنصرك لتجد الرضا."
+ },
+ "These colors resonate with your elemental energy. Use them in your environment for spiritual balance.": {
+  "id": "b5-E37",
+  "batch": 5,
+  "ar": "تتناغم هذه الألوان مع طاقة عنصرك. استعملها في محيطك للتوازن الروحي."
+ },
+ "Elemental Force": {
+  "id": "b5-E38",
+  "batch": 5,
+  "ar": "قوة العنصر"
+ },
+ "This verse resonates with your elemental nature and can be recited for spiritual guidance and protection. Reflect on its meaning as part of your daily practice.": {
+  "id": "b5-E39",
+  "batch": 5,
+  "ar": "تتناغم هذه الآية مع طبيعة عنصرك، ويمكن تلاوتها طلبًا للهداية والحفظ. وتدبّر معناها جزءًا من وردك اليومي."
+ },
+ "Your elemental natures": {
+  "id": "b5-E40",
+  "batch": 5,
+  "ar": "طبيعة عنصر كلٍّ منكما"
+ },
+ "energy. Strong, consistent elemental identity with deep": {
+  "id": "b5-E41",
+  "batch": 5,
+  "ar": ". هوية قوية ثابتة في العنصر، ذات"
+ },
+ "Elemental Value - number reduced modulo 9 determining primary element and temperament": {
+  "id": "b5-E42",
+  "batch": 5,
+  "ar": "قيمة العنصر - العدد بباقي القسمة على 9، يحدّد العنصر الأساسي والطبع"
+ },
+ "ʿIlm al-Ḥurūf (علم الحروف), or the 'Science of Letters', is a traditional Islamic discipline that studies the spiritual and numerical significance of Arabic letters. Each letter of the Arabic alphabet carries not only a sound, but also a numerical value (Abjad system) and elemental qualities.": {
+  "id": "b5-E43",
+  "batch": 5,
+  "ar": "علم الحروف علم إسلامي تقليدي يدرس الدلالة الروحية والعددية للحروف العربية. فلكل حرف من حروف العربية صوت، وقيمة عددية (نظام الأبجد)، وصفات مرتبطة بالعناصر."
+ },
+ "Contemplate your elemental nature and temperament": {
+  "id": "b5-E45",
+  "batch": 5,
+  "ar": "التأمّل في طبيعة عنصرك ومزاجك"
+ },
+ "3. Ḥadath (Elemental Value - الحدث)": {
+  "id": "b5-E46",
+  "batch": 5,
+  "ar": "3. الحدث (قيمة العنصر)"
+ },
+ "share exceptional compatibility across spiritual, elemental, and cosmic dimensions. This pairing has strong potential for harmony and mutual growth.": {
+  "id": "b5-E47",
+  "batch": 5,
+  "ar": "يتشاركان توافقًا استثنائيًا في أبعاد الروح والعناصر والفلك. ولهذا الاقتران إمكانات قوية للانسجام والنموّ المتبادل."
+ },
+ "interaction. This unique combination brings together different elemental energies in daily life.": {
+  "id": "b5-E48",
+  "batch": 5,
+  "ar": "تفاعل. يجمع هذا المزيج الفريد طاقات عناصر مختلفة في الحياة اليومية."
+ },
+ "You express and inherit the same {element} energy. Strong, coherent elemental identity with deep roots.": {
+  "id": "b5-E49",
+  "batch": 5,
+  "ar": "تُعبّر عن طاقة {element} نفسها التي ورثتها. هوية قوية متماسكة في العنصر، ذات جذور عميقة."
+ },
+ "Shows the elemental temperament between the two names. Each letter carries Fire, Air, Water, or Earth energy × their blend forms the emotional and energetic balance of your connection.": {
+  "id": "b5-E50",
+  "batch": 5,
+  "ar": "يبيّن مزاج العناصر بين الاسمين. يحمل كل حرف طاقة النار أو الهواء أو الماء أو التراب، ومزيجها يشكّل التوازن العاطفي والطاقي لصلتكما."
+ }
+}

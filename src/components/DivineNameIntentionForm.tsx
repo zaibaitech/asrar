@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useDivineNames } from '../hooks/useDivineNames';
 import { COMPAT_THEME } from '../constants/compatibilityTheme';
 import { DIVINE_INTENTIONS, DivineIntention, INTENTION_EMOJI } from '../constants/divineNameIntentions';
 import { DivineName } from '../data/divine-names';
@@ -15,6 +16,8 @@ interface DivineNameIntentionFormProps {
 }
 
 export function DivineNameIntentionForm({ onCalculate, language = 'en', isLoading = false }: DivineNameIntentionFormProps) {
+  // The Names (values and practice counts) for the selected Abjad system.
+  const divineNames = useDivineNames();
   const isFrench = language === 'fr';
   const [intention, setIntention] = useState<DivineIntention | null>(null);
   const [subMode, setSubMode] = useState<DivineIntentionSubMode>('auto');
@@ -102,7 +105,7 @@ export function DivineNameIntentionForm({ onCalculate, language = 'en', isLoadin
               <h2 className="font-technical text-[11px] tracking-[3px] uppercase font-bold mb-1" style={{ color: COMPAT_THEME.indigo }}>
                 {isFrench ? '2. Quel Nom souhaitez-vous vérifier ?' : '2. Which Name do you want to check?'}
               </h2>
-              <DivineNamePicker selected={divineName} onSelect={setDivineName} language={language} />
+              <DivineNamePicker selected={divineName} onSelect={setDivineName} language={language} names={divineNames} />
             </div>
           ) : (
             <p className="text-xs text-center leading-relaxed" style={{ color: COMPAT_THEME.muted }}>

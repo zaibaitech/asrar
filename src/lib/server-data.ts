@@ -1272,17 +1272,17 @@ export const DIVINE_NAMES_DATA: DivineName[] = [
   },
   {
     number: 91,
-    arabic: 'الضَّارَّ',
+    arabic: 'الضَّارُّ',
     transliteration: 'Ad Daaarr',
     meaningEn: 'The Creator of the harmful',
     meaningFr: 'Celui qui peut nuire',
-    meaningAr: 'الضَّارَّ',
+    meaningAr: 'الضَّارُّ',
     spiritualInfluence: 'The Creator of the harmful',
     spiritualInfluenceFr: 'Celui qui peut nuire',
-    spiritualInfluenceAr: 'الضَّارَّ',
+    spiritualInfluenceAr: 'الضَّارُّ',
     reflection: 'Reflect upon the Divine quality of The Creator of the harmful in your life.',
     reflectionFr: 'Réfléchissez à la qualité divine de Celui qui peut nuire dans votre vie.',
-    reflectionAr: 'تأمل في الصفة الإلهية الضَّارَّ في حياتك'
+    reflectionAr: 'تأمل في الصفة الإلهية الضَّارُّ في حياتك'
   },
   {
     number: 92,

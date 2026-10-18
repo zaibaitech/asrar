@@ -1503,7 +1503,7 @@ export const DIVINE_NAMES: DivineName[] = [
   },
   {
     number: 91,
-    arabic: "الضَّارَّ",
+    arabic: "الضَّارُّ",
     transliteration: "Aḍ-Ḍārr",
     translation: { en: "The One Who Creates Harm", fr: "Celui qui Crée le Préjudice" },
     abjadValue: 1001,

@@ -17,6 +17,7 @@ import { toLocalDateString } from '@/src/lib/localDate';
 import { TasbihCounter } from './TasbihCounter';
 import { translations } from '@/src/lib/translations';
 import { nativeOrCopy, trackEvent } from '@/src/lib/analytics';
+import { useLanguage } from '@/src/contexts/LanguageContext';
 
 // ─── Type Badge Colors ───────────────────────────────────────────────────────────
 
@@ -54,7 +55,7 @@ const TYPE_STYLES: Record<ChallengeType, { bg: string; text: string; label: stri
     text: 'text-teal-700 dark:text-teal-300',
     label: 'Debt Relief',
     labelFr: 'Soulagement Dettes',
-    labelAr: 'فرج من الدين',
+    labelAr: 'قضاء الدَّين',
   },
   CUSTOM: {
     bg: 'bg-slate-100 dark:bg-slate-700/40',
@@ -68,9 +69,9 @@ const TYPE_STYLES: Record<ChallengeType, { bg: string; text: string; label: stri
 // ─── Inspirational Quotes ────────────────────────────────────────────────────────
 
 const QUOTES = [
-  { en: 'The dhikr of Allah is the greatest.', ar: 'وَلَذِكْرُ اللّٰهِ أَكْبَرُ' },
+  { en: 'The dhikr of Allah is the greatest.', ar: 'وَلَذِكْرُ اللَّهِ أَكْبَرُ' },
   { en: 'Remember Me, and I will remember you.', ar: 'فَاذْكُرُونِي أَذْكُرْكُمْ' },
-  { en: 'Hearts find rest in the remembrance of Allah.', ar: 'أَلَا بِذِكْرِ اللّٰهِ تَطْمَئِنُّ الْقُلُوبُ' },
+  { en: 'Hearts find rest in the remembrance of Allah.', ar: 'أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ' },
   { en: 'Glorify Allah morning and evening.', ar: 'وَسَبِّحُوهُ بُكْرَةً وَأَصِيلًا' },
 ];
 
@@ -104,6 +105,10 @@ export function ChallengeCard({
   const [linkCopied, setLinkCopied] = useState(false);
   const [showTasbih, setShowTasbih] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+
+  // On /ar, Arabic text that already exists in the data (labelAr, the Qur'anic
+  // quote's `ar`) is rendered directly instead of machine-translating the English.
+  const isArabicUi = useLanguage().uiLanguage === 'ar';
 
   // Translations
   const t = translations[language].tasbih;
@@ -279,7 +284,7 @@ export function ChallengeCard({
           {/* Type badge and title */}
           <div className="flex items-center gap-3 flex-1 min-w-0">
             <span className={`inline-flex items-center px-2 py-1 rounded-lg text-xs font-medium ${typeStyle.bg} ${typeStyle.text}`}>
-              {language === 'fr' ? typeStyle.labelFr : typeStyle.label}
+              {isArabicUi ? typeStyle.labelAr : language === 'fr' ? typeStyle.labelFr : typeStyle.label}
             </span>
             <div className="min-w-0 flex-1">
               <h4 className="font-semibold text-slate-900 dark:text-slate-100 truncate">
@@ -529,10 +534,12 @@ export function ChallengeCard({
 
           {/* Inspirational quote */}
           <div className="pt-2 border-t border-slate-100 dark:border-slate-700">
-            <p className="text-center text-sm italic text-amber-600/80 dark:text-amber-400/80">
-              "{quote.en}"
-            </p>
-            <p className="text-center text-sm font-arabic text-amber-700/60 dark:text-amber-300/60 mt-1" dir="rtl">
+            {!isArabicUi && (
+              <p className="text-center text-sm italic text-amber-600/80 dark:text-amber-400/80">
+                "{quote.en}"
+              </p>
+            )}
+            <p className="text-center text-sm font-arabic text-amber-700/60 dark:text-amber-300/60 mt-1" dir="rtl" data-no-ar>
               {quote.ar}
             </p>
           </div>

@@ -28,7 +28,7 @@ type Catalog = { get(key: string): string | undefined };
  * are replaced by the catalog translation of each captured group ($pN keeps
  * the captured text as is).
  */
-function makeCatalog(o: Record<string, string>): Catalog {
+export function makeCatalog(o: Record<string, string>): Catalog {
   const exact = new Map<string, string>();
   const patterns: { re: RegExp; ar: string }[] = [];
   for (const [k, v] of Object.entries(o)) {

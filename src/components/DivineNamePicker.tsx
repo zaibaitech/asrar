@@ -1,14 +1,18 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 import { Search } from 'lucide-react';
-import { DIVINE_NAMES, DivineName } from '../data/divine-names';
+import type { DivineName } from '../data/divine-names';
+import { useDivineNames } from '../hooks/useDivineNames';
 import { COMPAT_THEME } from '../constants/compatibilityTheme';
 
 interface DivineNamePickerProps {
   selected: DivineName | null;
   onSelect: (name: DivineName) => void;
   language?: 'en' | 'fr' | 'ar';
+  /** The Names for the selected Abjad system (defaults to the app-wide choice). */
+  names?: DivineName[];
 }
 
 /** Strips scholarly transliteration diacritics (ā/ḥ/ṣ/ṭ/ẓ/ʿ/ʾ/etc.) so a plain-ASCII search like "latif" matches "Al-Laṭīf". */
@@ -16,20 +20,25 @@ function foldDiacritics(s: string): string {
   return s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[ʿʾ]/g, '');
 }
 
-export function DivineNamePicker({ selected, onSelect, language = 'en' }: DivineNamePickerProps) {
+export function DivineNamePicker({ selected, onSelect, language = 'en', names }: DivineNamePickerProps) {
+  const systemNames = useDivineNames();
+  const list = names ?? systemNames;
   const isFrench = language === 'fr';
+  // On /ar the verified Arabic from the data is shown directly; the English gloss
+  // is not machine-translated through the runtime catalog.
+  const isArabicUi = useLanguage().uiLanguage === 'ar';
   const [query, setQuery] = useState('');
 
   const results = useMemo(() => {
     const q = foldDiacritics(query.trim().toLowerCase());
-    if (!q) return DIVINE_NAMES;
-    return DIVINE_NAMES.filter(name =>
+    if (!q) return list;
+    return list.filter(name =>
       foldDiacritics(name.transliteration.toLowerCase()).includes(q) ||
       name.translation.en.toLowerCase().includes(q) ||
       name.translation.fr.toLowerCase().includes(q) ||
       name.keywords.some(k => k.includes(q))
     );
-  }, [query]);
+  }, [query, list]);
 
   return (
     <div>
@@ -78,9 +87,11 @@ export function DivineNamePicker({ selected, onSelect, language = 'en' }: Divine
                     {name.arabic}
                   </span>
                 </div>
-                <div className="text-xs truncate" style={{ color: COMPAT_THEME.muted }}>
-                  {name.translation[isFrench ? 'fr' : 'en']}
-                </div>
+                {!isArabicUi && (
+                  <div className="text-xs truncate" style={{ color: COMPAT_THEME.muted }}>
+                    {name.translation[isFrench ? 'fr' : 'en']}
+                  </div>
+                )}
               </div>
               {active && (
                 <span

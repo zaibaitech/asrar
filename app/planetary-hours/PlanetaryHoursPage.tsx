@@ -367,7 +367,7 @@ export function PlanetaryHoursPage() {
                   <span className={`font-medium ${p.text}`}>{p.key}</span>
                 </div>
                 {i < PLANET_GUIDE.length - 1 && (
-                  <span className="text-slate-400 dark:text-slate-600">→</span>
+                  <span className="inline-block text-slate-400 dark:text-slate-600 rtl:rotate-180" aria-hidden>→</span>
                 )}
               </React.Fragment>
             ))}

@@ -24,8 +24,11 @@ export function QuranicVerseDisplay({
   reflectionPrompt,
   reflectionPromptFr
 }: QuranicVerseDisplayProps) {
-  const { t, language } = useLanguage();
+  const { t, language, uiLanguage } = useLanguage();
   const isFr = language === 'fr';
+  // On /ar the verified Arabic from the data is shown directly; the English translation
+  // is not machine-translated through the runtime catalog.
+  const isArabicUi = uiLanguage === 'ar';
   const [showRelevance, setShowRelevance] = useState(false);
 
   return (
@@ -57,9 +60,11 @@ export function QuranicVerseDisplay({
           </div>
           
           {/* Translation */}
-          <div className="text-base md:text-lg text-emerald-800 dark:text-emerald-200 text-center leading-relaxed italic">
-            "{isFr ? verse.translationFr : verse.translationEn}"
-          </div>
+          {!isArabicUi && (
+            <div className="text-base md:text-lg text-emerald-800 dark:text-emerald-200 text-center leading-relaxed italic">
+              "{isFr ? verse.translationFr : verse.translationEn}"
+            </div>
+          )}
         </div>
 
         {/* Relevance - Expandable */}

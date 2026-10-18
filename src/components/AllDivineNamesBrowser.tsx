@@ -1,10 +1,14 @@
 import React, { useState, useMemo } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 import { ChevronDown, ChevronUp, Search } from 'lucide-react';
-import { DIVINE_NAMES } from '../data/divine-names';
+import type { DivineName } from '../data/divine-names';
+import { useDivineNames } from '../hooks/useDivineNames';
 import { COMPAT_THEME, COMPAT_TINTS } from '../constants/compatibilityTheme';
 
 interface AllDivineNamesBrowserProps {
   language?: 'en' | 'fr' | 'ar';
+  /** The Names for the selected Abjad system (defaults to the app-wide choice). */
+  names?: DivineName[];
 }
 
 /** Strips scholarly transliteration diacritics so a plain-ASCII search like "latif" matches "Al-Laṭīf" — mirrors DivineNamePicker.tsx's own helper. */
@@ -22,23 +26,28 @@ function foldDiacritics(s: string): string {
  * "Browse all 99 Names" toggle) so it never reads as part of the
  * intention recommendation itself.
  */
-export function AllDivineNamesBrowser({ language = 'en' }: AllDivineNamesBrowserProps) {
+export function AllDivineNamesBrowser({ language = 'en', names }: AllDivineNamesBrowserProps) {
+  const systemNames = useDivineNames();
+  const list = names ?? systemNames;
   const contentLang: 'en' | 'fr' = language === 'fr' ? 'fr' : 'en';
   const isFrench = contentLang === 'fr';
+  // On /ar the verified Arabic from the data is shown directly; the English gloss
+  // is not machine-translated through the runtime catalog.
+  const isArabicUi = useLanguage().uiLanguage === 'ar';
   const [expanded, setExpanded] = useState(false);
   const [query, setQuery] = useState('');
   const [openNumber, setOpenNumber] = useState<number | null>(null);
 
   const results = useMemo(() => {
     const q = foldDiacritics(query.trim().toLowerCase());
-    if (!q) return DIVINE_NAMES;
-    return DIVINE_NAMES.filter(name =>
+    if (!q) return list;
+    return list.filter(name =>
       foldDiacritics(name.transliteration.toLowerCase()).includes(q) ||
       name.translation.en.toLowerCase().includes(q) ||
       name.translation.fr.toLowerCase().includes(q) ||
       name.keywords.some(k => k.includes(q))
     );
-  }, [query]);
+  }, [query, list]);
 
   return (
     <div className="mt-6">
@@ -100,7 +109,7 @@ export function AllDivineNamesBrowser({ language = 'en' }: AllDivineNamesBrowser
                           <span className="font-technical text-sm font-bold" style={{ color: COMPAT_THEME.indigo }}>{name.transliteration}</span>
                           <span dir="rtl" lang="ar" className="font-arabic text-lg">{name.arabic}</span>
                         </div>
-                        <div className="text-xs truncate" style={{ color: COMPAT_THEME.muted }}>{name.translation[contentLang]}</div>
+                        {!isArabicUi && <div className="text-xs truncate" style={{ color: COMPAT_THEME.muted }}>{name.translation[contentLang]}</div>}
                       </div>
                     </div>
                     {isOpen ? <ChevronUp className="w-4 h-4 flex-shrink-0" style={{ color: COMPAT_THEME.muted }} /> : <ChevronDown className="w-4 h-4 flex-shrink-0" style={{ color: COMPAT_THEME.muted }} />}
