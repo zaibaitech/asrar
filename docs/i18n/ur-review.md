@@ -1067,10 +1067,10 @@ Tags, title, one-liner, meaning and outlook per context, watch-out, key to succe
 
 | English | Urdu |
 |---|---|
-| Grounded | جڑا ہوا |
+| Grounded | زمین سے جڑا |
 | Stability | استحکام |
 | Renewal | تجدید |
-| The Grounded Path | جڑا ہوا راستہ |
+| The Grounded Path | زمین سے جڑا راستہ |
 | May start easy; later can feel stagnant | آغاز آسان ہو سکتا ہے؛ بعد میں جمود محسوس ہو سکتا ہے |
 | Emotional coldness and taking each other for granted. Growth in provision may slow without conscious effort. | جذباتی سردمہری اور ایک دوسرے کو معمولی سمجھ لینا۔ شعوری کوشش کے بغیر رزق میں ترقی سست پڑ سکتی ہے۔ |
 | Shared spiritual goals, regular renewal practices, gratitude, and acts of charity (sadaqah) together. | مشترکہ روحانی مقاصد، تجدید کے باقاعدہ معمولات، شکرگزاری، اور مل کر صدقہ و خیرات۔ |
@@ -1098,26 +1098,26 @@ Tags, title, one-liner, meaning and outlook per context, watch-out, key to succe
 | Traditionally considered a favorable pattern for collaboration — natural cooperation and mutual understanding support the partnership. | مل کر کام کرنے کے لیے روایتی طور پر موافق نمونہ سمجھا جاتا ہے — فطری تعاون اور باہمی سمجھ شراکت کو سہارا دیتی ہے۔ |
 | This bond naturally supports cooperation and ease. Two people connected this way tend to understand each other quickly, though one may lean too heavily on the other. | یہ رشتہ فطری طور پر تعاون اور آسانی کو سہارا دیتا ہے۔ اس طرح جڑے ہوئے دو افراد ایک دوسرے کو جلد سمجھ لیتے ہیں، تاہم ایک فریق دوسرے پر ضرورت سے زیادہ انحصار کر سکتا ہے۔ |
 | Marriage is traditionally supported. Companionship and teamwork are natural strengths. Guard against dependency. | شادی کو روایتی طور پر سہارا ملتا ہے۔ رفاقت اور مل کر چلنا فطری خوبیاں ہیں۔ انحصار سے بچیں۔ |
-| A naturally easy, low-friction friendship — you tend to understand each other quickly and rarely clash. Watch that neither friend becomes overly reliant on the other. | فطری طور پر آسان اور کم رگڑ والی دوستی — آپ ایک دوسرے کو جلد سمجھ لیتے ہیں اور کم ہی ٹکراتے ہیں۔ خیال رکھیں کہ کوئی ایک دوست دوسرے پر حد سے زیادہ انحصار نہ کرنے لگے۔ |
-| Family members connected this way tend to get along with little friction and genuine mutual understanding. Encourage each other's independence alongside the closeness. | اس طرح جڑے ہوئے اہلِ خانہ عموماً کم رگڑ کے ساتھ ایک دوسرے سے نبھاتے ہیں اور حقیقی باہمی سمجھ رکھتے ہیں۔ قربت کے ساتھ ایک دوسرے کی خود مختاری کی بھی حوصلہ افزائی کریں۔ |
+| A naturally easy, low-friction friendship — you tend to understand each other quickly and rarely clash. Watch that neither friend becomes overly reliant on the other. | فطری طور پر آسان دوستی جس میں اختلافات کم ہوتے ہیں — آپ ایک دوسرے کو جلد سمجھ لیتے ہیں اور کم ہی ٹکراتے ہیں۔ خیال رکھیں کہ کوئی ایک دوست دوسرے پر حد سے زیادہ انحصار نہ کرنے لگے۔ |
+| Family members connected this way tend to get along with little friction and genuine mutual understanding. Encourage each other's independence alongside the closeness. | اس طرح جڑے ہوئے اہلِ خانہ عموماً کم اختلافات کے ساتھ ایک دوسرے سے نبھاتے ہیں اور حقیقی باہمی سمجھ رکھتے ہیں۔ قربت کے ساتھ ایک دوسرے کی خود مختاری کی بھی حوصلہ افزائی کریں۔ |
 | A cooperative, low-conflict working relationship where tasks divide naturally. Guard against one person carrying too much of the shared workload. | تعاون پر مبنی، کم تنازع والا پیشہ ورانہ تعلق جس میں کام فطری طور پر بٹ جاتا ہے۔ خیال رکھیں کہ مشترکہ کام کا بوجھ ایک ہی شخص پر نہ پڑ جائے۔ |
-| Friction | رگڑ |
+| Friction | اختلاف |
 | Patience | صبر |
 | Discipline | نظم و ضبط |
-| The Friction Path | رگڑ کا راستہ |
+| The Friction Path | اختلاف اور تناؤ کا راستہ |
 | Often difficult; tension and strain | اکثر مشکل؛ تناؤ اور دباؤ |
 | Constant arguments, financial instability, and emotional burnout. This path tests endurance. | مسلسل بحث، مالی عدم استحکام اور جذباتی تھکن۔ یہ راستہ برداشت کا امتحان لیتا ہے۔ |
 | Patience (sabr), structured routines, spiritual discipline, and wise counsel from trusted elders. | صبر، منظم معمولات، روحانی نظم و ضبط، اور قابلِ اعتماد بزرگوں کا دانشمندانہ مشورہ۔ |
 | Traditionally associated with difficulty — tension, frequent disagreements, and pressure may arise, requiring patience and discipline. | روایتی طور پر مشکل سے منسوب — تناؤ، بار بار اختلاف اور دباؤ پیدا ہو سکتا ہے، جس کے لیے صبر اور نظم و ضبط درکار ہے۔ |
 | Traditionally associated with difficulty in marriage. Tension, frequent disagreements, and financial pressure may arise. | شادی میں روایتی طور پر مشکل سے منسوب۔ تناؤ، بار بار اختلاف اور مالی دباؤ پیدا ہو سکتا ہے۔ |
-| Traditionally associated with difficulty — frequent small frictions and mismatched expectations may test the friendship. | روایتی طور پر مشکل سے منسوب — چھوٹی چھوٹی رگڑیں اور مختلف توقعات دوستی کا امتحان لے سکتی ہیں۔ |
+| Traditionally associated with difficulty — frequent small frictions and mismatched expectations may test the friendship. | روایتی طور پر مشکل سے منسوب — معمولی اختلافات اور مختلف توقعات دوستی کا امتحان لے سکتی ہیں۔ |
 | Traditionally associated with difficulty — recurring tension, sometimes over responsibilities, may strain the family bond. | روایتی طور پر مشکل سے منسوب — بار بار کا تناؤ، بعض اوقات ذمہ داریوں پر، خاندانی رشتے پر دباؤ ڈال سکتا ہے۔ |
-| Traditionally associated with difficulty — friction over resources, deadlines, or decisions may strain the partnership. | روایتی طور پر مشکل سے منسوب — وسائل، آخری تاریخوں یا فیصلوں پر رگڑ شراکت پر دباؤ ڈال سکتی ہے۔ |
-| This connection often carries tension and frequent friction. Patience and structure are needed to keep disagreements from escalating. | یہ تعلق اکثر تناؤ اور بار بار کی رگڑ لیے ہوتا ہے۔ اختلافات کو بڑھنے سے روکنے کے لیے صبر اور نظم درکار ہیں۔ |
+| Traditionally associated with difficulty — friction over resources, deadlines, or decisions may strain the partnership. | روایتی طور پر مشکل سے منسوب — وسائل، آخری تاریخوں یا فیصلوں پر اختلاف شراکت پر دباؤ ڈال سکتا ہے۔ |
+| This connection often carries tension and frequent friction. Patience and structure are needed to keep disagreements from escalating. | یہ تعلق اکثر تناؤ اور بار بار کے اختلافات لیے ہوتا ہے۔ اختلافات کو بڑھنے سے روکنے کے لیے صبر اور نظم درکار ہیں۔ |
 | Marriage may face continuous challenges. Strain in provision and emotional harmony often requires outside support and spiritual discipline. | شادی کو مسلسل چیلنجز کا سامنا ہو سکتا ہے۔ رزق میں تنگی اور جذباتی ہم آہنگی میں دباؤ کے لیے اکثر باہر سے مدد اور روحانی نظم و ضبط کی ضرورت پڑتی ہے۔ |
 | Friendships under this pattern can feel effortful — frequent small disagreements and mismatched expectations are common. The bond can hold, but needs conscious care. | اس نمونے میں دوستیاں محنت طلب محسوس ہو سکتی ہیں — چھوٹے چھوٹے اختلافات اور مختلف توقعات عام ہیں۔ رشتہ قائم رہ سکتا ہے، مگر شعوری دیکھ بھال چاہتا ہے۔ |
 | Family ties here often carry recurring tension, sometimes over money or responsibilities. Structure, patience, and outside support help ease the strain. | یہاں خاندانی رشتوں میں اکثر بار بار کا تناؤ ہوتا ہے، بعض اوقات پیسوں یا ذمہ داریوں پر۔ نظم، صبر اور باہر سے مدد دباؤ کم کرتے ہیں۔ |
-| Professional partnerships under this pattern often hit friction over resources, deadlines, or decisions. Clear agreements and structured communication reduce the strain. | اس نمونے میں پیشہ ورانہ شراکتوں میں اکثر وسائل، آخری تاریخوں یا فیصلوں پر رگڑ پیدا ہوتی ہے۔ واضح معاہدے اور منظم گفتگو دباؤ کم کرتے ہیں۔ |
+| Professional partnerships under this pattern often hit friction over resources, deadlines, or decisions. Clear agreements and structured communication reduce the strain. | اس نمونے میں پیشہ ورانہ شراکتوں میں اکثر وسائل، آخری تاریخوں یا فیصلوں پر اختلاف پیدا ہوتا ہے۔ واضح معاہدے اور منظم گفتگو دباؤ کم کرتے ہیں۔ |
 | Burden | بوجھ |
 | Health | صحت |
 | Maturity | پختگی |
@@ -1157,14 +1157,14 @@ Tags, title, one-liner, meaning and outlook per context, watch-out, key to succe
 | Self-work | خود احتسابی |
 | The Trial Path | آزمائش کا راستہ |
 | Quarrels and ego tests | جھگڑے اور انا کے امتحان |
-| Power struggles, recurring arguments, and cycles of blame. Pride and unresolved anger amplify friction. | طاقت کی کشمکش، بار بار کی بحثیں اور الزام تراشی کے چکر۔ غرور اور حل نہ ہوا غصہ رگڑ کو بڑھا دیتے ہیں۔ |
+| Power struggles, recurring arguments, and cycles of blame. Pride and unresolved anger amplify friction. | طاقت کی کشمکش، بار بار کی بحثیں اور الزام تراشی کے چکر۔ غرور اور حل نہ ہوا غصہ کشیدگی کو بڑھا دیتے ہیں۔ |
 | Conflict resolution skills, self-work (especially anger and ego), forgiveness practices, and regular spiritual remembrance (dhikr). | تنازع حل کرنے کی مہارتیں، خود احتسابی (خاص طور پر غصے اور انا میں)، معافی کے معمولات، اور باقاعدہ ذکرِ الٰہی۔ |
 | Traditionally shows recurring quarrels and discord — tests of anger, pride, and ego are common until inner work is done. | روایتی طور پر بار بار کے جھگڑے اور اختلاف دکھاتا ہے — جب تک اندرونی اصلاح نہ ہو، غصے، غرور اور انا کے امتحان عام رہتے ہیں۔ |
 | Traditionally shows recurring quarrels and discord in marriage. Tests of anger, pride, and ego are common. | روایتی طور پر شادی میں بار بار کے جھگڑے اور اختلاف دکھاتا ہے۔ غصے، غرور اور انا کے امتحان عام ہیں۔ |
 | Traditionally shows recurring small quarrels — tests of pride and ego may repeat until self-awareness grows. | روایتی طور پر بار بار کے چھوٹے جھگڑے دکھاتا ہے — خود آگاہی بڑھنے تک غرور اور انا کے امتحان دہرائے جا سکتے ہیں۔ |
 | Traditionally shows recurring discord — old patterns of pride and ego may resurface until addressed with forgiveness. | روایتی طور پر بار بار کا اختلاف دکھاتا ہے — غرور اور انا کے پرانے انداز اس وقت تک پھر ابھر سکتے ہیں جب تک انہیں معافی کے ساتھ نہ نمٹایا جائے۔ |
-| Traditionally shows recurring friction — tests of ego and power may repeat until clear roles and respect are established. | روایتی طور پر بار بار کی رگڑ دکھاتا ہے — انا اور طاقت کے امتحان اس وقت تک دہرائے جا سکتے ہیں جب تک واضح کردار اور باہمی احترام قائم نہ ہو۔ |
-| This bond tends to surface recurring friction tied to pride and ego. Self-awareness on both sides is what breaks the cycle. | یہ رشتہ غرور اور انا سے جڑی بار بار کی رگڑ کو ابھارتا ہے۔ دونوں طرف کی خود آگاہی ہی اس چکر کو توڑتی ہے۔ |
+| Traditionally shows recurring friction — tests of ego and power may repeat until clear roles and respect are established. | روایتی طور پر بار بار کے اختلافات دکھاتا ہے — انا اور طاقت کے امتحان اس وقت تک دہرائے جا سکتے ہیں جب تک واضح کردار اور باہمی احترام قائم نہ ہو۔ |
+| This bond tends to surface recurring friction tied to pride and ego. Self-awareness on both sides is what breaks the cycle. | یہ رشتہ غرور اور انا سے جڑی بار بار کے اختلافات کو ابھارتا ہے۔ دونوں طرف کی خود آگاہی ہی اس چکر کو توڑتی ہے۔ |
 | Marriage often involves power struggles and repeated conflicts. Both partners must work on self-awareness and forgiveness. | شادی میں اکثر طاقت کی کشمکش اور بار بار کے تنازعات ہوتے ہیں۔ دونوں فریقوں کو خود آگاہی اور معافی پر کام کرنا ہوگا۔ |
 | Friendships here often involve repeated small conflicts, sometimes over who's 'right.' Letting go of ego keeps the friendship from wearing thin. | یہاں دوستیوں میں اکثر بار بار کے چھوٹے تنازعات ہوتے ہیں، بعض اوقات اس پر کہ کون ’’صحیح‘‘ ہے۔ انا کو چھوڑ دینا دوستی کو گھسنے سے بچاتا ہے۔ |
 | Family relationships under this pattern often carry old, recurring disagreements. Forgiveness and honest self-reflection are what finally shift the pattern. | اس نمونے میں خاندانی رشتوں میں اکثر پرانے اور بار بار کے اختلافات ہوتے ہیں۔ معافی اور دیانت دارانہ خود احتسابی ہی بالآخر اس انداز کو بدلتی ہے۔ |
@@ -1179,28 +1179,28 @@ Tags, title, one-liner, meaning and outlook per context, watch-out, key to succe
 | Traditionally considered the most favorable for marriage. May face obstacles early on, but strong blessings and alignment often follow. | شادی کے لیے روایتی طور پر سب سے زیادہ موافق سمجھا جاتا ہے۔ شروع میں رکاوٹیں آ سکتی ہیں، مگر اکثر مضبوط برکتیں اور ہم آہنگی پیچھے آتی ہیں۔ |
 | Traditionally considered one of the most favorable patterns for friendship — early distance often resolves into deep loyalty. | دوستی کے لیے روایتی طور پر سب سے زیادہ موافق نمونوں میں سے ایک سمجھا جاتا ہے — شروع کی دوری اکثر گہری وفاداری میں بدل جاتی ہے۔ |
 | Traditionally considered one of the most favorable patterns for family bonds — early difficulty often gives way to lasting depth. | خاندانی رشتوں کے لیے روایتی طور پر سب سے زیادہ موافق نمونوں میں سے ایک سمجھا جاتا ہے — شروع کی مشکل اکثر دیرپا گہرائی کو راستہ دیتی ہے۔ |
-| Traditionally considered one of the most favorable patterns for partnership — early friction often resolves into a highly aligned collaboration. | شراکت کے لیے روایتی طور پر سب سے زیادہ موافق نمونوں میں سے ایک سمجھا جاتا ہے — شروع کی رگڑ اکثر ایک نہایت ہم آہنگ تعاون میں بدل جاتی ہے۔ |
+| Traditionally considered one of the most favorable patterns for partnership — early friction often resolves into a highly aligned collaboration. | شراکت کے لیے روایتی طور پر سب سے زیادہ موافق نمونوں میں سے ایک سمجھا جاتا ہے — شروع کا اختلاف اکثر ایک نہایت ہم آہنگ تعاون میں بدل جاتا ہے۔ |
 | Traditionally the most favorable connection — early obstacles often give way to a deep, aligned bond. Trust the process rather than forcing it. | روایتی طور پر سب سے زیادہ موافق تعلق — ابتدائی رکاوٹیں اکثر ایک گہرے اور ہم آہنگ رشتے کو راستہ دیتی ہیں۔ عمل کو زبردستی چلانے کے بجائے اس پر بھروسا کریں۔ |
 | Marriage is traditionally highly blessed. Challenges before union often make the bond stronger. This path carries spiritual favor. | شادی روایتی طور پر بہت مبارک ہے۔ نکاح سے پہلے کی مشکلات اکثر رشتے کو مضبوط بناتی ہیں۔ اس راستے میں روحانی فضل کا پہلو ہے۔ |
 | One of the strongest friendship patterns — any early distance or misunderstanding tends to resolve into a deeply loyal bond. Let it develop at its own pace. | دوستی کے مضبوط ترین نمونوں میں سے ایک — شروع کی کوئی بھی دوری یا غلط فہمی عموماً ایک گہرے وفادار رشتے میں بدل جاتی ہے۔ اسے اپنی رفتار سے پنپنے دیں۔ |
 | Family bonds here often carry real depth, even if the relationship faced early distance or difficulty. What follows tends to be lasting and meaningful. | یہاں خاندانی رشتوں میں اکثر حقیقی گہرائی ہوتی ہے، چاہے رشتے کو شروع میں دوری یا مشکل کا سامنا رہا ہو۔ جو آگے آتا ہے وہ عموماً دیرپا اور بامعنی ہوتا ہے۔ |
-| A strong working alliance — early friction or slow starts often lead to a highly effective, trusted partnership. Give it time to align. | ایک مضبوط پیشہ ورانہ اتحاد — شروع کی رگڑ یا سست آغاز اکثر ایک نہایت مؤثر اور قابلِ اعتماد شراکت تک لے جاتے ہیں۔ اسے ہم آہنگ ہونے کا وقت دیں۔ |
+| A strong working alliance — early friction or slow starts often lead to a highly effective, trusted partnership. Give it time to align. | ایک مضبوط پیشہ ورانہ اتحاد — شروع کے اختلافات یا سست آغاز اکثر ایک نہایت مؤثر اور قابلِ اعتماد شراکت تک لے جاتے ہیں۔ اسے ہم آہنگ ہونے کا وقت دیں۔ |
 | Long-term | طویل مدتی |
 | Wisdom | حکمت |
 | The Path of Patience | صبر کا راستہ |
 | Very good long-term; early struggles | طویل مدت میں بہت اچھا؛ شروع میں مشکلات |
-| Judging the relationship too quickly in the beginning. Early friction may cause premature endings. | شروع ہی میں رشتے کے بارے میں جلد فیصلہ کر لینا۔ ابتدائی رگڑ قبل از وقت اختتام کا سبب بن سکتی ہے۔ |
+| Judging the relationship too quickly in the beginning. Early friction may cause premature endings. | شروع ہی میں رشتے کے بارے میں جلد فیصلہ کر لینا۔ ابتدائی اختلافات قبل از وقت اختتام کا سبب بن سکتے ہیں۔ |
 | Patience (sabr), emotional intelligence, gentle communication, and giving time for mutual understanding to deepen. | صبر، جذباتی فہم، نرم گفتگو، اور باہمی سمجھ کے گہرا ہونے کے لیے وقت دینا۔ |
 | Traditionally very good for the long term, though early misunderstandings are common — patience transforms this into a strong bond. | روایتی طور پر طویل مدت کے لیے بہت اچھا ہے، اگرچہ ابتدائی غلط فہمیاں عام ہیں — صبر اسے ایک مضبوط رشتے میں بدل دیتا ہے۔ |
 | Traditionally very good for marriage over the long term, though early misunderstandings are common. | روایتی طور پر شادی کے لیے طویل مدت میں بہت اچھا ہے، اگرچہ ابتدائی غلط فہمیاں عام ہیں۔ |
 | Traditionally very good for the long term — early awkwardness is common, but patience often builds a lasting friendship. | روایتی طور پر طویل مدت کے لیے بہت اچھا ہے — شروع کی بے ڈھنگی عام ہے، مگر صبر اکثر ایک دیرپا دوستی بنا دیتا ہے۔ |
 | Traditionally very good for the long term — early distance is common, but the family bond tends to deepen with time. | روایتی طور پر طویل مدت کے لیے بہت اچھا ہے — شروع کی دوری عام ہے، مگر خاندانی رشتہ وقت کے ساتھ گہرا ہوتا جاتا ہے۔ |
-| Traditionally very good for the long term — early friction is common, but patience often builds a highly reliable partnership. | روایتی طور پر طویل مدت کے لیے بہت اچھا ہے — شروع کی رگڑ عام ہے، مگر صبر اکثر ایک نہایت قابلِ بھروسا شراکت بنا دیتا ہے۔ |
+| Traditionally very good for the long term — early friction is common, but patience often builds a highly reliable partnership. | روایتی طور پر طویل مدت کے لیے بہت اچھا ہے — شروع کے اختلافات عام ہیں، مگر صبر اکثر ایک نہایت قابلِ بھروسا شراکت بنا دیتا ہے۔ |
 | This connection often starts with confusion or misjudgment but strengthens significantly with time. Patience is what unlocks its real depth. | یہ تعلق اکثر الجھن یا غلط اندازے سے شروع ہوتا ہے مگر وقت کے ساتھ نمایاں طور پر مضبوط ہوتا ہے۔ صبر ہی اس کی حقیقی گہرائی کو کھولتا ہے۔ |
 | Marriage starts with confusion or misjudgment but becomes very strong over time. Patience is the key to unlocking this bond's strength. | شادی الجھن یا غلط اندازے سے شروع ہوتی ہے مگر وقت کے ساتھ بہت مضبوط ہو جاتی ہے۔ صبر ہی اس رشتے کی طاقت کو کھولنے کی کنجی ہے۔ |
 | Friendships here can start awkwardly or take time to click, but often become some of the most enduring bonds. Don't judge it too early. | یہاں دوستیاں بے ڈھنگے انداز سے شروع ہو سکتی ہیں یا ہم آہنگ ہونے میں وقت لے سکتی ہیں، مگر اکثر سب سے پائیدار رشتوں میں سے بن جاتی ہیں۔ جلد فیصلہ نہ کریں۔ |
 | Family relationships under this pattern may start with distance or misunderstanding but tend to deepen meaningfully over the years. Give the bond time. | اس نمونے میں خاندانی رشتے دوری یا غلط فہمی سے شروع ہو سکتے ہیں مگر برسوں میں بامعنی طور پر گہرے ہوتے جاتے ہیں۔ رشتے کو وقت دیں۔ |
-| Working relationships here often start rocky — mismatched expectations or slow trust-building — but tend to become highly reliable partnerships over time. | یہاں پیشہ ورانہ تعلقات اکثر ناہموار شروع ہوتے ہیں — مختلف توقعات یا اعتماد بننے میں سستی — مگر وقت کے ساتھ نہایت قابلِ بھروسا شراکت بن جاتے ہیں۔ |
+| Working relationships here often start rocky — mismatched expectations or slow trust-building — but tend to become highly reliable partnerships over time. | یہاں پیشہ ورانہ تعلقات اکثر مشکل سے شروع ہوتے ہیں — مختلف توقعات یا اعتماد بننے میں سستی — مگر وقت کے ساتھ نہایت قابلِ بھروسا شراکت بن جاتے ہیں۔ |
 | The Severed Path | کٹا ہوا راستہ |
 | Traditionally warned against | روایتی طور پر اس سے منع کیا گیا ہے |
 | Sudden separations, recurring harm cycles, and patterns that repeat despite efforts. This path requires vigilance. | اچانک جدائیاں، نقصان کے بار بار کے چکر، اور ایسے انداز جو کوشش کے باوجود دہرائے جاتے ہیں۔ اس راستے میں چوکسی درکار ہے۔ |
@@ -1276,7 +1276,7 @@ Name meaning, divine quality, spiritual focus, favourable/unfavourable themes, r
 | Deception | دھوکا |
 | Unclear contracts | غیر واضح معاہدے |
 | Confusion | الجھن |
-| Clarity of intention softens confusion — seek light before you speak or sign. | نیت کی وضاحت الجھن کو نرم کرتی ہے — بولنے یا دستخط کرنے سے پہلے روشنی مانگیں۔ |
+| Clarity of intention softens confusion — seek light before you speak or sign. | نیت کی وضاحت الجھن کو نرم کرتی ہے — بات کرنے یا دستخط کرنے سے پہلے اللہ سے رہنمائی مانگیں۔ |
 | Educational reflection | تعلیمی غور و فکر |
 | The Brand | داغ |
 | Marking, Identity, Recognition | نشان، شناخت، پہچان |
@@ -1454,7 +1454,7 @@ Name meaning, divine quality, spiritual focus, favourable/unfavourable themes, r
 | Overindulgence | حد سے زیادہ لذت پرستی |
 | The Most Fortunate | سب سے زیادہ سعد |
 | Gratitude, Hope | شکرگزاری، امید |
-| Named “most fortunate” in the star calendar — meet ease with shukr, and hardship with hope in Allah alone. | ستاروں کے کیلنڈر میں “سب سے زیادہ سعد” کہلاتی ہے — آسانی کو شکر کے ساتھ اور مشکل کو صرف اللہ سے امید کے ساتھ ملیں۔ |
+| Named “most fortunate” in the star calendar — meet ease with shukr, and hardship with hope in Allah alone. | ستاروں کے کیلنڈر میں “سب سے زیادہ سعد” کہلاتی ہے — آسانی ملے تو شکر ادا کریں، اور مشکل پیش آئے تو صرف اللہ سے امید رکھیں۔ |
 | Gratitude practices | شکرگزاری کے معمولات |
 | Beginning hopeful works | پُرامید کاموں کا آغاز |
 | Sharing ease with others | آسانی دوسروں کے ساتھ بانٹنا |
@@ -1511,8 +1511,8 @@ Traditional text, guiding principle, fields to consider carefully, and the 45 re
 | English | Urdu |
 |---|---|
 | Livestock trading, fashion and clothing business, fruit wholesaling (sell wholesale for quick turnover to prevent spoilage) | مویشیوں کی تجارت، فیشن اور ملبوسات کا کاروبار، پھلوں کی تھوک فروخت (خراب ہونے سے بچانے کے لیے جلد نکاسی کی خاطر تھوک میں بیچنا) |
-| Quick turnover, fresh goods, dynamic movement, and energetic action align perfectly with your fiery nature and passionate energy | تیز رفتار نکاسی، تازہ مال، متحرک سرگرمی اور توانا عمل آپ کی آتشی فطرت اور پُرجوش توانائی سے پوری طرح ہم آہنگ ہیں |
-| None specified - Fire element has freedom in career choices | کوئی مخصوص ممانعت نہیں — آتشی عنصر کو پیشے کے انتخاب میں آزادی حاصل ہے |
+| Quick turnover, fresh goods, dynamic movement, and energetic action align perfectly with your fiery nature and passionate energy | تیز رفتار نکاسی، تازہ مال، متحرک سرگرمی اور توانا عمل آپ کے آتشی مزاج اور پُرجوش توانائی سے پوری طرح ہم آہنگ ہیں |
+| None specified - Fire element has freedom in career choices | کوئی مخصوص پابندی نہیں — آتشی عنصر کو پیشے کے انتخاب میں آزادی حاصل ہے |
 | Slow-moving inventory, long-term storage businesses, or careers requiring extreme patience | سست رفتار ذخیرہ، طویل مدتی گودام کے کاروبار، یا ایسے پیشے جن میں انتہائی صبر درکار ہو |
 | Fashion & Apparel | فیشن اور ملبوسات |
 | E-commerce clothing platforms | ملبوسات کے ای کامرس پلیٹ فارم |
@@ -1541,7 +1541,7 @@ Traditional text, guiding principle, fields to consider carefully, and the 45 re
 | Time-sensitive product sales | وقت کی پابندی والی مصنوعات کی فروخت |
 | Produce wholesale networks | پیداوار کی تھوک نیٹ ورکس |
 | Agriculture and farming, mining and mineral extraction, gold trading, petroleum and natural resources, earth-derived products | زراعت اور کاشتکاری، کان کنی اور معدنیات کا استخراج، سونے کی تجارت، پیٹرولیم اور قدرتی وسائل، زمین سے حاصل ہونے والی اشیا |
-| Stability, long-term growth, tangible assets, and connection to the earth's bounty align perfectly with your grounded nature and patient disposition | استحکام، طویل مدتی ترقی، ٹھوس اثاثے، اور زمین کی نعمتوں سے تعلق آپ کی زمینی فطرت اور صابر مزاج سے پوری طرح ہم آہنگ ہیں |
+| Stability, long-term growth, tangible assets, and connection to the earth's bounty align perfectly with your grounded nature and patient disposition | استحکام، طویل مدتی ترقی، ٹھوس اثاثے، اور زمین کی نعمتوں سے تعلق آپ کے زمینی مزاج اور صبر سے پوری طرح ہم آہنگ ہیں |
 | Fish and all fish-related products or businesses | مچھلی اور مچھلی سے متعلق تمام مصنوعات یا کاروبار |
 | Seafood industry, aquaculture, fish markets, sushi restaurants, fishing equipment - all water-based food commerce | سمندری خوراک کی صنعت، آبی زراعت، مچھلی منڈیاں، سوشی ریستوران، ماہی گیری کا سامان — پانی سے متعلق تمام خوراکی تجارت |
 | Agriculture & Farming | زراعت اور کاشتکاری |
@@ -1579,8 +1579,8 @@ Traditional text, guiding principle, fields to consider carefully, and the 45 re
 | Seed and fertilizer supply | بیج اور کھاد کی فراہمی |
 | Agricultural equipment sales | زرعی آلات کی فروخت |
 | Fruits and vegetables trading, fashion and clothing business - items that move and circulate like air | پھلوں اور سبزیوں کی تجارت، فیشن اور ملبوسات کا کاروبار — وہ اشیا جو ہوا کی طرح حرکت اور گردش کرتی ہیں |
-| Movement, circulation, communication, and fresh exchange align with your airy nature. Like wind, you thrive with constant motion and change. | حرکت، گردش، رابطہ اور تازہ لین دین آپ کی ہوائی فطرت سے ہم آہنگ ہیں۔ ہوا کی طرح آپ مسلسل حرکت اور تبدیلی میں پھلتے پھولتے ہیں۔ |
-| Fish and all fish-related products - disrupts air element severely | مچھلی اور مچھلی سے متعلق تمام مصنوعات — ہوائی عنصر کو شدید طور پر بگاڑتی ہیں |
+| Movement, circulation, communication, and fresh exchange align with your airy nature. Like wind, you thrive with constant motion and change. | حرکت، گردش، رابطہ اور تازہ لین دین آپ کے ہوائی مزاج سے ہم آہنگ ہیں۔ ہوا کی طرح آپ مسلسل حرکت اور تبدیلی میں پھلتے پھولتے ہیں۔ |
+| Fish and all fish-related products - disrupts air element severely | مچھلی اور مچھلی سے متعلق تمام مصنوعات — روایتی طور پر ہوائی عنصر سے غیر موافق سمجھی جاتی ہیں |
 | Seafood industry, aquaculture, fishing, fish markets - any water-based food business. Also avoid slow, stagnant businesses that lack movement. | سمندری خوراک کی صنعت، آبی زراعت، ماہی گیری، مچھلی منڈیاں — پانی سے متعلق ہر خوراکی کاروبار۔ ایسے سست اور جامد کاروبار سے بھی بچیں جن میں حرکت نہ ہو۔ |
 | Fashion & Retail | فیشن اور خوردہ فروشی |
 | Clothing boutiques and stores | ملبوسات کے بوتیک اور دکانیں |
@@ -1618,8 +1618,8 @@ Traditional text, guiding principle, fields to consider carefully, and the 45 re
 | IT consulting | آئی ٹی مشاورت |
 | Digital innovation | ڈیجیٹل جدت |
 | Fish and seafood trading, fashion and clothing business, earth-based products (blessed despite being water element) | مچھلی اور سمندری خوراک کی تجارت، فیشن اور ملبوسات کا کاروبار، زمینی مصنوعات (پانی کے عنصر کے باوجود بابرکت) |
-| Flow, adaptability, emotional intelligence, and nurturing energy align with your water nature. Like water, you find success in filling needs and providing sustenance. | بہاؤ، لچک، جذباتی فہم اور پرورش کرنے والی توانائی آپ کی آبی فطرت سے ہم آہنگ ہیں۔ پانی کی طرح آپ ضرورتیں پوری کرنے اور رزق مہیا کرنے میں کامیابی پاتے ہیں۔ |
-| Fruits and vegetables - these disrupt water element balance severely | پھل اور سبزیاں — یہ آبی عنصر کے توازن کو شدید طور پر بگاڑتی ہیں |
+| Flow, adaptability, emotional intelligence, and nurturing energy align with your water nature. Like water, you find success in filling needs and providing sustenance. | بہاؤ، لچک، جذباتی فہم اور پرورش کرنے والی توانائی آپ کے آبی مزاج سے ہم آہنگ ہیں۔ پانی کی طرح آپ ضرورتیں پوری کرنے اور رزق مہیا کرنے میں کامیابی پاتے ہیں۔ |
+| Fruits and vegetables - these disrupt water element balance severely | پھل اور سبزیاں — یہ روایتی طور پر آبی عنصر سے غیر موافق سمجھی جاتی ہیں |
 | Fresh produce markets, fruit wholesale, vegetable trading, juice bars (from fruits), salad businesses - any fruit/vegetable-focused enterprise | تازہ پیداوار کے بازار، پھلوں کی تھوک فروخت، سبزیوں کی تجارت، (پھلوں سے بنے) جوس بار، سلاد کے کاروبار — پھلوں یا سبزیوں پر مبنی ہر کاروبار |
 | Seafood & Marine | سمندری خوراک اور بحری مصنوعات |
 | Fish markets and wholesaling | مچھلی منڈیاں اور تھوک فروخت |
@@ -1654,7 +1654,7 @@ Traditional text, guiding principle, fields to consider carefully, and the 45 re
 | Earth-derived goods | زمین سے حاصل ہونے والی اشیا |
 | Natural products retail | قدرتی مصنوعات کی خوردہ فروخت |
 | Leadership roles, entrepreneurship, any venture requiring courage and initiative | قیادتی کردار، کاروباری سرگرمیاں، اور ہر وہ کام جس میں ہمت اور پہل درکار ہو |
-| Leadership, innovation, courage, and pioneering spirit align with your solar fire nature | قیادت، جدت، ہمت اور اولیت کا جذبہ آپ کی شمسی آتشی فطرت سے ہم آہنگ ہیں |
+| Leadership, innovation, courage, and pioneering spirit align with your solar fire nature | قیادت، جدت، ہمت اور اولیت کا جذبہ آپ کے شمسی آتشی مزاج سے ہم آہنگ ہیں |
 | Routine, repetitive work lacking creativity or leadership opportunity | معمول کا، دہرایا جانے والا کام جس میں تخلیقی صلاحیت یا قیادت کا موقع نہ ہو |
 | Subordinate roles without autonomy, micromanaged positions, careers suppressing initiative | خود مختاری کے بغیر ماتحت کردار، سخت نگرانی والے عہدے، اور وہ پیشے جو پہل کو دبا دیں |
 | Leadership & Management | قیادت اور انتظام |
@@ -1685,7 +1685,7 @@ Traditional text, guiding principle, fields to consider carefully, and the 45 re
 | Arts administration | فنون کا انتظام |
 | Cultural initiatives | ثقافتی اقدامات |
 | Similar to Buruj 2 - agriculture, real estate, construction, earth resources | برج 2 کی طرح — زراعت، رئیل اسٹیٹ، تعمیرات، زمینی وسائل |
-| Long-term stability, tangible assets, and foundational structures align with your earth nature | طویل مدتی استحکام، ٹھوس اثاثے اور بنیادی ڈھانچے آپ کی زمینی فطرت سے ہم آہنگ ہیں |
+| Long-term stability, tangible assets, and foundational structures align with your earth nature | طویل مدتی استحکام، ٹھوس اثاثے اور بنیادی ڈھانچے آپ کے زمینی مزاج سے ہم آہنگ ہیں |
 | Fish and fish-related products | مچھلی اور مچھلی سے متعلق مصنوعات |
 | Seafood industry, high-risk volatile ventures, speculative businesses | سمندری خوراک کی صنعت، زیادہ خطرے والے غیر مستحکم منصوبے، قیاسی کاروبار |
 | Real Estate & Property | رئیل اسٹیٹ اور جائیداد |
@@ -1714,7 +1714,7 @@ Traditional text, guiding principle, fields to consider carefully, and the 45 re
 | Public works | عوامی تعمیرات |
 | Municipal projects | بلدیاتی منصوبے |
 | Similar to Buruj 3 - communication, trade, fashion, fresh produce | برج 3 کی طرح — ابلاغ، تجارت، فیشن، تازہ پیداوار |
-| Communication, movement, variety, and intellectual exchange align with your airy nature | ابلاغ، حرکت، تنوع اور فکری تبادلہ آپ کی ہوائی فطرت سے ہم آہنگ ہیں |
+| Communication, movement, variety, and intellectual exchange align with your airy nature | ابلاغ، حرکت، تنوع اور فکری تبادلہ آپ کے ہوائی مزاج سے ہم آہنگ ہیں |
 | Seafood industry, isolated work, repetitive tasks without variety | سمندری خوراک کی صنعت، تنہائی کا کام، بغیر تنوع کے دہرائے جانے والے کام |
 | Media & Communications | ذرائع ابلاغ اور رابطہ کاری |
 | Journalism and reporting | صحافت اور رپورٹنگ |
@@ -1744,7 +1744,7 @@ Traditional text, guiding principle, fields to consider carefully, and the 45 re
 | Translation services | ترجمے کی خدمات |
 | Editorial work | ادارتی کام |
 | Similar to Buruj 4 - fish trading, deep work, transformative professions | برج 4 کی طرح — مچھلی کی تجارت، گہرا کام، تبدیلی لانے والے پیشے |
-| Depth, transformation, healing, and uncovering hidden truths align with your Scorpionic water nature | گہرائی، تبدیلی، شفا اور پوشیدہ سچائیوں کی کھوج آپ کی عقربی آبی فطرت سے ہم آہنگ ہیں |
+| Depth, transformation, healing, and uncovering hidden truths align with your Scorpionic water nature | گہرائی، تبدیلی، شفا اور پوشیدہ سچائیوں کی کھوج آپ کے عقربی آبی مزاج سے ہم آہنگ ہیں |
 | Fruits and vegetables | پھل اور سبزیاں |
 | Fresh produce business, fruit wholesale, superficial work lacking depth | تازہ پیداوار کا کاروبار، پھلوں کی تھوک فروخت، گہرائی سے خالی سطحی کام |
 | Healing & Therapy | شفا اور تھراپی |
@@ -1776,8 +1776,8 @@ Traditional text, guiding principle, fields to consider carefully, and the 45 re
 | Change management consulting | تبدیلی کے انتظام کی مشاورت |
 | Hospice and end-of-life care | تسکینی اور آخری ایام کی نگہداشت |
 | Teaching, trade, long-distance commerce, knowledge-based professions | تدریس، تجارت، دور دراز کا کاروبار، علم پر مبنی پیشے |
-| Expansion, knowledge, truth-seeking, and freedom align with Sagittarius fire | وسعت، علم، حق کی تلاش اور آزادی قوس کی آتشی فطرت سے ہم آہنگ ہیں |
-| None specified for this buruj | اس برج کے لیے کوئی مخصوص ممانعت نہیں |
+| Expansion, knowledge, truth-seeking, and freedom align with Sagittarius fire | وسعت، علم، حق کی تلاش اور آزادی قوس کے آتشی مزاج سے ہم آہنگ ہیں |
+| None specified for this buruj | اس برج کے لیے کوئی مخصوص پابندی نہیں |
 | Confined spaces, restrictive roles, work without meaning or purpose | تنگ جگہیں، پابندی والے کردار، اور بے معنی یا بے مقصد کام |
 | Education & Philosophy | تعلیم اور فلسفہ |
 | Higher education teaching | اعلیٰ تعلیم کی تدریس |
@@ -1801,7 +1801,7 @@ Traditional text, guiding principle, fields to consider carefully, and the 45 re
 | International journalism | بین الاقوامی صحافت |
 | Knowledge platforms | علمی پلیٹ فارم |
 | Similar to other earth buruj - agriculture, construction, earth resources, property | دیگر زمینی بروج کی طرح — زراعت، تعمیرات، زمینی وسائل، جائیداد |
-| Structure, discipline, long-term achievement, and mastery align with Capricorn earth | ساخت، نظم و ضبط، طویل مدتی کامیابی اور مہارت جدی کی زمینی فطرت سے ہم آہنگ ہیں |
+| Structure, discipline, long-term achievement, and mastery align with Capricorn earth | ساخت، نظم و ضبط، طویل مدتی کامیابی اور مہارت جدی کے زمینی مزاج سے ہم آہنگ ہیں |
 | Seafood industry, unstable ventures, roles without clear authority | سمندری خوراک کی صنعت، غیر مستحکم منصوبے، واضح اختیار کے بغیر کردار |
 | Corporate executive leadership | کارپوریٹ اعلیٰ انتظامی قیادت |
 | Government positions | حکومتی عہدے |
@@ -1820,7 +1820,7 @@ Traditional text, guiding principle, fields to consider carefully, and the 45 re
 | Infrastructure projects | بنیادی ڈھانچے کے منصوبے |
 | Property investment | جائیداد میں سرمایہ کاری |
 | Similar to other air buruj - communication, trade, community service | دیگر ہوائی بروج کی طرح — ابلاغ، تجارت، کمیونٹی کی خدمت |
-| Innovation, community service, future vision, and progressive thinking align with Aquarius air | جدت، کمیونٹی کی خدمت، مستقبل بینی اور ترقی پسند سوچ دلو کی ہوائی فطرت سے ہم آہنگ ہیں |
+| Innovation, community service, future vision, and progressive thinking align with Aquarius air | جدت، کمیونٹی کی خدمت، مستقبل بینی اور ترقی پسند سوچ دلو کے ہوائی مزاج سے ہم آہنگ ہیں |
 | Seafood industry, traditional rigid structures, roles opposing innovation | سمندری خوراک کی صنعت، روایتی سخت ڈھانچے، جدت کی مخالفت کرنے والے کردار |
 | Tech innovation | ٹیکنالوجی میں جدت |
 | AI and machine learning | مصنوعی ذہانت اور مشین لرننگ |
@@ -1837,7 +1837,7 @@ Traditional text, guiding principle, fields to consider carefully, and the 45 re
 | Astronomy and space | فلکیات اور خلا |
 | Future studies | مستقبل کے مطالعات |
 | Similar to other water buruj - healing, fish trading, spiritual service | دیگر آبی بروج کی طرح — شفا، مچھلی کی تجارت، روحانی خدمت |
-| Compassion, service, spiritual connection, and healing align with Pisces water | ہمدردی، خدمت، روحانی تعلق اور شفا حوت کی آبی فطرت سے ہم آہنگ ہیں |
+| Compassion, service, spiritual connection, and healing align with Pisces water | ہمدردی، خدمت، روحانی تعلق اور شفا حوت کے آبی مزاج سے ہم آہنگ ہیں |
 | Fresh produce business, aggressive sales roles, competitive environments lacking compassion | تازہ پیداوار کا کاروبار، جارحانہ فروخت کے کردار، اور ہمدردی سے خالی مسابقتی ماحول |
 | Healing & Healthcare | شفا اور صحتِ عامہ |
 | Nursing and caregiving | نرسنگ اور تیمارداری |
@@ -1875,7 +1875,7 @@ Headings and buttons of the tab. Source: `src/features/istikhara/components/Care
 | English | Urdu |
 |---|---|
 | Career & Vocation Guidance | پیشہ اور کیریئر کی رہنمائی |
-| Career paths that resonate with your spiritual energy and elemental nature | وہ پیشہ ورانہ راستے جو آپ کی روحانی توانائی اور آپ کے عنصر کی فطرت سے ہم آہنگ ہیں |
+| Career paths that resonate with your spiritual energy and elemental nature | وہ پیشہ ورانہ راستے جو آپ کی روحانی توانائی اور آپ کے عنصری مزاج سے ہم آہنگ ہیں |
 | Traditional Wisdom | روایتی حکمت |
 | Traditional Islamic Guidance | روایتی اسلامی رہنمائی |
 | Special Spiritual Blessing | خاص روحانی برکت |
@@ -1906,13 +1906,13 @@ One paragraph per weekday. Source: `app/planet-of-the-day/PlanetOfTheDayPage.tsx
 
 | English | Urdu |
 |---|---|
-| The Sun's day is best for bold, visible action. Begin projects you want recognized. Seek blessings from those in authority. Make decisions that require confidence and leadership. Avoid hiding or working in secrecy — the Sun illuminates. | اتوار شمس سے منسوب دن ہے، جو نمایاں اور واضح اقدام کے لیے موزوں سمجھا جاتا ہے۔ جن منصوبوں کی پہچان چاہتے ہوں انہیں شروع کریں۔ صاحبِ اختیار لوگوں سے دعائیں لیں۔ ایسے فیصلے کریں جن میں اعتماد اور قیادت درکار ہو۔ چھپنے یا پوشیدگی میں کام کرنے سے بچیں — شمس روشنی دیتا ہے۔ |
-| Monday is ideal for matters of the home, family, and emotional wellbeing. Engage in travel or movement — the Moon governs journeys. Practice emotional healing, prayer, and du'ā'. Reflect on your inner world. Avoid confrontation; the Moon's waters prefer calm. | پیر گھر، خاندان اور جذباتی سکون کے معاملات کے لیے موزوں ہے۔ سفر یا نقل و حرکت اختیار کریں — روایت میں قمر کو اسفار سے منسوب کیا جاتا ہے۔ جذباتی شفا، نماز اور دعا کا اہتمام کریں۔ اپنے باطن پر غور کریں۔ ٹکراؤ سے بچیں؛ قمر کے پانی سکون پسند کرتے ہیں۔ |
-| Tuesday strengthens courage and decisive action. Tackle difficult tasks requiring force or conviction. Physical training, surgery if medically required, and overcoming fears align with Mars. Channel Mars energy into productive determination — not aggression. Start with Bismillah and firm niyyah. | منگل ہمت اور فیصلہ کن اقدام کو تقویت دینے والا دن ہے۔ قوت یا پختہ ارادے والے مشکل کام نمٹائیں۔ جسمانی تربیت، طبی ضرورت پر سرجری، اور خوف پر قابو پانا مریخ کی نسبت سے ہم آہنگ ہیں۔ مریخ کی توانائی کو جارحیت نہیں بلکہ بامقصد عزم میں ڈھالیں۔ بسم اللہ اور پختہ نیت سے آغاز کریں۔ |
-| Wednesday is the day of the scholar and the merchant. Ideal for studying, writing, signing contracts, teaching, and all forms of communication. Engage the mind — read, research, debate. Mercury rewards precision and clarity. This is also an excellent day for Zikr that involves recitation (tilāwah). | بدھ عالم اور تاجر کا دن ہے۔ مطالعہ، تحریر، معاہدوں پر دستخط، تدریس اور ہر طرح کی گفتگو کے لیے موزوں ہے۔ ذہن کو مشغول رکھیں — پڑھیں، تحقیق کریں، مباحثہ کریں۔ عطارد درستی اور وضاحت کو سراہتا ہے۔ یہ تلاوت پر مشتمل ذکر کے لیے بھی بہترین دن ہے۔ |
-| Thursday is the most blessed day for spiritual elevation, wealth-seeking, and expansion. Make du'ā' for rizq (sustenance). Begin long-term projects. Seek knowledge, visit scholars, and perform generous acts of sadaqah. Thursday night (eve of Friday) is especially blessed — use it for extra worship. | جمعرات روحانی بلندی، رزق کی طلب اور وسعت کے لیے سب سے بابرکت دن ہے۔ رزق کے لیے دعا کریں۔ طویل مدتی منصوبے شروع کریں۔ علم حاصل کریں، اہلِ علم سے ملیں، اور فراخ دلی سے صدقہ کریں۔ جمعرات کی رات (جمعہ کی شب) خاص طور پر بابرکت ہے — اسے اضافی عبادت کے لیے استعمال کریں۔ |
-| Friday is the most sacred day in Islam (Yawm al-Jum'ah). Venus and Friday align in beauty, community, and gratitude. Attend Jumu'ah, send abundant Ṣalawāt upon the Prophet ﷺ, and perform acts of beauty (charity, kind words, reconciliation). It is a day for love, forgiveness, and peace. | جمعہ اسلام میں سب سے مقدس دن ہے (یومُ الجمعہ)۔ زہرہ اور جمعہ حسن، اجتماع اور شکرگزاری میں ہم آہنگ ہیں۔ جمعہ کی نماز میں شریک ہوں، نبی کریم ﷺ پر کثرت سے درود شریف پڑھیں، اور حسنِ عمل (صدقہ، نرم گفتگو، صلح) اختیار کریں۔ یہ محبت، معافی اور سکون کا دن ہے۔ |
-| Saturday is governed by the slowest and most disciplined of the classical planets. It is a day for long-term commitments, serious study, and patient effort. Engage in property matters, legal affairs, and building lasting structures. Avoid rushing — Saturn rewards consistent, sustained effort over time. | ہفتہ کلاسیکی سیاروں میں سب سے سست اور سب سے منظم سیارے سے منسوب ہے۔ یہ طویل مدتی وعدوں، سنجیدہ مطالعے اور صبر آزما کوشش کا دن ہے۔ جائیداد، قانونی معاملات اور پائیدار ڈھانچے بنانے میں مشغول ہوں۔ جلد بازی سے بچیں — زحل مسلسل اور دیرپا محنت کو سراہتا ہے۔ |
+| The Sun's day is best for bold, visible action. Begin projects you want recognized. Seek blessings from those in authority. Make decisions that require confidence and leadership. Avoid hiding or working in secrecy — the Sun illuminates. | روایتی علمِ نجوم میں اتوار کو شمس سے منسوب کیا جاتا ہے، اور اسے نمایاں اور واضح اقدام کے لیے موزوں دن سمجھا جاتا ہے۔ جن منصوبوں کی پہچان چاہتے ہوں انہیں شروع کریں۔ بااختیار یا بزرگ افراد سے دعائیں لیں۔ ایسے فیصلے کریں جن میں اعتماد اور قیادت درکار ہو۔ چھپنے یا پوشیدگی میں کام کرنے سے بچیں — شمس روشنی کی علامت ہے۔ |
+| Monday is ideal for matters of the home, family, and emotional wellbeing. Engage in travel or movement — the Moon governs journeys. Practice emotional healing, prayer, and du'ā'. Reflect on your inner world. Avoid confrontation; the Moon's waters prefer calm. | روایتی علمِ نجوم میں پیر کو قمر سے منسوب کیا جاتا ہے، اور یہ گھر، خاندان اور جذباتی سکون کے معاملات کے لیے موزوں دن سمجھا جاتا ہے۔ سفر یا نقل و حرکت اختیار کریں — روایت میں قمر کو اسفار سے جوڑا جاتا ہے۔ جذباتی سکون، نماز اور دعا کا اہتمام کریں۔ اپنے باطن پر غور کریں۔ ٹکراؤ سے بچیں؛ اس دن سکون اور تحمل کو ترجیح دیں۔ |
+| Tuesday strengthens courage and decisive action. Tackle difficult tasks requiring force or conviction. Physical training, surgery if medically required, and overcoming fears align with Mars. Channel Mars energy into productive determination — not aggression. Start with Bismillah and firm niyyah. | روایتی علمِ نجوم میں منگل کو مریخ سے منسوب کیا جاتا ہے، اور اسے ہمت اور فیصلہ کن اقدام کا دن سمجھا جاتا ہے۔ قوت یا پختہ ارادے والے مشکل کام نمٹائیں۔ جسمانی تربیت، طبی ضرورت پر سرجری، اور خوف پر قابو پانا اسی نسبت سے مناسب سمجھا جاتا ہے۔ ہمت اور قوت کو جارحیت نہیں بلکہ بامقصد عزم میں ڈھالیں۔ بسم اللہ اور پختہ نیت سے آغاز کریں۔ |
+| Wednesday is the day of the scholar and the merchant. Ideal for studying, writing, signing contracts, teaching, and all forms of communication. Engage the mind — read, research, debate. Mercury rewards precision and clarity. This is also an excellent day for Zikr that involves recitation (tilāwah). | بدھ عالم اور تاجر کا دن ہے، اور روایت میں اسے عطارد سے منسوب کیا جاتا ہے۔ مطالعہ، تحریر، معاہدوں پر دستخط، تدریس اور ہر طرح کی گفتگو کے لیے موزوں ہے۔ ذہن کو مشغول رکھیں — پڑھیں، تحقیق کریں، مباحثہ کریں۔ اس دن درستی اور وضاحت کو اپنا شعار بنائیں۔ یہ تلاوت پر مشتمل ذکر کے لیے بھی بہترین دن ہے۔ |
+| Thursday is the most blessed day for spiritual elevation, wealth-seeking, and expansion. Make du'ā' for rizq (sustenance). Begin long-term projects. Seek knowledge, visit scholars, and perform generous acts of sadaqah. Thursday night (eve of Friday) is especially blessed — use it for extra worship. | روایت میں جمعرات روحانی بلندی، رزق کی طلب اور وسعت کے لیے خاص طور پر بابرکت سمجھی جاتی ہے۔ رزق کے لیے دعا کریں۔ طویل مدتی منصوبے شروع کریں۔ علم حاصل کریں، اہلِ علم سے ملیں، اور فراخ دلی سے صدقہ کریں۔ جمعرات کی رات (جمعہ کی شب) کو خاص طور پر بابرکت سمجھا جاتا ہے — اسے اضافی عبادت کے لیے استعمال کریں۔ |
+| Friday is the most sacred day in Islam (Yawm al-Jum'ah). Venus and Friday align in beauty, community, and gratitude. Attend Jumu'ah, send abundant Ṣalawāt upon the Prophet ﷺ, and perform acts of beauty (charity, kind words, reconciliation). It is a day for love, forgiveness, and peace. | جمعہ اسلام میں سب سے افضل دن ہے (یومُ الجمعہ)۔ روایتی علمِ نجوم اسے زہرہ سے منسوب کرتا ہے، جو حسن، اجتماع اور شکرگزاری کی علامت ہے۔ جمعہ کی نماز میں شریک ہوں، نبی کریم ﷺ پر کثرت سے درود شریف پڑھیں، اور حسنِ عمل (صدقہ، نرم گفتگو، صلح) اختیار کریں۔ یہ محبت، معافی اور سکون کا دن ہے۔ |
+| Saturday is governed by the slowest and most disciplined of the classical planets. It is a day for long-term commitments, serious study, and patient effort. Engage in property matters, legal affairs, and building lasting structures. Avoid rushing — Saturn rewards consistent, sustained effort over time. | روایتی علمِ نجوم میں ہفتے کو زحل سے منسوب کیا جاتا ہے، جو کلاسیکی سیاروں میں سب سے سست اور سب سے منظم ہے۔ یہ طویل مدتی وعدوں، سنجیدہ مطالعے اور صبر آزما کوشش کا دن ہے۔ جائیداد، قانونی معاملات اور پائیدار ڈھانچے بنانے میں مشغول ہوں۔ جلد بازی سے بچیں — اس دن مسلسل اور دیرپا محنت کو ترجیح دیں۔ |
 
 
 
@@ -1929,5 +1929,15 @@ Result texts that are still English on /ur after section 5 (counts are unique En
 | Planet / hour pages: Divine Names and incense of the current hour | a handful | e.g. “Yā Razzāq”, “O Provider”, incense names (“Lubān wa Misk”); Divine Names render the Arabic from the data files |
 | Ikhtiyārāt rule *technical* details (Detailed mode) | many, dynamic | contain degrees, signs and orbs (“Moon at 12°…”), need pattern entries, not exact strings |
 | Overview tab: “Explore the tabs above…”, “Innovative and humanitarian…” etc. | a few | the per-burj one-liners and activity lists of the overview |
+
+### Open points from the external Urdu audit (18 Oct 2026), left for the native reviewer
+
+Applied in code: «رگڑ» (friction) replaced by اختلاف / تناؤ / کشیدگی; «جڑا ہوا» (grounded) → «زمین سے جڑا»; «فطرت» → «مزاج» in the career texts; deterministic career wording («شدید طور پر بگاڑتی ہیں») softened to «روایتی طور پر … غیر موافق سمجھی جاتی ہیں»; «ممانعت» → «پابندی»; the seven weekday paragraphs now attribute each day to its planet «روایتی علمِ نجوم میں» (planets are never agents); Friday is «سب سے افضل دن».
+
+Not applied, because they change meaning or need a source check:
+- Mansion titles «چھوٹا پیٹ» (The Little Belly), «داغ» (The Brand), «سعد کے خیمے» (The Fortunate Tents), «پیچھے آنے والا»: verify against the Arabic names (البطین, الوسم/الجبهة, الأخبية, الدبران) before finalising.
+- Medical rule explanations (treatment, diagnosis): the audit suggests adding «طبی علاج کے فیصلے ڈاکٹر کے مشورے سے کریں». The English source has no such sentence, so it should be added to EN/FR/AR/UR together or not at all (Mario's decision).
+- «ربط» vs «اتصال» for connection vs applying aspect, and «اکثر بے نتیجہ رہتا ہے» (“tends to come to nothing”) kept as in the English hedge; reviewer may soften further.
+- Thursday/Friday statements: confirm the Islamic claims against sources.
 
 
