@@ -33,7 +33,7 @@ interface SimplifiedEntry {
 }
 
 /** Keyed by rule id -> list of possible outcomes, matched by exact points value first, then by status-based fallback. */
-const SIMPLIFICATIONS: Record<string, SimplifiedEntry[]> = {
+export const SIMPLIFICATIONS: Record<string, SimplifiedEntry[]> = {
   // ===== MARRIAGE =====
   'dark-moon': [
     { tone: 'caution', points: 0, en: 'The Moon is in its darkest phase right before a new moon — traditionally a time to wait, not begin.', fr: 'La Lune est dans sa phase la plus sombre juste avant une nouvelle lune — traditionnellement un moment pour attendre, pas pour commencer.' },

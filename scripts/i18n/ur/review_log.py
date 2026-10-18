@@ -104,7 +104,7 @@ ANSWERS = [
     ('Urdu letters in Abjad', 'Recommends normalising ی→ي، ک→ك، ہ/ۃ→ه/ة (ے→ي) before counting, or until then an inline warning.',
      '✅ applied (approved by Mario, Oct 2026): src/lib/urduLetters.ts converts ی ے→ي, ک→ك, ھ ۂ→ه, ہ ۃ→ه (ة at the end of a word, so فاطمہ = فاطمة = 135) before every name/Abjad count (burj, compatibility, Abjad calculator, ʿilm al-ḥurūf). علی = 110, فاطمہ = 135, کریم = 270. ٹ ڈ ڑ ں and پ چ ژ گ have no value (0). Arabic input is untouched (src/lib/urduLetters.test.ts). The spelling note says so (batch 4 wording; Arabic letters in a Naskh span). Batch 4 decisions (Mario, Oct 2026): اللہ, also inside names (عبداللہ), → الله, so total (66) and elements match الله exactly; پ چ ژ گ ٹ ڈ ڑ ں stay at 0 (strict Arabic Abjad, no chronogram values); the hamza/ى rule and the differing letter tables, already on main, are fixed in a separate PR.'),
     ('English interpretive content', 'OK for a noindex phase 1 with UR_COMMON.toolUiNote; translate burj career texts and soul-connection meanings before indexing.',
-     '⏳ not done in this PR (separate task). toolUiNote stays visible; /ur stays noindex.'),
+     '⏳ partly done: archetype meanings, burj career texts, rule explanations, manzil descriptions and day guidance are now AI-drafted (section 5, pending native review). Other result texts are still English. toolUiNote stays visible; /ur stays noindex.'),
 ]
 
 

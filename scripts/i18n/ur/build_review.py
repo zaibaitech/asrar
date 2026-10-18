@@ -6,6 +6,7 @@ English source, grouped for the native reviewer. Run from the repo root:
 import json, os, subprocess, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from catalog_source import ENTRIES
+from catalog_ai_draft import AI_ENTRIES
 from review_log import ANSWERS, CORRECTIONS, PENDING_REVIEW
 
 dump = json.loads(subprocess.check_output(['npx', 'tsx', 'scripts/i18n/ur/dump_ts.ts'], text=True))
@@ -54,7 +55,7 @@ NOTES = [
     'Planet-of-the-day intro: “a ruling planet that colours its energy” → softened to “روایت کے مطابق … اس دن کی کیفیت کا رنگ متعین کرتا ہے”. Check that the wording does not attribute independent influence to planets.',
     'Astro technical terms in the Ikhtiyārāt breakdown (محترق، خالی السیر، تحت الشعاع، ہبوط، وبال، رجعت، الطریقۃ المحترقۃ) follow classical Arabic/Persian usage; please confirm they are understood by Urdu readers.',
     'Urdu-typed names in the Abjad count: RESOLVED. Urdu letters are converted before counting (see the reviewer answers below, Q7).',
-    'Interpretive result content (soul-connection archetype meanings, burj career texts, per-date rule explanations, manzil descriptions, day guidance paragraphs) is NOT translated yet and still shows in English; the pages say “ٹول کے کچھ حصے ابھی انگریزی میں ہیں۔”',
+    'Soul-connection archetype meanings, burj career texts, per-date rule explanations (Simple mode), manzil descriptions and day guidance paragraphs are now AI-drafted (section 5, awaiting native review). Other result texts are still English (see “Still in English” at the end); the pages keep saying “ٹول کے کچھ حصے ابھی انگریزی میں ہیں۔”',
 ]
 
 def esc(s):
@@ -69,9 +70,18 @@ def table(rows, cols=('English', 'Urdu')):
 cat = {}
 for g, en, ur in ENTRIES:
     cat.setdefault(en, (g, ur))
+AI_SECTIONS = [
+    ('rules', 'Ikhtiyārāt rule explanations (Simple mode, the default)', 'Shown per date in the rule list of the Best Dates tool. Source: `src/lib/ikhtiyarat/ruleSimplification.ts`.'),
+    ('arch', 'Soul-connection archetypes (compatibility result)', 'Tags, title, one-liner, meaning and outlook per context, watch-out, key to success. Source: `src/constants/soulConnectionArchetypes.ts`.'),
+    ('manzil', 'Lunar mansions (manāzil) shown on the planet/hour pages', 'Name meaning, divine quality, spiritual focus, favourable/unfavourable themes, reflection line. The Arabic and transliterated mansion names are untouched. Source: `src/lib/lunarMansions.ts`.'),
+    ('career', 'Burj career texts (burj result, Career tab)', 'Traditional text, guiding principle, fields to consider carefully, and the 45 recommended-field categories with their items. Source: `src/data/burujData.json` (`career.*`).'),
+    ('career-ui', 'Burj Career tab labels', 'Headings and buttons of the tab. Source: `src/features/istikhara/components/CareerTabAdvanced.tsx`.'),
+    ('potd', 'Planet-of-the-day guidance paragraphs', 'One paragraph per weekday. Source: `app/planet-of-the-day/PlanetOfTheDayPage.tsx`.'),
+]
 quran = [(en, ur) for en, (g, ur) in cat.items() if g == 'quran']
 rel = [(en, ur) for en, (g, ur) in cat.items() if g == 'rel']
 ui_cat = [(en, ur) for en, (g, ur) in cat.items() if g == 'ui']
+STILL_ENGLISH = open(os.path.join(os.path.dirname(__file__), 'still_english.md'), encoding='utf-8').read()
 
 seo = dump['seo']
 pages = dump['pages']
@@ -81,16 +91,17 @@ n_meta = len(seo)
 n_pages = len({(p['en'], p['ur']) for p in pages})
 n_ui = len({(p['en'], p['ur']) for p in ui})
 n_cat = len(cat)
+n_ai = len({en for _, en, _ in AI_ENTRIES})
 total = n_meta + n_pages + n_ui + n_cat
 
 md = []
 md.append('# Urdu (/ur) — native review sheet\n')
 md.append('Phase 1 Urdu pages for asrar.app. **All /ur pages are noindex and are not in the sitemap or hreflang** until Mario approves indexing. The native review is done and its corrections are applied (see below).\n')
 md.append('Pages: `/ur`, `/ur/name-and-mother-burj`, `/ur/compatibility`, `/ur/abjad`, `/ur/planetary-hours`, `/ur/planet-of-the-day`, `/ur/ikhtiyarat`.\n')
-md.append('Every string was translated by hand (no machine translation). The mobile app (zaibaitech/asrar-mobile) has no Urdu, so nothing was reused. Qur\'an and Divine Names stay in Arabic.\n')
-md.append(f'**String count: {total}** ({n_meta} SEO metadata, {n_pages} page copy, {n_ui} shared UI in TypeScript, {n_cat} tool-UI catalog entries incl. {sum(1 for k in cat if k.startswith("re:"))} patterns).\n')
+md.append('Every string was translated by hand (no machine translation), **except the AI-drafted result texts in section 5**, which were drafted by an AI assistant, are NOT native-reviewed and are listed there for the Language Reviewer. The mobile app (zaibaitech/asrar-mobile) has no Urdu, so nothing was reused. Qur\'an and Divine Names stay in Arabic.\n')
+md.append(f'**String count: {total}** ({n_meta} SEO metadata, {n_pages} page copy, {n_ui} shared UI in TypeScript, {n_cat} tool-UI catalog entries incl. {sum(1 for k in cat if k.startswith("re:"))} patterns). Not counted here: {n_ai} AI-drafted result texts (section 5), which are not native-reviewed.\n')
 md.append('Sources (edit there, then regenerate this file with `python3 scripts/i18n/ur/build_review.py`):\n')
-md.append('- SEO metadata: `src/lib/urMetadata.ts`\n- Page copy: `src/lib/i18n/urPages.ts`\n- Shared UI: `src/lib/i18n/ur.ts`, `src/components/seo/relatedTools.ts`\n- Tool UI catalog: `scripts/i18n/ur/catalog_source.py` → `public/i18n/ur-ui.json` (`python3 scripts/i18n/ur/build_catalog.py`)\n')
+md.append('- SEO metadata: `src/lib/urMetadata.ts`\n- Page copy: `src/lib/i18n/urPages.ts`\n- Shared UI: `src/lib/i18n/ur.ts`, `src/components/seo/relatedTools.ts`\n- Tool UI catalog: `scripts/i18n/ur/catalog_source.py` + AI drafts `scripts/i18n/ur/catalog_ai_draft.py` → `public/i18n/ur-ui.json` (`python3 scripts/i18n/ur/build_catalog.py`)\n')
 md.append('\n## Open questions for the reviewer\n')
 for i, n in enumerate(NOTES, 1):
     md.append(f'{i}. {n}')
@@ -126,6 +137,18 @@ md.append(table([(p['where'], p['en'], p['ur']) for p in ui], ('Key', 'English',
 md.append('\n\n### Tool UI catalog (`public/i18n/ur-ui.json`)\n')
 md.append('Exact-match English text in the tools → Urdu. `re:` keys are patterns; `$1`… are replaced by the catalog translation of each captured part, `$pN` keeps the captured text (times).\n')
 md.append(table(ui_cat))
+md.append('\n')
+md.append(f'\n## 5. AI-drafted result texts ({n_ai} strings, NOT native-reviewed)\n')
+md.append('These were drafted by an AI assistant (Claude, Oct 2026), not by a native speaker, to fill the English gaps listed in open question 8. They are live on the **noindex** /ur pages only (no /ur page is indexed, in the sitemap or in hreflang). Please review them like the rest; the register follows the glossary above (traditional, reflective wording; planets are never agents). Divine Names and Qur\'an text are deliberately not in this list: the Arabic comes from the data files.\n')
+md.append('To change one, edit `scripts/i18n/ur/catalog_ai_draft.py` and run `python3 scripts/i18n/ur/build_catalog.py` and `python3 scripts/i18n/ur/build_review.py`. `src/lib/urdu-result-coverage.test.ts` fails if an English source string changes without its Urdu pair.\n')
+for sec, title, note in AI_SECTIONS:
+    rows = [(en, ur) for sc, en, ur in AI_ENTRIES if sc == sec]
+    md.append(f'\n### 5.{[x[0] for x in AI_SECTIONS].index(sec) + 1} {title} ({len(rows)})\n')
+    md.append(note + '\n')
+    md.append(table(rows))
+    md.append('\n')
+md.append('\n### Still in English on /ur (not part of this change)\n')
+md.append(STILL_ENGLISH)
 md.append('\n')
 os.makedirs('docs/i18n', exist_ok=True)
 open('docs/i18n/ur-review.md', 'w', encoding='utf-8').write('\n'.join(md))
