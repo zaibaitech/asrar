@@ -896,7 +896,7 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 283 | AI-draft | What are Planetary Hours? | ما الساعات الكوكبية؟ |
 | 284 | AI-draft | Writing & communication | الكتابة والتواصل |
 | 285 | AI-draft | Yā Karīm (يا كريم) · Yā Wahhāb (يا وهاب) | يا كريم · يا وهاب |
-| 286 | AI-draft | Yā Laṭīf (يا لطيف) · Yā Wudd (يا ودود) | يا لطيف · يا ودود |
+| 286 | AI-draft | Yā Laṭīf (يا لطيف) · Yā Wadūd (يا ودود) | يا لطيف · يا ودود |
 | 287 | AI-draft | Yā Qawiyy (يا قوي) · Yā Qahhār (يا قهار) | يا قوي · يا قهار |
 | 288 | AI-draft | ⚠️ For reflection & spiritual timing — not prediction. Only Allah knows the unseen. | ⚠️ للتأمّل والتوقيت الروحي — لا للتنبّؤ. ولا يعلم الغيب إلا الله. |
 | 289 | AI-draft | ⚠️ Planetary hours are a traditional tool for reflection and spiritual timing used by Islamic scholars (ʿulamā'). They are not a form of divination (kahanah). Use them to align your efforts with natural rhythms, always relying on tawakkul (trust in Allah). Consult qualified scholars for religious rulings. | ⚠️ الساعات الكوكبية أداة تقليدية للتأمّل والتوقيت الروحي استعملها علماء المسلمين، وليست ضربًا من الكهانة. استعملها لمواءمة جهودك مع الإيقاعات الطبيعية، مع التوكّل على الله دائمًا. وارجع إلى أهل العلم المؤهّلين في الأحكام الشرعية. |

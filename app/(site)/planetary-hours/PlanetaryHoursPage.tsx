@@ -55,7 +55,7 @@ const PLANET_GUIDE = [
       en: ['Starting long projects', 'Confrontations'],
       fr: ['Démarrer de longs projets', 'Confrontations'],
     },
-    dhikr: { en: 'Yā Laṭīf (يا لطيف) · Yā Wudd (يا ودود)', fr: 'Yā Laṭīf (يا لطيف) · Yā Wudd (يا ودود)' },
+    dhikr: { en: 'Yā Laṭīf (يا لطيف) · Yā Wadūd (يا ودود)', fr: 'Yā Laṭīf (يا لطيف) · Yā Wadūd (يا ودود)' },
   },
   {
     key: 'Mars',

@@ -11,7 +11,7 @@ A = '✅ applied'
 CORRECTIONS = [
     # Batch 0: Qur'an / Divine Names
     ('0', 'Divine Names list, English label “Yā Wudd”', 'Yā Laṭīf (يا لطيف) · Yā Wudd (يا ودود)', 'Yā Laṭīf (يا لطيف) · Yā Wadūd (يا ودود)',
-     '⏸ not applied in source: the /ur page already shows the correct Arabic «يا لطيف · يا ودود». The typo is in the English/French tool text (app/planetary-hours/PlanetaryHoursPage.tsx), which this PR leaves unchanged (EN/FR unaffected); the Urdu catalog key has to match that English text exactly. Fix it in a separate EN/FR change.'),
+     A + ' (typo fixed in app/planetary-hours/PlanetaryHoursPage.tsx for EN and FR; the Urdu and Arabic catalog keys were updated to match the new English text).'),
     ('0', 'Burj table (burujData.json): all 12 rows', '6 rows vocalised, 6 bare', 'all 12 fully vocalised (يَا رَحْمٰنُ with dagger alif)',
      A + ' (display only: urDhikrDisplay() in urPages.ts; burujData.json, the calculator and EN/FR/AR unchanged)'),
     # Batch 1: Religious terms
