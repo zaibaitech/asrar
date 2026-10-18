@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useDivineNames } from '../hooks/useDivineNames';
 import { Keyboard, Info } from 'lucide-react';
 import { useProfile } from '../hooks/useProfile';
 import { COMPAT_THEME } from '../constants/compatibilityTheme';
@@ -21,6 +22,8 @@ interface DivineNameInputFormProps {
 }
 
 export function DivineNameInputForm({ onCalculate, language = 'en', isLoading = false }: DivineNameInputFormProps) {
+  // The Names (values and practice counts) for the selected Abjad system.
+  const divineNames = useDivineNames();
   const isFrench = language === 'fr';
   const { profile } = useProfile();
   const [personName, setPersonName] = useState('');
@@ -158,7 +161,7 @@ export function DivineNameInputForm({ onCalculate, language = 'en', isLoading = 
             <h2 className="font-technical text-[11px] tracking-[3px] uppercase font-bold mb-3" style={{ color: COMPAT_THEME.indigo }}>
               {isFrench ? 'Choisissez un Nom Divin' : 'Choose a Divine Name'}
             </h2>
-            <DivineNamePicker selected={selectedDivineName} onSelect={setSelectedDivineName} language={language} />
+            <DivineNamePicker selected={selectedDivineName} onSelect={setSelectedDivineName} language={language} names={divineNames} />
           </div>
         )}
 

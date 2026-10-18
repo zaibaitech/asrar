@@ -121,8 +121,24 @@ PAT = {
  r"re:^· hour of (\w+)$": "· ساعة $1",
  r"re:^(Day|Night) · Hour (\d+)$": "$1 · الساعة $2",
 }
+# Divine-Name practice sentences state the Name's abjad value as the count, which follows
+# the selected Abjad system (getDivineNames in src/data/divine-names.ts). Turn each
+# "Recite N times …" entry into a count pattern so /ar shows the right N for both systems.
+COUNT = re.compile(r"^Recite (\d+) times(\W.*)$", re.S)
+count_patterns = 0
+converted = set()
+for k in list(cat):
+    m = COUNT.match(k)
+    if not m: continue
+    n, rest = m.groups()
+    num = re.compile(r"(?<!\d)" + n + r"(?!\d)")
+    if len(num.findall(cat[k])) != 1: continue
+    cat["re:^Recite (\\d+) times" + re.sub(r"([\\^$.*+?()[\]{}|/])", r"\\\1", rest) + "$"] = num.sub("$p1", cat.pop(k))
+    src.pop(k, None); converted.add(k); count_patterns += 1
+bump('count-patterns', count_patterns)
+
 for k in list(pending):
-    if k in cat or k in rev or k in REKEY: del pending[k]  # covered by ai / manual / reviewed entries
+    if k in cat or k in rev or k in REKEY or k in converted: del pending[k]  # covered by ai / manual / reviewed entries
 cat.update(PAT)
 for s in src.values(): bump(s)
 bump('patterns', len(PAT))

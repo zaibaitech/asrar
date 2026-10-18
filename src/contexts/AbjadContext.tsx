@@ -63,7 +63,8 @@ interface AbjadContextType {
 /** localStorage key that remembers the user's choice for the whole app. */
 export const ABJAD_SYSTEM_STORAGE_KEY = 'abjadSystem';
 
-const AbjadContext = createContext<AbjadContextType | undefined>(undefined);
+/** Exported for tests that need a fixed system; the app uses AbjadProvider / useAbjad. */
+export const AbjadContext = createContext<AbjadContextType | undefined>(undefined);
 
 type KeyValueStorage = Pick<Storage, 'getItem' | 'setItem'>;
 

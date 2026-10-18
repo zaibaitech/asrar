@@ -2193,7 +2193,7 @@
    "file": "src/lib/server-data.ts"
   },
   "Reflect upon the Divine quality of The Creator of the harmful in your life.": {
-   "ar": "تأمل في الصفة الإلهية الضَّارَّ في حياتك",
+   "ar": "تأمل في الصفة الإلهية الضَّارُّ في حياتك",
    "file": "src/lib/server-data.ts"
   },
   "Reflect upon the Divine quality of The Delayer in your life.": {
@@ -3077,7 +3077,7 @@
    "file": "src/lib/server-data.ts"
   },
   "The Creator of the harmful": {
-   "ar": "الضَّارَّ",
+   "ar": "الضَّارُّ",
    "file": "src/lib/server-data.ts"
   },
   "The Crown": {
@@ -6963,7 +6963,7 @@
    "file": "src/lib/server-data.ts"
   },
   "The Creator of the harmful": {
-   "ar": "الضَّارَّ",
+   "ar": "الضَّارُّ",
    "file": "src/lib/server-data.ts"
   },
   "The Crown": {
@@ -7723,7 +7723,7 @@
    "file": "src/features/ramadanChallenges/propheticNames201.ts"
   },
   "The One Who Creates Harm": {
-   "ar": "الضَّارَّ",
+   "ar": "الضَّارُّ",
    "file": "src/data/divine-names.ts"
   },
   "The One capable of all things, with power that meets no obstacle or limitation.": {
@@ -7927,7 +7927,7 @@
    "file": "src/data/divine-names.ts"
   },
   "The One who permits hardship to occur as a test, trial, or consequence, within His wisdom.": {
-   "ar": "الضَّارَّ",
+   "ar": "الضَّارُّ",
    "file": "src/data/divine-names.ts"
   },
   "The One who protects and preserves all things from loss, harm, and decay.": {

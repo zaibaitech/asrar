@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { useDivineNames } from '../hooks/useDivineNames';
 import { useLanguage } from '../contexts/LanguageContext';
 import { COMPAT_THEME, COMPAT_TINTS } from '../constants/compatibilityTheme';
 import { DIVINE_INTENTIONS, DivineIntention, INTENTION_EMOJI, INTENTION_NAME_MAP, INTENTION_COMPANION_DUA } from '../constants/divineNameIntentions';
@@ -29,6 +30,8 @@ const GRADE_LABEL: Record<'optimal' | 'suitable' | 'hadith-or-quran' | 'meaning-
 
 /** "Find the Best Names" — searches all 99 Names and shows which ones best match the selected intention. */
 export function DivineNameIntentionMatchesView({ intention, onSelectName, language = 'en' }: DivineNameIntentionMatchesViewProps) {
+  // The Names (values and practice counts) for the selected Abjad system.
+  const divineNames = useDivineNames();
   const contentLang: 'en' | 'fr' = language === 'fr' ? 'fr' : 'en';
   const isFrench = contentLang === 'fr';
   // On /ar the verified Arabic from the data is shown directly; the English gloss
@@ -131,7 +134,7 @@ export function DivineNameIntentionMatchesView({ intention, onSelectName, langua
           </p>
         </div>
 
-        <AllDivineNamesBrowser language={language} />
+        <AllDivineNamesBrowser language={language} names={divineNames} />
       </div>
     </div>
   );
