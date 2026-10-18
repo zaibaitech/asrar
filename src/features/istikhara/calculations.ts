@@ -6,6 +6,7 @@
  */
 
 import { calculateAbjadValue, modIndex } from '../ilm-huruf/core';
+import { ABJAD_MAGHRIBI } from '../../lib/abjad-maps';
 import burujDataJson from '../../data/burujData.json';
 import type { BurujProfile, BurujData, IstikharaCalculationResult } from './types';
 
@@ -94,7 +95,8 @@ export function getDayOfWeek(dayNumber: number | null): { en: string; fr: string
  */
 export function calculateIstikhara(
   personName: string,
-  motherName: string
+  motherName: string,
+  abjad: Record<string, number> = ABJAD_MAGHRIBI
 ): IstikharaCalculationResult {
   // Validate inputs
   if (!personName || personName.trim().length === 0) {
@@ -105,8 +107,8 @@ export function calculateIstikhara(
   }
 
   // Calculate Abjad totals
-  const personTotal = calculateAbjadValue(personName);
-  const motherTotal = calculateAbjadValue(motherName);
+  const personTotal = calculateAbjadValue(personName, abjad);
+  const motherTotal = calculateAbjadValue(motherName, abjad);
   const combinedTotal = personTotal + motherTotal;
 
   // Calculate buruj remainder
@@ -424,4 +426,16 @@ export function calculateIstikharaFromBirthDate(
     burjNameFr: burjData.burjFr,
     burjPlanetaryRuler: burjData.planetaryRuler,
   };
+}
+
+/**
+ * Re-runs a name-based result with another letter table (the app-wide Abjad
+ * system switch). Birth-date results do not total letters and come back as is.
+ */
+export function recalculateIstikharaForSystem(
+  result: IstikharaCalculationResult,
+  abjad: Record<string, number>
+): IstikharaCalculationResult {
+  if (result.calculationMethod === 'birth-date' || !result.personName || !result.motherName) return result;
+  return calculateIstikhara(result.personName, result.motherName, abjad);
 }

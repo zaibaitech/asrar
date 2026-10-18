@@ -1,6 +1,8 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
+import { useAbjad } from "../../../contexts/AbjadContext";
+import { recalculateIstikharaForSystem } from "../calculations";
 import { useLanguage } from "../../../contexts/LanguageContext";
 import { translations } from "../../../lib/translations";
 import type { IstikharaCalculationResult } from "../types";
@@ -68,7 +70,14 @@ export function IstikharaPanel() {
   const formRef = useRef<HTMLDivElement>(null);
   
   // State management
-  const [calculationResult, setCalculationResult] = useState<IstikharaCalculationResult | null>(null);
+  const [savedResult, setCalculationResult] = useState<IstikharaCalculationResult | null>(null);
+  // The result on screen always follows the app-wide Abjad system: switching
+  // it re-runs a name-based result from the same names with the new table.
+  const { abjad } = useAbjad();
+  const calculationResult = useMemo(
+    () => (savedResult ? recalculateIstikharaForSystem(savedResult, abjad) : null),
+    [savedResult, abjad]
+  );
   const [showResults, setShowResults] = useState(false);
   const [showEducation, setShowEducation] = useState(false);
   const [showHistory, setShowHistory] = useState(false);

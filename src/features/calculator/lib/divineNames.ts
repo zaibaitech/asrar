@@ -3,6 +3,8 @@
  * abjad value. Ported verbatim to match the Deftere calculator's matching.
  */
 
+import { ABJAD_MAGHRIBI } from './abjadMaps';
+
 export interface DivineName {
   number: number;
   arabic: string;
@@ -112,13 +114,44 @@ export const DIVINE_NAMES: DivineName[] = [
   { number: 99, arabic: "الصَّبُورُ", transliteration: "As Saboor", abjadValue: 329 },
 ];
 
-export function findDivineNamesByValue(abjadValue: number, tolerance = 0): DivineName[] {
-  return DIVINE_NAMES.filter((n) => Math.abs(n.abjadValue - abjadValue) <= tolerance);
+/**
+ * abjadValue above is the full-spelling Mashriqi total. The calculator shows
+ * the value in the user's selected Abjad system instead, computed the same
+ * way (every letter, including "ال", vowel marks stripped) from the shared
+ * table. Default Maghribi.
+ */
+export function calculatorDivineNameValue(arabic: string, abjad: Record<string, number> = ABJAD_MAGHRIBI): number {
+  const plain = arabic.replace(/[\u064B-\u0652\u0670\u0640\s]/g, '');
+  return [...plain].reduce((sum, ch) => sum + (abjad[ch] || 0), 0);
+}
+
+const BY_TABLE = new Map<Record<string, number>, DivineName[]>();
+
+/** The calculator's Divine Names with abjadValue for the given letter table (default Maghribi). */
+export function getCalculatorDivineNames(abjad: Record<string, number> = ABJAD_MAGHRIBI): DivineName[] {
+  let list = BY_TABLE.get(abjad);
+  if (!list) {
+    list = DIVINE_NAMES.map((n) => ({ ...n, abjadValue: calculatorDivineNameValue(n.arabic, abjad) }));
+    BY_TABLE.set(abjad, list);
+  }
+  return list;
+}
+
+export function findDivineNamesByValue(
+  abjadValue: number,
+  tolerance = 0,
+  abjad: Record<string, number> = ABJAD_MAGHRIBI
+): DivineName[] {
+  return getCalculatorDivineNames(abjad).filter((n) => Math.abs(n.abjadValue - abjadValue) <= tolerance);
 }
 
 /** Nearest divine names to a value, sorted by distance, closest first. */
-export function nearestDivineNames(abjadValue: number, count = 3): (DivineName & { distance: number })[] {
-  return DIVINE_NAMES.map((n) => ({ ...n, distance: Math.abs(n.abjadValue - abjadValue) }))
+export function nearestDivineNames(
+  abjadValue: number,
+  count = 3,
+  abjad: Record<string, number> = ABJAD_MAGHRIBI
+): (DivineName & { distance: number })[] {
+  return getCalculatorDivineNames(abjad).map((n) => ({ ...n, distance: Math.abs(n.abjadValue - abjadValue) }))
     .sort((a, b) => a.distance - b.distance)
     .slice(0, count);
 }

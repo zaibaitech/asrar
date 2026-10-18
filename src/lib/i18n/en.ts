@@ -1,6 +1,11 @@
 /* eslint-disable */
 // Split out of src/lib/translations.ts (no content changes).
 export const en = {
+  // App-wide Abjad system selector (one choice for every calculator)
+  abjadSystem: {
+    note: "Maghribi (North & West Africa) · Mashriqi (Middle East & Asia)",
+  },
+
   // Navigation
   nav: {
     home: "Home",

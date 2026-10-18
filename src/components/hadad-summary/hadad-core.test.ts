@@ -12,7 +12,9 @@ import {
   nearestSacred,
   sacredSet,
   getPlanetarySignatureFromTotal,
+  getAbjadMap,
 } from './hadad-core';
+import { LETTER_FORMS } from '../../lib/abjad-maps';
 
 describe('digitalRoot', () => {
   it('reduces multi-digit numbers to 1-9', () => {
@@ -63,7 +65,8 @@ describe('hadathToElement', () => {
 describe('ABJAD and LETTER_ELEMENTS', () => {
   it('assigns exactly 7 letters to each of the 4 elements (Maghribi system)', () => {
     const counts: Record<string, number> = { Fire: 0, Water: 0, Air: 0, Earth: 0 };
-    for (const letter of Object.keys(ABJAD)) {
+    // the 28 letters only (the shared table also lists أ إ آ ؤ ئ ى ة forms)
+    for (const letter of Object.keys(ABJAD).filter((l) => !(l in LETTER_FORMS))) {
       const el = LETTER_ELEMENTS[letter];
       if (el) counts[el]++;
     }
@@ -74,9 +77,11 @@ describe('ABJAD and LETTER_ELEMENTS', () => {
     expect(counts.Earth).toBe(7);
   });
 
-  it('gives alif the value 1 and ghayn the value 1000', () => {
+  it('uses the shared table: Maghribi by default (ghayn 900), Mashriqi on request (ghayn 1000)', () => {
     expect(ABJAD['ا']).toBe(1);
-    expect(ABJAD['غ']).toBe(1000);
+    expect(ABJAD['غ']).toBe(900);
+    expect(getAbjadMap('mashriqi')['غ']).toBe(1000);
+    expect(getAbjadMap(undefined)).toBe(ABJAD);
   });
 });
 

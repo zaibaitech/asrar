@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { SoulConnectionResult, AstrologicalCompatibility, DivineNameConnectionResult } from '../../types/compatibility';
 import { RelationshipInputForm } from '../../components/RelationshipInputForm';
 import { SoulConnectionView } from '../../components/SoulConnectionView';
@@ -21,7 +21,7 @@ import type { RelationshipContext } from '../../constants/soulConnectionArchetyp
 import type { DivineName } from '../../data/divine-names';
 import type { DivineIntention } from '../../constants/divineNameIntentions';
 import {
-  DIVINE_NAME_METADATA,
+  getDivineNameMetadata,
   DIVINE_INTENTION_TO_CATEGORY,
   findDivineNameMetadataByNumber,
   type DivineNameIntentionCompatibility,
@@ -140,11 +140,11 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
       await new Promise(resolve => setTimeout(resolve, 300));
 
       if (subMode === 'pick' && selectedDivineName) {
-        const result = calculateDivineNameConnection(personName, personArabic, personKabir, selectedDivineName);
+        const result = calculateDivineNameConnection(personName, personArabic, personKabir, selectedDivineName, abjad);
         setDivineNameResult(result);
         setDivineNameMatches(null);
       } else {
-        const matches = findBestDivineNameMatches(personKabir);
+        const matches = findBestDivineNameMatches(personKabir, abjad);
         setDivineNameMatches({ person: { name: personName, arabicName: personArabic, kabir: personKabir }, matches });
         setDivineNameResult(null);
       }
@@ -159,14 +159,62 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
     }
   };
 
-  const runIntentionCalculation = (intention: DivineIntention, divineNameNumber: number) => {
-    const metadata = findDivineNameMetadataByNumber(divineNameNumber);
+  const runIntentionCalculation = (
+    intention: DivineIntention,
+    divineNameNumber: number,
+    table: Record<string, number> = abjad,
+  ) => {
+    const metadata = findDivineNameMetadataByNumber(divineNameNumber, table);
     if (!metadata) return;
     const category = DIVINE_INTENTION_TO_CATEGORY[intention];
-    const { result, sourceNote } = calculateDivineNameIntentionCompatibilityEnFr(metadata, category, DIVINE_NAME_METADATA);
+    const { result, sourceNote } = calculateDivineNameIntentionCompatibilityEnFr(metadata, category, getDivineNameMetadata(table));
     setIntentionResult({ intention, result, guidance: sourceNote });
     setIntentionMatches(null);
   };
+
+  // One app-wide Abjad system: when the user switches it, recompute whatever
+  // result is on screen from the same inputs with the new letter table.
+  useEffect(() => {
+    setSoulConnectionResult((prev) =>
+      prev
+        ? calculateSoulConnection(
+            prev.person1.name,
+            prev.person1.arabicName,
+            calculateAbjadTotal(prev.person1.arabicName, abjad),
+            prev.person2.name,
+            prev.person2.arabicName,
+            calculateAbjadTotal(prev.person2.arabicName, abjad),
+          )
+        : prev
+    );
+    setDivineNameResult((prev) =>
+      prev
+        ? calculateDivineNameConnection(
+            prev.person.name,
+            prev.person.arabicName,
+            calculateAbjadTotal(prev.person.arabicName, abjad),
+            prev.divineName,
+            abjad,
+          )
+        : prev
+    );
+    setDivineNameMatches((prev) => {
+      if (!prev) return prev;
+      const kabir = calculateAbjadTotal(prev.person.arabicName, abjad);
+      return { person: { ...prev.person, kabir }, matches: findBestDivineNameMatches(kabir, abjad) };
+    });
+    setIntentionResult((prev) => {
+      if (!prev) return prev;
+      const metadata = findDivineNameMetadataByNumber(prev.result.divineName.number, abjad);
+      if (!metadata) return prev;
+      const { result, sourceNote } = calculateDivineNameIntentionCompatibilityEnFr(
+        metadata,
+        DIVINE_INTENTION_TO_CATEGORY[prev.intention],
+        getDivineNameMetadata(abjad),
+      );
+      return { intention: prev.intention, result, guidance: sourceNote };
+    });
+  }, [abjad]);
 
   const handleIntentionCalculate = async (
     intention: DivineIntention,

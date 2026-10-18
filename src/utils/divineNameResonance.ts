@@ -7,41 +7,15 @@
  */
 
 import { normalizeArabic } from '../lib/text-normalize';
+import { ABJAD_MAGHRIBI, ABJAD_MASHRIQI } from '../lib/abjad-maps';
 
 /**
- * Abjad Kabīr values for all Arabic letters
- * AUTHORITATIVE - DO NOT MODIFY
+ * Abjad Kabīr letter values. These come from the app's one shared table
+ * (src/lib/abjad-maps.ts) and follow the user's Abjad system: callers pass
+ * the selected table, and Maghribi is the default. ABJAD_KABIR is kept as
+ * the Mashriqi table this module used to type in, for existing imports.
  */
-export const ABJAD_KABIR: Record<string, number> = {
-  'ا': 1,
-  'ب': 2,
-  'ج': 3,
-  'د': 4,
-  'ه': 5,
-  'و': 6,
-  'ز': 7,
-  'ح': 8,
-  'ط': 9,
-  'ي': 10,
-  'ك': 20,
-  'ل': 30,
-  'م': 40,
-  'ن': 50,
-  'س': 60,
-  'ع': 70,
-  'ف': 80,
-  'ص': 90,
-  'ق': 100,
-  'ر': 200,
-  'ش': 300,
-  'ت': 400,
-  'ث': 500,
-  'خ': 600,
-  'ذ': 700,
-  'ض': 800,
-  'ظ': 900,
-  'غ': 1000
-};
+export const ABJAD_KABIR: Record<string, number> = ABJAD_MASHRIQI;
 
 /**
  * 28 Governing Divine Names mapped to the Arabic alphabet
@@ -128,16 +102,17 @@ export function normalizeForDivineNameResonance(name: string): string {
  * Calculate Abjad total using Abjad Kabīr values
  * 
  * @param normalizedName - Normalized Arabic name
+ * @param abjad - Letter table of the selected Abjad system (default Maghribi)
  * @returns Total Abjad value
  */
-export function calculateAbjadTotal(normalizedName: string): number {
+export function calculateAbjadTotal(normalizedName: string, abjad: Record<string, number> = ABJAD_MAGHRIBI): number {
   if (!normalizedName) {
     return 0;
   }
   
   const letters = [...normalizedName];
   return letters.reduce((sum, letter) => {
-    const value = ABJAD_KABIR[letter];
+    const value = abjad[letter];
     return sum + (value || 0); // Ignore non-Abjad characters safely
   }, 0);
 }
@@ -183,11 +158,12 @@ export function getGoverningDivineNameByIndex(index: number): GoverningDivineNam
  * NOT the user's name, NOT the resonance index, NOT multipliers.
  * 
  * @param divineName - Divine Name in Arabic
+ * @param abjad - Letter table of the selected Abjad system (default Maghribi)
  * @returns Dhikr count (Abjad value of the Divine Name)
  */
-export function calculateDhikrCount(divineName: string): number {
+export function calculateDhikrCount(divineName: string, abjad: Record<string, number> = ABJAD_MAGHRIBI): number {
   const normalized = normalizeForDivineNameResonance(divineName);
-  return calculateAbjadTotal(normalized);
+  return calculateAbjadTotal(normalized, abjad);
 }
 
 /**
@@ -221,9 +197,13 @@ export interface DivineNameResonanceResult {
  * This is the complete implementation of the Divine Name Resonance methodology.
  * 
  * @param arabicName - User's name in Arabic
+ * @param abjad - Letter table of the selected Abjad system (default Maghribi)
  * @returns Divine Name Resonance result
  */
-export function calculateDivineNameResonance(arabicName: string): DivineNameResonanceResult | null {
+export function calculateDivineNameResonance(
+  arabicName: string,
+  abjad: Record<string, number> = ABJAD_MAGHRIBI
+): DivineNameResonanceResult | null {
   if (!arabicName || arabicName.trim().length === 0) {
     return null;
   }
@@ -236,7 +216,7 @@ export function calculateDivineNameResonance(arabicName: string): DivineNameReso
   }
   
   // Step 2: Calculate Abjad total
-  const abjadTotal = calculateAbjadTotal(normalizedName);
+  const abjadTotal = calculateAbjadTotal(normalizedName, abjad);
   
   if (abjadTotal === 0) {
     return null;
@@ -253,7 +233,7 @@ export function calculateDivineNameResonance(arabicName: string): DivineNameReso
   }
   
   // Step 5: Calculate dhikr count (from the Divine Name itself)
-  const dhikrCount = calculateDhikrCount(governingDivineName.name);
+  const dhikrCount = calculateDhikrCount(governingDivineName.name, abjad);
   
   return {
     originalName: arabicName,

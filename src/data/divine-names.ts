@@ -38,6 +38,8 @@
 // are fixed daily litanies, not a per-Name counting system. No verifiable,
 // scholar-attributed table of alternate counts per Name was found.
 
+import { ABJAD_MAGHRIBI } from '../lib/abjad-maps';
+
 export interface DivineName {
   number: number;
   arabic: string;
@@ -1670,3 +1672,51 @@ export function searchDivineNamesByKeyword(keyword: string): DivineName[] {
   );
 }
 
+
+// ============================================================================
+// SYSTEM-AWARE VALUES (one app-wide Abjad system, Maghribi by default)
+// ============================================================================
+//
+// The abjadValue fields above are the Mashriqi values (see the header). The
+// same convention (drop a leading "ال", count hamza by its seat, compound
+// Names spelled in full) is computed here from the app's one shared table,
+// so every tool can show the values of the user's selected system. With the
+// Mashriqi table this reproduces every stored value (see divine-names.test.ts).
+
+/** Abjad value of a Divine Name under a letter table (default Maghribi). */
+export function divineNameAbjadValue(arabic: string, abjad: Record<string, number> = ABJAD_MAGHRIBI): number {
+  const plain = arabic.replace(/[\u064B-\u0652\u0670\u0640\s]/g, '');
+  const stem = plain.startsWith('ال') ? plain.slice(2) : plain;
+  return [...stem].reduce((sum, ch) => sum + (abjad[ch] || 0), 0);
+}
+
+function withSystemValue(name: DivineName, abjad: Record<string, number>): DivineName {
+  const value = divineNameAbjadValue(name.arabic, abjad);
+  if (value === name.abjadValue) return name;
+  const old = String(name.abjadValue);
+  // The practice text states the Name's own value as the count; keep it in step.
+  const count = (text: string) =>
+    text.replace(new RegExp(`(Recite |Récitez )${old}( times| fois)`), `$1${value}$2`);
+  return {
+    ...name,
+    abjadValue: value,
+    spiritualPractice: { en: count(name.spiritualPractice.en), fr: count(name.spiritualPractice.fr) },
+  };
+}
+
+const NAMES_BY_TABLE = new Map<Record<string, number>, DivineName[]>();
+
+/** The 99 Names with abjadValue for the given letter table (default Maghribi). */
+export function getDivineNames(abjad: Record<string, number> = ABJAD_MAGHRIBI): DivineName[] {
+  let list = NAMES_BY_TABLE.get(abjad);
+  if (!list) {
+    list = DIVINE_NAMES.map((n) => withSystemValue(n, abjad));
+    NAMES_BY_TABLE.set(abjad, list);
+  }
+  return list;
+}
+
+/** One Name (by its number) with abjadValue for the given letter table. */
+export function getDivineNameForSystem(number: number, abjad: Record<string, number> = ABJAD_MAGHRIBI): DivineName | undefined {
+  return getDivineNames(abjad).find((n) => n.number === number);
+}

@@ -49,3 +49,30 @@ export const ABJAD_MASHRIQI: Record<string, number> = withForms({
 export const ABJAD_MAGHRIBI: Record<string, number> = withForms({
   ...COMMON, 'ص': 60, 'ض': 90, 'س': 300, 'ظ': 800, 'غ': 900, 'ش': 1000,
 });
+
+// ============================================================================
+// SYSTEM SELECTION (one app-wide choice; Maghribi is the default everywhere)
+// ============================================================================
+
+/** Lower-case system id, as used by the API (`abjadSystem`) and storage. */
+export type AbjadSystemKey = 'maghribi' | 'mashriqi';
+
+export const DEFAULT_ABJAD_SYSTEM: AbjadSystemKey = 'maghribi';
+
+/**
+ * Reads a system id from any input ('Mashriqi', 'mashriqi', undefined, …).
+ * Anything that is not Mashriqi resolves to the default, Maghribi.
+ */
+export function resolveAbjadSystem(value: unknown): AbjadSystemKey {
+  return typeof value === 'string' && value.trim().toLowerCase() === 'mashriqi' ? 'mashriqi' : DEFAULT_ABJAD_SYSTEM;
+}
+
+/** The letter table for a system id (Maghribi unless Mashriqi is asked for). */
+export function getAbjadMap(system?: unknown): Record<string, number> {
+  return resolveAbjadSystem(system) === 'mashriqi' ? ABJAD_MASHRIQI : ABJAD_MAGHRIBI;
+}
+
+/** Which system a letter table belongs to (Maghribi for anything that is not the Mashriqi table). */
+export function abjadSystemOfMap(map: Record<string, number> | undefined): AbjadSystemKey {
+  return map === ABJAD_MASHRIQI ? 'mashriqi' : 'maghribi';
+}

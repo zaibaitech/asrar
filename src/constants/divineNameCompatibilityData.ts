@@ -22,8 +22,8 @@
  * fields elsewhere.
  */
 
-import { DIVINE_NAMES, type DivineName } from '../data/divine-names';
-import { ABJAD_MAGHRIBI } from '../contexts/AbjadContext';
+import { DIVINE_NAMES, getDivineNameForSystem, type DivineName } from '../data/divine-names';
+import { ABJAD_MAGHRIBI, ABJAD_MASHRIQI } from '../lib/abjad-maps';
 import { PLANETARY_RULERS } from './compatibility';
 import type { DivineIntention } from './divineNameIntentions';
 
@@ -242,10 +242,13 @@ function stripDefiniteArticle(arabic: string): string {
   return noDiacritics.startsWith('ال') ? noDiacritics.slice(2) : noDiacritics;
 }
 
-/** Sums Maghribi abjad values letter-by-letter after stripping tashkīl/whitespace and a leading ال. */
-export function calculateAbjadWithoutPrefix(arabic: string): number {
+/**
+ * Sums abjad values letter-by-letter after stripping tashkīl/whitespace and a
+ * leading ال, with the selected system's table (default Maghribi).
+ */
+export function calculateAbjadWithoutPrefix(arabic: string, abjad: Record<string, number> = ABJAD_MAGHRIBI): number {
   const stripped = stripDefiniteArticle(arabic);
-  return [...stripped].reduce((sum, char) => sum + (ABJAD_MAGHRIBI[char] || 0), 0);
+  return [...stripped].reduce((sum, char) => sum + (abjad[char] || 0), 0);
 }
 
 function deriveElementAndPlanet(abjadValue: number): { element: ElementType; planet: string } {
@@ -262,8 +265,8 @@ function deriveModeOfAction(classicalFunction: IntentionCategory[]): ModeOfActio
   return 'gradual';
 }
 
-function buildDivineNameMetadata(name: DivineName): DivineNameMetadata {
-  const abjadValue = calculateAbjadWithoutPrefix(name.arabic);
+function buildDivineNameMetadata(name: DivineName, abjad: Record<string, number>): DivineNameMetadata {
+  const abjadValue = calculateAbjadWithoutPrefix(name.arabic, abjad);
   const { element, planet } = deriveElementAndPlanet(abjadValue);
   const classicalFunction = CLASSICAL_FUNCTION_BY_NUMBER[name.number] || ['peace'];
   return {
@@ -280,13 +283,29 @@ function buildDivineNameMetadata(name: DivineName): DivineNameMetadata {
   };
 }
 
-/** The full 99-name dataset for this feature — built once at module load. */
-export const DIVINE_NAME_METADATA: DivineNameMetadata[] = DIVINE_NAMES.map(buildDivineNameMetadata);
-
-const DIVINE_NAME_METADATA_BY_NUMBER: Map<number, DivineNameMetadata> = new Map(
-  DIVINE_NAME_METADATA.map(dn => [dn.number, dn])
+/**
+ * The full 99-name dataset for this feature, one per Abjad system, built once
+ * at module load. DIVINE_NAME_METADATA is the default (Maghribi) set.
+ */
+export const DIVINE_NAME_METADATA: DivineNameMetadata[] = DIVINE_NAMES.map((n) =>
+  buildDivineNameMetadata(getDivineNameForSystem(n.number, ABJAD_MAGHRIBI) ?? n, ABJAD_MAGHRIBI)
+);
+export const DIVINE_NAME_METADATA_MASHRIQI: DivineNameMetadata[] = DIVINE_NAMES.map((n) =>
+  buildDivineNameMetadata(getDivineNameForSystem(n.number, ABJAD_MASHRIQI) ?? n, ABJAD_MASHRIQI)
 );
 
-export function findDivineNameMetadataByNumber(number: number): DivineNameMetadata | undefined {
-  return DIVINE_NAME_METADATA_BY_NUMBER.get(number);
+/** The metadata set for a letter table (Mashriqi table → Mashriqi set, anything else → Maghribi). */
+export function getDivineNameMetadata(abjad: Record<string, number> = ABJAD_MAGHRIBI): DivineNameMetadata[] {
+  return abjad === ABJAD_MASHRIQI ? DIVINE_NAME_METADATA_MASHRIQI : DIVINE_NAME_METADATA;
+}
+
+const BY_NUMBER = new Map<DivineNameMetadata[], Map<number, DivineNameMetadata>>(
+  [DIVINE_NAME_METADATA, DIVINE_NAME_METADATA_MASHRIQI].map((list) => [list, new Map(list.map((dn) => [dn.number, dn]))])
+);
+
+export function findDivineNameMetadataByNumber(
+  number: number,
+  abjad: Record<string, number> = ABJAD_MAGHRIBI
+): DivineNameMetadata | undefined {
+  return BY_NUMBER.get(getDivineNameMetadata(abjad))!.get(number);
 }

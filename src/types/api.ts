@@ -127,6 +127,7 @@ export interface IstikharaRequest {
   personName: string;
   motherName: string;
   language?: 'en' | 'fr' | 'ar';
+  abjadSystem?: 'maghribi' | 'mashriqi'; // default 'maghribi'
 }
 
 export interface IstikharaResponse {
@@ -154,6 +155,7 @@ export interface CompatibilityRequest {
   };
   analysisMode?: 'basic' | 'four-layer';
   language?: 'en' | 'fr' | 'ar';
+  abjadSystem?: 'maghribi' | 'mashriqi'; // default 'maghribi'
 }
 
 export interface CompatibilityResponse {
@@ -540,6 +542,8 @@ export interface DivineTimingRequest {
   dateTime?: string; // ISO 8601
   
   // Optional: Personal data for alignment scoring
+  /** Abjad system for the name's element (default 'maghribi') */
+  abjadSystem?: 'maghribi' | 'mashriqi';
   name?: string;
   birthDate?: string; // ISO 8601
   

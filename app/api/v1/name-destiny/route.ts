@@ -116,9 +116,9 @@ export async function POST(request: NextRequest) {
       const date = new Date(birthDate);
       lifePathNumbers = {
         trueLifePath: calculateTrueLifePath(date),
-        expressionNumber: calculateExpressionNumber(name),
-        soulUrgeNumber: calculateSoulUrgeNumber(name),
-        personalityNumber: calculatePersonalityNumber(name)
+        expressionNumber: calculateExpressionNumber(name, abjadMap),
+        soulUrgeNumber: calculateSoulUrgeNumber(name, abjadMap),
+        personalityNumber: calculatePersonalityNumber(name, abjadMap)
       };
     }
 

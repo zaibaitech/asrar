@@ -20,6 +20,7 @@ import {
 import {
   validateName,
   validateLanguage,
+  validateAbjadSystem,
   combineValidations
 } from '@/src/lib/api-validation';
 import { 
@@ -29,7 +30,7 @@ import {
 import {
   analyzeFourLayerCompatibility
 } from '@/src/utils/fourLayerCompatibility';
-import { ABJAD_MAGHRIBI } from '@/src/lib/abjad-maps';
+import { getAbjadMap } from '@/src/lib/abjad-maps';
 import { transliterateLatinToArabic, normalizeArabic } from '@/src/lib/text-normalize';
 
 // Helper function to calculate Abjad value
@@ -64,7 +65,7 @@ export async function POST(request: NextRequest) {
   try {
     // Parse request body
     const body: CompatibilityRequest = await request.json();
-    const { person1, person2, analysisMode = 'four-layer', language = 'en' } = body;
+    const { person1, person2, analysisMode = 'four-layer', language = 'en', abjadSystem = 'maghribi' } = body;
 
     // ========================================================================
     // INPUT VALIDATION
@@ -75,7 +76,8 @@ export async function POST(request: NextRequest) {
       validateName(person2?.name, 'person2.name', true),
       validateName(person1?.motherName, 'person1.motherName', false),
       validateName(person2?.motherName, 'person2.motherName', false),
-      validateLanguage(language, false)
+      validateLanguage(language, false),
+      validateAbjadSystem(abjadSystem, false)
     );
 
     if (!validationResult.isValid) {
@@ -100,11 +102,14 @@ export async function POST(request: NextRequest) {
       ? person2.name
       : transliterateLatinToArabic(person2.name).primary;
 
+    // Letter table of the requested Abjad system (default Maghribi)
+    const abjadMap = getAbjadMap(abjadSystem);
+
     // Calculate Abjad totals and elements
-    const person1Total = calculateAbjadValue(person1Arabic, ABJAD_MAGHRIBI);
+    const person1Total = calculateAbjadValue(person1Arabic, abjadMap);
     const person1Element = getElementFromAbjadTotal(person1Total);
     
-    const person2Total = calculateAbjadValue(person2Arabic, ABJAD_MAGHRIBI);
+    const person2Total = calculateAbjadValue(person2Arabic, abjadMap);
     const person2Element = getElementFromAbjadTotal(person2Total);
 
     const basicCompatibility = analyzeRelationshipCompatibility(
@@ -141,7 +146,7 @@ export async function POST(request: NextRequest) {
         person2.name,
         person2Arabic,
         person2MotherArabic,
-        ABJAD_MAGHRIBI
+        abjadMap
       );
 
       fourLayerAnalysis = {
