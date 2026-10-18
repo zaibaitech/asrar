@@ -8,9 +8,9 @@
  * (calculateAbjadValue / calculateBurujRemainder); nothing is hard-coded.
  *
  * First slice deliberately avoids names whose spelling contains hamza
- * forms (أ إ آ ء ؤ ئ) or alif maqṣūra (ى): the calculator's letter table
- * does not count them, so e.g. Ahmad / Ibrahim / Aisha / Musa would show a
- * value that needs a scholar's decision first (see PR notes).
+ * forms (أ إ آ ء ؤ ئ) or alif maqṣūra (ى). Since the shared letter table
+ * (src/lib/abjad-maps.ts) counts hamza seats and ى as their letters, such
+ * names could be added later.
  */
 import { nameTransliterations } from '@/src/features/calculator/lib/nameTransliterations';
 import {
@@ -20,21 +20,11 @@ import {
   getBurujData,
 } from '@/src/features/istikhara/calculations';
 import { ZODIAC_SADAQAH, ZODIAC_SIGN_ORDER } from '@/src/data/zodiacSadaqahData';
+import { ABJAD_MAGHRIBI, ABJAD_MASHRIQI } from '@/src/lib/abjad-maps';
 
-/**
- * Maghribi letter values, matching the calculator's ABJAD_MAGHRIBI in
- * AbjadContext (the table Istikhārat al-Asmāʾ uses). Kept as a plain
- * server-safe constant: AbjadContext is a client module and cannot be
- * imported into these SEO pages. Letters that differ between Maghribi and
- * Mashriqi (ṣād 300 vs 90, etc.) are listed so Mashriqi comparison works.
- */
-const MAGHRIBI: Record<string, number> = {
-  ا: 1, ب: 2, ج: 3, د: 4, ه: 5, و: 6, ز: 7, ح: 8, ط: 9,
-  ي: 10, ك: 20, ل: 30, م: 40, ن: 50, س: 60, ع: 70, ف: 80, ص: 300,
-  ق: 100, ر: 200, ش: 300, ت: 400, ث: 500, خ: 600, ذ: 700, ض: 800, ظ: 900, غ: 1000,
-  ة: 5,
-};
-const MASHRIQI: Record<string, number> = { ...MAGHRIBI, ص: 90 };
+/** Letter values from the app's single shared table (server-safe module). */
+const MAGHRIBI = ABJAD_MAGHRIBI;
+const MASHRIQI = ABJAD_MASHRIQI;
 
 function abjadSum(text: string, table: Record<string, number>): number {
   const normalized = text.replace(/[ًٌٍَُِّْ]/g, '').replace(/\s+/g, '');
