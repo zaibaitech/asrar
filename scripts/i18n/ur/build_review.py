@@ -6,7 +6,7 @@ English source, grouped for the native reviewer. Run from the repo root:
 import json, os, subprocess, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from catalog_source import ENTRIES
-from review_log import ANSWERS, CORRECTIONS
+from review_log import ANSWERS, CORRECTIONS, PENDING_REVIEW
 
 dump = json.loads(subprocess.check_output(['npx', 'tsx', 'scripts/i18n/ur/dump_ts.ts'], text=True))
 
@@ -94,6 +94,10 @@ md.append('- SEO metadata: `src/lib/urMetadata.ts`\n- Page copy: `src/lib/i18n/u
 md.append('\n## Open questions for the reviewer\n')
 for i, n in enumerate(NOTES, 1):
     md.append(f'{i}. {n}')
+md.append(f'\n### New strings for the Language Reviewer ({len(PENDING_REVIEW)} pending)\n')
+md.append('Added after the native review; please check these.\n')
+md.append(table(PENDING_REVIEW, ('Where', 'English', 'Urdu', 'Note')))
+md.append('\n')
 md.append('\n### Reviewer answers (native review, Oct 2026)\n')
 md.append(table([(i, q, a, st) for i, (q, a, st) in enumerate(ANSWERS, 1)], ('#', 'Question', 'Reviewer answer', 'Status')))
 n_applied = sum(1 for c in CORRECTIONS if c[4].startswith('✅'))

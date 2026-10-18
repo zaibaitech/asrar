@@ -6,7 +6,7 @@ Pages: `/ur`, `/ur/name-and-mother-burj`, `/ur/compatibility`, `/ur/abjad`, `/ur
 
 Every string was translated by hand (no machine translation). The mobile app (zaibaitech/asrar-mobile) has no Urdu, so nothing was reused. Qur'an and Divine Names stay in Arabic.
 
-**String count: 721** (14 SEO metadata, 161 page copy, 53 shared UI in TypeScript, 493 tool-UI catalog entries incl. 27 patterns).
+**String count: 722** (14 SEO metadata, 161 page copy, 53 shared UI in TypeScript, 494 tool-UI catalog entries incl. 27 patterns).
 
 Sources (edit there, then regenerate this file with `python3 scripts/i18n/ur/build_review.py`):
 
@@ -26,6 +26,16 @@ Sources (edit there, then regenerate this file with `python3 scripts/i18n/ur/bui
 6. Astro technical terms in the Ikhtiyārāt breakdown (محترق، خالی السیر، تحت الشعاع، ہبوط، وبال، رجعت، الطریقۃ المحترقۃ) follow classical Arabic/Persian usage; please confirm they are understood by Urdu readers.
 7. Urdu-typed names in the Abjad count: RESOLVED. Urdu letters are converted before counting (see the reviewer answers below, Q7).
 8. Interpretive result content (soul-connection archetype meanings, burj career texts, per-date rule explanations, manzil descriptions, day guidance paragraphs) is NOT translated yet and still shows in English; the pages say “ٹول کے کچھ حصے ابھی انگریزی میں ہیں۔”
+
+### New strings for the Language Reviewer (1 pending)
+
+Added after the native review; please check these.
+
+| Where | English | Urdu | Note |
+|---|---|---|---|
+| catalog (abjad system selector note, all calculators; English source from PR #89) | Maghribi (North & West Africa) · Mashriqi (Middle East & Asia) | مغربی (شمالی و مغربی افریقہ) · مشرقی (مشرقِ وسطیٰ اور ایشیا) | Short regional hint under the Maghribi/Mashriqi switch. Check “مغربی” is not read as “Western” here, and the geography wording. |
+
+
 
 ### Reviewer answers (native review, Oct 2026)
 
@@ -612,6 +622,7 @@ Exact-match English text in the tools → Urdu. `re:` keys are patterns; `$1`…
 | Sign In | سائن ان |
 | Maghribi | مغربی |
 | Mashriqi | مشرقی |
+| Maghribi (North & West Africa) · Mashriqi (Middle East & Asia) | مغربی (شمالی و مغربی افریقہ) · مشرقی (مشرقِ وسطیٰ اور ایشیا) |
 | Educational Tool: | تعلیمی ٹول: |
 | Best Dates | بہترین تاریخیں |
 | Dates | تاریخیں |

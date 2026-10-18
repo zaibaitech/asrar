@@ -100,3 +100,13 @@ ANSWERS = [
     ('English interpretive content', 'OK for a noindex phase 1 with UR_COMMON.toolUiNote; translate burj career texts and soul-connection meanings before indexing.',
      '⏳ not done in this PR (separate task). toolUiNote stays visible; /ur stays noindex.'),
 ]
+
+
+# New strings added after the native review; not yet seen by the Language Reviewer.
+# (where, English source, Urdu, note)
+PENDING_REVIEW = [
+    ('catalog (abjad system selector note, all calculators; English source from PR #89)',
+     'Maghribi (North & West Africa) · Mashriqi (Middle East & Asia)',
+     'مغربی (شمالی و مغربی افریقہ) · مشرقی (مشرقِ وسطیٰ اور ایشیا)',
+     'Short regional hint under the Maghribi/Mashriqi switch. Check “مغربی” is not read as “Western” here, and the geography wording.'),
+]
