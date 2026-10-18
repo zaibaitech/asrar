@@ -11,7 +11,7 @@ import type { en } from './en';
 
 export const ar: DeepPartial<typeof en> = {
   abjadSystem: {
-    note: "المغربي (شمال أفريقيا وغربها) · المشرقي (الشرق الأوسط وآسيا)", // TODO review (hand draft, not from mobile)
+    note: "المغربي (المغرب العربي والأندلس وغرب أفريقيا) · المشرقي (مصر والمشرق وسائر آسيا)", // Language Reviewer batch 5 wording (reviewed)
   },
 
   nav: {
@@ -125,14 +125,14 @@ export const ar: DeepPartial<typeof en> = {
     recent: "الأخيرة",
   },
   comparison: {
-    elementalHarmony: "الانسجام العنصري",
+    elementalHarmony: "انسجام العناصر",
     planet: "الكوكب",
     day: "نهار",
     bestHours: "أفضل الساعات",
     title: "قارن بين اسمين", // TODO review (hand draft, not from mobile)
     firstName: "الاسم/النص الأول", // TODO review (hand draft, not from mobile)
     secondName: "الاسم/النص الثاني", // TODO review (hand draft, not from mobile)
-    analysis: "التحليل", // TODO review (machine draft)
+    analysis: "التحليل", // reviewed (Language Reviewer batch 5, accepted)
   },
   dailyReflection: {
     dailyBadge: "يومي",
@@ -179,12 +179,12 @@ export const ar: DeepPartial<typeof en> = {
       debtReliefDescription: "1000 مرة بعد العشاء لقضاء الدَّين", // TODO review (hand draft, not from mobile)
       divineNameDescription: "اذكر اسمًا من أسماء الله الحسنى", // TODO review (hand draft, not from mobile)
       customDescription: "أضف ذكرك أو وردك الخاص", // TODO review (hand draft, not from mobile)
-      special: "خاصة", // TODO review (machine draft)
+      special: "خاص", // reviewed (Language Reviewer batch 5)
       alreadyAdded: "مُضاف بالفعل", // reviewed (Language Reviewer batch 4)
       tapToPreview: "اضغط لمعاينة النص كاملًا", // TODO review (hand draft, not from mobile)
       viewFullText: "عرض النص كاملًا ←", // TODO review (hand draft, not from mobile)
       showMeaning: "إظهار المعنى", // reviewed (Language Reviewer batch 4)
-      recommendedDailyTarget: "الهدف اليومي الموصى به", // TODO review (machine draft)
+      recommendedDailyTarget: "الهدف اليومي الموصى به", // reviewed (Language Reviewer batch 5, accepted)
       alreadyAddedButton: "مُضاف بالفعل", // reviewed (Language Reviewer batch 4)
       selectThisSalawat: "اختر هذه الصلاة", // TODO review (hand draft, not from mobile)
       addDivineName: "أضف تحدّي اسم من الأسماء الحسنى", // TODO review (hand draft, not from mobile)
@@ -192,14 +192,14 @@ export const ar: DeepPartial<typeof en> = {
       titlePlaceholder: "مثال: التسبيح", // TODO review (hand draft, not from mobile)
       ramadanTarget: "مجموع 30 يومًا", // reviewed (Language Reviewer batch 4)
       addCustomWird: "أضف وردًا خاصًا", // TODO review (hand draft, not from mobile)
-      steps: "الخطوات:", // TODO review (machine draft)
-      names: "الأسماء", // TODO review (machine draft)
+      steps: "الخطوات:", // reviewed (Language Reviewer batch 5, accepted)
+      names: "الأسماء", // reviewed (Language Reviewer batch 5, accepted)
       spiritualPurpose: "المقصد الروحي", // TODO review (hand draft, not from mobile)
     },
     title: "تحدّي الاستغفار في رمضان", // TODO review (hand draft, not from mobile)
     subtitle: "أتمّ 124,000 استغفار في رمضان هذا", // TODO review (hand draft, not from mobile)
     contextNote: "من ملأ رمضانه بالاستغفار جعل الله له من كل ضيقٍ مخرجًا.", // TODO review (hand draft, not from mobile)
-    totalTarget: "المجموع المستهدف", // TODO review (machine draft)
+    totalTarget: "الهدف الإجمالي", // reviewed (Language Reviewer batch 5)
     todaysTarget: "هدف اليوم", // TODO review (hand draft, not from mobile)
     todaysProgress: "تقدّم اليوم", // TODO review (hand draft, not from mobile)
     remainingToday: "المتبقّي اليوم", // TODO review (hand draft, not from mobile)
@@ -211,10 +211,10 @@ export const ar: DeepPartial<typeof en> = {
     planIntensiveDesc: "12,400 يوميًا — الإتمام في 10 أيام", // TODO review (hand draft, not from mobile)
     planBalancedDesc: "6,200 يوميًا — الإتمام في 20 يومًا", // TODO review (hand draft, not from mobile)
     planSteadyDesc: "نحو 4,134 يوميًا — على مدى 30 يومًا", // TODO review (hand draft, not from mobile)
-    planLight: "الضوء", // TODO review (machine draft)
+    planLight: "خفيف", // reviewed (Language Reviewer batch 5)
     planLightDesc: "3,100 يوميًا — وتيرة ممتدة على 40 يومًا", // TODO review (hand draft, not from mobile)
     planCustomDesc: "حدّد هدفك اليومي", // TODO review (hand draft, not from mobile)
-    customDailyGoal: "هدفك اليومي", // TODO review (machine draft)
+    customDailyGoal: "هدفك اليومي", // reviewed (Language Reviewer batch 5, accepted)
     selectPlan: "اختر الخطة", // TODO review (hand draft, not from mobile)
     changePlan: "تغيير الخطة", // reviewed (Language Reviewer batch 4)
     logSession: "سجّل الجلسة", // TODO review (hand draft, not from mobile)
@@ -229,7 +229,7 @@ export const ar: DeepPartial<typeof en> = {
     noEntries: "لا توجد إدخالات اليوم بعد", // TODO review (hand draft, not from mobile)
     signInPrompt: "سجّل الدخول لمتابعة تقدّمك في استغفار رمضان", // TODO review (hand draft, not from mobile)
     ramadanBadge: "رمضان", // TODO review (hand draft, not from mobile)
-    heatmapTitle: "التقدم الشهري", // TODO review (machine draft)
+    heatmapTitle: "التقدم الشهري", // reviewed (Language Reviewer batch 5, accepted)
     streakDays: "أيام متتالية",
     quickTap: "إضافة سريعة", // TODO review (hand draft, not from mobile)
     arabic: "أَسْتَغْفِرُ اللهَ", // same as EN (transliteration/Arabic/brand)
@@ -262,13 +262,13 @@ export const ar: DeepPartial<typeof en> = {
     promise: "يُرجى بها فتحٌ في الرزق والسعة والإمداد الإلهي، والأمر كله لله.", // TODO review (hand draft, not from mobile)
     sessions: "الجلسات", // TODO review (hand draft, not from mobile)
     sessionsPerDay: "مرة يوميًا (صباحًا)", // TODO review (hand draft, not from mobile)
-    estimatedTime: "الوقت التقديري", // TODO review (machine draft)
+    estimatedTime: "الوقت التقديري", // reviewed (Language Reviewer batch 5, accepted)
     estimatedTimeValue: "25–35 دقيقة لكل جلسة", // reviewed (Language Reviewer batch 4)
     dayComplete: "اكتمل اليوم", // TODO review (hand draft, not from mobile)
     complete: "✓ مكتمل",
     onceDaily: "مرة يوميًا (صباحًا)", // TODO review (hand draft, not from mobile)
     startNext: "ابدأ ممارسة اليوم", // TODO review (hand draft, not from mobile)
-    congratulations: "تهانينا!", // TODO review (machine draft)
+    congratulations: "تهانينا!", // reviewed (Language Reviewer batch 5, accepted)
     completedAllDays: "أتممت أيام الممارسة السبعة كلها!", // TODO review (hand draft, not from mobile)
     startAgain: "ابدأ من جديد", // TODO review (hand draft, not from mobile)
     continueDaily: "تابع يوميًا", // TODO review (hand draft, not from mobile)
@@ -276,8 +276,8 @@ export const ar: DeepPartial<typeof en> = {
     todayComplete: "تمّت ممارسة اليوم!", // TODO review (hand draft, not from mobile)
     comeBackTomorrow: "عُد غدًا لجلستك التالية", // reviewed (Language Reviewer batch 4)
     startTodaysPractice: "ابدأ ممارسة اليوم", // TODO review (hand draft, not from mobile)
-    practiceSteps: "خطوات الممارسة", // TODO review (machine draft)
-    stepPrefix: "الخطوة", // TODO review (machine draft)
+    practiceSteps: "خطوات الممارسة", // reviewed (Language Reviewer batch 5, accepted)
+    stepPrefix: "الخطوة", // reviewed (Language Reviewer batch 5, accepted)
     step2: "الأسماء النبوية المئتان وواحد", // TODO review (hand draft, not from mobile)
     step2Note: "مع «صلى الله عليه وسلم» بعد كل اسم", // TODO review (hand draft, not from mobile)
     step3: "دعاء الختام", // TODO review (hand draft, not from mobile)
@@ -287,7 +287,7 @@ export const ar: DeepPartial<typeof en> = {
     withSallaAfterEach: "مع «صلى الله عليه وسلم» بعد كل اسم", // TODO review (hand draft, not from mobile)
     fromDalail: "من دلائل الخيرات", // TODO review (hand draft, not from mobile)
     beginBismillah: "ابدأ بسم الله", // TODO review (hand draft, not from mobile)
-    step2The201Names: "الخطوة 2: الأسماء الـ 201", // TODO review (machine draft)
+    step2The201Names: "الخطوة 2: الأسماء الـ201", // reviewed (Language Reviewer batch 5)
     step3ClosingDua: "الخطوة 3: دعاء الختام", // TODO review (hand draft, not from mobile)
     recite: "اقرأ", // TODO review (hand draft, not from mobile)
     tapToCount: "اضغط للعد",
@@ -295,7 +295,7 @@ export const ar: DeepPartial<typeof en> = {
     continueToDua: "تابع إلى الدعاء", // TODO review (hand draft, not from mobile)
     completeSession: "أتمّ الجلسة", // TODO review (hand draft, not from mobile)
     yaJamiuMeaning: "الله الجامع العزيز", // TODO review (hand draft, not from mobile)
-    theNames: "الأسماء الـ 201", // TODO review (machine draft)
+    theNames: "الأسماء الـ201", // reviewed (Language Reviewer batch 5)
     hideMeaning: "إخفاء المعنى", // reviewed (Language Reviewer batch 4)
     showMeaning: "اعرض المعنى", // TODO review (hand draft, not from mobile)
     openingDua: "الفاتحة", // TODO review (hand draft, not from mobile)
@@ -307,16 +307,16 @@ export const ar: DeepPartial<typeof en> = {
     nextSession: "التالي",
     next: "التالي",
     practiceComplete: "اكتملت الممارسة!", // TODO review (hand draft, not from mobile)
-    tonightSession: "الليلة:", // TODO review (machine draft)
-    tonight: "الليلة:", // TODO review (machine draft)
-    eveningSession: "جلسة المساء", // TODO review (machine draft)
+    tonightSession: "الليلة:", // reviewed (Language Reviewer batch 5, accepted)
+    tonight: "الليلة:", // reviewed (Language Reviewer batch 5, accepted)
+    eveningSession: "جلسة المساء", // reviewed (Language Reviewer batch 5, accepted)
     authorizationLabel: "الإجازة", // TODO review (hand draft, not from mobile)
     specialPractice: "ممارسة خاصة", // reviewed (Language Reviewer batch 4)
-    special: "خاصة", // TODO review (machine draft)
+    special: "خاص", // reviewed (Language Reviewer batch 5)
     sevenDayPractice: "ممارسة صباحية لسبعة أيام", // TODO review (hand draft, not from mobile)
     start7Day: "ابدأ تحدّي 7 أيام", // reviewed (Language Reviewer batch 4)
-    removeChallenge: "إزالة هذا التحدي؟", // TODO review (machine draft)
-    progressWillBeLost: "تقدمك سيضيع", // TODO review (machine draft)
+    removeChallenge: "هل تريد إزالة هذا التحدي؟", // reviewed (Language Reviewer batch 5)
+    progressWillBeLost: "سيُفقد تقدّمك.", // reviewed (Language Reviewer batch 5)
     inviteFriends: "ادعُ أصدقاءك للمشاركة", // TODO review (hand draft, not from mobile)
     shareInvite: "شارك هذه الممارسة", // TODO review (hand draft, not from mobile)
     shareTitle: "الأسماء المئتان وواحد للنبي محمد ﷺ", // TODO review (hand draft, not from mobile)
@@ -335,7 +335,7 @@ export const ar: DeepPartial<typeof en> = {
   debtRelief: {
     remove: "إزالة",
     title: "ورد قضاء الدَّين", // TODO review (hand draft, not from mobile)
-    shortTitle: "تخفيف عبء الديون", // TODO review (machine draft)
+    shortTitle: "قضاء الدَّين", // reviewed (Language Reviewer batch 5)
     subtitle: "1000 مرة بعد صلاة العشاء", // TODO review (hand draft, not from mobile)
     quranicWird: "ورد قرآني", // TODO review (hand draft, not from mobile)
     source: "سورة فاطر 35:17 · سورة إبراهيم 14:20", // TODO review (hand draft, not from mobile)
@@ -346,17 +346,17 @@ export const ar: DeepPartial<typeof en> = {
     purpose: "الفرج من الدَّين وتيسير قضائه", // TODO review (hand draft, not from mobile)
     meaning: "وما ذلك على الله بعزيز", // TODO review (hand draft, not from mobile)
     spiritualMeaning: "تؤكّد هذه الآية التوكّل التام على قدرة الله التي لا حدّ لها. فما يبدو لنا مستحيلًا — ومنه الخلاص من الدَّين — هيّنٌ على الله. وبتكرار هذه الحقيقة نُعلّق قلوبنا بقدرته سبحانه ونرجو فرجه.", // TODO review (hand draft, not from mobile)
-    benefits: "الاستحقاقات", // TODO review (machine draft)
-    benefit1: "الإعفاء من العبء المالي والديون", // TODO review (machine draft)
+    benefits: "الفوائد", // reviewed (Language Reviewer batch 5)
+    benefit1: "الفرج من الضيق المالي والدَّين", // reviewed (Language Reviewer batch 5)
     benefit2: "فرص قضاء سريعة وغير متوقّعة", // TODO review (hand draft, not from mobile)
-    benefit3: "فتح مصادر جديدة للحكم", // TODO review (machine draft)
-    benefit4: "سلام القلب فيما يتعلق بالمسائل المالية", // TODO review (machine draft)
+    benefit3: "فتح أبواب جديدة للرزق", // reviewed (Language Reviewer batch 5)
+    benefit4: "طمأنينة القلب في الأمور المالية", // reviewed (Language Reviewer batch 5)
     benefit5: "تقوية التوكّل على قدرة الله", // TODO review (hand draft, not from mobile)
     startDailyWird: "ابدأ الورد اليومي", // TODO review (hand draft, not from mobile)
     continueWird: "تابع الورد", // TODO review (hand draft, not from mobile)
     wirdComplete: "اكتمل الورد اليومي!", // TODO review (hand draft, not from mobile)
-    removeChallenge: "إزالة هذا التحدي؟", // TODO review (machine draft)
-    progressWillBeLost: "تقدمك سيضيع", // TODO review (machine draft)
+    removeChallenge: "هل تريد إزالة هذا التحدي؟", // reviewed (Language Reviewer batch 5)
+    progressWillBeLost: "سيُفقد تقدّمك.", // reviewed (Language Reviewer batch 5)
     arabic: "وَمَا ذَٰلِكَ عَلَى اللهِ بِعَزِيزٍ", // same as EN (transliteration/Arabic/brand)
     transliteration: "Wamā dhālika ʿalā llāhi bi-ʿAzīzin", // same as EN (transliteration/Arabic/brand)
   },
@@ -369,8 +369,8 @@ export const ar: DeepPartial<typeof en> = {
     logProgress: "سجّل التقدّم", // TODO review (hand draft, not from mobile)
     hint: "يمكنك الإغلاق في أي وقت — سيُحفظ عددك", // TODO review (hand draft, not from mobile)
     openTasbih: "افتح السبحة", // TODO review (hand draft, not from mobile)
-    removeChallenge: "إزالة هذا التحدي؟", // TODO review (machine draft)
-    progressWillBeLost: "تقدمك سيضيع", // TODO review (machine draft)
+    removeChallenge: "هل تريد إزالة هذا التحدي؟", // reviewed (Language Reviewer batch 5)
+    progressWillBeLost: "سيُفقد تقدّمك.", // reviewed (Language Reviewer batch 5)
   },
   guidance: {
     divineNames: "الأسماء الحسنى",
@@ -405,7 +405,7 @@ export const ar: DeepPartial<typeof en> = {
     discoverSignificance: "اكتشف الدلالة العددية لاسمك من خلال العلوم الإسلامية التقليدية",
     numericalValues: "القيم العددية",
     numericalValuesDesc: "كيف يتحول كل حرف عربي إلى أرقام مقدسة",
-    elementalForces: "القوى العنصرية",
+    elementalForces: "قوى العناصر",
     elementalForcesDesc: "العناصر الأربعة الكلاسيكية وتركيبتك الروحية",
     hiddenPatterns: "الأنماط الخفية",
     hiddenPatternsDesc: "الروابط المقدسة والرنينات الإلهية في أرقامك",
@@ -474,19 +474,19 @@ export const ar: DeepPartial<typeof en> = {
     timing: "التوقيت",
   },
   elementalComposition: {
-    title: "التركيب العنصري",
+    title: "تركيب العناصر",
     letters: "حروف",
   },
   numericalEssence: {
     title: "جوهرك الرقمي",
     dominantElement: "العنصر الغالب:",
     coreNumberMeaning: "معنى الرقم الأساسي",
-    theNumber: "العدد", // TODO review (machine draft)
+    theNumber: "العدد", // reviewed (Language Reviewer batch 5, accepted)
     number1: "القيادة والاستقلال وروح الريادة", // TODO review (hand draft, not from mobile)
-    number2: "الشراكة والتوازن والتعاون والوئام", // TODO review (machine draft)
+    number2: "الشراكة والتوازن والتعاون والوئام", // reviewed (Language Reviewer batch 5, accepted)
     number3: "الإبداع والتعبير والفرح والتواصل", // reviewed (Language Reviewer batch 4)
     number4: "الاستقرار والأساس والأمان والبنية", // reviewed (Language Reviewer batch 4)
-    number5: "الحرية والمغامرة والتغيير والقدرة على التكيف", // TODO review (machine draft)
+    number5: "الحرية والمغامرة والتغيير والقدرة على التكيف", // reviewed (Language Reviewer batch 5, accepted)
     number6: "الخدمة والمسؤولية والرعاية والمحبة", // reviewed (Language Reviewer batch 4)
     number7: "الحكمة والروحانية والتأمّل الباطني والغموض", // TODO review (hand draft, not from mobile)
     number8: "القوة والوفرة والتمكّن المادي والنجاح", // TODO review (hand draft, not from mobile)
@@ -652,10 +652,10 @@ export const ar: DeepPartial<typeof en> = {
       personalYear: "الموضوع والطاقة الرئيسية لسنتك الحالية",
       personalMonth: "الطاقة والتركيز الشهري",
     },
-    elementalComposition: "تركيبتك العنصرية",
-    elementalCompositionDesc: "بناءً على أرقامك الأساسية الأربعة، إليك التوازن العنصري في مسار حياتك:",
+    elementalComposition: "تركيبة عناصرك",
+    elementalCompositionDesc: "بناءً على أرقامك الأساسية الأربعة، إليك توازن العناصر في مسار حياتك:",
     dominantElement: "العنصر الغالب",
-    elementalBalance: "التوازن العنصري",
+    elementalBalance: "توازن العناصر",
     elementDescriptions: {
       fire: "تجلب النار الشغف والمبادرة والدافع. أنت مدفوع لاتخاذ الفعل والقيادة.",
       earth: "تجلب الأرض الثبات والعملية والرسوخ. تبني أسسًا دائمة.",
@@ -692,7 +692,7 @@ export const ar: DeepPartial<typeof en> = {
     checkCompatibility: "تحقق من التوافق",
     overallScore: "درجة الانسجام الكلية",
     spiritualHarmony: "الانسجام الروحي",
-    elementalHarmony: "الانسجام العنصري",
+    elementalHarmony: "انسجام العناصر",
     planetaryCompatibility: "التوافق الكوكبي",
     coreCompatibility: "التوافق الأساسي (الأسماء الشخصية)",
     coreCompatibilityDesc: "كيف تتفاعل شخصياتكم الواعية",
@@ -725,7 +725,7 @@ export const ar: DeepPartial<typeof en> = {
       day: "اليوم",
       hour: "رقم الساعة الكوكبية",
       hourTip: "الساعة رقم كذا بعد شروق الشمس المحلي. الترتيب: الشمس، الزهرة، عطارد، القمر، زحل، المشتري، المريخ.",
-      elementHarmony: "الانسجام العنصري",
+      elementHarmony: "انسجام العناصر",
       harmonious: "✨ منسجم",
       nourishing: "🌱 مغذٍّ",
       transformative: "⚡ تحويلي",
@@ -795,7 +795,7 @@ export const ar: DeepPartial<typeof en> = {
     },
     elementChart: {
       title: "مخطط عنصر الاسم",
-      subtitle: "التركيب العنصري والتوازن",
+      subtitle: "تركيب العناصر وتوازنها",
       dominant: "العنصر الغالب",
       personality: "انعكاس الشخصية",
       balancingDhikr: "ذكر الموازنة",
@@ -870,12 +870,12 @@ export const ar: DeepPartial<typeof en> = {
       difficulty: {
         moderate: "معتدل",
         advanced: "متقدم",
-        easy: "على مهلك", // TODO review (machine draft)
+        easy: "سهل", // reviewed (Language Reviewer batch 5)
       },
       title: "كوكب اليوم", // TODO review (hand draft, not from mobile)
-      subtitle: "الطاقة اليومية", // TODO review (machine draft)
+      subtitle: "الطاقة اليومية", // reviewed (Language Reviewer batch 5, accepted)
       practiceLevel: "مستوى الممارسة", // TODO review (hand draft, not from mobile)
-      currentPosition: "المنصب الحالي", // TODO review (machine draft)
+      currentPosition: "الموضع الحالي", // reviewed (Language Reviewer batch 5)
       titleAr: "يوم الكوكب", // same as EN (transliteration/Arabic/brand)
     },
     planetaryHour: {
@@ -892,7 +892,7 @@ export const ar: DeepPartial<typeof en> = {
       dayHours: "ساعات النهار",
       nightHours: "ساعات الليل",
       subtitle: "توافق اللحظة", // TODO review (hand draft, not from mobile)
-      seeAllHours: "شاهدْ جميع ساعاتِ", // TODO review (machine draft)
+      seeAllHours: "اعرض جميع الساعات", // reviewed (Language Reviewer batch 5)
       sunrise: "الشروق", // TODO review (hand draft, not from mobile)
       titleAr: "ساعة الكوكب", // same as EN (transliteration/Arabic/brand)
     },
@@ -1048,7 +1048,7 @@ export const ar: DeepPartial<typeof en> = {
       said: "سعيد", // TODO review (hand draft, not from mobile)
       mahdhur: "حذر", // TODO review (hand draft, not from mobile)
       saidGuidance: "ممتاز للدعاء والذكر والنوايا الجديدة", // TODO review (hand draft, not from mobile)
-      mutadilGuidance: "مناسبة للممارسة والتفكير المنتظمين", // TODO review (machine draft)
+      mutadilGuidance: "مناسب للممارسة المنتظمة والتأمّل", // reviewed (Language Reviewer batch 5)
       mahdhurGuidance: "ركّز على الاستغفار وأذكار التحصين", // TODO review (hand draft, not from mobile)
       exaltedIn: "{planet} في شرفه في برج {sign}", // TODO review (hand draft, not from mobile)
       strongIn: "{planet} قوي في برج {sign}", // TODO review (hand draft, not from mobile)
@@ -1060,7 +1060,7 @@ export const ar: DeepPartial<typeof en> = {
       viewDetails: "عرض التفاصيل",
       practiceHint: "تلميح الممارسة", // TODO review (hand draft, not from mobile)
       appTeaser: "إرشاد شخصي في تطبيق أسرار", // TODO review (hand draft, not from mobile)
-      comingSoon: "قادم قريباً", // TODO review (machine draft)
+      comingSoon: "قريبًا", // reviewed (Language Reviewer batch 5)
       saidAr: "سَعِيد", // same as EN (transliteration/Arabic/brand)
       mutadilAr: "مُعْتَدِل", // same as EN (transliteration/Arabic/brand)
       mahdhurAr: "مَحْذُور", // same as EN (transliteration/Arabic/brand)
@@ -1075,14 +1075,14 @@ export const ar: DeepPartial<typeof en> = {
       fire: {
         leadership: "القيادة",
         starting: "بدء المشاريع", // TODO review (hand draft, not from mobile)
-        physical: "الأنشطة المادية", // TODO review (machine draft)
+        physical: "الأنشطة البدنية", // reviewed (Language Reviewer batch 5)
         bold: "القرارات الجريئة", // TODO review (hand draft, not from mobile)
       },
       water: {
         healing: "الشفاء العاطفي",
         relationships: "العلاقات",
         intuitive: "العمل الحدسي",
-        creative: "التدفق الإبداعي", // TODO review (machine draft)
+        creative: "الانسياب الإبداعي", // reviewed (Language Reviewer batch 5)
       },
       air: {
         learning: "التعلّم",
@@ -1093,8 +1093,8 @@ export const ar: DeepPartial<typeof en> = {
       earth: {
         practical: "المهام العملية",
         building: "بناء الأسس", // TODO review (hand draft, not from mobile)
-        financial: "المسائل المالية", // TODO review (machine draft)
-        health: "الصحة البدنية", // TODO review (machine draft)
+        financial: "الأمور المالية", // reviewed (Language Reviewer batch 5)
+        health: "الصحة البدنية", // reviewed (Language Reviewer batch 5, accepted)
       },
     },
     zikr: {
@@ -1266,7 +1266,7 @@ export const ar: DeepPartial<typeof en> = {
     conflict: "النزاع",
     moderate: "معتدل",
     harmony: "الانسجام",
-    yourBalanceToday: "رصيدك اليوم", // TODO review (machine draft)
+    yourBalanceToday: "توازنك اليوم", // reviewed (Language Reviewer batch 5)
     tooMuch: "الزيادة المفرطة:", // TODO review (hand draft, not from mobile)
     needMore: "يحتاج إلى المزيد:", // reviewed (Language Reviewer batch 4)
     quickFix: "حلّ سريع", // TODO review (hand draft, not from mobile)
@@ -1293,7 +1293,7 @@ export const ar: DeepPartial<typeof en> = {
     about: "حول التطبيق",
     privacy: "سياسة الخصوصية",
     tagline: "علم العدد والحسابات الروحية", // TODO review (hand draft, not from mobile)
-    rights: "جميع الحقوق المحجوزة", // TODO review (machine draft)
+    rights: "جميع الحقوق محفوظة", // reviewed (Language Reviewer batch 5)
     contact: "اتصل بنا", // TODO review (hand draft, not from mobile)
   },
   spiritualStations: {
@@ -1420,7 +1420,7 @@ export const ar: DeepPartial<typeof en> = {
       benefit: "يمنح الصبر والثبات", // TODO review (hand draft, not from mobile)
     },
     Air: {
-      benefit: "زيادة المعرفة والوضوح", // TODO review (machine draft)
+      benefit: "يزيد المعرفة والوضوح", // reviewed (Language Reviewer batch 5)
       time: "بعد العشاء", // TODO review (hand draft, not from mobile)
     },
   },
@@ -1441,15 +1441,15 @@ export const ar: DeepPartial<typeof en> = {
     closesIn: "تُغلق خلال",
     nextWindow: "النافذة التالية",
     closeDetails: "أغلق التفاصيل", // TODO review (hand draft, not from mobile)
-    energyType: "نوع الطاقة", // TODO review (machine draft)
+    energyType: "نوع الطاقة", // reviewed (Language Reviewer batch 5, accepted)
     planetalPhase: "المرحلة الكوكبية", // TODO review (hand draft, not from mobile)
     peakClarity: "ذروة الصفاء", // TODO review (hand draft, not from mobile)
-    socialEnergy: "الطاقة الاجتماعية", // TODO review (machine draft)
+    socialEnergy: "الطاقة الاجتماعية", // reviewed (Language Reviewer batch 5, accepted)
     endurancePhase: "مرحلة التحمّل", // TODO review (hand draft, not from mobile)
     reviewTime: "وقت المراجعة", // reviewed (Language Reviewer batch 4)
     classicalTeaching: "تعليم كلاسيكي (الدرس", // TODO review (hand draft, not from mobile)
-    forEverythingTime: "لكل شيء هناك وقت", // TODO review (machine draft)
-    successFromRightAction: "النجاح يأتي من العمل الصحيح في الوقت المناسب", // TODO review (machine draft)
+    forEverythingTime: "لكلّ شيء وقت", // reviewed (Language Reviewer batch 5)
+    successFromRightAction: "النجاح يأتي من العمل الصحيح في وقته", // reviewed (Language Reviewer batch 5)
     allTips: "كل النصائح", // TODO review (hand draft, not from mobile)
     peakPerformanceDay: "يوم الأداء الأمثل", // TODO review (hand draft, not from mobile)
     steadyProgressDay: "يوم التقدّم الثابت", // TODO review (hand draft, not from mobile)
@@ -1473,20 +1473,20 @@ export const ar: DeepPartial<typeof en> = {
     specialNumbers: "أرقام ودروس خاصة",
     lessonsToLearn: "دروس يجب تعلّمها",
     blessedNumbers: "أرقام مباركة",
-    unableToCalculate: "غير قادر على حساب القدر رجاءً إدخلْ a اسم.", // TODO review (machine draft)
+    unableToCalculate: "تعذّر إجراء الحساب. يُرجى إدخال اسم.", // reviewed (Language Reviewer batch 5)
     loadingVerse: "جارٍ تحميل الآية...", // TODO review (hand draft, not from mobile)
     verseError: "تعذّر تحميل الآية حاليًا. حدّث الصفحة أو زر Quran.com مباشرة.", // TODO review (hand draft, not from mobile)
-    englishTranslation: "الترجمة التحريرية الإنكليزية", // TODO review (machine draft)
+    englishTranslation: "الترجمة الإنجليزية", // reviewed (Language Reviewer batch 5)
     readFullVerse: "اقرأ الآية كاملة على Quran.com", // TODO review (hand draft, not from mobile)
     ayahOf: "الآية {ayah} من {total}", // TODO review (hand draft, not from mobile)
     noVerseData: "لا تتوفّر بيانات آية لهذا الرنين.", // TODO review (hand draft, not from mobile)
-    growthAreas: "مناطق النمو", // TODO review (machine draft)
-    yourNumbers: "أرقامك", // TODO review (machine draft)
+    growthAreas: "مجالات النمو", // reviewed (Language Reviewer batch 5)
+    yourNumbers: "أعدادك", // reviewed (Language Reviewer batch 5)
     corePersonality: "الشخصية الجوهرية", // TODO review (hand draft, not from mobile)
     innerDesires: "الرغبات الباطنة", // TODO review (hand draft, not from mobile)
-    howOthersSee: "كيف الآخرون يرونك", // TODO review (machine draft)
+    howOthersSee: "كيف يراك الآخرون", // reviewed (Language Reviewer batch 5)
     lifePurpose: "غاية الحياة", // TODO review (hand draft, not from mobile)
-    destiny: "القدر", // TODO review (machine draft)
+    destiny: "المصير", // reviewed (Language Reviewer batch 5)
     coreTalents: "مواهبك الجوهرية وقواك الطبيعية؛ القدرات التي وُلدت بها.", // TODO review (hand draft, not from mobile)
     ultimateGoal: "غاية حياتك وما خُلقت لتحقيقه؛ هدفك الأسمى.", // TODO review (hand draft, not from mobile)
     lessonsDescription: "تمثّل هذه الأعداد دروسًا تريد روحك تعلّمها في هذه الحياة. ليست عوائق، بل فرص للنمو.", // TODO review (hand draft, not from mobile)
@@ -1495,7 +1495,7 @@ export const ar: DeepPartial<typeof en> = {
   compatibilityResults: {
     overallCompatibility: "التوافق الشامل",
     spiritualDestiny: "القدر الروحي",
-    elementalTemperament: "المزاج العنصري",
+    elementalTemperament: "مزاج العناصر",
     remainder: "الباقي",
     sharedElement: "العنصر",
     recommendations: "التوصيات",
@@ -1509,11 +1509,11 @@ export const ar: DeepPartial<typeof en> = {
     water: "ماء",
     earth: "أرض",
     harmony: "الانسجام",
-    unableToCalculate: "غير قادر على حساب التوافق يرجى ضمان إدخال الاسمين معا.", // TODO review (machine draft)
-    threeAnalysisMethods: "ثلاثة أساليب تحليل", // TODO review (machine draft)
+    unableToCalculate: "تعذّر حساب التوافق. يُرجى التأكد من إدخال الاسمين.", // reviewed (Language Reviewer batch 5)
+    threeAnalysisMethods: "ثلاثة أساليب للتحليل", // reviewed (Language Reviewer batch 5)
     planetaryCosmic: "الكوكبي الفلكي", // TODO review (hand draft, not from mobile)
     letterChemistry: "كيمياء الحروف", // TODO review (hand draft, not from mobile)
-    letterChemistryDesc: "يبيّن الطبع العنصري بين الاسمين. يحمل كل حرف طاقة النار أو الهواء أو الماء أو التراب، ومزيجها يشكّل التوازن العاطفي والطاقي لصلتكما.", // TODO review (hand draft, not from mobile)
+    letterChemistryDesc: "يبيّن مزاج العناصر بين الاسمين. يحمل كل حرف طاقة النار أو الهواء أو الماء أو التراب، ومزيجها يشكّل التوازن العاطفي والطاقي لصلتكما.", // TODO review (hand draft, not from mobile)
     combinedHarmony: "الانسجام المشترك", // TODO review (hand draft, not from mobile)
     combinedHarmonyExplain: "كلما ارتفع كان تدفّق العناصر بينكما أسلس", // TODO review (hand draft, not from mobile)
     balancingDhikrContext: "تساعد هذه الأذكار على موازنة العناصر الغالبة حتى ينسجم الطرفان.", // TODO review (hand draft, not from mobile)
@@ -1543,7 +1543,7 @@ export const ar: DeepPartial<typeof en> = {
     accuracy: "الدقة", // TODO review (hand draft, not from mobile)
     precision: "الدقة", // TODO review (hand draft, not from mobile)
     weight: "الوزن", // TODO review (hand draft, not from mobile)
-    motherOf: "الأم", // TODO review (machine draft)
+    motherOf: "أمّ", // reviewed (Language Reviewer batch 5)
     whatThisMeans: "ما يعني هذا",
     showCalculationDetails: "اعرض تفاصيل الحساب", // TODO review (hand draft, not from mobile)
     understandingTerms: "فهم المصطلحات", // TODO review (hand draft, not from mobile)
@@ -1590,7 +1590,7 @@ export const ar: DeepPartial<typeof en> = {
     challengingMeaning: "اختلافات كبيرة في الطاقة والأسلوب. تتطلب هذه العلاقة جهدًا كبيرًا وصبرًا ونموًا متبادلًا.",
     difficult: "صعب جدًا",
     difficultRange: "0-39%",
-    difficultMeaning: "تعارضات عنصرية كبيرة. رغم أنه ليس مستحيلًا، يواجه هذا الاقتران تحديات جوهرية تتطلب التزامًا عميقًا لتجاوزها.",
+    difficultMeaning: "تعارضات كبيرة بين العناصر. رغم أنه ليس مستحيلًا، يواجه هذا الاقتران تحديات جوهرية تتطلب التزامًا عميقًا لتجاوزها.",
     layer1Title: "توافق الحياة اليومية",
     layer1TitleArabic: "التوافق اليومي",
     layer1Subtitle: "الديناميكية الظاهرة",
@@ -1607,10 +1607,10 @@ export const ar: DeepPartial<typeof en> = {
     basedOn: "🔍 مبني على:",
     whyItMatters: "💡 لماذا يهم:",
     layer1WhatItMeans: "كيف تتفاعل شخصيتاكما الواعيتان يوميًا. هذه هي الطاقة التي تجلبانها فعليًا للمحادثات والقرارات والأنشطة المشتركة. إنها ما يراه الناس عندما ينظرون إلى علاقتكما.",
-    layer1BasedOn: "المزاجات العنصرية من كلا اسميكما (محسوبة باستخدام طريقة الحدث ÷ 4)",
+    layer1BasedOn: "أمزجة العناصر من كلا اسميكما (محسوبة باستخدام طريقة الحدث ÷ 4)",
     layer1WhyItMatters: "يحدد هذا أسلوب تواصلكما، وحل النزاعات، وما إذا كنتما 'تفهمان' بعضكما طبيعيًا في اللحظات اليومية. الدرجات العالية هنا تعني تدفقًا سهلًا وطبيعيًا في الحياة اليومية.",
     layer2WhatItMeans: "التوافق العاطفي اللاواعي الموروث من والدتيكما. هذا هو 'شعور المنزل' الذي تخلقانه معًا × الراحة والأمان والرابطة العميقة غير المعلنة التي إما موجودة طبيعيًا أو يجب بناؤها.",
-    layer2BasedOn: "المزاجات العنصرية من اسمي والدتيكما (محسوبة باستخدام طريقة الحدث ÷ 4)",
+    layer2BasedOn: "أمزجة العناصر من اسمي والدتيكما (محسوبة باستخدام طريقة الحدث ÷ 4)",
     layer2WhyItMatters: "هذه هي الطبقة الأهم للزواج والشراكة طويلة الأمد. إليك السبب:\n\n• شكّلت أنماط والدتك العاطفية كيف تعطي وتتلقى الحب\n• تحدد هذه الطبقة ما إذا كنتما تشعران بـ\"الأمان\" عاطفيًا معًا\n• الدرجات العالية هنا تعني أنكما تفهمان احتياجات بعضكما بالفطرة\n• الدرجات المنخفضة تعني أنكما ستحتاجان لعمل واعٍ لتلبية احتياجات بعضكما العاطفية\n\nيعاني كثير من الأزواج ذوي الكيمياء السطحية الرائعة لأن هذه الطبقة غير منسجمة. معرفة ذلك مسبقًا تساعدكما على الاستعداد.",
     layer2ExampleTitle: "🎭 مثال من الواقع:",
     layer2Example: "أحمد وليلى لديهما كيمياء يومية رائعة (نار + هواء = 85%).\n\nلكن عند حدوث ضغط:\n• جذور أحمد المائية (من والدته) تحتاج معالجة عاطفية وحوارًا\n• جذور ليلى النارية (من والدتها) تحتاج مساحة وفعلًا لتشعر بتحسن\n\nدون معرفة هذا، يؤذيان بعضهما:\n• يشعر أحمد بالهجران عندما تأخذ ليلى مساحتها\n• تشعر ليلى بالاختناق عندما يريد أحمد الحديث\n\nبهذه المعرفة، يفهمان: \"كلانا يحاول الشعور بالأمان × بطرق مختلفة فقط.\"",
@@ -1639,9 +1639,9 @@ export const ar: DeepPartial<typeof en> = {
     areasToNurture: "⚠️ مجالات تحتاج رعاية",
     challengesDesc: "تحتاج هذه المجالات انتباهًا واعيًا، لكن الوعي نصف الحل:",
     specificPractices: "🛠️ ممارسات محددة",
-    practicesDesc: "جرّبا هذه الأنشطة لموازنة ديناميكياتكما العنصرية:",
+    practicesDesc: "جرّبا هذه الأنشطة لموازنة حركية عناصركما:",
     spiritualBalancing: "🤲 التوازن الروحي",
-    dhikrDesc: "تساعد هذه العبارات المقدسة على مواءمة طاقاتكما العنصرية:",
+    dhikrDesc: "تساعد هذه العبارات المقدسة على التوفيق بين طاقات عناصركما:",
     understandingTheTerms: "[ℹ️ فهم المصطلحات]",
     glossaryTitle: "📚 مسرد علم الحروف",
     glossaryTitleArabic: "مسرد علم الحروف",
@@ -1652,10 +1652,10 @@ export const ar: DeepPartial<typeof en> = {
     hadathArabic: "الحدث",
     hadathDef: "الجوهر العددي × مجموع قيم جميع الحروف في الاسم باستخدام نظام الأبجد. يكشف هذا الرقم الجوهر الروحي وأنماط القدر.",
     hadathDiv4: "الحدث ÷ 4",
-    hadathDiv4Def: "الطريقة الكلاسيكية لتحديد المزاج العنصري (النظام المغربي). يشير باقي قسمة الحدث على 4 إلى العنصر الغالب:\n• الباقي 1 = النار\n• الباقي 2 = الأرض\n• الباقي 3 = الهواء\n• الباقي 0 = الماء",
+    hadathDiv4Def: "الطريقة الكلاسيكية لتحديد مزاج العناصر (النظام المغربي). يشير باقي قسمة الحدث على 4 إلى العنصر الغالب:\n• الباقي 1 = النار\n• الباقي 2 = التراب\n• الباقي 3 = الهواء\n• الباقي 0 = الماء",
     zawajAlHuruf: "زواج الحروف",
     zawajAlHurufArabic: "زواج الحروف",
-    zawajAlHurufDef: "زواج الحروف × تحليل التوافق بين اسمين بناءً على انسجامهما العنصري. كيف 'تتزوج' الحروف أو تتفاعل بين شخصين.",
+    zawajAlHurufDef: "زواج الحروف × تحليل التوافق بين اسمين بناءً على انسجام عناصرهما. كيف 'تتزوج' الحروف أو تتفاعل بين شخصين.",
     showCalculation: "[📊 عرض كيفية حسابنا لهذا]",
     calculationBreakdown: "🔢 تفصيل الحساب",
     calculationBreakdownArabic: "تفصيل الحسابات",
@@ -1734,9 +1734,9 @@ export const ar: DeepPartial<typeof en> = {
         meaning: "لديك طموحات كبيرة لخلق شيء دائم. تحوّل الأحلام إلى واقع على نطاق واسع.",
       },
     },
-    yourLifeNumbers: "عدد حياتك", // TODO review (machine draft)
+    yourLifeNumbers: "أعداد حياتك", // reviewed (Language Reviewer batch 5)
     introduction: "تكشف هذه الأعداد الأربعة شخصيتك الجوهرية، ورغباتك الباطنة، وكيف يراك الآخرون، وغاية حياتك. اعتبرها السمات الرئيسة التي تشكّل من أنت والطريق الذي تسلكه.", // TODO review (hand draft, not from mobile)
-    whereYouAre: "أين أنت الآن", // TODO review (machine draft)
+    whereYouAre: "أين أنت الآن", // reviewed (Language Reviewer batch 5, accepted)
     phaseOf: "المرحلة {current} من 9", // TODO review (hand draft, not from mobile)
     yearOf: "السنة {current}/9", // TODO review (hand draft, not from mobile)
     focusAreas: "مجالات التركيز:",
@@ -1745,11 +1745,11 @@ export const ar: DeepPartial<typeof en> = {
     strengthsDescription: "يمثّل كل عدد من 1 إلى 9 صفات حياتية مختلفة. نقاط قوتك تبيّن ما تتفوّق فيه بطبعك، ومجالات النمو تبيّن ما يمكنك تطويره.", // TODO review (hand draft, not from mobile)
     whatYouAreStrongAt: "ما تتفوق فيه",
     whereYouCanGrow: "أين يمكنك النمو",
-    growthArea: "منطقة النمو", // TODO review (machine draft)
+    growthArea: "مجال النمو", // reviewed (Language Reviewer batch 5)
     rightNow: "الآن", // TODO review (hand draft, not from mobile)
-    currentStrength: "قوتك الحالية", // TODO review (machine draft)
+    currentStrength: "قوتك الحالية", // reviewed (Language Reviewer batch 5, accepted)
     currentlyWorkingOn: "تعمل حاليًا على", // reviewed (Language Reviewer batch 4)
-    yourMainFocus: "تركيزك الرئيسي", // TODO review (machine draft)
+    yourMainFocus: "تركيزك الرئيسي", // reviewed (Language Reviewer batch 5, accepted)
     whatLifeTeaching: "هذا ما تعلّمك إياه الحياة الآن، فتقبّله!", // TODO review (hand draft, not from mobile)
   },
   timingResults: {
@@ -1813,10 +1813,10 @@ export const ar: DeepPartial<typeof en> = {
     wearTheseColors: "البس هذه الألوان:", // TODO review (hand draft, not from mobile)
     tryThis: "جرّب هذا:", // reviewed (Language Reviewer batch 4)
     perfectFit: "توافق تام", // TODO review (hand draft, not from mobile)
-    goingWell: "تسير على ما يرام", // TODO review (machine draft)
+    goingWell: "تسير على ما يرام", // reviewed (Language Reviewer batch 5, accepted)
     needCare: "يحتاج إلى عناية", // reviewed (Language Reviewer batch 4)
     actNowRealTimeGuidance: "اعمل الآن: إرشاد آني", // reviewed (Language Reviewer batch 4)
-    useThisTimeFor: "إستخدم هذا الوقت:", // TODO review (machine draft)
+    useThisTimeFor: "استعمل هذا الوقت في:", // reviewed (Language Reviewer batch 5)
     handleRoutineTasks: "أنجز المهام الروتينية", // TODO review (hand draft, not from mobile)
     continueOngoingWork: "تابع العمل الجاري", // TODO review (hand draft, not from mobile)
     plentyOfTime: "بقي وقت كافٍ في هذه النافذة", // TODO review (hand draft, not from mobile)
@@ -1841,11 +1841,11 @@ export const ar: DeepPartial<typeof en> = {
     waitFor: "انتظر {element}", // TODO review (hand draft, not from mobile)
     handleRoutineTasks: "أنجز المهام الروتينية", // TODO review (hand draft, not from mobile)
     continueOngoingWork: "تابع العمل الجاري", // TODO review (hand draft, not from mobile)
-    takeBoldAction: "اتخاذ إجراءات جريئة", // TODO review (machine draft)
+    takeBoldAction: "أقدِم على خطوة جريئة", // reviewed (Language Reviewer batch 5)
     writeOrCommunicate: "اكتب أو تواصل", // TODO review (hand draft, not from mobile)
     brainstormIdeas: "اعصف الأفكار", // TODO review (hand draft, not from mobile)
-    creativeWork: "العمل الإبداعي", // TODO review (machine draft)
-    deepReflection: "الانعكاس العميق", // TODO review (machine draft)
+    creativeWork: "العمل الإبداعي", // reviewed (Language Reviewer batch 5, accepted)
+    deepReflection: "التأمّل العميق", // reviewed (Language Reviewer batch 5)
     buildOrOrganize: "ابنِ أو نظّم", // TODO review (hand draft, not from mobile)
     completeTasks: "أتمّ المهام", // TODO review (hand draft, not from mobile)
     lowStakesActivities: "أنشطة قليلة المخاطر", // TODO review (hand draft, not from mobile)
@@ -1871,11 +1871,11 @@ export const ar: DeepPartial<typeof en> = {
     yourElement: "عنصرك",
     todayElement: "عنصر اليوم",
     dailyColorGuidance: "إرشاد ألوان اليوم", // TODO review (hand draft, not from mobile)
-    harmonyLevel: "مستوى الانسجام", // TODO review (machine draft)
+    harmonyLevel: "مستوى الانسجام", // reviewed (Language Reviewer batch 5, accepted)
     primaryColors: "الألوان الأساسية", // TODO review (hand draft, not from mobile)
     accentColors: "ألوان مكمّلة", // TODO review (hand draft, not from mobile)
     avoidColors: "ألوان يُستحسن تجنّبها", // TODO review (hand draft, not from mobile)
-    energyMessage: "رسالة الطاقة", // TODO review (machine draft)
+    energyMessage: "رسالة الطاقة", // reviewed (Language Reviewer batch 5, accepted)
     practicalTips: "نصائح عملية", // TODO review (hand draft, not from mobile)
     bestEnergyTimes: "أفضل أوقات الطاقة", // TODO review (hand draft, not from mobile)
     harmonyBreakdown: "تفصيل الانسجام", // TODO review (hand draft, not from mobile)
@@ -1899,37 +1899,37 @@ export const ar: DeepPartial<typeof en> = {
     afternoon: "بعد الظهر",
     evening: "المساء",
     optimalSequence: "التسلسل الأمثل لـ", // TODO review (hand draft, not from mobile)
-    energyType: "نوع الطاقة", // TODO review (machine draft)
+    energyType: "نوع الطاقة", // reviewed (Language Reviewer batch 5, accepted)
     bestFor: "الأفضل لـ",
     avoid: "تجنّب",
     planetalPhase: "المرحلة الكوكبية", // TODO review (hand draft, not from mobile)
     peakLeadership: "ذروة طاقة القيادة", // TODO review (hand draft, not from mobile)
     highVisibility: "حضور بارز", // TODO review (hand draft, not from mobile)
-    delegationPhase: "مرحلة التفويض", // TODO review (machine draft)
+    delegationPhase: "مرحلة التفويض", // reviewed (Language Reviewer batch 5, accepted)
     reflectionTime: "وقت التأمّل", // TODO review (hand draft, not from mobile)
-    emotionalClarity: "الوضوح العاطفي", // TODO review (machine draft)
+    emotionalClarity: "الوضوح العاطفي", // reviewed (Language Reviewer batch 5, accepted)
     empathyPeak: "ذروة التعاطف", // TODO review (hand draft, not from mobile)
-    creativeFlow: "التدفق الإبداعي", // TODO review (machine draft)
+    creativeFlow: "الانسياب الإبداعي", // reviewed (Language Reviewer batch 5)
     deepRestBegins: "تبدأ الراحة العميقة", // TODO review (hand draft, not from mobile)
     peakPhysicalEnergy: "ذروة الطاقة البدنية", // TODO review (hand draft, not from mobile)
     combatMode: "وضع المواجهة", // TODO review (hand draft, not from mobile)
     sustainedPush: "دفع متواصل", // TODO review (hand draft, not from mobile)
     coolDownNeeded: "يلزم التهدئة", // TODO review (hand draft, not from mobile)
     mentalSharpness: "حدّة ذهنية", // TODO review (hand draft, not from mobile)
-    communicationPeak: "ذروة الاتصالات", // TODO review (machine draft)
+    communicationPeak: "ذروة التواصل", // reviewed (Language Reviewer batch 5)
     quickConnections: "روابط سريعة", // TODO review (hand draft, not from mobile)
-    integrationTime: "وقت التكامل", // TODO review (machine draft)
-    expansionBegins: "يبدأ التوسع", // TODO review (machine draft)
-    opportunityWindow: "نافذة الفرص", // TODO review (machine draft)
-    growthMomentum: "زخم النمو", // TODO review (machine draft)
+    integrationTime: "وقت التكامل", // reviewed (Language Reviewer batch 5, accepted)
+    expansionBegins: "بداية التوسّع", // reviewed (Language Reviewer batch 5)
+    opportunityWindow: "فرصة سانحة", // reviewed (Language Reviewer batch 5)
+    growthMomentum: "زخم النمو", // reviewed (Language Reviewer batch 5, accepted)
     wisdomIntegration: "دمج الحكمة", // TODO review (hand draft, not from mobile)
     beautyAppreciation: "تذوّق الجمال", // TODO review (hand draft, not from mobile)
-    relationshipHarmony: "الوئام بين العلاقات", // TODO review (machine draft)
+    relationshipHarmony: "الانسجام في العلاقات", // reviewed (Language Reviewer batch 5)
     pleasureTime: "وقت المتعة", // TODO review (hand draft, not from mobile)
-    disciplinePeak: "الذروة الانضباطية", // TODO review (machine draft)
+    disciplinePeak: "ذروة الانضباط", // reviewed (Language Reviewer batch 5)
     seriousWorkMode: "وضع العمل الجاد", // TODO review (hand draft, not from mobile)
     endurancePhase: "مرحلة التحمّل", // TODO review (hand draft, not from mobile)
-    reviewTime: "وقت الاستعراض", // TODO review (machine draft)
+    reviewTime: "وقت المراجعة", // reviewed (Language Reviewer batch 5)
     classicalTeaching: "تعليم كلاسيكي (الدرس 28):", // TODO review (hand draft, not from mobile)
     forEverythingTime: "«لكلّ شيءٍ وقت»", // TODO review (hand draft, not from mobile)
     successFromTiming: "(لكل شيء وقت) × النجاح في العمل الصحيح في الوقت الصحيح.", // TODO review (hand draft, not from mobile)
@@ -1945,7 +1945,7 @@ export const ar: DeepPartial<typeof en> = {
     dayLabel: "نهار",
     hourLabel: "رقم الساعة الكوكبية",
     hourTooltip: "الساعة رقم كذا بعد شروق الشمس المحلي. الترتيب: الشمس، الزهرة، عطارد، القمر، زحل، المشتري، المريخ.",
-    elementHarmony: "الانسجام العنصري",
+    elementHarmony: "انسجام العناصر",
     harmonious: "✨ منسجم",
     nourishing: "🌱 مغذٍّ",
     transformative: "⚡ تحويلي",
@@ -1992,8 +1992,8 @@ export const ar: DeepPartial<typeof en> = {
     shadowToWatch: "ظل يجب مراقبته",
     shadowToWatchDesc: "ميول ينبغي الوعي بها قد تعيق نموك.",
     reflectionOnly: "للتأمل فقط × ليس تنجيمًا أو حكمًا شرعيًا.",
-    unableToCalculate: "غير قادر على حساب القدر رجاءً إدخلْ a اسم.", // TODO review (machine draft)
-    englishTranslation: "الترجمة التحريرية الإنكليزية", // TODO review (machine draft)
+    unableToCalculate: "تعذّر إجراء الحساب. يُرجى إدخال اسم.", // reviewed (Language Reviewer batch 5)
+    englishTranslation: "الترجمة الإنجليزية", // reviewed (Language Reviewer batch 5)
     loadingVerse: "جارٍ تحميل الآية...", // TODO review (hand draft, not from mobile)
     unableToLoadVerse: "تعذّر تحميل الآية حاليًا. حدّث الصفحة أو زر Quran.com مباشرة.", // TODO review (hand draft, not from mobile)
     verseReferenceValid: "مرجع الآية صحيح (سورة {surah}:{ayah})، لكن تعذّر جلبها.", // TODO review (hand draft, not from mobile)
@@ -2025,13 +2025,13 @@ export const ar: DeepPartial<typeof en> = {
     challenges: "التحديات",
     advice: "نصائح",
     harmonyScore: "درجة الانسجام",
-    unableToCalculate: "غير قادر على حساب التوافق يرجى ضمان إدخال الاسمين معا.", // TODO review (machine draft)
-    threeAnalysisMethods: "ثلاثة أساليب تحليل", // TODO review (machine draft)
+    unableToCalculate: "تعذّر حساب التوافق. يُرجى التأكد من إدخال الاسمين.", // reviewed (Language Reviewer batch 5)
+    threeAnalysisMethods: "ثلاثة أساليب للتحليل", // reviewed (Language Reviewer batch 5)
     spiritualDestiny: "القدر الروحي",
-    elementalTemperament: "المزاج العنصري",
+    elementalTemperament: "مزاج العناصر",
     planetaryCosmic: "⭐ الكوكبي الفلكي", // TODO review (hand draft, not from mobile)
-    growthAreas: "مناطق النمو", // TODO review (machine draft)
-    relationship: "العلاقة", // TODO review (machine draft)
+    growthAreas: "مجالات النمو", // reviewed (Language Reviewer batch 5)
+    relationship: "العلاقة", // reviewed (Language Reviewer batch 5, accepted)
   },
   planetaryDescriptions: {
     Sun: {
@@ -2164,7 +2164,7 @@ export const ar: DeepPartial<typeof en> = {
     alignment: {
       personalAlignment: "المحاذاة الشخصية",
       alignmentBreakdown: "تفصيل المحاذاة",
-      elementalHarmony: "الانسجام العنصري",
+      elementalHarmony: "انسجام العناصر",
       planetaryResonance: "الرنين الكوكبي",
       numericalAlignment: "التوافق العددي",
       sacredConnection: "الاتصال المقدس",
@@ -2294,7 +2294,7 @@ export const ar: DeepPartial<typeof en> = {
       subtitle: "المبدأ الروحي وراء القراءات الشخصية",
       section1: {
         title: "المبدأ: بصمة روحك الفريدة",
-        text: "في التقليد السنغالي لعلم الحروف، تتشكل هويتك الروحية الكاملة (الأصل الروحاني) من اسمك + اسم والدتك. يخلق هذا بصمة عددية وعنصرية فريدة لك وحدك.",
+        text: "في التقليد السنغالي لعلم الحروف، تتشكل هويتك الروحية الكاملة (الأصل الروحاني) من اسمك + اسم والدتك. ويصنع ذلك بصمةً فريدة لك وحدك في الأعداد والعناصر.",
       },
       section2: {
         title: "لماذا يهم هذا",
@@ -2494,7 +2494,7 @@ export const ar: DeepPartial<typeof en> = {
     angularDominant: "طاقة حادّة حاسمة. تشقّ التعقيد بوضوح وتحوّل. نهج مباشر ومركّز.", // TODO review (hand draft, not from mobile)
     balanced: "طاقة هندسية متوازنة. لديك تنوّع في التعبير؛ تقدر أن تكون طموحًا أو حاضنًا أو راسخًا أو حاسمًا.", // TODO review (hand draft, not from mobile)
   },
-  inheritanceSame: "تُعبّر عن طاقة {element} نفسها التي ورثتها. هوية عنصرية قوية ومتماسكة ذات جذور عميقة.", // TODO review (hand draft, not from mobile)
+  inheritanceSame: "تُعبّر عن طاقة {element} نفسها التي ورثتها. هوية قوية متماسكة في العنصر، ذات جذور عميقة.", // TODO review (hand draft, not from mobile)
   inheritanceCompatible: {
     fireAir: "تُعبّر بالنار وجذورك هوائية. أساسك الهوائي يغذّي فعلك الناري كالريح تُذكي اللهب.", // TODO review (hand draft, not from mobile)
     airFire: "تعبّر بالهواء لكن جذورك نارية. أساسك الناري يمدّ حركتك الهوائية بالطاقة، كالحرارة التي تولّد الريح.", // reviewed (Language Reviewer batch 4)
@@ -2515,7 +2515,7 @@ export const ar: DeepPartial<typeof en> = {
     },
     Moon: {
       quality: "العاطفة، الحدس، البيت", // TODO review (hand draft, not from mobile)
-      favorable: ["شؤون الأسرة", "الشفاء العاطفي", "تأمّل الرؤى", "أنشطة الرعاية"], // TODO review (hand draft, not from mobile)
+      favorable: ["شؤون الأسرة", "الشفاء العاطفي", "التأمّل في الرؤى", "أنشطة الرعاية"], // TODO review (hand draft, not from mobile)
       avoid: ["القرارات الكبرى (العاطفة تغشى الرأي)", "الشؤون القانونية"], // TODO review (hand draft, not from mobile)
     },
     Mercury: {
@@ -2545,12 +2545,12 @@ export const ar: DeepPartial<typeof en> = {
     },
   },
   personalYearThemes: {
-    "1": "بدايات جديدة، زرع البذور، الاستقلال", // TODO review (machine draft)
-    "2": "الشراكات والصبر والتعاون", // TODO review (machine draft)
-    "3": "التعبير الإبداعي، الفرح، التوسع الاجتماعي", // TODO review (machine draft)
+    "1": "بدايات جديدة، زرع البذور، الاستقلال", // reviewed (Language Reviewer batch 5, accepted)
+    "2": "الشراكات والصبر والتعاون", // reviewed (Language Reviewer batch 5, accepted)
+    "3": "التعبير الإبداعي، الفرح، التوسع الاجتماعي", // reviewed (Language Reviewer batch 5, accepted)
     "4": "بناء الأسس، العمل الجاد، الاستقرار", // TODO review (hand draft, not from mobile)
-    "5": "التغير، الحرية، المغامرة، الأحداث غير المتوقعة", // TODO review (machine draft)
-    "6": "المسؤولية، الخدمة، شؤون الأسرة، الحب", // TODO review (machine draft)
+    "5": "التغير، الحرية، المغامرة، الأحداث غير المتوقعة", // reviewed (Language Reviewer batch 5, accepted)
+    "6": "المسؤولية، الخدمة، شؤون الأسرة، الحب", // reviewed (Language Reviewer batch 5, accepted)
     "7": "النمو الروحي، التأمّل الباطني، الدراسة، الراحة", // TODO review (hand draft, not from mobile)
     "8": "الإنجاز، القوة، الشؤون المالية، التقدير", // TODO review (hand draft, not from mobile)
     "9": "الاكتمال، التخلّي، خدمة الناس، نهايات تقود إلى بدايات جديدة", // TODO review (hand draft, not from mobile)
@@ -2561,7 +2561,7 @@ export const ar: DeepPartial<typeof en> = {
     uniqueDynamic: "ديناميكية فريدة", // TODO review (hand draft, not from mobile)
     eachRelationshipTeaches: "كل علاقة تعلّم دروسًا فريدة", // TODO review (hand draft, not from mobile)
     opportunityForGrowth: "فرصة للنمو", // TODO review (hand draft, not from mobile)
-    learningThroughDifferences: "التعلم من خلال الاختلافات", // TODO review (machine draft)
+    learningThroughDifferences: "التعلم من خلال الاختلافات", // reviewed (Language Reviewer batch 5, accepted)
     balanceIndividuality: "الموازنة بين الفردية والاتحاد", // TODO review (hand draft, not from mobile)
   },
   elementPairings: {
@@ -2581,7 +2581,7 @@ export const ar: DeepPartial<typeof en> = {
     },
     fireWater: {
       label: "نار + ماء: بخار وتحوّل", // TODO review (hand draft, not from mobile)
-      description: "العاطفة تلتقي بعمق وهذا يخلق إما البخار (التحويل) أو التبخر (الصراع).", // TODO review (machine draft)
+      description: "الشغف يلتقي بالعمق، فينتج إما بخارًا (تحوّلًا) وإما تبخّرًا (خلافًا).", // reviewed (Language Reviewer batch 5)
       dailyLife: "منهجاكما في الحياة متعاكسان؛ النار تتصرّف بسرعة، والماء يحتاج وقتًا ليشعر. وهذا يولّد احتكاكًا في القرارات اليومية.", // TODO review (hand draft, not from mobile)
       challenge: "⚠️ قد تطغى النار على الماء، وقد ينسحب الماء من النار، وتتصادم أساليب التواصل.", // reviewed (Language Reviewer batch 4)
       tip: "💡 النار: تدرّب على الإصغاء الفعّال والصبر. الماء: عبّر عن احتياجاتك بوضوح ومباشرة.", // reviewed (Language Reviewer batch 4)
@@ -2595,14 +2595,14 @@ export const ar: DeepPartial<typeof en> = {
     },
     airAir: {
       label: "هواء + هواء: الشراكة الفكرية", // TODO review (hand draft, not from mobile)
-      description: "محادثات لا نهاية لها، فضول مشترك، وتحفيز ذهني. أنت تفهم كيف يفكر كل من الآخر.", // TODO review (machine draft)
+      description: "أحاديث لا تنتهي، وفضول مشترك، وتحفيز ذهني. يفهم كلٌّ منكما كيف يفكّر الآخر.", // reviewed (Language Reviewer batch 5)
       dailyLife: "تستطيعان الحديث لساعات؛ كل تجربة تصير نقاشًا، والتعلّم والاستكشاف معًا أمر طبيعي.", // TODO review (hand draft, not from mobile)
       challenge: "⚠️ قد تُفرطان في التفكير أو تتجنّبان الانكشاف العاطفي؛ عقل كثير وقلب قليل.", // TODO review (hand draft, not from mobile)
       tip: "💡 خصّصا أوقاتًا «بلا تحليل». تدرّبا على الشعور دون نقاش. أحيانًا: لمسة أكثر وكلام أقل.", // TODO review (hand draft, not from mobile)
     },
     airWater: {
       label: "هواء + ماء: العقل يلتقي بالقلب", // TODO review (hand draft, not from mobile)
-      description: "الهواء يعطي الكلمات لمشاعر الماء. الماء يضيف العمق لأفكار الهواء جميلة عندما تكون متوازنة", // TODO review (machine draft)
+      description: "الهواء يمنح مشاعر الماء كلمات، والماء يضيف إلى أفكار الهواء عمقًا. جميل حين يتوازنان.", // reviewed (Language Reviewer batch 5)
       dailyLife: "الهواء يساعد الماء على التعبير عن مشاعره بوضوح، والماء يذكّر الهواء بأن المشاعر لا تقلّ أهمية عن الأفكار.", // TODO review (hand draft, not from mobile)
       challenge: "⚠️ قد يعقلن الهواء المشاعر، وقد يشعر الماء بأنه غير مفهوم حين تُحلَّل عواطفه.", // TODO review (hand draft, not from mobile)
       tip: "💡 الهواء: اكتب رسائل محبة واستعمل كلماتك للعاطفة. الماء: شارك أحلامك بصوت مسموع وثق بأن الهواء يُصغي.", // TODO review (hand draft, not from mobile)
@@ -2617,20 +2617,20 @@ export const ar: DeepPartial<typeof en> = {
     waterWater: {
       label: "ماء + ماء: الصلة العميقة", // TODO review (hand draft, not from mobile)
       description: "تفاهم حدسي؛ تشعران بمشاعر بعضكما دون كلام، والتعاطف يسري بينكما بطبيعته.", // TODO review (hand draft, not from mobile)
-      dailyLife: "نظرة تقول كل شيء. ترعى بعضكم البعض بشكل غريزي السلامة العاطفية تأتي بشكل طبيعي.", // TODO review (machine draft)
+      dailyLife: "نظرة واحدة تقول كل شيء. يرعى كلٌّ منكما الآخر بالفطرة، والأمان العاطفي يأتي طبيعيًا.", // reviewed (Language Reviewer batch 5)
       challenge: "⚠️ قد تغرقان في العواطف معًا وتنعزلان عن العالم الخارجي؛ تحتاجان إلى منظور الهواء.", // TODO review (hand draft, not from mobile)
       tip: "💡 اكتبا يومياتكما معًا ثم ناقشا ما كتبتما. حوّلا العواطف إلى كلمات، وتواصلا مع الآخرين أيضًا.", // TODO review (hand draft, not from mobile)
     },
     waterEarth: {
-      label: "المياه + الأرض: تعزيز النمو", // TODO review (machine draft)
+      label: "الماء + التراب: نموّ برعاية", // reviewed (Language Reviewer batch 5)
       description: "انسجام طبيعي؛ الماء يغذّي التراب، والتراب يحتضن الماء. كالبستان، ينمو كل شيء بطبيعته.", // TODO review (hand draft, not from mobile)
-      dailyLife: "تدعمون نمو بعضكم البعض بلا مجهود الماء يجلب المشاعر الأرض تجلب الاستقرار متوازنة وسلمية", // TODO review (machine draft)
+      dailyLife: "تدعمان نموّ بعضكما دون عناء: الماء يجلب المشاعر، والتراب يجلب الاستقرار. علاقة متوازنة هادئة.", // reviewed (Language Reviewer batch 5)
       challenge: "⚠️ قد تتجنّبان الخلاف أو تركدان؛ الراحة الزائدة قد تعني غياب تحدّيات النمو.", // TODO review (hand draft, not from mobile)
       tip: "💡 اطبخا معًا، وازرعا، واصنعا بأيديكما. تقبّلا التغيير اللطيف وجرّبا شيئًا جديدًا كل شهر.", // TODO review (hand draft, not from mobile)
     },
     earthEarth: {
-      label: "الأرض + الأرض: مؤسسة الصلب", // TODO review (machine draft)
-      description: "استقرار صخري صلب الولاء، والاتساق، والأهداف العملية المشتركة. تَبْني معاً الطوبِ مِنْ الطوبِ.", // TODO review (machine draft)
+      label: "التراب + التراب: الأساس المتين", // reviewed (Language Reviewer batch 5)
+      description: "استقرار راسخ كالصخر: وفاء وثبات وأهداف عملية مشتركة. تبنيان معًا لبنةً لبنة.", // reviewed (Language Reviewer batch 5)
       dailyLife: "روتين موثوق، ومسؤوليات مشتركة، وتقدّم ثابت. يعرف كلٌّ منكما ما يتوقّعه من الآخر.", // TODO review (hand draft, not from mobile)
       challenge: "⚠️ قد تقاومان التغيير أو تغرقان في الروتين، وكلاكما قد يكون عنيدًا. الحياة آمنة لكنها قد تفتقر إلى العفوية.", // TODO review (hand draft, not from mobile)
       tip: "💡 خصّصا كل شهر «تجارب جديدة». اكسرا الروتين معًا عن قصد، وادعوا طاقة الهواء والنار.", // reviewed (Language Reviewer batch 4)
@@ -2654,28 +2654,28 @@ export const ar: DeepPartial<typeof en> = {
     extraSleep: "نوم إضافي — احترم إيقاعك القمري", // TODO review (hand draft, not from mobile)
     gentleMovement: "حركة لطيفة جدًا فقط (تمدّد، مشي بطيء)", // TODO review (hand draft, not from mobile)
     breathingExercises: "اهدأ بتمارين التنفّس", // TODO review (hand draft, not from mobile)
-    noConflicts: "لا نزاعات أو مواجهات اليوم", // TODO review (machine draft)
+    noConflicts: "تجنّب النزاعات والمواجهات اليوم", // reviewed (Language Reviewer batch 5)
     postponePhysical: "أجّل التحدّيات البدنية", // TODO review (hand draft, not from mobile)
     coolDown: "اهدأ بتمارين التنفّس", // TODO review (hand draft, not from mobile)
     informationFast: "صيام عن المعلومات — قلّل القراءة والرسائل", // TODO review (hand draft, not from mobile)
-    speakLess: "قلل من الكلام، والاستماع إلى الصمت", // TODO review (machine draft)
+    speakLess: "قلّل الكلام، وأنصت إلى الصمت", // reviewed (Language Reviewer batch 5)
     postponeCommunication: "أجّل التواصلات المهمة", // TODO review (hand draft, not from mobile)
-    simpleTasks: "المهام البسيطة ذات التركيز الواحد فقط", // TODO review (machine draft)
+    simpleTasks: "اقتصر على مهام بسيطة ذات تركيز واحد", // reviewed (Language Reviewer batch 5)
     mentalRest: "راحة ذهنية — بلا حلّ مشكلات", // TODO review (hand draft, not from mobile)
     scaleBack: "قلّص الخطط الطموحة", // TODO review (hand draft, not from mobile)
     postponeTeaching: "أجّل التعليم ومشاركة الحكمة", // TODO review (hand draft, not from mobile)
     gratitudePractice: "تمرين الشكر على ما هو كائن", // TODO review (hand draft, not from mobile)
     restInContentment: "استرح في القناعة لا في التوسّع", // TODO review (hand draft, not from mobile)
     gentleSelfCare: "عناية لطيفة بالنفس (حمّام، صوت هادئ، جمال)", // TODO review (hand draft, not from mobile)
-    noRelationshipDecisions: "لا قرارات علاقة اليوم", // TODO review (machine draft)
+    noRelationshipDecisions: "يُستحسن تأجيل قرارات العلاقات اليوم", // reviewed (Language Reviewer batch 5)
     postponeSocial: "أجّل التجمّعات الاجتماعية", // TODO review (hand draft, not from mobile)
     soloTime: "وقت منفرد في مكان مريح", // TODO review (hand draft, not from mobile)
     appreciateWithout: "تأمّل الجمال دون اقتناء", // TODO review (hand draft, not from mobile)
     releaseRigidity: "تخلَّ عن الجمود — لا تفرض النظام", // TODO review (hand draft, not from mobile)
-    postponePlanning: "التخطيط الطويل الأجل", // TODO review (machine draft)
+    postponePlanning: "أجّل التخطيط بعيد المدى", // reviewed (Language Reviewer batch 5)
     letGoShould: "دع أفكار «ينبغي»", // TODO review (hand draft, not from mobile)
     flexibilityExercises: "تمارين مرونة لطيفة", // TODO review (hand draft, not from mobile)
-    trustPause: "ثق بالتوقف قبل عودة الانضباط", // TODO review (machine draft)
+    trustPause: "ثق بفترة السكون قبل أن يعود الانضباط", // reviewed (Language Reviewer batch 5)
   },
   glossary: {
     openTitle: "افتح معجم مصطلحات علم العدد", // TODO review (hand draft, not from mobile)
@@ -2684,13 +2684,13 @@ export const ar: DeepPartial<typeof en> = {
     noResults: "لا توجد مصطلحات مطابقة لـ", // TODO review (hand draft, not from mobile)
   },
   controls: {
-    closeKeyboard: "اغلق لوحة المفاتيح", // TODO review (machine draft)
+    closeKeyboard: "أغلق لوحة المفاتيح", // reviewed (Language Reviewer batch 5)
     closeMenu: "أغلق القائمة", // TODO review (hand draft, not from mobile)
     updateLocation: "تحديث", // TODO review (hand draft, not from mobile)
   },
   energyReturn: {
     fast: "ما تعطيه يعود إليك سريعًا", // TODO review (hand draft, not from mobile)
-    slow: "ما تعطيه اليوم يستغرق وقتاً للعودة", // TODO review (machine draft)
+    slow: "ما تعطيه اليوم يعود إليك بعد حين", // reviewed (Language Reviewer batch 5)
   },
   seo: {
     siteTitle: "أسرار — حاسبة علم الحروف وعلم العدد", // TODO review (hand draft, not from mobile)

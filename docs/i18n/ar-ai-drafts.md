@@ -4,7 +4,7 @@ Rows marked **✅ reviewed** were checked by the Language Reviewer (Oct 2026, se
 
 Conventions: Divine Names use the canonical Arabic. Qur'ān lines use the original text (imlāʾī spelling, full tashkīl), with references written as (surah name + āyah number). Ṣalawāt/duʿāʾ are listed separately: they are not Qur'ān. Terms: صاحب اليوم (day ruler), مداري (tropical), وِرد (practice), يُردَّد (recite).
 
-Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divine-Name mappings (reviewed), 5235 UI strings (116 reviewed, 5119 AI-draft).
+Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divine-Name mappings (reviewed), 5234 UI strings (150 reviewed, 5084 AI-draft).
 
 ## Qur'anic lines (✅ reviewed: checked against the muṣḥaf)
 
@@ -731,7 +731,7 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 118 | AI-draft | Suggested practice | الممارسة المقترحة |
 | 119 | AI-draft | Tap any planet for its full dignity breakdown | اضغط على أي كوكب لتفصيل كرامته كاملًا |
 | 120 | AI-draft | Time of birth (local) | وقت الميلاد (المحلي) |
-| 121 | AI-draft | Your Elemental Imprint | بصمتك العنصرية |
+| 121 | ✅ reviewed | Your Elemental Imprint | بصمة عناصرك |
 | 122 | AI-draft | Your Personal ʿIlm al-Nujūm Snapshot | لمحتك الشخصية في علم النجوم |
 | 123 | ✅ reviewed | Your personal ʿIlm al-Nujūm birth profile: Sun and Moon signs, lunar mansion, day ruler, and the real dignity condition of each classical planet at your birth. | ملف ميلادك الشخصي في علم النجوم: برجا الشمس والقمر، والمنزلة القمرية، وصاحب اليوم، والحال الحقيقية لحظّ كل كوكب كلاسيكي من القوة (الشرف/البيت) عند ولادتك. |
 | 124 | AI-draft | A low number is not a prohibition and not a bad omen. It can be an invitation to talk about expectations and patience. Many happy marriages would "fail" a numeric test. | العدد المنخفض ليس تحريمًا ولا شؤمًا، بل قد يكون دعوة للحديث عن التوقّعات والصبر. وكثير من الزيجات السعيدة كانت «سترسب» في اختبار رقمي. |
@@ -1158,7 +1158,7 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 545 | AI-draft | 50-64: Moderate 🧡 | 50-64: معتدل 🧡 |
 | 546 | AI-draft | 65-74: Good Match 💛 | 65-74: توافق جيد 💛 |
 | 547 | AI-draft | 85-100: Excellent Match 💚 | 85-100: توافق ممتاز 💚 |
-| 548 | AI-draft | Analyzes the interaction of your elemental natures (Fire, Water, Air, Earth). Fire brings passion, Water brings emotion, Air brings intellect, Earth brings stability. Understanding your elemental blend helps navigate daily interactions. | يحلّل تفاعل طبيعتيكما العنصريتين (النار، الماء، الهواء، التراب). فالنار تجلب الشغف، والماء العاطفة، والهواء العقل، والتراب الثبات. وفهم مزيجكما العنصري يعين على التعامل اليومي. |
+| 548 | ✅ reviewed | Analyzes the interaction of your elemental natures (Fire, Water, Air, Earth). Fire brings passion, Water brings emotion, Air brings intellect, Earth brings stability. Understanding your elemental blend helps navigate daily interactions. | يحلّل تفاعل طبيعة عنصر كلٍّ منكما (النار، الماء، الهواء، التراب). فالنار تجلب الشغف، والماء العاطفة، والهواء العقل، والتراب الثبات. وفهم مزيج عناصركما يعين على التعامل اليومي. |
 | 549 | AI-draft | Ancient Wisdom for Modern Relationships | حكمة قديمة لعلاقات اليوم |
 | 550 | AI-draft | Below 50: Challenging ❤️ | أقل من 50: صعب ❤️ |
 | 551 | AI-draft | Communication is Everything | التواصل هو كل شيء |
@@ -1166,7 +1166,7 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 553 | AI-draft | Compatibility analysis uses the sacred science of ʿIlm al-Ḥurūf (Science of Letters) to understand how two people's energies interact. Your names carry spiritual vibrations that reveal natural harmony or areas requiring conscious effort. | يستعمل تحليل التوافق علم الحروف لفهم تفاعل طاقات شخصين. فلأسمائكما اهتزازات روحية تكشف الانسجام الطبيعي أو المواطن التي تحتاج إلى جهد واعٍ. |
 | 554 | AI-draft | Compatibility is a guide, not a sentence. With love, patience, and faith, any committed couple can create a beautiful relationship. | التوافق دليلٌ لا حُكم. وبالمحبّة والصبر والإيمان يستطيع أي زوجين ملتزمين بناء علاقة جميلة. |
 | 555 | AI-draft | Consider compatibility as one factor among many—character, shared values, faith, life goals, and mutual respect matter deeply. Use this tool to enter with open eyes, not to make absolute judgments. | اجعل التوافق عاملًا من عوامل كثيرة — فالخُلق والقيم المشتركة والإيمان وغايات الحياة والاحترام المتبادل مهمّة جدًا. استعمل هذه الأداة لتدخل بعينين مفتوحتين، لا لتُصدر أحكامًا مطلقة. |
-| 556 | AI-draft | Discover why certain patterns exist in your relationship. Understanding your elemental and planetary dynamics can transform conflicts into opportunities for deeper connection and growth. | اكتشف لماذا توجد أنماط معيّنة في علاقتكما. ففهم ديناميكيتكما العنصرية والكوكبية قد يحوّل الصراعات إلى فرص لصلة أعمق ونموّ. |
+| 556 | ✅ reviewed | Discover why certain patterns exist in your relationship. Understanding your elemental and planetary dynamics can transform conflicts into opportunities for deeper connection and growth. | اكتشف لماذا توجد أنماط معيّنة في علاقتكما. ففهم حركية العناصر والكواكب بينكما قد يحوّل الصراعات إلى فرص لصلة أعمق ونموّ. |
 | 557 | AI-draft | Examines how your spiritual essences align. This reveals your capacity for deep understanding, shared life purpose, and spiritual growth together. High scores indicate natural soul-level resonance. | يفحص مدى انسجام جوهريكما الروحيين. ويكشف قدرتكما على الفهم العميق والغاية المشتركة في الحياة والنموّ الروحي معًا. والنتائج العالية تشير إلى رنين طبيعي على مستوى الروح. |
 | 558 | AI-draft | Grow Spiritually Together | انموا روحيًا معًا |
 | 559 | AI-draft | High spiritual compatibility means you can support each other's faith journey. Make dhikr together, pray together, study together. Shared spiritual practice strengthens all types of compatibility. | التوافق الروحي العالي يعني أنكما تستطيعان دعم رحلة الإيمان لدى كلٍّ منكما. اذكرا الله معًا، وصلّيا معًا، وتعلّما معًا. والممارسة الروحية المشتركة تقوّي كل أنواع التوافق. |
@@ -1185,12 +1185,12 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 572 | AI-draft | Understanding Relationship Compatibility | فهم توافق العلاقات |
 | 573 | AI-draft | Understanding Your Score | فهم نتيجتك |
 | 574 | AI-draft | Use compatibility insights to understand potential strengths and challenges early. High compatibility doesn't guarantee success, and low scores don't doom a relationship—but awareness helps you prepare and communicate better. | استعمل لمحات التوافق لفهم مواطن القوة والتحدّي المحتملة مبكرًا. فالتوافق العالي لا يضمن النجاح، والنتائج المنخفضة لا تحكم على علاقة بالفشل — لكن الوعي يعين على الاستعداد وحسن التواصل. |
-| 575 | AI-draft | We analyze compatibility through three complementary lenses: Soul Connection (spiritual alignment), Personality Balance (elemental harmony), and Cosmic Harmony (planetary influences). Each reveals different aspects of your relationship potential. | نحلّل التوافق من ثلاث زوايا متكاملة: صلة الأرواح (الانسجام الروحي)، وتوازن الشخصية (الانسجام العنصري)، والانسجام الكوني (الصلات الكوكبية). وكل منها يكشف جانبًا مختلفًا من إمكانات علاقتكما. |
+| 575 | ✅ reviewed | We analyze compatibility through three complementary lenses: Soul Connection (spiritual alignment), Personality Balance (elemental harmony), and Cosmic Harmony (planetary influences). Each reveals different aspects of your relationship potential. | نحلّل التوافق من ثلاث زوايا متكاملة: صلة الأرواح (الانسجام الروحي)، وتوازن الشخصية (انسجام العناصر)، والانسجام الكوني (الصلات الكوكبية). وكل منها يكشف جانبًا مختلفًا من إمكانات علاقتكما. |
 | 576 | AI-draft | What is Compatibility Analysis? | ما تحليل التوافق؟ |
 | 577 | AI-draft | Why Names Matter | لماذا تهمّ الأسماء |
-| 578 | AI-draft | Your elemental and planetary differences aren't problems to fix—they're complementary strengths. Fire needs Water's depth, Air needs Earth's grounding. Appreciate what your partner brings. | اختلافاتكما العنصرية والكوكبية ليست مشكلات تُصلَح — بل قوى متكاملة. فالنار تحتاج إلى عمق الماء، والهواء يحتاج إلى ثبات التراب. قدّر ما يأتي به شريكك. |
+| 578 | ✅ reviewed | Your elemental and planetary differences aren't problems to fix—they're complementary strengths. Fire needs Water's depth, Air needs Earth's grounding. Appreciate what your partner brings. | اختلافاتكما في العناصر والكواكب ليست مشكلات تُصلَح — بل قوى متكاملة. فالنار تحتاج إلى عمق الماء، والهواء يحتاج إلى ثبات التراب. قدّر ما يأتي به شريكك. |
 | 579 | AI-draft | 🌟 Cosmic Harmony (Planetary Compatibility) | 🌟 الانسجام الكوني (التوافق الكوكبي) |
-| 580 | AI-draft | 🎨 Personality Balance (Elemental Temperament) | 🎨 توازن الشخصية (الطبع العنصري) |
+| 580 | ✅ reviewed | 🎨 Personality Balance (Elemental Temperament) | 🎨 توازن الشخصية (مزاج العناصر) |
 | 581 | AI-draft | 💫 Soul Connection (Spiritual Destiny) | 💫 صلة الأرواح (المسار الروحي) |
 | 582 | AI-draft | Transliteration Confidence: | ثقة النقل الحرفي: |
 | 583 | AI-draft | Community | المجتمع |
@@ -1240,7 +1240,7 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 627 | AI-draft | Strong resonance | رنين قوي |
 | 628 | AI-draft | Workable resonance | رنين قابل للعمل |
 | 629 | AI-draft | of 99 Names resonate strongly with | من الأسماء الحسنى لها رنين قوي مع |
-| 630 | AI-draft | 🌙 Spiritual Destiny \| 🌊 Elemental Temperament \| ⭐ Planetary Cosmic \| 🤝 Daily Interaction | 🌙 المسار الروحي \| 🌊 الطبع العنصري \| ⭐ الكوني الكوكبي \| 🤝 التفاعل اليومي |
+| 630 | ✅ reviewed | 🌙 Spiritual Destiny \| 🌊 Elemental Temperament \| ⭐ Planetary Cosmic \| 🤝 Daily Interaction | 🌙 المسار الروحي \| 🌊 مزاج العناصر \| ⭐ الكوني الكوكبي \| 🤝 التفاعل اليومي |
 | 631 | AI-draft | ) guides you toward your higher purpose. | ) يرشدك إلى غايتك الأسمى. |
 | 632 | AI-draft | ) represents your spiritual essence, while your Soul Urge ( | ) يمثّل جوهرك الروحي، بينما رغبة روحك ( |
 | 633 | AI-draft | ) shows how others perceive you, and your Destiny ( | ) تُظهر كيف يراك الآخرون، ومسارك ( |
@@ -1326,8 +1326,8 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 713 | AI-draft | Compatibility Factors | عوامل التوافق |
 | 714 | AI-draft | Connection to Quranic Wisdom | الصلة بالحكمة القرآنية |
 | 715 | AI-draft | Digital Root (Formula) | الجذر الرقمي (الصيغة) |
-| 716 | AI-draft | Elemental Event/Classification | التصنيف العنصري |
-| 717 | AI-draft | Elemental Type | النوع العنصري |
+| 716 | ✅ reviewed | Elemental Event/Classification | التصنيف بحسب العناصر |
+| 717 | ✅ reviewed | Elemental Type | نوع العنصر |
 | 718 | AI-draft | In relationship analysis: destiny compatibility (life path alignment), soul urge compatibility (emotional resonance), and special pairings (unique numerological combinations). | في تحليل العلاقات: توافق المسار (انسجام مسار الحياة)، وتوافق رغبة الروح (الرنين العاطفي)، والأزواج الخاصة (تراكيب عددية فريدة). |
 | 719 | AI-draft | Inner Desires & Motivations | الرغبات والدوافع الباطنة |
 | 720 | AI-draft | Islamic Numerology Glossary | معجم علم العدد |
@@ -1395,7 +1395,7 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 782 | AI-draft | Naturally harmonious and stable | منسجم وثابت بطبعه |
 | 783 | AI-draft | Needs from: | يحتاج من: |
 | 784 | AI-draft | Passionate, spontaneous, energetic, inspiring, assertive | شغوف، عفويّ، نشيط، ملهِم، مقدام |
-| 785 | AI-draft | Personality Balance (Elemental Temperament) | توازن الشخصية (الطبع العنصري) |
+| 785 | ✅ reviewed | Personality Balance (Elemental Temperament) | توازن الشخصية (مزاج العناصر) |
 | 786 | AI-draft | Practical, stable, reliable, patient, methodical | عمليّ، ثابت، موثوق، صبور، منهجيّ |
 | 787 | AI-draft | Qualities: | الصفات: |
 | 788 | AI-draft | Rock-solid but may lack excitement | متين كالصخر لكنه قد يفتقر إلى الحماسة |
@@ -1413,12 +1413,12 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 800 | AI-draft | Sun (mutual warmth), Mercury (intellectual exploration), Venus (shared appreciation) | الشمس (الدفء المتبادل)، عطارد (الاستكشاف الفكري)، الزهرة (التقدير المشترك) |
 | 801 | AI-draft | Sun people bring warmth, generosity, and inspiring energy. They need admiration and tend to take center stage. | أهل الشمس يجلبون الدفء والكرم والطاقة الملهِمة. يحتاجون إلى الإعجاب ويميلون إلى تصدّر المشهد. |
 | 802 | AI-draft | The Planets and Their Influences | الكواكب وصلاتها |
-| 803 | AI-draft | The four elements—Fire, Water, Air, Earth—represent fundamental personality types. Your elemental makeup determines how you approach life, relationships, and challenges. | العناصر الأربعة — النار والماء والهواء والتراب — تمثّل أنماط الشخصية الأساسية. وتركيبك العنصري يصف طريقتك في مواجهة الحياة والعلاقات والتحدّيات. |
+| 803 | ✅ reviewed | The four elements—Fire, Water, Air, Earth—represent fundamental personality types. Your elemental makeup determines how you approach life, relationships, and challenges. | العناصر الأربعة — النار والماء والهواء والتراب — تمثّل أنماط الشخصية الأساسية. وتركيب عناصرك يصف طريقتك في مواجهة الحياة والعلاقات والتحدّيات. |
 | 804 | AI-draft | Traditional Islamic astronomy recognized seven celestial influences: Sun (identity, vitality), Moon (emotions, intuition), Mercury (communication, intellect), Venus (love, beauty), Mars (action, courage), Jupiter (wisdom, expansion), Saturn (discipline, structure). | عرف علم الفلك الإسلامي التقليدي سبعة أجرام سماوية: الشمس (الهوية، الحيوية)، القمر (العاطفة، الحدس)، عطارد (التواصل، العقل)، الزهرة (المحبّة، الجمال)، المريخ (العمل، الشجاعة)، المشتري (الحكمة، الاتساع)، زحل (الانضباط، البنية). |
 | 805 | AI-draft | Traits: | السمات: |
 | 806 | AI-draft | Ultimate stability and reliability. Shared practical values. Risk: routine becoming rut. Need to consciously inject novelty and spontaneity. | غاية الثبات والموثوقية، وقيم عملية مشتركة. والخطر: أن تصير العادة رتابة. يحتاجان إلى إدخال التجديد والعفوية بوعي. |
 | 807 | AI-draft | Understanding Planetary Influence | فهم الصلة الكوكبية |
-| 808 | AI-draft | Understanding Your Elemental Dance | فهم رقصتكما العنصرية |
+| 808 | ✅ reviewed | Understanding Your Elemental Dance | فهم رقصة عناصركما |
 | 809 | AI-draft | Use this understanding to: 1) Appreciate why certain spiritual topics connect or create friction, 2) Find shared spiritual practices that honor both paths, 3) Support each other's individual spiritual journey without forcing similarity, 4) Create family spiritual traditions that blend both approaches. | استعمل هذا الفهم من أجل: 1) تقدير سبب تلاقي بعض الموضوعات الروحية أو احتكاكها، 2) إيجاد ممارسات روحية مشتركة تحترم الطريقين، 3) دعم رحلة كلٍّ منكما الروحية الفردية دون فرض التشابه، 4) صنع تقاليد روحية عائلية تمزج النهجين. |
 | 810 | AI-draft | Venus (charming dialogue), Jupiter (philosophical exchange), Uranus (innovative thinking) | الزهرة (حوار لطيف)، المشتري (تبادل فلسفي)، أورانوس (تفكير مبتكر) |
 | 811 | AI-draft | Venus (mutual gentleness), Neptune (spiritual connection), Sun (complementary) | الزهرة (لين متبادل)، نبتون (صلة روحية)، الشمس (تكامل) |
@@ -1432,7 +1432,7 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 819 | AI-draft | 💨 Air Element | 💨 عنصر الهواء |
 | 820 | AI-draft | (Science of Letters) and | (علم الحروف) و |
 | 821 | AI-draft | (Science of Numbers). | (علم العدد). |
-| 822 | AI-draft | Discover the sacred numerical values and elemental associations within Arabic text, connecting language to the deeper patterns of creation. | اكتشف القيم العددية والمناسبات العنصرية في النصّ العربي، وصلة اللغة بأنماط الخلق الأعمق. |
+| 822 | ✅ reviewed | Discover the sacred numerical values and elemental associations within Arabic text, connecting language to the deeper patterns of creation. | اكتشف القيم العددية للحروف وصلاتها بالعناصر في النصّ العربي، وصلة اللغة بأنماط الخلق الأعمق. |
 | 823 | AI-draft | Explore | استكشف |
 | 824 | AI-draft | Version 1.0 • © 2025 | الإصدار 1.0 • © 2025 |
 | 825 | AI-draft | is your guide to the Islamic sciences of | دليلك إلى العلوم الإسلامية: |
@@ -1457,12 +1457,12 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 844 | AI-draft | 💡 How to Use This Tool | 💡 كيف تستعمل هذه الأداة |
 | 845 | AI-draft | 📏 Accuracy Levels | 📏 مستويات الدقّة |
 | 846 | AI-draft | 📜 Traditional Foundation | 📜 الأساس التقليدي |
-| 847 | AI-draft | Discover Quranic verses, Divine Names, and spiritual guidance based on your elemental profile. Use History to save calculations, and Comparison mode to explore relationships! | اكتشف آيات قرآنية وأسماء حسنى وإرشادًا روحيًا بحسب ملفك العنصري. استعمل السجلّ لحفظ الحسابات، ووضع المقارنة لاستكشاف العلاقات! |
+| 847 | ✅ reviewed | Discover Quranic verses, Divine Names, and spiritual guidance based on your elemental profile. Use History to save calculations, and Comparison mode to explore relationships! | اكتشف آيات قرآنية وأسماء حسنى وإرشادًا روحيًا بحسب ملف عناصرك. استعمل السجلّ لحفظ الحسابات، ووضع المقارنة لاستكشاف العلاقات! |
 | 848 | AI-draft | Explore Deeper | تعمّق أكثر |
-| 849 | AI-draft | Explore the beautiful tradition of ʿIlm al-Ḥurūf (Science of Letters) - an Islamic science that reveals numerical values and elemental associations in Arabic text. | استكشف تراث علم الحروف الجميل — علمٌ إسلامي يكشف القيم العددية والمناسبات العنصرية في النصّ العربي. |
+| 849 | ✅ reviewed | Explore the beautiful tradition of ʿIlm al-Ḥurūf (Science of Letters) - an Islamic science that reveals numerical values and elemental associations in Arabic text. | استكشف تراث علم الحروف الجميل — علمٌ إسلامي يكشف القيم العددية للحروف وصلاتها بالعناصر في النصّ العربي. |
 | 850 | AI-draft | Let's Begin! | لنبدأ! |
 | 851 | AI-draft | Type in English/French (like 'Rahim' or 'Fatou') and we'll transliterate to Arabic. Or use the Arabic keyboard for direct input. Always verify the Arabic spelling for accuracy! | اكتب بالإنجليزية أو الفرنسية (مثل «Rahim» أو «Fatou») وسنحوّله إلى العربية، أو استعمل لوحة المفاتيح العربية للإدخال المباشر. وتحقّق دائمًا من صحّة الكتابة العربية! |
-| 852 | AI-draft | • Kabīr (الكبير): Total numerical value • Ṣaghīr (الصغير): Digital root (1-9) • Elements: Fire 🔥 Water 💧 Air 🌬 Earth 🌍 • Ḥadath: Elemental influence pattern | • الكبير: القيمة العددية الكلية • الصغير: الجذر الرقمي (1-9) • العناصر: النار 🔥 الماء 💧 الهواء 🌬 التراب 🌍 • الحدث: نمط الأثر العنصري |
+| 852 | ✅ reviewed | • Kabīr (الكبير): Total numerical value • Ṣaghīr (الصغير): Digital root (1-9) • Elements: Fire 🔥 Water 💧 Air 🌬 Earth 🌍 • Ḥadath: Elemental influence pattern | • الكبير: القيمة العددية الكلية • الصغير: الجذر الرقمي (1-9) • العناصر: النار 🔥 الماء 💧 الهواء 🌬 التراب 🌍 • الحدث: نمط أثر العناصر |
 | 853 | AI-draft | Coordinates: | الإحداثيات: |
 | 854 | AI-draft | Failed to delete avatar: | تعذّر حذف الصورة: |
 | 855 | AI-draft | Failed to update profile: | تعذّر تحديث الملف: |
@@ -2043,11 +2043,11 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 1430 | AI-draft | Aligned Path | طريق منسجم |
 | 1431 | AI-draft | Career Fields | المجالات المهنية |
 | 1432 | AI-draft | Career guidance data is being compiled for your profile | يجري إعداد بيانات الإرشاد المهني لملفك |
-| 1433 | AI-draft | Career paths that resonate with your spiritual energy and elemental nature | مسارات مهنية تتناغم مع طاقتك الروحية وطبيعتك العنصرية |
+| 1433 | ✅ reviewed | Career paths that resonate with your spiritual energy and elemental nature | مسارات مهنية تتناغم مع طاقتك الروحية وطبيعة عنصرك |
 | 1434 | AI-draft | Collapse All | طيّ الكل |
 | 1435 | AI-draft | Copied to clipboard! | نُسخ إلى الحافظة! |
 | 1436 | AI-draft | Despite being a Water element, you receive special blessings from Earth industries. This unique spiritual gift allows you to thrive in both water-related AND earth-based careers—giving you more pathways to success than most other elements. | مع أنك من عنصر الماء، فلك نصيب خاص من مجالات التراب. فتستطيع بفضل الله أن تزدهر في المهن المتّصلة بالماء والتراب معًا — فأمامك طرق أكثر من غيرك. |
-| 1437 | AI-draft | Discovered my career path through Istikhara al-Asmāʾ! My | اكتشفت مساري المهني عبر استخارة الأسماء! عنصري |
+| 1437 | ✅ reviewed | Discovered my career path through Istikhara al-Asmāʾ! My | اكتشفت مساري المهني عبر استخارة الأسماء! العنصر الغالب عندي |
 | 1438 | AI-draft | Download Career Guide PDF | تنزيل دليل المهن PDF |
 | 1439 | AI-draft | Expand All | توسيع الكل |
 | 1440 | AI-draft | Fields to Consider Carefully | مجالات تُدرَس بعناية |
@@ -2096,7 +2096,7 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 1483 | AI-draft | Communicative | تواصليّ |
 | 1484 | AI-draft | Counseling | الاستشارة |
 | 1485 | AI-draft | Creative | مبدع |
-| 1486 | AI-draft | Discover career paths that align with your elemental nature. Note both traditional and modern recommendations. | اكتشف مسارات مهنية تنسجم مع طبيعتك العنصرية، ولاحظ التوصيات التقليدية والحديثة معًا. |
+| 1486 | ✅ reviewed | Discover career paths that align with your elemental nature. Note both traditional and modern recommendations. | اكتشف مسارات مهنية تنسجم مع طبيعة عنصرك، ولاحظ التوصيات التقليدية والحديثة معًا. |
 | 1487 | AI-draft | Emotional | عاطفي |
 | 1488 | AI-draft | Empathetic | متعاطف |
 | 1489 | AI-draft | Energetic | نشيط |
@@ -2173,10 +2173,10 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 1560 | AI-draft | Your calculations are automatically saved for quick access later | تُحفظ حساباتك تلقائيًا للرجوع إليها سريعًا |
 | 1561 | AI-draft | element. Discover yours on Asrār! | . اكتشف عنصرك على أسرار! |
 | 1562 | AI-draft | saved calculations | حسابات محفوظة |
-| 1563 | AI-draft | ✨🌙 I discovered my spiritual profile through Istikhara al-Asmāʾ! I'm a | ✨🌙 اكتشفت ملفي الروحي عبر استخارة الأسماء! عنصري |
+| 1563 | ✅ reviewed | ✨🌙 I discovered my spiritual profile through Istikhara al-Asmāʾ! I'm a | ✨🌙 اكتشفت ملفي الروحي عبر استخارة الأسماء! العنصر الغالب عندي |
 | 1564 | AI-draft | 🌙 Discover your spiritual profile with Istikhara al-Asmāʾ on Asrār! | 🌙 اكتشف ملفك الروحي باستخارة الأسماء على أسرار! |
 | 1565 | AI-draft | 🌙 Discover your spiritual profile with Istikhara al-Asmāʾ on Asrār! Abjad numerology, planetary hours, Zikr challenges, and more. | 🌙 اكتشف ملفك الروحي باستخارة الأسماء على أسرار! حساب الأبجد والساعات الكوكبية وتحدّيات الذكر وأكثر. |
-| 1566 | AI-draft | Align your work with your elemental nature for fulfillment. | وافِق عملك طبيعتك العنصرية لتجد الرضا. |
+| 1566 | ✅ reviewed | Align your work with your elemental nature for fulfillment. | وافِق بين عملك وطبيعة عنصرك لتجد الرضا. |
 | 1567 | AI-draft | Career Direction | التوجّه المهني |
 | 1568 | AI-draft | Combine these practices consistently for 40 days to see meaningful spiritual and practical results. Start small and build gradually. | داوم على هذه الممارسات أربعين يومًا لتلمس أثرًا روحيًا وعمليًا بإذن الله. ابدأ بالقليل وزِد تدريجيًا. |
 | 1569 | AI-draft | Monthly Sadaqah | الصدقة الشهرية |
@@ -2206,7 +2206,7 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 1593 | AI-draft | Schedule your most important meetings, critical decisions, and new ventures on this day when possible. Your spiritual energy and divine support are at their peak. | اجعل أهمّ اجتماعاتك وقراراتك ومشاريعك الجديدة في هذا اليوم ما أمكن، فهو يوم يُرجى فيه التيسير. |
 | 1594 | AI-draft | Social Strengths | نقاط القوة الاجتماعية |
 | 1595 | AI-draft | Special Significance | دلالة خاصة |
-| 1596 | AI-draft | These colors resonate with your elemental energy. Use them in your environment for spiritual balance. | تتناغم هذه الألوان مع طاقتك العنصرية. استعملها في محيطك للتوازن الروحي. |
+| 1596 | ✅ reviewed | These colors resonate with your elemental energy. Use them in your environment for spiritual balance. | تتناغم هذه الألوان مع طاقة عنصرك. استعملها في محيطك للتوازن الروحي. |
 | 1597 | AI-draft | This is your most spiritually auspicious day of the week. Your energy peaks and divine support is strongest on this day. | هذا أبرك أيامك في الأسبوع بحسب التراث، يُرجى فيه مزيد من التيسير. |
 | 1598 | AI-draft | Your Personality Profile | ملف شخصيتك |
 | 1599 | AI-draft | Your spiritual profile at a glance | ملفك الروحي في لمحة |
@@ -2254,7 +2254,7 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 1641 | AI-draft | Dhikr Count | عدد الذكر |
 | 1642 | AI-draft | Divine Names & Dhikr Practice | الأسماء الحسنى وممارسة الذكر |
 | 1643 | AI-draft | Element Alignment | انسجام العنصر |
-| 1644 | AI-draft | Elemental Force | القوة العنصرية |
+| 1644 | ✅ reviewed | Elemental Force | قوة العنصر |
 | 1645 | AI-draft | For Dhikr Count | لعدد الذكر |
 | 1646 | AI-draft | For dhikr count | لعدد الذكر |
 | 1647 | AI-draft | Getting Started | البداية |
@@ -2270,7 +2270,7 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 1657 | AI-draft | Sacred Lifetime Offering | صدقة العمر |
 | 1658 | AI-draft | Spiritual Guardians & Forces | الحفظة والقوى الروحية |
 | 1659 | AI-draft | This is a profound spiritual commitment that should be undertaken with careful preparation and sincere intention. | هذا التزام روحي عميق ينبغي أن يُقدَم عليه باستعداد وعناية ونيّة صادقة. |
-| 1660 | AI-draft | This verse resonates with your elemental nature and can be recited for spiritual guidance and protection. Reflect on its meaning as part of your daily practice. | تتناغم هذه الآية مع طبيعتك العنصرية، ويمكن تلاوتها طلبًا للهداية والحفظ. وتدبّر معناها جزءًا من وردك اليومي. |
+| 1660 | ✅ reviewed | This verse resonates with your elemental nature and can be recited for spiritual guidance and protection. Reflect on its meaning as part of your daily practice. | تتناغم هذه الآية مع طبيعة عنصرك، ويمكن تلاوتها طلبًا للهداية والحفظ. وتدبّر معناها جزءًا من وردك اليومي. |
 | 1661 | AI-draft | Use Name | استعمل الاسم |
 | 1662 | AI-draft | View Practice History & Progress | عرض سجلّ الممارسة والتقدّم |
 | 1663 | AI-draft | Your core energy | طاقتك الجوهرية |
@@ -2405,7 +2405,7 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 1792 | ✅ reviewed | Recite 308 times for provision and to remove poverty. For a shorter practice, 33 or 99 repetitions is also a widely used count. | يُردَّد الاسم 308 مرّة طلبًا للرزق ودفع الفقر. ولوِرْدٍ أقصر، يشيع أيضًا العدد 33 أو 99. |
 | 1793 | AI-draft | The One who opens doors of opportunity, knowledge, and divine understanding. | الذي يفتح أبواب الخير والعلم والفهم. |
 | 1794 | ✅ reviewed | Recite 489 times for opening of closed doors, both worldly and spiritual. For a shorter practice, 33 or 99 repetitions is also a widely used count. | يُردَّد الاسم 489 مرّة رجاء فتح الأبواب المغلقة في الدنيا والدين. ولوِرْدٍ أقصر، يشيع أيضًا العدد 33 أو 99. |
-| 1795 | AI-draft | The One whose knowledge encompasses all things, past, present, and future. | الذي أحاط علمه بكل شيء، ماضيه وحاضره ومستقبله. |
+| 1795 | ✅ reviewed | The One whose knowledge encompasses all things, past, present, and future. | الذي أحاط بكل شيء علمًا، ما كان وما يكون وما سيكون. |
 | 1796 | ✅ reviewed | Recite 150 times for increase in knowledge and understanding of divine wisdom. For a shorter practice, 33 or 99 repetitions is also a widely used count. | يُردَّد الاسم 150 مرّة لزيادة العلم وفهم حكمة الله. ولوِرْدٍ أقصر، يشيع أيضًا العدد 33 أو 99. |
 | 1797 | AI-draft | The One who withholds and constricts, testing through difficulty and scarcity. | الذي يقبض ويمسك، ويبتلي بالشدّة والقلّة. |
 | 1798 | ✅ reviewed | Recite 903 times, or paired with Al-Bāsiṭ, for balance in giving and withholding. For a shorter practice, 33 or 99 repetitions is also a widely used count. | يُردَّد الاسم 903 مرّة، أو مقرونًا باسم الباسط، للتوازن بين العطاء والإمساك. ولوِرْدٍ أقصر، يشيع أيضًا العدد 33 أو 99. |
@@ -2550,8 +2550,8 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 1937 | AI-draft | The One who withholds harm from His servants and protects them from what would injure them. | الذي يمنع الأذى عن عباده ويحفظهم مما يضرّهم. |
 | 1938 | ✅ reviewed | Recite 161 times for protection from harm, danger, and calamity. For a shorter practice, 33 or 99 repetitions is also a widely used count. | يُردَّد الاسم 161 مرّة للحفظ من الأذى والخطر والبلاء. ولوِرْدٍ أقصر، يشيع أيضًا العدد 33 أو 99. |
 | 1939 | AI-draft | The One who permits hardship to occur as a test, trial, or consequence, within His wisdom. | الذي يأذن بوقوع الشدّة ابتلاءً أو جزاءً، بحكمته. |
-| 1940 | ✅ reviewed | Recite 1001 times for perspective when facing hardship, trusting the wisdom behind it. For a shorter practice, 33 or 99 repetitions is also a widely used count. | يُردَّد الاسم 1001 مرّة للنظر الصحيح عند الشدّة، ثقةً بالحكمة وراءها. ولوِرْدٍ أقصر، يشيع أيضًا العدد 33 أو 99. |
-| 1941 | AI-draft | The One from whom all true benefit flows, in this life and the next. | الذي يصدر عنه كل نفع حقيقي في الدنيا والآخرة. |
+| 1940 | ✅ reviewed | Recite 1001 times for perspective when facing hardship, trusting the wisdom behind it. For a shorter practice, 33 or 99 repetitions is also a widely used count. | يُردَّد الاسم 1001 مرّة طلبًا لحسن النظر عند الشدّة، ثقةً بحكمة الله فيها. ولوِرْدٍ أقصر، يشيع أيضًا العدد 33 أو 99. |
+| 1941 | ✅ reviewed | The One from whom all true benefit flows, in this life and the next. | الذي منه كلُّ نفعٍ حقيقي في الدنيا والآخرة. |
 | 1942 | ✅ reviewed | Recite 201 times when seeking benefit and blessing in an undertaking or decision. For a shorter practice, 33 or 99 repetitions is also a widely used count. | يُردَّد الاسم 201 مرّة عند طلب النفع والبركة في عمل أو قرار. ولوِرْدٍ أقصر، يشيع أيضًا العدد 33 أو 99. |
 | 1943 | AI-draft | The One who illuminates the heavens, the earth, and the hearts of the guided. | الذي ينير السماوات والأرض وقلوب المهتدين. |
 | 1944 | ✅ reviewed | Recite 256 times for clarity, guidance, and light in a time of confusion. For a shorter practice, 33 or 99 repetitions is also a widely used count. | يُردَّد الاسم 256 مرّة طلبًا للوضوح والهداية والنور في وقت الحيرة. ولوِرْدٍ أقصر، يشيع أيضًا العدد 33 أو 99. |
@@ -2873,7 +2873,7 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 2260 | AI-draft | How We Analyze Your Compatibility | كيف نحلّل توافقكما |
 | 2261 | AI-draft | We examine your relationship through four different dimensions to give you the complete picture. | ننظر في علاقتكما من أربعة أبعاد لنعطيكما الصورة كاملة. |
 | 2262 | AI-draft | Your spiritual alignment | انسجامكما الروحي |
-| 2263 | AI-draft | Your elemental natures | طبيعتاكما العنصريتان |
+| 2263 | ✅ reviewed | Your elemental natures | طبيعة عنصر كلٍّ منكما |
 | 2264 | AI-draft | Your planetary influences | صلاتكما الكوكبية |
 | 2265 | AI-draft | Your day-to-day dynamics | ديناميكيتكما اليومية |
 | 2266 | AI-draft | Your Personality Balance | توازن شخصيتكما |
@@ -2913,7 +2913,7 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 2300 | AI-draft | while outwardly you express | بينما تعبّر ظاهرًا عن |
 | 2301 | AI-draft | Divine Name Resonance (28-Letter Cycle) | رنين الاسم الحسن (دورة الحروف الثمانية والعشرين) |
 | 2302 | AI-draft | You express and inherit the same | تعبّر عن الطاقة نفسها وترثها: |
-| 2303 | AI-draft | energy. Strong, consistent elemental identity with deep | . هوية عنصرية قوية ثابتة ذات |
+| 2303 | ✅ reviewed | energy. Strong, consistent elemental identity with deep | . هوية قوية ثابتة في العنصر، ذات |
 | 2304 | AI-draft | roots. This creates a pure lineage of | جذور عميقة. وهذا يصنع نسبًا صافيًا من صفات |
 | 2305 | AI-draft | qualities - what you express outwardly mirrors your inner foundation. | - فما تعبّر عنه ظاهرًا يعكس أساسك الباطن. |
 | 2306 | AI-draft | You express with Fire but have Air roots. Your Air foundation feeds your Fire action - like wind fanning flames. This creates natural confidence and momentum. Your mother's airy nature (movement, ideas) supports your fiery expression (passion, action). | تعبّر بالنار لكن جذورك هوائية. فأساسك الهوائي يغذّي فعلك الناري — كالريح تذكي اللهب. وهذا يمنحك ثقة طبيعية واندفاعًا. وطبيعة أمك الهوائية (الحركة والأفكار) تسند تعبيرك الناري (الشغف والعمل). |
@@ -3378,7 +3378,7 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 2765 | AI-draft | The Science of Letters - traditional Islamic discipline studying the spiritual and numerical significance of Arabic letters | علم الحروف - علم إسلامي تقليدي يدرس الدلالة الروحية والعددية للحروف العربية |
 | 2766 | AI-draft | Numerical value system for Arabic letters, used since pre-Islamic times | نظام القيم العددية للحروف العربية، المستعمل منذ ما قبل الإسلام |
 | 2767 | AI-draft | Reduced Root - the Kabīr reduced to a single digit (1-9), revealing the spiritual station | الجذر المختزل - الكبير مختزلًا إلى رقم واحد (1-9)، يدلّ على المقام الروحي |
-| 2768 | AI-draft | Elemental Value - number reduced modulo 9 determining primary element and temperament | القيمة العنصرية - العدد بباقي القسمة على 9، يحدّد العنصر الأساسي والطبع |
+| 2768 | ✅ reviewed | Elemental Value - number reduced modulo 9 determining primary element and temperament | قيمة العنصر - العدد بباقي القسمة على 9، يحدّد العنصر الأساسي والطبع |
 | 2769 | AI-draft | North/West African tradition that classifies 28 letters into 4 elements (7 per element) | تراث شمال أفريقيا وغربها الذي يصنّف الحروف الثمانية والعشرين في أربعة عناصر (سبعة لكل عنصر) |
 | 2770 | AI-draft | Mysterious letters at the beginning of certain Qur'anic surahs (like Alif-Lām-Mīm) | الحروف المقطّعة في أوائل بعض سور القرآن (مثل الم) |
 | 2771 | AI-draft | Personal nature determined by the balance of four elements (Fire, Earth, Air, Water) | الطبع الشخصي المحدَّد بتوازن العناصر الأربعة (النار، التراب، الهواء، الماء) |
@@ -3387,7 +3387,7 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 2774 | AI-draft | Name Destiny Learning Center | مركز تعلّم مسار الاسم |
 | 2775 | AI-draft | Discover the spiritual wisdom encoded in Arabic letters | اكتشف الحكمة الروحية في الحروف العربية |
 | 2776 | AI-draft | What is ʿIlm al-Ḥurūf? | ما علم الحروف؟ |
-| 2777 | AI-draft | ʿIlm al-Ḥurūf (علم الحروف), or the 'Science of Letters', is a traditional Islamic discipline that studies the spiritual and numerical significance of Arabic letters. Each letter of the Arabic alphabet carries not only a sound, but also a numerical value (Abjad system) and elemental qualities. | علم الحروف علم إسلامي تقليدي يدرس الدلالة الروحية والعددية للحروف العربية. فلكل حرف من حروف العربية صوت، وقيمة عددية (نظام الأبجد)، وصفات عنصرية. |
+| 2777 | ✅ reviewed | ʿIlm al-Ḥurūf (علم الحروف), or the 'Science of Letters', is a traditional Islamic discipline that studies the spiritual and numerical significance of Arabic letters. Each letter of the Arabic alphabet carries not only a sound, but also a numerical value (Abjad system) and elemental qualities. | علم الحروف علم إسلامي تقليدي يدرس الدلالة الروحية والعددية للحروف العربية. فلكل حرف من حروف العربية صوت، وقيمة عددية (نظام الأبجد)، وصفات مرتبطة بالعناصر. |
 | 2778 | AI-draft | This science was developed by Islamic scholars over centuries, including Ibn al-ʿArabī, al-Būnī, and al-Ghazālī. It's used for spiritual contemplation, name analysis, and understanding hidden meanings in the Qur'anic text. | طوّر هذا العلم علماء مسلمون عبر قرون، منهم ابن عربي والبوني والغزالي. ويُستعمل للتأمّل الروحي وتحليل الأسماء وتدبّر المعاني الخفيّة في النصّ القرآني. |
 | 2779 | AI-draft | Core Principles | المبادئ الأساسية |
 | 2780 | AI-draft | Each Arabic letter has a unique numerical value (Abjad) | لكل حرف عربي قيمة عددية فريدة (الأبجد) |
@@ -3395,2454 +3395,2453 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 2782 | AI-draft | Names reveal spiritual patterns and personal qualities | تكشف الأسماء أنماطًا روحية وصفات شخصية |
 | 2783 | AI-draft | This science is used for reflection, not fortune-telling | يُستعمل هذا العلم للتأمّل لا للعرافة |
 | 2784 | AI-draft | History & Tradition | التاريخ والتراث |
-| 2785 | AI-draft | The Abjad system predates Islam and was used throughout the Semitic world. Muslim scholars developed it into a sophisticated spiritual discipline. The Maghribi (North/West African) tradition developed its own unique elemental classification of the 28 letters. | نظام الأبجد أقدم من الإسلام، واستُعمل في العالم السامي كله. وطوّره علماء المسلمين إلى علم روحي دقيق. وطوّر التراث المغربي (شمال أفريقيا وغربها) تصنيفًا عنصريًا خاصًا للحروف الثمانية والعشرين. |
-| 2786 | AI-draft | Letters in Islamic Tradition | الحروف في التراث الإسلامي |
-| 2787 | AI-draft | In Islamic tradition, letters are seen as carriers of deep spiritual meanings. The Qur'an itself begins several surahs with mysterious letters (al-Ḥurūf al-Muqaṭṭaʿa) like Alif-Lām-Mīm (الم), whose meanings have been contemplated by scholars for centuries. | في التراث الإسلامي تُعدّ الحروف حاملة لمعانٍ روحية عميقة. والقرآن نفسه يفتتح سورًا بحروف مقطّعة مثل الم، تأمّل العلماء معانيها قرونًا. |
-| 2788 | AI-draft | Key Scholars | أعلام العلماء |
-| 2789 | AI-draft | The great Sufi mystic wrote extensively on the spiritual significance of letters in works like al-Futūḥāt al-Makkiyya. | كتب الصوفي الكبير كثيرًا عن الدلالة الروحية للحروف في مؤلّفات مثل «الفتوحات المكية». |
-| 2790 | AI-draft | Author of Shams al-Maʿārif, a major text on the science of letters and their spiritual applications. | صاحب «شمس المعارف»، من أبرز المصنّفات في علم الحروف وتطبيقاته الروحية. |
-| 2791 | AI-draft | Explored the spiritual dimensions of language and writing in his theological work. | تناول الأبعاد الروحية للّغة والكتابة في مؤلّفه العقدي. |
-| 2792 | AI-draft | Spiritual Perspective | المنظور الروحي |
-| 2793 | AI-draft | ʿIlm al-Ḥurūf is seen as a tool for contemplation and self-reflection, not a means of predicting the future. It helps to: | يُعدّ علم الحروف أداة للتأمّل ومحاسبة النفس، لا وسيلة للتنبّؤ بالمستقبل. وهو يعين على: |
-| 2794 | AI-draft | Understand the spiritual qualities encoded in your name | فهم الصفات الروحية في اسمك |
-| 2795 | AI-draft | Contemplate your elemental nature and temperament | التأمّل في طبيعتك العنصرية وطبعك |
-| 2796 | AI-draft | Discover resonances with Divine Names | اكتشاف الرنين مع الأسماء الحسنى |
-| 2797 | AI-draft | Reflect on your unique spiritual path | التأمّل في طريقك الروحي الخاص |
-| 2798 | AI-draft | How Calculations Work | كيف تجري الحسابات |
-| 2799 | AI-draft | The Abjad system assigns a unique numerical value to each Arabic letter. These values are used to calculate several key numbers. | يجعل نظام الأبجد لكل حرف عربي قيمة عددية فريدة، وتُستعمل هذه القيم لحساب عدة أعداد أساسية. |
-| 2800 | AI-draft | Letter values from 1 to 1000: | قيم الحروف من 1 إلى 1000: |
-| 2801 | AI-draft | The sum of all letter values in your name. Represents your total spiritual potential. | مجموع قيم كل حروف اسمك. ويمثّل إمكانك الروحي الكلي. |
-| 2802 | AI-draft | The Kabīr reduced to a single digit (1-9). Reveals your spiritual station and destiny path. | الكبير مختزلًا إلى رقم واحد (1-9). ويكشف مقامك الروحي وطريق مسارك. |
-| 2803 | AI-draft | 3. Ḥadath (Elemental Value - الحدث) | 3. الحدث (القيمة العنصرية) |
-| 2804 | AI-draft | Reduced modulo 9 (1-9). Determines your primary element and temperament. | بباقي القسمة على 9 (1-9). ويحدّد عنصرك الأساسي وطبعك. |
-| 2805 | AI-draft | 4. Elemental Letter Distribution | 4. توزيع الحروف على العناصر |
-| 2806 | AI-draft | Is this fortune-telling? | هل هذه عرافة؟ |
-| 2807 | AI-draft | No. ʿIlm al-Ḥurūf is a tool for contemplation and self-reflection, not predicting the future. It's a way to understand the spiritual qualities and patterns encoded in your name. | لا. علم الحروف أداة للتأمّل ومحاسبة النفس، لا للتنبّؤ بالمستقبل. إنه طريقة لفهم الصفات والأنماط الروحية في اسمك. |
-| 2808 | AI-draft | ʿIlm al-Ḥurūf is rooted in Islamic tradition and uses the Arabic Abjad system with 28 letters. Western numerology uses the Pythagorean system with 26 Latin letters. The philosophical and spiritual approaches are also different. | علم الحروف متجذّر في التراث الإسلامي، ويستعمل نظام الأبجد العربي بحروفه الثمانية والعشرين. أما علم الأعداد الغربي فيستعمل النظام الفيثاغوري بالحروف اللاتينية الستة والعشرين. والمنهجان الفلسفي والروحي مختلفان أيضًا. |
-| 2809 | AI-draft | What is the Maghribi tradition? | ما التراث المغربي؟ |
-| 2810 | AI-draft | The Maghribi tradition (North/West Africa - Senegal, Gambia, Mali, Mauritania) developed a unique system of classifying the 28 Arabic letters into 4 elements, with exactly 7 letters per element. This balanced system is based on thermal and moisture qualities. | طوّر التراث المغربي (شمال أفريقيا وغربها - السنغال، غامبيا، مالي، موريتانيا) نظامًا خاصًا يصنّف الحروف العربية الثمانية والعشرين في أربعة عناصر، سبعة حروف لكل عنصر بالضبط. ويقوم هذا النظام المتوازن على صفتي الحرارة والرطوبة. |
-| 2811 | AI-draft | In the Abjad system, each Arabic letter has a numerical value. Your name, written in Arabic, can be converted to numbers. These numbers reveal spiritual patterns and qualities encoded in your name. | في نظام الأبجد لكل حرف عربي قيمة عددية. فيمكن تحويل اسمك المكتوب بالعربية إلى أعداد، وتكشف هذه الأعداد أنماطًا وصفات روحية في اسمك. |
-| 2812 | AI-draft | Yes, but for the most meaningful results, use your full name as it appears on your birth certificate, written in Arabic. You can also analyze your mother's name to see maternal influence. | نعم، لكن لأفضل النتائج استعمل اسمك الكامل كما في شهادة الميلاد مكتوبًا بالعربية. ويمكنك أيضًا تحليل اسم أمك لترى أثر الأم. |
-| 2813 | AI-draft | ʿIlm al-Ḥurūf is a tool for spiritual reflection and personal contemplation. It doesn't replace prayer, consulting scholars, or making practical decisions. Use it as a guide to better understand yourself. | علم الحروف أداة للتأمّل الروحي والتدبّر الشخصي. ولا يغني عن الدعاء ولا عن سؤال أهل العلم ولا عن اتّخاذ القرارات العملية. فاجعله دليلًا لفهم نفسك أكثر. |
-| 2814 | AI-draft | Palindrome - reads same forwards and backwards | متناظر - يُقرأ طردًا وعكسًا سواء |
-| 2815 | AI-draft | Balance and symmetry - your path has natural harmony. What appears different from various angles is fundamentally the same. | التوازن والتناظر - في طريقك انسجام طبيعي. فما يبدو مختلفًا من زوايا متعدّدة هو في أصله واحد. |
-| 2816 | AI-draft | Ascending sequence - digits increase in order | تسلسل تصاعدي - الأرقام تتزايد بالترتيب |
-| 2817 | AI-draft | Progressive growth - your journey is one of steady upward development. Each step builds naturally on the previous. | نموّ متدرّج - رحلتك رحلة ارتقاء ثابت، كل خطوة تُبنى على سابقتها. |
-| 2818 | AI-draft | Descending sequence - digits decrease in order | تسلسل تنازلي - الأرقام تتناقص بالترتيب |
-| 2819 | AI-draft | Refinement and distillation - your path involves releasing the unnecessary to reach essence. Simplification leads to clarity. | التهذيب والتصفية - في طريقك تخلٍّ عمّا لا يلزم للوصول إلى الجوهر. والتبسيط يقود إلى الوضوح. |
-| 2820 | AI-draft | Amplified energy of | طاقة مضاعفة للعدد |
-| 2821 | AI-draft | - this number carries intensified spiritual significance. The universe emphasizes this message. | - لهذا العدد دلالة روحية مكثّفة، فتأمّل رسالته. |
-| 2822 | AI-draft | Significant repetition detected in digits | تكرار ملحوظ في الأرقام |
-| 2823 | AI-draft | Emphasis and reinforcement - certain energies in your path are being highlighted and strengthened. | تأكيد وتقوية - بعض الطاقات في طريقك تُبرَز وتُقوّى. |
-| 2824 | AI-draft | Angelic number pattern - repeating sequence | نمط عدد متكرّر |
-| 2825 | AI-draft | Divine attention - this pattern often appears when spiritual guidance is near. Pay attention to synchronicities. | لفتة للتأمّل - قد يذكّرك هذا النمط بالانتباه إلى ما حولك من آيات ومعانٍ. |
-| 2826 | AI-draft | Multiple of sacred number(s): | مضاعف لعدد (أعداد) مميّز: |
-| 2827 | AI-draft | Connected to Islamic sacred numerology ( | متّصل بالأعداد المميّزة في التراث الإسلامي ( |
-| 2828 | AI-draft | ). Your value resonates with traditional spiritual significance. | ). وقيمتك تتناغم مع دلالة روحية تقليدية. |
-| 2829 | AI-draft | Mirror number | العدد المعكوس |
-| 2830 | AI-draft | is significant | له دلالة |
-| 2831 | AI-draft | , creating a hidden connection. What you seek may be found by looking at things in reverse. | ، فيصنع صلة خفيّة. وقد تجد ما تطلبه بالنظر إلى الأمور من الجهة الأخرى. |
-| 2832 | AI-draft | Your number carries perfect symmetry and amplification - a rare spiritual alignment indicating mastery and completion. | لعددك تناظر تامّ وتضاعف - انسجام روحي نادر يدلّ على الإتقان والتمام. |
-| 2833 | AI-draft | Progressive spiritual development aligned with sacred tradition - you are on a well-trodden path of enlightenment. | نموّ روحي متدرّج منسجم مع التراث - أنت على طريق مسلوك من طرق السير إلى الله. |
-| 2834 | AI-draft | The angels speak through numbers - this is a sign to trust your intuition and pay attention to subtle messages. | الأعداد مجال للتأمّل - فاجعل هذا تذكيرًا بالإصغاء إلى حدسك وملاحظة المعاني الدقيقة، والعلم عند الله. |
-| 2835 | AI-draft | Multiple patterns converge in your number - this indicates a pivotal moment of spiritual significance in your journey. | تلتقي في عددك أنماط متعدّدة - وقد يكون هذا وقفة مهمّة للتأمّل في رحلتك. |
-| 2836 | AI-draft | patterns - aligned spiritual energies | أنماط - طاقات روحية منسجمة |
-| 2837 | AI-draft | ) are mirror numbers - complementary spiritual forces | ) أعداد معكوسة - قوى روحية متكاملة |
-| 2838 | AI-draft | which has | الذي له |
-| 2839 | AI-draft | pattern(s) - combined energy creates harmony | نمط (أنماط) - الطاقة المجتمعة تصنع انسجامًا |
-| 2840 | AI-draft | Translation not available. Please visit Quran.com for the full translation. | الترجمة غير متاحة. يُرجى زيارة Quran.com للترجمة الكاملة. |
-| 2841 | AI-draft | Invalid Hadad value - must be positive | قيمة الحدد غير صالحة - يجب أن تكون موجبة |
-| 2842 | AI-draft | not found in metadata | غير موجود في البيانات |
-| 2843 | AI-draft | This verse emerged through numerical resonance between your name and the Qur'anic structure. | ظهرت هذه الآية من رنين عددي بين اسمك وبنية النصّ القرآني. |
-| 2844 | AI-draft | Reflect upon it as a potential sign or reminder in your spiritual journey. | تدبّرها تذكرةً في رحلتك الروحية. |
-| 2845 | AI-draft | Remember: this is for contemplation, not divination. | تذكّر: هذا للتدبّر لا للكهانة. |
-| 2846 | AI-draft | day enhances your energy | اليوم يعزّز طاقتك |
-| 2847 | AI-draft | rules both hour and day (double power) | يحكم الساعة واليوم معًا (قوة مضاعفة) |
-| 2848 | AI-draft | brings beneficial energy | يجلب طاقة نافعة |
-| 2849 | AI-draft | Current alignment is | الانسجام الحالي |
-| 2850 | AI-draft | Next optimal window: | النافذة المثلى التالية: |
-| 2851 | AI-draft | Talisman Timing Analysis | تحليل توقيت الوفق |
-| 2852 | AI-draft | Optimal Day | اليوم الأمثل |
-| 2853 | AI-draft | Optimal Hour | الساعة المثلى |
-| 2854 | AI-draft | Upcoming Optimal Windows | النوافذ المثلى القادمة |
-| 2855 | AI-draft | Alignment Score | درجة الانسجام |
-| 2856 | AI-draft | Saturn hour | ساعة زحل |
-| 2857 | AI-draft | Grounding, discipline, boundaries, ancestral wisdom | التجذّر، الانضباط، الحدود، حكمة الأسلاف |
-| 2858 | ✅ reviewed | Expansion, abundance, wisdom, good fortune | الاتساع، الوفرة، الحكمة، التوفيق |
-| 2859 | AI-draft | Mars hour | ساعة المريخ |
-| 2860 | AI-draft | Venus hour | ساعة الزهرة |
-| 2861 | AI-draft | Communication, intellect, travel, commerce | التواصل، العقل، السفر، التجارة |
-| 2862 | AI-draft | Moon hour | ساعة القمر |
-| 2863 | AI-draft | Intuition, emotions, dreams, receptivity | الحدس، العواطف، المنامات، التلقّي |
-| 2864 | AI-draft | Lo Shu (Saturn) | لو شو (زحل) |
-| 2865 | AI-draft | Dürer (Jupiter) | دورر (المشتري) |
-| 2866 | AI-draft | Composite (Sun) | مركّب (الشمس) |
-| 2867 | AI-draft | Composite (Mercury) | مركّب (عطارد) |
-| 2868 | AI-draft | Magic Square | الوفق |
-| 2869 | AI-draft | Magic Constant | الثابت السحري (مجموع الصفّ) |
-| 2870 | AI-draft | Intention | النيّة |
-| 2871 | AI-draft | Created From | مأخوذ من |
-| 2872 | AI-draft | Legacy | الإرث |
-| 2873 | AI-draft | Eternal Wisdom | الحكمة الباقية |
-| 2874 | AI-draft | Start fresh | ابدأ من جديد |
-| 2875 | AI-draft | Listen deeply | أصغِ بعمق |
-| 2876 | AI-draft | Find balance | جِد التوازن |
-| 2877 | AI-draft | Communicate | تواصل |
-| 2878 | AI-draft | Be adventurous | كن مغامرًا |
-| 2879 | AI-draft | Serve family | اخدم الأسرة |
-| 2880 | AI-draft | Spiritual Growth | النموّ الروحي |
-| 2881 | AI-draft | Seek wisdom | اطلب الحكمة |
-| 2882 | AI-draft | Meditate | تأمّل |
-| 2883 | AI-draft | Study deeply | ادرس بعمق |
-| 2884 | AI-draft | Achieve goals | حقّق الأهداف |
-| 2885 | AI-draft | Lead powerfully | قُد بقوة |
-| 2886 | AI-draft | Laziness & Negative Thinking | الكسل والتفكير السلبي |
-| 2887 | AI-draft | Tendency toward shortcuts | الميل إلى الطرق المختصرة |
-| 2888 | AI-draft | Difficulty completing tasks | صعوبة إتمام المهامّ |
-| 2889 | AI-draft | Negative thought patterns | أنماط تفكير سلبية |
-| 2890 | AI-draft | Struggles with discipline | صعوبة في الانضباط |
-| 2891 | AI-draft | Dhikr for perseverance (Ya Sabūr) | ذكر للمثابرة (يا صبور) |
-| 2892 | AI-draft | Reframe challenges positively | انظر إلى التحدّيات نظرة إيجابية |
-| 2893 | AI-draft | Build consistent routines | ابنِ عادات ثابتة |
-| 2894 | AI-draft | Abuse of Freedom | إساءة استعمال الحرية |
-| 2895 | AI-draft | Excessive indulgence | الإفراط في الملذّات |
-| 2896 | AI-draft | Seeking escape through substances or behaviors | الهروب بالمواد أو السلوكيات |
-| 2897 | AI-draft | Practice moderation in all things. True freedom comes through self-discipline. | اعتدل في كل شيء. فالحرية الحقّة تأتي بضبط النفس. |
-| 2898 | AI-draft | Fasting and abstinence practices | ممارسات الصيام والإمساك |
-| 2899 | AI-draft | Dhikr for self-control (Ya Qabid) | ذكر لضبط النفس (يا قابض) |
-| 2900 | AI-draft | Set healthy boundaries | ضع حدودًا صحّية |
-| 2901 | AI-draft | Mindful consumption | استهلاك واعٍ |
-| 2902 | AI-draft | Commit to one path deeply | التزم بطريق واحد بعمق |
-| 2903 | AI-draft | Learning humility and proper use of power in relationships through ego dissolution. | تعلّم التواضع وحسن استعمال القوة في العلاقات بتذويب الأنا. |
-| 2904 | AI-draft | Sudden relationship endings | نهايات مفاجئة للعلاقات |
-| 2905 | AI-draft | Ego-driven decisions backfire | القرارات التي تحرّكها الأنا تنقلب على صاحبها |
-| 2906 | AI-draft | Betrayals or abandonments | خيانات أو هجران |
-| 2907 | AI-draft | Loss of status or position | فقدان المكانة أو المنصب |
-| 2908 | AI-draft | Surrender the ego. Love selflessly. Build on spiritual foundation, not ego. | تخلَّ عن الأنا، وأحبب بإيثار، وابنِ على أساس روحي لا على الأنا. |
-| 2909 | AI-draft | Dhikr for divine love (Ya Wadud) | ذكر للمحبّة (يا ودود) |
-| 2910 | AI-draft | Serve without expectation | اخدم دون انتظار |
-| 2911 | AI-draft | Meditate on impermanence | تأمّل في الفناء |
-| 2912 | AI-draft | Forgive deeply and often | اعفُ بعمق وكثيرًا |
-| 2913 | AI-draft | Learning to give rather than take, serve rather than dominate. | تعلّم العطاء بدل الأخذ، والخدمة بدل التسلّط. |
-| 2914 | AI-draft | Difficulty asking for help | صعوبة طلب العون |
-| 2915 | AI-draft | Loneliness despite achievements | الوحدة رغم الإنجازات |
-| 2916 | AI-draft | Fear of dependency | الخوف من الاعتماد على الغير |
-| 2917 | AI-draft | Learn to receive. Serve humbly. Recognize interdependence as divine design. | تعلّم أن تتلقّى، واخدم بتواضع، واعلم أن حاجة الناس بعضهم إلى بعض من سنن الله. |
-| 2918 | AI-draft | Practice asking for help | تدرّب على طلب العون |
-| 2919 | AI-draft | Dhikr for unity (Ya Wahid, Ya Ahad) | ذكر للوحدة (يا واحد، يا أحد) |
-| 2920 | AI-draft | Join community service | شارك في خدمة المجتمع |
-| 2921 | AI-draft | Share power willingly | شارك السلطة طوعًا |
-| 2922 | AI-draft | Acknowledge others' contributions | اعترف بإسهامات الآخرين |
-| 2923 | AI-draft | Seven heavens, seven earths | سبع سماوات وسبع أرضين |
-| 2924 | AI-draft | Divine perfection and wholeness. Your name carries the frequency of completion. | التمام والكمال. ويحمل اسمك معنى الاكتمال. |
-| 2925 | AI-draft | Months, Tribes, Imams | الشهور والأسباط والأئمة |
-| 2926 | AI-draft | Twelve months, twelve springs | اثنا عشر شهرًا واثنتا عشرة عينًا |
-| 2927 | AI-draft | Cosmic order and leadership. Your path involves guiding others. | النظام الكوني والقيادة. وفي طريقك إرشاد للآخرين. |
-| 2928 | AI-draft | Quranic Miracle Number | العدد 19 في القرآن |
-| 2929 | AI-draft | Mathematical pattern in Quran | نمط عددي في القرآن |
-| 2930 | AI-draft | Divine signature. Your soul carries a special message for humanity. | علامة للتأمّل. لعلّ في طريقك رسالة نافعة للناس. |
-| 2931 | AI-draft | Testing & Purification Period | مدّة الابتلاء والتزكية |
-| 2932 | AI-draft | Nations, Elders, Completion | الأمم والشيوخ والتمام |
-| 2933 | AI-draft | Seventy elders of Moses | السبعون الذين اختارهم موسى |
-| 2934 | AI-draft | Wisdom keeper. You are meant to gather and share ancient knowledge. | حافظ للحكمة. لعلّك ممن يجمع المعرفة القديمة وينشرها. |
-| 2935 | AI-draft | Names of Allah | أسماء الله |
-| 2936 | AI-draft | Divine attributes. Your soul reflects the Beautiful Names. | الصفات الإلهية. لتكن روحك متخلّقة بمعاني الأسماء الحسنى. |
-| 2937 | AI-draft | Surah Al-Ikhlas Value | قيمة سورة الإخلاص |
-| 2938 | AI-draft | The Chapter of Sincerity | سورة الإخلاص |
-| 2939 | AI-draft | Pure monotheism. Your essence is aligned with divine unity. | التوحيد الخالص. ليكن جوهرك قائمًا على التوحيد. |
-| 2940 | AI-draft | Warriors of Badr | أهل بدر |
-| 2941 | AI-draft | Spiritual warrior. You are here to stand for truth. | مجاهد للنفس. لتكن ممن يقوم بالحقّ. |
-| 2942 | AI-draft | Bismillah al-Rahman al-Rahim | بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ |
-| 2943 | AI-draft | Opening verse of Quran | الآية الأولى من القرآن |
-| 2944 | AI-draft | Begin with grace. Your every action should start with divine remembrance. | ابدأ بالبركة. ليبدأ كل عمل لك بذكر الله. |
-| 2945 | AI-draft | Symbolic Perfection | الكمال الرمزي |
-| 2946 | AI-draft | Mastery incarnate. You are here to demonstrate perfection of soul. | الإتقان. لتكن ممن يسعى إلى كمال النفس. |
-| 2947 | AI-draft | Military Leader | قائد عسكري |
-| 2948 | AI-draft | Manager | مدير |
-| 2949 | AI-draft | Pioneer in Tech | رائد في التقنية |
-| 2950 | AI-draft | Subordinate roles | الأدوار التابعة |
-| 2951 | AI-draft | Repetitive tasks | المهامّ المتكرّرة |
-| 2952 | AI-draft | HR Professional | مختصّ في الموارد البشرية |
-| 2953 | AI-draft | Isolated work | العمل المنعزل |
-| 2954 | AI-draft | You excel at bringing people together and creating harmony in teams and relationships. | تتفوّق في جمع الناس وصنع الانسجام في الفرق والعلاقات. |
-| 2955 | AI-draft | Public Speaker | متحدّث عام |
-| 2956 | AI-draft | Entertainer | فنّان أداء |
-| 2957 | AI-draft | Content Creator | صانع محتوى |
-| 2958 | AI-draft | Silent, monotonous work | العمل الصامت الرتيب |
-| 2959 | AI-draft | Strict corporate settings | بيئات الشركات الصارمة |
-| 2960 | AI-draft | Environments that suppress creativity | البيئات التي تكبت الإبداع |
-| 2961 | AI-draft | You're naturally expressive and thrive when you can communicate, create, and inspire others. | أنت معبّر بطبعك، وتزدهر حين تستطيع التواصل والإبداع وإلهام الآخرين. |
-| 2962 | AI-draft | Administrator | إداري |
-| 2963 | AI-draft | Planner | مخطّط |
-| 2964 | AI-draft | Systems Designer | مصمّم أنظمة |
-| 2965 | AI-draft | Chaotic, unstructured environments | البيئات الفوضوية غير المنظّمة |
-| 2966 | AI-draft | Frequent travel | كثرة السفر |
-| 2967 | AI-draft | Jobs without clear processes | الوظائف بلا إجراءات واضحة |
-| 2968 | AI-draft | Travel Guide | مرشد سياحي |
-| 2969 | AI-draft | Sales | المبيعات |
-| 2970 | AI-draft | Event Planner | منظّم فعاليات |
-| 2971 | AI-draft | PR Specialist | مختصّ علاقات عامة |
-| 2972 | AI-draft | Flight Attendant | مضيف طيران |
-| 2973 | AI-draft | Freelancer | عمل حرّ |
-| 2974 | AI-draft | Routine desk jobs | وظائف المكتب الروتينية |
-| 2975 | AI-draft | Micromanaged environments | البيئات كثيرة الرقابة |
-| 2976 | AI-draft | You love variety and freedom, thriving in dynamic environments where you can explore and adapt. | تحبّ التنوّع والحرية، وتزدهر في البيئات الحيوية التي تستكشف فيها وتتكيّف. |
-| 2977 | AI-draft | Caregiver | مقدّم رعاية |
-| 2978 | AI-draft | Chef | طاهٍ |
-| 2979 | AI-draft | Interior Designer | مصمّم داخلي |
-| 2980 | AI-draft | Family Therapist | معالج أسري |
-| 2981 | AI-draft | Hospitality Manager | مدير ضيافة |
-| 2982 | AI-draft | Cut-throat competition | المنافسة الشرسة |
-| 2983 | AI-draft | Highly individualistic roles | الأدوار الفردية جدًا |
-| 2984 | AI-draft | You're naturally nurturing and responsible, finding fulfillment when you serve and care for others. | أنت راعٍ مسؤول بطبعك، وتجد رضاك في خدمة الآخرين ورعايتهم. |
-| 2985 | AI-draft | Philosopher | فيلسوف |
-| 2986 | AI-draft | Spiritual Guide | مرشد روحي |
-| 2987 | AI-draft | Investigator | محقّق |
-| 2988 | AI-draft | Data Scientist | عالم بيانات |
-| 2989 | AI-draft | Superficial sales roles | أدوار المبيعات السطحية |
-| 2990 | AI-draft | Overly social environments | البيئات المفرطة في الاختلاط |
-| 2991 | AI-draft | You're analytical and introspective, excelling when you can dive deep into knowledge and mysteries. | أنت تحليلي متأمّل، تتفوّق حين تغوص في المعرفة والأسرار. |
-| 2992 | AI-draft | Finance Manager | مدير مالي |
-| 2993 | AI-draft | Real Estate Developer | مطوّر عقاري |
-| 2994 | AI-draft | Business Owner | صاحب عمل |
-| 2995 | AI-draft | Investment Banker | مصرفي استثمار |
-| 2996 | AI-draft | Attorney | محامٍ |
-| 2997 | AI-draft | Producer | منتج |
-| 2998 | AI-draft | Low-responsibility roles | الأدوار قليلة المسؤولية |
-| 2999 | AI-draft | You're ambitious and results-driven, excelling at managing resources and achieving material success. | أنت طموح موجَّه بالنتائج، تتفوّق في إدارة الموارد وتحقيق النجاح المادي. |
-| 3000 | AI-draft | Non-Profit Leader | قائد في العمل الخيري |
-| 3001 | AI-draft | Global Advocate | مناصر عالمي |
-| 3002 | AI-draft | Philanthropist | محسن |
-| 3003 | AI-draft | Environmentalist | ناشط بيئي |
-| 3004 | AI-draft | Narrow, self-serving work | العمل الضيّق الأناني |
-| 3005 | AI-draft | Materialistic environments | البيئات المادية |
-| 3006 | AI-draft | Jobs lacking purpose | الوظائف بلا غاية |
-| 3007 | AI-draft | You're compassionate and globally-minded, finding fulfillment when you serve humanity and create positive change. | أنت رحيم واسع الأفق، تجد رضاك في خدمة الناس وصنع تغيير نافع. |
-| 3008 | AI-draft | Motivational Speaker | متحدّث تحفيزي |
-| 3009 | AI-draft | Visionary Leader | قائد صاحب رؤية |
-| 3010 | AI-draft | Intuitive Coach | مدرّب حدسي |
-| 3011 | AI-draft | Psychic | صاحب فراسة |
-| 3012 | AI-draft | Inspirational Writer | كاتب ملهِم |
-| 3013 | AI-draft | Mundane, routine work | العمل الرتيب العادي |
-| 3014 | AI-draft | Materially-focused jobs | الوظائف المادية الصرفة |
-| 3015 | AI-draft | Environments that suppress intuition | البيئات التي تكبت الحدس |
-| 3016 | AI-draft | You're a spiritual visionary who inspires others and carries messages from higher realms. | أنت صاحب رؤية روحية تُلهم الآخرين وتحمل معاني سامية. |
-| 3017 | AI-draft | Large-Scale Developer | مطوّر مشاريع كبرى |
-| 3018 | AI-draft | Visionary CEO | رئيس تنفيذي صاحب رؤية |
-| 3019 | AI-draft | International Leader | قائد دولي |
-| 3020 | AI-draft | Founder of Institutions | مؤسّس مؤسّسات |
-| 3021 | AI-draft | Work without legacy potential | العمل بلا أثر باقٍ |
-| 3022 | AI-draft | You're a master manifestor who builds lasting structures and turns grand visions into reality. | أنت بانٍ متقن تُقيم بنى دائمة وتحوّل الرؤى الكبيرة إلى واقع. |
-| 3023 | AI-draft | Humanitarian Leader | قائد إنساني |
-| 3024 | AI-draft | Universal Counselor | مستشار شامل |
-| 3025 | AI-draft | Transformational Coach | مدرّب تحوّلي |
-| 3026 | AI-draft | Compassionate Leader | قائد رحيم |
-| 3027 | AI-draft | Global Educator | معلّم عالمي |
-| 3028 | AI-draft | Work lacking compassion | العمل الخالي من الرحمة |
-| 3029 | AI-draft | You're a master teacher who guides humanity with unconditional love and profound wisdom. | أنت معلّم متقن يرشد الناس بمحبّة غير مشروطة وحكمة عميقة. |
-| 3030 | AI-draft | Practice patience - not everything needs to be done right now | تحلَّ بالصبر - فليس كل شيء يلزم الآن |
-| 3031 | AI-draft | Balance independence with collaboration | وازِن الاستقلال بالتعاون |
-| 3032 | AI-draft | Schedule regular breaks to avoid burnout | خصّص استراحات منتظمة لتجنّب الإنهاك |
-| 3033 | AI-draft | Set clear boundaries - it's okay to say no | ضع حدودًا واضحة - لا بأس أن تقول لا |
-| 3034 | AI-draft | Speak up for your own needs, not just others' | عبّر عن حاجاتك أنت، لا حاجات الآخرين وحدها |
-| 3035 | AI-draft | Finish projects before starting new ones | أتمّ المشاريع قبل البدء بغيرها |
-| 3036 | AI-draft | Practice focused work without distractions | اعمل بتركيز بلا مشتّتات |
-| 3037 | AI-draft | Don't scatter your energy - choose priorities | لا تبعثر طاقتك - اختر أولوياتك |
-| 3038 | AI-draft | Allow room for spontaneity and flexibility | اترك مجالًا للعفوية والمرونة |
-| 3039 | AI-draft | Take calculated risks instead of always playing safe | خاطر مخاطرة محسوبة بدل الحذر الدائم |
-| 3040 | AI-draft | Commit to one thing at a time instead of juggling many | التزم بأمر واحد في كل مرّة بدل الكثير |
-| 3041 | AI-draft | Ground yourself daily through meditation or nature | تجذّر كل يوم بالتأمّل أو الطبيعة |
-| 3042 | AI-draft | Balance material success with spiritual growth | وازِن النجاح المادي بالنموّ الروحي |
-| 3043 | AI-draft | Lead with compassion, not just authority | قُد بالرحمة لا بالسلطة وحدها |
-| 3044 | AI-draft | Set healthy boundaries - you can't save everyone | ضع حدودًا صحّية - لا يمكنك إنقاذ الجميع |
-| 3045 | AI-draft | Ground yourself in practical daily tasks | تجذّر بالمهامّ اليومية العملية |
-| 3046 | AI-draft | Take care of your own needs before serving others | اعتنِ بحاجاتك قبل خدمة الآخرين |
-| 3047 | AI-draft | Release attachment to outcomes - let go when needed | تخلَّ عن التعلّق بالنتائج - ودَع حين يلزم |
-| 3048 | AI-draft | Balance giving with receiving | وازِن العطاء بالأخذ |
-| 3049 | AI-draft | Ground your visions in practical action | جذّر رؤاك في عمل عملي |
-| 3050 | AI-draft | Balance spiritual work with physical self-care | وازِن العمل الروحي بالعناية بالبدن |
-| 3051 | AI-draft | Trust divine timing - you don't have to rush | ثق بتوقيت الله - لا داعي للعجلة |
-| 3052 | AI-draft | Balance grand vision with attention to details | وازِن الرؤية الكبيرة بالانتباه إلى التفاصيل |
-| 3053 | AI-draft | Rest regularly - even master builders need recovery | استرح بانتظام - حتى كبار البنّائين يحتاجون إلى التعافي |
-| 3054 | AI-draft | Teach without sacrificing your own wellbeing | علّم دون التضحية بعافيتك |
-| 3055 | AI-draft | Set clear boundaries even while serving | ضع حدودًا واضحة حتى وأنت تخدم |
-| 3056 | AI-draft | Remember you're human too - rest and restore | تذكّر أنك بشر أيضًا - استرح وتعافَ |
-| 3057 | AI-draft | Can become domineering or overly controlling | قد تصبح متسلّطًا أو مفرطًا في السيطرة |
-| 3058 | AI-draft | May struggle with collaboration or listening to others | قد تجد صعوبة في التعاون أو الإصغاء للآخرين |
-| 3059 | AI-draft | Tendency to burn out from doing everything alone | ميل إلى الإنهاك من فعل كل شيء وحدك |
-| 3060 | AI-draft | May come across as aggressive or insensitive | قد تبدو عدوانيًا أو قليل المراعاة |
-| 3061 | AI-draft | Can become overly dependent on others' approval | قد تعتمد كثيرًا على استحسان الآخرين |
-| 3062 | AI-draft | Risk of being too passive or indecisive | خطر السلبية أو التردّد المفرط |
-| 3063 | AI-draft | May struggle with standing up for yourself | قد تجد صعوبة في الدفاع عن نفسك |
-| 3064 | AI-draft | Can scatter energy across too many projects | قد تبعثر طاقتك على مشاريع كثيرة |
-| 3065 | AI-draft | May use humor or charm to avoid depth | قد تستعمل الدعابة أو الجاذبية لتجنّب العمق |
-| 3066 | AI-draft | Risk of being superficial or lacking follow-through | خطر السطحية أو عدم المتابعة |
-| 3067 | AI-draft | May get stuck in routines and miss opportunities | قد تعلق في الروتين وتفوتك الفرص |
-| 3068 | AI-draft | Risk of being overly critical or perfectionistic | خطر النقد المفرط أو الكمالية |
-| 3069 | AI-draft | Tendency to overwork and neglect play | ميل إلى الإفراط في العمل وإهمال الترويح |
-| 3070 | AI-draft | Can become restless or commitment-phobic | قد تصبح قلقًا أو نافرًا من الالتزام |
-| 3071 | AI-draft | Risk of being impulsive or reckless | خطر الاندفاع أو التهوّر |
-| 3072 | AI-draft | Can become a martyr or overly self-sacrificing | قد تفرط في التضحية بنفسك |
-| 3073 | AI-draft | Risk of perfectionism in home or relationships | خطر الكمالية في البيت أو العلاقات |
-| 3074 | AI-draft | Tendency to feel unappreciated or resentful | ميل إلى الشعور بعدم التقدير أو الاستياء |
-| 3075 | AI-draft | May struggle with receiving or asking for help | قد تجد صعوبة في تلقّي العون أو طلبه |
-| 3076 | AI-draft | Can become isolated or emotionally distant | قد تصبح منعزلًا أو بعيدًا عاطفيًا |
-| 3077 | AI-draft | Risk of being skeptical or distrustful | خطر الشكّ أو عدم الثقة |
-| 3078 | AI-draft | Tendency to intellectualize emotions instead of feeling them | ميل إلى عقلنة المشاعر بدل الإحساس بها |
-| 3079 | AI-draft | May struggle with vulnerability or intimacy | قد تجد صعوبة في الانكشاف أو القرب |
-| 3080 | AI-draft | Can become power-hungry or materialistic | قد تصبح متعطّشًا للسلطة أو ماديًا |
-| 3081 | AI-draft | May use people as stepping stones | قد تتّخذ الناس سلّمًا |
-| 3082 | AI-draft | Tendency to equate worth with success or money | ميل إلى قياس القيمة بالنجاح أو المال |
-| 3083 | AI-draft | Can become overly idealistic or impractical | قد تصبح مفرطًا في المثالية أو بعيدًا عن الواقع |
-| 3084 | AI-draft | Risk of emotional overwhelm from world's pain | خطر الإرهاق العاطفي من آلام العالم |
-| 3085 | AI-draft | Tendency to give until depleted | ميل إلى العطاء حتى النفاد |
-| 3086 | AI-draft | May struggle with letting go or completion | قد تجد صعوبة في التخلّي أو الإتمام |
-| 3087 | AI-draft | Can feel misunderstood or alienated | قد تشعر بأنك غير مفهوم أو غريب |
-| 3088 | AI-draft | May struggle to ground visions into reality | قد تجد صعوبة في تحويل الرؤى إلى واقع |
-| 3089 | AI-draft | Risk of spiritual bypassing or escapism | خطر الهروب الروحي من الواقع |
-| 3090 | AI-draft | Tendency to feel overwhelmed by sensitivity | ميل إلى الشعور بالإرهاق من فرط الحساسية |
-| 3091 | AI-draft | May struggle with practical, mundane tasks | قد تجد صعوبة في المهامّ العملية العادية |
-| 3092 | AI-draft | May struggle with patience for long-term building | قد تجد صعوبة في الصبر على البناء الطويل |
-| 3093 | AI-draft | Risk of burnout from massive ambitions | خطر الإنهاك من الطموحات الهائلة |
-| 3094 | AI-draft | May struggle with starting small or being content | قد تجد صعوبة في البدء صغيرًا أو القناعة |
-| 3095 | AI-draft | Can become overwhelmed by responsibility to humanity | قد ترهقك مسؤوليتك تجاه الناس |
-| 3096 | AI-draft | Risk of spiritual exhaustion from constant giving | خطر الإنهاك الروحي من العطاء الدائم |
-| 3097 | AI-draft | Tendency to hold yourself to impossible standards | ميل إلى مطالبة نفسك بمعايير مستحيلة |
-| 3098 | AI-draft | May struggle with accepting human limitations | قد تجد صعوبة في تقبّل حدود البشر |
-| 3099 | AI-draft | Daily affirmation: "I lead with courage and humility." Practice meditation to balance assertiveness with inner peace. | تذكير يومي: «أقود بشجاعة وتواضع». وتأمّل لتوازن الحزم بالسكينة الباطنة. |
-| 3100 | AI-draft | Start one new initiative or project | ابدأ مبادرة أو مشروعًا جديدًا واحدًا |
-| 3101 | AI-draft | Ask for help with one task instead of doing it alone | اطلب العون في مهمّة واحدة بدل إنجازها وحدك |
-| 3102 | AI-draft | Avoid becoming domineering or refusing to collaborate. Balance independence with teamwork. | تجنّب التسلّط أو رفض التعاون. وازِن الاستقلال بالعمل الجماعي. |
-| 3103 | AI-draft | Daily affirmation: "I honor my own needs while serving others." Practice boundary-setting as spiritual discipline. | تذكير يومي: «أكرم حاجاتي وأنا أخدم الآخرين». وتدرّب على وضع الحدود رياضةً روحية. |
-| 3104 | AI-draft | Express your opinion even if it differs from the group | عبّر عن رأيك ولو خالف الجماعة |
-| 3105 | AI-draft | Daily affirmation: "I express my truth with joy and discipline." Practice focused creativity sessions. | تذكير يومي: «أعبّر عن حقيقتي بفرح وانضباط». وخصّص جلسات إبداع مركّزة. |
-| 3106 | AI-draft | Finish one creative project before starting another | أتمّ مشروعًا إبداعيًا قبل أن تبدأ غيره |
-| 3107 | AI-draft | Avoid scattering your energy or using charm to escape depth. Focus brings power. | تجنّب بعثرة طاقتك أو الهروب من العمق بالجاذبية. فالتركيز قوة. |
-| 3108 | AI-draft | Daily affirmation: "I build with patience and trust the process." Practice yoga or grounding exercises. | تذكير يومي: «أبني بصبر وأثق بالمسار». وتدرّب على تمارين التجذّر. |
-| 3109 | AI-draft | Schedule time for play or spontaneity | خصّص وقتًا للترويح أو العفوية |
-| 3110 | AI-draft | Daily affirmation: "I am free and grounded." Practice grounding meditation or nature walks. | تذكير يومي: «أنا حرّ ومتجذّر». وتأمّل تأمّل تجذّر أو امشِ في الطبيعة. |
-| 3111 | AI-draft | Commit to one thing and see it through this week | التزم بأمر واحد وأتمّه هذا الأسبوع |
-| 3112 | AI-draft | Create one simple daily routine for stability | ضع عادة يومية بسيطة واحدة للثبات |
-| 3113 | AI-draft | Ground yourself through physical exercise or gardening | تجذّر بالتمرين البدني أو البستنة |
-| 3114 | AI-draft | Avoid restlessness or commitment-phobia. True freedom comes from mastering discipline. | تجنّب القلق أو النفور من الالتزام. فالحرية الحقّة من إتقان الانضباط. |
-| 3115 | AI-draft | Daily affirmation: "I give and receive with balance." Practice self-care rituals as spiritual practice. | تذكير يومي: «أعطي وآخذ بتوازن». واجعل العناية بنفسك عبادةً. |
-| 3116 | AI-draft | Let someone solve their own problem this week | دع أحدًا يحلّ مشكلته بنفسه هذا الأسبوع |
-| 3117 | AI-draft | Say no to one responsibility that isn't yours | ارفض مسؤولية واحدة ليست لك |
-| 3118 | AI-draft | Accept help from someone graciously | اقبل العون من أحد بلطف |
-| 3119 | AI-draft | Practice "good enough" instead of perfect in one area | اكتفِ بـ«الجيّد بما يكفي» بدل الكمال في مجال واحد |
-| 3120 | AI-draft | Avoid martyrdom or controlling others "for their good." Let people have their own journey. | تجنّب التضحية المفرطة أو التحكّم بالآخرين «لمصلحتهم». دع الناس يسلكون طريقهم. |
-| 3121 | AI-draft | Daily affirmation: "I trust my inner knowing." Practice contemplative prayer or silent meditation. | تذكير يومي: «أثق بمعرفتي الباطنة». وتدرّب على الدعاء التأمّلي أو التأمّل الصامت. |
-| 3122 | AI-draft | Share one insight or teaching with someone | شارك فكرة أو درسًا مع أحد |
-| 3123 | AI-draft | Practice feeling an emotion instead of analyzing it | تدرّب على الإحساس بشعور بدل تحليله |
-| 3124 | AI-draft | Avoid isolation or emotional detachment. Connection is part of wisdom. | تجنّب العزلة أو الانفصال العاطفي. فالتواصل جزء من الحكمة. |
-| 3125 | AI-draft | You are here to achieve, manifest abundance, and lead with power and integrity. | طريقك طريق الإنجاز وتحقيق الوفرة والقيادة بقوة ونزاهة. |
-| 3126 | AI-draft | Daily affirmation: "I use power wisely and serve the highest good." Practice gratitude meditation. | تذكير يومي: «أستعمل القوة بحكمة وأخدم الخير الأسمى». وتأمّل تأمّل الشكر. |
-| 3127 | AI-draft | Do one act of kindness without expecting return | اعمل معروفًا واحدًا دون انتظار مقابل |
-| 3128 | AI-draft | Spend quality time with loved ones | اقضِ وقتًا طيبًا مع أحبّتك |
-| 3129 | AI-draft | Lead with compassion in one situation this week | قُد برحمة في موقف واحد هذا الأسبوع |
-| 3130 | AI-draft | Avoid workaholism or equating worth with achievement. You are enough as you are. | تجنّب إدمان العمل أو قياس قيمتك بالإنجاز. فأنت كافٍ كما أنت. |
-| 3131 | AI-draft | Daily affirmation: "I serve with wisdom and boundaries." Practice loving-kindness meditation. | تذكير يومي: «أخدم بحكمة وحدود». وتأمّل تأمّل المحبّة والرحمة. |
-| 3132 | AI-draft | Set one clear boundary around your giving | ضع حدًّا واضحًا واحدًا لعطائك |
-| 3133 | AI-draft | Do one practical, grounded task | أنجز مهمّة عملية واحدة |
-| 3134 | AI-draft | Let go of one thing you can't control | تخلَّ عن أمر واحد لا تملكه |
-| 3135 | AI-draft | Practice receiving as well as giving | تدرّب على الأخذ كما تعطي |
-| 3136 | AI-draft | Avoid depletion from over-giving. You can't pour from an empty cup. | تجنّب النفاد من فرط العطاء. ففاقد الشيء لا يعطيه. |
-| 3137 | AI-draft | You are here to inspire, illuminate, and bring spiritual messages to humanity. | طريقك طريق الإلهام والإنارة وحمل المعاني الروحية إلى الناس. |
-| 3138 | AI-draft | Daily affirmation: "I am a vessel of light grounded in reality." Practice visualization and grounding. | تذكير يومي: «أنا وعاء للنور متجذّر في الواقع». وتدرّب على التصوّر والتجذّر. |
-| 3139 | AI-draft | Take one spiritual vision and create a practical first step | خذ رؤية روحية واحدة واصنع لها خطوة عملية أولى |
-| 3140 | AI-draft | Protect your energy - say no to energy vampires | احفظ طاقتك - وقل لا لمن يستنزفها |
-| 3141 | AI-draft | Share your insights with those ready to hear them | شارك أفكارك مع المستعدّين لسماعها |
-| 3142 | AI-draft | Trust divine timing instead of rushing | ثق بتوقيت الله بدل العجلة |
-| 3143 | AI-draft | Avoid spiritual escapism or feeling alienated. Ground your light in practical service. | تجنّب الهروب الروحي أو الشعور بالغربة. جذّر نورك في خدمة عملية. |
-| 3144 | AI-draft | You are here to build lasting structures and turn grand visions into tangible reality. | طريقك طريق بناء البنى الدائمة وتحويل الرؤى الكبيرة إلى واقع ملموس. |
-| 3145 | AI-draft | Daily affirmation: "I build step by step with patience." Practice mindful breathing when overwhelmed. | تذكير يومي: «أبني خطوة خطوة بصبر». وتنفّس بوعي حين يغلبك الضغط. |
-| 3146 | AI-draft | Delegate one task to someone else | فوّض مهمّة واحدة إلى غيرك |
-| 3147 | AI-draft | Rest when you need to - recovery fuels creation | استرح حين تحتاج - فالتعافي وقود الإنجاز |
-| 3148 | AI-draft | Be patient with the process - Rome wasn't built in a day | اصبر على المسار - فالأمور العظيمة لا تُبنى في يوم |
-| 3149 | AI-draft | Avoid overwhelm from the scale of your vision. Trust the process and start where you are. | تجنّب الإرهاق من حجم رؤيتك. ثق بالمسار وابدأ من حيث أنت. |
-| 3150 | AI-draft | Daily affirmation: "I teach from fullness, not depletion." Practice self-compassion meditation. | تذكير يومي: «أعلّم من امتلاء لا من نفاد». وتأمّل تأمّل الرفق بالنفس. |
-| 3151 | AI-draft | Release one responsibility that isn't yours to carry | تخلَّ عن مسؤولية واحدة ليست لك |
-| 3152 | AI-draft | Teach or guide while maintaining clear boundaries | علّم أو أرشد مع الحفاظ على حدود واضحة |
-| 3153 | AI-draft | Practice self-love with the same intensity you love others | أحبب نفسك بالقدر الذي تحبّ به الآخرين |
-| 3154 | AI-draft | Rest deeply - you need it more than most | استرح بعمق - فأنت تحتاج إلى ذلك أكثر من غيرك |
-| 3155 | AI-draft | Surah Al-Ikhlas 112:1 | سورة الإخلاص 112:1 |
-| 3156 | AI-draft | Life Path 1 embodies divine unity and singularity. Like Allah being Al-Ahad, you're called to stand independently in your truth and lead with authentic individuality. | مسار الحياة 1 يعكس معنى الوحدانية والتفرّد. وكما أن الله هو الأحد، فأنت مدعوّ إلى الثبات مستقلًّا على الحقّ والقيادة بفردية صادقة. |
-| 3157 | AI-draft | Recite Surah Al-Ikhlas 3 times after Fajr prayer to strengthen your connection to divine oneness and individual purpose. | اقرأ سورة الإخلاص ثلاث مرّات بعد صلاة الفجر لتقوية صلتك بالتوحيد وبغايتك الخاصة. |
-| 3158 | AI-draft | Surah Al-Ahqaf 46:15 | سورة الأحقاف 46:15 |
-| 3159 | AI-draft | Life Path 2 reflects divine gentleness and relational harmony. Like Al-Latif, you work through subtle kindness, diplomacy, and nurturing connections between people. | مسار الحياة 2 يعكس معنى اللطف والانسجام في العلاقات. وتخلّقًا باسم اللطيف تعمل بالرفق الخفيّ والدبلوماسية ورعاية الصلات بين الناس. |
-| 3160 | AI-draft | Recite "Ya Latif" 129 times after Asr prayer to cultivate divine gentleness in your relationships and mediation work. | اذكر «يا لطيف» 129 مرّة بعد صلاة العصر لتنمية اللطف في علاقاتك وسعيك في الإصلاح. |
-| 3161 | AI-draft | Surah Al-A'raf 7:176 | سورة الأعراف 7:176 |
-| 3162 | AI-draft | Life Path 3 channels divine expression through creative communication. Like Al-Khabir, you're gifted with awareness that must be shared through stories, art, and joyful expression. | مسار الحياة 3 يوجّه التعبير بالتواصل المبدع. وتخلّقًا باسم الخبير أوتيت وعيًا ينبغي أن تشاركه بالقصص والفنّ والتعبير البهيج. |
-| 3163 | AI-draft | After Maghrib, reflect on one story from the Quran and how it relates to your creative expression today. | بعد المغرب تأمّل قصة من قصص القرآن وصلتها بتعبيرك المبدع اليوم. |
-| 3164 | AI-draft | Surah Al-Anbiya 21:32 | سورة الأنبياء 21:32 |
-| 3165 | AI-draft | Life Path 4 embodies divine structure and preservation. Like Al-Hafiz, you build stable foundations, create order, and guard what is sacred through disciplined work. | مسار الحياة 4 يعكس معنى النظام والحفظ. وتخلّقًا باسم الحفيظ تبني أسسًا ثابتة، وتقيم النظام، وتحفظ المقدّس بالعمل المنضبط. |
-| 3166 | AI-draft | Perform your 5 daily prayers at their exact times to embody divine order and structure in your spiritual practice. | أدِّ الصلوات الخمس في أوقاتها لتتجلّى معاني النظام في عبادتك. |
-| 3167 | AI-draft | Surah An-Naba 78:8 | سورة النبأ 78:8 |
-| 3168 | AI-draft | Life Path 5 reflects divine creativity and adaptability. Like Al-Musawwir, you shape-shift through experiences, exploring the diverse forms of creation with freedom and curiosity. | مسار الحياة 5 يعكس معنى الإبداع والتكيّف. وتخلّقًا باسم المصوّر تتقلّب في التجارب، مستكشفًا صور الخلق المتنوّعة بحرية وفضول. |
-| 3169 | AI-draft | Before traveling or starting new experiences, recite "Bismillah" 5 times to invoke divine guidance through change. | قبل السفر أو بدء تجارب جديدة قل «بسم الله» خمس مرّات طالبًا هداية الله في التغيير. |
-| 3170 | AI-draft | Surah Al-Isra 17:24 | سورة الإسراء 17:24 |
-| 3171 | AI-draft | Life Path 6 embodies divine mercy and nurturing. Like Ar-Rahman, you extend unconditional compassion to family, community, and all who seek healing and harmony. | مسار الحياة 6 يعكس معنى الرحمة والرعاية. وتخلّقًا باسم الرحمن تبذل الرأفة للأسرة والمجتمع ولكل من يطلب الشفاء والانسجام. |
-| 3172 | AI-draft | Begin each day by reciting "Bismillah Ar-Rahman Ar-Rahim" and setting an intention to serve your family or community with mercy. | ابدأ كل يوم بـ«بسم الله الرحمن الرحيم» وانوِ خدمة أسرتك أو مجتمعك برحمة. |
-| 3173 | AI-draft | Surah Ali 'Imran 3:190 | سورة آل عمران 3:190 |
-| 3174 | AI-draft | Life Path 7 seeks divine wisdom through contemplation. Like Al-Hakim, you're called to study the signs, dive deep into mysteries, and uncover sacred knowledge through spiritual inquiry. | مسار الحياة 7 يطلب الحكمة بالتأمّل. وتخلّقًا باسم الحكيم أنت مدعوّ إلى تدبّر الآيات والغوص في الأسرار وطلب العلم بالبحث الروحي. |
-| 3175 | AI-draft | Spend 7 minutes after Fajr in silent contemplation (muraqaba) reflecting on the signs of Allah in creation. | اقضِ سبع دقائق بعد الفجر في مراقبة صامتة تتفكّر في آيات الله في الخلق. |
-| 3176 | AI-draft | Surah Ali 'Imran 3:189 | سورة آل عمران 3:189 |
-| 3177 | AI-draft | Life Path 8 manifests divine authority and abundance. Like Al-Malik, you're entrusted with power, resources, and leadership to establish justice and prosperity in the material realm. | مسار الحياة 8 يعكس معنى السلطان والوفرة. وتخلّقًا باسم الملك أنت مؤتمن على القوة والموارد والقيادة لإقامة العدل والرخاء في عالم المادة. |
-| 3178 | AI-draft | Recite "Ya Malik" 90 times on Fridays to align your material success with divine sovereignty and ethical leadership. | اذكر «يا ملك» 90 مرّة يوم الجمعة لتوافق نجاحك المادي مع الأمانة والقيادة الأخلاقية. |
-| 3179 | AI-draft | Surah Al-Baqarah 2:195 | سورة البقرة 2:195 |
-| 3180 | AI-draft | Life Path 9 embodies divine generosity and completion. Like Al-Karim, you're called to give selflessly, serve humanity, and complete karmic cycles through compassionate service. | مسار الحياة 9 يعكس معنى الكرم والتمام. وتخلّقًا باسم الكريم أنت مدعوّ إلى العطاء بإيثار وخدمة الناس وإتمام الدورات بخدمة رحيمة. |
-| 3181 | AI-draft | Give charity (sadaqah) every day, even if small, and recite "Alhamdulillah" 9 times to embody divine generosity. | تصدّق كل يوم ولو بقليل، وقل «الحمد لله» تسع مرّات تخلّقًا بالكرم. |
-| 3182 | AI-draft | Surah An-Nur 24:35 | سورة النور 24:35 |
-| 3183 | AI-draft | Master Number 11 channels divine illumination. Like An-Nur, you're a spiritual lighthouse meant to inspire, uplift, and guide others toward enlightenment through your heightened intuition. | العدد الأستاذ 11 يحمل معنى الإنارة. وتخلّقًا باسم النور أنت منارة روحية تُلهم الآخرين وترفعهم وترشدهم بحدسك المرهف. |
-| 3184 | AI-draft | Recite Ayat an-Nur (24:35) during Tahajjud prayer to strengthen your connection to divine light and spiritual vision. | اقرأ آية النور (24:35) في صلاة التهجّد لتقوية صلتك بالنور والبصيرة. |
-| 3185 | AI-draft | Surah Al-Anbiya 21:30 | سورة الأنبياء 21:30 |
-| 3186 | AI-draft | Al-Bani (The Builder, The Architect) | الباني (البنّاء) |
-| 3187 | AI-draft | Master Number 22 builds divine vision into material reality. Like Al-Bani, you're the master architect capable of constructing systems, institutions, and legacies that serve humanity for generations. | العدد الأستاذ 22 يحوّل الرؤية إلى واقع ملموس. أنت البنّاء المتقن القادر على إقامة أنظمة ومؤسّسات وآثار تخدم الناس أجيالًا. |
-| 3188 | AI-draft | Before major projects, perform 2 rakat Salat al-Istikhara asking Allah to guide your building and manifestation work. | قبل المشاريع الكبيرة صلِّ ركعتي الاستخارة سائلًا الله أن يرشد عملك. |
-| 3189 | AI-draft | Surah Al-Baqarah 2:153 | سورة البقرة 2:153 |
-| 3190 | AI-draft | Master Number 33 embodies divine compassion and mastery through sacrifice. Like As-Sabur, you're called to serve as a spiritual teacher and healer, patiently uplifting all beings with universal love. | العدد الأستاذ 33 يعكس معنى الرحمة والإتقان بالتضحية. وتخلّقًا باسم الصبور أنت مدعوّ إلى أن تكون معلّمًا ومداويًا روحيًا ترفع الناس بصبر ومحبّة شاملة. |
-| 3191 | AI-draft | Practice sabr (patience) consciously in 3 situations daily, and recite "Ya Sabur" 33 times after Isha to embody divine patience in your teaching. | تحلَّ بالصبر عن وعي في ثلاثة مواقف كل يوم، واذكر «يا صبور» 33 مرّة بعد العشاء. |
-| 3192 | AI-draft | New Beginnings & Independence | البدايات الجديدة والاستقلال |
-| 3193 | AI-draft | Personal goals | الأهداف الشخصية |
-| 3194 | AI-draft | Express your vision | عبّر عن رؤيتك |
-| 3195 | AI-draft | Adapt and explore | تكيّف واستكشف |
-| 3196 | AI-draft | Nurture growth | ارعَ النموّ |
-| 3197 | AI-draft | Reflect and refine | تأمّل وهذّب |
-| 3198 | AI-draft | Define clear personal goals | حدّد أهدافًا شخصية واضحة |
-| 3199 | AI-draft | Collaboration | التعاون |
-| 3200 | AI-draft | Connect with others | تواصل مع الآخرين |
-| 3201 | AI-draft | Deepen partnerships | عمّق الشراكات |
-| 3202 | AI-draft | Communicate harmoniously | تواصل بانسجام |
-| 3203 | AI-draft | Build together | ابنوا معًا |
-| 3204 | AI-draft | Adapt as a team | تكيّفوا فريقًا |
-| 3205 | AI-draft | Serve relationships | اخدم العلاقات |
-| 3206 | AI-draft | Understand deeply | افهم بعمق |
-| 3207 | AI-draft | Manifest through unity | حقّق بالوحدة |
-| 3208 | AI-draft | Complete collaborations | أتمّ أعمال التعاون |
-| 3209 | AI-draft | Seek win-win solutions | اطلب حلولًا ينتفع بها الطرفان |
-| 3210 | AI-draft | Practice active listening | تدرّب على الإصغاء الفعّال |
-| 3211 | AI-draft | Join a partnership or team | انضمّ إلى شراكة أو فريق |
-| 3212 | AI-draft | Creativity & Self-Expression | الإبداع والتعبير عن الذات |
-| 3213 | AI-draft | Create something new | اصنع شيئًا جديدًا |
-| 3214 | AI-draft | Share your ideas | شارك أفكارك |
-| 3215 | AI-draft | Express fully | عبّر بكمال |
-| 3216 | AI-draft | Explore diverse expressions | استكشف أشكال تعبير متنوّعة |
-| 3217 | AI-draft | Create for others | اصنع للآخرين |
-| 3218 | AI-draft | Refine your craft | هذّب صنعتك |
-| 3219 | AI-draft | Manifest creations | حقّق إبداعاتك |
-| 3220 | AI-draft | Complete creative projects | أتمّ المشاريع الإبداعية |
-| 3221 | AI-draft | Start a creative project | ابدأ مشروعًا إبداعيًا |
-| 3222 | AI-draft | Speak your truth | قل حقيقتك |
-| 3223 | AI-draft | Attend social events | احضر المناسبات الاجتماعية |
-| 3224 | AI-draft | Lay the groundwork | مهّد الأرض |
-| 3225 | AI-draft | Collaborate on systems | تعاون على الأنظمة |
-| 3226 | AI-draft | Communicate plans | أعلن خططك |
-| 3227 | AI-draft | Build methodically | ابنِ بمنهجية |
-| 3228 | AI-draft | Adjust your approach | عدّل نهجك |
-| 3229 | AI-draft | Serve through structure | اخدم بالتنظيم |
-| 3230 | AI-draft | Complete foundations | أتمّ الأسس |
-| 3231 | AI-draft | Create a detailed plan | ضع خطة مفصّلة |
-| 3232 | AI-draft | Establish routines and systems | أقم عادات وأنظمة |
-| 3233 | AI-draft | Improve health and finances | حسّن الصحّة والمال |
-| 3234 | AI-draft | Stay disciplined and focused | ابقَ منضبطًا مركّزًا |
-| 3235 | AI-draft | Freedom & Change | الحرية والتغيير |
-| 3236 | AI-draft | This year brings unexpected changes, travel, and new experiences. Embrace variety and stay flexible. | تجلب هذه السنة تغيّرات غير متوقّعة وسفرًا وتجارب جديدة. تقبّل التنوّع وابقَ مرنًا. |
-| 3237 | AI-draft | Initiate change | ابدأ التغيير |
-| 3238 | AI-draft | Navigate transitions together | اجتازوا التحوّلات معًا |
-| 3239 | AI-draft | Express your freedom | عبّر عن حريتك |
-| 3240 | AI-draft | Create flexible structures | اصنع بنى مرنة |
-| 3241 | AI-draft | Embrace full freedom | اغتنم الحرية كاملة |
-| 3242 | AI-draft | Release what's complete | دَع ما اكتمل |
-| 3243 | AI-draft | Travel or explore | سافر أو استكشف |
-| 3244 | AI-draft | Break old patterns | اكسر الأنماط القديمة |
-| 3245 | AI-draft | Responsibility & Service | المسؤولية والخدمة |
-| 3246 | AI-draft | This year focuses on family, home, and caring for others. Step into responsibilities with love. | تركّز هذه السنة على الأسرة والبيت ورعاية الآخرين. تحمّل المسؤوليات بمحبّة. |
-| 3247 | AI-draft | Start caring initiatives | ابدأ مبادرات رعاية |
-| 3248 | AI-draft | Harmonize relationships | أصلِح العلاقات |
-| 3249 | AI-draft | Express love | عبّر عن المحبّة |
-| 3250 | AI-draft | Build a stable home | ابنِ بيتًا مستقرًّا |
-| 3251 | AI-draft | Serve fully | اخدم بكمال |
-| 3252 | AI-draft | Manifest through caring | حقّق بالرعاية |
-| 3253 | AI-draft | Complete family matters | أتمّ شؤون الأسرة |
-| 3254 | AI-draft | Strengthen family bonds | قوِّ روابط الأسرة |
-| 3255 | AI-draft | Create a nurturing home | اصنع بيتًا راعيًا |
-| 3256 | AI-draft | Help those in need | أعِن المحتاجين |
-| 3257 | AI-draft | Take on more responsibility | تحمّل مسؤولية أكبر |
-| 3258 | AI-draft | Practice unconditional love | تدرّب على المحبّة غير المشروطة |
-| 3259 | AI-draft | Reflection & Inner Growth | التأمّل والنموّ الباطن |
-| 3260 | AI-draft | This year calls for introspection, study, and spiritual development. Go inward to find answers. | تدعو هذه السنة إلى محاسبة النفس والدراسة والنموّ الروحي. ارجع إلى داخلك لتجد الأجوبة. |
-| 3261 | AI-draft | Begin inner journey | ابدأ الرحلة الباطنة |
-| 3262 | AI-draft | Seek deeper connections | اطلب صلات أعمق |
-| 3263 | AI-draft | Express your insights | عبّر عن بصائرك |
-| 3264 | AI-draft | Build spiritual practices | ابنِ ممارسات روحية |
-| 3265 | AI-draft | Serve through wisdom | اخدم بالحكمة |
-| 3266 | AI-draft | Dive deep within | غُص في داخلك |
-| 3267 | AI-draft | Release old beliefs | تخلَّ عن المعتقدات القديمة |
-| 3268 | AI-draft | Meditate or pray daily | تأمّل أو ادعُ كل يوم |
-| 3269 | AI-draft | Study a spiritual topic | ادرس موضوعًا روحيًا |
-| 3270 | AI-draft | Journal your insights | دوّن بصائرك |
-| 3271 | AI-draft | Power & Manifestation | القوة والتحقيق |
-| 3272 | AI-draft | This year is about achieving goals, building wealth, and stepping into your power. Think big and take action. | هذه السنة سنة تحقيق الأهداف وبناء الثروة والقيام بقوّتك. فكّر بسعة واعمل. |
-| 3273 | AI-draft | Initiate big goals | ابدأ أهدافًا كبيرة |
-| 3274 | AI-draft | Build powerful alliances | ابنِ تحالفات قوية |
-| 3275 | AI-draft | Communicate your vision | أعلن رؤيتك |
-| 3276 | AI-draft | Create wealth foundations | أقم أسس الثروة |
-| 3277 | AI-draft | Adapt your strategy | عدّل استراتيجيتك |
-| 3278 | AI-draft | Plan strategically | خطّط استراتيجيًا |
-| 3279 | AI-draft | Manifest abundance | حقّق الوفرة |
-| 3280 | AI-draft | Complete major projects | أتمّ المشاريع الكبرى |
-| 3281 | AI-draft | Set ambitious financial goals | ضع أهدافًا مالية طموحة |
-| 3282 | AI-draft | Step into leadership | تقدّم إلى القيادة |
-| 3283 | AI-draft | Completion & Humanitarianism | الإتمام والعمل الإنساني |
-| 3284 | AI-draft | Release | التخلّي |
-| 3285 | AI-draft | Begin completing cycles | ابدأ إتمام الدورات |
-| 3286 | AI-draft | Release relationships gently | أنهِ العلاقات برفق |
-| 3287 | AI-draft | Express forgiveness | عبّر عن العفو |
-| 3288 | AI-draft | Dismantle old structures | فكّك البنى القديمة |
-| 3289 | AI-draft | Let go freely | تخلَّ بحرية |
-| 3290 | AI-draft | Understand endings | افهم الخواتيم |
-| 3291 | AI-draft | Release attachment | تخلَّ عن التعلّق |
-| 3292 | AI-draft | Complete and prepare for new | أتمّ واستعدّ للجديد |
-| 3293 | AI-draft | Forgive and let go | اعفُ وتخلَّ |
-| 3294 | AI-draft | Donate or declutter | تصدّق أو تخفّف من الأشياء |
-| 3295 | AI-draft | Serve a cause greater than yourself | اخدم قضية أكبر منك |
-| 3296 | AI-draft | Complete unfinished projects | أتمّ المشاريع غير المنتهية |
-| 3297 | AI-draft | In past lives, you may have been lazy, avoided responsibility, or manipulated others to do your work. You took shortcuts and left projects incomplete. | ربما ملت في مراحل سابقة إلى الكسل أو التهرّب من المسؤولية أو جعل غيرك يعمل عنك، فسلكت الطرق المختصرة وتركت المشاريع ناقصة. |
-| 3298 | AI-draft | Nothing comes easy. You must work harder than others for the same results. Obstacles test your commitment. Laziness or negativity brings immediate consequences. | لا شيء يأتي بسهولة. قد تحتاج إلى جهد أكبر من غيرك لنتائج مماثلة، والعقبات تختبر التزامك، والكسل أو السلبية يعقبهما أثر سريع. |
-| 3299 | AI-draft | Develop unwavering discipline and work ethic | نمِّ انضباطًا راسخًا وأخلاق عمل متينة |
-| 3300 | AI-draft | Transform obstacles into stepping stones | حوّل العقبات إلى درجات صعود |
-| 3301 | AI-draft | Once mastered, Karmic Debt 13/4 becomes the most resilient builder. Your struggles become your strength. You inspire others by showing that persistence conquers all. | إذا أُتقن، صار الدَّين الكرمي 13/4 أصلب البنّائين. فتصبح معاناتك قوّتك، وتُلهم الآخرين بأن المثابرة تغلب كل شيء. |
-| 3302 | AI-draft | Perform Salat al-Tahajjud (night prayer) regularly. The discipline of waking before dawn mirrors your karmic lesson of self-mastery through consistent effort. | داوِم على صلاة التهجّد. فانضباط القيام قبل الفجر يعكس درسك في تهذيب النفس بالجهد الدائم. |
-| 3303 | AI-draft | Unshakeable foundation-building. You become the person others turn to when the going gets tough because you've mastered endurance. | بناء أسس لا تتزعزع. تصبح من يلجأ إليه الناس عند الشدّة لأنك أتقنت الصبر. |
-| 3304 | AI-draft | In previous incarnations, you abused freedom and indulged excessively in physical pleasures, substances, or reckless behavior. You harmed your body and disrespected sacred boundaries. | ربما ملت في مراحل سابقة إلى إساءة استعمال الحرية والإفراط في الملذّات البدنية أو المواد أو السلوك المتهوّر، فأضررت ببدنك وتجاوزت الحدود. |
-| 3305 | AI-draft | You're prone to addiction, restlessness, and self-destructive patterns. Freedom becomes chaos without discipline. Your body is more sensitive to toxins and imbalance. | قد تكون عرضة للإدمان والقلق والأنماط المؤذية للنفس. فالحرية تصير فوضى بلا انضباط، وبدنك أكثر حساسية للسموم واختلال التوازن. |
-| 3306 | AI-draft | Respect your body as a sacred trust (amanah) | احترم بدنك فهو أمانة |
-| 3307 | AI-draft | Channel restlessness into constructive exploration | وجّه القلق إلى استكشاف بنّاء |
-| 3308 | AI-draft | Distinguish true freedom from mere escape | ميّز الحرية الحقّة من مجرّد الهروب |
-| 3309 | AI-draft | Mastered 14/5 becomes the adaptable adventurer who finds freedom through discipline. You teach others that true liberation comes from self-control, not indulgence. | إذا أُتقن 14/5 صار المغامر المتكيّف الذي يجد الحرية في الانضباط، ويعلّم غيره أن التحرّر الحقّ من ضبط النفس لا من الإفراط. |
-| 3310 | AI-draft | Fast regularly (not just Ramadan) to train your body in discipline. Practice mindful eating and make dua before consuming anything, honoring the body as Allah's trust. | صُم تطوّعًا بانتظام (لا في رمضان وحده) لتعوّد بدنك الانضباط. وكُل بوعي وسمِّ الله قبل الطعام، إكرامًا للبدن أمانة الله. |
-| 3311 | AI-draft | Notice when "just one more" becomes a pattern. Any time you justify excess, pause and reconnect with balance. | انتبه حين يصير «واحد آخر فقط» عادة. وكلّما برّرت الإفراط فتوقّف وعُد إلى التوازن. |
-| 3312 | AI-draft | Conscious freedom. You show others how to experience life fully without losing themselves, becoming a guide for healthy exploration. | حرية واعية. تُري الآخرين كيف يعيشون الحياة كاملة دون أن يضيّعوا أنفسهم، فتصبح دليلًا للاستكشاف الصحّي. |
-| 3313 | AI-draft | In past lives, you may have abused spiritual knowledge, engaged in illicit relationships, or misused intimacy and trust. Pride and ego led to your downfall from a position of power. | ربما ملت في مراحل سابقة إلى إساءة استعمال المعرفة الروحية أو العلاقات المحرّمة أو خيانة الثقة، فأوقعك الكِبر من موقع قوة. |
-| 3314 | AI-draft | Sudden, unexpected upheavals shatter your illusions. Just when you feel secure, life humbles you. Relationships may involve betrayal or karmic patterns. Your ego must be broken to rebuild on truth. | قد تهزّ تقلّبات مفاجئة أوهامك؛ فحين تشعر بالأمان تذكّرك الحياة بالتواضع. وقد تتكرّر في العلاقات خيانة أو أنماط مؤلمة. والأنا ينبغي أن تُكسر لتبني على الحقّ. |
-| 3315 | AI-draft | Surrender ego and embrace humility | تخلَّ عن الأنا وتحلَّ بالتواضع |
-| 3316 | AI-draft | Welcome sudden changes as spiritual purification | استقبل التغيّرات المفاجئة تزكيةً للنفس |
-| 3317 | AI-draft | Honor sacred boundaries in relationships | احترم الحدود الشرعية في العلاقات |
-| 3318 | AI-draft | Transform pride into divine devotion | حوّل الكِبر إلى عبودية لله |
-| 3319 | AI-draft | Mastered 16/7 becomes the enlightened mystic. Your breakdowns become breakthroughs. You gain profound spiritual wisdom through surrender and emerge as a humble spiritual teacher. | إذا أُتقن 16/7 صار صاحب بصيرة روحية، وتصبح انكساراتك فتوحًا، وتنال حكمة عميقة بالتسليم فتصير معلّمًا متواضعًا. |
-| 3320 | AI-draft | Perform sujud (prostration) outside of prayer as an act of surrender. Recite "La hawla wa la quwwata illa billah" (There is no power except with Allah) to dissolve ego. | اسجد لله خارج الصلاة تسليمًا، وقل «لا حول ولا قوة إلا بالله» لإذابة الأنا. |
-| 3321 | AI-draft | When you feel "too comfortable" or your ego inflates, expect a humbling lesson. Stay grounded in spiritual practice before the tower falls. | حين تشعر بأنك «مرتاح جدًا» أو تنتفخ أناك، فتوقّع درسًا في التواضع، والزم عبادتك قبل أن يهوي البناء. |
-| 3322 | AI-draft | Divine humility and spiritual depth. You become unshakeable because you've learned that ego is the only thing that can be destroyed, and your true self is eternal. | تواضع وعمق روحي. تصبح راسخًا لأنك تعلّمت أن الأنا وحدها هي التي تنهدم. |
-| 3323 | AI-draft | In previous lives, you abused power and position. You were likely a tyrant, dictator, or selfish leader who manipulated others for personal gain and showed no compassion for those beneath you. | ربما ملت في مراحل سابقة إلى إساءة استعمال السلطة والمكانة، والتسلّط على الناس لمصلحتك دون رحمة بمن هم دونك. |
-| 3324 | AI-draft | You resist asking for or accepting help from others. Deep fear of being controlled or dependent. You must learn to lead while also being vulnerable and receiving support. | تقاوم طلب العون أو قبوله، وتخاف بعمق من أن تُقاد أو تعتمد على غيرك. فعليك أن تتعلّم القيادة مع الانكشاف وقبول السند. |
-| 3325 | AI-draft | Balance independence with healthy interdependence | وازِن الاستقلال بحاجة صحّية إلى الآخرين |
-| 3326 | AI-draft | Lead with compassion, not dominance | قُد بالرحمة لا بالتسلّط |
-| 3327 | AI-draft | Give others credit and share power | انسب الفضل لأهله وشارك السلطة |
-| 3328 | AI-draft | Serve others while honoring your own needs | اخدم الآخرين مع إكرام حاجاتك |
-| 3329 | AI-draft | Practice servant leadership. Volunteer to serve in your community, washing dishes at the mosque or helping elders, to dissolve the ego of superiority. | تدرّب على القيادة بالخدمة. تطوّع في مجتمعك، كغسل الأواني في المسجد أو إعانة الكبار، لإذابة أنا الاستعلاء. |
-| 3330 | AI-draft | When you refuse help or feel superior to others, recognize this as your karmic pattern resurfacing. Consciously choose humility and connection. | حين ترفض العون أو تشعر بالتفوّق على غيرك فاعلم أن نمطك القديم يعود، واختر التواضع والتواصل عن وعي. |
-| 3331 | AI-draft | Empowered leadership through service. You become a leader who lifts others up, understanding that true power comes from empowering, not dominating. | قيادة قوية بالخدمة. تصبح قائدًا يرفع الآخرين، مدركًا أن القوة الحقّة في التمكين لا في التسلّط. |
-| 3332 | AI-draft | Both driven and ambitious | كلاكما طموح مندفع |
-| 3333 | AI-draft | Both want to lead | كلاكما يريد القيادة |
-| 3334 | AI-draft | Ego clashes | صدام الأنا |
-| 3335 | AI-draft | Take turns leading. Collaborate on shared projects where each has their domain of authority. | تناوبا القيادة، وتعاونا في مشاريع مشتركة لكلٍّ منكما فيها مجال صلاحيته. |
-| 3336 | AI-draft | 1 leads, 2 supports gracefully | 1 يقود، و2 يساند بلطف |
-| 3337 | AI-draft | Complementary strengths | قوى متكاملة |
-| 3338 | AI-draft | 2 softens 1's edges | 2 يليّن حدّة 1 |
-| 3339 | AI-draft | 1 may dominate | قد يطغى 1 |
-| 3340 | AI-draft | 2 may feel overshadowed | قد يشعر 2 بأنه مغمور |
-| 3341 | AI-draft | 1 can be insensitive to 2's needs | قد يغفل 1 عن حاجات 2 |
-| 3342 | AI-draft | 1: Value 2's input and emotional intelligence. 2: Speak up for your needs clearly. | 1: قدّر رأي 2 وذكاءه العاطفي. 2: عبّر عن حاجاتك بوضوح. |
-| 3343 | AI-draft | Dynamic duo! 1's drive meets 3's creativity for exciting partnerships. | ثنائي حيوي! اندفاع 1 يلتقي بإبداع 3 لشراكات مثيرة. |
-| 3344 | AI-draft | 3 can be scattered | قد يتشتّت 3 |
-| 3345 | AI-draft | Different work styles | أساليب عمل مختلفة |
-| 3346 | AI-draft | 1: Let 3 bring playfulness to your goals. 3: Match 1's focus when it matters. | 1: دع 3 يضفي المرح على أهدافك. 3: جارِ تركيز 1 حين يلزم. |
-| 3347 | AI-draft | Adventure partners! Both love freedom and new experiences. | رفيقا مغامرة! كلاكما يحبّ الحرية والتجارب الجديدة. |
-| 3348 | AI-draft | Exciting and dynamic | مثير وحيوي |
-| 3349 | AI-draft | Both avoid routine | كلاكما يتجنّب الروتين |
-| 3350 | AI-draft | May grow apart | قد يتباعدان |
-| 3351 | AI-draft | Create shared adventures while maintaining individual pursuits. Schedule quality time. | اصنعا مغامرات مشتركة مع الحفاظ على مساعيكما الفردية، وخصّصا وقتًا طيبًا معًا. |
-| 3352 | AI-draft | Beginning meets ending. 1's self-focus clashes with 9's universal love. | البداية تلتقي بالنهاية. تركيز 1 على ذاته يصطدم بمحبّة 9 الشاملة. |
-| 3353 | AI-draft | 9's wisdom guides 1's ambition | حكمة 9 ترشد طموح 1 |
-| 3354 | AI-draft | Both are leaders | كلاكما قائد |
-| 3355 | AI-draft | 1 is self-focused, 9 is universal | 1 متمركز حول ذاته، و9 شامل |
-| 3356 | AI-draft | Different priorities | أولويات مختلفة |
-| 3357 | AI-draft | 9 may find 1 selfish | قد يرى 9 أن 1 أناني |
-| 3358 | AI-draft | Gentle, supportive partnership built on emotional understanding. | شراكة لطيفة داعمة مبنية على التفاهم العاطفي. |
-| 3359 | AI-draft | Lack of direction | غياب الوجهة |
-| 3360 | AI-draft | May be too passive | قد يكونان سلبيّين جدًا |
-| 3361 | AI-draft | Take turns being the initiator. Practice healthy conflict resolution together. | تناوبا المبادرة، وتدرّبا معًا على حلّ الخلاف حلًّا صحّيًا. |
-| 3362 | AI-draft | Divine balance of material and emotional. Power couple potential! | توازن بين المادي والعاطفي. إمكانات ثنائي قوي! |
-| 3363 | AI-draft | 2 supports 8's ambitions | 2 يساند طموحات 8 |
-| 3364 | AI-draft | 8 provides security for 2 | 8 يوفّر الأمان لـ 2 |
-| 3365 | AI-draft | Yin-yang perfection | تكامل الضدّين |
-| 3366 | AI-draft | 8 can be domineering | قد يتسلّط 8 |
-| 3367 | AI-draft | 2 may feel controlled | قد يشعر 2 بأنه مقيَّد |
-| 3368 | AI-draft | Creative explosion! Life is a joyful party with these two. | انفجار إبداعي! الحياة مع هذين احتفال بهيج. |
-| 3369 | AI-draft | Endless fun and laughter | مرح وضحك بلا نهاية |
-| 3370 | AI-draft | Shared creative vision | رؤية إبداعية مشتركة |
-| 3371 | AI-draft | Financial irresponsibility | عدم المسؤولية المالية |
-| 3372 | AI-draft | Too scattered | تشتّت مفرط |
-| 3373 | AI-draft | Hire a 4 or 8 to handle practical matters. Schedule 'responsibility time' together. | استعينا بـ 4 أو 8 للشؤون العملية، وخصّصا «وقت مسؤولية» معًا. |
-| 3374 | AI-draft | Solid, stable, predictable. Security-focused partnership. | متين، مستقرّ، متوقَّع. شراكة تركّز على الأمان. |
-| 3375 | AI-draft | Ultimate stability | ثبات تامّ |
-| 3376 | AI-draft | Shared values | قيم مشتركة |
-| 3377 | AI-draft | Too much routine | روتين مفرط |
-| 3378 | AI-draft | Lack of spontaneity | قلّة العفوية |
-| 3379 | AI-draft | Schedule fun and adventure. Push each other out of comfort zones occasionally. | خصّصا وقتًا للمرح والمغامرة، وادفعا بعضكما خارج منطقة الراحة أحيانًا. |
-| 3380 | AI-draft | Wild adventure! Exciting but potentially unstable. | مغامرة جامحة! مثيرة لكنها قد تكون غير مستقرّة. |
-| 3381 | AI-draft | Never boring | لا ملل أبدًا |
-| 3382 | AI-draft | Freedom to explore | حرية الاستكشاف |
-| 3383 | AI-draft | Adventurous spirit | روح مغامرة |
-| 3384 | AI-draft | Create grounding rituals. Have one stable anchor (home, routine) while exploring freely. | اصنعا عادات تجذّر، واجعلا لكما مرسى ثابتًا (بيتًا أو روتينًا) وأنتما تستكشفان بحرية. |
-| 3385 | AI-draft | Nurturing paradise. Home and family are the center of everything. | جنّة الرعاية. البيت والأسرة محور كل شيء. |
-| 3386 | AI-draft | Beautiful home life | حياة بيتية جميلة |
-| 3387 | AI-draft | Shared values of service | قيم مشتركة في الخدمة |
-| 3388 | AI-draft | Emotionally supportive | سند عاطفي |
-| 3389 | AI-draft | Martyrdom tendency | ميل إلى التضحية المفرطة |
-| 3390 | AI-draft | Neglect personal growth | إهمال النموّ الشخصي |
-| 3391 | AI-draft | Codependency risk | خطر الاعتماد المتبادل المفرط |
-| 3392 | AI-draft | Deep spiritual connection but may lack warmth. Intellectual soulmates. | صلة روحية عميقة قد ينقصها الدفء. رفيقا روح فكريّان. |
-| 3393 | AI-draft | Profound understanding | فهم عميق |
-| 3394 | AI-draft | Respect for solitude | احترام الخلوة |
-| 3395 | AI-draft | Emotional distance | بعد عاطفي |
-| 3396 | AI-draft | Too much alone time | خلوة مفرطة |
-| 3397 | AI-draft | Isolation from world | عزلة عن العالم |
-| 3398 | AI-draft | Schedule quality connection time. Balance spiritual pursuits with emotional intimacy. | خصّصا وقتًا للتواصل الطيّب، ووازنا المساعي الروحية بالقرب العاطفي. |
-| 3399 | AI-draft | Power couple or power struggle. Both want control and success. | ثنائي قوي أو صراع على القوة. كلاكما يريد السيطرة والنجاح. |
-| 3400 | AI-draft | Shared ambition | طموح مشترك |
-| 3401 | AI-draft | Workaholism | إدمان العمل |
-| 3402 | AI-draft | Neglect emotional/spiritual | إهمال الجانب العاطفي والروحي |
-| 3403 | AI-draft | Collaborate, don't compete. Remember success means nothing without love and spirituality. | تعاونا ولا تتنافسا. وتذكّرا أن النجاح لا معنى له بلا محبّة وروحانية. |
-| 3404 | AI-draft | Shared humanitarian vision | رؤية إنسانية مشتركة |
-| 3405 | AI-draft | Spiritual unity | وحدة روحية |
-| 3406 | AI-draft | Giving until empty | العطاء حتى النفاد |
-| 3407 | AI-draft | Neglecting practical needs | إهمال الحاجات العملية |
-| 3408 | AI-draft | Set boundaries. Serve the world but also honor your personal needs and rest. | ضعا حدودًا. اخدما العالم وأكرِما أيضًا حاجاتكما وراحتكما. |
-| 3409 | AI-draft | Divine spiritual connection. Twin flames with shared mission. | صلة روحية عميقة. روحان برسالة مشتركة. |
-| 3410 | AI-draft | Spiritual telepathy | تفاهم روحي بلا كلام |
-| 3411 | AI-draft | Inspire each other | يُلهم كلٌّ منكما الآخر |
-| 3412 | AI-draft | Shared higher purpose | غاية عليا مشتركة |
-| 3413 | AI-draft | Intensity overload | فرط الشدّة |
-| 3414 | AI-draft | Anxiety amplified | قلق مضاعف |
-| 3415 | AI-draft | Grounding needed | يلزم التجذّر |
-| 3416 | AI-draft | Ground together daily. Balance spiritual highs with earthly practices. | تجذّرا معًا كل يوم، ووازنا لحظات السموّ الروحي بممارسات أرضية. |
-| 3417 | AI-draft | Master builders creating legacy together. Practical visionaries. | بنّاءان متقنان يصنعان إرثًا معًا. صاحبا رؤية عمليّان. |
-| 3418 | AI-draft | Shared grand vision | رؤية كبيرة مشتركة |
-| 3419 | AI-draft | Practical manifestation | تحقيق عملي |
-| 3420 | AI-draft | Ultimate spiritual teachers and healers. Heavy karmic responsibility. | معلّمان ومداويان روحيّان. مسؤولية ثقيلة. |
-| 3421 | AI-draft | Unconditional love | محبّة غير مشروطة |
-| 3422 | AI-draft | Transformative healing | شفاء تحويلي |
-| 3423 | AI-draft | Overwhelming responsibility | مسؤولية مرهقة |
-| 3424 | AI-draft | Self-sacrifice to detriment | تضحية بالنفس إلى حدّ الضرر |
-| 3425 | AI-draft | Requires compromise | يتطلّب تنازلًا |
-| 3426 | AI-draft | Cycle Timeline | الخطّ الزمني للدورات |
-| 3427 | AI-draft | Invalid buruj remainder: | باقي البروج غير صالح: |
-| 3428 | AI-draft | Buruj profile not found for remainder | لم يُعثر على ملفّ البرج لهذا الباقي |
-| 3429 | AI-draft | Mother name is required | اسم الأم مطلوب |
-| 3430 | AI-draft | Invalid date of birth | تاريخ ميلاد غير صالح |
-| 3431 | AI-draft | Optimism | التفاؤل |
-| 3432 | AI-draft | Practicality | الواقعية |
-| 3433 | AI-draft | Determination | العزيمة |
-| 3434 | AI-draft | Trustworthiness | الأمانة |
-| 3435 | AI-draft | Resourcefulness | سعة الحيلة |
-| 3436 | AI-draft | Spiritual depth | العمق الروحي |
-| 3437 | AI-draft | Mysticism | التصوّف |
-| 3438 | AI-draft | Ambition | الطموح |
-| 3439 | AI-draft | Material success | النجاح المادي |
-| 3440 | AI-draft | Karma | الجزاء (الكارما) |
-| 3441 | AI-draft | Service to others | خدمة الآخرين |
-| 3442 | AI-draft | Face the qibla | استقبل القبلة |
-| 3443 | AI-draft | End with duʿāʾ | اختم بالدعاء |
-| 3444 | AI-draft | The Most Compassionate | الرحيم |
-| 3445 | AI-draft | The King, The Sovereign | الملك |
-| 3446 | AI-draft | The Most Holy, The Pure | القدّوس |
-| 3447 | AI-draft | The Giver of Faith and Security | المؤمن |
-| 3448 | AI-draft | The Guardian, The Protector | المهيمن |
-| 3449 | AI-draft | The Almighty, The Mighty | العزيز |
-| 3450 | AI-draft | The Compeller, The Irresistible | الجبّار |
-| 3451 | AI-draft | The Supreme in Greatness | المتكبّر |
-| 3452 | AI-draft | The Evolver, The Maker | البارئ |
-| 3453 | AI-draft | The Fashioner, The Shaper | المصوّر |
-| 3454 | AI-draft | The Ever-Forgiving | الغفّار |
-| 3455 | AI-draft | The Subduer, The Dominant | القهّار |
-| 3456 | AI-draft | The Opener, The Judge | الفتّاح |
-| 3457 | AI-draft | The Constrictor, The Withholder | القابض |
-| 3458 | AI-draft | The Expander, The Reliever | الباسط |
-| 3459 | AI-draft | The Abaser, The Humbler | الخافض |
-| 3460 | AI-draft | The Utterly Just | العدل |
-| 3461 | AI-draft | The Subtle, The Gentle | اللطيف |
-| 3462 | AI-draft | The Forbearing, The Clement | الحليم |
-| 3463 | AI-draft | The Magnificent, The Supreme | العظيم |
-| 3464 | AI-draft | The All-Forgiving | الغفور |
-| 3465 | AI-draft | The Most Appreciative | الشكور |
-| 3466 | AI-draft | The Greatest, The Most Great | الكبير |
-| 3467 | AI-draft | The Preserver, The Guardian | الحفيظ |
-| 3468 | AI-draft | The Sustainer, The Nourisher | المقيت |
-| 3469 | AI-draft | The Most Generous | الكريم |
-| 3470 | AI-draft | The Responsive, The Answerer | المجيب |
-| 3471 | AI-draft | The All-Encompassing, The Vast | الواسع |
-| 3472 | AI-draft | The Glorious, The Magnificent | المجيد |
-| 3473 | AI-draft | The Trustee, The Advocate | الوكيل |
-| 3474 | AI-draft | The Firm, The Steadfast | المتين |
-| 3475 | AI-draft | The All-Praiseworthy | الحميد |
-| 3476 | AI-draft | The Accounter, The Reckoner | المحصي |
-| 3477 | AI-draft | The Bringer of Death | المميت |
-| 3478 | AI-draft | Ar Rahmaan | الرحمن |
-| 3479 | AI-draft | Ar Raheem | الرحيم |
-| 3480 | AI-draft | Al Malik | الملك |
-| 3481 | AI-draft | Al Quddus | القدوس |
-| 3482 | AI-draft | As Salaam | السلام |
-| 3483 | AI-draft | Al Mu'min | المؤمن |
-| 3484 | AI-draft | Al Muhaymin | المهيمن |
-| 3485 | AI-draft | Al Azeez | العزيز |
-| 3486 | AI-draft | Al Jabbaar | الجبار |
-| 3487 | AI-draft | Al Mutakabbir | المتكبر |
-| 3488 | AI-draft | Al Khaaliq | الخالق |
-| 3489 | AI-draft | Al Baari | البارئ |
-| 3490 | AI-draft | Al Musawwir | المصور |
-| 3491 | AI-draft | Al Ghaffaar | الغفار |
-| 3492 | AI-draft | Al Qahhaar | القهار |
-| 3493 | AI-draft | Al Wahhaab | الوهاب |
-| 3494 | AI-draft | Ar Razzaaq | الرزاق |
-| 3495 | AI-draft | Al Fattaah | الفتاح |
-| 3496 | AI-draft | Al 'Aleem | العليم |
-| 3497 | AI-draft | Al Qaabid | القابض |
-| 3498 | AI-draft | Al Baasit | الباسط |
-| 3499 | AI-draft | Al Khaafid | الخافض |
-| 3500 | AI-draft | Ar Raafi' | الرافع |
-| 3501 | AI-draft | Al Mudhil | المذل |
-| 3502 | AI-draft | As Samee' | السميع |
-| 3503 | AI-draft | Al Baseer | البصير |
-| 3504 | AI-draft | Al Hakam | الحكم |
-| 3505 | AI-draft | Al 'Adl | العدل |
-| 3506 | AI-draft | Al Lateef | اللطيف |
-| 3507 | AI-draft | Al Khabeer | الخبير |
-| 3508 | AI-draft | Al Haleem | الحليم |
-| 3509 | AI-draft | Al 'Azeem | العظيم |
-| 3510 | AI-draft | Al Ghafoor | الغفور |
-| 3511 | AI-draft | Ash Shakoor | الشكور |
-| 3512 | AI-draft | Al 'Aliyy | العلي |
-| 3513 | AI-draft | Al Kabeer | الكبير |
-| 3514 | AI-draft | Al Hafeez | الحفيظ |
-| 3515 | AI-draft | Al Muqeet | المقيت |
-| 3516 | AI-draft | Al Haseeb | الحسيب |
-| 3517 | AI-draft | Al Jaleel | الجليل |
-| 3518 | AI-draft | Al Kareem | الكريم |
-| 3519 | AI-draft | Ar Raqeeb | الرقيب |
-| 3520 | AI-draft | Al Mujeeb | المجيب |
-| 3521 | AI-draft | Al Waasi' | الواسع |
-| 3522 | AI-draft | Al Hakeem | الحكيم |
-| 3523 | AI-draft | Al Wudood | الودود |
-| 3524 | AI-draft | Al Majeed | المجيد |
-| 3525 | AI-draft | Al Baa'ith | الباعث |
-| 3526 | AI-draft | Ash Shaheed | الشهيد |
-| 3527 | AI-draft | Al Haqq | الحق |
-| 3528 | AI-draft | Al Wakeel | الوكيل |
-| 3529 | AI-draft | Al Qawiyy | القوي |
-| 3530 | AI-draft | Al Mateen | المتين |
-| 3531 | AI-draft | Al Waliyy | الولي |
-| 3532 | AI-draft | Al Hameed | الحميد |
-| 3533 | AI-draft | Al Muhsi | المحصي |
-| 3534 | AI-draft | Al Mubdi | المبدئ |
-| 3535 | AI-draft | Al Mu'eed | المعيد |
-| 3536 | AI-draft | Al Muhiy | المحيي |
-| 3537 | AI-draft | Al Mumeet | المميت |
-| 3538 | AI-draft | Al Haiyy | الحي |
-| 3539 | AI-draft | Al Qayyoom | القيوم |
-| 3540 | AI-draft | Al Waajid | الواجد |
-| 3541 | AI-draft | Al Maajid | الماجد |
-| 3542 | AI-draft | Al Waahid | الواحد |
-| 3543 | AI-draft | Al Ahad | الأحد |
-| 3544 | AI-draft | As Samad | الصمد |
-| 3545 | AI-draft | Al Qaadir | القادر |
-| 3546 | AI-draft | Al Muqtadir | المقتدر |
-| 3547 | AI-draft | Al Muqaddim | المقدم |
-| 3548 | AI-draft | Al Mu’akhir | المؤخر |
-| 3549 | AI-draft | Al Awwal | الأول |
-| 3550 | AI-draft | Al Aakhir | الآخر |
-| 3551 | AI-draft | Az Zaahir | الظاهر |
-| 3552 | AI-draft | Al Baatin | الباطن |
-| 3553 | AI-draft | Al Waali | الوالي |
-| 3554 | AI-draft | Al Muta’ali | المتعالي |
-| 3555 | AI-draft | Al Barr | البر |
-| 3556 | AI-draft | At Tawwaab | التواب |
-| 3557 | AI-draft | Al Muntaqim | المنتقم |
-| 3558 | AI-draft | Al Afuww | العفو |
-| 3559 | AI-draft | Ar Ra’oof | الرؤوف |
-| 3560 | AI-draft | Maalik Ul Mulk | مالك الملك |
-| 3561 | AI-draft | Dhu Al Jalaali Wa Al Ikraam | ذو الجلال والإكرام |
-| 3562 | AI-draft | Al Muqsit | المقسط |
-| 3563 | AI-draft | Al Jaami' | الجامع |
-| 3564 | AI-draft | Al Ghaniyy | الغني |
-| 3565 | AI-draft | Al Mughi | المغني |
-| 3566 | AI-draft | Al Maani' | المانع |
-| 3567 | AI-draft | Ad Daaarr | الضار |
-| 3568 | AI-draft | An Naafi’ | النافع |
-| 3569 | AI-draft | Al Haadi | الهادي |
-| 3570 | AI-draft | Al Badi' | البديع |
-| 3571 | AI-draft | Al Baaqi | الباقي |
-| 3572 | AI-draft | Al Waarith | الوارث |
-| 3573 | AI-draft | Ar Rasheed | الرشيد |
-| 3574 | AI-draft | As Saboor | الصبور |
-| 3575 | AI-draft | The Self-Subsisting Sustainer | القيّوم |
-| 3576 | AI-draft | The Perceiver, The Finder | الواجد |
-| 3577 | AI-draft | The All-Noble, The Glorious | الماجد |
-| 3578 | AI-draft | The Self-Sufficient Master | الصمد |
-| 3579 | AI-draft | The All-Powerful | القادر |
-| 3580 | AI-draft | The Powerful, The Dominant | المقتدر |
-| 3581 | AI-draft | The Expediter, The Promoter | المقدّم |
-| 3582 | AI-draft | The Manifest, The Evident | الظاهر |
-| 3583 | AI-draft | The Hidden, The Inward | الباطن |
-| 3584 | AI-draft | The Most Exalted | المتعالي |
-| 3585 | AI-draft | The Ever-Relenting | التوّاب |
-| 3586 | AI-draft | The Most Kind | الرؤوف |
-| 3587 | AI-draft | The Lord of Majesty and Generosity | ذو الجلال والإكرام |
-| 3588 | AI-draft | The Self-Sufficient, The Rich | الغني |
-| 3589 | AI-draft | The Preventer | المانع |
-| 3590 | AI-draft | The Distresser (by His decree) | الضارّ |
-| 3591 | AI-draft | The Propitious, The Benefactor | النافع |
-| 3592 | AI-draft | The Inheritor of All | الوارث |
-| 3593 | AI-draft | The Most Patient | الصبور |
-| 3594 | AI-draft | Allah | الله |
-| 3595 | AI-draft | The God, The One True God | الله |
-| 3596 | AI-draft | The Everlasting, The Eternal | الباقي |
-| 3597 | AI-draft | The Gatherer, The Uniter | الجامع |
-| 3598 | AI-draft | The Eternal, The Everlasting | الباقي |
-| 3599 | AI-draft | The Guide, The One Who Guides | الهادي |
-| 3600 | AI-draft | The Loving, The Most Affectionate | الودود |
-| 3601 | AI-draft | The Pure, The Immaculate | القدّوس |
-| 3602 | AI-draft | The Wise, The All-Wise | الحكيم |
-| 3603 | AI-draft | The Purifier, The Pure One | القدّوس |
-| 3604 | AI-draft | The Certain, The Certainty | الحقّ |
-| 3605 | AI-draft | The Generous, The Most Bountiful | الكريم |
-| 3606 | AI-draft | The Subtle, The Most Kind | اللطيف |
-| 3607 | AI-draft | The Believer, The Giver of Faith | المؤمن |
-| 3608 | AI-draft | The Light, The Illuminator | النور |
-| 3609 | AI-draft | The Peace, The Source of Peace | السلام |
-| 3610 | AI-draft | The All-Knowing, The Omniscient | العليم |
-| 3611 | AI-draft | The Patient, The Most Forbearing | الصبور |
-| 3612 | AI-draft | The Able, The All-Powerful | القادر |
-| 3613 | AI-draft | The Most Merciful, The Beneficent | الرحمن |
-| 3614 | AI-draft | The Grateful, The Appreciative | الشكور |
-| 3615 | AI-draft | The Acceptor of Repentance | التوّاب |
-| 3616 | AI-draft | The Aware, The All-Informed | الخبير |
-| 3617 | AI-draft | The Lord of Majesty and Bounty | ذو الجلال والإكرام |
-| 3618 | AI-draft | The Distresser, The Corrector | الضارّ |
-| 3619 | AI-draft | Yunus | يونس |
-| 3620 | AI-draft | Hud | هود |
-| 3621 | AI-draft | Taha | طه |
-| 3622 | AI-draft | Luqman | لقمان |
-| 3623 | AI-draft | Saba | سبأ |
-| 3624 | AI-draft | Fatir | فاطر |
-| 3625 | AI-draft | Sad | ص |
-| 3626 | AI-draft | Ghafir | غافر |
-| 3627 | AI-draft | Fussilat | فصّلت |
-| 3628 | AI-draft | Qaf | ق |
-| 3629 | AI-draft | Nuh | نوح |
-| 3630 | AI-draft | Abasa | عبس |
-| 3631 | AI-draft | Quraish | قريش |
-| 3632 | AI-draft | Numerical miracle of the Qurʾan | الإعجاز العددي في القرآن |
-| 3633 | AI-draft | Surahs in the Qurʾan | سور القرآن |
-| 3634 | AI-draft | Resonates with a divine pattern | يتناغم مع نمط إلهي |
-| 3635 | AI-draft | For Sunday, the recommended sadaqah is: | صدقة يوم الأحد المستحبّة: |
-| 3636 | AI-draft | Gather children and give them food as sadaqah. | اجمع الأطفال وأطعمهم صدقةً. |
-| 3637 | AI-draft | Help anyone who is poor or in need. | أعِن كل فقير أو محتاج. |
-| 3638 | AI-draft | For Monday, the recommended sadaqah is: | صدقة يوم الاثنين المستحبّة: |
-| 3639 | AI-draft | Give water as sadaqah. | تصدّق بالماء. |
-| 3640 | AI-draft | Help an elderly person, a woman, or children. | أعِن مسنًّا أو امرأة أو أطفالًا. |
-| 3641 | AI-draft | Give food or sadaqah to children in the evening. | أعطِ الأطفال طعامًا أو صدقة في المساء. |
-| 3642 | AI-draft | Tuesday is recommended for sadaqah intended for healing and protection. Recommended forms of sadaqah include: | يُستحبّ يوم الثلاثاء للصدقة بنيّة الشفاء والحفظ. ومن صورها: |
-| 3643 | AI-draft | Giving food to children. | إطعام الأطفال. |
-| 3644 | AI-draft | Helping a person who is experiencing difficulties. | إعانة من يمرّ بضيق. |
-| 3645 | AI-draft | Helping someone purchase their medication. | إعانة أحد على شراء دوائه. |
-| 3646 | AI-draft | Contributing toward someone's medical or medication expenses. | المساهمة في نفقات علاج أحد أو دوائه. |
-| 3647 | AI-draft | In Wolof, Rab refers to a type of illness or affliction associated with satanic or devil-related causes. | في لغة الولوف، «راب» نوع من المرض أو البلاء يُنسب إلى أسباب شيطانية. |
-| 3648 | AI-draft | For Wednesday, the recommended sadaqah is: | صدقة يوم الأربعاء المستحبّة: |
-| 3649 | AI-draft | Give white paper and pens. | تصدّق بورق أبيض وأقلام. |
-| 3650 | AI-draft | Provide food to children. | أطعم الأطفال. |
-| 3651 | AI-draft | Thursday is considered favourable for sadaqah intended for opening the way to wealth, success, or removing blockages. Recommended acts include: | يُعدّ يوم الخميس مناسبًا للصدقة بنيّة فتح أبواب الرزق والتوفيق أو رفع العوائق. ومن الأعمال المستحبّة: |
-| 3652 | AI-draft | Giving money as sadaqah. | التصدّق بالمال. |
-| 3653 | AI-draft | Supporting a mosque. | دعم مسجد. |
-| 3654 | AI-draft | Helping to clean a mosque. | المساعدة في تنظيف مسجد. |
-| 3655 | AI-draft | Performing voluntary service in the mosque. | التطوّع بالخدمة في المسجد. |
-| 3656 | AI-draft | Friday is associated with Venus and is considered a favourable day for giving sadaqah. Recommended acts include giving: | يرتبط يوم الجمعة بالزهرة ويُعدّ مناسبًا للصدقة. ومن الأعمال المستحبّة التصدّق بـ: |
-| 3657 | AI-draft | It is also recommended to make ziyāra (visiting) to a scholar or a Borom Ham-Ham. | ويُستحبّ أيضًا زيارة عالم أو «بوروم هام هام». |
-| 3658 | AI-draft | Saturday is recommended for helping poor and needy people. Recommended sadaqah includes: | يُستحبّ يوم السبت لإعانة الفقراء والمحتاجين. ومن الصدقة المستحبّة: |
-| 3659 | AI-draft | Giving essential food items such as rice, oil, and other necessities. | التصدّق بالمواد الغذائية الأساسية كالأرز والزيت وغيرها. |
-| 3660 | AI-draft | Providing financial assistance to someone in difficulty. | تقديم عون مالي لمن هو في ضيق. |
-| 3661 | AI-draft | This day is also considered particularly beneficial for removing blockages, especially for people associated with Capricorn. | ويُعدّ هذا اليوم نافعًا خاصّة لرفع العوائق، لا سيما لأهل برج الجدي. |
-| 3662 | AI-draft | This sadaqah is given sincerely for the sake of Allah, seeking blessings, protection, mercy, and goodness throughout the year. | تُعطى هذه الصدقة خالصة لوجه الله، طلبًا للبركة والحفظ والرحمة والخير طوال السنة. |
-| 3663 | AI-draft | This sadaqah is intended to seek Allah's help, blessings, success, stability, and ease in one's affairs and endeavors. | يُقصد بهذه الصدقة طلب عون الله وبركته وتوفيقه وتيسير الأمور والمساعي. |
-| 3664 | AI-draft | Because this month is considered a bit heavy or difficult, these forms of sadaqah are considered beneficial for the person born in this month. | لأن هذا الشهر يُعدّ ثقيلًا أو صعبًا بعض الشيء، تُعدّ هذه الصور من الصدقة نافعة لمن وُلد فيه. |
-| 3665 | AI-draft | This sadaqah can help the person have more strength, encouragement, patience, and stability as they continue working through difficult circumstances. | قد تعين هذه الصدقة صاحبها على مزيد من القوة والتشجيع والصبر والثبات وهو يجتاز الظروف الصعبة. |
-| 3666 | AI-draft | This sadaqah is intended to bring goodness, blessings, protection, success, and stability to the person born in Ramadan. | يُقصد بهذه الصدقة جلب الخير والبركة والحفظ والتوفيق والثبات لمن وُلد في رمضان. |
-| 3667 | AI-draft | The help given to the traveller and the food given to the needy are two separate forms of sadaqah. | إعانة المسافر وإطعام المحتاج صورتان مستقلّتان من الصدقة. |
-| 3668 | AI-draft | Outlook | الآفاق |
-| 3669 | AI-draft | Friendship Outlook | آفاق الصداقة |
-| 3670 | AI-draft | Family Outlook | آفاق الأسرة |
-| 3671 | AI-draft | Work Outlook | آفاق العمل |
-| 3672 | AI-draft | This pattern traditionally shows an easy, comfortable beginning that can settle into stagnation if never renewed. | يدلّ هذا النمط تقليديًا على بداية سهلة مريحة قد تستقرّ في الركود إن لم تتجدّد. |
-| 3673 | AI-draft | This pattern traditionally shows an easy beginning that may later feel stagnant, especially in growth and shared provision. | يدلّ هذا النمط تقليديًا على بداية سهلة قد تصير راكدة لاحقًا، لا سيما في النموّ والرزق المشترك. |
-| 3674 | AI-draft | This pattern traditionally shows a friendship that starts with natural ease but can quietly stagnate without renewal. | يدلّ هذا النمط تقليديًا على صداقة تبدأ بيسر طبيعي لكنها قد تركد بهدوء بلا تجديد. |
-| 3675 | AI-draft | This pattern traditionally shows family closeness that begins easily but can fade into distance without active care. | يدلّ هذا النمط تقليديًا على قرب عائلي يبدأ بسهولة لكنه قد يذبل إلى بُعد بلا رعاية فاعلة. |
-| 3676 | AI-draft | This connection often starts with ease and comfort, but can settle into routine if never renewed. Shared purpose and intentional effort keep it alive. | تبدأ هذه الصلة غالبًا بيسر وراحة، لكنها قد تستقرّ في الروتين إن لم تتجدّد. والغاية المشتركة والجهد المقصود يُبقيانها حيّة. |
-| 3677 | AI-draft | Friendships under this pattern begin naturally and comfortably, but may drift into routine without shared activities or new experiences. Regular effort keeps the connection warm. | تبدأ الصداقات في هذا النمط طبيعية مريحة، لكنها قد تنجرف إلى الروتين بلا أنشطة مشتركة أو تجارب جديدة. والجهد المنتظم يُبقي الصلة دافئة. |
-| 3678 | AI-draft | Family ties here tend to feel steady and dependable, though closeness can fade into distance if never actively nurtured. Checking in regularly keeps the bond warm. | تميل الروابط العائلية هنا إلى الثبات والاعتمادية، لكن القرب قد يذبل إلى بُعد إن لم يُرعَ. والسؤال المنتظم يُبقي الرابطة دافئة. |
-| 3679 | AI-draft | Working relationships start smoothly and productively, but can grow stale without new goals or challenges. Revisit shared objectives regularly to avoid complacency. | تبدأ علاقات العمل بسلاسة وإنتاجية، لكنها قد تفتر بلا أهداف أو تحدّيات جديدة. راجعوا الأهداف المشتركة بانتظام لتجنّب التراخي. |
-| 3680 | AI-draft | Camaraderie | الرفقة |
-| 3681 | AI-draft | Traditionally considered favorable for marriage. This pattern supports natural cooperation, companionship, and mutual understanding. | يُعدّ تقليديًا مواتيًا للزواج. ويدعم هذا النمط التعاون الطبيعي والمؤانسة والتفاهم المتبادل. |
-| 3682 | AI-draft | Traditionally considered a favorable pattern for friendship — ease, cooperation, and mutual understanding come naturally. | يُعدّ تقليديًا نمطًا مواتيًا للصداقة — اليسر والتعاون والتفاهم تأتي طبيعيًا. |
-| 3683 | AI-draft | Traditionally considered a favorable pattern for collaboration — natural cooperation and mutual understanding support the partnership. | يُعدّ تقليديًا نمطًا مواتيًا للتعاون — فالتعاون الطبيعي والتفاهم يدعمان الشراكة. |
-| 3684 | AI-draft | This bond naturally supports cooperation and ease. Two people connected this way tend to understand each other quickly, though one may lean too heavily on the other. | تدعم هذه الرابطة التعاون واليسر بطبعها. ويميل المتّصلان بها إلى التفاهم سريعًا، وإن كان أحدهما قد يعتمد على الآخر أكثر من اللازم. |
-| 3685 | AI-draft | A naturally easy, low-friction friendship — you tend to understand each other quickly and rarely clash. Watch that neither friend becomes overly reliant on the other. | صداقة سهلة قليلة الاحتكاك — تتفاهمان سريعًا ونادرًا ما تتصادمان. انتبها ألّا يعتمد أحدكما على الآخر اعتمادًا مفرطًا. |
-| 3686 | AI-draft | Family members connected this way tend to get along with little friction and genuine mutual understanding. Encourage each other's independence alongside the closeness. | يميل أفراد الأسرة المتّصلون هكذا إلى التوافق بقليل من الاحتكاك وتفاهم صادق. شجّعوا استقلال بعضكم إلى جانب القرب. |
-| 3687 | AI-draft | A cooperative, low-conflict working relationship where tasks divide naturally. Guard against one person carrying too much of the shared workload. | علاقة عمل متعاونة قليلة الخلاف تتوزّع فيها المهامّ طبيعيًا. احذروا أن يحمل شخص واحد معظم العبء المشترك. |
-| 3688 | AI-draft | Traditionally associated with difficulty in marriage. Tension, frequent disagreements, and financial pressure may arise. | يرتبط تقليديًا بالصعوبة في الزواج. قد ينشأ توتّر وخلافات متكرّرة وضغط مالي. |
-| 3689 | AI-draft | Traditionally associated with difficulty — frequent small frictions and mismatched expectations may test the friendship. | يرتبط تقليديًا بالصعوبة — احتكاكات صغيرة متكرّرة وتوقّعات غير متوافقة قد تختبر الصداقة. |
-| 3690 | AI-draft | Traditionally associated with difficulty — recurring tension, sometimes over responsibilities, may strain the family bond. | يرتبط تقليديًا بالصعوبة — توتّر متكرّر، أحيانًا حول المسؤوليات، قد يُثقل الرابطة العائلية. |
-| 3691 | AI-draft | Traditionally associated with difficulty — friction over resources, deadlines, or decisions may strain the partnership. | يرتبط تقليديًا بالصعوبة — احتكاك حول الموارد أو المواعيد أو القرارات قد يُثقل الشراكة. |
-| 3692 | AI-draft | This connection often carries tension and frequent friction. Patience and structure are needed to keep disagreements from escalating. | تحمل هذه الصلة غالبًا توتّرًا واحتكاكًا متكرّرًا. ويلزم الصبر والتنظيم لمنع الخلافات من التصاعد. |
-| 3693 | AI-draft | Friendships under this pattern can feel effortful — frequent small disagreements and mismatched expectations are common. The bond can hold, but needs conscious care. | قد تبدو الصداقات في هذا النمط متعبة — فالخلافات الصغيرة المتكرّرة والتوقّعات غير المتوافقة شائعة. يمكن للرابطة أن تصمد، لكنها تحتاج إلى عناية واعية. |
-| 3694 | AI-draft | Family ties here often carry recurring tension, sometimes over money or responsibilities. Structure, patience, and outside support help ease the strain. | تحمل الروابط العائلية هنا غالبًا توتّرًا متكرّرًا، أحيانًا حول المال أو المسؤوليات. والتنظيم والصبر والعون الخارجي تخفّف العبء. |
-| 3695 | AI-draft | Traditionally seen as a heavy pattern — one friend's stress or unresolved struggles may surface within the bond. | يُرى تقليديًا نمطًا ثقيلًا — قد يظهر ضغط أحد الصديقين أو صراعاته العالقة داخل الرابطة. |
-| 3696 | AI-draft | Traditionally seen as a heavy pattern — caretaking or shared hardship, often tied to health, may mark the family bond. | يُرى تقليديًا نمطًا ثقيلًا — قد تطبع الرعايةُ أو المشقّة المشتركة، المرتبطة غالبًا بالصحّة، الرابطةَ العائلية. |
-| 3697 | AI-draft | Friendships here can feel heavy at times, often surfacing one person's stress or unresolved struggles. Steady, patient support matters more than constant closeness. | قد تبدو الصداقات هنا ثقيلة أحيانًا، وتُظهر غالبًا ضغط أحدكما أو صراعاته العالقة. والسند الثابت الصبور أهمّ من القرب الدائم. |
-| 3698 | AI-draft | Family bonds under this pattern often involve caretaking or shared hardship — health concerns are common threads. Calm routines and honest communication ease the load. | تتضمّن الروابط العائلية في هذا النمط غالبًا رعاية أو مشقّة مشتركة — والهموم الصحّية خيط متكرّر. والعادات الهادئة والتواصل الصادق تخفّف الحمل. |
-| 3699 | AI-draft | Working relationships here can feel draining, with stress or burnout as recurring risks. Clear boundaries and realistic workloads protect the partnership. | قد تبدو علاقات العمل هنا مستنزِفة، والضغط أو الإنهاك خطر متكرّر. والحدود الواضحة وأعباء العمل الواقعية تحمي الشراكة. |
-| 3700 | AI-draft | Traditionally considered very favorable — blessing, natural harmony, and growth tend to flow more easily. | يُعدّ تقليديًا مواتيًا جدًا — تنساب البركة والانسجام الطبيعي والنموّ بيسر أكبر. |
-| 3701 | AI-draft | Traditionally considered very favorable for marriage. Associated with blessing, natural harmony, children, and spiritual growth. | يُعدّ تقليديًا مواتيًا جدًا للزواج. ويرتبط بالبركة والانسجام الطبيعي والذرّية والنموّ الروحي. |
-| 3702 | AI-draft | Traditionally considered very favorable — warmth, harmony, and shared growth tend to mark this family bond. | يُعدّ تقليديًا مواتيًا جدًا — يطبع الدفءُ والانسجام والنموّ المشترك هذه الرابطة العائلية. |
-| 3703 | AI-draft | This connection is traditionally favorable — harmony, growth, and ease tend to flow naturally between the two. Gratitude keeps the blessing from being taken for granted. | هذه الصلة مواتية تقليديًا — الانسجام والنموّ واليسر تنساب طبيعيًا بين الاثنين. والشكر يحفظ النعمة من أن تُعدّ أمرًا مسلّمًا. |
-| 3704 | AI-draft | A genuinely blessed friendship — trust, ease, and mutual growth come naturally. Keep showing up for each other so the bond doesn't drift into complacency. | صداقة مباركة حقًّا — الثقة واليسر والنموّ المتبادل تأتي طبيعيًا. واصلا الحضور لبعضكما كي لا تنجرف الرابطة إلى التراخي. |
-| 3705 | AI-draft | Family ties here tend to be a source of real blessing — warmth, support, and shared growth. Nurture the bond actively rather than assuming it as given. | تميل الروابط العائلية هنا إلى أن تكون مصدر بركة حقيقية — دفء وسند ونموّ مشترك. ارعوا الرابطة بفاعلية ولا تعدّوها مضمونة. |
-| 3706 | AI-draft | A productive, mutually beneficial working relationship where success tends to come naturally. Stay grounded and avoid overconfidence as things go well. | علاقة عمل منتجة نافعة للطرفين يأتي فيها النجاح طبيعيًا. ابقوا متواضعين وتجنّبوا الإفراط في الثقة حين تسير الأمور جيدًا. |
-| 3707 | AI-draft | Traditionally shows recurring quarrels and discord — tests of anger, pride, and ego are common until inner work is done. | يدلّ تقليديًا على خصومات وخلافات متكرّرة — وابتلاءات الغضب والكبر والأنا شائعة حتى تُجاهَد النفس. |
-| 3708 | AI-draft | Traditionally shows recurring quarrels and discord in marriage. Tests of anger, pride, and ego are common. | يدلّ تقليديًا على خصومات وخلافات متكرّرة في الزواج. وابتلاءات الغضب والكبر والأنا شائعة. |
-| 3709 | AI-draft | Traditionally shows recurring small quarrels — tests of pride and ego may repeat until self-awareness grows. | يدلّ تقليديًا على خصومات صغيرة متكرّرة — قد تتكرّر ابتلاءات الكبر والأنا حتى ينمو الوعي بالنفس. |
-| 3710 | AI-draft | Traditionally shows recurring discord — old patterns of pride and ego may resurface until addressed with forgiveness. | يدلّ تقليديًا على خلاف متكرّر — قد تعود أنماط قديمة من الكبر والأنا حتى تُعالج بالعفو. |
-| 3711 | AI-draft | Traditionally shows recurring friction — tests of ego and power may repeat until clear roles and respect are established. | يدلّ تقليديًا على احتكاك متكرّر — قد تتكرّر ابتلاءات الأنا والسلطة حتى تتّضح الأدوار ويقوم الاحترام. |
-| 3712 | AI-draft | This bond tends to surface recurring friction tied to pride and ego. Self-awareness on both sides is what breaks the cycle. | تميل هذه الرابطة إلى إظهار احتكاك متكرّر مرتبط بالكبر والأنا. والوعي بالنفس من الطرفين هو ما يكسر الدورة. |
-| 3713 | AI-draft | Friendships here often involve repeated small conflicts, sometimes over who's 'right.' Letting go of ego keeps the friendship from wearing thin. | تتضمّن الصداقات هنا غالبًا خلافات صغيرة متكرّرة، أحيانًا حول «من المُحقّ». والتخلّي عن الأنا يحفظ الصداقة من البِلى. |
-| 3714 | AI-draft | Family relationships under this pattern often carry old, recurring disagreements. Forgiveness and honest self-reflection are what finally shift the pattern. | تحمل العلاقات العائلية في هذا النمط غالبًا خلافات قديمة متكرّرة. والعفو ومحاسبة النفس الصادقة هما ما يغيّر النمط أخيرًا. |
-| 3715 | AI-draft | Traditionally considered the most favorable of all patterns — early obstacles often give way to strong blessings and alignment. | يُعدّ تقليديًا أكثر الأنماط مواتاة — غالبًا ما تُفضي العقبات الأولى إلى بركات قوية وانسجام. |
-| 3716 | AI-draft | Traditionally considered the most favorable for marriage. May face obstacles early on, but strong blessings and alignment often follow. | يُعدّ تقليديًا أكثر الأنماط مواتاة للزواج. قد يواجه عقبات في البداية، لكن البركات القوية والانسجام كثيرًا ما تتبع. |
-| 3717 | AI-draft | Traditionally considered one of the most favorable patterns for friendship — early distance often resolves into deep loyalty. | يُعدّ تقليديًا من أكثر الأنماط مواتاة للصداقة — كثيرًا ما يتحوّل البُعد الأول إلى وفاء عميق. |
-| 3718 | AI-draft | Traditionally considered one of the most favorable patterns for family bonds — early difficulty often gives way to lasting depth. | يُعدّ تقليديًا من أكثر الأنماط مواتاة للروابط العائلية — كثيرًا ما تُفضي الصعوبة الأولى إلى عمق دائم. |
-| 3719 | AI-draft | Traditionally considered one of the most favorable patterns for partnership — early friction often resolves into a highly aligned collaboration. | يُعدّ تقليديًا من أكثر الأنماط مواتاة للشراكة — كثيرًا ما يتحوّل الاحتكاك الأول إلى تعاون شديد الانسجام. |
-| 3720 | AI-draft | Traditionally the most favorable connection — early obstacles often give way to a deep, aligned bond. Trust the process rather than forcing it. | الصلة الأكثر مواتاة تقليديًا — كثيرًا ما تُفضي العقبات الأولى إلى رابطة عميقة منسجمة. ثق بالمسار ولا تستعجله. |
-| 3721 | AI-draft | One of the strongest friendship patterns — any early distance or misunderstanding tends to resolve into a deeply loyal bond. Let it develop at its own pace. | من أقوى أنماط الصداقة — يميل أي بُعد أو سوء فهم أوّل إلى التحوّل إلى رابطة وفية عميقة. دعها تنمو على مهل. |
-| 3722 | AI-draft | Family bonds here often carry real depth, even if the relationship faced early distance or difficulty. What follows tends to be lasting and meaningful. | تحمل الروابط العائلية هنا غالبًا عمقًا حقيقيًا، حتى لو واجهت العلاقة بُعدًا أو صعوبة أولى. وما يتبع يميل إلى أن يكون دائمًا ذا معنى. |
-| 3723 | AI-draft | Pride in the blessing, external interference early on, and assuming ease means no effort is needed. | الاغترار بالنعمة، وتدخّل الآخرين في البداية، وظنّ أن اليسر يعني الاستغناء عن الجهد. |
-| 3724 | AI-draft | Traditionally very good for the long term, though early misunderstandings are common — patience transforms this into a strong bond. | جيد جدًا تقليديًا على المدى البعيد، وإن كان سوء الفهم الأول شائعًا — والصبر يحوّله إلى رابطة قوية. |
-| 3725 | AI-draft | Traditionally very good for marriage over the long term, though early misunderstandings are common. | جيد جدًا تقليديًا للزواج على المدى البعيد، وإن كان سوء الفهم الأول شائعًا. |
-| 3726 | AI-draft | Traditionally very good for the long term — early friction is common, but patience often builds a highly reliable partnership. | جيد جدًا تقليديًا على المدى البعيد — الاحتكاك الأول شائع، لكن الصبر كثيرًا ما يبني شراكة موثوقة جدًا. |
-| 3727 | AI-draft | This connection often starts with confusion or misjudgment but strengthens significantly with time. Patience is what unlocks its real depth. | تبدأ هذه الصلة غالبًا بحيرة أو سوء تقدير لكنها تقوى كثيرًا مع الوقت. والصبر هو مفتاح عمقها الحقيقي. |
-| 3728 | AI-draft | Friendships here can start awkwardly or take time to click, but often become some of the most enduring bonds. Don't judge it too early. | قد تبدأ الصداقات هنا متعثّرة أو تحتاج وقتًا لتتّضح، لكنها كثيرًا ما تصير من أدوم الروابط. لا تحكم عليها مبكرًا. |
-| 3729 | AI-draft | Family relationships under this pattern may start with distance or misunderstanding but tend to deepen meaningfully over the years. Give the bond time. | قد تبدأ العلاقات العائلية في هذا النمط ببُعد أو سوء فهم لكنها تميل إلى التعمّق مع السنين. امنح الرابطة وقتها. |
-| 3730 | AI-draft | Working relationships here often start rocky — mismatched expectations or slow trust-building — but tend to become highly reliable partnerships over time. | تبدأ علاقات العمل هنا غالبًا متعثّرة — توقّعات غير متوافقة أو ثقة بطيئة — لكنها تميل إلى أن تصير شراكات موثوقة جدًا مع الوقت. |
-| 3731 | AI-draft | Traditionally warned against for binding commitments — associated with severe hardship, sudden breaks, and recurring harm. | يُحذَّر منه تقليديًا في الالتزامات الملزمة — ويرتبط بمشقّة شديدة وانقطاعات مفاجئة وأذى متكرّر. |
-| 3732 | AI-draft | Traditionally warned against for marriage. Associated with severe hardship, sudden breaks, and recurring harm patterns. | يُحذَّر منه تقليديًا في الزواج. ويرتبط بمشقّة شديدة وانقطاعات مفاجئة وأنماط أذى متكرّرة. |
-| 3733 | AI-draft | Traditionally warned against for close, binding friendship — sudden falling-outs and recurring hurt are associated risks. | يُحذَّر منه تقليديًا في الصداقة الوثيقة — والقطيعة المفاجئة والأذى المتكرّر من مخاطره. |
-| 3734 | AI-draft | Traditionally associated with real difficulty in family bonds — estrangement and recurring conflict are common risks. | يرتبط تقليديًا بصعوبة حقيقية في الروابط العائلية — والجفاء والخلاف المتكرّر من مخاطره الشائعة. |
-| 3735 | AI-draft | Traditionally warned against for binding partnership — sudden fallout and recurring breakdowns in trust are associated risks. | يُحذَّر منه تقليديًا في الشراكة الملزمة — والانهيار المفاجئ وتكرّر فقدان الثقة من مخاطره. |
-| 3736 | AI-draft | Traditionally a difficult pattern, associated with sudden breaks and recurring strain. Extreme caution and spiritual protection are advised. | نمط صعب تقليديًا، يرتبط بانقطاعات مفاجئة وعناء متكرّر. يُنصح بالحذر الشديد والتحصّن بالأذكار. |
-| 3737 | AI-draft | Friendships under this pattern can be prone to sudden falling-outs or repeated hurt. Approach with awareness, and don't ignore recurring red flags. | قد تكون الصداقات في هذا النمط عرضة للقطيعة المفاجئة أو الأذى المتكرّر. اقترب بوعي ولا تتجاهل العلامات المتكرّرة. |
-| 3738 | AI-draft | Family ties here can carry real difficulty, including estrangement or repeated conflict. Seek wise counsel and increase protective practices rather than forcing closeness. | قد تحمل الروابط العائلية هنا صعوبة حقيقية، منها الجفاء أو الخلاف المتكرّر. اطلب نصح الحكماء وأكثِر من الأذكار بدل فرض القرب. |
-| 3739 | AI-draft | Professional partnerships under this pattern carry real risk — sudden fallout or repeated breakdowns in trust are common. Proceed with caution and clear agreements. | تحمل الشراكات المهنية في هذا النمط خطرًا حقيقيًا — الانهيار المفاجئ أو تكرّر فقدان الثقة شائع. تقدّم بحذر واتفاقات واضحة. |
-| 3740 | AI-draft | New beginnings and fresh energy. This pairing initiates new chapters together. | بدايات جديدة وطاقة متجدّدة. هذا الاقتران يفتتح فصولًا جديدة معًا. |
-| 3741 | AI-draft | Balance and duality. Both individuals complement each other through cooperation. | التوازن والثنائية. يتكامل الطرفان بالتعاون. |
-| 3742 | AI-draft | Friction and discord. This pairing faces fundamental differences that require careful navigation. | احتكاك وخلاف. يواجه هذا الاقتران اختلافات جوهرية تتطلّب سيرًا حذرًا. |
-| 3743 | AI-draft | Stability and structure. A grounded partnership built on solid foundations. | الثبات والنظام. شراكة متجذّرة مبنية على أسس متينة. |
-| 3744 | AI-draft | Dynamic change and adaptability. This pairing thrives on variety and movement. | تغيّر حيوي وتكيّف. يزدهر هذا الاقتران بالتنوّع والحركة. |
-| 3745 | AI-draft | Spiritual harmony and wisdom. An ideal match with deep understanding. | انسجام روحي وحكمة. توافق مثالي بفهم عميق. |
-| 3746 | AI-draft | Abundance and manifestation. This pair has strong potential for achievement. | الوفرة والتحقيق. لهذا الثنائي إمكانات قوية للإنجاز. |
-| 3747 | AI-draft | Cycle ending and completion. This connection may represent a karmic conclusion or natural closure. | نهاية الدورة والإتمام. قد تمثّل هذه الصلة خاتمة أو إغلاقًا طبيعيًا. |
-| 3748 | AI-draft | Emotional depth and intuitive connection. A nurturing and empathetic bond. | عمق عاطفي وصلة حدسية. رابطة راعية متعاطفة. |
-| 3749 | AI-draft | Intellectual stimulation and clear communication. Mental compatibility is strong. | تحفيز فكري وتواصل واضح. التوافق الذهني قوي. |
-| 3750 | AI-draft | Practical stability and reliable support. A grounded, lasting partnership. | ثبات عملي وسند موثوق. شراكة متجذّرة دائمة. |
-| 3751 | AI-draft | are harmonious celestial allies. Their cosmic energies flow smoothly together. | حليفان سماويّان منسجمان، تنساب طاقتاهما معًا بسلاسة. |
-| 3752 | AI-draft | have challenging cosmic aspects. Growth comes through navigating differences. | بينهما جوانب فلكية صعبة. والنموّ يأتي بتجاوز الاختلافات. |
-| 3753 | AI-draft | share exceptional compatibility across spiritual, elemental, and cosmic dimensions. This pairing has strong potential for harmony and mutual growth. | يتشاركان توافقًا استثنائيًا في الأبعاد الروحية والعنصرية والفلكية. ولهذا الاقتران إمكانات قوية للانسجام والنموّ المتبادل. |
-| 3754 | AI-draft | have good compatibility with balanced energies. With understanding and effort, this connection can flourish. | بينهما توافق جيد بطاقات متوازنة. وبالتفاهم والجهد يمكن لهذه الصلة أن تزدهر. |
-| 3755 | AI-draft | Your Fire–Fire combination creates intense passion and drive. Channel this energy into shared goals to avoid burnout. | يصنع اجتماع النار بالنار شغفًا واندفاعًا شديدين. وجّها هذه الطاقة إلى أهداف مشتركة لتجنّب الإنهاك. |
-| 3756 | AI-draft | Your Fire–Air mix ignites creativity and inspiration. Balance spontaneity with thoughtful planning. | يُشعل مزيج النار والهواء الإبداع والإلهام. وازنا العفوية بالتخطيط المتأنّي. |
-| 3757 | AI-draft | Your Fire–Water mix creates transformation through emotion and passion. Allow emotions to cool before major decisions. | يصنع مزيج النار والماء تحوّلًا بالعاطفة والشغف. دعا المشاعر تهدأ قبل القرارات الكبرى. |
-| 3758 | AI-draft | Your Fire–Earth combination blends passion with practicality. Let vision meet execution for powerful results. | يمزج اجتماع النار والتراب الشغف بالعملية. لتلتقِ الرؤية بالتنفيذ لنتائج قوية. |
-| 3759 | AI-draft | Your Air–Air pairing enhances intellectual synergy. Ground ideas in action to manifest your shared visions. | يعزّز اقتران الهواء بالهواء التآزر الفكري. جذّرا الأفكار في العمل لتحقيق رؤاكما المشتركة. |
-| 3760 | AI-draft | Your Air–Water blend merges intellect with intuition. Trust both logic and feelings in decision-making. | يمزج الهواء والماء العقل بالحدس. ثقا بالمنطق والمشاعر معًا في اتّخاذ القرار. |
-| 3761 | AI-draft | Your Air–Earth combination balances ideas with implementation. Communicate clearly while building tangible foundations. | يوازن اجتماع الهواء والتراب الأفكار بالتنفيذ. تواصلا بوضوح وأنتما تبنيان أسسًا ملموسة. |
-| 3762 | AI-draft | Your Water–Water connection deepens emotional bonds. Create boundaries to prevent emotional overwhelm. | تعمّق صلة الماء بالماء الروابط العاطفية. ضعا حدودًا لتجنّب الإرهاق العاطفي. |
-| 3763 | AI-draft | Your Water–Earth pairing nurtures growth and stability. Combine emotional depth with practical care. | يرعى اقتران الماء بالتراب النموّ والثبات. اجمعا العمق العاطفي بالرعاية العملية. |
-| 3764 | AI-draft | Your Earth–Earth foundation builds lasting security. Embrace flexibility to keep the relationship dynamic. | يبني أساس التراب بالتراب أمانًا دائمًا. تقبّلا المرونة لتبقى العلاقة حيوية. |
-| 3765 | AI-draft | Your spiritual alignment is exceptional. Continue deepening your shared understanding through meditation or reflection together. | انسجامكما الروحي استثنائي. واصلا تعميق فهمكما المشترك بالتأمّل أو التدبّر معًا. |
-| 3766 | AI-draft | Your spiritual paths may differ. Respect each other's journey and find common ground in shared values. | قد تختلف طريقاكما الروحيان. احترما رحلة كلٍّ منكما واجدا أرضًا مشتركة في القيم. |
-| 3767 | AI-draft | energy creates dynamic interaction. Channel this into creative projects or shared adventures. | يصنع تفاعلًا حيويًا. وجّها هذا إلى مشاريع إبداعية أو مغامرات مشتركة. |
-| 3768 | AI-draft | support each other naturally. Trust your intuitive connection. | يسند كلٌّ منهما الآخر طبيعيًا. ثقا بصلتكما الحدسية. |
-| 3769 | AI-draft | create tension. Use this as an opportunity to learn from different perspectives. | يصنعان توتّرًا. اجعلاه فرصة للتعلّم من وجهات نظر مختلفة. |
-| 3770 | AI-draft | energy harmonizes beautifully in daily life. Celebrate your natural understanding. | تنسجم طاقتهما انسجامًا جميلًا في الحياة اليومية. احتفيا بتفاهمكما الطبيعي. |
-| 3771 | AI-draft | energies require conscious balance in daily routines. Create space for both styles. | تحتاج طاقتاهما إلى توازن واعٍ في الروتين اليومي. افسحا مجالًا للأسلوبين. |
-| 3772 | AI-draft | Practice patience, kindness, and open communication to nurture your connection. | تحلّيا بالصبر واللطف والتواصل المفتوح لرعاية صلتكما. |
-| 3773 | AI-draft | Both partners share Fire energy. Expect passion, enthusiasm, and dynamic action in daily life. May need to manage intensity. | يتشارك الطرفان طاقة النار. توقّعا شغفًا وحماسة وعملًا حيويًا في الحياة اليومية، وقد يلزم ضبط الشدّة. |
-| 3774 | AI-draft | Both partners share Air energy. Daily interactions focus on communication, ideas, and mental stimulation. Keep conversations grounded. | يتشارك الطرفان طاقة الهواء. تتركّز التفاعلات اليومية على التواصل والأفكار والتحفيز الذهني. أبقيا الحديث متجذّرًا. |
-| 3775 | AI-draft | Both partners share Water energy. Emotional depth and intuition guide daily life. Create healthy boundaries to avoid emotional overwhelm. | يتشارك الطرفان طاقة الماء. يقود العمق العاطفي والحدس الحياة اليومية. ضعا حدودًا صحّية لتجنّب الإرهاق العاطفي. |
-| 3776 | AI-draft | Fire and Air energies fuel each other. Daily interactions are stimulating, creative, and full of movement. Channel this energy constructively. | تغذّي طاقتا النار والهواء بعضهما. فالتفاعلات اليومية محفّزة مبدعة مليئة بالحركة. وجّها هذه الطاقة توجيهًا بنّاءً. |
-| 3777 | AI-draft | Earth and Water blend for growth and nurturing. Daily life balances practicality with emotional care. A naturally supportive combination. | يمتزج التراب والماء للنموّ والرعاية. توازن الحياة اليومية العمليةَ بالرعاية العاطفية. مزيج داعم بطبعه. |
-| 3778 | AI-draft | Air and Earth represent ideas meeting practicality. Daily life requires balancing vision with execution. Communication is key. | يمثّل الهواء والتراب التقاء الأفكار بالعملية. تتطلّب الحياة اليومية موازنة الرؤية بالتنفيذ، والتواصل هو المفتاح. |
-| 3779 | AI-draft | Fire and Earth combine action with stability. Daily interactions balance passion with practicality. Respect each other's pace. | يجمع النار والتراب العمل والثبات. توازن التفاعلات اليومية الشغف بالعملية. احترما إيقاع بعضكما. |
-| 3780 | AI-draft | Air and Water blend logic with emotion. Daily life requires honoring both intellect and feelings. Find balance between thinking and feeling. | يمزج الهواء والماء المنطق بالعاطفة. تتطلّب الحياة اليومية إكرام العقل والمشاعر معًا. جِدا التوازن بين التفكير والإحساس. |
-| 3781 | AI-draft | interaction. This unique combination brings together different elemental energies in daily life. | تفاعل. يجمع هذا المزيج الفريد طاقات عنصرية مختلفة في الحياة اليومية. |
-| 3782 | AI-draft | Unknown Pairing | اقتران غير معروف |
-| 3783 | AI-draft | Schedule calm time together. Practice listening, not just doing. | خصّصا وقتًا هادئًا معًا. تدرّبا على الإصغاء لا على الفعل وحده. |
-| 3784 | AI-draft | May overlook emotional depth and practical details. All vision, little grounding. | قد تغفلان عن العمق العاطفي والتفاصيل العملية. رؤية كثيرة وتجذّر قليل. |
-| 3785 | AI-draft | Weekly check-ins: 'How are you feeling?' not just 'What are you doing?' | مراجعة أسبوعية: «كيف تشعر؟» لا «ماذا تفعل؟» فقط. |
-| 3786 | AI-draft | Different paces: Fire rushes, Earth takes time. May feel like you're pulling in opposite directions. | إيقاعان مختلفان: النار تستعجل والتراب يتمهّل. قد تشعران بأنكما تشدّان في اتجاهين متعاكسين. |
-| 3787 | AI-draft | Combine planning sessions (Earth) with spontaneous adventures (Fire). Honor both approaches. | اجمعا جلسات التخطيط (التراب) بالمغامرات العفوية (النار). أكرِما النهجين. |
-| 3788 | AI-draft | May overthink or avoid emotional vulnerability. All head, not enough heart. | قد تفرطان في التفكير أو تتجنّبان الانكشاف العاطفي. عقل كثير وقلب قليل. |
-| 3789 | AI-draft | Set 'no-analysis' zones. Practice feeling without discussing. Touch more, talk less sometimes. | خصّصا أوقاتًا «بلا تحليل». تدرّبا على الإحساس دون نقاش. قلّلا الكلام وأكثِرا المودّة أحيانًا. |
-| 3790 | AI-draft | Create vision boards together (Air), then assign tasks and timelines (Earth). Meet in the middle. | اصنعا لوحات رؤية معًا (الهواء)، ثم وزّعا المهامّ والمواعيد (التراب). والتقيا في الوسط. |
-| 3791 | AI-draft | May drown in emotions together. Can become isolated from the outside world. Need Air's perspective. | قد تغرقان في المشاعر معًا وتنعزلان عن العالم. تحتاجان إلى منظور الهواء. |
-| 3792 | AI-draft | Journal together, then discuss what you wrote. Bring emotions into words. Connect with others too. | دوّنا معًا ثم ناقشا ما كتبتما. حوّلا المشاعر إلى كلمات، وتواصلا مع الآخرين أيضًا. |
-| 3793 | AI-draft | Natural harmony. Water nourishes Earth, Earth holds Water. Like a garden—growth happens organically. | انسجام طبيعي. الماء يغذّي التراب، والتراب يحفظ الماء. كالبستان — ينمو الخير طبيعيًا. |
-| 3794 | AI-draft | May avoid conflict or become stagnant. Too comfortable can mean no growth challenges. | قد تتجنّبان الخلاف أو تركدان. فالراحة المفرطة قد تعني غياب تحدّيات النموّ. |
-| 3795 | AI-draft | Cook together, garden, create with your hands. Embrace gentle change. Try new things monthly. | اطبخا معًا، وازرعا، واصنعا بأيديكما. تقبّلا التغيير اللطيف، وجرّبا جديدًا كل شهر. |
-| 3796 | AI-draft | May resist change or become too routine. Both can be stubborn. Life feels safe but may lack spontaneity. | قد تقاومان التغيير أو تغرقان في الروتين. كلاكما قد يكون عنيدًا. الحياة آمنة لكن قد تنقصها العفوية. |
-| 3797 | AI-draft | Strong Emotional Foundation ( | أساس عاطفي قوي ( |
-| 3798 | AI-draft | Natural Daily Compatibility ( | توافق يومي طبيعي ( |
-| 3799 | AI-draft | %): Your conscious personalities align well. Communication feels easy and you "get" each other's thought processes without much explanation. | %): شخصيّتاكما الواعيتان منسجمتان. التواصل سهل وتفهمان طريقة تفكير بعضكما دون كثير شرح. |
-| 3800 | AI-draft | Surface Dynamic: | الديناميكية الظاهرة: |
-| 3801 | AI-draft | %) - Your daily interaction styles differ. | %) - أسلوبا تفاعلكما اليومي مختلفان. |
-| 3802 | AI-draft | approach may clash with | قد يتصادم نهج |
-| 3803 | AI-draft | style in routine decisions. | مع أسلوب الآخر في القرارات اليومية. |
-| 3804 | AI-draft | %) - Your inherited emotional patterns differ. What feels "natural" to one may seem foreign to the other. This requires conscious emotional education between you. | %) - أنماطكما العاطفية الموروثة مختلفة. فما يبدو «طبيعيًا» لأحدكما قد يبدو غريبًا للآخر. وهذا يتطلّب تعلّمًا عاطفيًا واعيًا بينكما. |
-| 3805 | AI-draft | Cook slow meals together - teaches Fire patience, gives Earth quality time | اطبخا وجبات على مهل معًا - تعلّم النار الصبر وتمنح التراب وقتًا طيبًا |
-| 3806 | AI-draft | Evening walks after work - Fire burns energy, Earth processes the day | نزهات مسائية بعد العمل - النار تُفرغ طاقتها والتراب يراجع يومه |
-| 3807 | AI-draft | Create a "soft space" for hard conversations - neutral zone for both temperaments | اصنعا «مساحة لطيفة» للمحادثات الصعبة - منطقة محايدة للطبعين |
-| 3808 | AI-draft | Monthly check-ins - structured time to discuss emotions without defensiveness | مراجعات شهرية - وقت منظّم لمناقشة المشاعر دون دفاعية |
-| 3809 | AI-draft | Journal together - Air analyzes, Water feels, both learn from the other's lens | دوّنا معًا - الهواء يحلّل والماء يشعر، ويتعلّم كلٌّ من عدسة الآخر |
-| 3810 | AI-draft | Create "thinking time" and "feeling time" - honor both processing styles | خصّصا «وقتًا للتفكير» و«وقتًا للإحساس» - أكرِما أسلوبي المعالجة |
-| 3811 | AI-draft | Build together - Air designs, Earth executes, celebrate both contributions | ابنيا معًا - الهواء يصمّم والتراب ينفّذ، واحتفيا بالإسهامين |
-| 3812 | AI-draft | The Subtle One - Cools intensity, brings gentleness | اللطيف - يُبرِد الحدّة ويجلب الرفق |
-| 3813 | AI-draft | The All-Strong - Builds boundaries, strengthens resolve | القوي - يبني الحدود ويقوّي العزم |
-| 3814 | AI-draft | The All-Wise - Grounds ideas, brings practical wisdom | الحكيم - يجذّر الأفكار ويجلب الحكمة العملية |
-| 3815 | AI-draft | The Opener - Releases rigidity, invites flow | الفتّاح - يحلّ الجمود ويدعو إلى الانسياب |
-| 3816 | AI-draft | Together: Yā Wadūd (يا ودود) - The Most Loving - Cultivates love and affection between hearts | معًا: يا ودود - لتنمية المحبّة والمودّة بين القلوب |
-| 3817 | AI-draft | Mother | الأم |
-| 3818 | AI-draft | Location unavailable — allow it in your browser settings to use your city. | الموقع غير متاح — اسمح به في إعدادات المتصفّح لاستعمال مدينتك. |
-| 3819 | AI-draft | Scan this range | افحص هذا النطاق |
-| 3820 | AI-draft | Least-afflicted time | أقلّ الأوقات نحوسة |
-| 3821 | AI-draft | No acceptable dates found within 45 days. | لم يُعثر على تواريخ مقبولة خلال 45 يومًا. |
-| 3822 | AI-draft | Top 5 dates | أفضل 5 تواريخ |
-| 3823 | AI-draft | Sunna & Fiqh | السنّة والفقه |
-| 3824 | AI-draft | Pass | مستوفى |
-| 3825 | AI-draft | Fail | غير مستوفى |
-| 3826 | AI-draft | Bonus | زيادة |
-| 3827 | AI-draft | Penalty | خصم |
-| 3828 | AI-draft | Hard fail | مانع قاطع |
-| 3829 | ✅ reviewed | Conditions worsen later this day — | تُعدّ بقية هذا اليوم تقليديًا وقتًا أثقل — |
-| 3830 | AI-draft | after ~ | بعد ~ |
-| 3831 | AI-draft | Conditions were better earlier this day — | كانت الأحوال أفضل في وقت أبكر من هذا اليوم — |
-| 3832 | AI-draft | Mercury Retrograde (Contracts) | رجوع عطارد (العقود) |
-| 3833 | AI-draft | Mercury is retrograde — the single most-cited classical caution against signing contracts, starting negotiations, or finalizing a sale. | عطارد راجع — وهذا أشهر تحذير كلاسيكي من توقيع العقود أو بدء المفاوضات أو إتمام البيع. |
-| 3834 | AI-draft | Mercury is direct. | عطارد مستقيم. |
-| 3835 | AI-draft | Moon has no applying aspect before leaving its current sign — void of course, nothing "comes of" a deal begun now. | لا يتّصل القمر بأي نظر قبل خروجه من برجه — فهو خالي السير، ولا يُرجى «ثمرة» لصفقة تبدأ الآن. |
-| 3836 | AI-draft | Mercury Combust | احتراق عطارد |
-| 3837 | AI-draft | ° from the Sun — not combust. | ° من الشمس — غير محترق. |
-| 3838 | AI-draft | Moon applying to a | القمر متّصل بـ |
-| 3839 | AI-draft | ° — warns of dispute, loss, or a deal turning sour. | ° — يحذّر من نزاع أو خسارة أو فساد الصفقة. |
-| 3840 | AI-draft | Moon is not applying to a hard aspect with Saturn or Mars. | القمر غير متّصل بنظر صعب مع زحل أو المريخ. |
-| 3841 | AI-draft | , orbe | ، بفلك |
-| 3842 | AI-draft | Moon elongation | بُعد القمر عن الشمس |
-| 3843 | AI-draft | ° — waning. | ° — ناقص النور. |
-| 3844 | AI-draft | Moon Applying to Jupiter (Gain) | اتّصال القمر بالمشتري (الربح) |
-| 3845 | AI-draft | with Jupiter, orb | مع المشتري، بفلك |
-| 3846 | AI-draft | ° — Jupiter is the classical significator of profit and gain. | ° — المشتري هو الدالّ الكلاسيكي على الربح والكسب. |
-| 3847 | AI-draft | Moon is not applying to a favorable aspect with Jupiter. | القمر غير متّصل بنظر حسن مع المشتري. |
-| 3848 | AI-draft | Moon Applying to Venus (Smooth Dealing) | اتّصال القمر بالزهرة (حسن المعاملة) |
-| 3849 | AI-draft | with Venus, orb | مع الزهرة، بفلك |
-| 3850 | AI-draft | ° — favorable for amicable dealing between the parties. | ° — مواتٍ لحسن التعامل بين الطرفين. |
-| 3851 | AI-draft | Moon is not applying to a favorable aspect with Venus. | القمر غير متّصل بنظر حسن مع الزهرة. |
-| 3852 | AI-draft | Mercury Dignified | عطارد في كرامة |
-| 3853 | AI-draft | Mercury has no domicile bonus in this sign. | لا زيادة بيت لعطارد في هذا البرج. |
-| 3854 | AI-draft | Mercury Free of Fall/Detriment | عطارد سالم من الهبوط والوبال |
-| 3855 | AI-draft | — in fall or detriment. | — في هبوط أو وبال. |
-| 3856 | AI-draft | — free of fall or detriment. | — سالم من الهبوط والوبال. |
-| 3857 | AI-draft | This window is not in a Mercury or Jupiter hour. | هذه النافذة ليست في ساعة عطارد أو المشتري. |
-| 3858 | AI-draft | in fall/detriment | في هبوط/وبال |
-| 3859 | AI-draft | This window is in the planetary hour of | هذه النافذة في الساعة الكوكبية لـ |
-| 3860 | AI-draft | — no bonus. [SCHOLAR-REVIEW] | — بلا زيادة. [للمراجعة العلمية] |
-| 3861 | AI-draft | Wednesday (day of Mercury) — favorable for negotiation and contracts. | الأربعاء (يوم عطارد) — مواتٍ للتفاوض والعقود. |
-| 3862 | AI-draft | Thursday (day of Jupiter) — favorable for profit and gain. | الخميس (يوم المشتري) — مواتٍ للربح والكسب. |
-| 3863 | AI-draft | Not a day classically associated with favorable business dealings. | ليس يومًا يرتبط كلاسيكيًا بحسن المعاملات التجارية. |
-| 3864 | AI-draft | جيد (Jayyid) | جيد |
-| 3865 | AI-draft | اجتناب (Ijtanib) | اجتنب |
-| 3866 | AI-draft | Mercury Retrograde (Study/Comprehension) | رجوع عطارد (الدراسة والفهم) |
-| 3867 | AI-draft | Mercury is retrograde — the same classical caution cited against contracts (business.ts) applies here: avoid starting serious study, an exam, or a new course while Mercury retrogrades. | عطارد راجع — ويسري هنا التحذير الكلاسيكي نفسه المذكور في العقود: تجنّب بدء دراسة جادّة أو امتحان أو مقرّر جديد وعطارد راجع. |
-| 3868 | AI-draft | Moon Applying to Jupiter (Wisdom/Comprehension) | اتّصال القمر بالمشتري (الحكمة والفهم) |
-| 3869 | AI-draft | ° — Jupiter is the classical significator of wisdom and comprehension. | ° — المشتري هو الدالّ الكلاسيكي على الحكمة والفهم. |
-| 3870 | AI-draft | Moon Applying to Mercury (Retention) | اتّصال القمر بعطارد (الحفظ) |
-| 3871 | AI-draft | with Mercury, orb | مع عطارد، بفلك |
-| 3872 | AI-draft | ° — favorable for retention and a receptive mind. | ° — مواتٍ للحفظ وتهيّؤ الذهن. |
-| 3873 | AI-draft | Moon is not applying to a favorable aspect with Mercury. | القمر غير متّصل بنظر حسن مع عطارد. |
-| 3874 | AI-draft | ° — warns of frustration, blocked progress, or discouragement. | ° — يحذّر من الإحباط أو تعثّر التقدّم أو الفتور. |
-| 3875 | AI-draft | Jupiter Free of Fall/Detriment | المشتري سالم من الهبوط والوبال |
-| 3876 | AI-draft | Jupiter is in | المشتري في |
-| 3877 | AI-draft | — free of fall or detriment, supporting comprehension and wisdom. | — سالم من الهبوط والوبال، يدعم الفهم والحكمة. |
-| 3878 | AI-draft | Wednesday (day of Mercury) — favorable for study and comprehension. | الأربعاء (يوم عطارد) — مواتٍ للدراسة والفهم. |
-| 3879 | AI-draft | Thursday (day of Jupiter) — favorable for wisdom and understanding. | الخميس (يوم المشتري) — مواتٍ للحكمة والفهم. |
-| 3880 | AI-draft | Not a day classically associated with favorable study. | ليس يومًا يرتبط كلاسيكيًا بحسن الدراسة. |
-| 3881 | AI-draft | Moon Applying to Mars (Hard Aspect) | اتّصال القمر بالمريخ (نظر صعب) |
-| 3882 | AI-draft | with Mars, orb | مع المريخ، بفلك |
-| 3883 | AI-draft | Moon is not applying to a hard aspect with Mars. | القمر غير متّصل بنظر صعب مع المريخ. |
-| 3884 | AI-draft | Moon Sign Modality (Fixed/Movable) | طبيعة برج القمر (ثابت/منقلب) |
-| 3885 | AI-draft | — a mutable sign, neutral for this purpose. | — برج ذو جسدين، محايد لهذا الغرض. |
-| 3886 | AI-draft | Moon is not applying to a favorable aspect with Venus or Jupiter. | القمر غير متّصل بنظر حسن مع الزهرة أو المشتري. |
-| 3887 | AI-draft | Saturn Dignified (Domicile) | زحل في كرامة (بيته) |
-| 3888 | AI-draft | Saturn has no domicile bonus in this sign. | لا زيادة بيت لزحل في هذا البرج. |
-| 3889 | AI-draft | Saturn Free of Fall/Detriment | زحل سالم من الهبوط والوبال |
-| 3890 | AI-draft | Saturn Retrograde | رجوع زحل |
-| 3891 | AI-draft | Saturn is retrograde — increased risk of delays, cost overruns, or rework during construction. | زحل راجع — يزداد خطر التأخير وتجاوز التكاليف أو إعادة العمل في البناء. |
-| 3892 | AI-draft | Saturn is direct. | زحل مستقيم. |
-| 3893 | AI-draft | This window is not in a Saturn or Jupiter hour. | هذه النافذة ليست في ساعة زحل أو المشتري. |
-| 3894 | AI-draft | Saturday (day of Saturn) — favorable for foundations and lasting structures. | السبت (يوم زحل) — مواتٍ للأسس والبنى الدائمة. |
-| 3895 | AI-draft | Thursday (day of Jupiter) — favorable for a settled, supported household. | الخميس (يوم المشتري) — مواتٍ لبيت مستقرّ مُعان. |
-| 3896 | AI-draft | Not a day classically associated with favorable building or moving. | ليس يومًا يرتبط كلاسيكيًا بحسن البناء أو الانتقال. |
-| 3897 | AI-draft | ° — waning into the last quarter approaching new moon. | ° — ناقص يقترب من التربيع الأخير قبل المحاق. |
-| 3898 | AI-draft | ° — not in muḥāq. | ° — ليس في المحاق. |
-| 3899 | AI-draft | ° from the Sun — combust (muḥtaraq). | ° من الشمس — محترق. |
-| 3900 | AI-draft | Moon has no applying Ptolemaic aspect before leaving its current sign — void of course. | لا يتّصل القمر بأي نظر بطلمي قبل خروجه من برجه — خالي السير. |
-| 3901 | AI-draft | Moon applying to | القمر متّصل بـ |
-| 3902 | AI-draft | No applying hard aspect to Saturn or Mars within 6°. | لا اتّصال بنظر صعب مع زحل أو المريخ في حدود 6°. |
-| 3903 | AI-draft | h away). | س بعيدًا). |
-| 3904 | AI-draft | ° from the Sun — under the beams. | ° من الشمس — تحت الشعاع. |
-| 3905 | AI-draft | Moon is not in the waning penalty band. | القمر ليس في نطاق النقصان المكروه. |
-| 3906 | AI-draft | ° ecliptic — within via combusta (15° Libra–15° Scorpio). | ° من فلك البروج — في الطريق المحترقة (15° الميزان – 15° العقرب). |
-| 3907 | AI-draft | Moon is outside via combusta. | القمر خارج الطريق المحترقة. |
-| 3908 | AI-draft | Moon in Scorpio — fall. | القمر في العقرب — هبوط. |
-| 3909 | AI-draft | Moon in Capricorn — detriment. | القمر في الجدي — وبال. |
-| 3910 | AI-draft | Moon is not in fall or detriment. | القمر ليس في هبوط ولا وبال. |
-| 3911 | AI-draft | ° from the Sun — combust. | ° من الشمس — محترق. |
-| 3912 | AI-draft | Venus is not combust. | الزهرة غير محترقة. |
-| 3913 | AI-draft | Venus is retrograde. | الزهرة راجعة. |
-| 3914 | AI-draft | Venus is direct. | الزهرة مستقيمة. |
-| 3915 | AI-draft | Venus in Virgo — fall. | الزهرة في العذراء — هبوط. |
-| 3916 | AI-draft | Venus in | الزهرة في |
-| 3917 | AI-draft | — exil. | — وبال. |
-| 3918 | AI-draft | Venus is not in fall or detriment. | الزهرة ليست في هبوط ولا وبال. |
-| 3919 | AI-draft | Mercury is retrograde — caution for the nikāḥ contract itself. | عطارد راجع — احتياط لعقد النكاح نفسه. |
-| 3920 | ✅ reviewed | Moon is applying to a benefic today. | القمر متّصل بكوكبٍ سعدٍ اليوم. |
-| 3921 | AI-draft | Moon is not applying to Venus or Jupiter today — separating from the benefics. | القمر غير متّصل بالزهرة أو المشتري اليوم — منصرف عن السعدين. |
-| 3922 | AI-draft | Moon is not in the favorable waxing band. | القمر ليس في نطاق الزيادة المواتي. |
-| 3923 | AI-draft | Moon in Cancer — domicile. | القمر في السرطان — بيته. |
-| 3924 | AI-draft | Moon in Taurus — exaltation. | القمر في الثور — شرفه. |
-| 3925 | AI-draft | Moon has no marriage-favorable dignity bonus in this sign. | لا زيادة كرامة للقمر في هذا البرج تناسب الزواج. |
-| 3926 | AI-draft | Moon is not applying to Venus or Jupiter by a favorable aspect. | القمر غير متّصل بالزهرة أو المشتري بنظر حسن. |
-| 3927 | AI-draft | Venus in Pisces — exaltation. | الزهرة في الحوت — شرفها. |
-| 3928 | AI-draft | Venus has no dignity bonus in this sign. | لا زيادة كرامة للزهرة في هذا البرج. |
-| 3929 | AI-draft | No day-of-week bonus. | لا زيادة ليوم الأسبوع. |
-| 3930 | AI-draft | This window is not in a Venus, Moon, or Jupiter hour. | هذه النافذة ليست في ساعة الزهرة أو القمر أو المشتري. |
-| 3931 | AI-draft | Moon in lunar mansion | القمر في منزلة |
-| 3932 | AI-draft | — favorable for marriage. [SCHOLAR-REVIEW] | — مواتية للزواج. [للمراجعة العلمية] |
-| 3933 | AI-draft | — unfavorable for marriage. [SCHOLAR-REVIEW] | — غير مواتية للزواج. [للمراجعة العلمية] |
-| 3934 | AI-draft | ° — traditionally warns of complication, poor healing, or a worsened condition. | ° — يحذّر تقليديًا من التعقيد أو بطء الشفاء أو سوء الحال. |
-| 3935 | AI-draft | — free of fall or detriment, supporting recovery. | — سالم من الهبوط والوبال، يدعم التعافي. |
-| 3936 | AI-draft | Mercury Free of Fall/Detriment (Diagnosis) | عطارد سالم من الهبوط والوبال (التشخيص) |
-| 3937 | AI-draft | Mercury Retrograde (Diagnosis) | رجوع عطارد (التشخيص) |
-| 3938 | AI-draft | This window is not in a Moon or Jupiter hour. | هذه النافذة ليست في ساعة القمر أو المشتري. |
-| 3939 | AI-draft | Monday (day of the Moon) — favorable, as the Moon is the primary significator of the body. | الاثنين (يوم القمر) — مواتٍ، لأن القمر هو الدالّ الأول على البدن. |
-| 3940 | AI-draft | Thursday (day of Jupiter) — favorable for recovery and vital force. | الخميس (يوم المشتري) — مواتٍ للتعافي والقوة الحيوية. |
-| 3941 | AI-draft | Not a day classically associated with favorable medical timing. | ليس يومًا يرتبط كلاسيكيًا بحسن التوقيت الطبي. |
-| 3942 | AI-draft | ° — traditionally warns of danger, delay, or mishap en route. | ° — يحذّر تقليديًا من خطر أو تأخير أو عارض في الطريق. |
-| 3943 | AI-draft | Moon Sign Modality (Movable/Fixed) | طبيعة برج القمر (منقلب/ثابت) |
-| 3944 | AI-draft | — a mutable sign, neutral for travel timing. | — برج ذو جسدين، محايد لتوقيت السفر. |
-| 3945 | AI-draft | Mercury Retrograde (Travel Plans/Documents) | رجوع عطارد (خطط السفر والوثائق) |
-| 3946 | AI-draft | Mercury is retrograde — increased risk of itinerary changes, lost documents, or miscommunication. | عطارد راجع — يزداد خطر تغيّر خطّ السير أو ضياع الوثائق أو سوء التفاهم. |
-| 3947 | AI-draft | This window is not in a Jupiter, Moon, or Mercury hour. | هذه النافذة ليست في ساعة المشتري أو القمر أو عطارد. |
-| 3948 | AI-draft | Early departure — "Allāhumma bārik li-ummatī fī bukūrihā" (O Allah, bless my ummah in its early mornings). | الخروج باكرًا — «اللهم بارك لأمتي في بكورها». |
-| 3949 | AI-draft | This window is not in the early-morning (bukūr) band. | هذه النافذة ليست في وقت البكور. |
-| 3950 | AI-draft | Lunar Mansion (Manzil) for Travel | منزلة القمر للسفر |
-| 3951 | AI-draft | — favorable for travel. [SCHOLAR-REVIEW] | — مواتية للسفر. [للمراجعة العلمية] |
-| 3952 | AI-draft | — unfavorable for travel. [SCHOLAR-REVIEW] | — غير مواتية للسفر. [للمراجعة العلمية] |
-| 3953 | AI-draft | — free of fall or detriment, good for plans and correspondence. | — سالم من الهبوط والوبال، جيد للخطط والمراسلات. |
-| 3954 | AI-draft | Wednesday (day of Mercury) — favorable for travel and communication. | الأربعاء (يوم عطارد) — مواتٍ للسفر والتواصل. |
-| 3955 | AI-draft | Thursday — the Prophet ﷺ preferred to set out on journeys on Thursday (Bukhārī). | الخميس — كان النبي ﷺ يحبّ أن يخرج في السفر يوم الخميس (البخاري). |
-| 3956 | AI-draft | Not a day classically associated with favorable travel. | ليس يومًا يرتبط كلاسيكيًا بحسن السفر. |
-| 3957 | AI-draft | Muharram | محرّم |
-| 3958 | AI-draft | Mouharram | محرّم |
-| 3959 | AI-draft | Rabi' al-Awwal | ربيع الأول |
-| 3960 | AI-draft | Rabi al-Awwal | ربيع الأول |
-| 3961 | AI-draft | Rabi al-Thani | ربيع الآخر |
-| 3962 | AI-draft | Joumada al-Awwal | جمادى الأولى |
-| 3963 | AI-draft | Jumada al-Thani | جمادى الآخرة |
-| 3964 | AI-draft | Joumada al-Thani | جمادى الآخرة |
-| 3965 | AI-draft | Chaabane | شعبان |
-| 3966 | AI-draft | Shawwal | شوّال |
-| 3967 | AI-draft | Chawwal | شوّال |
-| 3968 | AI-draft | Dhu al-Qi'dah | ذو القعدة |
-| 3969 | AI-draft | Dhou al-Qi`dah | ذو القعدة |
-| 3970 | AI-draft | Dhu al-Hijjah | ذو الحجّة |
-| 3971 | AI-draft | Dhou al-Hijjah | ذو الحجّة |
-| 3972 | AI-draft | Highly Recommended (Sunnah) | مستحبّ جدًا (سنّة) |
-| 3973 | AI-draft | The Prophet ﷺ married ʿĀʾisha (RA) in Shawwāl — a month long favored for marriage in the Sunnah. | تزوّج النبي ﷺ عائشة رضي الله عنها في شوّال — وهو شهر استُحبّ فيه الزواج في السنّة. |
-| 3974 | AI-draft | Mawlid month | شهر المولد |
-| 3975 | AI-draft | Rabī' al-Awwal, the month associated with the Prophet's ﷺ birth. | ربيع الأول، الشهر المرتبط بمولد النبي ﷺ. |
-| 3976 | AI-draft | The Moon is near dark-of-moon (muḥāq) in the Hijri calendar — this overlaps with the astrological combustion caution above. | القمر قرب المحاق في التقويم الهجري — ويتقاطع هذا مع تحذير الاحتراق الفلكي أعلاه. |
-| 3977 | AI-draft | Celebrations are usually scheduled around Ramadan for practical reasons — nikāḥ itself is permitted year-round, including during Ramadan. | تُرتَّب الاحتفالات عادة حول رمضان لأسباب عملية — أما النكاح نفسه فجائز طوال السنة، ومنه رمضان. |
-| 3978 | AI-draft | Days of Hajj | أيام الحجّ |
-| 3979 | AI-draft | Celebrations are usually scheduled around the days of Hajj (8–13 Dhū al-Ḥijja) for practical reasons — nikāḥ itself is permitted year-round. | تُرتَّب الاحتفالات عادة حول أيام الحجّ (8–13 ذو الحجّة) لأسباب عملية — أما النكاح نفسه فجائز طوال السنة. |
-| 3980 | AI-draft | Zodiac Man Caution | تحذير «الإنسان البروجي» |
-| 3981 | AI-draft | The Moon is in a sign classically ruling the | القمر في برج يحكم كلاسيكيًا |
-| 3982 | AI-draft | Monday is the day of the Moon, the classical significator of the body — informational only. | الاثنين يوم القمر، الدالّ الكلاسيكي على البدن — للمعلومة فقط. |
-| 3983 | AI-draft | The Moon is in a sign where it traditionally expresses its qualities less comfortably. | القمر في برج يُعبّر فيه تقليديًا عن صفاته بارتياح أقلّ. |
-| 3984 | AI-draft | Venus — the planet of love and harmony — is too close to the Sun right now and appears "hidden," weakening its supportive influence. | الزهرة — كوكب المحبّة والانسجام — قريبة جدًا من الشمس الآن وتبدو «مستترة»، فيضعف أثرها الداعم. |
-| 3985 | AI-draft | Mercury appears to be moving backward right now — a mild caution specifically for the paperwork/contract side of things. | يبدو عطارد راجعًا الآن — تحذير خفيف يخصّ جانب الأوراق والعقد. |
-| 3986 | AI-draft | The Moon isn't currently connecting with either of the two traditionally supportive planets (Venus or Jupiter). | القمر غير متّصل الآن بأيٍّ من الكوكبين الداعمين تقليديًا (الزهرة أو المشتري). |
-| 3987 | AI-draft | The Moon is growing in light and clear of the Sun's glare right now — one of the most favorable classical signs for a fresh start. | القمر يزداد نورًا وقد خرج من وهج الشمس — من أحسن العلامات الكلاسيكية لبداية جديدة. |
-| 3988 | AI-draft | The Moon is in a sign it traditionally feels very at home in. | القمر في برج يكون فيه تقليديًا في بيته. |
-| 3989 | AI-draft | The Moon is in the sign of its greatest traditional strength. | القمر في برج أعظم قوّته التقليدية (شرفه). |
-| 3990 | AI-draft | The Moon is forming a supportive connection with Jupiter, the planet of growth and good fortune, right now. | القمر يتّصل الآن اتّصالًا داعمًا بالمشتري، كوكب النموّ والسعد. |
-| 3991 | AI-draft | Venus is in a sign it traditionally feels very at home in. | الزهرة في برج تكون فيه تقليديًا في بيتها. |
-| 3992 | AI-draft | Venus is in the sign of its greatest traditional strength. | الزهرة في برج أعظم قوّتها التقليدية (شرفها). |
-| 3993 | AI-draft | This falls on Friday — the day most recommended in Islamic tradition for this occasion. | يقع هذا يوم الجمعة — أكثر الأيام استحبابًا لهذه المناسبة في التراث الإسلامي. |
-| 3994 | AI-draft | This falls on Monday, a day traditionally seen as mildly favorable. | يقع هذا يوم الاثنين، وهو يوم يُرى تقليديًا مواتيًا بعض الشيء. |
-| 3995 | AI-draft | The Moon is passing through a lunar "station" traditionally considered favorable for this occasion. | القمر يمرّ بمنزلة تُعدّ تقليديًا مواتية لهذه المناسبة. |
-| 3996 | AI-draft | The Moon is passing through a lunar "station" traditionally considered less favorable for this occasion. | القمر يمرّ بمنزلة تُعدّ تقليديًا أقلّ مواتاة لهذه المناسبة. |
-| 3997 | AI-draft | The Moon isn't forming any meaningful connection right now — traditionally, a journey begun in this state tends to come to nothing. | القمر لا يكوّن الآن أي اتّصال ذي معنى — وتقليديًا، السفر الذي يبدأ في هذه الحال لا يُثمر. |
-| 3998 | AI-draft | The Moon is in a tense position with Saturn or Mars right now — a traditional warning of danger or delay en route. | القمر في وضع متوتّر مع زحل أو المريخ الآن — تحذير تقليدي من خطر أو تأخير في الطريق. |
-| 3999 | AI-draft | The Moon is too close to the Sun right now and appears "hidden" — this weakens the traveler's own influence in the chart. | القمر قريب جدًا من الشمس الآن ويبدو «مستترًا» — وهذا يُضعف دلالة المسافر نفسه في الطالع. |
-| 4000 | AI-draft | The Moon is in a sign associated with quick movement — traditionally favorable for setting out. | القمر في برج يرتبط بسرعة الحركة — مواتٍ تقليديًا للخروج. |
-| 4001 | AI-draft | The Moon is in a sign associated with staying put — traditionally a caution for travel, suggesting possible delay. | القمر في برج يرتبط بالمكث — تحذير تقليدي للسفر يوحي بتأخير محتمل. |
-| 4002 | AI-draft | Mercury appears to be moving backward right now — traditionally linked to itinerary changes, lost documents, or mix-ups. | يبدو عطارد راجعًا الآن — ويرتبط تقليديًا بتغيّر خطّ السير أو ضياع الوثائق أو الالتباس. |
-| 4003 | AI-draft | The Moon is growing in light right now — traditionally favorable for setting out and making progress. | القمر يزداد نورًا الآن — مواتٍ تقليديًا للخروج والتقدّم. |
-| 4004 | AI-draft | The Moon is forming a supportive connection with Venus or Jupiter right now — a sign of a smooth, well-supported journey. | القمر يتّصل الآن اتّصالًا داعمًا بالزهرة أو المشتري — علامة على سفر سلس ميسّر. |
-| 4005 | AI-draft | This specific time window aligns with a planetary hour traditionally seen as supportive for travel. | تتوافق هذه النافذة مع ساعة كوكبية تُرى تقليديًا داعمة للسفر. |
-| 4006 | AI-draft | This is an early-morning departure — the Prophet ﷺ asked Allah to bless the early mornings of his ummah. | هذا خروج في البكور — وقد دعا النبي ﷺ لأمّته بالبركة في بكورها. |
-| 4007 | AI-draft | The Moon is passing through a lunar "station" traditionally considered favorable for travel. | القمر يمرّ بمنزلة تُعدّ تقليديًا مواتية للسفر. |
-| 4008 | AI-draft | The Moon is passing through a lunar "station" traditionally considered less favorable for travel. | القمر يمرّ بمنزلة تُعدّ تقليديًا أقلّ مواتاة للسفر. |
-| 4009 | AI-draft | Mercury is in a comfortable position right now, supporting clear plans and communication. | عطارد في وضع مريح الآن، يدعم وضوح الخطط والتواصل. |
-| 4010 | AI-draft | This falls on Wednesday, a day traditionally linked to travel and communication. | يقع هذا يوم الأربعاء، وهو يوم يرتبط تقليديًا بالسفر والتواصل. |
-| 4011 | AI-draft | Mercury appears to be moving backward right now — the single most-cited traditional caution against signing contracts or starting negotiations. | يبدو عطارد راجعًا الآن — وهذا أشهر تحذير تقليدي من توقيع العقود أو بدء المفاوضات. |
-| 4012 | AI-draft | The Moon isn't forming any meaningful connection right now — traditionally, a deal begun in this state tends to come to nothing. | القمر لا يكوّن الآن أي اتّصال ذي معنى — وتقليديًا، الصفقة التي تبدأ في هذه الحال لا تُثمر. |
-| 4013 | AI-draft | Mercury is too close to the Sun right now and appears "hidden" — this weakens the deal's own significator. | عطارد قريب جدًا من الشمس الآن ويبدو «مستترًا» — وهذا يُضعف دالّ الصفقة نفسه. |
-| 4014 | AI-draft | The Moon is in a tense position with Saturn or Mars right now — a traditional warning of dispute or a deal turning sour. | القمر في وضع متوتّر مع زحل أو المريخ الآن — تحذير تقليدي من نزاع أو فساد الصفقة. |
-| 4015 | AI-draft | The Moon is growing in light right now — traditionally favorable for starting and growing a venture. | القمر يزداد نورًا الآن — مواتٍ تقليديًا لبدء مشروع وتنميته. |
-| 4016 | AI-draft | The Moon is forming a supportive connection with Jupiter right now — traditionally the planet of profit and gain. | القمر يتّصل الآن اتّصالًا داعمًا بالمشتري — كوكب الربح والكسب تقليديًا. |
-| 4017 | AI-draft | The Moon is forming a supportive connection with Venus right now — favorable for amicable dealing between both sides. | القمر يتّصل الآن اتّصالًا داعمًا بالزهرة — مواتٍ لحسن التعامل بين الطرفين. |
-| 4018 | AI-draft | Mercury is in a sign it traditionally feels very at home in — strong for negotiation and paperwork. | عطارد في برج يكون فيه تقليديًا في بيته — قوي للتفاوض والأوراق. |
-| 4019 | AI-draft | The Moon isn't forming any meaningful connection right now — traditionally, treatment begun in this state tends to come to nothing. | القمر لا يكوّن الآن أي اتّصال ذي معنى — وتقليديًا، العلاج الذي يبدأ في هذه الحال لا يُثمر. |
-| 4020 | AI-draft | The Moon is too close to the Sun right now and appears "hidden" — traditionally, this weakens the body's own vital force in the chart. | القمر قريب جدًا من الشمس الآن ويبدو «مستترًا» — وتقليديًا يُضعف هذا القوة الحيوية للبدن في الطالع. |
-| 4021 | AI-draft | The Moon is in a tense position with Saturn or Mars right now — a traditional warning of complication or slow healing. | القمر في وضع متوتّر مع زحل أو المريخ الآن — تحذير تقليدي من التعقيد أو بطء الشفاء. |
-| 4022 | AI-draft | The Moon is growing in light right now — traditionally favorable for treatments meant to build up or strengthen the body. | القمر يزداد نورًا الآن — مواتٍ تقليديًا للعلاجات التي تبني البدن وتقوّيه. |
-| 4023 | AI-draft | The Moon is forming a supportive connection with Venus or Jupiter right now — a sign of a smooth course of treatment and recovery. | القمر يتّصل الآن اتّصالًا داعمًا بالزهرة أو المشتري — علامة على علاج وتعافٍ سلسين. |
-| 4024 | AI-draft | Jupiter — the traditional significator of recovery — is in a comfortable position right now. | المشتري — الدالّ التقليدي على التعافي — في وضع مريح الآن. |
-| 4025 | AI-draft | Mercury is in a comfortable position right now, supporting a clear diagnosis. | عطارد في وضع مريح الآن، يدعم وضوح التشخيص. |
-| 4026 | AI-draft | Mercury appears to be moving backward right now — a mild caution for the accuracy of a diagnosis. | يبدو عطارد راجعًا الآن — تحذير خفيف يخصّ دقّة التشخيص. |
-| 4027 | AI-draft | This falls on Monday or Thursday — days traditionally linked to the body and to recovery. | يقع هذا يوم الاثنين أو الخميس — يومان يرتبطان تقليديًا بالبدن والتعافي. |
-| 4028 | AI-draft | The Moon isn't forming any meaningful connection right now — traditionally, work begun in this state tends to come to nothing. | القمر لا يكوّن الآن أي اتّصال ذي معنى — وتقليديًا، العمل الذي يبدأ في هذه الحال لا يُثمر. |
-| 4029 | AI-draft | The Moon is too close to the Sun right now and appears "hidden" — this weakens the matter's own significator. | القمر قريب جدًا من الشمس الآن ويبدو «مستترًا» — وهذا يُضعف دالّ الأمر نفسه. |
-| 4030 | AI-draft | The Moon is in a sign associated with stability — traditionally favorable for something meant to last. | القمر في برج يرتبط بالثبات — مواتٍ تقليديًا لما يُراد له الدوام. |
-| 4031 | AI-draft | The Moon is in a sign associated with change and impermanence — the opposite of what a lasting foundation calls for. | القمر في برج يرتبط بالتغيّر وعدم الدوام — عكس ما يتطلّبه الأساس الدائم. |
-| 4032 | AI-draft | The Moon is growing in light right now — traditionally favorable for building and growing a household. | القمر يزداد نورًا الآن — مواتٍ تقليديًا لبناء بيت وتنميته. |
-| 4033 | AI-draft | The Moon is forming a supportive connection with Venus or Jupiter right now — a sign of a settled, well-supported household. | القمر يتّصل الآن اتّصالًا داعمًا بالزهرة أو المشتري — علامة على بيت مستقرّ مُعان. |
-| 4034 | AI-draft | Saturn — the traditional significator of land and foundations — is in a sign it feels very at home in. | زحل — الدالّ التقليدي على الأرض والأسس — في برج يكون فيه في بيته. |
-| 4035 | AI-draft | Saturn appears to be moving backward right now — traditionally linked to delays, cost overruns, or rework. | يبدو زحل راجعًا الآن — ويرتبط تقليديًا بالتأخير أو تجاوز التكاليف أو إعادة العمل. |
-| 4036 | AI-draft | This specific time window aligns with a planetary hour traditionally seen as supportive for foundations and building. | تتوافق هذه النافذة مع ساعة كوكبية تُرى تقليديًا داعمة للأسس والبناء. |
-| 4037 | AI-draft | This falls on Saturday or Thursday — days traditionally linked to foundations and a supported household. | يقع هذا يوم السبت أو الخميس — يومان يرتبطان تقليديًا بالأسس والبيت المُعان. |
-| 4038 | AI-draft | Mercury appears to be moving backward right now — the same traditional caution cited against contracts applies to starting serious study. | يبدو عطارد راجعًا الآن — ويسري التحذير التقليدي نفسه المذكور في العقود على بدء الدراسة الجادّة. |
-| 4039 | AI-draft | The Moon isn't forming any meaningful connection right now — traditionally, study begun in this state tends to come to nothing. | القمر لا يكوّن الآن أي اتّصال ذي معنى — وتقليديًا، الدراسة التي تبدأ في هذه الحال لا تُثمر. |
-| 4040 | AI-draft | Mercury is too close to the Sun right now and appears "hidden" — this weakens the significator of the intellect and study itself. | عطارد قريب جدًا من الشمس الآن ويبدو «مستترًا» — وهذا يُضعف دالّ العقل والدراسة نفسه. |
-| 4041 | AI-draft | The Moon is forming a supportive connection with Jupiter right now — traditionally the planet of wisdom and comprehension. | القمر يتّصل الآن اتّصالًا داعمًا بالمشتري — كوكب الحكمة والفهم تقليديًا. |
-| 4042 | AI-draft | The Moon is forming a supportive connection with Mercury right now — favorable for retention and a receptive mind. | القمر يتّصل الآن اتّصالًا داعمًا بعطارد — مواتٍ للحفظ وتهيّؤ الذهن. |
-| 4043 | AI-draft | The Moon is in a tense position with Saturn or Mars right now — a traditional warning of frustration or blocked progress. | القمر في وضع متوتّر مع زحل أو المريخ الآن — تحذير تقليدي من الإحباط أو تعثّر التقدّم. |
-| 4044 | AI-draft | Mercury is in a sign it traditionally feels very at home in — strong for comprehension and memory. | عطارد في برج يكون فيه تقليديًا في بيته — قوي للفهم والحفظ. |
-| 4045 | AI-draft | Jupiter is in a comfortable position right now, supporting comprehension and wisdom. | المشتري في وضع مريح الآن، يدعم الفهم والحكمة. |
-| 4046 | AI-draft | This falls on Wednesday or Thursday — days traditionally linked to the intellect and wisdom. | يقع هذا يوم الأربعاء أو الخميس — يومان يرتبطان تقليديًا بالعقل والحكمة. |
-| 4047 | AI-draft | "Allāhumma bārik li-ummatī fī bukūrihā" — O Allah, bless my ummah in its early mornings. | «اللهم بارك لأمتي في بكورها». |
-| 4048 | AI-draft | Friday Caution | تنبيه يوم الجمعة |
-| 4049 | AI-draft | For those obligated to attend Jumuʿah, departing after the call to Friday prayer is discouraged in fiqh — this is informational only and does not affect the score. | لمن تجب عليه الجمعة، يُكره السفر بعد نداء صلاة الجمعة في الفقه — وهذا للمعلومة فقط ولا يؤثّر في الدرجة. |
-| 4050 | AI-draft | Favored month ( | شهر مستحبّ ( |
-| 4051 | AI-draft | Favored month in Senegambian custom — | شهر مستحبّ في العرف السنغالي الغامبي — |
-| 4052 | AI-draft | (Muḥarram) is one of the sacred months (min al-ashhur al-ḥurum). | (محرّم) من الأشهر الحُرُم. |
-| 4053 | AI-draft | Traditionally cautious ( | احتياط تقليدي ( |
-| 4054 | AI-draft | ) is fully permissible in fiqh. | ) جائز تمامًا في الفقه. |
-| 4055 | AI-draft | Festive month ( | شهر احتفالي ( |
-| 4056 | AI-draft | Mawlid month — | شهر المولد — |
-| 4057 | AI-draft | is festive in Senegambian custom, associated with the Prophet's ﷺ birth. | شهر احتفالي في العرف السنغالي الغامبي، مرتبط بمولد النبي ﷺ. |
-| 4058 | AI-draft | Sunnah-recommended ( | مستحبّ في السنّة ( |
-| 4059 | AI-draft | Sunnah-recommended — the Prophet ﷺ married ʿĀʾisha (RA) in Shawwāl ( | مستحبّ في السنّة — تزوّج النبي ﷺ عائشة رضي الله عنها في شوّال ( |
-| 4060 | AI-draft | chest and stomach | الصدر والمعدة |
-| 4061 | AI-draft | heart and upper back | القلب وأعلى الظهر |
-| 4062 | AI-draft | abdomen and intestines | البطن والأمعاء |
-| 4063 | AI-draft | reproductive organs and bladder | الأعضاء التناسلية والمثانة |
-| 4064 | AI-draft | knees, joints, and bones | الركبتين والمفاصل والعظام |
-| 4065 | AI-draft | ankles and shins | الكاحلين والساقين |
-| 4066 | AI-draft | New Beginnings, Initiative | البدايات الجديدة والمبادرة |
-| 4067 | AI-draft | New ventures | المشاريع الجديدة |
-| 4068 | AI-draft | Beginnings invite intention (niyyah) and remembrance — the Moon’s stations are signs, not decrees. | البدايات تدعو إلى النيّة والذكر — ومنازل القمر علامات لا أقدار. |
-| 4069 | AI-draft | Nourishment, Growth | الغذاء والنموّ |
-| 4070 | AI-draft | Planting | الغرس |
-| 4071 | AI-draft | Business ventures | المشاريع التجارية |
-| 4072 | AI-draft | As the body needs nourishment, the heart needs what draws it nearer to Allah. | كما يحتاج البدن إلى الغذاء، يحتاج القلب إلى ما يقرّبه من الله. |
-| 4073 | AI-draft | Beauty, Abundance, Gathering | الجمال والوفرة والاجتماع |
-| 4074 | AI-draft | Gatherings | الاجتماعات |
-| 4075 | AI-draft | Harsh speech | الكلام القاسي |
-| 4076 | AI-draft | Al-Thurayyā was among the best-known stations in Arab star lore — a reminder to gather in beauty and good company. | كانت الثريا من أشهر المنازل في علم النجوم عند العرب — تذكيرًا بالاجتماع في جمال وصحبة طيبة. |
-| 4077 | AI-draft | Educational reflection (anwāʾ / Al-Bīrūnī tradition of naming) | تأمّل تعليمي (الأنواء / تقليد التسمية عند البيروني) |
-| 4078 | AI-draft | Loyalty, Persistence, Following Truth | الوفاء والمثابرة واتّباع الحقّ |
-| 4079 | AI-draft | Seeking teachers | طلب المعلّمين |
-| 4080 | AI-draft | Breaking commitments | نقض العهود |
-| 4081 | AI-draft | Impulsive changes | التغييرات المتسرّعة |
-| 4082 | AI-draft | Al-Dabarān “follows” Thurayyā across the sky — a picture of steadfast following, not blind haste. | الدبران «يتبع» الثريا في السماء — صورة للاتّباع الثابت لا العجلة العمياء. |
-| 4083 | AI-draft | Educational reflection (star-name lore) | تأمّل تعليمي (موروث أسماء النجوم) |
-| 4084 | AI-draft | Orion | الجبّار |
-| 4085 | AI-draft | Clarity, Purification, Truth | الوضوح والتطهّر والحقّ |
-| 4086 | AI-draft | Spiritual purification | التطهّر الروحي |
-| 4087 | AI-draft | Unclear contracts | العقود الغامضة |
-| 4088 | AI-draft | Confusion | الالتباس |
-| 4089 | AI-draft | Clarity of intention softens confusion — seek light before you speak or sign. | وضوح النيّة يخفّف الالتباس — اطلب النور قبل أن تتكلّم أو توقّع. |
-| 4090 | AI-draft | Marking, Identity, Recognition | الوسم والهوية والتعرّف |
-| 4091 | AI-draft | Establishing identity | إثبات الهوية |
-| 4092 | AI-draft | Clear naming | التسمية الواضحة |
-| 4093 | AI-draft | Anonymity | الخفاء |
-| 4094 | AI-draft | Hiding truth | كتمان الحقّ |
-| 4095 | AI-draft | Dishonesty | الكذب |
-| 4096 | AI-draft | Names and marks in the old star calendar were for recognition — know yourself before Allah, not for show. | كانت الأسماء والعلامات في تقويم النجوم القديم للتعارف — فاعرف نفسك بين يدي الله لا للرياء. |
-| 4097 | AI-draft | Reach, Extension, Generosity | المدّ والامتداد والكرم |
-| 4098 | AI-draft | The forearm that gives in charity teaches reach without grasping. | الذراع التي تمتدّ بالصدقة تعلّم المدّ دون القبض. |
-| 4099 | AI-draft | Mystery, Threshold, Sacred Space | السرّ والعتبة والمكان المقدّس |
-| 4100 | AI-draft | Retreat | الخلوة |
-| 4101 | AI-draft | Excessive worldly activity | الإفراط في الانشغال الدنيوي |
-| 4102 | AI-draft | Noise | الضجيج |
-| 4103 | AI-draft | Distraction | التشتّت |
-| 4104 | AI-draft | In quiet gaps — between tasks, between breaths — remember the One who ordered the Moon’s phases. | في الفجوات الهادئة — بين المهامّ وبين الأنفاس — اذكر الذي قدّر القمر منازل. |
-| 4105 | AI-draft | Vision, Attentiveness | البصر واليقظة |
-| 4106 | AI-draft | Careful observation | الملاحظة الدقيقة |
-| 4107 | AI-draft | Seeking counsel | طلب المشورة |
-| 4108 | AI-draft | Hasty judgments | الأحكام المتسرّعة |
-| 4109 | AI-draft | Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen. | منازل القمر محطّات للتأمّل ولأدب التوقيت — لا للتنبّؤ بالغيب. |
-| 4110 | AI-draft | Formal commitments | الالتزامات الرسمية |
-| 4111 | AI-draft | Empty show | المظاهر الجوفاء |
-| 4112 | AI-draft | Neglecting counsel | إهمال المشورة |
-| 4113 | AI-draft | Strength, Presence | القوة والحضور |
-| 4114 | AI-draft | Encouraging others | تشجيع الآخرين |
-| 4115 | AI-draft | Steady work | العمل الثابت |
-| 4116 | AI-draft | Protecting the vulnerable | حماية الضعفاء |
-| 4117 | AI-draft | Boastfulness | التفاخر |
-| 4118 | AI-draft | Wasting energy | إهدار الطاقة |
-| 4119 | AI-draft | Transition, Turning | الانتقال والتحوّل |
-| 4120 | AI-draft | Course corrections | تصحيح المسار |
-| 4121 | AI-draft | Ending harmful habits | ترك العادات الضارّة |
-| 4122 | AI-draft | Reorganizing | إعادة التنظيم |
-| 4123 | AI-draft | Tawba | التوبة |
-| 4124 | AI-draft | Clinging to the obsolete | التشبّث بما بلي |
-| 4125 | AI-draft | Forced abrupt breaks without counsel | القطيعة المفاجئة بلا مشورة |
-| 4126 | AI-draft | Gathering, Calling | الجمع والنداء |
-| 4127 | AI-draft | Community work | العمل المجتمعي |
-| 4128 | AI-draft | Spreading alarm without cause | نشر الذعر بلا سبب |
-| 4129 | AI-draft | Fair dealing | المعاملة العادلة |
-| 4130 | AI-draft | Harvest and completion of work | الحصاد وإتمام العمل |
-| 4131 | AI-draft | Neglecting zakāh and rights | إهمال الزكاة والحقوق |
-| 4132 | AI-draft | Covering, Discretion | الستر والكتمان |
-| 4133 | AI-draft | Private repentance | التوبة في السرّ |
-| 4134 | AI-draft | Protecting privacy | صون الخصوصية |
-| 4135 | AI-draft | Quiet charity | صدقة السرّ |
-| 4136 | AI-draft | Exposing others | فضح الآخرين |
-| 4137 | AI-draft | Scandal | الفضيحة |
-| 4138 | AI-draft | Public shaming | التشهير العلني |
-| 4139 | AI-draft | Boundaries, Careful Cuts | الحدود والقطع بحذر |
-| 4140 | AI-draft | Spiteful severance | القطيعة عن حقد |
-| 4141 | AI-draft | Ambiguous contracts | العقود الملتبسة |
-| 4142 | AI-draft | Formal roles | الأدوار الرسمية |
-| 4143 | AI-draft | Guarding dignity | صون الكرامة |
-| 4144 | AI-draft | Betrayal of trust | خيانة الأمانة |
-| 4145 | AI-draft | Seeking status for its own sake | طلب الجاه لذاته |
-| 4146 | AI-draft | Sincerity, Courage of Heart | الإخلاص وشجاعة القلب |
-| 4147 | AI-draft | Courageous apology | الاعتذار الشجاع |
-| 4148 | AI-draft | Emotional recklessness | التهوّر العاطفي |
-| 4149 | AI-draft | Crushing speech | الكلام الجارح |
-| 4150 | AI-draft | Restraint, Defense of Dignity | الإمساك والدفاع عن الكرامة |
-| 4151 | AI-draft | Cautious travel planning | التخطيط الحذر للسفر |
-| 4152 | AI-draft | Saying less | الإقلال من الكلام |
-| 4153 | AI-draft | Retaliation for ego | الانتقام للأنا |
-| 4154 | AI-draft | Reckless risk | المخاطرة المتهوّرة |
-| 4155 | AI-draft | Journey, Openness | السفر والانفتاح |
-| 4156 | AI-draft | Outdoor work | العمل في الهواء الطلق |
-| 4157 | AI-draft | Expanding horizons with adab | توسيع الآفاق بأدب |
-| 4158 | AI-draft | Aimless wandering | التجوال بلا غاية |
-| 4159 | AI-draft | Leaving duties unfinished | ترك الواجبات ناقصة |
-| 4160 | AI-draft | Isolation from good counsel | الانعزال عن النصح الطيّب |
-| 4161 | AI-draft | Settling affairs | تسوية الشؤون |
-| 4162 | AI-draft | Neighborhood care | رعاية الجيران |
-| 4163 | AI-draft | Organizing home | ترتيب البيت |
-| 4164 | AI-draft | Neglecting neighbors' rights | إهمال حقوق الجيران |
-| 4165 | AI-draft | Chaos in commitments | الفوضى في الالتزامات |
-| 4166 | AI-draft | Fleeing responsibility | الفرار من المسؤولية |
-| 4167 | AI-draft | Offering, Commitment | القربان والالتزام |
-| 4168 | AI-draft | Charitable giving | الصدقة |
-| 4169 | AI-draft | Keeping vows | الوفاء بالنذور |
-| 4170 | AI-draft | Serious commitments | الالتزامات الجادّة |
-| 4171 | AI-draft | Simplifying lifestyle | تبسيط المعيشة |
-| 4172 | AI-draft | Wasteful spending | الإسراف |
-| 4173 | AI-draft | Harming animals or people | إيذاء الحيوان أو الناس |
-| 4174 | AI-draft | L'Avaleur Fortune | سعد بلع |
-| 4175 | AI-draft | Depth, Absorption | العمق والاستيعاب |
-| 4176 | AI-draft | Patience with difficulty | الصبر على الشدّة |
-| 4177 | AI-draft | Swallowing anger into resentment | كظم الغيظ حتى يصير حقدًا |
-| 4178 | AI-draft | Consuming without reflection | الاستهلاك بلا تفكّر |
-| 4179 | AI-draft | Overindulgence | الإفراط |
-| 4180 | AI-draft | Gratitude, Hope | الشكر والرجاء |
-| 4181 | AI-draft | Gratitude practices | ممارسات الشكر |
-| 4182 | AI-draft | Beginning hopeful works | بدء الأعمال المرجوّة |
-| 4183 | AI-draft | Sharing ease with others | مشاركة اليسر مع الآخرين |
-| 4184 | AI-draft | Taking ease for granted | الغفلة عن النعمة |
-| 4185 | AI-draft | Complacency | الركون والتراخي |
-| 4186 | AI-draft | Forgetting the Giver | نسيان المُنعِم |
-| 4187 | AI-draft | Shelter and housing matters | شؤون المأوى والسكن |
-| 4188 | AI-draft | Protecting family | حماية الأسرة |
-| 4189 | AI-draft | Welcoming the stranger with adab | إكرام الغريب بأدب |
-| 4190 | AI-draft | Inhospitality | ترك إكرام الضيف |
-| 4191 | AI-draft | Neglecting dependents | إهمال من تعول |
-| 4192 | AI-draft | Closing doors out of pride | إغلاق الأبواب كِبرًا |
-| 4193 | AI-draft | Opening, Outflow | الانفتاح والتدفّق |
-| 4194 | AI-draft | Starting helpful projects | بدء مشاريع نافعة |
-| 4195 | AI-draft | Releasing stuck affairs | تحريك الشؤون العالقة |
-| 4196 | AI-draft | Gossip as “release” | الغيبة بحجّة «التنفيس» |
-| 4197 | AI-draft | Completion, Emptying | الإتمام والتفريغ |
-| 4198 | AI-draft | Completing projects | إتمام المشاريع |
-| 4199 | AI-draft | Settling debts | قضاء الديون |
-| 4200 | AI-draft | Forgiving leftovers | العفو عن البقايا |
-| 4201 | AI-draft | Closing cycles cleanly | إغلاق الدورات بنظافة |
-| 4202 | AI-draft | Leaving ends untied | ترك الأطراف معلّقة |
-| 4203 | AI-draft | Hoarding grudges | اكتناز الضغائن |
-| 4204 | AI-draft | Starting too many new things | بدء أشياء جديدة كثيرة |
-| 4205 | AI-draft | Wholeness, Hidden Depths | الكمال والأعماق الخفيّة |
-| 4206 | AI-draft | Quiet reflection | التأمّل الهادئ |
-| 4207 | AI-draft | Caring for the unseen needs of others | رعاية حاجات الآخرين الخفيّة |
-| 4208 | AI-draft | Patience with the hidden | الصبر على ما خفي |
-| 4209 | AI-draft | Integrating lessons | استيعاب الدروس |
-| 4210 | AI-draft | Denying the unseen | إنكار الغيب |
-| 4211 | AI-draft | Despair in darkness | اليأس في الظلمة |
-| 4212 | AI-draft | Waxing Gibbous | أحدب متزايد |
-| 4213 | AI-draft | Waning Gibbous | أحدب متناقص |
-| 4214 | AI-draft | Last Quarter | التربيع الأخير |
-| 4215 | AI-draft | Waning Crescent | هلال متناقص |
-| 4216 | AI-draft | Excellent alignment! Lunar mansion | انسجام ممتاز! منزلة القمر |
-| 4217 | AI-draft | is ruled by | يحكمها |
-| 4218 | AI-draft | , matching the current planetary hour. | ، موافقةً للساعة الكوكبية الحالية. |
-| 4219 | AI-draft | shares the | يشترك في عنصر |
-| 4220 | AI-draft | element with lunar mansion | مع منزلة القمر |
-| 4221 | AI-draft | Neutral influence. | أثر محايد. |
-| 4222 | AI-draft | hour and lunar mansion | الساعة ومنزلة القمر |
-| 4223 | AI-draft | have different energies. | طاقتاهما مختلفتان. |
-| 4224 | AI-draft | Hot Food Sadaqah | صدقة الطعام الساخن |
-| 4225 | AI-draft | Giving hot, prepared food as sadaqah is a beneficial form of charity. The food can be given to children or to anyone who can benefit from it. This form of sadaqah is associated with feeding and providing nourishment. | التصدّق بطعام ساخن مطبوخ صورة نافعة من الصدقة. ويمكن إعطاؤه للأطفال أو لكل من ينتفع به. وترتبط هذه الصدقة بالإطعام وتقديم الغذاء. |
-| 4226 | AI-draft | Rice | أرز |
-| 4227 | AI-draft | Porridge | عصيدة |
-| 4228 | AI-draft | Cold Water Sadaqah | صدقة الماء البارد |
-| 4229 | AI-draft | Giving cold water as sadaqah is another beneficial form of charity. The sadaqah specifically consists of providing cold drinking water to someone who can benefit from it. | التصدّق بالماء البارد صورة نافعة أخرى من الصدقة، وهي تقديم ماء بارد للشرب لمن ينتفع به. |
-| 4230 | AI-draft | Supporting an Athlete or Sportsman | إعانة رياضي |
-| 4231 | AI-draft | Helping a sportsman or athlete can also be given as a form of sadaqah. The assistance should be given sincerely for the benefit of the person. | يمكن أيضًا أن تكون إعانة رياضي صدقةً. وينبغي أن تُقدَّم بإخلاص لمنفعة الشخص. |
-| 4232 | AI-draft | Buying them sports equipment or supplies | شراء معدّات أو لوازم رياضية له |
-| 4233 | AI-draft | A form of sadaqah associated with Ḥamal is giving livestock. The animal may be raised and cared for in the household and then given as sadaqah. | من صور الصدقة المرتبطة ببرج الحمل التصدّق بالماشية. فيمكن تربية الحيوان والعناية به في البيت ثم التصدّق به. |
-| 4234 | AI-draft | A ram | كبش |
-| 4235 | AI-draft | A white sheep or ram | شاة أو كبش أبيض |
-| 4236 | AI-draft | A sheep or ram of another colour | شاة أو كبش من لون آخر |
-| 4237 | AI-draft | Giving away clothing that you have personally worn — once, twice, or a small number of times. The important condition is that the clothing is still clean, usable, and in good condition. It is then given to another person who can benefit from wearing it. The emphasis is on giving clothing that has already been worn by the giver, rather than brand-new or completely unused clothing. This sadaqah is associated with protection and seeking benefit through charity. | التصدّق بملابس لبستها أنت — مرّة أو مرّتين أو مرّات قليلة. والشرط المهمّ أن تكون نظيفة صالحة بحالة جيدة، فتُعطى لمن ينتفع بلبسها. والتركيز على ملابس لبسها المتصدّق لا الجديدة تمامًا. وترتبط هذه الصدقة بالحفظ وطلب النفع بالصدقة. |
-| 4238 | AI-draft | Venus (al-Zuhrah / الزهرة) | الزهرة |
-| 4239 | AI-draft | A primary form of sadaqah associated with al-Thawr is giving a single-coloured ram. A white ram is particularly suitable. The ram is given as sadaqah to someone who can benefit from it. | من أهمّ صور الصدقة المرتبطة ببرج الثور التصدّق بكبش ذي لون واحد، والأبيض أنسب. ويُعطى لمن ينتفع به. |
-| 4240 | AI-draft | Giving away clothing that has already been worn, still in good and usable condition. This sadaqah is associated with protection and may be given with the intention of seeking protection through charity. | التصدّق بملابس سبق لبسها وهي بحالة جيدة صالحة. وترتبط هذه الصدقة بالحفظ ويمكن أن تُعطى بنيّة طلب الحفظ بالصدقة. |
-| 4241 | AI-draft | Giving things grown from the ground, particularly staple agricultural foods, directly to people in need. | التصدّق بما يخرج من الأرض، لا سيما الأغذية الزراعية الأساسية، للمحتاجين مباشرة. |
-| 4242 | AI-draft | Millet (dugub in Wolof) | الدُّخن («دوغوب» بالولوف) |
-| 4243 | AI-draft | Other grains and agricultural produce | حبوب ومحاصيل زراعية أخرى |
-| 4244 | AI-draft | Rice and millet may also be combined with cooking oil and given together as a food-based sadaqah package to someone or a family in need. | يمكن أيضًا جمع الأرز والدُّخن مع زيت الطبخ وإعطاؤها معًا سلّة غذائية صدقةً لشخص أو أسرة محتاجة. |
-| 4245 | AI-draft | Millet | الدُّخن |
-| 4246 | AI-draft | Giving water is another beneficial sadaqah for Taurus. The water is given to someone who needs or can benefit from it. | التصدّق بالماء صدقة نافعة أخرى لبرج الثور، يُعطى لمن يحتاجه أو ينتفع به. |
-| 4247 | AI-draft | A particularly important form of sadaqah for Taurus is helping an elderly man or woman, regularly or whenever they are in need. This is regarded in the tradition as a secret sadaqah for increasing and sustaining one's provision (rizq). The emphasis is on quietly and consistently helping an elderly person without seeking recognition. | من أهمّ صور الصدقة لبرج الثور إعانة رجل أو امرأة مسنّة بانتظام أو كلّما احتاجا. وتُعدّ في التراث صدقة سرّ لزيادة الرزق ودوامه. والتركيز على إعانة المسنّ بهدوء وثبات دون طلب ثناء. |
-| 4248 | AI-draft | Household necessities | لوازم البيت |
-| 4249 | AI-draft | Other practical needs | حاجات عملية أخرى |
-| 4250 | AI-draft | Friday is considered a particularly suitable day for giving Taurus-related sadaqah, connected in the tradition with Venus (al-Zuhrah), the planetary ruler of the sign. Where possible, give on Friday while maintaining the intention of sincere charity and seeking blessing, protection, and increase in provision. | يُعدّ يوم الجمعة مناسبًا خاصّة لصدقة برج الثور، لارتباطه في التراث بالزهرة حاكمة البرج. وإن أمكن فتصدّق يوم الجمعة مع نيّة الصدقة الخالصة وطلب البركة والحفظ وزيادة الرزق. |
-| 4251 | AI-draft | A form of sadaqah associated with Jawzāʾ is giving 100 kola nuts, which are then distributed as sadaqah. | من صور الصدقة المرتبطة ببرج الجوزاء التصدّق بمئة حبّة كولا تُوزَّع صدقةً. |
-| 4252 | AI-draft | White kola nuts | حبّات كولا بيضاء |
-| 4253 | AI-draft | Red kola nuts | حبّات كولا حمراء |
-| 4254 | AI-draft | A combination of white and red kola nuts | مزيج من حبّات الكولا البيضاء والحمراء |
-| 4255 | AI-draft | Giving money as sadaqah is intended to help with the preservation and stability of wealth: giving a portion of one's wealth away so that wealth is not simply accumulated and lost or continuously spent. The amount can be according to the person's ability and circumstances. Intention: give sincerely, with the intention of helping others and seeking stability, preservation, and blessing in one's wealth. | يُقصد بالتصدّق بالمال المساعدة على حفظ المال وثباته: بإخراج جزء منه كي لا يُكنز فيضيع أو يُنفق بلا انقطاع. والمقدار بحسب قدرة الشخص وحاله. النيّة: تصدّق بإخلاص بنيّة إعانة الآخرين وطلب الثبات والحفظ والبركة في مالك. |
-| 4256 | AI-draft | Giving a guinea fowl (French: pintade) as sadaqah, distributed to someone who can benefit from it. | التصدّق بدجاجة غينيا، تُعطى لمن ينتفع بها. |
-| 4257 | AI-draft | Providing educational materials is another beneficial form of sadaqah for Gemini. These materials can be given to children or students who need them for their education. | تقديم الأدوات التعليمية صورة نافعة أخرى من الصدقة لبرج الجوزاء، تُعطى للأطفال أو الطلاب المحتاجين إليها في تعليمهم. |
-| 4258 | AI-draft | White writing paper | ورق كتابة أبيض |
-| 4259 | AI-draft | Exercise books | دفاتر تمارين |
-| 4260 | AI-draft | Pencils | أقلام رصاص |
-| 4261 | AI-draft | Educational sadaqah can also be directed toward teachers, including Qur'anic teachers — helping a teacher or their students. The sadaqah can therefore benefit either the teacher or the students. | يمكن أيضًا توجيه الصدقة التعليمية إلى المعلّمين، ومنهم معلّمو القرآن — بإعانة المعلّم أو طلابه. فتنفع الصدقة المعلّم أو الطلاب. |
-| 4262 | AI-draft | Other materials needed for teaching and learning | مواد أخرى لازمة للتعليم والتعلّم |
-| 4263 | AI-draft | Food can be prepared or purchased and given directly to children who can benefit from it. The intention is to provide nourishment and assistance through sadaqah. | يمكن إعداد الطعام أو شراؤه وإعطاؤه مباشرة للأطفال المنتفعين به. والنيّة تقديم الغذاء والعون بالصدقة. |
-| 4264 | AI-draft | A form of sadaqah associated with Saraṭān is giving salt according to one's current age — the amount in kilograms matching the person's age (age 25 → 25 kg, age 30 → 30 kg, age 40 → 40 kg). The amount is weighed according to the person's age and then given out as sadaqah. This may be performed yearly, using the person's age at that time. | من صور الصدقة المرتبطة ببرج السرطان التصدّق بالملح بقدر عمر الشخص الحالي — بالكيلوغرام مساويًا للعمر (25 سنة ← 25 كغ، 30 ← 30 كغ، 40 ← 40 كغ). يُوزن بقدر العمر ثم يُوزَّع صدقةً. ويمكن فعل ذلك كل سنة بعمر الشخص حينها. |
-| 4265 | AI-draft | Giving 4 kg of meat — beef or another type — out as sadaqah to people who can benefit from it. | التصدّق بأربعة كيلوغرامات من اللحم — بقر أو غيره — لمن ينتفع به. |
-| 4266 | AI-draft | Helping with food expenses | الإعانة في نفقات الطعام |
-| 4267 | AI-draft | Helping with household expenses | الإعانة في نفقات البيت |
-| 4268 | AI-draft | Providing financial assistance to an elderly woman in need. The intention is to assist and ease her difficulties through sadaqah. | تقديم عون مالي لامرأة مسنّة محتاجة. والنيّة إعانتها وتيسير صعابها بالصدقة. |
-| 4269 | AI-draft | Giving her money | إعطاؤها مالًا |
-| 4270 | AI-draft | Helping with essential expenses | الإعانة في النفقات الأساسية |
-| 4271 | AI-draft | Providing regular or occasional financial support | تقديم دعم مالي منتظم أو عند الحاجة |
-| 4272 | AI-draft | Giving milk to children as sadaqah to provide nourishment and benefit. | التصدّق بالحليب على الأطفال غذاءً ونفعًا. |
-| 4273 | AI-draft | A small bottle of milk | قارورة حليب صغيرة |
-| 4274 | AI-draft | A larger quantity of milk | كمية أكبر من الحليب |
-| 4275 | AI-draft | A primary form of sadaqah associated with al-Asad is to raise a ram, particularly a white ram: obtain it, keep it in an appropriate place at home or elsewhere, feed and care for it, and allow it to grow until it reaches a suitable mature stage. It is then slaughtered as sadaqah, the meat divided into portions and distributed to people who can benefit from it. Within this tradition, there is an observation that some Leo individuals may find the ram does not survive long enough to reach maturity, traditionally attributed to the heaviness of the zodiac. If the ram survives and reaches the appropriate mature stage, it can then be given as sadaqah. | من أهمّ صور الصدقة المرتبطة ببرج الأسد تربية كبش، لا سيما الأبيض: يُقتنى ويُحفظ في مكان مناسب في البيت أو غيره، ويُطعَم ويُعتنى به حتى يبلغ سنًّا مناسبة. ثم يُذبح صدقةً ويُقسَّم لحمه حصصًا تُوزَّع على من ينتفع بها. وفي هذا التراث ملاحظة أن بعض مواليد الأسد قد لا يعيش كبشهم حتى يبلغ، ويُنسب ذلك تقليديًا إلى ثقل البرج. فإن عاش وبلغ السنّ المناسبة تُصدِّق به. |
-| 4276 | AI-draft | Preparing three bowls of Cheb Yap — a Senegalese rice dish made with meat, similar to meat-based jollof rice — and giving the prepared food as sadaqah to people who can benefit from it. | إعداد ثلاثة صحون من «تشب ياب» — طبق أرز سنغالي باللحم، شبيه بأرز الجلوف باللحم — والتصدّق بالطعام المُعدّ لمن ينتفع به. |
-| 4277 | AI-draft | Preparing three bowls of porridge with a sour or fermented dairy component such as yogurt, and distributing them to people as sadaqah. | إعداد ثلاثة صحون من العصيدة مع لبن حامض أو مخمّر كالزبادي، وتوزيعها صدقةً. |
-| 4278 | AI-draft | 3 bowls of Cheb Yap | 3 صحون من «تشب ياب» |
-| 4279 | AI-draft | 3 bowls of porridge with yogurt | 3 صحون عصيدة باللبن |
-| 4280 | AI-draft | A primary form of sadaqah associated with al-Sunbula is giving 100 kola nuts, a mixture of red and white, mixed together and distributed as sadaqah. | من أهمّ صور الصدقة المرتبطة ببرج السنبلة التصدّق بمئة حبّة كولا، حمراء وبيضاء مختلطة، تُوزَّع صدقةً. |
-| 4281 | AI-draft | Giving money as sadaqah, according to the person's ability and circumstances, sincerely to someone who can benefit from it. | التصدّق بالمال بحسب قدرة الشخص وحاله، بإخلاص، لمن ينتفع به. |
-| 4282 | AI-draft | Giving three different types of cereal together as sadaqah to people or families who can benefit from them. | التصدّق بثلاثة أنواع من الحبوب معًا على أشخاص أو أسر ينتفعون بها. |
-| 4283 | AI-draft | Bessi — a Wolof cereal/grain similar to millet | «بيسي» — حبّ بالولوف شبيه بالدُّخن |
-| 4284 | AI-draft | A particularly important secret sadaqah associated with Virgo is performed on reaching the age of 40: give 40 metres of kafan cloth (the white cloth used to shroud a deceased Muslim before burial) as sadaqah. Obtain the 40 metres, keep the cloth in the house overnight, then the following day divide it into portions of 7 metres each and distribute the portions as sadaqah. | من صدقات السرّ المهمّة المرتبطة بالسنبلة ما يكون عند بلوغ الأربعين: التصدّق بأربعين مترًا من قماش الكفن (القماش الأبيض الذي يُكفَّن به الميّت المسلم). تُقتنى الأربعون مترًا، ويُبات القماش في البيت ليلة، ثم يُقسَّم في الغد حصصًا كل منها سبعة أمتار وتُوزَّع صدقةً. |
-| 4285 | AI-draft | 100 kola nuts — red and white mixed together | 100 حبّة كولا — حمراء وبيضاء مختلطة |
-| 4286 | AI-draft | Three cereals — millet, rice, and Bessi | ثلاثة حبوب — الدُّخن والأرز و«بيسي» |
-| 4287 | AI-draft | At age 40: 40 metres of kafan cloth, kept overnight then divided into 7-metre portions | عند الأربعين: 40 مترًا من قماش الكفن، تُبات ليلة ثم تُقسَّم حصصًا من 7 أمتار |
-| 4288 | AI-draft | Argent | المال |
-| 4289 | AI-draft | Giving guinea fowl (pintade) as sadaqah to someone who can benefit from it. | التصدّق بدجاج غينيا لمن ينتفع به. |
-| 4290 | AI-draft | Giving three chickens of different colours — black, white and red — out as sadaqah. | التصدّق بثلاث دجاجات مختلفة الألوان — سوداء وبيضاء وحمراء. |
-| 4291 | AI-draft | 7 portions of yogurt — even small sachets | 7 حصص من اللبن — ولو أكياسًا صغيرة |
-| 4292 | AI-draft | Guinea fowl (pintade) | دجاج غينيا |
-| 4293 | AI-draft | Pintade | دجاج غينيا |
-| 4294 | AI-draft | A special form of sadaqah associated with Scorpio is having or giving a good protective ring, with stones such as rose agate or amethyst. The ring is regarded within this tradition as having protective and beneficial qualities and is also considered part of the sadaqah practice for Scorpio. | من الصدقات الخاصّة المرتبطة ببرج العقرب اقتناء خاتم حافظ حسن أو إهداؤه، بأحجار كالعقيق الوردي أو الجمشت. ويُعدّ الخاتم في هذا التراث ذا خصائص حافظة نافعة، وجزءًا من ممارسة الصدقة للعقرب. |
-| 4295 | AI-draft | Giving a white ram or white sheep, particularly associated with favourable conditions involving Mars. | التصدّق بكبش أبيض أو شاة بيضاء، ويرتبط خاصّة بأحوال المريخ المواتية. |
-| 4296 | AI-draft | When Mars is transiting a favourable or friendly zodiac sign, such as Aries, a red goat may be given as sadaqah. The goat is prepared and its meat divided into portions, distributed among people who can benefit from it until the meat has been given out. The emphasis is on distributing the meat, rather than keeping it for personal consumption. | حين يعبر المريخ برجًا مواتيًا أو صديقًا كالحمل، يمكن التصدّق بماعز أحمر. يُذبح ويُقسَّم لحمه حصصًا تُوزَّع على من ينتفع بها حتى يُعطى كله. والتركيز على التوزيع لا على الاستبقاء للأكل الشخصي. |
-| 4297 | AI-draft | Giving water is an important sadaqah for Scorpio, particularly to sick or hospitalised people — for example taking drinking water to a hospital and giving it freely to patients who need it. This form is especially associated with Scorpio when beginning a new project or undertaking a journey. | التصدّق بالماء صدقة مهمّة للعقرب، لا سيما على المرضى ونزلاء المستشفيات — كأخذ ماء الشرب إلى مستشفى وإعطائه مجّانًا للمرضى المحتاجين. وترتبط هذه الصورة خاصّة بالعقرب عند بدء مشروع جديد أو سفر. |
-| 4298 | AI-draft | Giving rice and fish together as a single sadaqah, both uncooked (raw), distributed to people or families who can benefit from them. | التصدّق بالأرز والسمك معًا صدقةً واحدة، نيّئين، على أشخاص أو أسر ينتفعون بهما. |
-| 4299 | AI-draft | Tuesday is particularly associated with Scorpio because of its connection with Mars, the planetary ruler of the sign, and can be chosen when Mars is in a favourable or neutral transit. Sunday may also be considered, particularly when the Sun is in a favourable condition. The planetary condition should be considered when selecting the timing according to the tradition. | يرتبط يوم الثلاثاء خاصّة بالعقرب لصلته بالمريخ حاكم البرج، ويمكن اختياره حين يكون عبور المريخ مواتيًا أو محايدًا. ويمكن أيضًا اعتبار يوم الأحد، لا سيما حين تكون الشمس في حال مواتية. وينبغي مراعاة حال الكوكب عند اختيار التوقيت وفق التراث. |
-| 4300 | AI-draft | Protective ring — rose agate or amethyst | خاتم حافظ — عقيق وردي أو جمشت |
-| 4301 | AI-draft | White ram or sheep | كبش أو شاة بيضاء |
-| 4302 | AI-draft | Water — especially to sick or hospitalised people | الماء — لا سيما للمرضى ونزلاء المستشفيات |
-| 4303 | AI-draft | Rice and fish — given together, uncooked | الأرز والسمك — معًا، نيّئين |
-| 4304 | AI-draft | Special occasions: beginning a project or travelling | مناسبات خاصّة: بدء مشروع أو السفر |
-| 4305 | AI-draft | Sagittarius is considered a sign for which sadaqah is particularly important and should be given regularly. Unlike some signs that have specific items associated with their sadaqah, Sagittarius has a more open form: a person may give whatever they sincerely wish to give, provided it benefits another person. | يُعدّ برج القوس برجًا للصدقة فيه أهمية خاصّة، وينبغي أن تُعطى بانتظام. وخلافًا لبروج لها أشياء محدّدة، صدقة القوس أوسع: يعطي المرء ما يريد بإخلاص ما دام ينفع غيره. |
-| 4306 | AI-draft | Giving nine pieces of bread, distributed to people who are in need or to anyone who can benefit from it. | التصدّق بتسعة أرغفة خبز، تُوزَّع على المحتاجين أو كل من ينتفع بها. |
-| 4307 | AI-draft | Preparing three bowls of laakh — a Wolof-style porridge traditionally prepared with a fermented or sour dairy component such as yogurt — and giving them to people who can benefit from the food. | إعداد ثلاثة صحون من «لاخ» — عصيدة على طريقة الولوف تُعدّ تقليديًا مع لبن حامض أو مخمّر كالزبادي — وإعطاؤها لمن ينتفع بالطعام. |
-| 4308 | AI-draft | Giving a single-coloured ram, particularly a white ram, as sadaqah to someone who can benefit from it. | التصدّق بكبش ذي لون واحد، لا سيما الأبيض، لمن ينتفع به. |
-| 4309 | AI-draft | Sagittarius has a broad range of possible sadaqah. A person may give whatever they are able and willing to give. The important principle is to give sincerely and for the benefit of another person. | لبرج القوس نطاق واسع من الصدقة. يعطي المرء ما يقدر عليه ويرغب فيه. والمبدأ المهمّ الإخلاص ونفع الغير. |
-| 4310 | AI-draft | Assistance to people in need | إعانة المحتاجين |
-| 4311 | AI-draft | Other beneficial forms of charity | صور نافعة أخرى من الصدقة |
-| 4312 | AI-draft | Thursday is considered a particularly suitable day for giving Sagittarius-related sadaqah. Where possible, give on Thursday while maintaining the intention of sincere charity and seeking blessing and ease. | يُعدّ يوم الخميس مناسبًا خاصّة لصدقة برج القوس. وإن أمكن فتصدّق يوم الخميس مع نيّة الصدقة الخالصة وطلب البركة والتيسير. |
-| 4313 | AI-draft | 3 bowls of laakh with yogurt | 3 صحون «لاخ» باللبن |
-| 4314 | AI-draft | One-coloured white ram | كبش أبيض ذو لون واحد |
-| 4315 | AI-draft | Any sincere and beneficial sadaqah | أي صدقة صادقة نافعة |
-| 4316 | AI-draft | Sagittarius is traditionally regarded as a sign that benefits from frequent and generous sadaqah, so regular charity is emphasised | يُعدّ القوس تقليديًا برجًا ينتفع بكثرة الصدقة وسخائها، فيُؤكَّد على انتظامها |
-| 4317 | AI-draft | Giving rice and millet according to measurements connected to the person's age and body weight: rice in kilograms corresponding to the person's age, millet in kilograms corresponding to the person's body weight. The rice and millet may be distributed little by little until the entire amount has been given out, to individuals, families, or people in need. | التصدّق بالأرز والدُّخن بمقادير مرتبطة بعمر الشخص ووزنه: الأرز بالكيلوغرام بقدر العمر، والدُّخن بالكيلوغرام بقدر الوزن. ويمكن توزيعهما شيئًا فشيئًا حتى يُعطى المقدار كله، على أفراد أو أسر أو محتاجين. |
-| 4318 | AI-draft | Giving a single-coloured ram, a white ram particularly associated with this sadaqah. This is described in the tradition as a particularly powerful sadaqah, and some people who follow this practice may experience it symbolically through dreams, such as dreaming that they are giving away a ram. | التصدّق بكبش ذي لون واحد، والأبيض مرتبط خاصّة بهذه الصدقة. وتوصف في التراث بأنها صدقة قوية، وقد يراها بعض من يمارسها رمزيًا في المنام، كأن يرى أنه يتصدّق بكبش. |
-| 4319 | AI-draft | Giving kafan, the white cloth used to shroud a deceased Muslim before burial. The sadaqah may consist of providing the cloth needed for someone's burial. | التصدّق بالكفن، القماش الأبيض الذي يُكفَّن به الميّت المسلم. ويمكن أن تكون الصدقة تقديم القماش اللازم لدفن أحد. |
-| 4320 | AI-draft | A family preparing for a burial | أسرة تستعدّ لدفن |
-| 4321 | AI-draft | A mosque or community | مسجد أو مجتمع |
-| 4322 | AI-draft | Someone who cannot afford the burial shroud | من لا يقدر على ثمن الكفن |
-| 4323 | AI-draft | People responsible for assisting with funeral arrangements | القائمون على تجهيز الجنائز |
-| 4324 | AI-draft | Giving cowries, known in Wolof as petaw — the small white cowrie shells traditionally used for decoration and in various cultural and spiritual practices. This form of sadaqah is considered special and sensitive within the tradition. | التصدّق بالودع، المسمّى بالولوف «بيتاو» — الأصداف البيضاء الصغيرة المستعملة تقليديًا للزينة وفي ممارسات ثقافية وروحية متنوّعة. وتُعدّ هذه الصدقة خاصّة وحسّاسة في التراث. |
-| 4325 | AI-draft | Labourers | العمّال |
-| 4326 | AI-draft | Casual workers | العمّال المؤقّتون |
-| 4327 | AI-draft | Cleaners | عمّال النظافة |
-| 4328 | AI-draft | The assistance can be given regularly or whenever the family needs support. This is regarded as a particularly meaningful form of sadaqah because it supports both the widow and the children who depend on her. | يمكن تقديم العون بانتظام أو كلّما احتاجت الأسرة. ويُعدّ هذا من أعظم صور الصدقة معنى لأنه يعين الأرملة والأطفال الذين يعتمدون عليها. |
-| 4329 | AI-draft | Providing food or household necessities | تقديم الطعام أو لوازم البيت |
-| 4330 | AI-draft | Helping with children's expenses | الإعانة في نفقات الأطفال |
-| 4331 | AI-draft | Assisting with other essential needs | الإعانة في حاجات أساسية أخرى |
-| 4332 | AI-draft | Important Guidance — Cowries / Petaw | إرشاد مهمّ — الودع / «بيتاو» |
-| 4333 | AI-draft | Anyone intending to give petaw/cowries as sadaqah should seek guidance from a knowledgeable and trusted spiritual authority who understands the practice. According to the tradition being documented, this sadaqah may be considered capable of helping to open pathways and make matters easier, but it should not be undertaken casually. The practice is therefore regarded as one requiring proper guidance and understanding before giving it as sadaqah. | من ينوي التصدّق بالودع فليطلب الإرشاد من مرجع روحي عالم موثوق يفهم هذه الممارسة. ووفق التراث الموثَّق قد تُعدّ هذه الصدقة معينة على فتح الطرق وتيسير الأمور، لكن لا ينبغي فعلها باستخفاف. فهي ممارسة تتطلّب إرشادًا وفهمًا صحيحين قبل التصدّق بها. |
-| 4334 | AI-draft | Rice and millet | الأرز والدُّخن |
-| 4335 | AI-draft | A white, single-coloured ram | كبش أبيض ذو لون واحد |
-| 4336 | AI-draft | Kafan (burial shroud) | الكفن |
-| 4337 | AI-draft | Cowries / petaw, with proper guidance | الودع / «بيتاو»، بإرشاد صحيح |
-| 4338 | AI-draft | Helping labourers and low-income workers | إعانة العمّال وذوي الدخل المحدود |
-| 4339 | AI-draft | The practices above are regarded within this tradition as forms of secret or special sadaqah for Capricorn. The sadaqah should be given discreetly and sincerely, with the intention of benefiting another person rather than seeking recognition. | تُعدّ الممارسات أعلاه في هذا التراث صورًا من صدقة السرّ أو الصدقة الخاصّة لبرج الجدي. وينبغي أن تُعطى بكتمان وإخلاص، بنيّة نفع الغير لا طلب الثناء. |
-| 4340 | AI-draft | A primary form of sadaqah associated with al-Dalw is giving 100 kola nuts — white, red, or a combination. This sadaqah can be performed monthly, or every three months. The 100 kola nuts are then distributed as sadaqah. | من أهمّ صور الصدقة المرتبطة ببرج الدلو التصدّق بمئة حبّة كولا — بيضاء أو حمراء أو مزيجًا منهما. ويمكن فعلها كل شهر أو كل ثلاثة أشهر، ثم تُوزَّع صدقةً. |
-| 4341 | AI-draft | Helping a community, group, or voluntary organisation. Support may be financial, material, or practical. | إعانة مجتمع أو جماعة أو منظّمة تطوّعية، ماليًا أو ماديًا أو عمليًا. |
-| 4342 | AI-draft | A local community | مجتمع محلّي |
-| 4343 | AI-draft | A charitable group | جماعة خيرية |
-| 4344 | AI-draft | A masjid | مسجد |
-| 4345 | AI-draft | A group serving people in need | جماعة تخدم المحتاجين |
-| 4346 | AI-draft | Giving guinea fowl (pintade) or chicken as sadaqah to someone who can benefit from it. | التصدّق بدجاج غينيا أو دجاج لمن ينتفع به. |
-| 4347 | AI-draft | Giving three chickens of different colours — black, red and white — out as sadaqah. | التصدّق بثلاث دجاجات مختلفة الألوان — سوداء وحمراء وبيضاء. |
-| 4348 | AI-draft | Community or group support — a voluntary group, community, masjid, or similar organisation | دعم مجتمع أو جماعة — جماعة تطوّعية أو مجتمع أو مسجد أو نحوه |
-| 4349 | AI-draft | Guinea fowl (pintade) or chicken | دجاج غينيا أو دجاج |
-| 4350 | AI-draft | Three-coloured chickens — black, red and white | دجاج بثلاثة ألوان — أسود وأحمر وأبيض |
-| 4351 | AI-draft | A primary form of sadaqah associated with al-Ḥūt is giving fish. A particularly recommended amount is 12 fish, given as sadaqah to people who can benefit from them. | من أهمّ صور الصدقة المرتبطة ببرج الحوت التصدّق بالسمك، والمقدار المستحبّ خاصّة اثنتا عشرة سمكة تُعطى لمن ينتفع بها. |
-| 4352 | AI-draft | This may be performed when a person has an important project or undertaking: take seven chickens, prepare and cook them, and distribute the prepared food as sadaqah — giving it to people in need, such as a poor family, and continuing until the food has been completely given out. The purpose is to provide food and benefit to people who are in need. | يمكن فعل هذا حين يكون للمرء مشروع أو أمر مهمّ: تُؤخذ سبع دجاجات فتُطبخ ويُوزَّع الطعام صدقةً — على المحتاجين كأسرة فقيرة — حتى يُعطى كله. والغاية إطعام المحتاجين ونفعهم. |
-| 4353 | AI-draft | The food sadaqah may particularly be given in the evening, around the time when people would normally have dinner, an evening meal, or tea or other evening refreshments. The food should be distributed to people who can benefit from it, especially those experiencing financial hardship or food insecurity. | يمكن إعطاء صدقة الطعام خاصّة في المساء، قرب وقت العشاء أو الشاي ونحوه. ويُوزَّع على من ينتفع به، لا سيما من يعانون ضيقًا ماليًا أو نقصًا في الغذاء. |
-| 4354 | AI-draft | Helping someone experiencing mental or emotional difficulties. The intention is to reduce their hardship and provide compassionate assistance. | إعانة من يمرّ بصعوبات نفسية أو عاطفية. والنيّة تخفيف ضيقه وتقديم عون رحيم. |
-| 4355 | AI-draft | Providing financial assistance | تقديم عون مالي |
-| 4356 | AI-draft | Supporting them during a difficult period | مساندته في مرحلة صعبة |
-| 4357 | AI-draft | Offering practical assistance | تقديم عون عملي |
-| 4358 | AI-draft | Helping them access appropriate support | مساعدته على الوصول إلى الدعم المناسب |
-| 4359 | AI-draft | Helping a person who is engaged in spiritual or religious activity. Assistance may be financial or practical, depending on the person's needs. | إعانة شخص منشغل بعمل روحي أو ديني، ماليًا أو عمليًا بحسب حاجته. |
-| 4360 | AI-draft | A spiritual practitioner | صاحب ممارسة روحية |
-| 4361 | AI-draft | Someone involved in spiritual activities | منشغل بالأنشطة الروحية |
-| 4362 | AI-draft | Someone who provides spiritual guidance or related services | من يقدّم إرشادًا روحيًا أو خدمات متّصلة به |
-| 4363 | AI-draft | The sadaqah should be given sincerely for the benefit of others. The food, fish, or other assistance is distributed to people who can genuinely benefit from it, particularly those experiencing poverty or hardship. | ينبغي أن تُعطى الصدقة بإخلاص لنفع الآخرين. فالطعام أو السمك أو غيرهما يُوزَّع على من ينتفع به حقًّا، لا سيما الفقراء وأهل الضيق. |
-| 4364 | AI-draft | The Light - Source of all illumination and guidance | النور - مصدر كل إنارة وهداية |
-| 4365 | AI-draft | The Guide - Who leads to truth | الهادي - الذي يهدي إلى الحقّ |
-| 4366 | AI-draft | The Greatest - Supreme in majesty | الكبير - العظيم في جلاله |
-| 4367 | AI-draft | Divine Illumination and Clarity | الإنارة والوضوح |
-| 4368 | AI-draft | Leadership and Authority | القيادة والسلطة |
-| 4369 | AI-draft | Spiritual Radiance | الإشراق الروحي |
-| 4370 | AI-draft | Truth and Authenticity | الحقّ والصدق |
-| 4371 | AI-draft | Vitality and Life Force | الحيوية وقوة الحياة |
-| 4372 | AI-draft | Conscious Awareness | الوعي اليقظ |
-| 4373 | AI-draft | Public speaking and presentations | الخطابة والعروض |
-| 4374 | AI-draft | Spiritual illumination practices | ممارسات الإنارة الروحية |
-| 4375 | AI-draft | Dhikr of An-Nūr (100x recommended) | ذكر «يا نور» (100 مرّة مستحبّة) |
-| 4376 | AI-draft | Study of sacred texts | دراسة النصوص المقدّسة |
-| 4377 | AI-draft | Decision-making requiring wisdom | القرارات التي تتطلّب حكمة |
-| 4378 | AI-draft | Secretive or deceptive activities | الأعمال السرّية أو المخادعة |
-| 4379 | AI-draft | Hiding from responsibility | التهرّب من المسؤولية |
-| 4380 | AI-draft | Avoiding difficult truths | تجنّب الحقائق الصعبة |
-| 4381 | AI-draft | Dishonest dealings | المعاملات غير الأمينة |
-| 4382 | AI-draft | The Sun hour is when divine light most easily penetrates the veils of the heart. Use it for seeking truth and clarity. | ساعة الشمس وقت يسهل فيه على النور أن ينفذ إلى حجب القلب. فاستعملها لطلب الحقّ والوضوح. |
-| 4383 | AI-draft | Al-Būnī emphasized the Sun hour as optimal for spiritual illumination and receiving divine guidance. | أكّد البوني أن ساعة الشمس أنسب للإنارة الروحية وتلقّي الهداية. |
-| 4384 | AI-draft | Divine Revelation | الوحي |
-| 4385 | AI-draft | The Quran swears by the Sun, indicating its significance in divine creation and as a sign of Allah's power. | أقسم القرآن بالشمس، دلالةً على شأنها في الخلق وآيةً على قدرة الله. |
-| 4386 | AI-draft | In Islamic tradition, the Sun (Ash-Shams) represents divine light and knowledge. The Prophet Muhammad ﷺ compared the scholars to "lamps in the darkness," echoing solar symbolism. Sunday (Yawm al-Aḥad) is named after the Sun and is considered auspicious for beginning important spiritual practices. | في التراث الإسلامي تمثّل الشمس النور والعلم. وقد شبّه النبي ﷺ العلماء بالمصابيح في الظلمة. ويوم الأحد يرتبط بالشمس ويُعدّ مناسبًا لبدء الممارسات الروحية المهمّة. |
-| 4387 | AI-draft | A student studies Quran during Sun hour and experiences unusual clarity in understanding | طالب يدرس القرآن في ساعة الشمس فيجد وضوحًا غير معتاد في الفهم |
-| 4388 | AI-draft | A leader makes a difficult but just decision during Sun hour | قائد يتّخذ قرارًا صعبًا عادلًا في ساعة الشمس |
-| 4389 | AI-draft | Someone seeking guidance performs dhikr of An-Nūr 100x and receives clear insight | طالب هداية يذكر «يا نور» 100 مرّة فينال بصيرة واضحة |
-| 4390 | AI-draft | Ilm (Knowledge) - Divine and Sacred Knowledge | العلم - العلم الإلهي المقدّس |
-| 4391 | AI-draft | Nūr al-Qalb (Light of the Heart) | نور القلب |
-| 4392 | AI-draft | The Subtle One - Gentle, Kind, and All-Perceiving | اللطيف - الرفيق الرحيم الخبير |
-| 4393 | AI-draft | The Most Merciful - Eternally Compassionate | الرحيم - دائم الرحمة |
-| 4394 | AI-draft | Emotional Wisdom and Intuition | الحكمة العاطفية والحدس |
-| 4395 | AI-draft | Receptivity to Divine Messages | التهيّؤ للمعاني الإلهية |
-| 4396 | AI-draft | Nurturing and Compassion | الرعاية والرحمة |
-| 4397 | AI-draft | Cycles of Growth and Renewal | دورات النموّ والتجدّد |
-| 4398 | AI-draft | Subtle Spiritual Perception | الإدراك الروحي اللطيف |
-| 4399 | AI-draft | Connection to the Unseen | الصلة بالغيب |
-| 4400 | AI-draft | Family matters and nurturing | شؤون الأسرة والرعاية |
-| 4401 | AI-draft | Dhikr of Al-Laṭīf (129x recommended) | ذكر «يا لطيف» (129 مرّة مستحبّة) |
-| 4402 | AI-draft | Seeking mercy and forgiveness | طلب الرحمة والمغفرة |
-| 4403 | AI-draft | Gentle spiritual practices | ممارسات روحية لطيفة |
-| 4404 | AI-draft | Connecting with feminine divine qualities | التخلّق بصفات الرحمة والحنان |
-| 4405 | AI-draft | Harsh or aggressive actions | الأعمال القاسية أو العدوانية |
-| 4406 | AI-draft | Forcing emotional issues | فرض المسائل العاطفية |
-| 4407 | AI-draft | Ignoring intuitive guidance | تجاهل الإلهام الباطن |
-| 4408 | AI-draft | Overly rational approaches to spiritual matters | المناهج العقلانية المفرطة في الأمور الروحية |
-| 4409 | AI-draft | The Moon hour is blessed for those seeking divine mercy. The subtle light of the Moon reveals what the harsh Sun might hide. | ساعة القمر مباركة لطالبي رحمة الله. فنور القمر اللطيف يكشف ما قد تخفيه الشمس الحادّة. |
-| 4410 | AI-draft | Ibn 'Arabī taught that lunar energy facilitates subtle spiritual perception and emotional healing. | علّم ابن عربي أن الطاقة القمرية تيسّر الإدراك الروحي اللطيف وشفاء النفس. |
-| 4411 | AI-draft | The Quran emphasizes the Moon's cycles as divine signs, teaching about spiritual growth and renewal. | يؤكّد القرآن أن أطوار القمر آيات، تعلّم النموّ الروحي والتجدّد. |
-| 4412 | AI-draft | The Moon (Al-Qamar) has special significance in Islam, determining the Islamic calendar (Hijri). The Prophet Muhammad ﷺ was said to have split the Moon as a miracle. Monday (Yawm al-Ithnayn), the Moon's day, is blessed as the day of the Prophet's birth and is recommended for fasting. | للقمر شأن خاصّ في الإسلام، فبه يُحدَّد التقويم الهجري. ومن معجزات النبي ﷺ انشقاق القمر. ويوم الاثنين يوم وُلد فيه النبي ﷺ ويُستحبّ صيامه. |
-| 4413 | AI-draft | A mother performs dhikr of Al-Laṭīf during Moon hour and finds patience with her children | أمّ تذكر «يا لطيف» في ساعة القمر فتجد صبرًا مع أولادها |
-| 4414 | AI-draft | Someone seeking forgiveness makes du'a during Moon hour and feels divine mercy | طالب مغفرة يدعو في ساعة القمر فيشعر برحمة الله |
-| 4415 | AI-draft | A spiritual seeker has a profound dream after Moon hour meditation | سالك يرى رؤيا عميقة بعد تأمّل في ساعة القمر |
-| 4416 | AI-draft | Luṭf (Subtlety and Gentleness) | اللطف |
-| 4417 | AI-draft | Barakah (Divine Blessing) | البركة |
-| 4418 | AI-draft | Qalb (Heart - Spiritual Center) | القلب - المركز الروحي |
-| 4419 | AI-draft | Divine Knowledge | العلم الإلهي |
-| 4420 | AI-draft | Mental Clarity | صفاء الذهن |
-| 4421 | AI-draft | Mercury hour opens the mind to divine knowledge | ساعة عطارد تفتح الذهن للعلم |
-| 4422 | AI-draft | Classical Tradition | التراث الكلاسيكي |
-| 4423 | AI-draft | Traditional | تقليدي |
-| 4424 | AI-draft | Mercury represents sacred knowledge ('Ilm) in Islamic tradition. | يمثّل عطارد العلم المقدّس في التراث الإسلامي. |
-| 4425 | AI-draft | Studying Quran during Mercury hour enhances comprehension | دراسة القرآن في ساعة عطارد تعين على الفهم |
-| 4426 | AI-draft | 'Ilm (Knowledge) | العلم |
-| 4427 | AI-draft | Ḥikmah (Wisdom) | الحكمة |
-| 4428 | AI-draft | Seeking provision | طلب الرزق |
-| 4429 | AI-draft | Harsh decisions | القرارات القاسية |
-| 4430 | AI-draft | Venus hour is blessed for love and beauty | ساعة الزهرة مباركة للمحبّة والجمال |
-| 4431 | AI-draft | Sufi Tradition | التراث الصوفي |
-| 4432 | AI-draft | Venus cultivates divine love | الزهرة تنمّي المحبّة الإلهية |
-| 4433 | AI-draft | Venus represents divine beauty (Jamāl) and Friday is the holiest day. | تمثّل الزهرة الجمال، ويوم الجمعة أفضل الأيام. |
-| 4434 | AI-draft | Couples reconcile during Venus hour | زوجان يتصالحان في ساعة الزهرة |
-| 4435 | AI-draft | Rizq (Provision) | الرزق |
-| 4436 | AI-draft | Divine Strength | القوة الإلهية |
-| 4437 | AI-draft | Willpower | قوة الإرادة |
-| 4438 | AI-draft | Gentle matters | الأمور اللطيفة |
-| 4439 | AI-draft | Mars hour gives spiritual strength | ساعة المريخ تمنح قوة روحية |
-| 4440 | AI-draft | Mars provides courage | المريخ يمنح الشجاعة |
-| 4441 | AI-draft | Mars represents jihad (spiritual struggle) in Islamic tradition. | يمثّل المريخ مجاهدة النفس في التراث الإسلامي. |
-| 4442 | AI-draft | Quwwah (Strength) | القوة |
-| 4443 | AI-draft | Ṣabr (Patience) | الصبر |
-| 4444 | AI-draft | Expansion | الاتساع |
-| 4445 | AI-draft | Generosity | الكرم |
-| 4446 | ✅ reviewed | Fortune | السعد |
-| 4447 | AI-draft | Seeking blessings | طلب البركات |
-| 4448 | AI-draft | Restriction | التقييد |
-| 4449 | AI-draft | Withholding | الإمساك |
-| 4450 | AI-draft | Stinginess | البخل |
-| 4451 | AI-draft | Jupiter hour opens doors of provision | ساعة المشتري تفتح أبواب الرزق |
-| 4452 | AI-draft | Jupiter brings abundance | المشتري يجلب الوفرة |
-| 4453 | AI-draft | Jupiter represents divine expansion and Thursday is blessed for seeking knowledge. | يمثّل المشتري الاتساع، ويوم الخميس مبارك لطلب العلم. |
-| 4454 | AI-draft | Starting business during Jupiter hour brings success | بدء التجارة في ساعة المشتري يجلب التوفيق |
-| 4455 | AI-draft | Karam (Generosity) | الكرم |
-| 4456 | AI-draft | Barakah (Blessing) | البركة |
-| 4457 | AI-draft | Solitude | الخلوة |
-| 4458 | AI-draft | Celebration | الاحتفال |
-| 4459 | AI-draft | Saturn hour is for deep wisdom and contemplation | ساعة زحل للحكمة العميقة والتأمّل |
-| 4460 | AI-draft | Saturn teaches patience | زحل يعلّم الصبر |
-| 4461 | AI-draft | Saturn represents divine wisdom (Ḥikmah) and the importance of patience in spiritual growth. | يمثّل زحل الحكمة وأهمية الصبر في النموّ الروحي. |
-| 4462 | AI-draft | Deep meditation during Saturn hour yields profound insights | التأمّل العميق في ساعة زحل يثمر بصائر عميقة |
-| 4463 | AI-draft | Bold and energetic | جريء نشيط |
-| 4464 | AI-draft | Fast-moving and decisive | سريع الحركة حاسم |
-| 4465 | AI-draft | Confident and direct | واثق مباشر |
-| 4466 | AI-draft | Natural initiator | مبادر بطبعه |
-| 4467 | AI-draft | Gets things done quickly | ينجز الأمور بسرعة |
-| 4468 | AI-draft | High energy and drive | طاقة واندفاع عاليان |
-| 4469 | AI-draft | Can become impatient with slower processes | قد ينفد صبره مع العمليات البطيئة |
-| 4470 | AI-draft | May react too quickly without reflection | قد يتفاعل بسرعة دون تروٍّ |
-| 4471 | AI-draft | Risk of burnout from constant activity | خطر الإنهاك من النشاط الدائم |
-| 4472 | AI-draft | Can overlook details in rush to complete | قد يغفل التفاصيل في عجلته للإنجاز |
-| 4473 | AI-draft | May struggle with repetitive tasks | قد يجد صعوبة في المهامّ المتكرّرة |
-| 4474 | AI-draft | Take short breaks to cool down | خذ استراحات قصيرة لتهدأ |
-| 4475 | AI-draft | Schedule downtime for rest | خصّص وقتًا للراحة |
-| 4476 | AI-draft | Sports training and coaching | التدريب الرياضي |
-| 4477 | AI-draft | Event management | إدارة الفعاليات |
-| 4478 | AI-draft | Slow-paced environments with little variety | البيئات البطيئة قليلة التنوّع |
-| 4479 | AI-draft | Roles requiring extreme patience and detailed precision | الأدوار التي تتطلّب صبرًا شديدًا ودقّة مفصّلة |
-| 4480 | AI-draft | Fire types thrive in dynamic, fast-paced environments where they can lead, initiate, and see quick results. | يزدهر أصحاب النار في البيئات الحيوية السريعة التي يقودون فيها ويبادرون ويرون نتائج سريعة. |
-| 4481 | AI-draft | Cold & Wet | بارد رطب |
-| 4482 | AI-draft | Emotional and intuitive | عاطفي حدسي |
-| 4483 | AI-draft | Patient and supportive | صبور داعم |
-| 4484 | AI-draft | Caring and empathetic | راعٍ متعاطف |
-| 4485 | AI-draft | Sensitive to surroundings | حسّاس لمحيطه |
-| 4486 | AI-draft | Patient and persistent | صبور مثابر |
-| 4487 | AI-draft | Creative and imaginative | مبدع واسع الخيال |
-| 4488 | AI-draft | Can absorb negativity from others | قد يمتصّ سلبية الآخرين |
-| 4489 | AI-draft | May overthink and get stuck in emotions | قد يفرط في التفكير ويعلق في مشاعره |
-| 4490 | AI-draft | Risk of taking on too many others' problems | خطر تحمّل مشكلات الآخرين أكثر من اللازم |
-| 4491 | AI-draft | Can become drained in harsh environments | قد يُستنزف في البيئات القاسية |
-| 4492 | AI-draft | Set healthy boundaries with others | ضع حدودًا صحّية مع الآخرين |
-| 4493 | AI-draft | Create calm, peaceful spaces | اصنع مساحات هادئة مطمئنّة |
-| 4494 | AI-draft | Practice saying no when needed | تدرّب على قول لا عند الحاجة |
-| 4495 | AI-draft | Avoid absorbing others' emotions | تجنّب امتصاص مشاعر الآخرين |
-| 4496 | AI-draft | Healthcare and nursing | الرعاية الصحّية والتمريض |
-| 4497 | AI-draft | Teaching and education | التعليم والتربية |
-| 4498 | AI-draft | Counseling and therapy | الإرشاد والعلاج النفسي |
-| 4499 | AI-draft | UX research and design | بحوث تجربة المستخدم وتصميمها |
-| 4500 | AI-draft | Childcare and early education | رعاية الأطفال والتعليم المبكر |
-| 4501 | AI-draft | HR and employee wellbeing | الموارد البشرية ورفاه الموظّفين |
-| 4502 | AI-draft | Aggressive, cutthroat workplaces | أماكن العمل العدوانية الشرسة |
-| 4503 | AI-draft | Roles with constant conflict and confrontation | الأدوار ذات الصراع والمواجهة الدائمين |
-| 4504 | AI-draft | Water types excel in nurturing, supportive roles where empathy and patience are valued. | يتفوّق أصحاب الماء في أدوار الرعاية والسند حيث يُقدَّر التعاطف والصبر. |
-| 4505 | AI-draft | Curious and talkative | فضولي كثير الكلام |
-| 4506 | AI-draft | Communicative and social | تواصلي اجتماعي |
-| 4507 | AI-draft | Loves learning and ideas | يحبّ التعلّم والأفكار |
-| 4508 | AI-draft | Adaptable and flexible | متكيّف مرن |
-| 4509 | AI-draft | Excellent communicator | متواصل ممتاز |
-| 4510 | AI-draft | Fast learner and adapter | سريع التعلّم والتكيّف |
-| 4511 | AI-draft | Creative problem solver | مبدع في حلّ المشكلات |
-| 4512 | AI-draft | Thrives in social settings | يزدهر في الأجواء الاجتماعية |
-| 4513 | AI-draft | Can become scattered or unfocused | قد يتشتّت أو يفقد التركيز |
-| 4514 | AI-draft | May start many things without finishing | قد يبدأ أشياء كثيرة ولا يتمّها |
-| 4515 | AI-draft | Risk of anxiety from overthinking | خطر القلق من فرط التفكير |
-| 4516 | AI-draft | May struggle with routine and structure | قد يجد صعوبة في الروتين والتنظيم |
-| 4517 | AI-draft | Practice grounding activities | مارس أنشطة التجذّر |
-| 4518 | AI-draft | Data and business analysis | تحليل البيانات والأعمال |
-| 4519 | AI-draft | Writing and journalism | الكتابة والصحافة |
-| 4520 | AI-draft | Content creation and blogging | صناعة المحتوى والتدوين |
-| 4521 | AI-draft | Design and creative services | التصميم والخدمات الإبداعية |
-| 4522 | AI-draft | Teaching and training | التعليم والتدريب |
-| 4523 | AI-draft | Highly repetitive, non-creative tasks | المهامّ المتكرّرة غير الإبداعية |
-| 4524 | AI-draft | Environments with zero flexibility or variety | البيئات الخالية من المرونة أو التنوّع |
-| 4525 | AI-draft | Air types thrive in dynamic, communicative roles that value ideas, learning, and connection. | يزدهر أصحاب الهواء في الأدوار الحيوية التواصلية التي تقدّر الأفكار والتعلّم والتواصل. |
-| 4526 | AI-draft | Grounded and stable | متجذّر مستقرّ |
-| 4527 | AI-draft | Patient and methodical | صبور منهجي |
-| 4528 | AI-draft | Practical and organized | عملي منظّم |
-| 4529 | AI-draft | Excellent follow-through | متابعة ممتازة حتى الإتمام |
-| 4530 | AI-draft | Dependable and trustworthy | موثوق أمين |
-| 4531 | AI-draft | Calm under pressure | هادئ تحت الضغط |
-| 4532 | AI-draft | May get stuck in routine or comfort zone | قد يعلق في الروتين أو منطقة الراحة |
-| 4533 | AI-draft | Risk of becoming too rigid | خطر التصلّب المفرط |
-| 4534 | AI-draft | May need extra motivation to start | قد يحتاج إلى دافع إضافي للبدء |
-| 4535 | AI-draft | Mix routine with variety | امزج الروتين بالتنوّع |
-| 4536 | AI-draft | Set gentle goals for change | ضع أهدافًا لطيفة للتغيير |
-| 4537 | AI-draft | Accounting and finance operations | عمليات المحاسبة والمالية |
-| 4538 | AI-draft | HR operations and administration | عمليات الموارد البشرية والإدارة |
-| 4539 | AI-draft | Skilled trades (carpentry, plumbing, electrical) | الحِرف الماهرة (النجارة، السباكة، الكهرباء) |
-| 4540 | AI-draft | Archive management and documentation | إدارة الأرشيف والتوثيق |
-| 4541 | AI-draft | Chaotic, unstructured early-stage startups | الشركات الناشئة الفوضوية غير المنظّمة |
-| 4542 | AI-draft | Roles requiring constant rapid change | الأدوار التي تتطلّب تغيّرًا سريعًا دائمًا |
-| 4543 | AI-draft | Earth types excel in structured, stable environments where reliability and thoroughness are valued. | يتفوّق أصحاب التراب في البيئات المنظّمة المستقرّة حيث تُقدَّر الموثوقية والإتقان. |
-| 4544 | AI-draft | The Ram - Initiative and new beginnings | الحمل - المبادرة والبدايات الجديدة |
-| 4545 | AI-draft | Spring Equinox | الاعتدال الربيعي |
-| 4546 | AI-draft | The Bull - Stability and material mastery | الثور - الثبات وإتقان المادة |
-| 4547 | AI-draft | Patience, perseverance, groundedness | الصبر والمثابرة والتجذّر |
-| 4548 | AI-draft | The Twins - Duality and communication | الجوزاء - الثنائية والتواصل |
-| 4549 | AI-draft | The Crab - Protection and nurturing | السرطان - الحماية والرعاية |
-| 4550 | AI-draft | Summer Solstice | الانقلاب الصيفي |
-| 4551 | AI-draft | Nobility, generosity, radiance | النُّبل والكرم والإشراق |
-| 4552 | AI-draft | The Maiden - Purity and service | السنبلة - الطهارة والخدمة |
-| 4553 | AI-draft | The Scales - Balance and harmony | الميزان - التوازن والانسجام |
-| 4554 | AI-draft | The Archer - Quest for truth and expansion | القوس - طلب الحقّ والاتساع |
-| 4555 | AI-draft | Wisdom-seeking, optimism, faith | طلب الحكمة والتفاؤل والإيمان |
-| 4556 | AI-draft | Winter Solstice | الانقلاب الشتوي |
-| 4557 | AI-draft | The Water-Bearer - Innovation and community | الدلو - الابتكار والمجتمع |
-| 4558 | AI-draft | The Fish - Transcendence and compassion | الحوت - السموّ والرحمة |
-| 4559 | AI-draft | Mysticism, empathy, dissolution of ego | التصوّف والتعاطف وفناء الأنا |
-| 4560 | AI-draft | Mutable water, completing the cycle in divine unity | ماء ذو جسدين يُتمّ الدورة في التوحيد |
-| 4561 | AI-draft | Divine radiance, leadership, vitality, nobility | الإشراق والقيادة والحيوية والنُّبل |
-| 4562 | AI-draft | Al-Nūr (The Light) | النور |
-| 4563 | AI-draft | At sunrise or solar noon | عند الشروق أو الزوال |
-| 4564 | AI-draft | Masculine, diurnal, benefic | مذكّر، نهاري، سعد |
-| 4565 | AI-draft | Rulership, authority, life force | الحكم والسلطة وقوة الحياة |
-| 4566 | AI-draft | Kings, fathers, spiritual leaders | الملوك والآباء والقادة الروحيون |
-| 4567 | AI-draft | Receptivity, intuition, emotional depth, nurturing | التلقّي والحدس والعمق العاطفي والرعاية |
-| 4568 | AI-draft | Feminine, nocturnal, benefic | مؤنّث، ليلي، سعد |
-| 4569 | AI-draft | Emotions, cycles, subconscious | العواطف والدورات والباطن |
-| 4570 | AI-draft | Mothers, common people, the soul | الأمّهات وعامّة الناس والروح |
-| 4571 | AI-draft | Iron | الحديد |
-| 4572 | AI-draft | Hot & Dry (Extreme) | حارّ يابس (شديد) |
-| 4573 | AI-draft | Masculine, nocturnal, malefic (transformative) | مذكّر، ليلي، نحس (محوِّل) |
-| 4574 | AI-draft | Quicksilver (Mercury) | الزئبق |
-| 4575 | AI-draft | Variable (adapts to neighbors) | متغيّر (يتكيّف مع ما يجاوره) |
-| 4576 | AI-draft | Knowledge, communication, intellect, sacred writing | العلم والتواصل والعقل والكتابة المقدّسة |
-| 4577 | AI-draft | Wednesday mornings, ideal for study | صباح الأربعاء، مثالي للدراسة |
-| 4578 | AI-draft | Neutral, convertible, benefic when well-placed | محايد ممتزج، سعد إذا حسن موضعه |
-| 4579 | AI-draft | Scholars, merchants, scribes, students | العلماء والتجّار والكتّاب والطلاب |
-| 4580 | AI-draft | Tin | القصدير |
-| 4581 | AI-draft | Hot & Moist (Moderate) | حارّ رطب (معتدل) |
-| 4582 | AI-draft | Wisdom, expansion, generosity, divine grace | الحكمة والاتساع والكرم والفضل |
-| 4583 | AI-draft | Thursday before sunset, especially for blessings | الخميس قبل الغروب، لا سيما للبركات |
-| 4584 | AI-draft | Masculine, diurnal, benefic (great fortune) | مذكّر، نهاري، سعد (السعد الأكبر) |
-| 4585 | AI-draft | Copper | النحاس |
-| 4586 | AI-draft | Cold & Moist (Moderate) | بارد رطب (معتدل) |
-| 4587 | AI-draft | Beauty, harmony, love, divine attraction | الجمال والانسجام والمحبّة والجاذبية |
-| 4588 | AI-draft | Cold & Dry (Extreme) | بارد يابس (شديد) |
-| 4589 | AI-draft | Discipline, patience, divine wisdom through trials | الانضباط والصبر والحكمة عبر الابتلاء |
-| 4590 | AI-draft | Saturday evenings, for patience and endurance | مساء السبت، للصبر والتحمّل |
-| 4591 | AI-draft | Masculine, diurnal, malefic (teaching through difficulty) | مذكّر، نهاري، نحس (يعلّم بالشدّة) |
-| 4592 | AI-draft | Time, karma, structure, limitations | الزمن والجزاء والبنية والحدود |
-| 4593 | AI-draft | Elders, ascetics, those who endure | الشيوخ والزهّاد وأهل الصبر |
-| 4594 | AI-draft | The Initiator (Al-Mubtadiʾ) | المبتدئ |
-| 4595 | AI-draft | Tawbah (Repentance) | التوبة |
-| 4596 | AI-draft | Pioneering spirit | روح الريادة |
-| 4597 | AI-draft | Originality | الأصالة |
-| 4598 | AI-draft | Overcoming ego (nafs) | مجاهدة النفس |
-| 4599 | AI-draft | To lead with integrity and inspire others to their own path | أن تقود بنزاهة وتُلهم الآخرين طريقهم |
-| 4600 | AI-draft | The Peacemaker (Al-Muṣāliḥ) | المصالح |
-| 4601 | AI-draft | Wara' (Scrupulousness) | الورع |
-| 4602 | AI-draft | Indecision | التردّد |
-| 4603 | AI-draft | Hypersensitivity | فرط الحساسية |
-| 4604 | AI-draft | Passivity | السلبية |
-| 4605 | AI-draft | The Creator (Al-Khallāq) | الخلّاق |
-| 4606 | AI-draft | Zuhd (Asceticism) | الزهد |
-| 4607 | AI-draft | Joy | الفرح |
-| 4608 | AI-draft | Scattered talents | مواهب مبعثرة |
-| 4609 | AI-draft | Difficulty completing projects | صعوبة إتمام المشاريع |
-| 4610 | AI-draft | To express oneself freely and bring beauty to the world | أن تعبّر عن نفسك بحرية وتجلب الجمال إلى العالم |
-| 4611 | AI-draft | The Builder (Al-Bānī) | الباني |
-| 4612 | AI-draft | Sabr (Patience) | الصبر |
-| 4613 | AI-draft | Dullness | الفتور |
-| 4614 | AI-draft | To create lasting systems that serve humanity | أن تقيم أنظمة دائمة تخدم الناس |
-| 4615 | AI-draft | The Freedom Seeker (Al-Ḥurr) | طالب الحرية (الحرّ) |
-| 4616 | AI-draft | Tawakkul (Trust) | التوكّل |
-| 4617 | AI-draft | Versatility | تعدّد المواهب |
-| 4618 | AI-draft | Restlessness | القلق |
-| 4619 | AI-draft | Irresponsibility | عدم المسؤولية |
-| 4620 | AI-draft | Escapism | الهروب |
-| 4621 | AI-draft | Agitation | الاضطراب |
-| 4622 | AI-draft | To teach adaptability and embrace divine will | أن تعلّم التكيّف والرضا بقضاء الله |
-| 4623 | AI-draft | Freedom to experience life fully and authentically | حرية عيش الحياة كاملة بصدق |
-| 4624 | AI-draft | The Nurturer (Al-Rāʿī) | الراعي |
-| 4625 | AI-draft | Meddling | التدخّل |
-| 4626 | AI-draft | Controlling tendencies | الميل إلى التحكّم |
-| 4627 | AI-draft | To heal and harmonize through compassionate service | أن تشفي وتؤلّف بالخدمة الرحيمة |
-| 4628 | AI-draft | The Seeker (Al-Ṭālib) | الطالب |
-| 4629 | AI-draft | Neptune (Spiritual) / Moon (Traditional) | نبتون (روحي) / القمر (تقليدي) |
-| 4630 | AI-draft | Tafakkur (Contemplation) | التفكّر |
-| 4631 | AI-draft | Spirituality | الروحانية |
-| 4632 | AI-draft | Introspection | محاسبة النفس |
-| 4633 | AI-draft | Discernment | التمييز |
-| 4634 | AI-draft | Skepticism | الشكّ |
-| 4635 | AI-draft | Moodiness | تقلّب المزاج |
-| 4636 | AI-draft | To uncover divine mysteries and teach spiritual truths | أن تكشف الأسرار وتعلّم الحقائق الروحية |
-| 4637 | AI-draft | To understand the deeper mysteries of existence | أن تفهم أسرار الوجود الأعمق |
-| 4638 | AI-draft | The Master (Al-Sayyid) | السيّد |
-| 4639 | AI-draft | Abundance | الوفرة |
-| 4640 | AI-draft | Imbalanced power | اختلال القوة |
-| 4641 | AI-draft | Materialism | المادية |
-| 4642 | AI-draft | Hardness | القسوة |
-| 4643 | AI-draft | Insensitivity | قلّة الإحساس |
-| 4644 | AI-draft | To master material and spiritual realms | أن تُتقن عالمي المادة والروح |
-| 4645 | AI-draft | The Humanitarian (Al-Insānī) | الإنساني |
-| 4646 | AI-draft | Universality | الشمول |
-| 4647 | AI-draft | Selflessness | الإيثار |
-| 4648 | AI-draft | Accepting endings | تقبّل الخواتيم |
-| 4649 | AI-draft | Impersonal distance | البُعد غير الشخصي |
-| 4650 | AI-draft | To complete cycles and serve the collective | أن تُتمّ الدورات وتخدم الجماعة |
-| 4651 | AI-draft | The Illuminator (Al-Munīr) | المنير |
-| 4652 | AI-draft | Kashf (Unveiling) | الكشف |
-| 4653 | AI-draft | Spiritual insight | البصيرة الروحية |
-| 4654 | AI-draft | Charisma | الجاذبية |
-| 4655 | AI-draft | To illuminate the path for others through spiritual wisdom | أن تنير الطريق للآخرين بالحكمة الروحية |
-| 4656 | AI-draft | The Master Builder (Al-Muhandis al-Aʿẓam) | البنّاء الأعظم |
-| 4657 | AI-draft | Fanāʾ (Annihilation in Divine) | الفناء |
-| 4658 | AI-draft | Visionary power | قوة الرؤية |
-| 4659 | AI-draft | Large-scale impact | أثر واسع النطاق |
-| 4660 | AI-draft | To manifest divine vision into physical reality | أن تحوّل الرؤية إلى واقع ملموس |
-| 4661 | AI-draft | The Master Teacher (Al-Muʿallim al-Akbar) | المعلّم الأكبر |
-| 4662 | AI-draft | Baqāʾ (Remaining in Divine) | البقاء |
-| 4663 | AI-draft | Universal love | المحبّة الشاملة |
-| 4664 | AI-draft | Embodied wisdom | الحكمة المتجسّدة |
-| 4665 | AI-draft | To heal and guide humanity toward unity with the Divine | أن تشفي الناس وترشدهم إلى التوحيد |
-| 4666 | AI-draft | Enhanced Life Path Analysis | تحليل مسار الحياة الموسَّع |
-| 4667 | AI-draft | Your Core Life Purpose | غاية حياتك الأساسية |
-| 4668 | AI-draft | Your Core Path | مسارك الأساسي |
-| 4669 | AI-draft | Your Inner Desires | رغباتك الباطنة |
-| 4670 | AI-draft | What truly motivates and fulfills you deep down | ما يحرّكك ويرضيك حقًّا في العمق |
-| 4671 | AI-draft | What Fulfills You | ما يرضيك |
-| 4672 | AI-draft | Your Outer Self | ذاتك الظاهرة |
-| 4673 | AI-draft | Your Purpose | غايتك |
-| 4674 | AI-draft | Power Number | عدد القوة |
-| 4675 | AI-draft | Numbers 11, 22, and 33 carry special spiritual significance | للأعداد 11 و22 و33 دلالة روحية خاصّة |
-| 4676 | AI-draft | Number Colors & Meanings | ألوان الأعداد ومعانيها |
-| 4677 | AI-draft | Balance & Partnership | التوازن والشراكة |
-| 4678 | AI-draft | Creativity & Expression | الإبداع والتعبير |
-| 4679 | AI-draft | Wisdom & Spirituality | الحكمة والروحانية |
-| 4680 | AI-draft | Power & Success | القوة والنجاح |
-| 4681 | AI-draft | Completion & Compassion | الإتمام والرحمة |
-| 4682 | AI-draft | Intuition & Illumination | الحدس والإنارة |
-| 4683 | AI-draft | Life Path Interpretation | تفسير مسار الحياة |
-| 4684 | AI-draft | Synthesis & Integration | التركيب والتكامل |
-| 4685 | AI-draft | How It All Fits Together | كيف يتكامل كل شيء |
-| 4686 | AI-draft | Your Current Life Chapter | فصل حياتك الحالي |
-| 4687 | AI-draft | The spiritual theme of this period in your life | الموضوع الروحي لهذه المرحلة من حياتك |
-| 4688 | AI-draft | What Truly Fulfills You | ما يرضيك حقًّا |
-| 4689 | AI-draft | Your Spiritual Connection | صلتك الروحية |
-| 4690 | AI-draft | Pinnacles & Challenges | القمم والتحدّيات |
-| 4691 | AI-draft | Life Stages & Turning Points | مراحل الحياة ونقاط التحوّل |
-| 4692 | AI-draft | Peak of capability and establishment | ذروة القدرة والاستقرار |
-| 4693 | AI-draft | Wisdom (Ḥikmah) | الحكمة |
-| 4694 | AI-draft | Integration of experience into understanding | تحويل التجربة إلى فهم |
-| 4695 | AI-draft | Service (Khidmah) | الخدمة |
-| 4696 | AI-draft | Contribution to family and community | الإسهام في الأسرة والمجتمع |
-| 4697 | AI-draft | Creating lasting impact and inheritance | صنع أثر وإرث باقيين |
-| 4698 | AI-draft | Transcendence and spiritual elevation | السموّ والارتقاء الروحي |
-| 4699 | AI-draft | Wara' | الورع |
-| 4700 | AI-draft | Sabr | الصبر |
-| 4701 | AI-draft | Trust in Divine | التوكّل على الله |
-| 4702 | AI-draft | Rida | الرضا |
-| 4703 | AI-draft | Contentment | القناعة |
-| 4704 | AI-draft | Tafakkur | التفكّر |
-| 4705 | AI-draft | Muraqabah | المراقبة |
-| 4706 | AI-draft | Watchfulness | اليقظة |
-| 4707 | AI-draft | Mahabba | المحبّة |
-| 4708 | AI-draft | Neptune | نبتون |
-| 4709 | AI-draft | Divine Illumination, Clarity, Guidance | الإنارة والوضوح والهداية |
-| 4710 | AI-draft | Reciting An-Nūr brings clarity to the heart and illuminates the path ahead. The Sun hour channels divine light. | ذكر «يا نور» يجلي القلب وينير الطريق. وساعة الشمس تحمل معنى النور. |
-| 4711 | ✅ reviewed | Surah Ash-Shams 91:1 | سورة الشمس، الآية 1 |
-| 4712 | AI-draft | Allah takes an oath by the sun, highlighting its role as a source of divine light and guidance in creation. | أقسم الله بالشمس، إبرازًا لدورها مصدرًا للنور والهداية في الخلق. |
-| 4713 | AI-draft | How can you illuminate the path for others today? | كيف تنير الطريق للآخرين اليوم؟ |
-| 4714 | AI-draft | The Sun represents the divine light of certainty (yaqīn) that dispels all darkness of doubt. | تمثّل الشمس نور اليقين الذي يبدّد ظلمات الشكّ. |
-| 4715 | AI-draft | Recite An-Nūr (100x) seeking clarity. Make important decisions with confidence. | اذكر «يا نور» (100 مرّة) طالبًا الوضوح، واتّخذ قراراتك المهمّة بثقة. |
-| 4716 | AI-draft | Gentle Grace, Subtlety, Inner Wisdom | اللطف والرقّة والحكمة الباطنة |
-| 4717 | AI-draft | Al-Laṭīf opens subtle spiritual perception and emotional wisdom. The Moon hour nurtures receptivity. | اسم اللطيف يفتح الإدراك الروحي اللطيف والحكمة العاطفية. وساعة القمر تنمّي التلقّي. |
-| 4718 | AI-draft | Surah Ya-Sin 36:39 | سورة يس 36:39 |
-| 4719 | AI-draft | The lunar phases teach us about divine timing, cycles, and the wisdom of gradual change. | تعلّمنا أطوار القمر التوقيت الإلهي والدورات وحكمة التغيّر التدريجي. |
-| 4720 | AI-draft | What phase of life are you in? What needs to grow or release? | في أي طور من الحياة أنت؟ ما الذي ينبغي أن ينمو أو يُترك؟ |
-| 4721 | AI-draft | The Moon governs the realm of the soul (nafs) and teaches the wisdom of receptivity and emotional intelligence. | يحكم القمر عالم النفس ويعلّم حكمة التلقّي والذكاء العاطفي. |
-| 4722 | AI-draft | Emotional healing, intuition, reflection, nurturing relationships | شفاء النفس، الحدس، التأمّل، رعاية العلاقات |
-| 4723 | AI-draft | Recite Al-Laṭīf (129x) for gentle guidance. Practice deep listening and empathy. | اذكر «يا لطيف» (129 مرّة) طلبًا للهداية اللطيفة، وتدرّب على الإصغاء العميق والتعاطف. |
-| 4724 | AI-draft | Avoid emotional overwhelm. Balance feelings with wisdom (ḥikma). | تجنّب الإرهاق العاطفي، ووازن المشاعر بالحكمة. |
-| 4725 | AI-draft | Divine Knowledge, Communication, Mental Clarity | العلم والتواصل وصفاء الذهن |
-| 4726 | AI-draft | Al-ʿAlīm enhances reception of divine knowledge and clear communication. Mercury hour opens the mind. | اسم العليم يعين على تلقّي العلم ووضوح التواصل. وساعة عطارد تفتح الذهن. |
-| 4727 | AI-draft | Surah Al-Baqarah 2:269 | سورة البقرة 2:269 |
-| 4728 | AI-draft | Mercury hours are blessed for seeking divine wisdom (ḥikma) through study, communication, and learning. | ساعات عطارد مباركة لطلب الحكمة بالدراسة والتواصل والتعلّم. |
-| 4729 | AI-draft | What knowledge is calling to you? How will you use it for good? | أي علم يدعوك؟ وكيف تستعمله في الخير؟ |
-| 4730 | AI-draft | Mercury governs the pen and tongue - the instruments of knowledge transmission. Use them with truth (ḥaqq). | يحكم عطارد القلم واللسان — أداتي نقل العلم. فاستعملهما بالحقّ. |
-| 4731 | AI-draft | Recite Al-ʿAlīm (150x) before study. Engage in meaningful dialogue and written reflection. | اذكر «يا عليم» (150 مرّة) قبل الدراسة، وانخرط في حوار نافع وتأمّل مكتوب. |
-| 4732 | AI-draft | Avoid gossip (ghība) and empty speech. Knowledge without action is burden. | تجنّب الغيبة واللغو. فالعلم بلا عمل حِمل. |
-| 4733 | AI-draft | Divine Love, Beauty, Harmony, Abundance | المحبّة والجمال والانسجام والوفرة |
-| 4734 | AI-draft | Al-Wadūd cultivates divine love and appreciation of beauty. Venus hour opens the heart to harmony. | اسم الودود ينمّي المحبّة وتذوّق الجمال. وساعة الزهرة تفتح القلب للانسجام. |
-| 4735 | AI-draft | Surah Al-Buruj 85:14 | سورة البروج 85:14 |
-| 4736 | AI-draft | Venus reflects divine love (maḥabba) that forgives, nurtures, and creates beauty in all relationships. | تعكس الزهرة معنى المحبّة التي تغفر وترعى وتصنع الجمال في كل العلاقات. |
-| 4737 | AI-draft | Who needs your love and kindness today? How can you create beauty? | من يحتاج إلى محبّتك ولطفك اليوم؟ وكيف تصنع الجمال؟ |
-| 4738 | AI-draft | Venus teaches that true beauty (jamāl) is inseparable from goodness (iḥsān). Love without righteousness is illusion. | تعلّم الزهرة أن الجمال الحقّ لا ينفكّ عن الإحسان. والمحبّة بلا صلاح وهم. |
-| 4739 | AI-draft | Recite Al-Wadūd (20x) with a heart full of love. Create beauty and harmony in your surroundings. | اذكر «يا ودود» (20 مرّة) بقلب ممتلئ محبّة، واصنع الجمال والانسجام في محيطك. |
-| 4740 | AI-draft | Avoid vanity and superficiality. True love serves the beloved, not the self. | تجنّب الغرور والسطحية. فالمحبّة الحقّة تخدم المحبوب لا النفس. |
-| 4741 | AI-draft | Divine Strength, Courage, Decisive Action | القوة والشجاعة والعمل الحاسم |
-| 4742 | AI-draft | Al-Qawiyy provides divine strength and courage for righteous action. Mars hour empowers the will. | اسم القوي يمنح القوة والشجاعة للعمل الصالح. وساعة المريخ تقوّي الإرادة. |
-| 4743 | AI-draft | The Capable | القادر |
-| 4744 | AI-draft | Surah Al-Anfal 8:66 | سورة الأنفال 8:66 |
-| 4745 | AI-draft | Mars hours empower righteous struggle (jihād an-nafs) with divine strength when paired with patience (ṣabr). | ساعات المريخ تقوّي جهاد النفس إذا اقترنت بالصبر. |
-| 4746 | AI-draft | What challenge requires your courage today? Where must you take a stand? | أي تحدٍّ يتطلّب شجاعتك اليوم؟ وأين يجب أن تثبت؟ |
-| 4747 | AI-draft | Mars governs the spiritual warrior (mujāhid) who battles the ego, not others. True strength is self-mastery. | يحكم المريخ المجاهد الذي يجاهد نفسه لا الناس. فالقوة الحقّة ضبط النفس. |
-| 4748 | AI-draft | Traditional Islamic spiritual warfare teachings | تعاليم مجاهدة النفس في التراث الإسلامي |
-| 4749 | AI-draft | Classical Sufi tradition | التراث الصوفي الكلاسيكي |
-| 4750 | AI-draft | Overcoming obstacles, physical activity, assertiveness, protection, righteous action | تجاوز العقبات، النشاط البدني، الحزم، الحماية، العمل الصالح |
-| 4751 | AI-draft | Recite Al-Qawiyy (116x) for inner strength. Take decisive action on important matters. | اذكر «يا قوي» (116 مرّة) طلبًا للقوة الباطنة، واعمل بحسم في الأمور المهمّة. |
-| 4752 | AI-draft | Avoid aggression and anger (ghaḍab). Channel strength with wisdom and mercy. | تجنّب العدوان والغضب، ووجّه القوة بالحكمة والرحمة. |
-| 4753 | AI-draft | Divine Expansion, Generosity, Boundless Wisdom | الاتساع والكرم والحكمة الواسعة |
-| 4754 | AI-draft | Al-Wāsiʿ opens doors to divine abundance and expansive blessings. Jupiter hour brings growth. | اسم الواسع يفتح أبواب الوفرة والبركات الواسعة. وساعة المشتري تجلب النموّ. |
-| 4755 | AI-draft | Surah Al-Baqarah 2:261 | سورة البقرة 2:261 |
-| 4756 | AI-draft | Jupiter hours multiply blessings (barakah) when actions are done with generosity (karam) and pure intention. | ساعات المشتري تضاعف البركة إذا كانت الأعمال بكرم ونيّة خالصة. |
-| 4757 | AI-draft | What can you expand with generosity? Where should growth occur? | ما الذي يمكنك توسيعه بالكرم؟ وأين ينبغي أن يكون النموّ؟ |
-| 4758 | AI-draft | Jupiter represents divine generosity that knows no bounds. Give freely, for expansion comes through service. | يمثّل المشتري معنى الكرم الذي لا حدّ له. فأعطِ بسخاء، فالسعة تأتي بالخدمة. |
-| 4759 | AI-draft | Classical Islamic wisdom on abundance | الحكمة الإسلامية الكلاسيكية في الوفرة |
-| 4760 | AI-draft | Traditional teaching | تعليم تقليدي |
-| 4761 | AI-draft | Recite Al-Wāsiʿ (136x) seeking expansion. Give generously in charity (ṣadaqah). | اذكر «يا واسع» (136 مرّة) طالبًا السعة، وتصدّق بسخاء. |
-| 4762 | AI-draft | Avoid overextension and false optimism. Growth must be grounded in reality. | تجنّب التمدّد المفرط والتفاؤل الزائف. فالنموّ ينبغي أن يتجذّر في الواقع. |
-| 4763 | AI-draft | Supreme Wisdom, Patience, Divine Order | الحكمة العليا والصبر والنظام الإلهي |
-| 4764 | AI-draft | Al-Ḥakīm teaches divine wisdom through patience and structure. Saturn hour brings deep understanding. | اسم الحكيم يعلّم الحكمة بالصبر والنظام. وساعة زحل تجلب الفهم العميق. |
-| 4765 | AI-draft | Surah Al-Asr 103:3 | سورة العصر 103:3 |
-| 4766 | AI-draft | What requires your patience and persistence? What wisdom is being revealed? | ما الذي يتطلّب صبرك ومثابرتك؟ وأي حكمة تتكشّف؟ |
-| 4767 | AI-draft | Saturn is the teacher of time (zamān) and consequence. It shows that all actions ripen in their season. | زحل معلّم الزمان والعاقبة، يُري أن كل عمل ينضج في أوانه. |
-| 4768 | AI-draft | Traditional Islamic understanding of time and wisdom | الفهم الإسلامي التقليدي للزمن والحكمة |
-| 4769 | AI-draft | Classical tradition | التراث الكلاسيكي |
-| 4770 | AI-draft | Recite Al-Ḥakīm (78x) seeking wisdom. Embrace discipline and commitment to worthy goals. | اذكر «يا حكيم» (78 مرّة) طالبًا الحكمة، والتزم بالانضباط في الأهداف الجديرة. |
-| 4771 | AI-draft | Avoid rigidity and fear. Structure serves growth, not limitation. | تجنّب التصلّب والخوف. فالنظام يخدم النموّ لا التقييد. |
-| 4772 | AI-draft | Exceptional alignment! Your spiritual essence ( | انسجام استثنائي! جوهرك الروحي ( |
-| 4773 | AI-draft | ruler) resonates powerfully with | الحاكم) يتناغم بقوة مع طاقة |
-| 4774 | AI-draft | energy. This is an optimal time for important spiritual work. | . وهذا وقت مناسب للعمل الروحي المهمّ. |
-| 4775 | AI-draft | Engage in deep spiritual practices | انشغل بممارسات روحية عميقة |
-| 4776 | AI-draft | Perform dhikr of your resonant Divine Name | اذكر الاسم الحسن الموافق لك |
-| 4777 | AI-draft | Initiate significant projects | ابدأ مشاريع مهمّة |
-| 4778 | AI-draft | Strong alignment. Your | انسجام قوي. جوهرك |
-| 4779 | AI-draft | essence harmonizes well with | ينسجم جيدًا مع طاقة |
-| 4780 | AI-draft | energy. Good time for spiritual growth and meaningful actions. | . وقت جيد للنموّ الروحي والأعمال ذات المعنى. |
-| 4781 | AI-draft | Pursue spiritual learning | اطلب العلم الروحي |
-| 4782 | AI-draft | Practice regular dhikr | داوِم على الذكر |
-| 4783 | AI-draft | Seek beneficial knowledge | اطلب العلم النافع |
-| 4784 | AI-draft | Moderate alignment. | انسجام معتدل. |
-| 4785 | AI-draft | Maintain regular spiritual practices | حافظ على ممارساتك الروحية المنتظمة |
-| 4786 | AI-draft | Reflect and contemplate | تأمّل وتفكّر |
-| 4787 | AI-draft | Challenging alignment. | انسجام صعب. |
-| 4788 | AI-draft | energy opposes your | طاقة تعاكس |
-| 4789 | AI-draft | essence. Time for patience, reflection, and gentle practices. | جوهرك. وقت للصبر والتأمّل والممارسات اللطيفة. |
-| 4790 | AI-draft | Practice patience and sabr | تحلَّ بالصبر |
-| 4791 | AI-draft | Gentle dhikr and remembrance | ذكر لطيف |
-| 4792 | AI-draft | Avoid major decisions | تجنّب القرارات الكبرى |
-| 4793 | AI-draft | Rest and spiritual contemplation | الراحة والتأمّل الروحي |
-| 4794 | AI-draft | Moderate Days | أيام معتدلة |
-| 4795 | AI-draft | MILESTONE | إنجاز |
-| 4796 | AI-draft | STREAK | سلسلة |
-| 4797 | AI-draft | First Step | الخطوة الأولى |
-| 4798 | AI-draft | Logged your first dhikr | سجّلت أول ذكر لك |
-| 4799 | AI-draft | 100 Dhikr | 100 ذكر |
-| 4800 | AI-draft | Completed 100 total dhikr | أتممت 100 ذكر إجمالًا |
-| 4801 | AI-draft | 1,000 Dhikr | 1,000 ذكر |
-| 4802 | AI-draft | Completed 1,000 total dhikr | أتممت 1,000 ذكر إجمالًا |
-| 4803 | AI-draft | 10,000 Dhikr | 10,000 ذكر |
-| 4804 | AI-draft | Completed 10,000 total dhikr | أتممت 10,000 ذكر إجمالًا |
-| 4805 | AI-draft | 100,000 Dhikr | 100,000 ذكر |
-| 4806 | AI-draft | Completed 100,000 total dhikr - Legendary! | أتممت 100,000 ذكر إجمالًا - ما شاء الله! |
-| 4807 | AI-draft | 3-Day Streak | سلسلة 3 أيام |
-| 4808 | AI-draft | Maintained a 3-day streak | حافظت على سلسلة 3 أيام |
-| 4809 | AI-draft | Maintained a 7-day streak | حافظت على سلسلة 7 أيام |
-| 4810 | AI-draft | Maintained a 30-day streak | حافظت على سلسلة 30 يومًا |
-| 4811 | AI-draft | Century Streak | سلسلة المئة |
-| 4812 | AI-draft | Maintained a 100-day streak - Unstoppable! | حافظت على سلسلة 100 يوم - ما شاء الله! |
-| 4813 | AI-draft | Goal Achiever | محقّق الهدف |
-| 4814 | AI-draft | Completed your first challenge goal | أتممت أول هدف تحدٍّ لك |
-| 4815 | AI-draft | Daily Champion | بطل اليوم |
-| 4816 | AI-draft | Met your daily target | بلغت هدفك اليومي |
-| 4817 | AI-draft | Active in 3+ challenges simultaneously | نشط في 3 تحدّيات أو أكثر في آن واحد |
-| 4818 | AI-draft | Ramadan Complete | إتمام رمضان |
-| 4819 | AI-draft | Completed a challenge during Ramadan | أتممت تحدّيًا في رمضان |
-| 4820 | AI-draft | All unlocked! | فُتح الكل! |
-| 4821 | AI-draft | Qurʾān, Sūrat Fāṭir 35:17 and Sūrat Ibrāhīm 14:20 | القرآن، سورة فاطر 35:17 وسورة إبراهيم 14:20 |
-| 4822 | AI-draft | I seek forgiveness from Allah | أستغفر الله |
-| 4823 | AI-draft | Allāhumma ṣalli wa sallim wa bārik ʿalā Sayyidinā Muḥammad | اللَّهُمَّ صَلِّ وَسَلِّمْ وَبَارِكْ عَلَى سَيِّدِنَا مُحَمَّدٍ |
-| 4824 | AI-draft | O Allah, send blessings, peace, and grace upon our master Muḥammad. | اللهم صلِّ وسلّم وبارك على سيّدنا محمد. |
-| 4825 | AI-draft | Fajr / Pre-dawn | الفجر / ما قبل الفجر |
-| 4826 | AI-draft | Ẓuhr / Midday | الظهر / منتصف النهار |
-| 4827 | AI-draft | Late Night / Tahajjud | آخر الليل / التهجّد |
-| 4828 | AI-draft | Istighfār is most powerful during this window | الاستغفار أعظم أثرًا في هذا الوقت |
-| 4829 | AI-draft | Ṣalawāt upon the Prophet ﷺ brings abundant blessings now | الصلاة على النبي ﷺ تجلب بركات وفيرة الآن |
-| 4830 | AI-draft | Divine Name invocation is especially blessed now | الدعاء بالأسماء الحسنى مبارك خاصّة الآن |
-| 4831 | AI-draft | 201 Holy Names practice invokes powerful rizq blessings | ممارسة الأسماء المئتين والواحد ترجى بها بركة الرزق |
-| 4832 | AI-draft | Debt Relief wird after ʿIshāʾ brings miraculous financial relief | ورد قضاء الدين بعد العشاء يُرجى به تفريج الضائقة المالية |
-| 4833 | AI-draft | Continue your personal wird during this spiritual window | واصل وردك الخاص في هذا الوقت الروحي |
-| 4834 | AI-draft | Start a dhikr challenge for this blessed time | ابدأ تحدّي ذكر لهذا الوقت المبارك |
-| 4835 | AI-draft | 🌟 My Spiritual Challenge on Asrār | 🌟 تحدّيي الروحي على أسرار |
-| 4836 | AI-draft | 🔥 Streak: | 🔥 السلسلة: |
-| 4837 | AI-draft | 🎯 Active challenges: | 🎯 التحدّيات النشطة: |
-| 4838 | AI-draft | Join me in this spiritual journey! | انضمّ إليّ في هذه الرحلة الروحية! |
-| 4839 | AI-draft | My Spiritual Challenge | تحدّيي الروحي |
-| 4840 | AI-draft | 💰✨ Miraculous Debt Relief - Powerful Wird | 💰✨ ورد قضاء الدين |
-| 4841 | AI-draft | 🌙 What seems IMPOSSIBLE for us is EFFORTLESS for Allah! | 🌙 ما يبدو مستحيلًا لنا هيّن على الله! |
-| 4842 | AI-draft | 📿 Recite with me: | 📿 اقرأ معي: |
-| 4843 | AI-draft | 🎯 Goal: | 🎯 الهدف: |
-| 4844 | AI-draft | 📊 My progress: | 📊 تقدّمي: |
-| 4845 | AI-draft | Towards financial freedom through Allah's grace... 🤲 | نحو الفرج المالي بفضل الله... 🤲 |
-| 4846 | AI-draft | 💰 Debt Relief Wird | 💰 ورد قضاء الدين |
-| 4847 | AI-draft | Join me in this spiritual challenge on Asrār! | انضمّ إليّ في هذا التحدّي الروحي على أسرار! |
-| 4848 | AI-draft | 🎉 I reached | 🎉 بلغت |
-| 4849 | AI-draft | dhikr on Asrār! | ذكرًا على أسرار! |
-| 4850 | AI-draft | A major milestone in my spiritual journey. 🌟 | محطّة كبيرة في رحلتي الروحية. 🌟 |
-| 4851 | AI-draft | Dhikr Reached! | تمّ بلوغ الذكر! |
-| 4852 | AI-draft | O Allah, send blessings upon Muhammad | اللهم صلِّ على محمد |
-| 4853 | AI-draft | O Allah, send blessings upon our Master Muhammad | اللهم صلِّ على سيّدنا محمد |
-| 4854 | AI-draft | O Allah, send blessings upon the one described with generosity and munificence | اللهم صلِّ على الموصوف بالكرم والجود |
-| 4855 | AI-draft | The most authentic ṣalawāt, taught by the Prophet ﷺ himself. Recited in every Ṣalāh. | أصحّ صيغ الصلاة على النبي، علّمها النبي ﷺ بنفسه، وتُقرأ في كل صلاة. |
-| 4856 | AI-draft | Universal · All Schools | عامّة · كل المذاهب |
-| 4857 | AI-draft | The shortest complete ṣalawāt — ideal for high-count daily dhikr sessions. | أقصر صيغة تامّة للصلاة على النبي — مثالية لجلسات الذكر اليومية الكثيرة العدد. |
-| 4858 | AI-draft | Ṣalāt al-Fātiḥ · The Opener | صلاة الفاتح |
-| 4859 | AI-draft | Central wird of the Tijāniyya order. Especially beloved in West African Sufi communities. | الورد المحوري في الطريقة التجانية، محبوبة خاصّة في المجتمعات الصوفية في غرب أفريقيا. |
-| 4860 | AI-draft | Ṣalāt al-Nāriyya · Prayer of Relief | الصلاة النارية · صلاة التفريج |
-| 4861 | AI-draft | Imam al-Qurṭubī · Also known as Ṣalāt al-Tafrijiyya | الإمام القرطبي · وتُعرف أيضًا بالصلاة التفريجية |
-| 4862 | AI-draft | Known for alleviating difficulties. Traditionally recited 11 times for relief, or 4,444 times for major opening. | معروفة بتفريج الكروب، وتُقرأ تقليديًا 11 مرّة للفرج، أو 4444 مرّة للفتح الكبير. |
-| 4863 | AI-draft | Shaykh ʿAbd al-Salām ibn Mashīsh · Shādhilī tradition | الشيخ عبد السلام بن مشيش · الطريقة الشاذلية |
-| 4864 | AI-draft | The sublime prayer of Shaykh Ibn Mashīsh, spiritual guide of Imam al-Shādhilī. Widely recited in the Maghrib and West Africa. | الصلاة الجليلة للشيخ ابن مشيش، شيخ الإمام الشاذلي، وتُقرأ كثيرًا في المغرب وغرب أفريقيا. |
-| 4865 | AI-draft | Jawharatu l-Kamāl · Jewel of Perfection | جوهرة الكمال |
-| 4866 | AI-draft | The most exalted ṣalawāt of the Tijāniyya — recited 12 times daily in the wāẓifa. Requires respectful intention and attentiveness. | أجلّ صيغ الصلاة في الطريقة التجانية — تُقرأ 12 مرّة يوميًا في الوظيفة، وتتطلّب نيّة محترمة وحضورًا. |
-| 4867 | AI-draft | Ṣalāt al-Mawṣūf · Described with Generosity | صلاة الموصوف بالكرم |
-| 4868 | AI-draft | Prophetic Blessing · Traditional | صلاة نبوية · تقليدية |
-| 4869 | AI-draft | A concise yet powerful ṣalawāt praising the Prophet ﷺ for his perfect generosity and noble character. Ideal for high-count daily practice. | صيغة موجزة قوية تثني على النبي ﷺ بكماله في الكرم ونُبل خُلقه. مثالية للممارسة اليومية الكثيرة العدد. |
-| 4870 | AI-draft | Ṣalāt Nūr al-Qalb · Light of the Heart | صلاة نور القلب |
-| 4871 | AI-draft | Traditional Blessing | صلاة تقليدية |
-| 4872 | AI-draft | Ṣallā Allāhu ʿalā Muḥammadin, aṣbaḥa lil-qalbi nūruhu, wa raḥmatan lil-ʿālamīna ẓuhūruhu. | صَلَّى اللهُ عَلَى مُحَمَّدٍ، أَصْبَحَ لِلْقَلْبِ نُورُهُ، وَرَحْمَةً لِلْعَالَمِينَ ظُهُورُهُ |
-| 4873 | AI-draft | A beautiful ṣalawāt connecting the Prophet ﷺ as light for the heart and mercy for all creation. Excellent for morning recitation. | صيغة جميلة تصل بين النبي ﷺ نورًا للقلب ورحمة للخلق. ممتازة لقراءة الصباح. |
-| 4874 | AI-draft | O Most Merciful | يا رحيم |
-| 4875 | AI-draft | O Provider | يا رزّاق |
-| 4876 | AI-draft | O Ever-Forgiving | يا غفّار |
-| 4877 | AI-draft | O Most Subtle | يا لطيف |
-| 4878 | AI-draft | O Opener | يا فتّاح |
-| 4879 | AI-draft | Cherno Moussa Yero Sy | شيرنو موسى يرو سي |
-| 4880 | AI-draft | Offer a Hadiyya | قدّم هدية |
-| 4881 | AI-draft | universal love | المحبّة الشاملة |
-| 4882 | AI-draft | Error calculating compatibility. Please try again. | خطأ في حساب التوافق. يُرجى المحاولة مجدّدًا. |
-| 4883 | AI-draft | Call upon Allah by the Name whose meaning matches your need | ادعُ الله بالاسم الذي يوافق معناه حاجتك |
-| 4884 | AI-draft | Explore general astrological compatibility from birth dates | استكشف التوافق الفلكي العام من تواريخ الميلاد |
-| 4885 | AI-draft | Calculate Another Pair | احسب ثنائيًا آخر |
-| 4886 | AI-draft | core temperament | الطبع الأساسي |
-| 4887 | AI-draft | Both share | كلاهما يشتركان في |
-| 4888 | AI-draft | — an easy, instinctive rapport. | — ألفة سهلة فطرية. |
-| 4889 | AI-draft | s can create friction without conscious effort. |  قد يصنعان احتكاكًا دون جهد واعٍ. |
-| 4890 | AI-draft | s are independent — neither reinforcing nor clashing. |  مستقلّان — لا يقوّي أحدهما الآخر ولا يتصادمان. |
-| 4891 | AI-draft | Strong mutual attraction — what each is drawn to matches how the other pursues connection. | انجذاب متبادل قوي — ما ينجذب إليه كلٌّ منكما يوافق طريقة الآخر في طلب القرب. |
-| 4892 | AI-draft | A workable attraction dynamic — different styles that can still click. | انجذاب قابل للعمل — أسلوبان مختلفان يمكن أن يتوافقا. |
-| 4893 | AI-draft | Attraction styles pull in different directions — may take deliberate effort to align. | أسلوبا الانجذاب يشدّان في اتجاهين مختلفين — قد يتطلّب التوافق جهدًا مقصودًا. |
-| 4894 | AI-draft | is classically invoked for | يُدعى به كلاسيكيًا لـ |
-| 4895 | AI-draft | — a direct match for this intention. | — موافقة مباشرة لهذه النيّة. |
-| 4896 | AI-draft | is not classically tied to | لا يرتبط كلاسيكيًا بـ |
-| 4897 | AI-draft | directly, but its meaning closely relates to it. | مباشرة، لكن معناه قريب منه. |
-| 4898 | AI-draft | 's classical function doesn't align closely with | وظيفته الكلاسيكية لا توافق كثيرًا |
-| 4899 | AI-draft | Ya Allah | يا الله |
-| 4900 | AI-draft | Ya Rahman | يا رحمن |
-| 4901 | AI-draft | Ya Raheem | يا رحيم |
-| 4902 | AI-draft | Ya Quddus | يا قدّوس |
-| 4903 | AI-draft | Ya Salam | يا سلام |
-| 4904 | AI-draft | Ya Hakim | يا حكيم |
-| 4905 | AI-draft | Ya 'Adl | يا عدل |
-| 4906 | AI-draft | Ya Bari' | يا بارئ |
-| 4907 | AI-draft | Ya Musawwir | يا مصوّر |
-| 4908 | AI-draft | Ya Rafi' | يا رافع |
-| 4909 | AI-draft | Ya Halim | يا حليم |
-| 4910 | AI-draft | Ya Basir | يا بصير |
-| 4911 | AI-draft | Ya Ghaffar | يا غفّار |
-| 4912 | AI-draft | Ya Wahhab | يا وهّاب |
-| 4913 | AI-draft | Ya Razzaq | يا رزّاق |
-| 4914 | AI-draft | Ya Qabid | يا قابض |
-| 4915 | AI-draft | Ya Latif | يا لطيف |
-| 4916 | AI-draft | Ya Jami' | يا جامع |
-| 4917 | AI-draft | Ya Khafid | يا خافض |
-| 4918 | AI-draft | Ya Muzil | يا مذلّ |
-| 4919 | AI-draft | Ya Jabbar | يا جبّار |
-| 4920 | AI-draft | Ya Qahhar | يا قهّار |
-| 4921 | AI-draft | For gentleness, subtle ease, and calming the heart. | للّطف واليسر الخفيّ وطمأنينة القلب. |
-| 4922 | AI-draft | For mercy, ease in transitions, and emotional balance. | للرحمة واليسر في التحوّلات والتوازن العاطفي. |
-| 4923 | AI-draft | For compassion and softness in family and home matters. | للرأفة واللين في شؤون الأسرة والبيت. |
-| 4924 | AI-draft | Ya Wadud | يا ودود |
-| 4925 | AI-draft | For affection, harmony, and softening of hearts. | للمودّة والانسجام وتليين القلوب. |
-| 4926 | AI-draft | Ya 'Alim | يا عليم |
-| 4927 | AI-draft | For clarity of mind and beneficial knowledge. | لصفاء الذهن والعلم النافع. |
-| 4928 | AI-draft | Ya Khabir | يا خبير |
-| 4929 | AI-draft | Thursday's planet in classical ʿIlm al-Nujūm — for remembrance, generosity, and reliance on Allah's provision. Not prediction. | كوكب الخميس في علم النجوم الكلاسيكي — للذكر والكرم والتوكّل على رزق الله. لا للتنبّؤ. |
-| 4930 | AI-draft | For provision, barakah, and trust in Allah as Provider. | للرزق والبركة والتوكّل على الله الرزّاق. |
-| 4931 | AI-draft | Ya Wasi' | يا واسع |
-| 4932 | AI-draft | For spaciousness of heart and ease in what feels tight. | لسعة الصدر واليسر فيما ضاق. |
-| 4933 | AI-draft | Ya Karim | يا كريم |
-| 4934 | AI-draft | For generosity and noble character. | للكرم ونُبل الخُلق. |
-| 4935 | AI-draft | For mindful reliance on Allah's care and guardianship. | للتوكّل الواعي على رعاية الله وحفظه. |
-| 4936 | AI-draft | For forbearance and a softened heart. | للحِلم ولين القلب. |
-| 4937 | AI-draft | Ya Muhsi | يا محصي |
-| 4938 | AI-draft | Ya Sami' | يا سميع |
-| 4939 | AI-draft | For turning to the All-Hearing in duʿāʾ. | للتوجّه إلى السميع بالدعاء. |
-| 4940 | AI-draft | For humility before the Most Great and dignity without arrogance. | للتواضع للكبير والعزّة بلا كِبر. |
-| 4941 | AI-draft | Ya 'Aziz | يا عزيز |
-| 4942 | AI-draft | For strength with honour in righteous effort. | للقوة مع العزّة في السعي الصالح. |
-| 4943 | AI-draft | Ya Baqi | يا باقي |
-| 4944 | AI-draft | For steadfastness and what endures of good deeds. | للثبات وما يبقى من الأعمال الصالحة. |
-| 4945 | AI-draft | Ya Sabur | يا صبور |
-| 4946 | AI-draft | For wise restraint and sound judgment. | للإمساك الحكيم وسداد الحكم. |
-| 4947 | AI-draft | For forbearance when progress feels slow. | للحِلم حين يبدو التقدّم بطيئًا. |
-| 4948 | AI-draft | Ya Matin | يا متين |
-| 4949 | AI-draft | For firmness, discipline, and steady resolve. | للثبات والانضباط ورسوخ العزم. |
-| 4950 | AI-draft | When a benefic planet (Jupiter, Venus) is in dignity and transiting your area of concern, consider it a period of openness (fatḥ). Make du'ā', begin projects, and act boldly. | حين يكون كوكب سعد (المشتري أو الزهرة) في كرامة ويعبر مجال اهتمامك، فاعدده وقت انفتاح (فتح): ادعُ، وابدأ المشاريع، واعمل بجرأة. |
-| 4951 | AI-draft | These are periods to exercise extra patience and caution in matters of health, finances, and conflicts. Double your Isti'ādhah (seeking refuge in Allah) and du'ā'. | هذه أوقات لمزيد من الصبر والحذر في الصحّة والمال والخلافات. أكثِر من الاستعاذة بالله والدعاء. |
-| 4952 | AI-draft | Thursday is the most blessed day for spiritual elevation, wealth-seeking, and expansion. Make du'ā' for rizq (sustenance). Begin long-term projects. Seek knowledge, visit scholars, and perform generous acts of sadaqah. Thursday night (eve of Friday) is especially blessed — use it for extra worship. | الخميس من أبرك الأيام للارتقاء الروحي وطلب الرزق والسعة. ادعُ بالرزق، وابدأ المشاريع الطويلة، واطلب العلم، وزُر العلماء، وتصدّق بسخاء. وليلة الجمعة مباركة خاصّة — فاغتنمها بمزيد من العبادة. |
-| 4953 | AI-draft | This is THE most important layer for marriage and long-term partnership. Here's why: • Your mother's emotional patterns shaped how you give and receive love • This layer determines if you feel "safe" together emotionally • High scores here mean you intuitively understand each other's needs • Low scores mean you'll need conscious work to meet each other's emotional needs Many couples with great surface chemistry struggle because this layer isn't harmonious. Knowing this in advance helps you prepare. | هذه أهمّ طبقة للزواج والشراكة الطويلة. ولماذا: • أنماط أمك العاطفية شكّلت طريقة عطائك للمحبّة وتلقّيها • هذه الطبقة تحدّد هل تشعران «بالأمان» العاطفي معًا • الدرجات العالية تعني أنكما تفهمان حاجات بعضكما بالفطرة • الدرجات المنخفضة تعني الحاجة إلى تعلّم عاطفي واعٍ |
-| 4954 | AI-draft | Unlocks your Ascendant/Descendant — otherwise skipped, since it needs a precise time to mean anything. | يفتح الطالع/الغارب — وإلّا يُتخطّى، لأنه يحتاج إلى وقت دقيق ليكون ذا معنى. |
-| 4955 | AI-draft | Descendant | الغارب |
-| 4956 | AI-draft | Compatibility Analysis | تحليل التوافق |
-| 4957 | AI-draft | We analyze your relationship using ancient Islamic numerology and name wisdom | نحلّل علاقتكما بعلم الأعداد الإسلامي القديم وحكمة الأسماء |
-| 4958 | AI-draft | Combined compatibility from all three analysis methods - higher is better! | التوافق المجمّع من طرق التحليل الثلاث - الأعلى أفضل! |
-| 4959 | AI-draft | Overall Quality | الجودة العامّة |
-| 4960 | AI-draft | Relationship Potential | إمكانات العلاقة |
-| 4961 | AI-draft | How naturally compatible you are based on your names and energies | مدى توافقكما الطبيعي بحسب أسمائكما وطاقاتكما |
-| 4962 | AI-draft | How your spiritual energies align and complement each other at a deep level | كيف تنسجم طاقاتكما الروحية وتتكامل في العمق |
-| 4963 | AI-draft | How We Analyzed You | كيف حلّلنا |
-| 4964 | AI-draft | Tips for Your Relationship | نصائح لعلاقتكما |
-| 4965 | AI-draft | What the different score ranges mean | معنى نطاقات الدرجات المختلفة |
-| 4966 | AI-draft | Strong natural harmony - you complement each other beautifully | انسجام طبيعي قوي - تتكاملان تكاملًا جميلًا |
-| 4967 | AI-draft | Great potential - minor adjustments will create harmony | إمكانات كبيرة - تعديلات صغيرة تصنع الانسجام |
-| 4968 | AI-draft | Requires effort - understanding and compromise are key | يتطلّب جهدًا - التفاهم والتنازل هما المفتاح |
-| 4969 | AI-draft | Needs work - focus on communication and mutual respect | يحتاج إلى عمل - ركّزا على التواصل والاحترام المتبادل |
-| 4970 | AI-draft | See how we calculated this | اعرض طريقة الحساب |
-| 4971 | AI-draft | Hide calculation details | أخفِ تفاصيل الحساب |
-| 4972 | AI-draft | Analyze Another Pair | حلّل ثنائيًا آخر |
-| 4973 | AI-draft | Passionate & Dynamic | شغوف حيوي |
-| 4974 | AI-draft | Emotional & Intuitive | عاطفي حدسي |
-| 4975 | AI-draft | Practical & Grounded | عملي متجذّر |
-| 4976 | AI-draft | Intellectuel & Social | فكري اجتماعي |
-| 4977 | AI-draft | Provision & Sustenance | الرزق والقوت |
-| 4978 | AI-draft | Rizq, livelihood, and material need | الرزق والمعيشة والحاجة المادية |
-| 4979 | AI-draft | Recovery from illness, physical or spiritual | الشفاء من المرض، بدنيًا أو روحيًا |
-| 4980 | AI-draft | Relief from Distress | تفريج الكرب |
-| 4981 | AI-draft | Anxiety, grief, or a heavy heart | القلق أو الحزن أو ثقل القلب |
-| 4982 | AI-draft | Clarity in a decision — alongside istikhāra, not instead of it | الوضوح في قرار — مع الاستخارة لا بدلًا منها |
-| 4983 | AI-draft | Marriage & Love | الزواج والمحبّة |
-| 4984 | AI-draft | Pardon | العفو |
-| 4985 | AI-draft | Repentance (tawba) and seeking pardon | التوبة وطلب العفو |
-| 4986 | AI-draft | Strength & Patience | القوة والصبر |
-| 4987 | AI-draft | Endurance through hardship | الصبر على الشدّة |
-| 4988 | AI-draft | Ease & Removing Obstacles | التيسير وإزالة العوائق |
-| 4989 | AI-draft | Opening a way through a difficult affair | فتح طريق في أمر صعب |
-| 4990 | AI-draft | Knowledge & Understanding | العلم والفهم |
-| 4991 | AI-draft | Increase in beneficial knowledge | الزيادة في العلم النافع |
-| 4992 | AI-draft | Quran 20:114 | القرآن 20:114 |
-| 4993 | AI-draft | This resonance flows naturally — practice with this Name tends to bring swift, tangible ease. A wonderful one to return to often. | هذا الرنين ينساب طبيعيًا — والممارسة بهذا الاسم تجلب غالبًا يسرًا سريعًا ملموسًا. اسم جميل للرجوع إليه كثيرًا. |
-| 4994 | AI-draft | This resonance is workable but benefits from consistency — steady, regular practice over time is what unlocks its full effect. | هذا الرنين قابل للعمل لكنه ينتفع بالمداومة — فالممارسة الثابتة المنتظمة مع الوقت هي ما يفتح أثره كاملًا. |
-| 4995 | AI-draft | This resonance calls for extra patience and discipline — approach this Name's practice with sincere intention, and consider pairing it with istighfār. | هذا الرنين يتطلّب مزيدًا من الصبر والانضباط — فأقبل على الذكر بهذا الاسم بنيّة صادقة، واقرنه بالاستغفار. |
-| 4996 | AI-draft | The opening verse, foundation of all recitation. 786 is the most famous sacred number in Islamic tradition. | الآية الأولى، أساس كل تلاوة. و786 أشهر الأعداد المميّزة في التراث الإسلامي. |
-| 4997 | AI-draft | Ya-Sin (Arabic letters) | يس (حروف عربية) |
-| 4998 | AI-draft | mysterious letters | الحروف المقطّعة |
-| 4999 | AI-draft | Ayat al-Kursi (Throne Verse) - the greatest verse for protection and divine connection. | آية الكرسي - أعظم آية للحفظ والصلة بالله. |
-| 5000 | AI-draft | ayat al-kursi | آية الكرسي |
-| 5001 | AI-draft | Surah Al-Ikhlas (Sincerity) - equals one-third of the Quran in reward. Affirms divine unity. | سورة الإخلاص - تعدل ثلث القرآن في الأجر، وتقرّر التوحيد. |
-| 5002 | AI-draft | The healing verse - affirms the Quran's power to heal spiritual and physical ailments. | آية الشفاء - تقرّر أن في القرآن شفاءً لأمراض الروح والبدن. |
-| 5003 | AI-draft | Repeated 31 times in Surah Ar-Rahman. A reminder of divine blessings and gratitude. | تتكرّر 31 مرّة في سورة الرحمن، تذكيرًا بالنِّعم والشكر. |
-| 5004 | AI-draft | A verse of comfort and reassurance about divine justice and mercy in trials. | آية طمأنينة وتسلية عن عدل الله ورحمته في الابتلاء. |
-| 5005 | AI-draft | A promise of relief after difficulty. The verse appears twice in Surah Ash-Sharh for emphasis. | وعد بالفرج بعد الشدّة، وتتكرّر الآية مرّتين في سورة الشرح للتأكيد. |
-| 5006 | AI-draft | Beginning of the verse of divine power and sovereignty. Used for seeking provision and authority. | مطلع آية القدرة والملك، يُقرأ لطلب الرزق والتمكين. |
-| 5007 | AI-draft | The prayer of the youths of the cave (Ashab al-Kahf) seeking divine mercy and guidance. | دعاء فتية الكهف طلبًا للرحمة والرشد. |
-| 5008 | AI-draft | Umar | عمر |
-| 5009 | AI-draft | Husayn | حسين |
-| 5010 | AI-draft | Zaynab | زينب |
-| 5011 | AI-draft | Sharaf | الشرف |
-| 5012 | AI-draft | Bayt | البيت |
-| 5013 | AI-draft | Muthallatha | مثلّثة |
-| 5014 | AI-draft | Wajh | الوجه |
-| 5015 | AI-draft | Musharraf | مشرَّف |
-| 5016 | AI-draft | Camphor + White Sandalwood | الكافور + الصندل الأبيض |
-| 5017 | AI-draft | For calm, receptivity, and inner quiet | للسكينة والتلقّي والهدوء الباطن |
-| 5018 | AI-draft | Yellow Sandalwood + Frankincense | الصندل الأصفر + اللبان |
-| 5019 | AI-draft | For courage and steady resolve | للشجاعة وثبات العزم |
-| 5020 | AI-draft | Mastic + Frankincense | المصطكى + اللبان |
-| 5021 | AI-draft | For abundance, expansion, and barakah | للوفرة والسعة والبركة |
-| 5022 | AI-draft | Frankincense + Liquid Storax | اللبان + الميعة السائلة |
-| 5023 | AI-draft | For grounding, patience, and steadiness | للتجذّر والصبر والثبات |
-| 5024 | AI-draft | For clarity and spiritual illumination | للوضوح والإنارة الروحية |
-| 5025 | AI-draft | For inner strength and resilience | للقوة الباطنة والجلَد |
-| 5026 | AI-draft | O All-Knowing | يا عليم |
-| 5027 | AI-draft | For clarity and beneficial knowledge | للوضوح والعلم النافع |
-| 5028 | AI-draft | For provision and barakah | للرزق والبركة |
-| 5029 | AI-draft | For harmony and softening hearts | للانسجام وتليين القلوب |
-| 5030 | AI-draft | Universal spiritual cleansing | تطهير روحي عام |
-| 5031 | AI-draft | Always beneficial, opens spiritual doors | نافع دائمًا، يفتح الأبواب الروحية |
-| 5032 | AI-draft | Excellent time for | وقت ممتاز لـ |
-| 5033 | AI-draft | Steady practice brings consistent benefit | الممارسة الثابتة تجلب نفعًا دائمًا |
-| 5034 | AI-draft | Focus on protection and istighfār | ركّز على التحصّن والاستغفار |
-| 5035 | AI-draft | Ishraq | الإشراق |
-| 5036 | AI-draft | Duha | الضحى |
-| 5037 | AI-draft | Time of divine closeness. The Prophet ﷺ said: "The two rak'ahs of Fajr are better than this world and all it contains." Seek clarity and guidance. | وقت قرب من الله. قال النبي ﷺ: «ركعتا الفجر خير من الدنيا وما فيها». فاطلب الوضوح والهداية. |
-| 5038 | AI-draft | Midday renewal. Break from worldly affairs to reconnect with the Divine. Time for gratitude and seeking provision. | تجديد منتصف النهار. انقطع عن شؤون الدنيا لتعود إلى الله. وقت للشكر وطلب الرزق. |
-| 5039 | AI-draft | Time of reflection. The Prophet ﷺ emphasized this prayer greatly. Review your day and prepare for evening with mindfulness. | وقت المراجعة. عظّم النبي ﷺ شأن هذه الصلاة. راجع يومك واستعدّ للمساء بحضور. |
-| 5040 | AI-draft | Transition from light to darkness. Time to seek forgiveness and make du'a. The Prophet ﷺ said du'a is accepted at this time. | الانتقال من النور إلى الظلمة. وقت للاستغفار والدعاء. |
-| 5041 | AI-draft | Night's serenity. Time for deep reflection and contemplation. The last prayer before sleep - end your day in remembrance. | سكينة الليل. وقت للتأمّل والتفكّر العميق. آخر صلاة قبل النوم — فاختم يومك بالذكر. |
-| 5042 | AI-draft | Use this time for good deeds, seeking knowledge, or helping others. Every moment is an opportunity for spiritual growth. | استعمل هذا الوقت في الأعمال الصالحة أو طلب العلم أو إعانة الآخرين. فكل لحظة فرصة للنموّ الروحي. |
-| 5043 | AI-draft | Excellent alignment! | انسجام ممتاز! |
-| 5044 | AI-draft | prayer resonates with | تتناغم صلاة |
-| 5045 | AI-draft | energy. This is an optimal time for spiritual work. | . وهذا وقت مناسب للعمل الروحي. |
-| 5046 | AI-draft | Prayer time adds spiritual dimension to the | وقت الصلاة يضيف بعدًا روحيًا إلى ساعة |
-| 5047 | AI-draft | hour. Combine worldly action with remembrance. | . اجمع بين العمل الدنيوي والذكر. |
-| 5048 | AI-draft | The blessed time of Tahajjud! Allah descends to the lowest heaven asking "Who is calling upon Me?" Optimal for deep du'a and spiritual connection. | وقت التهجّد المبارك! ينزل ربّنا إلى السماء الدنيا فيقول: «من يدعوني فأستجيب له؟». وقت مناسب للدعاء العميق والصلة الروحية. |
-| 5049 | AI-draft | Ishraq time! The Prophet ﷺ said this prayer has immense reward. Time of new beginnings and fresh starts. | وقت الإشراق! وقد ورد في هذه الصلاة أجر عظيم. وقت للبدايات الجديدة. |
-| 5050 | AI-draft | Duha prayer time! A Sunnah practice that brings barakah. The Prophet ﷺ called it "the prayer of the penitent." | وقت صلاة الضحى! سنّة تجلب البركة، وسمّاها النبي ﷺ «صلاة الأوّابين». |
-| 5051 | AI-draft | Geolocation not supported | تحديد الموقع غير مدعوم |
-| 5052 | AI-draft | Failed to fetch location | تعذّر جلب الموقع |
-| 5053 | AI-draft | Allah (lexicon) | الله (معجم) |
-| 5054 | AI-draft | al-Rahman (lexicon) | الرحمن (معجم) |
-| 5055 | AI-draft | Rahman (lexicon) | رحمن (معجم) |
-| 5056 | AI-draft | al-Rahim (lexicon) | الرحيم (معجم) |
-| 5057 | AI-draft | Rahim | رحيم |
-| 5058 | AI-draft | Rahim (lexicon) | رحيم (معجم) |
-| 5059 | AI-draft | al-Latif (lexicon) | اللطيف (معجم) |
-| 5060 | AI-draft | Latif | لطيف |
-| 5061 | AI-draft | Latif (lexicon) | لطيف (معجم) |
-| 5062 | AI-draft | Hayy | حيّ |
-| 5063 | AI-draft | Hayy (lexicon) | حيّ (معجم) |
-| 5064 | AI-draft | al-Hayy (lexicon) | الحيّ (معجم) |
-| 5065 | AI-draft | Qayyum | قيّوم |
-| 5066 | AI-draft | Qayyum (lexicon) | قيّوم (معجم) |
-| 5067 | AI-draft | al-Qayyum (lexicon) | القيّوم (معجم) |
-| 5068 | AI-draft | Baka | بقاء |
-| 5069 | AI-draft | Fana | فناء |
-| 5070 | AI-draft | Musa | موسى |
-| 5071 | AI-draft | Mohammed | محمد |
-| 5072 | AI-draft | Opposing Energy | طاقة معاكسة |
-| 5073 | AI-draft | The God | الله |
-| 5074 | AI-draft | The Eternal | الباقي |
-| 5075 | AI-draft | The Pure One | القدّوس |
-| 5076 | AI-draft | The Certainty | الحقّ |
-| 5077 | AI-draft | The Believer | المؤمن |
-| 5078 | AI-draft | Fard | فرض |
-| 5079 | AI-draft | The Grateful | الشكور |
-| 5080 | AI-draft | The Praised One | كثير الخصال المحمودة |
-| 5081 | AI-draft | The Most Praised | أكثر الناس حمدًا لله |
-| 5082 | AI-draft | The Praiser | الحامد لربّه |
-| 5083 | AI-draft | The Commended | الممدوح عند الله والناس |
-| 5084 | AI-draft | The Eraser (of idolatry) | الذي يمحو الله به الكفر |
-| 5085 | AI-draft | O Pure One | من الحروف المقطّعة في أوّل سورة طه |
-| 5086 | AI-draft | O Mighty One | من الحروف المقطّعة في أوّل سورة يس |
-| 5087 | AI-draft | The Purified | المطهَّر من كل دنس |
-| 5088 | AI-draft | The Master | السيّد في قومه |
-| 5089 | AI-draft | The Messenger | المرسَل من الله |
-| 5090 | AI-draft | The Prophet | المنبَّأ بالوحي |
-| 5091 | AI-draft | The Messenger of Mercy | المرسَل رحمةً للعالمين |
-| 5092 | AI-draft | The Overseer | المقدَّم على الخلق |
-| 5093 | AI-draft | The Completing | الآتي على أثر الأنبياء |
-| 5094 | AI-draft | The Messenger of Battles | المرسَل بالجهاد |
-| 5095 | AI-draft | The Messenger of Comfort | المرسَل بالراحة والتيسير |
-| 5096 | AI-draft | The Cloaked One | المتدثّر بثوبه (أوّل المدثّر) |
-| 5097 | AI-draft | The Wrapped One | المتلفّف بثوبه (أوّل المزّمّل) |
-| 5098 | AI-draft | The Servant of Allah | العبد لله |
-| 5099 | AI-draft | The Beloved of Allah | المحبوب عند الله |
-| 5100 | AI-draft | The Chosen of Allah | المصطفى المختار من الله |
-| 5101 | AI-draft | The Confidant of Allah | المناجي لربّه |
-| 5102 | AI-draft | The Speaker with Allah | المكلَّم من الله |
-| 5103 | AI-draft | Seal of the Prophets | آخر الأنبياء |
-| 5104 | AI-draft | Seal of the Messengers | آخر المرسلين |
-| 5105 | AI-draft | The Reviver | المحيي للقلوب بالهدى |
-| 5106 | AI-draft | The Rescuer | المغيث في الشدائد |
-| 5107 | AI-draft | The Reminder | المذكِّر بالله |
-| 5108 | AI-draft | The Helper | الناصر للحقّ |
-| 5109 | AI-draft | The Victorious | المؤيَّد بالنصر |
-| 5110 | AI-draft | The Prophet of Mercy | نبيّ الرحمة للخلق |
-| 5111 | AI-draft | The Prophet of Repentance | الداعي إلى التوبة |
-| 5112 | AI-draft | The Watchful Over You | الحريص على هداية أمّته |
-| 5113 | AI-draft | The Known One | المعروف بصفته |
-| 5114 | AI-draft | The Witnesser | الشاهد على أمّته |
-| 5115 | AI-draft | The Attested | المشهود له بالرسالة |
-| 5116 | AI-draft | The Glad-Tidings | المبشّر بالخير |
-| 5117 | AI-draft | The Spreader of Good News | المبشّر بالجنّة |
-| 5118 | AI-draft | The Admonisher | المحذِّر من العذاب |
-| 5119 | AI-draft | The Lantern | السراج المنير |
-| 5120 | AI-draft | The Rightly Guided | المهديّ من ربّه |
-| 5121 | AI-draft | The Illumined One | المنير للطريق |
-| 5122 | AI-draft | The Caller | الداعي إلى الله |
-| 5123 | AI-draft | The Called One | المدعوّ إلى ربّه |
-| 5124 | AI-draft | The One Responded To | المستجاب دعاؤه |
-| 5125 | AI-draft | The Gentle | البارّ اللطيف |
-| 5126 | AI-draft | The Overlooker of Sins | العافي عن الزلّات |
-| 5127 | AI-draft | The Trustworthy | المؤتمن على الوحي |
-| 5128 | AI-draft | The Evident | المبيِّن للحقّ |
-| 5129 | AI-draft | The One Hoped For | المرجوّ نفعه |
-| 5130 | AI-draft | The Connection | الواصل للرحم |
-| 5131 | AI-draft | Possessor of Power | صاحب القوّة |
-| 5132 | AI-draft | Possessor of Honor | صاحب الحرمة |
-| 5133 | AI-draft | Possessor of Firmness | صاحب المنزلة الرفيعة |
-| 5134 | AI-draft | Possessor of Might | صاحب العزّة |
-| 5135 | AI-draft | Possessor of Grace | صاحب الفضل |
-| 5136 | AI-draft | The One Obeyed | المطاع أمره |
-| 5137 | AI-draft | The Obedient | المطيع لربّه |
-| 5138 | AI-draft | The Firm Foothold | السابقة الصادقة |
-| 5139 | AI-draft | Mercy | الرحمة المهداة |
-| 5140 | AI-draft | The Redeemer | المغيث للخلق |
-| 5141 | AI-draft | The Favor of Allah | النعمة من الله |
-| 5142 | AI-draft | The Gift of Allah | الهدية من الله |
-| 5143 | AI-draft | The Trusty Handhold | العروة الوثقى في الدين |
-| 5144 | AI-draft | The Path of Allah | الطريق إلى الله |
-| 5145 | AI-draft | The Straight Path | الطريق القويم |
-| 5146 | AI-draft | The Remembrance of Allah | المذكِّر بالله |
-| 5147 | AI-draft | The Sword of Allah | المسلول على الباطل |
-| 5148 | AI-draft | The Party of Allah | إمام جند الحقّ |
-| 5149 | AI-draft | The Piercing Star | النجم المضيء |
-| 5150 | AI-draft | The Chosen One | المختار الصافي |
-| 5151 | AI-draft | The Singled-Out | المجتبى من الخلق |
-| 5152 | AI-draft | The Selected One | المنتقى المختار |
-| 5153 | AI-draft | The Unlettered | الذي لم يقرأ ولم يكتب |
-| 5154 | AI-draft | The Chosen | المختار من الله |
-| 5155 | AI-draft | Allah's Worker | الأجير لله |
-| 5156 | AI-draft | The Compelling One | المصلح الجابر |
-| 5157 | AI-draft | Father of Qāsim | كنيته بابنه القاسم |
-| 5158 | AI-draft | Father of Ṭāhir | كنيته بابنه الطاهر |
-| 5159 | AI-draft | Father of Ṭayyib | كنيته بابنه الطيّب |
-| 5160 | AI-draft | Father of Ibrāhīm | كنيته بابنه إبراهيم |
-| 5161 | AI-draft | Whose Intercession is Accepted | المقبول شفاعته |
-| 5162 | AI-draft | The Interceder | الشافع لأمّته |
-| 5163 | AI-draft | The Righteous | الصالح التقيّ |
-| 5164 | AI-draft | The Truthful | الصادق في قوله |
-| 5165 | AI-draft | The Confirmer | المصدِّق لمن قبله |
-| 5166 | AI-draft | Sincerity | الصدق |
-| 5167 | AI-draft | Master of Messengers | إمام المرسلين |
-| 5168 | AI-draft | Leader of the God-Fearing | إمام أهل التقوى |
-| 5169 | AI-draft | Guide of the Bright Shining Ones | قائد أهل الوضوء يوم القيامة |
-| 5170 | AI-draft | Friend of the Merciful | خليل الله |
-| 5171 | AI-draft | The Pious | البارّ التقيّ |
-| 5172 | AI-draft | The Venerated | الموقَّر المبجَّل |
-| 5173 | AI-draft | The Eminent | ذو الجاه |
-| 5174 | AI-draft | The Counselor | الناصح لأمّته |
-| 5175 | AI-draft | The Advocate | القائم بالأمر |
-| 5176 | AI-draft | The Reliant on Allah | المتوكّل على الله |
-| 5177 | AI-draft | The Guarantor | الكفيل بالعهد |
-| 5178 | AI-draft | Establisher of the Way | المقيم للسنّة |
-| 5179 | AI-draft | The Sacred | المطهَّر المقدّس |
-| 5180 | AI-draft | The Holy Spirit | المؤيَّد بروح القدس |
-| 5181 | AI-draft | The Spirit of Truth | روح الحقّ |
-| 5182 | AI-draft | The Spirit of Justice | روح العدل |
-| 5183 | AI-draft | The Qualified | الكافي |
-| 5184 | AI-draft | The Broad-Shouldered One | المكتفي بالله |
-| 5185 | AI-draft | The Proclaimer | البالغ رسالته |
-| 5186 | AI-draft | The Informer | المبلِّغ رسالة ربّه |
-| 5187 | AI-draft | The Inseparable Friend | الواصل لربّه |
-| 5188 | AI-draft | The One Bound to Allah | الموصول بالله |
-| 5189 | AI-draft | The Foremost | السابق إلى الخير |
-| 5190 | AI-draft | The Guided | المهتدي بالله |
-| 5191 | AI-draft | The Mighty | العزيز |
-| 5192 | AI-draft | The Outstanding | الفاضل |
-| 5193 | AI-draft | The Favoured | المفضَّل على العالمين |
-| 5194 | AI-draft | The Key to Mercy | باب الرحمة |
-| 5195 | AI-draft | Teacher of Faith | علامة الإيمان |
-| 5196 | AI-draft | Teacher of Certainty | علامة اليقين |
-| 5197 | AI-draft | Guide to Good Things | الدالّ على الخير |
-| 5198 | AI-draft | Verifier of Good Deeds | المصحِّح للحسنات |
-| 5199 | AI-draft | Remover of Obstacles | المقيل للعثرات |
-| 5200 | AI-draft | Pardoner of Sins | الصافح عن الزلّات |
-| 5201 | AI-draft | Possessor of Intercession | صاحب الشفاعة العظمى |
-| 5202 | AI-draft | Possessor of the Honored Station | صاحب المقام المحمود |
-| 5203 | AI-draft | Owner of the Footprint | صاحب قدم الصدق |
-| 5204 | AI-draft | Distinguished with Might | المخصوص بالعزّة |
-| 5205 | AI-draft | Distinguished with Glory | المخصوص بالمجد |
-| 5206 | AI-draft | Distinguished with Nobility | المخصوص بالشرف |
-| 5207 | AI-draft | Possessor of Closest Access | صاحب الوسيلة |
-| 5208 | AI-draft | Possessor of Pre-eminence | صاحب الفضيلة |
-| 5209 | AI-draft | Owner of the Waist-Wrap | صاحب الإزار |
-| 5210 | AI-draft | Possessor of Proof | صاحب الحجّة |
-| 5211 | AI-draft | Possessor of Authority | صاحب السلطان |
-| 5212 | AI-draft | Owner of the Robe | صاحب الرداء |
-| 5213 | AI-draft | Possessor of the Lofty Rank | صاحب الدرجة الرفيعة |
-| 5214 | AI-draft | Possessor of the Crown | صاحب التاج |
-| 5215 | AI-draft | Possessor of Forgiveness | صاحب المغفر |
-| 5216 | AI-draft | Possessor of the Flag | صاحب لواء الحمد |
-| 5217 | AI-draft | Master of the Night Journey | صاحب المعراج |
-| 5218 | AI-draft | Possessor of the Staff | صاحب القضيب |
-| 5219 | AI-draft | Owner of the Burāq | صاحب البراق |
-| 5220 | AI-draft | Owner of the Ring | صاحب خاتم النبوّة |
-| 5221 | AI-draft | Owner of the Sign | صاحب العلامة |
-| 5222 | AI-draft | Possessor of the Evidence | صاحب البرهان |
-| 5223 | AI-draft | Possessor of Evident Proof | صاحب البيان |
-| 5224 | AI-draft | The Good Communicator | فصيح اللسان |
-| 5225 | AI-draft | Purifier of the Souls | طاهر القلب |
-| 5226 | AI-draft | The Kind | الرؤوف بأمّته |
-| 5227 | AI-draft | The Mercy Giving | الرحيم بالمؤمنين |
-| 5228 | AI-draft | The One with Perfect Islam | الكامل في إسلامه |
-| 5229 | AI-draft | Master of the Two Universes | سيّد الدنيا والآخرة |
-| 5230 | AI-draft | The Spring of Bliss | ينبوع النعيم |
-| 5231 | AI-draft | The Joy of Allah | سعد من الله |
-| 5232 | AI-draft | The Joy of the Creator | سعادة للخلق |
-| 5233 | AI-draft | The Preacher to Nations | خطيب الأمم |
-| 5234 | AI-draft | The Remover of Worries | كاشف الكروب |
-| 5235 | AI-draft | The Might of the Arab | عزّ العرب |
+| 2785 | AI-draft | Letters in Islamic Tradition | الحروف في التراث الإسلامي |
+| 2786 | AI-draft | In Islamic tradition, letters are seen as carriers of deep spiritual meanings. The Qur'an itself begins several surahs with mysterious letters (al-Ḥurūf al-Muqaṭṭaʿa) like Alif-Lām-Mīm (الم), whose meanings have been contemplated by scholars for centuries. | في التراث الإسلامي تُعدّ الحروف حاملة لمعانٍ روحية عميقة. والقرآن نفسه يفتتح سورًا بحروف مقطّعة مثل الم، تأمّل العلماء معانيها قرونًا. |
+| 2787 | AI-draft | Key Scholars | أعلام العلماء |
+| 2788 | AI-draft | The great Sufi mystic wrote extensively on the spiritual significance of letters in works like al-Futūḥāt al-Makkiyya. | كتب الصوفي الكبير كثيرًا عن الدلالة الروحية للحروف في مؤلّفات مثل «الفتوحات المكية». |
+| 2789 | AI-draft | Author of Shams al-Maʿārif, a major text on the science of letters and their spiritual applications. | صاحب «شمس المعارف»، من أبرز المصنّفات في علم الحروف وتطبيقاته الروحية. |
+| 2790 | AI-draft | Explored the spiritual dimensions of language and writing in his theological work. | تناول الأبعاد الروحية للّغة والكتابة في مؤلّفه العقدي. |
+| 2791 | AI-draft | Spiritual Perspective | المنظور الروحي |
+| 2792 | AI-draft | ʿIlm al-Ḥurūf is seen as a tool for contemplation and self-reflection, not a means of predicting the future. It helps to: | يُعدّ علم الحروف أداة للتأمّل ومحاسبة النفس، لا وسيلة للتنبّؤ بالمستقبل. وهو يعين على: |
+| 2793 | AI-draft | Understand the spiritual qualities encoded in your name | فهم الصفات الروحية في اسمك |
+| 2794 | ✅ reviewed | Contemplate your elemental nature and temperament | التأمّل في طبيعة عنصرك ومزاجك |
+| 2795 | AI-draft | Discover resonances with Divine Names | اكتشاف الرنين مع الأسماء الحسنى |
+| 2796 | AI-draft | Reflect on your unique spiritual path | التأمّل في طريقك الروحي الخاص |
+| 2797 | AI-draft | How Calculations Work | كيف تجري الحسابات |
+| 2798 | AI-draft | The Abjad system assigns a unique numerical value to each Arabic letter. These values are used to calculate several key numbers. | يجعل نظام الأبجد لكل حرف عربي قيمة عددية فريدة، وتُستعمل هذه القيم لحساب عدة أعداد أساسية. |
+| 2799 | AI-draft | Letter values from 1 to 1000: | قيم الحروف من 1 إلى 1000: |
+| 2800 | AI-draft | The sum of all letter values in your name. Represents your total spiritual potential. | مجموع قيم كل حروف اسمك. ويمثّل إمكانك الروحي الكلي. |
+| 2801 | AI-draft | The Kabīr reduced to a single digit (1-9). Reveals your spiritual station and destiny path. | الكبير مختزلًا إلى رقم واحد (1-9). ويكشف مقامك الروحي وطريق مسارك. |
+| 2802 | ✅ reviewed | 3. Ḥadath (Elemental Value - الحدث) | 3. الحدث (قيمة العنصر) |
+| 2803 | AI-draft | Reduced modulo 9 (1-9). Determines your primary element and temperament. | بباقي القسمة على 9 (1-9). ويحدّد عنصرك الأساسي وطبعك. |
+| 2804 | AI-draft | 4. Elemental Letter Distribution | 4. توزيع الحروف على العناصر |
+| 2805 | AI-draft | Is this fortune-telling? | هل هذه عرافة؟ |
+| 2806 | AI-draft | No. ʿIlm al-Ḥurūf is a tool for contemplation and self-reflection, not predicting the future. It's a way to understand the spiritual qualities and patterns encoded in your name. | لا. علم الحروف أداة للتأمّل ومحاسبة النفس، لا للتنبّؤ بالمستقبل. إنه طريقة لفهم الصفات والأنماط الروحية في اسمك. |
+| 2807 | AI-draft | ʿIlm al-Ḥurūf is rooted in Islamic tradition and uses the Arabic Abjad system with 28 letters. Western numerology uses the Pythagorean system with 26 Latin letters. The philosophical and spiritual approaches are also different. | علم الحروف متجذّر في التراث الإسلامي، ويستعمل نظام الأبجد العربي بحروفه الثمانية والعشرين. أما علم الأعداد الغربي فيستعمل النظام الفيثاغوري بالحروف اللاتينية الستة والعشرين. والمنهجان الفلسفي والروحي مختلفان أيضًا. |
+| 2808 | AI-draft | What is the Maghribi tradition? | ما التراث المغربي؟ |
+| 2809 | AI-draft | The Maghribi tradition (North/West Africa - Senegal, Gambia, Mali, Mauritania) developed a unique system of classifying the 28 Arabic letters into 4 elements, with exactly 7 letters per element. This balanced system is based on thermal and moisture qualities. | طوّر التراث المغربي (شمال أفريقيا وغربها - السنغال، غامبيا، مالي، موريتانيا) نظامًا خاصًا يصنّف الحروف العربية الثمانية والعشرين في أربعة عناصر، سبعة حروف لكل عنصر بالضبط. ويقوم هذا النظام المتوازن على صفتي الحرارة والرطوبة. |
+| 2810 | AI-draft | In the Abjad system, each Arabic letter has a numerical value. Your name, written in Arabic, can be converted to numbers. These numbers reveal spiritual patterns and qualities encoded in your name. | في نظام الأبجد لكل حرف عربي قيمة عددية. فيمكن تحويل اسمك المكتوب بالعربية إلى أعداد، وتكشف هذه الأعداد أنماطًا وصفات روحية في اسمك. |
+| 2811 | AI-draft | Yes, but for the most meaningful results, use your full name as it appears on your birth certificate, written in Arabic. You can also analyze your mother's name to see maternal influence. | نعم، لكن لأفضل النتائج استعمل اسمك الكامل كما في شهادة الميلاد مكتوبًا بالعربية. ويمكنك أيضًا تحليل اسم أمك لترى أثر الأم. |
+| 2812 | AI-draft | ʿIlm al-Ḥurūf is a tool for spiritual reflection and personal contemplation. It doesn't replace prayer, consulting scholars, or making practical decisions. Use it as a guide to better understand yourself. | علم الحروف أداة للتأمّل الروحي والتدبّر الشخصي. ولا يغني عن الدعاء ولا عن سؤال أهل العلم ولا عن اتّخاذ القرارات العملية. فاجعله دليلًا لفهم نفسك أكثر. |
+| 2813 | AI-draft | Palindrome - reads same forwards and backwards | متناظر - يُقرأ طردًا وعكسًا سواء |
+| 2814 | AI-draft | Balance and symmetry - your path has natural harmony. What appears different from various angles is fundamentally the same. | التوازن والتناظر - في طريقك انسجام طبيعي. فما يبدو مختلفًا من زوايا متعدّدة هو في أصله واحد. |
+| 2815 | AI-draft | Ascending sequence - digits increase in order | تسلسل تصاعدي - الأرقام تتزايد بالترتيب |
+| 2816 | AI-draft | Progressive growth - your journey is one of steady upward development. Each step builds naturally on the previous. | نموّ متدرّج - رحلتك رحلة ارتقاء ثابت، كل خطوة تُبنى على سابقتها. |
+| 2817 | AI-draft | Descending sequence - digits decrease in order | تسلسل تنازلي - الأرقام تتناقص بالترتيب |
+| 2818 | AI-draft | Refinement and distillation - your path involves releasing the unnecessary to reach essence. Simplification leads to clarity. | التهذيب والتصفية - في طريقك تخلٍّ عمّا لا يلزم للوصول إلى الجوهر. والتبسيط يقود إلى الوضوح. |
+| 2819 | AI-draft | Amplified energy of | طاقة مضاعفة للعدد |
+| 2820 | AI-draft | - this number carries intensified spiritual significance. The universe emphasizes this message. | - لهذا العدد دلالة روحية مكثّفة، فتأمّل رسالته. |
+| 2821 | AI-draft | Significant repetition detected in digits | تكرار ملحوظ في الأرقام |
+| 2822 | AI-draft | Emphasis and reinforcement - certain energies in your path are being highlighted and strengthened. | تأكيد وتقوية - بعض الطاقات في طريقك تُبرَز وتُقوّى. |
+| 2823 | AI-draft | Angelic number pattern - repeating sequence | نمط عدد متكرّر |
+| 2824 | AI-draft | Divine attention - this pattern often appears when spiritual guidance is near. Pay attention to synchronicities. | لفتة للتأمّل - قد يذكّرك هذا النمط بالانتباه إلى ما حولك من آيات ومعانٍ. |
+| 2825 | AI-draft | Multiple of sacred number(s): | مضاعف لعدد (أعداد) مميّز: |
+| 2826 | AI-draft | Connected to Islamic sacred numerology ( | متّصل بالأعداد المميّزة في التراث الإسلامي ( |
+| 2827 | AI-draft | ). Your value resonates with traditional spiritual significance. | ). وقيمتك تتناغم مع دلالة روحية تقليدية. |
+| 2828 | AI-draft | Mirror number | العدد المعكوس |
+| 2829 | AI-draft | is significant | له دلالة |
+| 2830 | AI-draft | , creating a hidden connection. What you seek may be found by looking at things in reverse. | ، فيصنع صلة خفيّة. وقد تجد ما تطلبه بالنظر إلى الأمور من الجهة الأخرى. |
+| 2831 | AI-draft | Your number carries perfect symmetry and amplification - a rare spiritual alignment indicating mastery and completion. | لعددك تناظر تامّ وتضاعف - انسجام روحي نادر يدلّ على الإتقان والتمام. |
+| 2832 | AI-draft | Progressive spiritual development aligned with sacred tradition - you are on a well-trodden path of enlightenment. | نموّ روحي متدرّج منسجم مع التراث - أنت على طريق مسلوك من طرق السير إلى الله. |
+| 2833 | AI-draft | The angels speak through numbers - this is a sign to trust your intuition and pay attention to subtle messages. | الأعداد مجال للتأمّل - فاجعل هذا تذكيرًا بالإصغاء إلى حدسك وملاحظة المعاني الدقيقة، والعلم عند الله. |
+| 2834 | AI-draft | Multiple patterns converge in your number - this indicates a pivotal moment of spiritual significance in your journey. | تلتقي في عددك أنماط متعدّدة - وقد يكون هذا وقفة مهمّة للتأمّل في رحلتك. |
+| 2835 | AI-draft | patterns - aligned spiritual energies | أنماط - طاقات روحية منسجمة |
+| 2836 | AI-draft | ) are mirror numbers - complementary spiritual forces | ) أعداد معكوسة - قوى روحية متكاملة |
+| 2837 | AI-draft | which has | الذي له |
+| 2838 | AI-draft | pattern(s) - combined energy creates harmony | نمط (أنماط) - الطاقة المجتمعة تصنع انسجامًا |
+| 2839 | AI-draft | Translation not available. Please visit Quran.com for the full translation. | الترجمة غير متاحة. يُرجى زيارة Quran.com للترجمة الكاملة. |
+| 2840 | AI-draft | Invalid Hadad value - must be positive | قيمة الحدد غير صالحة - يجب أن تكون موجبة |
+| 2841 | AI-draft | not found in metadata | غير موجود في البيانات |
+| 2842 | AI-draft | This verse emerged through numerical resonance between your name and the Qur'anic structure. | ظهرت هذه الآية من رنين عددي بين اسمك وبنية النصّ القرآني. |
+| 2843 | AI-draft | Reflect upon it as a potential sign or reminder in your spiritual journey. | تدبّرها تذكرةً في رحلتك الروحية. |
+| 2844 | AI-draft | Remember: this is for contemplation, not divination. | تذكّر: هذا للتدبّر لا للكهانة. |
+| 2845 | AI-draft | day enhances your energy | اليوم يعزّز طاقتك |
+| 2846 | AI-draft | rules both hour and day (double power) | يحكم الساعة واليوم معًا (قوة مضاعفة) |
+| 2847 | AI-draft | brings beneficial energy | يجلب طاقة نافعة |
+| 2848 | AI-draft | Current alignment is | الانسجام الحالي |
+| 2849 | AI-draft | Next optimal window: | النافذة المثلى التالية: |
+| 2850 | AI-draft | Talisman Timing Analysis | تحليل توقيت الوفق |
+| 2851 | AI-draft | Optimal Day | اليوم الأمثل |
+| 2852 | AI-draft | Optimal Hour | الساعة المثلى |
+| 2853 | AI-draft | Upcoming Optimal Windows | النوافذ المثلى القادمة |
+| 2854 | AI-draft | Alignment Score | درجة الانسجام |
+| 2855 | AI-draft | Saturn hour | ساعة زحل |
+| 2856 | AI-draft | Grounding, discipline, boundaries, ancestral wisdom | التجذّر، الانضباط، الحدود، حكمة الأسلاف |
+| 2857 | ✅ reviewed | Expansion, abundance, wisdom, good fortune | الاتساع، الوفرة، الحكمة، التوفيق |
+| 2858 | AI-draft | Mars hour | ساعة المريخ |
+| 2859 | AI-draft | Venus hour | ساعة الزهرة |
+| 2860 | AI-draft | Communication, intellect, travel, commerce | التواصل، العقل، السفر، التجارة |
+| 2861 | AI-draft | Moon hour | ساعة القمر |
+| 2862 | AI-draft | Intuition, emotions, dreams, receptivity | الحدس، العواطف، المنامات، التلقّي |
+| 2863 | AI-draft | Lo Shu (Saturn) | لو شو (زحل) |
+| 2864 | AI-draft | Dürer (Jupiter) | دورر (المشتري) |
+| 2865 | AI-draft | Composite (Sun) | مركّب (الشمس) |
+| 2866 | AI-draft | Composite (Mercury) | مركّب (عطارد) |
+| 2867 | AI-draft | Magic Square | الوفق |
+| 2868 | AI-draft | Magic Constant | الثابت السحري (مجموع الصفّ) |
+| 2869 | AI-draft | Intention | النيّة |
+| 2870 | AI-draft | Created From | مأخوذ من |
+| 2871 | AI-draft | Legacy | الإرث |
+| 2872 | AI-draft | Eternal Wisdom | الحكمة الباقية |
+| 2873 | AI-draft | Start fresh | ابدأ من جديد |
+| 2874 | AI-draft | Listen deeply | أصغِ بعمق |
+| 2875 | AI-draft | Find balance | جِد التوازن |
+| 2876 | AI-draft | Communicate | تواصل |
+| 2877 | AI-draft | Be adventurous | كن مغامرًا |
+| 2878 | AI-draft | Serve family | اخدم الأسرة |
+| 2879 | AI-draft | Spiritual Growth | النموّ الروحي |
+| 2880 | AI-draft | Seek wisdom | اطلب الحكمة |
+| 2881 | AI-draft | Meditate | تأمّل |
+| 2882 | AI-draft | Study deeply | ادرس بعمق |
+| 2883 | AI-draft | Achieve goals | حقّق الأهداف |
+| 2884 | AI-draft | Lead powerfully | قُد بقوة |
+| 2885 | AI-draft | Laziness & Negative Thinking | الكسل والتفكير السلبي |
+| 2886 | AI-draft | Tendency toward shortcuts | الميل إلى الطرق المختصرة |
+| 2887 | AI-draft | Difficulty completing tasks | صعوبة إتمام المهامّ |
+| 2888 | AI-draft | Negative thought patterns | أنماط تفكير سلبية |
+| 2889 | AI-draft | Struggles with discipline | صعوبة في الانضباط |
+| 2890 | AI-draft | Dhikr for perseverance (Ya Sabūr) | ذكر للمثابرة (يا صبور) |
+| 2891 | AI-draft | Reframe challenges positively | انظر إلى التحدّيات نظرة إيجابية |
+| 2892 | AI-draft | Build consistent routines | ابنِ عادات ثابتة |
+| 2893 | AI-draft | Abuse of Freedom | إساءة استعمال الحرية |
+| 2894 | AI-draft | Excessive indulgence | الإفراط في الملذّات |
+| 2895 | AI-draft | Seeking escape through substances or behaviors | الهروب بالمواد أو السلوكيات |
+| 2896 | AI-draft | Practice moderation in all things. True freedom comes through self-discipline. | اعتدل في كل شيء. فالحرية الحقّة تأتي بضبط النفس. |
+| 2897 | AI-draft | Fasting and abstinence practices | ممارسات الصيام والإمساك |
+| 2898 | AI-draft | Dhikr for self-control (Ya Qabid) | ذكر لضبط النفس (يا قابض) |
+| 2899 | AI-draft | Set healthy boundaries | ضع حدودًا صحّية |
+| 2900 | AI-draft | Mindful consumption | استهلاك واعٍ |
+| 2901 | AI-draft | Commit to one path deeply | التزم بطريق واحد بعمق |
+| 2902 | AI-draft | Learning humility and proper use of power in relationships through ego dissolution. | تعلّم التواضع وحسن استعمال القوة في العلاقات بتذويب الأنا. |
+| 2903 | AI-draft | Sudden relationship endings | نهايات مفاجئة للعلاقات |
+| 2904 | AI-draft | Ego-driven decisions backfire | القرارات التي تحرّكها الأنا تنقلب على صاحبها |
+| 2905 | AI-draft | Betrayals or abandonments | خيانات أو هجران |
+| 2906 | AI-draft | Loss of status or position | فقدان المكانة أو المنصب |
+| 2907 | AI-draft | Surrender the ego. Love selflessly. Build on spiritual foundation, not ego. | تخلَّ عن الأنا، وأحبب بإيثار، وابنِ على أساس روحي لا على الأنا. |
+| 2908 | AI-draft | Dhikr for divine love (Ya Wadud) | ذكر للمحبّة (يا ودود) |
+| 2909 | AI-draft | Serve without expectation | اخدم دون انتظار |
+| 2910 | AI-draft | Meditate on impermanence | تأمّل في الفناء |
+| 2911 | AI-draft | Forgive deeply and often | اعفُ بعمق وكثيرًا |
+| 2912 | AI-draft | Learning to give rather than take, serve rather than dominate. | تعلّم العطاء بدل الأخذ، والخدمة بدل التسلّط. |
+| 2913 | AI-draft | Difficulty asking for help | صعوبة طلب العون |
+| 2914 | AI-draft | Loneliness despite achievements | الوحدة رغم الإنجازات |
+| 2915 | AI-draft | Fear of dependency | الخوف من الاعتماد على الغير |
+| 2916 | AI-draft | Learn to receive. Serve humbly. Recognize interdependence as divine design. | تعلّم أن تتلقّى، واخدم بتواضع، واعلم أن حاجة الناس بعضهم إلى بعض من سنن الله. |
+| 2917 | AI-draft | Practice asking for help | تدرّب على طلب العون |
+| 2918 | AI-draft | Dhikr for unity (Ya Wahid, Ya Ahad) | ذكر للوحدة (يا واحد، يا أحد) |
+| 2919 | AI-draft | Join community service | شارك في خدمة المجتمع |
+| 2920 | AI-draft | Share power willingly | شارك السلطة طوعًا |
+| 2921 | AI-draft | Acknowledge others' contributions | اعترف بإسهامات الآخرين |
+| 2922 | AI-draft | Seven heavens, seven earths | سبع سماوات وسبع أرضين |
+| 2923 | AI-draft | Divine perfection and wholeness. Your name carries the frequency of completion. | التمام والكمال. ويحمل اسمك معنى الاكتمال. |
+| 2924 | AI-draft | Months, Tribes, Imams | الشهور والأسباط والأئمة |
+| 2925 | AI-draft | Twelve months, twelve springs | اثنا عشر شهرًا واثنتا عشرة عينًا |
+| 2926 | AI-draft | Cosmic order and leadership. Your path involves guiding others. | النظام الكوني والقيادة. وفي طريقك إرشاد للآخرين. |
+| 2927 | AI-draft | Quranic Miracle Number | العدد 19 في القرآن |
+| 2928 | AI-draft | Mathematical pattern in Quran | نمط عددي في القرآن |
+| 2929 | AI-draft | Divine signature. Your soul carries a special message for humanity. | علامة للتأمّل. لعلّ في طريقك رسالة نافعة للناس. |
+| 2930 | AI-draft | Testing & Purification Period | مدّة الابتلاء والتزكية |
+| 2931 | AI-draft | Nations, Elders, Completion | الأمم والشيوخ والتمام |
+| 2932 | AI-draft | Seventy elders of Moses | السبعون الذين اختارهم موسى |
+| 2933 | AI-draft | Wisdom keeper. You are meant to gather and share ancient knowledge. | حافظ للحكمة. لعلّك ممن يجمع المعرفة القديمة وينشرها. |
+| 2934 | AI-draft | Names of Allah | أسماء الله |
+| 2935 | AI-draft | Divine attributes. Your soul reflects the Beautiful Names. | الصفات الإلهية. لتكن روحك متخلّقة بمعاني الأسماء الحسنى. |
+| 2936 | AI-draft | Surah Al-Ikhlas Value | قيمة سورة الإخلاص |
+| 2937 | AI-draft | The Chapter of Sincerity | سورة الإخلاص |
+| 2938 | AI-draft | Pure monotheism. Your essence is aligned with divine unity. | التوحيد الخالص. ليكن جوهرك قائمًا على التوحيد. |
+| 2939 | AI-draft | Warriors of Badr | أهل بدر |
+| 2940 | AI-draft | Spiritual warrior. You are here to stand for truth. | مجاهد للنفس. لتكن ممن يقوم بالحقّ. |
+| 2941 | AI-draft | Bismillah al-Rahman al-Rahim | بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ |
+| 2942 | AI-draft | Opening verse of Quran | الآية الأولى من القرآن |
+| 2943 | AI-draft | Begin with grace. Your every action should start with divine remembrance. | ابدأ بالبركة. ليبدأ كل عمل لك بذكر الله. |
+| 2944 | AI-draft | Symbolic Perfection | الكمال الرمزي |
+| 2945 | AI-draft | Mastery incarnate. You are here to demonstrate perfection of soul. | الإتقان. لتكن ممن يسعى إلى كمال النفس. |
+| 2946 | AI-draft | Military Leader | قائد عسكري |
+| 2947 | AI-draft | Manager | مدير |
+| 2948 | AI-draft | Pioneer in Tech | رائد في التقنية |
+| 2949 | AI-draft | Subordinate roles | الأدوار التابعة |
+| 2950 | AI-draft | Repetitive tasks | المهامّ المتكرّرة |
+| 2951 | AI-draft | HR Professional | مختصّ في الموارد البشرية |
+| 2952 | AI-draft | Isolated work | العمل المنعزل |
+| 2953 | AI-draft | You excel at bringing people together and creating harmony in teams and relationships. | تتفوّق في جمع الناس وصنع الانسجام في الفرق والعلاقات. |
+| 2954 | AI-draft | Public Speaker | متحدّث عام |
+| 2955 | AI-draft | Entertainer | فنّان أداء |
+| 2956 | AI-draft | Content Creator | صانع محتوى |
+| 2957 | AI-draft | Silent, monotonous work | العمل الصامت الرتيب |
+| 2958 | AI-draft | Strict corporate settings | بيئات الشركات الصارمة |
+| 2959 | AI-draft | Environments that suppress creativity | البيئات التي تكبت الإبداع |
+| 2960 | AI-draft | You're naturally expressive and thrive when you can communicate, create, and inspire others. | أنت معبّر بطبعك، وتزدهر حين تستطيع التواصل والإبداع وإلهام الآخرين. |
+| 2961 | AI-draft | Administrator | إداري |
+| 2962 | AI-draft | Planner | مخطّط |
+| 2963 | AI-draft | Systems Designer | مصمّم أنظمة |
+| 2964 | AI-draft | Chaotic, unstructured environments | البيئات الفوضوية غير المنظّمة |
+| 2965 | AI-draft | Frequent travel | كثرة السفر |
+| 2966 | AI-draft | Jobs without clear processes | الوظائف بلا إجراءات واضحة |
+| 2967 | AI-draft | Travel Guide | مرشد سياحي |
+| 2968 | AI-draft | Sales | المبيعات |
+| 2969 | AI-draft | Event Planner | منظّم فعاليات |
+| 2970 | AI-draft | PR Specialist | مختصّ علاقات عامة |
+| 2971 | AI-draft | Flight Attendant | مضيف طيران |
+| 2972 | AI-draft | Freelancer | عمل حرّ |
+| 2973 | AI-draft | Routine desk jobs | وظائف المكتب الروتينية |
+| 2974 | AI-draft | Micromanaged environments | البيئات كثيرة الرقابة |
+| 2975 | AI-draft | You love variety and freedom, thriving in dynamic environments where you can explore and adapt. | تحبّ التنوّع والحرية، وتزدهر في البيئات الحيوية التي تستكشف فيها وتتكيّف. |
+| 2976 | AI-draft | Caregiver | مقدّم رعاية |
+| 2977 | AI-draft | Chef | طاهٍ |
+| 2978 | AI-draft | Interior Designer | مصمّم داخلي |
+| 2979 | AI-draft | Family Therapist | معالج أسري |
+| 2980 | AI-draft | Hospitality Manager | مدير ضيافة |
+| 2981 | AI-draft | Cut-throat competition | المنافسة الشرسة |
+| 2982 | AI-draft | Highly individualistic roles | الأدوار الفردية جدًا |
+| 2983 | AI-draft | You're naturally nurturing and responsible, finding fulfillment when you serve and care for others. | أنت راعٍ مسؤول بطبعك، وتجد رضاك في خدمة الآخرين ورعايتهم. |
+| 2984 | AI-draft | Philosopher | فيلسوف |
+| 2985 | AI-draft | Spiritual Guide | مرشد روحي |
+| 2986 | AI-draft | Investigator | محقّق |
+| 2987 | AI-draft | Data Scientist | عالم بيانات |
+| 2988 | AI-draft | Superficial sales roles | أدوار المبيعات السطحية |
+| 2989 | AI-draft | Overly social environments | البيئات المفرطة في الاختلاط |
+| 2990 | AI-draft | You're analytical and introspective, excelling when you can dive deep into knowledge and mysteries. | أنت تحليلي متأمّل، تتفوّق حين تغوص في المعرفة والأسرار. |
+| 2991 | AI-draft | Finance Manager | مدير مالي |
+| 2992 | AI-draft | Real Estate Developer | مطوّر عقاري |
+| 2993 | AI-draft | Business Owner | صاحب عمل |
+| 2994 | AI-draft | Investment Banker | مصرفي استثمار |
+| 2995 | AI-draft | Attorney | محامٍ |
+| 2996 | AI-draft | Producer | منتج |
+| 2997 | AI-draft | Low-responsibility roles | الأدوار قليلة المسؤولية |
+| 2998 | AI-draft | You're ambitious and results-driven, excelling at managing resources and achieving material success. | أنت طموح موجَّه بالنتائج، تتفوّق في إدارة الموارد وتحقيق النجاح المادي. |
+| 2999 | AI-draft | Non-Profit Leader | قائد في العمل الخيري |
+| 3000 | AI-draft | Global Advocate | مناصر عالمي |
+| 3001 | AI-draft | Philanthropist | محسن |
+| 3002 | AI-draft | Environmentalist | ناشط بيئي |
+| 3003 | AI-draft | Narrow, self-serving work | العمل الضيّق الأناني |
+| 3004 | AI-draft | Materialistic environments | البيئات المادية |
+| 3005 | AI-draft | Jobs lacking purpose | الوظائف بلا غاية |
+| 3006 | AI-draft | You're compassionate and globally-minded, finding fulfillment when you serve humanity and create positive change. | أنت رحيم واسع الأفق، تجد رضاك في خدمة الناس وصنع تغيير نافع. |
+| 3007 | AI-draft | Motivational Speaker | متحدّث تحفيزي |
+| 3008 | AI-draft | Visionary Leader | قائد صاحب رؤية |
+| 3009 | AI-draft | Intuitive Coach | مدرّب حدسي |
+| 3010 | AI-draft | Psychic | صاحب فراسة |
+| 3011 | AI-draft | Inspirational Writer | كاتب ملهِم |
+| 3012 | AI-draft | Mundane, routine work | العمل الرتيب العادي |
+| 3013 | AI-draft | Materially-focused jobs | الوظائف المادية الصرفة |
+| 3014 | AI-draft | Environments that suppress intuition | البيئات التي تكبت الحدس |
+| 3015 | AI-draft | You're a spiritual visionary who inspires others and carries messages from higher realms. | أنت صاحب رؤية روحية تُلهم الآخرين وتحمل معاني سامية. |
+| 3016 | AI-draft | Large-Scale Developer | مطوّر مشاريع كبرى |
+| 3017 | AI-draft | Visionary CEO | رئيس تنفيذي صاحب رؤية |
+| 3018 | AI-draft | International Leader | قائد دولي |
+| 3019 | AI-draft | Founder of Institutions | مؤسّس مؤسّسات |
+| 3020 | AI-draft | Work without legacy potential | العمل بلا أثر باقٍ |
+| 3021 | AI-draft | You're a master manifestor who builds lasting structures and turns grand visions into reality. | أنت بانٍ متقن تُقيم بنى دائمة وتحوّل الرؤى الكبيرة إلى واقع. |
+| 3022 | AI-draft | Humanitarian Leader | قائد إنساني |
+| 3023 | AI-draft | Universal Counselor | مستشار شامل |
+| 3024 | AI-draft | Transformational Coach | مدرّب تحوّلي |
+| 3025 | AI-draft | Compassionate Leader | قائد رحيم |
+| 3026 | AI-draft | Global Educator | معلّم عالمي |
+| 3027 | AI-draft | Work lacking compassion | العمل الخالي من الرحمة |
+| 3028 | AI-draft | You're a master teacher who guides humanity with unconditional love and profound wisdom. | أنت معلّم متقن يرشد الناس بمحبّة غير مشروطة وحكمة عميقة. |
+| 3029 | AI-draft | Practice patience - not everything needs to be done right now | تحلَّ بالصبر - فليس كل شيء يلزم الآن |
+| 3030 | AI-draft | Balance independence with collaboration | وازِن الاستقلال بالتعاون |
+| 3031 | AI-draft | Schedule regular breaks to avoid burnout | خصّص استراحات منتظمة لتجنّب الإنهاك |
+| 3032 | AI-draft | Set clear boundaries - it's okay to say no | ضع حدودًا واضحة - لا بأس أن تقول لا |
+| 3033 | AI-draft | Speak up for your own needs, not just others' | عبّر عن حاجاتك أنت، لا حاجات الآخرين وحدها |
+| 3034 | AI-draft | Finish projects before starting new ones | أتمّ المشاريع قبل البدء بغيرها |
+| 3035 | AI-draft | Practice focused work without distractions | اعمل بتركيز بلا مشتّتات |
+| 3036 | AI-draft | Don't scatter your energy - choose priorities | لا تبعثر طاقتك - اختر أولوياتك |
+| 3037 | AI-draft | Allow room for spontaneity and flexibility | اترك مجالًا للعفوية والمرونة |
+| 3038 | AI-draft | Take calculated risks instead of always playing safe | خاطر مخاطرة محسوبة بدل الحذر الدائم |
+| 3039 | AI-draft | Commit to one thing at a time instead of juggling many | التزم بأمر واحد في كل مرّة بدل الكثير |
+| 3040 | AI-draft | Ground yourself daily through meditation or nature | تجذّر كل يوم بالتأمّل أو الطبيعة |
+| 3041 | AI-draft | Balance material success with spiritual growth | وازِن النجاح المادي بالنموّ الروحي |
+| 3042 | AI-draft | Lead with compassion, not just authority | قُد بالرحمة لا بالسلطة وحدها |
+| 3043 | AI-draft | Set healthy boundaries - you can't save everyone | ضع حدودًا صحّية - لا يمكنك إنقاذ الجميع |
+| 3044 | AI-draft | Ground yourself in practical daily tasks | تجذّر بالمهامّ اليومية العملية |
+| 3045 | AI-draft | Take care of your own needs before serving others | اعتنِ بحاجاتك قبل خدمة الآخرين |
+| 3046 | AI-draft | Release attachment to outcomes - let go when needed | تخلَّ عن التعلّق بالنتائج - ودَع حين يلزم |
+| 3047 | AI-draft | Balance giving with receiving | وازِن العطاء بالأخذ |
+| 3048 | AI-draft | Ground your visions in practical action | جذّر رؤاك في عمل عملي |
+| 3049 | AI-draft | Balance spiritual work with physical self-care | وازِن العمل الروحي بالعناية بالبدن |
+| 3050 | AI-draft | Trust divine timing - you don't have to rush | ثق بتوقيت الله - لا داعي للعجلة |
+| 3051 | AI-draft | Balance grand vision with attention to details | وازِن الرؤية الكبيرة بالانتباه إلى التفاصيل |
+| 3052 | AI-draft | Rest regularly - even master builders need recovery | استرح بانتظام - حتى كبار البنّائين يحتاجون إلى التعافي |
+| 3053 | AI-draft | Teach without sacrificing your own wellbeing | علّم دون التضحية بعافيتك |
+| 3054 | AI-draft | Set clear boundaries even while serving | ضع حدودًا واضحة حتى وأنت تخدم |
+| 3055 | AI-draft | Remember you're human too - rest and restore | تذكّر أنك بشر أيضًا - استرح وتعافَ |
+| 3056 | AI-draft | Can become domineering or overly controlling | قد تصبح متسلّطًا أو مفرطًا في السيطرة |
+| 3057 | AI-draft | May struggle with collaboration or listening to others | قد تجد صعوبة في التعاون أو الإصغاء للآخرين |
+| 3058 | AI-draft | Tendency to burn out from doing everything alone | ميل إلى الإنهاك من فعل كل شيء وحدك |
+| 3059 | AI-draft | May come across as aggressive or insensitive | قد تبدو عدوانيًا أو قليل المراعاة |
+| 3060 | AI-draft | Can become overly dependent on others' approval | قد تعتمد كثيرًا على استحسان الآخرين |
+| 3061 | AI-draft | Risk of being too passive or indecisive | خطر السلبية أو التردّد المفرط |
+| 3062 | AI-draft | May struggle with standing up for yourself | قد تجد صعوبة في الدفاع عن نفسك |
+| 3063 | AI-draft | Can scatter energy across too many projects | قد تبعثر طاقتك على مشاريع كثيرة |
+| 3064 | AI-draft | May use humor or charm to avoid depth | قد تستعمل الدعابة أو الجاذبية لتجنّب العمق |
+| 3065 | AI-draft | Risk of being superficial or lacking follow-through | خطر السطحية أو عدم المتابعة |
+| 3066 | AI-draft | May get stuck in routines and miss opportunities | قد تعلق في الروتين وتفوتك الفرص |
+| 3067 | AI-draft | Risk of being overly critical or perfectionistic | خطر النقد المفرط أو الكمالية |
+| 3068 | AI-draft | Tendency to overwork and neglect play | ميل إلى الإفراط في العمل وإهمال الترويح |
+| 3069 | AI-draft | Can become restless or commitment-phobic | قد تصبح قلقًا أو نافرًا من الالتزام |
+| 3070 | AI-draft | Risk of being impulsive or reckless | خطر الاندفاع أو التهوّر |
+| 3071 | AI-draft | Can become a martyr or overly self-sacrificing | قد تفرط في التضحية بنفسك |
+| 3072 | AI-draft | Risk of perfectionism in home or relationships | خطر الكمالية في البيت أو العلاقات |
+| 3073 | AI-draft | Tendency to feel unappreciated or resentful | ميل إلى الشعور بعدم التقدير أو الاستياء |
+| 3074 | AI-draft | May struggle with receiving or asking for help | قد تجد صعوبة في تلقّي العون أو طلبه |
+| 3075 | AI-draft | Can become isolated or emotionally distant | قد تصبح منعزلًا أو بعيدًا عاطفيًا |
+| 3076 | AI-draft | Risk of being skeptical or distrustful | خطر الشكّ أو عدم الثقة |
+| 3077 | AI-draft | Tendency to intellectualize emotions instead of feeling them | ميل إلى عقلنة المشاعر بدل الإحساس بها |
+| 3078 | AI-draft | May struggle with vulnerability or intimacy | قد تجد صعوبة في الانكشاف أو القرب |
+| 3079 | AI-draft | Can become power-hungry or materialistic | قد تصبح متعطّشًا للسلطة أو ماديًا |
+| 3080 | AI-draft | May use people as stepping stones | قد تتّخذ الناس سلّمًا |
+| 3081 | AI-draft | Tendency to equate worth with success or money | ميل إلى قياس القيمة بالنجاح أو المال |
+| 3082 | AI-draft | Can become overly idealistic or impractical | قد تصبح مفرطًا في المثالية أو بعيدًا عن الواقع |
+| 3083 | AI-draft | Risk of emotional overwhelm from world's pain | خطر الإرهاق العاطفي من آلام العالم |
+| 3084 | AI-draft | Tendency to give until depleted | ميل إلى العطاء حتى النفاد |
+| 3085 | AI-draft | May struggle with letting go or completion | قد تجد صعوبة في التخلّي أو الإتمام |
+| 3086 | AI-draft | Can feel misunderstood or alienated | قد تشعر بأنك غير مفهوم أو غريب |
+| 3087 | AI-draft | May struggle to ground visions into reality | قد تجد صعوبة في تحويل الرؤى إلى واقع |
+| 3088 | AI-draft | Risk of spiritual bypassing or escapism | خطر الهروب الروحي من الواقع |
+| 3089 | AI-draft | Tendency to feel overwhelmed by sensitivity | ميل إلى الشعور بالإرهاق من فرط الحساسية |
+| 3090 | AI-draft | May struggle with practical, mundane tasks | قد تجد صعوبة في المهامّ العملية العادية |
+| 3091 | AI-draft | May struggle with patience for long-term building | قد تجد صعوبة في الصبر على البناء الطويل |
+| 3092 | AI-draft | Risk of burnout from massive ambitions | خطر الإنهاك من الطموحات الهائلة |
+| 3093 | AI-draft | May struggle with starting small or being content | قد تجد صعوبة في البدء صغيرًا أو القناعة |
+| 3094 | AI-draft | Can become overwhelmed by responsibility to humanity | قد ترهقك مسؤوليتك تجاه الناس |
+| 3095 | AI-draft | Risk of spiritual exhaustion from constant giving | خطر الإنهاك الروحي من العطاء الدائم |
+| 3096 | AI-draft | Tendency to hold yourself to impossible standards | ميل إلى مطالبة نفسك بمعايير مستحيلة |
+| 3097 | AI-draft | May struggle with accepting human limitations | قد تجد صعوبة في تقبّل حدود البشر |
+| 3098 | AI-draft | Daily affirmation: "I lead with courage and humility." Practice meditation to balance assertiveness with inner peace. | تذكير يومي: «أقود بشجاعة وتواضع». وتأمّل لتوازن الحزم بالسكينة الباطنة. |
+| 3099 | AI-draft | Start one new initiative or project | ابدأ مبادرة أو مشروعًا جديدًا واحدًا |
+| 3100 | AI-draft | Ask for help with one task instead of doing it alone | اطلب العون في مهمّة واحدة بدل إنجازها وحدك |
+| 3101 | AI-draft | Avoid becoming domineering or refusing to collaborate. Balance independence with teamwork. | تجنّب التسلّط أو رفض التعاون. وازِن الاستقلال بالعمل الجماعي. |
+| 3102 | AI-draft | Daily affirmation: "I honor my own needs while serving others." Practice boundary-setting as spiritual discipline. | تذكير يومي: «أكرم حاجاتي وأنا أخدم الآخرين». وتدرّب على وضع الحدود رياضةً روحية. |
+| 3103 | AI-draft | Express your opinion even if it differs from the group | عبّر عن رأيك ولو خالف الجماعة |
+| 3104 | AI-draft | Daily affirmation: "I express my truth with joy and discipline." Practice focused creativity sessions. | تذكير يومي: «أعبّر عن حقيقتي بفرح وانضباط». وخصّص جلسات إبداع مركّزة. |
+| 3105 | AI-draft | Finish one creative project before starting another | أتمّ مشروعًا إبداعيًا قبل أن تبدأ غيره |
+| 3106 | AI-draft | Avoid scattering your energy or using charm to escape depth. Focus brings power. | تجنّب بعثرة طاقتك أو الهروب من العمق بالجاذبية. فالتركيز قوة. |
+| 3107 | AI-draft | Daily affirmation: "I build with patience and trust the process." Practice yoga or grounding exercises. | تذكير يومي: «أبني بصبر وأثق بالمسار». وتدرّب على تمارين التجذّر. |
+| 3108 | AI-draft | Schedule time for play or spontaneity | خصّص وقتًا للترويح أو العفوية |
+| 3109 | AI-draft | Daily affirmation: "I am free and grounded." Practice grounding meditation or nature walks. | تذكير يومي: «أنا حرّ ومتجذّر». وتأمّل تأمّل تجذّر أو امشِ في الطبيعة. |
+| 3110 | AI-draft | Commit to one thing and see it through this week | التزم بأمر واحد وأتمّه هذا الأسبوع |
+| 3111 | AI-draft | Create one simple daily routine for stability | ضع عادة يومية بسيطة واحدة للثبات |
+| 3112 | AI-draft | Ground yourself through physical exercise or gardening | تجذّر بالتمرين البدني أو البستنة |
+| 3113 | AI-draft | Avoid restlessness or commitment-phobia. True freedom comes from mastering discipline. | تجنّب القلق أو النفور من الالتزام. فالحرية الحقّة من إتقان الانضباط. |
+| 3114 | AI-draft | Daily affirmation: "I give and receive with balance." Practice self-care rituals as spiritual practice. | تذكير يومي: «أعطي وآخذ بتوازن». واجعل العناية بنفسك عبادةً. |
+| 3115 | AI-draft | Let someone solve their own problem this week | دع أحدًا يحلّ مشكلته بنفسه هذا الأسبوع |
+| 3116 | AI-draft | Say no to one responsibility that isn't yours | ارفض مسؤولية واحدة ليست لك |
+| 3117 | AI-draft | Accept help from someone graciously | اقبل العون من أحد بلطف |
+| 3118 | AI-draft | Practice "good enough" instead of perfect in one area | اكتفِ بـ«الجيّد بما يكفي» بدل الكمال في مجال واحد |
+| 3119 | AI-draft | Avoid martyrdom or controlling others "for their good." Let people have their own journey. | تجنّب التضحية المفرطة أو التحكّم بالآخرين «لمصلحتهم». دع الناس يسلكون طريقهم. |
+| 3120 | AI-draft | Daily affirmation: "I trust my inner knowing." Practice contemplative prayer or silent meditation. | تذكير يومي: «أثق بمعرفتي الباطنة». وتدرّب على الدعاء التأمّلي أو التأمّل الصامت. |
+| 3121 | AI-draft | Share one insight or teaching with someone | شارك فكرة أو درسًا مع أحد |
+| 3122 | AI-draft | Practice feeling an emotion instead of analyzing it | تدرّب على الإحساس بشعور بدل تحليله |
+| 3123 | AI-draft | Avoid isolation or emotional detachment. Connection is part of wisdom. | تجنّب العزلة أو الانفصال العاطفي. فالتواصل جزء من الحكمة. |
+| 3124 | AI-draft | You are here to achieve, manifest abundance, and lead with power and integrity. | طريقك طريق الإنجاز وتحقيق الوفرة والقيادة بقوة ونزاهة. |
+| 3125 | AI-draft | Daily affirmation: "I use power wisely and serve the highest good." Practice gratitude meditation. | تذكير يومي: «أستعمل القوة بحكمة وأخدم الخير الأسمى». وتأمّل تأمّل الشكر. |
+| 3126 | AI-draft | Do one act of kindness without expecting return | اعمل معروفًا واحدًا دون انتظار مقابل |
+| 3127 | AI-draft | Spend quality time with loved ones | اقضِ وقتًا طيبًا مع أحبّتك |
+| 3128 | AI-draft | Lead with compassion in one situation this week | قُد برحمة في موقف واحد هذا الأسبوع |
+| 3129 | AI-draft | Avoid workaholism or equating worth with achievement. You are enough as you are. | تجنّب إدمان العمل أو قياس قيمتك بالإنجاز. فأنت كافٍ كما أنت. |
+| 3130 | AI-draft | Daily affirmation: "I serve with wisdom and boundaries." Practice loving-kindness meditation. | تذكير يومي: «أخدم بحكمة وحدود». وتأمّل تأمّل المحبّة والرحمة. |
+| 3131 | AI-draft | Set one clear boundary around your giving | ضع حدًّا واضحًا واحدًا لعطائك |
+| 3132 | AI-draft | Do one practical, grounded task | أنجز مهمّة عملية واحدة |
+| 3133 | AI-draft | Let go of one thing you can't control | تخلَّ عن أمر واحد لا تملكه |
+| 3134 | AI-draft | Practice receiving as well as giving | تدرّب على الأخذ كما تعطي |
+| 3135 | AI-draft | Avoid depletion from over-giving. You can't pour from an empty cup. | تجنّب النفاد من فرط العطاء. ففاقد الشيء لا يعطيه. |
+| 3136 | AI-draft | You are here to inspire, illuminate, and bring spiritual messages to humanity. | طريقك طريق الإلهام والإنارة وحمل المعاني الروحية إلى الناس. |
+| 3137 | AI-draft | Daily affirmation: "I am a vessel of light grounded in reality." Practice visualization and grounding. | تذكير يومي: «أنا وعاء للنور متجذّر في الواقع». وتدرّب على التصوّر والتجذّر. |
+| 3138 | AI-draft | Take one spiritual vision and create a practical first step | خذ رؤية روحية واحدة واصنع لها خطوة عملية أولى |
+| 3139 | AI-draft | Protect your energy - say no to energy vampires | احفظ طاقتك - وقل لا لمن يستنزفها |
+| 3140 | AI-draft | Share your insights with those ready to hear them | شارك أفكارك مع المستعدّين لسماعها |
+| 3141 | AI-draft | Trust divine timing instead of rushing | ثق بتوقيت الله بدل العجلة |
+| 3142 | AI-draft | Avoid spiritual escapism or feeling alienated. Ground your light in practical service. | تجنّب الهروب الروحي أو الشعور بالغربة. جذّر نورك في خدمة عملية. |
+| 3143 | AI-draft | You are here to build lasting structures and turn grand visions into tangible reality. | طريقك طريق بناء البنى الدائمة وتحويل الرؤى الكبيرة إلى واقع ملموس. |
+| 3144 | AI-draft | Daily affirmation: "I build step by step with patience." Practice mindful breathing when overwhelmed. | تذكير يومي: «أبني خطوة خطوة بصبر». وتنفّس بوعي حين يغلبك الضغط. |
+| 3145 | AI-draft | Delegate one task to someone else | فوّض مهمّة واحدة إلى غيرك |
+| 3146 | AI-draft | Rest when you need to - recovery fuels creation | استرح حين تحتاج - فالتعافي وقود الإنجاز |
+| 3147 | AI-draft | Be patient with the process - Rome wasn't built in a day | اصبر على المسار - فالأمور العظيمة لا تُبنى في يوم |
+| 3148 | AI-draft | Avoid overwhelm from the scale of your vision. Trust the process and start where you are. | تجنّب الإرهاق من حجم رؤيتك. ثق بالمسار وابدأ من حيث أنت. |
+| 3149 | AI-draft | Daily affirmation: "I teach from fullness, not depletion." Practice self-compassion meditation. | تذكير يومي: «أعلّم من امتلاء لا من نفاد». وتأمّل تأمّل الرفق بالنفس. |
+| 3150 | AI-draft | Release one responsibility that isn't yours to carry | تخلَّ عن مسؤولية واحدة ليست لك |
+| 3151 | AI-draft | Teach or guide while maintaining clear boundaries | علّم أو أرشد مع الحفاظ على حدود واضحة |
+| 3152 | AI-draft | Practice self-love with the same intensity you love others | أحبب نفسك بالقدر الذي تحبّ به الآخرين |
+| 3153 | AI-draft | Rest deeply - you need it more than most | استرح بعمق - فأنت تحتاج إلى ذلك أكثر من غيرك |
+| 3154 | AI-draft | Surah Al-Ikhlas 112:1 | سورة الإخلاص 112:1 |
+| 3155 | AI-draft | Life Path 1 embodies divine unity and singularity. Like Allah being Al-Ahad, you're called to stand independently in your truth and lead with authentic individuality. | مسار الحياة 1 يعكس معنى الوحدانية والتفرّد. وكما أن الله هو الأحد، فأنت مدعوّ إلى الثبات مستقلًّا على الحقّ والقيادة بفردية صادقة. |
+| 3156 | AI-draft | Recite Surah Al-Ikhlas 3 times after Fajr prayer to strengthen your connection to divine oneness and individual purpose. | اقرأ سورة الإخلاص ثلاث مرّات بعد صلاة الفجر لتقوية صلتك بالتوحيد وبغايتك الخاصة. |
+| 3157 | AI-draft | Surah Al-Ahqaf 46:15 | سورة الأحقاف 46:15 |
+| 3158 | AI-draft | Life Path 2 reflects divine gentleness and relational harmony. Like Al-Latif, you work through subtle kindness, diplomacy, and nurturing connections between people. | مسار الحياة 2 يعكس معنى اللطف والانسجام في العلاقات. وتخلّقًا باسم اللطيف تعمل بالرفق الخفيّ والدبلوماسية ورعاية الصلات بين الناس. |
+| 3159 | AI-draft | Recite "Ya Latif" 129 times after Asr prayer to cultivate divine gentleness in your relationships and mediation work. | اذكر «يا لطيف» 129 مرّة بعد صلاة العصر لتنمية اللطف في علاقاتك وسعيك في الإصلاح. |
+| 3160 | AI-draft | Surah Al-A'raf 7:176 | سورة الأعراف 7:176 |
+| 3161 | AI-draft | Life Path 3 channels divine expression through creative communication. Like Al-Khabir, you're gifted with awareness that must be shared through stories, art, and joyful expression. | مسار الحياة 3 يوجّه التعبير بالتواصل المبدع. وتخلّقًا باسم الخبير أوتيت وعيًا ينبغي أن تشاركه بالقصص والفنّ والتعبير البهيج. |
+| 3162 | AI-draft | After Maghrib, reflect on one story from the Quran and how it relates to your creative expression today. | بعد المغرب تأمّل قصة من قصص القرآن وصلتها بتعبيرك المبدع اليوم. |
+| 3163 | AI-draft | Surah Al-Anbiya 21:32 | سورة الأنبياء 21:32 |
+| 3164 | AI-draft | Life Path 4 embodies divine structure and preservation. Like Al-Hafiz, you build stable foundations, create order, and guard what is sacred through disciplined work. | مسار الحياة 4 يعكس معنى النظام والحفظ. وتخلّقًا باسم الحفيظ تبني أسسًا ثابتة، وتقيم النظام، وتحفظ المقدّس بالعمل المنضبط. |
+| 3165 | AI-draft | Perform your 5 daily prayers at their exact times to embody divine order and structure in your spiritual practice. | أدِّ الصلوات الخمس في أوقاتها لتتجلّى معاني النظام في عبادتك. |
+| 3166 | AI-draft | Surah An-Naba 78:8 | سورة النبأ 78:8 |
+| 3167 | AI-draft | Life Path 5 reflects divine creativity and adaptability. Like Al-Musawwir, you shape-shift through experiences, exploring the diverse forms of creation with freedom and curiosity. | مسار الحياة 5 يعكس معنى الإبداع والتكيّف. وتخلّقًا باسم المصوّر تتقلّب في التجارب، مستكشفًا صور الخلق المتنوّعة بحرية وفضول. |
+| 3168 | AI-draft | Before traveling or starting new experiences, recite "Bismillah" 5 times to invoke divine guidance through change. | قبل السفر أو بدء تجارب جديدة قل «بسم الله» خمس مرّات طالبًا هداية الله في التغيير. |
+| 3169 | AI-draft | Surah Al-Isra 17:24 | سورة الإسراء 17:24 |
+| 3170 | AI-draft | Life Path 6 embodies divine mercy and nurturing. Like Ar-Rahman, you extend unconditional compassion to family, community, and all who seek healing and harmony. | مسار الحياة 6 يعكس معنى الرحمة والرعاية. وتخلّقًا باسم الرحمن تبذل الرأفة للأسرة والمجتمع ولكل من يطلب الشفاء والانسجام. |
+| 3171 | AI-draft | Begin each day by reciting "Bismillah Ar-Rahman Ar-Rahim" and setting an intention to serve your family or community with mercy. | ابدأ كل يوم بـ«بسم الله الرحمن الرحيم» وانوِ خدمة أسرتك أو مجتمعك برحمة. |
+| 3172 | AI-draft | Surah Ali 'Imran 3:190 | سورة آل عمران 3:190 |
+| 3173 | AI-draft | Life Path 7 seeks divine wisdom through contemplation. Like Al-Hakim, you're called to study the signs, dive deep into mysteries, and uncover sacred knowledge through spiritual inquiry. | مسار الحياة 7 يطلب الحكمة بالتأمّل. وتخلّقًا باسم الحكيم أنت مدعوّ إلى تدبّر الآيات والغوص في الأسرار وطلب العلم بالبحث الروحي. |
+| 3174 | AI-draft | Spend 7 minutes after Fajr in silent contemplation (muraqaba) reflecting on the signs of Allah in creation. | اقضِ سبع دقائق بعد الفجر في مراقبة صامتة تتفكّر في آيات الله في الخلق. |
+| 3175 | AI-draft | Surah Ali 'Imran 3:189 | سورة آل عمران 3:189 |
+| 3176 | AI-draft | Life Path 8 manifests divine authority and abundance. Like Al-Malik, you're entrusted with power, resources, and leadership to establish justice and prosperity in the material realm. | مسار الحياة 8 يعكس معنى السلطان والوفرة. وتخلّقًا باسم الملك أنت مؤتمن على القوة والموارد والقيادة لإقامة العدل والرخاء في عالم المادة. |
+| 3177 | AI-draft | Recite "Ya Malik" 90 times on Fridays to align your material success with divine sovereignty and ethical leadership. | اذكر «يا ملك» 90 مرّة يوم الجمعة لتوافق نجاحك المادي مع الأمانة والقيادة الأخلاقية. |
+| 3178 | AI-draft | Surah Al-Baqarah 2:195 | سورة البقرة 2:195 |
+| 3179 | AI-draft | Life Path 9 embodies divine generosity and completion. Like Al-Karim, you're called to give selflessly, serve humanity, and complete karmic cycles through compassionate service. | مسار الحياة 9 يعكس معنى الكرم والتمام. وتخلّقًا باسم الكريم أنت مدعوّ إلى العطاء بإيثار وخدمة الناس وإتمام الدورات بخدمة رحيمة. |
+| 3180 | AI-draft | Give charity (sadaqah) every day, even if small, and recite "Alhamdulillah" 9 times to embody divine generosity. | تصدّق كل يوم ولو بقليل، وقل «الحمد لله» تسع مرّات تخلّقًا بالكرم. |
+| 3181 | AI-draft | Surah An-Nur 24:35 | سورة النور 24:35 |
+| 3182 | AI-draft | Master Number 11 channels divine illumination. Like An-Nur, you're a spiritual lighthouse meant to inspire, uplift, and guide others toward enlightenment through your heightened intuition. | العدد الأستاذ 11 يحمل معنى الإنارة. وتخلّقًا باسم النور أنت منارة روحية تُلهم الآخرين وترفعهم وترشدهم بحدسك المرهف. |
+| 3183 | AI-draft | Recite Ayat an-Nur (24:35) during Tahajjud prayer to strengthen your connection to divine light and spiritual vision. | اقرأ آية النور (24:35) في صلاة التهجّد لتقوية صلتك بالنور والبصيرة. |
+| 3184 | AI-draft | Surah Al-Anbiya 21:30 | سورة الأنبياء 21:30 |
+| 3185 | AI-draft | Al-Bani (The Builder, The Architect) | الباني (البنّاء) |
+| 3186 | AI-draft | Master Number 22 builds divine vision into material reality. Like Al-Bani, you're the master architect capable of constructing systems, institutions, and legacies that serve humanity for generations. | العدد الأستاذ 22 يحوّل الرؤية إلى واقع ملموس. أنت البنّاء المتقن القادر على إقامة أنظمة ومؤسّسات وآثار تخدم الناس أجيالًا. |
+| 3187 | AI-draft | Before major projects, perform 2 rakat Salat al-Istikhara asking Allah to guide your building and manifestation work. | قبل المشاريع الكبيرة صلِّ ركعتي الاستخارة سائلًا الله أن يرشد عملك. |
+| 3188 | AI-draft | Surah Al-Baqarah 2:153 | سورة البقرة 2:153 |
+| 3189 | AI-draft | Master Number 33 embodies divine compassion and mastery through sacrifice. Like As-Sabur, you're called to serve as a spiritual teacher and healer, patiently uplifting all beings with universal love. | العدد الأستاذ 33 يعكس معنى الرحمة والإتقان بالتضحية. وتخلّقًا باسم الصبور أنت مدعوّ إلى أن تكون معلّمًا ومداويًا روحيًا ترفع الناس بصبر ومحبّة شاملة. |
+| 3190 | AI-draft | Practice sabr (patience) consciously in 3 situations daily, and recite "Ya Sabur" 33 times after Isha to embody divine patience in your teaching. | تحلَّ بالصبر عن وعي في ثلاثة مواقف كل يوم، واذكر «يا صبور» 33 مرّة بعد العشاء. |
+| 3191 | AI-draft | New Beginnings & Independence | البدايات الجديدة والاستقلال |
+| 3192 | AI-draft | Personal goals | الأهداف الشخصية |
+| 3193 | AI-draft | Express your vision | عبّر عن رؤيتك |
+| 3194 | AI-draft | Adapt and explore | تكيّف واستكشف |
+| 3195 | AI-draft | Nurture growth | ارعَ النموّ |
+| 3196 | AI-draft | Reflect and refine | تأمّل وهذّب |
+| 3197 | AI-draft | Define clear personal goals | حدّد أهدافًا شخصية واضحة |
+| 3198 | AI-draft | Collaboration | التعاون |
+| 3199 | AI-draft | Connect with others | تواصل مع الآخرين |
+| 3200 | AI-draft | Deepen partnerships | عمّق الشراكات |
+| 3201 | AI-draft | Communicate harmoniously | تواصل بانسجام |
+| 3202 | AI-draft | Build together | ابنوا معًا |
+| 3203 | AI-draft | Adapt as a team | تكيّفوا فريقًا |
+| 3204 | AI-draft | Serve relationships | اخدم العلاقات |
+| 3205 | AI-draft | Understand deeply | افهم بعمق |
+| 3206 | AI-draft | Manifest through unity | حقّق بالوحدة |
+| 3207 | AI-draft | Complete collaborations | أتمّ أعمال التعاون |
+| 3208 | AI-draft | Seek win-win solutions | اطلب حلولًا ينتفع بها الطرفان |
+| 3209 | AI-draft | Practice active listening | تدرّب على الإصغاء الفعّال |
+| 3210 | AI-draft | Join a partnership or team | انضمّ إلى شراكة أو فريق |
+| 3211 | AI-draft | Creativity & Self-Expression | الإبداع والتعبير عن الذات |
+| 3212 | AI-draft | Create something new | اصنع شيئًا جديدًا |
+| 3213 | AI-draft | Share your ideas | شارك أفكارك |
+| 3214 | AI-draft | Express fully | عبّر بكمال |
+| 3215 | AI-draft | Explore diverse expressions | استكشف أشكال تعبير متنوّعة |
+| 3216 | AI-draft | Create for others | اصنع للآخرين |
+| 3217 | AI-draft | Refine your craft | هذّب صنعتك |
+| 3218 | AI-draft | Manifest creations | حقّق إبداعاتك |
+| 3219 | AI-draft | Complete creative projects | أتمّ المشاريع الإبداعية |
+| 3220 | AI-draft | Start a creative project | ابدأ مشروعًا إبداعيًا |
+| 3221 | AI-draft | Speak your truth | قل حقيقتك |
+| 3222 | AI-draft | Attend social events | احضر المناسبات الاجتماعية |
+| 3223 | AI-draft | Lay the groundwork | مهّد الأرض |
+| 3224 | AI-draft | Collaborate on systems | تعاون على الأنظمة |
+| 3225 | AI-draft | Communicate plans | أعلن خططك |
+| 3226 | AI-draft | Build methodically | ابنِ بمنهجية |
+| 3227 | AI-draft | Adjust your approach | عدّل نهجك |
+| 3228 | AI-draft | Serve through structure | اخدم بالتنظيم |
+| 3229 | AI-draft | Complete foundations | أتمّ الأسس |
+| 3230 | AI-draft | Create a detailed plan | ضع خطة مفصّلة |
+| 3231 | AI-draft | Establish routines and systems | أقم عادات وأنظمة |
+| 3232 | AI-draft | Improve health and finances | حسّن الصحّة والمال |
+| 3233 | AI-draft | Stay disciplined and focused | ابقَ منضبطًا مركّزًا |
+| 3234 | AI-draft | Freedom & Change | الحرية والتغيير |
+| 3235 | AI-draft | This year brings unexpected changes, travel, and new experiences. Embrace variety and stay flexible. | تجلب هذه السنة تغيّرات غير متوقّعة وسفرًا وتجارب جديدة. تقبّل التنوّع وابقَ مرنًا. |
+| 3236 | AI-draft | Initiate change | ابدأ التغيير |
+| 3237 | AI-draft | Navigate transitions together | اجتازوا التحوّلات معًا |
+| 3238 | AI-draft | Express your freedom | عبّر عن حريتك |
+| 3239 | AI-draft | Create flexible structures | اصنع بنى مرنة |
+| 3240 | AI-draft | Embrace full freedom | اغتنم الحرية كاملة |
+| 3241 | AI-draft | Release what's complete | دَع ما اكتمل |
+| 3242 | AI-draft | Travel or explore | سافر أو استكشف |
+| 3243 | AI-draft | Break old patterns | اكسر الأنماط القديمة |
+| 3244 | AI-draft | Responsibility & Service | المسؤولية والخدمة |
+| 3245 | AI-draft | This year focuses on family, home, and caring for others. Step into responsibilities with love. | تركّز هذه السنة على الأسرة والبيت ورعاية الآخرين. تحمّل المسؤوليات بمحبّة. |
+| 3246 | AI-draft | Start caring initiatives | ابدأ مبادرات رعاية |
+| 3247 | AI-draft | Harmonize relationships | أصلِح العلاقات |
+| 3248 | AI-draft | Express love | عبّر عن المحبّة |
+| 3249 | AI-draft | Build a stable home | ابنِ بيتًا مستقرًّا |
+| 3250 | AI-draft | Serve fully | اخدم بكمال |
+| 3251 | AI-draft | Manifest through caring | حقّق بالرعاية |
+| 3252 | AI-draft | Complete family matters | أتمّ شؤون الأسرة |
+| 3253 | AI-draft | Strengthen family bonds | قوِّ روابط الأسرة |
+| 3254 | AI-draft | Create a nurturing home | اصنع بيتًا راعيًا |
+| 3255 | AI-draft | Help those in need | أعِن المحتاجين |
+| 3256 | AI-draft | Take on more responsibility | تحمّل مسؤولية أكبر |
+| 3257 | AI-draft | Practice unconditional love | تدرّب على المحبّة غير المشروطة |
+| 3258 | AI-draft | Reflection & Inner Growth | التأمّل والنموّ الباطن |
+| 3259 | AI-draft | This year calls for introspection, study, and spiritual development. Go inward to find answers. | تدعو هذه السنة إلى محاسبة النفس والدراسة والنموّ الروحي. ارجع إلى داخلك لتجد الأجوبة. |
+| 3260 | AI-draft | Begin inner journey | ابدأ الرحلة الباطنة |
+| 3261 | AI-draft | Seek deeper connections | اطلب صلات أعمق |
+| 3262 | AI-draft | Express your insights | عبّر عن بصائرك |
+| 3263 | AI-draft | Build spiritual practices | ابنِ ممارسات روحية |
+| 3264 | AI-draft | Serve through wisdom | اخدم بالحكمة |
+| 3265 | AI-draft | Dive deep within | غُص في داخلك |
+| 3266 | AI-draft | Release old beliefs | تخلَّ عن المعتقدات القديمة |
+| 3267 | AI-draft | Meditate or pray daily | تأمّل أو ادعُ كل يوم |
+| 3268 | AI-draft | Study a spiritual topic | ادرس موضوعًا روحيًا |
+| 3269 | AI-draft | Journal your insights | دوّن بصائرك |
+| 3270 | AI-draft | Power & Manifestation | القوة والتحقيق |
+| 3271 | AI-draft | This year is about achieving goals, building wealth, and stepping into your power. Think big and take action. | هذه السنة سنة تحقيق الأهداف وبناء الثروة والقيام بقوّتك. فكّر بسعة واعمل. |
+| 3272 | AI-draft | Initiate big goals | ابدأ أهدافًا كبيرة |
+| 3273 | AI-draft | Build powerful alliances | ابنِ تحالفات قوية |
+| 3274 | AI-draft | Communicate your vision | أعلن رؤيتك |
+| 3275 | AI-draft | Create wealth foundations | أقم أسس الثروة |
+| 3276 | AI-draft | Adapt your strategy | عدّل استراتيجيتك |
+| 3277 | AI-draft | Plan strategically | خطّط استراتيجيًا |
+| 3278 | AI-draft | Manifest abundance | حقّق الوفرة |
+| 3279 | AI-draft | Complete major projects | أتمّ المشاريع الكبرى |
+| 3280 | AI-draft | Set ambitious financial goals | ضع أهدافًا مالية طموحة |
+| 3281 | AI-draft | Step into leadership | تقدّم إلى القيادة |
+| 3282 | AI-draft | Completion & Humanitarianism | الإتمام والعمل الإنساني |
+| 3283 | AI-draft | Release | التخلّي |
+| 3284 | AI-draft | Begin completing cycles | ابدأ إتمام الدورات |
+| 3285 | AI-draft | Release relationships gently | أنهِ العلاقات برفق |
+| 3286 | AI-draft | Express forgiveness | عبّر عن العفو |
+| 3287 | AI-draft | Dismantle old structures | فكّك البنى القديمة |
+| 3288 | AI-draft | Let go freely | تخلَّ بحرية |
+| 3289 | AI-draft | Understand endings | افهم الخواتيم |
+| 3290 | AI-draft | Release attachment | تخلَّ عن التعلّق |
+| 3291 | AI-draft | Complete and prepare for new | أتمّ واستعدّ للجديد |
+| 3292 | AI-draft | Forgive and let go | اعفُ وتخلَّ |
+| 3293 | AI-draft | Donate or declutter | تصدّق أو تخفّف من الأشياء |
+| 3294 | AI-draft | Serve a cause greater than yourself | اخدم قضية أكبر منك |
+| 3295 | AI-draft | Complete unfinished projects | أتمّ المشاريع غير المنتهية |
+| 3296 | AI-draft | In past lives, you may have been lazy, avoided responsibility, or manipulated others to do your work. You took shortcuts and left projects incomplete. | ربما ملت في مراحل سابقة إلى الكسل أو التهرّب من المسؤولية أو جعل غيرك يعمل عنك، فسلكت الطرق المختصرة وتركت المشاريع ناقصة. |
+| 3297 | AI-draft | Nothing comes easy. You must work harder than others for the same results. Obstacles test your commitment. Laziness or negativity brings immediate consequences. | لا شيء يأتي بسهولة. قد تحتاج إلى جهد أكبر من غيرك لنتائج مماثلة، والعقبات تختبر التزامك، والكسل أو السلبية يعقبهما أثر سريع. |
+| 3298 | AI-draft | Develop unwavering discipline and work ethic | نمِّ انضباطًا راسخًا وأخلاق عمل متينة |
+| 3299 | AI-draft | Transform obstacles into stepping stones | حوّل العقبات إلى درجات صعود |
+| 3300 | AI-draft | Once mastered, Karmic Debt 13/4 becomes the most resilient builder. Your struggles become your strength. You inspire others by showing that persistence conquers all. | إذا أُتقن، صار الدَّين الكرمي 13/4 أصلب البنّائين. فتصبح معاناتك قوّتك، وتُلهم الآخرين بأن المثابرة تغلب كل شيء. |
+| 3301 | AI-draft | Perform Salat al-Tahajjud (night prayer) regularly. The discipline of waking before dawn mirrors your karmic lesson of self-mastery through consistent effort. | داوِم على صلاة التهجّد. فانضباط القيام قبل الفجر يعكس درسك في تهذيب النفس بالجهد الدائم. |
+| 3302 | AI-draft | Unshakeable foundation-building. You become the person others turn to when the going gets tough because you've mastered endurance. | بناء أسس لا تتزعزع. تصبح من يلجأ إليه الناس عند الشدّة لأنك أتقنت الصبر. |
+| 3303 | AI-draft | In previous incarnations, you abused freedom and indulged excessively in physical pleasures, substances, or reckless behavior. You harmed your body and disrespected sacred boundaries. | ربما ملت في مراحل سابقة إلى إساءة استعمال الحرية والإفراط في الملذّات البدنية أو المواد أو السلوك المتهوّر، فأضررت ببدنك وتجاوزت الحدود. |
+| 3304 | AI-draft | You're prone to addiction, restlessness, and self-destructive patterns. Freedom becomes chaos without discipline. Your body is more sensitive to toxins and imbalance. | قد تكون عرضة للإدمان والقلق والأنماط المؤذية للنفس. فالحرية تصير فوضى بلا انضباط، وبدنك أكثر حساسية للسموم واختلال التوازن. |
+| 3305 | AI-draft | Respect your body as a sacred trust (amanah) | احترم بدنك فهو أمانة |
+| 3306 | AI-draft | Channel restlessness into constructive exploration | وجّه القلق إلى استكشاف بنّاء |
+| 3307 | AI-draft | Distinguish true freedom from mere escape | ميّز الحرية الحقّة من مجرّد الهروب |
+| 3308 | AI-draft | Mastered 14/5 becomes the adaptable adventurer who finds freedom through discipline. You teach others that true liberation comes from self-control, not indulgence. | إذا أُتقن 14/5 صار المغامر المتكيّف الذي يجد الحرية في الانضباط، ويعلّم غيره أن التحرّر الحقّ من ضبط النفس لا من الإفراط. |
+| 3309 | AI-draft | Fast regularly (not just Ramadan) to train your body in discipline. Practice mindful eating and make dua before consuming anything, honoring the body as Allah's trust. | صُم تطوّعًا بانتظام (لا في رمضان وحده) لتعوّد بدنك الانضباط. وكُل بوعي وسمِّ الله قبل الطعام، إكرامًا للبدن أمانة الله. |
+| 3310 | AI-draft | Notice when "just one more" becomes a pattern. Any time you justify excess, pause and reconnect with balance. | انتبه حين يصير «واحد آخر فقط» عادة. وكلّما برّرت الإفراط فتوقّف وعُد إلى التوازن. |
+| 3311 | AI-draft | Conscious freedom. You show others how to experience life fully without losing themselves, becoming a guide for healthy exploration. | حرية واعية. تُري الآخرين كيف يعيشون الحياة كاملة دون أن يضيّعوا أنفسهم، فتصبح دليلًا للاستكشاف الصحّي. |
+| 3312 | AI-draft | In past lives, you may have abused spiritual knowledge, engaged in illicit relationships, or misused intimacy and trust. Pride and ego led to your downfall from a position of power. | ربما ملت في مراحل سابقة إلى إساءة استعمال المعرفة الروحية أو العلاقات المحرّمة أو خيانة الثقة، فأوقعك الكِبر من موقع قوة. |
+| 3313 | AI-draft | Sudden, unexpected upheavals shatter your illusions. Just when you feel secure, life humbles you. Relationships may involve betrayal or karmic patterns. Your ego must be broken to rebuild on truth. | قد تهزّ تقلّبات مفاجئة أوهامك؛ فحين تشعر بالأمان تذكّرك الحياة بالتواضع. وقد تتكرّر في العلاقات خيانة أو أنماط مؤلمة. والأنا ينبغي أن تُكسر لتبني على الحقّ. |
+| 3314 | AI-draft | Surrender ego and embrace humility | تخلَّ عن الأنا وتحلَّ بالتواضع |
+| 3315 | AI-draft | Welcome sudden changes as spiritual purification | استقبل التغيّرات المفاجئة تزكيةً للنفس |
+| 3316 | AI-draft | Honor sacred boundaries in relationships | احترم الحدود الشرعية في العلاقات |
+| 3317 | AI-draft | Transform pride into divine devotion | حوّل الكِبر إلى عبودية لله |
+| 3318 | AI-draft | Mastered 16/7 becomes the enlightened mystic. Your breakdowns become breakthroughs. You gain profound spiritual wisdom through surrender and emerge as a humble spiritual teacher. | إذا أُتقن 16/7 صار صاحب بصيرة روحية، وتصبح انكساراتك فتوحًا، وتنال حكمة عميقة بالتسليم فتصير معلّمًا متواضعًا. |
+| 3319 | AI-draft | Perform sujud (prostration) outside of prayer as an act of surrender. Recite "La hawla wa la quwwata illa billah" (There is no power except with Allah) to dissolve ego. | اسجد لله خارج الصلاة تسليمًا، وقل «لا حول ولا قوة إلا بالله» لإذابة الأنا. |
+| 3320 | AI-draft | When you feel "too comfortable" or your ego inflates, expect a humbling lesson. Stay grounded in spiritual practice before the tower falls. | حين تشعر بأنك «مرتاح جدًا» أو تنتفخ أناك، فتوقّع درسًا في التواضع، والزم عبادتك قبل أن يهوي البناء. |
+| 3321 | AI-draft | Divine humility and spiritual depth. You become unshakeable because you've learned that ego is the only thing that can be destroyed, and your true self is eternal. | تواضع وعمق روحي. تصبح راسخًا لأنك تعلّمت أن الأنا وحدها هي التي تنهدم. |
+| 3322 | AI-draft | In previous lives, you abused power and position. You were likely a tyrant, dictator, or selfish leader who manipulated others for personal gain and showed no compassion for those beneath you. | ربما ملت في مراحل سابقة إلى إساءة استعمال السلطة والمكانة، والتسلّط على الناس لمصلحتك دون رحمة بمن هم دونك. |
+| 3323 | AI-draft | You resist asking for or accepting help from others. Deep fear of being controlled or dependent. You must learn to lead while also being vulnerable and receiving support. | تقاوم طلب العون أو قبوله، وتخاف بعمق من أن تُقاد أو تعتمد على غيرك. فعليك أن تتعلّم القيادة مع الانكشاف وقبول السند. |
+| 3324 | AI-draft | Balance independence with healthy interdependence | وازِن الاستقلال بحاجة صحّية إلى الآخرين |
+| 3325 | AI-draft | Lead with compassion, not dominance | قُد بالرحمة لا بالتسلّط |
+| 3326 | AI-draft | Give others credit and share power | انسب الفضل لأهله وشارك السلطة |
+| 3327 | AI-draft | Serve others while honoring your own needs | اخدم الآخرين مع إكرام حاجاتك |
+| 3328 | AI-draft | Practice servant leadership. Volunteer to serve in your community, washing dishes at the mosque or helping elders, to dissolve the ego of superiority. | تدرّب على القيادة بالخدمة. تطوّع في مجتمعك، كغسل الأواني في المسجد أو إعانة الكبار، لإذابة أنا الاستعلاء. |
+| 3329 | AI-draft | When you refuse help or feel superior to others, recognize this as your karmic pattern resurfacing. Consciously choose humility and connection. | حين ترفض العون أو تشعر بالتفوّق على غيرك فاعلم أن نمطك القديم يعود، واختر التواضع والتواصل عن وعي. |
+| 3330 | AI-draft | Empowered leadership through service. You become a leader who lifts others up, understanding that true power comes from empowering, not dominating. | قيادة قوية بالخدمة. تصبح قائدًا يرفع الآخرين، مدركًا أن القوة الحقّة في التمكين لا في التسلّط. |
+| 3331 | AI-draft | Both driven and ambitious | كلاكما طموح مندفع |
+| 3332 | AI-draft | Both want to lead | كلاكما يريد القيادة |
+| 3333 | AI-draft | Ego clashes | صدام الأنا |
+| 3334 | AI-draft | Take turns leading. Collaborate on shared projects where each has their domain of authority. | تناوبا القيادة، وتعاونا في مشاريع مشتركة لكلٍّ منكما فيها مجال صلاحيته. |
+| 3335 | AI-draft | 1 leads, 2 supports gracefully | 1 يقود، و2 يساند بلطف |
+| 3336 | AI-draft | Complementary strengths | قوى متكاملة |
+| 3337 | AI-draft | 2 softens 1's edges | 2 يليّن حدّة 1 |
+| 3338 | AI-draft | 1 may dominate | قد يطغى 1 |
+| 3339 | AI-draft | 2 may feel overshadowed | قد يشعر 2 بأنه مغمور |
+| 3340 | AI-draft | 1 can be insensitive to 2's needs | قد يغفل 1 عن حاجات 2 |
+| 3341 | AI-draft | 1: Value 2's input and emotional intelligence. 2: Speak up for your needs clearly. | 1: قدّر رأي 2 وذكاءه العاطفي. 2: عبّر عن حاجاتك بوضوح. |
+| 3342 | AI-draft | Dynamic duo! 1's drive meets 3's creativity for exciting partnerships. | ثنائي حيوي! اندفاع 1 يلتقي بإبداع 3 لشراكات مثيرة. |
+| 3343 | AI-draft | 3 can be scattered | قد يتشتّت 3 |
+| 3344 | AI-draft | Different work styles | أساليب عمل مختلفة |
+| 3345 | AI-draft | 1: Let 3 bring playfulness to your goals. 3: Match 1's focus when it matters. | 1: دع 3 يضفي المرح على أهدافك. 3: جارِ تركيز 1 حين يلزم. |
+| 3346 | AI-draft | Adventure partners! Both love freedom and new experiences. | رفيقا مغامرة! كلاكما يحبّ الحرية والتجارب الجديدة. |
+| 3347 | AI-draft | Exciting and dynamic | مثير وحيوي |
+| 3348 | AI-draft | Both avoid routine | كلاكما يتجنّب الروتين |
+| 3349 | AI-draft | May grow apart | قد يتباعدان |
+| 3350 | AI-draft | Create shared adventures while maintaining individual pursuits. Schedule quality time. | اصنعا مغامرات مشتركة مع الحفاظ على مساعيكما الفردية، وخصّصا وقتًا طيبًا معًا. |
+| 3351 | AI-draft | Beginning meets ending. 1's self-focus clashes with 9's universal love. | البداية تلتقي بالنهاية. تركيز 1 على ذاته يصطدم بمحبّة 9 الشاملة. |
+| 3352 | AI-draft | 9's wisdom guides 1's ambition | حكمة 9 ترشد طموح 1 |
+| 3353 | AI-draft | Both are leaders | كلاكما قائد |
+| 3354 | AI-draft | 1 is self-focused, 9 is universal | 1 متمركز حول ذاته، و9 شامل |
+| 3355 | AI-draft | Different priorities | أولويات مختلفة |
+| 3356 | AI-draft | 9 may find 1 selfish | قد يرى 9 أن 1 أناني |
+| 3357 | AI-draft | Gentle, supportive partnership built on emotional understanding. | شراكة لطيفة داعمة مبنية على التفاهم العاطفي. |
+| 3358 | AI-draft | Lack of direction | غياب الوجهة |
+| 3359 | AI-draft | May be too passive | قد يكونان سلبيّين جدًا |
+| 3360 | AI-draft | Take turns being the initiator. Practice healthy conflict resolution together. | تناوبا المبادرة، وتدرّبا معًا على حلّ الخلاف حلًّا صحّيًا. |
+| 3361 | AI-draft | Divine balance of material and emotional. Power couple potential! | توازن بين المادي والعاطفي. إمكانات ثنائي قوي! |
+| 3362 | AI-draft | 2 supports 8's ambitions | 2 يساند طموحات 8 |
+| 3363 | AI-draft | 8 provides security for 2 | 8 يوفّر الأمان لـ 2 |
+| 3364 | AI-draft | Yin-yang perfection | تكامل الضدّين |
+| 3365 | AI-draft | 8 can be domineering | قد يتسلّط 8 |
+| 3366 | AI-draft | 2 may feel controlled | قد يشعر 2 بأنه مقيَّد |
+| 3367 | AI-draft | Creative explosion! Life is a joyful party with these two. | انفجار إبداعي! الحياة مع هذين احتفال بهيج. |
+| 3368 | AI-draft | Endless fun and laughter | مرح وضحك بلا نهاية |
+| 3369 | AI-draft | Shared creative vision | رؤية إبداعية مشتركة |
+| 3370 | AI-draft | Financial irresponsibility | عدم المسؤولية المالية |
+| 3371 | AI-draft | Too scattered | تشتّت مفرط |
+| 3372 | AI-draft | Hire a 4 or 8 to handle practical matters. Schedule 'responsibility time' together. | استعينا بـ 4 أو 8 للشؤون العملية، وخصّصا «وقت مسؤولية» معًا. |
+| 3373 | AI-draft | Solid, stable, predictable. Security-focused partnership. | متين، مستقرّ، متوقَّع. شراكة تركّز على الأمان. |
+| 3374 | AI-draft | Ultimate stability | ثبات تامّ |
+| 3375 | AI-draft | Shared values | قيم مشتركة |
+| 3376 | AI-draft | Too much routine | روتين مفرط |
+| 3377 | AI-draft | Lack of spontaneity | قلّة العفوية |
+| 3378 | AI-draft | Schedule fun and adventure. Push each other out of comfort zones occasionally. | خصّصا وقتًا للمرح والمغامرة، وادفعا بعضكما خارج منطقة الراحة أحيانًا. |
+| 3379 | AI-draft | Wild adventure! Exciting but potentially unstable. | مغامرة جامحة! مثيرة لكنها قد تكون غير مستقرّة. |
+| 3380 | AI-draft | Never boring | لا ملل أبدًا |
+| 3381 | AI-draft | Freedom to explore | حرية الاستكشاف |
+| 3382 | AI-draft | Adventurous spirit | روح مغامرة |
+| 3383 | AI-draft | Create grounding rituals. Have one stable anchor (home, routine) while exploring freely. | اصنعا عادات تجذّر، واجعلا لكما مرسى ثابتًا (بيتًا أو روتينًا) وأنتما تستكشفان بحرية. |
+| 3384 | AI-draft | Nurturing paradise. Home and family are the center of everything. | جنّة الرعاية. البيت والأسرة محور كل شيء. |
+| 3385 | AI-draft | Beautiful home life | حياة بيتية جميلة |
+| 3386 | AI-draft | Shared values of service | قيم مشتركة في الخدمة |
+| 3387 | AI-draft | Emotionally supportive | سند عاطفي |
+| 3388 | AI-draft | Martyrdom tendency | ميل إلى التضحية المفرطة |
+| 3389 | AI-draft | Neglect personal growth | إهمال النموّ الشخصي |
+| 3390 | AI-draft | Codependency risk | خطر الاعتماد المتبادل المفرط |
+| 3391 | AI-draft | Deep spiritual connection but may lack warmth. Intellectual soulmates. | صلة روحية عميقة قد ينقصها الدفء. رفيقا روح فكريّان. |
+| 3392 | AI-draft | Profound understanding | فهم عميق |
+| 3393 | AI-draft | Respect for solitude | احترام الخلوة |
+| 3394 | AI-draft | Emotional distance | بعد عاطفي |
+| 3395 | AI-draft | Too much alone time | خلوة مفرطة |
+| 3396 | AI-draft | Isolation from world | عزلة عن العالم |
+| 3397 | AI-draft | Schedule quality connection time. Balance spiritual pursuits with emotional intimacy. | خصّصا وقتًا للتواصل الطيّب، ووازنا المساعي الروحية بالقرب العاطفي. |
+| 3398 | AI-draft | Power couple or power struggle. Both want control and success. | ثنائي قوي أو صراع على القوة. كلاكما يريد السيطرة والنجاح. |
+| 3399 | AI-draft | Shared ambition | طموح مشترك |
+| 3400 | AI-draft | Workaholism | إدمان العمل |
+| 3401 | AI-draft | Neglect emotional/spiritual | إهمال الجانب العاطفي والروحي |
+| 3402 | AI-draft | Collaborate, don't compete. Remember success means nothing without love and spirituality. | تعاونا ولا تتنافسا. وتذكّرا أن النجاح لا معنى له بلا محبّة وروحانية. |
+| 3403 | AI-draft | Shared humanitarian vision | رؤية إنسانية مشتركة |
+| 3404 | AI-draft | Spiritual unity | وحدة روحية |
+| 3405 | AI-draft | Giving until empty | العطاء حتى النفاد |
+| 3406 | AI-draft | Neglecting practical needs | إهمال الحاجات العملية |
+| 3407 | AI-draft | Set boundaries. Serve the world but also honor your personal needs and rest. | ضعا حدودًا. اخدما العالم وأكرِما أيضًا حاجاتكما وراحتكما. |
+| 3408 | AI-draft | Divine spiritual connection. Twin flames with shared mission. | صلة روحية عميقة. روحان برسالة مشتركة. |
+| 3409 | AI-draft | Spiritual telepathy | تفاهم روحي بلا كلام |
+| 3410 | AI-draft | Inspire each other | يُلهم كلٌّ منكما الآخر |
+| 3411 | AI-draft | Shared higher purpose | غاية عليا مشتركة |
+| 3412 | AI-draft | Intensity overload | فرط الشدّة |
+| 3413 | AI-draft | Anxiety amplified | قلق مضاعف |
+| 3414 | AI-draft | Grounding needed | يلزم التجذّر |
+| 3415 | AI-draft | Ground together daily. Balance spiritual highs with earthly practices. | تجذّرا معًا كل يوم، ووازنا لحظات السموّ الروحي بممارسات أرضية. |
+| 3416 | AI-draft | Master builders creating legacy together. Practical visionaries. | بنّاءان متقنان يصنعان إرثًا معًا. صاحبا رؤية عمليّان. |
+| 3417 | AI-draft | Shared grand vision | رؤية كبيرة مشتركة |
+| 3418 | AI-draft | Practical manifestation | تحقيق عملي |
+| 3419 | AI-draft | Ultimate spiritual teachers and healers. Heavy karmic responsibility. | معلّمان ومداويان روحيّان. مسؤولية ثقيلة. |
+| 3420 | AI-draft | Unconditional love | محبّة غير مشروطة |
+| 3421 | AI-draft | Transformative healing | شفاء تحويلي |
+| 3422 | AI-draft | Overwhelming responsibility | مسؤولية مرهقة |
+| 3423 | AI-draft | Self-sacrifice to detriment | تضحية بالنفس إلى حدّ الضرر |
+| 3424 | AI-draft | Requires compromise | يتطلّب تنازلًا |
+| 3425 | AI-draft | Cycle Timeline | الخطّ الزمني للدورات |
+| 3426 | AI-draft | Invalid buruj remainder: | باقي البروج غير صالح: |
+| 3427 | AI-draft | Buruj profile not found for remainder | لم يُعثر على ملفّ البرج لهذا الباقي |
+| 3428 | AI-draft | Mother name is required | اسم الأم مطلوب |
+| 3429 | AI-draft | Invalid date of birth | تاريخ ميلاد غير صالح |
+| 3430 | AI-draft | Optimism | التفاؤل |
+| 3431 | AI-draft | Practicality | الواقعية |
+| 3432 | AI-draft | Determination | العزيمة |
+| 3433 | AI-draft | Trustworthiness | الأمانة |
+| 3434 | AI-draft | Resourcefulness | سعة الحيلة |
+| 3435 | AI-draft | Spiritual depth | العمق الروحي |
+| 3436 | AI-draft | Mysticism | التصوّف |
+| 3437 | AI-draft | Ambition | الطموح |
+| 3438 | AI-draft | Material success | النجاح المادي |
+| 3439 | AI-draft | Karma | الجزاء (الكارما) |
+| 3440 | AI-draft | Service to others | خدمة الآخرين |
+| 3441 | AI-draft | Face the qibla | استقبل القبلة |
+| 3442 | AI-draft | End with duʿāʾ | اختم بالدعاء |
+| 3443 | AI-draft | The Most Compassionate | الرحيم |
+| 3444 | AI-draft | The King, The Sovereign | الملك |
+| 3445 | AI-draft | The Most Holy, The Pure | القدّوس |
+| 3446 | AI-draft | The Giver of Faith and Security | المؤمن |
+| 3447 | AI-draft | The Guardian, The Protector | المهيمن |
+| 3448 | AI-draft | The Almighty, The Mighty | العزيز |
+| 3449 | AI-draft | The Compeller, The Irresistible | الجبّار |
+| 3450 | AI-draft | The Supreme in Greatness | المتكبّر |
+| 3451 | AI-draft | The Evolver, The Maker | البارئ |
+| 3452 | AI-draft | The Fashioner, The Shaper | المصوّر |
+| 3453 | AI-draft | The Ever-Forgiving | الغفّار |
+| 3454 | AI-draft | The Subduer, The Dominant | القهّار |
+| 3455 | AI-draft | The Opener, The Judge | الفتّاح |
+| 3456 | AI-draft | The Constrictor, The Withholder | القابض |
+| 3457 | AI-draft | The Expander, The Reliever | الباسط |
+| 3458 | AI-draft | The Abaser, The Humbler | الخافض |
+| 3459 | AI-draft | The Utterly Just | العدل |
+| 3460 | AI-draft | The Subtle, The Gentle | اللطيف |
+| 3461 | AI-draft | The Forbearing, The Clement | الحليم |
+| 3462 | AI-draft | The Magnificent, The Supreme | العظيم |
+| 3463 | AI-draft | The All-Forgiving | الغفور |
+| 3464 | AI-draft | The Most Appreciative | الشكور |
+| 3465 | AI-draft | The Greatest, The Most Great | الكبير |
+| 3466 | AI-draft | The Preserver, The Guardian | الحفيظ |
+| 3467 | AI-draft | The Sustainer, The Nourisher | المقيت |
+| 3468 | AI-draft | The Most Generous | الكريم |
+| 3469 | AI-draft | The Responsive, The Answerer | المجيب |
+| 3470 | AI-draft | The All-Encompassing, The Vast | الواسع |
+| 3471 | AI-draft | The Glorious, The Magnificent | المجيد |
+| 3472 | AI-draft | The Trustee, The Advocate | الوكيل |
+| 3473 | AI-draft | The Firm, The Steadfast | المتين |
+| 3474 | AI-draft | The All-Praiseworthy | الحميد |
+| 3475 | AI-draft | The Accounter, The Reckoner | المحصي |
+| 3476 | AI-draft | The Bringer of Death | المميت |
+| 3477 | AI-draft | Ar Rahmaan | الرحمن |
+| 3478 | AI-draft | Ar Raheem | الرحيم |
+| 3479 | AI-draft | Al Malik | الملك |
+| 3480 | AI-draft | Al Quddus | القدوس |
+| 3481 | AI-draft | As Salaam | السلام |
+| 3482 | AI-draft | Al Mu'min | المؤمن |
+| 3483 | AI-draft | Al Muhaymin | المهيمن |
+| 3484 | AI-draft | Al Azeez | العزيز |
+| 3485 | AI-draft | Al Jabbaar | الجبار |
+| 3486 | AI-draft | Al Mutakabbir | المتكبر |
+| 3487 | AI-draft | Al Khaaliq | الخالق |
+| 3488 | AI-draft | Al Baari | البارئ |
+| 3489 | AI-draft | Al Musawwir | المصور |
+| 3490 | AI-draft | Al Ghaffaar | الغفار |
+| 3491 | AI-draft | Al Qahhaar | القهار |
+| 3492 | AI-draft | Al Wahhaab | الوهاب |
+| 3493 | AI-draft | Ar Razzaaq | الرزاق |
+| 3494 | AI-draft | Al Fattaah | الفتاح |
+| 3495 | AI-draft | Al 'Aleem | العليم |
+| 3496 | AI-draft | Al Qaabid | القابض |
+| 3497 | AI-draft | Al Baasit | الباسط |
+| 3498 | AI-draft | Al Khaafid | الخافض |
+| 3499 | AI-draft | Ar Raafi' | الرافع |
+| 3500 | AI-draft | Al Mudhil | المذل |
+| 3501 | AI-draft | As Samee' | السميع |
+| 3502 | AI-draft | Al Baseer | البصير |
+| 3503 | AI-draft | Al Hakam | الحكم |
+| 3504 | AI-draft | Al 'Adl | العدل |
+| 3505 | AI-draft | Al Lateef | اللطيف |
+| 3506 | AI-draft | Al Khabeer | الخبير |
+| 3507 | AI-draft | Al Haleem | الحليم |
+| 3508 | AI-draft | Al 'Azeem | العظيم |
+| 3509 | AI-draft | Al Ghafoor | الغفور |
+| 3510 | AI-draft | Ash Shakoor | الشكور |
+| 3511 | AI-draft | Al 'Aliyy | العلي |
+| 3512 | AI-draft | Al Kabeer | الكبير |
+| 3513 | AI-draft | Al Hafeez | الحفيظ |
+| 3514 | AI-draft | Al Muqeet | المقيت |
+| 3515 | AI-draft | Al Haseeb | الحسيب |
+| 3516 | AI-draft | Al Jaleel | الجليل |
+| 3517 | AI-draft | Al Kareem | الكريم |
+| 3518 | AI-draft | Ar Raqeeb | الرقيب |
+| 3519 | AI-draft | Al Mujeeb | المجيب |
+| 3520 | AI-draft | Al Waasi' | الواسع |
+| 3521 | AI-draft | Al Hakeem | الحكيم |
+| 3522 | AI-draft | Al Wudood | الودود |
+| 3523 | AI-draft | Al Majeed | المجيد |
+| 3524 | AI-draft | Al Baa'ith | الباعث |
+| 3525 | AI-draft | Ash Shaheed | الشهيد |
+| 3526 | AI-draft | Al Haqq | الحق |
+| 3527 | AI-draft | Al Wakeel | الوكيل |
+| 3528 | AI-draft | Al Qawiyy | القوي |
+| 3529 | AI-draft | Al Mateen | المتين |
+| 3530 | AI-draft | Al Waliyy | الولي |
+| 3531 | AI-draft | Al Hameed | الحميد |
+| 3532 | AI-draft | Al Muhsi | المحصي |
+| 3533 | AI-draft | Al Mubdi | المبدئ |
+| 3534 | AI-draft | Al Mu'eed | المعيد |
+| 3535 | AI-draft | Al Muhiy | المحيي |
+| 3536 | AI-draft | Al Mumeet | المميت |
+| 3537 | AI-draft | Al Haiyy | الحي |
+| 3538 | AI-draft | Al Qayyoom | القيوم |
+| 3539 | AI-draft | Al Waajid | الواجد |
+| 3540 | AI-draft | Al Maajid | الماجد |
+| 3541 | AI-draft | Al Waahid | الواحد |
+| 3542 | AI-draft | Al Ahad | الأحد |
+| 3543 | AI-draft | As Samad | الصمد |
+| 3544 | AI-draft | Al Qaadir | القادر |
+| 3545 | AI-draft | Al Muqtadir | المقتدر |
+| 3546 | AI-draft | Al Muqaddim | المقدم |
+| 3547 | AI-draft | Al Mu’akhir | المؤخر |
+| 3548 | AI-draft | Al Awwal | الأول |
+| 3549 | AI-draft | Al Aakhir | الآخر |
+| 3550 | AI-draft | Az Zaahir | الظاهر |
+| 3551 | AI-draft | Al Baatin | الباطن |
+| 3552 | AI-draft | Al Waali | الوالي |
+| 3553 | AI-draft | Al Muta’ali | المتعالي |
+| 3554 | AI-draft | Al Barr | البر |
+| 3555 | AI-draft | At Tawwaab | التواب |
+| 3556 | AI-draft | Al Muntaqim | المنتقم |
+| 3557 | AI-draft | Al Afuww | العفو |
+| 3558 | AI-draft | Ar Ra’oof | الرؤوف |
+| 3559 | AI-draft | Maalik Ul Mulk | مالك الملك |
+| 3560 | AI-draft | Dhu Al Jalaali Wa Al Ikraam | ذو الجلال والإكرام |
+| 3561 | AI-draft | Al Muqsit | المقسط |
+| 3562 | AI-draft | Al Jaami' | الجامع |
+| 3563 | AI-draft | Al Ghaniyy | الغني |
+| 3564 | AI-draft | Al Mughi | المغني |
+| 3565 | AI-draft | Al Maani' | المانع |
+| 3566 | AI-draft | Ad Daaarr | الضار |
+| 3567 | AI-draft | An Naafi’ | النافع |
+| 3568 | AI-draft | Al Haadi | الهادي |
+| 3569 | AI-draft | Al Badi' | البديع |
+| 3570 | AI-draft | Al Baaqi | الباقي |
+| 3571 | AI-draft | Al Waarith | الوارث |
+| 3572 | AI-draft | Ar Rasheed | الرشيد |
+| 3573 | AI-draft | As Saboor | الصبور |
+| 3574 | AI-draft | The Self-Subsisting Sustainer | القيّوم |
+| 3575 | AI-draft | The Perceiver, The Finder | الواجد |
+| 3576 | AI-draft | The All-Noble, The Glorious | الماجد |
+| 3577 | AI-draft | The Self-Sufficient Master | الصمد |
+| 3578 | AI-draft | The All-Powerful | القادر |
+| 3579 | AI-draft | The Powerful, The Dominant | المقتدر |
+| 3580 | AI-draft | The Expediter, The Promoter | المقدّم |
+| 3581 | AI-draft | The Manifest, The Evident | الظاهر |
+| 3582 | AI-draft | The Hidden, The Inward | الباطن |
+| 3583 | AI-draft | The Most Exalted | المتعالي |
+| 3584 | AI-draft | The Ever-Relenting | التوّاب |
+| 3585 | AI-draft | The Most Kind | الرؤوف |
+| 3586 | AI-draft | The Lord of Majesty and Generosity | ذو الجلال والإكرام |
+| 3587 | AI-draft | The Self-Sufficient, The Rich | الغني |
+| 3588 | AI-draft | The Preventer | المانع |
+| 3589 | AI-draft | The Distresser (by His decree) | الضارّ |
+| 3590 | AI-draft | The Propitious, The Benefactor | النافع |
+| 3591 | AI-draft | The Inheritor of All | الوارث |
+| 3592 | AI-draft | The Most Patient | الصبور |
+| 3593 | AI-draft | Allah | الله |
+| 3594 | AI-draft | The God, The One True God | الله |
+| 3595 | AI-draft | The Everlasting, The Eternal | الباقي |
+| 3596 | AI-draft | The Gatherer, The Uniter | الجامع |
+| 3597 | AI-draft | The Eternal, The Everlasting | الباقي |
+| 3598 | AI-draft | The Guide, The One Who Guides | الهادي |
+| 3599 | AI-draft | The Loving, The Most Affectionate | الودود |
+| 3600 | AI-draft | The Pure, The Immaculate | القدّوس |
+| 3601 | AI-draft | The Wise, The All-Wise | الحكيم |
+| 3602 | AI-draft | The Purifier, The Pure One | القدّوس |
+| 3603 | AI-draft | The Certain, The Certainty | الحقّ |
+| 3604 | AI-draft | The Generous, The Most Bountiful | الكريم |
+| 3605 | AI-draft | The Subtle, The Most Kind | اللطيف |
+| 3606 | AI-draft | The Believer, The Giver of Faith | المؤمن |
+| 3607 | AI-draft | The Light, The Illuminator | النور |
+| 3608 | AI-draft | The Peace, The Source of Peace | السلام |
+| 3609 | AI-draft | The All-Knowing, The Omniscient | العليم |
+| 3610 | AI-draft | The Patient, The Most Forbearing | الصبور |
+| 3611 | AI-draft | The Able, The All-Powerful | القادر |
+| 3612 | AI-draft | The Most Merciful, The Beneficent | الرحمن |
+| 3613 | AI-draft | The Grateful, The Appreciative | الشكور |
+| 3614 | AI-draft | The Acceptor of Repentance | التوّاب |
+| 3615 | AI-draft | The Aware, The All-Informed | الخبير |
+| 3616 | AI-draft | The Lord of Majesty and Bounty | ذو الجلال والإكرام |
+| 3617 | AI-draft | The Distresser, The Corrector | الضارّ |
+| 3618 | AI-draft | Yunus | يونس |
+| 3619 | AI-draft | Hud | هود |
+| 3620 | AI-draft | Taha | طه |
+| 3621 | AI-draft | Luqman | لقمان |
+| 3622 | AI-draft | Saba | سبأ |
+| 3623 | AI-draft | Fatir | فاطر |
+| 3624 | AI-draft | Sad | ص |
+| 3625 | AI-draft | Ghafir | غافر |
+| 3626 | AI-draft | Fussilat | فصّلت |
+| 3627 | AI-draft | Qaf | ق |
+| 3628 | AI-draft | Nuh | نوح |
+| 3629 | AI-draft | Abasa | عبس |
+| 3630 | AI-draft | Quraish | قريش |
+| 3631 | AI-draft | Numerical miracle of the Qurʾan | الإعجاز العددي في القرآن |
+| 3632 | AI-draft | Surahs in the Qurʾan | سور القرآن |
+| 3633 | AI-draft | Resonates with a divine pattern | يتناغم مع نمط إلهي |
+| 3634 | AI-draft | For Sunday, the recommended sadaqah is: | صدقة يوم الأحد المستحبّة: |
+| 3635 | AI-draft | Gather children and give them food as sadaqah. | اجمع الأطفال وأطعمهم صدقةً. |
+| 3636 | AI-draft | Help anyone who is poor or in need. | أعِن كل فقير أو محتاج. |
+| 3637 | AI-draft | For Monday, the recommended sadaqah is: | صدقة يوم الاثنين المستحبّة: |
+| 3638 | AI-draft | Give water as sadaqah. | تصدّق بالماء. |
+| 3639 | AI-draft | Help an elderly person, a woman, or children. | أعِن مسنًّا أو امرأة أو أطفالًا. |
+| 3640 | AI-draft | Give food or sadaqah to children in the evening. | أعطِ الأطفال طعامًا أو صدقة في المساء. |
+| 3641 | AI-draft | Tuesday is recommended for sadaqah intended for healing and protection. Recommended forms of sadaqah include: | يُستحبّ يوم الثلاثاء للصدقة بنيّة الشفاء والحفظ. ومن صورها: |
+| 3642 | AI-draft | Giving food to children. | إطعام الأطفال. |
+| 3643 | AI-draft | Helping a person who is experiencing difficulties. | إعانة من يمرّ بضيق. |
+| 3644 | AI-draft | Helping someone purchase their medication. | إعانة أحد على شراء دوائه. |
+| 3645 | AI-draft | Contributing toward someone's medical or medication expenses. | المساهمة في نفقات علاج أحد أو دوائه. |
+| 3646 | AI-draft | In Wolof, Rab refers to a type of illness or affliction associated with satanic or devil-related causes. | في لغة الولوف، «راب» نوع من المرض أو البلاء يُنسب إلى أسباب شيطانية. |
+| 3647 | AI-draft | For Wednesday, the recommended sadaqah is: | صدقة يوم الأربعاء المستحبّة: |
+| 3648 | AI-draft | Give white paper and pens. | تصدّق بورق أبيض وأقلام. |
+| 3649 | AI-draft | Provide food to children. | أطعم الأطفال. |
+| 3650 | AI-draft | Thursday is considered favourable for sadaqah intended for opening the way to wealth, success, or removing blockages. Recommended acts include: | يُعدّ يوم الخميس مناسبًا للصدقة بنيّة فتح أبواب الرزق والتوفيق أو رفع العوائق. ومن الأعمال المستحبّة: |
+| 3651 | AI-draft | Giving money as sadaqah. | التصدّق بالمال. |
+| 3652 | AI-draft | Supporting a mosque. | دعم مسجد. |
+| 3653 | AI-draft | Helping to clean a mosque. | المساعدة في تنظيف مسجد. |
+| 3654 | AI-draft | Performing voluntary service in the mosque. | التطوّع بالخدمة في المسجد. |
+| 3655 | AI-draft | Friday is associated with Venus and is considered a favourable day for giving sadaqah. Recommended acts include giving: | يرتبط يوم الجمعة بالزهرة ويُعدّ مناسبًا للصدقة. ومن الأعمال المستحبّة التصدّق بـ: |
+| 3656 | AI-draft | It is also recommended to make ziyāra (visiting) to a scholar or a Borom Ham-Ham. | ويُستحبّ أيضًا زيارة عالم أو «بوروم هام هام». |
+| 3657 | AI-draft | Saturday is recommended for helping poor and needy people. Recommended sadaqah includes: | يُستحبّ يوم السبت لإعانة الفقراء والمحتاجين. ومن الصدقة المستحبّة: |
+| 3658 | AI-draft | Giving essential food items such as rice, oil, and other necessities. | التصدّق بالمواد الغذائية الأساسية كالأرز والزيت وغيرها. |
+| 3659 | AI-draft | Providing financial assistance to someone in difficulty. | تقديم عون مالي لمن هو في ضيق. |
+| 3660 | AI-draft | This day is also considered particularly beneficial for removing blockages, especially for people associated with Capricorn. | ويُعدّ هذا اليوم نافعًا خاصّة لرفع العوائق، لا سيما لأهل برج الجدي. |
+| 3661 | AI-draft | This sadaqah is given sincerely for the sake of Allah, seeking blessings, protection, mercy, and goodness throughout the year. | تُعطى هذه الصدقة خالصة لوجه الله، طلبًا للبركة والحفظ والرحمة والخير طوال السنة. |
+| 3662 | AI-draft | This sadaqah is intended to seek Allah's help, blessings, success, stability, and ease in one's affairs and endeavors. | يُقصد بهذه الصدقة طلب عون الله وبركته وتوفيقه وتيسير الأمور والمساعي. |
+| 3663 | AI-draft | Because this month is considered a bit heavy or difficult, these forms of sadaqah are considered beneficial for the person born in this month. | لأن هذا الشهر يُعدّ ثقيلًا أو صعبًا بعض الشيء، تُعدّ هذه الصور من الصدقة نافعة لمن وُلد فيه. |
+| 3664 | AI-draft | This sadaqah can help the person have more strength, encouragement, patience, and stability as they continue working through difficult circumstances. | قد تعين هذه الصدقة صاحبها على مزيد من القوة والتشجيع والصبر والثبات وهو يجتاز الظروف الصعبة. |
+| 3665 | AI-draft | This sadaqah is intended to bring goodness, blessings, protection, success, and stability to the person born in Ramadan. | يُقصد بهذه الصدقة جلب الخير والبركة والحفظ والتوفيق والثبات لمن وُلد في رمضان. |
+| 3666 | AI-draft | The help given to the traveller and the food given to the needy are two separate forms of sadaqah. | إعانة المسافر وإطعام المحتاج صورتان مستقلّتان من الصدقة. |
+| 3667 | AI-draft | Outlook | الآفاق |
+| 3668 | AI-draft | Friendship Outlook | آفاق الصداقة |
+| 3669 | AI-draft | Family Outlook | آفاق الأسرة |
+| 3670 | AI-draft | Work Outlook | آفاق العمل |
+| 3671 | AI-draft | This pattern traditionally shows an easy, comfortable beginning that can settle into stagnation if never renewed. | يدلّ هذا النمط تقليديًا على بداية سهلة مريحة قد تستقرّ في الركود إن لم تتجدّد. |
+| 3672 | AI-draft | This pattern traditionally shows an easy beginning that may later feel stagnant, especially in growth and shared provision. | يدلّ هذا النمط تقليديًا على بداية سهلة قد تصير راكدة لاحقًا، لا سيما في النموّ والرزق المشترك. |
+| 3673 | AI-draft | This pattern traditionally shows a friendship that starts with natural ease but can quietly stagnate without renewal. | يدلّ هذا النمط تقليديًا على صداقة تبدأ بيسر طبيعي لكنها قد تركد بهدوء بلا تجديد. |
+| 3674 | AI-draft | This pattern traditionally shows family closeness that begins easily but can fade into distance without active care. | يدلّ هذا النمط تقليديًا على قرب عائلي يبدأ بسهولة لكنه قد يذبل إلى بُعد بلا رعاية فاعلة. |
+| 3675 | AI-draft | This connection often starts with ease and comfort, but can settle into routine if never renewed. Shared purpose and intentional effort keep it alive. | تبدأ هذه الصلة غالبًا بيسر وراحة، لكنها قد تستقرّ في الروتين إن لم تتجدّد. والغاية المشتركة والجهد المقصود يُبقيانها حيّة. |
+| 3676 | AI-draft | Friendships under this pattern begin naturally and comfortably, but may drift into routine without shared activities or new experiences. Regular effort keeps the connection warm. | تبدأ الصداقات في هذا النمط طبيعية مريحة، لكنها قد تنجرف إلى الروتين بلا أنشطة مشتركة أو تجارب جديدة. والجهد المنتظم يُبقي الصلة دافئة. |
+| 3677 | AI-draft | Family ties here tend to feel steady and dependable, though closeness can fade into distance if never actively nurtured. Checking in regularly keeps the bond warm. | تميل الروابط العائلية هنا إلى الثبات والاعتمادية، لكن القرب قد يذبل إلى بُعد إن لم يُرعَ. والسؤال المنتظم يُبقي الرابطة دافئة. |
+| 3678 | AI-draft | Working relationships start smoothly and productively, but can grow stale without new goals or challenges. Revisit shared objectives regularly to avoid complacency. | تبدأ علاقات العمل بسلاسة وإنتاجية، لكنها قد تفتر بلا أهداف أو تحدّيات جديدة. راجعوا الأهداف المشتركة بانتظام لتجنّب التراخي. |
+| 3679 | AI-draft | Camaraderie | الرفقة |
+| 3680 | AI-draft | Traditionally considered favorable for marriage. This pattern supports natural cooperation, companionship, and mutual understanding. | يُعدّ تقليديًا مواتيًا للزواج. ويدعم هذا النمط التعاون الطبيعي والمؤانسة والتفاهم المتبادل. |
+| 3681 | AI-draft | Traditionally considered a favorable pattern for friendship — ease, cooperation, and mutual understanding come naturally. | يُعدّ تقليديًا نمطًا مواتيًا للصداقة — اليسر والتعاون والتفاهم تأتي طبيعيًا. |
+| 3682 | AI-draft | Traditionally considered a favorable pattern for collaboration — natural cooperation and mutual understanding support the partnership. | يُعدّ تقليديًا نمطًا مواتيًا للتعاون — فالتعاون الطبيعي والتفاهم يدعمان الشراكة. |
+| 3683 | AI-draft | This bond naturally supports cooperation and ease. Two people connected this way tend to understand each other quickly, though one may lean too heavily on the other. | تدعم هذه الرابطة التعاون واليسر بطبعها. ويميل المتّصلان بها إلى التفاهم سريعًا، وإن كان أحدهما قد يعتمد على الآخر أكثر من اللازم. |
+| 3684 | AI-draft | A naturally easy, low-friction friendship — you tend to understand each other quickly and rarely clash. Watch that neither friend becomes overly reliant on the other. | صداقة سهلة قليلة الاحتكاك — تتفاهمان سريعًا ونادرًا ما تتصادمان. انتبها ألّا يعتمد أحدكما على الآخر اعتمادًا مفرطًا. |
+| 3685 | AI-draft | Family members connected this way tend to get along with little friction and genuine mutual understanding. Encourage each other's independence alongside the closeness. | يميل أفراد الأسرة المتّصلون هكذا إلى التوافق بقليل من الاحتكاك وتفاهم صادق. شجّعوا استقلال بعضكم إلى جانب القرب. |
+| 3686 | AI-draft | A cooperative, low-conflict working relationship where tasks divide naturally. Guard against one person carrying too much of the shared workload. | علاقة عمل متعاونة قليلة الخلاف تتوزّع فيها المهامّ طبيعيًا. احذروا أن يحمل شخص واحد معظم العبء المشترك. |
+| 3687 | AI-draft | Traditionally associated with difficulty in marriage. Tension, frequent disagreements, and financial pressure may arise. | يرتبط تقليديًا بالصعوبة في الزواج. قد ينشأ توتّر وخلافات متكرّرة وضغط مالي. |
+| 3688 | AI-draft | Traditionally associated with difficulty — frequent small frictions and mismatched expectations may test the friendship. | يرتبط تقليديًا بالصعوبة — احتكاكات صغيرة متكرّرة وتوقّعات غير متوافقة قد تختبر الصداقة. |
+| 3689 | AI-draft | Traditionally associated with difficulty — recurring tension, sometimes over responsibilities, may strain the family bond. | يرتبط تقليديًا بالصعوبة — توتّر متكرّر، أحيانًا حول المسؤوليات، قد يُثقل الرابطة العائلية. |
+| 3690 | AI-draft | Traditionally associated with difficulty — friction over resources, deadlines, or decisions may strain the partnership. | يرتبط تقليديًا بالصعوبة — احتكاك حول الموارد أو المواعيد أو القرارات قد يُثقل الشراكة. |
+| 3691 | AI-draft | This connection often carries tension and frequent friction. Patience and structure are needed to keep disagreements from escalating. | تحمل هذه الصلة غالبًا توتّرًا واحتكاكًا متكرّرًا. ويلزم الصبر والتنظيم لمنع الخلافات من التصاعد. |
+| 3692 | AI-draft | Friendships under this pattern can feel effortful — frequent small disagreements and mismatched expectations are common. The bond can hold, but needs conscious care. | قد تبدو الصداقات في هذا النمط متعبة — فالخلافات الصغيرة المتكرّرة والتوقّعات غير المتوافقة شائعة. يمكن للرابطة أن تصمد، لكنها تحتاج إلى عناية واعية. |
+| 3693 | AI-draft | Family ties here often carry recurring tension, sometimes over money or responsibilities. Structure, patience, and outside support help ease the strain. | تحمل الروابط العائلية هنا غالبًا توتّرًا متكرّرًا، أحيانًا حول المال أو المسؤوليات. والتنظيم والصبر والعون الخارجي تخفّف العبء. |
+| 3694 | AI-draft | Traditionally seen as a heavy pattern — one friend's stress or unresolved struggles may surface within the bond. | يُرى تقليديًا نمطًا ثقيلًا — قد يظهر ضغط أحد الصديقين أو صراعاته العالقة داخل الرابطة. |
+| 3695 | AI-draft | Traditionally seen as a heavy pattern — caretaking or shared hardship, often tied to health, may mark the family bond. | يُرى تقليديًا نمطًا ثقيلًا — قد تطبع الرعايةُ أو المشقّة المشتركة، المرتبطة غالبًا بالصحّة، الرابطةَ العائلية. |
+| 3696 | AI-draft | Friendships here can feel heavy at times, often surfacing one person's stress or unresolved struggles. Steady, patient support matters more than constant closeness. | قد تبدو الصداقات هنا ثقيلة أحيانًا، وتُظهر غالبًا ضغط أحدكما أو صراعاته العالقة. والسند الثابت الصبور أهمّ من القرب الدائم. |
+| 3697 | AI-draft | Family bonds under this pattern often involve caretaking or shared hardship — health concerns are common threads. Calm routines and honest communication ease the load. | تتضمّن الروابط العائلية في هذا النمط غالبًا رعاية أو مشقّة مشتركة — والهموم الصحّية خيط متكرّر. والعادات الهادئة والتواصل الصادق تخفّف الحمل. |
+| 3698 | AI-draft | Working relationships here can feel draining, with stress or burnout as recurring risks. Clear boundaries and realistic workloads protect the partnership. | قد تبدو علاقات العمل هنا مستنزِفة، والضغط أو الإنهاك خطر متكرّر. والحدود الواضحة وأعباء العمل الواقعية تحمي الشراكة. |
+| 3699 | AI-draft | Traditionally considered very favorable — blessing, natural harmony, and growth tend to flow more easily. | يُعدّ تقليديًا مواتيًا جدًا — تنساب البركة والانسجام الطبيعي والنموّ بيسر أكبر. |
+| 3700 | AI-draft | Traditionally considered very favorable for marriage. Associated with blessing, natural harmony, children, and spiritual growth. | يُعدّ تقليديًا مواتيًا جدًا للزواج. ويرتبط بالبركة والانسجام الطبيعي والذرّية والنموّ الروحي. |
+| 3701 | AI-draft | Traditionally considered very favorable — warmth, harmony, and shared growth tend to mark this family bond. | يُعدّ تقليديًا مواتيًا جدًا — يطبع الدفءُ والانسجام والنموّ المشترك هذه الرابطة العائلية. |
+| 3702 | AI-draft | This connection is traditionally favorable — harmony, growth, and ease tend to flow naturally between the two. Gratitude keeps the blessing from being taken for granted. | هذه الصلة مواتية تقليديًا — الانسجام والنموّ واليسر تنساب طبيعيًا بين الاثنين. والشكر يحفظ النعمة من أن تُعدّ أمرًا مسلّمًا. |
+| 3703 | AI-draft | A genuinely blessed friendship — trust, ease, and mutual growth come naturally. Keep showing up for each other so the bond doesn't drift into complacency. | صداقة مباركة حقًّا — الثقة واليسر والنموّ المتبادل تأتي طبيعيًا. واصلا الحضور لبعضكما كي لا تنجرف الرابطة إلى التراخي. |
+| 3704 | AI-draft | Family ties here tend to be a source of real blessing — warmth, support, and shared growth. Nurture the bond actively rather than assuming it as given. | تميل الروابط العائلية هنا إلى أن تكون مصدر بركة حقيقية — دفء وسند ونموّ مشترك. ارعوا الرابطة بفاعلية ولا تعدّوها مضمونة. |
+| 3705 | AI-draft | A productive, mutually beneficial working relationship where success tends to come naturally. Stay grounded and avoid overconfidence as things go well. | علاقة عمل منتجة نافعة للطرفين يأتي فيها النجاح طبيعيًا. ابقوا متواضعين وتجنّبوا الإفراط في الثقة حين تسير الأمور جيدًا. |
+| 3706 | AI-draft | Traditionally shows recurring quarrels and discord — tests of anger, pride, and ego are common until inner work is done. | يدلّ تقليديًا على خصومات وخلافات متكرّرة — وابتلاءات الغضب والكبر والأنا شائعة حتى تُجاهَد النفس. |
+| 3707 | AI-draft | Traditionally shows recurring quarrels and discord in marriage. Tests of anger, pride, and ego are common. | يدلّ تقليديًا على خصومات وخلافات متكرّرة في الزواج. وابتلاءات الغضب والكبر والأنا شائعة. |
+| 3708 | AI-draft | Traditionally shows recurring small quarrels — tests of pride and ego may repeat until self-awareness grows. | يدلّ تقليديًا على خصومات صغيرة متكرّرة — قد تتكرّر ابتلاءات الكبر والأنا حتى ينمو الوعي بالنفس. |
+| 3709 | AI-draft | Traditionally shows recurring discord — old patterns of pride and ego may resurface until addressed with forgiveness. | يدلّ تقليديًا على خلاف متكرّر — قد تعود أنماط قديمة من الكبر والأنا حتى تُعالج بالعفو. |
+| 3710 | AI-draft | Traditionally shows recurring friction — tests of ego and power may repeat until clear roles and respect are established. | يدلّ تقليديًا على احتكاك متكرّر — قد تتكرّر ابتلاءات الأنا والسلطة حتى تتّضح الأدوار ويقوم الاحترام. |
+| 3711 | AI-draft | This bond tends to surface recurring friction tied to pride and ego. Self-awareness on both sides is what breaks the cycle. | تميل هذه الرابطة إلى إظهار احتكاك متكرّر مرتبط بالكبر والأنا. والوعي بالنفس من الطرفين هو ما يكسر الدورة. |
+| 3712 | AI-draft | Friendships here often involve repeated small conflicts, sometimes over who's 'right.' Letting go of ego keeps the friendship from wearing thin. | تتضمّن الصداقات هنا غالبًا خلافات صغيرة متكرّرة، أحيانًا حول «من المُحقّ». والتخلّي عن الأنا يحفظ الصداقة من البِلى. |
+| 3713 | AI-draft | Family relationships under this pattern often carry old, recurring disagreements. Forgiveness and honest self-reflection are what finally shift the pattern. | تحمل العلاقات العائلية في هذا النمط غالبًا خلافات قديمة متكرّرة. والعفو ومحاسبة النفس الصادقة هما ما يغيّر النمط أخيرًا. |
+| 3714 | AI-draft | Traditionally considered the most favorable of all patterns — early obstacles often give way to strong blessings and alignment. | يُعدّ تقليديًا أكثر الأنماط مواتاة — غالبًا ما تُفضي العقبات الأولى إلى بركات قوية وانسجام. |
+| 3715 | AI-draft | Traditionally considered the most favorable for marriage. May face obstacles early on, but strong blessings and alignment often follow. | يُعدّ تقليديًا أكثر الأنماط مواتاة للزواج. قد يواجه عقبات في البداية، لكن البركات القوية والانسجام كثيرًا ما تتبع. |
+| 3716 | AI-draft | Traditionally considered one of the most favorable patterns for friendship — early distance often resolves into deep loyalty. | يُعدّ تقليديًا من أكثر الأنماط مواتاة للصداقة — كثيرًا ما يتحوّل البُعد الأول إلى وفاء عميق. |
+| 3717 | AI-draft | Traditionally considered one of the most favorable patterns for family bonds — early difficulty often gives way to lasting depth. | يُعدّ تقليديًا من أكثر الأنماط مواتاة للروابط العائلية — كثيرًا ما تُفضي الصعوبة الأولى إلى عمق دائم. |
+| 3718 | AI-draft | Traditionally considered one of the most favorable patterns for partnership — early friction often resolves into a highly aligned collaboration. | يُعدّ تقليديًا من أكثر الأنماط مواتاة للشراكة — كثيرًا ما يتحوّل الاحتكاك الأول إلى تعاون شديد الانسجام. |
+| 3719 | AI-draft | Traditionally the most favorable connection — early obstacles often give way to a deep, aligned bond. Trust the process rather than forcing it. | الصلة الأكثر مواتاة تقليديًا — كثيرًا ما تُفضي العقبات الأولى إلى رابطة عميقة منسجمة. ثق بالمسار ولا تستعجله. |
+| 3720 | AI-draft | One of the strongest friendship patterns — any early distance or misunderstanding tends to resolve into a deeply loyal bond. Let it develop at its own pace. | من أقوى أنماط الصداقة — يميل أي بُعد أو سوء فهم أوّل إلى التحوّل إلى رابطة وفية عميقة. دعها تنمو على مهل. |
+| 3721 | AI-draft | Family bonds here often carry real depth, even if the relationship faced early distance or difficulty. What follows tends to be lasting and meaningful. | تحمل الروابط العائلية هنا غالبًا عمقًا حقيقيًا، حتى لو واجهت العلاقة بُعدًا أو صعوبة أولى. وما يتبع يميل إلى أن يكون دائمًا ذا معنى. |
+| 3722 | AI-draft | Pride in the blessing, external interference early on, and assuming ease means no effort is needed. | الاغترار بالنعمة، وتدخّل الآخرين في البداية، وظنّ أن اليسر يعني الاستغناء عن الجهد. |
+| 3723 | AI-draft | Traditionally very good for the long term, though early misunderstandings are common — patience transforms this into a strong bond. | جيد جدًا تقليديًا على المدى البعيد، وإن كان سوء الفهم الأول شائعًا — والصبر يحوّله إلى رابطة قوية. |
+| 3724 | AI-draft | Traditionally very good for marriage over the long term, though early misunderstandings are common. | جيد جدًا تقليديًا للزواج على المدى البعيد، وإن كان سوء الفهم الأول شائعًا. |
+| 3725 | AI-draft | Traditionally very good for the long term — early friction is common, but patience often builds a highly reliable partnership. | جيد جدًا تقليديًا على المدى البعيد — الاحتكاك الأول شائع، لكن الصبر كثيرًا ما يبني شراكة موثوقة جدًا. |
+| 3726 | AI-draft | This connection often starts with confusion or misjudgment but strengthens significantly with time. Patience is what unlocks its real depth. | تبدأ هذه الصلة غالبًا بحيرة أو سوء تقدير لكنها تقوى كثيرًا مع الوقت. والصبر هو مفتاح عمقها الحقيقي. |
+| 3727 | AI-draft | Friendships here can start awkwardly or take time to click, but often become some of the most enduring bonds. Don't judge it too early. | قد تبدأ الصداقات هنا متعثّرة أو تحتاج وقتًا لتتّضح، لكنها كثيرًا ما تصير من أدوم الروابط. لا تحكم عليها مبكرًا. |
+| 3728 | AI-draft | Family relationships under this pattern may start with distance or misunderstanding but tend to deepen meaningfully over the years. Give the bond time. | قد تبدأ العلاقات العائلية في هذا النمط ببُعد أو سوء فهم لكنها تميل إلى التعمّق مع السنين. امنح الرابطة وقتها. |
+| 3729 | AI-draft | Working relationships here often start rocky — mismatched expectations or slow trust-building — but tend to become highly reliable partnerships over time. | تبدأ علاقات العمل هنا غالبًا متعثّرة — توقّعات غير متوافقة أو ثقة بطيئة — لكنها تميل إلى أن تصير شراكات موثوقة جدًا مع الوقت. |
+| 3730 | AI-draft | Traditionally warned against for binding commitments — associated with severe hardship, sudden breaks, and recurring harm. | يُحذَّر منه تقليديًا في الالتزامات الملزمة — ويرتبط بمشقّة شديدة وانقطاعات مفاجئة وأذى متكرّر. |
+| 3731 | AI-draft | Traditionally warned against for marriage. Associated with severe hardship, sudden breaks, and recurring harm patterns. | يُحذَّر منه تقليديًا في الزواج. ويرتبط بمشقّة شديدة وانقطاعات مفاجئة وأنماط أذى متكرّرة. |
+| 3732 | AI-draft | Traditionally warned against for close, binding friendship — sudden falling-outs and recurring hurt are associated risks. | يُحذَّر منه تقليديًا في الصداقة الوثيقة — والقطيعة المفاجئة والأذى المتكرّر من مخاطره. |
+| 3733 | AI-draft | Traditionally associated with real difficulty in family bonds — estrangement and recurring conflict are common risks. | يرتبط تقليديًا بصعوبة حقيقية في الروابط العائلية — والجفاء والخلاف المتكرّر من مخاطره الشائعة. |
+| 3734 | AI-draft | Traditionally warned against for binding partnership — sudden fallout and recurring breakdowns in trust are associated risks. | يُحذَّر منه تقليديًا في الشراكة الملزمة — والانهيار المفاجئ وتكرّر فقدان الثقة من مخاطره. |
+| 3735 | AI-draft | Traditionally a difficult pattern, associated with sudden breaks and recurring strain. Extreme caution and spiritual protection are advised. | نمط صعب تقليديًا، يرتبط بانقطاعات مفاجئة وعناء متكرّر. يُنصح بالحذر الشديد والتحصّن بالأذكار. |
+| 3736 | AI-draft | Friendships under this pattern can be prone to sudden falling-outs or repeated hurt. Approach with awareness, and don't ignore recurring red flags. | قد تكون الصداقات في هذا النمط عرضة للقطيعة المفاجئة أو الأذى المتكرّر. اقترب بوعي ولا تتجاهل العلامات المتكرّرة. |
+| 3737 | AI-draft | Family ties here can carry real difficulty, including estrangement or repeated conflict. Seek wise counsel and increase protective practices rather than forcing closeness. | قد تحمل الروابط العائلية هنا صعوبة حقيقية، منها الجفاء أو الخلاف المتكرّر. اطلب نصح الحكماء وأكثِر من الأذكار بدل فرض القرب. |
+| 3738 | AI-draft | Professional partnerships under this pattern carry real risk — sudden fallout or repeated breakdowns in trust are common. Proceed with caution and clear agreements. | تحمل الشراكات المهنية في هذا النمط خطرًا حقيقيًا — الانهيار المفاجئ أو تكرّر فقدان الثقة شائع. تقدّم بحذر واتفاقات واضحة. |
+| 3739 | AI-draft | New beginnings and fresh energy. This pairing initiates new chapters together. | بدايات جديدة وطاقة متجدّدة. هذا الاقتران يفتتح فصولًا جديدة معًا. |
+| 3740 | AI-draft | Balance and duality. Both individuals complement each other through cooperation. | التوازن والثنائية. يتكامل الطرفان بالتعاون. |
+| 3741 | AI-draft | Friction and discord. This pairing faces fundamental differences that require careful navigation. | احتكاك وخلاف. يواجه هذا الاقتران اختلافات جوهرية تتطلّب سيرًا حذرًا. |
+| 3742 | AI-draft | Stability and structure. A grounded partnership built on solid foundations. | الثبات والنظام. شراكة متجذّرة مبنية على أسس متينة. |
+| 3743 | AI-draft | Dynamic change and adaptability. This pairing thrives on variety and movement. | تغيّر حيوي وتكيّف. يزدهر هذا الاقتران بالتنوّع والحركة. |
+| 3744 | AI-draft | Spiritual harmony and wisdom. An ideal match with deep understanding. | انسجام روحي وحكمة. توافق مثالي بفهم عميق. |
+| 3745 | AI-draft | Abundance and manifestation. This pair has strong potential for achievement. | الوفرة والتحقيق. لهذا الثنائي إمكانات قوية للإنجاز. |
+| 3746 | AI-draft | Cycle ending and completion. This connection may represent a karmic conclusion or natural closure. | نهاية الدورة والإتمام. قد تمثّل هذه الصلة خاتمة أو إغلاقًا طبيعيًا. |
+| 3747 | AI-draft | Emotional depth and intuitive connection. A nurturing and empathetic bond. | عمق عاطفي وصلة حدسية. رابطة راعية متعاطفة. |
+| 3748 | AI-draft | Intellectual stimulation and clear communication. Mental compatibility is strong. | تحفيز فكري وتواصل واضح. التوافق الذهني قوي. |
+| 3749 | AI-draft | Practical stability and reliable support. A grounded, lasting partnership. | ثبات عملي وسند موثوق. شراكة متجذّرة دائمة. |
+| 3750 | AI-draft | are harmonious celestial allies. Their cosmic energies flow smoothly together. | حليفان سماويّان منسجمان، تنساب طاقتاهما معًا بسلاسة. |
+| 3751 | AI-draft | have challenging cosmic aspects. Growth comes through navigating differences. | بينهما جوانب فلكية صعبة. والنموّ يأتي بتجاوز الاختلافات. |
+| 3752 | ✅ reviewed | share exceptional compatibility across spiritual, elemental, and cosmic dimensions. This pairing has strong potential for harmony and mutual growth. | يتشاركان توافقًا استثنائيًا في أبعاد الروح والعناصر والفلك. ولهذا الاقتران إمكانات قوية للانسجام والنموّ المتبادل. |
+| 3753 | AI-draft | have good compatibility with balanced energies. With understanding and effort, this connection can flourish. | بينهما توافق جيد بطاقات متوازنة. وبالتفاهم والجهد يمكن لهذه الصلة أن تزدهر. |
+| 3754 | AI-draft | Your Fire–Fire combination creates intense passion and drive. Channel this energy into shared goals to avoid burnout. | يصنع اجتماع النار بالنار شغفًا واندفاعًا شديدين. وجّها هذه الطاقة إلى أهداف مشتركة لتجنّب الإنهاك. |
+| 3755 | AI-draft | Your Fire–Air mix ignites creativity and inspiration. Balance spontaneity with thoughtful planning. | يُشعل مزيج النار والهواء الإبداع والإلهام. وازنا العفوية بالتخطيط المتأنّي. |
+| 3756 | AI-draft | Your Fire–Water mix creates transformation through emotion and passion. Allow emotions to cool before major decisions. | يصنع مزيج النار والماء تحوّلًا بالعاطفة والشغف. دعا المشاعر تهدأ قبل القرارات الكبرى. |
+| 3757 | AI-draft | Your Fire–Earth combination blends passion with practicality. Let vision meet execution for powerful results. | يمزج اجتماع النار والتراب الشغف بالعملية. لتلتقِ الرؤية بالتنفيذ لنتائج قوية. |
+| 3758 | AI-draft | Your Air–Air pairing enhances intellectual synergy. Ground ideas in action to manifest your shared visions. | يعزّز اقتران الهواء بالهواء التآزر الفكري. جذّرا الأفكار في العمل لتحقيق رؤاكما المشتركة. |
+| 3759 | AI-draft | Your Air–Water blend merges intellect with intuition. Trust both logic and feelings in decision-making. | يمزج الهواء والماء العقل بالحدس. ثقا بالمنطق والمشاعر معًا في اتّخاذ القرار. |
+| 3760 | AI-draft | Your Air–Earth combination balances ideas with implementation. Communicate clearly while building tangible foundations. | يوازن اجتماع الهواء والتراب الأفكار بالتنفيذ. تواصلا بوضوح وأنتما تبنيان أسسًا ملموسة. |
+| 3761 | AI-draft | Your Water–Water connection deepens emotional bonds. Create boundaries to prevent emotional overwhelm. | تعمّق صلة الماء بالماء الروابط العاطفية. ضعا حدودًا لتجنّب الإرهاق العاطفي. |
+| 3762 | AI-draft | Your Water–Earth pairing nurtures growth and stability. Combine emotional depth with practical care. | يرعى اقتران الماء بالتراب النموّ والثبات. اجمعا العمق العاطفي بالرعاية العملية. |
+| 3763 | AI-draft | Your Earth–Earth foundation builds lasting security. Embrace flexibility to keep the relationship dynamic. | يبني أساس التراب بالتراب أمانًا دائمًا. تقبّلا المرونة لتبقى العلاقة حيوية. |
+| 3764 | AI-draft | Your spiritual alignment is exceptional. Continue deepening your shared understanding through meditation or reflection together. | انسجامكما الروحي استثنائي. واصلا تعميق فهمكما المشترك بالتأمّل أو التدبّر معًا. |
+| 3765 | AI-draft | Your spiritual paths may differ. Respect each other's journey and find common ground in shared values. | قد تختلف طريقاكما الروحيان. احترما رحلة كلٍّ منكما واجدا أرضًا مشتركة في القيم. |
+| 3766 | AI-draft | energy creates dynamic interaction. Channel this into creative projects or shared adventures. | يصنع تفاعلًا حيويًا. وجّها هذا إلى مشاريع إبداعية أو مغامرات مشتركة. |
+| 3767 | AI-draft | support each other naturally. Trust your intuitive connection. | يسند كلٌّ منهما الآخر طبيعيًا. ثقا بصلتكما الحدسية. |
+| 3768 | AI-draft | create tension. Use this as an opportunity to learn from different perspectives. | يصنعان توتّرًا. اجعلاه فرصة للتعلّم من وجهات نظر مختلفة. |
+| 3769 | AI-draft | energy harmonizes beautifully in daily life. Celebrate your natural understanding. | تنسجم طاقتهما انسجامًا جميلًا في الحياة اليومية. احتفيا بتفاهمكما الطبيعي. |
+| 3770 | AI-draft | energies require conscious balance in daily routines. Create space for both styles. | تحتاج طاقتاهما إلى توازن واعٍ في الروتين اليومي. افسحا مجالًا للأسلوبين. |
+| 3771 | AI-draft | Practice patience, kindness, and open communication to nurture your connection. | تحلّيا بالصبر واللطف والتواصل المفتوح لرعاية صلتكما. |
+| 3772 | AI-draft | Both partners share Fire energy. Expect passion, enthusiasm, and dynamic action in daily life. May need to manage intensity. | يتشارك الطرفان طاقة النار. توقّعا شغفًا وحماسة وعملًا حيويًا في الحياة اليومية، وقد يلزم ضبط الشدّة. |
+| 3773 | AI-draft | Both partners share Air energy. Daily interactions focus on communication, ideas, and mental stimulation. Keep conversations grounded. | يتشارك الطرفان طاقة الهواء. تتركّز التفاعلات اليومية على التواصل والأفكار والتحفيز الذهني. أبقيا الحديث متجذّرًا. |
+| 3774 | AI-draft | Both partners share Water energy. Emotional depth and intuition guide daily life. Create healthy boundaries to avoid emotional overwhelm. | يتشارك الطرفان طاقة الماء. يقود العمق العاطفي والحدس الحياة اليومية. ضعا حدودًا صحّية لتجنّب الإرهاق العاطفي. |
+| 3775 | AI-draft | Fire and Air energies fuel each other. Daily interactions are stimulating, creative, and full of movement. Channel this energy constructively. | تغذّي طاقتا النار والهواء بعضهما. فالتفاعلات اليومية محفّزة مبدعة مليئة بالحركة. وجّها هذه الطاقة توجيهًا بنّاءً. |
+| 3776 | AI-draft | Earth and Water blend for growth and nurturing. Daily life balances practicality with emotional care. A naturally supportive combination. | يمتزج التراب والماء للنموّ والرعاية. توازن الحياة اليومية العمليةَ بالرعاية العاطفية. مزيج داعم بطبعه. |
+| 3777 | AI-draft | Air and Earth represent ideas meeting practicality. Daily life requires balancing vision with execution. Communication is key. | يمثّل الهواء والتراب التقاء الأفكار بالعملية. تتطلّب الحياة اليومية موازنة الرؤية بالتنفيذ، والتواصل هو المفتاح. |
+| 3778 | AI-draft | Fire and Earth combine action with stability. Daily interactions balance passion with practicality. Respect each other's pace. | يجمع النار والتراب العمل والثبات. توازن التفاعلات اليومية الشغف بالعملية. احترما إيقاع بعضكما. |
+| 3779 | AI-draft | Air and Water blend logic with emotion. Daily life requires honoring both intellect and feelings. Find balance between thinking and feeling. | يمزج الهواء والماء المنطق بالعاطفة. تتطلّب الحياة اليومية إكرام العقل والمشاعر معًا. جِدا التوازن بين التفكير والإحساس. |
+| 3780 | ✅ reviewed | interaction. This unique combination brings together different elemental energies in daily life. | تفاعل. يجمع هذا المزيج الفريد طاقات عناصر مختلفة في الحياة اليومية. |
+| 3781 | AI-draft | Unknown Pairing | اقتران غير معروف |
+| 3782 | AI-draft | Schedule calm time together. Practice listening, not just doing. | خصّصا وقتًا هادئًا معًا. تدرّبا على الإصغاء لا على الفعل وحده. |
+| 3783 | AI-draft | May overlook emotional depth and practical details. All vision, little grounding. | قد تغفلان عن العمق العاطفي والتفاصيل العملية. رؤية كثيرة وتجذّر قليل. |
+| 3784 | AI-draft | Weekly check-ins: 'How are you feeling?' not just 'What are you doing?' | مراجعة أسبوعية: «كيف تشعر؟» لا «ماذا تفعل؟» فقط. |
+| 3785 | AI-draft | Different paces: Fire rushes, Earth takes time. May feel like you're pulling in opposite directions. | إيقاعان مختلفان: النار تستعجل والتراب يتمهّل. قد تشعران بأنكما تشدّان في اتجاهين متعاكسين. |
+| 3786 | AI-draft | Combine planning sessions (Earth) with spontaneous adventures (Fire). Honor both approaches. | اجمعا جلسات التخطيط (التراب) بالمغامرات العفوية (النار). أكرِما النهجين. |
+| 3787 | AI-draft | May overthink or avoid emotional vulnerability. All head, not enough heart. | قد تفرطان في التفكير أو تتجنّبان الانكشاف العاطفي. عقل كثير وقلب قليل. |
+| 3788 | AI-draft | Set 'no-analysis' zones. Practice feeling without discussing. Touch more, talk less sometimes. | خصّصا أوقاتًا «بلا تحليل». تدرّبا على الإحساس دون نقاش. قلّلا الكلام وأكثِرا المودّة أحيانًا. |
+| 3789 | AI-draft | Create vision boards together (Air), then assign tasks and timelines (Earth). Meet in the middle. | اصنعا لوحات رؤية معًا (الهواء)، ثم وزّعا المهامّ والمواعيد (التراب). والتقيا في الوسط. |
+| 3790 | AI-draft | May drown in emotions together. Can become isolated from the outside world. Need Air's perspective. | قد تغرقان في المشاعر معًا وتنعزلان عن العالم. تحتاجان إلى منظور الهواء. |
+| 3791 | AI-draft | Journal together, then discuss what you wrote. Bring emotions into words. Connect with others too. | دوّنا معًا ثم ناقشا ما كتبتما. حوّلا المشاعر إلى كلمات، وتواصلا مع الآخرين أيضًا. |
+| 3792 | AI-draft | Natural harmony. Water nourishes Earth, Earth holds Water. Like a garden—growth happens organically. | انسجام طبيعي. الماء يغذّي التراب، والتراب يحفظ الماء. كالبستان — ينمو الخير طبيعيًا. |
+| 3793 | AI-draft | May avoid conflict or become stagnant. Too comfortable can mean no growth challenges. | قد تتجنّبان الخلاف أو تركدان. فالراحة المفرطة قد تعني غياب تحدّيات النموّ. |
+| 3794 | AI-draft | Cook together, garden, create with your hands. Embrace gentle change. Try new things monthly. | اطبخا معًا، وازرعا، واصنعا بأيديكما. تقبّلا التغيير اللطيف، وجرّبا جديدًا كل شهر. |
+| 3795 | AI-draft | May resist change or become too routine. Both can be stubborn. Life feels safe but may lack spontaneity. | قد تقاومان التغيير أو تغرقان في الروتين. كلاكما قد يكون عنيدًا. الحياة آمنة لكن قد تنقصها العفوية. |
+| 3796 | AI-draft | Strong Emotional Foundation ( | أساس عاطفي قوي ( |
+| 3797 | AI-draft | Natural Daily Compatibility ( | توافق يومي طبيعي ( |
+| 3798 | AI-draft | %): Your conscious personalities align well. Communication feels easy and you "get" each other's thought processes without much explanation. | %): شخصيّتاكما الواعيتان منسجمتان. التواصل سهل وتفهمان طريقة تفكير بعضكما دون كثير شرح. |
+| 3799 | AI-draft | Surface Dynamic: | الديناميكية الظاهرة: |
+| 3800 | AI-draft | %) - Your daily interaction styles differ. | %) - أسلوبا تفاعلكما اليومي مختلفان. |
+| 3801 | AI-draft | approach may clash with | قد يتصادم نهج |
+| 3802 | AI-draft | style in routine decisions. | مع أسلوب الآخر في القرارات اليومية. |
+| 3803 | AI-draft | %) - Your inherited emotional patterns differ. What feels "natural" to one may seem foreign to the other. This requires conscious emotional education between you. | %) - أنماطكما العاطفية الموروثة مختلفة. فما يبدو «طبيعيًا» لأحدكما قد يبدو غريبًا للآخر. وهذا يتطلّب تعلّمًا عاطفيًا واعيًا بينكما. |
+| 3804 | AI-draft | Cook slow meals together - teaches Fire patience, gives Earth quality time | اطبخا وجبات على مهل معًا - تعلّم النار الصبر وتمنح التراب وقتًا طيبًا |
+| 3805 | AI-draft | Evening walks after work - Fire burns energy, Earth processes the day | نزهات مسائية بعد العمل - النار تُفرغ طاقتها والتراب يراجع يومه |
+| 3806 | AI-draft | Create a "soft space" for hard conversations - neutral zone for both temperaments | اصنعا «مساحة لطيفة» للمحادثات الصعبة - منطقة محايدة للطبعين |
+| 3807 | AI-draft | Monthly check-ins - structured time to discuss emotions without defensiveness | مراجعات شهرية - وقت منظّم لمناقشة المشاعر دون دفاعية |
+| 3808 | AI-draft | Journal together - Air analyzes, Water feels, both learn from the other's lens | دوّنا معًا - الهواء يحلّل والماء يشعر، ويتعلّم كلٌّ من عدسة الآخر |
+| 3809 | AI-draft | Create "thinking time" and "feeling time" - honor both processing styles | خصّصا «وقتًا للتفكير» و«وقتًا للإحساس» - أكرِما أسلوبي المعالجة |
+| 3810 | AI-draft | Build together - Air designs, Earth executes, celebrate both contributions | ابنيا معًا - الهواء يصمّم والتراب ينفّذ، واحتفيا بالإسهامين |
+| 3811 | AI-draft | The Subtle One - Cools intensity, brings gentleness | اللطيف - يُبرِد الحدّة ويجلب الرفق |
+| 3812 | AI-draft | The All-Strong - Builds boundaries, strengthens resolve | القوي - يبني الحدود ويقوّي العزم |
+| 3813 | AI-draft | The All-Wise - Grounds ideas, brings practical wisdom | الحكيم - يجذّر الأفكار ويجلب الحكمة العملية |
+| 3814 | AI-draft | The Opener - Releases rigidity, invites flow | الفتّاح - يحلّ الجمود ويدعو إلى الانسياب |
+| 3815 | AI-draft | Together: Yā Wadūd (يا ودود) - The Most Loving - Cultivates love and affection between hearts | معًا: يا ودود - لتنمية المحبّة والمودّة بين القلوب |
+| 3816 | AI-draft | Mother | الأم |
+| 3817 | AI-draft | Location unavailable — allow it in your browser settings to use your city. | الموقع غير متاح — اسمح به في إعدادات المتصفّح لاستعمال مدينتك. |
+| 3818 | AI-draft | Scan this range | افحص هذا النطاق |
+| 3819 | AI-draft | Least-afflicted time | أقلّ الأوقات نحوسة |
+| 3820 | AI-draft | No acceptable dates found within 45 days. | لم يُعثر على تواريخ مقبولة خلال 45 يومًا. |
+| 3821 | AI-draft | Top 5 dates | أفضل 5 تواريخ |
+| 3822 | AI-draft | Sunna & Fiqh | السنّة والفقه |
+| 3823 | AI-draft | Pass | مستوفى |
+| 3824 | AI-draft | Fail | غير مستوفى |
+| 3825 | AI-draft | Bonus | زيادة |
+| 3826 | AI-draft | Penalty | خصم |
+| 3827 | AI-draft | Hard fail | مانع قاطع |
+| 3828 | ✅ reviewed | Conditions worsen later this day — | تُعدّ بقية هذا اليوم تقليديًا وقتًا أثقل — |
+| 3829 | AI-draft | after ~ | بعد ~ |
+| 3830 | AI-draft | Conditions were better earlier this day — | كانت الأحوال أفضل في وقت أبكر من هذا اليوم — |
+| 3831 | AI-draft | Mercury Retrograde (Contracts) | رجوع عطارد (العقود) |
+| 3832 | AI-draft | Mercury is retrograde — the single most-cited classical caution against signing contracts, starting negotiations, or finalizing a sale. | عطارد راجع — وهذا أشهر تحذير كلاسيكي من توقيع العقود أو بدء المفاوضات أو إتمام البيع. |
+| 3833 | AI-draft | Mercury is direct. | عطارد مستقيم. |
+| 3834 | AI-draft | Moon has no applying aspect before leaving its current sign — void of course, nothing "comes of" a deal begun now. | لا يتّصل القمر بأي نظر قبل خروجه من برجه — فهو خالي السير، ولا يُرجى «ثمرة» لصفقة تبدأ الآن. |
+| 3835 | AI-draft | Mercury Combust | احتراق عطارد |
+| 3836 | AI-draft | ° from the Sun — not combust. | ° من الشمس — غير محترق. |
+| 3837 | AI-draft | Moon applying to a | القمر متّصل بـ |
+| 3838 | AI-draft | ° — warns of dispute, loss, or a deal turning sour. | ° — يحذّر من نزاع أو خسارة أو فساد الصفقة. |
+| 3839 | AI-draft | Moon is not applying to a hard aspect with Saturn or Mars. | القمر غير متّصل بنظر صعب مع زحل أو المريخ. |
+| 3840 | AI-draft | , orbe | ، بفلك |
+| 3841 | AI-draft | Moon elongation | بُعد القمر عن الشمس |
+| 3842 | AI-draft | ° — waning. | ° — ناقص النور. |
+| 3843 | AI-draft | Moon Applying to Jupiter (Gain) | اتّصال القمر بالمشتري (الربح) |
+| 3844 | AI-draft | with Jupiter, orb | مع المشتري، بفلك |
+| 3845 | AI-draft | ° — Jupiter is the classical significator of profit and gain. | ° — المشتري هو الدالّ الكلاسيكي على الربح والكسب. |
+| 3846 | AI-draft | Moon is not applying to a favorable aspect with Jupiter. | القمر غير متّصل بنظر حسن مع المشتري. |
+| 3847 | AI-draft | Moon Applying to Venus (Smooth Dealing) | اتّصال القمر بالزهرة (حسن المعاملة) |
+| 3848 | AI-draft | with Venus, orb | مع الزهرة، بفلك |
+| 3849 | AI-draft | ° — favorable for amicable dealing between the parties. | ° — مواتٍ لحسن التعامل بين الطرفين. |
+| 3850 | AI-draft | Moon is not applying to a favorable aspect with Venus. | القمر غير متّصل بنظر حسن مع الزهرة. |
+| 3851 | AI-draft | Mercury Dignified | عطارد في كرامة |
+| 3852 | AI-draft | Mercury has no domicile bonus in this sign. | لا زيادة بيت لعطارد في هذا البرج. |
+| 3853 | AI-draft | Mercury Free of Fall/Detriment | عطارد سالم من الهبوط والوبال |
+| 3854 | AI-draft | — in fall or detriment. | — في هبوط أو وبال. |
+| 3855 | AI-draft | — free of fall or detriment. | — سالم من الهبوط والوبال. |
+| 3856 | AI-draft | This window is not in a Mercury or Jupiter hour. | هذه النافذة ليست في ساعة عطارد أو المشتري. |
+| 3857 | AI-draft | in fall/detriment | في هبوط/وبال |
+| 3858 | AI-draft | This window is in the planetary hour of | هذه النافذة في الساعة الكوكبية لـ |
+| 3859 | AI-draft | — no bonus. [SCHOLAR-REVIEW] | — بلا زيادة. [للمراجعة العلمية] |
+| 3860 | AI-draft | Wednesday (day of Mercury) — favorable for negotiation and contracts. | الأربعاء (يوم عطارد) — مواتٍ للتفاوض والعقود. |
+| 3861 | AI-draft | Thursday (day of Jupiter) — favorable for profit and gain. | الخميس (يوم المشتري) — مواتٍ للربح والكسب. |
+| 3862 | AI-draft | Not a day classically associated with favorable business dealings. | ليس يومًا يرتبط كلاسيكيًا بحسن المعاملات التجارية. |
+| 3863 | AI-draft | جيد (Jayyid) | جيد |
+| 3864 | AI-draft | اجتناب (Ijtanib) | اجتنب |
+| 3865 | AI-draft | Mercury Retrograde (Study/Comprehension) | رجوع عطارد (الدراسة والفهم) |
+| 3866 | AI-draft | Mercury is retrograde — the same classical caution cited against contracts (business.ts) applies here: avoid starting serious study, an exam, or a new course while Mercury retrogrades. | عطارد راجع — ويسري هنا التحذير الكلاسيكي نفسه المذكور في العقود: تجنّب بدء دراسة جادّة أو امتحان أو مقرّر جديد وعطارد راجع. |
+| 3867 | AI-draft | Moon Applying to Jupiter (Wisdom/Comprehension) | اتّصال القمر بالمشتري (الحكمة والفهم) |
+| 3868 | AI-draft | ° — Jupiter is the classical significator of wisdom and comprehension. | ° — المشتري هو الدالّ الكلاسيكي على الحكمة والفهم. |
+| 3869 | AI-draft | Moon Applying to Mercury (Retention) | اتّصال القمر بعطارد (الحفظ) |
+| 3870 | AI-draft | with Mercury, orb | مع عطارد، بفلك |
+| 3871 | AI-draft | ° — favorable for retention and a receptive mind. | ° — مواتٍ للحفظ وتهيّؤ الذهن. |
+| 3872 | AI-draft | Moon is not applying to a favorable aspect with Mercury. | القمر غير متّصل بنظر حسن مع عطارد. |
+| 3873 | AI-draft | ° — warns of frustration, blocked progress, or discouragement. | ° — يحذّر من الإحباط أو تعثّر التقدّم أو الفتور. |
+| 3874 | AI-draft | Jupiter Free of Fall/Detriment | المشتري سالم من الهبوط والوبال |
+| 3875 | AI-draft | Jupiter is in | المشتري في |
+| 3876 | AI-draft | — free of fall or detriment, supporting comprehension and wisdom. | — سالم من الهبوط والوبال، يدعم الفهم والحكمة. |
+| 3877 | AI-draft | Wednesday (day of Mercury) — favorable for study and comprehension. | الأربعاء (يوم عطارد) — مواتٍ للدراسة والفهم. |
+| 3878 | AI-draft | Thursday (day of Jupiter) — favorable for wisdom and understanding. | الخميس (يوم المشتري) — مواتٍ للحكمة والفهم. |
+| 3879 | AI-draft | Not a day classically associated with favorable study. | ليس يومًا يرتبط كلاسيكيًا بحسن الدراسة. |
+| 3880 | AI-draft | Moon Applying to Mars (Hard Aspect) | اتّصال القمر بالمريخ (نظر صعب) |
+| 3881 | AI-draft | with Mars, orb | مع المريخ، بفلك |
+| 3882 | AI-draft | Moon is not applying to a hard aspect with Mars. | القمر غير متّصل بنظر صعب مع المريخ. |
+| 3883 | AI-draft | Moon Sign Modality (Fixed/Movable) | طبيعة برج القمر (ثابت/منقلب) |
+| 3884 | AI-draft | — a mutable sign, neutral for this purpose. | — برج ذو جسدين، محايد لهذا الغرض. |
+| 3885 | AI-draft | Moon is not applying to a favorable aspect with Venus or Jupiter. | القمر غير متّصل بنظر حسن مع الزهرة أو المشتري. |
+| 3886 | AI-draft | Saturn Dignified (Domicile) | زحل في كرامة (بيته) |
+| 3887 | AI-draft | Saturn has no domicile bonus in this sign. | لا زيادة بيت لزحل في هذا البرج. |
+| 3888 | AI-draft | Saturn Free of Fall/Detriment | زحل سالم من الهبوط والوبال |
+| 3889 | AI-draft | Saturn Retrograde | رجوع زحل |
+| 3890 | AI-draft | Saturn is retrograde — increased risk of delays, cost overruns, or rework during construction. | زحل راجع — يزداد خطر التأخير وتجاوز التكاليف أو إعادة العمل في البناء. |
+| 3891 | AI-draft | Saturn is direct. | زحل مستقيم. |
+| 3892 | AI-draft | This window is not in a Saturn or Jupiter hour. | هذه النافذة ليست في ساعة زحل أو المشتري. |
+| 3893 | AI-draft | Saturday (day of Saturn) — favorable for foundations and lasting structures. | السبت (يوم زحل) — مواتٍ للأسس والبنى الدائمة. |
+| 3894 | AI-draft | Thursday (day of Jupiter) — favorable for a settled, supported household. | الخميس (يوم المشتري) — مواتٍ لبيت مستقرّ مُعان. |
+| 3895 | AI-draft | Not a day classically associated with favorable building or moving. | ليس يومًا يرتبط كلاسيكيًا بحسن البناء أو الانتقال. |
+| 3896 | AI-draft | ° — waning into the last quarter approaching new moon. | ° — ناقص يقترب من التربيع الأخير قبل المحاق. |
+| 3897 | AI-draft | ° — not in muḥāq. | ° — ليس في المحاق. |
+| 3898 | AI-draft | ° from the Sun — combust (muḥtaraq). | ° من الشمس — محترق. |
+| 3899 | AI-draft | Moon has no applying Ptolemaic aspect before leaving its current sign — void of course. | لا يتّصل القمر بأي نظر بطلمي قبل خروجه من برجه — خالي السير. |
+| 3900 | AI-draft | Moon applying to | القمر متّصل بـ |
+| 3901 | AI-draft | No applying hard aspect to Saturn or Mars within 6°. | لا اتّصال بنظر صعب مع زحل أو المريخ في حدود 6°. |
+| 3902 | AI-draft | h away). | س بعيدًا). |
+| 3903 | AI-draft | ° from the Sun — under the beams. | ° من الشمس — تحت الشعاع. |
+| 3904 | AI-draft | Moon is not in the waning penalty band. | القمر ليس في نطاق النقصان المكروه. |
+| 3905 | AI-draft | ° ecliptic — within via combusta (15° Libra–15° Scorpio). | ° من فلك البروج — في الطريق المحترقة (15° الميزان – 15° العقرب). |
+| 3906 | AI-draft | Moon is outside via combusta. | القمر خارج الطريق المحترقة. |
+| 3907 | AI-draft | Moon in Scorpio — fall. | القمر في العقرب — هبوط. |
+| 3908 | AI-draft | Moon in Capricorn — detriment. | القمر في الجدي — وبال. |
+| 3909 | AI-draft | Moon is not in fall or detriment. | القمر ليس في هبوط ولا وبال. |
+| 3910 | AI-draft | ° from the Sun — combust. | ° من الشمس — محترق. |
+| 3911 | AI-draft | Venus is not combust. | الزهرة غير محترقة. |
+| 3912 | AI-draft | Venus is retrograde. | الزهرة راجعة. |
+| 3913 | AI-draft | Venus is direct. | الزهرة مستقيمة. |
+| 3914 | AI-draft | Venus in Virgo — fall. | الزهرة في العذراء — هبوط. |
+| 3915 | AI-draft | Venus in | الزهرة في |
+| 3916 | AI-draft | — exil. | — وبال. |
+| 3917 | AI-draft | Venus is not in fall or detriment. | الزهرة ليست في هبوط ولا وبال. |
+| 3918 | AI-draft | Mercury is retrograde — caution for the nikāḥ contract itself. | عطارد راجع — احتياط لعقد النكاح نفسه. |
+| 3919 | ✅ reviewed | Moon is applying to a benefic today. | القمر متّصل بكوكبٍ سعدٍ اليوم. |
+| 3920 | AI-draft | Moon is not applying to Venus or Jupiter today — separating from the benefics. | القمر غير متّصل بالزهرة أو المشتري اليوم — منصرف عن السعدين. |
+| 3921 | AI-draft | Moon is not in the favorable waxing band. | القمر ليس في نطاق الزيادة المواتي. |
+| 3922 | AI-draft | Moon in Cancer — domicile. | القمر في السرطان — بيته. |
+| 3923 | AI-draft | Moon in Taurus — exaltation. | القمر في الثور — شرفه. |
+| 3924 | AI-draft | Moon has no marriage-favorable dignity bonus in this sign. | لا زيادة كرامة للقمر في هذا البرج تناسب الزواج. |
+| 3925 | AI-draft | Moon is not applying to Venus or Jupiter by a favorable aspect. | القمر غير متّصل بالزهرة أو المشتري بنظر حسن. |
+| 3926 | AI-draft | Venus in Pisces — exaltation. | الزهرة في الحوت — شرفها. |
+| 3927 | AI-draft | Venus has no dignity bonus in this sign. | لا زيادة كرامة للزهرة في هذا البرج. |
+| 3928 | AI-draft | No day-of-week bonus. | لا زيادة ليوم الأسبوع. |
+| 3929 | AI-draft | This window is not in a Venus, Moon, or Jupiter hour. | هذه النافذة ليست في ساعة الزهرة أو القمر أو المشتري. |
+| 3930 | AI-draft | Moon in lunar mansion | القمر في منزلة |
+| 3931 | AI-draft | — favorable for marriage. [SCHOLAR-REVIEW] | — مواتية للزواج. [للمراجعة العلمية] |
+| 3932 | AI-draft | — unfavorable for marriage. [SCHOLAR-REVIEW] | — غير مواتية للزواج. [للمراجعة العلمية] |
+| 3933 | AI-draft | ° — traditionally warns of complication, poor healing, or a worsened condition. | ° — يحذّر تقليديًا من التعقيد أو بطء الشفاء أو سوء الحال. |
+| 3934 | AI-draft | — free of fall or detriment, supporting recovery. | — سالم من الهبوط والوبال، يدعم التعافي. |
+| 3935 | AI-draft | Mercury Free of Fall/Detriment (Diagnosis) | عطارد سالم من الهبوط والوبال (التشخيص) |
+| 3936 | AI-draft | Mercury Retrograde (Diagnosis) | رجوع عطارد (التشخيص) |
+| 3937 | AI-draft | This window is not in a Moon or Jupiter hour. | هذه النافذة ليست في ساعة القمر أو المشتري. |
+| 3938 | AI-draft | Monday (day of the Moon) — favorable, as the Moon is the primary significator of the body. | الاثنين (يوم القمر) — مواتٍ، لأن القمر هو الدالّ الأول على البدن. |
+| 3939 | AI-draft | Thursday (day of Jupiter) — favorable for recovery and vital force. | الخميس (يوم المشتري) — مواتٍ للتعافي والقوة الحيوية. |
+| 3940 | AI-draft | Not a day classically associated with favorable medical timing. | ليس يومًا يرتبط كلاسيكيًا بحسن التوقيت الطبي. |
+| 3941 | AI-draft | ° — traditionally warns of danger, delay, or mishap en route. | ° — يحذّر تقليديًا من خطر أو تأخير أو عارض في الطريق. |
+| 3942 | AI-draft | Moon Sign Modality (Movable/Fixed) | طبيعة برج القمر (منقلب/ثابت) |
+| 3943 | AI-draft | — a mutable sign, neutral for travel timing. | — برج ذو جسدين، محايد لتوقيت السفر. |
+| 3944 | AI-draft | Mercury Retrograde (Travel Plans/Documents) | رجوع عطارد (خطط السفر والوثائق) |
+| 3945 | AI-draft | Mercury is retrograde — increased risk of itinerary changes, lost documents, or miscommunication. | عطارد راجع — يزداد خطر تغيّر خطّ السير أو ضياع الوثائق أو سوء التفاهم. |
+| 3946 | AI-draft | This window is not in a Jupiter, Moon, or Mercury hour. | هذه النافذة ليست في ساعة المشتري أو القمر أو عطارد. |
+| 3947 | AI-draft | Early departure — "Allāhumma bārik li-ummatī fī bukūrihā" (O Allah, bless my ummah in its early mornings). | الخروج باكرًا — «اللهم بارك لأمتي في بكورها». |
+| 3948 | AI-draft | This window is not in the early-morning (bukūr) band. | هذه النافذة ليست في وقت البكور. |
+| 3949 | AI-draft | Lunar Mansion (Manzil) for Travel | منزلة القمر للسفر |
+| 3950 | AI-draft | — favorable for travel. [SCHOLAR-REVIEW] | — مواتية للسفر. [للمراجعة العلمية] |
+| 3951 | AI-draft | — unfavorable for travel. [SCHOLAR-REVIEW] | — غير مواتية للسفر. [للمراجعة العلمية] |
+| 3952 | AI-draft | — free of fall or detriment, good for plans and correspondence. | — سالم من الهبوط والوبال، جيد للخطط والمراسلات. |
+| 3953 | AI-draft | Wednesday (day of Mercury) — favorable for travel and communication. | الأربعاء (يوم عطارد) — مواتٍ للسفر والتواصل. |
+| 3954 | AI-draft | Thursday — the Prophet ﷺ preferred to set out on journeys on Thursday (Bukhārī). | الخميس — كان النبي ﷺ يحبّ أن يخرج في السفر يوم الخميس (البخاري). |
+| 3955 | AI-draft | Not a day classically associated with favorable travel. | ليس يومًا يرتبط كلاسيكيًا بحسن السفر. |
+| 3956 | AI-draft | Muharram | محرّم |
+| 3957 | AI-draft | Mouharram | محرّم |
+| 3958 | AI-draft | Rabi' al-Awwal | ربيع الأول |
+| 3959 | AI-draft | Rabi al-Awwal | ربيع الأول |
+| 3960 | AI-draft | Rabi al-Thani | ربيع الآخر |
+| 3961 | AI-draft | Joumada al-Awwal | جمادى الأولى |
+| 3962 | AI-draft | Jumada al-Thani | جمادى الآخرة |
+| 3963 | AI-draft | Joumada al-Thani | جمادى الآخرة |
+| 3964 | AI-draft | Chaabane | شعبان |
+| 3965 | AI-draft | Shawwal | شوّال |
+| 3966 | AI-draft | Chawwal | شوّال |
+| 3967 | AI-draft | Dhu al-Qi'dah | ذو القعدة |
+| 3968 | AI-draft | Dhou al-Qi`dah | ذو القعدة |
+| 3969 | AI-draft | Dhu al-Hijjah | ذو الحجّة |
+| 3970 | AI-draft | Dhou al-Hijjah | ذو الحجّة |
+| 3971 | AI-draft | Highly Recommended (Sunnah) | مستحبّ جدًا (سنّة) |
+| 3972 | AI-draft | The Prophet ﷺ married ʿĀʾisha (RA) in Shawwāl — a month long favored for marriage in the Sunnah. | تزوّج النبي ﷺ عائشة رضي الله عنها في شوّال — وهو شهر استُحبّ فيه الزواج في السنّة. |
+| 3973 | AI-draft | Mawlid month | شهر المولد |
+| 3974 | AI-draft | Rabī' al-Awwal, the month associated with the Prophet's ﷺ birth. | ربيع الأول، الشهر المرتبط بمولد النبي ﷺ. |
+| 3975 | AI-draft | The Moon is near dark-of-moon (muḥāq) in the Hijri calendar — this overlaps with the astrological combustion caution above. | القمر قرب المحاق في التقويم الهجري — ويتقاطع هذا مع تحذير الاحتراق الفلكي أعلاه. |
+| 3976 | AI-draft | Celebrations are usually scheduled around Ramadan for practical reasons — nikāḥ itself is permitted year-round, including during Ramadan. | تُرتَّب الاحتفالات عادة حول رمضان لأسباب عملية — أما النكاح نفسه فجائز طوال السنة، ومنه رمضان. |
+| 3977 | AI-draft | Days of Hajj | أيام الحجّ |
+| 3978 | AI-draft | Celebrations are usually scheduled around the days of Hajj (8–13 Dhū al-Ḥijja) for practical reasons — nikāḥ itself is permitted year-round. | تُرتَّب الاحتفالات عادة حول أيام الحجّ (8–13 ذو الحجّة) لأسباب عملية — أما النكاح نفسه فجائز طوال السنة. |
+| 3979 | AI-draft | Zodiac Man Caution | تحذير «الإنسان البروجي» |
+| 3980 | AI-draft | The Moon is in a sign classically ruling the | القمر في برج يحكم كلاسيكيًا |
+| 3981 | AI-draft | Monday is the day of the Moon, the classical significator of the body — informational only. | الاثنين يوم القمر، الدالّ الكلاسيكي على البدن — للمعلومة فقط. |
+| 3982 | AI-draft | The Moon is in a sign where it traditionally expresses its qualities less comfortably. | القمر في برج يُعبّر فيه تقليديًا عن صفاته بارتياح أقلّ. |
+| 3983 | AI-draft | Venus — the planet of love and harmony — is too close to the Sun right now and appears "hidden," weakening its supportive influence. | الزهرة — كوكب المحبّة والانسجام — قريبة جدًا من الشمس الآن وتبدو «مستترة»، فيضعف أثرها الداعم. |
+| 3984 | AI-draft | Mercury appears to be moving backward right now — a mild caution specifically for the paperwork/contract side of things. | يبدو عطارد راجعًا الآن — تحذير خفيف يخصّ جانب الأوراق والعقد. |
+| 3985 | AI-draft | The Moon isn't currently connecting with either of the two traditionally supportive planets (Venus or Jupiter). | القمر غير متّصل الآن بأيٍّ من الكوكبين الداعمين تقليديًا (الزهرة أو المشتري). |
+| 3986 | AI-draft | The Moon is growing in light and clear of the Sun's glare right now — one of the most favorable classical signs for a fresh start. | القمر يزداد نورًا وقد خرج من وهج الشمس — من أحسن العلامات الكلاسيكية لبداية جديدة. |
+| 3987 | AI-draft | The Moon is in a sign it traditionally feels very at home in. | القمر في برج يكون فيه تقليديًا في بيته. |
+| 3988 | AI-draft | The Moon is in the sign of its greatest traditional strength. | القمر في برج أعظم قوّته التقليدية (شرفه). |
+| 3989 | AI-draft | The Moon is forming a supportive connection with Jupiter, the planet of growth and good fortune, right now. | القمر يتّصل الآن اتّصالًا داعمًا بالمشتري، كوكب النموّ والسعد. |
+| 3990 | AI-draft | Venus is in a sign it traditionally feels very at home in. | الزهرة في برج تكون فيه تقليديًا في بيتها. |
+| 3991 | AI-draft | Venus is in the sign of its greatest traditional strength. | الزهرة في برج أعظم قوّتها التقليدية (شرفها). |
+| 3992 | AI-draft | This falls on Friday — the day most recommended in Islamic tradition for this occasion. | يقع هذا يوم الجمعة — أكثر الأيام استحبابًا لهذه المناسبة في التراث الإسلامي. |
+| 3993 | AI-draft | This falls on Monday, a day traditionally seen as mildly favorable. | يقع هذا يوم الاثنين، وهو يوم يُرى تقليديًا مواتيًا بعض الشيء. |
+| 3994 | AI-draft | The Moon is passing through a lunar "station" traditionally considered favorable for this occasion. | القمر يمرّ بمنزلة تُعدّ تقليديًا مواتية لهذه المناسبة. |
+| 3995 | AI-draft | The Moon is passing through a lunar "station" traditionally considered less favorable for this occasion. | القمر يمرّ بمنزلة تُعدّ تقليديًا أقلّ مواتاة لهذه المناسبة. |
+| 3996 | AI-draft | The Moon isn't forming any meaningful connection right now — traditionally, a journey begun in this state tends to come to nothing. | القمر لا يكوّن الآن أي اتّصال ذي معنى — وتقليديًا، السفر الذي يبدأ في هذه الحال لا يُثمر. |
+| 3997 | AI-draft | The Moon is in a tense position with Saturn or Mars right now — a traditional warning of danger or delay en route. | القمر في وضع متوتّر مع زحل أو المريخ الآن — تحذير تقليدي من خطر أو تأخير في الطريق. |
+| 3998 | AI-draft | The Moon is too close to the Sun right now and appears "hidden" — this weakens the traveler's own influence in the chart. | القمر قريب جدًا من الشمس الآن ويبدو «مستترًا» — وهذا يُضعف دلالة المسافر نفسه في الطالع. |
+| 3999 | AI-draft | The Moon is in a sign associated with quick movement — traditionally favorable for setting out. | القمر في برج يرتبط بسرعة الحركة — مواتٍ تقليديًا للخروج. |
+| 4000 | AI-draft | The Moon is in a sign associated with staying put — traditionally a caution for travel, suggesting possible delay. | القمر في برج يرتبط بالمكث — تحذير تقليدي للسفر يوحي بتأخير محتمل. |
+| 4001 | AI-draft | Mercury appears to be moving backward right now — traditionally linked to itinerary changes, lost documents, or mix-ups. | يبدو عطارد راجعًا الآن — ويرتبط تقليديًا بتغيّر خطّ السير أو ضياع الوثائق أو الالتباس. |
+| 4002 | AI-draft | The Moon is growing in light right now — traditionally favorable for setting out and making progress. | القمر يزداد نورًا الآن — مواتٍ تقليديًا للخروج والتقدّم. |
+| 4003 | AI-draft | The Moon is forming a supportive connection with Venus or Jupiter right now — a sign of a smooth, well-supported journey. | القمر يتّصل الآن اتّصالًا داعمًا بالزهرة أو المشتري — علامة على سفر سلس ميسّر. |
+| 4004 | AI-draft | This specific time window aligns with a planetary hour traditionally seen as supportive for travel. | تتوافق هذه النافذة مع ساعة كوكبية تُرى تقليديًا داعمة للسفر. |
+| 4005 | AI-draft | This is an early-morning departure — the Prophet ﷺ asked Allah to bless the early mornings of his ummah. | هذا خروج في البكور — وقد دعا النبي ﷺ لأمّته بالبركة في بكورها. |
+| 4006 | AI-draft | The Moon is passing through a lunar "station" traditionally considered favorable for travel. | القمر يمرّ بمنزلة تُعدّ تقليديًا مواتية للسفر. |
+| 4007 | AI-draft | The Moon is passing through a lunar "station" traditionally considered less favorable for travel. | القمر يمرّ بمنزلة تُعدّ تقليديًا أقلّ مواتاة للسفر. |
+| 4008 | AI-draft | Mercury is in a comfortable position right now, supporting clear plans and communication. | عطارد في وضع مريح الآن، يدعم وضوح الخطط والتواصل. |
+| 4009 | AI-draft | This falls on Wednesday, a day traditionally linked to travel and communication. | يقع هذا يوم الأربعاء، وهو يوم يرتبط تقليديًا بالسفر والتواصل. |
+| 4010 | AI-draft | Mercury appears to be moving backward right now — the single most-cited traditional caution against signing contracts or starting negotiations. | يبدو عطارد راجعًا الآن — وهذا أشهر تحذير تقليدي من توقيع العقود أو بدء المفاوضات. |
+| 4011 | AI-draft | The Moon isn't forming any meaningful connection right now — traditionally, a deal begun in this state tends to come to nothing. | القمر لا يكوّن الآن أي اتّصال ذي معنى — وتقليديًا، الصفقة التي تبدأ في هذه الحال لا تُثمر. |
+| 4012 | AI-draft | Mercury is too close to the Sun right now and appears "hidden" — this weakens the deal's own significator. | عطارد قريب جدًا من الشمس الآن ويبدو «مستترًا» — وهذا يُضعف دالّ الصفقة نفسه. |
+| 4013 | AI-draft | The Moon is in a tense position with Saturn or Mars right now — a traditional warning of dispute or a deal turning sour. | القمر في وضع متوتّر مع زحل أو المريخ الآن — تحذير تقليدي من نزاع أو فساد الصفقة. |
+| 4014 | AI-draft | The Moon is growing in light right now — traditionally favorable for starting and growing a venture. | القمر يزداد نورًا الآن — مواتٍ تقليديًا لبدء مشروع وتنميته. |
+| 4015 | AI-draft | The Moon is forming a supportive connection with Jupiter right now — traditionally the planet of profit and gain. | القمر يتّصل الآن اتّصالًا داعمًا بالمشتري — كوكب الربح والكسب تقليديًا. |
+| 4016 | AI-draft | The Moon is forming a supportive connection with Venus right now — favorable for amicable dealing between both sides. | القمر يتّصل الآن اتّصالًا داعمًا بالزهرة — مواتٍ لحسن التعامل بين الطرفين. |
+| 4017 | AI-draft | Mercury is in a sign it traditionally feels very at home in — strong for negotiation and paperwork. | عطارد في برج يكون فيه تقليديًا في بيته — قوي للتفاوض والأوراق. |
+| 4018 | AI-draft | The Moon isn't forming any meaningful connection right now — traditionally, treatment begun in this state tends to come to nothing. | القمر لا يكوّن الآن أي اتّصال ذي معنى — وتقليديًا، العلاج الذي يبدأ في هذه الحال لا يُثمر. |
+| 4019 | AI-draft | The Moon is too close to the Sun right now and appears "hidden" — traditionally, this weakens the body's own vital force in the chart. | القمر قريب جدًا من الشمس الآن ويبدو «مستترًا» — وتقليديًا يُضعف هذا القوة الحيوية للبدن في الطالع. |
+| 4020 | AI-draft | The Moon is in a tense position with Saturn or Mars right now — a traditional warning of complication or slow healing. | القمر في وضع متوتّر مع زحل أو المريخ الآن — تحذير تقليدي من التعقيد أو بطء الشفاء. |
+| 4021 | AI-draft | The Moon is growing in light right now — traditionally favorable for treatments meant to build up or strengthen the body. | القمر يزداد نورًا الآن — مواتٍ تقليديًا للعلاجات التي تبني البدن وتقوّيه. |
+| 4022 | AI-draft | The Moon is forming a supportive connection with Venus or Jupiter right now — a sign of a smooth course of treatment and recovery. | القمر يتّصل الآن اتّصالًا داعمًا بالزهرة أو المشتري — علامة على علاج وتعافٍ سلسين. |
+| 4023 | AI-draft | Jupiter — the traditional significator of recovery — is in a comfortable position right now. | المشتري — الدالّ التقليدي على التعافي — في وضع مريح الآن. |
+| 4024 | AI-draft | Mercury is in a comfortable position right now, supporting a clear diagnosis. | عطارد في وضع مريح الآن، يدعم وضوح التشخيص. |
+| 4025 | AI-draft | Mercury appears to be moving backward right now — a mild caution for the accuracy of a diagnosis. | يبدو عطارد راجعًا الآن — تحذير خفيف يخصّ دقّة التشخيص. |
+| 4026 | AI-draft | This falls on Monday or Thursday — days traditionally linked to the body and to recovery. | يقع هذا يوم الاثنين أو الخميس — يومان يرتبطان تقليديًا بالبدن والتعافي. |
+| 4027 | AI-draft | The Moon isn't forming any meaningful connection right now — traditionally, work begun in this state tends to come to nothing. | القمر لا يكوّن الآن أي اتّصال ذي معنى — وتقليديًا، العمل الذي يبدأ في هذه الحال لا يُثمر. |
+| 4028 | AI-draft | The Moon is too close to the Sun right now and appears "hidden" — this weakens the matter's own significator. | القمر قريب جدًا من الشمس الآن ويبدو «مستترًا» — وهذا يُضعف دالّ الأمر نفسه. |
+| 4029 | AI-draft | The Moon is in a sign associated with stability — traditionally favorable for something meant to last. | القمر في برج يرتبط بالثبات — مواتٍ تقليديًا لما يُراد له الدوام. |
+| 4030 | AI-draft | The Moon is in a sign associated with change and impermanence — the opposite of what a lasting foundation calls for. | القمر في برج يرتبط بالتغيّر وعدم الدوام — عكس ما يتطلّبه الأساس الدائم. |
+| 4031 | AI-draft | The Moon is growing in light right now — traditionally favorable for building and growing a household. | القمر يزداد نورًا الآن — مواتٍ تقليديًا لبناء بيت وتنميته. |
+| 4032 | AI-draft | The Moon is forming a supportive connection with Venus or Jupiter right now — a sign of a settled, well-supported household. | القمر يتّصل الآن اتّصالًا داعمًا بالزهرة أو المشتري — علامة على بيت مستقرّ مُعان. |
+| 4033 | AI-draft | Saturn — the traditional significator of land and foundations — is in a sign it feels very at home in. | زحل — الدالّ التقليدي على الأرض والأسس — في برج يكون فيه في بيته. |
+| 4034 | AI-draft | Saturn appears to be moving backward right now — traditionally linked to delays, cost overruns, or rework. | يبدو زحل راجعًا الآن — ويرتبط تقليديًا بالتأخير أو تجاوز التكاليف أو إعادة العمل. |
+| 4035 | AI-draft | This specific time window aligns with a planetary hour traditionally seen as supportive for foundations and building. | تتوافق هذه النافذة مع ساعة كوكبية تُرى تقليديًا داعمة للأسس والبناء. |
+| 4036 | AI-draft | This falls on Saturday or Thursday — days traditionally linked to foundations and a supported household. | يقع هذا يوم السبت أو الخميس — يومان يرتبطان تقليديًا بالأسس والبيت المُعان. |
+| 4037 | AI-draft | Mercury appears to be moving backward right now — the same traditional caution cited against contracts applies to starting serious study. | يبدو عطارد راجعًا الآن — ويسري التحذير التقليدي نفسه المذكور في العقود على بدء الدراسة الجادّة. |
+| 4038 | AI-draft | The Moon isn't forming any meaningful connection right now — traditionally, study begun in this state tends to come to nothing. | القمر لا يكوّن الآن أي اتّصال ذي معنى — وتقليديًا، الدراسة التي تبدأ في هذه الحال لا تُثمر. |
+| 4039 | AI-draft | Mercury is too close to the Sun right now and appears "hidden" — this weakens the significator of the intellect and study itself. | عطارد قريب جدًا من الشمس الآن ويبدو «مستترًا» — وهذا يُضعف دالّ العقل والدراسة نفسه. |
+| 4040 | AI-draft | The Moon is forming a supportive connection with Jupiter right now — traditionally the planet of wisdom and comprehension. | القمر يتّصل الآن اتّصالًا داعمًا بالمشتري — كوكب الحكمة والفهم تقليديًا. |
+| 4041 | AI-draft | The Moon is forming a supportive connection with Mercury right now — favorable for retention and a receptive mind. | القمر يتّصل الآن اتّصالًا داعمًا بعطارد — مواتٍ للحفظ وتهيّؤ الذهن. |
+| 4042 | AI-draft | The Moon is in a tense position with Saturn or Mars right now — a traditional warning of frustration or blocked progress. | القمر في وضع متوتّر مع زحل أو المريخ الآن — تحذير تقليدي من الإحباط أو تعثّر التقدّم. |
+| 4043 | AI-draft | Mercury is in a sign it traditionally feels very at home in — strong for comprehension and memory. | عطارد في برج يكون فيه تقليديًا في بيته — قوي للفهم والحفظ. |
+| 4044 | AI-draft | Jupiter is in a comfortable position right now, supporting comprehension and wisdom. | المشتري في وضع مريح الآن، يدعم الفهم والحكمة. |
+| 4045 | AI-draft | This falls on Wednesday or Thursday — days traditionally linked to the intellect and wisdom. | يقع هذا يوم الأربعاء أو الخميس — يومان يرتبطان تقليديًا بالعقل والحكمة. |
+| 4046 | AI-draft | "Allāhumma bārik li-ummatī fī bukūrihā" — O Allah, bless my ummah in its early mornings. | «اللهم بارك لأمتي في بكورها». |
+| 4047 | AI-draft | Friday Caution | تنبيه يوم الجمعة |
+| 4048 | AI-draft | For those obligated to attend Jumuʿah, departing after the call to Friday prayer is discouraged in fiqh — this is informational only and does not affect the score. | لمن تجب عليه الجمعة، يُكره السفر بعد نداء صلاة الجمعة في الفقه — وهذا للمعلومة فقط ولا يؤثّر في الدرجة. |
+| 4049 | AI-draft | Favored month ( | شهر مستحبّ ( |
+| 4050 | AI-draft | Favored month in Senegambian custom — | شهر مستحبّ في العرف السنغالي الغامبي — |
+| 4051 | AI-draft | (Muḥarram) is one of the sacred months (min al-ashhur al-ḥurum). | (محرّم) من الأشهر الحُرُم. |
+| 4052 | AI-draft | Traditionally cautious ( | احتياط تقليدي ( |
+| 4053 | AI-draft | ) is fully permissible in fiqh. | ) جائز تمامًا في الفقه. |
+| 4054 | AI-draft | Festive month ( | شهر احتفالي ( |
+| 4055 | AI-draft | Mawlid month — | شهر المولد — |
+| 4056 | AI-draft | is festive in Senegambian custom, associated with the Prophet's ﷺ birth. | شهر احتفالي في العرف السنغالي الغامبي، مرتبط بمولد النبي ﷺ. |
+| 4057 | AI-draft | Sunnah-recommended ( | مستحبّ في السنّة ( |
+| 4058 | AI-draft | Sunnah-recommended — the Prophet ﷺ married ʿĀʾisha (RA) in Shawwāl ( | مستحبّ في السنّة — تزوّج النبي ﷺ عائشة رضي الله عنها في شوّال ( |
+| 4059 | AI-draft | chest and stomach | الصدر والمعدة |
+| 4060 | AI-draft | heart and upper back | القلب وأعلى الظهر |
+| 4061 | AI-draft | abdomen and intestines | البطن والأمعاء |
+| 4062 | AI-draft | reproductive organs and bladder | الأعضاء التناسلية والمثانة |
+| 4063 | AI-draft | knees, joints, and bones | الركبتين والمفاصل والعظام |
+| 4064 | AI-draft | ankles and shins | الكاحلين والساقين |
+| 4065 | AI-draft | New Beginnings, Initiative | البدايات الجديدة والمبادرة |
+| 4066 | AI-draft | New ventures | المشاريع الجديدة |
+| 4067 | AI-draft | Beginnings invite intention (niyyah) and remembrance — the Moon’s stations are signs, not decrees. | البدايات تدعو إلى النيّة والذكر — ومنازل القمر علامات لا أقدار. |
+| 4068 | AI-draft | Nourishment, Growth | الغذاء والنموّ |
+| 4069 | AI-draft | Planting | الغرس |
+| 4070 | AI-draft | Business ventures | المشاريع التجارية |
+| 4071 | AI-draft | As the body needs nourishment, the heart needs what draws it nearer to Allah. | كما يحتاج البدن إلى الغذاء، يحتاج القلب إلى ما يقرّبه من الله. |
+| 4072 | AI-draft | Beauty, Abundance, Gathering | الجمال والوفرة والاجتماع |
+| 4073 | AI-draft | Gatherings | الاجتماعات |
+| 4074 | AI-draft | Harsh speech | الكلام القاسي |
+| 4075 | AI-draft | Al-Thurayyā was among the best-known stations in Arab star lore — a reminder to gather in beauty and good company. | كانت الثريا من أشهر المنازل في علم النجوم عند العرب — تذكيرًا بالاجتماع في جمال وصحبة طيبة. |
+| 4076 | AI-draft | Educational reflection (anwāʾ / Al-Bīrūnī tradition of naming) | تأمّل تعليمي (الأنواء / تقليد التسمية عند البيروني) |
+| 4077 | AI-draft | Loyalty, Persistence, Following Truth | الوفاء والمثابرة واتّباع الحقّ |
+| 4078 | AI-draft | Seeking teachers | طلب المعلّمين |
+| 4079 | AI-draft | Breaking commitments | نقض العهود |
+| 4080 | AI-draft | Impulsive changes | التغييرات المتسرّعة |
+| 4081 | AI-draft | Al-Dabarān “follows” Thurayyā across the sky — a picture of steadfast following, not blind haste. | الدبران «يتبع» الثريا في السماء — صورة للاتّباع الثابت لا العجلة العمياء. |
+| 4082 | AI-draft | Educational reflection (star-name lore) | تأمّل تعليمي (موروث أسماء النجوم) |
+| 4083 | AI-draft | Orion | الجبّار |
+| 4084 | AI-draft | Clarity, Purification, Truth | الوضوح والتطهّر والحقّ |
+| 4085 | AI-draft | Spiritual purification | التطهّر الروحي |
+| 4086 | AI-draft | Unclear contracts | العقود الغامضة |
+| 4087 | AI-draft | Confusion | الالتباس |
+| 4088 | AI-draft | Clarity of intention softens confusion — seek light before you speak or sign. | وضوح النيّة يخفّف الالتباس — اطلب النور قبل أن تتكلّم أو توقّع. |
+| 4089 | AI-draft | Marking, Identity, Recognition | الوسم والهوية والتعرّف |
+| 4090 | AI-draft | Establishing identity | إثبات الهوية |
+| 4091 | AI-draft | Clear naming | التسمية الواضحة |
+| 4092 | AI-draft | Anonymity | الخفاء |
+| 4093 | AI-draft | Hiding truth | كتمان الحقّ |
+| 4094 | AI-draft | Dishonesty | الكذب |
+| 4095 | AI-draft | Names and marks in the old star calendar were for recognition — know yourself before Allah, not for show. | كانت الأسماء والعلامات في تقويم النجوم القديم للتعارف — فاعرف نفسك بين يدي الله لا للرياء. |
+| 4096 | AI-draft | Reach, Extension, Generosity | المدّ والامتداد والكرم |
+| 4097 | AI-draft | The forearm that gives in charity teaches reach without grasping. | الذراع التي تمتدّ بالصدقة تعلّم المدّ دون القبض. |
+| 4098 | AI-draft | Mystery, Threshold, Sacred Space | السرّ والعتبة والمكان المقدّس |
+| 4099 | AI-draft | Retreat | الخلوة |
+| 4100 | AI-draft | Excessive worldly activity | الإفراط في الانشغال الدنيوي |
+| 4101 | AI-draft | Noise | الضجيج |
+| 4102 | AI-draft | Distraction | التشتّت |
+| 4103 | AI-draft | In quiet gaps — between tasks, between breaths — remember the One who ordered the Moon’s phases. | في الفجوات الهادئة — بين المهامّ وبين الأنفاس — اذكر الذي قدّر القمر منازل. |
+| 4104 | AI-draft | Vision, Attentiveness | البصر واليقظة |
+| 4105 | AI-draft | Careful observation | الملاحظة الدقيقة |
+| 4106 | AI-draft | Seeking counsel | طلب المشورة |
+| 4107 | AI-draft | Hasty judgments | الأحكام المتسرّعة |
+| 4108 | AI-draft | Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen. | منازل القمر محطّات للتأمّل ولأدب التوقيت — لا للتنبّؤ بالغيب. |
+| 4109 | AI-draft | Formal commitments | الالتزامات الرسمية |
+| 4110 | AI-draft | Empty show | المظاهر الجوفاء |
+| 4111 | AI-draft | Neglecting counsel | إهمال المشورة |
+| 4112 | AI-draft | Strength, Presence | القوة والحضور |
+| 4113 | AI-draft | Encouraging others | تشجيع الآخرين |
+| 4114 | AI-draft | Steady work | العمل الثابت |
+| 4115 | AI-draft | Protecting the vulnerable | حماية الضعفاء |
+| 4116 | AI-draft | Boastfulness | التفاخر |
+| 4117 | AI-draft | Wasting energy | إهدار الطاقة |
+| 4118 | AI-draft | Transition, Turning | الانتقال والتحوّل |
+| 4119 | AI-draft | Course corrections | تصحيح المسار |
+| 4120 | AI-draft | Ending harmful habits | ترك العادات الضارّة |
+| 4121 | AI-draft | Reorganizing | إعادة التنظيم |
+| 4122 | AI-draft | Tawba | التوبة |
+| 4123 | AI-draft | Clinging to the obsolete | التشبّث بما بلي |
+| 4124 | AI-draft | Forced abrupt breaks without counsel | القطيعة المفاجئة بلا مشورة |
+| 4125 | AI-draft | Gathering, Calling | الجمع والنداء |
+| 4126 | AI-draft | Community work | العمل المجتمعي |
+| 4127 | AI-draft | Spreading alarm without cause | نشر الذعر بلا سبب |
+| 4128 | AI-draft | Fair dealing | المعاملة العادلة |
+| 4129 | AI-draft | Harvest and completion of work | الحصاد وإتمام العمل |
+| 4130 | AI-draft | Neglecting zakāh and rights | إهمال الزكاة والحقوق |
+| 4131 | AI-draft | Covering, Discretion | الستر والكتمان |
+| 4132 | AI-draft | Private repentance | التوبة في السرّ |
+| 4133 | AI-draft | Protecting privacy | صون الخصوصية |
+| 4134 | AI-draft | Quiet charity | صدقة السرّ |
+| 4135 | AI-draft | Exposing others | فضح الآخرين |
+| 4136 | AI-draft | Scandal | الفضيحة |
+| 4137 | AI-draft | Public shaming | التشهير العلني |
+| 4138 | AI-draft | Boundaries, Careful Cuts | الحدود والقطع بحذر |
+| 4139 | AI-draft | Spiteful severance | القطيعة عن حقد |
+| 4140 | AI-draft | Ambiguous contracts | العقود الملتبسة |
+| 4141 | AI-draft | Formal roles | الأدوار الرسمية |
+| 4142 | AI-draft | Guarding dignity | صون الكرامة |
+| 4143 | AI-draft | Betrayal of trust | خيانة الأمانة |
+| 4144 | AI-draft | Seeking status for its own sake | طلب الجاه لذاته |
+| 4145 | AI-draft | Sincerity, Courage of Heart | الإخلاص وشجاعة القلب |
+| 4146 | AI-draft | Courageous apology | الاعتذار الشجاع |
+| 4147 | AI-draft | Emotional recklessness | التهوّر العاطفي |
+| 4148 | AI-draft | Crushing speech | الكلام الجارح |
+| 4149 | AI-draft | Restraint, Defense of Dignity | الإمساك والدفاع عن الكرامة |
+| 4150 | AI-draft | Cautious travel planning | التخطيط الحذر للسفر |
+| 4151 | AI-draft | Saying less | الإقلال من الكلام |
+| 4152 | AI-draft | Retaliation for ego | الانتقام للأنا |
+| 4153 | AI-draft | Reckless risk | المخاطرة المتهوّرة |
+| 4154 | AI-draft | Journey, Openness | السفر والانفتاح |
+| 4155 | AI-draft | Outdoor work | العمل في الهواء الطلق |
+| 4156 | AI-draft | Expanding horizons with adab | توسيع الآفاق بأدب |
+| 4157 | AI-draft | Aimless wandering | التجوال بلا غاية |
+| 4158 | AI-draft | Leaving duties unfinished | ترك الواجبات ناقصة |
+| 4159 | AI-draft | Isolation from good counsel | الانعزال عن النصح الطيّب |
+| 4160 | AI-draft | Settling affairs | تسوية الشؤون |
+| 4161 | AI-draft | Neighborhood care | رعاية الجيران |
+| 4162 | AI-draft | Organizing home | ترتيب البيت |
+| 4163 | AI-draft | Neglecting neighbors' rights | إهمال حقوق الجيران |
+| 4164 | AI-draft | Chaos in commitments | الفوضى في الالتزامات |
+| 4165 | AI-draft | Fleeing responsibility | الفرار من المسؤولية |
+| 4166 | AI-draft | Offering, Commitment | القربان والالتزام |
+| 4167 | AI-draft | Charitable giving | الصدقة |
+| 4168 | AI-draft | Keeping vows | الوفاء بالنذور |
+| 4169 | AI-draft | Serious commitments | الالتزامات الجادّة |
+| 4170 | AI-draft | Simplifying lifestyle | تبسيط المعيشة |
+| 4171 | AI-draft | Wasteful spending | الإسراف |
+| 4172 | AI-draft | Harming animals or people | إيذاء الحيوان أو الناس |
+| 4173 | AI-draft | L'Avaleur Fortune | سعد بلع |
+| 4174 | AI-draft | Depth, Absorption | العمق والاستيعاب |
+| 4175 | AI-draft | Patience with difficulty | الصبر على الشدّة |
+| 4176 | AI-draft | Swallowing anger into resentment | كظم الغيظ حتى يصير حقدًا |
+| 4177 | AI-draft | Consuming without reflection | الاستهلاك بلا تفكّر |
+| 4178 | AI-draft | Overindulgence | الإفراط |
+| 4179 | AI-draft | Gratitude, Hope | الشكر والرجاء |
+| 4180 | AI-draft | Gratitude practices | ممارسات الشكر |
+| 4181 | AI-draft | Beginning hopeful works | بدء الأعمال المرجوّة |
+| 4182 | AI-draft | Sharing ease with others | مشاركة اليسر مع الآخرين |
+| 4183 | AI-draft | Taking ease for granted | الغفلة عن النعمة |
+| 4184 | AI-draft | Complacency | الركون والتراخي |
+| 4185 | AI-draft | Forgetting the Giver | نسيان المُنعِم |
+| 4186 | AI-draft | Shelter and housing matters | شؤون المأوى والسكن |
+| 4187 | AI-draft | Protecting family | حماية الأسرة |
+| 4188 | AI-draft | Welcoming the stranger with adab | إكرام الغريب بأدب |
+| 4189 | AI-draft | Inhospitality | ترك إكرام الضيف |
+| 4190 | AI-draft | Neglecting dependents | إهمال من تعول |
+| 4191 | AI-draft | Closing doors out of pride | إغلاق الأبواب كِبرًا |
+| 4192 | AI-draft | Opening, Outflow | الانفتاح والتدفّق |
+| 4193 | AI-draft | Starting helpful projects | بدء مشاريع نافعة |
+| 4194 | AI-draft | Releasing stuck affairs | تحريك الشؤون العالقة |
+| 4195 | AI-draft | Gossip as “release” | الغيبة بحجّة «التنفيس» |
+| 4196 | AI-draft | Completion, Emptying | الإتمام والتفريغ |
+| 4197 | AI-draft | Completing projects | إتمام المشاريع |
+| 4198 | AI-draft | Settling debts | قضاء الديون |
+| 4199 | AI-draft | Forgiving leftovers | العفو عن البقايا |
+| 4200 | AI-draft | Closing cycles cleanly | إغلاق الدورات بنظافة |
+| 4201 | AI-draft | Leaving ends untied | ترك الأطراف معلّقة |
+| 4202 | AI-draft | Hoarding grudges | اكتناز الضغائن |
+| 4203 | AI-draft | Starting too many new things | بدء أشياء جديدة كثيرة |
+| 4204 | AI-draft | Wholeness, Hidden Depths | الكمال والأعماق الخفيّة |
+| 4205 | AI-draft | Quiet reflection | التأمّل الهادئ |
+| 4206 | AI-draft | Caring for the unseen needs of others | رعاية حاجات الآخرين الخفيّة |
+| 4207 | AI-draft | Patience with the hidden | الصبر على ما خفي |
+| 4208 | AI-draft | Integrating lessons | استيعاب الدروس |
+| 4209 | AI-draft | Denying the unseen | إنكار الغيب |
+| 4210 | AI-draft | Despair in darkness | اليأس في الظلمة |
+| 4211 | AI-draft | Waxing Gibbous | أحدب متزايد |
+| 4212 | AI-draft | Waning Gibbous | أحدب متناقص |
+| 4213 | AI-draft | Last Quarter | التربيع الأخير |
+| 4214 | AI-draft | Waning Crescent | هلال متناقص |
+| 4215 | AI-draft | Excellent alignment! Lunar mansion | انسجام ممتاز! منزلة القمر |
+| 4216 | AI-draft | is ruled by | يحكمها |
+| 4217 | AI-draft | , matching the current planetary hour. | ، موافقةً للساعة الكوكبية الحالية. |
+| 4218 | AI-draft | shares the | يشترك في عنصر |
+| 4219 | AI-draft | element with lunar mansion | مع منزلة القمر |
+| 4220 | AI-draft | Neutral influence. | أثر محايد. |
+| 4221 | AI-draft | hour and lunar mansion | الساعة ومنزلة القمر |
+| 4222 | AI-draft | have different energies. | طاقتاهما مختلفتان. |
+| 4223 | AI-draft | Hot Food Sadaqah | صدقة الطعام الساخن |
+| 4224 | AI-draft | Giving hot, prepared food as sadaqah is a beneficial form of charity. The food can be given to children or to anyone who can benefit from it. This form of sadaqah is associated with feeding and providing nourishment. | التصدّق بطعام ساخن مطبوخ صورة نافعة من الصدقة. ويمكن إعطاؤه للأطفال أو لكل من ينتفع به. وترتبط هذه الصدقة بالإطعام وتقديم الغذاء. |
+| 4225 | AI-draft | Rice | أرز |
+| 4226 | AI-draft | Porridge | عصيدة |
+| 4227 | AI-draft | Cold Water Sadaqah | صدقة الماء البارد |
+| 4228 | AI-draft | Giving cold water as sadaqah is another beneficial form of charity. The sadaqah specifically consists of providing cold drinking water to someone who can benefit from it. | التصدّق بالماء البارد صورة نافعة أخرى من الصدقة، وهي تقديم ماء بارد للشرب لمن ينتفع به. |
+| 4229 | AI-draft | Supporting an Athlete or Sportsman | إعانة رياضي |
+| 4230 | AI-draft | Helping a sportsman or athlete can also be given as a form of sadaqah. The assistance should be given sincerely for the benefit of the person. | يمكن أيضًا أن تكون إعانة رياضي صدقةً. وينبغي أن تُقدَّم بإخلاص لمنفعة الشخص. |
+| 4231 | AI-draft | Buying them sports equipment or supplies | شراء معدّات أو لوازم رياضية له |
+| 4232 | AI-draft | A form of sadaqah associated with Ḥamal is giving livestock. The animal may be raised and cared for in the household and then given as sadaqah. | من صور الصدقة المرتبطة ببرج الحمل التصدّق بالماشية. فيمكن تربية الحيوان والعناية به في البيت ثم التصدّق به. |
+| 4233 | AI-draft | A ram | كبش |
+| 4234 | AI-draft | A white sheep or ram | شاة أو كبش أبيض |
+| 4235 | AI-draft | A sheep or ram of another colour | شاة أو كبش من لون آخر |
+| 4236 | AI-draft | Giving away clothing that you have personally worn — once, twice, or a small number of times. The important condition is that the clothing is still clean, usable, and in good condition. It is then given to another person who can benefit from wearing it. The emphasis is on giving clothing that has already been worn by the giver, rather than brand-new or completely unused clothing. This sadaqah is associated with protection and seeking benefit through charity. | التصدّق بملابس لبستها أنت — مرّة أو مرّتين أو مرّات قليلة. والشرط المهمّ أن تكون نظيفة صالحة بحالة جيدة، فتُعطى لمن ينتفع بلبسها. والتركيز على ملابس لبسها المتصدّق لا الجديدة تمامًا. وترتبط هذه الصدقة بالحفظ وطلب النفع بالصدقة. |
+| 4237 | AI-draft | Venus (al-Zuhrah / الزهرة) | الزهرة |
+| 4238 | AI-draft | A primary form of sadaqah associated with al-Thawr is giving a single-coloured ram. A white ram is particularly suitable. The ram is given as sadaqah to someone who can benefit from it. | من أهمّ صور الصدقة المرتبطة ببرج الثور التصدّق بكبش ذي لون واحد، والأبيض أنسب. ويُعطى لمن ينتفع به. |
+| 4239 | AI-draft | Giving away clothing that has already been worn, still in good and usable condition. This sadaqah is associated with protection and may be given with the intention of seeking protection through charity. | التصدّق بملابس سبق لبسها وهي بحالة جيدة صالحة. وترتبط هذه الصدقة بالحفظ ويمكن أن تُعطى بنيّة طلب الحفظ بالصدقة. |
+| 4240 | AI-draft | Giving things grown from the ground, particularly staple agricultural foods, directly to people in need. | التصدّق بما يخرج من الأرض، لا سيما الأغذية الزراعية الأساسية، للمحتاجين مباشرة. |
+| 4241 | AI-draft | Millet (dugub in Wolof) | الدُّخن («دوغوب» بالولوف) |
+| 4242 | AI-draft | Other grains and agricultural produce | حبوب ومحاصيل زراعية أخرى |
+| 4243 | AI-draft | Rice and millet may also be combined with cooking oil and given together as a food-based sadaqah package to someone or a family in need. | يمكن أيضًا جمع الأرز والدُّخن مع زيت الطبخ وإعطاؤها معًا سلّة غذائية صدقةً لشخص أو أسرة محتاجة. |
+| 4244 | AI-draft | Millet | الدُّخن |
+| 4245 | AI-draft | Giving water is another beneficial sadaqah for Taurus. The water is given to someone who needs or can benefit from it. | التصدّق بالماء صدقة نافعة أخرى لبرج الثور، يُعطى لمن يحتاجه أو ينتفع به. |
+| 4246 | AI-draft | A particularly important form of sadaqah for Taurus is helping an elderly man or woman, regularly or whenever they are in need. This is regarded in the tradition as a secret sadaqah for increasing and sustaining one's provision (rizq). The emphasis is on quietly and consistently helping an elderly person without seeking recognition. | من أهمّ صور الصدقة لبرج الثور إعانة رجل أو امرأة مسنّة بانتظام أو كلّما احتاجا. وتُعدّ في التراث صدقة سرّ لزيادة الرزق ودوامه. والتركيز على إعانة المسنّ بهدوء وثبات دون طلب ثناء. |
+| 4247 | AI-draft | Household necessities | لوازم البيت |
+| 4248 | AI-draft | Other practical needs | حاجات عملية أخرى |
+| 4249 | AI-draft | Friday is considered a particularly suitable day for giving Taurus-related sadaqah, connected in the tradition with Venus (al-Zuhrah), the planetary ruler of the sign. Where possible, give on Friday while maintaining the intention of sincere charity and seeking blessing, protection, and increase in provision. | يُعدّ يوم الجمعة مناسبًا خاصّة لصدقة برج الثور، لارتباطه في التراث بالزهرة حاكمة البرج. وإن أمكن فتصدّق يوم الجمعة مع نيّة الصدقة الخالصة وطلب البركة والحفظ وزيادة الرزق. |
+| 4250 | AI-draft | A form of sadaqah associated with Jawzāʾ is giving 100 kola nuts, which are then distributed as sadaqah. | من صور الصدقة المرتبطة ببرج الجوزاء التصدّق بمئة حبّة كولا تُوزَّع صدقةً. |
+| 4251 | AI-draft | White kola nuts | حبّات كولا بيضاء |
+| 4252 | AI-draft | Red kola nuts | حبّات كولا حمراء |
+| 4253 | AI-draft | A combination of white and red kola nuts | مزيج من حبّات الكولا البيضاء والحمراء |
+| 4254 | AI-draft | Giving money as sadaqah is intended to help with the preservation and stability of wealth: giving a portion of one's wealth away so that wealth is not simply accumulated and lost or continuously spent. The amount can be according to the person's ability and circumstances. Intention: give sincerely, with the intention of helping others and seeking stability, preservation, and blessing in one's wealth. | يُقصد بالتصدّق بالمال المساعدة على حفظ المال وثباته: بإخراج جزء منه كي لا يُكنز فيضيع أو يُنفق بلا انقطاع. والمقدار بحسب قدرة الشخص وحاله. النيّة: تصدّق بإخلاص بنيّة إعانة الآخرين وطلب الثبات والحفظ والبركة في مالك. |
+| 4255 | AI-draft | Giving a guinea fowl (French: pintade) as sadaqah, distributed to someone who can benefit from it. | التصدّق بدجاجة غينيا، تُعطى لمن ينتفع بها. |
+| 4256 | AI-draft | Providing educational materials is another beneficial form of sadaqah for Gemini. These materials can be given to children or students who need them for their education. | تقديم الأدوات التعليمية صورة نافعة أخرى من الصدقة لبرج الجوزاء، تُعطى للأطفال أو الطلاب المحتاجين إليها في تعليمهم. |
+| 4257 | AI-draft | White writing paper | ورق كتابة أبيض |
+| 4258 | AI-draft | Exercise books | دفاتر تمارين |
+| 4259 | AI-draft | Pencils | أقلام رصاص |
+| 4260 | AI-draft | Educational sadaqah can also be directed toward teachers, including Qur'anic teachers — helping a teacher or their students. The sadaqah can therefore benefit either the teacher or the students. | يمكن أيضًا توجيه الصدقة التعليمية إلى المعلّمين، ومنهم معلّمو القرآن — بإعانة المعلّم أو طلابه. فتنفع الصدقة المعلّم أو الطلاب. |
+| 4261 | AI-draft | Other materials needed for teaching and learning | مواد أخرى لازمة للتعليم والتعلّم |
+| 4262 | AI-draft | Food can be prepared or purchased and given directly to children who can benefit from it. The intention is to provide nourishment and assistance through sadaqah. | يمكن إعداد الطعام أو شراؤه وإعطاؤه مباشرة للأطفال المنتفعين به. والنيّة تقديم الغذاء والعون بالصدقة. |
+| 4263 | AI-draft | A form of sadaqah associated with Saraṭān is giving salt according to one's current age — the amount in kilograms matching the person's age (age 25 → 25 kg, age 30 → 30 kg, age 40 → 40 kg). The amount is weighed according to the person's age and then given out as sadaqah. This may be performed yearly, using the person's age at that time. | من صور الصدقة المرتبطة ببرج السرطان التصدّق بالملح بقدر عمر الشخص الحالي — بالكيلوغرام مساويًا للعمر (25 سنة ← 25 كغ، 30 ← 30 كغ، 40 ← 40 كغ). يُوزن بقدر العمر ثم يُوزَّع صدقةً. ويمكن فعل ذلك كل سنة بعمر الشخص حينها. |
+| 4264 | AI-draft | Giving 4 kg of meat — beef or another type — out as sadaqah to people who can benefit from it. | التصدّق بأربعة كيلوغرامات من اللحم — بقر أو غيره — لمن ينتفع به. |
+| 4265 | AI-draft | Helping with food expenses | الإعانة في نفقات الطعام |
+| 4266 | AI-draft | Helping with household expenses | الإعانة في نفقات البيت |
+| 4267 | AI-draft | Providing financial assistance to an elderly woman in need. The intention is to assist and ease her difficulties through sadaqah. | تقديم عون مالي لامرأة مسنّة محتاجة. والنيّة إعانتها وتيسير صعابها بالصدقة. |
+| 4268 | AI-draft | Giving her money | إعطاؤها مالًا |
+| 4269 | AI-draft | Helping with essential expenses | الإعانة في النفقات الأساسية |
+| 4270 | AI-draft | Providing regular or occasional financial support | تقديم دعم مالي منتظم أو عند الحاجة |
+| 4271 | AI-draft | Giving milk to children as sadaqah to provide nourishment and benefit. | التصدّق بالحليب على الأطفال غذاءً ونفعًا. |
+| 4272 | AI-draft | A small bottle of milk | قارورة حليب صغيرة |
+| 4273 | AI-draft | A larger quantity of milk | كمية أكبر من الحليب |
+| 4274 | AI-draft | A primary form of sadaqah associated with al-Asad is to raise a ram, particularly a white ram: obtain it, keep it in an appropriate place at home or elsewhere, feed and care for it, and allow it to grow until it reaches a suitable mature stage. It is then slaughtered as sadaqah, the meat divided into portions and distributed to people who can benefit from it. Within this tradition, there is an observation that some Leo individuals may find the ram does not survive long enough to reach maturity, traditionally attributed to the heaviness of the zodiac. If the ram survives and reaches the appropriate mature stage, it can then be given as sadaqah. | من أهمّ صور الصدقة المرتبطة ببرج الأسد تربية كبش، لا سيما الأبيض: يُقتنى ويُحفظ في مكان مناسب في البيت أو غيره، ويُطعَم ويُعتنى به حتى يبلغ سنًّا مناسبة. ثم يُذبح صدقةً ويُقسَّم لحمه حصصًا تُوزَّع على من ينتفع بها. وفي هذا التراث ملاحظة أن بعض مواليد الأسد قد لا يعيش كبشهم حتى يبلغ، ويُنسب ذلك تقليديًا إلى ثقل البرج. فإن عاش وبلغ السنّ المناسبة تُصدِّق به. |
+| 4275 | AI-draft | Preparing three bowls of Cheb Yap — a Senegalese rice dish made with meat, similar to meat-based jollof rice — and giving the prepared food as sadaqah to people who can benefit from it. | إعداد ثلاثة صحون من «تشب ياب» — طبق أرز سنغالي باللحم، شبيه بأرز الجلوف باللحم — والتصدّق بالطعام المُعدّ لمن ينتفع به. |
+| 4276 | AI-draft | Preparing three bowls of porridge with a sour or fermented dairy component such as yogurt, and distributing them to people as sadaqah. | إعداد ثلاثة صحون من العصيدة مع لبن حامض أو مخمّر كالزبادي، وتوزيعها صدقةً. |
+| 4277 | AI-draft | 3 bowls of Cheb Yap | 3 صحون من «تشب ياب» |
+| 4278 | AI-draft | 3 bowls of porridge with yogurt | 3 صحون عصيدة باللبن |
+| 4279 | AI-draft | A primary form of sadaqah associated with al-Sunbula is giving 100 kola nuts, a mixture of red and white, mixed together and distributed as sadaqah. | من أهمّ صور الصدقة المرتبطة ببرج السنبلة التصدّق بمئة حبّة كولا، حمراء وبيضاء مختلطة، تُوزَّع صدقةً. |
+| 4280 | AI-draft | Giving money as sadaqah, according to the person's ability and circumstances, sincerely to someone who can benefit from it. | التصدّق بالمال بحسب قدرة الشخص وحاله، بإخلاص، لمن ينتفع به. |
+| 4281 | AI-draft | Giving three different types of cereal together as sadaqah to people or families who can benefit from them. | التصدّق بثلاثة أنواع من الحبوب معًا على أشخاص أو أسر ينتفعون بها. |
+| 4282 | AI-draft | Bessi — a Wolof cereal/grain similar to millet | «بيسي» — حبّ بالولوف شبيه بالدُّخن |
+| 4283 | AI-draft | A particularly important secret sadaqah associated with Virgo is performed on reaching the age of 40: give 40 metres of kafan cloth (the white cloth used to shroud a deceased Muslim before burial) as sadaqah. Obtain the 40 metres, keep the cloth in the house overnight, then the following day divide it into portions of 7 metres each and distribute the portions as sadaqah. | من صدقات السرّ المهمّة المرتبطة بالسنبلة ما يكون عند بلوغ الأربعين: التصدّق بأربعين مترًا من قماش الكفن (القماش الأبيض الذي يُكفَّن به الميّت المسلم). تُقتنى الأربعون مترًا، ويُبات القماش في البيت ليلة، ثم يُقسَّم في الغد حصصًا كل منها سبعة أمتار وتُوزَّع صدقةً. |
+| 4284 | AI-draft | 100 kola nuts — red and white mixed together | 100 حبّة كولا — حمراء وبيضاء مختلطة |
+| 4285 | AI-draft | Three cereals — millet, rice, and Bessi | ثلاثة حبوب — الدُّخن والأرز و«بيسي» |
+| 4286 | AI-draft | At age 40: 40 metres of kafan cloth, kept overnight then divided into 7-metre portions | عند الأربعين: 40 مترًا من قماش الكفن، تُبات ليلة ثم تُقسَّم حصصًا من 7 أمتار |
+| 4287 | AI-draft | Argent | المال |
+| 4288 | AI-draft | Giving guinea fowl (pintade) as sadaqah to someone who can benefit from it. | التصدّق بدجاج غينيا لمن ينتفع به. |
+| 4289 | AI-draft | Giving three chickens of different colours — black, white and red — out as sadaqah. | التصدّق بثلاث دجاجات مختلفة الألوان — سوداء وبيضاء وحمراء. |
+| 4290 | AI-draft | 7 portions of yogurt — even small sachets | 7 حصص من اللبن — ولو أكياسًا صغيرة |
+| 4291 | AI-draft | Guinea fowl (pintade) | دجاج غينيا |
+| 4292 | AI-draft | Pintade | دجاج غينيا |
+| 4293 | AI-draft | A special form of sadaqah associated with Scorpio is having or giving a good protective ring, with stones such as rose agate or amethyst. The ring is regarded within this tradition as having protective and beneficial qualities and is also considered part of the sadaqah practice for Scorpio. | من الصدقات الخاصّة المرتبطة ببرج العقرب اقتناء خاتم حافظ حسن أو إهداؤه، بأحجار كالعقيق الوردي أو الجمشت. ويُعدّ الخاتم في هذا التراث ذا خصائص حافظة نافعة، وجزءًا من ممارسة الصدقة للعقرب. |
+| 4294 | AI-draft | Giving a white ram or white sheep, particularly associated with favourable conditions involving Mars. | التصدّق بكبش أبيض أو شاة بيضاء، ويرتبط خاصّة بأحوال المريخ المواتية. |
+| 4295 | AI-draft | When Mars is transiting a favourable or friendly zodiac sign, such as Aries, a red goat may be given as sadaqah. The goat is prepared and its meat divided into portions, distributed among people who can benefit from it until the meat has been given out. The emphasis is on distributing the meat, rather than keeping it for personal consumption. | حين يعبر المريخ برجًا مواتيًا أو صديقًا كالحمل، يمكن التصدّق بماعز أحمر. يُذبح ويُقسَّم لحمه حصصًا تُوزَّع على من ينتفع بها حتى يُعطى كله. والتركيز على التوزيع لا على الاستبقاء للأكل الشخصي. |
+| 4296 | AI-draft | Giving water is an important sadaqah for Scorpio, particularly to sick or hospitalised people — for example taking drinking water to a hospital and giving it freely to patients who need it. This form is especially associated with Scorpio when beginning a new project or undertaking a journey. | التصدّق بالماء صدقة مهمّة للعقرب، لا سيما على المرضى ونزلاء المستشفيات — كأخذ ماء الشرب إلى مستشفى وإعطائه مجّانًا للمرضى المحتاجين. وترتبط هذه الصورة خاصّة بالعقرب عند بدء مشروع جديد أو سفر. |
+| 4297 | AI-draft | Giving rice and fish together as a single sadaqah, both uncooked (raw), distributed to people or families who can benefit from them. | التصدّق بالأرز والسمك معًا صدقةً واحدة، نيّئين، على أشخاص أو أسر ينتفعون بهما. |
+| 4298 | AI-draft | Tuesday is particularly associated with Scorpio because of its connection with Mars, the planetary ruler of the sign, and can be chosen when Mars is in a favourable or neutral transit. Sunday may also be considered, particularly when the Sun is in a favourable condition. The planetary condition should be considered when selecting the timing according to the tradition. | يرتبط يوم الثلاثاء خاصّة بالعقرب لصلته بالمريخ حاكم البرج، ويمكن اختياره حين يكون عبور المريخ مواتيًا أو محايدًا. ويمكن أيضًا اعتبار يوم الأحد، لا سيما حين تكون الشمس في حال مواتية. وينبغي مراعاة حال الكوكب عند اختيار التوقيت وفق التراث. |
+| 4299 | AI-draft | Protective ring — rose agate or amethyst | خاتم حافظ — عقيق وردي أو جمشت |
+| 4300 | AI-draft | White ram or sheep | كبش أو شاة بيضاء |
+| 4301 | AI-draft | Water — especially to sick or hospitalised people | الماء — لا سيما للمرضى ونزلاء المستشفيات |
+| 4302 | AI-draft | Rice and fish — given together, uncooked | الأرز والسمك — معًا، نيّئين |
+| 4303 | AI-draft | Special occasions: beginning a project or travelling | مناسبات خاصّة: بدء مشروع أو السفر |
+| 4304 | AI-draft | Sagittarius is considered a sign for which sadaqah is particularly important and should be given regularly. Unlike some signs that have specific items associated with their sadaqah, Sagittarius has a more open form: a person may give whatever they sincerely wish to give, provided it benefits another person. | يُعدّ برج القوس برجًا للصدقة فيه أهمية خاصّة، وينبغي أن تُعطى بانتظام. وخلافًا لبروج لها أشياء محدّدة، صدقة القوس أوسع: يعطي المرء ما يريد بإخلاص ما دام ينفع غيره. |
+| 4305 | AI-draft | Giving nine pieces of bread, distributed to people who are in need or to anyone who can benefit from it. | التصدّق بتسعة أرغفة خبز، تُوزَّع على المحتاجين أو كل من ينتفع بها. |
+| 4306 | AI-draft | Preparing three bowls of laakh — a Wolof-style porridge traditionally prepared with a fermented or sour dairy component such as yogurt — and giving them to people who can benefit from the food. | إعداد ثلاثة صحون من «لاخ» — عصيدة على طريقة الولوف تُعدّ تقليديًا مع لبن حامض أو مخمّر كالزبادي — وإعطاؤها لمن ينتفع بالطعام. |
+| 4307 | AI-draft | Giving a single-coloured ram, particularly a white ram, as sadaqah to someone who can benefit from it. | التصدّق بكبش ذي لون واحد، لا سيما الأبيض، لمن ينتفع به. |
+| 4308 | AI-draft | Sagittarius has a broad range of possible sadaqah. A person may give whatever they are able and willing to give. The important principle is to give sincerely and for the benefit of another person. | لبرج القوس نطاق واسع من الصدقة. يعطي المرء ما يقدر عليه ويرغب فيه. والمبدأ المهمّ الإخلاص ونفع الغير. |
+| 4309 | AI-draft | Assistance to people in need | إعانة المحتاجين |
+| 4310 | AI-draft | Other beneficial forms of charity | صور نافعة أخرى من الصدقة |
+| 4311 | AI-draft | Thursday is considered a particularly suitable day for giving Sagittarius-related sadaqah. Where possible, give on Thursday while maintaining the intention of sincere charity and seeking blessing and ease. | يُعدّ يوم الخميس مناسبًا خاصّة لصدقة برج القوس. وإن أمكن فتصدّق يوم الخميس مع نيّة الصدقة الخالصة وطلب البركة والتيسير. |
+| 4312 | AI-draft | 3 bowls of laakh with yogurt | 3 صحون «لاخ» باللبن |
+| 4313 | AI-draft | One-coloured white ram | كبش أبيض ذو لون واحد |
+| 4314 | AI-draft | Any sincere and beneficial sadaqah | أي صدقة صادقة نافعة |
+| 4315 | AI-draft | Sagittarius is traditionally regarded as a sign that benefits from frequent and generous sadaqah, so regular charity is emphasised | يُعدّ القوس تقليديًا برجًا ينتفع بكثرة الصدقة وسخائها، فيُؤكَّد على انتظامها |
+| 4316 | AI-draft | Giving rice and millet according to measurements connected to the person's age and body weight: rice in kilograms corresponding to the person's age, millet in kilograms corresponding to the person's body weight. The rice and millet may be distributed little by little until the entire amount has been given out, to individuals, families, or people in need. | التصدّق بالأرز والدُّخن بمقادير مرتبطة بعمر الشخص ووزنه: الأرز بالكيلوغرام بقدر العمر، والدُّخن بالكيلوغرام بقدر الوزن. ويمكن توزيعهما شيئًا فشيئًا حتى يُعطى المقدار كله، على أفراد أو أسر أو محتاجين. |
+| 4317 | AI-draft | Giving a single-coloured ram, a white ram particularly associated with this sadaqah. This is described in the tradition as a particularly powerful sadaqah, and some people who follow this practice may experience it symbolically through dreams, such as dreaming that they are giving away a ram. | التصدّق بكبش ذي لون واحد، والأبيض مرتبط خاصّة بهذه الصدقة. وتوصف في التراث بأنها صدقة قوية، وقد يراها بعض من يمارسها رمزيًا في المنام، كأن يرى أنه يتصدّق بكبش. |
+| 4318 | AI-draft | Giving kafan, the white cloth used to shroud a deceased Muslim before burial. The sadaqah may consist of providing the cloth needed for someone's burial. | التصدّق بالكفن، القماش الأبيض الذي يُكفَّن به الميّت المسلم. ويمكن أن تكون الصدقة تقديم القماش اللازم لدفن أحد. |
+| 4319 | AI-draft | A family preparing for a burial | أسرة تستعدّ لدفن |
+| 4320 | AI-draft | A mosque or community | مسجد أو مجتمع |
+| 4321 | AI-draft | Someone who cannot afford the burial shroud | من لا يقدر على ثمن الكفن |
+| 4322 | AI-draft | People responsible for assisting with funeral arrangements | القائمون على تجهيز الجنائز |
+| 4323 | AI-draft | Giving cowries, known in Wolof as petaw — the small white cowrie shells traditionally used for decoration and in various cultural and spiritual practices. This form of sadaqah is considered special and sensitive within the tradition. | التصدّق بالودع، المسمّى بالولوف «بيتاو» — الأصداف البيضاء الصغيرة المستعملة تقليديًا للزينة وفي ممارسات ثقافية وروحية متنوّعة. وتُعدّ هذه الصدقة خاصّة وحسّاسة في التراث. |
+| 4324 | AI-draft | Labourers | العمّال |
+| 4325 | AI-draft | Casual workers | العمّال المؤقّتون |
+| 4326 | AI-draft | Cleaners | عمّال النظافة |
+| 4327 | AI-draft | The assistance can be given regularly or whenever the family needs support. This is regarded as a particularly meaningful form of sadaqah because it supports both the widow and the children who depend on her. | يمكن تقديم العون بانتظام أو كلّما احتاجت الأسرة. ويُعدّ هذا من أعظم صور الصدقة معنى لأنه يعين الأرملة والأطفال الذين يعتمدون عليها. |
+| 4328 | AI-draft | Providing food or household necessities | تقديم الطعام أو لوازم البيت |
+| 4329 | AI-draft | Helping with children's expenses | الإعانة في نفقات الأطفال |
+| 4330 | AI-draft | Assisting with other essential needs | الإعانة في حاجات أساسية أخرى |
+| 4331 | AI-draft | Important Guidance — Cowries / Petaw | إرشاد مهمّ — الودع / «بيتاو» |
+| 4332 | AI-draft | Anyone intending to give petaw/cowries as sadaqah should seek guidance from a knowledgeable and trusted spiritual authority who understands the practice. According to the tradition being documented, this sadaqah may be considered capable of helping to open pathways and make matters easier, but it should not be undertaken casually. The practice is therefore regarded as one requiring proper guidance and understanding before giving it as sadaqah. | من ينوي التصدّق بالودع فليطلب الإرشاد من مرجع روحي عالم موثوق يفهم هذه الممارسة. ووفق التراث الموثَّق قد تُعدّ هذه الصدقة معينة على فتح الطرق وتيسير الأمور، لكن لا ينبغي فعلها باستخفاف. فهي ممارسة تتطلّب إرشادًا وفهمًا صحيحين قبل التصدّق بها. |
+| 4333 | AI-draft | Rice and millet | الأرز والدُّخن |
+| 4334 | AI-draft | A white, single-coloured ram | كبش أبيض ذو لون واحد |
+| 4335 | AI-draft | Kafan (burial shroud) | الكفن |
+| 4336 | AI-draft | Cowries / petaw, with proper guidance | الودع / «بيتاو»، بإرشاد صحيح |
+| 4337 | AI-draft | Helping labourers and low-income workers | إعانة العمّال وذوي الدخل المحدود |
+| 4338 | AI-draft | The practices above are regarded within this tradition as forms of secret or special sadaqah for Capricorn. The sadaqah should be given discreetly and sincerely, with the intention of benefiting another person rather than seeking recognition. | تُعدّ الممارسات أعلاه في هذا التراث صورًا من صدقة السرّ أو الصدقة الخاصّة لبرج الجدي. وينبغي أن تُعطى بكتمان وإخلاص، بنيّة نفع الغير لا طلب الثناء. |
+| 4339 | AI-draft | A primary form of sadaqah associated with al-Dalw is giving 100 kola nuts — white, red, or a combination. This sadaqah can be performed monthly, or every three months. The 100 kola nuts are then distributed as sadaqah. | من أهمّ صور الصدقة المرتبطة ببرج الدلو التصدّق بمئة حبّة كولا — بيضاء أو حمراء أو مزيجًا منهما. ويمكن فعلها كل شهر أو كل ثلاثة أشهر، ثم تُوزَّع صدقةً. |
+| 4340 | AI-draft | Helping a community, group, or voluntary organisation. Support may be financial, material, or practical. | إعانة مجتمع أو جماعة أو منظّمة تطوّعية، ماليًا أو ماديًا أو عمليًا. |
+| 4341 | AI-draft | A local community | مجتمع محلّي |
+| 4342 | AI-draft | A charitable group | جماعة خيرية |
+| 4343 | AI-draft | A masjid | مسجد |
+| 4344 | AI-draft | A group serving people in need | جماعة تخدم المحتاجين |
+| 4345 | AI-draft | Giving guinea fowl (pintade) or chicken as sadaqah to someone who can benefit from it. | التصدّق بدجاج غينيا أو دجاج لمن ينتفع به. |
+| 4346 | AI-draft | Giving three chickens of different colours — black, red and white — out as sadaqah. | التصدّق بثلاث دجاجات مختلفة الألوان — سوداء وحمراء وبيضاء. |
+| 4347 | AI-draft | Community or group support — a voluntary group, community, masjid, or similar organisation | دعم مجتمع أو جماعة — جماعة تطوّعية أو مجتمع أو مسجد أو نحوه |
+| 4348 | AI-draft | Guinea fowl (pintade) or chicken | دجاج غينيا أو دجاج |
+| 4349 | AI-draft | Three-coloured chickens — black, red and white | دجاج بثلاثة ألوان — أسود وأحمر وأبيض |
+| 4350 | AI-draft | A primary form of sadaqah associated with al-Ḥūt is giving fish. A particularly recommended amount is 12 fish, given as sadaqah to people who can benefit from them. | من أهمّ صور الصدقة المرتبطة ببرج الحوت التصدّق بالسمك، والمقدار المستحبّ خاصّة اثنتا عشرة سمكة تُعطى لمن ينتفع بها. |
+| 4351 | AI-draft | This may be performed when a person has an important project or undertaking: take seven chickens, prepare and cook them, and distribute the prepared food as sadaqah — giving it to people in need, such as a poor family, and continuing until the food has been completely given out. The purpose is to provide food and benefit to people who are in need. | يمكن فعل هذا حين يكون للمرء مشروع أو أمر مهمّ: تُؤخذ سبع دجاجات فتُطبخ ويُوزَّع الطعام صدقةً — على المحتاجين كأسرة فقيرة — حتى يُعطى كله. والغاية إطعام المحتاجين ونفعهم. |
+| 4352 | AI-draft | The food sadaqah may particularly be given in the evening, around the time when people would normally have dinner, an evening meal, or tea or other evening refreshments. The food should be distributed to people who can benefit from it, especially those experiencing financial hardship or food insecurity. | يمكن إعطاء صدقة الطعام خاصّة في المساء، قرب وقت العشاء أو الشاي ونحوه. ويُوزَّع على من ينتفع به، لا سيما من يعانون ضيقًا ماليًا أو نقصًا في الغذاء. |
+| 4353 | AI-draft | Helping someone experiencing mental or emotional difficulties. The intention is to reduce their hardship and provide compassionate assistance. | إعانة من يمرّ بصعوبات نفسية أو عاطفية. والنيّة تخفيف ضيقه وتقديم عون رحيم. |
+| 4354 | AI-draft | Providing financial assistance | تقديم عون مالي |
+| 4355 | AI-draft | Supporting them during a difficult period | مساندته في مرحلة صعبة |
+| 4356 | AI-draft | Offering practical assistance | تقديم عون عملي |
+| 4357 | AI-draft | Helping them access appropriate support | مساعدته على الوصول إلى الدعم المناسب |
+| 4358 | AI-draft | Helping a person who is engaged in spiritual or religious activity. Assistance may be financial or practical, depending on the person's needs. | إعانة شخص منشغل بعمل روحي أو ديني، ماليًا أو عمليًا بحسب حاجته. |
+| 4359 | AI-draft | A spiritual practitioner | صاحب ممارسة روحية |
+| 4360 | AI-draft | Someone involved in spiritual activities | منشغل بالأنشطة الروحية |
+| 4361 | AI-draft | Someone who provides spiritual guidance or related services | من يقدّم إرشادًا روحيًا أو خدمات متّصلة به |
+| 4362 | AI-draft | The sadaqah should be given sincerely for the benefit of others. The food, fish, or other assistance is distributed to people who can genuinely benefit from it, particularly those experiencing poverty or hardship. | ينبغي أن تُعطى الصدقة بإخلاص لنفع الآخرين. فالطعام أو السمك أو غيرهما يُوزَّع على من ينتفع به حقًّا، لا سيما الفقراء وأهل الضيق. |
+| 4363 | AI-draft | The Light - Source of all illumination and guidance | النور - مصدر كل إنارة وهداية |
+| 4364 | AI-draft | The Guide - Who leads to truth | الهادي - الذي يهدي إلى الحقّ |
+| 4365 | AI-draft | The Greatest - Supreme in majesty | الكبير - العظيم في جلاله |
+| 4366 | AI-draft | Divine Illumination and Clarity | الإنارة والوضوح |
+| 4367 | AI-draft | Leadership and Authority | القيادة والسلطة |
+| 4368 | AI-draft | Spiritual Radiance | الإشراق الروحي |
+| 4369 | AI-draft | Truth and Authenticity | الحقّ والصدق |
+| 4370 | AI-draft | Vitality and Life Force | الحيوية وقوة الحياة |
+| 4371 | AI-draft | Conscious Awareness | الوعي اليقظ |
+| 4372 | AI-draft | Public speaking and presentations | الخطابة والعروض |
+| 4373 | AI-draft | Spiritual illumination practices | ممارسات الإنارة الروحية |
+| 4374 | AI-draft | Dhikr of An-Nūr (100x recommended) | ذكر «يا نور» (100 مرّة مستحبّة) |
+| 4375 | AI-draft | Study of sacred texts | دراسة النصوص المقدّسة |
+| 4376 | AI-draft | Decision-making requiring wisdom | القرارات التي تتطلّب حكمة |
+| 4377 | AI-draft | Secretive or deceptive activities | الأعمال السرّية أو المخادعة |
+| 4378 | AI-draft | Hiding from responsibility | التهرّب من المسؤولية |
+| 4379 | AI-draft | Avoiding difficult truths | تجنّب الحقائق الصعبة |
+| 4380 | AI-draft | Dishonest dealings | المعاملات غير الأمينة |
+| 4381 | AI-draft | The Sun hour is when divine light most easily penetrates the veils of the heart. Use it for seeking truth and clarity. | ساعة الشمس وقت يسهل فيه على النور أن ينفذ إلى حجب القلب. فاستعملها لطلب الحقّ والوضوح. |
+| 4382 | AI-draft | Al-Būnī emphasized the Sun hour as optimal for spiritual illumination and receiving divine guidance. | أكّد البوني أن ساعة الشمس أنسب للإنارة الروحية وتلقّي الهداية. |
+| 4383 | AI-draft | Divine Revelation | الوحي |
+| 4384 | AI-draft | The Quran swears by the Sun, indicating its significance in divine creation and as a sign of Allah's power. | أقسم القرآن بالشمس، دلالةً على شأنها في الخلق وآيةً على قدرة الله. |
+| 4385 | AI-draft | In Islamic tradition, the Sun (Ash-Shams) represents divine light and knowledge. The Prophet Muhammad ﷺ compared the scholars to "lamps in the darkness," echoing solar symbolism. Sunday (Yawm al-Aḥad) is named after the Sun and is considered auspicious for beginning important spiritual practices. | في التراث الإسلامي تمثّل الشمس النور والعلم. وقد شبّه النبي ﷺ العلماء بالمصابيح في الظلمة. ويوم الأحد يرتبط بالشمس ويُعدّ مناسبًا لبدء الممارسات الروحية المهمّة. |
+| 4386 | AI-draft | A student studies Quran during Sun hour and experiences unusual clarity in understanding | طالب يدرس القرآن في ساعة الشمس فيجد وضوحًا غير معتاد في الفهم |
+| 4387 | AI-draft | A leader makes a difficult but just decision during Sun hour | قائد يتّخذ قرارًا صعبًا عادلًا في ساعة الشمس |
+| 4388 | AI-draft | Someone seeking guidance performs dhikr of An-Nūr 100x and receives clear insight | طالب هداية يذكر «يا نور» 100 مرّة فينال بصيرة واضحة |
+| 4389 | AI-draft | Ilm (Knowledge) - Divine and Sacred Knowledge | العلم - العلم الإلهي المقدّس |
+| 4390 | AI-draft | Nūr al-Qalb (Light of the Heart) | نور القلب |
+| 4391 | AI-draft | The Subtle One - Gentle, Kind, and All-Perceiving | اللطيف - الرفيق الرحيم الخبير |
+| 4392 | AI-draft | The Most Merciful - Eternally Compassionate | الرحيم - دائم الرحمة |
+| 4393 | AI-draft | Emotional Wisdom and Intuition | الحكمة العاطفية والحدس |
+| 4394 | AI-draft | Receptivity to Divine Messages | التهيّؤ للمعاني الإلهية |
+| 4395 | AI-draft | Nurturing and Compassion | الرعاية والرحمة |
+| 4396 | AI-draft | Cycles of Growth and Renewal | دورات النموّ والتجدّد |
+| 4397 | AI-draft | Subtle Spiritual Perception | الإدراك الروحي اللطيف |
+| 4398 | AI-draft | Connection to the Unseen | الصلة بالغيب |
+| 4399 | AI-draft | Family matters and nurturing | شؤون الأسرة والرعاية |
+| 4400 | AI-draft | Dhikr of Al-Laṭīf (129x recommended) | ذكر «يا لطيف» (129 مرّة مستحبّة) |
+| 4401 | AI-draft | Seeking mercy and forgiveness | طلب الرحمة والمغفرة |
+| 4402 | AI-draft | Gentle spiritual practices | ممارسات روحية لطيفة |
+| 4403 | AI-draft | Connecting with feminine divine qualities | التخلّق بصفات الرحمة والحنان |
+| 4404 | AI-draft | Harsh or aggressive actions | الأعمال القاسية أو العدوانية |
+| 4405 | AI-draft | Forcing emotional issues | فرض المسائل العاطفية |
+| 4406 | AI-draft | Ignoring intuitive guidance | تجاهل الإلهام الباطن |
+| 4407 | AI-draft | Overly rational approaches to spiritual matters | المناهج العقلانية المفرطة في الأمور الروحية |
+| 4408 | AI-draft | The Moon hour is blessed for those seeking divine mercy. The subtle light of the Moon reveals what the harsh Sun might hide. | ساعة القمر مباركة لطالبي رحمة الله. فنور القمر اللطيف يكشف ما قد تخفيه الشمس الحادّة. |
+| 4409 | AI-draft | Ibn 'Arabī taught that lunar energy facilitates subtle spiritual perception and emotional healing. | علّم ابن عربي أن الطاقة القمرية تيسّر الإدراك الروحي اللطيف وشفاء النفس. |
+| 4410 | AI-draft | The Quran emphasizes the Moon's cycles as divine signs, teaching about spiritual growth and renewal. | يؤكّد القرآن أن أطوار القمر آيات، تعلّم النموّ الروحي والتجدّد. |
+| 4411 | AI-draft | The Moon (Al-Qamar) has special significance in Islam, determining the Islamic calendar (Hijri). The Prophet Muhammad ﷺ was said to have split the Moon as a miracle. Monday (Yawm al-Ithnayn), the Moon's day, is blessed as the day of the Prophet's birth and is recommended for fasting. | للقمر شأن خاصّ في الإسلام، فبه يُحدَّد التقويم الهجري. ومن معجزات النبي ﷺ انشقاق القمر. ويوم الاثنين يوم وُلد فيه النبي ﷺ ويُستحبّ صيامه. |
+| 4412 | AI-draft | A mother performs dhikr of Al-Laṭīf during Moon hour and finds patience with her children | أمّ تذكر «يا لطيف» في ساعة القمر فتجد صبرًا مع أولادها |
+| 4413 | AI-draft | Someone seeking forgiveness makes du'a during Moon hour and feels divine mercy | طالب مغفرة يدعو في ساعة القمر فيشعر برحمة الله |
+| 4414 | AI-draft | A spiritual seeker has a profound dream after Moon hour meditation | سالك يرى رؤيا عميقة بعد تأمّل في ساعة القمر |
+| 4415 | AI-draft | Luṭf (Subtlety and Gentleness) | اللطف |
+| 4416 | AI-draft | Barakah (Divine Blessing) | البركة |
+| 4417 | AI-draft | Qalb (Heart - Spiritual Center) | القلب - المركز الروحي |
+| 4418 | AI-draft | Divine Knowledge | العلم الإلهي |
+| 4419 | AI-draft | Mental Clarity | صفاء الذهن |
+| 4420 | AI-draft | Mercury hour opens the mind to divine knowledge | ساعة عطارد تفتح الذهن للعلم |
+| 4421 | AI-draft | Classical Tradition | التراث الكلاسيكي |
+| 4422 | AI-draft | Traditional | تقليدي |
+| 4423 | AI-draft | Mercury represents sacred knowledge ('Ilm) in Islamic tradition. | يمثّل عطارد العلم المقدّس في التراث الإسلامي. |
+| 4424 | AI-draft | Studying Quran during Mercury hour enhances comprehension | دراسة القرآن في ساعة عطارد تعين على الفهم |
+| 4425 | AI-draft | 'Ilm (Knowledge) | العلم |
+| 4426 | AI-draft | Ḥikmah (Wisdom) | الحكمة |
+| 4427 | AI-draft | Seeking provision | طلب الرزق |
+| 4428 | AI-draft | Harsh decisions | القرارات القاسية |
+| 4429 | AI-draft | Venus hour is blessed for love and beauty | ساعة الزهرة مباركة للمحبّة والجمال |
+| 4430 | AI-draft | Sufi Tradition | التراث الصوفي |
+| 4431 | AI-draft | Venus cultivates divine love | الزهرة تنمّي المحبّة الإلهية |
+| 4432 | AI-draft | Venus represents divine beauty (Jamāl) and Friday is the holiest day. | تمثّل الزهرة الجمال، ويوم الجمعة أفضل الأيام. |
+| 4433 | AI-draft | Couples reconcile during Venus hour | زوجان يتصالحان في ساعة الزهرة |
+| 4434 | AI-draft | Rizq (Provision) | الرزق |
+| 4435 | AI-draft | Divine Strength | القوة الإلهية |
+| 4436 | AI-draft | Willpower | قوة الإرادة |
+| 4437 | AI-draft | Gentle matters | الأمور اللطيفة |
+| 4438 | AI-draft | Mars hour gives spiritual strength | ساعة المريخ تمنح قوة روحية |
+| 4439 | AI-draft | Mars provides courage | المريخ يمنح الشجاعة |
+| 4440 | AI-draft | Mars represents jihad (spiritual struggle) in Islamic tradition. | يمثّل المريخ مجاهدة النفس في التراث الإسلامي. |
+| 4441 | AI-draft | Quwwah (Strength) | القوة |
+| 4442 | AI-draft | Ṣabr (Patience) | الصبر |
+| 4443 | AI-draft | Expansion | الاتساع |
+| 4444 | AI-draft | Generosity | الكرم |
+| 4445 | ✅ reviewed | Fortune | السعد |
+| 4446 | AI-draft | Seeking blessings | طلب البركات |
+| 4447 | AI-draft | Restriction | التقييد |
+| 4448 | AI-draft | Withholding | الإمساك |
+| 4449 | AI-draft | Stinginess | البخل |
+| 4450 | AI-draft | Jupiter hour opens doors of provision | ساعة المشتري تفتح أبواب الرزق |
+| 4451 | AI-draft | Jupiter brings abundance | المشتري يجلب الوفرة |
+| 4452 | AI-draft | Jupiter represents divine expansion and Thursday is blessed for seeking knowledge. | يمثّل المشتري الاتساع، ويوم الخميس مبارك لطلب العلم. |
+| 4453 | AI-draft | Starting business during Jupiter hour brings success | بدء التجارة في ساعة المشتري يجلب التوفيق |
+| 4454 | AI-draft | Karam (Generosity) | الكرم |
+| 4455 | AI-draft | Barakah (Blessing) | البركة |
+| 4456 | AI-draft | Solitude | الخلوة |
+| 4457 | AI-draft | Celebration | الاحتفال |
+| 4458 | AI-draft | Saturn hour is for deep wisdom and contemplation | ساعة زحل للحكمة العميقة والتأمّل |
+| 4459 | AI-draft | Saturn teaches patience | زحل يعلّم الصبر |
+| 4460 | AI-draft | Saturn represents divine wisdom (Ḥikmah) and the importance of patience in spiritual growth. | يمثّل زحل الحكمة وأهمية الصبر في النموّ الروحي. |
+| 4461 | AI-draft | Deep meditation during Saturn hour yields profound insights | التأمّل العميق في ساعة زحل يثمر بصائر عميقة |
+| 4462 | AI-draft | Bold and energetic | جريء نشيط |
+| 4463 | AI-draft | Fast-moving and decisive | سريع الحركة حاسم |
+| 4464 | AI-draft | Confident and direct | واثق مباشر |
+| 4465 | AI-draft | Natural initiator | مبادر بطبعه |
+| 4466 | AI-draft | Gets things done quickly | ينجز الأمور بسرعة |
+| 4467 | AI-draft | High energy and drive | طاقة واندفاع عاليان |
+| 4468 | AI-draft | Can become impatient with slower processes | قد ينفد صبره مع العمليات البطيئة |
+| 4469 | AI-draft | May react too quickly without reflection | قد يتفاعل بسرعة دون تروٍّ |
+| 4470 | AI-draft | Risk of burnout from constant activity | خطر الإنهاك من النشاط الدائم |
+| 4471 | AI-draft | Can overlook details in rush to complete | قد يغفل التفاصيل في عجلته للإنجاز |
+| 4472 | AI-draft | May struggle with repetitive tasks | قد يجد صعوبة في المهامّ المتكرّرة |
+| 4473 | AI-draft | Take short breaks to cool down | خذ استراحات قصيرة لتهدأ |
+| 4474 | AI-draft | Schedule downtime for rest | خصّص وقتًا للراحة |
+| 4475 | AI-draft | Sports training and coaching | التدريب الرياضي |
+| 4476 | AI-draft | Event management | إدارة الفعاليات |
+| 4477 | AI-draft | Slow-paced environments with little variety | البيئات البطيئة قليلة التنوّع |
+| 4478 | AI-draft | Roles requiring extreme patience and detailed precision | الأدوار التي تتطلّب صبرًا شديدًا ودقّة مفصّلة |
+| 4479 | AI-draft | Fire types thrive in dynamic, fast-paced environments where they can lead, initiate, and see quick results. | يزدهر أصحاب النار في البيئات الحيوية السريعة التي يقودون فيها ويبادرون ويرون نتائج سريعة. |
+| 4480 | AI-draft | Cold & Wet | بارد رطب |
+| 4481 | AI-draft | Emotional and intuitive | عاطفي حدسي |
+| 4482 | AI-draft | Patient and supportive | صبور داعم |
+| 4483 | AI-draft | Caring and empathetic | راعٍ متعاطف |
+| 4484 | AI-draft | Sensitive to surroundings | حسّاس لمحيطه |
+| 4485 | AI-draft | Patient and persistent | صبور مثابر |
+| 4486 | AI-draft | Creative and imaginative | مبدع واسع الخيال |
+| 4487 | AI-draft | Can absorb negativity from others | قد يمتصّ سلبية الآخرين |
+| 4488 | AI-draft | May overthink and get stuck in emotions | قد يفرط في التفكير ويعلق في مشاعره |
+| 4489 | AI-draft | Risk of taking on too many others' problems | خطر تحمّل مشكلات الآخرين أكثر من اللازم |
+| 4490 | AI-draft | Can become drained in harsh environments | قد يُستنزف في البيئات القاسية |
+| 4491 | AI-draft | Set healthy boundaries with others | ضع حدودًا صحّية مع الآخرين |
+| 4492 | AI-draft | Create calm, peaceful spaces | اصنع مساحات هادئة مطمئنّة |
+| 4493 | AI-draft | Practice saying no when needed | تدرّب على قول لا عند الحاجة |
+| 4494 | AI-draft | Avoid absorbing others' emotions | تجنّب امتصاص مشاعر الآخرين |
+| 4495 | AI-draft | Healthcare and nursing | الرعاية الصحّية والتمريض |
+| 4496 | AI-draft | Teaching and education | التعليم والتربية |
+| 4497 | AI-draft | Counseling and therapy | الإرشاد والعلاج النفسي |
+| 4498 | AI-draft | UX research and design | بحوث تجربة المستخدم وتصميمها |
+| 4499 | AI-draft | Childcare and early education | رعاية الأطفال والتعليم المبكر |
+| 4500 | AI-draft | HR and employee wellbeing | الموارد البشرية ورفاه الموظّفين |
+| 4501 | AI-draft | Aggressive, cutthroat workplaces | أماكن العمل العدوانية الشرسة |
+| 4502 | AI-draft | Roles with constant conflict and confrontation | الأدوار ذات الصراع والمواجهة الدائمين |
+| 4503 | AI-draft | Water types excel in nurturing, supportive roles where empathy and patience are valued. | يتفوّق أصحاب الماء في أدوار الرعاية والسند حيث يُقدَّر التعاطف والصبر. |
+| 4504 | AI-draft | Curious and talkative | فضولي كثير الكلام |
+| 4505 | AI-draft | Communicative and social | تواصلي اجتماعي |
+| 4506 | AI-draft | Loves learning and ideas | يحبّ التعلّم والأفكار |
+| 4507 | AI-draft | Adaptable and flexible | متكيّف مرن |
+| 4508 | AI-draft | Excellent communicator | متواصل ممتاز |
+| 4509 | AI-draft | Fast learner and adapter | سريع التعلّم والتكيّف |
+| 4510 | AI-draft | Creative problem solver | مبدع في حلّ المشكلات |
+| 4511 | AI-draft | Thrives in social settings | يزدهر في الأجواء الاجتماعية |
+| 4512 | AI-draft | Can become scattered or unfocused | قد يتشتّت أو يفقد التركيز |
+| 4513 | AI-draft | May start many things without finishing | قد يبدأ أشياء كثيرة ولا يتمّها |
+| 4514 | AI-draft | Risk of anxiety from overthinking | خطر القلق من فرط التفكير |
+| 4515 | AI-draft | May struggle with routine and structure | قد يجد صعوبة في الروتين والتنظيم |
+| 4516 | AI-draft | Practice grounding activities | مارس أنشطة التجذّر |
+| 4517 | AI-draft | Data and business analysis | تحليل البيانات والأعمال |
+| 4518 | AI-draft | Writing and journalism | الكتابة والصحافة |
+| 4519 | AI-draft | Content creation and blogging | صناعة المحتوى والتدوين |
+| 4520 | AI-draft | Design and creative services | التصميم والخدمات الإبداعية |
+| 4521 | AI-draft | Teaching and training | التعليم والتدريب |
+| 4522 | AI-draft | Highly repetitive, non-creative tasks | المهامّ المتكرّرة غير الإبداعية |
+| 4523 | AI-draft | Environments with zero flexibility or variety | البيئات الخالية من المرونة أو التنوّع |
+| 4524 | AI-draft | Air types thrive in dynamic, communicative roles that value ideas, learning, and connection. | يزدهر أصحاب الهواء في الأدوار الحيوية التواصلية التي تقدّر الأفكار والتعلّم والتواصل. |
+| 4525 | AI-draft | Grounded and stable | متجذّر مستقرّ |
+| 4526 | AI-draft | Patient and methodical | صبور منهجي |
+| 4527 | AI-draft | Practical and organized | عملي منظّم |
+| 4528 | AI-draft | Excellent follow-through | متابعة ممتازة حتى الإتمام |
+| 4529 | AI-draft | Dependable and trustworthy | موثوق أمين |
+| 4530 | AI-draft | Calm under pressure | هادئ تحت الضغط |
+| 4531 | AI-draft | May get stuck in routine or comfort zone | قد يعلق في الروتين أو منطقة الراحة |
+| 4532 | AI-draft | Risk of becoming too rigid | خطر التصلّب المفرط |
+| 4533 | AI-draft | May need extra motivation to start | قد يحتاج إلى دافع إضافي للبدء |
+| 4534 | AI-draft | Mix routine with variety | امزج الروتين بالتنوّع |
+| 4535 | AI-draft | Set gentle goals for change | ضع أهدافًا لطيفة للتغيير |
+| 4536 | AI-draft | Accounting and finance operations | عمليات المحاسبة والمالية |
+| 4537 | AI-draft | HR operations and administration | عمليات الموارد البشرية والإدارة |
+| 4538 | AI-draft | Skilled trades (carpentry, plumbing, electrical) | الحِرف الماهرة (النجارة، السباكة، الكهرباء) |
+| 4539 | AI-draft | Archive management and documentation | إدارة الأرشيف والتوثيق |
+| 4540 | AI-draft | Chaotic, unstructured early-stage startups | الشركات الناشئة الفوضوية غير المنظّمة |
+| 4541 | AI-draft | Roles requiring constant rapid change | الأدوار التي تتطلّب تغيّرًا سريعًا دائمًا |
+| 4542 | AI-draft | Earth types excel in structured, stable environments where reliability and thoroughness are valued. | يتفوّق أصحاب التراب في البيئات المنظّمة المستقرّة حيث تُقدَّر الموثوقية والإتقان. |
+| 4543 | AI-draft | The Ram - Initiative and new beginnings | الحمل - المبادرة والبدايات الجديدة |
+| 4544 | AI-draft | Spring Equinox | الاعتدال الربيعي |
+| 4545 | AI-draft | The Bull - Stability and material mastery | الثور - الثبات وإتقان المادة |
+| 4546 | AI-draft | Patience, perseverance, groundedness | الصبر والمثابرة والتجذّر |
+| 4547 | AI-draft | The Twins - Duality and communication | الجوزاء - الثنائية والتواصل |
+| 4548 | AI-draft | The Crab - Protection and nurturing | السرطان - الحماية والرعاية |
+| 4549 | AI-draft | Summer Solstice | الانقلاب الصيفي |
+| 4550 | AI-draft | Nobility, generosity, radiance | النُّبل والكرم والإشراق |
+| 4551 | AI-draft | The Maiden - Purity and service | السنبلة - الطهارة والخدمة |
+| 4552 | AI-draft | The Scales - Balance and harmony | الميزان - التوازن والانسجام |
+| 4553 | AI-draft | The Archer - Quest for truth and expansion | القوس - طلب الحقّ والاتساع |
+| 4554 | AI-draft | Wisdom-seeking, optimism, faith | طلب الحكمة والتفاؤل والإيمان |
+| 4555 | AI-draft | Winter Solstice | الانقلاب الشتوي |
+| 4556 | AI-draft | The Water-Bearer - Innovation and community | الدلو - الابتكار والمجتمع |
+| 4557 | AI-draft | The Fish - Transcendence and compassion | الحوت - السموّ والرحمة |
+| 4558 | AI-draft | Mysticism, empathy, dissolution of ego | التصوّف والتعاطف وفناء الأنا |
+| 4559 | AI-draft | Mutable water, completing the cycle in divine unity | ماء ذو جسدين يُتمّ الدورة في التوحيد |
+| 4560 | AI-draft | Divine radiance, leadership, vitality, nobility | الإشراق والقيادة والحيوية والنُّبل |
+| 4561 | AI-draft | Al-Nūr (The Light) | النور |
+| 4562 | AI-draft | At sunrise or solar noon | عند الشروق أو الزوال |
+| 4563 | AI-draft | Masculine, diurnal, benefic | مذكّر، نهاري، سعد |
+| 4564 | AI-draft | Rulership, authority, life force | الحكم والسلطة وقوة الحياة |
+| 4565 | AI-draft | Kings, fathers, spiritual leaders | الملوك والآباء والقادة الروحيون |
+| 4566 | AI-draft | Receptivity, intuition, emotional depth, nurturing | التلقّي والحدس والعمق العاطفي والرعاية |
+| 4567 | AI-draft | Feminine, nocturnal, benefic | مؤنّث، ليلي، سعد |
+| 4568 | AI-draft | Emotions, cycles, subconscious | العواطف والدورات والباطن |
+| 4569 | AI-draft | Mothers, common people, the soul | الأمّهات وعامّة الناس والروح |
+| 4570 | AI-draft | Iron | الحديد |
+| 4571 | AI-draft | Hot & Dry (Extreme) | حارّ يابس (شديد) |
+| 4572 | AI-draft | Masculine, nocturnal, malefic (transformative) | مذكّر، ليلي، نحس (محوِّل) |
+| 4573 | AI-draft | Quicksilver (Mercury) | الزئبق |
+| 4574 | AI-draft | Variable (adapts to neighbors) | متغيّر (يتكيّف مع ما يجاوره) |
+| 4575 | AI-draft | Knowledge, communication, intellect, sacred writing | العلم والتواصل والعقل والكتابة المقدّسة |
+| 4576 | AI-draft | Wednesday mornings, ideal for study | صباح الأربعاء، مثالي للدراسة |
+| 4577 | AI-draft | Neutral, convertible, benefic when well-placed | محايد ممتزج، سعد إذا حسن موضعه |
+| 4578 | AI-draft | Scholars, merchants, scribes, students | العلماء والتجّار والكتّاب والطلاب |
+| 4579 | AI-draft | Tin | القصدير |
+| 4580 | AI-draft | Hot & Moist (Moderate) | حارّ رطب (معتدل) |
+| 4581 | AI-draft | Wisdom, expansion, generosity, divine grace | الحكمة والاتساع والكرم والفضل |
+| 4582 | AI-draft | Thursday before sunset, especially for blessings | الخميس قبل الغروب، لا سيما للبركات |
+| 4583 | AI-draft | Masculine, diurnal, benefic (great fortune) | مذكّر، نهاري، سعد (السعد الأكبر) |
+| 4584 | AI-draft | Copper | النحاس |
+| 4585 | AI-draft | Cold & Moist (Moderate) | بارد رطب (معتدل) |
+| 4586 | AI-draft | Beauty, harmony, love, divine attraction | الجمال والانسجام والمحبّة والجاذبية |
+| 4587 | AI-draft | Cold & Dry (Extreme) | بارد يابس (شديد) |
+| 4588 | AI-draft | Discipline, patience, divine wisdom through trials | الانضباط والصبر والحكمة عبر الابتلاء |
+| 4589 | AI-draft | Saturday evenings, for patience and endurance | مساء السبت، للصبر والتحمّل |
+| 4590 | AI-draft | Masculine, diurnal, malefic (teaching through difficulty) | مذكّر، نهاري، نحس (يعلّم بالشدّة) |
+| 4591 | AI-draft | Time, karma, structure, limitations | الزمن والجزاء والبنية والحدود |
+| 4592 | AI-draft | Elders, ascetics, those who endure | الشيوخ والزهّاد وأهل الصبر |
+| 4593 | AI-draft | The Initiator (Al-Mubtadiʾ) | المبتدئ |
+| 4594 | AI-draft | Tawbah (Repentance) | التوبة |
+| 4595 | AI-draft | Pioneering spirit | روح الريادة |
+| 4596 | AI-draft | Originality | الأصالة |
+| 4597 | AI-draft | Overcoming ego (nafs) | مجاهدة النفس |
+| 4598 | AI-draft | To lead with integrity and inspire others to their own path | أن تقود بنزاهة وتُلهم الآخرين طريقهم |
+| 4599 | AI-draft | The Peacemaker (Al-Muṣāliḥ) | المصالح |
+| 4600 | AI-draft | Wara' (Scrupulousness) | الورع |
+| 4601 | AI-draft | Indecision | التردّد |
+| 4602 | AI-draft | Hypersensitivity | فرط الحساسية |
+| 4603 | AI-draft | Passivity | السلبية |
+| 4604 | AI-draft | The Creator (Al-Khallāq) | الخلّاق |
+| 4605 | AI-draft | Zuhd (Asceticism) | الزهد |
+| 4606 | AI-draft | Joy | الفرح |
+| 4607 | AI-draft | Scattered talents | مواهب مبعثرة |
+| 4608 | AI-draft | Difficulty completing projects | صعوبة إتمام المشاريع |
+| 4609 | AI-draft | To express oneself freely and bring beauty to the world | أن تعبّر عن نفسك بحرية وتجلب الجمال إلى العالم |
+| 4610 | AI-draft | The Builder (Al-Bānī) | الباني |
+| 4611 | AI-draft | Sabr (Patience) | الصبر |
+| 4612 | AI-draft | Dullness | الفتور |
+| 4613 | AI-draft | To create lasting systems that serve humanity | أن تقيم أنظمة دائمة تخدم الناس |
+| 4614 | AI-draft | The Freedom Seeker (Al-Ḥurr) | طالب الحرية (الحرّ) |
+| 4615 | AI-draft | Tawakkul (Trust) | التوكّل |
+| 4616 | AI-draft | Versatility | تعدّد المواهب |
+| 4617 | AI-draft | Restlessness | القلق |
+| 4618 | AI-draft | Irresponsibility | عدم المسؤولية |
+| 4619 | AI-draft | Escapism | الهروب |
+| 4620 | AI-draft | Agitation | الاضطراب |
+| 4621 | AI-draft | To teach adaptability and embrace divine will | أن تعلّم التكيّف والرضا بقضاء الله |
+| 4622 | AI-draft | Freedom to experience life fully and authentically | حرية عيش الحياة كاملة بصدق |
+| 4623 | AI-draft | The Nurturer (Al-Rāʿī) | الراعي |
+| 4624 | AI-draft | Meddling | التدخّل |
+| 4625 | AI-draft | Controlling tendencies | الميل إلى التحكّم |
+| 4626 | AI-draft | To heal and harmonize through compassionate service | أن تشفي وتؤلّف بالخدمة الرحيمة |
+| 4627 | AI-draft | The Seeker (Al-Ṭālib) | الطالب |
+| 4628 | AI-draft | Neptune (Spiritual) / Moon (Traditional) | نبتون (روحي) / القمر (تقليدي) |
+| 4629 | AI-draft | Tafakkur (Contemplation) | التفكّر |
+| 4630 | AI-draft | Spirituality | الروحانية |
+| 4631 | AI-draft | Introspection | محاسبة النفس |
+| 4632 | AI-draft | Discernment | التمييز |
+| 4633 | AI-draft | Skepticism | الشكّ |
+| 4634 | AI-draft | Moodiness | تقلّب المزاج |
+| 4635 | AI-draft | To uncover divine mysteries and teach spiritual truths | أن تكشف الأسرار وتعلّم الحقائق الروحية |
+| 4636 | AI-draft | To understand the deeper mysteries of existence | أن تفهم أسرار الوجود الأعمق |
+| 4637 | AI-draft | The Master (Al-Sayyid) | السيّد |
+| 4638 | AI-draft | Abundance | الوفرة |
+| 4639 | AI-draft | Imbalanced power | اختلال القوة |
+| 4640 | AI-draft | Materialism | المادية |
+| 4641 | AI-draft | Hardness | القسوة |
+| 4642 | AI-draft | Insensitivity | قلّة الإحساس |
+| 4643 | AI-draft | To master material and spiritual realms | أن تُتقن عالمي المادة والروح |
+| 4644 | AI-draft | The Humanitarian (Al-Insānī) | الإنساني |
+| 4645 | AI-draft | Universality | الشمول |
+| 4646 | AI-draft | Selflessness | الإيثار |
+| 4647 | AI-draft | Accepting endings | تقبّل الخواتيم |
+| 4648 | AI-draft | Impersonal distance | البُعد غير الشخصي |
+| 4649 | AI-draft | To complete cycles and serve the collective | أن تُتمّ الدورات وتخدم الجماعة |
+| 4650 | AI-draft | The Illuminator (Al-Munīr) | المنير |
+| 4651 | AI-draft | Kashf (Unveiling) | الكشف |
+| 4652 | AI-draft | Spiritual insight | البصيرة الروحية |
+| 4653 | AI-draft | Charisma | الجاذبية |
+| 4654 | AI-draft | To illuminate the path for others through spiritual wisdom | أن تنير الطريق للآخرين بالحكمة الروحية |
+| 4655 | AI-draft | The Master Builder (Al-Muhandis al-Aʿẓam) | البنّاء الأعظم |
+| 4656 | AI-draft | Fanāʾ (Annihilation in Divine) | الفناء |
+| 4657 | AI-draft | Visionary power | قوة الرؤية |
+| 4658 | AI-draft | Large-scale impact | أثر واسع النطاق |
+| 4659 | AI-draft | To manifest divine vision into physical reality | أن تحوّل الرؤية إلى واقع ملموس |
+| 4660 | AI-draft | The Master Teacher (Al-Muʿallim al-Akbar) | المعلّم الأكبر |
+| 4661 | AI-draft | Baqāʾ (Remaining in Divine) | البقاء |
+| 4662 | AI-draft | Universal love | المحبّة الشاملة |
+| 4663 | AI-draft | Embodied wisdom | الحكمة المتجسّدة |
+| 4664 | AI-draft | To heal and guide humanity toward unity with the Divine | أن تشفي الناس وترشدهم إلى التوحيد |
+| 4665 | AI-draft | Enhanced Life Path Analysis | تحليل مسار الحياة الموسَّع |
+| 4666 | AI-draft | Your Core Life Purpose | غاية حياتك الأساسية |
+| 4667 | AI-draft | Your Core Path | مسارك الأساسي |
+| 4668 | AI-draft | Your Inner Desires | رغباتك الباطنة |
+| 4669 | AI-draft | What truly motivates and fulfills you deep down | ما يحرّكك ويرضيك حقًّا في العمق |
+| 4670 | AI-draft | What Fulfills You | ما يرضيك |
+| 4671 | AI-draft | Your Outer Self | ذاتك الظاهرة |
+| 4672 | AI-draft | Your Purpose | غايتك |
+| 4673 | AI-draft | Power Number | عدد القوة |
+| 4674 | AI-draft | Numbers 11, 22, and 33 carry special spiritual significance | للأعداد 11 و22 و33 دلالة روحية خاصّة |
+| 4675 | AI-draft | Number Colors & Meanings | ألوان الأعداد ومعانيها |
+| 4676 | AI-draft | Balance & Partnership | التوازن والشراكة |
+| 4677 | AI-draft | Creativity & Expression | الإبداع والتعبير |
+| 4678 | AI-draft | Wisdom & Spirituality | الحكمة والروحانية |
+| 4679 | AI-draft | Power & Success | القوة والنجاح |
+| 4680 | AI-draft | Completion & Compassion | الإتمام والرحمة |
+| 4681 | AI-draft | Intuition & Illumination | الحدس والإنارة |
+| 4682 | AI-draft | Life Path Interpretation | تفسير مسار الحياة |
+| 4683 | AI-draft | Synthesis & Integration | التركيب والتكامل |
+| 4684 | AI-draft | How It All Fits Together | كيف يتكامل كل شيء |
+| 4685 | AI-draft | Your Current Life Chapter | فصل حياتك الحالي |
+| 4686 | AI-draft | The spiritual theme of this period in your life | الموضوع الروحي لهذه المرحلة من حياتك |
+| 4687 | AI-draft | What Truly Fulfills You | ما يرضيك حقًّا |
+| 4688 | AI-draft | Your Spiritual Connection | صلتك الروحية |
+| 4689 | AI-draft | Pinnacles & Challenges | القمم والتحدّيات |
+| 4690 | AI-draft | Life Stages & Turning Points | مراحل الحياة ونقاط التحوّل |
+| 4691 | AI-draft | Peak of capability and establishment | ذروة القدرة والاستقرار |
+| 4692 | AI-draft | Wisdom (Ḥikmah) | الحكمة |
+| 4693 | AI-draft | Integration of experience into understanding | تحويل التجربة إلى فهم |
+| 4694 | AI-draft | Service (Khidmah) | الخدمة |
+| 4695 | AI-draft | Contribution to family and community | الإسهام في الأسرة والمجتمع |
+| 4696 | AI-draft | Creating lasting impact and inheritance | صنع أثر وإرث باقيين |
+| 4697 | AI-draft | Transcendence and spiritual elevation | السموّ والارتقاء الروحي |
+| 4698 | AI-draft | Wara' | الورع |
+| 4699 | AI-draft | Sabr | الصبر |
+| 4700 | AI-draft | Trust in Divine | التوكّل على الله |
+| 4701 | AI-draft | Rida | الرضا |
+| 4702 | AI-draft | Contentment | القناعة |
+| 4703 | AI-draft | Tafakkur | التفكّر |
+| 4704 | AI-draft | Muraqabah | المراقبة |
+| 4705 | AI-draft | Watchfulness | اليقظة |
+| 4706 | AI-draft | Mahabba | المحبّة |
+| 4707 | AI-draft | Neptune | نبتون |
+| 4708 | AI-draft | Divine Illumination, Clarity, Guidance | الإنارة والوضوح والهداية |
+| 4709 | AI-draft | Reciting An-Nūr brings clarity to the heart and illuminates the path ahead. The Sun hour channels divine light. | ذكر «يا نور» يجلي القلب وينير الطريق. وساعة الشمس تحمل معنى النور. |
+| 4710 | ✅ reviewed | Surah Ash-Shams 91:1 | سورة الشمس، الآية 1 |
+| 4711 | AI-draft | Allah takes an oath by the sun, highlighting its role as a source of divine light and guidance in creation. | أقسم الله بالشمس، إبرازًا لدورها مصدرًا للنور والهداية في الخلق. |
+| 4712 | AI-draft | How can you illuminate the path for others today? | كيف تنير الطريق للآخرين اليوم؟ |
+| 4713 | AI-draft | The Sun represents the divine light of certainty (yaqīn) that dispels all darkness of doubt. | تمثّل الشمس نور اليقين الذي يبدّد ظلمات الشكّ. |
+| 4714 | AI-draft | Recite An-Nūr (100x) seeking clarity. Make important decisions with confidence. | اذكر «يا نور» (100 مرّة) طالبًا الوضوح، واتّخذ قراراتك المهمّة بثقة. |
+| 4715 | AI-draft | Gentle Grace, Subtlety, Inner Wisdom | اللطف والرقّة والحكمة الباطنة |
+| 4716 | AI-draft | Al-Laṭīf opens subtle spiritual perception and emotional wisdom. The Moon hour nurtures receptivity. | اسم اللطيف يفتح الإدراك الروحي اللطيف والحكمة العاطفية. وساعة القمر تنمّي التلقّي. |
+| 4717 | AI-draft | Surah Ya-Sin 36:39 | سورة يس 36:39 |
+| 4718 | AI-draft | The lunar phases teach us about divine timing, cycles, and the wisdom of gradual change. | تعلّمنا أطوار القمر التوقيت الإلهي والدورات وحكمة التغيّر التدريجي. |
+| 4719 | AI-draft | What phase of life are you in? What needs to grow or release? | في أي طور من الحياة أنت؟ ما الذي ينبغي أن ينمو أو يُترك؟ |
+| 4720 | AI-draft | The Moon governs the realm of the soul (nafs) and teaches the wisdom of receptivity and emotional intelligence. | يحكم القمر عالم النفس ويعلّم حكمة التلقّي والذكاء العاطفي. |
+| 4721 | AI-draft | Emotional healing, intuition, reflection, nurturing relationships | شفاء النفس، الحدس، التأمّل، رعاية العلاقات |
+| 4722 | AI-draft | Recite Al-Laṭīf (129x) for gentle guidance. Practice deep listening and empathy. | اذكر «يا لطيف» (129 مرّة) طلبًا للهداية اللطيفة، وتدرّب على الإصغاء العميق والتعاطف. |
+| 4723 | AI-draft | Avoid emotional overwhelm. Balance feelings with wisdom (ḥikma). | تجنّب الإرهاق العاطفي، ووازن المشاعر بالحكمة. |
+| 4724 | AI-draft | Divine Knowledge, Communication, Mental Clarity | العلم والتواصل وصفاء الذهن |
+| 4725 | AI-draft | Al-ʿAlīm enhances reception of divine knowledge and clear communication. Mercury hour opens the mind. | اسم العليم يعين على تلقّي العلم ووضوح التواصل. وساعة عطارد تفتح الذهن. |
+| 4726 | AI-draft | Surah Al-Baqarah 2:269 | سورة البقرة 2:269 |
+| 4727 | AI-draft | Mercury hours are blessed for seeking divine wisdom (ḥikma) through study, communication, and learning. | ساعات عطارد مباركة لطلب الحكمة بالدراسة والتواصل والتعلّم. |
+| 4728 | AI-draft | What knowledge is calling to you? How will you use it for good? | أي علم يدعوك؟ وكيف تستعمله في الخير؟ |
+| 4729 | AI-draft | Mercury governs the pen and tongue - the instruments of knowledge transmission. Use them with truth (ḥaqq). | يحكم عطارد القلم واللسان — أداتي نقل العلم. فاستعملهما بالحقّ. |
+| 4730 | AI-draft | Recite Al-ʿAlīm (150x) before study. Engage in meaningful dialogue and written reflection. | اذكر «يا عليم» (150 مرّة) قبل الدراسة، وانخرط في حوار نافع وتأمّل مكتوب. |
+| 4731 | AI-draft | Avoid gossip (ghība) and empty speech. Knowledge without action is burden. | تجنّب الغيبة واللغو. فالعلم بلا عمل حِمل. |
+| 4732 | AI-draft | Divine Love, Beauty, Harmony, Abundance | المحبّة والجمال والانسجام والوفرة |
+| 4733 | AI-draft | Al-Wadūd cultivates divine love and appreciation of beauty. Venus hour opens the heart to harmony. | اسم الودود ينمّي المحبّة وتذوّق الجمال. وساعة الزهرة تفتح القلب للانسجام. |
+| 4734 | AI-draft | Surah Al-Buruj 85:14 | سورة البروج 85:14 |
+| 4735 | AI-draft | Venus reflects divine love (maḥabba) that forgives, nurtures, and creates beauty in all relationships. | تعكس الزهرة معنى المحبّة التي تغفر وترعى وتصنع الجمال في كل العلاقات. |
+| 4736 | AI-draft | Who needs your love and kindness today? How can you create beauty? | من يحتاج إلى محبّتك ولطفك اليوم؟ وكيف تصنع الجمال؟ |
+| 4737 | AI-draft | Venus teaches that true beauty (jamāl) is inseparable from goodness (iḥsān). Love without righteousness is illusion. | تعلّم الزهرة أن الجمال الحقّ لا ينفكّ عن الإحسان. والمحبّة بلا صلاح وهم. |
+| 4738 | AI-draft | Recite Al-Wadūd (20x) with a heart full of love. Create beauty and harmony in your surroundings. | اذكر «يا ودود» (20 مرّة) بقلب ممتلئ محبّة، واصنع الجمال والانسجام في محيطك. |
+| 4739 | AI-draft | Avoid vanity and superficiality. True love serves the beloved, not the self. | تجنّب الغرور والسطحية. فالمحبّة الحقّة تخدم المحبوب لا النفس. |
+| 4740 | AI-draft | Divine Strength, Courage, Decisive Action | القوة والشجاعة والعمل الحاسم |
+| 4741 | AI-draft | Al-Qawiyy provides divine strength and courage for righteous action. Mars hour empowers the will. | اسم القوي يمنح القوة والشجاعة للعمل الصالح. وساعة المريخ تقوّي الإرادة. |
+| 4742 | AI-draft | The Capable | القادر |
+| 4743 | AI-draft | Surah Al-Anfal 8:66 | سورة الأنفال 8:66 |
+| 4744 | AI-draft | Mars hours empower righteous struggle (jihād an-nafs) with divine strength when paired with patience (ṣabr). | ساعات المريخ تقوّي جهاد النفس إذا اقترنت بالصبر. |
+| 4745 | AI-draft | What challenge requires your courage today? Where must you take a stand? | أي تحدٍّ يتطلّب شجاعتك اليوم؟ وأين يجب أن تثبت؟ |
+| 4746 | AI-draft | Mars governs the spiritual warrior (mujāhid) who battles the ego, not others. True strength is self-mastery. | يحكم المريخ المجاهد الذي يجاهد نفسه لا الناس. فالقوة الحقّة ضبط النفس. |
+| 4747 | AI-draft | Traditional Islamic spiritual warfare teachings | تعاليم مجاهدة النفس في التراث الإسلامي |
+| 4748 | AI-draft | Classical Sufi tradition | التراث الصوفي الكلاسيكي |
+| 4749 | AI-draft | Overcoming obstacles, physical activity, assertiveness, protection, righteous action | تجاوز العقبات، النشاط البدني، الحزم، الحماية، العمل الصالح |
+| 4750 | AI-draft | Recite Al-Qawiyy (116x) for inner strength. Take decisive action on important matters. | اذكر «يا قوي» (116 مرّة) طلبًا للقوة الباطنة، واعمل بحسم في الأمور المهمّة. |
+| 4751 | AI-draft | Avoid aggression and anger (ghaḍab). Channel strength with wisdom and mercy. | تجنّب العدوان والغضب، ووجّه القوة بالحكمة والرحمة. |
+| 4752 | AI-draft | Divine Expansion, Generosity, Boundless Wisdom | الاتساع والكرم والحكمة الواسعة |
+| 4753 | AI-draft | Al-Wāsiʿ opens doors to divine abundance and expansive blessings. Jupiter hour brings growth. | اسم الواسع يفتح أبواب الوفرة والبركات الواسعة. وساعة المشتري تجلب النموّ. |
+| 4754 | AI-draft | Surah Al-Baqarah 2:261 | سورة البقرة 2:261 |
+| 4755 | AI-draft | Jupiter hours multiply blessings (barakah) when actions are done with generosity (karam) and pure intention. | ساعات المشتري تضاعف البركة إذا كانت الأعمال بكرم ونيّة خالصة. |
+| 4756 | AI-draft | What can you expand with generosity? Where should growth occur? | ما الذي يمكنك توسيعه بالكرم؟ وأين ينبغي أن يكون النموّ؟ |
+| 4757 | AI-draft | Jupiter represents divine generosity that knows no bounds. Give freely, for expansion comes through service. | يمثّل المشتري معنى الكرم الذي لا حدّ له. فأعطِ بسخاء، فالسعة تأتي بالخدمة. |
+| 4758 | AI-draft | Classical Islamic wisdom on abundance | الحكمة الإسلامية الكلاسيكية في الوفرة |
+| 4759 | AI-draft | Traditional teaching | تعليم تقليدي |
+| 4760 | AI-draft | Recite Al-Wāsiʿ (136x) seeking expansion. Give generously in charity (ṣadaqah). | اذكر «يا واسع» (136 مرّة) طالبًا السعة، وتصدّق بسخاء. |
+| 4761 | AI-draft | Avoid overextension and false optimism. Growth must be grounded in reality. | تجنّب التمدّد المفرط والتفاؤل الزائف. فالنموّ ينبغي أن يتجذّر في الواقع. |
+| 4762 | AI-draft | Supreme Wisdom, Patience, Divine Order | الحكمة العليا والصبر والنظام الإلهي |
+| 4763 | AI-draft | Al-Ḥakīm teaches divine wisdom through patience and structure. Saturn hour brings deep understanding. | اسم الحكيم يعلّم الحكمة بالصبر والنظام. وساعة زحل تجلب الفهم العميق. |
+| 4764 | AI-draft | Surah Al-Asr 103:3 | سورة العصر 103:3 |
+| 4765 | AI-draft | What requires your patience and persistence? What wisdom is being revealed? | ما الذي يتطلّب صبرك ومثابرتك؟ وأي حكمة تتكشّف؟ |
+| 4766 | AI-draft | Saturn is the teacher of time (zamān) and consequence. It shows that all actions ripen in their season. | زحل معلّم الزمان والعاقبة، يُري أن كل عمل ينضج في أوانه. |
+| 4767 | AI-draft | Traditional Islamic understanding of time and wisdom | الفهم الإسلامي التقليدي للزمن والحكمة |
+| 4768 | AI-draft | Classical tradition | التراث الكلاسيكي |
+| 4769 | AI-draft | Recite Al-Ḥakīm (78x) seeking wisdom. Embrace discipline and commitment to worthy goals. | اذكر «يا حكيم» (78 مرّة) طالبًا الحكمة، والتزم بالانضباط في الأهداف الجديرة. |
+| 4770 | AI-draft | Avoid rigidity and fear. Structure serves growth, not limitation. | تجنّب التصلّب والخوف. فالنظام يخدم النموّ لا التقييد. |
+| 4771 | AI-draft | Exceptional alignment! Your spiritual essence ( | انسجام استثنائي! جوهرك الروحي ( |
+| 4772 | AI-draft | ruler) resonates powerfully with | الحاكم) يتناغم بقوة مع طاقة |
+| 4773 | AI-draft | energy. This is an optimal time for important spiritual work. | . وهذا وقت مناسب للعمل الروحي المهمّ. |
+| 4774 | AI-draft | Engage in deep spiritual practices | انشغل بممارسات روحية عميقة |
+| 4775 | AI-draft | Perform dhikr of your resonant Divine Name | اذكر الاسم الحسن الموافق لك |
+| 4776 | AI-draft | Initiate significant projects | ابدأ مشاريع مهمّة |
+| 4777 | AI-draft | Strong alignment. Your | انسجام قوي. جوهرك |
+| 4778 | AI-draft | essence harmonizes well with | ينسجم جيدًا مع طاقة |
+| 4779 | AI-draft | energy. Good time for spiritual growth and meaningful actions. | . وقت جيد للنموّ الروحي والأعمال ذات المعنى. |
+| 4780 | AI-draft | Pursue spiritual learning | اطلب العلم الروحي |
+| 4781 | AI-draft | Practice regular dhikr | داوِم على الذكر |
+| 4782 | AI-draft | Seek beneficial knowledge | اطلب العلم النافع |
+| 4783 | AI-draft | Moderate alignment. | انسجام معتدل. |
+| 4784 | AI-draft | Maintain regular spiritual practices | حافظ على ممارساتك الروحية المنتظمة |
+| 4785 | AI-draft | Reflect and contemplate | تأمّل وتفكّر |
+| 4786 | AI-draft | Challenging alignment. | انسجام صعب. |
+| 4787 | AI-draft | energy opposes your | طاقة تعاكس |
+| 4788 | AI-draft | essence. Time for patience, reflection, and gentle practices. | جوهرك. وقت للصبر والتأمّل والممارسات اللطيفة. |
+| 4789 | AI-draft | Practice patience and sabr | تحلَّ بالصبر |
+| 4790 | AI-draft | Gentle dhikr and remembrance | ذكر لطيف |
+| 4791 | AI-draft | Avoid major decisions | تجنّب القرارات الكبرى |
+| 4792 | AI-draft | Rest and spiritual contemplation | الراحة والتأمّل الروحي |
+| 4793 | AI-draft | Moderate Days | أيام معتدلة |
+| 4794 | AI-draft | MILESTONE | إنجاز |
+| 4795 | AI-draft | STREAK | سلسلة |
+| 4796 | AI-draft | First Step | الخطوة الأولى |
+| 4797 | AI-draft | Logged your first dhikr | سجّلت أول ذكر لك |
+| 4798 | AI-draft | 100 Dhikr | 100 ذكر |
+| 4799 | AI-draft | Completed 100 total dhikr | أتممت 100 ذكر إجمالًا |
+| 4800 | AI-draft | 1,000 Dhikr | 1,000 ذكر |
+| 4801 | AI-draft | Completed 1,000 total dhikr | أتممت 1,000 ذكر إجمالًا |
+| 4802 | AI-draft | 10,000 Dhikr | 10,000 ذكر |
+| 4803 | AI-draft | Completed 10,000 total dhikr | أتممت 10,000 ذكر إجمالًا |
+| 4804 | AI-draft | 100,000 Dhikr | 100,000 ذكر |
+| 4805 | AI-draft | Completed 100,000 total dhikr - Legendary! | أتممت 100,000 ذكر إجمالًا - ما شاء الله! |
+| 4806 | AI-draft | 3-Day Streak | سلسلة 3 أيام |
+| 4807 | AI-draft | Maintained a 3-day streak | حافظت على سلسلة 3 أيام |
+| 4808 | AI-draft | Maintained a 7-day streak | حافظت على سلسلة 7 أيام |
+| 4809 | AI-draft | Maintained a 30-day streak | حافظت على سلسلة 30 يومًا |
+| 4810 | AI-draft | Century Streak | سلسلة المئة |
+| 4811 | AI-draft | Maintained a 100-day streak - Unstoppable! | حافظت على سلسلة 100 يوم - ما شاء الله! |
+| 4812 | AI-draft | Goal Achiever | محقّق الهدف |
+| 4813 | AI-draft | Completed your first challenge goal | أتممت أول هدف تحدٍّ لك |
+| 4814 | AI-draft | Daily Champion | بطل اليوم |
+| 4815 | AI-draft | Met your daily target | بلغت هدفك اليومي |
+| 4816 | AI-draft | Active in 3+ challenges simultaneously | نشط في 3 تحدّيات أو أكثر في آن واحد |
+| 4817 | AI-draft | Ramadan Complete | إتمام رمضان |
+| 4818 | AI-draft | Completed a challenge during Ramadan | أتممت تحدّيًا في رمضان |
+| 4819 | AI-draft | All unlocked! | فُتح الكل! |
+| 4820 | AI-draft | Qurʾān, Sūrat Fāṭir 35:17 and Sūrat Ibrāhīm 14:20 | القرآن، سورة فاطر 35:17 وسورة إبراهيم 14:20 |
+| 4821 | AI-draft | I seek forgiveness from Allah | أستغفر الله |
+| 4822 | AI-draft | Allāhumma ṣalli wa sallim wa bārik ʿalā Sayyidinā Muḥammad | اللَّهُمَّ صَلِّ وَسَلِّمْ وَبَارِكْ عَلَى سَيِّدِنَا مُحَمَّدٍ |
+| 4823 | AI-draft | O Allah, send blessings, peace, and grace upon our master Muḥammad. | اللهم صلِّ وسلّم وبارك على سيّدنا محمد. |
+| 4824 | AI-draft | Fajr / Pre-dawn | الفجر / ما قبل الفجر |
+| 4825 | AI-draft | Ẓuhr / Midday | الظهر / منتصف النهار |
+| 4826 | AI-draft | Late Night / Tahajjud | آخر الليل / التهجّد |
+| 4827 | AI-draft | Istighfār is most powerful during this window | الاستغفار أعظم أثرًا في هذا الوقت |
+| 4828 | AI-draft | Ṣalawāt upon the Prophet ﷺ brings abundant blessings now | الصلاة على النبي ﷺ تجلب بركات وفيرة الآن |
+| 4829 | AI-draft | Divine Name invocation is especially blessed now | الدعاء بالأسماء الحسنى مبارك خاصّة الآن |
+| 4830 | AI-draft | 201 Holy Names practice invokes powerful rizq blessings | ممارسة الأسماء المئتين والواحد ترجى بها بركة الرزق |
+| 4831 | AI-draft | Debt Relief wird after ʿIshāʾ brings miraculous financial relief | ورد قضاء الدين بعد العشاء يُرجى به تفريج الضائقة المالية |
+| 4832 | AI-draft | Continue your personal wird during this spiritual window | واصل وردك الخاص في هذا الوقت الروحي |
+| 4833 | AI-draft | Start a dhikr challenge for this blessed time | ابدأ تحدّي ذكر لهذا الوقت المبارك |
+| 4834 | AI-draft | 🌟 My Spiritual Challenge on Asrār | 🌟 تحدّيي الروحي على أسرار |
+| 4835 | AI-draft | 🔥 Streak: | 🔥 السلسلة: |
+| 4836 | AI-draft | 🎯 Active challenges: | 🎯 التحدّيات النشطة: |
+| 4837 | AI-draft | Join me in this spiritual journey! | انضمّ إليّ في هذه الرحلة الروحية! |
+| 4838 | AI-draft | My Spiritual Challenge | تحدّيي الروحي |
+| 4839 | AI-draft | 💰✨ Miraculous Debt Relief - Powerful Wird | 💰✨ ورد قضاء الدين |
+| 4840 | AI-draft | 🌙 What seems IMPOSSIBLE for us is EFFORTLESS for Allah! | 🌙 ما يبدو مستحيلًا لنا هيّن على الله! |
+| 4841 | AI-draft | 📿 Recite with me: | 📿 اقرأ معي: |
+| 4842 | AI-draft | 🎯 Goal: | 🎯 الهدف: |
+| 4843 | AI-draft | 📊 My progress: | 📊 تقدّمي: |
+| 4844 | AI-draft | Towards financial freedom through Allah's grace... 🤲 | نحو الفرج المالي بفضل الله... 🤲 |
+| 4845 | AI-draft | 💰 Debt Relief Wird | 💰 ورد قضاء الدين |
+| 4846 | AI-draft | Join me in this spiritual challenge on Asrār! | انضمّ إليّ في هذا التحدّي الروحي على أسرار! |
+| 4847 | AI-draft | 🎉 I reached | 🎉 بلغت |
+| 4848 | AI-draft | dhikr on Asrār! | ذكرًا على أسرار! |
+| 4849 | AI-draft | A major milestone in my spiritual journey. 🌟 | محطّة كبيرة في رحلتي الروحية. 🌟 |
+| 4850 | AI-draft | Dhikr Reached! | تمّ بلوغ الذكر! |
+| 4851 | AI-draft | O Allah, send blessings upon Muhammad | اللهم صلِّ على محمد |
+| 4852 | AI-draft | O Allah, send blessings upon our Master Muhammad | اللهم صلِّ على سيّدنا محمد |
+| 4853 | AI-draft | O Allah, send blessings upon the one described with generosity and munificence | اللهم صلِّ على الموصوف بالكرم والجود |
+| 4854 | AI-draft | The most authentic ṣalawāt, taught by the Prophet ﷺ himself. Recited in every Ṣalāh. | أصحّ صيغ الصلاة على النبي، علّمها النبي ﷺ بنفسه، وتُقرأ في كل صلاة. |
+| 4855 | AI-draft | Universal · All Schools | عامّة · كل المذاهب |
+| 4856 | AI-draft | The shortest complete ṣalawāt — ideal for high-count daily dhikr sessions. | أقصر صيغة تامّة للصلاة على النبي — مثالية لجلسات الذكر اليومية الكثيرة العدد. |
+| 4857 | AI-draft | Ṣalāt al-Fātiḥ · The Opener | صلاة الفاتح |
+| 4858 | AI-draft | Central wird of the Tijāniyya order. Especially beloved in West African Sufi communities. | الورد المحوري في الطريقة التجانية، محبوبة خاصّة في المجتمعات الصوفية في غرب أفريقيا. |
+| 4859 | AI-draft | Ṣalāt al-Nāriyya · Prayer of Relief | الصلاة النارية · صلاة التفريج |
+| 4860 | AI-draft | Imam al-Qurṭubī · Also known as Ṣalāt al-Tafrijiyya | الإمام القرطبي · وتُعرف أيضًا بالصلاة التفريجية |
+| 4861 | AI-draft | Known for alleviating difficulties. Traditionally recited 11 times for relief, or 4,444 times for major opening. | معروفة بتفريج الكروب، وتُقرأ تقليديًا 11 مرّة للفرج، أو 4444 مرّة للفتح الكبير. |
+| 4862 | AI-draft | Shaykh ʿAbd al-Salām ibn Mashīsh · Shādhilī tradition | الشيخ عبد السلام بن مشيش · الطريقة الشاذلية |
+| 4863 | AI-draft | The sublime prayer of Shaykh Ibn Mashīsh, spiritual guide of Imam al-Shādhilī. Widely recited in the Maghrib and West Africa. | الصلاة الجليلة للشيخ ابن مشيش، شيخ الإمام الشاذلي، وتُقرأ كثيرًا في المغرب وغرب أفريقيا. |
+| 4864 | AI-draft | Jawharatu l-Kamāl · Jewel of Perfection | جوهرة الكمال |
+| 4865 | AI-draft | The most exalted ṣalawāt of the Tijāniyya — recited 12 times daily in the wāẓifa. Requires respectful intention and attentiveness. | أجلّ صيغ الصلاة في الطريقة التجانية — تُقرأ 12 مرّة يوميًا في الوظيفة، وتتطلّب نيّة محترمة وحضورًا. |
+| 4866 | AI-draft | Ṣalāt al-Mawṣūf · Described with Generosity | صلاة الموصوف بالكرم |
+| 4867 | AI-draft | Prophetic Blessing · Traditional | صلاة نبوية · تقليدية |
+| 4868 | AI-draft | A concise yet powerful ṣalawāt praising the Prophet ﷺ for his perfect generosity and noble character. Ideal for high-count daily practice. | صيغة موجزة قوية تثني على النبي ﷺ بكماله في الكرم ونُبل خُلقه. مثالية للممارسة اليومية الكثيرة العدد. |
+| 4869 | AI-draft | Ṣalāt Nūr al-Qalb · Light of the Heart | صلاة نور القلب |
+| 4870 | AI-draft | Traditional Blessing | صلاة تقليدية |
+| 4871 | AI-draft | Ṣallā Allāhu ʿalā Muḥammadin, aṣbaḥa lil-qalbi nūruhu, wa raḥmatan lil-ʿālamīna ẓuhūruhu. | صَلَّى اللهُ عَلَى مُحَمَّدٍ، أَصْبَحَ لِلْقَلْبِ نُورُهُ، وَرَحْمَةً لِلْعَالَمِينَ ظُهُورُهُ |
+| 4872 | AI-draft | A beautiful ṣalawāt connecting the Prophet ﷺ as light for the heart and mercy for all creation. Excellent for morning recitation. | صيغة جميلة تصل بين النبي ﷺ نورًا للقلب ورحمة للخلق. ممتازة لقراءة الصباح. |
+| 4873 | AI-draft | O Most Merciful | يا رحيم |
+| 4874 | AI-draft | O Provider | يا رزّاق |
+| 4875 | AI-draft | O Ever-Forgiving | يا غفّار |
+| 4876 | AI-draft | O Most Subtle | يا لطيف |
+| 4877 | AI-draft | O Opener | يا فتّاح |
+| 4878 | AI-draft | Cherno Moussa Yero Sy | شيرنو موسى يرو سي |
+| 4879 | AI-draft | Offer a Hadiyya | قدّم هدية |
+| 4880 | AI-draft | universal love | المحبّة الشاملة |
+| 4881 | AI-draft | Error calculating compatibility. Please try again. | خطأ في حساب التوافق. يُرجى المحاولة مجدّدًا. |
+| 4882 | AI-draft | Call upon Allah by the Name whose meaning matches your need | ادعُ الله بالاسم الذي يوافق معناه حاجتك |
+| 4883 | AI-draft | Explore general astrological compatibility from birth dates | استكشف التوافق الفلكي العام من تواريخ الميلاد |
+| 4884 | AI-draft | Calculate Another Pair | احسب ثنائيًا آخر |
+| 4885 | AI-draft | core temperament | الطبع الأساسي |
+| 4886 | AI-draft | Both share | كلاهما يشتركان في |
+| 4887 | AI-draft | — an easy, instinctive rapport. | — ألفة سهلة فطرية. |
+| 4888 | AI-draft | s can create friction without conscious effort. |  قد يصنعان احتكاكًا دون جهد واعٍ. |
+| 4889 | AI-draft | s are independent — neither reinforcing nor clashing. |  مستقلّان — لا يقوّي أحدهما الآخر ولا يتصادمان. |
+| 4890 | AI-draft | Strong mutual attraction — what each is drawn to matches how the other pursues connection. | انجذاب متبادل قوي — ما ينجذب إليه كلٌّ منكما يوافق طريقة الآخر في طلب القرب. |
+| 4891 | AI-draft | A workable attraction dynamic — different styles that can still click. | انجذاب قابل للعمل — أسلوبان مختلفان يمكن أن يتوافقا. |
+| 4892 | AI-draft | Attraction styles pull in different directions — may take deliberate effort to align. | أسلوبا الانجذاب يشدّان في اتجاهين مختلفين — قد يتطلّب التوافق جهدًا مقصودًا. |
+| 4893 | AI-draft | is classically invoked for | يُدعى به كلاسيكيًا لـ |
+| 4894 | AI-draft | — a direct match for this intention. | — موافقة مباشرة لهذه النيّة. |
+| 4895 | AI-draft | is not classically tied to | لا يرتبط كلاسيكيًا بـ |
+| 4896 | AI-draft | directly, but its meaning closely relates to it. | مباشرة، لكن معناه قريب منه. |
+| 4897 | AI-draft | 's classical function doesn't align closely with | وظيفته الكلاسيكية لا توافق كثيرًا |
+| 4898 | AI-draft | Ya Allah | يا الله |
+| 4899 | AI-draft | Ya Rahman | يا رحمن |
+| 4900 | AI-draft | Ya Raheem | يا رحيم |
+| 4901 | AI-draft | Ya Quddus | يا قدّوس |
+| 4902 | AI-draft | Ya Salam | يا سلام |
+| 4903 | AI-draft | Ya Hakim | يا حكيم |
+| 4904 | AI-draft | Ya 'Adl | يا عدل |
+| 4905 | AI-draft | Ya Bari' | يا بارئ |
+| 4906 | AI-draft | Ya Musawwir | يا مصوّر |
+| 4907 | AI-draft | Ya Rafi' | يا رافع |
+| 4908 | AI-draft | Ya Halim | يا حليم |
+| 4909 | AI-draft | Ya Basir | يا بصير |
+| 4910 | AI-draft | Ya Ghaffar | يا غفّار |
+| 4911 | AI-draft | Ya Wahhab | يا وهّاب |
+| 4912 | AI-draft | Ya Razzaq | يا رزّاق |
+| 4913 | AI-draft | Ya Qabid | يا قابض |
+| 4914 | AI-draft | Ya Latif | يا لطيف |
+| 4915 | AI-draft | Ya Jami' | يا جامع |
+| 4916 | AI-draft | Ya Khafid | يا خافض |
+| 4917 | AI-draft | Ya Muzil | يا مذلّ |
+| 4918 | AI-draft | Ya Jabbar | يا جبّار |
+| 4919 | AI-draft | Ya Qahhar | يا قهّار |
+| 4920 | AI-draft | For gentleness, subtle ease, and calming the heart. | للّطف واليسر الخفيّ وطمأنينة القلب. |
+| 4921 | AI-draft | For mercy, ease in transitions, and emotional balance. | للرحمة واليسر في التحوّلات والتوازن العاطفي. |
+| 4922 | AI-draft | For compassion and softness in family and home matters. | للرأفة واللين في شؤون الأسرة والبيت. |
+| 4923 | AI-draft | Ya Wadud | يا ودود |
+| 4924 | AI-draft | For affection, harmony, and softening of hearts. | للمودّة والانسجام وتليين القلوب. |
+| 4925 | AI-draft | Ya 'Alim | يا عليم |
+| 4926 | AI-draft | For clarity of mind and beneficial knowledge. | لصفاء الذهن والعلم النافع. |
+| 4927 | AI-draft | Ya Khabir | يا خبير |
+| 4928 | AI-draft | Thursday's planet in classical ʿIlm al-Nujūm — for remembrance, generosity, and reliance on Allah's provision. Not prediction. | كوكب الخميس في علم النجوم الكلاسيكي — للذكر والكرم والتوكّل على رزق الله. لا للتنبّؤ. |
+| 4929 | AI-draft | For provision, barakah, and trust in Allah as Provider. | للرزق والبركة والتوكّل على الله الرزّاق. |
+| 4930 | AI-draft | Ya Wasi' | يا واسع |
+| 4931 | AI-draft | For spaciousness of heart and ease in what feels tight. | لسعة الصدر واليسر فيما ضاق. |
+| 4932 | AI-draft | Ya Karim | يا كريم |
+| 4933 | AI-draft | For generosity and noble character. | للكرم ونُبل الخُلق. |
+| 4934 | AI-draft | For mindful reliance on Allah's care and guardianship. | للتوكّل الواعي على رعاية الله وحفظه. |
+| 4935 | AI-draft | For forbearance and a softened heart. | للحِلم ولين القلب. |
+| 4936 | AI-draft | Ya Muhsi | يا محصي |
+| 4937 | AI-draft | Ya Sami' | يا سميع |
+| 4938 | AI-draft | For turning to the All-Hearing in duʿāʾ. | للتوجّه إلى السميع بالدعاء. |
+| 4939 | AI-draft | For humility before the Most Great and dignity without arrogance. | للتواضع للكبير والعزّة بلا كِبر. |
+| 4940 | AI-draft | Ya 'Aziz | يا عزيز |
+| 4941 | AI-draft | For strength with honour in righteous effort. | للقوة مع العزّة في السعي الصالح. |
+| 4942 | AI-draft | Ya Baqi | يا باقي |
+| 4943 | AI-draft | For steadfastness and what endures of good deeds. | للثبات وما يبقى من الأعمال الصالحة. |
+| 4944 | AI-draft | Ya Sabur | يا صبور |
+| 4945 | AI-draft | For wise restraint and sound judgment. | للإمساك الحكيم وسداد الحكم. |
+| 4946 | AI-draft | For forbearance when progress feels slow. | للحِلم حين يبدو التقدّم بطيئًا. |
+| 4947 | AI-draft | Ya Matin | يا متين |
+| 4948 | AI-draft | For firmness, discipline, and steady resolve. | للثبات والانضباط ورسوخ العزم. |
+| 4949 | AI-draft | When a benefic planet (Jupiter, Venus) is in dignity and transiting your area of concern, consider it a period of openness (fatḥ). Make du'ā', begin projects, and act boldly. | حين يكون كوكب سعد (المشتري أو الزهرة) في كرامة ويعبر مجال اهتمامك، فاعدده وقت انفتاح (فتح): ادعُ، وابدأ المشاريع، واعمل بجرأة. |
+| 4950 | AI-draft | These are periods to exercise extra patience and caution in matters of health, finances, and conflicts. Double your Isti'ādhah (seeking refuge in Allah) and du'ā'. | هذه أوقات لمزيد من الصبر والحذر في الصحّة والمال والخلافات. أكثِر من الاستعاذة بالله والدعاء. |
+| 4951 | AI-draft | Thursday is the most blessed day for spiritual elevation, wealth-seeking, and expansion. Make du'ā' for rizq (sustenance). Begin long-term projects. Seek knowledge, visit scholars, and perform generous acts of sadaqah. Thursday night (eve of Friday) is especially blessed — use it for extra worship. | الخميس من أبرك الأيام للارتقاء الروحي وطلب الرزق والسعة. ادعُ بالرزق، وابدأ المشاريع الطويلة، واطلب العلم، وزُر العلماء، وتصدّق بسخاء. وليلة الجمعة مباركة خاصّة — فاغتنمها بمزيد من العبادة. |
+| 4952 | AI-draft | This is THE most important layer for marriage and long-term partnership. Here's why: • Your mother's emotional patterns shaped how you give and receive love • This layer determines if you feel "safe" together emotionally • High scores here mean you intuitively understand each other's needs • Low scores mean you'll need conscious work to meet each other's emotional needs Many couples with great surface chemistry struggle because this layer isn't harmonious. Knowing this in advance helps you prepare. | هذه أهمّ طبقة للزواج والشراكة الطويلة. ولماذا: • أنماط أمك العاطفية شكّلت طريقة عطائك للمحبّة وتلقّيها • هذه الطبقة تحدّد هل تشعران «بالأمان» العاطفي معًا • الدرجات العالية تعني أنكما تفهمان حاجات بعضكما بالفطرة • الدرجات المنخفضة تعني الحاجة إلى تعلّم عاطفي واعٍ |
+| 4953 | AI-draft | Unlocks your Ascendant/Descendant — otherwise skipped, since it needs a precise time to mean anything. | يفتح الطالع/الغارب — وإلّا يُتخطّى، لأنه يحتاج إلى وقت دقيق ليكون ذا معنى. |
+| 4954 | AI-draft | Descendant | الغارب |
+| 4955 | AI-draft | Compatibility Analysis | تحليل التوافق |
+| 4956 | AI-draft | We analyze your relationship using ancient Islamic numerology and name wisdom | نحلّل علاقتكما بعلم الأعداد الإسلامي القديم وحكمة الأسماء |
+| 4957 | AI-draft | Combined compatibility from all three analysis methods - higher is better! | التوافق المجمّع من طرق التحليل الثلاث - الأعلى أفضل! |
+| 4958 | AI-draft | Overall Quality | الجودة العامّة |
+| 4959 | AI-draft | Relationship Potential | إمكانات العلاقة |
+| 4960 | AI-draft | How naturally compatible you are based on your names and energies | مدى توافقكما الطبيعي بحسب أسمائكما وطاقاتكما |
+| 4961 | AI-draft | How your spiritual energies align and complement each other at a deep level | كيف تنسجم طاقاتكما الروحية وتتكامل في العمق |
+| 4962 | AI-draft | How We Analyzed You | كيف حلّلنا |
+| 4963 | AI-draft | Tips for Your Relationship | نصائح لعلاقتكما |
+| 4964 | AI-draft | What the different score ranges mean | معنى نطاقات الدرجات المختلفة |
+| 4965 | AI-draft | Strong natural harmony - you complement each other beautifully | انسجام طبيعي قوي - تتكاملان تكاملًا جميلًا |
+| 4966 | AI-draft | Great potential - minor adjustments will create harmony | إمكانات كبيرة - تعديلات صغيرة تصنع الانسجام |
+| 4967 | AI-draft | Requires effort - understanding and compromise are key | يتطلّب جهدًا - التفاهم والتنازل هما المفتاح |
+| 4968 | AI-draft | Needs work - focus on communication and mutual respect | يحتاج إلى عمل - ركّزا على التواصل والاحترام المتبادل |
+| 4969 | AI-draft | See how we calculated this | اعرض طريقة الحساب |
+| 4970 | AI-draft | Hide calculation details | أخفِ تفاصيل الحساب |
+| 4971 | AI-draft | Analyze Another Pair | حلّل ثنائيًا آخر |
+| 4972 | AI-draft | Passionate & Dynamic | شغوف حيوي |
+| 4973 | AI-draft | Emotional & Intuitive | عاطفي حدسي |
+| 4974 | AI-draft | Practical & Grounded | عملي متجذّر |
+| 4975 | AI-draft | Intellectuel & Social | فكري اجتماعي |
+| 4976 | AI-draft | Provision & Sustenance | الرزق والقوت |
+| 4977 | AI-draft | Rizq, livelihood, and material need | الرزق والمعيشة والحاجة المادية |
+| 4978 | AI-draft | Recovery from illness, physical or spiritual | الشفاء من المرض، بدنيًا أو روحيًا |
+| 4979 | AI-draft | Relief from Distress | تفريج الكرب |
+| 4980 | AI-draft | Anxiety, grief, or a heavy heart | القلق أو الحزن أو ثقل القلب |
+| 4981 | AI-draft | Clarity in a decision — alongside istikhāra, not instead of it | الوضوح في قرار — مع الاستخارة لا بدلًا منها |
+| 4982 | AI-draft | Marriage & Love | الزواج والمحبّة |
+| 4983 | AI-draft | Pardon | العفو |
+| 4984 | AI-draft | Repentance (tawba) and seeking pardon | التوبة وطلب العفو |
+| 4985 | AI-draft | Strength & Patience | القوة والصبر |
+| 4986 | AI-draft | Endurance through hardship | الصبر على الشدّة |
+| 4987 | AI-draft | Ease & Removing Obstacles | التيسير وإزالة العوائق |
+| 4988 | AI-draft | Opening a way through a difficult affair | فتح طريق في أمر صعب |
+| 4989 | AI-draft | Knowledge & Understanding | العلم والفهم |
+| 4990 | AI-draft | Increase in beneficial knowledge | الزيادة في العلم النافع |
+| 4991 | AI-draft | Quran 20:114 | القرآن 20:114 |
+| 4992 | AI-draft | This resonance flows naturally — practice with this Name tends to bring swift, tangible ease. A wonderful one to return to often. | هذا الرنين ينساب طبيعيًا — والممارسة بهذا الاسم تجلب غالبًا يسرًا سريعًا ملموسًا. اسم جميل للرجوع إليه كثيرًا. |
+| 4993 | AI-draft | This resonance is workable but benefits from consistency — steady, regular practice over time is what unlocks its full effect. | هذا الرنين قابل للعمل لكنه ينتفع بالمداومة — فالممارسة الثابتة المنتظمة مع الوقت هي ما يفتح أثره كاملًا. |
+| 4994 | AI-draft | This resonance calls for extra patience and discipline — approach this Name's practice with sincere intention, and consider pairing it with istighfār. | هذا الرنين يتطلّب مزيدًا من الصبر والانضباط — فأقبل على الذكر بهذا الاسم بنيّة صادقة، واقرنه بالاستغفار. |
+| 4995 | AI-draft | The opening verse, foundation of all recitation. 786 is the most famous sacred number in Islamic tradition. | الآية الأولى، أساس كل تلاوة. و786 أشهر الأعداد المميّزة في التراث الإسلامي. |
+| 4996 | AI-draft | Ya-Sin (Arabic letters) | يس (حروف عربية) |
+| 4997 | AI-draft | mysterious letters | الحروف المقطّعة |
+| 4998 | AI-draft | Ayat al-Kursi (Throne Verse) - the greatest verse for protection and divine connection. | آية الكرسي - أعظم آية للحفظ والصلة بالله. |
+| 4999 | AI-draft | ayat al-kursi | آية الكرسي |
+| 5000 | AI-draft | Surah Al-Ikhlas (Sincerity) - equals one-third of the Quran in reward. Affirms divine unity. | سورة الإخلاص - تعدل ثلث القرآن في الأجر، وتقرّر التوحيد. |
+| 5001 | AI-draft | The healing verse - affirms the Quran's power to heal spiritual and physical ailments. | آية الشفاء - تقرّر أن في القرآن شفاءً لأمراض الروح والبدن. |
+| 5002 | AI-draft | Repeated 31 times in Surah Ar-Rahman. A reminder of divine blessings and gratitude. | تتكرّر 31 مرّة في سورة الرحمن، تذكيرًا بالنِّعم والشكر. |
+| 5003 | AI-draft | A verse of comfort and reassurance about divine justice and mercy in trials. | آية طمأنينة وتسلية عن عدل الله ورحمته في الابتلاء. |
+| 5004 | AI-draft | A promise of relief after difficulty. The verse appears twice in Surah Ash-Sharh for emphasis. | وعد بالفرج بعد الشدّة، وتتكرّر الآية مرّتين في سورة الشرح للتأكيد. |
+| 5005 | AI-draft | Beginning of the verse of divine power and sovereignty. Used for seeking provision and authority. | مطلع آية القدرة والملك، يُقرأ لطلب الرزق والتمكين. |
+| 5006 | AI-draft | The prayer of the youths of the cave (Ashab al-Kahf) seeking divine mercy and guidance. | دعاء فتية الكهف طلبًا للرحمة والرشد. |
+| 5007 | AI-draft | Umar | عمر |
+| 5008 | AI-draft | Husayn | حسين |
+| 5009 | AI-draft | Zaynab | زينب |
+| 5010 | AI-draft | Sharaf | الشرف |
+| 5011 | AI-draft | Bayt | البيت |
+| 5012 | AI-draft | Muthallatha | مثلّثة |
+| 5013 | AI-draft | Wajh | الوجه |
+| 5014 | AI-draft | Musharraf | مشرَّف |
+| 5015 | AI-draft | Camphor + White Sandalwood | الكافور + الصندل الأبيض |
+| 5016 | AI-draft | For calm, receptivity, and inner quiet | للسكينة والتلقّي والهدوء الباطن |
+| 5017 | AI-draft | Yellow Sandalwood + Frankincense | الصندل الأصفر + اللبان |
+| 5018 | AI-draft | For courage and steady resolve | للشجاعة وثبات العزم |
+| 5019 | AI-draft | Mastic + Frankincense | المصطكى + اللبان |
+| 5020 | AI-draft | For abundance, expansion, and barakah | للوفرة والسعة والبركة |
+| 5021 | AI-draft | Frankincense + Liquid Storax | اللبان + الميعة السائلة |
+| 5022 | AI-draft | For grounding, patience, and steadiness | للتجذّر والصبر والثبات |
+| 5023 | AI-draft | For clarity and spiritual illumination | للوضوح والإنارة الروحية |
+| 5024 | AI-draft | For inner strength and resilience | للقوة الباطنة والجلَد |
+| 5025 | AI-draft | O All-Knowing | يا عليم |
+| 5026 | AI-draft | For clarity and beneficial knowledge | للوضوح والعلم النافع |
+| 5027 | AI-draft | For provision and barakah | للرزق والبركة |
+| 5028 | AI-draft | For harmony and softening hearts | للانسجام وتليين القلوب |
+| 5029 | AI-draft | Universal spiritual cleansing | تطهير روحي عام |
+| 5030 | AI-draft | Always beneficial, opens spiritual doors | نافع دائمًا، يفتح الأبواب الروحية |
+| 5031 | AI-draft | Excellent time for | وقت ممتاز لـ |
+| 5032 | AI-draft | Steady practice brings consistent benefit | الممارسة الثابتة تجلب نفعًا دائمًا |
+| 5033 | AI-draft | Focus on protection and istighfār | ركّز على التحصّن والاستغفار |
+| 5034 | AI-draft | Ishraq | الإشراق |
+| 5035 | AI-draft | Duha | الضحى |
+| 5036 | AI-draft | Time of divine closeness. The Prophet ﷺ said: "The two rak'ahs of Fajr are better than this world and all it contains." Seek clarity and guidance. | وقت قرب من الله. قال النبي ﷺ: «ركعتا الفجر خير من الدنيا وما فيها». فاطلب الوضوح والهداية. |
+| 5037 | AI-draft | Midday renewal. Break from worldly affairs to reconnect with the Divine. Time for gratitude and seeking provision. | تجديد منتصف النهار. انقطع عن شؤون الدنيا لتعود إلى الله. وقت للشكر وطلب الرزق. |
+| 5038 | AI-draft | Time of reflection. The Prophet ﷺ emphasized this prayer greatly. Review your day and prepare for evening with mindfulness. | وقت المراجعة. عظّم النبي ﷺ شأن هذه الصلاة. راجع يومك واستعدّ للمساء بحضور. |
+| 5039 | AI-draft | Transition from light to darkness. Time to seek forgiveness and make du'a. The Prophet ﷺ said du'a is accepted at this time. | الانتقال من النور إلى الظلمة. وقت للاستغفار والدعاء. |
+| 5040 | AI-draft | Night's serenity. Time for deep reflection and contemplation. The last prayer before sleep - end your day in remembrance. | سكينة الليل. وقت للتأمّل والتفكّر العميق. آخر صلاة قبل النوم — فاختم يومك بالذكر. |
+| 5041 | AI-draft | Use this time for good deeds, seeking knowledge, or helping others. Every moment is an opportunity for spiritual growth. | استعمل هذا الوقت في الأعمال الصالحة أو طلب العلم أو إعانة الآخرين. فكل لحظة فرصة للنموّ الروحي. |
+| 5042 | AI-draft | Excellent alignment! | انسجام ممتاز! |
+| 5043 | AI-draft | prayer resonates with | تتناغم صلاة |
+| 5044 | AI-draft | energy. This is an optimal time for spiritual work. | . وهذا وقت مناسب للعمل الروحي. |
+| 5045 | AI-draft | Prayer time adds spiritual dimension to the | وقت الصلاة يضيف بعدًا روحيًا إلى ساعة |
+| 5046 | AI-draft | hour. Combine worldly action with remembrance. | . اجمع بين العمل الدنيوي والذكر. |
+| 5047 | AI-draft | The blessed time of Tahajjud! Allah descends to the lowest heaven asking "Who is calling upon Me?" Optimal for deep du'a and spiritual connection. | وقت التهجّد المبارك! ينزل ربّنا إلى السماء الدنيا فيقول: «من يدعوني فأستجيب له؟». وقت مناسب للدعاء العميق والصلة الروحية. |
+| 5048 | AI-draft | Ishraq time! The Prophet ﷺ said this prayer has immense reward. Time of new beginnings and fresh starts. | وقت الإشراق! وقد ورد في هذه الصلاة أجر عظيم. وقت للبدايات الجديدة. |
+| 5049 | AI-draft | Duha prayer time! A Sunnah practice that brings barakah. The Prophet ﷺ called it "the prayer of the penitent." | وقت صلاة الضحى! سنّة تجلب البركة، وسمّاها النبي ﷺ «صلاة الأوّابين». |
+| 5050 | AI-draft | Geolocation not supported | تحديد الموقع غير مدعوم |
+| 5051 | AI-draft | Failed to fetch location | تعذّر جلب الموقع |
+| 5052 | AI-draft | Allah (lexicon) | الله (معجم) |
+| 5053 | AI-draft | al-Rahman (lexicon) | الرحمن (معجم) |
+| 5054 | AI-draft | Rahman (lexicon) | رحمن (معجم) |
+| 5055 | AI-draft | al-Rahim (lexicon) | الرحيم (معجم) |
+| 5056 | AI-draft | Rahim | رحيم |
+| 5057 | AI-draft | Rahim (lexicon) | رحيم (معجم) |
+| 5058 | AI-draft | al-Latif (lexicon) | اللطيف (معجم) |
+| 5059 | AI-draft | Latif | لطيف |
+| 5060 | AI-draft | Latif (lexicon) | لطيف (معجم) |
+| 5061 | AI-draft | Hayy | حيّ |
+| 5062 | AI-draft | Hayy (lexicon) | حيّ (معجم) |
+| 5063 | AI-draft | al-Hayy (lexicon) | الحيّ (معجم) |
+| 5064 | AI-draft | Qayyum | قيّوم |
+| 5065 | AI-draft | Qayyum (lexicon) | قيّوم (معجم) |
+| 5066 | AI-draft | al-Qayyum (lexicon) | القيّوم (معجم) |
+| 5067 | AI-draft | Baka | بقاء |
+| 5068 | AI-draft | Fana | فناء |
+| 5069 | AI-draft | Musa | موسى |
+| 5070 | AI-draft | Mohammed | محمد |
+| 5071 | AI-draft | Opposing Energy | طاقة معاكسة |
+| 5072 | AI-draft | The God | الله |
+| 5073 | AI-draft | The Eternal | الباقي |
+| 5074 | AI-draft | The Pure One | القدّوس |
+| 5075 | AI-draft | The Certainty | الحقّ |
+| 5076 | AI-draft | The Believer | المؤمن |
+| 5077 | AI-draft | Fard | فرض |
+| 5078 | AI-draft | The Grateful | الشكور |
+| 5079 | AI-draft | The Praised One | كثير الخصال المحمودة |
+| 5080 | AI-draft | The Most Praised | أكثر الناس حمدًا لله |
+| 5081 | AI-draft | The Praiser | الحامد لربّه |
+| 5082 | AI-draft | The Commended | الممدوح عند الله والناس |
+| 5083 | AI-draft | The Eraser (of idolatry) | الذي يمحو الله به الكفر |
+| 5084 | AI-draft | O Pure One | من الحروف المقطّعة في أوّل سورة طه |
+| 5085 | AI-draft | O Mighty One | من الحروف المقطّعة في أوّل سورة يس |
+| 5086 | AI-draft | The Purified | المطهَّر من كل دنس |
+| 5087 | AI-draft | The Master | السيّد في قومه |
+| 5088 | AI-draft | The Messenger | المرسَل من الله |
+| 5089 | AI-draft | The Prophet | المنبَّأ بالوحي |
+| 5090 | AI-draft | The Messenger of Mercy | المرسَل رحمةً للعالمين |
+| 5091 | AI-draft | The Overseer | المقدَّم على الخلق |
+| 5092 | AI-draft | The Completing | الآتي على أثر الأنبياء |
+| 5093 | AI-draft | The Messenger of Battles | المرسَل بالجهاد |
+| 5094 | AI-draft | The Messenger of Comfort | المرسَل بالراحة والتيسير |
+| 5095 | AI-draft | The Cloaked One | المتدثّر بثوبه (أوّل المدثّر) |
+| 5096 | AI-draft | The Wrapped One | المتلفّف بثوبه (أوّل المزّمّل) |
+| 5097 | AI-draft | The Servant of Allah | العبد لله |
+| 5098 | AI-draft | The Beloved of Allah | المحبوب عند الله |
+| 5099 | AI-draft | The Chosen of Allah | المصطفى المختار من الله |
+| 5100 | AI-draft | The Confidant of Allah | المناجي لربّه |
+| 5101 | AI-draft | The Speaker with Allah | المكلَّم من الله |
+| 5102 | AI-draft | Seal of the Prophets | آخر الأنبياء |
+| 5103 | AI-draft | Seal of the Messengers | آخر المرسلين |
+| 5104 | AI-draft | The Reviver | المحيي للقلوب بالهدى |
+| 5105 | AI-draft | The Rescuer | المغيث في الشدائد |
+| 5106 | AI-draft | The Reminder | المذكِّر بالله |
+| 5107 | AI-draft | The Helper | الناصر للحقّ |
+| 5108 | AI-draft | The Victorious | المؤيَّد بالنصر |
+| 5109 | AI-draft | The Prophet of Mercy | نبيّ الرحمة للخلق |
+| 5110 | AI-draft | The Prophet of Repentance | الداعي إلى التوبة |
+| 5111 | AI-draft | The Watchful Over You | الحريص على هداية أمّته |
+| 5112 | AI-draft | The Known One | المعروف بصفته |
+| 5113 | AI-draft | The Witnesser | الشاهد على أمّته |
+| 5114 | AI-draft | The Attested | المشهود له بالرسالة |
+| 5115 | AI-draft | The Glad-Tidings | المبشّر بالخير |
+| 5116 | AI-draft | The Spreader of Good News | المبشّر بالجنّة |
+| 5117 | AI-draft | The Admonisher | المحذِّر من العذاب |
+| 5118 | AI-draft | The Lantern | السراج المنير |
+| 5119 | AI-draft | The Rightly Guided | المهديّ من ربّه |
+| 5120 | AI-draft | The Illumined One | المنير للطريق |
+| 5121 | AI-draft | The Caller | الداعي إلى الله |
+| 5122 | AI-draft | The Called One | المدعوّ إلى ربّه |
+| 5123 | AI-draft | The One Responded To | المستجاب دعاؤه |
+| 5124 | AI-draft | The Gentle | البارّ اللطيف |
+| 5125 | AI-draft | The Overlooker of Sins | العافي عن الزلّات |
+| 5126 | AI-draft | The Trustworthy | المؤتمن على الوحي |
+| 5127 | AI-draft | The Evident | المبيِّن للحقّ |
+| 5128 | AI-draft | The One Hoped For | المرجوّ نفعه |
+| 5129 | AI-draft | The Connection | الواصل للرحم |
+| 5130 | AI-draft | Possessor of Power | صاحب القوّة |
+| 5131 | AI-draft | Possessor of Honor | صاحب الحرمة |
+| 5132 | AI-draft | Possessor of Firmness | صاحب المنزلة الرفيعة |
+| 5133 | AI-draft | Possessor of Might | صاحب العزّة |
+| 5134 | AI-draft | Possessor of Grace | صاحب الفضل |
+| 5135 | AI-draft | The One Obeyed | المطاع أمره |
+| 5136 | AI-draft | The Obedient | المطيع لربّه |
+| 5137 | AI-draft | The Firm Foothold | السابقة الصادقة |
+| 5138 | AI-draft | Mercy | الرحمة المهداة |
+| 5139 | AI-draft | The Redeemer | المغيث للخلق |
+| 5140 | AI-draft | The Favor of Allah | النعمة من الله |
+| 5141 | AI-draft | The Gift of Allah | الهدية من الله |
+| 5142 | AI-draft | The Trusty Handhold | العروة الوثقى في الدين |
+| 5143 | AI-draft | The Path of Allah | الطريق إلى الله |
+| 5144 | AI-draft | The Straight Path | الطريق القويم |
+| 5145 | AI-draft | The Remembrance of Allah | المذكِّر بالله |
+| 5146 | AI-draft | The Sword of Allah | المسلول على الباطل |
+| 5147 | AI-draft | The Party of Allah | إمام جند الحقّ |
+| 5148 | AI-draft | The Piercing Star | النجم المضيء |
+| 5149 | AI-draft | The Chosen One | المختار الصافي |
+| 5150 | AI-draft | The Singled-Out | المجتبى من الخلق |
+| 5151 | AI-draft | The Selected One | المنتقى المختار |
+| 5152 | AI-draft | The Unlettered | الذي لم يقرأ ولم يكتب |
+| 5153 | AI-draft | The Chosen | المختار من الله |
+| 5154 | AI-draft | Allah's Worker | الأجير لله |
+| 5155 | AI-draft | The Compelling One | المصلح الجابر |
+| 5156 | AI-draft | Father of Qāsim | كنيته بابنه القاسم |
+| 5157 | AI-draft | Father of Ṭāhir | كنيته بابنه الطاهر |
+| 5158 | AI-draft | Father of Ṭayyib | كنيته بابنه الطيّب |
+| 5159 | AI-draft | Father of Ibrāhīm | كنيته بابنه إبراهيم |
+| 5160 | AI-draft | Whose Intercession is Accepted | المقبول شفاعته |
+| 5161 | AI-draft | The Interceder | الشافع لأمّته |
+| 5162 | AI-draft | The Righteous | الصالح التقيّ |
+| 5163 | AI-draft | The Truthful | الصادق في قوله |
+| 5164 | AI-draft | The Confirmer | المصدِّق لمن قبله |
+| 5165 | AI-draft | Sincerity | الصدق |
+| 5166 | AI-draft | Master of Messengers | إمام المرسلين |
+| 5167 | AI-draft | Leader of the God-Fearing | إمام أهل التقوى |
+| 5168 | AI-draft | Guide of the Bright Shining Ones | قائد أهل الوضوء يوم القيامة |
+| 5169 | AI-draft | Friend of the Merciful | خليل الله |
+| 5170 | AI-draft | The Pious | البارّ التقيّ |
+| 5171 | AI-draft | The Venerated | الموقَّر المبجَّل |
+| 5172 | AI-draft | The Eminent | ذو الجاه |
+| 5173 | AI-draft | The Counselor | الناصح لأمّته |
+| 5174 | AI-draft | The Advocate | القائم بالأمر |
+| 5175 | AI-draft | The Reliant on Allah | المتوكّل على الله |
+| 5176 | AI-draft | The Guarantor | الكفيل بالعهد |
+| 5177 | AI-draft | Establisher of the Way | المقيم للسنّة |
+| 5178 | AI-draft | The Sacred | المطهَّر المقدّس |
+| 5179 | AI-draft | The Holy Spirit | المؤيَّد بروح القدس |
+| 5180 | AI-draft | The Spirit of Truth | روح الحقّ |
+| 5181 | AI-draft | The Spirit of Justice | روح العدل |
+| 5182 | AI-draft | The Qualified | الكافي |
+| 5183 | AI-draft | The Broad-Shouldered One | المكتفي بالله |
+| 5184 | AI-draft | The Proclaimer | البالغ رسالته |
+| 5185 | AI-draft | The Informer | المبلِّغ رسالة ربّه |
+| 5186 | AI-draft | The Inseparable Friend | الواصل لربّه |
+| 5187 | AI-draft | The One Bound to Allah | الموصول بالله |
+| 5188 | AI-draft | The Foremost | السابق إلى الخير |
+| 5189 | AI-draft | The Guided | المهتدي بالله |
+| 5190 | AI-draft | The Mighty | العزيز |
+| 5191 | AI-draft | The Outstanding | الفاضل |
+| 5192 | AI-draft | The Favoured | المفضَّل على العالمين |
+| 5193 | AI-draft | The Key to Mercy | باب الرحمة |
+| 5194 | AI-draft | Teacher of Faith | علامة الإيمان |
+| 5195 | AI-draft | Teacher of Certainty | علامة اليقين |
+| 5196 | AI-draft | Guide to Good Things | الدالّ على الخير |
+| 5197 | AI-draft | Verifier of Good Deeds | المصحِّح للحسنات |
+| 5198 | AI-draft | Remover of Obstacles | المقيل للعثرات |
+| 5199 | AI-draft | Pardoner of Sins | الصافح عن الزلّات |
+| 5200 | AI-draft | Possessor of Intercession | صاحب الشفاعة العظمى |
+| 5201 | AI-draft | Possessor of the Honored Station | صاحب المقام المحمود |
+| 5202 | AI-draft | Owner of the Footprint | صاحب قدم الصدق |
+| 5203 | AI-draft | Distinguished with Might | المخصوص بالعزّة |
+| 5204 | AI-draft | Distinguished with Glory | المخصوص بالمجد |
+| 5205 | AI-draft | Distinguished with Nobility | المخصوص بالشرف |
+| 5206 | AI-draft | Possessor of Closest Access | صاحب الوسيلة |
+| 5207 | AI-draft | Possessor of Pre-eminence | صاحب الفضيلة |
+| 5208 | AI-draft | Owner of the Waist-Wrap | صاحب الإزار |
+| 5209 | AI-draft | Possessor of Proof | صاحب الحجّة |
+| 5210 | AI-draft | Possessor of Authority | صاحب السلطان |
+| 5211 | AI-draft | Owner of the Robe | صاحب الرداء |
+| 5212 | AI-draft | Possessor of the Lofty Rank | صاحب الدرجة الرفيعة |
+| 5213 | AI-draft | Possessor of the Crown | صاحب التاج |
+| 5214 | AI-draft | Possessor of Forgiveness | صاحب المغفر |
+| 5215 | AI-draft | Possessor of the Flag | صاحب لواء الحمد |
+| 5216 | AI-draft | Master of the Night Journey | صاحب المعراج |
+| 5217 | AI-draft | Possessor of the Staff | صاحب القضيب |
+| 5218 | AI-draft | Owner of the Burāq | صاحب البراق |
+| 5219 | AI-draft | Owner of the Ring | صاحب خاتم النبوّة |
+| 5220 | AI-draft | Owner of the Sign | صاحب العلامة |
+| 5221 | AI-draft | Possessor of the Evidence | صاحب البرهان |
+| 5222 | AI-draft | Possessor of Evident Proof | صاحب البيان |
+| 5223 | AI-draft | The Good Communicator | فصيح اللسان |
+| 5224 | AI-draft | Purifier of the Souls | طاهر القلب |
+| 5225 | AI-draft | The Kind | الرؤوف بأمّته |
+| 5226 | AI-draft | The Mercy Giving | الرحيم بالمؤمنين |
+| 5227 | AI-draft | The One with Perfect Islam | الكامل في إسلامه |
+| 5228 | AI-draft | Master of the Two Universes | سيّد الدنيا والآخرة |
+| 5229 | AI-draft | The Spring of Bliss | ينبوع النعيم |
+| 5230 | AI-draft | The Joy of Allah | سعد من الله |
+| 5231 | AI-draft | The Joy of the Creator | سعادة للخلق |
+| 5232 | AI-draft | The Preacher to Nations | خطيب الأمم |
+| 5233 | AI-draft | The Remover of Worries | كاشف الكروب |
+| 5234 | AI-draft | The Might of the Arab | عزّ العرب |

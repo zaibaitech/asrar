@@ -5120,5 +5120,281 @@
   "batch": 3,
   "ar": "🚨 صعب جدًا",
   "note": "source key was mojibake «š¨ Very Difficult»; emoji fixed in IlmHurufPanel.tsx"
+ },
+ "After Saturn, the cycle repeats from ♄ → ♃ → ♂ → ☉ → ♀ → ☿ → ☽ → ♄...": {
+  "id": "b5-5a",
+  "batch": 5,
+  "ar": "بعد زحل تعود الدورة من جديد: ♄ ← ♃ ← ♂ ← ☉ ← ♀ ← ☿ ← ☽ ← ♄…",
+  "note": "RTL: ← instead of →"
+ },
+ "Based on your four core numbers, here's the elemental balance in your life path:": {
+  "id": "b5-E00",
+  "batch": 5,
+  "ar": "بناءً على أرقامك الأساسية الأربعة، إليك توازن العناصر في مسار حياتك:"
+ },
+ "Element Harmony": {
+  "id": "b5-E01",
+  "batch": 5,
+  "ar": "انسجام العناصر"
+ },
+ "Elemental Harmony": {
+  "id": "b5-E01",
+  "batch": 5,
+  "ar": "انسجام العناصر"
+ },
+ "Elemental harmony (": {
+  "id": "b5-E01",
+  "batch": 5,
+  "ar": "انسجام العناصر"
+ },
+ "Elemental Balance": {
+  "id": "b5-E02",
+  "batch": 5,
+  "ar": "توازن العناصر"
+ },
+ "Elemental Composition": {
+  "id": "b5-E03",
+  "batch": 5,
+  "ar": "تركيب العناصر"
+ },
+ "Elemental Composition & Balance": {
+  "id": "b5-E04",
+  "batch": 5,
+  "ar": "تركيب العناصر وتوازنها"
+ },
+ "Elemental Forces": {
+  "id": "b5-E05",
+  "batch": 5,
+  "ar": "قوى العناصر"
+ },
+ "Elemental Temperament": {
+  "id": "b5-E06",
+  "batch": 5,
+  "ar": "مزاج العناصر"
+ },
+ "🌊 Elemental Temperament": {
+  "id": "b5-E06",
+  "batch": 5,
+  "ar": "مزاج العناصر"
+ },
+ "In the Senegalese tradition of ʿIlm al-Ḥurūf, your full spiritual identity (Aṣl al-Rūḥānī) is formed from your name + your mother's name. This creates a unique numerical and elemental signature that is yours alone.": {
+  "id": "b5-E07",
+  "batch": 5,
+  "ar": "في التقليد السنغالي لعلم الحروف، تتشكل هويتك الروحية الكاملة (الأصل الروحاني) من اسمك + اسم والدتك. ويصنع ذلك بصمةً فريدة لك وحدك في الأعداد والعناصر."
+ },
+ "Major elemental conflicts. While not impossible, this pairing faces fundamental challenges that require deep commitment to overcome.": {
+  "id": "b5-E08",
+  "batch": 5,
+  "ar": "تعارضات كبيرة بين العناصر. رغم أنه ليس مستحيلًا، يواجه هذا الاقتران تحديات جوهرية تتطلب التزامًا عميقًا لتجاوزها."
+ },
+ "Marriage of Letters × The compatibility analysis between two names based on their elemental harmony. How the letters 'marry' or interact between two people.": {
+  "id": "b5-E09",
+  "batch": 5,
+  "ar": "زواج الحروف × تحليل التوافق بين اسمين بناءً على انسجام عناصرهما. كيف 'تتزوج' الحروف أو تتفاعل بين شخصين."
+ },
+ "The elemental temperaments from both of your mothers' names (calculated using Ḥadath ÷ 4 method)": {
+  "id": "b5-E10",
+  "batch": 5,
+  "ar": "أمزجة العناصر من اسمي والدتيكما (محسوبة باستخدام طريقة الحدث ÷ 4)"
+ },
+ "The elemental temperaments from both of your names (calculated using Ḥadath ÷ 4 method)": {
+  "id": "b5-E11",
+  "batch": 5,
+  "ar": "أمزجة العناصر من كلا اسميكما (محسوبة باستخدام طريقة الحدث ÷ 4)"
+ },
+ "These sacred phrases help harmonize your elemental energies:": {
+  "id": "b5-E12",
+  "batch": 5,
+  "ar": "تساعد هذه العبارات المقدسة على التوفيق بين طاقات عناصركما:"
+ },
+ "Try these activities to balance your elemental dynamics:": {
+  "id": "b5-E13",
+  "batch": 5,
+  "ar": "جرّبا هذه الأنشطة لموازنة حركية عناصركما:"
+ },
+ "Your Elemental Composition": {
+  "id": "b5-E14",
+  "batch": 5,
+  "ar": "تركيبة عناصرك"
+ },
+ "Your Elemental Nature": {
+  "id": "b5-E15",
+  "batch": 5,
+  "ar": "طبيعة عنصرك"
+ },
+ "Your elemental nature": {
+  "id": "b5-E15",
+  "batch": 5,
+  "ar": "طبيعة عنصرك"
+ },
+ "Your Elemental Imprint": {
+  "id": "b5-E16",
+  "batch": 5,
+  "ar": "بصمة عناصرك"
+ },
+ "Analyzes the interaction of your elemental natures (Fire, Water, Air, Earth). Fire brings passion, Water brings emotion, Air brings intellect, Earth brings stability. Understanding your elemental blend helps navigate daily interactions.": {
+  "id": "b5-E17",
+  "batch": 5,
+  "ar": "يحلّل تفاعل طبيعة عنصر كلٍّ منكما (النار، الماء، الهواء، التراب). فالنار تجلب الشغف، والماء العاطفة، والهواء العقل، والتراب الثبات. وفهم مزيج عناصركما يعين على التعامل اليومي."
+ },
+ "Discover why certain patterns exist in your relationship. Understanding your elemental and planetary dynamics can transform conflicts into opportunities for deeper connection and growth.": {
+  "id": "b5-E18",
+  "batch": 5,
+  "ar": "اكتشف لماذا توجد أنماط معيّنة في علاقتكما. ففهم حركية العناصر والكواكب بينكما قد يحوّل الصراعات إلى فرص لصلة أعمق ونموّ."
+ },
+ "We analyze compatibility through three complementary lenses: Soul Connection (spiritual alignment), Personality Balance (elemental harmony), and Cosmic Harmony (planetary influences). Each reveals different aspects of your relationship potential.": {
+  "id": "b5-E19",
+  "batch": 5,
+  "ar": "نحلّل التوافق من ثلاث زوايا متكاملة: صلة الأرواح (الانسجام الروحي)، وتوازن الشخصية (انسجام العناصر)، والانسجام الكوني (الصلات الكوكبية). وكل منها يكشف جانبًا مختلفًا من إمكانات علاقتكما."
+ },
+ "Your elemental and planetary differences aren't problems to fix—they're complementary strengths. Fire needs Water's depth, Air needs Earth's grounding. Appreciate what your partner brings.": {
+  "id": "b5-E20",
+  "batch": 5,
+  "ar": "اختلافاتكما في العناصر والكواكب ليست مشكلات تُصلَح — بل قوى متكاملة. فالنار تحتاج إلى عمق الماء، والهواء يحتاج إلى ثبات التراب. قدّر ما يأتي به شريكك."
+ },
+ "🎨 Personality Balance (Elemental Temperament)": {
+  "id": "b5-E21",
+  "batch": 5,
+  "ar": "🎨 توازن الشخصية (مزاج العناصر)"
+ },
+ "🌙 Spiritual Destiny | 🌊 Elemental Temperament | ⭐ Planetary Cosmic | 🤝 Daily Interaction": {
+  "id": "b5-E22",
+  "batch": 5,
+  "ar": "🌙 المسار الروحي | 🌊 مزاج العناصر | ⭐ الكوني الكوكبي | 🤝 التفاعل اليومي"
+ },
+ "Elemental Event/Classification": {
+  "id": "b5-E23",
+  "batch": 5,
+  "ar": "التصنيف بحسب العناصر"
+ },
+ "Elemental Type": {
+  "id": "b5-E24",
+  "batch": 5,
+  "ar": "نوع العنصر"
+ },
+ "Personality Balance (Elemental Temperament)": {
+  "id": "b5-E25",
+  "batch": 5,
+  "ar": "توازن الشخصية (مزاج العناصر)"
+ },
+ "The four elements—Fire, Water, Air, Earth—represent fundamental personality types. Your elemental makeup determines how you approach life, relationships, and challenges.": {
+  "id": "b5-E26",
+  "batch": 5,
+  "ar": "العناصر الأربعة — النار والماء والهواء والتراب — تمثّل أنماط الشخصية الأساسية. وتركيب عناصرك يصف طريقتك في مواجهة الحياة والعلاقات والتحدّيات."
+ },
+ "Understanding Your Elemental Dance": {
+  "id": "b5-E27",
+  "batch": 5,
+  "ar": "فهم رقصة عناصركما"
+ },
+ "Discover the sacred numerical values and elemental associations within Arabic text, connecting language to the deeper patterns of creation.": {
+  "id": "b5-E28",
+  "batch": 5,
+  "ar": "اكتشف القيم العددية للحروف وصلاتها بالعناصر في النصّ العربي، وصلة اللغة بأنماط الخلق الأعمق."
+ },
+ "Discover Quranic verses, Divine Names, and spiritual guidance based on your elemental profile. Use History to save calculations, and Comparison mode to explore relationships!": {
+  "id": "b5-E29",
+  "batch": 5,
+  "ar": "اكتشف آيات قرآنية وأسماء حسنى وإرشادًا روحيًا بحسب ملف عناصرك. استعمل السجلّ لحفظ الحسابات، ووضع المقارنة لاستكشاف العلاقات!"
+ },
+ "Explore the beautiful tradition of ʿIlm al-Ḥurūf (Science of Letters) - an Islamic science that reveals numerical values and elemental associations in Arabic text.": {
+  "id": "b5-E30",
+  "batch": 5,
+  "ar": "استكشف تراث علم الحروف الجميل — علمٌ إسلامي يكشف القيم العددية للحروف وصلاتها بالعناصر في النصّ العربي."
+ },
+ "• Kabīr (الكبير): Total numerical value • Ṣaghīr (الصغير): Digital root (1-9) • Elements: Fire 🔥 Water 💧 Air 🌬 Earth 🌍 • Ḥadath: Elemental influence pattern": {
+  "id": "b5-E31",
+  "batch": 5,
+  "ar": "• الكبير: القيمة العددية الكلية • الصغير: الجذر الرقمي (1-9) • العناصر: النار 🔥 الماء 💧 الهواء 🌬 التراب 🌍 • الحدث: نمط أثر العناصر"
+ },
+ "Career paths that resonate with your spiritual energy and elemental nature": {
+  "id": "b5-E32",
+  "batch": 5,
+  "ar": "مسارات مهنية تتناغم مع طاقتك الروحية وطبيعة عنصرك"
+ },
+ "Discovered my career path through Istikhara al-Asmāʾ! My": {
+  "id": "b5-E33",
+  "batch": 5,
+  "ar": "اكتشفت مساري المهني عبر استخارة الأسماء! العنصر الغالب عندي"
+ },
+ "Discover career paths that align with your elemental nature. Note both traditional and modern recommendations.": {
+  "id": "b5-E34",
+  "batch": 5,
+  "ar": "اكتشف مسارات مهنية تنسجم مع طبيعة عنصرك، ولاحظ التوصيات التقليدية والحديثة معًا."
+ },
+ "✨🌙 I discovered my spiritual profile through Istikhara al-Asmāʾ! I'm a": {
+  "id": "b5-E35",
+  "batch": 5,
+  "ar": "✨🌙 اكتشفت ملفي الروحي عبر استخارة الأسماء! العنصر الغالب عندي"
+ },
+ "Align your work with your elemental nature for fulfillment.": {
+  "id": "b5-E36",
+  "batch": 5,
+  "ar": "وافِق بين عملك وطبيعة عنصرك لتجد الرضا."
+ },
+ "These colors resonate with your elemental energy. Use them in your environment for spiritual balance.": {
+  "id": "b5-E37",
+  "batch": 5,
+  "ar": "تتناغم هذه الألوان مع طاقة عنصرك. استعملها في محيطك للتوازن الروحي."
+ },
+ "Elemental Force": {
+  "id": "b5-E38",
+  "batch": 5,
+  "ar": "قوة العنصر"
+ },
+ "This verse resonates with your elemental nature and can be recited for spiritual guidance and protection. Reflect on its meaning as part of your daily practice.": {
+  "id": "b5-E39",
+  "batch": 5,
+  "ar": "تتناغم هذه الآية مع طبيعة عنصرك، ويمكن تلاوتها طلبًا للهداية والحفظ. وتدبّر معناها جزءًا من وردك اليومي."
+ },
+ "Your elemental natures": {
+  "id": "b5-E40",
+  "batch": 5,
+  "ar": "طبيعة عنصر كلٍّ منكما"
+ },
+ "energy. Strong, consistent elemental identity with deep": {
+  "id": "b5-E41",
+  "batch": 5,
+  "ar": ". هوية قوية ثابتة في العنصر، ذات"
+ },
+ "Elemental Value - number reduced modulo 9 determining primary element and temperament": {
+  "id": "b5-E42",
+  "batch": 5,
+  "ar": "قيمة العنصر - العدد بباقي القسمة على 9، يحدّد العنصر الأساسي والطبع"
+ },
+ "ʿIlm al-Ḥurūf (علم الحروف), or the 'Science of Letters', is a traditional Islamic discipline that studies the spiritual and numerical significance of Arabic letters. Each letter of the Arabic alphabet carries not only a sound, but also a numerical value (Abjad system) and elemental qualities.": {
+  "id": "b5-E43",
+  "batch": 5,
+  "ar": "علم الحروف علم إسلامي تقليدي يدرس الدلالة الروحية والعددية للحروف العربية. فلكل حرف من حروف العربية صوت، وقيمة عددية (نظام الأبجد)، وصفات مرتبطة بالعناصر."
+ },
+ "Contemplate your elemental nature and temperament": {
+  "id": "b5-E45",
+  "batch": 5,
+  "ar": "التأمّل في طبيعة عنصرك ومزاجك"
+ },
+ "3. Ḥadath (Elemental Value - الحدث)": {
+  "id": "b5-E46",
+  "batch": 5,
+  "ar": "3. الحدث (قيمة العنصر)"
+ },
+ "share exceptional compatibility across spiritual, elemental, and cosmic dimensions. This pairing has strong potential for harmony and mutual growth.": {
+  "id": "b5-E47",
+  "batch": 5,
+  "ar": "يتشاركان توافقًا استثنائيًا في أبعاد الروح والعناصر والفلك. ولهذا الاقتران إمكانات قوية للانسجام والنموّ المتبادل."
+ },
+ "interaction. This unique combination brings together different elemental energies in daily life.": {
+  "id": "b5-E48",
+  "batch": 5,
+  "ar": "تفاعل. يجمع هذا المزيج الفريد طاقات عناصر مختلفة في الحياة اليومية."
+ },
+ "You express and inherit the same {element} energy. Strong, coherent elemental identity with deep roots.": {
+  "id": "b5-E49",
+  "batch": 5,
+  "ar": "تُعبّر عن طاقة {element} نفسها التي ورثتها. هوية قوية متماسكة في العنصر، ذات جذور عميقة."
+ },
+ "Shows the elemental temperament between the two names. Each letter carries Fire, Air, Water, or Earth energy × their blend forms the emotional and energetic balance of your connection.": {
+  "id": "b5-E50",
+  "batch": 5,
+  "ar": "يبيّن مزاج العناصر بين الاسمين. يحمل كل حرف طاقة النار أو الهواء أو الماء أو التراب، ومزيجها يشكّل التوازن العاطفي والطاقي لصلتكما."
  }
 }

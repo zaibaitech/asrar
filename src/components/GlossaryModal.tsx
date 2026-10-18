@@ -85,7 +85,7 @@ const GLOSSARY_TERMS: GlossaryTerm[] = [
   },
   {
     term: 'Elemental Type',
-    arabic: 'النوع العنصري',
+    arabic: 'نوع العنصر',
     meaning: 'Four Element Classification',
     definition: 'All names fall into one of four elements with distinct qualities: Fire (active, passionate), Water (emotional, intuitive), Air (intellectual, communicative), Earth (practical, grounded).'
   },

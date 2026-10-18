@@ -11,23 +11,23 @@ Hand drafts, marked `// TODO review` in src/lib/i18n/ar.ts. Please check the reg
 | `abjadSystem.note` | Maghribi (North & West Africa) · Mashriqi (Middle East & Asia) | المغربي (شمال أفريقيا وغربها) · المشرقي (الشرق الأوسط وآسيا) |
 | /ar/abjad FAQ «ما هو حساب الجمل؟» and the “ما هو حساب الجمل” section (app/ar/abjad/page.tsx) | … up to shīn at 1000 in the Maghribi order used here by default (in the Mashriqi order, also available, ghayn is 1000). | وهكذا حتى الشين 1000 في الترتيب المغربي المعتمد هنا افتراضيًا (وفي الترتيب المشرقي، المتاح أيضًا، تكون الغين 1000). |
 
-## 1. Translation keys (src/lib/i18n/ar.ts): 165 machine drafts, 571 hand drafts
-Marked inline with `// TODO review`.
+## 1. Translation keys (src/lib/i18n/ar.ts): machine drafts all reviewed (batches 4–5); 571 hand drafts
+Hand drafts are marked inline with `// TODO review`; reviewed lines carry `// reviewed (Language Reviewer batch N)`.
 
 ## 2. Runtime catalog (public/i18n/ar-ui.json)
 
-Built by `python3 scripts/i18n/ar/build_catalog.py` (see the docstring for the layer order). Oct 2026 rebuild: **9918 → 9901 entries**.
+Built by `python3 scripts/i18n/ar/build_catalog.py` (see the docstring for the layer order). Oct 2026 rebuild: **9918 → 9901 entries** (after batch 5: still 9901, the orphan pre‑PR #91 Abjad-history AI draft was removed and «After Saturn…» was added).
 
 | layer | live entries |
 |---|---|
-| mobile | 1481 |
-| manual | 934 |
-| ai | 5771 |
+| mobile | 1461 |
+| manual | 932 |
+| reviewed | 1068 |
+| ai | 5738 |
 | mt | 691 |
-| reviewed | 1013 |
 | patterns | 11 |
 
-- **No score-based auto-accept.** Machine drafts are live only if the Language Reviewer accepted them unchanged (`mt-reviewed-accepted.json`, 695 keys); corrected ones come from `reviewer-corrections.json`. Any other machine draft goes to `mt-pending.json` (currently 1) and stays English.
+- **No score-based auto-accept.** Machine drafts are live only if the Language Reviewer accepted them unchanged (`mt-reviewed-accepted.json`, 695 keys); corrected ones come from `reviewer-corrections.json`. Any other machine draft goes to `mt-pending.json` (currently 0) and stays English.
 - Religious-term filter widened (Qur'an/ḥadīth/du'a vocabulary, Divine and Prophetic epithets, and any English gloss that sits next to an Arabic field in the religious data files). Such keys are never taken from MT; the verified Arabic from the data file (`data-ar.json`, built by `node scripts/i18n/ar/data_ar.js`) is used if nothing better exists.
 - Name-database entries (lowercase latin names, e.g. `cheikh amadou`) and code fragments (`use client`, Tailwind classes) are excluded; no-op entries (value identical to the English, e.g. `EN`, `UTC`, `🇸🇳 Wave`) are dropped.
 - 19 keys left the catalog: the 9 reviewer removals, 2 mojibake keys re-keyed (`🚨 Very Difficult`, `⚠️ Challenging Compatibility`; source fixed in IlmHurufPanel.tsx), 7 no-ops and `After Saturn, the cycle repeats from ♄ → … ` (unreviewed, its Arabic dropped the planet sequence; now pending). No reviewed, manual, mobile or AI entry was lost.
@@ -41,6 +41,7 @@ Built by `python3 scripts/i18n/ar/build_catalog.py` (see the docstring for the l
 | 2 | 68 | 0 |
 | 3 | 668 | 3 |
 | 4 | 53 | 0 |
+| 5 | 55 catalog strings (rule for «عنصري», E00–E57) + 4 §5 strings; 72 ar.ts lines (39 more accepted) | 1 (orphan E44) |
 
 Also: the AM/PM range keys `11 AM-1 PM`, `3-5 PM`, `6-8 PM`, `6-8 AM`, `7-9 PM`, `8-10 AM` follow the b1-265 rule (ص / م). Batch 4 values were also written into `src/lib/i18n/ar.ts` (54 paths, marked `// reviewed (Language Reviewer batch 4)`), so the English fallback no longer shows.
 
@@ -143,7 +144,7 @@ Checked letter-for-letter against Tanzil *quran-simple* (api.alquran.cloud `qura
 
 `أَسْتَغْفِرُ اللهَ` (store.tsx) is the istighfār formula, not a quotation, so it is not listed.
 
-## 5. For review: the 26 machine-draft keys outside batches 1–4
+## 5. The 26 machine-draft keys outside batches 1–4 (reviewed in batch 5: 22 correct, an-Nāfiʿ / aḍ-Ḍārr / al-ʿAlīm reworded, After Saturn supplied)
 
 25 are overridden by AI/manual entries (live value shown); the last one was live and is now pending.
 
@@ -173,10 +174,12 @@ Checked letter-for-letter against Tanzil *quran-simple* (api.alquran.cloud `qura
 | The Heart | manual | قلب العقرب |
 | The Sting | manual | إبرة العقرب |
 | Your Burj from Your Name & Mother's Name | manual | برجك من اسمك واسم أمك |
-| After Saturn, the cycle repeats from ♄ → ♃ → ♂ → ☉ → ♀ → ☿ → ☽ → ♄... | pending (was MT) | — (English shown) |
+| After Saturn, the cycle repeats from ♄ → ♃ → ♂ → ☉ → ♀ → ☿ → ☽ → ♄... | reviewed (batch 5) | بعد زحل تعود الدورة من جديد: ♄ ← ♃ ← ♂ ← ☉ ← ♀ ← ☿ ← ☽ ← ♄… |
 | If your water were to sink away | ai | قُلْ أَرَأَيْتُمْ إِنْ أَصْبَحَ مَاؤُكُمْ غَوْرًا |
 
 ## 6. Open notes
 
-- «العنصري/العنصرية» for 'elemental' is still used in ~55 manual/AI entries (e.g. «التوازن العنصري», «القوى العنصرية»). Only the PR #91 instance was flagged; these may need the same «بحسب العناصر» / «العناصر» rewording.
-- 111 lines in src/lib/i18n/ar.ts are still marked `// TODO review (machine draft)`.
+- «عنصري / عنصرية» no longer appears anywhere in the web catalog, ar.ts, the calculator strings, the AI prompts or the data files (rule in the reviewer's batch 5: توازن العناصر، طبيعة عنصرك، مزاج العناصر …). The guard test `src/lib/i18n/ar-reviewed.test.ts` fails if an ar.ts value differs from a reviewed correction for the same English text.
+- All 111 ar.ts machine drafts are reviewed (72 corrected, 39 accepted).
+- Waiting for Mario: aḍ-Ḍārr's practice count 1001 is the Mashriqi value of ضار (Maghribi: 291), and the data spelling «الضَّارَّ» should end in «ـارُّ». Both are unchanged.
+- Recitation counts: «Recite N times» comes from `spiritualPractice` in src/data/divine-names.ts, where N = the Name's stored (Mashriqi) abjad value. `getDivineNames(abjad)` rewrites N for the selected system (EN and FR). The Arabic catalog entries are keyed by the stored (Mashriqi) English text, so under Maghribi (the default) the 25 Names whose value differs show the English sentence on /ar where the system-aware list is used (DivineNameConnectionView). AllDivineNamesBrowser and DivineNamePicker read `DIVINE_NAMES` directly and always show the stored Mashriqi count. Both can follow the selected system: pass the system's list to those two components and give the catalog one count pattern per practice sentence (`re:^Recite (\\d+) times for …$` → «يُردَّد الاسم $1 مرّة …»).

@@ -1417,7 +1417,7 @@
    "file": "src/constants/lifePathMeanings.ts"
   },
   "Hearts find rest in the remembrance of Allah.": {
-   "ar": "أَلَا بِذِكْرِ اللّٰهِ تَطْمَئِنُّ الْقُلُوبُ",
+   "ar": "أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ",
    "file": "src/features/ramadanChallenges/components/ChallengeCard.tsx"
   },
   "Helping Labourers and Low-Income Workers": {
@@ -3949,7 +3949,7 @@
    "file": "src/data/zodiacSadaqahData.ts"
   },
   "The dhikr of Allah is the greatest.": {
-   "ar": "وَلَذِكْرُ اللّٰهِ أَكْبَرُ",
+   "ar": "وَلَذِكْرُ اللَّهِ أَكْبَرُ",
    "file": "src/features/ramadanChallenges/components/ChallengeCard.tsx"
   },
   "The example of those who spend in the way of Allah is like a seed which grows seven spikes": {
@@ -4747,7 +4747,7 @@
    "file": "src/utils/enhancedLifePath.ts"
   },
   "And that is not difficult for Allah": {
-   "ar": "وَمَا ذَٰلِكَ عَلَى اللهِ بِعَزِيزٍ",
+   "ar": "وَمَا ذَٰلِكَ عَلَى اللَّهِ بِعَزِيزٍ",
    "file": "src/features/ramadanChallenges/debtRelief1000.ts"
   },
   "And to Allah belongs the dominion of the heavens and the earth": {
@@ -5031,7 +5031,7 @@
    "file": "src/lib/ikhtiyarat/hijri.ts"
   },
   "Debt Relief Wird": {
-   "ar": "وَمَا ذَٰلِكَ عَلَى اللهِ بِعَزِيزٍ",
+   "ar": "وَمَا ذَٰلِكَ عَلَى اللَّهِ بِعَزِيزٍ",
    "file": "src/features/ramadanChallenges/store.tsx"
   },
   "Debt Relief wird after ʿIshāʾ brings miraculous financial relief": {
@@ -5243,7 +5243,7 @@
    "file": "src/lib/ikhtiyarat/travelBadges.ts"
   },
   "Four Element Classification": {
-   "ar": "النوع العنصري",
+   "ar": "نوع العنصر",
    "file": "src/components/GlossaryModal.tsx"
   },
   "Four Kilograms of Meat": {
@@ -5443,7 +5443,7 @@
    "file": "src/data/zodiacSadaqahData.ts"
   },
   "Hearts find rest in the remembrance of Allah.": {
-   "ar": "أَلَا بِذِكْرِ اللّٰهِ تَطْمَئِنُّ الْقُلُوبُ",
+   "ar": "أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ",
    "file": "src/features/ramadanChallenges/components/ChallengeCard.tsx"
   },
   "Helping Labourers and Low-Income Workers": {
@@ -8695,7 +8695,7 @@
    "file": "src/data/zodiacSadaqahData.ts"
   },
   "The dhikr of Allah is the greatest.": {
-   "ar": "وَلَذِكْرُ اللّٰهِ أَكْبَرُ",
+   "ar": "وَلَذِكْرُ اللَّهِ أَكْبَرُ",
    "file": "src/features/ramadanChallenges/components/ChallengeCard.tsx"
   },
   "The food sadaqah may particularly be given in the evening, around the time when people would normally have dinner, an evening meal, or tea or other evening refreshments. The food should be distributed to people who can benefit from it, especially those experiencing financial hardship or food insecurity.": {
