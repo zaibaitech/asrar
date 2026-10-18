@@ -197,9 +197,6 @@ function getDailyReflection() {
 export default function AsrarEveryday() {
   const { t, language, uiLanguage } = useLanguage(); // Get translations and current language
   
-  // Add mounted state to prevent hydration mismatch
-  const [mounted, setMounted] = useState(false);
-  
   const [darkMode, setDarkMode] = useState(false);
   const [showDisclaimer, setShowDisclaimer] = useState(true);
   const [viewMode, setViewMode] = useState<'planetary' | 'calculator' | 'guidance' | 'advanced'>('planetary');
@@ -207,11 +204,6 @@ export default function AsrarEveryday() {
 
   // Daily Reflection State - initialize to true (collapsed by default), set from localStorage in useEffect
   const [isDailyReflectionCollapsed, setIsDailyReflectionCollapsed] = useState(true);
-
-  // Set mounted on client side only
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   // Load daily reflection preference from localStorage
   useEffect(() => {
@@ -304,23 +296,11 @@ export default function AsrarEveryday() {
   }, [showMobileMenu]);
   
   
-  // Prevent hydration mismatch by showing loading state until mounted.
-  // The distinct keys make React replace (not reuse and resize) the splash element, which would count as a layout shift.
-  if (!mounted) {
-    return (
-      <div key="splash" className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 flex items-center justify-center">
-        <div className="text-center">
-          <div className="flex justify-center mb-4">
-            <AsrarLogo size={80} variant="icon" element="aether" animate={true} />
-          </div>
-          <p className="text-xl font-semibold text-slate-700 dark:text-slate-300">Loading Asrār...</p>
-        </div>
-      </div>
-    );
-  }
-  
+  // The real app is server-rendered (no "Loading Asrār…" splash): every value read from the browser
+  // (dark mode, saved preferences, the visitor's language) is applied in effects after hydration,
+  // so the first client render matches the server HTML.
   return (
-    <div key="app" className={darkMode ? 'dark' : ''}>
+    <div className={darkMode ? 'dark' : ''}>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 transition-colors">
         {/* Header */}
         <header className="border-b border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm sticky top-0 z-40">
