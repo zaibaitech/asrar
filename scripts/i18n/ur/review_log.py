@@ -109,4 +109,8 @@ PENDING_REVIEW = [
      'Maghribi (North & West Africa) · Mashriqi (Middle East & Asia)',
      'مغربی (شمالی و مغربی افریقہ) · مشرقی (مشرقِ وسطیٰ اور ایشیا)',
      'Short regional hint under the Maghribi/Mashriqi switch. Check “مغربی” is not read as “Western” here, and the geography wording.'),
+    ('page copy UR_ABJAD.what (/ur/abjad, “ابجد (حسابِ جمل) کیا ہے؟”)',
+     "… and so on up to shīn 1000 in the Maghribi order used here by default (in the Mashriqi order, also available, ghayn is 1000).",
+     'الف 1، ب 2، ج 3، اور اسی طرح ش 1000 تک، اس مغربی ترتیب میں جو یہاں پہلے سے منتخب ہے (مشرقی ترتیب میں، جو یہاں دستیاب بھی ہے، غ 1000 ہے)۔',
+     'Was “… غ 1000 تک”, which is the Mashriqi value; the site now defaults to Maghribi (ش = 1000). Check the sentence flow.'),
 ]
