@@ -52,7 +52,7 @@ describe('Urdu result texts are in the /ur catalog', () => {
   });
 
   it('planet-of-the-day guidance', () => {
-    const src = readFileSync(path.join(root, 'app/planet-of-the-day/PlanetOfTheDayPage.tsx'), 'utf8');
+    const src = readFileSync(path.join(root, 'app/(site)/planet-of-the-day/PlanetOfTheDayPage.tsx'), 'utf8');
     const keys = [...src.matchAll(/guidance: \{\s*en: ('(?:[^'\\]|\\.)*'|"(?:[^"\\]|\\.)*")/g)].map((m) => (0, eval)(m[1]) as string);
     expect(keys).toHaveLength(7);
     expect(missing(keys)).toEqual([]);
