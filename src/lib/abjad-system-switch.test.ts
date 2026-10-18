@@ -307,7 +307,7 @@ describe('inventory guards', () => {
   });
 
   it('the shared selector sits next to the /abjad, /compatibility and burj calculators', () => {
-    for (const f of ['app/abjad/AbjadCalculator.tsx', 'app/compatibility/page.tsx', 'app/name-and-mother-burj/BurjCalculator.tsx']) {
+    for (const f of ['app/(site)/abjad/AbjadCalculator.tsx', 'app/(site)/compatibility/page.tsx', 'app/(site)/name-and-mother-burj/BurjCalculator.tsx']) {
       expect(fs.readFileSync(path.join(ROOT, f), 'utf8'), f).toContain('<AbjadSystemSelector compact');
     }
   });
@@ -318,7 +318,7 @@ describe('static SEO copy matches the Maghribi default', () => {
   const src = (rel: string) => fs.readFileSync(path.join(root, rel), 'utf8');
 
   it('no page says ghayn is the 1000 letter without naming the Mashriqi order', () => {
-    for (const rel of ['app/abjad/page.tsx', 'app/ar/abjad/page.tsx', 'app/names/page.tsx', 'src/lib/i18n/urPages.ts']) {
+    for (const rel of ['app/(site)/abjad/page.tsx', 'app/(ar)/ar/abjad/page.tsx', 'app/(site)/names/page.tsx', 'src/lib/i18n/urPages.ts']) {
       const text = src(rel);
       expect(text, rel).not.toMatch(/up to ghayn (at )?1000\.|jusqu\\'à ghayn à 1000\.|حتى الغين 1000\.|غ 1000 تک۔|… ghayn 1000\)/);
       expect(text, rel).toMatch(/shīn (at )?1000|shīn, worth 1000|الشين وقيمتها 1000|شین \(ش\) ہے جس کی قیمت 1000|shīn à 1000/);
@@ -329,7 +329,7 @@ describe('static SEO copy matches the Maghribi default', () => {
     const files = [
       'src/lib/i18n/en.ts', 'src/lib/i18n/fr.ts', 'src/lib/i18n/ar.ts', 'src/lib/i18n/urPages.ts',
       'src/components/AbjadSystemSelector.tsx', 'src/components/GlossaryModal.tsx',
-      'app/abjad/page.tsx', 'app/ar/abjad/page.tsx', 'app/compatibility/page.tsx',
+      'app/(site)/abjad/page.tsx', 'app/(ar)/ar/abjad/page.tsx', 'app/(site)/compatibility/page.tsx',
       'src/features/ilm-huruf/education/NameDestinyLearningCenter.tsx',
       'src/features/ilm-huruf/education/NameDestinyGlossary.tsx',
       'scripts/i18n/ur/catalog_source.py',
@@ -347,7 +347,7 @@ describe('static SEO copy matches the Maghribi default', () => {
   });
 
   it('/99-names-of-allah lists Maghribi values and states the table', () => {
-    const page = src('app/99-names-of-allah/page.tsx');
+    const page = src('app/(site)/99-names-of-allah/page.tsx');
     expect(page).toMatch(/getDivineNames\(ABJAD_MAGHRIBI\)/);
     expect(page).not.toMatch(/standard Mashriqi table|and use the Mashriqi table\./);
     // الصبور (99) without "al-": Maghribi 268, Mashriqi 298 (the stored value)

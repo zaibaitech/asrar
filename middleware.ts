@@ -86,7 +86,7 @@ export function middleware(request: NextRequest) {
   const frTarget = stripFrPrefix(pathname);
   const arTarget = stripArPrefix(pathname);
   if (arTarget !== null && isArAppPath(arTarget)) {
-    // /ar/... app mirror: same EN route file, Arabic UI, RTL. Mirrors of the
+    // /ar/... app mirror: the EN page re-exported under app/(ar), Arabic UI, RTL. Mirrors of the
     // localized SEO pages are indexable; the others (birth profile etc.) stay noindex.
     if (langParam) {
       const url = request.nextUrl.clone();
@@ -96,10 +96,10 @@ export function middleware(request: NextRequest) {
       response = NextResponse.redirect(url, 301);
       language = (SUPPORTED_LANGUAGES as readonly string[]).includes(langParam) ? (langParam as Language) : 'ar';
     } else {
-      const url = request.nextUrl.clone();
-      url.pathname = arTarget;
+      // The /ar/<path> route files live in app/(ar) (own root layout: lang="ar"
+      // dir="rtl" from the server) and re-export the EN page, so no rewrite.
       requestHeaders.set(ROUTE_LANG_HEADER, 'ar');
-      response = NextResponse.rewrite(url, { request: { headers: requestHeaders } });
+      response = NextResponse.next({ request: { headers: requestHeaders } });
       if (!isIndexableArAppPath(arTarget)) response.headers.set('X-Robots-Tag', 'noindex, follow');
       language = detectLanguage(request);
     }

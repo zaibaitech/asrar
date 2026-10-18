@@ -3,8 +3,8 @@ import { PURPOSE_SLUGS, type PurposeSlug } from '@/src/lib/ikhtiyarat/purposes';
 import type { CardProps } from '@/src/lib/og/card';
 import { clamp } from '@/src/lib/og/card';
 import type { OgLang, OgPageKey } from '@/src/lib/og/urls';
-import { PURPOSE_NAV } from '@/app/best-day-for/copy';
-import { capitalise, formatDate, getUpcomingDates, listJoin, purposeFacts, WEEKDAYS } from '@/app/best-day-for/data';
+import { PURPOSE_NAV } from '@/app/(site)/best-day-for/copy';
+import { capitalise, formatDate, getUpcomingDates, listJoin, purposeFacts, WEEKDAYS } from '@/app/(site)/best-day-for/data';
 
 const FOOTER: Record<OgLang, string> = {
   en: 'For reflection, not prediction · Only Allah knows the unseen',
