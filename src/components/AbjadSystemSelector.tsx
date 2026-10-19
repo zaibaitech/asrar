@@ -16,7 +16,8 @@ import { Globe2 } from 'lucide-react';
 export function AbjadSystemSelector({ compact = false, showNote = true }: { compact?: boolean; showNote?: boolean } = {}) {
   const { system, setSystem } = useAbjad();
   const { t } = useLanguage();
-  const note = t.abjadSystem?.note ?? 'Maghribi (the Maghreb, al-Andalus & West Africa) · Mashriqi (Egypt, the Middle East & Asia)';
+  const a = t.abjadSystem;
+  const note = a?.note ?? 'Maghribi (the Maghreb, al-Andalus & West Africa) · Mashriqi (Egypt, the Middle East & Asia)';
 
   if (compact) {
     const toggle = (
@@ -31,7 +32,7 @@ export function AbjadSystemSelector({ compact = false, showNote = true }: { comp
               : 'bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600'
           }`}
         >
-          Maghribi
+          {a.maghribi}
         </button>
         <button
           type="button"
@@ -43,7 +44,7 @@ export function AbjadSystemSelector({ compact = false, showNote = true }: { comp
               : 'bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600'
           }`}
         >
-          Mashriqi
+          {a.mashriqi}
         </button>
       </div>
     );
@@ -63,10 +64,10 @@ export function AbjadSystemSelector({ compact = false, showNote = true }: { comp
           <Globe2 className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
           <div>
             <div className="font-semibold text-slate-900 dark:text-slate-100">
-              Abjad System
+              {a.title}
             </div>
             <div className="text-xs text-slate-600 dark:text-slate-400">
-              Current Mode: <span className="font-medium text-indigo-600 dark:text-indigo-400">{system}</span>
+              {a.currentMode} <span className="font-medium text-indigo-600 dark:text-indigo-400">{system === 'Maghribi' ? a.maghribi : a.mashriqi}</span>
             </div>
           </div>
         </div>
@@ -82,8 +83,8 @@ export function AbjadSystemSelector({ compact = false, showNote = true }: { comp
                 : 'bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-600 hover:border-indigo-400'
             }`}
           >
-            Maghribi
-            <div className="text-xs opacity-75">Western</div>
+            {a.maghribi}
+            <div className="text-xs opacity-75">{a.western}</div>
           </button>
           <button
             type="button"
@@ -95,8 +96,8 @@ export function AbjadSystemSelector({ compact = false, showNote = true }: { comp
                 : 'bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-600 hover:border-indigo-400'
             }`}
           >
-            Mashriqi
-            <div className="text-xs opacity-75">Eastern</div>
+            {a.mashriqi}
+            <div className="text-xs opacity-75">{a.eastern}</div>
           </button>
         </div>
       </div>
@@ -105,11 +106,11 @@ export function AbjadSystemSelector({ compact = false, showNote = true }: { comp
         <div className="text-xs text-slate-600 dark:text-slate-400">
           {system === 'Maghribi' ? (
             <>
-              <span className="font-medium">Maghribi System:</span> Traditional method of the Maghreb (Morocco to Libya), al-Andalus and West Africa (ش=1000, غ=900)
+              <span className="font-medium">{a.maghribiSystem}</span> {a.maghribiDesc}
             </>
           ) : (
             <>
-              <span className="font-medium">Mashriqi System:</span> Eastern method used in Egypt, the Middle East and Asia (ش=300, غ=1000)
+              <span className="font-medium">{a.mashriqiSystem}</span> {a.mashriqiDesc}
             </>
           )}
         </div>

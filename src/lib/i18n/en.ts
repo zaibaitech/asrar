@@ -4,6 +4,16 @@ export const en = {
   // App-wide Abjad system selector (one choice for every calculator)
   abjadSystem: {
     note: "Maghribi (the Maghreb, al-Andalus & West Africa) · Mashriqi (Egypt, the Middle East & Asia)",
+    title: "Abjad System",
+    currentMode: "Current Mode:",
+    maghribi: "Maghribi",
+    mashriqi: "Mashriqi",
+    western: "Western",
+    eastern: "Eastern",
+    maghribiSystem: "Maghribi System:",
+    mashriqiSystem: "Mashriqi System:",
+    maghribiDesc: "Traditional method of the Maghreb (Morocco to Libya), al-Andalus and West Africa (ش=1000, غ=900)",
+    mashriqiDesc: "Eastern method used in Egypt, the Middle East and Asia (ش=300, غ=1000)",
   },
 
   // Navigation
@@ -15,6 +25,7 @@ export const en = {
     planetaryHours: "Planetary Hours",
     planetary: "Planetary Alignment",
     about: "About",
+    aboutApp: "About This App",
     guidance: "Life Guidance",
     advanced: "Who Am I?",
     menu: "Menu",

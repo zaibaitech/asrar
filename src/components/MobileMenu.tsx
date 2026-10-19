@@ -62,7 +62,7 @@ export function MobileMenu({
           {/* Abjad System Selector - UNIQUE TO MOBILE */}
           <div className="space-y-3">
             <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300">
-              📿 Abjad System
+              📿 {t.abjadSystem.title}
             </label>
             <AbjadSystemSelector compact={false} />
           </div>
@@ -155,7 +155,7 @@ export function MobileMenu({
             >
               <div className="flex items-center gap-3">
                 <Info className="w-5 h-5 flex-shrink-0 text-amber-500" />
-                <span className="font-medium text-base">About This App</span>
+                <span className="font-medium text-base">{t.nav.aboutApp}</span>
               </div>
               <BookOpen className={`w-4 h-4 flex-shrink-0 transition-transform ${expandAbout ? 'rotate-180' : ''}`} />
             </button>
