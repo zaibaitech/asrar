@@ -168,7 +168,7 @@ export function MobileMenu({
                   // would scramble the RTL sentence; Urdu gets whole sentences with the same bold terms.
                   <>
                     <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-                      <strong>Asrār</strong> اسلامی علوم <strong>علم الحروف</strong> (حروف کا علم) اور <strong>علم العدد</strong> (اعداد کا علم) کے لیے آپ کی رہنما ہے۔
+                      <strong>اسرار</strong> اسلامی علوم <strong>علم الحروف</strong> (حروف کا علم) اور <strong>علم العدد</strong> (اعداد کا علم) کے لیے آپ کی رہنما ہے۔
                     </p>
                     <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                       عربی متن میں چھپی مقدس عددی قدروں اور عنصری نسبتوں کو دریافت کریں، اور زبان کو تخلیق کے گہرے نمونوں سے جوڑیں۔
