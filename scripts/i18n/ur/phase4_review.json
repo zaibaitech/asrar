@@ -31,22 +31,22 @@
    "group": "potd",
    "en": "The Sun's day is best for bold, visible action. Begin projects you want recognized. Seek blessings from those in authority. Make decisions that require confidence and leadership. Avoid hiding or working in secrecy — the Sun illuminates.",
    "before": "روایتی علمِ نجوم میں اتوار کو شمس سے منسوب کیا جاتا ہے، اور اسے نمایاں اور واضح اقدام کے لیے موزوں دن سمجھا جاتا ہے۔ جن منصوبوں کی پہچان چاہتے ہوں انہیں شروع کریں۔ بااختیار یا بزرگ افراد سے دعائیں لیں۔ ایسے فیصلے کریں جن میں اعتماد اور قیادت درکار ہو۔ چھپنے یا پوشیدگی میں کام کرنے سے بچیں — شمس روشنی کی علامت ہے۔",
-   "after": "روایتی علمِ نجوم میں اتوار کو شمس سے منسوب کیا جاتا ہے، اور اسے جرأت مندانہ اور نمایاں اقدام کے لیے موزوں دن سمجھا جاتا ہے۔ جن منصوبوں کی پہچان چاہتے ہوں انہیں شروع کریں۔ بااختیار یا بزرگ افراد سے دعائیں لیں۔ ایسے فیصلے کریں جن میں اعتماد اور قیادت درکار ہو۔ چھپنے یا پوشیدگی میں کام کرنے سے بچیں — شمس روشنی کی علامت ہے۔",
-   "reason": "\"bold\" was lost: source says bold, visible action"
+   "after": "روایتی علمِ نجوم میں اتوار کو شمس سے منسوب کیا جاتا ہے، اور اسے جرأت مندانہ اور نمایاں اقدام کے لیے موزوں دن سمجھا جاتا ہے۔ جن منصوبوں کی پہچان چاہتے ہوں انہیں شروع کریں۔ بااختیار افراد کی تائید اور سرپرستی حاصل کرنے کی کوشش کریں۔ ایسے فیصلے کریں جن میں اعتماد اور قیادت درکار ہو۔ چھپنے یا پوشیدگی میں کام کرنے سے بچیں — شمس روشنی کی علامت ہے۔",
+   "reason": "\"bold\" was lost: source says bold, visible action | Phase 10: Urdu revised after the external review (see still_english.md, Phase 10); the English source is unchanged. Qualified review still required."
   },
   {
    "group": "potd",
    "en": "Monday is ideal for matters of the home, family, and emotional wellbeing. Engage in travel or movement — the Moon governs journeys. Practice emotional healing, prayer, and du'ā'. Reflect on your inner world. Avoid confrontation; the Moon's waters prefer calm.",
    "before": "روایتی علمِ نجوم میں پیر کو قمر سے منسوب کیا جاتا ہے، اور یہ گھر، خاندان اور جذباتی سکون کے معاملات کے لیے موزوں دن سمجھا جاتا ہے۔ سفر یا نقل و حرکت اختیار کریں — روایت میں قمر کو اسفار سے جوڑا جاتا ہے۔ جذباتی سکون، نماز اور دعا کا اہتمام کریں۔ اپنے باطن پر غور کریں۔ ٹکراؤ سے بچیں؛ اس دن سکون اور تحمل کو ترجیح دیں۔",
-   "after": "روایتی علمِ نجوم میں پیر کو قمر سے منسوب کیا جاتا ہے، اور یہ گھر، خاندان اور جذباتی بہبود کے معاملات کے لیے موزوں دن سمجھا جاتا ہے۔ سفر یا نقل و حرکت اختیار کریں — روایت میں قمر کو اسفار سے جوڑا جاتا ہے۔ جذباتی بحالی، نماز اور دعا کا اہتمام کریں۔ اپنے باطن پر غور کریں۔ ٹکراؤ سے بچیں؛ اس دن سکون اور تحمل کو ترجیح دیں۔",
-   "reason": "\"emotional wellbeing\" / \"emotional healing\" were both rendered «جذباتی سکون»; now بہبود and بحالی, as in the source"
+   "after": "روایتی علمِ نجوم میں پیر کو قمر سے منسوب کیا جاتا ہے، اور یہ گھر، خاندان اور جذباتی بہبود کے معاملات کے لیے موزوں دن سمجھا جاتا ہے۔ سفر یا نقل و حرکت اختیار کریں — روایت میں قمر کو اسفار سے جوڑا جاتا ہے۔ جذباتی سکون اور بہتری کے لیے نماز اور دعا کا اہتمام کریں۔ اپنے باطن پر غور کریں۔ ٹکراؤ سے بچیں؛ اس دن سکون اور تحمل کو ترجیح دیں۔",
+   "reason": "\"emotional wellbeing\" / \"emotional healing\" were both rendered «جذباتی سکون»; now بہبود and بحالی, as in the source | Phase 10: Urdu revised after the external review (see still_english.md, Phase 10); the English source is unchanged. Qualified review still required."
   },
   {
    "group": "potd",
    "en": "Saturday is governed by the slowest and most disciplined of the classical planets. It is a day for long-term commitments, serious study, and patient effort. Engage in property matters, legal affairs, and building lasting structures. Avoid rushing — Saturn rewards consistent, sustained effort over time.",
    "before": "روایتی علمِ نجوم میں ہفتے کو زحل سے منسوب کیا جاتا ہے، جو کلاسیکی سیاروں میں سب سے سست اور سب سے منظم ہے۔ یہ طویل مدتی وعدوں، سنجیدہ مطالعے اور صبر آزما کوشش کا دن ہے۔ جائیداد، قانونی معاملات اور پائیدار ڈھانچے بنانے میں مشغول ہوں۔ جلد بازی سے بچیں — اس دن مسلسل اور دیرپا محنت کو ترجیح دیں۔",
-   "after": "روایتی علمِ نجوم میں ہفتے کو زحل سے منسوب کیا جاتا ہے، جو کلاسیکی سیاروں میں سب سے سست اور سب سے منظم ہے۔ یہ طویل مدتی وعدوں، سنجیدہ مطالعے اور صبر آزما کوشش کا دن ہے۔ جائیداد، قانونی معاملات اور دیرپا تعمیرات کھڑی کرنے میں مشغول ہوں۔ جلد بازی سے بچیں — اس دن مسلسل اور دیرپا محنت کو ترجیح دیں۔",
-   "reason": "\"lasting structures\" → «دیرپا تعمیرات», the term used for the same phrase in the Ikhtiyārāt text (Phase 3)"
+   "after": "روایتی علمِ نجوم میں ہفتے کو زحل سے منسوب کیا جاتا ہے، جو کلاسیکی سیاروں میں سب سے سست اور سب سے منظم ہے۔ یہ طویل مدتی وعدوں، سنجیدہ مطالعے اور صبر آزما کوشش کا دن ہے۔ جائیداد، قانونی معاملات اور دیرپا اور مضبوط ڈھانچے تعمیر کرنے پر توجہ دیں۔ جلد بازی سے بچیں — اس دن مسلسل اور دیرپا محنت کو ترجیح دیں۔",
+   "reason": "\"lasting structures\" → «دیرپا تعمیرات», the term used for the same phrase in the Ikhtiyārāt text (Phase 3) | Phase 10: Urdu revised after the external review (see still_english.md, Phase 10); the English source is unchanged. Qualified review still required."
   },
   {
    "group": "rules",
@@ -122,8 +122,8 @@
    "group": "rules",
    "en": "Mercury is in a comfortable position right now, supporting a clear diagnosis.",
    "before": "عطارد اس وقت موافق حالت میں ہے، جو درست تشخیص میں معاون ہے۔",
-   "after": "عطارد اس وقت موافق حالت میں ہے، جو واضح تشخیص میں معاون ہے۔",
-   "reason": "source says \"clear\" diagnosis (Phase 3 uses «واضح تشخیص»); «درست» claims correctness"
+   "after": "عطارد اس وقت موافق حالت میں ہے، جسے روایتی طور پر واضح تشخیص میں معاون سمجھا جاتا ہے۔",
+   "reason": "source says \"clear\" diagnosis (Phase 3 uses «واضح تشخیص»); «درست» claims correctness | Phase 10: wording later given the attribution «روایتی طور پر» (external review); the English source is unchanged."
   },
   {
    "group": "rules",
@@ -352,8 +352,8 @@
   {
    "group": "rules",
    "en": "The Moon is forming a supportive connection with Venus or Jupiter right now — a sign of a smooth course of treatment and recovery.",
-   "ur": "قمر اس وقت زہرہ یا مشتری کے ساتھ موافق ربط بنا رہا ہے — علاج اور صحت یابی کے ہموار سلسلے کی علامت۔",
-   "reason": "«ربط» (plain \"connection\") is used for the Moon forming an applying aspect; the glossary term for the classical Moon \"Applying to\" is «اتصال» (Phase 2 open question 11).",
+   "ur": "قمر اس وقت زہرہ یا مشتری کے ساتھ موافق ربط بنا رہا ہے — روایتی تعبیر میں علاج اور صحت یابی کے ہموار سلسلے کی علامت سمجھی جاتی ہے۔",
+   "reason": "«ربط» (plain \"connection\") is used for the Moon forming an applying aspect; the glossary term for the classical Moon \"Applying to\" is «اتصال» (Phase 2 open question 11). | Phase 10: Urdu revised after the external review (attributed \"روایتی تعبیر\" wording); the English source is unchanged. Qualified review still required.",
    "alternative": "«قمر اس وقت … سے اتصال کر رہا ہے» (the wording used in the Detailed mode)",
    "review": "native Urdu + astrology"
   },
@@ -464,56 +464,56 @@
   {
    "group": "rules",
    "en": "The Moon isn't forming any meaningful connection right now — traditionally, a journey begun in this state tends to come to nothing.",
-   "ur": "قمر اس وقت کوئی نمایاں ربط نہیں بنا رہا — روایت میں اس حالت میں شروع کیا گیا سفر اکثر بے نتیجہ رہتا ہے۔",
-   "reason": "\"tends to come to nothing\": stated without a hedge in the source; Urdu «اکثر بے نتیجہ رہتا ہے» keeps that strength (external audit suggested softening).",
+   "ur": "قمر اس وقت کوئی نمایاں ربط نہیں بنا رہا — روایتی تعبیر میں اس حالت میں شروع کیے گئے سفر کے بے نتیجہ رہنے کا رجحان سمجھا جاتا ہے۔",
+   "reason": "\"tends to come to nothing\": stated without a hedge in the source; Urdu «اکثر بے نتیجہ رہتا ہے» keeps that strength (external audit suggested softening). | Phase 10: Urdu revised after the external review (attributed \"روایتی تعبیر\" wording); the English source is unchanged. Qualified review still required.",
    "alternative": "«بے نتیجہ رہنے کا امکان رہتا ہے»",
    "review": "native Urdu"
   },
   {
    "group": "rules",
    "en": "The Moon isn't forming any meaningful connection right now — traditionally, a deal begun in this state tends to come to nothing.",
-   "ur": "قمر اس وقت کوئی نمایاں ربط نہیں بنا رہا — روایت میں اس حالت میں شروع کیا گیا سودا اکثر بے نتیجہ رہتا ہے۔",
-   "reason": "\"tends to come to nothing\": stated without a hedge in the source; Urdu «اکثر بے نتیجہ رہتا ہے» keeps that strength (external audit suggested softening).",
+   "ur": "قمر اس وقت کوئی نمایاں ربط نہیں بنا رہا — روایتی تعبیر میں اس حالت میں شروع کیے گئے سودے کے بے نتیجہ رہنے کا رجحان سمجھا جاتا ہے۔",
+   "reason": "\"tends to come to nothing\": stated without a hedge in the source; Urdu «اکثر بے نتیجہ رہتا ہے» keeps that strength (external audit suggested softening). | Phase 10: Urdu revised after the external review (attributed \"روایتی تعبیر\" wording); the English source is unchanged. Qualified review still required.",
    "alternative": "«بے نتیجہ رہنے کا امکان رہتا ہے»",
    "review": "native Urdu"
   },
   {
    "group": "rules",
    "en": "The Moon isn't forming any meaningful connection right now — traditionally, treatment begun in this state tends to come to nothing.",
-   "ur": "قمر اس وقت کوئی نمایاں ربط نہیں بنا رہا — روایت میں اس حالت میں شروع کیا گیا علاج اکثر بے نتیجہ رہتا ہے۔",
-   "reason": "Medical-timing claim kept as in the English source. It must not be read as a reason to delay or avoid medical care; whether the source text needs a note is a separate content decision (Mario). | \"tends to come to nothing\": stated without a hedge in the source; Urdu «اکثر بے نتیجہ رہتا ہے» keeps that strength (external audit suggested softening).",
+   "ur": "قمر اس وقت کوئی نمایاں ربط نہیں بنا رہا — روایتی تعبیر میں اس حالت میں شروع کیے گئے علاج کے بے نتیجہ رہنے کا رجحان سمجھا جاتا ہے۔ یہ طبی دعویٰ نہیں۔",
+   "reason": "Medical-timing claim kept as in the English source. It must not be read as a reason to delay or avoid medical care; whether the source text needs a note is a separate content decision (Mario). | \"tends to come to nothing\": stated without a hedge in the source; Urdu «اکثر بے نتیجہ رہتا ہے» keeps that strength (external audit suggested softening). | Phase 10: Urdu revised after the external review (attributed \"روایتی تعبیر\" wording; «طبی دعویٰ نہیں» added for the medical sentence); the English source is unchanged. Qualified review still required.",
    "alternative": "keep as source; add a doctor note to EN/FR/AR/UR together or not at all | «بے نتیجہ رہنے کا امکان رہتا ہے»",
    "review": "subject-matter + product decision + native Urdu"
   },
   {
    "group": "rules",
    "en": "The Moon isn't forming any meaningful connection right now — traditionally, work begun in this state tends to come to nothing.",
-   "ur": "قمر اس وقت کوئی نمایاں ربط نہیں بنا رہا — روایت میں اس حالت میں شروع کیا گیا کام اکثر بے نتیجہ رہتا ہے۔",
-   "reason": "\"tends to come to nothing\": stated without a hedge in the source; Urdu «اکثر بے نتیجہ رہتا ہے» keeps that strength (external audit suggested softening).",
+   "ur": "قمر اس وقت کوئی نمایاں ربط نہیں بنا رہا — روایتی تعبیر میں اس حالت میں شروع کیے گئے کام کے بے نتیجہ رہنے کا رجحان سمجھا جاتا ہے۔",
+   "reason": "\"tends to come to nothing\": stated without a hedge in the source; Urdu «اکثر بے نتیجہ رہتا ہے» keeps that strength (external audit suggested softening). | Phase 10: Urdu revised after the external review (attributed \"روایتی تعبیر\" wording); the English source is unchanged. Qualified review still required.",
    "alternative": "«بے نتیجہ رہنے کا امکان رہتا ہے»",
    "review": "native Urdu"
   },
   {
    "group": "rules",
    "en": "The Moon isn't forming any meaningful connection right now — traditionally, study begun in this state tends to come to nothing.",
-   "ur": "قمر اس وقت کوئی نمایاں ربط نہیں بنا رہا — روایت میں اس حالت میں شروع کی گئی تعلیم اکثر بے نتیجہ رہتی ہے۔",
-   "reason": "\"tends to come to nothing\": stated without a hedge in the source; Urdu «اکثر بے نتیجہ رہتا ہے» keeps that strength (external audit suggested softening).",
+   "ur": "قمر اس وقت کوئی نمایاں ربط نہیں بنا رہا — روایتی تعبیر میں اس حالت میں شروع کی گئی تعلیم کے بے نتیجہ رہنے کا رجحان سمجھا جاتا ہے۔",
+   "reason": "\"tends to come to nothing\": stated without a hedge in the source; Urdu «اکثر بے نتیجہ رہتا ہے» keeps that strength (external audit suggested softening). | Phase 10: Urdu revised after the external review (attributed \"روایتی تعبیر\" wording); the English source is unchanged. Qualified review still required.",
    "alternative": "«بے نتیجہ رہنے کا امکان رہتا ہے»",
    "review": "native Urdu"
   },
   {
    "group": "rules",
    "en": "How scoring works: each rule adds or subtracts points; the total is scaled to a 0–100 score against that election type's own maximum achievable points, so the tier bands (Mumtāz, Jayyid, Maqbūl, Ḍaʿīf, Ijtanib) mean the same thing across marriage, travel, and any future election type.",
-   "ur": "اسکور کیسے بنتا ہے: ہر اصول کچھ پوائنٹس جمع یا منفی کرتا ہے؛ مجموعے کو اسی قسم کے انتخاب کے زیادہ سے زیادہ ممکنہ پوائنٹس کے مقابلے میں 0–100 کے اسکور پر لایا جاتا ہے، تاکہ درجوں (ممتاز، جیّد، مقبول، ضعیف، اجتنب) کا مطلب شادی، سفر اور آئندہ ہر قسم کے انتخاب میں ایک ہی رہے۔",
-   "reason": "Tier names are written in Urdu script (ممتاز، جیّد، مقبول، ضعیف، اجتنب) while the UI badges may still show the transliterations; check the spellings.",
+   "ur": "اسکور کیسے شمار ہوتا ہے: ہر اصول کے مطابق کچھ پوائنٹس جمع یا منہا کیے جاتے ہیں۔ پھر حاصل شدہ مجموعے کو اسی قسم کے انتخاب کے زیادہ سے زیادہ ممکنہ پوائنٹس کے لحاظ سے 0–100 کے پیمانے پر تبدیل کیا جاتا ہے، تاکہ درجوں (ممتاز، جیّد، مقبول، ضعیف، اجتناب) کا مطلب شادی، سفر اور آئندہ ہر قسم کے انتخاب میں ایک ہی رہے۔",
+   "reason": "Tier names are written in Urdu script (ممتاز، جیّد، مقبول، ضعیف، اجتنب) while the UI badges may still show the transliterations; check the spellings. | Phase 10: Urdu revised after the external review (attributed \"روایتی تعبیر\" wording; tier name spelled «اجتناب» as on the badge); the English source is unchanged. Qualified review still required.",
    "alternative": "",
    "review": "native Urdu"
   },
   {
    "group": "career-ui",
    "en": "Despite being a Water element, you receive special blessings from Earth industries. This unique spiritual gift allows you to thrive in both water-related AND earth-based careers—giving you more pathways to success than most other elements.",
-   "ur": "اگرچہ آپ آبی عنصر سے ہیں، روایت کے مطابق آپ کو زمینی صنعتوں سے خاص برکت حاصل ہے۔ یہ منفرد روحانی عطیہ آپ کو پانی سے متعلق اور زمین پر مبنی دونوں طرح کے پیشوں میں آگے بڑھنے دیتا ہے — یعنی آپ کے لیے دوسرے اکثر عناصر کے مقابلے میں کامیابی کے زیادہ راستے ہیں۔",
-   "reason": "Urdu adds the hedge «روایت کے مطابق» that the source lacks (certainty is lowered, on purpose, after the external audit). The source itself states a spiritual \"gift\" and \"more pathways to success than most other elements\" as fact; whether that claim belongs in the product is a content decision.",
+   "ur": "روایتی تعبیر کے مطابق، آبی مزاج رکھنے والوں کے لیے زمینی صنعتوں کو بھی قابلِ غور سمجھا جاتا ہے۔ اسے کامیابی کی ضمانت یا پیشہ منتخب کرنے کا واحد معیار نہ سمجھیں۔",
+   "reason": "Urdu adds the hedge «روایت کے مطابق» that the source lacks (certainty is lowered, on purpose, after the external audit). The source itself states a spiritual \"gift\" and \"more pathways to success than most other elements\" as fact; whether that claim belongs in the product is a content decision. | Phase 10: Urdu revised after the external review (see still_english.md, Phase 10); the English source is unchanged. Qualified review still required.",
    "alternative": "keep (hedged)",
    "review": "subject-matter + product decision"
   },
@@ -536,8 +536,8 @@
   {
    "group": "potd",
    "en": "Monday is ideal for matters of the home, family, and emotional wellbeing. Engage in travel or movement — the Moon governs journeys. Practice emotional healing, prayer, and du'ā'. Reflect on your inner world. Avoid confrontation; the Moon's waters prefer calm.",
-   "ur": "روایتی علمِ نجوم میں پیر کو قمر سے منسوب کیا جاتا ہے، اور یہ گھر، خاندان اور جذباتی بہبود کے معاملات کے لیے موزوں دن سمجھا جاتا ہے۔ سفر یا نقل و حرکت اختیار کریں — روایت میں قمر کو اسفار سے جوڑا جاتا ہے۔ جذباتی بحالی، نماز اور دعا کا اہتمام کریں۔ اپنے باطن پر غور کریں۔ ٹکراؤ سے بچیں؛ اس دن سکون اور تحمل کو ترجیح دیں۔",
-   "reason": "The metaphor \"the Moon's waters prefer calm\" is not carried over (Phase 3 rewrite after the external audit flagged the earlier sentence as ungrammatical); the Urdu keeps the advice (avoid confrontation, prefer calm).",
+   "ur": "روایتی علمِ نجوم میں پیر کو قمر سے منسوب کیا جاتا ہے، اور یہ گھر، خاندان اور جذباتی بہبود کے معاملات کے لیے موزوں دن سمجھا جاتا ہے۔ سفر یا نقل و حرکت اختیار کریں — روایت میں قمر کو اسفار سے جوڑا جاتا ہے۔ جذباتی سکون اور بہتری کے لیے نماز اور دعا کا اہتمام کریں۔ اپنے باطن پر غور کریں۔ ٹکراؤ سے بچیں؛ اس دن سکون اور تحمل کو ترجیح دیں۔",
+   "reason": "The metaphor \"the Moon's waters prefer calm\" is not carried over (Phase 3 rewrite after the external audit flagged the earlier sentence as ungrammatical); the Urdu keeps the advice (avoid confrontation, prefer calm). | Phase 10: Urdu revised after the external review (see still_english.md, Phase 10); the English source is unchanged. Qualified review still required.",
    "alternative": "«قمر کے پانی سکون پسند کرتے ہیں» is not recommended; a metaphor-preserving wording needs a native reviewer",
    "review": "native Urdu"
   },
@@ -552,8 +552,8 @@
   {
    "group": "arch",
    "en": "Working relationships start smoothly and productively, but can grow stale without new goals or challenges. Revisit shared objectives regularly to avoid complacency.",
-   "ur": "پیشہ ورانہ تعلقات ہموار اور نتیجہ خیز شروع ہوتے ہیں، مگر نئے اہداف یا چیلنجز کے بغیر پرانے پڑ سکتے ہیں۔ خود اطمینانی سے بچنے کے لیے مشترکہ مقاصد پر باقاعدگی سے نظرِ ثانی کریں۔",
-   "reason": "\"complacency\" rendered «خود اطمینانی» (see above).",
+   "ur": "پیشہ ورانہ تعلقات ہموار اور نتیجہ خیز شروع ہوتے ہیں، مگر نئے اہداف یا چیلنجز نہ ہوں تو یکسانیت پیدا ہو سکتی ہے۔ خود اطمینانی سے بچنے کے لیے مشترکہ مقاصد پر باقاعدگی سے نظرِ ثانی کریں۔",
+   "reason": "\"complacency\" rendered «خود اطمینانی» (see above). | Phase 10: Urdu revised after the external review (see still_english.md, Phase 10); the English source is unchanged. Qualified review still required.",
    "alternative": "«غفلت / آسودگی میں بے پروائی»",
    "review": "native Urdu"
   },
