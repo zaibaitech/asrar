@@ -1938,7 +1938,7 @@ One paragraph per weekday. Source: `app/planet-of-the-day/PlanetOfTheDayPage.tsx
 
 
 
-## 6. AI-drafted UI strings from the Urdu audit (2056 strings, NOT native-reviewed)
+## 6. AI-drafted UI strings from the Urdu audit (2127 strings, NOT native-reviewed)
 
 Found by a browser audit of the /ur pages and of the Urdu language mode on the other pages (menus, tabs, calculators, result tabs, page prose, FAQs), plus a scan of the source for hard-coded English. Drafted by an AI assistant, live on noindex /ur only. Rules: traditional / reflective framing, no prediction or medical claims, planets never agents; Qur'an lines and Divine Names are NOT translated (Arabic comes from the data files: `planetaryZikr.ts`, `lunarMansions.ts`, `burujData.json`, `incense.ts`, the verified `ar-ui.json` Qur'an lines). Edit `scripts/i18n/ur/catalog_ai_draft_ui.py`, then run `build_catalog.py` and `build_review.py`.
 
@@ -2003,6 +2003,7 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 | burj-spiritual | 4 |
 | ikhtiyarat-detail | 175 |
 | phase5-ui | 6 |
+| phase6-ui | 71 |
 
 ### 6.1 incense (10)
 
@@ -4470,6 +4471,84 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 | Sign Out | سائن آؤٹ |
 | Explore the tools | ٹولز دیکھیں |
 | These tools are for reflection and education, not prediction. Only Allah knows the unseen. | یہ ٹولز غور و فکر اور تعلیم کے لیے ہیں، پیش گوئی کے لیے نہیں۔ غیب کا علم صرف اللہ کو ہے۔ |
+
+
+
+### 6.60 phase6-ui (71)
+
+| English | Urdu |
+|---|---|
+| Account created! Setting up your profile... | اکاؤنٹ بن گیا! آپ کا پروفائل تیار کیا جا رہا ہے… |
+| An unexpected error occurred. Please try again. | ایک غیر متوقع خرابی پیش آئی۔ براہِ کرم دوبارہ کوشش کریں۔ |
+| Create Account | اکاؤنٹ بنائیں |
+| Email Address | ای میل ایڈریس |
+| Enter your email to reset your password | پاس ورڈ ری سیٹ کرنے کے لیے اپنا ای میل درج کریں |
+| Failed to create account | اکاؤنٹ بنانے میں ناکامی |
+| Failed to send password reset email | پاس ورڈ ری سیٹ کی ای میل بھیجنے میں ناکامی |
+| Failed to sign in | سائن ان کرنے میں ناکامی |
+| Forgot password? | پاس ورڈ بھول گئے؟ |
+| Hide password | پاس ورڈ چھپائیں |
+| Must be at least 6 characters | کم از کم 6 حروف ہونے چاہییں |
+| Password | پاس ورڈ |
+| Password reset email sent! Check your inbox. | پاس ورڈ ری سیٹ کی ای میل بھیج دی گئی! اپنا ان باکس دیکھیں۔ |
+| Processing... | کارروائی ہو رہی ہے… |
+| Reset Password | پاس ورڈ ری سیٹ کریں |
+| Send Reset Link | ری سیٹ لنک بھیجیں |
+| Show password | پاس ورڈ دکھائیں |
+| Sign in | سائن ان |
+| Sign in to continue your journey | اپنا سفر جاری رکھنے کے لیے سائن ان کریں |
+| Sign up | سائن اپ |
+| Successfully signed in! | کامیابی سے سائن ان ہو گئے! |
+| Supabase not configured | Supabase ترتیب نہیں دیا گیا |
+| Welcome Back | واپسی پر خوش آمدید |
+| Account Information | اکاؤنٹ کی معلومات |
+| Complete Profile | پروفائل مکمل کریں |
+| Complete Your Profile | اپنا پروفائل مکمل کریں |
+| Complete your profile to unlock all features and get personalized guidance. | تمام سہولیات کھولنے اور ذاتی رہنمائی پانے کے لیے اپنا پروفائل مکمل کریں۔ |
+| Coordinates | نقاط (عرض و طول) |
+| Create Profile | پروفائل بنائیں |
+| Creating your profile... | آپ کا پروفائل بنایا جا رہا ہے… |
+| Edit Profile | پروفائل میں ترمیم کریں |
+| Full Name | پورا نام |
+| Last Seen | آخری بار دیکھا گیا |
+| Last Updated | آخری تازہ کاری |
+| Location & Timezone | مقام اور ٹائم زون |
+| Member Since | رکنیت کی ابتدا |
+| No name set | نام درج نہیں |
+| No profile found | کوئی پروفائل نہیں ملا |
+| Not set | درج نہیں |
+| Personal Information | ذاتی معلومات |
+| Preferred Language | پسندیدہ زبان |
+| Profile | پروفائل |
+| Profile Completion | پروفائل کی تکمیل |
+| Set Up Profile | پروفائل ترتیب دیں |
+| City, Country | شہر، ملک |
+| Enter your full name | اپنا پورا نام درج کریں |
+| Getting Location... | مقام معلوم کیا جا رہا ہے… |
+| Location Name | مقام کا نام |
+| Location found, but unable to get location name | مقام مل گیا، لیکن اس کا نام معلوم نہیں ہو سکا |
+| Profile Picture | پروفائل کی تصویر |
+| Profile updated successfully! | پروفائل کامیابی سے اپ ڈیٹ ہو گیا! |
+| Remove current picture | موجودہ تصویر ہٹائیں |
+| Save Changes | تبدیلیاں محفوظ کریں |
+| Used for Name Destiny calculations | نام کے مقدر کے حساب کے لیے استعمال ہوتا ہے |
+| Used for planetary hour calculations | ساعاتِ کواکب کے حساب کے لیے استعمال ہوتا ہے |
+| 📍 Update to Current Location | 📍 موجودہ مقام پر اپ ڈیٹ کریں |
+| Home | ہوم |
+| Loading profile... | پروفائل لوڈ ہو رہا ہے… |
+| Update your profile information | اپنے پروفائل کی معلومات اپ ڈیٹ کریں |
+| Add a profile picture to personalize your account | اپنے اکاؤنٹ کو ذاتی بنانے کے لیے پروفائل کی تصویر شامل کریں |
+| Complete Setup | ترتیب مکمل کریں |
+| Enter Location Manually | مقام خود درج کریں |
+| Next | اگلا |
+| Profile Picture (Optional) | پروفائل کی تصویر (اختیاری) |
+| Skip for now | ابھی چھوڑیں |
+| This helps us personalize your experience with Asrār Everyday | اس سے ہم Asrār Everyday میں آپ کے تجربے کو ذاتی بنا سکتے ہیں |
+| Used for Name Destiny calculations and personalized guidance | نام کے مقدر کے حساب اور ذاتی رہنمائی کے لیے استعمال ہوتا ہے |
+| Used for accurate planetary hour calculations and prayer times | ساعاتِ کواکب اور اوقاتِ نماز کے درست حساب کے لیے استعمال ہوتا ہے |
+| Welcome! Let's set up your profile | خوش آمدید! آئیے آپ کا پروفائل ترتیب دیں |
+| Your Location | آپ کا مقام |
+| 📍 Use Current Location | 📍 موجودہ مقام استعمال کریں |
 
 
 
