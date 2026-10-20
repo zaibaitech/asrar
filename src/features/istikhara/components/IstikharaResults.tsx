@@ -539,6 +539,7 @@ function EnhancedPersonalitySection({
   showAll: boolean;
 }) {
   const { language } = useLanguage();
+  const [expanded, setExpanded] = useState(false);
   const profile = result.burujProfile;
   const personality = profile.personality[language as "en" | "fr"];
 
@@ -611,7 +612,8 @@ function EnhancedPersonalitySection({
     }
   ];
 
-  const displayFields = showAll 
+  const showEverything = showAll || expanded;
+  const displayFields = showEverything 
     ? personalityFields 
     : personalityFields.slice(0, 5);
 
@@ -659,9 +661,9 @@ function EnhancedPersonalitySection({
       </div>
 
       {/* Show More/Less Button */}
-      {!showAll && personalityFields.length > 5 && (
+      {!showEverything && personalityFields.length > 5 && (
         <button
-          onClick={() => {}}
+          onClick={() => setExpanded(true)}
           className="w-full py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors flex items-center justify-center gap-2"
         >
           <ChevronDown className="w-5 h-5" />

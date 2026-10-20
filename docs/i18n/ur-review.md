@@ -4379,7 +4379,7 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 | caution for the nikāḥ contract itself. | نکاح کے عقد کے لیے احتیاط۔ |
 | increased risk of a delayed, incomplete, or revised diagnosis. | تشخیص کے مؤخر، نامکمل یا نظرِ ثانی شدہ ہونے کا بڑھا ہوا خطرہ۔ |
 | increased risk of itinerary changes, lost documents, or miscommunication. | سفری پروگرام میں تبدیلی، دستاویزات کے گم ہونے یا غلط فہمی کا بڑھا ہوا خطرہ۔ |
-| the same classical caution cited against contracts (business.ts) applies here: avoid starting serious study, an exam, or a new course while Mercury retrogrades. | معاہدوں کے خلاف جو کلاسیکی احتیاط بیان کی جاتی ہے (business.ts) وہی یہاں بھی لاگو ہوتی ہے: عطارد کی رجعت کے دوران سنجیدہ تعلیم، امتحان یا نیا کورس شروع کرنے سے بچیں۔ |
+| the same classical caution cited against contracts (business.ts) applies here: avoid starting serious study, an exam, or a new course while Mercury retrogrades. | معاہدوں کے خلاف جو کلاسیکی احتیاط بیان کی جاتی ہے وہی یہاں بھی لاگو ہوتی ہے: عطارد کی رجعت کے دوران سنجیدہ تعلیم، امتحان یا نیا کورس شروع کرنے سے بچیں۔ |
 | the single most-cited classical caution against signing contracts, starting negotiations, or finalizing a sale. | معاہدوں پر دستخط، مذاکرات کے آغاز یا فروخت کو حتمی شکل دینے کے خلاف سب سے زیادہ بیان کی جانے والی کلاسیکی احتیاط۔ |
 | increased risk of delays, cost overruns, or rework during construction. | تعمیر کے دوران تاخیر، اخراجات بڑھ جانے یا کام دوبارہ کرنے کا بڑھا ہوا خطرہ۔ |
 | a fixed sign (burj thābit); fixed signs show stability, favoring a foundation or building meant to endure. [SCHOLAR-REVIEW] | ثابت برج؛ ثابت برج استحکام ظاہر کرتے ہیں، جو ایسی بنیاد یا عمارت کے لیے موافق ہے جسے دیرپا ہونا چاہیے۔ [SCHOLAR-REVIEW] |
