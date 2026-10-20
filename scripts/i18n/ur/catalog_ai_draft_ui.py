@@ -2224,4 +2224,11 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('phase6b-ui', 'Track your dhikr: Istighfār, Ṣalawāt, Divine Names and the 201 Prophetic Names practice.', 'اپنے ذکر کا حساب رکھیں: استغفار، صلوات، اسمائے حسنیٰ اور نبی کریم ﷺ کے 201 اسمائے مبارکہ کا معمول۔'),
     ('phase13-ui', 'Astrology cannot tell you when, whether or how to have medical treatment or surgery, and it must not be used to choose, delay, stop or replace treatment. Consult a qualified healthcare professional, and do not delay necessary care. This result is a traditional astrological interpretation, not a clinically validated medical prediction.', 'طبی علاج کے وقت، انتخاب یا فیصلے کا تعین علمِ نجوم کی بنیاد پر نہ کریں۔ اسی بنیاد پر کسی علاج یا سرجری کو مؤخر نہ کریں، جاری علاج بند نہ کریں اور نہ اس کی جگہ کوئی اور طریقہ اختیار کریں۔ تشخیص اور علاج کے لیے مستند طبی ماہر سے رجوع کریں، اور ضروری طبی امداد میں تاخیر نہ کریں۔ یہ نتیجہ روایتی علمِ نجوم کی تعبیر ہے، کوئی طبی پیش گوئی نہیں۔'),
     ('phase13-ui', 'Medical treatment · traditional reading', 'طبی علاج · روایتی تعبیر'),
+    # Batch 14 (DRAFT, not reviewed): primary practice nights in burujData.json
+    # (weekly_spiritual_practices.*.practice_night, ~lines 4486–4672), Islamic night convention
+    # with the reviewed «… اور … کی درمیانی رات» / «شبِ جمعہ» wording (sheet 2, item 10).
+    ('practice-night-draft', 'Thursday midnight (Friday night)', 'جمعرات اور جمعہ کی درمیانی رات (شبِ جمعہ)'),
+    ('practice-night-draft', 'Sunday midnight (Monday night)', 'اتوار اور پیر کی درمیانی رات'),
+    ('practice-night-draft', 'Monday midnight (Tuesday night)', 'پیر اور منگل کی درمیانی رات'),
+    ('practice-night-draft', 'Tuesday midnight (Wednesday night)', 'منگل اور بدھ کی درمیانی رات'),
 ]

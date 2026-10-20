@@ -1,12 +1,17 @@
 """Build public/i18n/ur-ui.json from catalog_source.py (run from the repo root)."""
-import json, os, re, sys
+import json, os, re, subprocess, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from catalog_source import ENTRIES
 from catalog_ai_draft import AI_ENTRIES
 from catalog_ai_draft_ui import AI_UI_ENTRIES
 
+# Batch 13 (not reviewed): Urdu drafts for the /ur/abjad calculator UI, kept as a locale file
+# next to en.ts/ar.ts (src/features/calculator/i18n/ur.ts) and paired with the English here.
+CALC_ENTRIES = [(r['en'], r['ur']) for r in json.loads(
+    subprocess.check_output(['npx', 'tsx', 'scripts/i18n/ur/dump_calculator.ts'], text=True))]
+
 out, seen = {}, {}
-for group, en, ur in list(ENTRIES) + [('ai', en, ur) for _, en, ur in AI_ENTRIES] + [('ai-ui', en, ur) for _, en, ur in AI_UI_ENTRIES]:
+for group, en, ur in list(ENTRIES) + [('ai', en, ur) for _, en, ur in AI_ENTRIES] + [('ai-ui', en, ur) for _, en, ur in AI_UI_ENTRIES] + [('calc-draft', en, ur) for en, ur in CALC_ENTRIES]:
     if en in out and out[en] != ur:
         sys.exit(f'conflicting Urdu for {en!r}: {out[en]!r} vs {ur!r}')
     if not en.startswith('re:') and not re.search(r'[\u0600-\u06FF]', ur):
