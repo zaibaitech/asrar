@@ -1,5 +1,69 @@
 English that is still shown to Urdu users, after the Phase 5 audit of the Urdu audit (Oct 2026). **Urdu is not fully localized**: the tools and result tabs are translated, the sign-in, profile and name-guide labels and the Quran share actions are translated (Phase 6), but the long server-rendered prose of the name pages, the social-preview images, page metadata and image `alt` text are not, and the religious items below are deliberately held. Numbers are UNIQUE English strings. /ur stays noindex, out of the sitemap and out of hreflang until these are resolved and a qualified reviewer has approved the Urdu.
 
+## Handover (Phase 9) — read this first; the sections below are the dated log
+
+**Status: technically validated, partially localized; editorial review and future share-preview decisions outstanding.** Urdu is **not** fully localized (21 scanner findings below, plus data-file text and every item in the reviewer checklist). Nothing in this branch is native-reviewed or scholar-approved. Branch `fix/urdu-localization-audit`, local only (not pushed, merged, or deployed).
+
+### 1. Implemented and validated
+
+Evidence kinds: **Impl** = code or catalog change; **Tests** = automated Vitest coverage; **Browser** = Chromium on a built app (with the phase it was last run; "recorded" means not re-run in Phase 9). The Phase 9 run re-ran only tsc, Vitest, the scanner and the catalog/review generators (section 5).
+
+| Area | Impl | Tests | Browser (recorded) |
+|---|---|---|---|
+| UI localization, `lang="ur"` / `dir="rtl"` | `LanguageContext` sets lang/dir from the UI language; shared dictionary `src/lib/i18n/ur.ts`; DOM catalog `public/i18n/ur-ui.json` (3,594 entries) | `urdu-dictionary`, `urdu-catalog-integrity`, `urdu-phase1-ui`, `urdu-ui-coverage`, `urdu` | Phase 7: 84 page loads (`/`, `/auth`, `/profile`, `/names`, `/names/muhammad|fatima|khadija` × en/fr/ar/ur × 360/390/412 px): ur `ur/rtl`, en `en/ltr`, fr `fr/ltr`, ar `ar/rtl`, no horizontal overflow, no raw internal text |
+| Result catalog and terminology | AI-drafted result texts, Phase 4 corrections, glossary | `urdu-result-content` (engine sweep over 6 election types), `urdu-result-coverage`, `urdu-glossary`, `urdu-phase4-review` | Phases 3-4: rendered Burj result counts (not re-run) |
+| Ikhtiyārāt labels and "Show N more traits" | `pickLabel` (labels); `IstikharaResults.tsx` expands (was an empty handler); Urdu flag «[علما کے جائزے کا منتظر]»; "(business.ts)" removed from en/fr/ar/ur text | `urdu-ikhtiyarat-labels`, `urdu-phase6-source-content`, `urdu-result-content` | Labels: Phase 5 (marriage, medical at 360/390/412, en/fr unchanged). Show more: Phase 7 (21 → 27 headings, button hidden, en/fr/ur × 3 widths) |
+| `/auth` diagnostics hardening | `SupabaseConfigNotice` + `authErrorMessage`: production shows only «Sign-in is temporarily unavailable…» | `SupabaseConfigNotice.test` (production vs development, real rendering) | Production: Phase 7 (message after a submit, no diagnostics strings in built chunks). Development (`next dev`): Phase 6B only, **not re-run** |
+| Image `alt` text | `src/lib/i18n/imageAlt.ts`, component level; `ArabicDomTranslator` not widened | `urdu-phase6b-alt` | Only the Play badge on `/`: Urdu in ur, unchanged in en/fr/ar (Phase 7). Profile photo, Wave QR, Play-install QR: **tests only** |
+| Urdu 12-hour time | ICU day-period words, Urdu branch of the Intl patch only (`withUrduDayPeriod`) | `urdu-phase6b-time` (every hour, 24-hour untouched, en/fr/ar untouched, time zones) | Phase 7, fixed browser clock: 12:00 «دوپہر», 15:45 «دوپہر», 17:10 «سہ پہر», 19:30 «شام», 00:05 «12:05 رات»; en PM, ar «م» |
+| Names guide `/names`, `/names/[slug]` | `src/lib/names/urdu.ts` whole-sentence templates via `ByUiLanguage` (Urdu mode only); English markup and JSON-LD unchanged | `urdu-phase6b-names` (all 12 names, numbers, example, framing) | Phase 6B/7: muhammad, fatima, khadija × 3 widths |
+| Home SEO shell, sign-in/profile/share labels | catalog rows (`phase6-ui`, `phase6b-ui`) | `urdu-phase6-account`, `urdu-phase6-names-share`, `urdu-phase6b-names` | Home and `/auth` in the matrix above; `/profile` unauthenticated only |
+| SEO safeguards | unchanged: `app/(ur)/ur/layout.tsx`, middleware `X-Robots-Tag`, sitemap, hreflang | `urdu-seo-rtl`, `urdu-english-ratchet` | Phase 6B/7: `/ur` and `/ur/ikhtiyarat` serve `noindex, follow`; 0 `/ur` URLs in the 62-URL sitemap; hreflang en, fr, ar, x-default only |
+
+### 2. The 21 scanner findings (`known_english.json`, `npx tsx scripts/i18n/ur/update_known_english.ts`)
+
+| Category | Count | Items | Why it is held |
+|---|---|---|---|
+| Social-preview image strings | 8 | `app/og/ikhtiyarat/[date]/route.tsx` ×6, `app/og/quran/…/route.tsx` ×1, `app/opengraph-image.tsx` ×1 | technical limitation, section 4 |
+| Metadata title | 1 | «Ikhtiyārāt Result» (`ikhtiyarat/r/[date]` generateMetadata) | metadata decision, Phase 8 part B |
+| Religious / scholarly | 12 | `SpiritualPracticeTab` ×10, `DhikrCounter` ×2 (angel, jinn) | awaits qualified review; deliberately not translated |
+
+These are deliberate holds and limits, **not** evidence that localization is complete. The scan sees only certain literal shapes; text in data files (burujData: 59 held strings and others, see "How these were counted") and text it cannot see is not in the 21.
+
+### 3. Reviewer checklist (work top to bottom; religious approval is separate from linguistic review, and a native-language reviewer is not by default a religious authority; no reviewer names, qualifications, approvals or dates are recorded here)
+
+| Pri | Category and reviewer type | Where | Decision / review needed | Acceptance criterion | Status |
+|---|---|---|---|---|---|
+| 1 | Religious content, **qualified religious reviewer** | Section 3 "Religious or subject-matter content" below; Phase 8 register rows 1; 7.2 | Angel/jinn text (24 burujData fields + 12 UI strings); Divine Name glosses (9); Fātiḥa renderings (9); "Recite the Angel/Jinn name" lines (17); «201 Prophetic Names» wording; Thursday/Friday and "most sacred day" statements | Reviewer supplies or approves each Urdu text or states "keep English"; only then is a string translated | Awaiting review (untranslated) |
+| 1 | `[SCHOLAR-REVIEW]` rule sentences, **qualified religious reviewer** | `src/lib/ikhtiyarat/elections/*.ts`; Phase 6B notes | Review the classical rules the flag marks; decide whether en/fr/ur show a localized badge or the raw flag | Each flagged rule reviewed; flag removed only by that decision | Awaiting review; display decision required |
+| 1 | Medical and traditional claims, **editorial owner (Mario) plus a qualified reviewer** | Section 4 below; "Open points"; Phase 8 register rows 2 | Medical-timing sentences; add a "decisions about medical treatment: ask a doctor" sentence to EN/FR/AR/UR together or not at all; unhedged tradition claims (ring, cowries, dreams, Leo, "most spiritually aligned day", "Give secretly…") and marriage warnings | A written decision per item (keep, hedge, remove); any new sentence exists in all four languages | Decision required |
+| 2 | Glossary, **Urdu subject-matter reviewer** | "Open points"; Phase 8 register rows 3 | «ربط» vs «اتصال»; aspect names; ثابت/منقلب/ذوجسدین; «دلالت کنندہ»; «زاویائی فرق/فاصلہ»; «غیر موافق»; «نشان» for الهنعة | One term per concept, recorded in the glossary, then `urdu-glossary` updated | Awaiting review |
+| 2 | 60 flagged entries, **Urdu subject-matter reviewer** | `docs/i18n/ur-review.md` section 7.2 (source list `phase4_review.json`) | Answer the question in each row; accept or replace the provisional Urdu | Every row marked accepted or replaced, with the catalog rebuilt | Awaiting review |
+| 2 | 896 AI-drafted result texts and 2,200 AI-drafted UI strings, **native Urdu reviewer** | `ur-review.md` sections 5 and 6 (40 corrections applied in 7.1) | Linguistic read of each group | Reviewer signs off per group; until then they stay "AI-drafted, not native-reviewed" | Awaiting review |
+| 3 | Native Urdu wording | Phase 6B/7 notes | Day-period words: «دوپہر» (mid-afternoon) vs «سہ پہر» (from about 17:00), «رات» for 20:06 and 00:05 (or «آدھی رات»), noon «12:00 دوپہر»; spelling «Asrār» vs «اسرار» (the catalog turns the Latin brand into «اسرار» in some places, templates keep «Asrār») | One convention chosen; implementation changed only if the choice differs from ICU | Awaiting review |
+| 4 | Arabic sign-in notice, **Arabic reviewer** | `scripts/i18n/ar/manual.json`, `public/i18n/ar-ui.json` | «تسجيل الدخول غير متاح مؤقتًا. يُرجى المحاولة لاحقًا.» (AI draft) | Reviewer accepts or replaces | Awaiting review |
+| 5 | Share-preview renderer | section 4 below; Phase 8 part A | Do Urdu share links become a requirement? If yes: approve a renderer option | Written decision; any dependency approved explicitly | Decision required; technically deferred |
+| 5 | Urdu metadata | Phase 8 part B | Approve the opt-in `?lang=ur` share-link design, or keep English metadata | Written decision; canonical, robots, sitemap and hreflang tests as listed in Phase 8 B | Decision required; technically deferred |
+
+### 4. Share-preview decision (current recommendation)
+
+- Leave the existing cards unchanged. Do not add Playwright or any other renderer yet.
+- No existing URL requests an Urdu card: share links are language-neutral English routes and only `lang=fr` is read.
+- Satori's Urdu problems must never ship as broken output: Urdu-capable fonts crash its shaper; the one font that renders ignores RTL, scrambles word order, and the per-word workaround breaks tokens with punctuation.
+- Headless Chromium rendered correct Urdu (shaping, RTL, punctuation, Latin and digits) with Noto Nastaliq and Noto Naskh in a disposable proof, byte-identical across two renders in one process. **Not verified across machines or Chromium versions.**
+- Seven of the eight cards are dynamic (per date or per ayah), so build-time rendering of fixed cards cannot cover them; only `app/opengraph-image.tsx` and the static page cards are fixed.
+- Revisit only if Urdu share links become a real requirement.
+
+Future options (none implemented; any new dependency or architecture change needs explicit approval): (a) re-run the same four-line proof on the next Next/satori upgrade, no cost; (b) build-time Chromium for fixed cards only, new devDependency and fonts, no dynamic coverage; (c) request-time Chromium, heavy; (d) a native shaping renderer (sharp/librsvg, resvg with text), not demonstrated; (e) browser-side canvas for the Share button only. Full comparison table: Phase 8 part A.
+
+### 5. Verification record
+
+New in Phase 9 (re-run on HEAD `f6264cd`): `tsc --noEmit` clean; Vitest 60 files / 476 tests pass; scanner output byte-identical (21 strings, 6 files); `build_catalog.py` (3,594 entries) and `build_review.py` regenerate the committed files with no diff, i.e. deterministic; working tree clean afterwards. **Recorded, not re-run:** `next build` compiled in Phase 7 (HEAD `b526d31`; no source change since, only documentation); every browser result in section 1 and the live SEO curl checks (`urdu-seo-rtl` re-ran as part of Vitest). No ESLint configuration exists and none was added.
+
+**Still unverified:** authenticated `/profile` content; `/share/quran/…` (needs `api.alquran.cloud`, unreachable from the sandbox); `/auth` under `next dev` in this phase; profile-photo, Wave QR and Play-install QR `alt` text in a browser; Chromium output across machines and versions; native shaping alternatives and newer satori versions; Ikhtiyārāt Detailed labels in a browser since Phase 5.
+
+---
+
 ### How these were counted
 
 | Method | What it counts |
