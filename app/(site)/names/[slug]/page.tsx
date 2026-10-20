@@ -4,6 +4,10 @@ import { BurjCalculator } from '@/app/(site)/name-and-mother-burj/BurjCalculator
 import { FaqSection, JsonLd, RelatedLinks, faqJsonLd, type FaqItem, type RelatedLink } from '@/src/components/seo/SeoSections';
 import { COMMON_NAMES, burjWithMothers, getCommonName, getCommonNames, type CommonName } from '@/src/lib/names/commonNames';
 import { englishPageMetadata } from '@/src/lib/names/seo';
+import ByUiLanguage from '@/src/components/i18n/ByUiLanguage';
+import {
+  urFaqs, urHow, urIntro, urNote, urPairingsHeading, urPairingsNote, urSpellings, urValueHeading,
+} from '@/src/lib/names/urdu';
 
 export const dynamicParams = false;
 
@@ -65,6 +69,8 @@ export default async function Page({ params }: Props) {
   const pairings = burjWithMothers(n).filter((p) => p.mother.slug !== n.slug);
   const fatima = burjWithMothers(n).find((p) => p.mother.slug === 'fatima');
   const faqs = faqsFor(n, fatima);
+  const urdu = urFaqs({ name: n.name, arabicPlain: n.arabicPlain, value: n.value, mashriqiValue: n.mashriqiValue, variants: n.variants, slug: n.slug, breakdown: breakdown(n) }, fatima);
+  const arabicSpan = (t: string) => <span lang="ar" dir="rtl">{t}</span>;
   const others = getCommonNames().filter((o) => o.slug !== n.slug);
   const related: RelatedLink[] = [
     ['/name-and-mother-burj', "Burj from Your Name & Mother's Name", 'How the calculation works and the 12 burūj at a glance.'],
@@ -80,12 +86,16 @@ export default async function Page({ params }: Props) {
           <a href="/" className="hover:underline">Asrār</a> › <a href="/names" className="hover:underline">Names</a> › {n.name}
         </nav>
         <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100">
-          {n.name} (<span lang="ar" dir="rtl">{n.arabicPlain}</span>): Abjad Value and Burj
+          <ByUiLanguage ur={<><bdi>{n.name}</bdi> ({arabicSpan(n.arabicPlain)}) کی ابجد قیمت اور برج</>}>
+            {n.name} (<span lang="ar" dir="rtl">{n.arabicPlain}</span>): Abjad Value and Burj
+          </ByUiLanguage>
         </h1>
         <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-          In ḥisāb al-jummal the name {n.name} (<span lang="ar" dir="rtl">{n.arabic}</span>) has an Abjad value of{' '}
-          <strong>{n.value}</strong>. Add your mother&apos;s name in the calculator below to find your burj, element, blessed
-          day, dhikr and sadaqah.
+          <ByUiLanguage ur={<>{urIntro.before} <bdi>{n.name}</bdi> ({arabicSpan(n.arabic)}) کی ابجد قیمت <strong>{n.value}</strong> {urIntro.after}</>}>
+            In ḥisāb al-jummal the name {n.name} (<span lang="ar" dir="rtl">{n.arabic}</span>) has an Abjad value of{' '}
+            <strong>{n.value}</strong>. Add your mother&apos;s name in the calculator below to find your burj, element, blessed
+            day, dhikr and sadaqah.
+          </ByUiLanguage>
         </p>
       </main>
 
@@ -94,7 +104,7 @@ export default async function Page({ params }: Props) {
       <div className="max-w-3xl mx-auto px-4 py-8 space-y-8">
         <section className="space-y-3" aria-labelledby="value-heading">
           <h2 id="value-heading" className="text-xl font-semibold text-slate-900 dark:text-slate-100">
-            Abjad value of {n.name}
+            <ByUiLanguage ur={<>{urValueHeading(n.name)}</>}>Abjad value of {n.name}</ByUiLanguage>
           </h2>
           <div className="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-700">
             <table className="w-full text-left text-sm">
@@ -119,11 +129,20 @@ export default async function Page({ params }: Props) {
             </table>
           </div>
           <p className="text-sm text-slate-600 dark:text-slate-400">
-            Maghribi letter values, as used by the &ldquo;Who Am I?&rdquo; calculator; vowel marks are not counted.{' '}
-            {n.mashriqiValue === n.value
-              ? 'The Mashriqi table gives the same total for this name.'
-              : `The Mashriqi table gives ${n.mashriqiValue}.`}{' '}
-            You can check any spelling in the <a href="/abjad" className="text-purple-700 dark:text-purple-300 hover:underline">Abjad calculator</a>.
+            <ByUiLanguage
+              ur={
+                <>
+                  {urNote.maghribi} {n.mashriqiValue === n.value ? urNote.mashriqiSame : urNote.mashriqiDiffers(n.mashriqiValue)}{' '}
+                  {urNote.checkSpelling} <a href="/abjad" className="text-purple-700 dark:text-purple-300 hover:underline">{urNote.abjadCalculator}</a> {urNote.inCalculator}
+                </>
+              }
+            >
+              Maghribi letter values, as used by the &ldquo;Who Am I?&rdquo; calculator; vowel marks are not counted.{' '}
+              {n.mashriqiValue === n.value
+                ? 'The Mashriqi table gives the same total for this name.'
+                : `The Mashriqi table gives ${n.mashriqiValue}.`}{' '}
+              You can check any spelling in the <a href="/abjad" className="text-purple-700 dark:text-purple-300 hover:underline">Abjad calculator</a>.
+            </ByUiLanguage>
           </p>
         </section>
 
@@ -131,15 +150,17 @@ export default async function Page({ params }: Props) {
           <section className="space-y-3" aria-labelledby="spellings-heading">
             <h2 id="spellings-heading" className="text-xl font-semibold text-slate-900 dark:text-slate-100">Spellings</h2>
             <p className="text-slate-700 dark:text-slate-300">
-              {n.variants.join(', ')}: all are written <span lang="ar" dir="rtl">{n.arabicPlain}</span> in Arabic, so they share
-              the same value. Type any of them in the calculator&apos;s Latin search and pick the Arabic spelling.
+              <ByUiLanguage ur={<><bdi>{urSpellings(n.variants).list}</bdi>: {urSpellings(n.variants).rest} {arabicSpan(n.arabicPlain)} {urSpellings(n.variants).rest2}</>}>
+                {n.variants.join(', ')}: all are written <span lang="ar" dir="rtl">{n.arabicPlain}</span> in Arabic, so they share
+                the same value. Type any of them in the calculator&apos;s Latin search and pick the Arabic spelling.
+              </ByUiLanguage>
             </p>
           </section>
         )}
 
         <section className="space-y-3" aria-labelledby="pairings-heading">
           <h2 id="pairings-heading" className="text-xl font-semibold text-slate-900 dark:text-slate-100">
-            Burj of {n.name} with common mothers&apos; names
+            <ByUiLanguage ur={<>{urPairingsHeading(n.name)}</>}>Burj of {n.name} with common mothers&apos; names</ByUiLanguage>
           </h2>
           <div className="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-700">
             <table className="w-full text-left text-sm">
@@ -171,23 +192,37 @@ export default async function Page({ params }: Props) {
             </table>
           </div>
           <p className="text-sm text-slate-600 dark:text-slate-400">
-            Examples only: use your own mother&apos;s name in the calculator above. What each burj means (temperament, dhikr,
-            sadaqah) is explained on the{' '}
-            <a href="/name-and-mother-burj#buruj-heading" className="text-purple-700 dark:text-purple-300 hover:underline">burj guide</a>.
+            <ByUiLanguage
+              ur={
+                <>
+                  {urPairingsNote.before}{' '}
+                  <a href="/name-and-mother-burj#buruj-heading" className="text-purple-700 dark:text-purple-300 hover:underline">{urPairingsNote.link}</a>{' '}
+                  {urPairingsNote.after}
+                </>
+              }
+            >
+              Examples only: use your own mother&apos;s name in the calculator above. What each burj means (temperament, dhikr,
+              sadaqah) is explained on the{' '}
+              <a href="/name-and-mother-burj#buruj-heading" className="text-purple-700 dark:text-purple-300 hover:underline">burj guide</a>.
+            </ByUiLanguage>
           </p>
         </section>
 
         <section className="space-y-3" aria-labelledby="how-heading">
           <h2 id="how-heading" className="text-xl font-semibold text-slate-900 dark:text-slate-100">How the burj is found</h2>
           <p className="text-slate-700 dark:text-slate-300">
-            Your name&apos;s Abjad total and your mother&apos;s are added and divided by 12; the remainder (1–12, with 0 counted as
-            12) is the burj, from 1 = Aries (al-Ḥamal) to 12 = Pisces (al-Ḥūt). The traditional name for this reflection is
-            Istikhārat al-Asmāʾ, but it is not the istikhāra prayer. Use it for reflection and education, not prediction; Allah
-            alone knows the unseen.
+            <ByUiLanguage ur={<>{urHow}</>}>
+              Your name&apos;s Abjad total and your mother&apos;s are added and divided by 12; the remainder (1–12, with 0 counted as
+              12) is the burj, from 1 = Aries (al-Ḥamal) to 12 = Pisces (al-Ḥūt). The traditional name for this reflection is
+              Istikhārat al-Asmāʾ, but it is not the istikhāra prayer. Use it for reflection and education, not prediction; Allah
+              alone knows the unseen.
+            </ByUiLanguage>
           </p>
         </section>
 
-        <FaqSection id="name-faq-heading" title="Frequently asked questions" faqs={faqs} />
+        <ByUiLanguage ur={<FaqSection id="name-faq-heading" title="عام سوالات" faqs={urdu} />}>
+          <FaqSection id="name-faq-heading" title="Frequently asked questions" faqs={faqs} />
+        </ByUiLanguage>
 
         <nav aria-label="Other names" className="space-y-3">
           <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100">Other names</h2>
