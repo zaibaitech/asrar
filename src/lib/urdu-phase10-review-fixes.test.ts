@@ -4,6 +4,8 @@ import path from 'path';
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { makeCatalog } from '../components/i18n/ArabicDomTranslator';
+import { marriageElectionConfig } from './ikhtiyarat/elections/marriage';
+import { medicalElectionConfig } from './ikhtiyarat/elections/medical';
 
 /** Phase 10: fixes from the external Urdu review (urdu-localization-initial-findings.md). Linguistic and safety wording only. */
 const ui = vi.hoisted(() => ({ lang: 'ur' }));
@@ -130,5 +132,33 @@ describe('scoring explanation and archetypes', () => {
     expect(find('This pattern traditionally shows an easy beginning')).toContain('ایک آسان آغاز کی طرف اشارہ کرتا ہے، جو بعد میں جمود کا شکار ہو سکتا ہے');
     expect(find('This pattern traditionally shows family closeness')).toContain('مسلسل توجہ اور دیکھ بھال نہ ہو تو دوری بڑھ سکتی ہے');
     expect(find('Working relationships start smoothly')).toContain('نئے اہداف یا چیلنجز نہ ہوں تو یکسانیت پیدا ہو سکتی ہے');
+  });
+});
+
+describe('Phase 11: tier names, risk wording, brand spelling', () => {
+  it('each Urdu tier badge shows two words (TierBadge prints labelEn and labelAr, both go through the catalog) and the scoring note lists the second set', () => {
+    const note = raw[Object.keys(raw).find((x) => x.startsWith('How scoring works'))!];
+    const listed = note.match(/\(([^)]*)\)/g)!.find((g) => g.includes('ممتاز'))!;
+    const bandNames = marriageElectionConfig.tiers.map((t) => catalog.get(t.labelAr));
+    expect(bandNames).toEqual(['ممتاز', 'جیّد', 'مقبول', 'ضعیف', 'اجتناب']);
+    for (const b of bandNames) expect(listed).toContain(b!);
+    expect(marriageElectionConfig.tiers.map((t) => catalog.get(t.labelEn))).toEqual(['بہت عمدہ', 'اچھا', 'قابلِ قبول', 'کمزور', 'اجتناب']);
+    expect(read('src/features/ikhtiyarat/components/TierBadge.tsx')).toMatch(/\{label\}[\s\S]*\{tierInfo\.labelAr\}/);
+    // same five tiers for the medical election, in the same order
+    expect(medicalElectionConfig.tiers.map((t) => t.tier)).toEqual(marriageElectionConfig.tiers.map((t) => t.tier));
+  });
+
+  it('"risk" is «خطرہ» everywhere, including the diagnosis sentence (Phase 10 had softened it to «امکان»)', () => {
+    const k = 'increased risk of a delayed, incomplete, or revised diagnosis.';
+    expect(raw[k]).toContain('بڑھا ہوا خطرہ');
+    expect(raw[k]).toContain('روایتی تعبیر');
+    for (const [en, ur] of Object.entries(raw)) if (/\brisk\b/i.test(en) && !en.startsWith('re:')) expect(ur, en).toMatch(/خطر/);
+  });
+
+  it('the standalone brand name follows the /ur pages («اسرار»); the product name "Asrār Everyday" stays Latin', () => {
+    expect(catalog.get('Asrār')).toBe('اسرار');
+    expect(raw['Join Asrār today']).toBe('آج ہی اسرار سے جڑیں');
+    expect(raw['Asrār — Planetary Hours, Abjad & Islamic Sacred Sciences']).toMatch(/^اسرار —/);
+    expect(raw['This helps us personalize your experience with Asrār Everyday']).toContain('Asrār Everyday');
   });
 });
