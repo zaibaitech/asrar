@@ -1938,7 +1938,7 @@ One paragraph per weekday. Source: `app/planet-of-the-day/PlanetOfTheDayPage.tsx
 
 
 
-## 6. AI-drafted UI strings from the Urdu audit (2050 strings, NOT native-reviewed)
+## 6. AI-drafted UI strings from the Urdu audit (2056 strings, NOT native-reviewed)
 
 Found by a browser audit of the /ur pages and of the Urdu language mode on the other pages (menus, tabs, calculators, result tabs, page prose, FAQs), plus a scan of the source for hard-coded English. Drafted by an AI assistant, live on noindex /ur only. Rules: traditional / reflective framing, no prediction or medical claims, planets never agents; Qur'an lines and Divine Names are NOT translated (Arabic comes from the data files: `planetaryZikr.ts`, `lunarMansions.ts`, `burujData.json`, `incense.ts`, the verified `ar-ui.json` Qur'an lines). Edit `scripts/i18n/ur/catalog_ai_draft_ui.py`, then run `build_catalog.py` and `build_review.py`.
 
@@ -2002,6 +2002,7 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 | burj-overview | 3 |
 | burj-spiritual | 4 |
 | ikhtiyarat-detail | 175 |
+| phase5-ui | 6 |
 
 ### 6.1 incense (10)
 
@@ -2274,7 +2275,7 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 | Check a Name | ایک اسم جانچیں |
 | We'll search all 99 Names and show you the ones that best match your intention. | ہم تمام 99 ناموں میں تلاش کر کے وہ نام دکھائیں گے جو آپ کی نیت سے سب سے زیادہ مطابقت رکھتے ہیں۔ |
 | Why this matters | یہ کیوں اہم ہے |
-| Each of the 99 Names is classically associated with certain qualities. Matching your intention to a Name whose meaning relates to it is a way of calling on Allah by the Name best suited to your need, rather than an arbitrary choice. | ہر ایک نام روایتی طور پر کچھ صفات سے منسوب ہے۔ اپنی نیت کو ایسے نام سے ملانا جس کا مفہوم اس سے متعلق ہو، اللہ کو اس نام سے پکارنے کا ایک طریقہ ہے جو آپ کی ضرورت کے سب سے زیادہ مطابق ہو، نہ کہ کوئی من مانا انتخاب۔ |
+| Each of the 99 Names is classically associated with certain qualities. Matching your intention to a Name whose meaning relates to it is a way of calling on Allah by the Name best suited to your need, rather than an arbitrary choice. | ننانوے ناموں میں سے ہر نام روایتی طور پر کچھ صفات سے منسوب ہے۔ اپنی نیت کو ایسے نام سے ملانا جس کا مفہوم اس سے متعلق ہو، اللہ کو اس نام سے پکارنے کا ایک طریقہ ہے جو آپ کی ضرورت کے سب سے زیادہ مطابق ہو، نہ کہ کوئی من مانا انتخاب۔ |
 | 2. Which Name do you want to check? | 2. آپ کون سا نام جانچنا چاہتے ہیں؟ |
 | Search: Ar-Raḥmān, Light, healing... | تلاش کریں: الرحمن، نور، شفا... |
 | Name Compatibility for Marriage — Abjad Soul Connection Calculator | شادی کے لیے ناموں کی مطابقت — ابجد سے روحانی ربط کا کیلکولیٹر |
@@ -2633,7 +2634,7 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 | English | Urdu |
 |---|---|
 | Real-Time Celestial Positions | آسمان کے زندہ مقامات |
-| This page shows the live positions of all 7 classical planets (Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn) in the zodiac, calculated using NASA JPL-based ephemeris data. Tap any planet to see its detailed dignity status, sign meaning, and guidance for that planetary energy right now. | یہ صفحہ زائچے میں تمام 7 کلاسیکی سیاروں (شمس، قمر، عطارد، زہرہ، مریخ، مشتری، زحل) کے زندہ مقامات دکھاتا ہے، جو NASA JPL پر مبنی ایفیمرس ڈیٹا سے نکالے گئے ہیں۔ کسی بھی سیارے پر ٹیپ کر کے اس کی تفصیلی حالت، برج کا مفہوم، اور اس وقت اس فلکی توانائی کے بارے میں رہنمائی دیکھیں۔ |
+| This page shows the live positions of all 7 classical planets (Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn) in the zodiac, calculated using NASA JPL-based ephemeris data. Tap any planet to see its detailed dignity status, sign meaning, and guidance for that planetary energy right now. | یہ صفحہ دائرۃ البروج میں تمام 7 کلاسیکی سیاروں (شمس، قمر، عطارد، زہرہ، مریخ، مشتری، زحل) کے زندہ مقامات دکھاتا ہے، جو NASA JPL پر مبنی ایفیمرس ڈیٹا سے نکالے گئے ہیں۔ کسی بھی سیارے پر ٹیپ کر کے اس کی تفصیلی حالت، برج کا مفہوم، اور اس وقت اس فلکی توانائی کے بارے میں رہنمائی دیکھیں۔ |
 | Live Planetary Positions | سیاروں کے زندہ مقامات |
 | 🗺️ How to Read Transits | 🗺️ عبور کیسے پڑھیں |
 | Pick Your Planet | اپنا سیارہ منتخب کریں |
@@ -3746,7 +3747,7 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 | Calculation History | حساب کی تاریخ |
 | Clear All | سب صاف کریں |
 | Discover Asrār — Sacred Sciences & Divine Timing | اسرار دریافت کریں — مقدس علوم اور اوقات کا علم |
-| History | تاریخ |
+| History | سابقہ حسابات |
 | Invitation copied! | دعوت کاپی ہو گئی! |
 | Istikhara al-Asmāʾ — My Spiritual Profile | استخارۃ الاسماء — میرا روحانی پروفائل |
 | No saved calculations yet | ابھی تک کوئی محفوظ حساب نہیں |
@@ -4456,6 +4457,19 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 | re:^This window is in the planetary hour of (\w+), but (\w+) is (combust\|retrograde\|in fall/detriment) — no bonus\. \[SCHOLAR-REVIEW\]$ | یہ وقفہ $1 کی ساعتِ کواکب میں ہے، لیکن $2 $3 ہے — کوئی اضافی نمبر نہیں۔ [SCHOLAR-REVIEW] |
 | re:^(\w+day)\.$ | $1۔ |
 | re:^(\w+day) \(day of (?:the )?(\w+)\) — favorable for (.+)\.$ | $1 ($2 کا دن) — $3 کے لیے موافق۔ |
+
+
+
+### 6.59 phase5-ui (6)
+
+| English | Urdu |
+|---|---|
+| Previous | پچھلا |
+| Don't show this tutorial again | یہ رہنمائی دوبارہ نہ دکھائیں |
+| Signed in as | سائن ان بطور |
+| Sign Out | سائن آؤٹ |
+| Explore the tools | ٹولز دیکھیں |
+| These tools are for reflection and education, not prediction. Only Allah knows the unseen. | یہ ٹولز غور و فکر اور تعلیم کے لیے ہیں، پیش گوئی کے لیے نہیں۔ غیب کا علم صرف اللہ کو ہے۔ |
 
 
 

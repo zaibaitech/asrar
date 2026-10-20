@@ -14,7 +14,7 @@ import { ZodiacSign } from '../planetary/types';
 
 export interface MedicalBadge {
   id: string;
-  label: { en: string; fr: string; ar: string };
+  label: { en: string; fr: string; ar: string; ur?: string };
   note: { en: string; fr: string; ar: string };
   tone: 'positive' | 'neutral' | 'caution';
 }
@@ -27,7 +27,7 @@ export function getMedicalBadges(result: ElectionResult, moonSign: ZodiacSign): 
 
   badges.push({
     id: 'zodiac-man-caution',
-    label: { en: 'Zodiac Man Caution', fr: 'Prudence — Homme Zodiacal', ar: 'تنبيه الإنسان الفلكي' },
+    label: { en: 'Zodiac Man Caution', fr: 'Prudence — Homme Zodiacal', ar: 'تنبيه الإنسان الفلكي', ur: 'احتیاط — انسانِ فلکی' },
     note: {
       en: `The Moon is in a sign classically ruling the ${bodyPart.en}. Traditional sources advise avoiding surgery or bloodletting on that area while the Moon transits its ruling sign — informational only, always follow qualified medical advice.`,
       fr: `La Lune est dans un signe qui gouverne classiquement ${bodyPart.fr}. Les sources traditionnelles conseillent d'éviter une chirurgie ou une saignée sur cette zone pendant que la Lune transite son signe régent — ceci est purement informatif, suivez toujours l'avis d'un professionnel de santé qualifié.`,

@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import { SunnahBadge } from '@/src/lib/ikhtiyarat/hijri';
-import { UiLang } from '../copy';
+import { useLanguage } from '@/src/contexts/LanguageContext';
+import { UiLang, pickLabel } from '../copy';
 
 const TONE_COLOR: Record<SunnahBadge['tone'], string> = {
   positive: '#22C55E',
@@ -12,6 +13,7 @@ const TONE_COLOR: Record<SunnahBadge['tone'], string> = {
 
 export function SunnahBadges({ badges, language }: { badges: SunnahBadge[]; language: UiLang }) {
   const [openId, setOpenId] = useState<string | null>(null);
+  const { uiLanguage } = useLanguage();
 
   if (badges.length === 0) return null;
 
@@ -28,7 +30,7 @@ export function SunnahBadges({ badges, language }: { badges: SunnahBadge[]; lang
               className="px-3 py-1.5 min-h-[36px] rounded-full border text-xs font-medium"
               style={{ backgroundColor: `${color}12`, borderColor: `${color}40`, color }}
             >
-              {badge.label[language]} <span dir="rtl" lang="ar" className="font-arabic opacity-70">{badge.label.ar}</span>
+              {pickLabel(badge.label, language, uiLanguage)} <span dir="rtl" lang="ar" className="font-arabic opacity-70">{badge.label.ar}</span>
             </button>
             {isOpen && (
               <>

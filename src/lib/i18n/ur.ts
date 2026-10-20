@@ -14,6 +14,7 @@ import type { en } from './en';
 
 export const ur: DeepPartial<typeof en> = {
   abjadSystem: {
+    note: "مغربی (مراکش تا لیبیا، اندلس اور مغربی افریقہ) · مشرقی (مصر، مشرقِ وسطیٰ اور برصغیر سمیت ایشیا)",
     title: "ابجد کا نظام",
     currentMode: "موجودہ نظام:",
     maghribi: "مغربی",

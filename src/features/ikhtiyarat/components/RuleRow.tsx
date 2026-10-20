@@ -2,7 +2,8 @@
 
 import { RuleResult } from '@/src/lib/ikhtiyarat/types';
 import { getSimplifiedRuleText } from '@/src/lib/ikhtiyarat/ruleSimplification';
-import { UiLang, ruleStatusLabel } from '../copy';
+import { useLanguage } from '@/src/contexts/LanguageContext';
+import { UiLang, pickLabel, ruleStatusLabel } from '../copy';
 
 const STATUS_COLOR: Record<RuleResult['status'], string> = {
   pass: '#94A3B8',
@@ -21,12 +22,13 @@ const STATUS_ICON: Record<RuleResult['status'], string> = {
 };
 
 export function RuleRow({ rule, language, simple = false }: { rule: RuleResult; language: UiLang; simple?: boolean }) {
+  const { uiLanguage } = useLanguage();
   const color = STATUS_COLOR[rule.status];
   const label = language === 'fr' ? rule.label_fr : rule.label_en;
   const technicalDetail = language === 'fr' ? rule.detail_fr : rule.detail_en;
   const simplified = simple ? getSimplifiedRuleText(rule, language) : null;
   const detail = simplified ? simplified.text : technicalDetail;
-  const statusLabel = ruleStatusLabel[rule.status][language];
+  const statusLabel = pickLabel(ruleStatusLabel[rule.status], language, uiLanguage);
 
   return (
     <div className="flex items-start gap-3 py-2.5 border-b border-slate-100 dark:border-slate-800 last:border-0">
