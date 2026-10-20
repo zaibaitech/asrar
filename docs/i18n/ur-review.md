@@ -1275,7 +1275,7 @@ Name meaning, divine quality, spiritual focus, favourable/unfavourable themes, r
 | Separation | جدائی |
 | Conflict | جھگڑا |
 | Harsh speech | سخت کلامی |
-| Al-Thurayyā was among the best-known stations in Arab star lore — a reminder to gather in beauty and good company. | الثریا عربوں کے علمِ نجوم میں سب سے معروف منازل میں سے تھی — حسن اور اچھی صحبت میں جمع ہونے کی یاد دہانی۔ |
+| Al-Thurayyā was among the best-known stations in Arab star lore — a reminder to gather in beauty and good company. | الثریا عربوں کی ستاروں کی روایت میں سب سے معروف منازل میں سے تھی — حسن اور اچھی صحبت میں جمع ہونے کی یاد دہانی۔ |
 | Educational reflection (anwāʾ / Al-Bīrūnī tradition of naming) | تعلیمی غور و فکر (انواء / البیرونی کی نام رکھنے کی روایت) |
 | The Follower | پیچھے آنے والا |
 | Loyalty, Persistence, Following Truth | وفاداری، استقامت، حق کی پیروی |
@@ -1285,7 +1285,7 @@ Name meaning, divine quality, spiritual focus, favourable/unfavourable themes, r
 | Seeking teachers | اساتذہ کی تلاش |
 | Study | مطالعہ |
 | Breaking commitments | عہد توڑنا |
-| Impulsive changes | جذباتی تبدیلیاں |
+| Impulsive changes | بے سوچی سمجھی تبدیلیاں |
 | Al-Dabarān “follows” Thurayyā across the sky — a picture of steadfast following, not blind haste. | الدبران آسمان میں ثریا کے “پیچھے چلتا” ہے — یہ ثابت قدم پیروی کی تصویر ہے، اندھی جلد بازی کی نہیں۔ |
 | Educational reflection (star-name lore) | تعلیمی غور و فکر (ستاروں کے ناموں کی روایت) |
 | The White Spot | سفید نشان |
@@ -1298,7 +1298,7 @@ Name meaning, divine quality, spiritual focus, favourable/unfavourable themes, r
 | Deception | دھوکا |
 | Unclear contracts | غیر واضح معاہدے |
 | Confusion | الجھن |
-| Clarity of intention softens confusion — seek light before you speak or sign. | نیت کی وضاحت الجھن کو نرم کرتی ہے — بات کرنے یا دستخط کرنے سے پہلے اللہ سے رہنمائی مانگیں۔ |
+| Clarity of intention softens confusion — seek light before you speak or sign. | نیت کی وضاحت الجھن کو نرم کرتی ہے — بات کرنے یا دستخط کرنے سے پہلے روشنی (رہنمائی) کی طلب کریں۔ |
 | Educational reflection | تعلیمی غور و فکر |
 | The Brand | نشان |
 | Marking, Identity, Recognition | نشان، شناخت، پہچان |
@@ -1334,7 +1334,7 @@ Name meaning, divine quality, spiritual focus, favourable/unfavourable themes, r
 | Educational reflection (Qurʾān 36:39) | تعلیمی غور و فکر (قرآن 36:39) |
 | The Glance | نگاہ |
 | Vision, Attentiveness | بصیرت، توجہ |
-| Looking with care: notice what you see before you act, and ask Allah for insight without haste. | غور سے دیکھنا: عمل سے پہلے جو دیکھیں اسے محسوس کریں، اور جلدی کیے بغیر اللہ سے بصیرت مانگیں۔ |
+| Looking with care: notice what you see before you act, and ask Allah for insight without haste. | غور سے دیکھنا: عمل سے پہلے جو دیکھیں اس پر غور کریں، اور جلدی کیے بغیر اللہ سے بصیرت مانگیں۔ |
 | Careful observation | محتاط مشاہدہ |
 | Reviewing plans | منصوبوں پر نظرِ ثانی |
 | Seeking counsel | مشورہ لینا |
@@ -1473,10 +1473,10 @@ Name meaning, divine quality, spiritual focus, favourable/unfavourable themes, r
 | Patience with difficulty | مشکل میں صبر |
 | Swallowing anger into resentment | غصے کو نگل کر رنجش بنا لینا |
 | Consuming without reflection | بغیر سوچے سمجھے لینا |
-| Overindulgence | حد سے زیادہ لذت پرستی |
+| Overindulgence | حد سے زیادہ لطف اندوزی |
 | The Most Fortunate | سعد السعود (سب سے زیادہ خوش بخت) |
 | Gratitude, Hope | شکرگزاری، امید |
-| Named “most fortunate” in the star calendar — meet ease with shukr, and hardship with hope in Allah alone. | ستاروں کے کیلنڈر میں “سب سے زیادہ سعد” کہلاتی ہے — آسانی ملے تو شکر ادا کریں، اور مشکل پیش آئے تو صرف اللہ سے امید رکھیں۔ |
+| Named “most fortunate” in the star calendar — meet ease with shukr, and hardship with hope in Allah alone. | ستاروں کے کیلنڈر میں اسے “سب سے زیادہ خوش بخت” کہا گیا ہے — آسانی ملے تو شکر ادا کریں، اور مشکل پیش آئے تو صرف اللہ سے امید رکھیں۔ |
 | Gratitude practices | شکرگزاری کے معمولات |
 | Beginning hopeful works | پُرامید کاموں کا آغاز |
 | Sharing ease with others | آسانی دوسروں کے ساتھ بانٹنا |
@@ -1509,7 +1509,7 @@ Name meaning, divine quality, spiritual focus, favourable/unfavourable themes, r
 | Completing projects | منصوبے مکمل کرنا |
 | Settling debts | قرض چکانا |
 | Forgiving leftovers | بچی کھچی رنجشیں معاف کرنا |
-| Closing cycles cleanly | دوروں کو صفائی سے بند کرنا |
+| Closing cycles cleanly | ادوار کو صفائی سے بند کرنا |
 | Leaving ends untied | سرے کھلے چھوڑ دینا |
 | Hoarding grudges | کینے سنبھال کر رکھنا |
 | Starting too many new things | بہت سی نئی چیزیں شروع کر لینا |
@@ -4469,6 +4469,7 @@ The groups in the table below were read entry by entry against their English sou
 | career-ui | 23 | 23 | 0 | 23 | 1 |
 | rules | 86 | 86 | 13 | 73 | 25 |
 | arch | 148 | 148 | 13 | 135 | 13 |
+| manzil | 277 | 277 | 7 | 270 | 12 |
 
 
 ### 7.1 Corrections
@@ -4504,6 +4505,13 @@ The groups in the table below were read entry by entry against their English sou
 | arch | Traditionally warned against for binding partnership — sudden fallout and recurring breakdowns in trust are associated risks. | پابند شراکت کے لیے روایتی طور پر اس سے منع کیا گیا ہے — اچانک بگاڑ اور اعتماد کا بار بار ٹوٹنا اس سے منسوب خطرات ہیں۔ | پابند شراکت کے لیے روایتی طور پر اس سے خبردار کیا گیا ہے — اچانک بگاڑ اور اعتماد کا بار بار ٹوٹنا اس سے منسوب خطرات ہیں۔ | "warned against" is a caution, not a prohibition: «منع کیا گیا ہے» («forbidden») overstated it (the earlier audit already replaced «ممانعت» for the same reason) |
 | arch | Marriage is traditionally discouraged under this pattern. If already in this bond, increase spiritual protection practices and seek wise counsel. | اس نمونے کے تحت شادی کو روایتی طور پر ناپسند کیا گیا ہے۔ اگر آپ پہلے سے اس رشتے میں ہیں تو روحانی حفاظت کے معمولات بڑھائیں اور دانشمندانہ مشورہ لیں۔ | اس نمونے کے تحت شادی کی روایتی طور پر حوصلہ شکنی کی جاتی ہے۔ اگر آپ پہلے سے اس رشتے میں ہیں تو روحانی حفاظت کے معمولات بڑھائیں اور دانشمندانہ مشورہ لیں۔ | "discouraged" is not «ناپسند» (disliked / disapproved) |
 | arch | Do not panic if this appears. Seek counsel from trusted spiritual guides. If already bound, increase protection practices (duʿāʾ, charity, guidance). Avoid fatalistic thinking — free will and divine mercy remain. | اگر یہ نتیجہ آئے تو گھبرائیں نہیں۔ قابلِ اعتماد روحانی رہنماؤں سے مشورہ کریں۔ اگر رشتہ پہلے سے بندھا ہوا ہے تو حفاظت کے معمولات (دعا، صدقہ، رہنمائی) بڑھا دیں۔ تقدیر پرستانہ سوچ سے بچیں — انسان کا اختیار اور اللہ کی رحمت باقی ہیں۔ | اگر یہ نتیجہ آئے تو گھبرائیں نہیں۔ قابلِ اعتماد روحانی رہنماؤں سے مشورہ کریں۔ اگر رشتہ پہلے سے بندھا ہوا ہے تو حفاظت کے معمولات (دعا، صدقہ، رہنمائی) بڑھا دیں۔ یہ سوچ کر ہار مان لینے سے بچیں کہ سب کچھ طے ہو چکا ہے — انسان کا اختیار اور اللہ کی رحمت باقی ہیں۔ | "fatalistic thinking" → «تقدیر پرستانہ» reads as faulting belief in qadar itself; the source warns against giving up because "everything is fixed" |
+| manzil | Al-Thurayyā was among the best-known stations in Arab star lore — a reminder to gather in beauty and good company. | الثریا عربوں کے علمِ نجوم میں سب سے معروف منازل میں سے تھی — حسن اور اچھی صحبت میں جمع ہونے کی یاد دہانی۔ | الثریا عربوں کی ستاروں کی روایت میں سب سے معروف منازل میں سے تھی — حسن اور اچھی صحبت میں جمع ہونے کی یاد دہانی۔ | "Arab star lore" is the anwāʾ tradition of naming stars (the same entries say «ستاروں کی روایت»), not «علمِ نجوم» (astrology) |
+| manzil | Impulsive changes | جذباتی تبدیلیاں | بے سوچی سمجھی تبدیلیاں | "impulsive" ≠ «جذباتی» (emotional) |
+| manzil | Clarity of intention softens confusion — seek light before you speak or sign. | نیت کی وضاحت الجھن کو نرم کرتی ہے — بات کرنے یا دستخط کرنے سے پہلے اللہ سے رہنمائی مانگیں۔ | نیت کی وضاحت الجھن کو نرم کرتی ہے — بات کرنے یا دستخط کرنے سے پہلے روشنی (رہنمائی) کی طلب کریں۔ | the Urdu added "from Allah"; the source says "seek light" (metaphor) |
+| manzil | Looking with care: notice what you see before you act, and ask Allah for insight without haste. | غور سے دیکھنا: عمل سے پہلے جو دیکھیں اسے محسوس کریں، اور جلدی کیے بغیر اللہ سے بصیرت مانگیں۔ | غور سے دیکھنا: عمل سے پہلے جو دیکھیں اس پر غور کریں، اور جلدی کیے بغیر اللہ سے بصیرت مانگیں۔ | "notice" is «غور کریں», not «محسوس کریں» (feel) |
+| manzil | Overindulgence | حد سے زیادہ لذت پرستی | حد سے زیادہ لطف اندوزی | «لذت پرستی» is hedonism, stronger than "overindulgence" |
+| manzil | Named “most fortunate” in the star calendar — meet ease with shukr, and hardship with hope in Allah alone. | ستاروں کے کیلنڈر میں “سب سے زیادہ سعد” کہلاتی ہے — آسانی ملے تو شکر ادا کریں، اور مشکل پیش آئے تو صرف اللہ سے امید رکھیں۔ | ستاروں کے کیلنڈر میں اسے “سب سے زیادہ خوش بخت” کہا گیا ہے — آسانی ملے تو شکر ادا کریں، اور مشکل پیش آئے تو صرف اللہ سے امید رکھیں۔ | awkward «“سب سے زیادہ سعد” کہلاتی ہے» (flagged by the external audit); now matches the gloss «سب سے زیادہ خوش بخت» used in the title |
+| manzil | Closing cycles cleanly | دوروں کو صفائی سے بند کرنا | ادوار کو صفائی سے بند کرنا | «دوروں» reads as «دورے» (visits/fits); «ادوار» is cycles/phases |
 
 
 ### 7.2 Flagged for human review
@@ -4552,6 +4560,18 @@ The groups in the table below were read entry by entry against their English sou
 | arch | Marriage is traditionally discouraged under this pattern. If already in this bond, increase spiritual protection practices and seek wise counsel. | اس نمونے کے تحت شادی کی روایتی طور پر حوصلہ شکنی کی جاتی ہے۔ اگر آپ پہلے سے اس رشتے میں ہیں تو روحانی حفاظت کے معمولات بڑھائیں اور دانشمندانہ مشورہ لیں۔ | Strong warnings about marriage/binding commitments kept as traditional framing; whether such a warning should be shown to users at all is a product decision (not changed here). |  | product decision + native Urdu |
 | arch | Traditionally considered very favorable for marriage. Associated with blessing, natural harmony, children, and spiritual growth. | شادی کے لیے روایتی طور پر بہت موافق سمجھا جاتا ہے۔ برکت، فطری ہم آہنگی، اولاد اور روحانی ترقی سے منسوب۔ | "children" and "blessing" are traditional associations stated for marriage; not guarantees. |  | subject-matter |
 | arch | Marriage is traditionally blessed. Harmony, children, and shared spiritual life are often supported. Guard against excess and distraction. | شادی روایتی طور پر مبارک ہے۔ ہم آہنگی، اولاد اور مشترکہ روحانی زندگی کو اکثر سہارا ملتا ہے۔ زیادتی اور غفلت سے بچیں۔ | "children" and "blessing" are traditional associations stated for marriage; not guarantees. |  | subject-matter |
+| manzil | The Brand | نشان | «نشان» for الهنعة (the external audit asked about «داغ»; «داغ» reads as a stain/disgrace). Both title and theme line use «نشان». | «داغ» (rejected), «نشانِ شناخت» | native Urdu |
+| manzil | The Former Spout | پہلا نالہ | "Spout" (الفرغ, the pouring lip of the star-bucket) is «نالہ», which in Urdu also means a drain or a lament; the astronomical meaning needs a specialist. | «ڈول کا پہلا / دوسرا منہ» | astronomy / native Urdu |
+| manzil | The former spout of the bucket: begin letting good flow — speech, charity, and help — with measured opening. | ڈول کا پہلا نالہ: بھلائی کو بہنے دینا شروع کریں — بات، صدقہ اور مدد — ناپ تول کے ساتھ کھولتے ہوئے۔ | "Spout" (الفرغ, the pouring lip of the star-bucket) is «نالہ», which in Urdu also means a drain or a lament; the astronomical meaning needs a specialist. | «ڈول کا پہلا / دوسرا منہ» | astronomy / native Urdu |
+| manzil | The Latter Spout | دوسرا نالہ | "Spout" (الفرغ, the pouring lip of the star-bucket) is «نالہ», which in Urdu also means a drain or a lament; the astronomical meaning needs a specialist. | «ڈول کا پہلا / دوسرا منہ» | astronomy / native Urdu |
+| manzil | The latter spout completes the pouring — finish what you opened, and empty the heart of grudges. | دوسرا نالہ انڈیلنے کو مکمل کرتا ہے — جو کھولا اسے پورا کریں، اور دل کو کینوں سے خالی کریں۔ | "Spout" (الفرغ, the pouring lip of the star-bucket) is «نالہ», which in Urdu also means a drain or a lament; the astronomical meaning needs a specialist. | «ڈول کا پہلا / دوسرا منہ» | astronomy / native Urdu |
+| manzil | Complacency | خود اطمینانی | "Complacency" rendered «خود اطمینانی» (see the archetype flags). | «غفلت / آسودگی میں بے پروائی» | native Urdu |
+| manzil | Gossip | غیبت | "Gossip" is rendered «غیبت» (backbiting, a religious term); «چغلی / گپ شپ» are the plain words. | «چغلی» / «غیبت و گپ شپ» | native Urdu |
+| manzil | Gossip as “release” | غیبت کو “اظہارِ دل” سمجھنا | "Gossip" is rendered «غیبت» (backbiting, a religious term); «چغلی / گپ شپ» are the plain words. | «چغلی» / «غیبت و گپ شپ» | native Urdu |
+| manzil | The Fortunate Sacrificer | سعد الذابح (قربانی کرنے والا) | Gloss «قربانی کرنے والا» follows the English "Sacrificer"; the Arabic ذابح is literally "the slaughterer". | «ذبح کرنے والا» | native Urdu |
+| manzil | The Forearm | بازو | "Forearm" is «بازو» (arm); the Arabic ذراع is the forearm/cubit. | «ساعد» (technical) / keep | native Urdu |
+| manzil | Denying the unseen | غیب کا انکار | «غیب کا انکار» is a theologically loaded phrase (rejecting the ghayb); the source line is a caution in a list of things to avoid. | keep as source | religious scholar |
+| manzil | Names and marks in the old star calendar were for recognition — know yourself before Allah, not for show. | پرانے ستارہ کیلنڈر میں نام اور نشان پہچان کے لیے تھے — اپنے آپ کو اللہ کے سامنے پہچانیں، دکھاوے کے لیے نہیں۔ | Statement on knowing oneself "before Allah, not for show" (religious framing added by the app text) kept as in the source. |  | religious scholar |
 
 
 
