@@ -1561,7 +1561,7 @@ Traditional text, guiding principle, fields to consider carefully, and the 45 re
 | Cold chain logistics | کولڈ چین لاجسٹکس |
 | Quick-turnover inventory management | جلد نکاسی والے ذخیرے کا انتظام |
 | Time-sensitive product sales | وقت کی پابندی والی مصنوعات کی فروخت |
-| Produce wholesale networks | پیداوار کی تھوک نیٹ ورکس |
+| Produce wholesale networks | پیداوار کی تھوک فروخت کے نیٹ ورک |
 | Agriculture and farming, mining and mineral extraction, gold trading, petroleum and natural resources, earth-derived products | زراعت اور کاشتکاری، کان کنی اور معدنیات کا استخراج، سونے کی تجارت، پیٹرولیم اور قدرتی وسائل، زمین سے حاصل ہونے والی اشیا |
 | Stability, long-term growth, tangible assets, and connection to the earth's bounty align perfectly with your grounded nature and patient disposition | استحکام، طویل مدتی ترقی، ٹھوس اثاثے، اور زمین کی نعمتوں سے تعلق آپ کے زمینی مزاج اور صبر سے پوری طرح ہم آہنگ ہیں |
 | Fish and all fish-related products or businesses | مچھلی اور مچھلی سے متعلق تمام مصنوعات یا کاروبار |
@@ -1709,7 +1709,7 @@ Traditional text, guiding principle, fields to consider carefully, and the 45 re
 | Similar to Buruj 2 - agriculture, real estate, construction, earth resources | برج 2 کی طرح — زراعت، رئیل اسٹیٹ، تعمیرات، زمینی وسائل |
 | Long-term stability, tangible assets, and foundational structures align with your earth nature | طویل مدتی استحکام، ٹھوس اثاثے اور بنیادی ڈھانچے آپ کے زمینی مزاج سے ہم آہنگ ہیں |
 | Fish and fish-related products | مچھلی اور مچھلی سے متعلق مصنوعات |
-| Seafood industry, high-risk volatile ventures, speculative businesses | سمندری خوراک کی صنعت، زیادہ خطرے والے غیر مستحکم منصوبے، قیاسی کاروبار |
+| Seafood industry, high-risk volatile ventures, speculative businesses | سمندری خوراک کی صنعت، زیادہ خطرے والے غیر مستحکم منصوبے، قیاس آرائی پر مبنی کاروبار |
 | Real Estate & Property | رئیل اسٹیٹ اور جائیداد |
 | Real estate investment | رئیل اسٹیٹ میں سرمایہ کاری |
 | Property development | جائیداد کی ترقی |
@@ -1773,7 +1773,7 @@ Traditional text, guiding principle, fields to consider carefully, and the 45 re
 | Psychotherapy and counseling | نفسیاتی علاج اور مشاورت |
 | Trauma healing work | صدمے سے شفا کا کام |
 | Deep healing modalities | گہرے شفا بخش طریقے |
-| Psychiatric services | نفسیاتی خدمات |
+| Psychiatric services | سائیکاٹری (ذہنی امراض کی طب) کی خدمات |
 | Crisis intervention | بحران میں مداخلت |
 | Transformational coaching | تبدیلی لانے والی کوچنگ |
 | Investigation & Research | تفتیش اور تحقیق |
@@ -1861,7 +1861,7 @@ Traditional text, guiding principle, fields to consider carefully, and the 45 re
 | Similar to other water buruj - healing, fish trading, spiritual service | دیگر آبی بروج کی طرح — شفا، مچھلی کی تجارت، روحانی خدمت |
 | Compassion, service, spiritual connection, and healing align with Pisces water | ہمدردی، خدمت، روحانی تعلق اور شفا حوت کے آبی مزاج سے ہم آہنگ ہیں |
 | Fresh produce business, aggressive sales roles, competitive environments lacking compassion | تازہ پیداوار کا کاروبار، جارحانہ فروخت کے کردار، اور ہمدردی سے خالی مسابقتی ماحول |
-| Healing & Healthcare | شفا اور صحتِ عامہ |
+| Healing & Healthcare | شفا اور طبی نگہداشت |
 | Nursing and caregiving | نرسنگ اور تیمارداری |
 | Holistic healing | ہمہ گیر شفا |
 | Mental health counseling | ذہنی صحت کی مشاورت |
@@ -4470,6 +4470,7 @@ The groups in the table below were read entry by entry against their English sou
 | rules | 86 | 86 | 13 | 73 | 25 |
 | arch | 148 | 148 | 13 | 135 | 13 |
 | manzil | 277 | 277 | 7 | 270 | 12 |
+| career | 355 | 355 | 4 | 351 | 6 |
 
 
 ### 7.1 Corrections
@@ -4512,6 +4513,10 @@ The groups in the table below were read entry by entry against their English sou
 | manzil | Overindulgence | حد سے زیادہ لذت پرستی | حد سے زیادہ لطف اندوزی | «لذت پرستی» is hedonism, stronger than "overindulgence" |
 | manzil | Named “most fortunate” in the star calendar — meet ease with shukr, and hardship with hope in Allah alone. | ستاروں کے کیلنڈر میں “سب سے زیادہ سعد” کہلاتی ہے — آسانی ملے تو شکر ادا کریں، اور مشکل پیش آئے تو صرف اللہ سے امید رکھیں۔ | ستاروں کے کیلنڈر میں اسے “سب سے زیادہ خوش بخت” کہا گیا ہے — آسانی ملے تو شکر ادا کریں، اور مشکل پیش آئے تو صرف اللہ سے امید رکھیں۔ | awkward «“سب سے زیادہ سعد” کہلاتی ہے» (flagged by the external audit); now matches the gloss «سب سے زیادہ خوش بخت» used in the title |
 | manzil | Closing cycles cleanly | دوروں کو صفائی سے بند کرنا | ادوار کو صفائی سے بند کرنا | «دوروں» reads as «دورے» (visits/fits); «ادوار» is cycles/phases |
+| career | Produce wholesale networks | پیداوار کی تھوک نیٹ ورکس | پیداوار کی تھوک فروخت کے نیٹ ورک | grammar: «پیداوار کی تھوک نیٹ ورکس» does not agree and drops "wholesale"; same pattern as «فصلوں کی تقسیم کے نیٹ ورک» |
+| career | Seafood industry, high-risk volatile ventures, speculative businesses | سمندری خوراک کی صنعت، زیادہ خطرے والے غیر مستحکم منصوبے، قیاسی کاروبار | سمندری خوراک کی صنعت، زیادہ خطرے والے غیر مستحکم منصوبے، قیاس آرائی پر مبنی کاروبار | «قیاسی» means conjectural; "speculative businesses" is business built on speculation |
+| career | Psychiatric services | نفسیاتی خدمات | سائیکاٹری (ذہنی امراض کی طب) کی خدمات | "Psychiatric" and "Psychotherapy" were both «نفسیاتی»; psychiatry is the medical branch |
+| career | Healing & Healthcare | شفا اور صحتِ عامہ | شفا اور طبی نگہداشت | «صحتِ عامہ» is public health; "healthcare" is «طبی نگہداشت» |
 
 
 ### 7.2 Flagged for human review
@@ -4572,6 +4577,12 @@ The groups in the table below were read entry by entry against their English sou
 | manzil | The Forearm | بازو | "Forearm" is «بازو» (arm); the Arabic ذراع is the forearm/cubit. | «ساعد» (technical) / keep | native Urdu |
 | manzil | Denying the unseen | غیب کا انکار | «غیب کا انکار» is a theologically loaded phrase (rejecting the ghayb); the source line is a caution in a list of things to avoid. | keep as source | religious scholar |
 | manzil | Names and marks in the old star calendar were for recognition — know yourself before Allah, not for show. | پرانے ستارہ کیلنڈر میں نام اور نشان پہچان کے لیے تھے — اپنے آپ کو اللہ کے سامنے پہچانیں، دکھاوے کے لیے نہیں۔ | Statement on knowing oneself "before Allah, not for show" (religious framing added by the app text) kept as in the source. |  | religious scholar |
+| career | Quick turnover, fresh goods, dynamic movement, and energetic action align perfectly with your fiery nature and passionate energy | تیز رفتار نکاسی، تازہ مال، متحرک سرگرمی اور توانا عمل آپ کے آتشی مزاج اور پُرجوش توانائی سے پوری طرح ہم آہنگ ہیں | Source states alignment/blessing as fact ("align perfectly", "blessed despite being water element"); the Urdu keeps the same strength. These are traditional associations, not guaranteed career outcomes; whether to hedge them is a content decision. | «ہم آہنگ سمجھے جاتے ہیں» | product decision + native Urdu |
+| career | Stability, long-term growth, tangible assets, and connection to the earth's bounty align perfectly with your grounded nature and patient disposition | استحکام، طویل مدتی ترقی، ٹھوس اثاثے، اور زمین کی نعمتوں سے تعلق آپ کے زمینی مزاج اور صبر سے پوری طرح ہم آہنگ ہیں | Source states alignment/blessing as fact ("align perfectly", "blessed despite being water element"); the Urdu keeps the same strength. These are traditional associations, not guaranteed career outcomes; whether to hedge them is a content decision. | «ہم آہنگ سمجھے جاتے ہیں» | product decision + native Urdu |
+| career | Fish and all fish-related products - disrupts air element severely | مچھلی اور مچھلی سے متعلق تمام مصنوعات — روایتی طور پر ہوائی عنصر سے غیر موافق سمجھی جاتی ہیں | English says "disrupts … severely"; the Urdu says «غیر موافق سمجھی جاتی ہیں» (traditionally unfavourable): hedged on purpose after the external audit (no deterministic career claim). «غیر موافق» vs «کم موافق» is a Phase 2 open question. | keep (hedged); decide «غیر موافق» / «کم موافق» | native Urdu + product decision |
+| career | Fish and seafood trading, fashion and clothing business, earth-based products (blessed despite being water element) | مچھلی اور سمندری خوراک کی تجارت، فیشن اور ملبوسات کا کاروبار، زمینی مصنوعات (پانی کے عنصر کے باوجود بابرکت) | Source states alignment/blessing as fact ("align perfectly", "blessed despite being water element"); the Urdu keeps the same strength. These are traditional associations, not guaranteed career outcomes; whether to hedge them is a content decision. | «ہم آہنگ سمجھے جاتے ہیں» | product decision + native Urdu |
+| career | Fruits and vegetables - these disrupt water element balance severely | پھل اور سبزیاں — یہ روایتی طور پر آبی عنصر سے غیر موافق سمجھی جاتی ہیں | English says "disrupts … severely"; the Urdu says «غیر موافق سمجھی جاتی ہیں» (traditionally unfavourable): hedged on purpose after the external audit (no deterministic career claim). «غیر موافق» vs «کم موافق» is a Phase 2 open question. | keep (hedged); decide «غیر موافق» / «کم موافق» | native Urdu + product decision |
+| career | Earth Products (Blessed) | زمینی مصنوعات (بابرکت) | Source states alignment/blessing as fact ("align perfectly", "blessed despite being water element"); the Urdu keeps the same strength. These are traditional associations, not guaranteed career outcomes; whether to hedge them is a content decision. | «ہم آہنگ سمجھے جاتے ہیں» | product decision + native Urdu |
 
 
 

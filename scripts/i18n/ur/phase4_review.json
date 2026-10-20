@@ -20,6 +20,10 @@
   "manzil": {
    "total": 277,
    "reviewed": 277
+  },
+  "career": {
+   "total": 355,
+   "reviewed": 355
   }
  },
  "corrections": [
@@ -274,6 +278,34 @@
    "before": "دوروں کو صفائی سے بند کرنا",
    "after": "ادوار کو صفائی سے بند کرنا",
    "reason": "«دوروں» reads as «دورے» (visits/fits); «ادوار» is cycles/phases"
+  },
+  {
+   "group": "career",
+   "en": "Produce wholesale networks",
+   "before": "پیداوار کی تھوک نیٹ ورکس",
+   "after": "پیداوار کی تھوک فروخت کے نیٹ ورک",
+   "reason": "grammar: «پیداوار کی تھوک نیٹ ورکس» does not agree and drops \"wholesale\"; same pattern as «فصلوں کی تقسیم کے نیٹ ورک»"
+  },
+  {
+   "group": "career",
+   "en": "Seafood industry, high-risk volatile ventures, speculative businesses",
+   "before": "سمندری خوراک کی صنعت، زیادہ خطرے والے غیر مستحکم منصوبے، قیاسی کاروبار",
+   "after": "سمندری خوراک کی صنعت، زیادہ خطرے والے غیر مستحکم منصوبے، قیاس آرائی پر مبنی کاروبار",
+   "reason": "«قیاسی» means conjectural; \"speculative businesses\" is business built on speculation"
+  },
+  {
+   "group": "career",
+   "en": "Psychiatric services",
+   "before": "نفسیاتی خدمات",
+   "after": "سائیکاٹری (ذہنی امراض کی طب) کی خدمات",
+   "reason": "\"Psychiatric\" and \"Psychotherapy\" were both «نفسیاتی»; psychiatry is the medical branch"
+  },
+  {
+   "group": "career",
+   "en": "Healing & Healthcare",
+   "before": "شفا اور صحتِ عامہ",
+   "after": "شفا اور طبی نگہداشت",
+   "reason": "«صحتِ عامہ» is public health; \"healthcare\" is «طبی نگہداشت»"
   }
  ],
  "flags": [
@@ -708,6 +740,54 @@
    "reason": "Statement on knowing oneself \"before Allah, not for show\" (religious framing added by the app text) kept as in the source.",
    "alternative": "",
    "review": "religious scholar"
+  },
+  {
+   "group": "career",
+   "en": "Quick turnover, fresh goods, dynamic movement, and energetic action align perfectly with your fiery nature and passionate energy",
+   "ur": "تیز رفتار نکاسی، تازہ مال، متحرک سرگرمی اور توانا عمل آپ کے آتشی مزاج اور پُرجوش توانائی سے پوری طرح ہم آہنگ ہیں",
+   "reason": "Source states alignment/blessing as fact (\"align perfectly\", \"blessed despite being water element\"); the Urdu keeps the same strength. These are traditional associations, not guaranteed career outcomes; whether to hedge them is a content decision.",
+   "alternative": "«ہم آہنگ سمجھے جاتے ہیں»",
+   "review": "product decision + native Urdu"
+  },
+  {
+   "group": "career",
+   "en": "Stability, long-term growth, tangible assets, and connection to the earth's bounty align perfectly with your grounded nature and patient disposition",
+   "ur": "استحکام، طویل مدتی ترقی، ٹھوس اثاثے، اور زمین کی نعمتوں سے تعلق آپ کے زمینی مزاج اور صبر سے پوری طرح ہم آہنگ ہیں",
+   "reason": "Source states alignment/blessing as fact (\"align perfectly\", \"blessed despite being water element\"); the Urdu keeps the same strength. These are traditional associations, not guaranteed career outcomes; whether to hedge them is a content decision.",
+   "alternative": "«ہم آہنگ سمجھے جاتے ہیں»",
+   "review": "product decision + native Urdu"
+  },
+  {
+   "group": "career",
+   "en": "Fish and all fish-related products - disrupts air element severely",
+   "ur": "مچھلی اور مچھلی سے متعلق تمام مصنوعات — روایتی طور پر ہوائی عنصر سے غیر موافق سمجھی جاتی ہیں",
+   "reason": "English says \"disrupts … severely\"; the Urdu says «غیر موافق سمجھی جاتی ہیں» (traditionally unfavourable): hedged on purpose after the external audit (no deterministic career claim). «غیر موافق» vs «کم موافق» is a Phase 2 open question.",
+   "alternative": "keep (hedged); decide «غیر موافق» / «کم موافق»",
+   "review": "native Urdu + product decision"
+  },
+  {
+   "group": "career",
+   "en": "Fish and seafood trading, fashion and clothing business, earth-based products (blessed despite being water element)",
+   "ur": "مچھلی اور سمندری خوراک کی تجارت، فیشن اور ملبوسات کا کاروبار، زمینی مصنوعات (پانی کے عنصر کے باوجود بابرکت)",
+   "reason": "Source states alignment/blessing as fact (\"align perfectly\", \"blessed despite being water element\"); the Urdu keeps the same strength. These are traditional associations, not guaranteed career outcomes; whether to hedge them is a content decision.",
+   "alternative": "«ہم آہنگ سمجھے جاتے ہیں»",
+   "review": "product decision + native Urdu"
+  },
+  {
+   "group": "career",
+   "en": "Fruits and vegetables - these disrupt water element balance severely",
+   "ur": "پھل اور سبزیاں — یہ روایتی طور پر آبی عنصر سے غیر موافق سمجھی جاتی ہیں",
+   "reason": "English says \"disrupts … severely\"; the Urdu says «غیر موافق سمجھی جاتی ہیں» (traditionally unfavourable): hedged on purpose after the external audit (no deterministic career claim). «غیر موافق» vs «کم موافق» is a Phase 2 open question.",
+   "alternative": "keep (hedged); decide «غیر موافق» / «کم موافق»",
+   "review": "native Urdu + product decision"
+  },
+  {
+   "group": "career",
+   "en": "Earth Products (Blessed)",
+   "ur": "زمینی مصنوعات (بابرکت)",
+   "reason": "Source states alignment/blessing as fact (\"align perfectly\", \"blessed despite being water element\"); the Urdu keeps the same strength. These are traditional associations, not guaranteed career outcomes; whether to hedge them is a content decision.",
+   "alternative": "«ہم آہنگ سمجھے جاتے ہیں»",
+   "review": "product decision + native Urdu"
   }
  ]
 }
