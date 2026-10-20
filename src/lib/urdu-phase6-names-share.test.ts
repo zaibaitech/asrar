@@ -24,12 +24,13 @@ describe('Phase 6: names, share and Ramadan modal in Urdu', () => {
   it('keeps the numbers of the burj rule and of the duration', () => {
     const rule = catalog.get("Add the Abjad value of your name to the Abjad value of your mother's name, divide by 12 and keep the remainder (0 counts as 12). Remainder 1 is Aries (al-Ḥamal), 2 Taurus, and so on to 12, Pisces (al-Ḥūt).")!;
     for (const n of ['12', '1', '2']) expect(rule).toContain(n);
-    expect(catalog.get('25-35 min')).toBe('25-35 منٹ');
+    expect(catalog.get('25-35 min')).toBe('25 تا 35 منٹ');
   });
 
-  it('keeps the brand name Asrariya in Latin letters inside the RTL sentences (store name, same as the app)', () => {
+  it('writes the brand name Asrariya in Urdu script («اسراریہ») inside the RTL sentences (native review sheet 2: 3.171, 9.188, 9.191)', () => {
     for (const k of ['Open in Asrariya', 'If the app does not open automatically, install Asrariya below.', 'Android users can install Asrariya today on Google Play.']) {
-      expect(catalog.get(k), k).toContain('Asrariya');
+      expect(catalog.get(k), k).toContain('اسراریہ');
+      expect(catalog.get(k), k).not.toContain('Asrariya');
       expect(catalog.get(k), k).toMatch(/[؀-ۿ]/);
     }
   });

@@ -24,14 +24,18 @@ describe('rule status labels (RuleRow)', () => {
     expect(fr).toEqual({ pass: 'Réussi', fail: 'Échec', bonus: 'Bonus', penalty: 'Pénalité', hardfail: 'Échec critique' });
   });
 
-  it('every status has its own Urdu text, and the three that the browser check found are the agreed terms', () => {
+  it('every status has its own Urdu text, and the labels are the native-reviewed rule terms (review sheet 2, Q4)', () => {
     for (const [status, label] of Object.entries(ruleStatusLabel)) {
       expect(label.ur, status).toMatch(URDU);
       expect(label.ur, status).not.toBe(label.en);
     }
-    expect(pickLabel(ruleStatusLabel.pass, 'en', 'ur')).toBe('پاس');
-    expect(pickLabel(ruleStatusLabel.penalty, 'en', 'ur')).toBe('منفی نمبر');
-    expect(pickLabel(ruleStatusLabel.bonus, 'en', 'ur')).toBe('اضافی نمبر'); // same term as the Detailed-mode sentences
+    expect(pickLabel(ruleStatusLabel.pass, 'en', 'ur')).toBe('موافق');
+    expect(pickLabel(ruleStatusLabel.fail, 'en', 'ur')).toBe('ناموافق');
+    expect(pickLabel(ruleStatusLabel.bonus, 'en', 'ur')).toBe('اضافہ');
+    expect(pickLabel(ruleStatusLabel.penalty, 'en', 'ur')).toBe('کٹوتی');
+    expect(pickLabel(ruleStatusLabel.hardfail, 'en', 'ur')).toBe('قطعی رکاوٹ');
+    // no exam wording (پاس / ناکام / نمبر) in the status labels
+    for (const label of Object.values(ruleStatusLabel)) expect(label.ur).not.toMatch(/پاس|ناکام|نمبر/);
   });
 
   it('the statuses used by the rule engine are exactly the statuses that have a label', () => {
@@ -46,7 +50,7 @@ describe('pickLabel', () => {
     ['en', 'en', 'Pass'],
     ['fr', 'fr', 'Réussi'],
     ['en', 'ar', 'Pass'], // Arabic mode reuses the English copy; its text comes from the Arabic catalog
-    ['en', 'ur', 'پاس'],
+    ['en', 'ur', 'موافق'],
   ])('copy %s, interface %s → %s', (language, uiLanguage, expected) => {
     expect(pickLabel(ruleStatusLabel.pass, language, uiLanguage)).toBe(expected);
   });
@@ -88,11 +92,11 @@ describe('"Zodiac Man Caution" (medical badge)', () => {
     expect(badge.label.en).toBe('Zodiac Man Caution');
     expect(badge.label.fr).toBe('Prudence — Homme Zodiacal');
     expect(badge.label.ar).toBe('تنبيه الإنسان الفلكي');
-    expect(badge.label.ur).toBe('احتیاط — انسانِ فلکی');
+    expect(badge.label.ur).toBe('احتیاط — بروج اور اعضائے جسم');
   });
 
   it('SunnahBadges picks the Urdu label in Urdu mode and still prints the Arabic beside it', () => {
-    expect(pickLabel(badge.label, 'en', 'ur')).toBe('احتیاط — انسانِ فلکی');
+    expect(pickLabel(badge.label, 'en', 'ur')).toBe('احتیاط — بروج اور اعضائے جسم');
     expect(pickLabel(badge.label, 'fr', 'fr')).toBe('Prudence — Homme Zodiacal');
     expect(read('src/features/ikhtiyarat/components/SunnahBadges.tsx')).toContain('pickLabel(badge.label, language, uiLanguage)');
   });

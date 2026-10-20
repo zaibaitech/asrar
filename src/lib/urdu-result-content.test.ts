@@ -80,10 +80,11 @@ describe('Burj result: Divine Names & dhikr tab (spiritual_practice)', () => {
     expect(untranslated(instr.filter((s) => !/^Recite the (Angel|Jinn) name:/.test(s)))).toEqual([]);
   });
 
-  it('dhikr instruction templates keep the transliterated text and the "hadad" rule', () => {
+  it('dhikr instruction templates keep the transliterated text and spell out the count rule (no «حدد»)', () => {
     const ur = catalog.get("Recite the Quranic verse (Maliki yawmi al-din) (repeat Hadad times: your name + mother's name)")!;
     expect(ur).toContain('Maliki yawmi al-din');
-    expect(ur).toContain('حدد');
+    expect(ur).toContain('اتنی بار دہرائیں جتنا آپ کے نام اور والدہ کے نام کا ابجد مجموعہ ہے');
+    expect(ur).not.toContain('حدد');
     const names = catalog.get("Recite Divine Names (Ya Maliku Ya Quddus) (repeat Hadad times: your name + mother's name)")!;
     expect(names).toContain('Ya Maliku Ya Quddus');
     expect(names).toContain('اسمائے الٰہی');

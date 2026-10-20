@@ -45,8 +45,9 @@ describe('single source of truth', () => {
     expect(MEDICAL_NOTICE.ur.long).toMatch(/مستند طبی ماہر سے رجوع کریں، اور ضروری طبی امداد میں تاخیر نہ کریں/);
   });
 
-  it('the Urdu long notice is word for word the one shipped in Phase 10 (its wording is not part of this change)', () => {
-    expect(MEDICAL_NOTICE.ur.long).toBe('طبی علاج کے وقت، انتخاب یا فیصلے کا تعین علمِ نجوم کی بنیاد پر نہ کریں۔ تشخیص اور علاج کے لیے مستند طبی ماہر سے رجوع کریں، اور ضروری طبی امداد میں تاخیر نہ کریں۔ یہ نتیجہ روایتی علمِ نجوم کی تعبیر ہے، کوئی طبی پیش گوئی نہیں۔');
+  it('the Urdu long notice is the native-reviewed text (review sheet 2, Q3): it adds the delay / stop / replace clause and names surgery', () => {
+    expect(MEDICAL_NOTICE.ur.long).toBe('طبی علاج کے وقت، انتخاب یا فیصلے کا تعین علمِ نجوم کی بنیاد پر نہ کریں۔ اسی بنیاد پر کسی علاج یا سرجری کو مؤخر نہ کریں، جاری علاج بند نہ کریں اور نہ اس کی جگہ کوئی اور طریقہ اختیار کریں۔ تشخیص اور علاج کے لیے مستند طبی ماہر سے رجوع کریں، اور ضروری طبی امداد میں تاخیر نہ کریں۔ یہ نتیجہ روایتی علمِ نجوم کی تعبیر ہے، کوئی طبی پیش گوئی نہیں۔');
+    expect(MEDICAL_NOTICE.ur.long).toMatch(/سرجری کو مؤخر نہ کریں، جاری علاج بند نہ کریں اور نہ اس کی جگہ کوئی اور طریقہ اختیار کریں/);
   });
 });
 

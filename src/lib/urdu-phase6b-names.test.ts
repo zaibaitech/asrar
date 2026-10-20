@@ -50,9 +50,9 @@ describe('Urdu FAQ templates, all 12 names', () => {
   it('the worked example uses the right sum, remainder and burj (Muhammad + Fatima = 92 + 135 = 227, remainder 11, Aquarius)', () => {
     const m = getCommonName('muhammad')!;
     const a = urFaqs(facts(m), fatimaOf(m))[1].a;
-    expect(a).toContain('92 + 135 = 227، باقی 11، یعنی دلو (al-Dalw)');
-    expect(a).toContain('1 حمل (al-Ḥamal)');
-    expect(a).toContain('12 حوت (al-Ḥūt)');
+    expect(a).toContain('92 + 135 = 227، باقی 11، یعنی دلو۔');
+    expect(a).toContain('1 حمل ہے اور 12 حوت');
+    expect(a).not.toMatch(/al-Ḥamal|al-Ḥūt|al-Dalw/); // no Latin glosses in the Urdu sentence (review sheet 2: 3.164, 9.78)
   });
 
   it('the example is left out for Fatima herself (as in English) and the variants question names the right spellings', () => {
@@ -109,14 +109,14 @@ describe('page wiring', () => {
 });
 
 describe('home page SEO shell (Urdu mode)', () => {
-  it('the heading, intro and every public tool description resolve to Urdu; the Prophetic Names title stays Latin pending religious review', () => {
+  it('the heading, intro and every public tool description resolve to Urdu; the Prophetic Names are named in Urdu (review sheet 2: 1.28)', () => {
     const routes = read('src/lib/siteRoutes.ts');
     const descriptions = [...routes.matchAll(/^\s{4}description: (?:'((?:[^'\\]|\\.)*)'|"((?:[^"\\]|\\.)*)"),$/gm)].map((m) => (m[1] ?? m[2]).replace(/\\'/g, "'"));
     expect(descriptions.length).toBe(17);
     for (const d of descriptions) expect(catalog.get(d), d).toMatch(URDU);
     expect(catalog.get('Asrār — Planetary Hours, Abjad & Islamic Sacred Sciences')).toMatch(URDU);
     const dhikr = catalog.get('Track your dhikr: Istighfār, Ṣalawāt, Divine Names and the 201 Prophetic Names practice.')!;
-    expect(dhikr).toContain('201 Prophetic Names');
+    expect(dhikr).toContain('نبی کریم ﷺ کے 201 اسمائے مبارکہ');
     expect(dhikr).toContain('اسمائے حسنیٰ');
     expect(catalog.get('The 28 lunar mansions: today’s manzil, Arabic names, spiritual focus, and links to birth profile and ikhtiyārāt. For reflection.')).toContain('اٹھائیس');
   });

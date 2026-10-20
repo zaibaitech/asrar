@@ -45,8 +45,8 @@
    "group": "potd",
    "en": "Saturday is governed by the slowest and most disciplined of the classical planets. It is a day for long-term commitments, serious study, and patient effort. Engage in property matters, legal affairs, and building lasting structures. Avoid rushing — Saturn rewards consistent, sustained effort over time.",
    "before": "روایتی علمِ نجوم میں ہفتے کو زحل سے منسوب کیا جاتا ہے، جو کلاسیکی سیاروں میں سب سے سست اور سب سے منظم ہے۔ یہ طویل مدتی وعدوں، سنجیدہ مطالعے اور صبر آزما کوشش کا دن ہے۔ جائیداد، قانونی معاملات اور پائیدار ڈھانچے بنانے میں مشغول ہوں۔ جلد بازی سے بچیں — اس دن مسلسل اور دیرپا محنت کو ترجیح دیں۔",
-   "after": "روایتی علمِ نجوم میں ہفتے کو زحل سے منسوب کیا جاتا ہے، جو کلاسیکی سیاروں میں سب سے سست اور سب سے منظم ہے۔ یہ طویل مدتی وعدوں، سنجیدہ مطالعے اور صبر آزما کوشش کا دن ہے۔ جائیداد، قانونی معاملات اور دیرپا اور مضبوط ڈھانچے تعمیر کرنے پر توجہ دیں۔ جلد بازی سے بچیں — اس دن مسلسل اور دیرپا محنت کو ترجیح دیں۔",
-   "reason": "\"lasting structures\" → «دیرپا تعمیرات», the term used for the same phrase in the Ikhtiyārāt text (Phase 3) | Phase 10: Urdu revised after the external review (see still_english.md, Phase 10); the English source is unchanged. Qualified review still required."
+   "after": "روایتی علمِ نجوم میں ہفتے کو زحل سے منسوب کیا جاتا ہے، جو کلاسیکی سیاروں میں سب سے سست اور سب سے منظم ہے۔ یہ طویل مدتی وعدوں، سنجیدہ مطالعے اور صبر و استقامت والی محنت کا دن ہے۔ جائیداد، قانونی معاملات اور دیرپا اور مضبوط ڈھانچے تعمیر کرنے پر توجہ دیں۔ جلد بازی سے بچیں — اس دن مسلسل اور دیرپا محنت کو ترجیح دیں۔",
+   "reason": "\"lasting structures\" → «دیرپا تعمیرات», the term used for the same phrase in the Ikhtiyārāt text (Phase 3) | Phase 10: Urdu revised after the external review (see still_english.md, Phase 10); the English source is unchanged. Qualified review still required. Superseded by the native review (sheet 2, Oct 2026); the \"after\" text is the reviewed one."
   },
   {
    "group": "rules",
@@ -73,8 +73,8 @@
    "group": "rules",
    "en": "The Moon is passing through a stretch of the zodiac traditionally considered turbulent (the \"burning path\").",
    "before": "قمر اس وقت زائچے کے اس حصے سے گزر رہا ہے جسے روایت میں پُرتلاطم سمجھا جاتا ہے (“الطریقۃ المحترقۃ”)۔",
-   "after": "قمر اس وقت دائرۃ البروج کے اس حصے سے گزر رہا ہے جسے روایت میں پُرتلاطم سمجھا جاتا ہے (“الطریقۃ المحترقۃ”)۔",
-   "reason": "«زائچہ» is the birth chart; \"a stretch of the zodiac\" is a stretch of the zodiacal circle"
+   "after": "قمر اس وقت دائرۃ البروج کے اس حصے سے گزر رہا ہے جسے روایت میں پُرتلاطم سمجھا جاتا ہے («الطریقۃ المحترقۃ»)۔",
+   "reason": "«زائچہ» is the birth chart; \"a stretch of the zodiac\" is a stretch of the zodiacal circle Superseded by the native review (sheet 2, Oct 2026); the \"after\" text is the reviewed one."
   },
   {
    "group": "rules",
@@ -150,8 +150,8 @@
    "group": "arch",
    "en": "Focus on health (physical and emotional), emotional maturity, calm daily routines, and seeking therapeutic support when needed.",
    "before": "صحت (جسمانی اور جذباتی) پر توجہ، جذباتی پختگی، پُرسکون روزمرہ معمولات، اور ضرورت پڑنے پر ماہرانہ معاونت لینا۔",
-   "after": "صحت (جسمانی اور جذباتی) پر توجہ، جذباتی پختگی، پُرسکون روزمرہ معمولات، اور ضرورت پڑنے پر علاجی معاونت (تھراپی) لینا۔",
-   "reason": "\"therapeutic support\" was rendered «ماہرانہ» (expert); the therapeutic sense is restored"
+   "after": "صحت (جسمانی اور جذباتی) پر توجہ، جذباتی پختگی، پُرسکون روزمرہ معمولات، اور ضرورت پڑنے پر کسی ماہر معالج یا ماہرِ نفسیات سے رجوع کرنا۔",
+   "reason": "\"therapeutic support\" was rendered «ماہرانہ» (expert); the therapeutic sense is restored Superseded by the native review (sheet 2, Oct 2026); the \"after\" text is the reviewed one."
   },
   {
    "group": "arch",
@@ -304,8 +304,8 @@
    "group": "career",
    "en": "Healing & Healthcare",
    "before": "شفا اور صحتِ عامہ",
-   "after": "شفا اور طبی نگہداشت",
-   "reason": "«صحتِ عامہ» is public health; \"healthcare\" is «طبی نگہداشت»"
+   "after": "طب اور صحت کی دیکھ بھال",
+   "reason": "«صحتِ عامہ» is public health; \"healthcare\" is «طبی نگہداشت» Superseded by the native review (sheet 2, Oct 2026); the \"after\" text is the reviewed one."
   }
  ],
  "flags": [
@@ -504,8 +504,8 @@
   {
    "group": "rules",
    "en": "How scoring works: each rule adds or subtracts points; the total is scaled to a 0–100 score against that election type's own maximum achievable points, so the tier bands (Mumtāz, Jayyid, Maqbūl, Ḍaʿīf, Ijtanib) mean the same thing across marriage, travel, and any future election type.",
-   "ur": "اسکور کیسے شمار ہوتا ہے: ہر اصول کے مطابق کچھ پوائنٹس جمع یا منہا کیے جاتے ہیں۔ پھر حاصل شدہ مجموعے کو اسی قسم کے انتخاب کے زیادہ سے زیادہ ممکنہ پوائنٹس کے لحاظ سے 0–100 کے پیمانے پر تبدیل کیا جاتا ہے، تاکہ درجوں (ممتاز، جیّد، مقبول، ضعیف، اجتناب) کا مطلب شادی، سفر اور آئندہ ہر قسم کے انتخاب میں ایک ہی رہے۔",
-   "reason": "Tier names are written in Urdu script (ممتاز، جیّد، مقبول، ضعیف، اجتنب) while the UI badges may still show the transliterations; check the spellings. | Phase 10: Urdu revised after the external review (attributed \"روایتی تعبیر\" wording; tier name spelled «اجتناب» as on the badge); the English source is unchanged. Qualified review still required. | Phase 11: checked in the built app: each Urdu tier badge prints the translated English label and, beside it, the classical band name (e.g. «قابلِ قبول مقبول»); the note lists the five band names, so there is no mismatch. Whether both words should be shown (the Avoid tier shows «اجتناب اجتناب») is an Urdu-editor question.",
+   "ur": "اسکور کیسے شمار ہوتا ہے: ہر اصول کے مطابق کچھ نمبر جمع یا منہا کیے جاتے ہیں۔ پھر حاصل شدہ مجموعے کو اسی قسم کے انتخاب کے زیادہ سے زیادہ ممکنہ نمبروں کے لحاظ سے 0–100 کے پیمانے پر تبدیل کیا جاتا ہے، تاکہ درجوں (ممتاز، جیّد، مقبول، ضعیف، اجتناب) کا مطلب شادی، سفر اور آئندہ ہر قسم کے انتخاب میں ایک ہی رہے۔",
+   "reason": "Tier names are written in Urdu script (ممتاز، جیّد، مقبول، ضعیف، اجتنب) while the UI badges may still show the transliterations; check the spellings. | Phase 10: Urdu revised after the external review (attributed \"روایتی تعبیر\" wording; tier name spelled «اجتناب» as on the badge); the English source is unchanged. Qualified review still required. | Phase 11: checked in the built app: each Urdu tier badge prints the translated English label and, beside it, the classical band name (e.g. «قابلِ قبول مقبول»); the note lists the five band names, so there is no mismatch. Whether both words should be shown (the Avoid tier shows «اجتناب اجتناب») is an Urdu-editor question. Text updated by the native review (sheet 2, Oct 2026).",
    "alternative": "",
    "review": "native Urdu"
   },

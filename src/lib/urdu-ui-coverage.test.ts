@@ -82,14 +82,27 @@ describe('Urdu UI: Arabic comes from the data files, not from a translation', ()
     }
   });
 
-  it('all 28 lunar mansion names are never replaced by anything but the Arabic of lunarMansions.ts', () => {
+  it('all 28 lunar mansion names render as the name of lunarMansions.ts, in Urdu letter forms in the Urdu UI (R2; the card keeps its own Arabic line)', () => {
     expect(LUNAR_MANSIONS).toHaveLength(28);
-    for (const m of LUNAR_MANSIONS) expect([undefined, m.nameArabic], m.nameTransliteration).toContain(raw[m.nameTransliteration]);
+    // R2 (review sheet 2, 9.7–9.27): a name mentioned in Urdu text takes Urdu letter forms (ی ک ہ, no hamza seat).
+    const urduForm = (a: string) =>
+      a.replace(/[ًٌٍَُِّْ]/g, '').replace(/[أإآ]/g, 'ا').replace(/ي/g, 'ی').replace(/ك/g, 'ک').replace(/ة/g, 'ہ').replace(/ه/g, 'ہ');
+    for (const m of LUNAR_MANSIONS) {
+      expect([undefined, m.nameArabic, urduForm(m.nameArabic)], m.nameTransliteration).toContain(raw[m.nameTransliteration]);
+    }
   });
 
-  it('the Qur\'an line on the Ramadan page is the verified Arabic (same as ar-ui.json), not a translation', () => {
-    const ar = JSON.parse(read('public/i18n/ar-ui.json'));
-    expect(raw['Remember Me, and I will remember you.']).toBe(ar['Remember Me, and I will remember you.']);
+  it('the Ramadan card quotes: the Arabic verse is printed from the data (data-no-ar), so the meaning line is an Urdu meaning, not the verse again (review sheet 2, Q2)', () => {
+    const card = read('src/features/ramadanChallenges/components/ChallengeCard.tsx');
+    expect(card).toContain("{ en: 'Remember Me, and I will remember you.', ar: 'فَاذْكُرُونِي أَذْكُرْكُمْ' }");
+    expect(raw['Remember Me, and I will remember you.']).toBe('تم مجھے یاد کرو، میں تمہیں یاد کروں گا۔ (البقرہ: 152)');
+    expect(raw['Glorify Allah morning and evening.']).toBe('اور صبح و شام اس کی تسبیح کرتے رہو۔ (الاحزاب: 42)');
+    expect(raw['Hearts find rest in the remembrance of Allah.']).toBe('سن رکھو! اللہ کے ذکر ہی سے دلوں کو اطمینان ملتا ہے۔ (الرعد: 28)');
+    expect(raw['The dhikr of Allah is the greatest.']).toBe('اور اللہ کا ذکر سب سے بڑی چیز ہے۔ (العنکبوت: 45)');
+    // none of the four meaning lines repeats the Arabic verse
+    for (const k of ['Remember Me, and I will remember you.', 'Glorify Allah morning and evening.', 'Hearts find rest in the remembrance of Allah.', 'The dhikr of Allah is the greatest.']) {
+      expect(raw[k], k).not.toMatch(/[ًٌٍَُِّْ]|ي|ك|ة/);
+    }
   });
 
   it('Divine Name glosses next to the 99 Names stay untranslated on purpose', () => {

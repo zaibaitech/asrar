@@ -27,13 +27,13 @@ export function getMedicalBadges(result: ElectionResult, moonSign: ZodiacSign): 
 
   badges.push({
     id: 'zodiac-man-caution',
-    label: { en: 'Zodiac Man Caution', fr: 'Prudence — Homme Zodiacal', ar: 'تنبيه الإنسان الفلكي', ur: 'احتیاط — انسانِ فلکی' },
+    label: { en: 'Zodiac Man Caution', fr: 'Prudence — Homme Zodiacal', ar: 'تنبيه الإنسان الفلكي', ur: 'احتیاط — بروج اور اعضائے جسم' },
     note: {
       en: `The Moon is in a sign classically ruling the ${bodyPart.en}. Traditional sources advise avoiding surgery or bloodletting on that area while the Moon transits its ruling sign — informational only, always follow qualified medical advice.`,
       fr: `La Lune est dans un signe qui gouverne classiquement ${bodyPart.fr}. Les sources traditionnelles conseillent d'éviter une chirurgie ou une saignée sur cette zone pendant que la Lune transite son signe régent — ceci est purement informatif, suivez toujours l'avis d'un professionnel de santé qualifié.`,
       ar: `القمر في برج يحكم تقليديًا ${bodyPart.ar}. تنصح المصادر التقليدية بتجنب الجراحة أو الفصد في تلك المنطقة أثناء عبور القمر لبرجه الحاكم — هذا للعلم فقط، اتبع دائمًا نصيحة طبية مؤهلة.`,
       // Draft: not reviewed by a native Urdu reader or a medical professional.
-      ur: `قمر ایک ایسے برج میں ہے جو روایتی طور پر ${bodyPart.ur} پر حاکم مانا جاتا ہے۔ روایتی ماخذ مشورہ دیتے ہیں کہ قمر کے اپنے حاکم برج میں گزرنے کے دوران اس حصے پر سرجری یا فصد سے بچا جائے — یہ محض معلومات ہیں، ہمیشہ مستند طبی ماہر کے مشورے پر عمل کریں۔`,
+      ur: `قمر اس وقت ایک ایسے برج میں ہے جو روایتی طور پر ${bodyPart.ur} پر حاکم مانا جاتا ہے۔ روایتی ماخذ کہتے ہیں کہ جب تک قمر اس برج میں ہو، جسم کے اس حصے کی سرجری یا فصد سے گریز کیا جائے۔ یہ محض معلومات ہیں: ہمیشہ مستند طبی ماہر کے مشورے پر عمل کریں اور ضروری علاج میں تاخیر نہ کریں۔`,
     },
     tone: 'caution',
   });

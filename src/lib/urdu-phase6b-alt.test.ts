@@ -26,10 +26,10 @@ describe('image alt text', () => {
     }
   });
 
-  it('every Urdu alternative is Urdu script, non-empty, and keeps its Latin brand names', () => {
+  it('every Urdu alternative is Urdu script, non-empty, keeps its Latin store names and writes the app name in Urdu script', () => {
     for (const v of Object.values(IMAGE_ALT_UR)) expect(v).toMatch(/[؀-ۿ]/);
     expect(IMAGE_ALT_UR.waveQr).toContain('Wave');
-    expect(IMAGE_ALT_UR.playInstallQr).toContain('Asrariya');
+    expect(IMAGE_ALT_UR.playInstallQr).toContain('اسراریہ');
     expect(IMAGE_ALT_UR.playInstallQr).toContain('Google Play');
     expect(IMAGE_ALT_UR.chernoAvatar).toContain('Cherno');
   });

@@ -21,24 +21,24 @@ describe('Phase 6B: source-content issues', () => {
     expect(ar[en]).toBeTruthy();
   });
 
-  it('in Urdu the [SCHOLAR-REVIEW] flag reads «[علما کے جائزے کا منتظر]» (awaiting scholarly review: it never says a scholar approved), in en/fr it is unchanged', () => {
-    const LABEL = '[علما کے جائزے کا منتظر]';
-    const marked = Object.entries(raw).filter(([k]) => k.includes('SCHOLAR-REVIEW'));
-    expect(marked.length).toBeGreaterThanOrEqual(7);
-    for (const [k, v] of marked) {
-      expect(v, k).toContain(LABEL);
-      expect(v, k).not.toContain('SCHOLAR');
-      expect(v, k).not.toMatch(/منظور|تصدیق شدہ|مصدقہ/);
-    }
-    expect(Object.values(raw).some((v) => v.includes('SCHOLAR-REVIEW'))).toBe(false);
-    const rule = makeCatalog(raw).get('Moon in lunar mansion 7 — favorable for marriage. [SCHOLAR-REVIEW]')!;
-    expect(rule).toBe('قمر منزلِ قمر 7 میں ہے — شادی کے لیے موافق۔ ' + LABEL);
+  it('the [SCHOLAR-REVIEW] tag is no longer visible in any language: no catalog key or value carries it (or its Urdu/Arabic label)', () => {
+    expect(Object.keys(raw).some((k) => k.includes('SCHOLAR-REVIEW'))).toBe(false);
+    expect(Object.values(raw).some((v) => v.includes('SCHOLAR') || v.includes('علما کے جائزے کا منتظر'))).toBe(false);
+    const ar = JSON.parse(readFileSync(path.join(root, 'public/i18n/ar-ui.json'), 'utf8')) as Record<string, string>;
+    expect(Object.keys(ar).some((k) => k.includes('SCHOLAR-REVIEW'))).toBe(false);
+    expect(Object.values(ar).some((v) => v.includes('للمراجعة العلمية'))).toBe(false);
+    const rule = makeCatalog(raw).get('Moon in lunar mansion 7 — favorable for marriage.')!;
+    expect(rule).toBe('قمر منزل نمبر 7 میں ہے — شادی کے لیے موافق۔');
   });
 
-  it('English and French rule text keep the marker and its test (useSimpleMode documents it as Detailed-mode terminology)', () => {
-    const marriage = readFileSync(path.join(root, 'src/lib/ikhtiyarat/elections/marriage.ts'), 'utf8');
-    expect(marriage).toContain('[SCHOLAR-REVIEW]`');
-    expect(marriage.match(/detail_fr:[^\n]*\[SCHOLAR-REVIEW\]/)).not.toBeNull();
+  it('English and French rule text no longer show the marker; it is kept as the scholarReview data flag and a code comment', () => {
+    for (const f of ['marriage', 'travel', 'home', 'business', 'education', 'medical']) {
+      const src = readFileSync(path.join(root, `src/lib/ikhtiyarat/elections/${f}.ts`), 'utf8');
+      expect(src, f).not.toContain('[SCHOLAR-REVIEW]');
+      expect(src, f).not.toContain('[À VÉRIFIER PAR UN SAVANT]');
+      expect(src, f).toMatch(/scholarReview: (true|waxing)/);
+      expect(src, f).toContain('// SCHOLAR-REVIEW:');
+    }
   });
 
   it('the "Show N more traits" button expands the traits (its handler is no longer empty)', () => {
@@ -57,7 +57,7 @@ describe('Phase 6A: mobile-menu About text', () => {
     expect(src).toContain('<strong>Asrār</strong> is your guide to the Islamic sciences of');
     const ur = src.slice(src.indexOf("uiLanguage === 'ur' ?"), src.indexOf(') : ('));
     expect(ur).toContain('علم الحروف');
-    expect(ur).toContain('علم العدد');
+    expect(ur).toContain('علم الاعداد');
     expect(ur).not.toMatch(/Science of|Discover/);
   });
 });

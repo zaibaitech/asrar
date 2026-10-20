@@ -12,11 +12,11 @@ export const IMAGE_ALT_UR = {
   /** Functional: the badge is the link to the store; same wording as the link's aria-label in the catalog. */
   googlePlayBadge: '⁦Google Play⁩ سے حاصل کریں',
   /** Informative: the portrait of the assistant, a proper name that stays in Latin letters. */
-  chernoAvatar: 'Cherno کی تصویر',
+  chernoAvatar: '⁨Cherno⁩ کی تصویر',
   /** Functional: the code is what a donor scans to pay. */
   waveQr: '⁦Wave Sénégal⁩ کا QR کوڈ',
   /** Functional: the code is what a visitor scans to install the app. */
-  playInstallQr: '⁦Google Play⁩ سے ⁦Asrariya⁩ انسٹال کرنے کے لیے QR کوڈ',
+  playInstallQr: '⁨Google Play⁩ سے اسراریہ انسٹال کرنے کے لیے ⁨QR⁩ کوڈ',
 } as const;
 
 export type ImageAltKey = keyof typeof IMAGE_ALT_UR;

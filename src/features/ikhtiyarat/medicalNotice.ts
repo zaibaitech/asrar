@@ -3,14 +3,16 @@
  * tier, score or timing claim (in-app views, shared-result page and its metadata, share text, share card).
  *
  * Status of the texts (see docs/i18n/ur-review.md, Phase 13):
- *  - ur.long is the notice written for the Urdu interface in Phase 10 and is unchanged.
+ *  - ur.long is the Urdu notice from Phase 10, corrected by the native Urdu language review (review sheet 2,
+ *    Q3, Oct 2026): it now also says not to delay, stop or replace treatment on this basis, and names surgery.
+ *    It is language-reviewed only, not approved by a medical professional.
  *  - Every other text is an AI DRAFT. None has been approved by a medical professional or a native-language
  *    reviewer; French and Arabic in particular need qualified language review.
  *
  * Meaning shared by all languages: astrology gives a traditional interpretation, not a clinically validated
  * medical prediction; it must not be used to choose, delay, stop or replace treatment; consult a qualified
- * health professional and do not delay necessary care. (The Urdu long text predates the "stop or replace"
- * clause and says the same without it.)
+ * health professional and do not delay necessary care. The Urdu long text carries every one of these clauses,
+ * including "delay, stop or replace" (added in the native review).
  */
 
 export type NoticeLang = 'en' | 'ur' | 'fr' | 'ar';
@@ -24,7 +26,7 @@ export const MEDICAL_NOTICE: Record<NoticeLang, { long: string; short: string; o
     occasion: 'Medical treatment · traditional reading',
   },
   ur: {
-    long: 'طبی علاج کے وقت، انتخاب یا فیصلے کا تعین علمِ نجوم کی بنیاد پر نہ کریں۔ تشخیص اور علاج کے لیے مستند طبی ماہر سے رجوع کریں، اور ضروری طبی امداد میں تاخیر نہ کریں۔ یہ نتیجہ روایتی علمِ نجوم کی تعبیر ہے، کوئی طبی پیش گوئی نہیں۔',
+    long: 'طبی علاج کے وقت، انتخاب یا فیصلے کا تعین علمِ نجوم کی بنیاد پر نہ کریں۔ اسی بنیاد پر کسی علاج یا سرجری کو مؤخر نہ کریں، جاری علاج بند نہ کریں اور نہ اس کی جگہ کوئی اور طریقہ اختیار کریں۔ تشخیص اور علاج کے لیے مستند طبی ماہر سے رجوع کریں، اور ضروری طبی امداد میں تاخیر نہ کریں۔ یہ نتیجہ روایتی علمِ نجوم کی تعبیر ہے، کوئی طبی پیش گوئی نہیں۔',
     short: 'روایتی نجومی تعبیر — طبی مشورہ نہیں۔',
     occasion: 'طبی علاج · روایتی تعبیر',
   },

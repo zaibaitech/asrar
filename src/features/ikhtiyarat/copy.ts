@@ -137,9 +137,9 @@ export const howScoringWorksArabic =
   'كيف يُحسب التقييم: كل قاعدة تضيف أو تطرح نقاطًا؛ ويُحوَّل المجموع إلى تقييم من 0 إلى 100 بالنسبة إلى أقصى عدد نقاط يمكن تحقيقه لهذا النوع من الاختيار، بحيث تحمل الفئات (ممتاز، جيد، مقبول، ضعيف، اجتناب) نفس المعنى في الزواج والسفر وأي نوع اختيار مستقبلي.';
 
 export const ruleStatusLabel: Record<string, { en: string; fr: string; ur: string }> = {
-  pass: { en: 'Pass', fr: 'Réussi', ur: 'پاس' },
-  fail: { en: 'Fail', fr: 'Échec', ur: 'ناکام' },
-  bonus: { en: 'Bonus', fr: 'Bonus', ur: 'اضافی نمبر' },
-  penalty: { en: 'Penalty', fr: 'Pénalité', ur: 'منفی نمبر' },
-  hardfail: { en: 'Hard fail', fr: 'Échec critique', ur: 'سخت ناکامی' },
+  pass: { en: 'Pass', fr: 'Réussi', ur: 'موافق' },
+  fail: { en: 'Fail', fr: 'Échec', ur: 'ناموافق' },
+  bonus: { en: 'Bonus', fr: 'Bonus', ur: 'اضافہ' },
+  penalty: { en: 'Penalty', fr: 'Pénalité', ur: 'کٹوتی' },
+  hardfail: { en: 'Hard fail', fr: 'Échec critique', ur: 'قطعی رکاوٹ' },
 };
