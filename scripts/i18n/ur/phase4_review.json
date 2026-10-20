@@ -8,6 +8,10 @@
   "career-ui": {
    "total": 23,
    "reviewed": 23
+  },
+  "rules": {
+   "total": 86,
+   "reviewed": 86
   }
  },
  "corrections": [
@@ -31,9 +35,300 @@
    "before": "روایتی علمِ نجوم میں ہفتے کو زحل سے منسوب کیا جاتا ہے، جو کلاسیکی سیاروں میں سب سے سست اور سب سے منظم ہے۔ یہ طویل مدتی وعدوں، سنجیدہ مطالعے اور صبر آزما کوشش کا دن ہے۔ جائیداد، قانونی معاملات اور پائیدار ڈھانچے بنانے میں مشغول ہوں۔ جلد بازی سے بچیں — اس دن مسلسل اور دیرپا محنت کو ترجیح دیں۔",
    "after": "روایتی علمِ نجوم میں ہفتے کو زحل سے منسوب کیا جاتا ہے، جو کلاسیکی سیاروں میں سب سے سست اور سب سے منظم ہے۔ یہ طویل مدتی وعدوں، سنجیدہ مطالعے اور صبر آزما کوشش کا دن ہے۔ جائیداد، قانونی معاملات اور دیرپا تعمیرات کھڑی کرنے میں مشغول ہوں۔ جلد بازی سے بچیں — اس دن مسلسل اور دیرپا محنت کو ترجیح دیں۔",
    "reason": "\"lasting structures\" → «دیرپا تعمیرات», the term used for the same phrase in the Ikhtiyārāt text (Phase 3)"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon isn't forming any meaningful connection with another planet right now — traditionally, things begun in this state tend to fizzle out.",
+   "before": "قمر اس وقت کسی دوسرے سیارے سے کوئی نمایاں ربط نہیں بنا رہا — روایت میں اس حالت میں شروع کیے گئے کام اکثر ادھورے رہ جاتے ہیں۔",
+   "after": "قمر اس وقت کسی دوسرے سیارے سے کوئی نمایاں ربط نہیں بنا رہا — روایت میں اس حالت میں شروع کیے گئے کام اکثر بے نتیجہ رہ جاتے ہیں۔",
+   "reason": "\"fizzle out / come to nothing\": consistent with the other void-of-course lines, which say «بے نتیجہ»; «ادھورے» means \"unfinished\""
+  },
+  {
+   "group": "rules",
+   "en": "A solar or lunar eclipse is happening within a day of this date — traditionally treated as an unsettled period to avoid for major beginnings.",
+   "before": "اس تاریخ کے ایک دن کے اندر سورج یا چاند گرہن ہے — روایت میں اسے غیر مستحکم دور سمجھا جاتا ہے، اس لیے بڑے آغاز سے گریز بہتر ہے۔",
+   "after": "اس تاریخ کے ایک دن کے اندر شمسی یا قمری گرہن ہے — روایت میں اسے غیر مستحکم دور مانا جاتا ہے جس میں بڑے آغاز سے پرہیز کیا جاتا ہے۔",
+   "reason": "the advice «اس لیے ... گریز بہتر ہے» stated the avoidance as direct advice; the source says it is what the tradition treats as a period to avoid. «شمسی/قمری گرہن» as in the Ikhtiyārāt text"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is shrinking in light right now (waning) — traditionally less favorable for starting something new.",
+   "before": "قمر کی روشنی اس وقت گھٹ رہی ہے (تنقیص) — نئی چیز شروع کرنے کے لیے روایتی طور پر کم موافق ہے۔",
+   "after": "قمر کی روشنی اس وقت گھٹ رہی ہے (گھٹتا چاند) — نئی چیز شروع کرنے کے لیے روایتی طور پر کم موافق ہے۔",
+   "reason": "«تنقیص» in Urdu means disparagement, not waning; «گھٹتا چاند» is the term already used for \"Moon Waning\""
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is passing through a stretch of the zodiac traditionally considered turbulent (the \"burning path\").",
+   "before": "قمر اس وقت زائچے کے اس حصے سے گزر رہا ہے جسے روایت میں پُرتلاطم سمجھا جاتا ہے (“الطریقۃ المحترقۃ”)۔",
+   "after": "قمر اس وقت دائرۃ البروج کے اس حصے سے گزر رہا ہے جسے روایت میں پُرتلاطم سمجھا جاتا ہے (“الطریقۃ المحترقۃ”)۔",
+   "reason": "«زائچہ» is the birth chart; \"a stretch of the zodiac\" is a stretch of the zodiacal circle"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is in a sign it traditionally feels very at home in.",
+   "before": "قمر ایسے برج میں ہے جہاں اسے روایتی طور پر بہت سہولت ملتی ہے۔",
+   "after": "قمر ایسے برج میں ہے جہاں اسے روایتی طور پر اپنے گھر جیسی سہولت ملتی ہے۔",
+   "reason": "\"feels very at home in\": the «at home» (domicile) image was dropped, only «سہولت» (ease) was left"
+  },
+  {
+   "group": "rules",
+   "en": "Venus is in a sign it traditionally feels very at home in.",
+   "before": "زہرہ ایسے برج میں ہے جہاں اسے روایتی طور پر بہت سہولت ملتی ہے۔",
+   "after": "زہرہ ایسے برج میں ہے جہاں اسے روایتی طور پر اپنے گھر جیسی سہولت ملتی ہے۔",
+   "reason": "\"feels very at home in\": the «at home» (domicile) image was dropped, only «سہولت» (ease) was left"
+  },
+  {
+   "group": "rules",
+   "en": "Mercury is in a sign it traditionally feels very at home in — strong for negotiation and paperwork.",
+   "before": "عطارد ایسے برج میں ہے جہاں اسے روایتی طور پر بہت سہولت ملتی ہے — مذاکرات اور کاغذی کارروائی کے لیے مضبوط۔",
+   "after": "عطارد ایسے برج میں ہے جہاں اسے روایتی طور پر اپنے گھر جیسی سہولت ملتی ہے — مذاکرات اور کاغذی کارروائی کے لیے مضبوط۔",
+   "reason": "\"feels very at home in\": the «at home» (domicile) image was dropped, only «سہولت» (ease) was left"
+  },
+  {
+   "group": "rules",
+   "en": "Mercury is in a sign it traditionally feels very at home in — strong for comprehension and memory.",
+   "before": "عطارد ایسے برج میں ہے جہاں اسے روایتی طور پر بہت سہولت ملتی ہے — فہم اور یادداشت کے لیے مضبوط۔",
+   "after": "عطارد ایسے برج میں ہے جہاں اسے روایتی طور پر اپنے گھر جیسی سہولت ملتی ہے — فہم اور یادداشت کے لیے مضبوط۔",
+   "reason": "\"feels very at home in\": the «at home» (domicile) image was dropped, only «سہولت» (ease) was left"
+  },
+  {
+   "group": "rules",
+   "en": "Saturn — the traditional significator of land and foundations — is in a sign it feels very at home in.",
+   "before": "زحل — روایتی طور پر زمین اور بنیادوں کی علامت — ایسے برج میں ہے جہاں اسے بہت سہولت ملتی ہے۔",
+   "after": "زحل — روایتی طور پر زمین اور بنیادوں کی علامت — ایسے برج میں ہے جہاں اسے اپنے گھر جیسی سہولت ملتی ہے۔",
+   "reason": "\"feels very at home in\": the «at home» (domicile) image was dropped, only «سہولت» (ease) was left"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is forming a supportive connection with Jupiter, the planet of growth and good fortune, right now.",
+   "before": "قمر اس وقت مشتری — نمو اور خیر کے سیارے — کے ساتھ موافق ربط بنا رہا ہے۔",
+   "after": "قمر اس وقت مشتری — نمو اور خوش بختی کے سیارے — کے ساتھ موافق ربط بنا رہا ہے۔",
+   "reason": "\"good fortune\" is «خوش بختی» (as in the Phase 3 glosses of the Fortunate mansions), not «خیر» (goodness)"
+  },
+  {
+   "group": "rules",
+   "en": "Mercury is in a comfortable position right now, supporting a clear diagnosis.",
+   "before": "عطارد اس وقت موافق حالت میں ہے، جو درست تشخیص میں معاون ہے۔",
+   "after": "عطارد اس وقت موافق حالت میں ہے، جو واضح تشخیص میں معاون ہے۔",
+   "reason": "source says \"clear\" diagnosis (Phase 3 uses «واضح تشخیص»); «درست» claims correctness"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is forming a supportive connection with Venus or Jupiter right now — a sign of a settled, well-supported household.",
+   "before": "قمر اس وقت زہرہ یا مشتری کے ساتھ موافق ربط بنا رہا ہے — پُرسکون اور معاون گھرانے کی علامت۔",
+   "after": "قمر اس وقت زہرہ یا مشتری کے ساتھ موافق ربط بنا رہا ہے — مستحکم اور معاون گھرانے کی علامت۔",
+   "reason": "\"settled\" household is «مستحکم» (Phase 3 wording); «پُرسکون» means peaceful"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is in a tense position with Saturn or Mars right now — a traditional warning of frustration or blocked progress.",
+   "before": "قمر اس وقت زحل یا مریخ کے ساتھ تناؤ والی نسبت (سخت نظر) میں ہے — بیزاری یا رکی ہوئی پیش رفت کی روایتی انتباہی علامت۔",
+   "after": "قمر اس وقت زحل یا مریخ کے ساتھ تناؤ والی نسبت (سخت نظر) میں ہے — مایوسی یا رکی ہوئی پیش رفت کی روایتی انتباہی علامت۔",
+   "reason": "\"frustration\" is «مایوسی» (Phase 3 wording); «بیزاری» means aversion/boredom"
   }
  ],
  "flags": [
+  {
+   "group": "rules",
+   "en": "The Moon is forming a supportive connection with Venus, the planet of love and harmony, right now.",
+   "ur": "قمر اس وقت زہرہ — محبت اور ہم آہنگی کے سیارے — کے ساتھ موافق ربط بنا رہا ہے۔",
+   "reason": "«ربط» (plain \"connection\") is used for the Moon forming an applying aspect; the glossary term for the classical Moon \"Applying to\" is «اتصال» (Phase 2 open question 11).",
+   "alternative": "«قمر اس وقت … سے اتصال کر رہا ہے» (the wording used in the Detailed mode)",
+   "review": "native Urdu + astrology"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is forming a supportive connection with Jupiter, the planet of growth and good fortune, right now.",
+   "ur": "قمر اس وقت مشتری — نمو اور خوش بختی کے سیارے — کے ساتھ موافق ربط بنا رہا ہے۔",
+   "reason": "«ربط» (plain \"connection\") is used for the Moon forming an applying aspect; the glossary term for the classical Moon \"Applying to\" is «اتصال» (Phase 2 open question 11).",
+   "alternative": "«قمر اس وقت … سے اتصال کر رہا ہے» (the wording used in the Detailed mode)",
+   "review": "native Urdu + astrology"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is forming a supportive connection with Venus or Jupiter right now — a sign of a smooth, well-supported journey.",
+   "ur": "قمر اس وقت زہرہ یا مشتری کے ساتھ موافق ربط بنا رہا ہے — ہموار اور معاون سفر کی علامت۔",
+   "reason": "«ربط» (plain \"connection\") is used for the Moon forming an applying aspect; the glossary term for the classical Moon \"Applying to\" is «اتصال» (Phase 2 open question 11).",
+   "alternative": "«قمر اس وقت … سے اتصال کر رہا ہے» (the wording used in the Detailed mode)",
+   "review": "native Urdu + astrology"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is forming a supportive connection with Jupiter right now — traditionally the planet of profit and gain.",
+   "ur": "قمر اس وقت مشتری — روایتی طور پر نفع اور کمائی کے سیارے — کے ساتھ موافق ربط بنا رہا ہے۔",
+   "reason": "«ربط» (plain \"connection\") is used for the Moon forming an applying aspect; the glossary term for the classical Moon \"Applying to\" is «اتصال» (Phase 2 open question 11).",
+   "alternative": "«قمر اس وقت … سے اتصال کر رہا ہے» (the wording used in the Detailed mode)",
+   "review": "native Urdu + astrology"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is forming a supportive connection with Venus right now — favorable for amicable dealing between both sides.",
+   "ur": "قمر اس وقت زہرہ کے ساتھ موافق ربط بنا رہا ہے — دونوں فریقوں کے درمیان خوش اسلوبی سے لین دین کے لیے موافق۔",
+   "reason": "«ربط» (plain \"connection\") is used for the Moon forming an applying aspect; the glossary term for the classical Moon \"Applying to\" is «اتصال» (Phase 2 open question 11).",
+   "alternative": "«قمر اس وقت … سے اتصال کر رہا ہے» (the wording used in the Detailed mode)",
+   "review": "native Urdu + astrology"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is forming a supportive connection with Venus or Jupiter right now — a sign of a smooth course of treatment and recovery.",
+   "ur": "قمر اس وقت زہرہ یا مشتری کے ساتھ موافق ربط بنا رہا ہے — علاج اور صحت یابی کے ہموار سلسلے کی علامت۔",
+   "reason": "«ربط» (plain \"connection\") is used for the Moon forming an applying aspect; the glossary term for the classical Moon \"Applying to\" is «اتصال» (Phase 2 open question 11).",
+   "alternative": "«قمر اس وقت … سے اتصال کر رہا ہے» (the wording used in the Detailed mode)",
+   "review": "native Urdu + astrology"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is forming a supportive connection with Venus or Jupiter right now — a sign of a settled, well-supported household.",
+   "ur": "قمر اس وقت زہرہ یا مشتری کے ساتھ موافق ربط بنا رہا ہے — مستحکم اور معاون گھرانے کی علامت۔",
+   "reason": "«ربط» (plain \"connection\") is used for the Moon forming an applying aspect; the glossary term for the classical Moon \"Applying to\" is «اتصال» (Phase 2 open question 11).",
+   "alternative": "«قمر اس وقت … سے اتصال کر رہا ہے» (the wording used in the Detailed mode)",
+   "review": "native Urdu + astrology"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is forming a supportive connection with Jupiter right now — traditionally the planet of wisdom and comprehension.",
+   "ur": "قمر اس وقت مشتری — روایتی طور پر حکمت اور فہم کے سیارے — کے ساتھ موافق ربط بنا رہا ہے۔",
+   "reason": "«ربط» (plain \"connection\") is used for the Moon forming an applying aspect; the glossary term for the classical Moon \"Applying to\" is «اتصال» (Phase 2 open question 11).",
+   "alternative": "«قمر اس وقت … سے اتصال کر رہا ہے» (the wording used in the Detailed mode)",
+   "review": "native Urdu + astrology"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is forming a supportive connection with Mercury right now — favorable for retention and a receptive mind.",
+   "ur": "قمر اس وقت عطارد کے ساتھ موافق ربط بنا رہا ہے — یادداشت اور قبول کرنے والے ذہن کے لیے موافق۔",
+   "reason": "«ربط» (plain \"connection\") is used for the Moon forming an applying aspect; the glossary term for the classical Moon \"Applying to\" is «اتصال» (Phase 2 open question 11).",
+   "alternative": "«قمر اس وقت … سے اتصال کر رہا ہے» (the wording used in the Detailed mode)",
+   "review": "native Urdu + astrology"
+  },
+  {
+   "group": "rules",
+   "en": "Mercury is too close to the Sun right now and appears \"hidden\" — this weakens the deal's own significator.",
+   "ur": "عطارد اس وقت شمس کے بہت قریب ہے اور “پوشیدہ” ہو گیا ہے — اس سے سودے کی اپنی علامت کمزور سمجھی جاتی ہے۔",
+   "reason": "English \"significator\" is rendered «علامت» here but «دلالت کنندہ» in the Detailed-mode sentences (Phase 3); the term is not settled.",
+   "alternative": "«دلالت کنندہ» everywhere, if the reviewer approves",
+   "review": "astrology terminology"
+  },
+  {
+   "group": "rules",
+   "en": "Jupiter — the traditional significator of recovery — is in a comfortable position right now.",
+   "ur": "مشتری — روایتی طور پر صحت یابی کی علامت — اس وقت موافق حالت میں ہے۔",
+   "reason": "English \"significator\" is rendered «علامت» here but «دلالت کنندہ» in the Detailed-mode sentences (Phase 3); the term is not settled.",
+   "alternative": "«دلالت کنندہ» everywhere, if the reviewer approves",
+   "review": "astrology terminology"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is too close to the Sun right now and appears \"hidden\" — this weakens the matter's own significator.",
+   "ur": "قمر اس وقت شمس کے بہت قریب ہے اور “پوشیدہ” ہو گیا ہے — اس سے اس معاملے کی اپنی علامت کمزور سمجھی جاتی ہے۔",
+   "reason": "English \"significator\" is rendered «علامت» here but «دلالت کنندہ» in the Detailed-mode sentences (Phase 3); the term is not settled.",
+   "alternative": "«دلالت کنندہ» everywhere, if the reviewer approves",
+   "review": "astrology terminology"
+  },
+  {
+   "group": "rules",
+   "en": "Saturn — the traditional significator of land and foundations — is in a sign it feels very at home in.",
+   "ur": "زحل — روایتی طور پر زمین اور بنیادوں کی علامت — ایسے برج میں ہے جہاں اسے اپنے گھر جیسی سہولت ملتی ہے۔",
+   "reason": "English \"significator\" is rendered «علامت» here but «دلالت کنندہ» in the Detailed-mode sentences (Phase 3); the term is not settled.",
+   "alternative": "«دلالت کنندہ» everywhere, if the reviewer approves",
+   "review": "astrology terminology"
+  },
+  {
+   "group": "rules",
+   "en": "Mercury is too close to the Sun right now and appears \"hidden\" — this weakens the significator of the intellect and study itself.",
+   "ur": "عطارد اس وقت شمس کے بہت قریب ہے اور “پوشیدہ” ہو گیا ہے — اس سے عقل اور تعلیم کی اپنی علامت کمزور سمجھی جاتی ہے۔",
+   "reason": "English \"significator\" is rendered «علامت» here but «دلالت کنندہ» in the Detailed-mode sentences (Phase 3); the term is not settled.",
+   "alternative": "«دلالت کنندہ» everywhere, if the reviewer approves",
+   "review": "astrology terminology"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is too close to the Sun right now and appears \"hidden\" — traditionally, this weakens the body's own vital force in the chart.",
+   "ur": "قمر اس وقت شمس کے بہت قریب ہے اور “پوشیدہ” ہو گیا ہے — روایت میں اس سے زائچے میں جسم کی اپنی قوتِ حیات کمزور سمجھی جاتی ہے۔",
+   "reason": "Medical-timing claim kept as in the English source. It must not be read as a reason to delay or avoid medical care; whether the source text needs a note is a separate content decision (Mario).",
+   "alternative": "keep as source; add a doctor note to EN/FR/AR/UR together or not at all",
+   "review": "subject-matter + product decision"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is in a tense position with Saturn or Mars right now — a traditional warning of complication or slow healing.",
+   "ur": "قمر اس وقت زحل یا مریخ کے ساتھ تناؤ والی نسبت (سخت نظر) میں ہے — پیچیدگی یا سست شفایابی کی روایتی انتباہی علامت۔",
+   "reason": "Medical-timing claim kept as in the English source. It must not be read as a reason to delay or avoid medical care; whether the source text needs a note is a separate content decision (Mario).",
+   "alternative": "keep as source; add a doctor note to EN/FR/AR/UR together or not at all",
+   "review": "subject-matter + product decision"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is growing in light right now — traditionally favorable for treatments meant to build up or strengthen the body.",
+   "ur": "قمر کی روشنی اس وقت بڑھ رہی ہے — جسم کو تقویت دینے والے علاج کے لیے روایتی طور پر موافق ہے۔",
+   "reason": "Medical-timing claim kept as in the English source. It must not be read as a reason to delay or avoid medical care; whether the source text needs a note is a separate content decision (Mario).",
+   "alternative": "keep as source; add a doctor note to EN/FR/AR/UR together or not at all",
+   "review": "subject-matter + product decision"
+  },
+  {
+   "group": "rules",
+   "en": "This falls on Friday — the day most recommended in Islamic tradition for this occasion.",
+   "ur": "یہ جمعہ کا دن ہے — اسلامی روایت میں اس موقع کے لیے سب سے زیادہ پسندیدہ دن۔",
+   "reason": "Religious statement (Friday as the recommended day; the Prophet ﷺ’s du‘ā’ for early mornings) kept as in the source; the sources are not cited in the app.",
+   "alternative": "keep as source",
+   "review": "religious scholar"
+  },
+  {
+   "group": "rules",
+   "en": "This is an early-morning departure — the Prophet ﷺ asked Allah to bless the early mornings of his ummah.",
+   "ur": "یہ صبح سویرے کی روانگی ہے — نبی کریم ﷺ نے اللہ سے اپنی امت کی صبحوں میں برکت کی دعا فرمائی تھی۔",
+   "reason": "Religious statement (Friday as the recommended day; the Prophet ﷺ’s du‘ā’ for early mornings) kept as in the source; the sources are not cited in the app.",
+   "alternative": "keep as source",
+   "review": "religious scholar"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon isn't forming any meaningful connection right now — traditionally, a journey begun in this state tends to come to nothing.",
+   "ur": "قمر اس وقت کوئی نمایاں ربط نہیں بنا رہا — روایت میں اس حالت میں شروع کیا گیا سفر اکثر بے نتیجہ رہتا ہے۔",
+   "reason": "\"tends to come to nothing\": stated without a hedge in the source; Urdu «اکثر بے نتیجہ رہتا ہے» keeps that strength (external audit suggested softening).",
+   "alternative": "«بے نتیجہ رہنے کا امکان رہتا ہے»",
+   "review": "native Urdu"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon isn't forming any meaningful connection right now — traditionally, a deal begun in this state tends to come to nothing.",
+   "ur": "قمر اس وقت کوئی نمایاں ربط نہیں بنا رہا — روایت میں اس حالت میں شروع کیا گیا سودا اکثر بے نتیجہ رہتا ہے۔",
+   "reason": "\"tends to come to nothing\": stated without a hedge in the source; Urdu «اکثر بے نتیجہ رہتا ہے» keeps that strength (external audit suggested softening).",
+   "alternative": "«بے نتیجہ رہنے کا امکان رہتا ہے»",
+   "review": "native Urdu"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon isn't forming any meaningful connection right now — traditionally, treatment begun in this state tends to come to nothing.",
+   "ur": "قمر اس وقت کوئی نمایاں ربط نہیں بنا رہا — روایت میں اس حالت میں شروع کیا گیا علاج اکثر بے نتیجہ رہتا ہے۔",
+   "reason": "Medical-timing claim kept as in the English source. It must not be read as a reason to delay or avoid medical care; whether the source text needs a note is a separate content decision (Mario). | \"tends to come to nothing\": stated without a hedge in the source; Urdu «اکثر بے نتیجہ رہتا ہے» keeps that strength (external audit suggested softening).",
+   "alternative": "keep as source; add a doctor note to EN/FR/AR/UR together or not at all | «بے نتیجہ رہنے کا امکان رہتا ہے»",
+   "review": "subject-matter + product decision + native Urdu"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon isn't forming any meaningful connection right now — traditionally, work begun in this state tends to come to nothing.",
+   "ur": "قمر اس وقت کوئی نمایاں ربط نہیں بنا رہا — روایت میں اس حالت میں شروع کیا گیا کام اکثر بے نتیجہ رہتا ہے۔",
+   "reason": "\"tends to come to nothing\": stated without a hedge in the source; Urdu «اکثر بے نتیجہ رہتا ہے» keeps that strength (external audit suggested softening).",
+   "alternative": "«بے نتیجہ رہنے کا امکان رہتا ہے»",
+   "review": "native Urdu"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon isn't forming any meaningful connection right now — traditionally, study begun in this state tends to come to nothing.",
+   "ur": "قمر اس وقت کوئی نمایاں ربط نہیں بنا رہا — روایت میں اس حالت میں شروع کی گئی تعلیم اکثر بے نتیجہ رہتی ہے۔",
+   "reason": "\"tends to come to nothing\": stated without a hedge in the source; Urdu «اکثر بے نتیجہ رہتا ہے» keeps that strength (external audit suggested softening).",
+   "alternative": "«بے نتیجہ رہنے کا امکان رہتا ہے»",
+   "review": "native Urdu"
+  },
+  {
+   "group": "rules",
+   "en": "How scoring works: each rule adds or subtracts points; the total is scaled to a 0–100 score against that election type's own maximum achievable points, so the tier bands (Mumtāz, Jayyid, Maqbūl, Ḍaʿīf, Ijtanib) mean the same thing across marriage, travel, and any future election type.",
+   "ur": "اسکور کیسے بنتا ہے: ہر اصول کچھ پوائنٹس جمع یا منفی کرتا ہے؛ مجموعے کو اسی قسم کے انتخاب کے زیادہ سے زیادہ ممکنہ پوائنٹس کے مقابلے میں 0–100 کے اسکور پر لایا جاتا ہے، تاکہ درجوں (ممتاز، جیّد، مقبول، ضعیف، اجتنب) کا مطلب شادی، سفر اور آئندہ ہر قسم کے انتخاب میں ایک ہی رہے۔",
+   "reason": "Tier names are written in Urdu script (ممتاز، جیّد، مقبول، ضعیف، اجتنب) while the UI badges may still show the transliterations; check the spellings.",
+   "alternative": "",
+   "review": "native Urdu"
+  },
   {
    "group": "career-ui",
    "en": "Despite being a Water element, you receive special blessings from Earth industries. This unique spiritual gift allows you to thrive in both water-related AND earth-based careers—giving you more pathways to success than most other elements.",

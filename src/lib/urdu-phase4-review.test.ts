@@ -43,4 +43,10 @@ describe('Phase 4 review record', () => {
     expect(bad.map((f) => f.en.slice(0, 60))).toEqual([]);
     expect(new Set(log.flags.map((f) => f.en)).size).toBe(log.flags.length);
   });
+
+  it('terms found wrong in review stay out of the AI-drafted result texts', () => {
+    const ai = Object.values(raw).join('\n');
+    expect(ai).not.toContain('تنقیص'); // means disparagement; waning is «گھٹتا چاند»
+    expect(ai).not.toContain('زائچے کے اس حصے'); // «زائچہ» is the birth chart, not the zodiac circle
+  });
 });
