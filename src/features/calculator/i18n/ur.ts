@@ -1,9 +1,11 @@
 /**
  * Urdu drafts for the calculator UI on /ur/abjad (Batch 13 of the native Urdu review, sheet 2).
  *
- * STATUS: DRAFT — NOT REVIEWED. Machine-assisted drafts reusing the reviewed /ur terms
- * (ابجد قیمت، ابجدِ کبیر، علم الحروف، نسبت، اسمِ الٰہی، ہم آہنگی، تدبر، صدقہ). They are listed
- * for the reviewer as "Batch 13: /ur/abjad calculator UI" with a blank Correction column.
+ * STATUS: REVIEWED (native review, pass 3: 13 corrections and the 10 optional suggestions applied).
+ * Originally drafted reusing the reviewed /ur terms (ابجد قیمت، ابجدِ کبیر، علم الحروف، نسبت،
+ * اسمِ الٰہی، ہم آہنگی، تدبر، صدقہ) and listed as "Batch 13: /ur/abjad calculator UI".
+ * spiritualReflectionBody (13.125) refers to the theme pills above it instead of inserting the
+ * English list of glosses, so the Urdu sentence stays Urdu.
  *
  * Only the keys that had no Urdu are here (134 keys); the other calculator strings were already
  * in the reviewed catalog. The calculator itself still renders English on /ur (it is given
@@ -21,7 +23,7 @@ export const calculatorUr: Draft<typeof calculatorEn> = {
   inputPlaceholder: 'کوئی نام، عبارت یا اسمِ الٰہی لکھیں',
   newCalculation: 'نیا حساب',
   kabir: 'کبیر (کل مجموعہ)',
-  saghir: 'صغیر (جذر)',
+  saghir: 'صغیر (مختصر عدد)',
   sirr: 'سِرّ (راز)',
   wusta: 'وُسطیٰ (درمیانی)',
   kamal: 'کمال (تکمیل)',
@@ -33,12 +35,12 @@ export const calculatorUr: Draft<typeof calculatorEn> = {
   weakestElement: 'کمزور ترین نسبت',
   noLetters: 'تجزیے کے لیے کوئی عربی حرف نہیں ملا',
   nameFieldPlaceholder: 'اپنا نام عربی حروف میں لکھیں',
-  archetype: 'علامتی مثالیہ',
+  archetype: 'علامتی کردار',
   spiritualGuidance: 'روحانی رہنمائی',
   divineNameResonance: 'اسمائے الٰہی سے نسبتیں',
   recommendedDhikrCounts: 'ذکر کی تجویز کردہ تعداد',
   bestTimeWindow: 'موزوں ترین وقت',
-  powerDays: 'خاص دن',
+  powerDays: 'موافق دن',
   repeatedLetters: 'دہرائے گئے حروف',
   nearSacredNumber: 'قریب ترین مقدس عدد',
   selectDivineName: 'اسمِ الٰہی منتخب کریں',
@@ -58,10 +60,10 @@ export const calculatorUr: Draft<typeof calculatorEn> = {
   howCalculatedBody:
     'ابجدِ کبیر کے نظام میں ہر عربی حرف کی ایک مقرر عددی قیمت ہے۔ اعراب شمار نہیں ہوتے؛ متن کے باقی تمام حروف کی قیمتیں جمع کر کے یہ مجموعہ بنتا ہے۔',
   totalLettersLabel: 'کل حروف',
-  uniqueLettersLabel: 'الگ الگ حروف',
+  uniqueLettersLabel: 'مختلف حروف',
   numericalProfileTitle: 'عددی خاکہ',
   classicalCalculation: 'کلاسیکی حساب',
-  traditionalUnverified: 'روایتی اصطلاح · درست تاریخی فارمولا غیر مصدقہ',
+  traditionalUnverified: 'روایتی اصطلاح · اصل تاریخی فارمولا غیر مصدقہ',
   derivedMetricLabel: 'ایپ کا اخذ کردہ پیمانہ',
   kabirFormula: 'متن کے ہر حرف کی ابجد قیمت کا مجموعہ۔',
   saghirFormula: 'کبیر کی قیمت کا عددی جذر: اس کے ہندسے بار بار جمع کیے جاتے ہیں یہاں تک کہ 1 سے 9 تک کا ایک ہندسہ رہ جائے۔',
@@ -75,21 +77,21 @@ export const calculatorUr: Draft<typeof calculatorEn> = {
     'یہاں کبیر کو صغیر سے ضرب دے کر نکالا گیا ہے۔ «بسط» (پھیلاؤ) ایک روایتی اصطلاح ہے؛ اس ایپ کے فارمولے کی کسی مخصوص تاریخی ماخذ سے آزادانہ تصدیق نہیں ہوئی۔',
   elementalCorrespondenceSubtitle: 'اس حساب کے نظام میں استعمال ہونے والی حروف کی نسبتوں سے ماخوذ۔',
   balanceIndexFormula:
-    '100 میں سے یہ پیمانہ منہا کیا جاتا ہے کہ چاروں عناصر کے حصے ہر ایک کے 25٪ کی برابر تقسیم سے کتنے ہٹے ہوئے ہیں؛ صرف ایک عنصر والے نام کا اشاریہ 0 اور برابر تقسیم کا 100 ہوتا ہے۔',
+    '100 میں سے وہ فرق گھٹایا جاتا ہے جو چاروں عناصر کے حصوں اور برابر تقسیم (ہر عنصر 25٪) کے درمیان ہو؛ صرف ایک عنصر والے نام کا اشاریہ 0 اور بالکل برابر تقسیم کا 100 ہوتا ہے۔',
   letterCorrespondencesTitle: 'حروف کی نسبتیں',
-  correspondenceSystemName: 'مغربی علم الحروف کی حروف کی درجہ بندی',
+  correspondenceSystemName: 'مغربی علم الحروف میں حروف کی درجہ بندی',
   correspondenceSystemLabel: 'نسبتوں کا نظام',
   correspondenceNote:
-    'یہ منتخب درجہ بندی کی روایت کی علامتی نسبتیں ہیں، سائنسی پیمائش نہیں۔ ایک الگ تاریخی نظام (مشرقی) بعض حروف کو مختلف طور پر منسوب کرتا ہے؛ وہ اس ایپ میں شامل نہیں۔',
+    'یہ منتخب درجہ بندی کی روایت کی علامتی نسبتیں ہیں، سائنسی پیمائش نہیں۔ ایک الگ تاریخی نظام (مشرقی) بعض حروف کو مختلف عناصر سے منسوب کرتا ہے؛ عناصر کی یہ مشرقی درجہ بندی اس ایپ میں شامل نہیں۔',
   zodiacalCorrespondenceTitle: 'برج سے نسبت',
   letterBasedCorrespondence: 'حروف پر مبنی نسبت',
   zodiacDisclaimer:
     'یہ منتخب نسبتوں کے نظام سے ماخوذ ایک علامتی برجی نسبت ہے (نام کا عددی مجموعہ بارہ برجوں میں سے ایک تک گھٹایا جاتا ہے)۔ یہ آپ کا فلکیاتی یا پیدائشی برج نہیں، جو آپ کی اصل تاریخِ پیدائش پر منحصر ہے۔',
   zodiacUnavailable: 'اس حساب کے لیے برج سے نسبت دستیاب نہیں۔',
-  themesLabel: 'موضوعات',
+  themesLabel: 'نمایاں اوصاف',
   archetypeDisclaimer:
     'اس نام کی عددی اور حرفی نسبتوں سے ماخوذ تعبیری علامت — ایک روایتی تعبیر، نفسیاتی جائزہ نہیں۔',
-  whyThese: 'یہی کیوں؟',
+  whyThese: 'یہ اسما کیوں؟',
   dhikrDisclaimer: 'ذاتی غور و فکر کے لیے تجویز کردہ عددی نسبتیں — اس نام سے جڑا کوئی لازمی عبادتی حکم نہیں۔',
   analysisTellsTitle: 'یہ تجزیہ کیا بتاتا ہے',
   analysisTellsItems: [
@@ -100,7 +102,7 @@ export const calculatorUr: Draft<typeof calculatorEn> = {
     'ان نسبتوں سے ماخوذ علامتی تعبیرات',
   ],
   analysisNotTitle: 'یہ تجزیہ کیا طے نہیں کرتا',
-  analysisNotItems: ['آپ کا اصل پیدائشی برج', 'آپ کا پیدائشی زائچہ', 'آپ کی شخصیت کی ٹھیک تصویر', 'آپ کا مستقبل', 'آپ کی تقدیر'],
+  analysisNotItems: ['آپ کا اصل پیدائشی برج', 'آپ کا پیدائشی زائچہ', 'آپ کی شخصیت کا حتمی خاکہ', 'آپ کا مستقبل', 'آپ کی تقدیر'],
   methodologyTitle: 'طریقۂ کار',
   methodologyTraditionLabel: 'حساب کی روایت',
   methodologyTraditionValue: 'علم الحروف / ابجد',
@@ -108,11 +110,11 @@ export const calculatorUr: Draft<typeof calculatorEn> = {
   methodologyPrimarySystemValue: 'ابجدِ کبیر',
   methodologyInterpretiveLabel: 'تعبیر کی سطح',
   methodologyInterpretiveValue: 'علامتی / روایتی تعبیر',
-  methodologyBirthDataLabel: 'پیدائش کا نجومی ڈیٹا',
-  methodologyBirthDataValue: 'فراہم نہیں کیا گیا',
+  methodologyBirthDataLabel: 'پیدائش کی نجومی معلومات',
+  methodologyBirthDataValue: 'فراہم نہیں',
   learnMore: 'جانیں کہ یہ حساب کیسے ہوتا ہے',
   learnMoreBody:
-    'اس صفحے کا ہر نتیجہ چار سطحوں سے گزرتا ہے: (1) آپ کے لکھے ہوئے متن کے حروف، (2) ابجدِ کبیر میں ان کی مقرر عددی قیمتیں، (3) وہ نسبتیں جو اس ایپ کا مغربی علم الحروف کا ڈیٹا ان اعداد اور حروف سے جوڑتا ہے (عنصر، برج، قریبی اسمائے الٰہی، قریبی مقدس اعداد)، اور (4) ان نسبتوں کی علامتی تعبیر (مثالیہ، رہنمائی، ذکر کی تجویز)۔ پہلی دو سطحیں سیدھا حساب ہیں۔ تیسری سطح اس نسبتوں کے نظام پر منحصر ہے جو یہ ایپ استعمال کرتی ہے، جو کئی تاریخی نظاموں میں سے ایک ہے۔ چوتھی سطح روایتی تعبیر ہے، آپ کے بارے میں کوئی حقیقی دعویٰ نہیں۔',
+    'اس صفحے کا ہر نتیجہ چار سطحوں سے گزرتا ہے: (1) آپ کے لکھے ہوئے متن کے حروف، (2) ابجدِ کبیر میں ان کی مقرر عددی قیمتیں، (3) وہ نسبتیں جو اس ایپ کا مغربی علم الحروف کا ڈیٹا ان اعداد اور حروف سے جوڑتا ہے (عنصر، برج، قریبی اسمائے الٰہی، قریبی مقدس اعداد)، اور (4) ان نسبتوں کی علامتی تعبیر (علامتی کردار، رہنمائی، ذکر کی تجویز)۔ پہلی دو سطحیں سیدھا حساب ہیں۔ تیسری سطح اس نسبتوں کے نظام پر منحصر ہے جو یہ ایپ استعمال کرتی ہے، جو کئی تاریخی نظاموں میں سے ایک ہے۔ چوتھی سطح روایتی تعبیر ہے، آپ کے بارے میں حقیقت کا کوئی دعویٰ نہیں۔',
   quranSurahLabel: 'سورت',
   quranAyahLabel: 'آیت',
   quranAyahHelper: 'اس سورت میں {max} آیات ہیں۔',
@@ -122,13 +124,13 @@ export const calculatorUr: Draft<typeof calculatorEn> = {
   divineResonanceSubtitle: 'وہ اسمِ الٰہی جو اس نام سے ہم آہنگ ہے',
   divineResonanceAbjadNote: 'یہ اسمِ الٰہی 28 حروف کے ابجد دور کے ذریعے اس نام سے ہم آہنگ ہے۔',
   howItWasDerived: 'یہ کیسے نکالا گیا',
-  abjadTotalLabel: 'ابجد مجموعہ',
+  abjadTotalLabel: 'ابجد کا مجموعہ',
   resonanceIndexLabel: 'ہم آہنگی کا اشاریہ (1–28)',
   resonantLetterLabel: 'ہم آہنگ حرف',
   dhikrOptionalLabel: 'ذکر (اختیاری)',
   dhikrSuggestedCountLabel: 'تجویز کردہ تعداد',
   divineResonanceDhikrDescription:
-    'یہ اسمِ الٰہی ذکر (اللہ کی یاد) میں پڑھا جا سکتا ہے، اپنی نیت کے مطابق قرب، مغفرت یا مدد مانگتے ہوئے۔',
+    'اس اسمِ الٰہی کو ذکر (اللہ کی یاد) میں پڑھا جا سکتا ہے، اور اپنی نیت کے مطابق اللہ کا قرب، مغفرت یا مدد طلب کی جا سکتی ہے۔',
   quranicResonanceSubtitle: 'اس عدد کے ذریعے تدبر کے لیے ایک آیت',
   ayahOfLabel: 'آیت {ayah} (کل {total} میں سے)',
   readFullVerseLabel: 'پوری آیت \u2068Quran.com\u2069 پر پڑھیں',
@@ -138,7 +140,7 @@ export const calculatorUr: Draft<typeof calculatorEn> = {
   loadingVerse: 'آیت لوڈ ہو رہی ہے…',
   noCalculatorsFound: 'آپ کی تلاش سے کوئی کیلکولیٹر نہیں ملا',
   divineNameSubtitle:
-    'وہ اسمائے الٰہی جن کی اپنی ابجد قیمت اس ایپ کے مطابقت کے اصول کے مطابق اس نام کے کبیر مجموعے کے سب سے قریب ہے۔',
+    'وہ اسمائے الٰہی جن کی اپنی ابجد قیمت، اس ایپ کے اصولِ مطابقت کی رو سے، اس نام کے کبیر مجموعے کے سب سے قریب ہے۔',
   exactMatchLabel: 'بالکل مطابق',
   closestMatchLabel: 'قریب ترین',
   numericalCorrespondenceLabel: 'عددی نسبت',
@@ -146,25 +148,25 @@ export const calculatorUr: Draft<typeof calculatorEn> = {
   whyTheseIntro: 'یہ اسمائے الٰہی اس لیے چنے گئے کہ ان کی اپنی ابجد قیمت اس نام کے کبیر مجموعے کے عددی طور پر قریب ہے۔',
   whyTheseRuleLabel: 'مطابقت کا اصول',
   whyTheseRuleValue: 'ایپ کی طے کردہ عددی نسبت — حساب شدہ کبیر مجموعے سے قریب ترین ابجد قیمت (سب سے کم مطلق فرق)۔',
-  whyTheseMultipleSystems: 'نسبت منتخب علم الحروف کے طریقے پر منحصر ہے؛ کوئی دوسرا نظام اسی مجموعے کے لیے دوسرے اسماء چن سکتا ہے۔',
+  whyTheseMultipleSystems: 'نسبت منتخب علم الحروف کے طریقے پر منحصر ہے؛ کوئی دوسرا نظام اسی مجموعے کے لیے دوسرے اسما چن سکتا ہے۔',
   attributeThemesTitle: 'صفات کے علامتی موضوعات',
   attributeThemesSubtitle: 'متعلقہ اسمائے الٰہی کی صفات — آپ کی شخصیت کا بیان نہیں۔',
   primaryThemeLabel: 'بنیادی موضوع',
   secondaryThemesLabel: 'ثانوی موضوعات',
   spiritualReflectionTitle: 'روحانی غور و فکر',
   spiritualReflectionBody:
-    'اس تجزیے کی عددی نسبتیں {themes} کے موضوعات سامنے لاتی ہیں — یہ ذاتی غور و فکر اور ذکر میں رکھنے کے موضوعات ہیں، آپ کی تقدیر یا روحانی مرتبے کے بارے میں کوئی فیصلہ نہیں۔',
+    'اس تجزیے کی عددی نسبتیں اوپر درج صفات کے موضوعات سامنے لاتی ہیں — یہ ذاتی غور و فکر اور ذکر میں رکھنے کے موضوعات ہیں، آپ کی تقدیر یا روحانی مرتبے کے بارے میں کوئی فیصلہ نہیں۔',
   divineNameEsotericNote:
     'یہ عددی نسبتیں علم الحروف کی علامتی روایت سے تعلق رکھتی ہیں۔ یہ کسی شخص کی تقدیر، روحانی مرتبہ یا اللہ سے اس کا تعلق طے نہیں کرتیں۔',
-  dhikrWhyThese: 'یہی اعداد کیوں؟',
+  dhikrWhyThese: 'یہ اعداد کیوں؟',
   dhikrWhyTheseBody:
     '33 اور 99 تسبیح کی روایتی تعداد ہیں اور اس نام سے آزاد ہیں۔ یہاں کوئی اور عدد اس نام کی اپنی صغیر (گھٹائی گئی) یا کبیر (کل) قیمت سے آتا ہے۔',
-  sadaqahResultTitle: 'اسلامی پیدائشی مہینہ',
+  sadaqahResultTitle: 'پیدائش کا ہجری مہینہ',
   hijriYearLabel: 'ہجری سال',
   sadaqahSuggestionsTitle: 'صدقے کی تجاویز',
   sadaqahUnavailable: 'اس مہینے کے لیے صدقے کی رہنمائی دستیاب نہیں۔',
   sadaqahDisclaimer:
-    'یہ غور و فکر اور خیرات کے لیے روایتی تجاویز ہیں — کسی بھی قسم کا صدقہ، کسی بھی وقت، ہمیشہ اچھا ہے اور انہی صورتوں تک محدود نہیں۔',
+    'یہ غور و فکر اور خیرات کے لیے روایتی تجاویز ہیں — کسی بھی قسم کا صدقہ، کسی بھی وقت، ہمیشہ پسندیدہ ہے اور انہی صورتوں تک محدود نہیں۔',
   sadaqahDayUnavailable: 'اس دن کے لیے صدقے کی رہنمائی دستیاب نہیں۔',
 };
 
@@ -173,7 +175,7 @@ export const nameFieldUr: Draft<typeof nameFieldEn> = {
   searchPlaceholder: 'نام تلاش کریں...',
   noResults: 'کوئی نام نہیں ملا',
   hideKeyboard: 'کی بورڈ چھپائیں',
-  space: 'خالی جگہ',
+  space: 'اسپیس',
   delete: 'حذف کریں',
 };
 

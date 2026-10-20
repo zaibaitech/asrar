@@ -1,6 +1,6 @@
 /**
  * Pairs the calculator's English UI strings (src/features/calculator/i18n/en.ts) with the Urdu
- * drafts in ur.ts (Batch 13, not reviewed) and prints them as JSON for build_catalog.py.
+ * in ur.ts (Batch 13, reviewed in pass 3) and prints them as JSON for build_catalog.py.
  * Run: npx tsx scripts/i18n/ur/dump_calculator.ts
  */
 import { calculatorEn, nameFieldEn, divineNamePickerEn } from '../../../src/features/calculator/i18n/en';

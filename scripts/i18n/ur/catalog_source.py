@@ -224,7 +224,7 @@ U = [
     ('Your Numbers', 'آپ کے اعداد'), ('ID Number', 'شناختی عدد'), ('Total', 'کل'), ('Ḥadad Value', 'عدد کی قیمت'),
     ('Count', 'تعداد'), ('Repetitions', 'تکرار'), ('Your Power Day', 'آپ کا خاص دن'),
     ('Most auspicious for important decisions', 'روایت میں اہم کاموں کے لیے موزوں سمجھا جاتا ہے'), ('Core Trait', 'بنیادی خصوصیت'),
-    ('Key Insights', 'اہم نکات'), ('categories', 'زمرے'), ('Best practiced on', 'بہتر وقت'), ('Wednesday night', 'شبِ بدھ (منگل کی شام)'),
+    ('Key Insights', 'اہم نکات'), ('categories', 'زمرے'), ('Best practiced on', 'بہتر وقت'), ('Wednesday night', 'منگل اور بدھ کی درمیانی رات'),
     ('Social Strengths', 'سماجی خوبیاں'), ('Your Colors', 'آپ کے رنگ'), ('Key Recommendation', 'اہم مشورہ'), ('Priority', 'ترجیح'),
     ('Your spiritual profile at a glance', 'آپ کا روحانی پروفائل ایک نظر میں'), ('Career Direction', 'پیشہ ورانہ سمت'),
     ('Daily Practice', 'روزانہ کا عمل'), ('Recite daily for spiritual balance', 'روحانی توازن کے لیے روزانہ پڑھیں'), ('Next Steps', 'اگلے قدم'),
