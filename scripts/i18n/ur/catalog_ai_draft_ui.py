@@ -747,6 +747,12 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('ramadan', 'ʿAṣr', 'عصر'),
     ('ramadan', 'ʿIshāʾ / Tarāwīḥ', 'عشاء / تراویح'),
     ('ramadan', 'Other', 'دیگر'),
+    # Pass 4 (reviewer): time-window names in the Ramadan "Best dhikr now" banner (recommender.ts).
+    ('ramadan', 'Fajr / Pre-dawn', 'فجر / سحر'),
+    ('ramadan', 'Morning / Ḍuḥā', 'صبح / چاشت'),
+    ('ramadan', 'Ẓuhr / Midday', 'ظہر / دوپہر'),
+    ('ramadan', 'ʿAṣr / Afternoon', 'عصر / سہ پہر'),
+    ('ramadan', 'Late Night / Tahajjud', 'رات کا آخری حصہ / تہجد'),
     # Pass 3 (G3): InfoDisclosure aria-label.
     ('calculator-aria', 'More information', 'مزید معلومات'),
     ('ramadan', 'Istighfār', 'استغفار'),
@@ -2242,7 +2248,7 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('practice-night-draft', 'Sunday midnight (Monday night)', 'اتوار اور پیر کی درمیانی رات'),
     ('practice-night-draft', 'Monday midnight (Tuesday night)', 'پیر اور منگل کی درمیانی رات'),
     ('practice-night-draft', 'Tuesday midnight (Wednesday night)', 'منگل اور بدھ کی درمیانی رات'),
-    # Batch 15 (DRAFT, not reviewed): CompactPracticeHint meanings (shown alone under the Arabic in Urdu UI).
+    # Batch 15 (reviewed in pass 4): CompactPracticeHint meanings (shown alone under the Arabic in Urdu UI).
     ('practice-hint-draft', 'I seek forgiveness from Allah', 'اللہ سے مغفرت مانگنا'),
     ('practice-hint-draft', 'O All-Knowing', 'اے سب کچھ جاننے والے'),
     ('practice-hint-draft', 'O Light', 'اے نور'),
