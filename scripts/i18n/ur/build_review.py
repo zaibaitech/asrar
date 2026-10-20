@@ -177,6 +177,22 @@ for sc, rows in _ui_groups.items():
     md.append(f'\n### 6.{list(_ui_groups).index(sc) + 1} {sc} ({len(rows)})\n')
     md.append(table(rows))
     md.append('\n')
+_p4 = os.path.join(os.path.dirname(__file__), 'phase4_review.json')
+if os.path.exists(_p4):
+    p4 = json.load(open(_p4, encoding='utf-8'))
+    md.append('\n## 7. Phase 4 review of the 896 AI-drafted result texts (sections 5.x), NOT native-reviewed\n')
+    md.append('The groups in the table below were read entry by entry against their English source (every source string of the 896 still exists verbatim in the app). Corrections are listed below with the reason; entries that could not be settled are flagged with the question and, where there is one, an alternative. The Urdu is still AI-drafted: no qualified reviewer has approved it. Source: `scripts/i18n/ur/phase4_review.json`.\n')
+    _rows = []
+    for _g, _v in p4['groups'].items():
+        _c = sum(1 for x in p4['corrections'] if x['group'] == _g)
+        _fl = sum(1 for x in p4['flags'] if x['group'] == _g)
+        _rows.append((_g, _v['total'], _v['reviewed'], _c, _v['total'] - _c, _fl))
+    md.append(table(_rows, ('Group', 'Entries', 'Reviewed', 'Corrected', 'Unchanged', 'Flagged')))
+    md.append('\n\n### 7.1 Corrections\n')
+    md.append(table([(x['group'], x['en'], x['before'], x['after'], x['reason']) for x in p4['corrections']], ('Group', 'English', 'Before', 'After', 'Why')))
+    md.append('\n\n### 7.2 Flagged for human review\n')
+    md.append(table([(x['group'], x['en'], x['ur'], x['reason'], x['alternative'], x['review']) for x in p4['flags']], ('Group', 'English', 'Urdu (kept provisionally)', 'Question', 'Suggested alternative', 'Review needed')))
+    md.append('\n')
 md.append('\n### Still in English on /ur (not part of this change)\n')
 md.append(STILL_ENGLISH)
 md.append('\n')

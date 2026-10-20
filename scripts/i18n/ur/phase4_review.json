@@ -1,0 +1,70 @@
+{
+ "note": "Phase 4 review of the 896 AI-drafted entries (catalog_ai_draft.py). Not native-reviewed.",
+ "groups": {
+  "potd": {
+   "total": 7,
+   "reviewed": 7
+  },
+  "career-ui": {
+   "total": 23,
+   "reviewed": 23
+  }
+ },
+ "corrections": [
+  {
+   "group": "potd",
+   "en": "The Sun's day is best for bold, visible action. Begin projects you want recognized. Seek blessings from those in authority. Make decisions that require confidence and leadership. Avoid hiding or working in secrecy — the Sun illuminates.",
+   "before": "روایتی علمِ نجوم میں اتوار کو شمس سے منسوب کیا جاتا ہے، اور اسے نمایاں اور واضح اقدام کے لیے موزوں دن سمجھا جاتا ہے۔ جن منصوبوں کی پہچان چاہتے ہوں انہیں شروع کریں۔ بااختیار یا بزرگ افراد سے دعائیں لیں۔ ایسے فیصلے کریں جن میں اعتماد اور قیادت درکار ہو۔ چھپنے یا پوشیدگی میں کام کرنے سے بچیں — شمس روشنی کی علامت ہے۔",
+   "after": "روایتی علمِ نجوم میں اتوار کو شمس سے منسوب کیا جاتا ہے، اور اسے جرأت مندانہ اور نمایاں اقدام کے لیے موزوں دن سمجھا جاتا ہے۔ جن منصوبوں کی پہچان چاہتے ہوں انہیں شروع کریں۔ بااختیار یا بزرگ افراد سے دعائیں لیں۔ ایسے فیصلے کریں جن میں اعتماد اور قیادت درکار ہو۔ چھپنے یا پوشیدگی میں کام کرنے سے بچیں — شمس روشنی کی علامت ہے۔",
+   "reason": "\"bold\" was lost: source says bold, visible action"
+  },
+  {
+   "group": "potd",
+   "en": "Monday is ideal for matters of the home, family, and emotional wellbeing. Engage in travel or movement — the Moon governs journeys. Practice emotional healing, prayer, and du'ā'. Reflect on your inner world. Avoid confrontation; the Moon's waters prefer calm.",
+   "before": "روایتی علمِ نجوم میں پیر کو قمر سے منسوب کیا جاتا ہے، اور یہ گھر، خاندان اور جذباتی سکون کے معاملات کے لیے موزوں دن سمجھا جاتا ہے۔ سفر یا نقل و حرکت اختیار کریں — روایت میں قمر کو اسفار سے جوڑا جاتا ہے۔ جذباتی سکون، نماز اور دعا کا اہتمام کریں۔ اپنے باطن پر غور کریں۔ ٹکراؤ سے بچیں؛ اس دن سکون اور تحمل کو ترجیح دیں۔",
+   "after": "روایتی علمِ نجوم میں پیر کو قمر سے منسوب کیا جاتا ہے، اور یہ گھر، خاندان اور جذباتی بہبود کے معاملات کے لیے موزوں دن سمجھا جاتا ہے۔ سفر یا نقل و حرکت اختیار کریں — روایت میں قمر کو اسفار سے جوڑا جاتا ہے۔ جذباتی بحالی، نماز اور دعا کا اہتمام کریں۔ اپنے باطن پر غور کریں۔ ٹکراؤ سے بچیں؛ اس دن سکون اور تحمل کو ترجیح دیں۔",
+   "reason": "\"emotional wellbeing\" / \"emotional healing\" were both rendered «جذباتی سکون»; now بہبود and بحالی, as in the source"
+  },
+  {
+   "group": "potd",
+   "en": "Saturday is governed by the slowest and most disciplined of the classical planets. It is a day for long-term commitments, serious study, and patient effort. Engage in property matters, legal affairs, and building lasting structures. Avoid rushing — Saturn rewards consistent, sustained effort over time.",
+   "before": "روایتی علمِ نجوم میں ہفتے کو زحل سے منسوب کیا جاتا ہے، جو کلاسیکی سیاروں میں سب سے سست اور سب سے منظم ہے۔ یہ طویل مدتی وعدوں، سنجیدہ مطالعے اور صبر آزما کوشش کا دن ہے۔ جائیداد، قانونی معاملات اور پائیدار ڈھانچے بنانے میں مشغول ہوں۔ جلد بازی سے بچیں — اس دن مسلسل اور دیرپا محنت کو ترجیح دیں۔",
+   "after": "روایتی علمِ نجوم میں ہفتے کو زحل سے منسوب کیا جاتا ہے، جو کلاسیکی سیاروں میں سب سے سست اور سب سے منظم ہے۔ یہ طویل مدتی وعدوں، سنجیدہ مطالعے اور صبر آزما کوشش کا دن ہے۔ جائیداد، قانونی معاملات اور دیرپا تعمیرات کھڑی کرنے میں مشغول ہوں۔ جلد بازی سے بچیں — اس دن مسلسل اور دیرپا محنت کو ترجیح دیں۔",
+   "reason": "\"lasting structures\" → «دیرپا تعمیرات», the term used for the same phrase in the Ikhtiyārāt text (Phase 3)"
+  }
+ ],
+ "flags": [
+  {
+   "group": "career-ui",
+   "en": "Despite being a Water element, you receive special blessings from Earth industries. This unique spiritual gift allows you to thrive in both water-related AND earth-based careers—giving you more pathways to success than most other elements.",
+   "ur": "اگرچہ آپ آبی عنصر سے ہیں، روایت کے مطابق آپ کو زمینی صنعتوں سے خاص برکت حاصل ہے۔ یہ منفرد روحانی عطیہ آپ کو پانی سے متعلق اور زمین پر مبنی دونوں طرح کے پیشوں میں آگے بڑھنے دیتا ہے — یعنی آپ کے لیے دوسرے اکثر عناصر کے مقابلے میں کامیابی کے زیادہ راستے ہیں۔",
+   "reason": "Urdu adds the hedge «روایت کے مطابق» that the source lacks (certainty is lowered, on purpose, after the external audit). The source itself states a spiritual \"gift\" and \"more pathways to success than most other elements\" as fact; whether that claim belongs in the product is a content decision.",
+   "alternative": "keep (hedged)",
+   "review": "subject-matter + product decision"
+  },
+  {
+   "group": "potd",
+   "en": "Thursday is the most blessed day for spiritual elevation, wealth-seeking, and expansion. Make du'ā' for rizq (sustenance). Begin long-term projects. Seek knowledge, visit scholars, and perform generous acts of sadaqah. Thursday night (eve of Friday) is especially blessed — use it for extra worship.",
+   "ur": "روایت میں جمعرات روحانی بلندی، رزق کی طلب اور وسعت کے لیے خاص طور پر بابرکت سمجھی جاتی ہے۔ رزق کے لیے دعا کریں۔ طویل مدتی منصوبے شروع کریں۔ علم حاصل کریں، اہلِ علم سے ملیں، اور فراخ دلی سے صدقہ کریں۔ جمعرات کی رات (جمعہ کی شب) کو خاص طور پر بابرکت سمجھا جاتا ہے — اسے اضافی عبادت کے لیے استعمال کریں۔",
+   "reason": "Religious/astrological claim (\"most blessed day\", the night before Friday \"especially blessed\") kept hedged («سمجھی جاتی ہے»); the source is not cited. Confirm against Islamic sources (external audit).",
+   "alternative": "",
+   "review": "religious scholar"
+  },
+  {
+   "group": "potd",
+   "en": "Friday is the most sacred day in Islam (Yawm al-Jum'ah). Venus and Friday align in beauty, community, and gratitude. Attend Jumu'ah, send abundant Ṣalawāt upon the Prophet ﷺ, and perform acts of beauty (charity, kind words, reconciliation). It is a day for love, forgiveness, and peace.",
+   "ur": "جمعہ اسلام میں سب سے افضل دن ہے (یومُ الجمعہ)۔ روایتی علمِ نجوم اسے زہرہ سے منسوب کرتا ہے، جو حسن، اجتماع اور شکرگزاری کی علامت ہے۔ جمعہ کی نماز میں شریک ہوں، نبی کریم ﷺ پر کثرت سے درود شریف پڑھیں، اور حسنِ عمل (صدقہ، نرم گفتگو، صلح) اختیار کریں۔ یہ محبت، معافی اور سکون کا دن ہے۔",
+   "reason": "«افضل» (native reviewer answer, Oct 2026) for \"most sacred\"; \"Venus and Friday align\" is rendered as a traditional attribution. Confirm the wording.",
+   "alternative": "",
+   "review": "native Urdu + religious scholar"
+  },
+  {
+   "group": "potd",
+   "en": "Monday is ideal for matters of the home, family, and emotional wellbeing. Engage in travel or movement — the Moon governs journeys. Practice emotional healing, prayer, and du'ā'. Reflect on your inner world. Avoid confrontation; the Moon's waters prefer calm.",
+   "ur": "روایتی علمِ نجوم میں پیر کو قمر سے منسوب کیا جاتا ہے، اور یہ گھر، خاندان اور جذباتی بہبود کے معاملات کے لیے موزوں دن سمجھا جاتا ہے۔ سفر یا نقل و حرکت اختیار کریں — روایت میں قمر کو اسفار سے جوڑا جاتا ہے۔ جذباتی بحالی، نماز اور دعا کا اہتمام کریں۔ اپنے باطن پر غور کریں۔ ٹکراؤ سے بچیں؛ اس دن سکون اور تحمل کو ترجیح دیں۔",
+   "reason": "The metaphor \"the Moon's waters prefer calm\" is not carried over (Phase 3 rewrite after the external audit flagged the earlier sentence as ungrammatical); the Urdu keeps the advice (avoid confrontation, prefer calm).",
+   "alternative": "«قمر کے پانی سکون پسند کرتے ہیں» is not recommended; a metaphor-preserving wording needs a native reviewer",
+   "review": "native Urdu"
+  }
+ ]
+}
