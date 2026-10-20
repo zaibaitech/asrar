@@ -48,4 +48,13 @@ rows.push({
   en: `re:^${calculatorEn.balanceScore}: (\\d+)% \\(${calculatorEn.derivedMetricLabel}\\)$`,
   ur: `${u.balanceScore}: $p1٪ (${u.derivedMetricLabel})`,
 });
+// Element lists from CalculatorResult.tsx ("Fire + Earth", " · Weakest correspondence: Water + Air");
+// each element name is translated through its reviewed catalog entry ($N).
+const E = '(Fire|Earth|Air|Water)';
+for (const n of [1, 2, 3]) {
+  const enList = Array.from({ length: n }, () => E).join(' \\+ ');
+  const urList = n === 1 ? '$1' : n === 2 ? '$1 اور $2' : '$1، $2 اور $3';
+  if (n > 1) rows.push({ ns: 'calculator', key: `elements[${n}]`, en: `re:^${enList}$`, ur: urList });
+  rows.push({ ns: 'calculator', key: `weakestElement+elements[${n}]`, en: `re:^· ${calculatorEn.weakestElement}: ${enList}$`, ur: `· ${u.weakestElement}: ${urList}` });
+}
 process.stdout.write(JSON.stringify(rows, null, 1));

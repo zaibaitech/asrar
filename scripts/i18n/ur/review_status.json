@@ -7,7 +7,7 @@
    "reviewed-kept": 6,
    "reviewed-flagged": 4
   },
-  "batch13_draft": 144,
+  "batch13_draft": 149,
   "batch14_draft": 4
  },
  "sheet2": {
@@ -12853,6 +12853,46 @@
    "key": "balanceScore+derivedMetricLabel",
    "en": "re:^Balance index: (\\d+)% \\(Application-derived metric\\)$",
    "ur": "توازن کا اشاریہ: $p1٪ (ایپ کا اخذ کردہ پیمانہ)",
+   "status": "draft"
+  },
+  {
+   "id": "13.145",
+   "ns": "calculator",
+   "key": "weakestElement+elements[1]",
+   "en": "re:^· Weakest correspondence: (Fire|Earth|Air|Water)$",
+   "ur": "· کمزور ترین نسبت: $1",
+   "status": "draft"
+  },
+  {
+   "id": "13.146",
+   "ns": "calculator",
+   "key": "elements[2]",
+   "en": "re:^(Fire|Earth|Air|Water) \\+ (Fire|Earth|Air|Water)$",
+   "ur": "$1 اور $2",
+   "status": "draft"
+  },
+  {
+   "id": "13.147",
+   "ns": "calculator",
+   "key": "weakestElement+elements[2]",
+   "en": "re:^· Weakest correspondence: (Fire|Earth|Air|Water) \\+ (Fire|Earth|Air|Water)$",
+   "ur": "· کمزور ترین نسبت: $1 اور $2",
+   "status": "draft"
+  },
+  {
+   "id": "13.148",
+   "ns": "calculator",
+   "key": "elements[3]",
+   "en": "re:^(Fire|Earth|Air|Water) \\+ (Fire|Earth|Air|Water) \\+ (Fire|Earth|Air|Water)$",
+   "ur": "$1، $2 اور $3",
+   "status": "draft"
+  },
+  {
+   "id": "13.149",
+   "ns": "calculator",
+   "key": "weakestElement+elements[3]",
+   "en": "re:^· Weakest correspondence: (Fire|Earth|Air|Water) \\+ (Fire|Earth|Air|Water) \\+ (Fire|Earth|Air|Water)$",
+   "ur": "· کمزور ترین نسبت: $1، $2 اور $3",
    "status": "draft"
   }
  ],
