@@ -12,6 +12,10 @@
   "rules": {
    "total": 86,
    "reviewed": 86
+  },
+  "arch": {
+   "total": 148,
+   "reviewed": 148
   }
  },
  "corrections": [
@@ -126,6 +130,97 @@
    "before": "قمر اس وقت زحل یا مریخ کے ساتھ تناؤ والی نسبت (سخت نظر) میں ہے — بیزاری یا رکی ہوئی پیش رفت کی روایتی انتباہی علامت۔",
    "after": "قمر اس وقت زحل یا مریخ کے ساتھ تناؤ والی نسبت (سخت نظر) میں ہے — مایوسی یا رکی ہوئی پیش رفت کی روایتی انتباہی علامت۔",
    "reason": "\"frustration\" is «مایوسی» (Phase 3 wording); «بیزاری» means aversion/boredom"
+  },
+  {
+   "group": "arch",
+   "en": "Traditionally associated with difficulty — frequent small frictions and mismatched expectations may test the friendship.",
+   "before": "روایتی طور پر مشکل سے منسوب — معمولی اختلافات اور مختلف توقعات دوستی کا امتحان لے سکتی ہیں۔",
+   "after": "روایتی طور پر مشکل سے منسوب — بار بار کے معمولی اختلافات اور مختلف توقعات دوستی کا امتحان لے سکتی ہیں۔",
+   "reason": "\"frequent\" was dropped"
+  },
+  {
+   "group": "arch",
+   "en": "Focus on health (physical and emotional), emotional maturity, calm daily routines, and seeking therapeutic support when needed.",
+   "before": "صحت (جسمانی اور جذباتی) پر توجہ، جذباتی پختگی، پُرسکون روزمرہ معمولات، اور ضرورت پڑنے پر ماہرانہ معاونت لینا۔",
+   "after": "صحت (جسمانی اور جذباتی) پر توجہ، جذباتی پختگی، پُرسکون روزمرہ معمولات، اور ضرورت پڑنے پر علاجی معاونت (تھراپی) لینا۔",
+   "reason": "\"therapeutic support\" was rendered «ماہرانہ» (expert); the therapeutic sense is restored"
+  },
+  {
+   "group": "arch",
+   "en": "This bond tends to surface recurring friction tied to pride and ego. Self-awareness on both sides is what breaks the cycle.",
+   "before": "یہ رشتہ غرور اور انا سے جڑی بار بار کے اختلافات کو ابھارتا ہے۔ دونوں طرف کی خود آگاہی ہی اس چکر کو توڑتی ہے۔",
+   "after": "یہ رشتہ غرور اور انا سے جڑے بار بار کے اختلافات کو ابھارتا ہے۔ دونوں طرف کی خود آگاہی ہی اس چکر کو توڑتی ہے۔",
+   "reason": "grammar: «اختلافات» is masculine plural, «جڑی» was feminine"
+  },
+  {
+   "group": "arch",
+   "en": "Friendships here often involve repeated small conflicts, sometimes over who's 'right.' Letting go of ego keeps the friendship from wearing thin.",
+   "before": "یہاں دوستیوں میں اکثر بار بار کے چھوٹے تنازعات ہوتے ہیں، بعض اوقات اس پر کہ کون ’’صحیح‘‘ ہے۔ انا کو چھوڑ دینا دوستی کو گھسنے سے بچاتا ہے۔",
+   "after": "یہاں دوستیوں میں اکثر بار بار کے چھوٹے تنازعات ہوتے ہیں، بعض اوقات اس پر کہ کون ’’صحیح‘‘ ہے۔ انا کو چھوڑ دینا دوستی کو کمزور پڑنے سے بچاتا ہے۔",
+   "reason": "\"wearing thin\" translated word for word («گھسنے»)"
+  },
+  {
+   "group": "arch",
+   "en": "Traditionally very good for the long term — early awkwardness is common, but patience often builds a lasting friendship.",
+   "before": "روایتی طور پر طویل مدت کے لیے بہت اچھا ہے — شروع کی بے ڈھنگی عام ہے، مگر صبر اکثر ایک دیرپا دوستی بنا دیتا ہے۔",
+   "after": "روایتی طور پر طویل مدت کے لیے بہت اچھا ہے — شروع کی جھجک عام ہے، مگر صبر اکثر ایک دیرپا دوستی بنا دیتا ہے۔",
+   "reason": "«بے ڈھنگی» means clumsy/unseemly, not social awkwardness"
+  },
+  {
+   "group": "arch",
+   "en": "Friendships here can start awkwardly or take time to click, but often become some of the most enduring bonds. Don't judge it too early.",
+   "before": "یہاں دوستیاں بے ڈھنگے انداز سے شروع ہو سکتی ہیں یا ہم آہنگ ہونے میں وقت لے سکتی ہیں، مگر اکثر سب سے پائیدار رشتوں میں سے بن جاتی ہیں۔ جلد فیصلہ نہ کریں۔",
+   "after": "یہاں دوستیاں جھجک کے ساتھ شروع ہو سکتی ہیں یا ہم آہنگ ہونے میں وقت لے سکتی ہیں، مگر اکثر سب سے پائیدار رشتوں میں سے بن جاتی ہیں۔ جلد فیصلہ نہ کریں۔",
+   "reason": "«بے ڈھنگے» means clumsy/unseemly, not awkward in the social sense"
+  },
+  {
+   "group": "arch",
+   "en": "Traditionally warned against",
+   "before": "روایتی طور پر اس سے منع کیا گیا ہے",
+   "after": "روایتی طور پر اس سے خبردار کیا گیا ہے",
+   "reason": "\"warned against\" is a caution, not a prohibition: «منع کیا گیا ہے» («forbidden») overstated it (the earlier audit already replaced «ممانعت» for the same reason)"
+  },
+  {
+   "group": "arch",
+   "en": "Traditionally warned against for binding commitments — associated with severe hardship, sudden breaks, and recurring harm.",
+   "before": "پابند کرنے والے عہد و پیمان کے لیے روایتی طور پر اس سے منع کیا گیا ہے — شدید مشکل، اچانک ٹوٹ پھوٹ اور بار بار کے نقصان سے منسوب۔",
+   "after": "پابند کرنے والے عہد و پیمان کے لیے روایتی طور پر اس سے خبردار کیا گیا ہے — شدید مشکل، اچانک ٹوٹ پھوٹ اور بار بار کے نقصان سے منسوب۔",
+   "reason": "\"warned against\" is a caution, not a prohibition: «منع کیا گیا ہے» («forbidden») overstated it (the earlier audit already replaced «ممانعت» for the same reason)"
+  },
+  {
+   "group": "arch",
+   "en": "Traditionally warned against for marriage. Associated with severe hardship, sudden breaks, and recurring harm patterns.",
+   "before": "شادی کے لیے روایتی طور پر اس سے منع کیا گیا ہے۔ شدید مشکل، اچانک ٹوٹ پھوٹ اور بار بار کے نقصان کے انداز سے منسوب۔",
+   "after": "شادی کے لیے روایتی طور پر اس سے خبردار کیا گیا ہے۔ شدید مشکل، اچانک ٹوٹ پھوٹ اور بار بار کے نقصان کے انداز سے منسوب۔",
+   "reason": "\"warned against\" is a caution, not a prohibition: «منع کیا گیا ہے» («forbidden») overstated it (the earlier audit already replaced «ممانعت» for the same reason)"
+  },
+  {
+   "group": "arch",
+   "en": "Traditionally warned against for close, binding friendship — sudden falling-outs and recurring hurt are associated risks.",
+   "before": "قریبی اور پابند دوستی کے لیے روایتی طور پر اس سے منع کیا گیا ہے — اچانک بگاڑ اور بار بار کی چوٹ اس سے منسوب خطرات ہیں۔",
+   "after": "قریبی اور پابند دوستی کے لیے روایتی طور پر اس سے خبردار کیا گیا ہے — اچانک بگاڑ اور بار بار کی چوٹ اس سے منسوب خطرات ہیں۔",
+   "reason": "\"warned against\" is a caution, not a prohibition: «منع کیا گیا ہے» («forbidden») overstated it (the earlier audit already replaced «ممانعت» for the same reason)"
+  },
+  {
+   "group": "arch",
+   "en": "Traditionally warned against for binding partnership — sudden fallout and recurring breakdowns in trust are associated risks.",
+   "before": "پابند شراکت کے لیے روایتی طور پر اس سے منع کیا گیا ہے — اچانک بگاڑ اور اعتماد کا بار بار ٹوٹنا اس سے منسوب خطرات ہیں۔",
+   "after": "پابند شراکت کے لیے روایتی طور پر اس سے خبردار کیا گیا ہے — اچانک بگاڑ اور اعتماد کا بار بار ٹوٹنا اس سے منسوب خطرات ہیں۔",
+   "reason": "\"warned against\" is a caution, not a prohibition: «منع کیا گیا ہے» («forbidden») overstated it (the earlier audit already replaced «ممانعت» for the same reason)"
+  },
+  {
+   "group": "arch",
+   "en": "Marriage is traditionally discouraged under this pattern. If already in this bond, increase spiritual protection practices and seek wise counsel.",
+   "before": "اس نمونے کے تحت شادی کو روایتی طور پر ناپسند کیا گیا ہے۔ اگر آپ پہلے سے اس رشتے میں ہیں تو روحانی حفاظت کے معمولات بڑھائیں اور دانشمندانہ مشورہ لیں۔",
+   "after": "اس نمونے کے تحت شادی کی روایتی طور پر حوصلہ شکنی کی جاتی ہے۔ اگر آپ پہلے سے اس رشتے میں ہیں تو روحانی حفاظت کے معمولات بڑھائیں اور دانشمندانہ مشورہ لیں۔",
+   "reason": "\"discouraged\" is not «ناپسند» (disliked / disapproved)"
+  },
+  {
+   "group": "arch",
+   "en": "Do not panic if this appears. Seek counsel from trusted spiritual guides. If already bound, increase protection practices (duʿāʾ, charity, guidance). Avoid fatalistic thinking — free will and divine mercy remain.",
+   "before": "اگر یہ نتیجہ آئے تو گھبرائیں نہیں۔ قابلِ اعتماد روحانی رہنماؤں سے مشورہ کریں۔ اگر رشتہ پہلے سے بندھا ہوا ہے تو حفاظت کے معمولات (دعا، صدقہ، رہنمائی) بڑھا دیں۔ تقدیر پرستانہ سوچ سے بچیں — انسان کا اختیار اور اللہ کی رحمت باقی ہیں۔",
+   "after": "اگر یہ نتیجہ آئے تو گھبرائیں نہیں۔ قابلِ اعتماد روحانی رہنماؤں سے مشورہ کریں۔ اگر رشتہ پہلے سے بندھا ہوا ہے تو حفاظت کے معمولات (دعا، صدقہ، رہنمائی) بڑھا دیں۔ یہ سوچ کر ہار مان لینے سے بچیں کہ سب کچھ طے ہو چکا ہے — انسان کا اختیار اور اللہ کی رحمت باقی ہیں۔",
+   "reason": "\"fatalistic thinking\" → «تقدیر پرستانہ» reads as faulting belief in qadar itself; the source warns against giving up because \"everything is fixed\""
   }
  ],
  "flags": [
@@ -360,6 +455,110 @@
    "reason": "The metaphor \"the Moon's waters prefer calm\" is not carried over (Phase 3 rewrite after the external audit flagged the earlier sentence as ungrammatical); the Urdu keeps the advice (avoid confrontation, prefer calm).",
    "alternative": "«قمر کے پانی سکون پسند کرتے ہیں» is not recommended; a metaphor-preserving wording needs a native reviewer",
    "review": "native Urdu"
+  },
+  {
+   "group": "arch",
+   "en": "Marriage may start smoothly but requires intentional renewal to avoid complacency. Focus on shared goals and gratitude practices.",
+   "ur": "شادی ہموار شروع ہو سکتی ہے مگر خود اطمینانی سے بچنے کے لیے شعوری تجدید ضروری ہے۔ مشترکہ اہداف اور شکرگزاری کے معمولات پر توجہ دیں۔",
+   "reason": "\"complacency\" is rendered «خود اطمینانی» (self-contentment), which can read as a positive; no better single Urdu word is certain.",
+   "alternative": "«غفلت / آسودگی میں بے پروائی»",
+   "review": "native Urdu"
+  },
+  {
+   "group": "arch",
+   "en": "Working relationships start smoothly and productively, but can grow stale without new goals or challenges. Revisit shared objectives regularly to avoid complacency.",
+   "ur": "پیشہ ورانہ تعلقات ہموار اور نتیجہ خیز شروع ہوتے ہیں، مگر نئے اہداف یا چیلنجز کے بغیر پرانے پڑ سکتے ہیں۔ خود اطمینانی سے بچنے کے لیے مشترکہ مقاصد پر باقاعدگی سے نظرِ ثانی کریں۔",
+   "reason": "\"complacency\" rendered «خود اطمینانی» (see above).",
+   "alternative": "«غفلت / آسودگی میں بے پروائی»",
+   "review": "native Urdu"
+  },
+  {
+   "group": "arch",
+   "en": "A genuinely blessed friendship — trust, ease, and mutual growth come naturally. Keep showing up for each other so the bond doesn't drift into complacency.",
+   "ur": "ایک حقیقی معنوں میں مبارک دوستی — اعتماد، آسانی اور باہمی ترقی فطری طور پر آتی ہے۔ ایک دوسرے کے لیے موجود رہیں تاکہ رشتہ خود اطمینانی میں نہ ڈھل جائے۔",
+   "reason": "\"complacency\" rendered «خود اطمینانی» (see above).",
+   "alternative": "«غفلت / آسودگی میں بے پروائی»",
+   "review": "native Urdu"
+  },
+  {
+   "group": "arch",
+   "en": "Self-work",
+   "ur": "خود احتسابی",
+   "reason": "\"Self-work\" (inner work on oneself) is «خود احتسابی» (self-accounting, a religiously loaded word); the Urdu body text uses «اندرونی اصلاح» for \"inner work\".",
+   "alternative": "«خود اصلاحی» or «باطنی اصلاح»",
+   "review": "native Urdu"
+  },
+  {
+   "group": "arch",
+   "en": "Conflict resolution skills, self-work (especially anger and ego), forgiveness practices, and regular spiritual remembrance (dhikr).",
+   "ur": "تنازع حل کرنے کی مہارتیں، خود احتسابی (خاص طور پر غصے اور انا میں)، معافی کے معمولات، اور باقاعدہ ذکرِ الٰہی۔",
+   "reason": "«خود احتسابی» for \"self-work\" (see the label).",
+   "alternative": "«خود اصلاحی»",
+   "review": "native Urdu"
+  },
+  {
+   "group": "arch",
+   "en": "Marriage is traditionally highly blessed. Challenges before union often make the bond stronger. This path carries spiritual favor.",
+   "ur": "شادی روایتی طور پر بہت مبارک ہے۔ نکاح سے پہلے کی مشکلات اکثر رشتے کو مضبوط بناتی ہیں۔ اس راستے میں روحانی فضل کا پہلو ہے۔",
+   "reason": "\"This path carries spiritual favor\" is stated as fact in the source («روحانی فضل کا پہلو ہے»).",
+   "alternative": "keep as source; religious scholar to confirm it can stay",
+   "review": "religious scholar + product decision"
+  },
+  {
+   "group": "arch",
+   "en": "Do not panic if this appears. Seek counsel from trusted spiritual guides. If already bound, increase protection practices (duʿāʾ, charity, guidance). Avoid fatalistic thinking — free will and divine mercy remain.",
+   "ur": "اگر یہ نتیجہ آئے تو گھبرائیں نہیں۔ قابلِ اعتماد روحانی رہنماؤں سے مشورہ کریں۔ اگر رشتہ پہلے سے بندھا ہوا ہے تو حفاظت کے معمولات (دعا، صدقہ، رہنمائی) بڑھا دیں۔ یہ سوچ کر ہار مان لینے سے بچیں کہ سب کچھ طے ہو چکا ہے — انسان کا اختیار اور اللہ کی رحمت باقی ہیں۔",
+   "reason": "Qadar / free will wording: «انسان کا اختیار اور اللہ کی رحمت باقی ہیں» and the advice on \"protection practices (duʿāʾ, charity, guidance)\" are religious statements.",
+   "alternative": "",
+   "review": "religious scholar"
+  },
+  {
+   "group": "arch",
+   "en": "Traditionally warned against for binding commitments — associated with severe hardship, sudden breaks, and recurring harm.",
+   "ur": "پابند کرنے والے عہد و پیمان کے لیے روایتی طور پر اس سے خبردار کیا گیا ہے — شدید مشکل، اچانک ٹوٹ پھوٹ اور بار بار کے نقصان سے منسوب۔",
+   "reason": "Strong warnings about marriage/binding commitments kept as traditional framing; whether such a warning should be shown to users at all is a product decision (not changed here).",
+   "alternative": "",
+   "review": "product decision + native Urdu"
+  },
+  {
+   "group": "arch",
+   "en": "Traditionally warned against for marriage. Associated with severe hardship, sudden breaks, and recurring harm patterns.",
+   "ur": "شادی کے لیے روایتی طور پر اس سے خبردار کیا گیا ہے۔ شدید مشکل، اچانک ٹوٹ پھوٹ اور بار بار کے نقصان کے انداز سے منسوب۔",
+   "reason": "Strong warnings about marriage/binding commitments kept as traditional framing; whether such a warning should be shown to users at all is a product decision (not changed here).",
+   "alternative": "",
+   "review": "product decision + native Urdu"
+  },
+  {
+   "group": "arch",
+   "en": "Traditionally a difficult pattern, associated with sudden breaks and recurring strain. Extreme caution and spiritual protection are advised.",
+   "ur": "روایتی طور پر ایک مشکل نمونہ، جو اچانک ٹوٹ پھوٹ اور بار بار کے دباؤ سے منسوب ہے۔ انتہائی احتیاط اور روحانی حفاظت کا مشورہ دیا جاتا ہے۔",
+   "reason": "Strong warnings about marriage/binding commitments kept as traditional framing; whether such a warning should be shown to users at all is a product decision (not changed here).",
+   "alternative": "",
+   "review": "product decision + native Urdu"
+  },
+  {
+   "group": "arch",
+   "en": "Marriage is traditionally discouraged under this pattern. If already in this bond, increase spiritual protection practices and seek wise counsel.",
+   "ur": "اس نمونے کے تحت شادی کی روایتی طور پر حوصلہ شکنی کی جاتی ہے۔ اگر آپ پہلے سے اس رشتے میں ہیں تو روحانی حفاظت کے معمولات بڑھائیں اور دانشمندانہ مشورہ لیں۔",
+   "reason": "Strong warnings about marriage/binding commitments kept as traditional framing; whether such a warning should be shown to users at all is a product decision (not changed here).",
+   "alternative": "",
+   "review": "product decision + native Urdu"
+  },
+  {
+   "group": "arch",
+   "en": "Traditionally considered very favorable for marriage. Associated with blessing, natural harmony, children, and spiritual growth.",
+   "ur": "شادی کے لیے روایتی طور پر بہت موافق سمجھا جاتا ہے۔ برکت، فطری ہم آہنگی، اولاد اور روحانی ترقی سے منسوب۔",
+   "reason": "\"children\" and \"blessing\" are traditional associations stated for marriage; not guarantees.",
+   "alternative": "",
+   "review": "subject-matter"
+  },
+  {
+   "group": "arch",
+   "en": "Marriage is traditionally blessed. Harmony, children, and shared spiritual life are often supported. Guard against excess and distraction.",
+   "ur": "شادی روایتی طور پر مبارک ہے۔ ہم آہنگی، اولاد اور مشترکہ روحانی زندگی کو اکثر سہارا ملتا ہے۔ زیادتی اور غفلت سے بچیں۔",
+   "reason": "\"children\" and \"blessing\" are traditional associations stated for marriage; not guarantees.",
+   "alternative": "",
+   "review": "subject-matter"
   }
  ]
 }
