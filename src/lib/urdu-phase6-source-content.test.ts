@@ -28,3 +28,15 @@ describe('Phase 6B: source-content issues', () => {
     expect(catalog.get('Show 7 more traits')).toBe('مزید 7 خصوصیات دکھائیں');
   });
 });
+
+describe('Phase 6A: mobile-menu About text', () => {
+  const src = readFileSync(path.join(root, 'src/components/MobileMenu.tsx'), 'utf8');
+  it("Urdu gets whole sentences (the English one is split by bold terms) and en/fr/ar keep the original markup", () => {
+    expect(src).toContain("uiLanguage === 'ur' ?");
+    expect(src).toContain('<strong>Asrār</strong> is your guide to the Islamic sciences of');
+    const ur = src.slice(src.indexOf("uiLanguage === 'ur' ?"), src.indexOf(') : ('));
+    expect(ur).toContain('علم الحروف');
+    expect(ur).toContain('علم العدد');
+    expect(ur).not.toMatch(/Science of|Discover/);
+  });
+});
