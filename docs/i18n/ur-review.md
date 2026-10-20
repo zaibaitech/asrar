@@ -6,7 +6,7 @@ Pages: `/ur`, `/ur/name-and-mother-burj`, `/ur/compatibility`, `/ur/abjad`, `/ur
 
 Every string was translated by hand (no machine translation), **except the AI-drafted result texts in section 5**, which were drafted by an AI assistant, are NOT native-reviewed and are listed there for the Language Reviewer. The mobile app (zaibaitech/asrar-mobile) has no Urdu, so nothing was reused. Qur'an and Divine Names stay in Arabic.
 
-**String count: 723** (14 SEO metadata, 161 page copy, 54 shared UI in TypeScript, 494 tool-UI catalog entries incl. 27 patterns). Not counted here: 896 AI-drafted result texts (section 5), which are not native-reviewed.
+**String count: 727** (14 SEO metadata, 161 page copy, 54 shared UI in TypeScript, 498 tool-UI catalog entries incl. 31 patterns). Not counted here: 896 AI-drafted result texts (section 5), which are not native-reviewed.
 
 Sources (edit there, then regenerate this file with `python3 scripts/i18n/ur/build_review.py`):
 
@@ -635,6 +635,10 @@ Exact-match English text in the tools → Urdu. `re:` keys are patterns; `$1`…
 | re:^(\w+) is neutral in (\w+)$ | $1 برجِ $2 میں معتدل ہے |
 | re:^(\S+) (\w+) — (\w+) is comfortable in (\w+)$ | $1 $2 — $3 برجِ $4 میں موافق حالت میں ہے |
 | re:^(\w+) is comfortable in (\w+)$ | $1 برجِ $2 میں موافق حالت میں ہے |
+| re:^(\S+) (\w+) — (\w+) is exalted in (\w+)$ | $1 $2 — $3 برجِ $4 میں شرف کی حالت میں ہے |
+| re:^(\w+) is exalted in (\w+)$ | $1 برجِ $2 میں شرف کی حالت میں ہے |
+| re:^(\S+) (\w+) — (\w+) is at home in (\w+)$ | $1 $2 — $3 برجِ $4 میں اپنے گھر میں (بیت) ہے |
+| re:^(\w+) is at home in (\w+)$ | $1 برجِ $2 میں اپنے گھر میں (بیت) ہے |
 | re:^(\w+) status: (\w+)$ | $1 کی حالت: $2 |
 | re:^(\d{1,2}:\d\d (?:AM\|PM)) → (\d{1,2}:\d\d (?:AM\|PM))$ | ⁦$p1 → $p2⁩ |
 | re:^(\d{1,2}:\d\d (?:AM\|PM))$ | ⁦$p1⁩ |
@@ -1296,7 +1300,7 @@ Name meaning, divine quality, spiritual focus, favourable/unfavourable themes, r
 | Confusion | الجھن |
 | Clarity of intention softens confusion — seek light before you speak or sign. | نیت کی وضاحت الجھن کو نرم کرتی ہے — بات کرنے یا دستخط کرنے سے پہلے اللہ سے رہنمائی مانگیں۔ |
 | Educational reflection | تعلیمی غور و فکر |
-| The Brand | داغ |
+| The Brand | نشان |
 | Marking, Identity, Recognition | نشان، شناخت، پہچان |
 | Recognizing one's unique spiritual purpose and calling | اپنے منفرد روحانی مقصد اور بلاوے کو پہچاننا |
 | Establishing identity | شناخت قائم کرنا |
@@ -1452,7 +1456,7 @@ Name meaning, divine quality, spiritual focus, favourable/unfavourable themes, r
 | Neglecting neighbors' rights | پڑوسیوں کے حقوق نظر انداز کرنا |
 | Chaos in commitments | ذمہ داریوں میں انتشار |
 | Fleeing responsibility | ذمہ داری سے فرار |
-| The Fortunate Sacrificer | سعد ذابح (قربانی کرنے والا) |
+| The Fortunate Sacrificer | سعد الذابح (قربانی کرنے والا) |
 | Offering, Commitment | پیشکش، وعدہ |
 | Named among the saʿd stations: reflect on what you are willing to offer — wealth, time, ego — for Allah’s sake. (Educational theme only; not a ritual prescription.) | سعد منازل میں شمار ہوتی ہے: غور کریں کہ آپ اللہ کی خاطر کیا پیش کرنے کو تیار ہیں — مال، وقت، انا۔ (محض تعلیمی موضوع؛ کوئی عبادتی نسخہ نہیں۔) |
 | Charitable giving | خیرات و صدقات |
@@ -1470,7 +1474,7 @@ Name meaning, divine quality, spiritual focus, favourable/unfavourable themes, r
 | Swallowing anger into resentment | غصے کو نگل کر رنجش بنا لینا |
 | Consuming without reflection | بغیر سوچے سمجھے لینا |
 | Overindulgence | حد سے زیادہ لذت پرستی |
-| The Most Fortunate | سب سے زیادہ سعد |
+| The Most Fortunate | سعد السعود (سب سے زیادہ خوش بخت) |
 | Gratitude, Hope | شکرگزاری، امید |
 | Named “most fortunate” in the star calendar — meet ease with shukr, and hardship with hope in Allah alone. | ستاروں کے کیلنڈر میں “سب سے زیادہ سعد” کہلاتی ہے — آسانی ملے تو شکر ادا کریں، اور مشکل پیش آئے تو صرف اللہ سے امید رکھیں۔ |
 | Gratitude practices | شکرگزاری کے معمولات |
@@ -1479,7 +1483,7 @@ Name meaning, divine quality, spiritual focus, favourable/unfavourable themes, r
 | Taking ease for granted | آسانی کو معمولی سمجھ لینا |
 | Complacency | خود اطمینانی |
 | Forgetting the Giver | عطا کرنے والے کو بھول جانا |
-| The Fortunate Tents | سعد کے خیمے |
+| The Fortunate Tents | سعد الاخبیہ (خیمے) |
 | Shelter, Hospitality | پناہ، مہمان نوازی |
 | Tents mean shelter and guests: open your space with generosity and guard those who seek safety. | خیموں کا مطلب پناہ اور مہمان ہے: فراخ دلی سے اپنی جگہ کھولیں اور پناہ مانگنے والوں کی حفاظت کریں۔ |
 | Hospitality | مہمان نوازی |
@@ -1934,28 +1938,2580 @@ One paragraph per weekday. Source: `app/planet-of-the-day/PlanetOfTheDayPage.tsx
 
 
 
+## 6. AI-drafted UI strings from the Urdu audit (2050 strings, NOT native-reviewed)
+
+Found by a browser audit of the /ur pages and of the Urdu language mode on the other pages (menus, tabs, calculators, result tabs, page prose, FAQs), plus a scan of the source for hard-coded English. Drafted by an AI assistant, live on noindex /ur only. Rules: traditional / reflective framing, no prediction or medical claims, planets never agents; Qur'an lines and Divine Names are NOT translated (Arabic comes from the data files: `planetaryZikr.ts`, `lunarMansions.ts`, `burujData.json`, `incense.ts`, the verified `ar-ui.json` Qur'an lines). Edit `scripts/i18n/ur/catalog_ai_draft_ui.py`, then run `build_catalog.py` and `build_review.py`.
+
+| Area | Strings |
+|---|---|
+| incense | 10 |
+| home | 13 |
+| home-menu | 18 |
+| home-compat | 8 |
+| zikr | 34 |
+| burj-career | 1 |
+| burj-page | 103 |
+| compat-page | 58 |
+| abjad-page | 30 |
+| potd-page | 38 |
+| names-page | 29 |
+| planetary-hours-page | 11 |
+| ikhtiyarat-page | 19 |
+| best-day | 78 |
+| manazil-page | 52 |
+| birth-profile | 11 |
+| planet-transit | 65 |
+| sadaqa-page | 150 |
+| sadaqa-day | 58 |
+| ramadan | 37 |
+| burj-personality | 120 |
+| burj-blessed-day | 136 |
+| burj-sadaqah | 270 |
+| scan-TrackingDashboard | 62 |
+| scan-SpiritualPracticeTab | 35 |
+| scan-IstikharaEducation | 40 |
+| scan-DhikrCounter | 28 |
+| scan-IstikharaResults | 25 |
+| scan-IstikharaPanel | 12 |
+| scan-IstikharaForm | 12 |
+| scan-ChallengeCard | 9 |
+| scan-CareerTabAdvanced | 6 |
+| scan-PlanetOfTheDayPage | 7 |
+| scan-DivineNameIntentionResul | 4 |
+| scan-GetTheAppBanner | 3 |
+| scan-DignityDetailPanel | 4 |
+| scan-DivineNameMatchesView | 3 |
+| scan-WaveHadiyyaCard | 3 |
+| scan-ProfileSetupBilingual | 2 |
+| scan-DailyReflectionCard | 2 |
+| scan-PlanetTransitCard | 2 |
+| scan-PlanetaryHourCard | 2 |
+| scan-PlanetOfTheDay | 1 |
+| scan-ScanDatesView | 2 |
+| scan-RamadanHub | 2 |
+| scan-CommunityBanner | 2 |
+| scan-RamadanPage | 2 |
+| scan-MobileMenu | 1 |
+| scan-SimplifiedStatusBadge | 1 |
+| scan-RamadanBannerMini | 1 |
+| scan-BadgeDisplay | 1 |
+| scan-RecommenderBanner | 1 |
+| zodiac-sadaqah | 185 |
+| spiritual-practice | 45 |
+| sadaqah-tab | 14 |
+| burj-overview | 3 |
+| burj-spiritual | 4 |
+| ikhtiyarat-detail | 175 |
+
+### 6.1 incense (10)
+
+| English | Urdu |
+|---|---|
+| Camphor + White Sandalwood | کافور + سفید صندل |
+| Yellow Sandalwood + Frankincense | زرد صندل + لوبان |
+| Mastic + Frankincense | مصطکی + لوبان |
+| Yellow Sandalwood + Agarwood (ʿŪd) | زرد صندل + عود (اگر) |
+| Musk + Rose | مشک + گلاب |
+| For calm, receptivity, and inner quiet | سکون، قبولیت اور باطنی خاموشی کے لیے |
+| For courage and steady resolve | ہمت اور پختہ عزم کے لیے |
+| For clarity of mind and ease in speech | ذہنی وضاحت اور گفتگو میں آسانی کے لیے |
+| For abundance, expansion, and barakah | فراوانی، وسعت اور برکت کے لیے |
+| For harmony and softened hearts | ہم آہنگی اور نرم دلی کے لیے |
+
+
+
+### 6.2 home (13)
+
+| English | Urdu |
+|---|---|
+| today | آج |
+| Day Hours | دن کی ساعتیں |
+| Night Hours | رات کی ساعتیں |
+| sunrise | طلوعِ آفتاب |
+| now | اب |
+| Misk wa Ward | مسک و ورد |
+| Lubān wa Misk | لُبان و مسک |
+| Carousel | ایک سیارہ |
+| Tasbih Counter | تسبیح کاؤنٹر |
+| Tap to count | گننے کے لیے ٹیپ کریں |
+| Reset | ری سیٹ |
+| You can close anytime — your count will be saved | آپ کسی بھی وقت بند کر سکتے ہیں — آپ کی گنتی محفوظ رہے گی |
+| Log Progress | پیش رفت درج کریں |
+
+
+
+### 6.3 home-menu (18)
+
+| English | Urdu |
+|---|---|
+| 📿 Abjad System | 📿 ابجد کا نظام |
+| Abjad System | ابجد کا نظام |
+| Current Mode: | موجودہ نظام: |
+| Western | مغربی ترتیب |
+| Eastern | مشرقی ترتیب |
+| Maghribi System: | مغربی نظام: |
+| Traditional method of the Maghreb (Morocco to Libya), al-Andalus and West Africa (ش=1000, غ=900) | مغرب (مراکش تا لیبیا)، اندلس اور مغربی افریقہ کا روایتی طریقہ (ش=1000، غ=900) |
+| Mashriqi System: | مشرقی نظام: |
+| Eastern method used in Egypt, the Middle East and Asia (ش=300, غ=1000) | مصر، مشرقِ وسطیٰ اور ایشیا میں رائج مشرقی طریقہ (ش=300، غ=1000) |
+| About This App | اس ایپ کے بارے میں |
+| Close menu | مینو بند کریں |
+| Back | واپس |
+| is your guide to the Islamic sciences of | اسلامی علوم کے لیے آپ کا رہنما ہے — |
+| (Science of Letters) and | (حروف کا علم) اور |
+| ʿIlm al-ʿAdad | علم العدد |
+| (Science of Numbers). | (اعداد کا علم)۔ |
+| Discover the sacred numerical values and elemental associations within Arabic text, connecting language to the deeper patterns of creation. | عربی متن میں چھپی مقدس عددی قدروں اور عناصر کی نسبتوں کو جانیں، اور زبان کو تخلیق کے گہرے نمونوں سے جوڑیں۔ |
+| Version 1.0 • © 2025 | ورژن 1.0 • © 2025 |
+
+
+
+### 6.4 home-compat (8)
+
+| English | Urdu |
+|---|---|
+| Explore general astrological compatibility from birth dates | تاریخِ پیدائش سے عمومی فلکی مطابقت جانیں |
+| Enter Two Birth Dates | دو تاریخِ پیدائش درج کریں |
+| General astrological compatibility from Sun sign, Moon sign, and Venus-Mars — no birth time needed | شمس کے برج، قمر کے برج اور زہرہ–مریخ کی بنیاد پر عمومی فلکی مطابقت — پیدائش کا وقت درکار نہیں |
+| Display Name (Optional) | ظاہر کیا جانے والا نام (اختیاری) |
+| Date of Birth (Required) | تاریخِ پیدائش (ضروری) |
+| Calculate Compatibility | مطابقت کا حساب کریں |
+| e.g., Ahmed | مثلاً: احمد |
+| e.g., Fatima | مثلاً: فاطمہ |
+
+
+
+### 6.5 zikr (34)
+
+| English | Urdu |
+|---|---|
+| Increase in blessings and goodness. | برکتوں اور بھلائی میں اضافے کے لیے۔ |
+| For wealth and prosperity. | مال و دولت اور خوشحالی کے لیے۔ |
+| For sustenance and provision. | رزق اور روزی کے لیے۔ |
+| For abundance in different forms of wealth. | مال کی مختلف صورتوں میں فراوانی کے لیے۔ |
+| For resolving difficulties and subtle ease. | مشکلات کے حل اور لطیف آسانی کے لیے۔ |
+| For fixing relationships and marriage. | رشتوں اور ازدواجی تعلق کی اصلاح کے لیے۔ |
+| Protection from enemies and their plots. | دشمنوں اور ان کی چالوں سے حفاظت کے لیے۔ |
+| To overcome and humble enemies. | دشمنوں پر غالب آنے اور ان کے سامنے عاجزی کے لیے۔ |
+| For strength against oppression or harm. | ظلم یا نقصان کے مقابلے میں قوت کے لیے۔ |
+| especially Tuesday | خاص طور پر منگل |
+| For overpowering enemies. | دشمنوں پر غلبے کے لیے۔ |
+| For gentleness, subtle ease, and calming the heart. | نرمی، لطیف آسانی اور دل کے سکون کے لیے۔ |
+| For mercy, ease in transitions, and emotional balance. | رحمت، تبدیلیوں میں آسانی اور جذباتی توازن کے لیے۔ |
+| For compassion and softness in family and home matters. | گھریلو اور خاندانی معاملات میں ہمدردی اور نرمی کے لیے۔ |
+| For affection, harmony, and softening of hearts. | محبت، ہم آہنگی اور دلوں کی نرمی کے لیے۔ |
+| For clarity of mind and beneficial knowledge. | ذہنی وضاحت اور نافع علم کے لیے۔ |
+| For wisdom in speech, study, and decisions. | گفتگو، مطالعے اور فیصلوں میں حکمت کے لیے۔ |
+| For insight and awareness in learning and communication. | سیکھنے اور گفتگو میں بصیرت اور آگاہی کے لیے۔ |
+| For provision, barakah, and trust in Allah as Provider. | رزق، برکت اور اللہ کو رازق ماننے پر بھروسے کے لیے۔ |
+| For spaciousness of heart and ease in what feels tight. | دل کی کشادگی اور تنگی محسوس ہونے والی باتوں میں آسانی کے لیے۔ |
+| For generosity and noble character. | سخاوت اور بلند اخلاق کے لیے۔ |
+| For mindful reliance on Allah's care and guardianship. | اللہ کی نگہداشت اور حفاظت پر شعوری بھروسے کے لیے۔ |
+| For forbearance and a softened heart. | بردباری اور نرم دلی کے لیے۔ |
+| For care and precision in what one undertakes. | اپنے کاموں میں احتیاط اور درستی کے لیے۔ |
+| For turning to the All-Hearing in duʿāʾ. | دعا میں سننے والے رب کی طرف رجوع کے لیے۔ |
+| For humility before the Most Great and dignity without arrogance. | عظمت والے کے سامنے عاجزی اور تکبر کے بغیر وقار کے لیے۔ |
+| For strength with honour in righteous effort. | نیک کوشش میں عزت کے ساتھ قوت کے لیے۔ |
+| For steadfastness and what endures of good deeds. | ثابت قدمی اور باقی رہنے والے نیک اعمال کے لیے۔ |
+| For patience and steadfastness in long work. | طویل کام میں صبر اور استقامت کے لیے۔ |
+| For wise restraint and sound judgment. | دانشمندانہ ضبط اور درست فیصلے کے لیے۔ |
+| For forbearance when progress feels slow. | پیش رفت سست محسوس ہونے پر بردباری کے لیے۔ |
+| For firmness, discipline, and steady resolve. | پختگی، نظم و ضبط اور مستقل عزم کے لیے۔ |
+| Used for protection, defense, and overcoming enemies. | حفاظت، دفاع اور دشمنوں پر قابو پانے کے لیے پڑھا جاتا ہے۔ |
+| Thursday's planet in classical ʿIlm al-Nujūm — for remembrance, generosity, and reliance on Allah's provision. Not prediction. | کلاسیکی علم النجوم میں جمعرات سے منسوب سیارہ — یاد، سخاوت اور اللہ کے رزق پر بھروسے کے لیے۔ پیش گوئی نہیں۔ |
+
+
+
+### 6.6 burj-career (1)
+
+| English | Urdu |
+|---|---|
+| Barred Plymouth Rock | دھاری دار پلائی ماؤتھ راک |
+
+
+
+### 6.7 burj-page (103)
+
+| English | Urdu |
+|---|---|
+| Arabic Script Required | عربی رسم الخط ضروری ہے |
+| Both names must be entered in Arabic letters for accurate calculation | درست حساب کے لیے دونوں نام عربی حروف میں لکھنا ضروری ہے |
+| Mother's Name Importance | والدہ کے نام کی اہمیت |
+| The mother's name is essential as it represents the soul's entry into this world | روایت میں والدہ کا نام ضروری سمجھا جاتا ہے، کیونکہ یہ اس دنیا میں آمد کی نسبت کو ظاہر کرتا ہے |
+| Auto-Save Feature | خودکار محفوظ کرنے کی سہولت |
+| Your calculations are automatically saved for quick access later | آپ کے حساب خودکار طور پر محفوظ ہو جاتے ہیں تاکہ بعد میں جلدی دیکھ سکیں |
+| Privacy First | رازداری پہلے |
+| All calculations happen locally in your browser - no data is sent to servers | تمام حساب آپ کے براؤزر ہی میں ہوتے ہیں — کوئی ڈیٹا سرورز کو نہیں بھیجا جاتا |
+| Your Elemental Nature | آپ کا عنصری مزاج |
+| Discover your core temperament (Fire, Earth, Air, or Water) | اپنا بنیادی مزاج جانیں (آگ، مٹی، ہوا یا پانی) |
+| Personality Insights | شخصیت کے پہلو |
+| Detailed traits, social dynamics, and dream symbolism | تفصیلی خصوصیات، سماجی انداز اور خوابوں کی علامتیں |
+| Traditional and modern career paths aligned with your energy | آپ کی توانائی سے ہم آہنگ روایتی اور جدید پیشے |
+| The most auspicious day for important decisions | روایت میں اہم فیصلوں کے لیے سب سے موزوں سمجھا جانے والا دن |
+| Spiritual Practices | روحانی معمولات |
+| Personalized dhikr, charity guidance, and sacred offerings | ذاتی ذکر، صدقے کی رہنمائی اور مقدس نذرانے |
+| Select Your Birth Date | اپنی تاریخِ پیدائش منتخب کریں |
+| Full date | مکمل تاریخ |
+| Month & day only | صرف مہینہ اور دن |
+| Best when using your own saved profile. | اپنے محفوظ کردہ پروفائل کے ساتھ بہتر کام کرتا ہے۔ |
+| What You'll Discover: | آپ کیا جانیں گے: |
+| Your Burj (zodiac sign) | آپ کا برج (فلکی نشان) |
+| Your elemental nature | آپ کا عنصری مزاج |
+| Optional lunar timing baselines (requires full DOB year) | اختیاری قمری اوقات کی بنیادیں (مکمل سالِ پیدائش درکار) |
+| Date of Birth | تاریخِ پیدائش |
+| Month | مہینہ |
+| Select... | منتخب کریں... |
+| No Data Storage | ڈیٹا محفوظ نہیں کیا جاتا |
+| Your names are calculated in real-time and never stored on our servers. All calculations happen locally in your browser. | آپ کے نام اسی وقت شمار ہوتے ہیں اور ہمارے سرورز پر کبھی محفوظ نہیں کیے جاتے۔ تمام حساب آپ کے براؤزر ہی میں ہوتے ہیں۔ |
+| Sacred Tradition | مقدس روایت |
+| This tool is created with respect for Islamic tradition and scholarly heritage. All calculations follow authentic classical methods. | یہ ٹول اسلامی روایت اور علمی ورثے کے احترام کے ساتھ بنایا گیا ہے۔ تمام حساب مستند کلاسیکی طریقوں کے مطابق ہیں۔ |
+| Istikhārat al-Asmāʾ · | استخارۃ الاسماء · |
+| Find Your Burj from Your Name and Your Mother's Name | اپنے نام اور اپنی والدہ کے نام سے اپنا برج معلوم کریں |
+| From the Arab world to West Africa and South Asia, people look for their burj (sign, ṭabʿ or sitāra) from their own name and their mother's name — in Arabic «برجك من اسمك واسم امك», in French « trouver son burj avec son prénom et le prénom de sa mère », in Urdu "naam se sitara". This page does the calculation with the same "Who Am I?" tool used in the Asrār app and explains the result: your element and temperament, blessed day, recommended dhikr and the sadaqah for your burj. | عرب دنیا سے مغربی افریقہ اور جنوبی ایشیا تک لوگ اپنے نام اور اپنی والدہ کے نام سے اپنا برج (نشان، طبع یا ستارہ) معلوم کرتے ہیں — عربی میں «برجك من اسمك واسم امك»، فرانسیسی میں « trouver son burj avec son prénom et le prénom de sa mère »، اور اردو میں «نام سے ستارہ»۔ یہ صفحہ اسرار ایپ والے اسی «میں کون ہوں؟» ٹول سے حساب کرتا ہے اور نتیجہ سمجھاتا ہے: آپ کا عنصر اور مزاج، مبارک دن، تجویز کردہ ذکر اور آپ کے برج کا صدقہ۔ |
+| The traditional name for this reflection is Istikhārat al-Asmāʾ, but it is not the istikhāra prayer: real istikhāra is ṣalāt al-istikhāra, the two rakʿas and duʿāʾ taught by the Prophet ﷺ. Use this tool for reflection and education, not prediction; Allah alone knows the unseen. | اس غور و فکر کا روایتی نام استخارۃ الاسماء ہے، مگر یہ نمازِ استخارہ نہیں: حقیقی استخارہ نمازِ استخارہ ہے، یعنی وہ دو رکعتیں اور دعا جو نبی کریم ﷺ نے سکھائی ہے۔ اس ٹول کو غور و فکر اور تعلیم کے لیے استعمال کریں، پیش گوئی کے لیے نہیں؛ غیب کا علم صرف اللہ کو ہے۔ |
+| How the calculation works | حساب کیسے ہوتا ہے |
+| Write your name and your mother's name in Arabic letters (or type them in Latin letters and pick the Arabic spelling). | اپنا نام اور اپنی والدہ کا نام عربی حروف میں لکھیں (یا لاطینی حروف میں لکھ کر عربی املا منتخب کریں)۔ |
+| Each name is converted to its Abjad (ḥisāb al-jummal) total using the Maghribi letter values. | ہر نام کو اس کے ابجد (حسابِ جمل) مجموعے میں مغربی ترتیب کی قدروں سے بدلا جاتا ہے۔ |
+| Add the two totals and divide by 12. The remainder (1–12, with 0 counted as 12) is your burj, from 1 = Aries (al-Ḥamal) to 12 = Pisces (al-Ḥūt). | دونوں مجموعوں کو جمع کر کے 12 سے تقسیم کریں۔ باقی (1 تا 12، صفر کو 12 شمار کر کے) آپ کا برج ہے، 1 = حمل سے 12 = حوت تک۔ |
+| The burj gives your element (fire, earth, air or water), which describes your ṭabʿ (temperament), and links to a blessed day, a dhikr and a sadaqah. | برج آپ کا عنصر (آگ، مٹی، ہوا یا پانی) بتاتا ہے جو آپ کے طبع (مزاج) کی نشاندہی کرتا ہے، اور ایک مبارک دن، ذکر اور صدقے سے جوڑتا ہے۔ |
+| Worked example | مثال |
+| محمد (Muhammad) = 92 and فاطمة (Fatima) = 135. 92 + 135 = 227, and 227 ÷ 12 = 18 remainder 11, so the burj is 11: Aquarius (al-Dalw), an air burj. | محمد = 92 اور فاطمة = 135۔ 92 + 135 = 227، اور 227 ÷ 12 = 18 باقی 11، لہٰذا برج 11 ہے: دلو، ایک ہوائی برج۔ |
+| Don't know your mother's name in Arabic? The tool can also work from your date of birth (tropical zodiac). | والدہ کا نام عربی میں نہیں آتا؟ ٹول آپ کی تاریخِ پیدائش (استوائی بروج) سے بھی کام کر سکتا ہے۔ |
+| The 12 burūj at a glance | ایک نظر میں 12 بروج |
+| Ḥamal | حمل |
+| Temperament | مزاج |
+| Slow to anger, but explosive when provoked—impossible to calm down once ignited | دیر سے غصہ آتا ہے، مگر چھیڑنے پر پھٹ پڑتا ہے — ایک بار بھڑک جائے تو ٹھنڈا کرنا ناممکن |
+| Blessed day | مبارک دن |
+| Ya Maliku Ya Quddus | يا مالك يا قدوس |
+| Beef (cow meat) - shared with those in need | گائے کا گوشت — ضرورت مندوں کے ساتھ بانٹنا |
+| al-Thawr | ثور |
+| Exceptionally patient and enduring - can bear tremendous hardship without complaint | نہایت صابر اور بردبار — بغیر شکایت کے بڑی مشقت سہہ لیتا ہے |
+| Ya Kafi Ya Ghani | يا كافي يا غني |
+| Food or earth-derived products - grains, crops, cereals | مٹی سے حاصل ہونے والی اشیا یا خوراک — اناج، فصلیں، غلہ |
+| Jawzāʾ | جوزا |
+| Quick-tempered and easily provoked - anger rises swiftly like a storm wind | تیز مزاج اور جلد مشتعل ہونے والا — غصہ آندھی کی طرح تیزی سے چڑھتا ہے |
+| Ya 'Aliyyu Ya 'Azim | يا علي يا عظيم |
+| Their own clothing from their wardrobe - garments they have worn | اپنی الماری کا اپنا لباس — پہنے ہوئے کپڑے |
+| Saraṭān | سرطان |
+| Extremely patient - mistaken for being foolish or weak due to extraordinary tolerance | بے حد صابر — غیر معمولی برداشت کی وجہ سے بعض اوقات بھولا یا کمزور سمجھ لیا جاتا ہے |
+| Ya Rahmanu Ya Rahim | يا رحمن يا رحيم |
+| Rice and fish together (can be cooked or uncooked) | چاول اور مچھلی اکٹھے (پکے ہوئے یا کچے) |
+| al-Asad | اسد |
+| Passionate and dynamic - driven by inner fire and enthusiasm for life | پُرجوش اور متحرک — اندرونی آگ اور زندگی کے جذبے سے چلنے والا |
+| Ya Hayyu Ya Qayyum | يا حي يا قيوم |
+| Similar to Buruj 1 - beef or substantial food for those in need | برج 1 کی طرح — ضرورت مندوں کے لیے گائے کا گوشت یا ٹھوس خوراک |
+| al-Sunbula | سنبلہ |
+| Deeply grounded and practical - embodies stability and reliability | گہرائی سے زمین سے جڑا اور عملی — استحکام اور بھروسے کی مثال |
+| Ya Fattah Ya Razzaq | يا فتاح يا رزاق |
+| Grains, crops, earth-derived food products | اناج، فصلیں، مٹی سے حاصل ہونے والی غذائی اشیا |
+| Quick-minded and intellectually agile - thrives on mental stimulation | تیز ذہن اور فکری طور پر چست — ذہنی سرگرمی میں پھلتا پھولتا ہے |
+| Clothing from your wardrobe - similar to Buruj 3 | آپ کی الماری کے کپڑے — برج 3 کی طرح |
+| al-ʿAqrab | عقرب |
+| Intense and transformative - deep emotional currents run beneath calm surface | شدید اور تبدیلی لانے والا — پُرسکون سطح کے نیچے گہرے جذباتی دھارے بہتے ہیں |
+| Yā Māliku Yā Quddūs | يَا مَالِكُ يَا قُدُّوسُ |
+| Rice and fish together - similar to Buruj 4 | چاول اور مچھلی اکٹھے — برج 4 کی طرح |
+| al-Qaws | قوس |
+| Optimistic and adventurous - seeks expansion and truth | پُرامید اور مہم جو — وسعت اور سچائی کی تلاش میں |
+| Ya Kabiru Ya Muta'ali | يا كبير يا متعالي |
+| Food to those in need - similar to other fire buruj | ضرورت مندوں کو کھانا — دیگر آتشی بروج کی طرح |
+| al-Jady | جدی |
+| Disciplined and ambitious - seeks achievement and mastery | نظم و ضبط والا اور بلند حوصلہ — کامیابی اور مہارت کا طالب |
+| Yā Fattāḥu Yā Razzāq | يَا فَتَّاحُ يَا رَزَّاقُ |
+| Grains, earth-derived food products | اناج، مٹی سے حاصل ہونے والی غذائی اشیا |
+| al-Dalw | دلو |
+| Innovative and humanitarian - seeks to serve the collective | جدت پسند اور انسان دوست — اجتماعی خدمت کا خواہاں |
+| Clothing from wardrobe | الماری کے کپڑے |
+| Compassionate and intuitive - deeply sensitive to others' pain | ہمدرد اور وجدانی — دوسروں کے درد کے لیے نہایت حساس |
+| Yā Kabīru Yā Mutaʿālī | يَا كَبِيرُ يَا مُتَعَالِي |
+| Rice and fish together | چاول اور مچھلی اکٹھے |
+| All sadaqah by burj → | برج کے مطابق تمام صدقات ← |
+| How do I find my burj from my name and my mother's name? | میں اپنے نام اور والدہ کے نام سے اپنا برج کیسے معلوم کروں؟ |
+| Add the Abjad value of your name to the Abjad value of your mother's name, divide by 12 and keep the remainder (0 counts as 12). Remainder 1 is Aries (al-Ḥamal), 2 Taurus, 3 Gemini, and so on to 12, Pisces (al-Ḥūt). The calculator above does it for you. | اپنے نام کی ابجد قدر کو اپنی والدہ کے نام کی ابجد قدر میں جمع کریں، 12 سے تقسیم کریں اور باقی رکھیں (صفر 12 شمار ہوتا ہے)۔ باقی 1 حمل ہے، 2 ثور، 3 جوزا، اور اسی طرح 12 تک جو حوت ہے۔ اوپر والا کیلکولیٹر یہ آپ کے لیے کر دیتا ہے۔ |
+| Why is the mother's name used? | والدہ کا نام کیوں استعمال ہوتا ہے؟ |
+| In ʿilm al-ḥurūf your own name is read as who you are, and your mother's name as what surrounds you: family inheritance and the conditions of your path. Pairing the two gives the burj. The same method is found in Arabic, West African (Hausa, Wolof) and South Asian practice. | علم الحروف میں آپ کا اپنا نام آپ کی ذات کے طور پر پڑھا جاتا ہے، اور والدہ کا نام اس کے طور پر جو آپ کو گھیرے ہوئے ہے: خاندانی ورثہ اور آپ کے راستے کے حالات۔ دونوں کو ملانے سے برج نکلتا ہے۔ یہی طریقہ عربی، مغربی افریقی (ہاؤسا، وولوف) اور جنوبی ایشیائی روایت میں ملتا ہے۔ |
+| Is this the same as istikhāra? | کیا یہ استخارہ ہے؟ |
+| No. Istikhāra is the prayer of seeking Allah's guidance (ṣalāt al-istikhāra). The name "Istikhārat al-Asmāʾ" is traditional, but this calculation is a reflection on names and temperament, not a prayer and not a way to know the unseen. | نہیں۔ استخارہ اللہ سے خیر طلب کرنے کی دعا اور نماز ہے (نمازِ استخارہ)۔ «استخارۃ الاسماء» کا نام روایتی ہے، مگر یہ حساب ناموں اور مزاج پر غور و فکر ہے، نہ کوئی نماز ہے اور نہ غیب جاننے کا کوئی طریقہ۔ |
+| Is my name burj the same as my zodiac sign by birth date? | کیا میرا نام والا برج میری تاریخِ پیدائش والے برج کے برابر ہوتا ہے؟ |
+| Not necessarily. The name-based burj comes only from the Abjad values of the two names. Your sign by birth date comes from the Sun's position when you were born, so the two can differ. The tool offers both methods. | ضروری نہیں۔ نام والا برج صرف دونوں ناموں کی ابجد قدروں سے نکلتا ہے۔ تاریخِ پیدائش والا برج آپ کی پیدائش کے وقت شمس کے مقام سے نکلتا ہے، اس لیے دونوں مختلف ہو سکتے ہیں۔ ٹول دونوں طریقے فراہم کرتا ہے۔ |
+| What does my burj tell me? | میرا برج مجھے کیا بتاتا ہے؟ |
+| Your element and temperament, a blessed day of the week, a Divine Name to remember in dhikr, and a traditional sadaqah. Read it as encouragement to good deeds and self-knowledge, not as a forecast. | آپ کا عنصر اور مزاج، ہفتے کا ایک مبارک دن، ذکر میں یاد رکھنے کے لیے ایک اسمِ الٰہی، اور ایک روایتی صدقہ۔ اسے نیک اعمال اور خود شناسی کی ترغیب کے طور پر پڑھیں، پیش گوئی کے طور پر نہیں۔ |
+| Today's recommended sadaqah. | آج کا تجویز کردہ صدقہ۔ |
+| Compare two names with the Abjad soul-connection method. | ابجد کے روحانی ربط کے طریقے سے دو ناموں کا موازنہ کریں۔ |
+
+
+
+### 6.8 compat-page (58)
+
+| English | Urdu |
+|---|---|
+| Discover your spiritual resonance with the 99 Names of Allah | اللہ کے 99 ناموں کے ساتھ اپنی روحانی ہم آہنگی جانیں |
+| You and a Divine Name | آپ اور ایک اسمِ الٰہی |
+| Find My Best Names | میرے لیے موزوں اسماء تلاش کریں |
+| Pick a Name | ایک اسم منتخب کریں |
+| We'll calculate your resonance with all 99 Names and show you the ones that resonate most favorably. | ہم آپ کی ہم آہنگی تمام 99 ناموں کے ساتھ شمار کریں گے اور وہ نام دکھائیں گے جن سے سب سے زیادہ موافقت ہے۔ |
+| Calculate Resonance | ہم آہنگی کا حساب کریں |
+| Type to search: Muhammad, Fatima... | تلاش کے لیے لکھیں: محمد، فاطمہ... |
+| Call upon Allah by the Name whose meaning matches your need | اللہ کو اس نام سے پکاریں جس کا مفہوم آپ کی ضرورت سے مطابقت رکھتا ہو |
+| Call upon Allah by the Name whose meaning matches your need — Quran 7:180 | اللہ کو اس نام سے پکاریں جس کا مفہوم آپ کی ضرورت سے مطابقت رکھتا ہو — قرآن 7:180 |
+| 1. What is your intention? | 1. آپ کی نیت کیا ہے؟ |
+| Provision & Sustenance | رزق اور روزی |
+| Rizq, livelihood, and material need | رزق، روزگار اور مادی ضرورت |
+| Healing | شفا |
+| Recovery from illness, physical or spiritual | بیماری سے صحت یابی، جسمانی ہو یا روحانی |
+| Relief from Distress | پریشانی سے نجات |
+| Anxiety, grief, or a heavy heart | فکر، غم یا بوجھل دل |
+| Safety from harm and fear | نقصان اور خوف سے حفاظت |
+| Clarity in a decision — alongside istikhāra, not instead of it | فیصلے میں وضاحت — استخارے کے ساتھ، اس کی جگہ نہیں |
+| Marriage & Love | نکاح اور محبت |
+| Harmony between spouses, love, and reconciliation | میاں بیوی میں ہم آہنگی، محبت اور صلح |
+| Repentance (tawba) and seeking pardon | توبہ اور معافی کی طلب |
+| Strength & Patience | قوت اور صبر |
+| Endurance through hardship | مشکل میں استقامت |
+| Ease & Removing Obstacles | آسانی اور رکاوٹوں کا ازالہ |
+| Opening a way through a difficult affair | مشکل معاملے میں راستہ کھلنا |
+| Knowledge & Understanding | علم اور فہم |
+| Increase in beneficial knowledge | نافع علم میں اضافہ |
+| Find the Best Names | موزوں اسماء تلاش کریں |
+| Check a Name | ایک اسم جانچیں |
+| We'll search all 99 Names and show you the ones that best match your intention. | ہم تمام 99 ناموں میں تلاش کر کے وہ نام دکھائیں گے جو آپ کی نیت سے سب سے زیادہ مطابقت رکھتے ہیں۔ |
+| Why this matters | یہ کیوں اہم ہے |
+| Each of the 99 Names is classically associated with certain qualities. Matching your intention to a Name whose meaning relates to it is a way of calling on Allah by the Name best suited to your need, rather than an arbitrary choice. | ہر ایک نام روایتی طور پر کچھ صفات سے منسوب ہے۔ اپنی نیت کو ایسے نام سے ملانا جس کا مفہوم اس سے متعلق ہو، اللہ کو اس نام سے پکارنے کا ایک طریقہ ہے جو آپ کی ضرورت کے سب سے زیادہ مطابق ہو، نہ کہ کوئی من مانا انتخاب۔ |
+| 2. Which Name do you want to check? | 2. آپ کون سا نام جانچنا چاہتے ہیں؟ |
+| Search: Ar-Raḥmān, Light, healing... | تلاش کریں: الرحمن، نور، شفا... |
+| Name Compatibility for Marriage — Abjad Soul Connection Calculator | شادی کے لیے ناموں کی مطابقت — ابجد سے روحانی ربط کا کیلکولیٹر |
+| Before a nikāḥ, many families like to look at the harmony between two names. In ʿilm al-ḥurūf each Arabic letter has a number (the Abjad, or ḥisāb al-jummal), so every name has a total. This calculator compares the two totals with the traditional "soul connection" method and reads the result for marriage first, with friendship, family and work as other contexts. | نکاح سے پہلے بہت سے گھرانے دو ناموں کے درمیان ہم آہنگی دیکھنا پسند کرتے ہیں۔ علم الحروف میں ہر عربی حرف کا ایک عدد ہے (ابجد یا حسابِ جمل)، اس لیے ہر نام کا ایک مجموعہ ہوتا ہے۔ یہ کیلکولیٹر دونوں مجموعوں کو روایتی «روحانی ربط» کے طریقے سے ملاتا ہے اور نتیجہ پہلے شادی کے لیے، پھر دوستی، خاندان اور کام کے دوسرے سیاق میں پڑھتا ہے۔ |
+| You can also compare two dates of birth (a general, modern astrological comparison of Sun, Moon, Venus and Mars signs), look at a person's resonance with one of the 99 Names of Allah, or find the Divine Name that matches an intention. | آپ دو تاریخِ پیدائش کا موازنہ بھی کر سکتے ہیں (شمس، قمر، زہرہ اور مریخ کے برجوں کا ایک عمومی، جدید فلکی موازنہ)، کسی شخص کی اللہ کے 99 ناموں میں سے کسی کے ساتھ ہم آہنگی دیکھ سکتے ہیں، یا وہ اسمِ الٰہی تلاش کر سکتے ہیں جو کسی نیت سے مطابقت رکھتا ہو۔ |
+| Adab first | پہلے آداب |
+| A name number cannot tell you whether a marriage will succeed. Ask about dīn and character, consult both families, pray ṣalāt al-istikhāra and put your trust in Allah. Use this tool for reflection and conversation, not as a verdict; Allah alone knows the unseen. | ناموں کا عدد یہ نہیں بتا سکتا کہ شادی کامیاب ہوگی یا نہیں۔ دین اور اخلاق کے بارے میں پوچھیں، دونوں خاندانوں سے مشورہ کریں، نمازِ استخارہ پڑھیں اور اللہ پر بھروسا رکھیں۔ اس ٹول کو غور و فکر اور گفتگو کے لیے استعمال کریں، فیصلے کے طور پر نہیں؛ غیب کا علم صرف اللہ کو ہے۔ |
+| How the names method works | ناموں کا طریقہ کیسے کام کرتا ہے |
+| Write both names in Arabic letters (or type them in Latin letters and pick the Arabic spelling). | دونوں نام عربی حروف میں لکھیں (یا لاطینی حروف میں لکھ کر عربی املا منتخب کریں)۔ |
+| Each name is converted to its Abjad (kabīr) total, using the Maghribi or Mashriqi letter values you select. | ہر نام کو اس کے ابجد (کبیر) مجموعے میں بدلا جاتا ہے، اس مغربی یا مشرقی ترتیب کی قدروں سے جو آپ منتخب کریں۔ |
+| The two totals are added together with 7 and divided by 9; the remainder (1–9, with 0 counted as 9) is the soul-connection number. | دونوں مجموعوں کو 7 کے ساتھ جمع کر کے 9 سے تقسیم کیا جاتا ہے؛ باقی (1 تا 9، صفر کو 9 شمار کر کے) روحانی ربط کا عدد ہے۔ |
+| Each number has a traditional meaning and outlook, shown for the relationship context you choose: marriage, universal, friendship, family or work. | ہر عدد کا ایک روایتی مفہوم اور پہلو ہے، جو آپ کے منتخب کردہ تعلق کے سیاق کے لیے دکھایا جاتا ہے: شادی، عمومی، دوستی، خاندان یا کام۔ |
+| How do I check name compatibility for marriage? | میں شادی کے لیے ناموں کی مطابقت کیسے دیکھوں؟ |
+| Enter both names, choose the "Marriage" context and calculate. The tool adds the Abjad values of the two names plus 7, divides by 9 and shows the meaning of the remainder for marriage. | دونوں نام درج کریں، «شادی» کا سیاق منتخب کریں اور حساب کریں۔ ٹول دونوں ناموں کی ابجد قدریں اور 7 جمع کرتا ہے، 9 سے تقسیم کرتا ہے اور باقی کا شادی کے لیے مفہوم دکھاتا ہے۔ |
+| Which Abjad system is used? | کون سا ابجد نظام استعمال ہوتا ہے؟ |
+| You can switch between the Maghribi order (the Maghreb, al-Andalus and West Africa) and the Mashriqi order (Egypt, the Middle East and Asia). Most names give the same total in both; names containing any of the six letters ṣād, ḍād, sīn, ẓāʾ, ghayn or shīn can differ. | آپ مغربی ترتیب (مراکش تا لیبیا، اندلس اور مغربی افریقہ) اور مشرقی ترتیب (مصر، مشرقِ وسطیٰ اور ایشیا) کے درمیان بدل سکتے ہیں۔ زیادہ تر ناموں کا مجموعہ دونوں میں ایک ہی ہوتا ہے؛ جن میں ص، ض، س، ظ، غ یا ش میں سے کوئی حرف ہو وہ مختلف ہو سکتے ہیں۔ |
+| Can I compare by date of birth instead of names? | کیا میں ناموں کے بجائے تاریخِ پیدائش سے موازنہ کر سکتا ہوں؟ |
+| Yes. Choose "By Birth Date" to compare two people's Sun, Moon, Venus and Mars signs. This is a general, modern astrological comparison, not a classical Islamic method, and it never uses birth time or houses. | جی ہاں۔ دو افراد کے شمس، قمر، زہرہ اور مریخ کے برجوں کا موازنہ کرنے کے لیے «تاریخِ پیدائش سے» منتخب کریں۔ یہ ایک عمومی، جدید فلکی موازنہ ہے، کلاسیکی اسلامی طریقہ نہیں، اور اس میں پیدائش کا وقت یا گھر (بیوت) کبھی استعمال نہیں ہوتے۔ |
+| Is it permissible to rely on name compatibility? | کیا ناموں کی مطابقت پر انحصار جائز ہے؟ |
+| Treat it as cultural reflection, not prediction. Choosing a spouse rests on dīn, character, family counsel and ṣalāt al-istikhāra. No number decides a marriage; Allah alone knows the unseen. | اسے ثقافتی غور و فکر سمجھیں، پیش گوئی نہیں۔ جیون ساتھی کا انتخاب دین، اخلاق، خاندان کے مشورے اور نمازِ استخارہ پر مبنی ہے۔ کوئی عدد شادی کا فیصلہ نہیں کرتا؛ غیب کا علم صرف اللہ کو ہے۔ |
+| What if our result is low? | اگر ہمارا نتیجہ کم آئے تو؟ |
+| A low number is not a prohibition and not a bad omen. It can be an invitation to talk about expectations and patience. Many happy marriages would "fail" a numeric test. | کم عدد نہ ممانعت ہے اور نہ بدشگونی۔ یہ توقعات اور صبر پر بات کرنے کی دعوت ہو سکتا ہے۔ بہت سی خوش حال شادیاں اس عددی امتحان میں «ناکام» ہو جاتیں۔ |
+| Choose an auspicious date for the nikāḥ. | نکاح کے لیے مناسب تاریخ چنیں۔ |
+| Your burj, blessed day, dhikr and sadaqah. | آپ کا برج، مبارک دن، ذکر اور صدقہ۔ |
+| Sadaqa Guide | صدقہ رہنما |
+| Sadaqah by weekday, Hijri birth month and burj. | دن، پیدائشی ہجری مہینے اور برج کے مطابق صدقہ۔ |
+
+
+
+### 6.9 abjad-page (30)
+
+| English | Urdu |
+|---|---|
+| Arabic Phrase or Sentence | عربی عبارت یا جملہ |
+| Enter a phrase or sentence in Arabic | عربی میں کوئی عبارت یا جملہ لکھیں |
+| Arabic Text | عربی متن |
+| Enter any Arabic text | کوئی بھی عربی متن لکھیں |
+| Abjad Calculator — ʿIlm al-Ḥurūf Letter Numerology | ابجد کیلکولیٹر — علم الحروف اور حروف کے اعداد |
+| The Abjad system assigns a number to each letter of the Arabic alphabet: alif is 1, bāʾ is 2, jīm is 3, and so on up to shīn at 1000 in the Maghribi order used here by default (in the Mashriqi order, which you can switch to, ghayn is 1000). Adding the values of the letters in a word gives its ḥisāb al-jummal, the "sum total" used for centuries in the Islamic sciences. | ابجد کا نظام عربی حروفِ تہجی کے ہر حرف کو ایک عدد دیتا ہے: الف 1، با 2، جیم 3، اور اسی طرح ش تک، جو یہاں بطورِ طے شدہ مغربی ترتیب میں 1000 ہے (مشرقی ترتیب میں، جسے آپ منتخب کر سکتے ہیں، غ 1000 ہے)۔ کسی لفظ کے حروف کی قدریں جمع کرنے سے اس کا حسابِ جمل بنتا ہے، یعنی وہ «مجموعہ» جو صدیوں سے اسلامی علوم میں استعمال ہوتا آیا ہے۔ |
+| Related tools | متعلقہ سہولیات |
+| Your Burj from Your Name & Mother's Name | نام اور والدہ کے نام سے آپ کا برج |
+| Name Compatibility for Marriage | شادی کے لیے ناموں کی مطابقت |
+| Planetary Hours Today | آج کی ساعاتِ کواکب |
+| How Abjad relates to Islamic letter-numerology | ابجد اور اسلامی حروف و اعداد کا تعلق |
+| In ʿilm al-ḥurūf (the science of letters) and ʿilm al-ʿadad (the science of numbers), scholars studied the numerical value of divine names, Qurʾānic phrases and personal names, and linked letters to the four elements: fire, air, water and earth. Two traditions are common: the Mashriqi order used in Egypt, the Middle East and Asia, and the Maghribi order used in the Maghreb (Morocco to Libya), historically in al-Andalus, and in West Africa. This calculator supports both, so you can compare results. | علم الحروف اور علم العدد میں علماء اسمائے الٰہی، قرآنی عبارتوں اور ذاتی ناموں کی عددی قدر کا مطالعہ کرتے تھے اور حروف کو چار عناصر — آگ، ہوا، پانی اور مٹی — سے جوڑتے تھے۔ دو روایتیں عام ہیں: مشرقی ترتیب، جو مصر، مشرقِ وسطیٰ اور ایشیا میں رائج ہے، اور مغربی ترتیب، جو مغرب (مراکش سے لیبیا تک)، تاریخی طور پر اندلس اور مغربی افریقہ میں رائج رہی۔ یہ کیلکولیٹر دونوں کو سپورٹ کرتا ہے تاکہ آپ نتائج کا موازنہ کر سکیں۔ |
+| Using the calculator | کیلکولیٹر کا استعمال |
+| Choose a calculator type below, enter an Arabic name or phrase (or type it in Latin letters and let the tool transliterate it), and read the total value, the letter-by-letter breakdown and the elemental analysis. | نیچے سے حساب کی قسم منتخب کریں، کوئی عربی نام یا عبارت لکھیں (یا لاطینی حروف میں لکھیں تاکہ ٹول اسے عربی میں لکھ دے)، پھر کل قدر، حرف بہ حرف تفصیل اور عناصر کا تجزیہ دیکھیں۔ |
+| For reflection and education only. It is not prediction; Allah alone knows the unseen. | صرف غور و فکر اور تعلیم کے لیے۔ یہ پیش گوئی نہیں؛ غیب کا علم صرف اللہ کو ہے۔ |
+| What is the Abjad (ḥisāb al-jummal)? | ابجد (حسابِ جمل) کیا ہے؟ |
+| The Abjad is the traditional system that gives each Arabic letter a number: alif is 1, bāʾ is 2, jīm is 3, and so on up to a thousand. Adding the letters of a word gives its ḥisāb al-jummal, the "sum total" used for centuries in ʿilm al-ḥurūf. | ابجد وہ روایتی نظام ہے جو ہر عربی حرف کو ایک عدد دیتا ہے: الف 1، با 2، جیم 3، اور اسی طرح ہزار تک۔ کسی لفظ کے حروف جمع کرنے سے اس کا حسابِ جمل بنتا ہے، یعنی وہ «مجموعہ» جو صدیوں سے علم الحروف میں استعمال ہوتا آیا ہے۔ |
+| What is the difference between the Maghribi and Mashriqi orders? | مغربی اور مشرقی ترتیب میں کیا فرق ہے؟ |
+| They differ on six letters. In the Maghribi order (the Maghreb, al-Andalus and West Africa, the default here) ṣād is 60, ḍād 90, sīn 300, ẓāʾ 800, ghayn 900 and shīn 1000. In the Mashriqi order (Egypt, the Middle East and Asia) ṣād is 90, ḍād 800, sīn 60, ẓāʾ 900, ghayn 1000 and shīn 300. A name without these letters has the same total in both. | دونوں چھ حروف میں مختلف ہیں۔ مغربی ترتیب میں (مراکش تا لیبیا، اندلس اور مغربی افریقہ؛ یہاں پہلے سے منتخب) ص 60، ض 90، س 300، ظ 800، غ 900 اور ش 1000 ہے۔ مشرقی ترتیب میں (مصر، مشرقِ وسطیٰ اور ایشیا) ص 90، ض 800، س 60، ظ 900، غ 1000 اور ش 300 ہے۔ جس نام میں یہ حروف نہ ہوں اس کا مجموعہ دونوں میں ایک ہی ہوتا ہے۔ |
+| How do I find the Abjad value of my name? | میں اپنے نام کی ابجد قدر کیسے معلوم کروں؟ |
+| Write your name in Arabic letters (or type it in Latin letters and choose the Arabic spelling the tool suggests), select the Maghribi or Mashriqi order, and the calculator shows the total with a letter-by-letter breakdown. Spelling matters: a different Arabic spelling of the same name can give a different total. | اپنا نام عربی حروف میں لکھیں (یا لاطینی حروف میں لکھ کر ٹول کی تجویز کردہ عربی املا منتخب کریں)، مغربی یا مشرقی ترتیب منتخب کریں، اور کیلکولیٹر حرف بہ حرف تفصیل کے ساتھ مجموعہ دکھا دے گا۔ املا اہم ہے: ایک ہی نام کی مختلف عربی املا مختلف مجموعہ دے سکتی ہے۔ |
+| Does my Abjad number predict my future or my character? | کیا میرا ابجد عدد میرے مستقبل یا کردار کی پیش گوئی کرتا ہے؟ |
+| No. The Abjad value is a traditional tool for reflection and learning about ʿilm al-ḥurūf. It does not predict events, and nothing in it replaces faith, effort and wise counsel. Allah alone knows the unseen. | نہیں۔ ابجد کی قدر علم الحروف کے مطالعے اور غور و فکر کا ایک روایتی ذریعہ ہے۔ یہ واقعات کی پیش گوئی نہیں کرتی، اور اس میں کوئی چیز ایمان، کوشش اور دانشمندانہ مشورے کی جگہ نہیں لیتی۔ غیب کا علم صرف اللہ کو ہے۔ |
+| Asrār home | اسرار کا ہوم |
+| The full Asrār app: planetary timing, calculators and dhikr. | مکمل اسرار ایپ: ساعاتِ کواکب، کیلکولیٹر اور ذکر۔ |
+| The ruling planet of the current hour at your location. | آپ کے مقام پر موجودہ ساعت کا حاکم سیارہ۔ |
+| Birth Profile | پیدائشی پروفائل |
+| Your Sun and Moon signs, lunar mansion and planetary dignities. | آپ کے شمس و قمر کے برج، منزلِ قمر اور سیاروں کی حالتیں۔ |
+| Best Dates (Ikhtiyārāt) | بہترین تاریخیں (اختیارات) |
+| Classical electional astrology for choosing an auspicious date. | مناسب تاریخ کے انتخاب کے لیے کلاسیکی علمِ اختیارات۔ |
+
+
+
+### 6.10 potd-page (38)
+
+| English | Urdu |
+|---|---|
+| Ya Allah | يَا اللهُ |
+| General remembrance and divine connection. | عمومی یاد اور الٰہی تعلق کے لیے۔ |
+| Ya Rahman | يَا رَحْمَانُ |
+| For rizq (wealth and provision). | رزق (دولت اور روزی) کے لیے۔ |
+| Ya Raheem | يَا رَحِيمُ |
+| For fulfilling needs and resolving difficulties. | حاجتیں پوری ہونے اور مشکلات کے حل کے لیے۔ |
+| Ya Malik | يَا مَلِكُ |
+| For support and success in endeavors. | کاموں میں معاونت اور کامیابی کے لیے۔ |
+| Ya Quddus | يَا قُدُّوسُ |
+| For purification, forgiveness, and spiritual cleansing. | پاکیزگی، مغفرت اور روحانی تطہیر کے لیے۔ |
+| Ya Salam | يَا سَلَامُ |
+| For inner peace and forgiveness. | قلبی سکون اور معافی کے لیے۔ |
+| Ya Mu'min | يَا مُؤْمِنُ |
+| For protection from enemies. | دشمنوں سے حفاظت کے لیے۔ |
+| Ya Hakim | يَا حَكِيمُ |
+| For wisdom, shahada, and blessings. | حکمت، شہادت اور برکتوں کے لیے۔ |
+| Ya 'Adl | يَا عَدْلُ |
+| For tawfiq and avoiding sinful actions. | توفیق اور گناہ والے کاموں سے بچنے کے لیے۔ |
+| Ya Bari' | يَا بَارِئُ |
+| For strength and overcoming enemies. | قوت اور دشمنوں پر غالب آنے کے لیے۔ |
+| Ya Musawwir | يَا مُصَوِّرُ |
+| To stay consistent in good deeds. | نیک اعمال میں استقامت کے لیے۔ |
+| Ya Rafi' | يَا رَافِعُ |
+| For elevation, respect, and being loved. | بلندی، عزت اور محبوبیت کے لیے۔ |
+| Ya Halim | يَا حَلِيمُ |
+| For calmness and patience. | سکون اور صبر کے لیے۔ |
+| Ya Basir | يَا بَصِيرُ |
+| For clarity and insight. | وضاحت اور بصیرت کے لیے۔ |
+| Recite with presence of heart (hudur al-qalb) and intention (niyyah). | حضورِ قلب اور نیت کے ساتھ پڑھیں۔ |
+| Planet of the Day — Today's Ruling Planet & Dhikr | آج کا سیارہ — آج کا حاکم سیارہ اور ذکر |
+| What is the planet of the day? | آج کا سیارہ کیا ہے؟ |
+| In the traditional astrological schedule each weekday is linked to one of the seven classical planets. The page shows that planet, its traditional themes, and the sadaqa and dhikr that tradition connects with the day. | روایتی فلکی نظام میں ہفتے کا ہر دن سات کلاسیکی سیاروں میں سے ایک سے منسوب ہے۔ یہ صفحہ وہ سیارہ، اس کے روایتی موضوعات، اور وہ صدقہ و ذکر دکھاتا ہے جو روایت اس دن سے جوڑتی ہے۔ |
+| Which planet goes with which weekday? | کون سا سیارہ ہفتے کے کس دن سے منسوب ہے؟ |
+| Sunday: the Sun. Monday: the Moon. Tuesday: Mars. Wednesday: Mercury. Thursday: Jupiter. Friday: Venus. Saturday: Saturn. | اتوار: شمس۔ پیر: قمر۔ منگل: مریخ۔ بدھ: عطارد۔ جمعرات: مشتری۔ جمعہ: زہرہ۔ ہفتہ: زحل۔ |
+| How does the planet of the day relate to planetary hours? | آج کے سیارے کا ساعاتِ کواکب سے کیا تعلق ہے؟ |
+| The planet of the day also rules the first planetary hour after sunrise; the following hours then run through the Chaldean order. The Planetary Hours page shows the hour you are in at your location. | دن کا سیارہ طلوعِ آفتاب کے بعد کی پہلی ساعت پر بھی منسوب ہوتا ہے؛ اس کے بعد کی ساعتیں کلدانی ترتیب سے چلتی ہیں۔ ساعاتِ کواکب کا صفحہ آپ کے مقام پر موجودہ ساعت دکھاتا ہے۔ |
+| Is the guidance for the day a prediction? | کیا دن کی رہنمائی کوئی پیش گوئی ہے؟ |
+| No. The suggestions are traditional themes offered for reflection, such as study on Wednesday or generosity on Thursday. They are not rulings and not forecasts, and they never replace the obligations of worship, istikhāra or wise counsel. Allah alone knows the unseen. | نہیں۔ یہ تجاویز غور و فکر کے لیے پیش کیے گئے روایتی موضوعات ہیں، جیسے بدھ کو مطالعہ یا جمعرات کو سخاوت۔ یہ نہ فتوے ہیں نہ پیش گوئیاں، اور یہ کبھی عبادات، استخارے یا دانشمندانہ مشورے کی جگہ نہیں لیتیں۔ غیب کا علم صرف اللہ کو ہے۔ |
+
+
+
+### 6.11 names-page (29)
+
+| English | Urdu |
+|---|---|
+| Frequently asked questions | عام سوالات |
+| Abjad Calculator | ابجد کیلکولیٹر |
+| Breadcrumb | راستہ |
+| Related | متعلقہ |
+| The Abjad value of any Arabic name or phrase. | کسی بھی عربی نام یا عبارت کی ابجد قدر۔ |
+| › 99 Names of Allah | › اللہ کے 99 نام |
+| The 99 Names of Allah (Asmāʾ al-Ḥusnā) | اللہ کے 99 نام (اسمائے حسنیٰ) |
+| Each Name in Arabic with its transliteration, meaning and Abjad value. Your burj in the | ہر نام عربی میں، اس کے تلفظ، مفہوم اور ابجد قدر کے ساتھ۔ آپ کا برج |
+| name-and-mother calculator | نام اور والدہ کے نام کے کیلکولیٹر میں |
+| also comes with Divine Names for dhikr. | ذکر کے لیے اسمائے الٰہی بھی ساتھ آتا ہے۔ |
+| Abjad value: | ابجد قدر: |
+| · Mashriqi: | · مشرقی: |
+| About this list | اس فہرست کے بارے میں |
+| The Names are given in the order of the compilation drawn from the hadith of al-Walīd in Jāmiʿ al-Tirmidhī (no. 3507). Abjad values drop the article “al-” and use the Maghribi table, the default across Asrār (the Mashriqi value is shown where it differs). They are listed for learning and reflection, not prediction. | نام اس مجموعے کی ترتیب میں دیے گئے ہیں جو جامع ترمذی (نمبر 3507) میں ولید کی حدیث سے ماخوذ ہے۔ ابجد قدریں «ال» کو چھوڑ کر مغربی جدول استعمال کرتی ہیں، جو اسرار میں طے شدہ ہے (جہاں مشرقی قدر مختلف ہو وہ دکھائی جاتی ہے)۔ یہ تعلیم اور غور و فکر کے لیے ہیں، پیش گوئی کے لیے نہیں۔ |
+| Where does this list of the 99 Names come from? | اللہ کے 99 ناموں کی یہ فہرست کہاں سے لی گئی ہے؟ |
+| The Arabic text and order follow the widely used compilation drawn from the hadith of al-Walīd in Jāmiʿ al-Tirmidhī (no. 3507). | عربی متن اور ترتیب اس مقبول مجموعے کے مطابق ہے جو جامع ترمذی (نمبر 3507) میں ولید کی حدیث سے ماخوذ ہے۔ |
+| How are the Abjad values of the Names calculated here? | یہاں ناموں کی ابجد قدریں کیسے نکالی جاتی ہیں؟ |
+| The leading definite article "al-" is dropped and the remaining letters are summed with the Maghribi table, the default across Asrār; hamza is counted by its seat (ؤ as wāw, ئ as yāʾ, أ/إ/آ as alif). The two compound Names, Mālik al-Mulk and Dhū al-Jalāli wa al-Ikrām, keep their full spelling. Where the Mashriqi table (used in the Middle East and Asia) gives a different total, it is shown next to the value, and you can switch the calculators to Mashriqi. | شروع کا «ال» چھوڑ دیا جاتا ہے اور باقی حروف مغربی جدول سے جمع کیے جاتے ہیں، جو اسرار میں طے شدہ ہے؛ ہمزہ کو اس کی کرسی کے حساب سے گنا جاتا ہے (ؤ بطور واؤ، ئ بطور یاء، أ/إ/آ بطور الف)۔ دو مرکب نام، مالک الملک اور ذو الجلال والاکرام، اپنی مکمل املا کے ساتھ رہتے ہیں۔ جہاں مشرقی جدول (مشرقِ وسطیٰ اور ایشیا میں رائج) مختلف مجموعہ دے وہ قدر کے ساتھ دکھایا جاتا ہے، اور آپ کیلکولیٹرز کو مشرقی پر بھی بدل سکتے ہیں۔ |
+| Why does the Abjad calculator show a different number for a Name? | ابجد کیلکولیٹر کسی نام کے لیے مختلف عدد کیوں دکھاتا ہے؟ |
+| The Abjad calculator counts every letter you type, including "al-", so its total can differ from the value listed here. Both use the Maghribi table by default, and both can be switched to Mashriqi. | ابجد کیلکولیٹر آپ کے لکھے ہر حرف کو گنتا ہے، «ال» سمیت، اس لیے اس کا مجموعہ یہاں درج قدر سے مختلف ہو سکتا ہے۔ دونوں پہلے سے مغربی جدول استعمال کرتے ہیں، اور دونوں کو مشرقی پر بدلا جا سکتا ہے۔ |
+| How are the Names linked to my burj? | نام میرے برج سے کیسے جڑے ہیں؟ |
+| Each of the 12 burūj in the name-and-mother calculator comes with Divine Names for dhikr, for example Yā Raḥmān, Yā Raḥīm for Cancer (al-Saraṭān). Find your burj with the calculator to see yours. | نام اور والدہ کے نام کے کیلکولیٹر میں 12 بروج میں سے ہر ایک کے ساتھ ذکر کے لیے اسمائے الٰہی ہیں، مثلاً سرطان کے لیے یا رحمٰن، یا رحیم۔ اپنا برج کیلکولیٹر سے معلوم کریں تاکہ اپنا دیکھ سکیں۔ |
+| Is this page for prediction or for amulets? | کیا یہ صفحہ پیش گوئی یا تعویذات کے لیے ہے؟ |
+| No. The Names are listed for learning, remembrance and reflection. Abjad values are a traditional study of letters, not a way to know the unseen; Allah alone knows the unseen. | نہیں۔ نام تعلیم، یاد اور غور و فکر کے لیے درج ہیں۔ ابجد قدریں حروف کا ایک روایتی مطالعہ ہیں، غیب جاننے کا ذریعہ نہیں؛ غیب کا علم صرف اللہ کو ہے۔ |
+| Burj from Your Name & Mother's Name | نام اور والدہ کے نام سے برج |
+| Your burj, element, blessed day and the Divine Names for its dhikr. | آپ کا برج، عنصر، مبارک دن اور اس کے ذکر کے اسمائے الٰہی۔ |
+| Muslim Names: Abjad Value and Burj | مسلم نام: ابجد قدر اور برج |
+| Common names such as Muhammad, Ali, Fatima and Maryam. | عام نام جیسے محمد، علی، فاطمہ اور مریم۔ |
+| The 99 Names of Allah | اللہ کے 99 نام |
+
+
+
+### 6.12 planetary-hours-page (11)
+
+| English | Urdu |
+|---|---|
+| Planetary Hours Today — Chaldean Hours in Islamic ʿIlm al-Nujūm | آج کی ساعاتِ کواکب — اسلامی علم النجوم میں کلدانی ساعتیں |
+| What are planetary hours? | ساعاتِ کواکب کیا ہیں؟ |
+| In the traditional Chaldean scheme the time from sunrise to sunset, and the time from sunset to the next sunrise, are each divided into twelve hours. The hours are named for the seven classical planets in a fixed repeating order: Saturn, Jupiter, Mars, Sun, Venus, Mercury, Moon. | روایتی کلدانی ترتیب میں طلوعِ آفتاب سے غروب تک، اور غروب سے اگلے طلوع تک، ہر وقفے کو بارہ ساعتوں میں بانٹا جاتا ہے۔ ساعتوں کے نام سات کلاسیکی سیاروں پر ایک مقررہ دہرائی جانے والی ترتیب سے رکھے گئے ہیں: زحل، مشتری، مریخ، شمس، زہرہ، عطارد، قمر۔ |
+| Why does a planetary hour not last 60 minutes? | ایک ساعتِ کواکب 60 منٹ کی کیوں نہیں ہوتی؟ |
+| Because the day and the night are each split into twelve equal parts, an hour is as long as the daylight or darkness allows. In summer the daytime hours are longer than 60 minutes and the night hours shorter; in winter it is the other way round. | کیونکہ دن اور رات کو الگ الگ بارہ برابر حصوں میں بانٹا جاتا ہے، اس لیے ساعت اتنی لمبی ہوتی ہے جتنی دن کی روشنی یا رات کی تاریکی اجازت دے۔ گرمیوں میں دن کی ساعتیں 60 منٹ سے لمبی اور رات کی چھوٹی ہوتی ہیں؛ سردیوں میں اس کے برعکس۔ |
+| How is the current hour worked out for my location? | میرے مقام کے لیے موجودہ ساعت کیسے نکالی جاتی ہے؟ |
+| The tool uses the sunrise and sunset at your location to set the start and end of each hour, then names it from the ruling planet of the weekday and the Chaldean order. Allow location access, or choose your city, for the right times. | ٹول آپ کے مقام پر طلوع اور غروبِ آفتاب سے ہر ساعت کا آغاز اور اختتام طے کرتا ہے، پھر ہفتے کے دن کے حاکم سیارے اور کلدانی ترتیب سے اس کا نام رکھتا ہے۔ درست اوقات کے لیے مقام کی اجازت دیں یا اپنا شہر منتخب کریں۔ |
+| Which planet rules which day? | کون سا سیارہ کس دن سے منسوب ہے؟ |
+| Traditionally the Sun rules Sunday, the Moon Monday, Mars Tuesday, Mercury Wednesday, Jupiter Thursday, Venus Friday and Saturn Saturday. The first hour after sunrise belongs to the planet of the day. | روایتی طور پر اتوار شمس سے، پیر قمر سے، منگل مریخ سے، بدھ عطارد سے، جمعرات مشتری سے، جمعہ زہرہ سے اور ہفتہ زحل سے منسوب ہے۔ طلوعِ آفتاب کے بعد کی پہلی ساعت اس دن کے سیارے سے منسوب ہوتی ہے۔ |
+| Should I plan my day by planetary hours? | کیا مجھے اپنا دن ساعاتِ کواکب کے مطابق ترتیب دینا چاہیے؟ |
+| Treat them as a tradition for reflection, not a rule and not a prediction. The times of ṣalāh follow the sun and never depend on a planetary hour; put your trust in Allah and use the hours, if you wish, as a prompt to pause and set a good intention. | اسے غور و فکر کی ایک روایت سمجھیں، نہ کوئی قاعدہ اور نہ پیش گوئی۔ نماز کے اوقات سورج کے حساب سے ہیں اور کسی ساعتِ کواکب پر منحصر نہیں؛ اللہ پر بھروسا رکھیں، اور چاہیں تو ان ساعتوں کو رک کر اچھی نیت کرنے کی یاددہانی کے طور پر استعمال کریں۔ |
+
+
+
+### 6.13 ikhtiyarat-page (19)
+
+| English | Urdu |
+|---|---|
+| Lunar Mansions (Manāzil) | منازلِ قمر |
+| Planetary Transits | سیاروں کے عبور |
+| Ikhtiyārāt: Choose an Auspicious Date | اختیارات: مناسب تاریخ کا انتخاب |
+| Check a date or find favourable days for nikāḥ, travel, business or moving home using classical Islamic timing. | کلاسیکی اسلامی اوقات کے مطابق نکاح، سفر، کاروبار یا نئے گھر میں منتقلی کے لیے کوئی تاریخ جانچیں یا موافق دن تلاش کریں۔ |
+| Ikhtiyārāt — Choose an Auspicious Date the Classical Islamic Way | اختیارات — کلاسیکی اسلامی طریقے سے مناسب تاریخ کا انتخاب |
+| Ikhtiyārāt is the classical practice of electional timing in ʿIlm al-Nujūm: choosing a day and hour for an important act — nikāḥ (marriage), travel, business, moving home, or starting study — when the celestial indicators are favourable. | اختیارات علم النجوم میں اوقات کے انتخاب کی کلاسیکی روایت ہے: کسی اہم کام — نکاح، سفر، کاروبار، نئے گھر میں منتقلی یا تعلیم کا آغاز — کے لیے ایسا دن اور ساعت چننا جب فلکی علامات موافق ہوں۔ |
+| Traditional rules weigh the day ruler, the planetary hour, the Moon's sign, phase and lunar mansion (manāzil al-qamar), and counsel avoiding periods when the Moon is combust or void of course. The aim is adab with time: beginning matters in a moment that supports them, not forcing outcomes. | روایتی قواعد دن کے حاکم، ساعتِ کواکب، قمر کے برج، مرحلے اور منزلِ قمر کو ملحوظ رکھتے ہیں، اور ان اوقات سے بچنے کا مشورہ دیتے ہیں جب قمر محترق ہو یا خالی السیر ہو۔ مقصد وقت کے آداب ہیں: کام کا آغاز ایسے لمحے میں کرنا جو اس کے لیے موافق سمجھا جائے، نتائج پر زور ڈالے بغیر۔ |
+| Use this page for reflection and education. It is not prediction; Allah alone knows the unseen. | اس صفحے کو غور و فکر اور تعلیم کے لیے استعمال کریں۔ یہ پیش گوئی نہیں؛ غیب کا علم صرف اللہ کو ہے۔ |
+| Ikhtiyārāt (اختيارات) means "choices" or elections: the traditional Islamic art of selecting an auspicious time to begin an undertaking. It draws on day rulers, planetary hours, and the Moon's condition within the broader science of ʿIlm al-Nujūm. | اختیارات (اختيارات) کا مطلب «انتخاب» ہے: کسی کام کے آغاز کے لیے مناسب وقت چننے کا روایتی اسلامی فن۔ یہ علم النجوم کے وسیع دائرے میں دن کے حاکم، ساعاتِ کواکب اور قمر کی حالت سے مدد لیتا ہے۔ |
+| How is it different from fortune-telling? | یہ فال گیری سے کیسے مختلف ہے؟ |
+| Fortune-telling claims to reveal the unseen or fix the future. Ikhtiyārāt does not. It offers classical guidelines for when to start something, while affirming that success and knowledge of the ghayb belong to Allah alone. Treat the tool as an aid for reflection, not a verdict. | فال گیری غیب ظاہر کرنے یا مستقبل طے کرنے کا دعویٰ کرتی ہے۔ اختیارات ایسا نہیں کرتے۔ یہ کسی کام کے آغاز کے وقت کے بارے میں کلاسیکی رہنما اصول دیتے ہیں، اور اس بات کی تصدیق کرتے ہیں کہ کامیابی اور غیب کا علم صرف اللہ کے پاس ہے۔ ٹول کو غور و فکر کا ذریعہ سمجھیں، فیصلہ نہیں۔ |
+| How do I pick a date for nikāḥ? | میں نکاح کی تاریخ کیسے چنوں؟ |
+| Choose the marriage (nikāḥ) election type, then check a candidate date or scan a range. Favourable signs typically include a supportive day ruler and planetary hour, a well-placed Moon by sign, phase and lunar mansion, and avoidance of combust or void-of-course Moon periods. Confirm practical and sharīʿah considerations separately. | نکاح کا انتخابی زمرہ منتخب کریں، پھر کوئی امیدوار تاریخ جانچیں یا کسی مدت کو اسکین کریں۔ موافق علامات میں عموماً معاون دن اور ساعت کا حاکم، برج، مرحلے اور منزلِ قمر کے لحاظ سے اچھی حالت میں قمر، اور قمر کے محترق یا خالی السیر ادوار سے پرہیز شامل ہیں۔ عملی اور شرعی پہلو الگ سے دیکھ لیں۔ |
+| Which planetary hour is best for travel or business? | سفر یا کاروبار کے لیے کون سی ساعتِ کواکب بہتر ہے؟ |
+| Travel often suits hours of the Moon or Mercury when those planets are well placed; business and trade lean toward Mercury, Jupiter or Venus hours depending on the aim (contracts, growth, or harmony). Always read the hour together with the day ruler and the Moon's condition rather than in isolation. | سفر اکثر قمر یا عطارد کی ساعتوں کے موافق سمجھا جاتا ہے جب وہ سیارے اچھی حالت میں ہوں؛ کاروبار اور تجارت مقصد کے مطابق (معاہدے، ترقی یا ہم آہنگی) عطارد، مشتری یا زہرہ کی ساعتوں کی طرف مائل ہے۔ ساعت کو ہمیشہ دن کے حاکم اور قمر کی حالت کے ساتھ ملا کر پڑھیں، الگ تھلگ نہیں۔ |
+| What is a lunar mansion? | منزلِ قمر کیا ہے؟ |
+| A lunar mansion (manzil, pl. manāzil al-qamar) is one of twenty-eight sectors along the Moon's path. Classical sources assign each mansion themes such as journeys, contracts or restraint. Ikhtiyārāt uses the mansion the Moon occupies on a given day as one factor among several. | منزلِ قمر (جمع: منازل القمر) قمر کے راستے کے اٹھائیس حصوں میں سے ایک ہے۔ کلاسیکی مآخذ ہر منزل سے سفر، معاہدے یا ضبط جیسے موضوعات منسوب کرتے ہیں۔ اختیارات کسی دن قمر جس منزل میں ہو اسے کئی عوامل میں سے ایک عامل کے طور پر استعمال کرتے ہیں۔ |
+| Live positions of the seven classical planets and their dignities. | سات کلاسیکی سیاروں کے زندہ مقامات اور ان کی حالتیں۔ |
+| ʿIlm al-ḥurūf letter numerology for Arabic names and phrases. | عربی ناموں اور عبارتوں کے لیے علم الحروف کے اعدادِ حروف۔ |
+
+
+
+### 6.14 best-day (78)
+
+| English | Urdu |
+|---|---|
+| Sadaqa of the Day | آج کا صدقہ |
+| Today's ruling planet, qualities and recommended dhikr. | آج کا حاکم سیارہ، اس کی خصوصیات اور تجویز کردہ ذکر۔ |
+| Best Day for Nikah (Marriage) | نکاح (شادی) کے لیے موزوں دن |
+| What is ikhtiyārāt? | اختیارات کیا ہے؟ |
+| Today's recommended sadaqah and the weekly table. | آج کا تجویز کردہ صدقہ اور ہفتہ وار جدول۔ |
+| Ikhtiyārāt | اختیارات |
+| Best Day For… Nikah, Travel, Moving Home and Business | بہترین دن… نکاح، سفر، نئے گھر میں منتقلی اور کاروبار کے لیے |
+| Which day should you choose for a nikāḥ, setting out on a journey, moving home or starting a business? The classical science of ikhtiyārāt (electional timing) gives each purpose its own favourable weekdays and planetary hours. | نکاح، سفر پر روانگی، نئے گھر میں منتقلی یا کاروبار کے آغاز کے لیے آپ کو کون سا دن چننا چاہیے؟ کلاسیکی علمِ اختیارات (وقت کے انتخاب) ہر مقصد کو اس کے اپنے موافق دن اور ساعاتِ کواکب دیتا ہے۔ |
+| For each purpose below: what the Asrār tool’s rules favour, and the next favourable date, recalculated every time this page loads. | نیچے ہر مقصد کے لیے: اسرار کے ٹول کے قواعد کیا موافق سمجھتے ہیں، اور اگلی موافق تاریخ، جو صفحہ کھلنے پر ہر بار دوبارہ نکالی جاتی ہے۔ |
+| For reflection, not prediction. No timing replaces istikhāra, consultation (mashwara) with family and trusted scholars, and tawakkul (reliance on Allah); Allah alone knows the unseen. | غور و فکر کے لیے، پیش گوئی کے لیے نہیں۔ کوئی وقت استخارے، گھر والوں اور معتبر علماء سے مشورے (مشورہ) اور توکل (اللہ پر بھروسا) کی جگہ نہیں لیتا؛ غیب کا علم صرف اللہ کو ہے۔ |
+| Purpose | مقصد |
+| Favoured days | موافق دن |
+| Planetary hours | ساعاتِ کواکب |
+| Next favourable date | اگلی موافق تاریخ |
+| Friday, Thursday and Monday | جمعہ، جمعرات اور پیر |
+| Moon, Jupiter and Venus | قمر، مشتری اور زہرہ |
+| Best Day to Travel | سفر کے لیے موزوں دن |
+| Wednesday and Thursday | بدھ اور جمعرات |
+| Moon, Mercury and Jupiter | قمر، عطارد اور مشتری |
+| Best Day to Move Home | نئے گھر میں منتقلی کے لیے موزوں دن |
+| Thursday and Saturday | جمعرات اور ہفتہ |
+| Jupiter and Saturn | مشتری اور زحل |
+| Best Day to Start a Business | کاروبار شروع کرنے کے لیے موزوں دن |
+| Mercury and Jupiter | عطارد اور مشتری |
+| Dates computed for Makkah (the app's default location). | تاریخیں مکہ مکرمہ کے لیے نکالی گئی ہیں (ایپ کا طے شدہ مقام)۔ |
+| Ikhtiyārāt (electional timing) is the classical science of choosing the most favourable moment to begin an action — a marriage, a journey, a building, a business — from the day, the planetary hour, the Moon and the lunar mansions. | اختیارات (وقت کا انتخاب) وہ کلاسیکی علم ہے جس میں دن، ساعتِ کواکب، قمر اور منازلِ قمر کی بنیاد پر کسی کام — نکاح، سفر، تعمیر، کاروبار — کے آغاز کے لیے سب سے موافق لمحہ چنا جاتا ہے۔ |
+| Is there one best day for everything? | کیا ہر کام کے لیے ایک ہی بہترین دن ہے؟ |
+| No: each purpose has its own rules. Thursday is, however, among the favoured days for all four purposes on this page. | نہیں: ہر مقصد کے اپنے قواعد ہیں۔ تاہم جمعرات اس صفحے کے چاروں مقاصد کے لیے موافق دنوں میں شامل ہے۔ |
+| Should I wait for a "perfect" date? | کیا مجھے «کامل» تاریخ کا انتظار کرنا چاہیے؟ |
+| No. No date is religiously forbidden for nikāḥ, and these rules are an aid to reflection. They are not a substitute for istikhāra, consultation (mashwara) and tawakkul (reliance on Allah). | نہیں۔ نکاح کے لیے کوئی تاریخ شرعاً ممنوع نہیں، اور یہ قواعد غور و فکر کی ایک مدد ہیں۔ یہ استخارے، مشورے اور توکل (اللہ پر بھروسا) کی جگہ نہیں لیتے۔ |
+| Why are the dates computed for Makkah? | تاریخیں مکہ مکرمہ کے لیے کیوں نکالی جاتی ہیں؟ |
+| Planetary hours and the Moon depend on location. This page uses Makkah, the app's default location; the Best Dates tool computes for your own location. | ساعاتِ کواکب اور قمر مقام پر منحصر ہیں۔ یہ صفحہ مکہ مکرمہ استعمال کرتا ہے، جو ایپ کا طے شدہ مقام ہے؛ بہترین تاریخیں ٹول آپ کے اپنے مقام کے لیے حساب کرتا ہے۔ |
+| Are the dates up to date? | کیا تاریخیں تازہ ترین ہیں؟ |
+| Yes. The next dates are recalculated for today with the same engine as the Best Dates (Ikhtiyārāt) tool. | جی ہاں۔ اگلی تاریخیں آج کے لیے اسی انجن سے دوبارہ نکالی جاتی ہیں جو بہترین تاریخیں (اختیارات) ٹول میں استعمال ہوتا ہے۔ |
+| Check a date or find the best dates for your location. | کوئی تاریخ جانچیں یا اپنے مقام کے لیے بہترین تاریخیں تلاش کریں۔ |
+| Compare two names with the Abjad soul-connection method before a nikāḥ. | نکاح سے پہلے ابجد کے روحانی ربط کے طریقے سے دو ناموں کا موازنہ کریں۔ |
+| Best day for… | بہترین دن… |
+| Best Day for Nikah in Islam — Favourable Days and Hours for Marriage | اسلام میں نکاح کے لیے بہترین دن — شادی کے موافق دن اور ساعتیں |
+| No date is religiously forbidden for nikāḥ: marriage is permitted at any time of the year. Many families still like to choose a blessed moment, and the classical science of ikhtiyārāt (electional timing) offers a framework for that reflection. | نکاح کے لیے کوئی تاریخ شرعاً ممنوع نہیں: شادی سال کے کسی بھی وقت جائز ہے۔ پھر بھی بہت سے گھرانے کوئی بابرکت لمحہ چننا پسند کرتے ہیں، اور کلاسیکی علمِ اختیارات (وقت کا انتخاب) اس غور و فکر کے لیے ایک ڈھانچہ دیتا ہے۔ |
+| Below are the weekdays and planetary hours the Asrār ikhtiyārāt rules favour for marriage, the conditions they rule out, and the next dates the same engine rates favourable — recalculated every time this page loads. | نیچے وہ دن اور ساعاتِ کواکب ہیں جنہیں اسرار کے اختیارات کے قواعد شادی کے لیے موافق سمجھتے ہیں، وہ حالتیں جو انہیں خارج کرتی ہیں، اور اگلی تاریخیں جنہیں وہی انجن موافق شمار کرتا ہے — صفحہ کھلنے پر ہر بار دوبارہ نکالی جاتی ہیں۔ |
+| Favoured days of the week | ہفتے کے موافق دن |
+| From the day-of-week rule the Asrār tool uses for this purpose: | اس مقصد کے لیے اسرار ٹول جو دن کا قاعدہ استعمال کرتا ہے اس کے مطابق: |
+| pts | پوائنٹس |
+| Friday (Jumu'ah) — most recommended day in fiqh. | جمعہ — فقہ میں سب سے زیادہ پسندیدہ دن۔ |
+| Thursday. | جمعرات۔ |
+| Monday. | پیر۔ |
+| Favoured planetary hours | موافق ساعاتِ کواکب |
+| A window in an hour of Moon, Jupiter and Venus earns a bonus. Each planetary hour is one twelfth of daytime or night, so the clock times change with the seasons and your location. | قمر، مشتری اور زہرہ کی ساعت میں کوئی وقفہ اضافی پوائنٹس پاتا ہے۔ ہر ساعتِ کواکب دن یا رات کا بارہواں حصہ ہے، اس لیے گھڑی کے اوقات موسموں اور آپ کے مقام کے ساتھ بدلتے ہیں۔ |
+| In the Sunnah | سنت میں |
+| Friday is the most blessed day of the week in the Sunnah. | سنت میں جمعہ ہفتے کا سب سے بابرکت دن ہے۔ |
+| The Prophet ﷺ married ʿĀʾisha (RA) in Shawwāl — a month long favoured for marriage in the Sunnah. | نبی کریم ﷺ نے حضرت عائشہؓ سے شوال میں نکاح فرمایا — ایک ایسا مہینہ جو سنت میں نکاح کے لیے طویل عرصے سے پسندیدہ ہے۔ |
+| The Prophet ﷺ explicitly negated the Ṣafar omen ("…wa-lā ṣafar" — Bukhārī & Muslim); marriage in Ṣafar is fully permissible in fiqh. | نبی کریم ﷺ نے صفر کی بدشگونی کی صراحتاً نفی فرمائی («…وَلَا صَفَرَ» — بخاری و مسلم)؛ فقہ میں صفر میں نکاح بالکل جائز ہے۔ |
+| Next favourable dates | اگلی موافق تاریخیں |
+| Computed now for Makkah (the app's default location) with the same engine as the "Find Best Dates" scanner: days rated Acceptable or better with no ruling-out condition, within the next 90 days. Times are Makkah time (UTC+3). | اب مکہ مکرمہ (ایپ کا طے شدہ مقام) کے لیے اسی انجن سے نکالی گئی ہیں جو «بہترین تاریخیں تلاش کریں» اسکینر میں ہے: وہ دن جنہیں قابلِ قبول یا بہتر درجہ ملا اور کوئی خارج کرنے والی حالت نہیں، اگلے 90 دنوں کے اندر۔ اوقات مکہ کے وقت (UTC+3) کے ہیں۔ |
+| best window | بہترین وقت |
+| Next favourable planetary hours | اگلی موافق ساعاتِ کواکب |
+| The coming hours of Moon, Jupiter and Venus in Makkah (UTC+3), computed for this page load. | مکہ مکرمہ (UTC+3) میں قمر، مشتری اور زہرہ کی آنے والی ساعتیں، اس صفحے کے کھلنے کے وقت کے مطابق نکالی گئی ہیں۔ |
+| Conditions treated as cautions | احتیاطی سمجھی جانے والی حالتیں |
+| Any of these rules a window out, whatever the weekday: | ان میں سے کوئی بھی حالت، ہفتے کا دن کوئی بھی ہو، کسی وقفے کو خارج کر دیتی ہے: |
+| Other factors the tool weighs | دیگر عوامل جو ٹول دیکھتا ہے |
+| Check dates for your own location | اپنے مقام کے لیے تاریخیں جانچیں |
+| The interactive ikhtiyārāt tool, set to this purpose. It uses your location if you allow it (otherwise Makkah). | انٹرایکٹو اختیارات ٹول، اسی مقصد پر سیٹ۔ اگر آپ اجازت دیں تو یہ آپ کا مقام استعمال کرتا ہے (ورنہ مکہ مکرمہ)۔ |
+| Open the full Best Dates (Ikhtiyārāt) tool → | مکمل بہترین تاریخیں (اختیارات) ٹول کھولیں ← |
+| What is the best day for nikah in Islam? | اسلام میں نکاح کے لیے بہترین دن کون سا ہے؟ |
+| No day is forbidden for nikāḥ. In the Asrār ikhtiyārāt rules Friday scores highest (Friday (Jumu'ah) — most recommended day in fiqh.), followed by Thursday and Monday. The Sunnah also describes Friday as the most blessed day of the week. | نکاح کے لیے کوئی دن ممنوع نہیں۔ اسرار کے اختیارات کے قواعد میں جمعہ کو سب سے زیادہ پوائنٹس ملتے ہیں (جمعہ — فقہ میں سب سے زیادہ پسندیدہ دن)، اس کے بعد جمعرات اور پیر۔ سنت بھی جمعہ کو ہفتے کا سب سے بابرکت دن بتاتی ہے۔ |
+| Which planetary hours are favourable for a wedding? | شادی کے لیے کون سی ساعاتِ کواکب موافق ہیں؟ |
+| The hours of Moon, Jupiter and Venus. Planetary hours divide daytime (sunrise to sunset) and night into twelve parts each, ruled in turn by the seven classical planets, so they depend on your location. | قمر، مشتری اور زہرہ کی ساعتیں۔ ساعاتِ کواکب دن (طلوع تا غروب) اور رات کو بارہ بارہ حصوں میں بانٹتی ہیں، جن پر باری باری سات کلاسیکی سیارے منسوب ہیں، اس لیے یہ آپ کے مقام پر منحصر ہیں۔ |
+| Is there a recommended month for marriage? | کیا شادی کے لیے کوئی مہینہ تجویز کیا گیا ہے؟ |
+| The Prophet ﷺ married ʿĀʾisha (RA) in Shawwāl, a month long favoured for marriage in the Sunnah. Nikāḥ itself is permitted year-round, including during Ramadan. | نبی کریم ﷺ نے حضرت عائشہؓ سے شوال میں نکاح فرمایا، ایک ایسا مہینہ جو سنت میں نکاح کے لیے طویل عرصے سے پسندیدہ ہے۔ نکاح بذاتِ خود سال بھر جائز ہے، رمضان سمیت۔ |
+| Is it bad luck to marry in Ṣafar? | کیا صفر میں شادی کرنا بدشگونی ہے؟ |
+| No. Weddings in Ṣafar are customarily avoided in some Senegambian communities, but the Prophet ﷺ explicitly negated the Ṣafar omen ("…wa-lā ṣafar" — Bukhārī & Muslim); marriage in Ṣafar is fully permissible in fiqh. | نہیں۔ بعض سینیگیمبیائی برادریوں میں صفر میں شادیاں رواجاً ٹالی جاتی ہیں، مگر نبی کریم ﷺ نے صفر کی بدشگونی کی صراحتاً نفی فرمائی («…وَلَا صَفَرَ» — بخاری و مسلم)؛ فقہ میں صفر میں نکاح بالکل جائز ہے۔ |
+| When does the tool advise caution? | ٹول کب احتیاط کا مشورہ دیتا ہے؟ |
+| These conditions rule a window out entirely: Dark of the Moon (Muḥāq); Moon Combust (Muḥtaraq); Moon Void of Course (Khāliya al-Sayr); Moon Applying to Saturn/Mars (Hard Aspect); Eclipse Proximity. | یہ حالتیں کسی وقفے کو مکمل طور پر خارج کر دیتی ہیں: محاقِ قمر (محاق)؛ قمر محترق (محترق)؛ قمر خالی السیر (خالیۃ السیر)؛ قمر کا زحل/مریخ سے اتصال (سخت نظر)؛ گرہن کی قربت۔ |
+| Does a favourable date guarantee a happy marriage? | کیا موافق تاریخ خوشگوار شادی کی ضمانت ہے؟ |
+| No. This is an aid to reflection, not a prediction. It is not a substitute for istikhāra, consultation (mashwara) with family and trusted scholars, and tawakkul (reliance on Allah). | نہیں۔ یہ غور و فکر کی ایک مدد ہے، پیش گوئی نہیں۔ یہ استخارے، گھر والوں اور معتبر علماء سے مشورے (مشورہ) اور توکل (اللہ پر بھروسا) کی جگہ نہیں لیتی۔ |
+| Favourable days and hours, and the next favourable dates. | موافق دن اور ساعتیں، اور اگلی موافق تاریخیں۔ |
+| Best Day For… (all purposes) | بہترین دن… (تمام مقاصد) |
+| Marriage, travel, moving home and business at a glance. | شادی، سفر، نئے گھر میں منتقلی اور کاروبار ایک نظر میں۔ |
+
+
+
+### 6.15 manazil-page (52)
+
+| English | Urdu |
+|---|---|
+| Manāzil al-Qamar — The 28 Lunar Mansions | منازلِ قمر — اٹھائیس منازل |
+| See which lunar mansion the Moon occupies today, browse all twenty-eight stations, and learn how classical ʿIlm al-Nujūm uses them for reflection and timing adab. | دیکھیں کہ آج قمر کس منزل میں ہے، تمام اٹھائیس منازل دیکھیں، اور جانیں کہ کلاسیکی علم النجوم انہیں غور و فکر اور اوقات کے آداب کے لیے کیسے استعمال کرتا ہے۔ |
+| What are the lunar mansions? | منازلِ قمر کیا ہیں؟ |
+| Manāzil al-qamar (منازل القمر) are twenty-eight stations along the Moon’s path. In Arab anwāʾ lore and classical ʿIlm al-Nujūm they mark seasonal and celestial milestones; later electional (ikhtiyārāt) practice also weighs the mansion the Moon occupies when choosing a time to begin something. | منازلِ قمر (منازل القمر) قمر کے راستے پر اٹھائیس مقامات ہیں۔ عربوں کے علمِ انواء اور کلاسیکی علم النجوم میں یہ موسمی اور فلکی سنگِ میل کی نشاندہی کرتے ہیں؛ بعد کی اختیارات کی روایت میں کوئی کام شروع کرنے کا وقت چنتے ہوئے قمر جس منزل میں ہو اسے بھی ملحوظ رکھا جاتا ہے۔ |
+| Asrār divides the ecliptic into twenty-eight equal tropical sectors (~12°51′ each) from the Moon’s longitude — a clear computational convention for education and reflection. Classical star-tied (sidereal) bounds differ; we document the equal tropical method so the live card stays consistent with our planetary ephemeris. | اسرار دائرۃ البروج کو قمر کے طول البلد کی بنیاد پر اٹھائیس برابر استوائی حصوں (تقریباً 12°51′ ہر ایک) میں تقسیم کرتا ہے — یہ تعلیم اور غور و فکر کے لیے ایک واضح حسابی اصطلاح ہے۔ کلاسیکی ستاروں سے جڑی (نجمی) حدیں مختلف ہیں؛ ہم برابر استوائی طریقہ بیان کرتے ہیں تاکہ زندہ کارڈ ہمارے سیاروی ایفیمرس کے مطابق رہے۔ |
+| Manāzil are signs for contemplation, not agents that compel the unseen. This page is for learning and adab with time — not prediction, not a fatwa, and not a substitute for istikhāra, mashwara or tawakkul. Allah alone knows the ghayb. | منازل غور و فکر کی نشانیاں ہیں، غیب پر زبردستی کرنے والی قوتیں نہیں۔ یہ صفحہ سیکھنے اور اوقات کے آداب کے لیے ہے — نہ پیش گوئی، نہ فتویٰ، اور نہ استخارے، مشورے یا توکل کا متبادل۔ غیب کا علم صرف اللہ کو ہے۔ |
+| Browse all 28 manāzil | تمام 28 منازل دیکھیں |
+| Arabic name, transliteration and a short focus for each station. Expand the live card above for favourable / caution themes (educational). | ہر منزل کا عربی نام، رومن حروف میں تلفظ اور مختصر مرکزی خیال۔ موافق / احتیاطی موضوعات (تعلیمی) کے لیے اوپر زندہ کارڈ کھولیں۔ |
+| Al-Sharaṭān | الشرطان |
+| Al-Buṭayn | البطين |
+| Al-Thurayyā | الثريا |
+| Al-Dabarān | الدبران |
+| Al-Haqʿah | الهقعة |
+| Al-Hanʿah | الهنعة |
+| Al-Dhirāʿ | الذراع |
+| Al-Nathrah | النثرة |
+| Al-Ṭarf | الطرف |
+| Al-Jabhah | الجبهة |
+| Al-Zubrah | الزبرة |
+| Al-Ṣarfah | الصرفة |
+| Al-ʿAwwāʾ | العواء |
+| Al-Simāk | السماك |
+| Al-Ghafr | الغفر |
+| Al-Zubānā | الزبانا |
+| Al-Iklīl | الإكليل |
+| Al-Qalb | القلب |
+| Al-Shawlah | الشولة |
+| Al-Baldah | البلدة |
+| Saʿd Bulaʿ | سعد بلع |
+| Saʿd al-Akhbiyah | سعد الأخبية |
+| Al-Fargh al-Muqaddam | الفرغ المقدم |
+| Al-Fargh al-Muʾakhkhar | الفرغ المؤخر |
+| Your natal manzil | آپ کی پیدائشی منزل |
+| Your birth profile shows the lunar mansion the Moon occupied at your birth time, together with Sun and Moon signs and day ruler. | آپ کا پیدائشی پروفائل وہ منزلِ قمر دکھاتا ہے جس میں آپ کی پیدائش کے وقت قمر تھا، ساتھ شمس و قمر کے برج اور دن کا حاکم سیارہ۔ |
+| Open Birth Profile → | پیدائشی پروفائل کھولیں ← |
+| What is a lunar mansion (manzil)? | منزلِ قمر کیا ہے؟ |
+| A manzil (pl. manāzil al-qamar) is one of twenty-eight sectors of the Moon’s path. Classical sources give each station a name and traditional themes. Asrār shows the current station and educational notes for reflection. | منزل (جمع: منازل القمر) قمر کے راستے کے اٹھائیس حصوں میں سے ایک ہے۔ کلاسیکی مآخذ ہر منزل کو ایک نام اور روایتی موضوعات دیتے ہیں۔ اسرار موجودہ منزل اور غور و فکر کے لیے تعلیمی نکات دکھاتا ہے۔ |
+| How does Asrār calculate today’s manzil? | اسرار آج کی منزل کیسے نکالتا ہے؟ |
+| From the Moon’s tropical ecliptic longitude (astronomy-engine), divided into 28 equal sectors of 360°/28 ≈ 12.857°. Mansion 1 begins at 0° of the tropical ecliptic. This matches Asrār’s default tropical planetary ephemeris. | قمر کے استوائی (ٹراپیکل) طول البلد سے (astronomy-engine)، جسے 360°/28 ≈ 12.857° کے 28 برابر حصوں میں تقسیم کیا جاتا ہے۔ منزل 1 استوائی دائرۃ البروج کے 0° سے شروع ہوتی ہے۔ یہ اسرار کے طے شدہ استوائی سیاروی ایفیمرس کے مطابق ہے۔ |
+| Is this prediction or magic? | کیا یہ پیش گوئی یا جادو ہے؟ |
+| No. Asrār presents manāzil for education and timing adab. There are no talismans, taweez recipes, or claims to know the unseen. Favourable or cautious themes are traditional notes for reflection, not guarantees. | نہیں۔ اسرار منازل کو تعلیم اور اوقات کے آداب کے لیے پیش کرتا ہے۔ اس میں نہ تعویذ ہیں، نہ تعویذ کے نسخے، اور نہ غیب جاننے کا کوئی دعویٰ۔ موافق یا احتیاطی موضوعات غور و فکر کے لیے روایتی نکات ہیں، ضمانت نہیں۔ |
+| How do manāzil relate to ikhtiyārāt? | منازل کا اختیارات سے کیا تعلق ہے؟ |
+| Electional timing may weigh the Moon’s mansion among other factors (day ruler, planetary hour, phase). See Best Dates (Ikhtiyārāt). Election tables on Asrār remain separately reviewed and are not auto-derived from every mansion’s fav/unfav list. | اختیارات کے وقت کے انتخاب میں دوسرے عوامل (دن کا حاکم، ساعتِ کواکب، قمر کا مرحلہ) کے ساتھ قمر کی منزل بھی دیکھی جا سکتی ہے۔ دیکھیں: بہترین تاریخیں (اختیارات)۔ اسرار کے انتخابی جدول الگ سے جانچے جاتے ہیں اور ہر منزل کی موافق/غیر موافق فہرست سے خودکار طور پر اخذ نہیں کیے جاتے۔ |
+| Where do I find my birth manzil? | میں اپنی پیدائشی منزل کہاں دیکھوں؟ |
+| Use Birth Profile with your birth date, time and place. The profile includes the natal lunar mansion alongside Sun/Moon signs. | پیدائشی پروفائل میں اپنی تاریخ، وقت اور مقامِ پیدائش درج کریں۔ پروفائل میں شمس و قمر کے برجوں کے ساتھ پیدائشی منزلِ قمر بھی شامل ہوتی ہے۔ |
+| Classical electional timing for nikāḥ, travel, business and more. | نکاح، سفر، کاروبار اور دیگر کے لیے کلاسیکی علمِ اختیارات۔ |
+| Your Sun and Moon signs, natal lunar mansion and dignities. | آپ کے شمس و قمر کے برج، پیدائشی منزلِ قمر اور سیاروں کی حالتیں۔ |
+| Live positions of the seven classical planets. | سات کلاسیکی سیاروں کے زندہ مقامات۔ |
+| ▼ Hide details | ▼ تفصیل چھپائیں |
+| Favourable themes (adab) | موافق موضوعات (آداب) |
+| Caution themes | احتیاطی موضوعات |
+| , Educational framing (Qurʾān 10:5; 36:39) | ، تعلیمی پس منظر (قرآن 10:5؛ 36:39) |
+
+
+
+### 6.16 birth-profile (11)
+
+| English | Urdu |
+|---|---|
+| Your Personal ʿIlm al-Nujūm Snapshot | آپ کا ذاتی علم النجوم خاکہ |
+| Enter your date of birth (and, if you know it, the exact time and place) to see your Sun and Moon signs, the Moon's lunar mansion at your birth, the day that ruled your birth date, and each classical planet's real astronomical condition that day — computed instantly from this app's own ephemeris, not a network call. | اپنی تاریخِ پیدائش (اور اگر معلوم ہو تو درست وقت اور مقام) درج کریں تاکہ آپ شمس و قمر کے برج، پیدائش کے وقت قمر کی منزل، آپ کی تاریخِ پیدائش کا حاکم دن، اور اس دن ہر کلاسیکی سیارے کی حقیقی فلکی حالت دیکھ سکیں — جو اسی ایپ کے اپنے ایفیمرس سے فوراً نکالی جاتی ہے، نیٹ ورک کال سے نہیں۔ |
+| Date of birth | تاریخِ پیدائش |
+| I know my exact time of birth | مجھے اپنی پیدائش کا درست وقت معلوم ہے |
+| Unlocks your Ascendant/Descendant — otherwise skipped, since it needs a precise time to mean anything. | آپ کا طالع/غارب کھولتا ہے — ورنہ چھوڑ دیا جاتا ہے، کیونکہ اس کے معنی کے لیے درست وقت ضروری ہے۔ |
+| Birth location | مقامِ پیدائش |
+| Use my current location | میرا موجودہ مقام استعمال کریں |
+| Latitude | عرض البلد |
+| Longitude | طول البلد |
+| Timezone | ٹائم زون |
+| Calculate My Birth Profile | میرا پیدائشی پروفائل حساب کریں |
+
+
+
+### 6.17 planet-transit (65)
+
+| English | Urdu |
+|---|---|
+| Real-Time Celestial Positions | آسمان کے زندہ مقامات |
+| This page shows the live positions of all 7 classical planets (Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn) in the zodiac, calculated using NASA JPL-based ephemeris data. Tap any planet to see its detailed dignity status, sign meaning, and guidance for that planetary energy right now. | یہ صفحہ زائچے میں تمام 7 کلاسیکی سیاروں (شمس، قمر، عطارد، زہرہ، مریخ، مشتری، زحل) کے زندہ مقامات دکھاتا ہے، جو NASA JPL پر مبنی ایفیمرس ڈیٹا سے نکالے گئے ہیں۔ کسی بھی سیارے پر ٹیپ کر کے اس کی تفصیلی حالت، برج کا مفہوم، اور اس وقت اس فلکی توانائی کے بارے میں رہنمائی دیکھیں۔ |
+| Live Planetary Positions | سیاروں کے زندہ مقامات |
+| 🗺️ How to Read Transits | 🗺️ عبور کیسے پڑھیں |
+| Pick Your Planet | اپنا سیارہ منتخب کریں |
+| Tap any planet in the grid to see its current zodiac sign, degree, and status. | گرڈ میں کسی بھی سیارے پر ٹیپ کریں تاکہ اس کا موجودہ برج، درجہ اور حالت دیکھ سکیں۔ |
+| Read Its Zodiac Position | اس کا برجی مقام پڑھیں |
+| The sign tells you the "flavour" of how the planet expresses itself and where in life its energy is focused. | برج بتاتا ہے کہ سیارہ اپنی خصوصیات کس «انداز» میں ظاہر کرتا ہے اور اس کی توانائی زندگی کے کس شعبے پر مرکوز ہے۔ |
+| Check the Dignity | حالت دیکھیں |
+| Domicile/Exaltation = strong beneficial influence. Detriment/Fall = weakened or challenged. Use this to calibrate timing for related matters. | بیت/شرف = مضبوط موافق حالت۔ وبال/ہبوط = کمزور یا مشکل حالت۔ اسے متعلقہ معاملات کے اوقات کا اندازہ لگانے کے لیے استعمال کریں۔ |
+| Note Retrograde Status | رجعت کی حالت دیکھیں |
+| A retrograde symbol (℞) means the planet is in a reflective phase — better for review than for new beginnings in that planet's domain. | رجعت کی علامت (℞) کا مطلب ہے کہ سیارہ غور و فکر کے مرحلے میں ہے — اس سیارے کے دائرے میں نئے آغاز سے زیادہ نظرِ ثانی کے لیے بہتر۔ |
+| ⚖️ Essential Dignities — The Strength System | ⚖️ ذاتی حالتیں — قوت کا نظام |
+| Traditional astrology grades each planet's strength by its relationship to the sign it occupies. Think of it as a measure of how comfortable and effective the planet is in expressing its nature. | روایتی علمِ نجوم ہر سیارے کی قوت کو اس برج سے اس کے تعلق کی بنیاد پر درجہ دیتا ہے جس میں وہ ہو۔ اسے اس پیمانے کی طرح سمجھیں کہ سیارہ اپنی فطرت ظاہر کرنے میں کتنا آرام دہ اور مؤثر ہے۔ |
+| Domicile (Rulership) | بیت (حکمرانی) |
+| The planet is in the sign it rules. Like being at home — most comfortable, powerful, and able to act freely. Its qualities express naturally and strongly. | سیارہ اپنے حاکم برج میں ہے۔ گویا اپنے گھر میں — سب سے زیادہ آرام دہ، طاقتور اور آزادی سے عمل کرنے کے قابل۔ اس کی خصوصیات فطری اور مضبوط انداز میں ظاہر ہوتی ہیں۔ |
+| Exaltation | شرف |
+| The planet is in a sign where it performs exceptionally well — like a guest of honour in a welcoming household. Its best qualities are elevated and dignified. | سیارہ ایسے برج میں ہے جہاں وہ غیر معمولی طور پر اچھا کام کرتا ہے — جیسے خوش آمدید کہنے والے گھر میں معزز مہمان۔ اس کی بہترین خصوصیات بلند اور باوقار ہو جاتی ہیں۔ |
+| Triplicity | مثلثہ |
+| The planet rules a set of three signs sharing the same element (fire, earth, air, water). Moderate strength, especially during day or night chart conditions. | سیارہ ایک ہی عنصر (آگ، مٹی، ہوا، پانی) والے تین بروج کے مجموعے کا حاکم ہے۔ اوسط قوت، خاص طور پر دن یا رات کے زائچے کی حالتوں میں۔ |
+| Term (Bounds) | حد |
+| Each sign is divided into 5 sections (terms), each ruled by a planet. A planet in its own term has minor dignity — like being in a familiar neighbourhood. | ہر برج کو 5 حصوں (حدود) میں بانٹا جاتا ہے، ہر ایک کا ایک حاکم سیارہ ہوتا ہے۔ اپنی حد میں سیارے کو معمولی وقار حاصل ہوتا ہے — جیسے جانے پہچانے محلے میں ہونا۔ |
+| Decan (Face) | وجہ (درجہ) |
+| Each sign has three 10° sections (decans), each ruled by a planet. Being in one's own decan gives minimal dignity — enough to act, but not with great strength. | ہر برج میں 10° کے تین حصے (وجوہ) ہوتے ہیں، ہر ایک کا ایک حاکم سیارہ۔ اپنی وجہ میں ہونے سے کم سے کم وقار ملتا ہے — کام کرنے کے لیے کافی، مگر بڑی قوت کے ساتھ نہیں۔ |
+| Detriment | وبال |
+| The planet is in the sign opposite its domicile. Uncomfortable, weakened, unable to work with full energy. Its natural qualities are challenged or distorted. | سیارہ اپنے بیت کے مقابل برج میں ہے۔ بے آرام، کمزور، اور پوری توانائی سے کام کرنے سے قاصر۔ اس کی فطری خصوصیات مشکل میں یا بگڑی ہوئی ہوتی ہیں۔ |
+| Fall | ہبوط |
+| The planet is in the sign opposite its exaltation. Significantly weakened. Like a king in exile — present but unable to fulfill their role. Caution advised for matters ruled by this planet. | سیارہ اپنے شرف کے مقابل برج میں ہے۔ نمایاں طور پر کمزور۔ جلاوطن بادشاہ کی طرح — موجود مگر اپنا کردار ادا کرنے سے قاصر۔ اس سیارے کے زیرِ اثر معاملات میں احتیاط کا مشورہ ہے۔ |
+| Retrograde (℞) Explained | رجعت (℞) کی وضاحت |
+| What is it? | یہ کیا ہے؟ |
+| When a planet appears to move backwards through the zodiac from Earth's perspective. This is an optical illusion caused by differing orbital speeds, but in traditional astrology the effect is real and significant. | جب زمین کے نقطۂ نظر سے کوئی سیارہ دائرۃ البروج میں پیچھے کی طرف چلتا نظر آتا ہے۔ یہ مداروں کی مختلف رفتار سے پیدا ہونے والا بصری دھوکا ہے، مگر روایتی علمِ نجوم میں اس کا اثر حقیقی اور اہم مانا جاتا ہے۔ |
+| Effect | اثر |
+| A retrograde planet's energy turns inward and becomes more reflective, less direct. For example: Mercury retrograde = review communication, revisit unfinished writing, and introspect on thought patterns. | رجعتی سیارے کی توانائی اندر کی طرف مڑ جاتی ہے اور زیادہ غور و فکر والی، کم براہِ راست ہو جاتی ہے۔ مثلاً: عطارد کی رجعت = رابطے پر نظرِ ثانی، ادھوری تحریر کی طرف واپسی، اور سوچ کے انداز پر غور۔ |
+| ☪️ Islamic Context | ☪️ اسلامی سیاق |
+| Islamic scholars of ʿIlm al-Nujūm noted retrograde (rujūʿ, رجوع) as a period where planetary influence is "weakened" or "reversed." It is a time for reflection (murājaʿah), not for beginning critical new matters. | علم النجوم کے اسلامی علماء نے رجعت (رجوع) کو ایسا دور بتایا جس میں سیاروی اثر «کمزور» یا «الٹا» سمجھا جاتا ہے۔ یہ غور و فکر (مراجعہ) کا وقت ہے، نہ کہ اہم نئے معاملات شروع کرنے کا۔ |
+| 🌐 Zodiac Systems | 🌐 بروج کے نظام |
+| Tropical Zodiac | استوائی دائرۃ البروج |
+| Based on the seasons and the Earth's relationship with the Sun. Aries begins at the Spring Equinox. This is the system used in Western astrology and most Islamic classical texts on ʿIlm al-Nujūm. | موسموں اور زمین کے سورج سے تعلق پر مبنی۔ حمل بہاری اعتدال سے شروع ہوتا ہے۔ یہ وہ نظام ہے جو مغربی علمِ نجوم اور علم النجوم کی اکثر کلاسیکی اسلامی کتب میں استعمال ہوتا ہے۔ |
+| Sidereal Zodiac (Lahiri) | نجمی دائرۃ البروج (لاہری) |
+| Fixed to the actual star constellations. Accounts for the ~24° "precession of the equinoxes" offset accumulated over 2,000 years. Used in Vedic/Jyotish astrology. Enabled in settings for comparison. | حقیقی ستارہ جھرمٹوں سے جڑا ہوا۔ 2,000 سال میں جمع ہونے والے تقریباً 24° «اعتدالین کے تقدم» کے فرق کو شمار کرتا ہے۔ ویدک/جیوتش علمِ نجوم میں استعمال ہوتا ہے۔ موازنے کے لیے سیٹنگز میں فعال کیا جا سکتا ہے۔ |
+| 🤲 Practical Islamic Use | 🤲 عملی اسلامی استعمال |
+| Knowing Your Timing | اپنے اوقات کو سمجھنا |
+| When a benefic planet (Jupiter, Venus) is in dignity and transiting your area of concern, consider it a period of openness (fatḥ). Make du'ā', begin projects, and act boldly. | جب کوئی سعد سیارہ (مشتری، زہرہ) وقار کی حالت میں ہو اور آپ کی فکر کے دائرے سے گزر رہا ہو تو اسے کشادگی (فتح) کا دور سمجھیں۔ دعا کریں، منصوبے شروع کریں، اور ہمت سے عمل کریں۔ |
+| When Saturn or Mars are in Fall or Detriment | جب زحل یا مریخ ہبوط یا وبال میں ہوں |
+| These are periods to exercise extra patience and caution in matters of health, finances, and conflicts. Double your Isti'ādhah (seeking refuge in Allah) and du'ā'. | یہ صحت، مالیات اور تنازعات کے معاملات میں اضافی صبر اور احتیاط کے ادوار ہیں۔ استعاذہ (اللہ کی پناہ مانگنا) اور دعا بڑھا دیں۔ |
+| Retrograde Periods | رجعت کے ادوار |
+| Use Mercury retrograde for reviewing contracts and studying. Use Venus retrograde for reflecting on relationships. Use Mars retrograde to strategize before acting. | عطارد کی رجعت معاہدوں اور مطالعے پر نظرِ ثانی کے لیے استعمال کریں۔ زہرہ کی رجعت تعلقات پر غور کے لیے۔ مریخ کی رجعت عمل سے پہلے حکمتِ عملی بنانے کے لیے۔ |
+| ⚠️ Planetary transit data is calculated using ephemeris mathematics and is provided for spiritual reflection within the tradition of Islamic ʿIlm al-Nujūm. This is not astrology for prediction (tanjīm) or belief in planets as independent agents. Allah alone is Al-Ḥakīm, Al-ʿAlīm — the All-Wise, All-Knowing. | ⚠️ سیاروں کے عبور کا ڈیٹا ایفیمرس کے ریاضیاتی حساب سے نکالا جاتا ہے اور علم النجوم کی اسلامی روایت کے اندر روحانی غور و فکر کے لیے فراہم کیا جاتا ہے۔ یہ پیش گوئی (تنجیم) کا علمِ نجوم نہیں ہے اور نہ سیاروں کو خود مختار فاعل ماننا ہے۔ صرف اللہ ہی الحکیم، العلیم ہے — سب حکمتوں اور علم والا۔ |
+| See All | سب دیکھیں |
+| Planet | سیارہ |
+| Sign | برج |
+| Ṣalawāt | درود شریف |
+| Blessings upon the Prophet ﷺ | نبی کریم ﷺ پر درود |
+| Always beneficial, opens spiritual doors | ہمیشہ مفید، روحانی دروازے کھولتا ہے |
+| Lubān wa Mayʿah Sāʾilah | لُبان و میعہ سائلہ |
+| Transit Practice - | عبور کا معمول - |
+| View Details | تفصیل دیکھیں |
+| Suitable for regular practice and reflection | باقاعدہ معمول اور غور و فکر کے لیے موزوں |
+| View Saturn | زحل دیکھیں |
+| View Jupiter | مشتری دیکھیں |
+| View Mars | مریخ دیکھیں |
+| View Sun | شمس دیکھیں |
+| View Venus | زہرہ دیکھیں |
+| View Mercury | عطارد دیکھیں |
+| View Moon | قمر دیکھیں |
+
+
+
+### 6.18 sadaqa-page (150)
+
+| English | Urdu |
+|---|---|
+| Sadaqa Guide — By Day of the Week, Hijri Birth Month and Burj | صدقہ رہنما — ہفتے کے دن، پیدائشی ہجری مہینے اور برج کے مطابق |
+| Sadaqah, voluntary charity, can be given at any time and in any amount. Many Muslims make a habit of giving on Friday (Jumuʿa), and in West African (Senegalese / Wolof) practice — sarax — particular forms of sadaqah are also suggested for each weekday, for the Hijri month you were born in, and for your burj. | صدقہ، یعنی نفلی خیرات، کسی بھی وقت اور کسی بھی مقدار میں دیا جا سکتا ہے۔ بہت سے مسلمان جمعہ کو دینے کی عادت بناتے ہیں، اور مغربی افریقی (سینیگالی / وولوف) روایت — سرَک — میں ہفتے کے ہر دن، آپ کی پیدائش کے ہجری مہینے اور آپ کے برج کے لیے صدقے کی مخصوص صورتیں بھی تجویز کی جاتی ہیں۔ |
+| This guide gathers the three in one place, using the same data as the Asrār calculators. Use whichever applies to you, and remember that the best sadaqah is the one given sincerely and regularly. | یہ رہنما تینوں کو ایک جگہ جمع کرتا ہے، اسرار کیلکولیٹرز والے ہی ڈیٹا کے ساتھ۔ جو آپ پر لاگو ہو اسے استعمال کریں، اور یاد رکھیں کہ بہترین صدقہ وہ ہے جو خلوص اور تسلسل کے ساتھ دیا جائے۔ |
+| For reflection and education, not prediction or a promise of outcomes; Allah alone knows the unseen. | غور و فکر اور تعلیم کے لیے، پیش گوئی یا نتائج کے وعدے کے لیے نہیں؛ غیب کا علم صرف اللہ کو ہے۔ |
+| Sadaqa by day of the week | ہفتے کے دن کے مطابق صدقہ |
+| Sadaqa by Hijri birth month | پیدائشی ہجری مہینے کے مطابق صدقہ |
+| Sadaqa by burj | برج کے مطابق صدقہ |
+| Each weekday has its own suggested sadaqah. See today's guidance and the full table on the Sadaqa of the Day page. | ہفتے کے ہر دن کا اپنا تجویز کردہ صدقہ ہے۔ آج کی رہنمائی اور مکمل جدول «آج کا صدقہ» کے صفحے پر دیکھیں۔ |
+| Gather children and give them food as sadaqah; Help anyone who is poor or in need | بچوں کو جمع کر کے صدقے کے طور پر کھانا کھلائیں؛ کسی بھی غریب یا ضرورت مند کی مدد کریں |
+| Give water as sadaqah; Help an elderly person, a woman, or children; Give food or sadaqah to children in the evening | صدقے کے طور پر پانی دیں؛ کسی بزرگ، خاتون یا بچوں کی مدد کریں؛ شام کو بچوں کو کھانا یا صدقہ دیں |
+| Giving food to children; Helping a person who is experiencing difficulties; Helping someone purchase their medication; Contributing toward someone's medical or medication expenses | بچوں کو کھانا کھلانا؛ کسی مشکل میں مبتلا شخص کی مدد کرنا؛ کسی کو دوا خریدنے میں مدد دینا؛ کسی کے علاج یا دوا کے اخراجات میں حصہ ڈالنا |
+| Give white paper and pens; Provide food to children | سفید کاغذ اور قلم دینا؛ بچوں کو کھانا کھلانا |
+| Giving food to people in need; Giving money as sadaqah; Supporting a mosque; Helping to clean a mosque; Performing voluntary service in the mosque | ضرورت مندوں کو کھانا دینا؛ صدقے کے طور پر رقم دینا؛ مسجد کی مدد کرنا؛ مسجد کی صفائی میں مدد کرنا؛ مسجد میں رضاکارانہ خدمت کرنا |
+| Clothes; Soap; Perfume | کپڑے؛ صابن؛ عطر |
+| Giving essential food items such as rice, oil, and other necessities; Helping an elderly person with their needs; Providing financial assistance to someone in difficulty | چاول، تیل اور دیگر ضروریات جیسی بنیادی غذائی اشیا دینا؛ کسی بزرگ کی ضروریات میں مدد کرنا؛ کسی مشکل میں مبتلا شخص کی مالی مدد کرنا |
+| See today's sadaqa → | آج کا صدقہ دیکھیں ← |
+| Enter your Gregorian date of birth to find the Hijri (Islamic) month you were born in. Wolof names are shown where they are commonly used (Tamxarit, Gamo, Korité, Tabaski…). | اپنی عیسوی تاریخِ پیدائش درج کریں تاکہ معلوم ہو آپ کس ہجری (اسلامی) مہینے میں پیدا ہوئے۔ جہاں رائج ہوں وہاں وولوف نام بھی دکھائے جاتے ہیں (تمخریت، گامو، کورتے، تباسکی…)۔ |
+| Enter your Gregorian date of birth — it will be converted to the Islamic calendar. | اپنی عیسوی تاریخِ پیدائش درج کریں — اسے اسلامی تقویم میں بدل دیا جائے گا۔ |
+| Muharram (Tamxarit) | محرم (تمخریت) |
+| For anyone born in Muharram (Tamxarit), their sadaqah can include: | محرم (تمخریت) میں پیدا ہونے والے کے صدقے میں یہ شامل ہو سکتا ہے: |
+| Giving water to those in need. | ضرورت مندوں کو پانی دینا۔ |
+| Feeding someone who is fasting. | کسی روزے دار کو کھانا کھلانا۔ |
+| Helping an orphan or orphans. | کسی یتیم یا یتیموں کی مدد کرنا۔ |
+| Giving other forms of charity according to their ability. | اپنی استطاعت کے مطابق خیرات کی دوسری صورتیں اختیار کرنا۔ |
+| For anyone born in Safar, their sadaqah can include: | صفر میں پیدا ہونے والے کے صدقے میں یہ شامل ہو سکتا ہے: |
+| Giving rice. | چاول دینا۔ |
+| Giving flour. | آٹا دینا۔ |
+| Giving cooking oil. | کھانا پکانے کا تیل دینا۔ |
+| Giving clothes. | کپڑے دینا۔ |
+| Helping sick people, financially or with whatever they need. | بیمار لوگوں کی مالی طور پر یا ان کی کسی بھی ضرورت میں مدد کرنا۔ |
+| Rabi al-Awwal (Gamo) | ربیع الاول (گامو) |
+| For anyone born in Rabi al-Awwal (Gamo), their sadaqah can include: | ربیع الاول (گامو) میں پیدا ہونے والے کے صدقے میں یہ شامل ہو سکتا ہے: |
+| Giving sadaqah to children. | بچوں کو صدقہ دینا۔ |
+| Helping poor families. | غریب خاندانوں کی مدد کرنا۔ |
+| Helping and supporting the mosque. | مسجد کی مدد اور اعانت کرنا۔ |
+| Providing food, money, or other useful assistance. | کھانا، رقم یا دوسری مفید مدد فراہم کرنا۔ |
+| Rabi al-Thani (Rabi al-Akhir) | ربیع الثانی (ربیع الآخر) |
+| For anyone born in Rabi al-Thani (Rabi al-Akhir), their sadaqah can include: | ربیع الثانی (ربیع الآخر) میں پیدا ہونے والے کے صدقے میں یہ شامل ہو سکتا ہے: |
+| Helping a widow. | کسی بیوہ کی مدد کرنا۔ |
+| Giving soap. | صابن دینا۔ |
+| Providing kitchen and food supplies. | باورچی خانے اور خوراک کا سامان فراہم کرنا۔ |
+| Helping with necessities that can support a person or family. | ایسی ضروریات میں مدد کرنا جو کسی فرد یا خاندان کا سہارا بن سکیں۔ |
+| For anyone born in Jumada al-Awwal, their sadaqah can include: | جمادی الاولیٰ میں پیدا ہونے والے کے صدقے میں یہ شامل ہو سکتا ہے: |
+| Giving hot, nourishing food. | گرم، غذائیت بخش کھانا دینا۔ |
+| Helping poor labourers and workers. | غریب مزدوروں اور کام کرنے والوں کی مدد کرنا۔ |
+| Supporting hardworking people who are facing difficult circumstances. | مشکل حالات کا سامنا کرنے والے محنتی لوگوں کا ساتھ دینا۔ |
+| Jumada al-Akhirah (Jumada al-Thani) | جمادی الثانیہ (جمادی الآخرہ) |
+| For anyone born in Jumada al-Akhirah, their sadaqah is especially good when it is given discreetly and privately. | جمادی الآخرہ میں پیدا ہونے والے کے لیے صدقہ خاص طور پر اس وقت اچھا ہے جب وہ چھپا کر اور خاموشی سے دیا جائے۔ |
+| Help anyone who is in need. | جو بھی ضرورت مند ہو اس کی مدد کریں۔ |
+| Give food, money, or useful assistance. | کھانا، رقم یا کوئی مفید مدد دیں۔ |
+| Help someone quietly without seeking recognition or praise. | کسی کی خاموشی سے مدد کریں، بغیر شہرت یا تعریف کی خواہش کے۔ |
+| For anyone born in Rajab, their sadaqah can focus on supporting people who learn and teach the Qur'an: | رجب میں پیدا ہونے والے کا صدقہ قرآن سیکھنے اور سکھانے والوں کی مدد پر مرکوز ہو سکتا ہے: |
+| Giving a complete Qur'an (Kamil) to a mosque or place of Qur'anic learning. | مسجد یا قرآنی تعلیم کی جگہ کو مکمل قرآن (کامل) دینا۔ |
+| Providing Qur'ans for people to read and use. | لوگوں کے پڑھنے اور استعمال کے لیے قرآن مہیا کرنا۔ |
+| Donating Qur'ans to daaras. | دارہ (قرآنی مدارس) کو قرآن عطیہ کرنا۔ |
+| Helping mosques and places of Qur'anic learning. | مساجد اور قرآنی تعلیم کی جگہوں کی مدد کرنا۔ |
+| Supporting Qur'anic students and those who use these places. | قرآن کے طلبہ اور ان جگہوں کو استعمال کرنے والوں کی معاونت کرنا۔ |
+| For anyone born in Sha'ban, their sadaqah can include: | شعبان میں پیدا ہونے والے کے صدقے میں یہ شامل ہو سکتا ہے: |
+| Giving meals to poor families. | غریب خاندانوں کو کھانا دینا۔ |
+| Sharing the meals prepared in their own home with a family in need. | اپنے گھر میں تیار کیا ہوا کھانا کسی ضرورت مند خاندان کے ساتھ بانٹنا۔ |
+| Giving food and other necessities to people who are struggling. | مشکل میں گھرے لوگوں کو کھانا اور دوسری ضروریات دینا۔ |
+| Helping and supporting the elderly, especially those who are alone or in need. | بزرگوں کی مدد اور معاونت کرنا، خاص طور پر ان کی جو تنہا یا ضرورت مند ہوں۔ |
+| Ramadan (Werruk Korr) | رمضان (ورّق کور) |
+| For anyone born in Ramadan (Werruk Korr), their sadaqah can include: | رمضان (ورّق کور) میں پیدا ہونے والے کے صدقے میں یہ شامل ہو سکتا ہے: |
+| Giving iftar to someone who is fasting. | کسی روزے دار کو افطار کروانا۔ |
+| Not being reluctant or hesitant to give their zakat when it is due. | زکوٰۃ واجب ہونے پر اسے دینے میں ہچکچاہٹ یا ٹال مٹول نہ کرنا۔ |
+| Helping poor families and needy people with food, money, or necessities. | غریب خاندانوں اور ضرورت مندوں کی کھانے، رقم یا ضروریات سے مدد کرنا۔ |
+| Giving this support at night, particularly to those who are in need. | یہ مدد رات کے وقت دینا، خاص طور پر ضرورت مندوں کو۔ |
+| Shawwal (Korité) | شوال (کورتے) |
+| For anyone born in Shawwal (Korité), their sadaqah can include: | شوال (کورتے) میں پیدا ہونے والے کے صدقے میں یہ شامل ہو سکتا ہے: |
+| Giving brand-new clothes to someone in need. | کسی ضرورت مند کو بالکل نئے کپڑے دینا۔ |
+| Giving clean, good-quality clothing. | صاف اور اچھی کوالٹی کے کپڑے دینا۔ |
+| Helping people have suitable clothes that they can wear with dignity. | لوگوں کی ایسے مناسب کپڑوں میں مدد کرنا جو وہ وقار کے ساتھ پہن سکیں۔ |
+| Dhu al-Qi'dah (Diggi Kor) | ذوالقعدہ (دِگّی کور) |
+| For anyone born in Dhu al-Qi'dah (Diggi Kor), their sadaqah can include: | ذوالقعدہ (دِگّی کور) میں پیدا ہونے والے کے صدقے میں یہ شامل ہو سکتا ہے: |
+| Helping a traveller, financially or in any other way that can make their journey easier. | کسی مسافر کی مالی طور پر یا کسی اور طرح مدد کرنا جس سے اس کا سفر آسان ہو۔ |
+| Giving food to poor and needy people. | غریب اور ضرورت مند لوگوں کو کھانا دینا۔ |
+| Giving hot, nourishing food as sadaqah to those in need. | ضرورت مندوں کو صدقے کے طور پر گرم، غذائیت بخش کھانا دینا۔ |
+| Offering practical assistance to people experiencing hardship. | مشکل میں مبتلا لوگوں کی عملی مدد کرنا۔ |
+| Dhu al-Hijjah (Tabaski) | ذوالحجہ (تباسکی) |
+| For anyone born in Dhu al-Hijjah (Tabaski), their sadaqah can include: | ذوالحجہ (تباسکی) میں پیدا ہونے والے کے صدقے میں یہ شامل ہو سکتا ہے: |
+| Giving meat as sadaqah, especially to poor and needy people. | صدقے کے طور پر گوشت دینا، خاص طور پر غریب اور ضرورت مند لوگوں کو۔ |
+| Helping pilgrims who have travelled to Makkah for Hajj, financially or in any other useful way. | مکہ مکرمہ حج کے لیے جانے والے حاجیوں کی مالی طور پر یا کسی اور مفید طریقے سے مدد کرنا۔ |
+| Visiting and welcoming a pilgrim when they return from Makkah, through ziyar. | مکہ سے واپسی پر کسی حاجی سے ملنے جانا اور اس کا استقبال کرنا، زیارت (زیار) کے ذریعے۔ |
+| Helping poor and needy people with food, money, clothing, or other necessities. | غریب اور ضرورت مند لوگوں کی کھانے، رقم، کپڑوں یا دوسری ضروریات سے مدد کرنا۔ |
+| Each of the twelve burūj has its own traditional sadaqah, according to the teachings of Seringe Mahdiou Niane (with companion videos in Wolof inside the app). Not sure of your burj? Find it from your name and your mother's name. | بارہ بروج میں سے ہر ایک کا اپنا روایتی صدقہ ہے، Seringe Mahdiou Niane کی تعلیمات کے مطابق (ایپ کے اندر وولوف زبان کی ساتھی ویڈیوز کے ساتھ)۔ اپنے برج کا یقین نہیں؟ اسے اپنے نام اور والدہ کے نام سے معلوم کریں۔ |
+| Find your burj from your name & mother's name → | اپنا برج اپنے نام اور والدہ کے نام سے معلوم کریں ← |
+| Livestock Sadaqah | مویشیوں کا صدقہ |
+| Worn Clothing Sadaqah | پہنے ہوئے کپڑوں کا صدقہ |
+| One-Coloured Ram Sadaqah | ایک رنگ کے مینڈھے کا صدقہ |
+| Used Clothing Sadaqah — Protection | استعمال شدہ کپڑوں کا صدقہ — حفاظت |
+| Grains and Agricultural Produce | اناج اور زرعی پیداوار |
+| Rice, Millet and Cooking Oil | چاول، باجرہ اور کھانا پکانے کا تیل |
+| Water Sadaqah | پانی کا صدقہ |
+| Supporting an Elderly Person — Provision | کسی بزرگ کی کفالت — روزی |
+| Suggested day | تجویز کردہ دن |
+| Kola Nut Sadaqah | کولا نٹ کا صدقہ |
+| Money Sadaqah — Preservation of Wealth | رقم کا صدقہ — مال کی حفاظت |
+| Three-Coloured Chicken Sadaqah | تین رنگوں کی مرغی کا صدقہ |
+| Guinea Fowl (Pintade) Sadaqah | گنی فاؤل (پنتاد) کا صدقہ |
+| Educational Materials Sadaqah | تعلیمی سامان کا صدقہ |
+| Supporting Teachers and Qur'anic Teachers | اساتذہ اور قرآن کے اساتذہ کی معاونت |
+| Feeding Children | بچوں کو کھانا کھلانا |
+| Salt Sadaqah | نمک کا صدقہ |
+| Four Kilograms of Meat | چار کلوگرام گوشت |
+| Helping a Family in Need | ضرورت مند خاندان کی مدد |
+| Supporting an Elderly Woman | کسی بزرگ خاتون کی معاونت |
+| Giving Milk to Children | بچوں کو دودھ دینا |
+| Raising and Giving a Ram | مینڈھا پال کر دینا |
+| Three Bowls of Cheb Yap | چیب یاپ کے تین پیالے |
+| Three Bowls of Porridge with Yogurt | دہی والے دلیے کے تین پیالے |
+| One Hundred Kola Nuts | ایک سو کولا نٹ |
+| Money Sadaqah | رقم کا صدقہ |
+| Three Cereals Sadaqah | تین اناجوں کا صدقہ |
+| Secret Sadaqah of Virgo — Age 40 | سنبلہ کا خفیہ صدقہ — چالیس سال کی عمر میں |
+| Seven Yogurts Sadaqah | سات دہیوں کا صدقہ |
+| Guinea Fowl Sadaqah | گنی فاؤل کا صدقہ |
+| Protective Ring Sadaqah | حفاظتی انگوٹھی کا صدقہ |
+| White Ram or Sheep Sadaqah | سفید مینڈھے یا بھیڑ کا صدقہ |
+| Red Goat Sadaqah During a Favourable Mars Transit | مریخ کے موافق عبور کے دوران سرخ بکرے کا صدقہ |
+| Water Sadaqah — For Patients | پانی کا صدقہ — مریضوں کے لیے |
+| Rice and Fish Sadaqah | چاول اور مچھلی کا صدقہ |
+| Nine Pieces of Bread | روٹی کے نو ٹکڑے |
+| Three Bowls of Laakh | لاخ کے تین پیالے |
+| One-Coloured White Ram | ایک رنگ کا سفید مینڈھا |
+| Open Sadaqah | کھلا صدقہ |
+| Rice and Millet Sadaqah | چاول اور باجرے کا صدقہ |
+| Kafan — Burial Shroud Sadaqah | کفن — کفن کا صدقہ |
+| Cowries — Petaw Sadaqah | کوڑیاں — پیتاو صدقہ |
+| Helping Labourers and Low-Income Workers | مزدوروں اور کم آمدنی والے کارکنوں کی مدد |
+| Helping a Widow and Her Children | بیوہ اور اس کے بچوں کی مدد |
+| Supporting a Community or Group | کسی برادری یا گروہ کی معاونت |
+| Guinea Fowl or Chicken Sadaqah | گنی فاؤل یا مرغی کا صدقہ |
+| Fish Sadaqah | مچھلی کا صدقہ |
+| Seven-Chicken Food Sadaqah | سات مرغیوں کے کھانے کا صدقہ |
+| Evening Food Sadaqah | شام کے کھانے کا صدقہ |
+| Helping Someone Experiencing Mental Health Difficulties | ذہنی صحت کی مشکل سے گزرنے والے کی مدد |
+| Supporting Someone Involved in Spiritual Work | روحانی کام میں مصروف شخص کی معاونت |
+| What is sarax? | سرَک کیا ہے؟ |
+| Sarax is the Wolof word for sadaqah (voluntary charity). In Senegalese and wider West African practice it is often given in specific forms — water, food, clothes, a ram, kola nuts — depending on the day, the person's birth month or their burj. | سرَک وولوف زبان میں صدقے (نفلی خیرات) کا لفظ ہے۔ سینیگال اور وسیع مغربی افریقی رواج میں یہ اکثر مخصوص صورتوں — پانی، کھانا، کپڑے، مینڈھا، کولا نٹ — میں دیا جاتا ہے، دن، فرد کے پیدائشی مہینے یا اس کے برج کے مطابق۔ |
+| How do I find my Hijri birth month? | میں اپنا ہجری پیدائشی مہینہ کیسے معلوم کروں؟ |
+| Enter your Gregorian date of birth in the checker on this page. It converts the date to the Islamic (Hijri) calendar and shows the sadaqah suggested for that month. | اس صفحے کے چیکر میں اپنی عیسوی تاریخِ پیدائش درج کریں۔ یہ تاریخ کو اسلامی (ہجری) تقویم میں بدل دیتا ہے اور اس مہینے کے لیے تجویز کردہ صدقہ دکھاتا ہے۔ |
+| How do I know my burj? | میں اپنا برج کیسے معلوم کروں؟ |
+| In this tradition your burj comes from the Abjad values of your name and your mother's name: add them, divide by 12 and the remainder gives the burj. The name & mother's name burj page does the calculation for you. | اس روایت میں آپ کا برج آپ کے نام اور آپ کی والدہ کے نام کی ابجد قدروں سے نکلتا ہے: انہیں جمع کریں، 12 سے تقسیم کریں اور باقی برج بتاتا ہے۔ نام اور والدہ کے نام والا برج کا صفحہ یہ حساب آپ کے لیے کر دیتا ہے۔ |
+| Which should I follow: the day, the month or the burj? | مجھے کس کی پیروی کرنی چاہیے: دن، مہینہ یا برج؟ |
+| Any of them, or none. They are complementary customs, not obligations. Sadaqah given sincerely on any day is good; these suggestions simply help you choose a form and a moment. | ان میں سے کسی کی بھی، یا کسی کی نہیں۔ یہ ایک دوسرے کی تکمیل کرنے والی رسمیں ہیں، فرائض نہیں۔ کسی بھی دن خلوص سے دیا گیا صدقہ اچھا ہے؛ یہ تجاویز صرف صورت اور وقت چننے میں مدد دیتی ہیں۔ |
+| Does giving this sadaqah guarantee a result? | کیا یہ صدقہ دینے سے کسی نتیجے کی ضمانت ملتی ہے؟ |
+| No. Sadaqah is given for the sake of Allah. The intentions mentioned (blessing, protection, ease, provision) are hopes placed with Allah, not promised outcomes. | نہیں۔ صدقہ اللہ کی رضا کے لیے دیا جاتا ہے۔ جن مقاصد کا ذکر ہے (برکت، حفاظت، آسانی، رزق) وہ اللہ سے وابستہ امیدیں ہیں، وعدہ شدہ نتائج نہیں۔ |
+| Burj, blessed day, dhikr and burj sadaqah. | برج، مبارک دن، ذکر اور برج کا صدقہ۔ |
+| All calculator types, including sadaqah by date. | حساب کی تمام اقسام، بشمول تاریخ کے مطابق صدقہ۔ |
+
+
+
+### 6.19 sadaqa-day (58)
+
+| English | Urdu |
+|---|---|
+| Sadaqa | صدقہ |
+| Sadaqa of the Day — Recommended Sadaqah for Each Day of the Week | آج کا صدقہ — ہفتے کے ہر دن کے لیے تجویز کردہ صدقہ |
+| Sadaqah, voluntary charity, is good on every day, and many Muslims make a habit of giving on Friday (Jumuʿa). Giving a little, consistently, is better than waiting for the "perfect" day. | صدقہ، یعنی نفلی خیرات، ہر دن اچھا ہے، اور بہت سے مسلمان جمعہ کو دینے کی عادت بناتے ہیں۔ تھوڑا مگر مسلسل دینا «بہترین» دن کے انتظار سے بہتر ہے۔ |
+| In West African (Senegalese / Wolof) teaching — sarax — each weekday is also linked to particular forms of sadaqah: water on Monday, help with someone's medicine on Tuesday, paper and pens on Wednesday, feeding the needy and supporting the mosque on Thursday, clothes, soap and perfume on Friday. Below is today's suggestion and the full weekly table, from the same guidance used by the Asrār calculator. | مغربی افریقی (سینیگالی / وولوف) تعلیم — سرَک — میں ہفتے کا ہر دن صدقے کی خاص صورتوں سے بھی جڑا ہے: پیر کو پانی، منگل کو کسی کی دوا میں مدد، بدھ کو کاغذ اور قلم، جمعرات کو ضرورت مندوں کو کھانا اور مسجد کی معاونت، جمعہ کو کپڑے، صابن اور عطر۔ نیچے آج کی تجویز اور مکمل ہفتہ وار جدول ہے، اسی رہنمائی سے جو اسرار کیلکولیٹر میں استعمال ہوتی ہے۔ |
+| Today's sadaqa | آج کا صدقہ |
+| Today is | آج ہے |
+| For Sunday, the recommended sadaqah is: | اتوار کے لیے تجویز کردہ صدقہ یہ ہے: |
+| Gather children and give them food as sadaqah. | بچوں کو جمع کر کے صدقے کے طور پر کھانا کھلائیں۔ |
+| Help anyone who is poor or in need. | جو بھی غریب یا ضرورت مند ہو اس کی مدد کریں۔ |
+| Based on the date on your device. | آپ کے آلے کی تاریخ کی بنیاد پر۔ |
+| Recommended sadaqa for each day of the week | ہفتے کے ہر دن کے لیے تجویز کردہ صدقہ |
+| Recommended sadaqa | تجویز کردہ صدقہ |
+| For Monday, the recommended sadaqah is: | پیر کے لیے تجویز کردہ صدقہ یہ ہے: |
+| Give water as sadaqah. | صدقے کے طور پر پانی دیں۔ |
+| Help an elderly person, a woman, or children. | کسی بزرگ، خاتون یا بچوں کی مدد کریں۔ |
+| Give food or sadaqah to children in the evening. | شام کو بچوں کو کھانا یا صدقہ دیں۔ |
+| Tuesday is recommended for sadaqah intended for healing and protection. Recommended forms of sadaqah include: | منگل شفا اور حفاظت کی نیت سے صدقے کے لیے تجویز کیا گیا ہے۔ تجویز کردہ صورتوں میں یہ شامل ہیں: |
+| Giving food to children. | بچوں کو کھانا کھلانا۔ |
+| Helping a person who is experiencing difficulties. | کسی مشکل میں مبتلا شخص کی مدد کرنا۔ |
+| Helping someone purchase their medication. | کسی کو اس کی دوا خریدنے میں مدد دینا۔ |
+| Contributing toward someone's medical or medication expenses. | کسی کے علاج یا دوا کے اخراجات میں حصہ ڈالنا۔ |
+| For Wednesday, the recommended sadaqah is: | بدھ کے لیے تجویز کردہ صدقہ یہ ہے: |
+| Give white paper and pens. | سفید کاغذ اور قلم دیں۔ |
+| Provide food to children. | بچوں کو کھانا دیں۔ |
+| Thursday is considered favourable for sadaqah intended for opening the way to wealth, success, or removing blockages. Recommended acts include: | جمعرات کو رزق و کامیابی کا راستہ کھلنے یا رکاوٹیں دور ہونے کی نیت سے صدقے کے لیے موافق سمجھا جاتا ہے۔ تجویز کردہ اعمال میں یہ شامل ہیں: |
+| Giving food to people in need. | ضرورت مندوں کو کھانا دینا۔ |
+| Giving money as sadaqah. | صدقے کے طور پر رقم دینا۔ |
+| Supporting a mosque. | مسجد کی مدد کرنا۔ |
+| Helping to clean a mosque. | مسجد کی صفائی میں مدد کرنا۔ |
+| Performing voluntary service in the mosque. | مسجد میں رضاکارانہ خدمت کرنا۔ |
+| Friday is associated with Venus and is considered a favourable day for giving sadaqah. Recommended acts include giving: | جمعہ زہرہ سے منسوب ہے اور صدقہ دینے کے لیے موافق دن سمجھا جاتا ہے۔ تجویز کردہ اعمال میں یہ دینا شامل ہے: |
+| Clothes. | کپڑے۔ |
+| Soap. | صابن۔ |
+| Perfume. | عطر۔ |
+| Saturday is recommended for helping poor and needy people. Recommended sadaqah includes: | ہفتہ غریب اور ضرورت مند لوگوں کی مدد کے لیے تجویز کیا گیا ہے۔ تجویز کردہ صدقے میں یہ شامل ہے: |
+| Giving essential food items such as rice, oil, and other necessities. | چاول، تیل اور دیگر ضروریات جیسی بنیادی غذائی اشیا دینا۔ |
+| Helping an elderly person with their needs. | کسی بزرگ کی ضروریات میں مدد کرنا۔ |
+| Providing financial assistance to someone in difficulty. | مشکل میں مبتلا شخص کی مالی معاونت کرنا۔ |
+| Check another date | کوئی اور تاریخ جانچیں |
+| The day you plan to give, or your date of birth. | وہ دن جب آپ دینے کا ارادہ رکھتے ہوں، یا آپ کی تاریخِ پیدائش۔ |
+| Date of birth or date of giving | تاریخِ پیدائش یا دینے کی تاریخ |
+| Enter either your date of birth or the day you plan to give sadaqah — its day of the week determines the guidance. | اپنی تاریخِ پیدائش یا وہ دن درج کریں جب آپ صدقہ دینے کا ارادہ رکھتے ہوں — اس کا ہفتے کا دن رہنمائی طے کرتا ہے۔ |
+| What is the "sadaqa of the day"? | «آج کا صدقہ» کیا ہے؟ |
+| It is the form of sadaqah (voluntary charity) traditionally linked to each day of the week in a West African (Senegalese / Wolof) teaching. This page shows today's suggestion and the table for all seven days. | یہ صدقے (نفلی خیرات) کی وہ صورت ہے جو مغربی افریقی (سینیگالی / وولوف) تعلیم میں روایتی طور پر ہفتے کے ہر دن سے جوڑی جاتی ہے۔ یہ صفحہ آج کی تجویز اور ساتوں دنوں کا جدول دکھاتا ہے۔ |
+| What is the best day to give sadaqah? | صدقہ دینے کا بہترین دن کون سا ہے؟ |
+| Sadaqah is good on every day, and many Muslims make a habit of giving on Friday (Jumuʿa). In this tradition Tuesday is linked with healing and protection, and Thursday with opening the way and removing blockages. Never delay giving because it is not the "right" day. | صدقہ ہر دن اچھا ہے، اور بہت سے مسلمان جمعہ کو دینے کی عادت بناتے ہیں۔ اس روایت میں منگل کو شفا اور حفاظت سے، اور جمعرات کو راستہ کھلنے اور رکاوٹیں دور ہونے سے جوڑا گیا ہے۔ کبھی دینے میں اس لیے تاخیر نہ کریں کہ یہ «درست» دن نہیں ہے۔ |
+| What sadaqah should I give on Monday? | مجھے پیر کو کون سا صدقہ دینا چاہیے؟ |
+| For Monday the tradition recommends: Give water as sadaqah; Help an elderly person, a woman, or children; Give food or sadaqah to children in the evening. | پیر کے لیے روایت یہ تجویز کرتی ہے: صدقے کے طور پر پانی دیں؛ کسی بزرگ، خاتون یا بچوں کی مدد کریں؛ شام کو بچوں کو کھانا یا صدقہ دیں۔ |
+| What sadaqah should I give on Friday? | مجھے جمعہ کو کون سا صدقہ دینا چاہیے؟ |
+| Friday is associated with Venus; the recommended gifts are: Clothes; Soap; Perfume. | جمعہ زہرہ سے منسوب ہے؛ تجویز کردہ تحائف یہ ہیں: کپڑے؛ صابن؛ عطر۔ |
+| Can I use the weekday I was born on? | کیا میں اپنی پیدائش کا ہفتے کا دن استعمال کر سکتا ہوں؟ |
+| Yes. The guidance can be read either for the day you plan to give or for the weekday of your birth. Enter a date in the checker above to see which weekday it falls on. | جی ہاں۔ رہنمائی کو یا تو اس دن کے لیے پڑھا جا سکتا ہے جب آپ دینے کا ارادہ رکھتے ہوں یا آپ کی پیدائش کے ہفتے کے دن کے لیے۔ اوپر چیکر میں تاریخ درج کریں تاکہ معلوم ہو وہ ہفتے کے کس دن پڑتی ہے۔ |
+| Is this an obligation or a guarantee of results? | کیا یہ فرض ہے یا نتائج کی ضمانت؟ |
+| No. These are customary suggestions for reflection. Sadaqah is given sincerely for the sake of Allah, on any day, and promises no particular outcome: Allah alone knows the unseen. | نہیں۔ یہ غور و فکر کے لیے رواجی تجاویز ہیں۔ صدقہ کسی بھی دن اللہ کی رضا کے لیے خلوص سے دیا جاتا ہے اور کسی خاص نتیجے کا وعدہ نہیں کرتا: غیب کا علم صرف اللہ کو ہے۔ |
+| Sadaqah by weekday, by Hijri birth month and by burj. | ہفتے کے دن، پیدائشی ہجری مہینے اور برج کے مطابق صدقہ۔ |
+| Your burj, blessed day, dhikr and the sadaqah for your burj. | آپ کا برج، مبارک دن، ذکر اور آپ کے برج کا صدقہ۔ |
+| Choose an auspicious date for marriage, travel or business. | شادی، سفر یا کاروبار کے لیے مناسب تاریخ چنیں۔ |
+| Track your dhikr: Istighfār, Ṣalawāt and Divine Names. | اپنا ذکر ٹریک کریں: استغفار، درود شریف اور اسمائے الٰہی۔ |
+
+
+
+### 6.20 ramadan (37)
+
+| English | Urdu |
+|---|---|
+| Zikr Challenges | ذکر کے چیلنج |
+| Tap a challenge ↓ | کوئی چیلنج منتخب کرنے کے لیے ٹیپ کریں ↓ |
+| Progress | پیش رفت |
+| Best dhikr now: | اس وقت کا بہترین ذکر: |
+| Astaghfirullāh | اَسْتَغْفِرُ اللّٰہَ |
+| Maghrib / Ifṭār | مغرب / افطار |
+| Istighfār | استغفار |
+| Ramadan Istighfār | رمضان کا استغفار |
+| Today's Target | آج کا ہدف |
+| Today's Progress | آج کی پیش رفت |
+| Quick Add | فوری اضافہ |
+| Log Session | نشست درج کریں |
+| Monthly Progress | ماہانہ پیش رفت |
+| Remember Me, and I will remember you. | ﴿فَاذْكُرُونِي أَذْكُرْكُمْ﴾ (البقرة 152) |
+| Invite Friends to Join | دوستوں کو شامل ہونے کی دعوت دیں |
+| Remove | ہٹائیں |
+| Add Challenge | چیلنج شامل کریں |
+| Share Progress | پیش رفت شیئر کریں |
+| Remove challenge | چیلنج ہٹائیں |
+| Settings | سیٹنگز |
+| 0.0% complete | 0.0٪ مکمل |
+| Share via | اس کے ذریعے شیئر کریں |
+| Link copied to clipboard | لنک کلپ بورڈ پر کاپی ہو گیا |
+| Add a Wird Challenge | ورد کا چیلنج شامل کریں |
+| Choose a wird to track your daily devotions | اپنے روزانہ اوراد ٹریک کرنے کے لیے ایک ورد منتخب کریں |
+| 201 Holy Names | 201 مقدس نام |
+| Special | خصوصی |
+| Rizq Abundance · 7-Day Morning Practice | رزق میں برکت · 7 دن کا صبح کا معمول |
+| Debt Relief Wird | قرض سے نجات کا ورد |
+| 1000× after ʿIshāʾ for debt relief | قرض سے نجات کے لیے عشاء کے بعد 1000 بار |
+| Divine Name | اسمِ الٰہی |
+| Recite one of the 99 Names of Allah | اللہ کے 99 ناموں میں سے کوئی ایک پڑھیں |
+| Custom Wird | اپنا ورد |
+| Add your own dhikr or wird | اپنا ذکر یا ورد شامل کریں |
+| Remove this challenge? | یہ چیلنج ہٹائیں؟ |
+| Your progress will be lost. | آپ کی پیش رفت ضائع ہو جائے گی۔ |
+| Cancel | منسوخ کریں |
+
+
+
+### 6.21 burj-personality (120)
+
+| English | Urdu |
+|---|---|
+| Speech becomes extremely harsh and cutting when angry, words like fire | غصے میں کلام نہایت سخت اور کاٹ دار ہو جاتا ہے، الفاظ آگ کی طرح |
+| Takes time to provoke, but once angry becomes an unstoppable force of nature | اشتعال میں آنے میں وقت لگتا ہے، مگر ایک بار غصہ آ جائے تو بے قابو قدرتی قوت بن جاتا ہے |
+| Deeply loved and respected by outsiders, strangers, and the general public | اجنبی، انجان لوگ اور عام عوام انہیں بہت چاہتے اور عزت دیتے ہیں |
+| Struggles with maintaining harmony in close family relationships despite best efforts | بھرپور کوشش کے باوجود قریبی خاندانی رشتوں میں ہم آہنگی برقرار رکھنا مشکل ہوتا ہے |
+| Extended family members and non-relatives are naturally drawn to their warmth | وسیع خاندان کے افراد اور غیر رشتہ دار فطری طور پر ان کی گرم جوشی کی طرف کھنچتے ہیں |
+| May face misunderstanding from immediate family who don't see their public persona | قریبی گھر والے، جو ان کی عوامی شخصیت نہیں دیکھتے، انہیں غلط سمجھ سکتے ہیں |
+| May occasionally see fire in dreams, though not as frequently as other elements see their symbols | کبھی کبھار خواب میں آگ نظر آ سکتی ہے، البتہ اتنی کثرت سے نہیں جتنی دوسرے عناصر کو اپنی علامات نظر آتی ہیں |
+| Usually granted remarkably long life and vitality that endures through challenges | روایت میں بیان کیا جاتا ہے کہ انہیں نمایاں طور پر طویل عمر اور ایسی توانائی ملتی ہے جو مشکلات میں بھی قائم رہتی ہے |
+| Receives divine protection in matters of livelihood and sustenance | روایت کے مطابق روزی اور معاش کے معاملات میں انہیں الٰہی حفاظت حاصل ہوتی ہے |
+| May experience the pain of child mortality or children facing difficulties in marriage | اولاد کے صدمے یا اولاد کو ازدواجی مشکلات پیش آنے کا دکھ جھیلنا پڑ سکتا ہے |
+| Speaks with groundedness and wisdom, words carry weight and stability | ٹھہراؤ اور حکمت سے بولتا ہے، الفاظ میں وزن اور استحکام ہوتا ہے |
+| Extremely slow to anger, but once provoked their wrath is earthquake-like in its power | غصہ بہت دیر سے آتا ہے، مگر ایک بار بھڑک جائے تو اس کا قہر زلزلے جیسا طاقتور ہوتا ہے |
+| Deeply beloved by outsiders and those who witness their patience and strength | اجنبی اور وہ لوگ جو ان کا صبر اور قوت دیکھتے ہیں انہیں بہت چاہتے ہیں |
+| Faces difficulties in close family relationships despite their steadfast nature | ثابت قدم فطرت کے باوجود قریبی خاندانی رشتوں میں مشکلات کا سامنا ہوتا ہے |
+| Extended family and community members are drawn to their reliability | وسیع خاندان اور برادری کے لوگ ان کی قابلِ بھروسا طبیعت کی طرف کھنچتے ہیں |
+| May be taken for granted by those closest to them | جو لوگ سب سے قریب ہوں وہ انہیں معمولی سمجھ سکتے ہیں |
+| Rich and vivid dreamlife - frequently sees water, vast deserts, ancient cities, and earthly landscapes | خوابوں کی زندگی بھرپور اور واضح — اکثر پانی، وسیع صحرا، قدیم شہر اور زمینی مناظر نظر آتے ہیں |
+| Receives consistent divine assistance in times of need - help always arrives | ضرورت کے وقت مسلسل الٰہی مدد ملتی ہے — مدد ہمیشہ پہنچتی ہے |
+| Protected in matters of sustenance and material provision | روزی اور مادی ضروریات کے معاملات میں محفوظ رہتے ہیں |
+| Must learn to set boundaries with family while maintaining their generous nature | اپنی فیاض فطرت برقرار رکھتے ہوئے گھر والوں کے ساتھ حدود قائم کرنا سیکھنا ہوگا |
+| Sharp and cutting words when upset, speech can wound deeply | ناراضی میں الفاظ تیز اور کاٹ دار ہوتے ہیں، بات گہرا زخم دے سکتی ہے |
+| Extremely short fuse - the slightest provocation can trigger intense reaction | فتیلہ بہت چھوٹا — ذرا سی اشتعال انگیزی شدید ردِ عمل پیدا کر سکتی ہے |
+| Despite temper, has loyal friends who understand their passionate nature | مزاج کی تیزی کے باوجود ایسے وفادار دوست ہوتے ہیں جو ان کی پُرجوش طبیعت سمجھتے ہیں |
+| Generally unpopular due to volatile temperament and quick anger | مزاج کی بے ثباتی اور جلد غصے کی وجہ سے عموماً غیر مقبول ہوتے ہیں |
+| Those with patience are drawn to their intellectual brilliance | صبر والے لوگ ان کی ذہنی تیزی کی طرف کھنچتے ہیں |
+| Difficult for most people to cope with their intense emotional swings | اکثر لوگوں کے لیے ان کے شدید جذباتی اتار چڑھاؤ کا سامنا کرنا مشکل ہوتا ہے |
+| Frequently dreams of flying in the sky or heavens, being lifted or elevated, carried in people's hands, soaring above the earth | اکثر خواب میں آسمان یا فضاؤں میں اڑنا، بلند کیا جانا، لوگوں کے ہاتھوں پر اٹھایا جانا اور زمین کے اوپر بلند ہونا دیکھتے ہیں |
+| Receives divine protection despite their challenges with anger | غصے سے متعلق مشکلات کے باوجود الٰہی حفاظت حاصل رہتی ہے |
+| Allah grants them opportunities to learn patience and emotional mastery | اللہ انہیں صبر اور جذباتی ضبط سیکھنے کے مواقع عطا فرماتا ہے |
+| Must work consciously to control anger and develop patience - this is their life's spiritual test | غصے پر قابو پانے اور صبر پیدا کرنے کے لیے شعوری کوشش کرنی ہوگی — یہی ان کی زندگی کا روحانی امتحان ہے |
+| Silent and calm usually, but when angry speaks continuously without stopping | عموماً خاموش اور پُرسکون رہتے ہیں، مگر غصے میں رکے بغیر مسلسل بولتے جاتے ہیں |
+| Takes immense provocation to anger, but once upset becomes an unstoppable verbal flood - no one can calm or interrupt them | غصہ دلانے کے لیے بہت زیادہ اشتعال چاہیے، مگر ایک بار ناراض ہو جائیں تو الفاظ کا بے قابو سیلاب بن جاتے ہیں — کوئی انہیں چپ نہیں کرا سکتا |
+| Deeply appreciated by those who recognize their strength in patience | جو لوگ صبر میں ان کی قوت پہچانتے ہیں وہ انہیں بہت سراہتے ہیں |
+| Often underestimated or taken advantage of due to their gentle nature | نرم مزاجی کی وجہ سے اکثر انہیں کم سمجھا جاتا ہے یا ان سے ناجائز فائدہ اٹھایا جاتا ہے |
+| People in crisis naturally seek them out for their calming presence | بحران میں گھرے لوگ ان کی تسکین بخش موجودگی کی وجہ سے فطری طور پر ان کے پاس آتے ہیں |
+| Some mistake their patience for weakness or lack of intelligence | بعض لوگ ان کے صبر کو کمزوری یا کم عقلی سمجھ لیتے ہیں |
+| Water appears very frequently - being in water, near water, flowing water, oceans, rivers. Most with this buruj regularly see water in their dreams. | پانی بہت کثرت سے نظر آتا ہے — پانی میں ہونا، پانی کے قریب ہونا، بہتا پانی، سمندر، دریا۔ اس برج والوں کو اکثر خواب میں پانی نظر آتا ہے۔ |
+| Granted deep emotional wisdom and intuitive understanding of others | روایت میں گہری جذباتی حکمت اور دوسروں کی وجدانی سمجھ عطا ہونا بیان کیا جاتا ہے |
+| Protected from those who would exploit their kindness | ایسے لوگوں سے محفوظ رہتے ہیں جو ان کی مہربانی کا ناجائز فائدہ اٹھانا چاہیں |
+| Must learn when to set boundaries without losing their compassionate nature | یہ سیکھنا ہوگا کہ اپنی ہمدرد فطرت کھوئے بغیر حدود کب قائم کی جائیں |
+| Speaks with warmth and conviction, inspiring others with fiery words | گرم جوشی اور یقین سے بولتا ہے، آگ جیسے الفاظ سے دوسروں کو متاثر کرتا ہے |
+| Slow to anger but fierce when provoked, burns bright but can cool with reason | غصہ دیر سے آتا ہے مگر چھیڑنے پر شدید ہوتا ہے؛ تیز جلتا ہے لیکن دلیل سے ٹھنڈا ہو سکتا ہے |
+| Admired for leadership qualities and courageous nature | قیادت کی صلاحیتوں اور دلیر فطرت کی وجہ سے قابلِ تحسین |
+| May overwhelm others with intensity and high expectations | اپنی شدت اور بلند توقعات سے دوسروں پر بھاری پڑ سکتا ہے |
+| Natural magnetism draws people seeking guidance and inspiration | فطری کشش رہنمائی اور تحریک چاہنے والوں کو اپنی طرف کھینچتی ہے |
+| Some find their directness too confrontational | بعض لوگوں کو ان کی صاف گوئی ضرورت سے زیادہ ٹکراؤ والی لگتی ہے |
+| Fire, light, sun, and illumination appear in dreams symbolizing clarity | خواب میں آگ، روشنی، سورج اور نور نظر آتے ہیں جو وضاحت کی علامت ہیں |
+| Granted natural leadership abilities and protective instincts | روایت میں فطری قیادت کی صلاحیت اور حفاظتی جبلت عطا ہونا بیان کیا جاتا ہے |
+| Protected in new ventures and bold initiatives | نئے کاموں اور جرأت مندانہ اقدامات میں محفوظ رہتے ہیں |
+| Must balance assertiveness with patience and understanding | جرأت اور صبر و فہم کے درمیان توازن رکھنا ہوگا |
+| Speaks with careful consideration, words carry weight and permanence | سوچ سمجھ کر بولتا ہے، الفاظ میں وزن اور پائیداری ہوتی ہے |
+| Slow to provoke but immovable when angered, like a mountain | غصہ دیر سے آتا ہے مگر ایک بار آ جائے تو پہاڑ کی طرح اٹل ہوتا ہے |
+| Trusted by all for consistency and dependability | مستقل مزاجی اور بھروسے کی وجہ سے سب کا اعتماد حاصل ہوتا ہے |
+| May be seen as rigid or resistant to change | سخت یا تبدیلی کے مخالف سمجھے جا سکتے ہیں |
+| People seeking stability naturally gravitate toward them | استحکام چاہنے والے فطری طور پر ان کی طرف کھنچتے ہیں |
+| Some find their cautiousness frustrating | بعض لوگوں کو ان کی احتیاط پسندی کھلتی ہے |
+| Earth, mountains, buildings, structures appear symbolizing foundation | زمین، پہاڑ، عمارتیں اور ڈھانچے نظر آتے ہیں جو بنیاد کی علامت ہیں |
+| Granted unshakeable faith and material security | روایت میں غیر متزلزل ایمان اور مادی تحفظ عطا ہونا بیان کیا جاتا ہے |
+| Protected in matters of property and long-term investments | جائیداد اور طویل مدتی سرمایہ کاری کے معاملات میں محفوظ رہتے ہیں |
+| Must learn flexibility while maintaining core stability | بنیادی استحکام برقرار رکھتے ہوئے لچک سیکھنی ہوگی |
+| Articulate and persuasive, natural communicator and teacher | فصیح اور قائل کرنے والا، فطری مبلغ اور استاد |
+| Quick to flare up but also quick to cool down, like passing winds | جلد بھڑکتا ہے مگر جلد ٹھنڈا بھی ہو جاتا ہے، گزرتی ہواؤں کی طرح |
+| Admired for wit, intelligence, and social charm | ذہانت، حاضر جوابی اور سماجی دلکشی کی وجہ سے قابلِ تحسین |
+| May be perceived as superficial or inconsistent | سطحی یا غیر مستقل سمجھا جا سکتا ہے |
+| Natural networker who connects diverse groups | فطری طور پر مختلف گروہوں کو جوڑنے والا |
+| Some find their restlessness and changeability unsettling | بعض لوگوں کو ان کی بے چینی اور بدلتا مزاج پریشان کن لگتا ہے |
+| Flying, heights, sky, being carried upward, intellectual pursuits in dreams | خوابوں میں اڑنا، بلندیاں، آسمان، اوپر اٹھایا جانا اور فکری جستجو |
+| Granted exceptional communication abilities and adaptability | روایت میں غیر معمولی ابلاغی صلاحیت اور موافقت عطا ہونا بیان کیا جاتا ہے |
+| Protected in intellectual and social endeavors | فکری اور سماجی کاموں میں محفوظ رہتے ہیں |
+| Must develop depth and follow-through alongside versatility | ہمہ جہتی کے ساتھ گہرائی اور تکمیلِ کار بھی پیدا کرنی ہوگی |
+| Speaks with penetrating insight and emotional depth | گہری بصیرت اور جذباتی گہرائی کے ساتھ بولتا ہے |
+| Slow to show anger externally but feels deeply, when released it's a tidal wave | غصہ ظاہر کرنے میں دیر لگاتا ہے مگر اندر سے شدت سے محسوس کرتا ہے؛ جب پھوٹتا ہے تو طوفانی لہر بن جاتا ہے |
+| Respected for loyalty, depth, and transformative presence | وفاداری، گہرائی اور تبدیلی لانے والی موجودگی کی وجہ سے قابلِ احترام |
+| Intensity can overwhelm those who prefer superficial connections | اس کی شدت ان لوگوں پر بھاری پڑ سکتی ہے جو سطحی تعلق پسند کرتے ہیں |
+| People in crisis instinctively seek their depth and understanding | بحران میں گھرے لوگ بے ساختہ ان کی گہرائی اور فہم تلاش کرتے ہیں |
+| Some fear their ability to see through facades | بعض لوگ ان کی ظاہری پردوں کے آر پار دیکھنے کی صلاحیت سے ڈرتے ہیں |
+| Deep water, oceans, transformation, death and rebirth symbolism, mysteries | گہرا پانی، سمندر، تبدیلی، موت و حیات کی علامتیں اور اسرار |
+| Granted profound insight into hidden truths and healing abilities | روایت میں پوشیدہ حقائق کی گہری بصیرت اور شفا کی صلاحیتیں عطا ہونا بیان کیا جاتا ہے |
+| Protected through life's deepest transformations | زندگی کی گہری ترین تبدیلیوں کے دوران محفوظ رہتے ہیں |
+| Must learn to trust and let go of control | بھروسا کرنا اور قابو چھوڑنا سیکھنا ہوگا |
+| Speaks with enthusiasm and philosophical depth | جوش اور فلسفیانہ گہرائی کے ساتھ بولتا ہے |
+| Slow to anger, but when provoked speaks with blazing directness | غصہ دیر سے آتا ہے، مگر چھیڑنے پر بے لاگ صاف گوئی سے بولتا ہے |
+| Beloved for generosity and uplifting spirit | سخاوت اور حوصلہ بڑھانے والی طبیعت کی وجہ سے محبوب |
+| May promise more than can be delivered | ممکن ہے جتنا نبھا سکے اس سے زیادہ وعدہ کر لے |
+| People seek their wisdom and optimistic perspective | لوگ ان کی حکمت اور پُرامید نقطۂ نظر کی طلب رکھتے ہیں |
+| Some find their bluntness too harsh | بعض لوگوں کو ان کی بے باکی ضرورت سے زیادہ سخت لگتی ہے |
+| Fire, travel, distant places, learning, spiritual journeys | آگ، سفر، دور دراز مقامات، علم اور روحانی سفر |
+| Granted wisdom and opportunities for expansion | روایت میں حکمت اور وسعت کے مواقع عطا ہونا بیان کیا جاتا ہے |
+| Protected in travel and seeking knowledge | سفر اور علم کی طلب میں محفوظ رہتے ہیں |
+| Must develop discipline alongside freedom-seeking nature | آزادی پسند فطرت کے ساتھ نظم و ضبط بھی پیدا کرنا ہوگا |
+| Speaks with authority and measured wisdom | اختیار اور ناپی تلی حکمت کے ساتھ بولتا ہے |
+| Very slow to anger, but when provoked is immovable like a mountain | غصہ بہت دیر سے آتا ہے، مگر چھیڑنے پر پہاڑ کی طرح اٹل ہوتا ہے |
+| Respected for reliability and achievement | بھروسے اور کامیابیوں کی وجہ سے قابلِ احترام |
+| May seem cold or overly serious | سرد مہر یا ضرورت سے زیادہ سنجیدہ لگ سکتا ہے |
+| People seeking stability and guidance are drawn to them | استحکام اور رہنمائی چاہنے والے ان کی طرف کھنچتے ہیں |
+| Some find their seriousness intimidating | بعض لوگوں کو ان کی سنجیدگی مرعوب کن لگتی ہے |
+| Mountains, structures, achievements, climbing upward | پہاڑ، ڈھانچے، کامیابیاں اور اوپر چڑھنا |
+| Granted patience and ultimate success through perseverance | روایت میں صبر اور استقامت کے ذریعے اعلیٰ کامیابی عطا ہونا بیان کیا جاتا ہے |
+| Protected in long-term endeavors and career | طویل مدتی کاموں اور پیشے میں محفوظ رہتے ہیں |
+| Must learn to balance ambition with compassion | بلند حوصلگی اور ہمدردی کے درمیان توازن سیکھنا ہوگا |
+| Speaks with vision for the future and community welfare | مستقبل کے وژن اور برادری کی فلاح کے ساتھ بولتا ہے |
+| Detached when angry, may become aloof or distant | غصے میں الگ تھلگ ہو جاتا ہے، لاتعلق یا دور ہو سکتا ہے |
+| Admired for progressive thinking and humanitarian efforts | ترقی پسند سوچ اور انسان دوست کوششوں کی وجہ سے قابلِ تحسین |
+| May seem emotionally distant or too idealistic | جذباتی طور پر دور یا ضرورت سے زیادہ مثالیت پسند لگ سکتا ہے |
+| People seeking change and innovation are drawn to them | تبدیلی اور جدت چاہنے والے ان کی طرف کھنچتے ہیں |
+| Some find their unconventional ideas threatening | بعض لوگوں کو ان کے غیر روایتی خیالات خطرناک لگتے ہیں |
+| Flying, future visions, communities, gatherings, innovative solutions | اڑنا، مستقبل کے تصورات، برادریاں، اجتماعات اور جدید حل |
+| Granted vision for collective benefit and innovation | روایت میں اجتماعی فائدے اور جدت کا وژن عطا ہونا بیان کیا جاتا ہے |
+| Protected in community service and humanitarian work | برادری کی خدمت اور انسان دوست کام میں محفوظ رہتے ہیں |
+| Must balance idealism with practical implementation | مثالیت پسندی اور عملی نفاذ کے درمیان توازن رکھنا ہوگا |
+| Speaks with empathy and spiritual understanding | ہمدردی اور روحانی فہم کے ساتھ بولتا ہے |
+| Absorbs anger internally, may become withdrawn or melancholic | غصہ اندر ہی اندر جذب کر لیتا ہے، گوشہ نشین یا اداس ہو سکتا ہے |
+| Cherished for compassion and selfless service | ہمدردی اور بے لوث خدمت کی وجہ سے عزیز |
+| May be taken advantage of due to giving nature | دینے والی فطرت کی وجہ سے ان سے ناجائز فائدہ اٹھایا جا سکتا ہے |
+| People in need naturally seek their healing presence | ضرورت مند لوگ فطری طور پر ان کی شفا بخش موجودگی کی طلب کرتے ہیں |
+| Some exploit their inability to say no | بعض لوگ ان کے «نہ» نہ کہہ سکنے کا فائدہ اٹھاتے ہیں |
+| Water, oceans, spiritual visions, mystical experiences, helping others | پانی، سمندر، روحانی رؤیا، صوفیانہ تجربات اور دوسروں کی مدد |
+| Granted deep spiritual connection and healing abilities | روایت میں گہرا روحانی تعلق اور شفا کی صلاحیتیں عطا ہونا بیان کیا جاتا ہے |
+| Protected through service to others | دوسروں کی خدمت کے ذریعے محفوظ رہتے ہیں |
+| Must learn healthy boundaries without losing compassion | ہمدردی کھوئے بغیر صحت مند حدود قائم کرنا سیکھنا ہوگا |
+
+
+
+### 6.22 burj-blessed-day (136)
+
+| English | Urdu |
+|---|---|
+| Starting new business ventures and projects | نئے کاروباری منصوبے اور کام شروع کرنا |
+| Important meetings with potential partners | ممکنہ شراکت داروں کے ساتھ اہم ملاقاتیں |
+| Making critical life decisions | زندگی کے اہم فیصلے کرنا |
+| Beginning travel for business or pleasure | کاروبار یا تفریح کے لیے سفر کا آغاز |
+| Signing important contracts | اہم معاہدوں پر دستخط |
+| Launching new initiatives | نئے اقدامات کا آغاز |
+| Confronting challenges head-on | چیلنجوں کا سامنا ڈٹ کر کرنا |
+| Mars energy peaks on this day, amplifying your natural fire | اس دن مریخ کی توانائی عروج پر سمجھی جاتی ہے، جو آپ کی فطری آتشی کیفیت کو بڑھاتی ہے |
+| Your charisma and persuasive power are at their strongest | آپ کی کشش اور قائل کرنے کی صلاحیت اپنی بلند ترین سطح پر ہوتی ہے |
+| Divine support flows most freely on Tuesdays | روایت میں سمجھا جاتا ہے کہ منگل کو الٰہی مدد سب سے زیادہ کشادگی سے ملتی ہے |
+| Making important financial decisions and investments | اہم مالی فیصلے اور سرمایہ کاری کرنا |
+| Signing property or land contracts | جائیداد یا زمین کے معاہدوں پر دستخط |
+| Starting agricultural or earth-based projects | زرعی یا زمین پر مبنی منصوبے شروع کرنا |
+| Major purchases of tangible assets | ٹھوس اثاثوں کی بڑی خریداری |
+| Family gatherings and reconciliation | خاندانی اجتماعات اور صلح |
+| Seeking forgiveness and spiritual renewal | معافی کی طلب اور روحانی تجدید |
+| Community service and charitable works | برادری کی خدمت اور فلاحی کام |
+| Friday is the most blessed day in Islam - Jumu'ah | جمعہ اسلام میں سب سے بابرکت دن ہے — یومُ الجمعہ |
+| Venus energy enhances beauty, harmony, and material blessings | روایتی طور پر زہرہ سے حسن، ہم آہنگی اور مادی برکتوں کو منسوب کیا جاتا ہے |
+| Your natural stability is amplified on this holy day | اس مقدس دن آپ کا فطری استحکام اور بڑھ جاتا ہے |
+| Perfect for long-term planning and commitments | طویل مدتی منصوبہ بندی اور وعدوں کے لیے بہترین |
+| Communication and important conversations | گفتگو اور اہم بات چیت |
+| Signing contracts and agreements | معاہدوں اور سمجھوتوں پر دستخط |
+| Starting new business ventures | نئے کاروباری منصوبے شروع کرنا |
+| Intellectual pursuits and learning | فکری جستجو اور سیکھنا |
+| Social networking and making connections | سماجی روابط اور تعلقات بنانا |
+| Writing and creative expression | تحریر اور تخلیقی اظہار |
+| Resolving conflicts peacefully | تنازعات کو پُرامن طریقے سے حل کرنا |
+| Mercury energy peaks - enhances communication and intellect | روایت میں عطارد کی توانائی عروج پر سمجھی جاتی ہے — ابلاغ اور ذہانت کو بڑھاتی ہے |
+| Associated with Prophet Musa (Moses) ع - the great communicator | حضرت موسیٰ علیہ السلام سے منسوب — عظیم بات کرنے والے |
+| Your mental clarity is sharpest on this day | اس دن آپ کی ذہنی وضاحت سب سے تیز ہوتی ہے |
+| Ideal for learning anger management and patience practices | غصے پر قابو اور صبر کے معمولات سیکھنے کے لیے موزوں |
+| Prophet Musa (Moses) | حضرت موسیٰ علیہ السلام |
+| Emotional healing and therapy | جذباتی شفا اور تھراپی |
+| Making decisions from the heart | دل کی آواز سے فیصلے کرنا |
+| Starting creative projects | تخلیقی منصوبے شروع کرنا |
+| Water-related ventures | پانی سے متعلق کام |
+| Spiritual practices and meditation | روحانی معمولات اور مراقبہ |
+| Family matters and reconciliation | گھریلو معاملات اور صلح |
+| Intuitive and psychic work | وجدانی اور باطنی کام |
+| Moon energy peaks - enhances emotions and intuition | روایت میں قمر کی توانائی عروج پر سمجھی جاتی ہے — جذبات اور وجدان کو بڑھاتی ہے |
+| Your natural empathy is strongest on this day | اس دن آپ کی فطری ہمدردی سب سے مضبوط ہوتی ہے |
+| Perfect for cleansing rituals and renewal | تطہیری اعمال اور تجدید کے لیے بہترین |
+| Water has maximum spiritual power on Mondays | روایت میں سمجھا جاتا ہے کہ پیر کو پانی میں سب سے زیادہ روحانی اثر ہوتا ہے |
+| Beginning travel - especially auspicious for journey starts | سفر کا آغاز — خاص طور پر سفر شروع کرنے کے لیے موزوں |
+| Starting construction of a new house or building | نئے گھر یا عمارت کی تعمیر شروع کرنا |
+| Launching major life projects | زندگی کے بڑے منصوبے شروع کرنا |
+| Important new beginnings | اہم نئے آغاز |
+| Leadership initiatives | قیادت پر مبنی اقدامات |
+| Making bold decisions | جرأت مندانہ فیصلے کرنا |
+| Solar-aligned spiritual practices | شمس سے ہم آہنگ روحانی معمولات |
+| Sunday is the day of the Sun - your natural power source | اتوار شمس کا دن ہے — آپ کی فطری قوت کا منبع |
+| Best day in the week to begin any significant journey | کسی بھی اہم سفر کے آغاز کے لیے ہفتے کا بہترین دن |
+| Most auspicious day to lay the first brick of a new home | نئے گھر کی پہلی اینٹ رکھنے کے لیے سب سے موزوں دن |
+| Solar energy amplifies your natural fire element | شمسی توانائی آپ کے فطری آتشی عنصر کو بڑھاتی ہے |
+| Perfect for initiating projects that require sustained energy | ایسے منصوبے شروع کرنے کے لیے بہترین جن میں مسلسل توانائی درکار ہو |
+| Long-term planning and strategy | طویل مدتی منصوبہ بندی اور حکمتِ عملی |
+| Property transactions and investments | جائیداد کے لین دین اور سرمایہ کاری |
+| Building foundations (literal and metaphorical) | بنیادیں رکھنا (لفظی بھی اور تمثیلی بھی) |
+| Serious commitments and contracts | سنجیدہ وعدے اور معاہدے |
+| Spiritual grounding practices | روحانی استحکام کے معمولات |
+| Ancestral work and family matters | آباؤ اجداد سے متعلق کام اور خاندانی معاملات |
+| Discipline and structure implementation | نظم و ضبط اور ڈھانچوں کا نفاذ |
+| Performing your lifetime sadaqah | اپنا عمر بھر کا صدقہ ادا کرنا |
+| Wednesday (Mercury day) enhances earth element communication | بدھ (عطارد کا دن) مٹی کے عنصر کی گفتگو کو بہتر بناتا ہے |
+| Your natural stability is most pronounced | آپ کا فطری استحکام سب سے نمایاں ہوتا ہے |
+| Ideal for establishing lasting foundations | پائیدار بنیادیں قائم کرنے کے لیے موزوں |
+| Perfect day for your lifetime sadaqah sacrifice | آپ کے عمر بھر کے صدقے اور قربانی کے لیے بہترین دن |
+| Important communications and presentations | اہم گفتگو اور پیشکشیں |
+| Social gatherings and networking | سماجی اجتماعات اور روابط |
+| Teaching and sharing knowledge | علم سکھانا اور بانٹنا |
+| Starting educational ventures | تعلیمی منصوبے شروع کرنا |
+| Building community connections | برادری کے تعلقات بنانا |
+| Friday prayers and spiritual community | جمعہ کی نماز اور روحانی برادری |
+| Venus and Jumu'ah energies combine for powerful social blessings | روایتی طور پر زہرہ اور جمعہ کی نسبتیں مل کر سماجی برکتوں کا ذریعہ سمجھی جاتی ہیں |
+| Your communication abilities peak on this holy day | اس مقدس دن آپ کی گفتگو کی صلاحیت عروج پر ہوتی ہے |
+| Perfect for building bridges between people and ideas | لوگوں اور خیالات کے درمیان پل بنانے کے لیے بہترین |
+| Divine support flows through community connections | روایت میں سمجھا جاتا ہے کہ برادری کے روابط کے ذریعے الٰہی مدد ملتی ہے |
+| Deep transformational work | گہرا تبدیلی کا کام |
+| Investigating hidden matters | پوشیدہ معاملات کی چھان بین |
+| Ending cycles and releasing the past | دوروں کو ختم کرنا اور ماضی کو چھوڑنا |
+| Powerful healing sessions | مؤثر شفا کے سیشن |
+| Confronting difficult truths | مشکل سچائیوں کا سامنا کرنا |
+| Strategic power moves | حکمتِ عملی کے اقدامات |
+| Intense spiritual practices | شدید روحانی معمولات |
+| Mars energy intensifies your natural Scorpio power | روایتی طور پر مریخ کی توانائی آپ کی فطری عقربی قوت کو بڑھاتی ہے |
+| Perfect day for endings that lead to new beginnings | ایسے اختتام کے لیے بہترین دن جو نئے آغاز کی طرف لے جائیں |
+| Your transformative abilities peak on this day | اس دن آپ کی تبدیلی لانے کی صلاحیت عروج پر ہوتی ہے |
+| Courage and insight combine powerfully on Tuesdays | روایت میں سمجھا جاتا ہے کہ منگل کو ہمت اور بصیرت بھرپور طور پر مل جاتی ہیں |
+| Seeking knowledge and education | علم اور تعلیم کی طلب |
+| Beginning journeys and travels | سفر اور مسافتوں کا آغاز |
+| Teaching and sharing wisdom | حکمت سکھانا اور بانٹنا |
+| Signing educational contracts | تعلیمی معاہدوں پر دستخط |
+| Starting publishing projects | اشاعتی منصوبے شروع کرنا |
+| International business dealings | بین الاقوامی کاروباری معاملات |
+| Spiritual study and reflection | روحانی مطالعہ اور غور و فکر |
+| Jupiter energy peaks - brings expansion and blessings | روایت میں مشتری کی توانائی عروج پر سمجھی جاتی ہے — وسعت اور برکتیں لاتی ہے |
+| Best day for learning and teaching | سیکھنے اور سکھانے کا بہترین دن |
+| Your wisdom and generosity are amplified | آپ کی حکمت اور سخاوت بڑھ جاتی ہے |
+| Perfect for beginning long-term educational pursuits | طویل مدتی تعلیمی کاموں کے آغاز کے لیے بہترین |
+| Career planning and advancement | پیشہ ورانہ منصوبہ بندی اور ترقی |
+| Important business decisions | اہم کاروباری فیصلے |
+| Long-term commitments | طویل مدتی وعدے |
+| Authority matters | اختیار سے متعلق معاملات |
+| Property and investment decisions | جائیداد اور سرمایہ کاری کے فیصلے |
+| Setting serious intentions | سنجیدہ نیتیں کرنا |
+| Saturday is THE BEST day for this buruj | ہفتہ اس برج کے لیے بہترین دن سمجھا جاتا ہے |
+| Saturn energy peaks - most powerful for serious undertakings | روایت میں زحل کی توانائی عروج پر سمجھی جاتی ہے — سنجیدہ کاموں کے لیے سب سے مؤثر |
+| Your natural discipline and authority are strongest | آپ کا فطری نظم و ضبط اور اختیار سب سے مضبوط ہوتے ہیں |
+| Ideal for establishing lasting structures | پائیدار ڈھانچے قائم کرنے کے لیے موزوں |
+| Perfect for patient, long-term planning | صبر آزما طویل مدتی منصوبہ بندی کے لیے بہترین |
+| Most auspicious day for your lifetime sadaqah | آپ کے عمر بھر کے صدقے کے لیے سب سے موزوں دن |
+| Community projects and gatherings | برادری کے منصوبے اور اجتماعات |
+| Innovation and new ideas | جدت اور نئے خیالات |
+| Humanitarian initiatives | انسان دوست اقدامات |
+| Group activities and collaboration | گروہی سرگرمیاں اور تعاون |
+| Technology launches | ٹیکنالوجی کا اجرا |
+| Social reform efforts | سماجی اصلاح کی کوششیں |
+| Future planning | مستقبل کی منصوبہ بندی |
+| Solar energy combined with air brings illuminating innovation | شمسی توانائی ہوا کے ساتھ مل کر روشن جدت لاتی ہے |
+| Your humanitarian vision is clearest | آپ کا انسان دوست وژن سب سے واضح ہوتا ہے |
+| Perfect for launching community initiatives | برادری کے اقدامات شروع کرنے کے لیے بہترین |
+| Divine support flows through collective efforts | روایت میں سمجھا جاتا ہے کہ اجتماعی کوششوں کے ذریعے الٰہی مدد ملتی ہے |
+| Healing and spiritual work | شفا اور روحانی کام |
+| Charitable activities and giving | خیراتی سرگرمیاں اور دینا |
+| Meditation and prayer | مراقبہ اور دعا |
+| Helping those in need | ضرورت مندوں کی مدد کرنا |
+| Creative and artistic pursuits | تخلیقی اور فنی مشاغل |
+| Spiritual teaching and guidance | روحانی تعلیم اور رہنمائی |
+| Acts of compassion and mercy | ہمدردی اور رحم کے کام |
+| Thursday is THE BEST and most blessed day for this buruj | جمعرات اس برج کے لیے بہترین اور سب سے بابرکت دن سمجھی جاتی ہے |
+| Jupiter energy brings expansion of compassion and divine blessings | روایتی طور پر مشتری کی نسبت ہمدردی اور الٰہی برکتوں کی وسعت سے جوڑی جاتی ہے |
+| Your healing abilities and spiritual connection are strongest | آپ کی شفا کی صلاحیتیں اور روحانی تعلق سب سے مضبوط ہوتے ہیں |
+| Perfect for spiritual retreats and deep prayer | روحانی خلوت اور گہری دعا کے لیے بہترین |
+| Divine mercy and barakah flow most freely on Thursdays | روایت میں سمجھا جاتا ہے کہ جمعرات کو الٰہی رحمت اور برکت سب سے زیادہ کشادگی سے ملتی ہے |
+| Most powerful day for your lifetime sadaqah | آپ کے عمر بھر کے صدقے کے لیے سب سے طاقتور دن |
+
+
+
+### 6.23 burj-sadaqah (270)
+
+| English | Urdu |
+|---|---|
+| Every 1-2 months consistently | ہر 1 تا 2 ماہ میں تسلسل کے ساتھ |
+| Whether in ease or difficulty, prosperity or hardship - consistency is key | آسانی ہو یا مشکل، خوشحالی ہو یا تنگی — تسلسل ہی کلید ہے |
+| To balance your fiery ṭabʿ, maintain spiritual equilibrium, cool excessive heat, and attract divine blessings | اپنے آتشی طبع کو متوازن رکھنے، روحانی توازن برقرار رکھنے، حد سے زیادہ گرمی کو ٹھنڈا کرنے اور الٰہی برکتیں پانے کے لیے |
+| Share beef meals with families in need | ضرورت مند خاندانوں کے ساتھ گائے کے گوشت کا کھانا بانٹیں |
+| Donate to food banks specializing in protein | پروٹین پر توجہ دینے والے فوڈ بینکوں کو عطیہ دیں |
+| Feed the hungry at soup kitchens | لنگر خانوں میں بھوکوں کو کھانا کھلائیں |
+| Support organizations providing meals | کھانا فراہم کرنے والی تنظیموں کی مدد کریں |
+| Host community dinners with meat dishes | گوشت کے پکوانوں کے ساتھ برادری کے کھانے کا اہتمام کریں |
+| Sponsor meals at mosques or community centers | مساجد یا کمیونٹی سینٹروں میں کھانے کا اہتمام کریں |
+| One lamb without horns (dakaru gaar in Wolof) - a sacred once-in-lifetime offering | بغیر سینگ کا ایک مینڈھا (وولوف میں dakaru gaar) — زندگی میں ایک بار کی مقدس نذر |
+| One complete lamb without horns (symbolizing purity and submission) | بغیر سینگ کا ایک مکمل مینڈھا (پاکیزگی اور سپردگی کی علامت) |
+| Must be healthy and without defects | صحت مند اور بے عیب ہونا ضروری ہے |
+| Meat distributed among believers and the poor | گوشت اہلِ ایمان اور غریبوں میں تقسیم کیا جائے |
+| Performed with sincere intention (niyyah) | خلوصِ نیت (نیت) کے ساتھ کیا جائے |
+| Done during a spiritually auspicious time | کسی روحانی طور پر موافق وقت میں کیا جائے |
+| Perform on your blessed day (Tuesday) for maximum spiritual benefit | زیادہ سے زیادہ روحانی فائدے کے لیے اپنے مبارک دن (منگل) کو کریں |
+| Islamic occasions like Eid al-Adha amplify the blessing | عیدالاضحیٰ جیسے اسلامی مواقع برکت کو بڑھا دیتے ہیں |
+| During times of gratitude or after major life milestones | شکرگزاری کے اوقات میں یا زندگی کے بڑے سنگِ میل کے بعد |
+| When seeking divine intervention for important matters | جب اہم معاملات میں اللہ کی مدد طلب کی جائے |
+| After completing a significant spiritual journey | کسی اہم روحانی سفر کی تکمیل کے بعد |
+| A major spiritual milestone that removes obstacles from your path, strengthens your connection with the Divine, balances your fiery nature, and opens doors of sustenance. This sacred act creates lasting spiritual protection for you and your lineage. | ایک بڑا روحانی سنگِ میل، جسے روایت میں راہ کی رکاوٹیں دور کرنے، اللہ سے تعلق مضبوط کرنے، آپ کے آتشی مزاج کو متوازن کرنے اور رزق کے دروازے کھولنے کا ذریعہ سمجھا جاتا ہے۔ اس مقدس عمل کو آپ اور آپ کی نسل کے لیے دیرپا روحانی حفاظت کا سبب مانا جاتا ہے۔ |
+| Every 1-2 months without fail | ہر 1 تا 2 ماہ میں بلا ناغہ |
+| In all circumstances - prosperity or hardship - to maintain spiritual balance | ہر حال میں — خوشحالی ہو یا تنگی — روحانی توازن برقرار رکھنے کے لیے |
+| To balance your earthy nature, maintain spiritual grounding, ensure continued divine provision, and avoid stagnation. CRITICAL: Never give fish - this disrupts your elemental balance severely. | اپنے زمینی مزاج کو متوازن رکھنے، روحانی استحکام برقرار رکھنے، الٰہی رزق کے تسلسل اور جمود سے بچنے کے لیے۔ نہایت اہم: کبھی مچھلی نہ دیں — روایت میں یہ آپ کے عناصر کے توازن کو شدید بگاڑتی سمجھی جاتی ہے۔ |
+| Donate rice, wheat, or grain to food banks | فوڈ بینکوں کو چاول، گندم یا اناج عطیہ کریں |
+| Provide bread and baked goods to the needy | ضرورت مندوں کو روٹی اور بیکری کی اشیا دیں |
+| Support agricultural cooperatives helping farmers | کسانوں کی مدد کرنے والی زرعی تعاونی انجمنوں کی معاونت کریں |
+| Sponsor school lunch programs | اسکولوں کے دوپہر کے کھانے کے پروگراموں کی کفالت کریں |
+| Donate to organizations feeding the hungry (ensure NO fish products) | بھوکوں کو کھانا کھلانے والی تنظیموں کو عطیہ دیں (مچھلی کی کوئی چیز نہ ہو) |
+| Provide dry goods and non-perishable earth-based foods | خشک سامان اور دیر تک محفوظ رہنے والی مٹی سے حاصل ہونے والی غذائیں دیں |
+| One cow (complete) - meat distributed among believers and the poor | ایک گائے (مکمل) — گوشت اہلِ ایمان اور غریبوں میں تقسیم کیا جائے |
+| One complete healthy cow without defects | ایک مکمل، صحت مند اور بے عیب گائے |
+| The cow must be of appropriate age (mature) | گائے مناسب عمر (بالغ) کی ہونی چاہیے |
+| Meat should be distributed widely among community | گوشت برادری میں وسیع پیمانے پر تقسیم کیا جائے |
+| Prioritize feeding the poor and needy first | پہلے غریبوں اور ضرورت مندوں کو کھلانے کو ترجیح دیں |
+| Keep minimal portion for yourself (tradition recommends 1/3 distribution) | اپنے لیے کم سے کم حصہ رکھیں (روایت میں 1/3 تقسیم کی سفارش ہے) |
+| Perform with sincere intention to please Allah | اللہ کی رضا کی خالص نیت سے کریں |
+| Perform on Friday (your blessed day) after Jumu'ah prayer | اپنے مبارک دن جمعہ کو نمازِ جمعہ کے بعد کریں |
+| Eid al-Adha is the most blessed time | عیدالاضحیٰ سب سے بابرکت وقت ہے |
+| During Dhul-Hijjah (sacred month) | ذوالحجہ (حرمت والے مہینے) کے دوران |
+| Times of major life transitions or gratitude | زندگی کی بڑی تبدیلیوں یا شکرگزاری کے اوقات |
+| When seeking divine openings in sustenance | جب رزق میں کشادگی کی دعا ہو |
+| A profound spiritual milestone that removes major obstacles, opens doors of sustenance from unexpected sources, strengthens family bonds, and establishes lasting barakah (blessing) in your lineage. The earth element connects you deeply to provision. | ایک گہرا روحانی سنگِ میل، جسے روایت میں بڑی رکاوٹیں دور کرنے، غیر متوقع ذرائع سے رزق کے دروازے کھولنے، خاندانی رشتے مضبوط کرنے اور آپ کی نسل میں دیرپا برکت قائم کرنے کا ذریعہ سمجھا جاتا ہے۔ مٹی کا عنصر آپ کو رزق سے گہرا جوڑتا ہے۔ |
+| In all circumstances - this practice cools the fiery anger and brings spiritual balance | ہر حال میں — یہ عمل غصے کی آگ کو ٹھنڈا کرتا اور روحانی توازن لاتا سمجھا جاتا ہے |
+| To purify the temperament, balance volatile emotions, cool anger, attract patience, and maintain spiritual equilibrium. The act of giving clothes symbolizes shedding negative traits. | مزاج کو پاک کرنے، بھڑکنے والے جذبات کو متوازن کرنے، غصہ ٹھنڈا کرنے، صبر پیدا کرنے اور روحانی توازن برقرار رکھنے کے لیے۔ کپڑے دینا منفی صفات اتار پھینکنے کی علامت ہے۔ |
+| Donate gently used clothing to shelters | پناہ گاہوں کو ہلکے استعمال شدہ کپڑے عطیہ کریں |
+| Give clothes to charitable organizations | فلاحی تنظیموں کو کپڑے دیں |
+| Provide clothing to refugees and displaced persons | مہاجرین اور بے گھر افراد کو لباس فراہم کریں |
+| Support clothing drives for the needy | ضرورت مندوں کے لیے کپڑوں کی مہمات کی مدد کریں |
+| Donate to organizations like Goodwill or Salvation Army | گڈول یا سالویشن آرمی جیسی تنظیموں کو عطیہ دیں |
+| Sponsor clothing for children in need | ضرورت مند بچوں کے لیے لباس کی کفالت کریں |
+| One complete outfit: shirt + trousers (or full African dress with trousers) + 1000 cowries OR 1000 of any currency | ایک مکمل جوڑا: قمیص + پتلون (یا پتلون کے ساتھ مکمل افریقی لباس) + 1000 کوڑیاں یا کسی بھی کرنسی کے 1000 |
+| Shirt and trouser OR full African traditional attire (kaftan with trouser) | قمیص اور پتلون یا مکمل افریقی روایتی لباس (پتلون کے ساتھ کفتان) |
+| 1000 cowries OR 1000 of any currency | 1000 کوڑیاں یا کسی بھی کرنسی کے 1000 |
+| One complete new outfit (top and bottom garments) | ایک مکمل نیا جوڑا (اوپر اور نیچے کے کپڑے) |
+| Clothing should be modest and appropriate for prayer | لباس باحیا اور نماز کے لیے مناسب ہونا چاہیے |
+| Can be traditional African dress (boubou) with trousers, or Western shirt and pants | پتلون کے ساتھ روایتی افریقی لباس (بوبو) یا مغربی قمیص اور پتلون ہو سکتا ہے |
+| Must be NEW clothing, not used | لباس نیا ہونا چاہیے، استعمال شدہ نہیں |
+| 1000 cowries OR 1000 units of any currency (symbolic of air's freedom and exchange) | 1000 کوڑیاں یا کسی بھی کرنسی کی 1000 اکائیاں (ہوا کی آزادی اور تبادلے کی علامت) |
+| Given to someone genuinely in need | کسی حقیقی ضرورت مند کو دیا جائے |
+| Performed with sincere intention to please Allah | اللہ کی رضا کی خالص نیت سے کیا جائے |
+| Perform on Wednesday (your blessed day) - OPTIMAL for Air element | اپنے مبارک دن بدھ کو کریں — ہوائی عنصر کے لیے بہترین |
+| During Ramadan for amplified blessings | زیادہ برکت کے لیے رمضان کے دوران |
+| Before Eid celebrations | عید کی تقریبات سے پہلے |
+| When seeking to overcome anger patterns | جب غصے کے انداز پر قابو پانا مقصود ہو |
+| During times of major spiritual transformation | بڑی روحانی تبدیلی کے اوقات میں |
+| A transformative spiritual act that specifically targets anger management and emotional balance. This buruj sadaqah for Air element creates a shield against the negative effects of quick temper and helps develop patience, wisdom, and self-control - your life's spiritual lessons. The monetary component represents the flow and exchange energy of air. | ایک تبدیلی لانے والا روحانی عمل جو خاص طور پر غصے پر قابو اور جذباتی توازن کو ہدف بناتا ہے۔ ہوائی عنصر کا یہ برجی صدقہ روایت میں جلد غصے کے منفی اثرات کے خلاف ڈھال اور صبر، حکمت اور ضبطِ نفس — آپ کی زندگی کے روحانی اسباق — پیدا کرنے کا ذریعہ سمجھا جاتا ہے۔ رقم کا حصہ ہوا کے بہاؤ اور تبادلے کی توانائی کو ظاہر کرتا ہے۔ |
+| In all circumstances - this unique combination balances your water nature perfectly | ہر حال میں — یہ منفرد امتزاج آپ کے آبی مزاج کو بہترین طور پر متوازن رکھتا سمجھا جاتا ہے |
+| To balance your water element, maintain emotional equilibrium, prevent being overwhelmed by feelings, and ensure spiritual flow. The rice (earth) grounds the fish (water) creating perfect harmony. | اپنے آبی عنصر کو متوازن رکھنے، جذباتی توازن برقرار رکھنے، جذبات سے مغلوب ہونے سے بچنے اور روحانی بہاؤ کے لیے۔ چاول (مٹی) مچھلی (پانی) کو سنبھالتے ہیں اور کامل ہم آہنگی بنتی ہے۔ |
+| Donate rice and fish meals to shelters | پناہ گاہوں کو چاول اور مچھلی کے کھانے عطیہ کریں |
+| Provide rice and canned fish to food banks | فوڈ بینکوں کو چاول اور ڈبہ بند مچھلی فراہم کریں |
+| Cook and distribute rice with fish dishes | چاول اور مچھلی کے پکوان پکا کر تقسیم کریں |
+| Support organizations feeding coastal communities | ساحلی برادریوں کو کھانا کھلانے والی تنظیموں کی مدد کریں |
+| Sponsor seafood meals at community centers | کمیونٹی سینٹروں میں سمندری خوراک کے کھانوں کی کفالت کریں |
+| Provide both staples to families in need | ضرورت مند خاندانوں کو دونوں بنیادی غذائیں فراہم کریں |
+| Goat with some clothes and 4 coins of money (Néént dërëm in Wolof) | بکرا، کچھ کپڑوں اور 4 سکّوں کے ساتھ (وولوف میں Néént dërëm) |
+| Goat with some clothes and 4 coins of money (Néént dërëm) | بکرا، کچھ کپڑوں اور 4 سکّوں کے ساتھ (Néént dërëm) |
+| One complete healthy goat (any color) | ایک مکمل صحت مند بکرا (کسی بھی رنگ کا) |
+| Several items of clothing (modest and appropriate) | کپڑوں کے کئی جوڑے (باحیا اور مناسب) |
+| 4 coins or currency (Néént dërëm - symbolic of the four elements and water's flow) | 4 سکّے یا کرنسی (Néént dërëm — چار عناصر اور پانی کے بہاؤ کی علامت) |
+| Clothing given to those in need | کپڑے ضرورت مندوں کو دیے جائیں |
+| Coins given as sadaqah to the needy | سکّے صدقے کے طور پر ضرورت مندوں کو دیے جائیں |
+| All performed with sincere intention | سب کچھ خلوصِ نیت کے ساتھ کیا جائے |
+| Perform on Monday (your blessed day) - OPTIMAL for Water element | اپنے مبارک دن پیر کو کریں — آبی عنصر کے لیے بہترین |
+| During Eid al-Adha for amplified blessings | زیادہ برکت کے لیے عیدالاضحیٰ کے دوران |
+| After major life transitions | زندگی کی بڑی تبدیلیوں کے بعد |
+| When seeking emotional healing | جب جذباتی شفا مقصود ہو |
+| A profound spiritual milestone that creates emotional balance for Water element, protects from being overwhelmed, strengthens boundaries while maintaining compassion, and opens doors of sustenance. The combination of elements (goat, cloth, 4 coins) represents complete spiritual protection and the harmonious flow of water energy. | ایک گہرا روحانی سنگِ میل، جو روایت میں آبی عنصر کے لیے جذباتی توازن پیدا کرنے، مغلوب ہونے سے بچانے، ہمدردی برقرار رکھتے ہوئے حدود مضبوط کرنے اور رزق کے دروازے کھولنے کا ذریعہ سمجھا جاتا ہے۔ عناصر کا امتزاج (بکرا، کپڑا، 4 سکّے) مکمل روحانی حفاظت اور آبی توانائی کے ہم آہنگ بہاؤ کی علامت ہے۔ |
+| To maintain spiritual balance and cool excessive fire energy | روحانی توازن برقرار رکھنے اور حد سے زیادہ آتشی توانائی کو ٹھنڈا کرنے کے لیے |
+| Balances fiery nature, attracts divine blessings for new beginnings, maintains leadership barakah | آتشی مزاج کو متوازن کرتا، نئے آغاز کے لیے الٰہی برکتیں لاتا اور قیادت کی برکت برقرار رکھتا سمجھا جاتا ہے |
+| Feed families in need with substantial meals | ضرورت مند خاندانوں کو بھرپور کھانا کھلائیں |
+| Support soup kitchens and feeding programs | لنگر خانوں اور کھانا کھلانے کے پروگراموں کی مدد کریں |
+| Donate to organizations helping new beginnings | نئے آغاز میں مدد کرنے والی تنظیموں کو عطیہ دیں |
+| Sponsor meals for travelers or displaced persons | مسافروں یا بے گھر افراد کے لیے کھانے کی کفالت کریں |
+| Provide food to construction workers or laborers | تعمیراتی کارکنوں یا مزدوروں کو کھانا فراہم کریں |
+| Support refugee feeding programs | مہاجرین کو کھانا کھلانے کے پروگراموں کی مدد کریں |
+| White lamb and white clothing | سفید میمنا اور سفید لباس |
+| One complete white lamb (without blemish) | ایک مکمل سفید میمنا (بے داغ) |
+| White clothing items (symbolizing purity and new beginnings) | سفید کپڑے (پاکیزگی اور نئے آغاز کی علامت) |
+| Lamb meat distributed among believers and the poor | میمنے کا گوشت اہلِ ایمان اور غریبوں میں تقسیم کیا جائے |
+| White clothing given to those in need | سفید کپڑے ضرورت مندوں کو دیے جائیں |
+| Performed with intention for purification and renewal | پاکیزگی اور تجدید کی نیت سے کیا جائے |
+| All done with sincere niyyah to please Allah | سب کچھ اللہ کی رضا کی خالص نیت کے ساتھ |
+| Perform on Sunday (your blessed day) for maximum benefit | زیادہ سے زیادہ فائدے کے لیے اپنے مبارک دن اتوار کو کریں |
+| Before beginning major life journeys or projects | زندگی کے بڑے سفروں یا منصوبوں کے آغاز سے پہلے |
+| When seeking purification and fresh starts | جب پاکیزگی اور نیا آغاز مقصود ہو |
+| At the start of a new year or significant life phase | نئے سال کے آغاز پر یا زندگی کے کسی اہم مرحلے پر |
+| The white lamb represents purity of intention and fresh beginnings - core to your solar nature. This sacred offering removes obstacles from new ventures, blesses travels and construction projects, purifies your path, and establishes divine protection for bold initiatives. The white color symbolizes the purifying light of the sun. | سفید میمنا نیت کی پاکیزگی اور نئے آغاز کی علامت ہے — جو آپ کے شمسی مزاج کا مرکز ہے۔ یہ مقدس نذر روایت میں نئے کاموں کی رکاوٹیں دور کرنے، سفر اور تعمیراتی منصوبوں میں برکت، راستے کی تطہیر اور جرأت مندانہ اقدامات کے لیے الٰہی حفاظت کا ذریعہ سمجھی جاتی ہے۔ سفید رنگ سورج کی پاک کرنے والی روشنی کی علامت ہے۔ |
+| To maintain grounding and prevent stagnation | استحکام برقرار رکھنے اور جمود سے بچنے کے لیے |
+| Maintains spiritual flow, prevents excessive rigidity, ensures continued blessings in property and assets | روحانی بہاؤ برقرار رکھتا، حد سے زیادہ سختی روکتا اور جائیداد و اثاثوں میں برکت کے تسلسل کا ذریعہ سمجھا جاتا ہے |
+| Donate rice, wheat, and grains to food banks | فوڈ بینکوں کو چاول، گندم اور اناج عطیہ کریں |
+| Support agricultural cooperatives | زرعی تعاونی انجمنوں کی مدد کریں |
+| Provide seeds to farming communities | کاشتکار برادریوں کو بیج فراہم کریں |
+| Sponsor meals at community centers | کمیونٹی سینٹروں میں کھانے کی کفالت کریں |
+| Donate to land conservation efforts | زمین کے تحفظ کی کوششوں کو عطیہ دیں |
+| Support sustainable farming initiatives | پائیدار کاشتکاری کے اقدامات کی مدد کریں |
+| Zakat al-Fitr in corn for 12 people, One Barred Plymouth Rock chicken | 12 افراد کے لیے مکئی میں صدقۂ فطر، ایک دھاری دار پلائی ماؤتھ راک مرغی |
+| Corn (maize): Zakat al-Fitr amount for 12 people - approximately 36kg total (3kg per person) | مکئی: 12 افراد کے لیے صدقۂ فطر کی مقدار — کل تقریباً 36 کلوگرام (فی شخص 3 کلوگرام) |
+| One Barred Plymouth Rock chicken - distinctive black and white barred feather pattern | ایک دھاری دار پلائی ماؤتھ راک مرغی — کالے اور سفید دھاری دار پروں کا نمایاں نمونہ |
+| All corn distributed among the needy and poor | ساری مکئی ضرورت مندوں اور غریبوں میں تقسیم کی جائے |
+| Chicken prepared and shared with community | مرغی پکا کر برادری کے ساتھ بانٹی جائے |
+| Must be performed on Wednesday (your blessed day) | اپنے مبارک دن بدھ کو کرنا ضروری ہے |
+| Done with sincere niyyah to please Allah | اللہ کی رضا کی خالص نیت کے ساتھ |
+| 1 person's Zakat al-Fitr ≈ 3kg of grain × 12 people = 36kg of corn | ایک شخص کا صدقۂ فطر ≈ 3 کلوگرام اناج × 12 افراد = 36 کلوگرام مکئی |
+| Black and white barred (striped) feather pattern, medium to large heritage breed | کالے اور سفید دھاری دار پروں کا نمونہ، درمیانی سے بڑی روایتی نسل |
+| The barred pattern symbolizes balance between light and dark, earth duality | دھاری دار نمونہ روشنی اور تاریکی کے توازن اور زمین کی دوئی کی علامت ہے |
+| Wednesday (your blessed day) - most powerful timing | بدھ (آپ کا مبارک دن) — سب سے مؤثر وقت |
+| Can be performed any Wednesday throughout the year | سال بھر کسی بھی بدھ کو کیا جا سکتا ہے |
+| Particularly blessed during Ramadan or Dhul-Hijjah | رمضان یا ذوالحجہ میں خاص طور پر بابرکت |
+| When acquiring new property or achieving major stability | جب نئی جائیداد حاصل ہو یا بڑا استحکام ملے |
+| At major life milestones | زندگی کے بڑے سنگِ میل پر |
+| The number 12 represents completion and fullness in Islamic tradition. Corn (earth's grain) grounds your element. The specific chicken breed symbolizes balanced duality. This sacrifice establishes lasting material barakah, protects property and assets, ensures generational stability, and opens doors of sustenance. Wednesday timing aligns the earth element with communication and manifestation energies. | اسلامی روایت میں 12 کا عدد تکمیل اور پورے پن کی علامت ہے۔ مکئی (زمین کا اناج) آپ کے عنصر کو سنبھالتی ہے۔ مخصوص مرغی کی نسل متوازن دوئی کی علامت ہے۔ یہ قربانی روایت میں دیرپا مادی برکت قائم کرنے، جائیداد اور اثاثوں کی حفاظت، نسلی استحکام اور رزق کے دروازے کھولنے کا ذریعہ سمجھی جاتی ہے۔ بدھ کا وقت مٹی کے عنصر کو گفتگو اور اظہار کی توانائیوں سے ہم آہنگ کرتا ہے۔ |
+| To maintain balance and prevent scattered energy | توازن برقرار رکھنے اور منتشر توانائی سے بچنے کے لیے |
+| Grounds your airy nature, brings focus, attracts meaningful connections, and ensures spiritual clarity in communication | آپ کے ہوائی مزاج کو ٹھہراؤ دیتا، توجہ لاتا، بامعنی تعلقات کی طرف کھینچتا اور گفتگو میں روحانی وضاحت یقینی بنانے والا سمجھا جاتا ہے |
+| Donate gently used clothing regularly | ہلکے استعمال شدہ کپڑے باقاعدگی سے عطیہ کریں |
+| Provide professional attire to job seekers | ملازمت کے متلاشیوں کو پیشہ ورانہ لباس فراہم کریں |
+| Support clothing programs for students | طلبہ کے لیے لباس کے پروگراموں کی مدد کریں |
+| Donate to organizations helping refugees | مہاجرین کی مدد کرنے والی تنظیموں کو عطیہ دیں |
+| Sponsor school uniforms for children | بچوں کے لیے اسکول یونیفارم کی کفالت کریں |
+| Support dress-for-success programs | ڈریس فار سکسس (ملازمت کے لیے لباس) پروگراموں کی مدد کریں |
+| White lamb (any lamb if white unavailable), 4 coins | سفید میمنا (سفید نہ ملے تو کوئی بھی میمنا)، 4 سکّے |
+| One white lamb (preferably) or any lamb if white not available | ایک سفید میمنا (ترجیحاً) یا سفید نہ ملے تو کوئی بھی میمنا |
+| 4 coins or currency (representing the four cardinal directions) | 4 سکّے یا کرنسی (چار سمتوں کی نمائندگی) |
+| Coins given as sadaqah to four different needy persons | سکّے چار مختلف ضرورت مند افراد کو صدقے کے طور پر دیے جائیں |
+| Performed with intention for spiritual clarity | روحانی وضاحت کی نیت سے کیا جائے |
+| Perform on Friday (your blessed day) after Jumu'ah | اپنے مبارک دن جمعہ کو نمازِ جمعہ کے بعد کریں |
+| During Eid al-Adha for maximum blessings | زیادہ سے زیادہ برکت کے لیے عیدالاضحیٰ کے دوران |
+| When seeking clarity in important communications | جب اہم گفتگو میں وضاحت مقصود ہو |
+| Before major teaching or speaking engagements | بڑے تدریسی یا خطاب کے مواقع سے پہلے |
+| During times of building community connections | برادری سے روابط بنانے کے اوقات میں |
+| This offering grounds your airy nature through the lamb (earth connection) while the 4 coins represent spreading your gifts in all directions. It ensures your words carry barakah, protects your communication endeavors, and opens doors for meaningful connections. The four coins symbolize reaching the four corners of the earth with your message. | یہ نذر میمنے (زمین سے تعلق) کے ذریعے آپ کے ہوائی مزاج کو ٹھہراؤ دیتی ہے جبکہ 4 سکّے آپ کی عطاؤں کے ہر سمت پھیلنے کی علامت ہیں۔ روایت میں اسے آپ کے کلام میں برکت کا ذریعہ، آپ کی گفتگو سے متعلق کوششوں کی حفاظت اور بامعنی روابط کے دروازے کھولنے والی سمجھا جاتا ہے۔ چار سکّے آپ کے پیغام کے زمین کے چاروں کونوں تک پہنچنے کی علامت ہیں۔ |
+| To balance intense emotional depth and maintain flow | شدید جذباتی گہرائی کو متوازن رکھنے اور بہاؤ برقرار رکھنے کے لیے |
+| Releases stuck energy, facilitates transformation, ensures emotional flow, and attracts healing opportunities | رکی ہوئی توانائی کو آزاد کرتا، تبدیلی کو آسان بناتا، جذباتی بہاؤ یقینی بناتا اور شفا کے مواقع لاتا سمجھا جاتا ہے |
+| Support programs feeding those in crisis | بحران میں گھرے لوگوں کو کھانا کھلانے والے پروگراموں کی مدد کریں |
+| Provide meals to hospitals and healing centers | ہسپتالوں اور شفا خانوں کو کھانا فراہم کریں |
+| Sponsor food for grief support groups | غم میں مبتلا افراد کے معاونتی گروہوں کے لیے کھانے کی کفالت کریں |
+| Donate to organizations helping trauma survivors | صدمے سے گزرنے والوں کی مدد کرنے والی تنظیموں کو عطیہ دیں |
+| Support meal programs for those in transition | تبدیلی کے مرحلے سے گزرنے والوں کے کھانے کے پروگراموں کی مدد کریں |
+| Red goat, one-eighth of a mithqāl gold (sumun mithqāl az-zahab ≈ 0.531g) OR money equivalent | سرخ بکرا، ایک مثقال سونے کا آٹھواں حصہ (sumun mithqāl az-zahab ≈ 0.531 گرام) یا اس کے برابر رقم |
+| One complete red goat (symbolizing transformation and power) | ایک مکمل سرخ بکرا (تبدیلی اور قوت کی علامت) |
+| One-eighth of a mithqāl of gold (approximately 0.531 grams) OR its monetary equivalent | ایک مثقال سونے کا آٹھواں حصہ (تقریباً 0.531 گرام) یا اس کے برابر مالیت |
+| The goat must be healthy and of good quality | بکرا صحت مند اور اچھی نسل کا ہونا چاہیے |
+| Meat distributed widely among the community | گوشت برادری میں وسیع پیمانے پر تقسیم کیا جائے |
+| Gold/money given as sadaqah to those in need | سونا/رقم ضرورت مندوں کو صدقے کے طور پر دی جائے |
+| Prioritize those going through difficult transitions | مشکل تبدیلیوں سے گزرنے والوں کو ترجیح دیں |
+| Performed with intention for transformation and healing | تبدیلی اور شفا کی نیت سے کیا جائے |
+| Perform on Tuesday (your blessed day) | اپنے مبارک دن منگل کو کریں |
+| During Eid al-Adha for maximum transformation | زیادہ سے زیادہ تبدیلی کے لیے عیدالاضحیٰ کے دوران |
+| At major life turning points | زندگی کے بڑے موڑ پر |
+| When seeking deep healing or release | جب گہری شفا یا رہائی مقصود ہو |
+| During Muharram (month of transformation) | محرم (تبدیلی کا مہینہ) کے دوران |
+| Capricorn (Jady) | جدی (Jady) |
+| The red goat symbolizes Scorpio's transformative power, while Capricorn represents the structured manifestation of that transformation | سرخ بکرا عقرب کی تبدیلی کی قوت کی علامت ہے، جبکہ جدی اس تبدیلی کے منظم اظہار کی نمائندگی کرتا ہے |
+| The red goat represents the blood of life and the power of transformation specific to buruj 8 (Water-Scorpio). This profound buruj sadaqah facilitates major life transitions, releases karmic patterns, empowers deep healing work, and transforms obstacles into opportunities. The red color symbolizes the intensity and power of Scorpio water - death and rebirth. The gold component (or monetary equivalent) represents the preciousness of transformation and connects to Capricorn's earthly manifestation. | سرخ بکرا زندگی کے خون اور برج 8 (آبی-عقرب) سے مخصوص تبدیلی کی قوت کی نمائندگی کرتا ہے۔ یہ گہرا برجی صدقہ روایت میں زندگی کی بڑی تبدیلیوں کو آسان بنانے، پرانے انداز چھوڑنے، گہرے شفا کے کام کو تقویت دینے اور رکاوٹوں کو مواقع میں بدلنے کا ذریعہ سمجھا جاتا ہے۔ سرخ رنگ عقربی پانی کی شدت اور قوت — موت اور نئی زندگی — کی علامت ہے۔ سونے کا حصہ (یا اس کے برابر رقم) تبدیلی کی قدر و قیمت کا اظہار ہے اور جدی کے زمینی اظہار سے جڑتا ہے۔ |
+| Every 1-2 months | ہر 1 تا 2 ماہ میں |
+| To balance fire energy and attract continued blessings | آتشی توانائی کو متوازن کرنے اور برکتوں کے تسلسل کے لیے |
+| Maintains spiritual balance and ensures blessings in knowledge and travel | روحانی توازن برقرار رکھتا اور علم و سفر میں برکت یقینی بناتا سمجھا جاتا ہے |
+| Feed students and scholars | طلبہ اور علماء کو کھانا کھلائیں |
+| Support educational meal programs | تعلیمی کھانے کے پروگراموں کی مدد کریں |
+| Donate to university food banks | یونیورسٹی کے فوڈ بینکوں کو عطیہ دیں |
+| Sponsor meals for travelers | مسافروں کے لیے کھانے کی کفالت کریں |
+| White hen, 1,000 cowrie shells OR 1,000 in currency | سفید مرغی، 1,000 کوڑیاں یا 1,000 کرنسی میں |
+| One white hen (symbolizing purity and knowledge) | ایک سفید مرغی (پاکیزگی اور علم کی علامت) |
+| 1,000 cowrie shells OR equivalent in currency | 1,000 کوڑیاں یا اس کے برابر کرنسی |
+| Hen distributed as food to the needy | مرغی ضرورت مندوں کو کھانے کے طور پر تقسیم کی جائے |
+| Currency/cowries given as sadaqah | کرنسی/کوڑیاں صدقے کے طور پر دی جائیں |
+| Performed with intention for expansion and blessings | وسعت اور برکتوں کی نیت سے کیا جائے |
+| All with sincere niyyah | سب کچھ خلوصِ نیت کے ساتھ |
+| Thursday (your blessed day) | جمعرات (آپ کا مبارک دن) |
+| Before major travels or educational ventures | بڑے سفروں یا تعلیمی منصوبوں سے پہلے |
+| During Islamic months of blessing | برکت والے اسلامی مہینوں کے دوران |
+| When seeking expansion in knowledge or business | جب علم یا کاروبار میں وسعت مقصود ہو |
+| Opens doors of knowledge, blesses travels, attracts opportunities for expansion, ensures protection during journeys | روایت میں علم کے دروازے کھولنے، سفر میں برکت، وسعت کے مواقع لانے اور سفر کے دوران حفاظت یقینی بنانے کا ذریعہ سمجھا جاتا ہے |
+| To maintain spiritual flow and prevent stagnation | روحانی بہاؤ برقرار رکھنے اور جمود سے بچنے کے لیے |
+| Balances earth energy, ensures continued success, maintains spiritual grounding | مٹی کی توانائی کو متوازن کرتا، تسلسلِ کامیابی اور روحانی استحکام برقرار رکھتا سمجھا جاتا ہے |
+| Donate grains and staples to food banks | فوڈ بینکوں کو اناج اور بنیادی اشیا عطیہ کریں |
+| Support agricultural communities | زرعی برادریوں کی مدد کریں |
+| Sponsor meals for workers and laborers | مزدوروں اور کارکنوں کے لیے کھانے کی کفالت کریں |
+| Donate to organizations helping the unemployed | بے روزگاروں کی مدد کرنے والی تنظیموں کو عطیہ دیں |
+| Support vocational training programs | فنی تربیت کے پروگراموں کی مدد کریں |
+| One black lamb, 10 Miskāl of gold (42.50 grams) or monetary equivalent | ایک کالا میمنا، 10 مثقال سونا (42.50 گرام) یا اس کے برابر رقم |
+| One black lamb (symbolizing depth, mastery, and Saturn's energy) | ایک کالا میمنا (گہرائی، مہارت اور زحل کی توانائی کی علامت) |
+| 10 Miskāl of gold = 42.50 grams of gold (10 × 4.25g) | 10 مثقال سونا = 42.50 گرام سونا (10 × 4.25 گرام) |
+| OR the monetary equivalent value of 42.50 grams of gold | یا 42.50 گرام سونے کی نقد مالیت |
+| Black lamb meat distributed among the poor and needy | کالے میمنے کا گوشت غریبوں اور ضرورت مندوں میں تقسیم کیا جائے |
+| Gold value given as sadaqah to those in need | سونے کی مالیت ضرورت مندوں کو صدقے کے طور پر دی جائے |
+| Must be performed on Saturday (THE BEST day for this buruj) | ہفتے کو کرنا ضروری ہے (اس برج کے لیے بہترین دن) |
+| Done with sincere niyyah and serious intention | خلوصِ نیت اور سنجیدہ ارادے کے ساتھ کیا جائے |
+| 1 Miskāl (Islamic measure) = 4.25 grams | 1 مثقال (اسلامی پیمانہ) = 4.25 گرام |
+| 10 Miskāl × 4.25g = 42.50 grams of gold | 10 مثقال × 4.25 گرام = 42.50 گرام سونا |
+| Check current gold price per gram and multiply by 42.50 to get the cash equivalent. This amount is given as sadaqah. | سونے کا موجودہ بھاؤ فی گرام دیکھیں اور 42.50 سے ضرب دیں تاکہ نقد مالیت معلوم ہو۔ یہ رقم صدقے کے طور پر دی جاتی ہے۔ |
+| Must be BLACK lamb - this color is essential for Capricorn/Saturn alignment | میمنا کالا ہونا ضروری ہے — یہ رنگ جدی/زحل کی نسبت کے لیے لازمی ہے |
+| Black represents depth, mystery, mastery, authority, and Saturn's grounding energy. It symbolizes the culmination of earth element wisdom. | کالا رنگ گہرائی، راز، مہارت، اختیار اور زحل کی ٹھہراؤ والی توانائی کی علامت ہے۔ یہ مٹی کے عنصر کی حکمت کی انتہا کا مظہر ہے۔ |
+| Healthy, mature lamb without defects | صحت مند، بالغ اور بے عیب میمنا |
+| 10 is the number of completion and perfection in Islamic numerology. It represents the ten commandments, complete divine order, and mastery. Combined with earth element and Saturn energy, it establishes ultimate material and spiritual authority. | اسلامی علم الاعداد میں 10 تکمیل اور کمال کا عدد ہے۔ یہ دس احکام، مکمل الٰہی نظم اور مہارت کی علامت سمجھا جاتا ہے۔ مٹی کے عنصر اور زحل کی توانائی کے ساتھ مل کر یہ اعلیٰ مادی اور روحانی اختیار کی علامت بنتا ہے۔ |
+| Saturday (THE BEST day for this buruj) - most powerful timing | ہفتہ (اس برج کے لیے بہترین دن) — سب سے مؤثر وقت |
+| Upon achieving major career milestone or promotion | جب کوئی بڑی پیشہ ورانہ کامیابی یا ترقی حاصل ہو |
+| When acquiring significant property or wealth | جب کوئی نمایاں جائیداد یا دولت حاصل ہو |
+| During times of establishing major authority or leadership | کوئی بڑا اختیار یا قیادت سنبھالنے کے اوقات میں |
+| At major life establishment moments | زندگی میں بڑے استحکام کے مواقع پر |
+| Can be performed any Saturday throughout the year | سال بھر کسی بھی ہفتے کو کیا جا سکتا ہے |
+| Particularly powerful during Dhul-Hijjah (month of sacrifice) | ذوالحجہ (قربانی کے مہینے) میں خاص طور پر مؤثر |
+| This is one of the most powerful sadaqah combinations in ʿIlm al-Ḥurūf. The black lamb represents mastery over the material world through spiritual discipline. The 10 Miskāl of gold (42.50g) represents complete wealth and divine provision. Together, they establish: lasting success in career and authority, protection of property and generational wealth, divine support in ambitious undertakings, mastery and leadership in your field, unshakeable material stability. Saturn's Saturday energy amplifies discipline, structure, and long-term results. This sacrifice creates a foundation that lasts for generations. | یہ علم الحروف میں صدقے کی سب سے مؤثر صورتوں میں سے ایک سمجھی جاتی ہے۔ کالا میمنا روحانی نظم و ضبط کے ذریعے مادی دنیا پر مہارت کی علامت ہے۔ 10 مثقال سونا (42.50 گرام) مکمل دولت اور الٰہی رزق کی علامت ہے۔ دونوں مل کر روایت میں یہ قائم کرنے والے سمجھے جاتے ہیں: پیشے اور اختیار میں دیرپا کامیابی، جائیداد اور نسلی دولت کی حفاظت، بلند ارادوں میں الٰہی مدد، اپنے میدان میں مہارت اور قیادت، اور غیر متزلزل مادی استحکام۔ زحل کے ہفتے کی توانائی نظم و ضبط، ساخت اور طویل مدتی نتائج کو بڑھاتی سمجھی جاتی ہے۔ یہ قربانی ایسی بنیاد بناتی سمجھی جاتی ہے جو نسلوں تک قائم رہے۔ |
+| Gold Option: You can give actual gold (jewelry, coins) worth 42.50g, OR | سونے کا اختیار: آپ 42.50 گرام کے برابر اصل سونا (زیور، سکّے) دے سکتے ہیں، یا |
+| Cash Option: Calculate cash value of 42.50g gold at current market price | نقد اختیار: 42.50 گرام سونے کی موجودہ بازاری قیمت کے مطابق نقد مالیت نکالیں |
+| Distribution: Give to the poor, needy, or charitable causes | تقسیم: غریبوں، ضرورت مندوں یا فلاحی مقاصد کو دیں |
+| Both lamb and gold/money must be given - they work together | میمنا اور سونا/رقم دونوں دینا ضروری ہے — یہ مل کر کام کرتے ہیں |
+| This is a once-in-lifetime offering - choose the timing carefully | یہ زندگی میں ایک بار کی نذر ہے — وقت کا انتخاب احتیاط سے کریں |
+| To ground visionary energy and maintain connection to community needs | بصیرت والی توانائی کو ٹھہراؤ دینے اور برادری کی ضروریات سے تعلق قائم رکھنے کے لیے |
+| Balances detached air nature, maintains connection to practical service, ensures spiritual flow | الگ تھلگ ہوائی مزاج کو متوازن کرتا، عملی خدمت سے تعلق برقرار رکھتا اور روحانی بہاؤ یقینی بناتا سمجھا جاتا ہے |
+| Donate clothing to homeless shelters | بے گھر افراد کی پناہ گاہوں کو کپڑے عطیہ کریں |
+| Support refugee clothing programs | مہاجرین کے لباس کے پروگراموں کی مدد کریں |
+| Provide work attire for job training programs | روزگار کی تربیت کے پروگراموں کے لیے کام کا لباس فراہم کریں |
+| Donate to community clothing drives | برادری کی لباس مہمات کو عطیہ دیں |
+| Support transitional housing clothing needs | عارضی رہائش کے لباس کی ضروریات میں مدد کریں |
+| Guinea fowl (pintade), their own clothing, 9 meters of cloth (mbasin/African/Asian fabric), 1,000 cowrie shells OR 1,000 in currency | گنی فاؤل (پنتاد)، اپنے لباس، 9 میٹر کپڑا (mbasin/افریقی/ایشیائی کپڑا)، 1,000 کوڑیاں یا 1,000 کرنسی میں |
+| One guinea fowl/pintade (symbolizing community and uniqueness) | ایک گنی فاؤل/پنتاد (برادری اور انفرادیت کی علامت) |
+| Personal clothing items | ذاتی لباس کی اشیا |
+| 9 meters of quality fabric (African or Asian cloth) | 9 میٹر معیاری کپڑا (افریقی یا ایشیائی) |
+| All distributed to those in need | سب کچھ ضرورت مندوں میں تقسیم کیا جائے |
+| Performed with intention for community benefit | برادری کے فائدے کی نیت سے کیا جائے |
+| Sunday (your blessed day) | اتوار (آپ کا مبارک دن) |
+| When launching major community projects | جب برادری کے بڑے منصوبے شروع کیے جائیں |
+| During times of social transition | سماجی تبدیلی کے اوقات میں |
+| When seeking to benefit the collective | جب اجتماعی فائدہ مقصود ہو |
+| Opens doors for humanitarian work, blesses community initiatives, attracts support for innovative projects, ensures divine assistance in collective service | روایت میں انسان دوست کام کے دروازے کھولنے، برادری کے اقدامات میں برکت، جدید منصوبوں کے لیے مدد کی کشش اور اجتماعی خدمت میں الٰہی مدد کا ذریعہ سمجھا جاتا ہے |
+| To maintain spiritual balance and prevent absorption of others' pain | روحانی توازن برقرار رکھنے اور دوسروں کے درد کو جذب کرنے سے بچنے کے لیے |
+| Protects empathic nature, maintains boundaries while serving, ensures spiritual clarity | ہمدرد فطرت کی حفاظت کرتا، خدمت کے دوران حدود برقرار رکھتا اور روحانی وضاحت یقینی بناتا سمجھا جاتا ہے |
+| Donate rice and fish meals to those in grief | غم میں مبتلا لوگوں کو چاول اور مچھلی کے کھانے عطیہ کریں |
+| Support hospice meal programs | تسکینی نگہداشت (ہاسپس) کے کھانے کے پروگراموں کی مدد کریں |
+| Provide food to spiritual retreat centers | روحانی خلوت کے مراکز کو کھانا فراہم کریں |
+| Sponsor meals for hospital patients | ہسپتال کے مریضوں کے لیے کھانے کی کفالت کریں |
+| Donate to organizations serving the vulnerable | کمزور طبقات کی خدمت کرنے والی تنظیموں کو عطیہ دیں |
+| Zakat al-Fitr in rice for 12 people, Fish | 12 افراد کے لیے چاول میں صدقۂ فطر، مچھلی |
+| Rice: Zakat al-Fitr amount for 12 people - approximately 36kg total (3kg per person) | چاول: 12 افراد کے لیے صدقۂ فطر کی مقدار — کل تقریباً 36 کلوگرام (فی شخص 3 کلوگرام) |
+| Fish - appropriate amount for community distribution (fresh or preserved) | مچھلی — برادری میں تقسیم کے لیے مناسب مقدار (تازہ یا محفوظ) |
+| All rice distributed among the needy and poor | سارے چاول ضرورت مندوں اور غریبوں میں تقسیم کیے جائیں |
+| Fish prepared and shared with community | مچھلی پکا کر برادری کے ساتھ بانٹی جائے |
+| Number 12 symbolizes completion and spiritual perfection (12th buruj) | عدد 12 تکمیل اور روحانی کمال کی علامت ہے (12واں برج) |
+| Must be performed on Thursday (THE BEST day for this buruj) | جمعرات کو کرنا ضروری ہے (اس برج کے لیے بہترین دن) |
+| 1 person's Zakat al-Fitr ≈ 3kg of grain × 12 people = 36kg of rice | ایک شخص کا صدقۂ فطر ≈ 3 کلوگرام اناج × 12 افراد = 36 کلوگرام چاول |
+| Any halal fish - fresh, dried, or preserved. Amount should feed the community. | کوئی بھی حلال مچھلی — تازہ، خشک یا محفوظ۔ مقدار اتنی ہو کہ برادری کو کھلا سکے۔ |
+| Fish represents water element purity, spiritual depth, and ancient sustenance | مچھلی آبی عنصر کی پاکیزگی، روحانی گہرائی اور قدیم رزق کی علامت ہے |
+| Thursday (THE BEST day for this buruj) - most powerful timing | جمعرات (اس برج کے لیے بہترین دن) — سب سے مؤثر وقت |
+| Can be performed any Thursday throughout the year | سال بھر کسی بھی جمعرات کو کیا جا سکتا ہے |
+| Especially blessed during Ramadan | رمضان میں خاص طور پر بابرکت |
+| At completion of major spiritual journey or transformation | کسی بڑے روحانی سفر یا تبدیلی کی تکمیل پر |
+| When seeking spiritual closure or new beginning | جب روحانی اختتام یا نیا آغاز مقصود ہو |
+| After major healing or life transition | کسی بڑی شفا یا زندگی کی تبدیلی کے بعد |
+| This is the completion buruj (12th) with 12 portions - representing full spiritual cycle completion. Rice (nourishment) and fish (water element) create complete spiritual protection and healing. The number 12 appears twice (12th buruj + 12 portions) symbolizing ultimate spiritual wholeness. Thursday's Jupiter energy amplifies compassion, mercy, and divine blessings. This sacrifice protects your empathic nature, establishes healthy boundaries while maintaining compassion, attracts divine protection in service to others, and ensures spiritual completion and closure. | یہ تکمیل کا برج (12واں) ہے اور 12 حصوں کے ساتھ — مکمل روحانی دور کی تکمیل کی علامت۔ چاول (غذا) اور مچھلی (آبی عنصر) مل کر روایت میں مکمل روحانی حفاظت اور شفا کا ذریعہ سمجھے جاتے ہیں۔ عدد 12 دو بار آتا ہے (12واں برج + 12 حصے) جو اعلیٰ روحانی کلیت کی علامت ہے۔ جمعرات کی مشتری کی توانائی ہمدردی، رحمت اور الٰہی برکتوں کو بڑھاتی سمجھی جاتی ہے۔ یہ قربانی روایت میں آپ کی ہمدرد فطرت کی حفاظت، ہمدردی برقرار رکھتے ہوئے صحت مند حدود قائم کرنے، دوسروں کی خدمت میں الٰہی حفاظت کی کشش اور روحانی تکمیل و اختتام کا ذریعہ سمجھی جاتی ہے۔ |
+
+
+
+### 6.24 scan-TrackingDashboard (62)
+
+| English | Urdu |
+|---|---|
+| Add | شامل کریں |
+| Add Practice Session | معمول کی نشست شامل کریں |
+| Add Record | اندراج شامل کریں |
+| Add Sadaqah Record | صدقے کا اندراج شامل کریں |
+| Add Session | نشست شامل کریں |
+| Advanced Charts Coming Soon | جدید چارٹس جلد آ رہے ہیں |
+| All activities | تمام سرگرمیاں |
+| Analytics | تجزیات |
+| Analytics & Trends | تجزیات اور رجحانات |
+| Average Quality | اوسط معیار |
+| Best Streak | بہترین تسلسل |
+| Complete Lifetime Offering | عمر بھر کی نذر مکمل کریں |
+| Completed | مکمل |
+| Completed full session | پوری نشست مکمل کی |
+| Completed on: | مکمل ہونے کی تاریخ: |
+| Completion Rate | تکمیل کی شرح |
+| Current Streak | موجودہ تسلسل |
+| Date Completed | مکمل ہونے کی تاریخ |
+| Day Streak | دن کا تسلسل |
+| Delete this record? | یہ اندراج حذف کریں؟ |
+| Export data | ڈیٹا برآمد کریں |
+| Import | درآمد کریں |
+| Insights & Recommendations | رجحانات اور تجاویز |
+| Invalid file format | فائل کی شکل درست نہیں |
+| Keep it up! | جاری رکھیں! |
+| Lifetime | عمر بھر |
+| Location: | مقام: |
+| Mark Complete | مکمل کا نشان لگائیں |
+| Mark as Completed | مکمل شدہ کے طور پر نشان زد کریں |
+| Monitor your spiritual journey | اپنے روحانی سفر پر نظر رکھیں |
+| Monthly Sadaqah Records | ماہانہ صدقے کے اندراجات |
+| No practice sessions yet | ابھی تک کوئی معمول کی نشست نہیں |
+| No sadaqah records yet | ابھی تک کوئی صدقے کا اندراج نہیں |
+| Not Yet Completed | ابھی مکمل نہیں ہوا |
+| Notes | نوٹس |
+| Notes (optional) | نوٹس (اختیاری) |
+| Period: | مدت: |
+| Practice | معمول |
+| Practice Sessions | معمول کی نشستیں |
+| Practice Tracking & Analytics | معمول کی نگرانی اور تجزیات |
+| Practice completion | معمول کی تکمیل |
+| Recent Activity | حالیہ سرگرمی |
+| Recitation Count | پڑھنے کی گنتی |
+| Sacred Lifetime Offering | عمر بھر کی مقدس نذر |
+| Success Rate | کامیابی کی شرح |
+| This sacred offering should be performed once in your lifetime at the appropriate time. | یہ مقدس نذر روایت کے مطابق زندگی میں ایک بار، مناسب وقت پر ادا کی جاتی ہے۔ |
+| This will replace all current data. Continue? | اس سے موجودہ تمام ڈیٹا بدل جائے گا۔ جاری رکھیں؟ |
+| Total Recitations | کل تلاوت/ورد |
+| Total Recorded | کل درج شدہ |
+| Total Sadaqah | کل صدقہ |
+| Total Time | کل وقت |
+| Type | قسم |
+| Visual charts and graphs will be available in the next update | بصری چارٹس اور گراف اگلی اپ ڈیٹ میں دستیاب ہوں گے |
+| Witnesses: | گواہ: |
+| Your completion rate is low. Try setting smaller daily goals. | آپ کی تکمیل کی شرح کم ہے۔ روزانہ چھوٹے اہداف مقرر کر کے دیکھیں۔ |
+| complete | مکمل |
+| consecutive days | مسلسل دن |
+| count | گنتی |
+| days | دن |
+| e.g., Food donation | مثلاً: کھانے کا عطیہ |
+| recitations | بار پڑھنا |
+| records | اندراجات |
+
+
+
+### 6.25 scan-SpiritualPracticeTab (35)
+
+| English | Urdu |
+|---|---|
+| Associated Zodiac | متعلقہ برج |
+| Choose one modern alternative that fits your lifestyle | اپنے طرزِ زندگی کے مطابق ایک جدید متبادل منتخب کریں |
+| Complete daily | روزانہ مکمل کریں |
+| Context | سیاق |
+| Copy Arabic text | عربی متن کاپی کریں |
+| Dhikr Count | ذکر کی گنتی |
+| Divine Names & Dhikr Practice | اسمائے الٰہی اور ذکر کا معمول |
+| Element Alignment | عنصر سے مطابقت |
+| For Dhikr Count | ذکر کی گنتی کے لیے |
+| For dhikr count | ذکر کی گنتی کے لیے |
+| Frequency | تکرار |
+| Getting Started | آغاز کیسے کریں |
+| Listen to recitation | تلاوت سنیں |
+| Make intention (niyyah) before each practice | ہر معمول سے پہلے نیت کریں |
+| Modern Applications | جدید صورتیں |
+| Monthly Spiritual Balance | ماہانہ روحانی توازن |
+| Optimal Timing | موزوں وقت |
+| Performed ONCE in Your Lifetime | زندگی میں صرف ایک بار ادا کیا جائے |
+| Practice Night | معمول کی رات |
+| Quranic Connection | قرآنی تعلق |
+| Regular practice for ongoing spiritual growth | مسلسل روحانی نشوونما کے لیے باقاعدہ معمول |
+| Repetition Count | تکرار کی گنتی |
+| Required Components | ضروری اجزا |
+| Set a monthly reminder on your calendar | اپنے کیلنڈر پر ماہانہ یاددہانی لگائیں |
+| Spiritual Benefits | روحانی فوائد |
+| Spiritual Significance | روحانی اہمیت |
+| This is a profound spiritual commitment that should be undertaken with careful preparation and sincere intention. | یہ ایک گہرا روحانی عہد ہے جو محتاط تیاری اور خلوصِ نیت کے ساتھ اٹھانا چاہیے۔ |
+| This verse resonates with your elemental nature and can be recited for spiritual guidance and protection. Reflect on its meaning as part of your daily practice. | یہ آیت آپ کے عنصری مزاج سے مناسبت رکھتی ہے اور روحانی رہنمائی اور حفاظت کے لیے پڑھی جا سکتی ہے۔ اپنے روزانہ معمول کے حصے کے طور پر اس کے معنی پر غور کریں۔ |
+| Traditional Guidance | روایتی رہنمائی |
+| Traditional Practice | روایتی معمول |
+| Use Name | نام استعمال کریں |
+| View Practice History & Progress | معمول کی تاریخ اور پیش رفت دیکھیں |
+| Your core energy | آپ کی بنیادی توانائی |
+| Your personalized dhikr guidance with Divine Names tailored to your spiritual profile | آپ کے روحانی پروفائل کے مطابق اسمائے الٰہی کے ساتھ آپ کی ذاتی ذکر کی رہنمائی |
+| times | بار |
+
+
+
+### 6.26 scan-IstikharaEducation (40)
+
+| English | Urdu |
+|---|---|
+| 1. Overview Tab | ۱۔ جائزہ ٹیب |
+| 2. Personality Tab | ۲۔ شخصیت ٹیب |
+| 3. Career Tab | ۳۔ پیشہ ٹیب |
+| 4. Blessed Day Tab | ۴۔ مبارک دن ٹیب |
+| 5. Spiritual Tab | ۵۔ روحانی ٹیب |
+| Career and life path guidance | پیشے اور زندگی کے راستے کی رہنمائی |
+| Discover career paths that align with your elemental nature. Note both traditional and modern recommendations. | وہ پیشے دریافت کریں جو آپ کے عنصری مزاج سے ہم آہنگ ہیں۔ روایتی اور جدید دونوں تجاویز پر غور کریں۔ |
+| Follow the recommended spiritual practices, Divine Names, and Quranic verses for protection and balance. | تجویز کردہ روحانی معمولات، اسمائے الٰہی اور حفاظت و توازن کے لیے قرآنی آیات کی پیروی کریں۔ |
+| Four Elements | چار عناصر |
+| Glossary | اصطلاحات |
+| Glossary of Terms | اصطلاحات کی فرہنگ |
+| Historical Context | تاریخی پس منظر |
+| History & Significance | تاریخ اور اہمیت |
+| How to Read Your Results | اپنے نتائج کیسے پڑھیں |
+| Integrates Arabic letter numerology (Abjad) with celestial correspondences | عربی حروف کے اعداد (ابجد) کو فلکی نسبتوں کے ساتھ جوڑتا ہے |
+| Istikharah al-Asmā' (Spiritual Guidance Through Names) is a classical Islamic tradition rooted in the science of Ilm al-Huruf (Science of Letters) and ancient astrological wisdom. This practice combines the numerical values of names with the Buruj (zodiacal mansions) to provide spiritual insight and guidance. | استخارۃ الاسماء (ناموں کے ذریعے روحانی رہنمائی) علم الحروف اور قدیم فلکی حکمت پر مبنی ایک کلاسیکی اسلامی روایت ہے۔ یہ معمول ناموں کی عددی قدروں کو بروج (فلکی منازل) کے ساتھ جوڑتا ہے۔ یہ نمازِ استخارہ نہیں؛ یہ غور و فکر اور خود شناسی کا ذریعہ ہے۔ |
+| Key Traits | اہم خصوصیات |
+| Numerical value derived from Arabic letters (Abjad numerology) | عربی حروف سے نکلنے والی عددی قدر (ابجد کا علم الاعداد) |
+| One of the four classical elements: Fire, Earth, Air, Water | چار کلاسیکی عناصر میں سے ایک: آگ، مٹی، ہوا، پانی |
+| Optimal timing for important decisions | اہم فیصلوں کے لیے موزوں وقت |
+| Purpose & Applications | مقصد اور استعمالات |
+| Reading Results | نتائج پڑھنا |
+| Remembrance of Allah through repetition of sacred phrases | مقدس کلمات کی تکرار کے ذریعے اللہ کی یاد |
+| Schedule important decisions, meetings, and new ventures on your blessed day for optimal spiritual alignment. | اپنے مبارک دن پر اہم فیصلے، ملاقاتیں اور نئے کام طے کریں تاکہ بہترین روحانی ہم آہنگی رہے۔ |
+| Seeking guidance or consultation, traditionally through prayer | رہنمائی یا مشورہ طلب کرنا، روایتی طور پر دعا کے ذریعے |
+| Spiritual practices aligned with personal nature | ذاتی مزاج کے مطابق روحانی معمولات |
+| Start here for quick, actionable guidance. This tab highlights the most important insights for immediate application. | یہاں سے فوری اور قابلِ عمل رہنمائی کے لیے آغاز کریں۔ یہ ٹیب فوری اطلاق کے لیے اہم ترین نکات نمایاں کرتا ہے۔ |
+| The 99 Names of Allah, each with specific spiritual qualities | اللہ کے 99 نام، ہر ایک کی اپنی روحانی صفات کے ساتھ |
+| The Ancient Practice of Istikharah al-Asmā' | استخارۃ الاسماء کی قدیم روایت |
+| The Buruj System | بروج کا نظام |
+| The Buruj system divides the celestial sphere into 12 sections, each associated with specific elements and qualities. Your personal Buruj is determined by the remainder when dividing the sum of names by 12. | بروج کا نظام فلکی کرے کو 12 حصوں میں تقسیم کرتا ہے، ہر ایک مخصوص عناصر اور صفات سے منسوب۔ آپ کا ذاتی برج ناموں کے مجموعے کو 12 سے تقسیم کرنے پر بچنے والے باقی سے طے ہوتا ہے۔ |
+| The Four Classical Elements | چار کلاسیکی عناصر |
+| The Science of Letters - study of Arabic letters and their mystical meanings | علم الحروف — عربی حروف اور ان کے باطنی معانی کا مطالعہ |
+| The Twelve Buruj (Zodiacal Mansions) | بارہ بروج (فلکی منازل) |
+| The twelve zodiacal mansions or constellations | بارہ فلکی منازل یا جھرمٹ |
+| Traced back to classical Islamic scholars and practitioners of Ilm al-Huruf | علم الحروف کے کلاسیکی علماء اور اہلِ فن تک پہنچتی ہے |
+| Understand your natural temperament, communication style, and social patterns. Use this for self-awareness and personal growth. | اپنے فطری مزاج، گفتگو کے انداز اور سماجی رویوں کو سمجھیں۔ اسے خود آگاہی اور ذاتی نشوونما کے لیے استعمال کریں۔ |
+| Understanding personality traits and temperament | شخصیت کی صفات اور مزاج کو سمجھنا |
+| Used for personal guidance, name selection, and spiritual counseling | ذاتی رہنمائی، نام کے انتخاب اور روحانی مشاورت کے لیے استعمال ہوتا ہے |
+| Voluntary charity given as an act of worship | نفلی خیرات جو عبادت کے طور پر دی جاتی ہے |
+
+
+
+### 6.27 scan-DhikrCounter (28)
+
+| English | Urdu |
+|---|---|
+| (Use Name for exact count) | (درست گنتی کے لیے نام استعمال کریں) |
+| Are you sure you want to reset? Your progress will be lost. | کیا آپ واقعی ری سیٹ کرنا چاہتے ہیں؟ آپ کی پیش رفت ضائع ہو جائے گی۔ |
+| Auto | خودکار |
+| Auto Counting... | خودکار گنتی... |
+| Auto Speed: | خودکار رفتار: |
+| Avg Pace | اوسط رفتار |
+| Best practiced after prayer in a quiet space | نماز کے بعد پرسکون جگہ پر بہترین طور پر پڑھا جاتا ہے |
+| Complete | مکمل |
+| Current | موجودہ |
+| Duration | دورانیہ |
+| Duration: | دورانیہ: |
+| Estimated time remaining: | اندازاً باقی وقت: |
+| Halfway | آدھا |
+| Manual | دستی |
+| Mode: | طریقہ: |
+| Māshā Allāh! 🎉 | ماشاء اللہ! 🎉 |
+| Pause | توقف |
+| Play pronunciation | تلفظ سنیں |
+| Practice Night: | معمول کی رات: |
+| Quarter | چوتھائی |
+| Recite with presence and sincerity | حضورِ قلب اور خلوص کے ساتھ پڑھیں |
+| Session Completed! | نشست مکمل ہو گئی! |
+| Session History | نشستوں کی تاریخ |
+| Start | شروع کریں |
+| Start Auto Count | خودکار گنتی شروع کریں |
+| Step-by-Step Practice Guide | مرحلہ وار معمول کی رہنمائی |
+| Tap to Count | گننے کے لیے ٹیپ کریں |
+| Three Quarters | تین چوتھائی |
+
+
+
+### 6.28 scan-IstikharaResults (25)
+
+| English | Urdu |
+|---|---|
+| Anger Pattern | غصے کا انداز |
+| Best Activities for This Day | اس دن کے لیے بہترین سرگرمیاں |
+| Communication Style | مزاج اور گفتگو کا انداز |
+| Copied to clipboard! | کلپ بورڈ پر کاپی ہو گیا! |
+| Deep insights into your temperament and character traits | آپ کے مزاج اور کردار کی خصوصیات کی گہری بصیرتیں |
+| Divine Support | الٰہی معاونت |
+| Dream Symbolism | خوابوں کی علامتیں |
+| Explore career guidance in the Career tab | پیشے کی رہنمائی پیشہ ٹیب میں دیکھیں |
+| Explore spiritual practices in the Spiritual tab | روحانی معمولات روحانی ٹیب میں دیکھیں |
+| Explore the tabs above to dive deeper into your personality traits, career guidance, blessed day details, and spiritual practices. Each section provides comprehensive insights tailored to your spiritual profile. | اوپر دیے گئے ٹیبز دیکھ کر اپنی شخصیت کی خصوصیات، پیشے کی رہنمائی، مبارک دن کی تفصیل اور روحانی معمولات کو گہرائی سے جانیں۔ ہر حصہ آپ کے روحانی پروفائل کے مطابق جامع بصیرتیں فراہم کرتا ہے۔ |
+| Growth Areas | نشوونما کے پہلو |
+| Harmonious Colors | ہم آہنگ رنگ |
+| Life Blessings | زندگی کی نعمتیں |
+| Life Challenges | زندگی کی آزمائشیں |
+| Mark this day in your calendar every week. Consider setting a recurring reminder to help you align important activities with your power day. | اس دن کو ہر ہفتے اپنے کیلنڈر میں نشان زد کریں۔ اہم سرگرمیوں کو اپنے خاص دن کے ساتھ ہم آہنگ کرنے کے لیے دہرائی جانے والی یاددہانی لگانے پر غور کریں۔ |
+| Pro Tip | مفید مشورہ |
+| Schedule your most important meetings, critical decisions, and new ventures on this day when possible. Your spiritual energy and divine support are at their peak. | جب ممکن ہو اپنی اہم ترین ملاقاتیں، فیصلے اور نئے کام اسی دن رکھیں۔ روایت میں سمجھا جاتا ہے کہ اس دن آپ کی روحانی توانائی اور الٰہی معاونت عروج پر ہوتی ہے۔ |
+| Social Challenges | سماجی آزمائشیں |
+| Social Dynamics | سماجی انداز |
+| Special Significance | خاص اہمیت |
+| These colors resonate with your elemental energy. Use them in your environment for spiritual balance. | یہ رنگ آپ کی عنصری توانائی سے ہم آہنگ ہیں۔ روحانی توازن کے لیے انہیں اپنے ماحول میں استعمال کریں۔ |
+| This is your most spiritually auspicious day of the week. Your energy peaks and divine support is strongest on this day. | روایت میں یہ ہفتے کا آپ کے لیے سب سے زیادہ روحانی طور پر موافق دن سمجھا جاتا ہے۔ اس دن آپ کی توانائی عروج پر اور الٰہی معاونت سب سے مضبوط مانی جاتی ہے۔ |
+| Weekly Planning | ہفتہ وار منصوبہ بندی |
+| Your Blessed Day | آپ کا مبارک دن |
+| Your Personality Profile | آپ کا شخصیتی پروفائل |
+
+
+
+### 6.29 scan-IstikharaPanel (12)
+
+| English | Urdu |
+|---|---|
+| Are you sure you want to clear all saved calculations? | کیا آپ واقعی تمام محفوظ شدہ حساب صاف کرنا چاہتے ہیں؟ |
+| Calculation History | حساب کی تاریخ |
+| Clear All | سب صاف کریں |
+| Discover Asrār — Sacred Sciences & Divine Timing | اسرار دریافت کریں — مقدس علوم اور اوقات کا علم |
+| History | تاریخ |
+| Invitation copied! | دعوت کاپی ہو گئی! |
+| Istikhara al-Asmāʾ — My Spiritual Profile | استخارۃ الاسماء — میرا روحانی پروفائل |
+| No saved calculations yet | ابھی تک کوئی محفوظ حساب نہیں |
+| View History | تاریخ دیکھیں |
+| saved calculations | محفوظ حساب |
+| 🌙 Discover your spiritual profile with Istikhara al-Asmāʾ on Asrār! | 🌙 اسرار پر استخارۃ الاسماء کے ساتھ اپنا روحانی پروفائل دریافت کریں! |
+| 🌙 Discover your spiritual profile with Istikhara al-Asmāʾ on Asrār! Abjad numerology, planetary hours, Zikr challenges, and more. | 🌙 اسرار پر استخارۃ الاسماء کے ساتھ اپنا روحانی پروفائل دریافت کریں! ابجد کا علم الاعداد، ساعاتِ کواکب، ذکر کے چیلنج اور بہت کچھ۔ |
+
+
+
+### 6.30 scan-IstikharaForm (12)
+
+| English | Urdu |
+|---|---|
+| Common Female Names | عام خواتین کے نام |
+| Common Male Names | عام مردوں کے نام |
+| Hide Keyboard | کی بورڈ چھپائیں |
+| Mother's Name Significance | والدہ کے نام کی اہمیت |
+| Name must contain only Arabic letters | نام صرف عربی حروف پر مشتمل ہونا چاہیے |
+| Please enter mother's name in Arabic | براہِ کرم والدہ کا نام عربی میں درج کریں |
+| Please enter your name in Arabic | براہِ کرم اپنا نام عربی میں درج کریں |
+| Ready to calculate! | حساب کے لیے تیار! |
+| Scholarly Foundation | علمی بنیاد |
+| The mother's influence shapes the soul's entry into this world, making her name essential for accurate spiritual calculation. | روایت میں والدہ کے اثر کو اس دنیا میں آمد سے جوڑا جاتا ہے، اس لیے درست روحانی حساب کے لیے اس کا نام ضروری سمجھا جاتا ہے۔ |
+| This practice is rooted in classical Islamic texts and has been preserved by scholars across generations. | یہ معمول کلاسیکی اسلامی کتب پر مبنی ہے اور نسل در نسل علماء کے ذریعے محفوظ رہا ہے۔ |
+| ʿIlm al-Ḥurūf (Science of Letters) is an ancient Islamic tradition that explores the spiritual significance of Arabic letters and their numerical values. Each letter corresponds to a number in the Abjad system, revealing hidden meanings and divine connections. | علم الحروف (حروف کا علم) ایک قدیم اسلامی روایت ہے جو عربی حروف اور ان کی عددی قدروں کی روحانی اہمیت کا مطالعہ کرتی ہے۔ ابجد کے نظام میں ہر حرف ایک عدد سے مطابقت رکھتا ہے۔ |
+
+
+
+### 6.31 scan-ChallengeCard (9)
+
+| English | Urdu |
+|---|---|
+| Copy Link | لنک کاپی کریں |
+| Custom amount | اپنی مرضی کی مقدار |
+| Glorify Allah morning and evening. | وَسَبِّحُوهُ بُكْرَةً وَأَصِيلًا |
+| Hearts find rest in the remembrance of Allah. | أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ |
+| Share this practice | اس معمول کو شیئر کریں |
+| The dhikr of Allah is the greatest. | وَلَذِكْرُ اللَّهِ أَكْبَرُ |
+| Today's target complete! | آج کا ہدف مکمل! |
+| day streak | دن کا تسلسل |
+| 💰 Debt Relief Wird — Asrār | 💰 قرض سے نجات کا ورد — اسرار |
+
+
+
+### 6.32 scan-CareerTabAdvanced (6)
+
+| English | Urdu |
+|---|---|
+| Career guidance data is being compiled for your profile | آپ کے پروفائل کے لیے پیشے کی رہنمائی کا ڈیٹا مرتب کیا جا رہا ہے |
+| Generating PDF... | پی ڈی ایف بن رہی ہے... |
+| This guidance comes from traditional Islamic texts on ʿIlm al-Ḥurūf (Science of Letters), preserved by scholars across generations. | یہ رہنمائی علم الحروف سے متعلق روایتی اسلامی کتب سے لی گئی ہے، جو نسل در نسل علماء کے ذریعے محفوظ رہی ہیں۔ |
+| career paths in this category | اس زمرے میں پیشے |
+| earth-based | زمین پر مبنی |
+| special blessing | خاص برکت |
+
+
+
+### 6.33 scan-PlanetOfTheDayPage (7)
+
+| English | Urdu |
+|---|---|
+| Bones, teeth, joints, skin | ہڈیاں، دانت، جوڑ، جلد |
+| Brain, stomach, uterus, fluids | دماغ، معدہ، رحم، رطوبتیں |
+| Heart, eyes, spine | دل، آنکھیں، ریڑھ کی ہڈی |
+| Kidneys, skin, throat | گردے، جلد، گلا |
+| Liver, hips, thighs | جگر، کولہے، رانیں |
+| Muscles, blood, head | پٹھے، خون، سر |
+| Nervous system, hands, lungs | اعصابی نظام، ہاتھ، پھیپھڑے |
+
+
+
+### 6.34 scan-DivineNameIntentionResul (4)
+
+| English | Urdu |
+|---|---|
+| Neutral | غیر جانبدار |
+| Not Recommended | تجویز نہیں کیا جاتا |
+| Optimal | بہترین |
+| Suitable | موزوں |
+
+
+
+### 6.35 scan-GetTheAppBanner (3)
+
+| English | Urdu |
+|---|---|
+| Install Asrār on your iPhone | اپنے آئی فون پر اسرار انسٹال کریں |
+| Tap | ٹیپ کریں |
+| then "Add to Home Screen" | پھر «ہوم اسکرین میں شامل کریں» منتخب کریں |
+
+
+
+### 6.36 scan-DignityDetailPanel (4)
+
+| English | Urdu |
+|---|---|
+| Download Asrāriya on Google Play | Google Play پر اسراریہ ڈاؤن لوڈ کریں |
+| Practice Guidance | معمول کی رہنمائی |
+| Practice Hint | معمول کا اشارہ |
+| Retrograde — inner reflection encouraged | رجعت — اندرونی غور و فکر کی ترغیب |
+
+
+
+### 6.37 scan-DivineNameMatchesView (3)
+
+| English | Urdu |
+|---|---|
+| Needs discipline | نظم و ضبط درکار ہے |
+| Strong resonance | مضبوط ہم آہنگی |
+| Workable resonance | قابلِ عمل ہم آہنگی |
+
+
+
+### 6.38 scan-WaveHadiyyaCard (3)
+
+| English | Urdu |
+|---|---|
+| Hide QR Code | QR کوڈ چھپائیں |
+| Scan Wave Senegal QR | Wave سینیگال کا QR اسکین کریں |
+| Scan with Wave Senegal app | Wave سینیگال ایپ سے اسکین کریں |
+
+
+
+### 6.39 scan-ProfileSetupBilingual (2)
+
+| English | Urdu |
+|---|---|
+| Enter mother's name | والدہ کا نام درج کریں |
+| Used for enhanced numerology calculations | بہتر علم الاعداد کے حساب کے لیے استعمال ہوتا ہے |
+
+
+
+### 6.40 scan-DailyReflectionCard (2)
+
+| English | Urdu |
+|---|---|
+| Community | برادری |
+| total | کل |
+
+
+
+### 6.41 scan-PlanetTransitCard (2)
+
+| English | Urdu |
+|---|---|
+| Retrograde | رجعت |
+| View | دیکھیں |
+
+
+
+### 6.42 scan-PlanetaryHourCard (2)
+
+| English | Urdu |
+|---|---|
+| Makkah (Default) | مکہ مکرمہ (طے شدہ) |
+| hour | ساعت |
+
+
+
+### 6.43 scan-PlanetOfTheDay (1)
+
+| English | Urdu |
+|---|---|
+| Unable to load planetary data | سیاروں کا ڈیٹا لوڈ نہیں ہو سکا |
+
+
+
+### 6.44 scan-ScanDatesView (2)
+
+| English | Urdu |
+|---|---|
+| End date must be after start date. | اختتامی تاریخ ابتدائی تاریخ کے بعد ہونی چاہیے۔ |
+| Maximum range is 12 months. | زیادہ سے زیادہ مدت 12 ماہ ہے۔ |
+
+
+
+### 6.45 scan-RamadanHub (2)
+
+| English | Urdu |
+|---|---|
+| Explore Asrar | اسرار دریافت کریں |
+| Today: | آج: |
+
+
+
+### 6.46 scan-CommunityBanner (2)
+
+| English | Urdu |
+|---|---|
+| dhikr completed by the community today | آج برادری کی طرف سے مکمل کیا گیا ذکر |
+| dhikr today | آج کا ذکر |
+
+
+
+### 6.47 scan-RamadanPage (2)
+
+| English | Urdu |
+|---|---|
+| Your Badges | آپ کے بیجز |
+| 📿 Join me in my zikr challenges on Asrār! | 📿 اسرار پر میرے ذکر کے چیلنجز میں شامل ہوں! |
+
+
+
+### 6.48 scan-MobileMenu (1)
+
+| English | Urdu |
+|---|---|
+| Explore | دریافت کریں |
+
+
+
+### 6.49 scan-SimplifiedStatusBadge (1)
+
+| English | Urdu |
+|---|---|
+| Technical Details | تکنیکی تفصیلات |
+
+
+
+### 6.50 scan-RamadanBannerMini (1)
+
+| English | Urdu |
+|---|---|
+| community dhikr | برادری کا ذکر |
+
+
+
+### 6.51 scan-BadgeDisplay (1)
+
+| English | Urdu |
+|---|---|
+| No badges earned yet. Keep going! | ابھی تک کوئی بیج نہیں ملا۔ جاری رکھیں! |
+
+
+
+### 6.52 scan-RecommenderBanner (1)
+
+| English | Urdu |
+|---|---|
+| Add a challenge to get started | آغاز کے لیے ایک چیلنج شامل کریں |
+
+
+
+### 6.53 zodiac-sadaqah (185)
+
+| English | Urdu |
+|---|---|
+| Hot Food Sadaqah | گرم کھانے کا صدقہ |
+| Giving hot, prepared food as sadaqah is a beneficial form of charity. The food can be given to children or to anyone who can benefit from it. This form of sadaqah is associated with feeding and providing nourishment. | گرم، تیار شدہ کھانا صدقے کے طور پر دینا خیرات کی ایک نفع بخش صورت ہے۔ یہ کھانا بچوں کو یا کسی بھی ایسے شخص کو دیا جا سکتا ہے جو اس سے فائدہ اٹھا سکے۔ صدقے کی یہ صورت کھانا کھلانے اور غذا مہیا کرنے سے وابستہ ہے۔ |
+| Rice | چاول |
+| Porridge | دلیہ |
+| Other hot, nourishing meals | دیگر گرم، غذائیت بخش کھانے |
+| Cold Water Sadaqah | ٹھنڈے پانی کا صدقہ |
+| Giving cold water as sadaqah is another beneficial form of charity. The sadaqah specifically consists of providing cold drinking water to someone who can benefit from it. | ٹھنڈا پانی صدقے کے طور پر دینا خیرات کی ایک اور نفع بخش صورت ہے۔ اس صدقے میں خاص طور پر کسی ایسے شخص کو پینے کا ٹھنڈا پانی مہیا کیا جاتا ہے جو اس سے فائدہ اٹھا سکے۔ |
+| Supporting an Athlete or Sportsman | کھلاڑی یا سپورٹس مین کی معاونت |
+| Helping a sportsman or athlete can also be given as a form of sadaqah. The assistance should be given sincerely for the benefit of the person. | کسی کھلاڑی یا ایتھلیٹ کی مدد بھی صدقے کی ایک صورت کے طور پر دی جا سکتی ہے۔ یہ مدد اخلاص کے ساتھ، اس شخص کے فائدے کے لیے دی جائے۔ |
+| Buying them sports equipment or supplies | انہیں کھیل کا سامان یا لوازمات خرید کر دینا |
+| Helping with something needed for their training | ان کی تربیت کے لیے درکار کسی چیز میں مدد کرنا |
+| Providing practical or financial assistance | عملی یا مالی معاونت فراہم کرنا |
+| Encouraging and supporting them in their sporting activities | ان کی کھیل کی سرگرمیوں میں حوصلہ افزائی اور معاونت کرنا |
+| A form of sadaqah associated with Ḥamal is giving livestock. The animal may be raised and cared for in the household and then given as sadaqah. | حمل سے منسوب صدقے کی ایک صورت مویشی دینا ہے۔ جانور کو گھر میں پال کر اس کی دیکھ بھال کی جا سکتی ہے اور پھر اسے صدقے کے طور پر دیا جا سکتا ہے۔ |
+| A sheep | ایک بھیڑ |
+| A ram | ایک مینڈھا |
+| A white sheep or ram | سفید بھیڑ یا مینڈھا |
+| A sheep or ram of another colour | کسی اور رنگ کی بھیڑ یا مینڈھا |
+| Giving away clothing that you have personally worn — once, twice, or a small number of times. The important condition is that the clothing is still clean, usable, and in good condition. It is then given to another person who can benefit from wearing it. The emphasis is on giving clothing that has already been worn by the giver, rather than brand-new or completely unused clothing. This sadaqah is associated with protection and seeking benefit through charity. | ایسے کپڑے دینا جو آپ نے خود پہنے ہوں — ایک، دو یا چند بار۔ اہم شرط یہ ہے کہ کپڑے اب بھی صاف، قابلِ استعمال اور اچھی حالت میں ہوں۔ پھر انہیں کسی ایسے شخص کو دیا جائے جو انہیں پہن کر فائدہ اٹھا سکے۔ زور اس بات پر ہے کہ دینے والے کے پہنے ہوئے کپڑے دیے جائیں، نہ کہ بالکل نئے یا کبھی نہ پہنے ہوئے۔ یہ صدقہ حفاظت اور خیرات کے ذریعے نفع طلب کرنے سے وابستہ ہے۔ |
+| Venus (al-Zuhrah / الزهرة) | زہرہ (الزهرة) |
+| A primary form of sadaqah associated with al-Thawr is giving a single-coloured ram. A white ram is particularly suitable. The ram is given as sadaqah to someone who can benefit from it. | ثور سے منسوب صدقے کی ایک بنیادی صورت ایک ہی رنگ کا مینڈھا دینا ہے۔ سفید مینڈھا خاص طور پر موزوں ہے۔ مینڈھا کسی ایسے شخص کو صدقے کے طور پر دیا جاتا ہے جو اس سے فائدہ اٹھا سکے۔ |
+| Giving away clothing that has already been worn, still in good and usable condition. This sadaqah is associated with protection and may be given with the intention of seeking protection through charity. | ایسے کپڑے دینا جو پہنے جا چکے ہوں مگر اب بھی اچھی اور قابلِ استعمال حالت میں ہوں۔ یہ صدقہ حفاظت سے وابستہ ہے اور خیرات کے ذریعے حفاظت کی نیت سے دیا جا سکتا ہے۔ |
+| Giving things grown from the ground, particularly staple agricultural foods, directly to people in need. | زمین سے اگنے والی چیزیں، خاص طور پر بنیادی زرعی غذائیں، براہِ راست حاجت مندوں کو دینا۔ |
+| Millet (dugub in Wolof) | باجرہ (وولوف میں dugub) |
+| Other grains and agricultural produce | دیگر اناج اور زرعی پیداوار |
+| Rice and millet may also be combined with cooking oil and given together as a food-based sadaqah package to someone or a family in need. | چاول اور باجرے کو کھانا پکانے کے تیل کے ساتھ ملا کر بھی کسی حاجت مند شخص یا خاندان کو کھانے کے ایک مجموعے کی صورت میں صدقہ کیا جا سکتا ہے۔ |
+| Millet | باجرہ |
+| Cooking oil | کھانا پکانے کا تیل |
+| Giving water is another beneficial sadaqah for Taurus. The water is given to someone who needs or can benefit from it. | پانی دینا ثور کے لیے ایک اور نفع بخش صدقہ ہے۔ پانی ایسے شخص کو دیا جاتا ہے جسے اس کی ضرورت ہو یا جو اس سے فائدہ اٹھا سکے۔ |
+| A particularly important form of sadaqah for Taurus is helping an elderly man or woman, regularly or whenever they are in need. This is regarded in the tradition as a secret sadaqah for increasing and sustaining one's provision (rizq). The emphasis is on quietly and consistently helping an elderly person without seeking recognition. | ثور کے لیے صدقے کی ایک خاص طور پر اہم صورت کسی بزرگ مرد یا خاتون کی مدد کرنا ہے، باقاعدگی سے یا جب بھی انہیں ضرورت ہو۔ اس روایت میں اسے رزق میں اضافے اور اس کے برقرار رہنے کے لیے خفیہ صدقہ سمجھا جاتا ہے۔ زور اس پر ہے کہ کسی بزرگ کی خاموشی اور تسلسل کے ساتھ، شہرت کی خواہش کے بغیر مدد کی جائے۔ |
+| Financial assistance | مالی معاونت |
+| Food | کھانا |
+| Household necessities | گھریلو ضروریات |
+| Medical or other essential expenses | علاج یا دیگر ضروری اخراجات |
+| Other practical needs | دیگر عملی ضروریات |
+| Friday is considered a particularly suitable day for giving Taurus-related sadaqah, connected in the tradition with Venus (al-Zuhrah), the planetary ruler of the sign. Where possible, give on Friday while maintaining the intention of sincere charity and seeking blessing, protection, and increase in provision. | جمعہ ثور سے متعلق صدقہ دینے کے لیے خاص طور پر موزوں دن سمجھا جاتا ہے، جو اس روایت میں برج کے حاکم سیارے زہرہ (الزهرة) سے جڑا ہے۔ جہاں ممکن ہو، جمعہ کے دن دیں، اور خالص خیرات کی نیت کے ساتھ برکت، حفاظت اور رزق میں اضافے کی طلب رکھیں۔ |
+| A form of sadaqah associated with Jawzāʾ is giving 100 kola nuts, which are then distributed as sadaqah. | جوزا سے منسوب صدقے کی ایک صورت 100 کولا نٹ دینا ہے، جو پھر صدقے کے طور پر تقسیم کر دیے جاتے ہیں۔ |
+| White kola nuts | سفید کولا نٹ |
+| Red kola nuts | سرخ کولا نٹ |
+| A combination of white and red kola nuts | سفید اور سرخ کولا نٹ کا امتزاج |
+| Giving money as sadaqah is intended to help with the preservation and stability of wealth: giving a portion of one's wealth away so that wealth is not simply accumulated and lost or continuously spent. The amount can be according to the person's ability and circumstances. Intention: give sincerely, with the intention of helping others and seeking stability, preservation, and blessing in one's wealth. | رقم کا صدقہ دولت کی حفاظت اور استحکام میں مدد کے لیے ہے: اپنے مال کا ایک حصہ دے دیا جائے تاکہ دولت محض جمع ہو کر ضائع نہ ہو یا مسلسل خرچ نہ ہوتی رہے۔ رقم انسان کی استطاعت اور حالات کے مطابق ہو سکتی ہے۔ نیت: اخلاص کے ساتھ دیں، دوسروں کی مدد اور اپنے مال میں استحکام، حفاظت اور برکت کی طلب کے ارادے سے۔ |
+| Giving a chicken of different colours, particularly a combination of black, white and red, to someone who can benefit from it. | مختلف رنگوں کی مرغی، خاص طور پر سیاہ، سفید اور سرخ کا امتزاج، کسی ایسے شخص کو دینا جو اس سے فائدہ اٹھا سکے۔ |
+| Giving a guinea fowl (French: pintade) as sadaqah, distributed to someone who can benefit from it. | گنی فاؤل (فرانسیسی: پنتاد) صدقے کے طور پر دینا، جو کسی ایسے شخص کو دیا جائے جو اس سے فائدہ اٹھا سکے۔ |
+| Providing educational materials is another beneficial form of sadaqah for Gemini. These materials can be given to children or students who need them for their education. | تعلیمی سامان فراہم کرنا جوزا کے لیے صدقے کی ایک اور نفع بخش صورت ہے۔ یہ سامان ان بچوں یا طلبہ کو دیا جا سکتا ہے جنہیں اپنی تعلیم کے لیے اس کی ضرورت ہو۔ |
+| White writing paper | لکھنے کے سفید کاغذ |
+| Exercise books | مشق کی کاپیاں |
+| Notebooks | نوٹ بکس |
+| Pens | قلم |
+| Pencils | پنسلیں |
+| Other basic school supplies | اسکول کا دیگر بنیادی سامان |
+| Educational sadaqah can also be directed toward teachers, including Qur'anic teachers — helping a teacher or their students. The sadaqah can therefore benefit either the teacher or the students. | تعلیمی صدقہ اساتذہ کی طرف بھی کیا جا سکتا ہے، بشمول قرآنی اساتذہ — کسی استاد یا ان کے شاگردوں کی مدد۔ یوں یہ صدقہ استاد کو بھی فائدہ دے سکتا ہے اور شاگردوں کو بھی۔ |
+| Books | کتابیں |
+| Writing materials | لکھنے کا سامان |
+| Educational resources | تعلیمی وسائل |
+| Other materials needed for teaching and learning | تدریس اور تعلیم کے لیے درکار دیگر سامان |
+| Food can be prepared or purchased and given directly to children who can benefit from it. The intention is to provide nourishment and assistance through sadaqah. | کھانا تیار کر کے یا خرید کر براہِ راست ان بچوں کو دیا جا سکتا ہے جو اس سے فائدہ اٹھا سکیں۔ نیت یہ ہے کہ صدقے کے ذریعے غذا اور مدد پہنچائی جائے۔ |
+| A form of sadaqah associated with Saraṭān is giving salt according to one's current age — the amount in kilograms matching the person's age (age 25 → 25 kg, age 30 → 30 kg, age 40 → 40 kg). The amount is weighed according to the person's age and then given out as sadaqah. This may be performed yearly, using the person's age at that time. | سرطان سے منسوب صدقے کی ایک صورت اپنی موجودہ عمر کے مطابق نمک دینا ہے — کلوگرام میں مقدار شخص کی عمر کے برابر (عمر 25 سال ہو تو 25 کلو، 30 ہو تو 30 کلو، 40 ہو تو 40 کلو)۔ نمک کو عمر کے حساب سے تولا جاتا ہے اور پھر صدقے کے طور پر تقسیم کر دیا جاتا ہے۔ یہ ہر سال، اس وقت کی عمر کے مطابق کیا جا سکتا ہے۔ |
+| Giving 4 kg of meat — beef or another type — out as sadaqah to people who can benefit from it. | 4 کلو گوشت — گائے کا یا کسی اور قسم کا — ایسے لوگوں کو صدقے کے طور پر دینا جو اس سے فائدہ اٹھا سکیں۔ |
+| Regularly helping a family in need. The support can be given from time to time, according to the family's needs and one's ability to help. | کسی ضرورت مند خاندان کی باقاعدگی سے مدد کرنا۔ یہ مدد وقتاً فوقتاً، خاندان کی ضرورت اور اپنی استطاعت کے مطابق دی جا سکتی ہے۔ |
+| Helping with food expenses | کھانے کے اخراجات میں مدد کرنا |
+| Paying for fish or other food | مچھلی یا دیگر کھانے کی قیمت ادا کرنا |
+| Helping with household expenses | گھریلو اخراجات میں مدد کرنا |
+| Providing financial assistance when needed | ضرورت پڑنے پر مالی معاونت فراہم کرنا |
+| Providing financial assistance to an elderly woman in need. The intention is to assist and ease her difficulties through sadaqah. | کسی ضرورت مند بزرگ خاتون کو مالی معاونت دینا۔ نیت یہ ہے کہ صدقے کے ذریعے ان کی مدد اور ان کی مشکلات میں آسانی کی جائے۔ |
+| Giving her money | انہیں رقم دینا |
+| Helping with essential expenses | ضروری اخراجات میں مدد کرنا |
+| Providing regular or occasional financial support | باقاعدہ یا کبھی کبھار مالی معاونت فراہم کرنا |
+| Giving milk to children as sadaqah to provide nourishment and benefit. | بچوں کو دودھ صدقے کے طور پر دینا تاکہ انہیں غذا اور فائدہ پہنچے۔ |
+| A small bottle of milk | دودھ کی ایک چھوٹی بوتل |
+| A larger quantity of milk | دودھ کی زیادہ مقدار |
+| Any suitable milk that can be given to children | بچوں کو دیا جا سکنے والا کوئی بھی مناسب دودھ |
+| A primary form of sadaqah associated with al-Asad is to raise a ram, particularly a white ram: obtain it, keep it in an appropriate place at home or elsewhere, feed and care for it, and allow it to grow until it reaches a suitable mature stage. It is then slaughtered as sadaqah, the meat divided into portions and distributed to people who can benefit from it. Within this tradition, there is an observation that some Leo individuals may find the ram does not survive long enough to reach maturity, traditionally attributed to the heaviness of the zodiac. If the ram survives and reaches the appropriate mature stage, it can then be given as sadaqah. | اسد سے منسوب صدقے کی ایک بنیادی صورت مینڈھا، خاص طور پر سفید مینڈھا، پالنا ہے: اسے حاصل کیا جائے، گھر میں یا کسی اور مناسب جگہ رکھا جائے، اسے کھلایا اور اس کی دیکھ بھال کی جائے، اور اسے بڑھنے دیا جائے یہاں تک کہ وہ مناسب پختہ عمر کو پہنچ جائے۔ پھر اسے صدقے کے طور پر ذبح کیا جائے، گوشت کے حصے بنا کر ایسے لوگوں میں تقسیم کیے جائیں جو اس سے فائدہ اٹھا سکیں۔ اس روایت میں یہ مشاہدہ بھی بیان ہوتا ہے کہ بعض اسد والوں کا مینڈھا پختہ عمر کو پہنچنے تک زندہ نہیں رہتا، جسے روایتی طور پر برج کے بھاری پن سے منسوب کیا جاتا ہے۔ اگر مینڈھا زندہ رہے اور مناسب پختہ عمر کو پہنچ جائے تو اسے صدقے کے طور پر دیا جا سکتا ہے۔ |
+| Preparing three bowls of Cheb Yap — a Senegalese rice dish made with meat, similar to meat-based jollof rice — and giving the prepared food as sadaqah to people who can benefit from it. | گوشت کے ساتھ تیار ہونے والے سینیگالی چاول کے پکوان چیب یاپ — جو گوشت والے جولوف چاول سے ملتا جلتا ہے — کے تین پیالے تیار کر کے وہ کھانا ایسے لوگوں کو صدقے کے طور پر دینا جو اس سے فائدہ اٹھا سکیں۔ |
+| Preparing three bowls of porridge with a sour or fermented dairy component such as yogurt, and distributing them to people as sadaqah. | دہی جیسے کھٹے یا خمیر شدہ دودھ والے جزو کے ساتھ دلیے کے تین پیالے تیار کر کے لوگوں میں صدقے کے طور پر تقسیم کرنا۔ |
+| White ram — raised to maturity, then slaughtered, divided and distributed | سفید مینڈھا — پال کر پختہ عمر تک پہنچایا جائے، پھر ذبح کر کے حصوں میں بانٹا اور تقسیم کیا جائے |
+| 3 bowls of Cheb Yap | چیب یاپ کے 3 پیالے |
+| 3 bowls of porridge with yogurt | دہی والے دلیے کے 3 پیالے |
+| A primary form of sadaqah associated with al-Sunbula is giving 100 kola nuts, a mixture of red and white, mixed together and distributed as sadaqah. | سنبلہ سے منسوب صدقے کی ایک بنیادی صورت 100 کولا نٹ دینا ہے، سرخ اور سفید ملے ہوئے، جو آپس میں ملا کر صدقے کے طور پر تقسیم کیے جاتے ہیں۔ |
+| Giving money as sadaqah, according to the person's ability and circumstances, sincerely to someone who can benefit from it. | اپنی استطاعت اور حالات کے مطابق رقم اخلاص کے ساتھ کسی ایسے شخص کو صدقے کے طور پر دینا جو اس سے فائدہ اٹھا سکے۔ |
+| Giving three different types of cereal together as sadaqah to people or families who can benefit from them. | تین مختلف قسم کے اناج ایک ساتھ ان لوگوں یا خاندانوں کو صدقے کے طور پر دینا جو ان سے فائدہ اٹھا سکیں۔ |
+| Bessi — a Wolof cereal/grain similar to millet | بیسی — وولوف کا ایک اناج جو باجرے سے ملتا جلتا ہے |
+| A particularly important secret sadaqah associated with Virgo is performed on reaching the age of 40: give 40 metres of kafan cloth (the white cloth used to shroud a deceased Muslim before burial) as sadaqah. Obtain the 40 metres, keep the cloth in the house overnight, then the following day divide it into portions of 7 metres each and distribute the portions as sadaqah. | سنبلہ سے وابستہ ایک خاص طور پر اہم خفیہ صدقہ چالیس سال کی عمر کو پہنچنے پر کیا جاتا ہے: 40 میٹر کفن کا کپڑا (وہ سفید کپڑا جس میں فوت شدہ مسلمان کو دفن سے پہلے لپیٹا جاتا ہے) صدقے کے طور پر دیں۔ 40 میٹر حاصل کریں، کپڑا رات بھر گھر میں رکھیں، پھر اگلے دن اسے 7، 7 میٹر کے حصوں میں بانٹ کر یہ حصے صدقے کے طور پر تقسیم کر دیں۔ |
+| 100 kola nuts — red and white mixed together | 100 کولا نٹ — سرخ اور سفید ملے ہوئے |
+| Money | رقم |
+| Three cereals — millet, rice, and Bessi | تین اناج — باجرہ، چاول اور بیسی |
+| At age 40: 40 metres of kafan cloth, kept overnight then divided into 7-metre portions | چالیس سال کی عمر میں: 40 میٹر کفن کا کپڑا، رات بھر رکھ کر 7 میٹر کے حصوں میں تقسیم |
+| Giving seven portions of yogurt — small bags, sachets, or small containers. The portions do not need to be large; seven separate portions are the important part. The yogurt is distributed as sadaqah to people who can benefit from it. | دہی کے سات حصے دینا — چھوٹی تھیلیاں، ساشے یا چھوٹے ڈبے۔ حصے بڑے ہونا ضروری نہیں؛ اصل بات سات الگ الگ حصے ہیں۔ دہی ایسے لوگوں میں صدقے کے طور پر تقسیم کیا جاتا ہے جو اس سے فائدہ اٹھا سکیں۔ |
+| Giving guinea fowl (pintade) as sadaqah to someone who can benefit from it. | گنی فاؤل (پنتاد) کسی ایسے شخص کو صدقے کے طور پر دینا جو اس سے فائدہ اٹھا سکے۔ |
+| Giving three chickens of different colours — black, white and red — out as sadaqah. | مختلف رنگوں کی تین مرغیاں — سیاہ، سفید اور سرخ — صدقے کے طور پر دینا۔ |
+| Because Libra is traditionally associated with Venus (al-Zuhrah), days may be selected when the planetary condition is favourable. Friday is preferred when Venus is favourable; Thursday may also be used when conditions are favourable. | چونکہ میزان روایتی طور پر زہرہ (الزهرة) سے منسوب ہے، اس لیے ایسے دن چنے جا سکتے ہیں جب سیارے کی حالت موافق ہو۔ جب زہرہ موافق ہو تو جمعہ کو ترجیح دی جاتی ہے؛ حالات موافق ہوں تو جمعرات بھی اختیار کی جا سکتی ہے۔ |
+| 7 portions of yogurt — even small sachets | دہی کے 7 حصے — چھوٹی ساشے بھی چلیں گی |
+| Guinea fowl (pintade) | گنی فاؤل (پنتاد) |
+| 3 chickens — black, white and red | 3 مرغیاں — سیاہ، سفید اور سرخ |
+| Preferred day: Friday when favourable; alternative: Thursday | ترجیحی دن: موافق ہونے پر جمعہ؛ متبادل: جمعرات |
+| Mars (al-Mirrīkh / المريخ) | مریخ (المریخ) |
+| A special form of sadaqah associated with Scorpio is having or giving a good protective ring, with stones such as rose agate or amethyst. The ring is regarded within this tradition as having protective and beneficial qualities and is also considered part of the sadaqah practice for Scorpio. | عقرب سے منسوب صدقے کی ایک خاص صورت ایک اچھی حفاظتی انگوٹھی رکھنا یا دینا ہے، جس میں گلابی عقیق یا جمشت (ایمتھسٹ) جیسے پتھر ہوں۔ اس روایت میں انگوٹھی کو حفاظتی اور نفع بخش خصوصیات والی سمجھا جاتا ہے اور اسے عقرب کے صدقے کے عمل کا حصہ بھی مانا جاتا ہے۔ |
+| Giving a white ram or white sheep, particularly associated with favourable conditions involving Mars. | سفید مینڈھا یا سفید بھیڑ دینا، جو خاص طور پر مریخ سے متعلق موافق حالات سے منسوب ہے۔ |
+| When Mars is transiting a favourable or friendly zodiac sign, such as Aries, a red goat may be given as sadaqah. The goat is prepared and its meat divided into portions, distributed among people who can benefit from it until the meat has been given out. The emphasis is on distributing the meat, rather than keeping it for personal consumption. | جب مریخ کسی موافق یا دوست برج، جیسے حمل، سے گزر رہا ہو تو سرخ بکرا صدقے کے طور پر دیا جا سکتا ہے۔ بکرا تیار کیا جاتا ہے اور اس کا گوشت حصوں میں بانٹ کر ایسے لوگوں میں تقسیم کیا جاتا ہے جو اس سے فائدہ اٹھا سکیں، یہاں تک کہ سارا گوشت بٹ جائے۔ زور گوشت کی تقسیم پر ہے، اسے ذاتی استعمال کے لیے رکھنے پر نہیں۔ |
+| Giving water is an important sadaqah for Scorpio, particularly to sick or hospitalised people — for example taking drinking water to a hospital and giving it freely to patients who need it. This form is especially associated with Scorpio when beginning a new project or undertaking a journey. | پانی دینا عقرب کے لیے ایک اہم صدقہ ہے، خاص طور پر بیماروں یا ہسپتال میں داخل لوگوں کو — مثلاً پینے کا پانی ہسپتال لے جا کر ضرورت مند مریضوں کو بلا معاوضہ دینا۔ یہ صورت خاص طور پر عقرب سے اس وقت وابستہ ہے جب کوئی نیا منصوبہ شروع کیا جائے یا سفر اختیار کیا جائے۔ |
+| Giving rice and fish together as a single sadaqah, both uncooked (raw), distributed to people or families who can benefit from them. | چاول اور مچھلی کو ایک ہی صدقے کے طور پر اکٹھے دینا، دونوں کچے (بغیر پکے)، ان لوگوں یا خاندانوں میں تقسیم کیے جائیں جو ان سے فائدہ اٹھا سکیں۔ |
+| Tuesday is particularly associated with Scorpio because of its connection with Mars, the planetary ruler of the sign, and can be chosen when Mars is in a favourable or neutral transit. Sunday may also be considered, particularly when the Sun is in a favourable condition. The planetary condition should be considered when selecting the timing according to the tradition. | منگل مریخ، جو برج کا حاکم سیارہ ہے، سے تعلق کی وجہ سے خاص طور پر عقرب سے وابستہ ہے، اور اس وقت چنا جا سکتا ہے جب مریخ موافق یا معتدل گزر میں ہو۔ اتوار پر بھی غور کیا جا سکتا ہے، خاص طور پر جب شمس موافق حالت میں ہو۔ روایت کے مطابق وقت کے انتخاب میں سیارے کی حالت کو پیشِ نظر رکھنا چاہیے۔ |
+| Protective ring — rose agate or amethyst | حفاظتی انگوٹھی — گلابی عقیق یا جمشت |
+| White ram or sheep | سفید مینڈھا یا بھیڑ |
+| Red goat — during a favourable Mars transit; meat divided and distributed | سرخ بکرا — مریخ کے موافق گزر کے دوران؛ گوشت حصوں میں بانٹ کر تقسیم |
+| Water — especially to sick or hospitalised people | پانی — خاص طور پر بیماروں یا ہسپتال میں داخل لوگوں کو |
+| Rice and fish — given together, uncooked | چاول اور مچھلی — اکٹھے، کچے |
+| Preferred day: Tuesday when Mars is favourable or neutral; alternative: Sunday when the Sun is favourable | ترجیحی دن: منگل جب مریخ موافق یا معتدل ہو؛ متبادل: اتوار جب شمس موافق ہو |
+| Special occasions: beginning a project or travelling | خاص مواقع: کسی منصوبے کا آغاز یا سفر |
+| Sagittarius is considered a sign for which sadaqah is particularly important and should be given regularly. Unlike some signs that have specific items associated with their sadaqah, Sagittarius has a more open form: a person may give whatever they sincerely wish to give, provided it benefits another person. | قوس کو ایسا برج سمجھا جاتا ہے جس کے لیے صدقہ خاص طور پر اہم ہے اور باقاعدگی سے دیا جانا چاہیے۔ بعض برجوں کے برعکس، جن کے صدقے سے مخصوص اشیا وابستہ ہیں، قوس کی صورت زیادہ کھلی ہے: انسان جو کچھ اخلاص کے ساتھ دینا چاہے دے سکتا ہے، بشرطیکہ اس سے کسی دوسرے کو فائدہ پہنچے۔ |
+| Giving nine pieces of bread, distributed to people who are in need or to anyone who can benefit from it. | روٹی کے نو ٹکڑے دینا، ضرورت مند لوگوں میں یا کسی بھی ایسے شخص کو جو اس سے فائدہ اٹھا سکے۔ |
+| Preparing three bowls of laakh — a Wolof-style porridge traditionally prepared with a fermented or sour dairy component such as yogurt — and giving them to people who can benefit from the food. | لاخ — وولوف طرز کا دلیہ جو روایتی طور پر دہی جیسے خمیر شدہ یا کھٹے دودھ والے جزو کے ساتھ تیار کیا جاتا ہے — کے تین پیالے تیار کر کے ایسے لوگوں کو دینا جو اس کھانے سے فائدہ اٹھا سکیں۔ |
+| Giving a single-coloured ram, particularly a white ram, as sadaqah to someone who can benefit from it. | ایک ہی رنگ کا مینڈھا، خاص طور پر سفید مینڈھا، کسی ایسے شخص کو صدقے کے طور پر دینا جو اس سے فائدہ اٹھا سکے۔ |
+| Sagittarius has a broad range of possible sadaqah. A person may give whatever they are able and willing to give. The important principle is to give sincerely and for the benefit of another person. | قوس کے لیے صدقے کی صورتیں وسیع ہیں۔ انسان جو کچھ دینے کی استطاعت اور آمادگی رکھتا ہو دے سکتا ہے۔ بنیادی اصول یہ ہے کہ اخلاص کے ساتھ اور کسی دوسرے کے فائدے کے لیے دیا جائے۔ |
+| Clothing | کپڑے |
+| Animals | جانور |
+| Assistance to people in need | حاجت مندوں کی مدد |
+| Other beneficial forms of charity | خیرات کی دیگر نفع بخش صورتیں |
+| Thursday is considered a particularly suitable day for giving Sagittarius-related sadaqah. Where possible, give on Thursday while maintaining the intention of sincere charity and seeking blessing and ease. | جمعرات کو قوس سے متعلق صدقہ دینے کے لیے خاص طور پر موزوں دن سمجھا جاتا ہے۔ جہاں ممکن ہو، جمعرات کو دیں، اور خالص خیرات کی نیت کے ساتھ برکت اور آسانی کی طلب رکھیں۔ |
+| 9 pieces of bread | روٹی کے 9 ٹکڑے |
+| 3 bowls of laakh with yogurt | دہی والے لاخ کے 3 پیالے |
+| One-coloured white ram | ایک رنگ کا سفید مینڈھا |
+| Any sincere and beneficial sadaqah | کوئی بھی مخلصانہ اور نفع بخش صدقہ |
+| Recommended day: Thursday | تجویز کردہ دن: جمعرات |
+| Sagittarius is traditionally regarded as a sign that benefits from frequent and generous sadaqah, so regular charity is emphasised | قوس کو روایتی طور پر ایسا برج مانا جاتا ہے جسے کثرت اور فراخی سے صدقہ دینے سے فائدہ ہوتا ہے، اس لیے باقاعدہ خیرات پر زور دیا جاتا ہے |
+| Giving rice and millet according to measurements connected to the person's age and body weight: rice in kilograms corresponding to the person's age, millet in kilograms corresponding to the person's body weight. The rice and millet may be distributed little by little until the entire amount has been given out, to individuals, families, or people in need. | چاول اور باجرہ شخص کی عمر اور جسمانی وزن سے متعلق پیمانوں کے مطابق دینا: چاول کلوگرام میں شخص کی عمر کے برابر، باجرہ کلوگرام میں شخص کے جسمانی وزن کے برابر۔ چاول اور باجرہ تھوڑا تھوڑا کر کے اس وقت تک تقسیم کیا جا سکتا ہے جب تک پوری مقدار نہ بٹ جائے، افراد، خاندانوں یا حاجت مندوں میں۔ |
+| Giving a single-coloured ram, a white ram particularly associated with this sadaqah. This is described in the tradition as a particularly powerful sadaqah, and some people who follow this practice may experience it symbolically through dreams, such as dreaming that they are giving away a ram. | ایک ہی رنگ کا مینڈھا دینا، خاص طور پر سفید مینڈھا جو اس صدقے سے وابستہ ہے۔ روایت میں اسے ایک خاص طور پر طاقتور صدقہ بتایا گیا ہے، اور اس عمل پر چلنے والے بعض لوگ اسے علامتی طور پر خوابوں میں دیکھ سکتے ہیں، مثلاً یہ خواب کہ وہ مینڈھا صدقہ کر رہے ہیں۔ |
+| Giving kafan, the white cloth used to shroud a deceased Muslim before burial. The sadaqah may consist of providing the cloth needed for someone's burial. | کفن دینا، وہ سفید کپڑا جس میں فوت شدہ مسلمان کو دفن سے پہلے لپیٹا جاتا ہے۔ اس صدقے میں کسی کی تدفین کے لیے درکار کپڑا فراہم کرنا شامل ہو سکتا ہے۔ |
+| A family preparing for a burial | تدفین کی تیاری کرنے والا خاندان |
+| A mosque or community | کوئی مسجد یا برادری |
+| Someone who cannot afford the burial shroud | کوئی ایسا شخص جو کفن کی استطاعت نہ رکھتا ہو |
+| People responsible for assisting with funeral arrangements | جنازے کے انتظامات میں مدد کے ذمہ دار افراد |
+| Giving cowries, known in Wolof as petaw — the small white cowrie shells traditionally used for decoration and in various cultural and spiritual practices. This form of sadaqah is considered special and sensitive within the tradition. | کوڑیاں دینا، جنہیں وولوف میں پیتاو (petaw) کہا جاتا ہے — چھوٹی سفید کوڑیاں جو روایتی طور پر زیبائش اور مختلف ثقافتی اور روحانی رسوم میں استعمال ہوتی رہی ہیں۔ اس روایت میں صدقے کی یہ صورت خاص اور نازک سمجھی جاتی ہے۔ |
+| Helping workers and labourers, particularly people earning a modest income through physically demanding or low-skilled work. The person does not necessarily have to be extremely poor; the sadaqah can simply be an act of assistance and support for someone whose income is limited. | مزدوروں اور محنت کشوں کی مدد، خاص طور پر ان لوگوں کی جو جسمانی مشقت یا کم ہنر والے کام سے معمولی آمدنی کماتے ہیں۔ ضروری نہیں کہ وہ شخص انتہائی غریب ہو؛ یہ صدقہ محض ایسے شخص کی مدد اور معاونت ہو سکتا ہے جس کی آمدنی محدود ہو۔ |
+| Labourers | مزدور |
+| Casual workers | یومیہ اجرت پر کام کرنے والے |
+| Construction workers | تعمیراتی کارکن |
+| Cleaners | صفائی کا کام کرنے والے |
+| Other low-income workers | دیگر کم آمدنی والے کارکن |
+| The assistance can be given regularly or whenever the family needs support. This is regarded as a particularly meaningful form of sadaqah because it supports both the widow and the children who depend on her. | یہ مدد باقاعدگی سے یا جب بھی خاندان کو سہارے کی ضرورت ہو دی جا سکتی ہے۔ اسے صدقے کی خاص طور پر بامعنی صورت مانا جاتا ہے کیونکہ اس سے بیوہ اور اس پر انحصار کرنے والے بچے، دونوں کو سہارا ملتا ہے۔ |
+| Financial assistance for the widow | بیوہ کے لیے مالی معاونت |
+| Providing food or household necessities | کھانا یا گھریلو ضروریات فراہم کرنا |
+| Helping with children's expenses | بچوں کے اخراجات میں مدد کرنا |
+| Supporting their education | ان کی تعلیم میں معاونت کرنا |
+| Assisting with other essential needs | دیگر ضروری حاجات میں مدد کرنا |
+| Important Guidance — Cowries / Petaw | اہم رہنمائی — کوڑیاں / پیتاو |
+| Anyone intending to give petaw/cowries as sadaqah should seek guidance from a knowledgeable and trusted spiritual authority who understands the practice. According to the tradition being documented, this sadaqah may be considered capable of helping to open pathways and make matters easier, but it should not be undertaken casually. The practice is therefore regarded as one requiring proper guidance and understanding before giving it as sadaqah. | جو شخص کوڑیاں / پیتاو صدقے کے طور پر دینے کا ارادہ رکھتا ہو اسے کسی ایسے جاننے والے اور قابلِ اعتماد روحانی رہنما سے رہنمائی لینی چاہیے جو اس عمل کو سمجھتا ہو۔ جس روایت کو یہاں قلم بند کیا گیا ہے اس کے مطابق، اس صدقے کو راستے کھولنے اور معاملات آسان کرنے میں معاون سمجھا جا سکتا ہے، مگر اسے یونہی بے پروائی سے اختیار نہیں کرنا چاہیے۔ اس لیے اسے صدقے کے طور پر دینے سے پہلے مناسب رہنمائی اور فہم کا طلب گار عمل مانا جاتا ہے۔ |
+| Rice and millet | چاول اور باجرہ |
+| A white, single-coloured ram | ایک سفید، یک رنگ مینڈھا |
+| Kafan (burial shroud) | کفن (تدفین کا کپڑا) |
+| Cowries / petaw, with proper guidance | کوڑیاں / پیتاو، مناسب رہنمائی کے ساتھ |
+| Helping labourers and low-income workers | مزدوروں اور کم آمدنی والے کارکنوں کی مدد |
+| Supporting widows and their children | بیواؤں اور ان کے بچوں کی معاونت |
+| The practices above are regarded within this tradition as forms of secret or special sadaqah for Capricorn. The sadaqah should be given discreetly and sincerely, with the intention of benefiting another person rather than seeking recognition. | اس روایت میں مذکورہ اعمال کو جدی کے لیے خفیہ یا خاص صدقے کی صورتیں مانا جاتا ہے۔ صدقہ رازداری اور اخلاص کے ساتھ دیا جائے، اس نیت سے کہ کسی دوسرے کو فائدہ پہنچے، نہ کہ شہرت کی طلب میں۔ |
+| A primary form of sadaqah associated with al-Dalw is giving 100 kola nuts — white, red, or a combination. This sadaqah can be performed monthly, or every three months. The 100 kola nuts are then distributed as sadaqah. | دلو سے منسوب صدقے کی ایک بنیادی صورت 100 کولا نٹ دینا ہے — سفید، سرخ یا ان کا امتزاج۔ یہ صدقہ ماہانہ یا ہر تین ماہ بعد کیا جا سکتا ہے۔ پھر 100 کولا نٹ صدقے کے طور پر تقسیم کر دیے جاتے ہیں۔ |
+| The amount can be determined according to one's ability and circumstances. The money should be given sincerely to someone or a cause that can benefit from it. | رقم کی مقدار اپنی استطاعت اور حالات کے مطابق طے کی جا سکتی ہے۔ رقم اخلاص کے ساتھ کسی ایسے شخص یا مقصد کو دی جائے جو اس سے فائدہ اٹھا سکے۔ |
+| Helping a community, group, or voluntary organisation. Support may be financial, material, or practical. | کسی برادری، گروہ یا رضاکار تنظیم کی مدد۔ معاونت مالی، مادی یا عملی ہو سکتی ہے۔ |
+| A local community | کوئی مقامی برادری |
+| A voluntary group | کوئی رضاکار گروہ |
+| A charitable group | کوئی فلاحی گروہ |
+| A masjid | کوئی مسجد |
+| A community project | کوئی اجتماعی منصوبہ |
+| A group serving people in need | حاجت مندوں کی خدمت کرنے والا کوئی گروہ |
+| Giving guinea fowl (pintade) or chicken as sadaqah to someone who can benefit from it. | گنی فاؤل (پنتاد) یا مرغی کسی ایسے شخص کو صدقے کے طور پر دینا جو اس سے فائدہ اٹھا سکے۔ |
+| Giving three chickens of different colours — black, red and white — out as sadaqah. | مختلف رنگوں کی تین مرغیاں — سیاہ، سرخ اور سفید — صدقے کے طور پر دینا۔ |
+| Giving water to someone who needs or can benefit from it. | ایسے شخص کو پانی دینا جسے اس کی ضرورت ہو یا جو اس سے فائدہ اٹھا سکے۔ |
+| 100 kola nuts — white, red, or a combination; monthly or every three months | 100 کولا نٹ — سفید، سرخ یا ان کا امتزاج؛ ماہانہ یا ہر تین ماہ بعد |
+| Money — according to one's ability | رقم — اپنی استطاعت کے مطابق |
+| Community or group support — a voluntary group, community, masjid, or similar organisation | برادری یا گروہ کی معاونت — رضاکار گروہ، برادری، مسجد یا اسی طرح کی کوئی تنظیم |
+| Guinea fowl (pintade) or chicken | گنی فاؤل (پنتاد) یا مرغی |
+| Three-coloured chickens — black, red and white | تین رنگوں کی مرغیاں — سیاہ، سرخ اور سفید |
+| A primary form of sadaqah associated with al-Ḥūt is giving fish. A particularly recommended amount is 12 fish, given as sadaqah to people who can benefit from them. | حوت سے منسوب صدقے کی ایک بنیادی صورت مچھلی دینا ہے۔ خاص طور پر تجویز کردہ مقدار 12 مچھلیاں ہے، جو ایسے لوگوں کو صدقے کے طور پر دی جائیں جو ان سے فائدہ اٹھا سکیں۔ |
+| This may be performed when a person has an important project or undertaking: take seven chickens, prepare and cook them, and distribute the prepared food as sadaqah — giving it to people in need, such as a poor family, and continuing until the food has been completely given out. The purpose is to provide food and benefit to people who are in need. | یہ اس وقت کیا جا سکتا ہے جب کسی شخص کے سامنے کوئی اہم منصوبہ یا کام ہو: سات مرغیاں لے کر انہیں تیار کر کے پکائیں اور پکا ہوا کھانا صدقے کے طور پر تقسیم کریں — ضرورت مندوں، مثلاً کسی غریب خاندان کو، دیں اور اس وقت تک جاری رکھیں جب تک کھانا مکمل طور پر بٹ نہ جائے۔ مقصد ضرورت مند لوگوں کو غذا اور فائدہ پہنچانا ہے۔ |
+| The food sadaqah may particularly be given in the evening, around the time when people would normally have dinner, an evening meal, or tea or other evening refreshments. The food should be distributed to people who can benefit from it, especially those experiencing financial hardship or food insecurity. | کھانے کا صدقہ خاص طور پر شام کے وقت دیا جا سکتا ہے، اس وقت جب لوگ عام طور پر رات کا کھانا، شام کا کھانا یا چائے اور دیگر شام کی تواضع لیتے ہیں۔ کھانا ایسے لوگوں میں تقسیم کیا جائے جو اس سے فائدہ اٹھا سکیں، خاص طور پر وہ جو مالی تنگی یا خوراک کی عدم دستیابی کا سامنا کر رہے ہوں۔ |
+| Helping someone experiencing mental or emotional difficulties. The intention is to reduce their hardship and provide compassionate assistance. | کسی ایسے شخص کی مدد کرنا جو ذہنی یا جذباتی مشکلات کا سامنا کر رہا ہو۔ نیت یہ ہے کہ اس کی تکلیف کم ہو اور ہمدردانہ مدد فراہم کی جائے۔ |
+| Providing financial assistance | مالی معاونت فراہم کرنا |
+| Helping with their basic needs | ان کی بنیادی ضروریات میں مدد کرنا |
+| Supporting them during a difficult period | مشکل وقت میں ان کا ساتھ دینا |
+| Offering practical assistance | عملی مدد پیش کرنا |
+| Helping them access appropriate support | مناسب مدد تک رسائی میں ان کی معاونت کرنا |
+| Helping a person who is engaged in spiritual or religious activity. Assistance may be financial or practical, depending on the person's needs. | کسی ایسے شخص کی مدد کرنا جو روحانی یا دینی سرگرمی میں مصروف ہو۔ مدد مالی یا عملی ہو سکتی ہے، شخص کی ضرورت کے مطابق۔ |
+| A spiritual practitioner | کوئی روحانی ریاضت کرنے والا |
+| A person engaged in religious study or service | دینی تعلیم یا خدمت میں مصروف کوئی شخص |
+| Someone involved in spiritual activities | روحانی سرگرمیوں میں شریک کوئی شخص |
+| Someone who provides spiritual guidance or related services | روحانی رہنمائی یا اس سے متعلق خدمات فراہم کرنے والا کوئی شخص |
+| The sadaqah should be given sincerely for the benefit of others. The food, fish, or other assistance is distributed to people who can genuinely benefit from it, particularly those experiencing poverty or hardship. | صدقہ دوسروں کے فائدے کے لیے اخلاص کے ساتھ دیا جائے۔ کھانا، مچھلی یا دیگر مدد ایسے لوگوں میں تقسیم کی جائے جو واقعی اس سے فائدہ اٹھا سکیں، خاص طور پر وہ جو غربت یا تنگی کا سامنا کر رہے ہوں۔ |
+
+
+
+### 6.54 spiritual-practice (45)
+
+| English | Urdu |
+|---|---|
+| Aries (Al-Hamal) - The Ram | حمل (الحمل) — مینڈھا |
+| Taurus (Al-Thawr) - The Bull | ثور (الثور) — بیل |
+| Gemini (Al-Jawzāʾ) - The Twins | جوزا (الجوزاء) — جڑواں |
+| Cancer (Al-Saraṭān) - The Crab | سرطان (السرطان) — کیکڑا |
+| Leo (Al-Asad) - The Lion | اسد (الأسد) — شیر |
+| Virgo (Al-Sunbulah) - The Maiden | سنبلہ (السنبلة) — کنواری |
+| Libra (Al-Mīzān) - The Balance | میزان (الميزان) — ترازو |
+| Scorpio (Al-ʿAqrab) - The Scorpion | عقرب (العقرب) — بچھو |
+| Sagittarius (Al-Qaws) - The Archer | قوس (القوس) — تیرانداز |
+| Capricorn (Al-Jady) - The Goat | جدی (الجدي) — بکرا |
+| Aquarius (Al-Dalw) - The Water Bearer | دلو (الدلو) — پانی اٹھانے والا |
+| Pisces (Al-Ḥūt) - The Fish | حوت (الحوت) — مچھلی |
+| Associated with Prophet Musa (Moses) | حضرت موسیٰ علیہ السلام سے منسوب |
+| Tuesday during the day, OR Thursday midnight, OR Sunday midnight | منگل کو دن میں، یا جمعرات کی آدھی رات، یا اتوار کی آدھی رات |
+| Friday, OR Sunday night (Monday night) | جمعہ، یا اتوار کی رات (پیر کی رات) |
+| Wednesday, OR Monday night (Sunday night), OR Friday night (Thursday midnight) | بدھ، یا پیر کی رات (اتوار کی رات)، یا جمعہ کی رات (جمعرات کی آدھی رات) |
+| Monday during the day, OR Thursday midnight (Friday night) | پیر کو دن میں، یا جمعرات کی آدھی رات (جمعہ کی رات) |
+| Sunday during the day, OR Sunday night (midnight/before Fajr), OR Thursday night (midnight/before Fajr) | اتوار کو دن میں، یا اتوار کی رات (آدھی رات / فجر سے پہلے)، یا جمعرات کی رات (آدھی رات / فجر سے پہلے) |
+| Wednesday during the day, OR Sunday night (Mercury's night) | بدھ کو دن میں، یا اتوار کی رات (عطارد کی رات) |
+| Tuesday night | منگل کی رات |
+| Friday during the day, OR Tuesday night (Venus's night), after Isha when the air is still and receptive | جمعہ کو دن میں، یا منگل کی رات (زہرہ کی رات)، عشاء کے بعد جب ہوا ساکن اور قبولیت والی ہو |
+| Saturday night | ہفتہ کی رات |
+| Deep night hours, after midnight for maximum depth | رات کے گہرے پہر، زیادہ گہرائی کے لیے آدھی رات کے بعد |
+| Thursday, OR Thursday night, OR Sunday midnight (Monday night) | جمعرات، یا جمعرات کی رات، یا اتوار کی آدھی رات (پیر کی رات) |
+| After Isha prayer | عشاء کی نماز کے بعد |
+| Saturday during the day, OR Wednesday night (Saturn's night), after Isha prayer | ہفتہ کو دن میں، یا بدھ کی رات (زحل کی رات)، عشاء کی نماز کے بعد |
+| Monday night | پیر کی رات |
+| Thursday during the day, OR Monday night (Jupiter's night), after Isha prayer in the last third of night for deeper connection | جمعرات کو دن میں، یا پیر کی رات (مشتری کی رات)، عشاء کی نماز کے بعد، رات کے آخری تہائی حصے میں گہرے ربط کے لیے |
+| Perform wudu with conscious breathing and presence | شعوری سانس اور حضورِ قلب کے ساتھ وضو کریں |
+| Find a quiet, airy space with good ventilation if possible | ممکن ہو تو کوئی پرسکون، ہوا دار جگہ تلاش کریں جہاں ہوا کا اچھا گزر ہو |
+| Face Qibla direction for spiritual alignment | روحانی یکسوئی کے لیے قبلہ رخ ہوں |
+| Begin with Bismillah and send blessings upon Prophet Muhammad ﷺ | بسم اللہ سے آغاز کریں اور نبی کریم ﷺ پر درود بھیجیں |
+| Take deep, calming breaths to center yourself | خود کو یکسو کرنے کے لیے گہری، پرسکون سانسیں لیں |
+| For Istikhara: state your question and seek divine guidance | استخارہ کے لیے: اپنا سوال بیان کریں اور اللہ سے رہنمائی مانگیں |
+| Close with blessings upon Prophet ﷺ and gratitude | نبی کریم ﷺ پر درود اور شکر کے ساتھ اختتام کریں |
+| Perform wudu (ablution) with mindful breathing | دھیان کے ساتھ سانس لیتے ہوئے وضو کریں |
+| Find a quiet, airy space | کوئی پرسکون، ہوا دار جگہ تلاش کریں |
+| Face Qibla if possible | ممکن ہو تو قبلہ رخ ہوں |
+| Begin with Bismillah and send salawat upon the Prophet ﷺ | بسم اللہ سے آغاز کریں اور نبی کریم ﷺ پر درود شریف پڑھیں |
+| Take 3-7 deep, conscious breaths | 3 سے 7 گہری، شعوری سانسیں لیں |
+| State your Istikhara question clearly and seek divine guidance | استخارہ کا سوال واضح طور پر بیان کریں اور اللہ سے رہنمائی مانگیں |
+| Close with salawat upon the Prophet ﷺ and gratitude | نبی کریم ﷺ پر درود شریف اور شکر کے ساتھ اختتام کریں |
+| For praying for yourself, calculate your name + mother's name into one hadad (numerical value) | اپنے لیے دعا کے لیے، اپنے نام اور والدہ کے نام کو ملا کر ایک حدد (عددی قدر) نکالیں |
+| re:^Recite the Quranic verse \((.+?)\) \(repeat Hadad times: your name \+ mother's name\)$ | قرآنی آیت ($p1) پڑھیں (حدد کے برابر بار دہرائیں: آپ کا نام + والدہ کا نام) |
+| re:^Recite Divine Names \((.+?)\) \(repeat Hadad times: your name \+ mother's name\)$ | اسمائے الٰہی ($p1) پڑھیں (حدد کے برابر بار دہرائیں: آپ کا نام + والدہ کا نام) |
+
+
+
+### 6.55 sadaqah-tab (14)
+
+| English | Urdu |
+|---|---|
+| re:^Sadaqah Guidance — (.+)$ | صدقے کی رہنمائی — $1 |
+| Traditional charity forms associated with your sign, for ongoing blessings and spiritual balance. | آپ کے برج سے وابستہ روایتی خیرات کی صورتیں، مسلسل برکت اور روحانی توازن کے لیے۔ |
+| According to the teachings of Seringe Mahdiou Niane | Seringe Mahdiou Niane کی تعلیمات کے مطابق |
+| General Forms | عمومی صورتیں |
+| Specific Forms | مخصوص صورتیں |
+| Best Timing | بہترین وقت |
+| Summary | خلاصہ |
+| Teaching Video (in Wolof) | تعلیمی ویڈیو (وولوف زبان میں) |
+| By Seringe Mahdiou Niane — spoken in Wolof | Seringe Mahdiou Niane کی جانب سے — وولوف زبان میں |
+| Getting Started with Sadaqah | صدقہ شروع کرنے کے لیے |
+| Set a monthly reminder for your regular sadaqah | اپنے باقاعدہ صدقے کے لیے ماہانہ یاد دہانی لگائیں |
+| Start small and increase gradually as you establish the habit | چھوٹے سے آغاز کریں اور عادت بننے کے ساتھ آہستہ آہستہ بڑھائیں |
+| The intention (niyyah) is as important as the action itself | نیت (niyyah) عمل جتنی ہی اہم ہے |
+| Give secretly when possible, as it purifies the heart | جہاں ممکن ہو چھپا کر دیں، کیونکہ یہ دل کو پاک کرتا ہے |
+
+
+
+### 6.56 burj-overview (3)
+
+| English | Urdu |
+|---|---|
+| re:^Focus your energy on (\w+)\. This is your most spiritually aligned day for important decisions and new beginnings\.$ | اپنی توجہ $1 پر مرکوز کریں۔ یہ اہم فیصلوں اور نئے آغاز کے لیے آپ کا سب سے زیادہ روحانی طور پر ہم آہنگ دن ہے۔ |
+| re:^Show (\d+) more traits$ | مزید $p1 خصوصیات دکھائیں |
+| more | مزید |
+
+
+
+### 6.57 burj-spiritual (4)
+
+| English | Urdu |
+|---|---|
+| Calculating optimal timing... | بہترین وقت کا حساب لگایا جا رہا ہے… |
+| re:^(\d+) times$ | $p1 بار |
+| Quranic Verse | قرآنی آیت |
+| re:^Surah Al-Fatiha (\d+:\d+[a-z]?)$ | سورۃ الفاتحہ $p1 |
+
+
+
+### 6.58 ikhtiyarat-detail (175)
+
+| English | Urdu |
+|---|---|
+| aries | حمل |
+| taurus | ثور |
+| gemini | جوزا |
+| cancer | سرطان |
+| leo | اسد |
+| virgo | سنبلہ |
+| libra | میزان |
+| scorpio | عقرب |
+| sagittarius | قوس |
+| capricorn | جدی |
+| aquarius | دلو |
+| pisces | حوت |
+| conjunction | قران |
+| sextile | تسدیس |
+| square | تربیع |
+| trine | تثلیث |
+| opposition | مقابلہ |
+| domicile | بیت |
+| exaltation | شرف |
+| detriment | وبال |
+| fall | ہبوط |
+| combust | محترق |
+| not combust | غیر محترق |
+| under the beams | تحت الشعاع |
+| retrograde | رجعت میں |
+| in fall/detriment | ہبوط یا وبال میں |
+| favorable | موافق |
+| neutral | معتدل |
+| unfavorable | غیر موافق |
+| marriage | شادی |
+| travel | سفر |
+| Moon Sign Modality (Movable/Fixed) | قمر کے برج کی نوعیت (منقلب/ثابت) |
+| Moon Sign Modality (Fixed/Movable) | قمر کے برج کی نوعیت (ثابت/منقلب) |
+| Mercury Retrograde (Travel Plans/Documents) | عطارد رجعت میں (سفری منصوبے/دستاویزات) |
+| Moon Waxing, Increasing in Light | بڑھتا چاند، روشنی میں اضافہ |
+| Early Departure (Bukūr) | صبح سویرے روانگی (بکور) |
+| Lunar Mansion (Manzil) for Travel | سفر کے لیے منزلِ قمر |
+| Mercury Free of Fall/Detriment | عطارد ہبوط/وبال سے محفوظ |
+| Jupiter Free of Fall/Detriment | مشتری ہبوط/وبال سے محفوظ |
+| Saturn Free of Fall/Detriment | زحل ہبوط/وبال سے محفوظ |
+| Mercury Retrograde (Contracts) | عطارد رجعت میں (معاہدے) |
+| Mercury Combust | عطارد محترق |
+| Moon Applying to Jupiter (Gain) | قمر کا مشتری سے اتصال (نفع) |
+| Moon Applying to Venus (Smooth Dealing) | قمر کا زہرہ سے اتصال (ہموار لین دین) |
+| Mercury Dignified | عطارد اپنی قوت میں |
+| Mercury Retrograde (Study/Comprehension) | عطارد رجعت میں (تعلیم/فہم) |
+| Moon Applying to Jupiter (Wisdom/Comprehension) | قمر کا مشتری سے اتصال (حکمت/فہم) |
+| Moon Applying to Mercury (Retention) | قمر کا عطارد سے اتصال (یادداشت) |
+| Mercury Free of Fall/Detriment (Diagnosis) | عطارد ہبوط/وبال سے محفوظ (تشخیص) |
+| Mercury Retrograde (Diagnosis) | عطارد رجعت میں (تشخیص) |
+| Moon Applying to Mars (Hard Aspect) | قمر کا مریخ سے اتصال (سخت نظر) |
+| Saturn Dignified (Domicile) | زحل اپنی قوت میں (بیت) |
+| Saturn Retrograde | زحل رجعت میں |
+| a settled, well-supported household. | ایک مستحکم اور سہارا یافتہ گھرانہ۔ |
+| a smooth course of treatment and recovery. | علاج اور صحت یابی کا ہموار سلسلہ۔ |
+| a smooth, well-supported journey. | ہموار اور سہارا یافتہ سفر۔ |
+| traditionally warns of complication, poor healing, or a worsened condition. | روایتی طور پر پیچیدگی، کمزور صحت یابی یا حالت کے بگڑنے کی تنبیہ سمجھی جاتی ہے۔ |
+| traditionally warns of danger, delay, or mishap en route. | روایتی طور پر راستے میں خطرے، تاخیر یا حادثے کی تنبیہ سمجھی جاتی ہے۔ |
+| warns of dispute, loss, or a deal turning sour. | تنازع، نقصان یا سودے کے بگڑنے کی تنبیہ سمجھی جاتی ہے۔ |
+| warns of frustration, blocked progress, or discouragement. | مایوسی، رکی ہوئی پیش رفت یا حوصلہ شکنی کی تنبیہ سمجھی جاتی ہے۔ |
+| traditionally warns of accident, damage, or fire risk during construction. | روایتی طور پر تعمیر کے دوران حادثے، نقصان یا آگ کے خطرے کی تنبیہ سمجھی جاتی ہے۔ |
+| Jupiter is the classical significator of profit and gain. | مشتری نفع اور کمائی کا کلاسیکی دلالت کنندہ سیارہ ہے۔ |
+| Jupiter is the classical significator of wisdom and comprehension. | مشتری حکمت اور فہم کا کلاسیکی دلالت کنندہ سیارہ ہے۔ |
+| favorable for retention and a receptive mind. | یادداشت اور قبول کرنے والے ذہن کے لیے موافق۔ |
+| favorable for amicable dealing between the parties. | فریقین کے درمیان خوش اسلوبی سے لین دین کے لیے موافق۔ |
+| supporting comprehension and wisdom. | فہم اور حکمت کے لیے معاون۔ |
+| supporting recovery. | صحت یابی کے لیے معاون۔ |
+| good for plans and correspondence. | منصوبوں اور خط و کتابت کے لیے اچھا۔ |
+| supporting a clear diagnosis. | واضح تشخیص کے لیے معاون۔ |
+| the classical significator of recovery and vital force is weakened. | صحت یابی اور قوتِ حیات کا کلاسیکی دلالت کنندہ کمزور ہے۔ |
+| the significator of diagnosis and the physician's assessment is weakened. | تشخیص اور معالج کی رائے کا دلالت کنندہ کمزور ہے۔ |
+| the significator of the foundation itself is weakened. | بنیاد کا اپنا دلالت کنندہ کمزور ہے۔ |
+| strong for comprehension, memory, and clear thinking. | فہم، یادداشت اور صاف سوچ کے لیے قوی۔ |
+| strong for negotiation, paperwork, and the terms of the deal. | بات چیت، کاغذی کارروائی اور سودے کی شرائط کے لیے قوی۔ |
+| strong for foundations, land, and permanence, the classical significators of this matter. | بنیادوں، زمین اور پائیداری کے لیے قوی، جو اس معاملے کے کلاسیکی دلالت کنندگان ہیں۔ |
+| the significator of the deal itself is weakened/obscured. | سودے کا اپنا دلالت کنندہ کمزور یا پوشیدہ ہے۔ |
+| the significator of the intellect and study itself is weakened/obscured. | عقل اور مطالعے کا اپنا دلالت کنندہ کمزور یا پوشیدہ ہے۔ |
+| the matter's own significator is weakened. | معاملے کا اپنا دلالت کنندہ کمزور ہے۔ |
+| the patient's own significator and the body's vital force are weakened. | مریض کا اپنا دلالت کنندہ اور جسم کی قوتِ حیات کمزور ہیں۔ |
+| the traveler's own significator is weakened. | مسافر کا اپنا دلالت کنندہ کمزور ہے۔ |
+| not in muḥāq. | محاق میں نہیں۔ |
+| waning into the last quarter approaching new moon. | گھٹتا ہوا، آخری چوتھائی میں، نئے چاند کے قریب۔ |
+| waning. | گھٹتا ہوا۔ |
+| waxing, clear of the beams, before full. | بڑھتا ہوا، شعاعوں سے باہر، بدر سے پہلے۔ |
+| waxing, growing in light; classically favorable for treatments meant to build up or strengthen the body. [SCHOLAR-REVIEW] | بڑھتا ہوا، روشنی میں اضافہ؛ کلاسیکی طور پر جسم کو تقویت دینے والے علاج کے لیے موافق۔ [SCHOLAR-REVIEW] |
+| waxing, growing in light; favorable for building and growing a household. | بڑھتا ہوا، روشنی میں اضافہ؛ گھر بسانے اور گھرانے کی افزائش کے لیے موافق۔ |
+| waxing, growing in light; favorable for setting out and making progress. | بڑھتا ہوا، روشنی میں اضافہ؛ روانگی اور پیش رفت کے لیے موافق۔ |
+| waxing, growing in light; favorable for starting and growing an undertaking. | بڑھتا ہوا، روشنی میں اضافہ؛ کام شروع کرنے اور بڑھانے کے لیے موافق۔ |
+| nothing "comes of" a deal begun now. | اب شروع ہونے والے سودے سے “کچھ برآمد نہیں ہوتا”۔ |
+| nothing "comes of" a journey begun now. | اب شروع ہونے والے سفر سے “کچھ برآمد نہیں ہوتا”۔ |
+| study begun now tends to come to nothing. | اب شروع کی گئی تعلیم اکثر بے نتیجہ رہتی ہے۔ |
+| treatment begun now tends to come to nothing. | اب شروع کیا گیا علاج اکثر بے نتیجہ رہتا ہے۔ |
+| work begun now tends to come to nothing. | اب شروع کیا گیا کام اکثر بے نتیجہ رہتا ہے۔ |
+| caution for the nikāḥ contract itself. | نکاح کے عقد کے لیے احتیاط۔ |
+| increased risk of a delayed, incomplete, or revised diagnosis. | تشخیص کے مؤخر، نامکمل یا نظرِ ثانی شدہ ہونے کا بڑھا ہوا خطرہ۔ |
+| increased risk of itinerary changes, lost documents, or miscommunication. | سفری پروگرام میں تبدیلی، دستاویزات کے گم ہونے یا غلط فہمی کا بڑھا ہوا خطرہ۔ |
+| the same classical caution cited against contracts (business.ts) applies here: avoid starting serious study, an exam, or a new course while Mercury retrogrades. | معاہدوں کے خلاف جو کلاسیکی احتیاط بیان کی جاتی ہے (business.ts) وہی یہاں بھی لاگو ہوتی ہے: عطارد کی رجعت کے دوران سنجیدہ تعلیم، امتحان یا نیا کورس شروع کرنے سے بچیں۔ |
+| the single most-cited classical caution against signing contracts, starting negotiations, or finalizing a sale. | معاہدوں پر دستخط، مذاکرات کے آغاز یا فروخت کو حتمی شکل دینے کے خلاف سب سے زیادہ بیان کی جانے والی کلاسیکی احتیاط۔ |
+| increased risk of delays, cost overruns, or rework during construction. | تعمیر کے دوران تاخیر، اخراجات بڑھ جانے یا کام دوبارہ کرنے کا بڑھا ہوا خطرہ۔ |
+| a fixed sign (burj thābit); fixed signs show stability, favoring a foundation or building meant to endure. [SCHOLAR-REVIEW] | ثابت برج؛ ثابت برج استحکام ظاہر کرتے ہیں، جو ایسی بنیاد یا عمارت کے لیے موافق ہے جسے دیرپا ہونا چاہیے۔ [SCHOLAR-REVIEW] |
+| a fixed sign; fixed signs incline to delay and being detained. [SCHOLAR-REVIEW] | ثابت برج؛ ثابت برجوں میں تاخیر اور رکاوٹ کا رجحان ہوتا ہے۔ [SCHOLAR-REVIEW] |
+| a movable sign (burj munqalib); movable signs favor journeys and swift movement. [SCHOLAR-REVIEW] | منقلب برج؛ منقلب برج سفر اور تیز رفتاری کے لیے موافق ہیں۔ [SCHOLAR-REVIEW] |
+| a movable sign; movable signs incline to impermanence, the opposite of what a foundation calls for. [SCHOLAR-REVIEW] | منقلب برج؛ منقلب برجوں میں عدمِ پائیداری کا رجحان ہوتا ہے، جو بنیاد کی ضرورت کے برعکس ہے۔ [SCHOLAR-REVIEW] |
+| a mutable sign, neutral for this purpose. | ذوجسدین برج، اس مقصد کے لیے غیر جانبدار۔ |
+| a mutable sign, neutral for travel timing. | ذوجسدین برج، سفر کے وقت کے انتخاب کے لیے غیر جانبدار۔ |
+| Early departure — "Allāhumma bārik li-ummatī fī bukūrihā" (O Allah, bless my ummah in its early mornings). | صبح سویرے روانگی — "Allāhumma bārik li-ummatī fī bukūrihā" (اے اللہ! میری امت کو اس کی صبح کے وقتوں میں برکت دے)۔ |
+| Moon has at least one applying aspect before changing sign. | برج بدلنے سے پہلے قمر کا کم از کم ایک اتصالی نظر موجود ہے۔ |
+| Moon has at least one applying aspect — not void of course. | قمر کا کم از کم ایک اتصالی نظر موجود ہے — خالی السیر نہیں۔ |
+| Moon has no applying Ptolemaic aspect before leaving its current sign — void of course. | موجودہ برج چھوڑنے سے پہلے قمر کا کوئی بطلیموسی اتصالی نظر نہیں — خالی السیر۔ |
+| Moon has no marriage-favorable dignity bonus in this sign. | اس برج میں قمر کو شادی کے لیے موافق ذاتی قوت کا کوئی اضافی نمبر نہیں ملتا۔ |
+| Moon is applying to a benefic today. | آج قمر کسی سعد سیارے سے اتصال کر رہا ہے۔ |
+| Moon is not applying to Venus or Jupiter by a favorable aspect. | قمر کسی موافق نظر کے ذریعے زہرہ یا مشتری سے اتصال نہیں کر رہا۔ |
+| Moon is not applying to Venus or Jupiter today — separating from the benefics. | آج قمر زہرہ یا مشتری سے اتصال نہیں کر رہا — سعد سیاروں سے انصراف میں ہے۔ |
+| Moon is not applying to a favorable aspect with Jupiter. | قمر مشتری کے ساتھ کسی موافق نظر میں اتصال نہیں کر رہا۔ |
+| Moon is not applying to a favorable aspect with Mercury. | قمر عطارد کے ساتھ کسی موافق نظر میں اتصال نہیں کر رہا۔ |
+| Moon is not applying to a favorable aspect with Venus or Jupiter. | قمر زہرہ یا مشتری کے ساتھ کسی موافق نظر میں اتصال نہیں کر رہا۔ |
+| Moon is not applying to a favorable aspect with Venus. | قمر زہرہ کے ساتھ کسی موافق نظر میں اتصال نہیں کر رہا۔ |
+| Moon is not applying to a hard aspect with Mars. | قمر مریخ کے ساتھ کسی سخت نظر میں اتصال نہیں کر رہا۔ |
+| Moon is not applying to a hard aspect with Saturn or Mars. | قمر زحل یا مریخ کے ساتھ کسی سخت نظر میں اتصال نہیں کر رہا۔ |
+| Moon is not in the favorable waxing band. | قمر روشنی بڑھنے کے موافق حصے میں نہیں۔ |
+| Moon is not in the waning penalty band. | قمر روشنی گھٹنے کے منفی نمبر والے حصے میں نہیں۔ |
+| Moon is not under the beams. | قمر تحت الشعاع نہیں۔ |
+| Moon is outside via combusta. | قمر الطریقۃ المحترقۃ سے باہر ہے۔ |
+| No day-of-week bonus. | دن کے حساب سے کوئی اضافی نمبر نہیں۔ |
+| Monday (day of the Moon) — favorable, as the Moon is the primary significator of the body. | پیر (قمر کا دن) — موافق، کیونکہ قمر جسم کا بنیادی دلالت کنندہ سیارہ ہے۔ |
+| Not a day classically associated with favorable building or moving. | یہ ایسا دن نہیں جسے کلاسیکی طور پر تعمیر یا منتقلی کے لیے موافق مانا جاتا ہو۔ |
+| Not a day classically associated with favorable business dealings. | یہ ایسا دن نہیں جسے کلاسیکی طور پر کاروباری لین دین کے لیے موافق مانا جاتا ہو۔ |
+| Not a day classically associated with favorable medical timing. | یہ ایسا دن نہیں جسے کلاسیکی طور پر طبی معاملات کے وقت کے لیے موافق مانا جاتا ہو۔ |
+| Not a day classically associated with favorable study. | یہ ایسا دن نہیں جسے کلاسیکی طور پر تعلیم کے لیے موافق مانا جاتا ہو۔ |
+| Not a day classically associated with favorable travel. | یہ ایسا دن نہیں جسے کلاسیکی طور پر سفر کے لیے موافق مانا جاتا ہو۔ |
+| Thursday — the Prophet ﷺ preferred to set out on journeys on Thursday (Bukhārī). | جمعرات — نبی کریم ﷺ سفر پر روانہ ہونے کے لیے جمعرات کو پسند فرماتے تھے (بخاری)۔ |
+| This window is not in a Jupiter, Moon, or Mercury hour. | یہ وقفہ مشتری، قمر یا عطارد کی ساعت میں نہیں۔ |
+| This window is not in a Mercury or Jupiter hour. | یہ وقفہ عطارد یا مشتری کی ساعت میں نہیں۔ |
+| This window is not in a Moon or Jupiter hour. | یہ وقفہ قمر یا مشتری کی ساعت میں نہیں۔ |
+| This window is not in a Saturn or Jupiter hour. | یہ وقفہ زحل یا مشتری کی ساعت میں نہیں۔ |
+| This window is not in a Venus, Moon, or Jupiter hour. | یہ وقفہ زہرہ، قمر یا مشتری کی ساعت میں نہیں۔ |
+| This window is not in the early-morning (bukūr) band. | یہ وقفہ صبح سویرے (بکور) کے حصے میں نہیں۔ |
+| negotiation and contracts | بات چیت اور معاہدوں |
+| study and comprehension | تعلیم اور فہم |
+| travel and communication | سفر اور رابطے |
+| foundations and lasting structures | بنیادوں اور دیرپا تعمیرات |
+| a settled, supported household | ایک مستحکم اور سہارا یافتہ گھرانے |
+| profit and gain | نفع اور کمائی |
+| recovery and vital force | صحت یابی اور قوتِ حیات |
+| wisdom and understanding | حکمت اور فہم |
+| re:^A solar or lunar eclipse falls within (-?\d+) hours \((-?[\d.]+)h away\)\.$ | شمسی یا قمری گرہن $p1 گھنٹوں کے اندر واقع ہے ($p2 گھنٹے کے فاصلے پر)۔ |
+| re:^No eclipse within (\d+) hours\.$ | $p1 گھنٹوں کے اندر کوئی گرہن نہیں۔ |
+| re:^Moon applying to (?:a )?(\w+) with (\w+), orb ([\d.]+)°\.$ | قمر کا $2 کے ساتھ $1 میں اتصال، زاویائی فرق $p3°۔ |
+| re:^Moon applying to (?:a )?(\w+) with (\w+), orb ([\d.]+)° — (.+)$ | قمر کا $2 کے ساتھ $1 میں اتصال، زاویائی فرق $p3° — $4 |
+| re:^No applying hard aspect to Saturn or Mars within ([\d.]+)°\.$ | $p1° کے اندر زحل یا مریخ سے کوئی سخت اتصالی نظر نہیں۔ |
+| re:^Moon elongation ([\d.]+)° — (.+)$ | قمر کا شمس سے زاویائی فاصلہ $p1° — $2 |
+| re:^(\w+) is ([\d.]+)° from the Sun — (combust\|not combust\|under the beams)(?: \(muḥtaraq\))?\.$ | $1 شمس سے $p2° کے فاصلے پر ہے — $3۔ |
+| re:^(\w+) is ([\d.]+)° from the Sun — combust(?: \(muḥtaraq\))?; (.+)$ | $1 شمس سے $p2° کے فاصلے پر ہے — محترق؛ $3 |
+| re:^Moon at ([\d.]+)° ecliptic — within via combusta \(15° Libra–15° Scorpio\)\.$ | قمر دائرۃ البروج پر $p1° پر ہے — الطریقۃ المحترقۃ (میزان 15° تا عقرب 15°) کے اندر۔ |
+| re:^(\w+) is in (\w+) — free of fall or detriment\.$ | $1 برجِ $2 میں ہے — ہبوط یا وبال میں نہیں۔ |
+| re:^(\w+) is in (\w+) — free of fall or detriment, (.+)$ | $1 برجِ $2 میں ہے — ہبوط یا وبال میں نہیں؛ $3 |
+| re:^(\w+) is in (\w+) — in fall or detriment\.$ | $1 برجِ $2 میں ہے — ہبوط یا وبال میں۔ |
+| re:^(\w+) is in (\w+) — in fall or detriment; (.+)$ | $1 برجِ $2 میں ہے — ہبوط یا وبال میں؛ $3 |
+| re:^(\w+) in (\w+) — (domicile\|exaltation\|detriment\|fall)\.$ | $1 برجِ $2 میں — $3۔ |
+| re:^(\w+) in (\w+) — domicile; (.+)$ | $1 برجِ $2 میں — بیت؛ $3 |
+| re:^(\w+) has no domicile bonus in this sign\.$ | اس برج میں $1 کو بیت کا کوئی اضافی نمبر نہیں ملتا۔ |
+| re:^(\w+) has no dignity bonus in this sign\.$ | اس برج میں $1 کو ذاتی قوت کا کوئی اضافی نمبر نہیں ملتا۔ |
+| re:^(\w+) is not in fall or detriment\.$ | $1 ہبوط یا وبال میں نہیں۔ |
+| re:^Moon in (\w+)\.$ | قمر برجِ $1 میں۔ |
+| re:^(\w+) is direct\.$ | $1 مستقیم ہے۔ |
+| re:^(\w+) is retrograde\.$ | $1 رجعت میں ہے۔ |
+| re:^(\w+) is retrograde — (.+)$ | $1 رجعت میں ہے — $2 |
+| re:^(\w+) is not combust\.$ | $1 محترق نہیں۔ |
+| re:^Moon has no applying aspect before leaving its current sign — void of course, (.+)$ | موجودہ برج چھوڑنے سے پہلے قمر کا کوئی اتصالی نظر نہیں — خالی السیر؛ $1 |
+| re:^Moon in (\w+) — (a (?:fixed\|movable\|mutable) sign.+)$ | قمر برجِ $1 میں ہے — $2 |
+| re:^Moon in lunar mansion (\d+) — (favorable\|neutral\|unfavorable) for (marriage\|travel)\.( \[SCHOLAR-REVIEW\])?$ | قمر منزلِ قمر $p1 میں ہے — $3 کے لیے $2۔$p4 |
+| re:^This window falls in the planetary hour of (\w+)\.$ | یہ وقفہ $1 کی ساعتِ کواکب میں آتا ہے۔ |
+| re:^This window is in the planetary hour of (\w+), but (\w+) is (combust\|retrograde\|in fall/detriment) — no bonus\. \[SCHOLAR-REVIEW\]$ | یہ وقفہ $1 کی ساعتِ کواکب میں ہے، لیکن $2 $3 ہے — کوئی اضافی نمبر نہیں۔ [SCHOLAR-REVIEW] |
+| re:^(\w+day)\.$ | $1۔ |
+| re:^(\w+day) \(day of (?:the )?(\w+)\) — favorable for (.+)\.$ | $1 ($2 کا دن) — $3 کے لیے موافق۔ |
+
+
+
 ### Still in English on /ur (not part of this change)
 
-Result texts that are still English on /ur after section 5 (counts are unique English strings; checked in the browser on the built site and against the data files). They are the remaining work before /ur can be indexed:
+Result texts that still reach Urdu users in English, after the Phase 3 pass of the Urdu audit (Oct 2026). All numbers are UNIQUE English strings. They are the remaining work before /ur can be indexed; /ur stays noindex, out of the sitemap and out of hreflang.
+
+### How these were counted (same method before and after)
+
+| Method | What it counts |
+|---|---|
+| A. Data count: `python3 scripts/i18n/ur/count_gaps.py [--ref HEAD]` | English strings in `src/data/burujData.json` not matched by an exact or `re:` entry of `public/i18n/ur-ui.json` |
+| B. Rendered count (Playwright, Chromium, Urdu mode, `/ur/name-and-mother-burj`, all 12 burj via 12 name pairs, every result tab opened and expanded) | unique Latin text nodes still on screen, excluding hex colours, social-share names and language codes |
+| C. Engine count: `evaluateElection` for the 6 election types (normal and strict hour ruler), 700 dates | unique rule labels and Detailed-mode sentences produced, normalised for numbers, not matched by the catalog |
+
+| Count | Catalog at `origin/main` | After the uncommitted AI draft (earlier in the audit) | After Phase 3 |
+|---|---|---|---|
+| A. burujData.json uncovered, unique (reachable areas: personality, blessed day, career, charity, spiritual practice) | 701 of 1,082 | 150 of 1,082 | 89 of 1,082 (of which 30 are `weekly_spiritual_practices`, unused by any page) |
+| B. Burj result, leftover Latin nodes | 657 | 353 | 95 |
+| C. Ikhtiyārāt Detailed mode (17,787 distinct rendered strings; ~260 shapes) | 17,787 | 17,784 | 0 (all 17,787 and all 43 labels resolve) |
+
+Catalog size: 1,390 entries at `origin/main`, 3,018 with the earlier uncommitted draft, 3,444 after Phase 3 (+426: 185 Charity-tab texts and 45 Divine Names & dhikr practice texts, 20 Sadaqah/overview/spiritual-practice labels and patterns, 175 Ikhtiyārāt labels and sentence patterns). Charity-tab content turned out to come from `src/data/zodiacSadaqahData.ts` (251 English texts, 185 were uncovered), not only from `burujData.json`.
+
+### What is left (method B, 95 unique nodes)
+
+| Category | Count | Why it is left |
+|---|---|---|
+| Held for subject-matter review: angel and jinn names/descriptions and their section labels ("Associated Angel", "Jinn King", "About Angels", "About Jinn", "Spiritual Guardians & Forces"…), the English glosses of the Divine Names ("O Opener, O Provider"), the English renderings of the Fātiḥa verses ("Guide us to the straight path") | 54 | Religious content: Divine Names and Qur'an are never machine-translated; the Arabic is already shown from the data files. A published Urdu translation of the Fātiḥa verses and a reviewer for the angel/jinn text are needed. The matching "Recite the Angel name / Jinn name" instruction lines (17) are held for the same reason. |
+| Latin transliteration of an Arabic name shown next to the Arabic (mansion names such as "Al-Jabha", angel/jinn names, verse transliterations) | 36 | Legitimate: proper nouns / transliteration. |
+| Urdu text that keeps a Latin proper noun (Seringe Mahdiou Niane, "dugub", "petaw", "niyyah") | 5 | Legitimate. |
+
+### Other known gaps
 
 | Where | Strings | Note |
 |---|---|---|
-| Burj result, Personality tab (`burujData.json` `personality`) | 132 | plus the tab's labels (“Your Personality Profile”, “Temperament”…) |
-| Burj result, Blessed day tab (`blessed_day`) | 136 | plus labels (“Your Blessed Day”, “Pro Tip”…) |
-| Burj result, Charity tab (`sadaqah`) | 282 | traditional sadaqah forms; wording needs a reviewer who knows the tradition (the text cites a named teacher) |
-| Burj result, Divine Names & dhikr tab (`spiritual_practice`) | 118 | angels, jinn, dhikr counts, Qur'anic connection: religious content, deliberately not drafted; Arabic must come from the data files |
-| Planet / hour pages: Divine Names and incense of the current hour | a handful | e.g. “Yā Razzāq”, “O Provider”, incense names (“Lubān wa Misk”); Divine Names render the Arabic from the data files |
-| Ikhtiyārāt rule *technical* details (Detailed mode) | many, dynamic | contain degrees, signs and orbs (“Moon at 12°…”), need pattern entries, not exact strings |
-| Overview tab: “Explore the tabs above…”, “Innovative and humanitarian…” etc. | a few | the per-burj one-liners and activity lists of the overview |
+| `weekly_spiritual_practices` in `burujData.json` | 30 | Not used by any page. |
+| Dead or dev-only code (IlmHurufPanel, divine-timing education, life-path, BalanceMeter, CalculationBreakdownModal…) | ~429 | Not reachable by users in production. |
+| Mobile menu About body (`MobileMenu.tsx`) | 3 | Sentence with bold terms; needs a templating decision and Arabic wording (Phase 1b). |
+| "Help & Tutorial", "History" (`MobileMenu.tsx`) | 2 | Translated through the catalog only. |
+| `alt` attributes, OG/share routes, AM/PM times | few | Not translated by the DOM catalog. |
+
+### Not verified in a browser
+
+The Detailed-mode Ikhtiyārāt sentences were verified against the engine output (method C) and a unit test, not by clicking through the rendered Detailed view in Urdu.
 
 ### Open points from the external Urdu audit (18 Oct 2026), left for the native reviewer
 
-Applied in code: «رگڑ» (friction) replaced by اختلاف / تناؤ / کشیدگی; «جڑا ہوا» (grounded) → «زمین سے جڑا»; «فطرت» → «مزاج» in the career texts; deterministic career wording («شدید طور پر بگاڑتی ہیں») softened to «روایتی طور پر … غیر موافق سمجھی جاتی ہیں»; «ممانعت» → «پابندی»; the seven weekday paragraphs now attribute each day to its planet «روایتی علمِ نجوم میں» (planets are never agents); Friday is «سب سے افضل دن».
+Applied in code: «رگڑ» (friction) replaced by اختلاف / تناؤ / کشیدگی; «جڑا ہوا» (grounded) → «زمین سے جڑا»; «فطرت» → «مزاج» in the career texts; deterministic career wording («شدید طور پر بگاڑتی ہیں») softened to «روایتی طور پر … غیر موافق سمجھی جاتی ہیں»; «ممانعت» → «پابندی»; the seven weekday paragraphs now attribute each day to its planet «روایتی علمِ نجوم میں» (planets are never agents); Friday is «سب سے افضل دن». Phase 3: the Monday paragraph no longer contains «قمر کے پانی سکون پسند کرتے ہیں» (it now ends «ٹکراؤ سے بچیں؛ اس دن سکون اور تحمل کو ترجیح دیں»; the English "the Moon's waters prefer calm" is a metaphor and is not carried over).
+
+Verified against the Arabic names in `lunarMansions.ts`: «چھوٹا پیٹ» = البطين (little belly); «پیچھے آنے والا» = الدبران (the follower); «نشان» = الهنعة (the brand/mark; «داغ» was dropped because it reads as a stain); «سعد الاخبیہ (خیمے)» = سعد الأخبية. Still for the native reviewer: whether «نشان» is the preferred Urdu for الهنعة.
 
 Not applied, because they change meaning or need a source check:
-- Mansion titles «چھوٹا پیٹ» (The Little Belly), «داغ» (The Brand), «سعد کے خیمے» (The Fortunate Tents), «پیچھے آنے والا»: verify against the Arabic names (البطین, الوسم/الجبهة, الأخبية, الدبران) before finalising.
-- Medical rule explanations (treatment, diagnosis): the audit suggests adding «طبی علاج کے فیصلے ڈاکٹر کے مشورے سے کریں». The English source has no such sentence, so it should be added to EN/FR/AR/UR together or not at all (Mario's decision).
-- «ربط» vs «اتصال» for connection vs applying aspect, and «اکثر بے نتیجہ رہتا ہے» (“tends to come to nothing”) kept as in the English hedge; reviewer may soften further.
+- Medical rule explanations (treatment, diagnosis): the audit suggests adding «طبی علاج کے فیصلے ڈاکٹر کے مشورے سے کریں». The English source has no such sentence, so it should be added to EN/FR/AR/UR together or not at all (Mario's decision). The Detailed-mode medical sentence "treatment begun now tends to come to nothing" (void-of-course Moon) is translated as it stands in the source; it is flagged for separate source-content review.
+- «ربط» vs «اتصال» for connection vs applying aspect (Phase 2 open question 11).
+- Source texts that state tradition claims without hedging, translated as they stand and flagged for review: the Charity-tab items about a protective ring, cowries (petaw) and dreams, the "heaviness of the zodiac" remark for Leo, "Give secretly… as it purifies the heart", and "your most spiritually aligned day" in the burj overview.
+- New terms drafted for the Detailed-mode sentences, for the reviewer to confirm: aspect names قران / تسدیس / تربیع / تثلیث / مقابلہ; ثابت / منقلب / ذوجسدین برج; «دلالت کنندہ» for "significator"; «زاویائی فرق» for "orb"; «زاویائی فاصلہ» for "elongation"; «غیر موافق» for the literal "unfavorable".
 - Thursday/Friday statements: confirm the Islamic claims against sources.
 
 

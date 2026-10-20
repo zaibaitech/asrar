@@ -7,6 +7,7 @@ import json, os, subprocess, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from catalog_source import ENTRIES
 from catalog_ai_draft import AI_ENTRIES
+from catalog_ai_draft_ui import AI_UI_ENTRIES
 from review_log import ANSWERS, CORRECTIONS, PENDING_REVIEW
 
 dump = json.loads(subprocess.check_output(['npx', 'tsx', 'scripts/i18n/ur/dump_ts.ts'], text=True))
@@ -162,6 +163,18 @@ for sec, title, note in AI_SECTIONS:
     rows = [(en, ur) for sc, en, ur in AI_ENTRIES if sc == sec]
     md.append(f'\n### 5.{[x[0] for x in AI_SECTIONS].index(sec) + 1} {title} ({len(rows)})\n')
     md.append(note + '\n')
+    md.append(table(rows))
+    md.append('\n')
+md.append(f'\n## 6. AI-drafted UI strings from the Urdu audit ({len({en for _, en, _ in AI_UI_ENTRIES})} strings, NOT native-reviewed)\n')
+md.append('Found by a browser audit of the /ur pages and of the Urdu language mode on the other pages (menus, tabs, calculators, result tabs, page prose, FAQs), plus a scan of the source for hard-coded English. Drafted by an AI assistant, live on noindex /ur only. Rules: traditional / reflective framing, no prediction or medical claims, planets never agents; Qur\'an lines and Divine Names are NOT translated (Arabic comes from the data files: `planetaryZikr.ts`, `lunarMansions.ts`, `burujData.json`, `incense.ts`, the verified `ar-ui.json` Qur\'an lines). Edit `scripts/i18n/ur/catalog_ai_draft_ui.py`, then run `build_catalog.py` and `build_review.py`.\n')
+_ui_groups = {}
+for sc, en, ur in AI_UI_ENTRIES:
+    _ui_groups.setdefault(sc, []).append((en, ur))
+md.append('| Area | Strings |\n|---|---|')
+for sc, rows in _ui_groups.items():
+    md.append(f'| {sc} | {len(rows)} |')
+for sc, rows in _ui_groups.items():
+    md.append(f'\n### 6.{list(_ui_groups).index(sc) + 1} {sc} ({len(rows)})\n')
     md.append(table(rows))
     md.append('\n')
 md.append('\n### Still in English on /ur (not part of this change)\n')

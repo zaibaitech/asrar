@@ -53,7 +53,7 @@ for en, ur in HIJRI.items():
 for en, ur in WD_SHORT.items():
     add('ui', f're:^Your time: {en}, (\\d{{1,2}}:\\d\\d) (\\S+)$', f'آپ کا وقت: {ur}، $1 $p2')
     add('ui', f're:^{en} (\\d{{1,2}}:\\d\\d)$', f'{ur} $1')
-for state, ur in [('weakened', 'کمزور ہے'), ('strong', 'قوی ہے'), ('neutral', 'معتدل ہے'), ('comfortable', 'موافق حالت میں ہے')]:
+for state, ur in [('weakened', 'کمزور ہے'), ('strong', 'قوی ہے'), ('neutral', 'معتدل ہے'), ('comfortable', 'موافق حالت میں ہے'), ('exalted', 'شرف کی حالت میں ہے'), ('at home', 'اپنے گھر میں (بیت) ہے')]:
     add('ui', f're:^(\\S+) (\\w+) — (\\w+) is {state} in (\\w+)$', f'$1 $2 — $3 برجِ $4 میں {ur}')
     add('ui', f're:^(\\w+) is {state} in (\\w+)$', f'$1 برجِ $2 میں {ur}')
 add('ui', 're:^(\\w+) status: (\\w+)$', '$1 کی حالت: $2')
