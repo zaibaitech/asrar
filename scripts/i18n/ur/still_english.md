@@ -104,3 +104,26 @@ Still English or not done:
 - Names pages: the 12 names, WhatsApp/Telegram and brand names are legitimate Latin text.
 - Religious items in section 3 unchanged (angel/jinn, Divine Name glosses, Fātiḥa renderings), plus the "201 Prophetic Names" wording above.
 - Decision still open: `[SCHOLAR-REVIEW]` as a localized badge in all languages (see section 4).
+
+### Phase 7 (final audit, no code change)
+
+Baseline = HEAD `b526d31`, clean tree: `tsc` clean, Vitest 60 files / 476 tests pass, `next build` compiled. Nothing needed fixing, so Phase 7 changed documentation only.
+
+The 21 scanner findings (`known_english.json`), classified:
+
+| Category | Count | Items |
+|---|---|---|
+| Safe to localize now | 0 | none |
+| Technical limitation (needs a separate decision) | 9 | 8 social-preview strings (`app/og/ikhtiyarat` ×6, `app/og/quran` ×1, `app/opengraph-image.tsx` ×1): satori cannot keep Urdu RTL word order and the Urdu-capable fonts tried crash its shaper (Phase 6B findings, not re-tried: the only fix is a different renderer, which is a new dependency/architecture decision). 1 metadata title «Ikhtiyārāt Result» (`ikhtiyarat/r/[date]` generateMetadata only knows en/fr; adding Urdu would touch metadata routing and SEO, and `/ur` is noindex). |
+| Religious/scholarly, held for qualified review | 12 | `SpiritualPracticeTab` (10) and `DhikrCounter` (2): angel and jinn labels and descriptions. |
+| Intentionally retained English | 0 on this list | brand names, Latin names and transliterations are already excluded by `LEGIT_ENGLISH`. |
+
+Also held (not on the scanner list): Divine Name glosses, Fātiḥa renderings, "Recite the Angel/Jinn name" lines, «201 Prophetic Names» wording, medical-timing statements and unhedged tradition claims. The Urdu review marker stays «[علما کے جائزے کا منتظر]» (awaiting review, not approved); no document says any entry is scholar-approved.
+
+Catalog audit: 3,594 entries, no duplicate key, no `SCHOLAR-REVIEW`/`business.ts` in any Urdu value; `build_catalog.py`, `build_review.py` and the scanner output are byte-identical on a second run. All 896 AI-drafted result texts appear in section 5 of `ur-review.md` (checked entry by entry against `catalog_ai_draft.py`); the 60 entries flagged in `phase4_review.json` all appear in section 7.2; the 2,200 AI-drafted UI strings are counted in section 6.
+
+Browser check (built app, Chromium, 360/390/412 px, en/fr/ar/ur, `/`, `/auth`, `/profile`, `/names`, `/names/muhammad|fatima|khadija` = 84 page loads): ur pages `lang=ur dir=rtl`, en `en/ltr`, fr `fr/ltr`, ar `ar/rtl`; no horizontal overflow; no raw `SCHOLAR-REVIEW`, `business.ts`, `Build Time`, `NEXT_PUBLIC`, `Supabase`, `URL:`/`Key:` text on any page. `/auth` in production shows only the plain «sign-in temporarily unavailable» message (also after a submit), and no built chunk contains the diagnostics strings. "Show N more traits": 21 → 27 headings and the button disappears in en, fr and ur at all three widths. The Play-badge `alt` is Urdu only in Urdu mode. Mobile-menu About expanded in Urdu and English at all three widths. Not re-run in Phase 7: `/auth` under `next dev` (checked in Phase 6B; `next dev` shares `.next` with the build and corrupted it once), the Ikhtiyārāt Detailed-labels browser check (Phase 5; covered by tests), `/profile` behind sign-in (only the unauthenticated page), the other image `alt`s and `/share/quran/…` (needs `api.alquran.cloud`).
+
+Urdu clock, rendered with a fixed browser clock (home page, Europe/London): 12:00 «دوپہر», 15:45 «دوپہر», 17:10 «سہ پہر», 19:30 «شام», 00:05 «12:05 رات»; English shows PM and Arabic «م» for the same instant. No defect, so no change. For the native reviewer: «دوپہر» for mid-afternoon vs «سہ پہر» from about 17:00, «رات» for both 20:06 and 00:05 (some readers prefer «آدھی رات» at midnight), and «12:00 دوپہر» for noon.
+
+Glossary questions still open for the reviewer are unchanged (Phase 2 open question 11, «ربط» vs «اتصال», and the new terms listed above); `/ur` and `/ur/ikhtiyarat` are `noindex, follow`, the sitemap has 0 `/ur` URLs (62 total) and hreflang is en, fr, ar and x-default only.
