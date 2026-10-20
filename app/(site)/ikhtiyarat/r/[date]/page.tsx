@@ -9,6 +9,8 @@ import {
   type PageSearchParams,
 } from '@/src/lib/ikhtiyarat/sharedResult';
 import { ogIkhtiyaratResultUrl, ogImageUrl } from '@/src/lib/og/urls';
+import { MEDICAL_NOTICE, descriptionWithCaution, isMedicalElection } from '@/src/features/ikhtiyarat/medicalNotice';
+import MedicalNoticeText from '@/src/features/ikhtiyarat/components/MedicalNoticeText';
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
 
@@ -37,11 +39,14 @@ export async function generateMetadata({
 
   const title = lang === 'fr' ? 'Résultat Ikhtiyārāt' : 'Ikhtiyārāt Result';
   const tierLabel = result ? (lang === 'fr' ? result.tierInfo.labelFr : result.tierInfo.labelEn) : '';
-  const description = result
+  const baseDescription = result
     ? (lang === 'fr'
         ? `${resolvedParams.date} — ${tierLabel} (${result.score}/100) pour ${electionLabel.fr}, selon l'ikhtiyārāt classique.`
         : `${resolvedParams.date} — ${tierLabel} (${result.score}/100) for ${electionLabel.en}, per classical ikhtiyārāt.`)
     : (lang === 'fr' ? `Vérifiez une date pour ${electionLabel.fr} selon l'ikhtiyārāt classique.` : `Check a date for ${electionLabel.en} per classical ikhtiyārāt.`);
+
+  // Medical results carry a short caution; every other election type keeps its description unchanged.
+  const description = descriptionWithCaution(baseDescription, electionType, lang);
 
   const url = `${baseUrl}/ikhtiyarat/r/${resolvedParams.date}`;
   // Result card for this exact share link (date, tier, score) — what WhatsApp shows.
@@ -120,6 +125,13 @@ export default async function SharedResultPage({
         <div className="text-2xl font-bold text-slate-900 dark:text-slate-100">
           {c.score}: {result.score}/100
         </div>
+
+        {isMedicalElection(electionType) && (
+          <>
+            <div className="text-xs font-semibold text-slate-700 dark:text-slate-200">{MEDICAL_NOTICE[lang].occasion}</div>
+            <MedicalNoticeText lang={lang} />
+          </>
+        )}
 
         <Link
           href={`/ikhtiyarat?date=${resolvedParams.date}&election=${electionType}${resolvedSearchParams.lang ? `&lang=${resolvedSearchParams.lang}` : ''}`}

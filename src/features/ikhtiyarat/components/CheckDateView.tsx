@@ -20,6 +20,7 @@ import { shareContent } from '@/src/features/ramadanChallenges/sharing';
 import { UserLocation } from '@/src/types/planetary';
 import { useLanguage } from '@/src/contexts/LanguageContext';
 import MedicalElectionNotice from './MedicalElectionNotice';
+import { shareTextFor } from '../medicalNotice';
 import { getLocalToday } from '@/src/lib/localDate';
 import { TierBadge } from './TierBadge';
 import { RuleRow } from './RuleRow';
@@ -156,7 +157,7 @@ export function CheckDateView({
     trackEvent('share_click', { tool, method: nativeOrCopy() });
     const shareResult = await shareContent({
       title: c.title,
-      text: `${dateOnly} — ${tierLabel} (${result.score}/100)`,
+      text: shareTextFor({ dateOnly, tierLabel, score: result.score, electionType, language }),
       url,
     });
     if (shareResult.success && shareResult.method === 'clipboard') {
