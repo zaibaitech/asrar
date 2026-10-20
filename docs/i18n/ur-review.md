@@ -1938,7 +1938,7 @@ One paragraph per weekday. Source: `app/planet-of-the-day/PlanetOfTheDayPage.tsx
 
 
 
-## 6. AI-drafted UI strings from the Urdu audit (2127 strings, NOT native-reviewed)
+## 6. AI-drafted UI strings from the Urdu audit (2167 strings, NOT native-reviewed)
 
 Found by a browser audit of the /ur pages and of the Urdu language mode on the other pages (menus, tabs, calculators, result tabs, page prose, FAQs), plus a scan of the source for hard-coded English. Drafted by an AI assistant, live on noindex /ur only. Rules: traditional / reflective framing, no prediction or medical claims, planets never agents; Qur'an lines and Divine Names are NOT translated (Arabic comes from the data files: `planetaryZikr.ts`, `lunarMansions.ts`, `burujData.json`, `incense.ts`, the verified `ar-ui.json` Qur'an lines). Edit `scripts/i18n/ur/catalog_ai_draft_ui.py`, then run `build_catalog.py` and `build_review.py`.
 
@@ -2003,7 +2003,7 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 | burj-spiritual | 4 |
 | ikhtiyarat-detail | 175 |
 | phase5-ui | 6 |
-| phase6-ui | 71 |
+| phase6-ui | 111 |
 
 ### 6.1 incense (10)
 
@@ -4474,7 +4474,7 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 
 
 
-### 6.60 phase6-ui (71)
+### 6.60 phase6-ui (111)
 
 | English | Urdu |
 |---|---|
@@ -4549,6 +4549,46 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 | Welcome! Let's set up your profile | خوش آمدید! آئیے آپ کا پروفائل ترتیب دیں |
 | Your Location | آپ کا مقام |
 | 📍 Use Current Location | 📍 موجودہ مقام استعمال کریں |
+| Add the Abjad value of your name to the Abjad value of your mother's name, divide by 12 and keep the remainder (0 counts as 12). Remainder 1 is Aries (al-Ḥamal), 2 Taurus, and so on to 12, Pisces (al-Ḥūt). | اپنے نام کی ابجد قیمت میں اپنی والدہ کے نام کی ابجد قیمت جمع کریں، حاصل کو 12 سے تقسیم کریں اور باقی رکھیں (صفر کو 12 شمار کیا جاتا ہے)۔ باقی 1 حمل (al-Ḥamal) ہے، 2 ثور، اور اسی طرح 12 تک، جو حوت (al-Ḥūt) ہے۔ |
+| Arabic, meaning and Abjad value of each Name. | ہر نام کی عربی شکل، معنی اور ابجد قیمت۔ |
+| Boys’ names | لڑکوں کے نام |
+| Calculate with any name, and see the 12 burūj at a glance. | کسی بھی نام سے حساب کریں اور بارہ بروج ایک نظر میں دیکھیں۔ |
+| Girls’ names | لڑکیوں کے نام |
+| How is the burj found from my name and my mother's name? | میرے نام اور میری والدہ کے نام سے برج کیسے نکالا جاتا ہے؟ |
+| Is this a prediction? | کیا یہ پیش گوئی ہے؟ |
+| Muslim Names: Abjad Value & Burj from Name and Mother's Name | مسلم نام: نام اور والدہ کے نام سے ابجد قیمت اور برج |
+| My name is not in the list. Can I still calculate it? | میرا نام فہرست میں نہیں ہے۔ کیا میں پھر بھی حساب کر سکتا ہوں؟ |
+| No. It is a traditional reflection on names and temperament from ʿilm al-ḥurūf, for education and self-knowledge. Allah alone knows the unseen. | نہیں۔ یہ علم الحروف کی روشنی میں ناموں اور مزاج پر ایک روایتی غور و فکر ہے، جو تعلیم اور خود شناسی کے لیے ہے۔ غیب کا علم صرف اللہ کو ہے۔ |
+| The Abjad (ḥisāb al-jummal) value of common Muslim names such as Muhammad, Ali, Fatima and Maryam, and how each one combines with your mother's name to give your burj. For reflection. | عام مسلم ناموں — جیسے محمد، علی، فاطمہ اور مریم — کی ابجد (حسابِ جمل) قیمت، اور یہ کہ ہر نام آپ کی والدہ کے نام کے ساتھ مل کر آپ کا برج کیسے دیتا ہے۔ غور و فکر کے لیے۔ |
+| What is the Abjad value of a name? | نام کی ابجد قیمت کیا ہوتی ہے؟ |
+| Why a name has a number | نام کا ایک عدد کیوں ہوتا ہے |
+| Yes. The name-and-mother burj calculator accepts any name written in Arabic letters, or typed in Latin letters with an Arabic spelling picked from its suggestions. | جی ہاں۔ نام اور والدہ کے نام کا برج کیلکولیٹر عربی حروف میں لکھا ہوا کوئی بھی نام قبول کرتا ہے، یا لاطینی حروف میں لکھا ہوا نام بھی، جس کی عربی املا اس کی تجاویز میں سے چنی جائے۔ |
+| calculate with any name → | کسی بھی نام سے حساب کریں ← |
+| › Names | › نام |
+| ): Abjad Value and Burj | ): ابجد قیمت اور برج |
+| All names → | تمام نام ← |
+| Burj | برج |
+| Does the burj predict my future? | کیا برج میرا مستقبل بتاتا ہے؟ |
+| How the burj is found | برج کیسے نکالا جاتا ہے |
+| How the calculation works and the 12 burūj at a glance. | حساب کیسے ہوتا ہے، اور بارہ بروج ایک نظر میں۔ |
+| Letter | حرف |
+| Names | نام |
+| Other names | دیگر نام |
+| Spellings | املا کی صورتیں |
+| The Mashriqi table gives the same total for this name. | مشرقی جدول اس نام کے لیے وہی مجموعہ دیتا ہے۔ |
+| Value | قیمت |
+| burj guide | برج کی رہنمائی |
+| Android users can install Asrariya today on Google Play. | اینڈرائیڈ صارفین آج ہی Google Play سے Asrariya انسٹال کر سکتے ہیں۔ |
+| Asrariya for iOS is coming soon. | iOS کے لیے Asrariya جلد آ رہا ہے۔ |
+| Don't have the app yet? Download it free. | ایپ ابھی نہیں ہے؟ مفت ڈاؤن لوڈ کریں۔ |
+| If the app does not open automatically, install Asrariya below. | اگر ایپ خود نہ کھلے تو نیچے سے Asrariya انسٹال کریں۔ |
+| Open in Asrariya | Asrariya میں کھولیں |
+| Open this ayah in Asrariya on Android. | اس آیت کو اینڈرائیڈ پر Asrariya میں کھولیں۔ |
+| QR code to install Asrariya from Google Play | Google Play سے Asrariya انسٹال کرنے کے لیے QR کوڈ |
+| Scan the QR code or open Google Play. | QR کوڈ اسکین کریں یا Google Play کھولیں۔ |
+| Ayah Not Found | آیت نہیں ملی |
+| Check a date for yourself | اپنے لیے کوئی تاریخ جانچیں |
+| 25-35 min | 25-35 منٹ |
 
 
 

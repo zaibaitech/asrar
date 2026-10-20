@@ -4,26 +4,6 @@
   "app/(site)/ikhtiyarat/r/[date]/page.tsx": [
    "Ikhtiyārāt Result"
   ],
-  "app/(site)/names/[slug]/page.tsx": [
-   "All names →",
-   "Burj",
-   "How the burj is found",
-   "Letter",
-   "Names",
-   "Other names",
-   "Spellings",
-   "Value"
-  ],
-  "app/(site)/names/page.tsx": [
-   "Why a name has a number"
-  ],
-  "app/(site)/share/quran/[surahNumber]/[ayahNumber]/ShareActions.tsx": [
-   "Android users can install Asrariya today on Google Play.",
-   "Asrariya for iOS is coming soon.",
-   "Open in Asrariya",
-   "Open this ayah in Asrariya on Android.",
-   "Scan the QR code or open Google Play."
-  ],
   "app/og/ikhtiyarat/[date]/route.tsx": [
    "For reflection, not prediction · Only Allah knows the unseen",
    "Ikhtiyārāt · Result",
@@ -53,9 +33,6 @@
    "Elemental Force",
    "Jinn King",
    "Jinn are beings created from smokeless fire, existing in a parallel realm. In Islamic mystical tradition, certain Jinn kings govern elemental forces and can be understood through spiritual knowledge."
-  ],
-  "src/features/ramadanChallenges/components/AddChallengeModal.tsx": [
-   "25-35 min"
   ]
  }
 }
