@@ -105,8 +105,10 @@ describe('Urdu UI: Arabic comes from the data files, not from a translation', ()
     }
   });
 
-  it('Divine Name glosses next to the 99 Names stay untranslated on purpose', () => {
-    expect(raw['The Provider']).toBeUndefined();
+  it('Divine Name glosses have Urdu (Batch 15 drafts, pass 3); transliterations stay untranslated', () => {
+    // Policy change in native review pass 3: the English glosses showed inside Urdu results on
+    // /ur/abjad, so they now carry DRAFT Urdu (Batch 15). The Names themselves come from the data.
+    expect(raw['The Provider']).toBe('رزق دینے والا');
     expect(raw['Ar-Razzāq']).toBeUndefined();
   });
 });

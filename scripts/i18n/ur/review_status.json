@@ -1,5 +1,5 @@
 {
- "about": "Review status of the Urdu (/ur) strings. Sheet 2 = /workspace review file asrar-ur-review-2.md (2,336 rows), all reviewed by the native Language Reviewer (Oct 2026). reviewed-corrected: correction applied; reviewed: confirmed as is; reviewed-kept: reviewer suggestion not applied on purpose (see note); reviewed-flagged: left for Mario / the source owner. Batch 13 (/ur/abjad calculator UI, src/features/calculator/i18n/ur.ts) and Batch 14 (burujData.json practice nights) are DRAFTS, not reviewed.",
+ "about": "Review status of the Urdu (/ur) strings. Sheet 2 = /workspace review file asrar-ur-review-2.md (2,336 rows), all reviewed by the native Language Reviewer (Oct 2026). reviewed-corrected: correction applied; reviewed: confirmed as is; reviewed-kept: reviewer suggestion not applied on purpose (see note); reviewed-flagged: left for Mario / the source owner. Batch 13 (/ur/abjad calculator UI, src/features/calculator/i18n/ur.ts) and Batch 14 (burujData.json practice nights) were reviewed in pass 3. Batch 15 (calculator result data and practice-hint meanings) is DRAFT, not reviewed; pass3_reviewer_data are the reviewer-written result-data strings (reviewed).",
  "counts": {
   "sheet2": {
    "reviewed-corrected": 417,
@@ -7,8 +7,15 @@
    "reviewed-kept": 6,
    "reviewed-flagged": 4
   },
-  "batch13_draft": 149,
-  "batch14_draft": 4
+  "batch13": {
+   "reviewed": 126,
+   "reviewed-corrected (optional)": 10,
+   "reviewed-corrected": 13
+  },
+  "batch14_reviewed": 5,
+  "pass3_ramadan": 9,
+  "pass3_reviewer_data": 33,
+  "batch15_draft": 180
  },
  "sheet2": {
   "1.1": {
@@ -179,7 +186,8 @@
   "1.34": {
    "en": "Astaghfirullāh",
    "loc": "catalog_ai_draft_ui.py:738 [ramadan]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "note": "Pass 3: the catalog key \"Astaghfirullāh\" is the transliteration line under the Arabic (ChallengeCard); its Urdu value is now the meaning «اللہ سے مغفرت مانگنا»."
   },
   "1.35": {
    "en": "Istighfār",
@@ -11709,7 +11717,7 @@
    "key": "inputLabel",
    "en": "Arabic text",
    "ur": "عربی متن",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.2",
@@ -11717,7 +11725,7 @@
    "key": "inputPlaceholder",
    "en": "Enter a name, phrase, or divine name",
    "ur": "کوئی نام، عبارت یا اسمِ الٰہی لکھیں",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.3",
@@ -11725,7 +11733,7 @@
    "key": "newCalculation",
    "en": "New calculation",
    "ur": "نیا حساب",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.4",
@@ -11733,15 +11741,15 @@
    "key": "kabir",
    "en": "Kabīr (Total)",
    "ur": "کبیر (کل مجموعہ)",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.5",
    "ns": "calculator",
    "key": "saghir",
    "en": "Ṣaghīr (Root)",
-   "ur": "صغیر (جذر)",
-   "status": "draft"
+   "ur": "صغیر (مختصر عدد)",
+   "status": "reviewed-corrected (optional)"
   },
   {
    "id": "13.6",
@@ -11749,7 +11757,7 @@
    "key": "sirr",
    "en": "Sirr (Secret)",
    "ur": "سِرّ (راز)",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.7",
@@ -11757,7 +11765,7 @@
    "key": "wusta",
    "en": "Wusṭā (Middle)",
    "ur": "وُسطیٰ (درمیانی)",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.8",
@@ -11765,7 +11773,7 @@
    "key": "kamal",
    "en": "Kamāl (Perfection)",
    "ur": "کمال (تکمیل)",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.9",
@@ -11773,7 +11781,7 @@
    "key": "bast",
    "en": "Basṭ (Expansion)",
    "ur": "بسط (پھیلاؤ)",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.10",
@@ -11781,7 +11789,7 @@
    "key": "elementalComposition",
    "en": "Elemental Correspondence",
    "ur": "عناصر کی نسبت",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.11",
@@ -11789,7 +11797,7 @@
    "key": "letterFrequency",
    "en": "Letter Composition",
    "ur": "حروف کی ترکیب",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.12",
@@ -11797,7 +11805,7 @@
    "key": "balanceScore",
    "en": "Balance index",
    "ur": "توازن کا اشاریہ",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.13",
@@ -11805,7 +11813,7 @@
    "key": "dominantElement",
    "en": "Dominant correspondence",
    "ur": "غالب نسبت",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.14",
@@ -11813,7 +11821,7 @@
    "key": "weakestElement",
    "en": "Weakest correspondence",
    "ur": "کمزور ترین نسبت",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.15",
@@ -11821,7 +11829,7 @@
    "key": "noLetters",
    "en": "No Arabic letters found to analyze",
    "ur": "تجزیے کے لیے کوئی عربی حرف نہیں ملا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.16",
@@ -11829,15 +11837,15 @@
    "key": "nameFieldPlaceholder",
    "en": "Enter your name in Arabic",
    "ur": "اپنا نام عربی حروف میں لکھیں",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.17",
    "ns": "calculator",
    "key": "archetype",
    "en": "Symbolic Archetype",
-   "ur": "علامتی مثالیہ",
-   "status": "draft"
+   "ur": "علامتی کردار",
+   "status": "reviewed-corrected (optional)"
   },
   {
    "id": "13.18",
@@ -11845,7 +11853,7 @@
    "key": "spiritualGuidance",
    "en": "Spiritual Guidance",
    "ur": "روحانی رہنمائی",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.19",
@@ -11853,7 +11861,7 @@
    "key": "divineNameResonance",
    "en": "Divine-Name Correspondences",
    "ur": "اسمائے الٰہی سے نسبتیں",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.20",
@@ -11861,7 +11869,7 @@
    "key": "recommendedDhikrCounts",
    "en": "Recommended Dhikr Counts",
    "ur": "ذکر کی تجویز کردہ تعداد",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.21",
@@ -11869,15 +11877,15 @@
    "key": "bestTimeWindow",
    "en": "Best Time Window",
    "ur": "موزوں ترین وقت",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.22",
    "ns": "calculator",
    "key": "powerDays",
    "en": "Power Days",
-   "ur": "خاص دن",
-   "status": "draft"
+   "ur": "موافق دن",
+   "status": "reviewed-corrected (optional)"
   },
   {
    "id": "13.23",
@@ -11885,7 +11893,7 @@
    "key": "repeatedLetters",
    "en": "Repeated Letters",
    "ur": "دہرائے گئے حروف",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.24",
@@ -11893,7 +11901,7 @@
    "key": "nearSacredNumber",
    "en": "Near Sacred Number",
    "ur": "قریب ترین مقدس عدد",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.25",
@@ -11901,7 +11909,7 @@
    "key": "selectDivineName",
    "en": "Select Divine Name",
    "ur": "اسمِ الٰہی منتخب کریں",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.26",
@@ -11909,7 +11917,7 @@
    "key": "suggestedCounts",
    "en": "Suggested Dhikr Counts",
    "ur": "ذکر کی تجویز کردہ تعداد",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.27",
@@ -11917,7 +11925,7 @@
    "key": "bestTimesToPractice",
    "en": "Best Times to Practice",
    "ur": "معمول کے لیے موزوں اوقات",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.28",
@@ -11925,7 +11933,7 @@
    "key": "valueBased",
    "en": "Value-Based",
    "ur": "قیمت پر مبنی",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.29",
@@ -11933,7 +11941,7 @@
    "key": "preparation",
    "en": "Preparation",
    "ur": "تیاری",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.30",
@@ -11941,7 +11949,7 @@
    "key": "etiquette",
    "en": "Adab (Etiquette)",
    "ur": "آداب",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.31",
@@ -11949,7 +11957,7 @@
    "key": "analysisTitleName",
    "en": "Name Analysis",
    "ur": "نام کا تجزیہ",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.32",
@@ -11957,7 +11965,7 @@
    "key": "analysisTitlePhrase",
    "en": "Phrase Analysis",
    "ur": "عبارت کا تجزیہ",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.33",
@@ -11965,7 +11973,7 @@
    "key": "analysisTitleDhikr",
    "en": "Divine Name Analysis",
    "ur": "اسمِ الٰہی کا تجزیہ",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.34",
@@ -11973,7 +11981,7 @@
    "key": "analysisTitleGeneral",
    "en": "Text Analysis",
    "ur": "متن کا تجزیہ",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.35",
@@ -11981,7 +11989,7 @@
    "key": "methodologyLabel",
    "en": "Abjad & Letter Correspondence Analysis",
    "ur": "ابجد اور حروف کی نسبتوں کا تجزیہ",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.36",
@@ -11989,7 +11997,7 @@
    "key": "numericalSignature",
    "en": "Numerical Signature",
    "ur": "عددی شناخت",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.37",
@@ -11997,7 +12005,7 @@
    "key": "abjadKabirLabel",
    "en": "Abjad al-Kabīr",
    "ur": "ابجدِ کبیر",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.38",
@@ -12005,7 +12013,7 @@
    "key": "howCalculated",
    "en": "How is this calculated?",
    "ur": "یہ کیسے نکالا جاتا ہے؟",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.39",
@@ -12013,7 +12021,7 @@
    "key": "howCalculatedBody",
    "en": "Each Arabic letter carries a fixed numerical value in the Abjad al-Kabīr system. Diacritics are ignored; the values of every remaining letter in the text are added together to produce this total.",
    "ur": "ابجدِ کبیر کے نظام میں ہر عربی حرف کی ایک مقرر عددی قیمت ہے۔ اعراب شمار نہیں ہوتے؛ متن کے باقی تمام حروف کی قیمتیں جمع کر کے یہ مجموعہ بنتا ہے۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.40",
@@ -12021,15 +12029,15 @@
    "key": "totalLettersLabel",
    "en": "Total letters",
    "ur": "کل حروف",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.41",
    "ns": "calculator",
    "key": "uniqueLettersLabel",
    "en": "Unique letters",
-   "ur": "الگ الگ حروف",
-   "status": "draft"
+   "ur": "مختلف حروف",
+   "status": "reviewed-corrected"
   },
   {
    "id": "13.42",
@@ -12037,7 +12045,7 @@
    "key": "numericalProfileTitle",
    "en": "Numerical Profile",
    "ur": "عددی خاکہ",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.43",
@@ -12045,15 +12053,15 @@
    "key": "classicalCalculation",
    "en": "Classical calculation",
    "ur": "کلاسیکی حساب",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.44",
    "ns": "calculator",
    "key": "traditionalUnverified",
    "en": "Traditional term · exact historical formula unverified",
-   "ur": "روایتی اصطلاح · درست تاریخی فارمولا غیر مصدقہ",
-   "status": "draft"
+   "ur": "روایتی اصطلاح · اصل تاریخی فارمولا غیر مصدقہ",
+   "status": "reviewed-corrected"
   },
   {
    "id": "13.45",
@@ -12061,7 +12069,7 @@
    "key": "derivedMetricLabel",
    "en": "Application-derived metric",
    "ur": "ایپ کا اخذ کردہ پیمانہ",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.46",
@@ -12069,7 +12077,7 @@
    "key": "kabirFormula",
    "en": "The sum of the abjad value of every letter in the text.",
    "ur": "متن کے ہر حرف کی ابجد قیمت کا مجموعہ۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.47",
@@ -12077,7 +12085,7 @@
    "key": "saghirFormula",
    "en": "The digital root of the Kabīr value — its digits are summed repeatedly until a single digit from 1–9 remains.",
    "ur": "کبیر کی قیمت کا عددی جذر: اس کے ہندسے بار بار جمع کیے جاتے ہیں یہاں تک کہ 1 سے 9 تک کا ایک ہندسہ رہ جائے۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.48",
@@ -12085,7 +12093,7 @@
    "key": "sirrFormula",
    "en": "Computed here as Kabīr minus Ṣaghīr. \"Sirr\" (secret) is a traditional ʿIlm al-Ḥurūf term; this app's exact formula for it has not been independently verified against a specific historical source.",
    "ur": "یہاں کبیر میں سے صغیر گھٹا کر نکالا گیا ہے۔ «سِرّ» (راز) علم الحروف کی ایک روایتی اصطلاح ہے؛ اس ایپ کے فارمولے کی کسی مخصوص تاریخی ماخذ سے آزادانہ تصدیق نہیں ہوئی۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.49",
@@ -12093,7 +12101,7 @@
    "key": "wustaFormula",
    "en": "Computed here as the whole-number average of Kabīr and Ṣaghīr, (Kabīr + Ṣaghīr) ÷ 2. \"Wusṭā\" (middle) is a traditional term; this app's exact formula has not been independently verified against a specific historical source.",
    "ur": "یہاں کبیر اور صغیر کا پورے عدد والا اوسط، یعنی (کبیر + صغیر) ÷ 2، لیا گیا ہے۔ «وُسطیٰ» (درمیانی) ایک روایتی اصطلاح ہے؛ اس ایپ کے فارمولے کی کسی مخصوص تاریخی ماخذ سے آزادانہ تصدیق نہیں ہوئی۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.50",
@@ -12101,7 +12109,7 @@
    "key": "kamalFormula",
    "en": "Computed here as Kabīr plus Ṣaghīr. \"Kamāl\" (completion) is a traditional term; this app's exact formula has not been independently verified against a specific historical source.",
    "ur": "یہاں کبیر اور صغیر کو جمع کر کے نکالا گیا ہے۔ «کمال» (تکمیل) ایک روایتی اصطلاح ہے؛ اس ایپ کے فارمولے کی کسی مخصوص تاریخی ماخذ سے آزادانہ تصدیق نہیں ہوئی۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.51",
@@ -12109,7 +12117,7 @@
    "key": "bastFormula",
    "en": "Computed here as Kabīr multiplied by Ṣaghīr. \"Basṭ\" (expansion) is a traditional term; this app's exact formula has not been independently verified against a specific historical source.",
    "ur": "یہاں کبیر کو صغیر سے ضرب دے کر نکالا گیا ہے۔ «بسط» (پھیلاؤ) ایک روایتی اصطلاح ہے؛ اس ایپ کے فارمولے کی کسی مخصوص تاریخی ماخذ سے آزادانہ تصدیق نہیں ہوئی۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.52",
@@ -12117,15 +12125,15 @@
    "key": "elementalCorrespondenceSubtitle",
    "en": "Derived from the letter correspondences used by this calculation system.",
    "ur": "اس حساب کے نظام میں استعمال ہونے والی حروف کی نسبتوں سے ماخوذ۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.53",
    "ns": "calculator",
    "key": "balanceIndexFormula",
    "en": "100 minus a measure of how far the four elemental shares deviate from an even 25% split each; a name using only one element scores 0, an even split scores 100.",
-   "ur": "100 میں سے یہ پیمانہ منہا کیا جاتا ہے کہ چاروں عناصر کے حصے ہر ایک کے 25٪ کی برابر تقسیم سے کتنے ہٹے ہوئے ہیں؛ صرف ایک عنصر والے نام کا اشاریہ 0 اور برابر تقسیم کا 100 ہوتا ہے۔",
-   "status": "draft"
+   "ur": "100 میں سے وہ فرق گھٹایا جاتا ہے جو چاروں عناصر کے حصوں اور برابر تقسیم (ہر عنصر 25٪) کے درمیان ہو؛ صرف ایک عنصر والے نام کا اشاریہ 0 اور بالکل برابر تقسیم کا 100 ہوتا ہے۔",
+   "status": "reviewed-corrected"
   },
   {
    "id": "13.54",
@@ -12133,15 +12141,15 @@
    "key": "letterCorrespondencesTitle",
    "en": "Letter Correspondences",
    "ur": "حروف کی نسبتیں",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.55",
    "ns": "calculator",
    "key": "correspondenceSystemName",
    "en": "Maghribi ʿIlm al-Ḥurūf letter classification",
-   "ur": "مغربی علم الحروف کی حروف کی درجہ بندی",
-   "status": "draft"
+   "ur": "مغربی علم الحروف میں حروف کی درجہ بندی",
+   "status": "reviewed-corrected"
   },
   {
    "id": "13.56",
@@ -12149,15 +12157,15 @@
    "key": "correspondenceSystemLabel",
    "en": "Correspondence system",
    "ur": "نسبتوں کا نظام",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.57",
    "ns": "calculator",
    "key": "correspondenceNote",
    "en": "These are symbolic correspondences from the selected letter-classification tradition, not scientific measurements. A separate historical system (Mashriqi) assigns some letters differently; it is not implemented in this app.",
-   "ur": "یہ منتخب درجہ بندی کی روایت کی علامتی نسبتیں ہیں، سائنسی پیمائش نہیں۔ ایک الگ تاریخی نظام (مشرقی) بعض حروف کو مختلف طور پر منسوب کرتا ہے؛ وہ اس ایپ میں شامل نہیں۔",
-   "status": "draft"
+   "ur": "یہ منتخب درجہ بندی کی روایت کی علامتی نسبتیں ہیں، سائنسی پیمائش نہیں۔ ایک الگ تاریخی نظام (مشرقی) بعض حروف کو مختلف عناصر سے منسوب کرتا ہے؛ عناصر کی یہ مشرقی درجہ بندی اس ایپ میں شامل نہیں۔",
+   "status": "reviewed-corrected"
   },
   {
    "id": "13.58",
@@ -12165,7 +12173,7 @@
    "key": "zodiacalCorrespondenceTitle",
    "en": "Zodiacal Correspondence",
    "ur": "برج سے نسبت",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.59",
@@ -12173,7 +12181,7 @@
    "key": "letterBasedCorrespondence",
    "en": "Letter-based correspondence",
    "ur": "حروف پر مبنی نسبت",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.60",
@@ -12181,7 +12189,7 @@
    "key": "zodiacDisclaimer",
    "en": "This is a symbolic zodiacal correspondence derived from the selected letter-correspondence system (the name's numerical total, reduced to one of twelve signs). It is not your astronomical or natal zodiac sign, which depends on your actual birth date.",
    "ur": "یہ منتخب نسبتوں کے نظام سے ماخوذ ایک علامتی برجی نسبت ہے (نام کا عددی مجموعہ بارہ برجوں میں سے ایک تک گھٹایا جاتا ہے)۔ یہ آپ کا فلکیاتی یا پیدائشی برج نہیں، جو آپ کی اصل تاریخِ پیدائش پر منحصر ہے۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.61",
@@ -12189,15 +12197,15 @@
    "key": "zodiacUnavailable",
    "en": "Zodiacal correspondence unavailable for this calculation.",
    "ur": "اس حساب کے لیے برج سے نسبت دستیاب نہیں۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.62",
    "ns": "calculator",
    "key": "themesLabel",
    "en": "Themes",
-   "ur": "موضوعات",
-   "status": "draft"
+   "ur": "نمایاں اوصاف",
+   "status": "reviewed-corrected (optional)"
   },
   {
    "id": "13.63",
@@ -12205,15 +12213,15 @@
    "key": "archetypeDisclaimer",
    "en": "Interpretive symbolism derived from the numerical and letter correspondences of this name — a traditional interpretation, not a psychological assessment.",
    "ur": "اس نام کی عددی اور حرفی نسبتوں سے ماخوذ تعبیری علامت — ایک روایتی تعبیر، نفسیاتی جائزہ نہیں۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.64",
    "ns": "calculator",
    "key": "whyThese",
    "en": "Why these?",
-   "ur": "یہی کیوں؟",
-   "status": "draft"
+   "ur": "یہ اسما کیوں؟",
+   "status": "reviewed-corrected"
   },
   {
    "id": "13.65",
@@ -12221,7 +12229,7 @@
    "key": "dhikrDisclaimer",
    "en": "Suggested numerical correspondences for personal reflection — not an obligatory devotional prescription tied to this name.",
    "ur": "ذاتی غور و فکر کے لیے تجویز کردہ عددی نسبتیں — اس نام سے جڑا کوئی لازمی عبادتی حکم نہیں۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.66",
@@ -12229,7 +12237,7 @@
    "key": "analysisTellsTitle",
    "en": "What this analysis tells you",
    "ur": "یہ تجزیہ کیا بتاتا ہے",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.67",
@@ -12237,7 +12245,7 @@
    "key": "analysisTellsItems[0]",
    "en": "Numerical value of the name",
    "ur": "نام کی عددی قیمت",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.68",
@@ -12245,7 +12253,7 @@
    "key": "analysisTellsItems[1]",
    "en": "Letter composition",
    "ur": "حروف کی ترکیب",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.69",
@@ -12253,7 +12261,7 @@
    "key": "analysisTellsItems[2]",
    "en": "Letter frequencies",
    "ur": "حروف کی تکرار",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.70",
@@ -12261,7 +12269,7 @@
    "key": "analysisTellsItems[3]",
    "en": "Correspondences according to the selected ʿIlm al-Ḥurūf system",
    "ur": "منتخب علم الحروف کے نظام کے مطابق نسبتیں",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.71",
@@ -12269,7 +12277,7 @@
    "key": "analysisTellsItems[4]",
    "en": "Symbolic interpretations derived from those correspondences",
    "ur": "ان نسبتوں سے ماخوذ علامتی تعبیرات",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.72",
@@ -12277,7 +12285,7 @@
    "key": "analysisNotTitle",
    "en": "What this analysis does not determine",
    "ur": "یہ تجزیہ کیا طے نہیں کرتا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.73",
@@ -12285,7 +12293,7 @@
    "key": "analysisNotItems[0]",
    "en": "Your actual birth zodiac sign",
    "ur": "آپ کا اصل پیدائشی برج",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.74",
@@ -12293,15 +12301,15 @@
    "key": "analysisNotItems[1]",
    "en": "Your natal chart",
    "ur": "آپ کا پیدائشی زائچہ",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.75",
    "ns": "calculator",
    "key": "analysisNotItems[2]",
    "en": "Your exact personality",
-   "ur": "آپ کی شخصیت کی ٹھیک تصویر",
-   "status": "draft"
+   "ur": "آپ کی شخصیت کا حتمی خاکہ",
+   "status": "reviewed-corrected (optional)"
   },
   {
    "id": "13.76",
@@ -12309,7 +12317,7 @@
    "key": "analysisNotItems[3]",
    "en": "Your future",
    "ur": "آپ کا مستقبل",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.77",
@@ -12317,7 +12325,7 @@
    "key": "analysisNotItems[4]",
    "en": "Your destiny",
    "ur": "آپ کی تقدیر",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.78",
@@ -12325,7 +12333,7 @@
    "key": "methodologyTitle",
    "en": "Methodology",
    "ur": "طریقۂ کار",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.79",
@@ -12333,7 +12341,7 @@
    "key": "methodologyTraditionLabel",
    "en": "Calculation tradition",
    "ur": "حساب کی روایت",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.80",
@@ -12341,7 +12349,7 @@
    "key": "methodologyTraditionValue",
    "en": "ʿIlm al-Ḥurūf / Abjad",
    "ur": "علم الحروف / ابجد",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.81",
@@ -12349,7 +12357,7 @@
    "key": "methodologyPrimarySystemLabel",
    "en": "Primary numerical system",
    "ur": "بنیادی عددی نظام",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.82",
@@ -12357,7 +12365,7 @@
    "key": "methodologyPrimarySystemValue",
    "en": "Abjad al-Kabīr",
    "ur": "ابجدِ کبیر",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.83",
@@ -12365,7 +12373,7 @@
    "key": "methodologyInterpretiveLabel",
    "en": "Interpretive layer",
    "ur": "تعبیر کی سطح",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.84",
@@ -12373,23 +12381,23 @@
    "key": "methodologyInterpretiveValue",
    "en": "Symbolic / traditional interpretation",
    "ur": "علامتی / روایتی تعبیر",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.85",
    "ns": "calculator",
    "key": "methodologyBirthDataLabel",
    "en": "Astrological birth data",
-   "ur": "پیدائش کا نجومی ڈیٹا",
-   "status": "draft"
+   "ur": "پیدائش کی نجومی معلومات",
+   "status": "reviewed-corrected (optional)"
   },
   {
    "id": "13.86",
    "ns": "calculator",
    "key": "methodologyBirthDataValue",
    "en": "Not provided",
-   "ur": "فراہم نہیں کیا گیا",
-   "status": "draft"
+   "ur": "فراہم نہیں",
+   "status": "reviewed-corrected (optional)"
   },
   {
    "id": "13.87",
@@ -12397,15 +12405,15 @@
    "key": "learnMore",
    "en": "Learn how this calculation works",
    "ur": "جانیں کہ یہ حساب کیسے ہوتا ہے",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.88",
    "ns": "calculator",
    "key": "learnMoreBody",
    "en": "Every result on this page traces back through four layers: (1) the letters of the text you entered, (2) their fixed numerical values under Abjad al-Kabīr, (3) correspondences this app's Maghribi ʿIlm al-Ḥurūf dataset assigns to those numbers and letters (element, zodiacal sign, nearby Divine Names, nearby sacred numbers), and (4) a symbolic interpretation of those correspondences (archetype, guidance, suggested dhikr). Layers 1–2 are direct arithmetic. Layer 3 depends on the correspondence system this app uses, which is one of several historical systems. Layer 4 is traditional interpretation, not a factual claim about you.",
-   "ur": "اس صفحے کا ہر نتیجہ چار سطحوں سے گزرتا ہے: (1) آپ کے لکھے ہوئے متن کے حروف، (2) ابجدِ کبیر میں ان کی مقرر عددی قیمتیں، (3) وہ نسبتیں جو اس ایپ کا مغربی علم الحروف کا ڈیٹا ان اعداد اور حروف سے جوڑتا ہے (عنصر، برج، قریبی اسمائے الٰہی، قریبی مقدس اعداد)، اور (4) ان نسبتوں کی علامتی تعبیر (مثالیہ، رہنمائی، ذکر کی تجویز)۔ پہلی دو سطحیں سیدھا حساب ہیں۔ تیسری سطح اس نسبتوں کے نظام پر منحصر ہے جو یہ ایپ استعمال کرتی ہے، جو کئی تاریخی نظاموں میں سے ایک ہے۔ چوتھی سطح روایتی تعبیر ہے، آپ کے بارے میں کوئی حقیقی دعویٰ نہیں۔",
-   "status": "draft"
+   "ur": "اس صفحے کا ہر نتیجہ چار سطحوں سے گزرتا ہے: (1) آپ کے لکھے ہوئے متن کے حروف، (2) ابجدِ کبیر میں ان کی مقرر عددی قیمتیں، (3) وہ نسبتیں جو اس ایپ کا مغربی علم الحروف کا ڈیٹا ان اعداد اور حروف سے جوڑتا ہے (عنصر، برج، قریبی اسمائے الٰہی، قریبی مقدس اعداد)، اور (4) ان نسبتوں کی علامتی تعبیر (علامتی کردار، رہنمائی، ذکر کی تجویز)۔ پہلی دو سطحیں سیدھا حساب ہیں۔ تیسری سطح اس نسبتوں کے نظام پر منحصر ہے جو یہ ایپ استعمال کرتی ہے، جو کئی تاریخی نظاموں میں سے ایک ہے۔ چوتھی سطح روایتی تعبیر ہے، آپ کے بارے میں حقیقت کا کوئی دعویٰ نہیں۔",
+   "status": "reviewed-corrected"
   },
   {
    "id": "13.89",
@@ -12413,7 +12421,7 @@
    "key": "quranSurahLabel",
    "en": "Surah",
    "ur": "سورت",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.90",
@@ -12421,7 +12429,7 @@
    "key": "quranAyahLabel",
    "en": "Ayah",
    "ur": "آیت",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.91",
@@ -12429,7 +12437,7 @@
    "key": "quranAyahHelper",
    "en": "re:^This surah has (\\d+) ayahs\\.$",
    "ur": "اس سورت میں $p1 آیات ہیں۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.92",
@@ -12437,7 +12445,7 @@
    "key": "quranVerseResultTitle",
    "en": "Qurʾānic Verse",
    "ur": "قرآنی آیت",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.93",
@@ -12445,7 +12453,7 @@
    "key": "motherNameFieldPlaceholder",
    "en": "Enter your mother's name in Arabic",
    "ur": "اپنی والدہ کا نام عربی حروف میں لکھیں",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.94",
@@ -12453,7 +12461,7 @@
    "key": "divineResonanceTitle",
    "en": "Divine Name Resonance",
    "ur": "اسمِ الٰہی سے ہم آہنگی",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.95",
@@ -12461,7 +12469,7 @@
    "key": "divineResonanceSubtitle",
    "en": "The Divine Name that resonates with this name",
    "ur": "وہ اسمِ الٰہی جو اس نام سے ہم آہنگ ہے",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.96",
@@ -12469,7 +12477,7 @@
    "key": "divineResonanceAbjadNote",
    "en": "This Name resonates with this name through the 28-letter Abjad cycle.",
    "ur": "یہ اسمِ الٰہی 28 حروف کے ابجد دور کے ذریعے اس نام سے ہم آہنگ ہے۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.97",
@@ -12477,15 +12485,15 @@
    "key": "howItWasDerived",
    "en": "How it was derived",
    "ur": "یہ کیسے نکالا گیا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.98",
    "ns": "calculator",
    "key": "abjadTotalLabel",
    "en": "Abjad Total",
-   "ur": "ابجد مجموعہ",
-   "status": "draft"
+   "ur": "ابجد کا مجموعہ",
+   "status": "reviewed-corrected (optional)"
   },
   {
    "id": "13.99",
@@ -12493,7 +12501,7 @@
    "key": "resonanceIndexLabel",
    "en": "Resonance Index (1–28)",
    "ur": "ہم آہنگی کا اشاریہ (1–28)",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.100",
@@ -12501,7 +12509,7 @@
    "key": "resonantLetterLabel",
    "en": "Resonant Letter",
    "ur": "ہم آہنگ حرف",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.101",
@@ -12509,7 +12517,7 @@
    "key": "dhikrOptionalLabel",
    "en": "Dhikr (Optional)",
    "ur": "ذکر (اختیاری)",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.102",
@@ -12517,15 +12525,15 @@
    "key": "dhikrSuggestedCountLabel",
    "en": "Suggested count",
    "ur": "تجویز کردہ تعداد",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.103",
    "ns": "calculator",
    "key": "divineResonanceDhikrDescription",
    "en": "This Divine Name may be used in dhikr (remembrance of Allah), seeking closeness, forgiveness, or help according to one's intention (niyyah).",
-   "ur": "یہ اسمِ الٰہی ذکر (اللہ کی یاد) میں پڑھا جا سکتا ہے، اپنی نیت کے مطابق قرب، مغفرت یا مدد مانگتے ہوئے۔",
-   "status": "draft"
+   "ur": "اس اسمِ الٰہی کو ذکر (اللہ کی یاد) میں پڑھا جا سکتا ہے، اور اپنی نیت کے مطابق اللہ کا قرب، مغفرت یا مدد طلب کی جا سکتی ہے۔",
+   "status": "reviewed-corrected"
   },
   {
    "id": "13.104",
@@ -12533,7 +12541,7 @@
    "key": "quranicResonanceSubtitle",
    "en": "A verse for reflection through this number",
    "ur": "اس عدد کے ذریعے تدبر کے لیے ایک آیت",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.105",
@@ -12541,7 +12549,7 @@
    "key": "ayahOfLabel",
    "en": "re:^Ayah (\\d+) of (\\d+)$",
    "ur": "آیت $p1 (کل $p2 میں سے)",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.106",
@@ -12549,7 +12557,7 @@
    "key": "readFullVerseLabel",
    "en": "Read full verse on Quran.com",
    "ur": "پوری آیت ⁨Quran.com⁩ پر پڑھیں",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.107",
@@ -12557,7 +12565,7 @@
    "key": "quranResonanceReflectionNote",
    "en": "This verse emerged through numerical resonance between this name and the Qur'anic structure — offered for contemplation, not divination.",
    "ur": "یہ آیت اس نام اور قرآنی ساخت کے درمیان عددی ہم آہنگی سے سامنے آئی ہے — غور و تدبر کے لیے پیش ہے، فال یا پیش گوئی کے لیے نہیں۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.108",
@@ -12565,7 +12573,7 @@
    "key": "quranTextLoadError",
    "en": "Verse text unavailable right now — use the link below to read it on Quran.com.",
    "ur": "آیت کا متن ابھی دستیاب نہیں — نیچے دیے گئے لنک سے اسے ⁨Quran.com⁩ پر پڑھیں۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.109",
@@ -12573,7 +12581,7 @@
    "key": "loadingVerse",
    "en": "Loading verse…",
    "ur": "آیت لوڈ ہو رہی ہے…",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.110",
@@ -12581,15 +12589,15 @@
    "key": "noCalculatorsFound",
    "en": "No calculators match your search",
    "ur": "آپ کی تلاش سے کوئی کیلکولیٹر نہیں ملا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.111",
    "ns": "calculator",
    "key": "divineNameSubtitle",
    "en": "Divine Names whose own Abjad value is numerically closest to this name's Kabīr total, according to this app's matching rule.",
-   "ur": "وہ اسمائے الٰہی جن کی اپنی ابجد قیمت اس ایپ کے مطابقت کے اصول کے مطابق اس نام کے کبیر مجموعے کے سب سے قریب ہے۔",
-   "status": "draft"
+   "ur": "وہ اسمائے الٰہی جن کی اپنی ابجد قیمت، اس ایپ کے اصولِ مطابقت کی رو سے، اس نام کے کبیر مجموعے کے سب سے قریب ہے۔",
+   "status": "reviewed-corrected"
   },
   {
    "id": "13.112",
@@ -12597,7 +12605,7 @@
    "key": "exactMatchLabel",
    "en": "Exact Match",
    "ur": "بالکل مطابق",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.113",
@@ -12605,7 +12613,7 @@
    "key": "closestMatchLabel",
    "en": "Closest Match",
    "ur": "قریب ترین",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.114",
@@ -12613,7 +12621,7 @@
    "key": "numericalCorrespondenceLabel",
    "en": "Numerical Correspondence",
    "ur": "عددی نسبت",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.115",
@@ -12621,7 +12629,7 @@
    "key": "reducedValueLabel",
    "en": "Reduced value",
    "ur": "گھٹائی گئی قیمت",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.116",
@@ -12629,7 +12637,7 @@
    "key": "whyTheseIntro",
    "en": "These Divine Names were selected because their own Abjad value is numerically close to this name's Kabīr total.",
    "ur": "یہ اسمائے الٰہی اس لیے چنے گئے کہ ان کی اپنی ابجد قیمت اس نام کے کبیر مجموعے کے عددی طور پر قریب ہے۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.117",
@@ -12637,7 +12645,7 @@
    "key": "whyTheseRuleLabel",
    "en": "Matching rule",
    "ur": "مطابقت کا اصول",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.118",
@@ -12645,15 +12653,15 @@
    "key": "whyTheseRuleValue",
    "en": "Application-defined numerical correspondence — the nearest Abjad value (smallest absolute difference) to the calculated Kabīr total.",
    "ur": "ایپ کی طے کردہ عددی نسبت — حساب شدہ کبیر مجموعے سے قریب ترین ابجد قیمت (سب سے کم مطلق فرق)۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.119",
    "ns": "calculator",
    "key": "whyTheseMultipleSystems",
    "en": "Correspondence depends on the selected ʿIlm al-Ḥurūf methodology; a different system could select different Names for the same total.",
-   "ur": "نسبت منتخب علم الحروف کے طریقے پر منحصر ہے؛ کوئی دوسرا نظام اسی مجموعے کے لیے دوسرے اسماء چن سکتا ہے۔",
-   "status": "draft"
+   "ur": "نسبت منتخب علم الحروف کے طریقے پر منحصر ہے؛ کوئی دوسرا نظام اسی مجموعے کے لیے دوسرے اسما چن سکتا ہے۔",
+   "status": "reviewed-corrected"
   },
   {
    "id": "13.120",
@@ -12661,7 +12669,7 @@
    "key": "attributeThemesTitle",
    "en": "Symbolic Attribute Themes",
    "ur": "صفات کے علامتی موضوعات",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.121",
@@ -12669,7 +12677,7 @@
    "key": "attributeThemesSubtitle",
    "en": "Attributes represented by the corresponding Divine Names — not a description of your personality.",
    "ur": "متعلقہ اسمائے الٰہی کی صفات — آپ کی شخصیت کا بیان نہیں۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.122",
@@ -12677,7 +12685,7 @@
    "key": "primaryThemeLabel",
    "en": "Primary theme",
    "ur": "بنیادی موضوع",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.123",
@@ -12685,7 +12693,7 @@
    "key": "secondaryThemesLabel",
    "en": "Secondary themes",
    "ur": "ثانوی موضوعات",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.124",
@@ -12693,15 +12701,15 @@
    "key": "spiritualReflectionTitle",
    "en": "Spiritual Reflection",
    "ur": "روحانی غور و فکر",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.125",
    "ns": "calculator",
    "key": "spiritualReflectionBody",
    "en": "re:^The numerical correspondences in this analysis surface themes of (.+?) — themes to hold in personal reflection and dhikr, not a statement about your destiny or spiritual rank\\.$",
-   "ur": "اس تجزیے کی عددی نسبتیں $p1 کے موضوعات سامنے لاتی ہیں — یہ ذاتی غور و فکر اور ذکر میں رکھنے کے موضوعات ہیں، آپ کی تقدیر یا روحانی مرتبے کے بارے میں کوئی فیصلہ نہیں۔",
-   "status": "draft"
+   "ur": "اس تجزیے کی عددی نسبتیں اوپر درج صفات کے موضوعات سامنے لاتی ہیں — یہ ذاتی غور و فکر اور ذکر میں رکھنے کے موضوعات ہیں، آپ کی تقدیر یا روحانی مرتبے کے بارے میں کوئی فیصلہ نہیں۔",
+   "status": "reviewed-corrected"
   },
   {
    "id": "13.126",
@@ -12709,15 +12717,15 @@
    "key": "divineNameEsotericNote",
    "en": "These numerical correspondences belong to the symbolic ʿIlm al-Ḥurūf tradition. They do not determine a person's destiny, spiritual rank, or relationship with Allah.",
    "ur": "یہ عددی نسبتیں علم الحروف کی علامتی روایت سے تعلق رکھتی ہیں۔ یہ کسی شخص کی تقدیر، روحانی مرتبہ یا اللہ سے اس کا تعلق طے نہیں کرتیں۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.127",
    "ns": "calculator",
    "key": "dhikrWhyThese",
    "en": "Why these numbers?",
-   "ur": "یہی اعداد کیوں؟",
-   "status": "draft"
+   "ur": "یہ اعداد کیوں؟",
+   "status": "reviewed-corrected"
   },
   {
    "id": "13.128",
@@ -12725,15 +12733,15 @@
    "key": "dhikrWhyTheseBody",
    "en": "33 and 99 are traditional tasbīḥ counts, independent of this name. Any other number here comes from this name's own Ṣaghīr (reduced) or Kabīr (total) value.",
    "ur": "33 اور 99 تسبیح کی روایتی تعداد ہیں اور اس نام سے آزاد ہیں۔ یہاں کوئی اور عدد اس نام کی اپنی صغیر (گھٹائی گئی) یا کبیر (کل) قیمت سے آتا ہے۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.129",
    "ns": "calculator",
    "key": "sadaqahResultTitle",
    "en": "Islamic Birth Month",
-   "ur": "اسلامی پیدائشی مہینہ",
-   "status": "draft"
+   "ur": "پیدائش کا ہجری مہینہ",
+   "status": "reviewed-corrected (optional)"
   },
   {
    "id": "13.130",
@@ -12741,7 +12749,7 @@
    "key": "hijriYearLabel",
    "en": "Hijri year",
    "ur": "ہجری سال",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.131",
@@ -12749,7 +12757,7 @@
    "key": "sadaqahSuggestionsTitle",
    "en": "Sadaqah Suggestions",
    "ur": "صدقے کی تجاویز",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.132",
@@ -12757,15 +12765,15 @@
    "key": "sadaqahUnavailable",
    "en": "No sadaqah guidance available for this month.",
    "ur": "اس مہینے کے لیے صدقے کی رہنمائی دستیاب نہیں۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.133",
    "ns": "calculator",
    "key": "sadaqahDisclaimer",
    "en": "These are traditional suggestions for reflection and charity — sadaqah of any kind, at any time, is always welcome and is not limited to these specific forms.",
-   "ur": "یہ غور و فکر اور خیرات کے لیے روایتی تجاویز ہیں — کسی بھی قسم کا صدقہ، کسی بھی وقت، ہمیشہ اچھا ہے اور انہی صورتوں تک محدود نہیں۔",
-   "status": "draft"
+   "ur": "یہ غور و فکر اور خیرات کے لیے روایتی تجاویز ہیں — کسی بھی قسم کا صدقہ، کسی بھی وقت، ہمیشہ پسندیدہ ہے اور انہی صورتوں تک محدود نہیں۔",
+   "status": "reviewed-corrected (optional)"
   },
   {
    "id": "13.134",
@@ -12773,7 +12781,7 @@
    "key": "sadaqahDayUnavailable",
    "en": "No sadaqah guidance available for this day.",
    "ur": "اس دن کے لیے صدقے کی رہنمائی دستیاب نہیں۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.135",
@@ -12781,7 +12789,7 @@
    "key": "chooseFromList",
    "en": "Choose from list",
    "ur": "فہرست سے چنیں",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.136",
@@ -12789,7 +12797,7 @@
    "key": "searchPlaceholder",
    "en": "Search a name...",
    "ur": "نام تلاش کریں...",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.137",
@@ -12797,7 +12805,7 @@
    "key": "noResults",
    "en": "No names found",
    "ur": "کوئی نام نہیں ملا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.138",
@@ -12805,15 +12813,15 @@
    "key": "hideKeyboard",
    "en": "Hide keyboard",
    "ur": "کی بورڈ چھپائیں",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.139",
    "ns": "nameField",
    "key": "space",
    "en": "Space",
-   "ur": "خالی جگہ",
-   "status": "draft"
+   "ur": "اسپیس",
+   "status": "reviewed-corrected"
   },
   {
    "id": "13.140",
@@ -12821,7 +12829,7 @@
    "key": "delete",
    "en": "Delete",
    "ur": "حذف کریں",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.141",
@@ -12829,7 +12837,7 @@
    "key": "title",
    "en": "Select a Divine Name",
    "ur": "اسمِ الٰہی منتخب کریں",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.142",
@@ -12837,7 +12845,7 @@
    "key": "searchPlaceholder",
    "en": "Search by Arabic or transliteration...",
    "ur": "عربی یا رومن حروف میں تلاش کریں...",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.143",
@@ -12845,7 +12853,7 @@
    "key": "noResults",
    "en": "No names found",
    "ur": "کوئی نام نہیں ملا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.144",
@@ -12853,7 +12861,7 @@
    "key": "balanceScore+derivedMetricLabel",
    "en": "re:^Balance index: (\\d+)% \\(Application-derived metric\\)$",
    "ur": "توازن کا اشاریہ: $p1٪ (ایپ کا اخذ کردہ پیمانہ)",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.145",
@@ -12861,7 +12869,7 @@
    "key": "weakestElement+elements[1]",
    "en": "re:^· Weakest correspondence: (Fire|Earth|Air|Water)$",
    "ur": "· کمزور ترین نسبت: $1",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.146",
@@ -12869,7 +12877,7 @@
    "key": "elements[2]",
    "en": "re:^(Fire|Earth|Air|Water) \\+ (Fire|Earth|Air|Water)$",
    "ur": "$1 اور $2",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.147",
@@ -12877,7 +12885,7 @@
    "key": "weakestElement+elements[2]",
    "en": "re:^· Weakest correspondence: (Fire|Earth|Air|Water) \\+ (Fire|Earth|Air|Water)$",
    "ur": "· کمزور ترین نسبت: $1 اور $2",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.148",
@@ -12885,7 +12893,7 @@
    "key": "elements[3]",
    "en": "re:^(Fire|Earth|Air|Water) \\+ (Fire|Earth|Air|Water) \\+ (Fire|Earth|Air|Water)$",
    "ur": "$1، $2 اور $3",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "13.149",
@@ -12893,7 +12901,7 @@
    "key": "weakestElement+elements[3]",
    "en": "re:^· Weakest correspondence: (Fire|Earth|Air|Water) \\+ (Fire|Earth|Air|Water) \\+ (Fire|Earth|Air|Water)$",
    "ur": "· کمزور ترین نسبت: $1، $2 اور $3",
-   "status": "draft"
+   "status": "reviewed"
   }
  ],
  "batch14": [
@@ -12902,27 +12910,1545 @@
    "en": "Thursday midnight (Friday night)",
    "ur": "جمعرات اور جمعہ کی درمیانی رات (شبِ جمعہ)",
    "loc": "src/data/burujData.json weekly_spiritual_practices.*.practice_night",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "14.2",
    "en": "Sunday midnight (Monday night)",
    "ur": "اتوار اور پیر کی درمیانی رات",
    "loc": "src/data/burujData.json weekly_spiritual_practices.*.practice_night",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "14.3",
    "en": "Monday midnight (Tuesday night)",
    "ur": "پیر اور منگل کی درمیانی رات",
    "loc": "src/data/burujData.json weekly_spiritual_practices.*.practice_night",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "14.4",
    "en": "Tuesday midnight (Wednesday night)",
    "ur": "منگل اور بدھ کی درمیانی رات",
    "loc": "src/data/burujData.json weekly_spiritual_practices.*.practice_night",
+   "status": "reviewed"
+  }
+ ],
+ "batch14_extra": [
+  {
+   "id": "14.E1",
+   "en": "Wednesday night",
+   "ur": "منگل اور بدھ کی درمیانی رات",
+   "loc": "catalog_source.py [practice_night.primary]",
+   "status": "reviewed-corrected"
+  }
+ ],
+ "pass3_ramadan": [
+  {
+   "en": "Astaghfirullāh",
+   "ur": "اللہ سے مغفرت مانگنا",
+   "status": "reviewed"
+  },
+  {
+   "en": "Fajr",
+   "ur": "فجر",
+   "status": "reviewed"
+  },
+  {
+   "en": "Ḍuḥā / Morning",
+   "ur": "چاشت / صبح",
+   "status": "reviewed"
+  },
+  {
+   "en": "Ẓuhr",
+   "ur": "ظہر",
+   "status": "reviewed"
+  },
+  {
+   "en": "ʿAṣr",
+   "ur": "عصر",
+   "status": "reviewed"
+  },
+  {
+   "en": "ʿIshāʾ / Tarāwīḥ",
+   "ur": "عشاء / تراویح",
+   "status": "reviewed"
+  },
+  {
+   "en": "Other",
+   "ur": "دیگر",
+   "status": "reviewed"
+  },
+  {
+   "en": "I seek forgiveness from Allah",
+   "ur": "اللہ سے مغفرت مانگنا",
+   "status": "reviewed"
+  },
+  {
+   "en": "More information",
+   "ur": "مزید معلومات",
+   "status": "reviewed"
+  }
+ ],
+ "pass3_reviewer_data": [
+  {
+   "loc": "calculatorContent.ts DHIKR_TIMING (joined \" · \")",
+   "en": "After Fajr · After Maghrib · Before sleep",
+   "ur": "فجر کے بعد · مغرب کے بعد · سونے سے پہلے",
+   "status": "reviewed"
+  },
+  {
+   "loc": "calculatorContent.ts DHIKR_PREPARATION (joined \", \")",
+   "en": "Make wuḍūʾ, Face the qibla, Begin with ṣalawāt on the Prophet ﷺ",
+   "ur": "وضو کریں، قبلہ رو ہوں، نبی ﷺ پر درود سے آغاز کریں",
+   "status": "reviewed"
+  },
+  {
+   "loc": "calculatorContent.ts DHIKR_ETIQUETTE (joined \", \")",
+   "en": "With presence and humility, Count on fingers or tasbīḥ, End with duʿāʾ",
+   "ur": "حضورِ قلب اور عاجزی کے ساتھ، انگلیوں یا تسبیح پر گنیں، دعا پر ختم کریں",
+   "status": "reviewed"
+  },
+  {
+   "loc": "calculatorContent.ts BEST_TIME.fire",
+   "en": "Dawn and sunrise (Fajr time) — when fire energy is strongest",
+   "ur": "سحر اور طلوعِ آفتاب (فجر کا وقت) — جب روایت میں آگ کی تاثیر سب سے قوی سمجھی جاتی ہے",
+   "status": "reviewed"
+  },
+  {
+   "loc": "calculatorContent.ts BEST_TIME.water",
+   "en": "Night and before sleep (Isha time) — when water energy flows",
+   "ur": "رات اور سونے سے پہلے (عشاء کا وقت) — جب روایت میں پانی کی تاثیر رواں سمجھی جاتی ہے",
+   "status": "reviewed"
+  },
+  {
+   "loc": "calculatorContent.ts BEST_TIME.air",
+   "en": "Morning and afternoon (Dhuhr to Asr) — when air circulates",
+   "ur": "صبح اور سہ پہر (ظہر سے عصر تک) — جب روایت میں ہوا کی تاثیر گردش میں سمجھی جاتی ہے",
+   "status": "reviewed"
+  },
+  {
+   "loc": "calculatorContent.ts BEST_TIME.earth",
+   "en": "Maghrib and grounding moments — when earth stabilizes",
+   "ur": "مغرب اور ٹھہراؤ کے لمحات — جب روایت میں مٹی کی تاثیر استحکام لاتی سمجھی جاتی ہے",
+   "status": "reviewed"
+  },
+  {
+   "loc": "calculatorContent.ts POWER_DAY.fire",
+   "en": "Tuesday (Mars) and Sunday (Sun)",
+   "ur": "منگل (مریخ) اور اتوار (شمس)",
+   "status": "reviewed"
+  },
+  {
+   "loc": "calculatorContent.ts POWER_DAY.water",
+   "en": "Monday (Moon) and Friday (Venus)",
+   "ur": "پیر (قمر) اور جمعہ (زہرہ)",
+   "status": "reviewed"
+  },
+  {
+   "loc": "calculatorContent.ts POWER_DAY.air",
+   "en": "Wednesday (Mercury)",
+   "ur": "بدھ (عطارد)",
+   "status": "reviewed"
+  },
+  {
+   "loc": "calculatorContent.ts POWER_DAY.earth",
+   "en": "Thursday (Jupiter) and Saturday (Saturn)",
+   "ur": "جمعرات (مشتری) اور ہفتہ (زحل)",
+   "status": "reviewed"
+  },
+  {
+   "loc": "calculatorContent.ts ELEMENT_GUIDANCE.fire",
+   "en": "Your fiery nature brings passion and transformation. Channel this energy through focused spiritual practice and righteous action.",
+   "ur": "روایتی تعبیر میں آتشی طبیعت جوش اور تبدیلی سے منسوب ہے۔ اس توانائی کو یکسو روحانی معمول اور نیک عمل کی طرف موڑیں۔",
+   "status": "reviewed"
+  },
+  {
+   "loc": "calculatorContent.ts ELEMENT_GUIDANCE.water",
+   "en": "Your flowing nature brings depth and intuition. Embrace emotional wisdom and let your heart guide you to divine connection.",
+   "ur": "روایتی تعبیر میں آبی طبیعت گہرائی اور وجدان سے منسوب ہے۔ جذبات کی دانائی کو اپنائیں اور دل کو اللہ سے تعلق کی راہ دکھانے دیں۔",
+   "status": "reviewed"
+  },
+  {
+   "loc": "calculatorContent.ts ELEMENT_GUIDANCE.air",
+   "en": "Your airy nature brings clarity and communication. Seek knowledge and share wisdom with gentle words and pure intention.",
+   "ur": "روایتی تعبیر میں ہوائی طبیعت وضاحت اور ابلاغ سے منسوب ہے۔ علم حاصل کریں اور نرم الفاظ اور خالص نیت کے ساتھ حکمت بانٹیں۔",
+   "status": "reviewed"
+  },
+  {
+   "loc": "calculatorContent.ts ELEMENT_GUIDANCE.earth",
+   "en": "Your grounded nature brings stability and patience. Build your spiritual foundation through consistent practice and gratitude.",
+   "ur": "روایتی تعبیر میں خاکی طبیعت استحکام اور صبر سے منسوب ہے۔ مسلسل معمول اور شکر کے ذریعے اپنی روحانی بنیاد مضبوط کریں۔",
+   "status": "reviewed"
+  },
+  {
+   "loc": "sacred.ts SACRED_SIGNIFICANCE[7]",
+   "en": "Seven heavens, seven days of creation",
+   "ur": "سات آسمان، تخلیق کے سات دن",
+   "status": "reviewed"
+  },
+  {
+   "loc": "sacred.ts SACRED_SIGNIFICANCE[12]",
+   "en": "Twelve Imams, twelve months",
+   "ur": "بارہ امام، بارہ مہینے",
+   "status": "reviewed"
+  },
+  {
+   "loc": "sacred.ts SACRED_SIGNIFICANCE[19]",
+   "en": "Numerical miracle of the Qurʾan",
+   "ur": "بعض کے نزدیک قرآن کا عددی اعجاز",
+   "status": "reviewed"
+  },
+  {
+   "loc": "sacred.ts SACRED_SIGNIFICANCE[70]",
+   "en": "Surah Yā-Sīn (يس)",
+   "ur": "سورۂ یٰسٓ (يس)",
+   "status": "reviewed"
+  },
+  {
+   "loc": "sacred.ts SACRED_SIGNIFICANCE[99]",
+   "en": "Asmāʾ al-Ḩusnā (Beautiful Names)",
+   "ur": "اسمائے حسنیٰ",
+   "status": "reviewed"
+  },
+  {
+   "loc": "sacred.ts SACRED_SIGNIFICANCE[114]",
+   "en": "Surahs in the Qurʾan",
+   "ur": "قرآن کی سورتیں",
+   "status": "reviewed"
+  },
+  {
+   "loc": "sacred.ts SACRED_SIGNIFICANCE[313]",
+   "en": "Companions at Badr",
+   "ur": "اصحابِ بدر",
+   "status": "reviewed"
+  },
+  {
+   "loc": "sacred.ts SACRED_SIGNIFICANCE[786]",
+   "en": "Bismillah value (short form)",
+   "ur": "بسم اللہ کی عددی قیمت (مختصر صورت)",
+   "status": "reviewed"
+  },
+  {
+   "loc": "sacred.ts SACRED_DEFAULT",
+   "en": "Resonates with a divine pattern",
+   "ur": "ایک الٰہی نظم سے ہم آہنگ",
+   "status": "reviewed"
+  },
+  {
+   "loc": "sadaqahByDay.ts Tuesday[5]",
+   "en": "In Wolof, Rab refers to a type of illness or affliction associated with satanic or devil-related causes.",
+   "ur": "«راب» (وولوف: ⁨Rab⁩) سے مراد ایسی بیماری یا تکلیف ہے جسے روایت میں شیطانی اسباب سے جوڑا جاتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "loc": "sadaqahByDay.ts Friday[4]",
+   "en": "It is also recommended to make ziyāra (visiting) to a scholar or a Borom Ham-Ham.",
+   "ur": "کسی عالم یا صاحبِ علم (وولوف: ⁨Borom Ham-Ham⁩) کی زیارت (ملاقات) بھی پسندیدہ سمجھی جاتی ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "loc": "sadaqahByDay.ts Saturday[4]",
+   "en": "This day is also considered particularly beneficial for removing blockages, especially for people associated with Capricorn.",
+   "ur": "یہ دن رکاوٹیں دور کرنے کے لیے بھی خاص طور پر مفید سمجھا جاتا ہے، خصوصاً برجِ جدی سے نسبت رکھنے والوں کے لیے۔",
+   "status": "reviewed"
+  },
+  {
+   "loc": "sadaqahByMonth.ts SADAQAH_BY_MONTH[0].notes[0]",
+   "en": "This sadaqah is given sincerely for the sake of Allah, seeking blessings, protection, mercy, and goodness throughout the year.",
+   "ur": "یہ صدقہ خالص اللہ کی رضا کے لیے دیا جاتا ہے، اس امید پر کہ سال بھر برکت، حفاظت، رحمت اور بھلائی نصیب ہو۔",
+   "status": "reviewed"
+  },
+  {
+   "loc": "sadaqahByMonth.ts SADAQAH_BY_MONTH[3].notes[0]",
+   "en": "This sadaqah is intended to seek Allah's help, blessings, success, stability, and ease in one's affairs and endeavors.",
+   "ur": "اس صدقے کا مقصد اپنے معاملات اور کوششوں میں اللہ کی مدد، برکت، کامیابی، استحکام اور آسانی طلب کرنا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "loc": "sadaqahByMonth.ts SADAQAH_BY_MONTH[4].notes[0]",
+   "en": "Because this month is considered a bit heavy or difficult, these forms of sadaqah are considered beneficial for the person born in this month.",
+   "ur": "چونکہ یہ مہینہ کچھ بھاری یا مشکل سمجھا جاتا ہے، اس لیے صدقے کی یہ صورتیں اس مہینے میں پیدا ہونے والوں کے لیے مفید سمجھی جاتی ہیں۔",
+   "status": "reviewed"
+  },
+  {
+   "loc": "sadaqahByMonth.ts SADAQAH_BY_MONTH[4].notes[1]",
+   "en": "This sadaqah can help the person have more strength, encouragement, patience, and stability as they continue working through difficult circumstances.",
+   "ur": "یہ صدقہ مشکل حالات سے گزرتے ہوئے زیادہ قوت، حوصلے، صبر اور ثابت قدمی کا ذریعہ بن سکتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "loc": "sadaqahByMonth.ts SADAQAH_BY_MONTH[8].notes[0]",
+   "en": "This sadaqah is intended to bring goodness, blessings, protection, success, and stability to the person born in Ramadan.",
+   "ur": "اس صدقے کا مقصد رمضان میں پیدا ہونے والوں کے لیے بھلائی، برکت، حفاظت، کامیابی اور استحکام طلب کرنا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "loc": "sadaqahByMonth.ts SADAQAH_BY_MONTH[10].notes[0]",
+   "en": "The help given to the traveller and the food given to the needy are two separate forms of sadaqah.",
+   "ur": "مسافر کی مدد اور ضرورت مند کو کھانا کھلانا صدقے کی دو الگ صورتیں ہیں۔",
+   "status": "reviewed"
+  }
+ ],
+ "batch15": [
+  {
+   "id": "15.1",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[1]",
+   "en": "The Most Compassionate",
+   "ur": "نہایت مہربان",
+   "status": "draft"
+  },
+  {
+   "id": "15.2",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[2]",
+   "en": "The Most Merciful",
+   "ur": "نہایت رحم والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.3",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[3]",
+   "en": "The King, The Sovereign",
+   "ur": "بادشاہ، حقیقی حکمران",
+   "status": "draft"
+  },
+  {
+   "id": "15.4",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[4]",
+   "en": "The Most Holy, The Pure",
+   "ur": "نہایت پاک، ہر عیب سے منزہ",
+   "status": "draft"
+  },
+  {
+   "id": "15.5",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[5]",
+   "en": "The Source of Peace",
+   "ur": "سلامتی کا سرچشمہ",
+   "status": "draft"
+  },
+  {
+   "id": "15.6",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[6]",
+   "en": "The Giver of Faith and Security",
+   "ur": "ایمان اور امن عطا کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.7",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[7]",
+   "en": "The Guardian, The Protector",
+   "ur": "نگہبان، حفاظت کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.8",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[8]",
+   "en": "The Almighty, The Mighty",
+   "ur": "غالب، زبردست",
+   "status": "draft"
+  },
+  {
+   "id": "15.9",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[9]",
+   "en": "The Compeller, The Irresistible",
+   "ur": "زور آور، جس کے ارادے کو کوئی روک نہیں سکتا",
+   "status": "draft"
+  },
+  {
+   "id": "15.10",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[10]",
+   "en": "The Supreme in Greatness",
+   "ur": "کبریائی والا، سب سے بڑا",
+   "status": "draft"
+  },
+  {
+   "id": "15.11",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[11]",
+   "en": "The Creator",
+   "ur": "تخلیق کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.12",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[12]",
+   "en": "The Evolver, The Maker",
+   "ur": "وجود بخشنے والا، بنانے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.13",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[13]",
+   "en": "The Fashioner, The Shaper",
+   "ur": "صورت گری کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.14",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[14]",
+   "en": "The Ever-Forgiving",
+   "ur": "بار بار معاف کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.15",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[15]",
+   "en": "The Subduer, The Dominant",
+   "ur": "سب پر غالب، قہر والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.16",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[16]",
+   "en": "The Bestower",
+   "ur": "بے حساب عطا کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.17",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[17]",
+   "en": "The Provider",
+   "ur": "رزق دینے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.18",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[18]",
+   "en": "The Opener, The Judge",
+   "ur": "کھولنے والا، فیصلہ فرمانے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.19",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[19]",
+   "en": "The All-Knowing",
+   "ur": "سب کچھ جاننے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.20",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[20]",
+   "en": "The Constrictor, The Withholder",
+   "ur": "تنگی دینے والا، روک لینے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.21",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[21]",
+   "en": "The Expander, The Reliever",
+   "ur": "کشادگی دینے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.22",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[22]",
+   "en": "The Abaser, The Humbler",
+   "ur": "پست کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.23",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[23]",
+   "en": "The Exalter",
+   "ur": "بلند کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.24",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[24]",
+   "en": "The Bestower of Honor",
+   "ur": "عزت دینے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.25",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[25]",
+   "en": "The Humiliator",
+   "ur": "ذلت دینے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.26",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[26]",
+   "en": "The All-Hearing",
+   "ur": "سب کچھ سننے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.27",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[27]",
+   "en": "The All-Seeing",
+   "ur": "سب کچھ دیکھنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.28",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[28]",
+   "en": "The Judge, The Arbitrator",
+   "ur": "حاکم، فیصلہ کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.29",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[29]",
+   "en": "The Utterly Just",
+   "ur": "سراسر عدل والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.30",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[30]",
+   "en": "The Subtle, The Gentle",
+   "ur": "باریک بین، نہایت لطف والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.31",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[31]",
+   "en": "The All-Aware",
+   "ur": "ہر بات سے باخبر",
+   "status": "draft"
+  },
+  {
+   "id": "15.32",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[32]",
+   "en": "The Forbearing, The Clement",
+   "ur": "بردبار، حلم والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.33",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[33]",
+   "en": "The Magnificent, The Supreme",
+   "ur": "عظمت والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.34",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[34]",
+   "en": "The All-Forgiving",
+   "ur": "بہت بخشنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.35",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[35]",
+   "en": "The Most Appreciative",
+   "ur": "قدر دان",
+   "status": "draft"
+  },
+  {
+   "id": "15.36",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[36]",
+   "en": "The Most High",
+   "ur": "بلند و برتر",
+   "status": "draft"
+  },
+  {
+   "id": "15.37",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[37]",
+   "en": "The Greatest, The Most Great",
+   "ur": "سب سے بڑا، بڑائی والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.38",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[38]",
+   "en": "The Preserver, The Guardian",
+   "ur": "حفاظت کرنے والا، نگہبان",
+   "status": "draft"
+  },
+  {
+   "id": "15.39",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[39]",
+   "en": "The Sustainer, The Nourisher",
+   "ur": "روزی اور قوت دینے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.40",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[40]",
+   "en": "The Reckoner",
+   "ur": "حساب لینے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.41",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[41]",
+   "en": "The Majestic",
+   "ur": "جلال والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.42",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[42]",
+   "en": "The Most Generous",
+   "ur": "نہایت کریم",
+   "status": "draft"
+  },
+  {
+   "id": "15.43",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[43]",
+   "en": "The Watchful",
+   "ur": "نگرانی کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.44",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[44]",
+   "en": "The Responsive, The Answerer",
+   "ur": "دعا قبول کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.45",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[45]",
+   "en": "The All-Encompassing, The Vast",
+   "ur": "وسعت والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.46",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[46]",
+   "en": "The All-Wise",
+   "ur": "حکمت والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.47",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[47]",
+   "en": "The Most Loving",
+   "ur": "محبت کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.48",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[48]",
+   "en": "The Glorious, The Magnificent",
+   "ur": "بزرگی اور شان والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.49",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[49]",
+   "en": "The Resurrector",
+   "ur": "دوبارہ زندہ اٹھانے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.50",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[50]",
+   "en": "The Witness",
+   "ur": "ہر چیز پر گواہ",
+   "status": "draft"
+  },
+  {
+   "id": "15.51",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[51]",
+   "en": "The Absolute Truth",
+   "ur": "حق، سراسر سچائی",
+   "status": "draft"
+  },
+  {
+   "id": "15.52",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[52]",
+   "en": "The Trustee, The Advocate",
+   "ur": "کارساز، جس پر بھروسا کیا جائے",
+   "status": "draft"
+  },
+  {
+   "id": "15.53",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[53]",
+   "en": "The Most Strong",
+   "ur": "قوت والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.54",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[54]",
+   "en": "The Firm, The Steadfast",
+   "ur": "مضبوط، ثابت قدم",
+   "status": "draft"
+  },
+  {
+   "id": "15.55",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[55]",
+   "en": "The Protecting Friend",
+   "ur": "حمایتی دوست، سرپرست",
+   "status": "draft"
+  },
+  {
+   "id": "15.56",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[56]",
+   "en": "The All-Praiseworthy",
+   "ur": "ہر تعریف کے لائق",
+   "status": "draft"
+  },
+  {
+   "id": "15.57",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[57]",
+   "en": "The Accounter, The Reckoner",
+   "ur": "شمار رکھنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.58",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[58]",
+   "en": "The Originator",
+   "ur": "پہلی بار پیدا کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.59",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[59]",
+   "en": "The Restorer",
+   "ur": "دوبارہ لوٹانے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.60",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[60]",
+   "en": "The Giver of Life",
+   "ur": "زندگی دینے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.61",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[61]",
+   "en": "The Bringer of Death",
+   "ur": "موت دینے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.62",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[62]",
+   "en": "The Ever-Living",
+   "ur": "ہمیشہ زندہ",
+   "status": "draft"
+  },
+  {
+   "id": "15.63",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[63]",
+   "en": "The Self-Subsisting Sustainer",
+   "ur": "خود قائم، سب کو قائم رکھنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.64",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[64]",
+   "en": "The Perceiver, The Finder",
+   "ur": "پانے والا، جس سے کچھ اوجھل نہیں",
+   "status": "draft"
+  },
+  {
+   "id": "15.65",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[65]",
+   "en": "The All-Noble, The Glorious",
+   "ur": "بزرگی والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.66",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[66]",
+   "en": "The One",
+   "ur": "ایک",
+   "status": "draft"
+  },
+  {
+   "id": "15.67",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[67]",
+   "en": "The Only One",
+   "ur": "یکتا",
+   "status": "draft"
+  },
+  {
+   "id": "15.68",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[68]",
+   "en": "The Self-Sufficient Master",
+   "ur": "بے نیاز، سب کا سہارا",
+   "status": "draft"
+  },
+  {
+   "id": "15.69",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[69]",
+   "en": "The All-Powerful",
+   "ur": "قدرت والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.70",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[70]",
+   "en": "The Powerful, The Dominant",
+   "ur": "کامل قدرت والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.71",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[71]",
+   "en": "The Expediter, The Promoter",
+   "ur": "آگے کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.72",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[72]",
+   "en": "The Delayer",
+   "ur": "پیچھے کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.73",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[73]",
+   "en": "The First",
+   "ur": "سب سے پہلا",
+   "status": "draft"
+  },
+  {
+   "id": "15.74",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[74]",
+   "en": "The Last",
+   "ur": "سب سے آخر",
+   "status": "draft"
+  },
+  {
+   "id": "15.75",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[75]",
+   "en": "The Manifest, The Evident",
+   "ur": "ظاہر",
+   "status": "draft"
+  },
+  {
+   "id": "15.76",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[76]",
+   "en": "The Hidden, The Inward",
+   "ur": "باطن، پوشیدہ",
+   "status": "draft"
+  },
+  {
+   "id": "15.77",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[77]",
+   "en": "The Governor, The Protecting Master",
+   "ur": "کارساز، مالک و سرپرست",
+   "status": "draft"
+  },
+  {
+   "id": "15.78",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[78]",
+   "en": "The Most Exalted",
+   "ur": "سب سے بلند",
+   "status": "draft"
+  },
+  {
+   "id": "15.79",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[79]",
+   "en": "The Source of All Goodness",
+   "ur": "ہر بھلائی کا سرچشمہ",
+   "status": "draft"
+  },
+  {
+   "id": "15.80",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[80]",
+   "en": "The Ever-Relenting",
+   "ur": "توبہ قبول کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.81",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[81]",
+   "en": "The Avenger",
+   "ur": "بدلہ لینے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.82",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[82]",
+   "en": "The Pardoner",
+   "ur": "درگزر کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.83",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[83]",
+   "en": "The Most Kind",
+   "ur": "نہایت شفیق",
+   "status": "draft"
+  },
+  {
+   "id": "15.84",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[84]",
+   "en": "The Owner of All Sovereignty",
+   "ur": "ساری بادشاہی کا مالک",
+   "status": "draft"
+  },
+  {
+   "id": "15.85",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[85]",
+   "en": "The Lord of Majesty and Generosity",
+   "ur": "جلال اور اکرام والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.86",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[86]",
+   "en": "The Equitable",
+   "ur": "انصاف کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.87",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[87]",
+   "en": "The Gatherer",
+   "ur": "جمع کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.88",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[88]",
+   "en": "The Self-Sufficient, The Rich",
+   "ur": "بے نیاز، غنی",
+   "status": "draft"
+  },
+  {
+   "id": "15.89",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[89]",
+   "en": "The Enricher",
+   "ur": "غنی کر دینے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.90",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[90]",
+   "en": "The Preventer",
+   "ur": "روکنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.91",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[91]",
+   "en": "The Distresser (by His decree)",
+   "ur": "(اپنی حکمت سے) تکلیف پہنچانے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.92",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[92]",
+   "en": "The Propitious, The Benefactor",
+   "ur": "نفع پہنچانے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.93",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[93]",
+   "en": "The Light",
+   "ur": "نور",
+   "status": "draft"
+  },
+  {
+   "id": "15.94",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[94]",
+   "en": "The Guide",
+   "ur": "ہدایت دینے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.95",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[95]",
+   "en": "The Incomparable Originator",
+   "ur": "بے مثال موجد",
+   "status": "draft"
+  },
+  {
+   "id": "15.96",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[96]",
+   "en": "The Everlasting",
+   "ur": "ہمیشہ باقی رہنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.97",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[97]",
+   "en": "The Inheritor of All",
+   "ur": "سب کا وارث",
+   "status": "draft"
+  },
+  {
+   "id": "15.98",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[98]",
+   "en": "The Guide to the Right Path",
+   "ur": "سیدھی راہ دکھانے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.99",
+   "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[99]",
+   "en": "The Most Patient",
+   "ur": "نہایت صبر والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.100",
+   "loc": "calculatorContent.ts ARCHETYPES[1].title",
+   "en": "The Leader",
+   "ur": "رہنما",
+   "status": "draft"
+  },
+  {
+   "id": "15.101",
+   "loc": "calculatorContent.ts ARCHETYPES[1].description",
+   "en": "Leadership, independence, pioneering spirit. The number of divine unity (Tawḥīd).",
+   "ur": "قیادت، خود مختاری اور پیش قدمی کا جذبہ۔ توحید کا عدد۔",
+   "status": "draft"
+  },
+  {
+   "id": "15.102",
+   "loc": "calculatorContent.ts ARCHETYPES[1].qualities[0]",
+   "en": "Initiative",
+   "ur": "پہل",
+   "status": "draft"
+  },
+  {
+   "id": "15.103",
+   "loc": "calculatorContent.ts ARCHETYPES[1].qualities[1]",
+   "en": "Confidence",
+   "ur": "خود اعتمادی",
+   "status": "draft"
+  },
+  {
+   "id": "15.104",
+   "loc": "calculatorContent.ts ARCHETYPES[1].qualities[2]",
+   "en": "Innovation",
+   "ur": "جدت",
+   "status": "draft"
+  },
+  {
+   "id": "15.105",
+   "loc": "calculatorContent.ts ARCHETYPES[1].qualities[3]",
+   "en": "Self-reliance",
+   "ur": "خود انحصاری",
+   "status": "draft"
+  },
+  {
+   "id": "15.106",
+   "loc": "calculatorContent.ts ARCHETYPES[2].title",
+   "en": "The Harmonizer",
+   "ur": "ہم آہنگی پیدا کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.107",
+   "loc": "calculatorContent.ts ARCHETYPES[2].description",
+   "en": "Balance, partnership, diplomacy. Represents duality seeking unity.",
+   "ur": "توازن، شراکت اور معاملہ فہمی۔ دوئی کی علامت جو وحدت کی طلب میں ہے۔",
+   "status": "draft"
+  },
+  {
+   "id": "15.108",
+   "loc": "calculatorContent.ts ARCHETYPES[2].qualities[1]",
+   "en": "Sensitivity",
+   "ur": "حساسیت",
+   "status": "draft"
+  },
+  {
+   "id": "15.109",
+   "loc": "calculatorContent.ts ARCHETYPES[2].qualities[3]",
+   "en": "Mediation",
+   "ur": "صلح کرانا",
+   "status": "draft"
+  },
+  {
+   "id": "15.110",
+   "loc": "calculatorContent.ts ARCHETYPES[3].description",
+   "en": "Creativity, expression, joy. Sacred trinity of body, mind, and spirit.",
+   "ur": "تخلیقی صلاحیت، اظہار اور خوشی۔ جسم، ذہن اور روح کا باہمی ربط۔",
+   "status": "draft"
+  },
+  {
+   "id": "15.111",
+   "loc": "calculatorContent.ts ARCHETYPES[3].qualities[0]",
+   "en": "Creativity",
+   "ur": "تخلیقی صلاحیت",
+   "status": "draft"
+  },
+  {
+   "id": "15.112",
+   "loc": "calculatorContent.ts ARCHETYPES[3].qualities[2]",
+   "en": "Optimism",
+   "ur": "امید پسندی",
+   "status": "draft"
+  },
+  {
+   "id": "15.113",
+   "loc": "calculatorContent.ts ARCHETYPES[3].qualities[3]",
+   "en": "Self-expression",
+   "ur": "اپنا اظہار",
+   "status": "draft"
+  },
+  {
+   "id": "15.114",
+   "loc": "calculatorContent.ts ARCHETYPES[4].title",
+   "en": "The Builder",
+   "ur": "معمار",
+   "status": "draft"
+  },
+  {
+   "id": "15.115",
+   "loc": "calculatorContent.ts ARCHETYPES[4].description",
+   "en": "Stability, foundation, discipline. Four elements, four sacred months.",
+   "ur": "استحکام، بنیاد اور نظم و ضبط۔ چار عناصر، چار حرمت والے مہینے۔",
+   "status": "draft"
+  },
+  {
+   "id": "15.116",
+   "loc": "calculatorContent.ts ARCHETYPES[4].qualities[0]",
+   "en": "Organization",
+   "ur": "تنظیم",
+   "status": "draft"
+  },
+  {
+   "id": "15.117",
+   "loc": "calculatorContent.ts ARCHETYPES[4].qualities[1]",
+   "en": "Practicality",
+   "ur": "عملی سوچ",
+   "status": "draft"
+  },
+  {
+   "id": "15.118",
+   "loc": "calculatorContent.ts ARCHETYPES[4].qualities[2]",
+   "en": "Determination",
+   "ur": "عزم",
+   "status": "draft"
+  },
+  {
+   "id": "15.119",
+   "loc": "calculatorContent.ts ARCHETYPES[4].qualities[3]",
+   "en": "Trustworthiness",
+   "ur": "امانت داری",
+   "status": "draft"
+  },
+  {
+   "id": "15.120",
+   "loc": "calculatorContent.ts ARCHETYPES[5].title",
+   "en": "The Adventurer",
+   "ur": "مہم جو",
+   "status": "draft"
+  },
+  {
+   "id": "15.121",
+   "loc": "calculatorContent.ts ARCHETYPES[5].description",
+   "en": "Freedom, change, versatility. Five pillars of Islam, five daily prayers.",
+   "ur": "آزادی، تبدیلی اور ہمہ جہتی۔ اسلام کے پانچ ارکان، پانچ وقت کی نماز۔",
+   "status": "draft"
+  },
+  {
+   "id": "15.122",
+   "loc": "calculatorContent.ts ARCHETYPES[5].qualities[0]",
+   "en": "Adaptability",
+   "ur": "حالات کے مطابق ڈھلنا",
+   "status": "draft"
+  },
+  {
+   "id": "15.123",
+   "loc": "calculatorContent.ts ARCHETYPES[5].qualities[1]",
+   "en": "Curiosity",
+   "ur": "جستجو",
+   "status": "draft"
+  },
+  {
+   "id": "15.124",
+   "loc": "calculatorContent.ts ARCHETYPES[5].qualities[2]",
+   "en": "Freedom",
+   "ur": "آزادی",
+   "status": "draft"
+  },
+  {
+   "id": "15.125",
+   "loc": "calculatorContent.ts ARCHETYPES[5].qualities[3]",
+   "en": "Resourcefulness",
+   "ur": "تدبیر اور سوجھ بوجھ",
+   "status": "draft"
+  },
+  {
+   "id": "15.126",
+   "loc": "calculatorContent.ts ARCHETYPES[6].title",
+   "en": "The Nurturer",
+   "ur": "پرورش کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.127",
+   "loc": "calculatorContent.ts ARCHETYPES[6].description",
+   "en": "Love, responsibility, harmony. Six days of creation.",
+   "ur": "محبت، ذمہ داری اور ہم آہنگی۔ تخلیق کے چھ دن۔",
+   "status": "draft"
+  },
+  {
+   "id": "15.128",
+   "loc": "calculatorContent.ts ARCHETYPES[6].qualities[0]",
+   "en": "Compassion",
+   "ur": "ہمدردی",
+   "status": "draft"
+  },
+  {
+   "id": "15.129",
+   "loc": "calculatorContent.ts ARCHETYPES[6].qualities[1]",
+   "en": "Service",
+   "ur": "خدمت",
+   "status": "draft"
+  },
+  {
+   "id": "15.130",
+   "loc": "calculatorContent.ts ARCHETYPES[6].qualities[2]",
+   "en": "Responsibility",
+   "ur": "ذمہ داری",
+   "status": "draft"
+  },
+  {
+   "id": "15.131",
+   "loc": "calculatorContent.ts ARCHETYPES[6].qualities[3]",
+   "en": "Balance",
+   "ur": "توازن",
+   "status": "draft"
+  },
+  {
+   "id": "15.132",
+   "loc": "calculatorContent.ts ARCHETYPES[7].title",
+   "en": "The Seeker",
+   "ur": "جویا",
+   "status": "draft"
+  },
+  {
+   "id": "15.133",
+   "loc": "calculatorContent.ts ARCHETYPES[7].description",
+   "en": "Wisdom, spirituality, introspection. Seven heavens, seven earths.",
+   "ur": "حکمت، روحانیت اور اپنے باطن پر غور۔ سات آسمان، سات زمینیں۔",
+   "status": "draft"
+  },
+  {
+   "id": "15.134",
+   "loc": "calculatorContent.ts ARCHETYPES[7].qualities[0]",
+   "en": "Spiritual depth",
+   "ur": "روحانی گہرائی",
+   "status": "draft"
+  },
+  {
+   "id": "15.135",
+   "loc": "calculatorContent.ts ARCHETYPES[7].qualities[1]",
+   "en": "Analysis",
+   "ur": "تجزیہ",
+   "status": "draft"
+  },
+  {
+   "id": "15.136",
+   "loc": "calculatorContent.ts ARCHETYPES[7].qualities[2]",
+   "en": "Contemplation",
+   "ur": "غور و فکر",
+   "status": "draft"
+  },
+  {
+   "id": "15.137",
+   "loc": "calculatorContent.ts ARCHETYPES[7].qualities[3]",
+   "en": "Mysticism",
+   "ur": "تصوف",
+   "status": "draft"
+  },
+  {
+   "id": "15.138",
+   "loc": "calculatorContent.ts ARCHETYPES[8].title",
+   "en": "The Achiever",
+   "ur": "کامیابی حاصل کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.139",
+   "loc": "calculatorContent.ts ARCHETYPES[8].description",
+   "en": "Power, abundance, manifestation. Eight angels carrying the Throne.",
+   "ur": "قوت، فراوانی اور ظہور۔ عرش اٹھانے والے آٹھ فرشتے۔",
+   "status": "draft"
+  },
+  {
+   "id": "15.140",
+   "loc": "calculatorContent.ts ARCHETYPES[8].qualities[0]",
+   "en": "Ambition",
+   "ur": "بلند حوصلگی",
+   "status": "draft"
+  },
+  {
+   "id": "15.141",
+   "loc": "calculatorContent.ts ARCHETYPES[8].qualities[1]",
+   "en": "Authority",
+   "ur": "اختیار",
+   "status": "draft"
+  },
+  {
+   "id": "15.142",
+   "loc": "calculatorContent.ts ARCHETYPES[8].qualities[2]",
+   "en": "Material success",
+   "ur": "مادی کامیابی",
+   "status": "draft"
+  },
+  {
+   "id": "15.143",
+   "loc": "calculatorContent.ts ARCHETYPES[8].qualities[3]",
+   "en": "Karma",
+   "ur": "عمل اور اس کا نتیجہ",
+   "status": "draft"
+  },
+  {
+   "id": "15.144",
+   "loc": "calculatorContent.ts ARCHETYPES[9].title",
+   "en": "The Humanitarian",
+   "ur": "انسان دوست",
+   "status": "draft"
+  },
+  {
+   "id": "15.145",
+   "loc": "calculatorContent.ts ARCHETYPES[9].description",
+   "en": "Completion, universal love, enlightenment. The number of completion and perfection.",
+   "ur": "تکمیل، سب سے محبت اور روشن ضمیری۔ تکمیل اور کمال کا عدد۔",
+   "status": "draft"
+  },
+  {
+   "id": "15.146",
+   "loc": "calculatorContent.ts ARCHETYPES[9].qualities[1]",
+   "en": "Service to others",
+   "ur": "دوسروں کی خدمت",
+   "status": "draft"
+  },
+  {
+   "id": "15.147",
+   "loc": "calculatorContent.ts ARCHETYPES[9].qualities[3]",
+   "en": "Completion",
+   "ur": "تکمیل",
+   "status": "draft"
+  },
+  {
+   "id": "15.148",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[1] (Allah)",
+   "en": "The God, The One True God",
+   "ur": "اللہ، واحد معبودِ برحق",
+   "status": "draft"
+  },
+  {
+   "id": "15.149",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[2] (Al-Bāqī)",
+   "en": "The Everlasting, The Eternal",
+   "ur": "ہمیشہ باقی رہنے والا، ابدی",
+   "status": "draft"
+  },
+  {
+   "id": "15.150",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[3] (Al-Jāmiʿ)",
+   "en": "The Gatherer, The Uniter",
+   "ur": "جمع کرنے والا، یکجا کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.151",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[4] (Ad-Dāʾim)",
+   "en": "The Eternal, The Everlasting",
+   "ur": "دائم، ہمیشہ رہنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.152",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[5] (Al-Hādī)",
+   "en": "The Guide, The One Who Guides",
+   "ur": "ہادی، ہدایت دینے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.153",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[6] (Al-Wadūd)",
+   "en": "The Loving, The Most Affectionate",
+   "ur": "محبت کرنے والا، نہایت شفیق",
+   "status": "draft"
+  },
+  {
+   "id": "15.154",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[7] (Az-Zakī)",
+   "en": "The Pure, The Immaculate",
+   "ur": "پاکیزہ، بے داغ",
+   "status": "draft"
+  },
+  {
+   "id": "15.155",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[8] (Al-Ḥakīm)",
+   "en": "The Wise, The All-Wise",
+   "ur": "حکیم، کامل حکمت والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.156",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[9] (Aṭ-Ṭāhir)",
+   "en": "The Purifier, The Pure One",
+   "ur": "پاک کرنے والا، پاک",
+   "status": "draft"
+  },
+  {
+   "id": "15.157",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[10] (Al-Yaqīn)",
+   "en": "The Certain, The Certainty",
+   "ur": "یقین، یقینی حق",
+   "status": "draft"
+  },
+  {
+   "id": "15.158",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[11] (Al-Karīm)",
+   "en": "The Generous, The Most Bountiful",
+   "ur": "کریم، بے حد عطا والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.159",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[12] (Al-Laṭīf)",
+   "en": "The Subtle, The Most Kind",
+   "ur": "باریک بین، نہایت مہربان",
+   "status": "draft"
+  },
+  {
+   "id": "15.160",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[13] (Al-Muʾmin)",
+   "en": "The Believer, The Giver of Faith",
+   "ur": "امن دینے والا، ایمان عطا کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.161",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[14] (An-Nūr)",
+   "en": "The Light, The Illuminator",
+   "ur": "نور، روشن کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.162",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[15] (As-Salām)",
+   "en": "The Peace, The Source of Peace",
+   "ur": "سلامتی، سلامتی کا سرچشمہ",
+   "status": "draft"
+  },
+  {
+   "id": "15.163",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[16] (Al-ʿAlīm)",
+   "en": "The All-Knowing, The Omniscient",
+   "ur": "علیم، سب کچھ جاننے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.164",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[17] (Al-Fard)",
+   "en": "The Unique, The One and Only",
+   "ur": "یکتا، بے مثل",
+   "status": "draft"
+  },
+  {
+   "id": "15.165",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[18] (Aṣ-Ṣabūr)",
+   "en": "The Patient, The Most Forbearing",
+   "ur": "صابر، نہایت بردبار",
+   "status": "draft"
+  },
+  {
+   "id": "15.166",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[19] (Al-Qādir)",
+   "en": "The Able, The All-Powerful",
+   "ur": "قادر، ہر چیز پر قدرت والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.167",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[20] (Ar-Raḥmān)",
+   "en": "The Most Merciful, The Beneficent",
+   "ur": "نہایت رحم والا، بے حد مہربان",
+   "status": "draft"
+  },
+  {
+   "id": "15.168",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[21] (Ash-Shakūr)",
+   "en": "The Grateful, The Appreciative",
+   "ur": "قدر دان، شکر قبول کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.169",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[22] (At-Tawwāb)",
+   "en": "The Acceptor of Repentance",
+   "ur": "توبہ قبول کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.170",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[24] (Al-Khabīr)",
+   "en": "The Aware, The All-Informed",
+   "ur": "خبیر، ہر بات سے باخبر",
+   "status": "draft"
+  },
+  {
+   "id": "15.171",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[25] (Dhul-Jalāli wal-Ikrām)",
+   "en": "The Lord of Majesty and Bounty",
+   "ur": "جلال اور اکرام والا رب",
+   "status": "draft"
+  },
+  {
+   "id": "15.172",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[26] (Aḍ-Ḍārr)",
+   "en": "The Distresser, The Corrector",
+   "ur": "(اپنی حکمت سے) تکلیف دینے والا، اصلاح کرنے والا",
+   "status": "draft"
+  },
+  {
+   "id": "15.173",
+   "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[28] (Al-Ghanī)",
+   "en": "The Rich, The Self-Sufficient",
+   "ur": "غنی، بے نیاز",
+   "status": "draft"
+  },
+  {
+   "id": "15.174",
+   "loc": "src/lib/planetary/practice-hints.ts (CompactPracticeHint meaning)",
+   "en": "O All-Knowing",
+   "ur": "اے سب کچھ جاننے والے",
+   "status": "draft"
+  },
+  {
+   "id": "15.175",
+   "loc": "src/lib/planetary/practice-hints.ts (CompactPracticeHint meaning)",
+   "en": "O Light",
+   "ur": "اے نور",
+   "status": "draft"
+  },
+  {
+   "id": "15.176",
+   "loc": "src/lib/planetary/practice-hints.ts (CompactPracticeHint meaning)",
+   "en": "O Most Loving",
+   "ur": "اے بے حد محبت کرنے والے",
+   "status": "draft"
+  },
+  {
+   "id": "15.177",
+   "loc": "src/lib/planetary/practice-hints.ts (CompactPracticeHint meaning)",
+   "en": "O Most Merciful",
+   "ur": "اے نہایت رحم کرنے والے",
+   "status": "draft"
+  },
+  {
+   "id": "15.178",
+   "loc": "src/lib/planetary/practice-hints.ts (CompactPracticeHint meaning)",
+   "en": "O Most Patient",
+   "ur": "اے نہایت صبر والے",
+   "status": "draft"
+  },
+  {
+   "id": "15.179",
+   "loc": "src/lib/planetary/practice-hints.ts (CompactPracticeHint meaning)",
+   "en": "O Most Strong",
+   "ur": "اے نہایت قوت والے",
+   "status": "draft"
+  },
+  {
+   "id": "15.180",
+   "loc": "src/lib/planetary/practice-hints.ts (CompactPracticeHint meaning)",
+   "en": "O Provider",
+   "ur": "اے رزق دینے والے",
    "status": "draft"
   }
  ]
