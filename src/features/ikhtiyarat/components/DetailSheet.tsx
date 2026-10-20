@@ -6,6 +6,7 @@ import { gregorianToHijri, getSunnahBadges } from '@/src/lib/ikhtiyarat/hijri';
 import { getUrfBadgeForMonth } from '@/src/lib/ikhtiyarat/urf';
 import { getTravelBadges } from '@/src/lib/ikhtiyarat/travelBadges';
 import { getMedicalBadges } from '@/src/lib/ikhtiyarat/medicalBadges';
+import MedicalElectionNotice from './MedicalElectionNotice';
 import { getDayDegradationNote } from '@/src/lib/ikhtiyarat/degradation';
 import { getPlanetPosition } from '@/src/lib/ikhtiyarat/ephemeris';
 import { TierBadge } from './TierBadge';
@@ -91,6 +92,8 @@ export function DetailSheet({ result, language, onClose }: DetailSheetProps) {
               <SunnahBadges badges={travelBadges} language={language} />
             </div>
           )}
+
+          <MedicalElectionNotice electionType={result.electionType} />
 
           {medicalBadges.length > 0 && (
             <div>

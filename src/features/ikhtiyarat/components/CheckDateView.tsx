@@ -19,6 +19,7 @@ import { getPlanetPosition } from '@/src/lib/ikhtiyarat/ephemeris';
 import { shareContent } from '@/src/features/ramadanChallenges/sharing';
 import { UserLocation } from '@/src/types/planetary';
 import { useLanguage } from '@/src/contexts/LanguageContext';
+import MedicalElectionNotice from './MedicalElectionNotice';
 import { getLocalToday } from '@/src/lib/localDate';
 import { TierBadge } from './TierBadge';
 import { RuleRow } from './RuleRow';
@@ -270,6 +271,8 @@ export function CheckDateView({
               <SunnahBadges badges={travelBadges} language={language} />
             </div>
           )}
+
+          <MedicalElectionNotice electionType={electionType} />
 
           {medicalBadges.length > 0 && (
             <div>
