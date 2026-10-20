@@ -129,7 +129,7 @@ export default async function SharedResultPage({
         {isMedicalElection(electionType) && (
           <>
             <div className="text-xs font-semibold text-slate-700 dark:text-slate-200">{MEDICAL_NOTICE[lang].occasion}</div>
-            <MedicalNoticeText lang={lang} />
+            <MedicalNoticeText lang={lang} auto />
           </>
         )}
 

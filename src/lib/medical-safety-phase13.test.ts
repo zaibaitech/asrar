@@ -96,7 +96,9 @@ describe('shared-result page and metadata', () => {
     const out = await page({ election: 'medical', lang: 'fr' });
     expect(text(out)).toContain(MEDICAL_NOTICE.fr.occasion);
     expect(text(out)).toContain(MEDICAL_NOTICE.fr.long);
-    expect(out).toContain('lang="fr" dir="ltr"');
+    // the server page only knows en/fr and the DOM catalogs may swap the text to Urdu/Arabic: no fixed lang/dir
+    expect(out).toMatch(/data-testid="medical-election-notice"[^>]*dir="auto"/);
+    expect(out).not.toMatch(/data-testid="medical-election-notice"[^>]*lang=/);
   });
 
   it('non-medical election types render no notice and no occasion label, and keep the old description exactly', async () => {
