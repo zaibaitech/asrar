@@ -5,6 +5,7 @@ import { X, Search } from 'lucide-react';
 import { getCalculatorDivineNames, type DivineName } from '../lib/divineNames';
 import { useAbjad } from '../../../contexts/AbjadContext';
 import { useCalculatorTranslations, type CalculatorLocale } from '../i18n';
+import { hasArabicScript, matchesDivineNameQuery } from '../../../lib/divineNameSearch';
 
 export function DivineNamePicker({
   locale,
@@ -22,9 +23,12 @@ export function DivineNamePicker({
   const results = useMemo(() => {
     // values shown in the selected Abjad system
     const names = getCalculatorDivineNames(abjad);
-    const q = query.trim().toLowerCase();
-    if (!q) return names;
-    return names.filter((n) => n.transliteration.toLowerCase().includes(q) || n.arabic.includes(query));
+    if (!query.trim()) return names;
+    // Latin transliteration (as before), plus Arabic- and Urdu-script input with diacritics,
+    // alef/hamza forms and Urdu letters folded (src/lib/divineNameSearch.ts).
+    return names.filter((n) =>
+      hasArabicScript(query) ? matchesDivineNameQuery({ arabic: n.arabic, transliteration: n.transliteration }, query) : n.transliteration.toLowerCase().includes(query.trim().toLowerCase()),
+    );
   }, [query, abjad]);
 
   return (
