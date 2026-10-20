@@ -49,7 +49,7 @@ export function gregorianToHijri(date: Date): HijriDate {
 export interface SunnahBadge {
   id: string;
   label: { en: string; fr: string; ar: string; ur?: string };
-  note: { en: string; fr: string; ar: string };
+  note: { en: string; fr: string; ar: string; ur?: string };
   tone: 'positive' | 'neutral' | 'caution';
 }
 

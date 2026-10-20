@@ -15,7 +15,7 @@ import { ZodiacSign } from '../planetary/types';
 export interface MedicalBadge {
   id: string;
   label: { en: string; fr: string; ar: string; ur?: string };
-  note: { en: string; fr: string; ar: string };
+  note: { en: string; fr: string; ar: string; ur?: string };
   tone: 'positive' | 'neutral' | 'caution';
 }
 
@@ -31,7 +31,9 @@ export function getMedicalBadges(result: ElectionResult, moonSign: ZodiacSign): 
     note: {
       en: `The Moon is in a sign classically ruling the ${bodyPart.en}. Traditional sources advise avoiding surgery or bloodletting on that area while the Moon transits its ruling sign — informational only, always follow qualified medical advice.`,
       fr: `La Lune est dans un signe qui gouverne classiquement ${bodyPart.fr}. Les sources traditionnelles conseillent d'éviter une chirurgie ou une saignée sur cette zone pendant que la Lune transite son signe régent — ceci est purement informatif, suivez toujours l'avis d'un professionnel de santé qualifié.`,
-      ar: `القمر في برج يحكم تقليديًا ${bodyPart.en}. تنصح المصادر التقليدية بتجنب الجراحة أو الفصد في تلك المنطقة أثناء عبور القمر لبرجه الحاكم — هذا للعلم فقط، اتبع دائمًا نصيحة طبية مؤهلة.`,
+      ar: `القمر في برج يحكم تقليديًا ${bodyPart.ar}. تنصح المصادر التقليدية بتجنب الجراحة أو الفصد في تلك المنطقة أثناء عبور القمر لبرجه الحاكم — هذا للعلم فقط، اتبع دائمًا نصيحة طبية مؤهلة.`,
+      // Draft: not reviewed by a native Urdu reader or a medical professional.
+      ur: `قمر ایک ایسے برج میں ہے جو روایتی طور پر ${bodyPart.ur} پر حاکم مانا جاتا ہے۔ روایتی ماخذ مشورہ دیتے ہیں کہ قمر کے اپنے حاکم برج میں گزرنے کے دوران اس حصے پر سرجری یا فصد سے بچا جائے — یہ محض معلومات ہیں، ہمیشہ مستند طبی ماہر کے مشورے پر عمل کریں۔`,
     },
     tone: 'caution',
   });

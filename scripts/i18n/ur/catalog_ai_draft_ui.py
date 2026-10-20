@@ -2221,4 +2221,6 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('phase6b-ui', "Today's recommended sadaqah from West African tradition, with the full table for every day of the week.", 'مغربی افریقی روایت کے مطابق آج کا تجویز کردہ صدقہ، ہفتے کے ہر دن کے مکمل جدول کے ساتھ۔'),
     ('phase6b-ui', 'Sadaqah by day of the week, by Hijri birth month (Tamxarit, Gamo, Korité, Tabaski…) and by burj.', 'ہفتے کے دن، ہجری پیدائشی مہینے (Tamxarit, Gamo, Korité, Tabaski…) اور برج کے مطابق صدقہ۔'),
     ('phase6b-ui', 'Track your dhikr: Istighfār, Ṣalawāt, Divine Names and the 201 Prophetic Names practice.', 'اپنے ذکر کا حساب رکھیں: استغفار، صلوات، اسمائے حسنیٰ اور 201 Prophetic Names کا معمول۔'),
+    ('phase13-ui', 'Astrology cannot tell you when, whether or how to have medical treatment or surgery, and it must not be used to choose, delay, stop or replace treatment. Consult a qualified healthcare professional, and do not delay necessary care. This result is a traditional astrological interpretation, not a clinically validated medical prediction.', 'طبی علاج کے وقت، انتخاب یا فیصلے کا تعین علمِ نجوم کی بنیاد پر نہ کریں۔ تشخیص اور علاج کے لیے مستند طبی ماہر سے رجوع کریں، اور ضروری طبی امداد میں تاخیر نہ کریں۔ یہ نتیجہ روایتی علمِ نجوم کی تعبیر ہے، کوئی طبی پیش گوئی نہیں۔'),
+    ('phase13-ui', 'Medical treatment · traditional reading', 'طبی علاج · روایتی تعبیر'),
 ]
