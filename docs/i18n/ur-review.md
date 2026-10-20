@@ -1938,7 +1938,7 @@ One paragraph per weekday. Source: `app/planet-of-the-day/PlanetOfTheDayPage.tsx
 
 
 
-## 6. AI-drafted UI strings from the Urdu audit (2200 strings, NOT native-reviewed)
+## 6. AI-drafted UI strings from the Urdu audit (2202 strings, NOT native-reviewed)
 
 Found by a browser audit of the /ur pages and of the Urdu language mode on the other pages (menus, tabs, calculators, result tabs, page prose, FAQs), plus a scan of the source for hard-coded English. Drafted by an AI assistant, live on noindex /ur only. Rules: traditional / reflective framing, no prediction or medical claims, planets never agents; Qur'an lines and Divine Names are NOT translated (Arabic comes from the data files: `planetaryZikr.ts`, `lunarMansions.ts`, `burujData.json`, `incense.ts`, the verified `ar-ui.json` Qur'an lines). Edit `scripts/i18n/ur/catalog_ai_draft_ui.py`, then run `build_catalog.py` and `build_review.py`.
 
@@ -2005,6 +2005,7 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 | phase5-ui | 6 |
 | phase6-ui | 122 |
 | phase6b-ui | 21 |
+| phase13-ui | 2 |
 
 ### 6.1 incense (10)
 
@@ -4633,6 +4634,15 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 
 
 
+### 6.62 phase13-ui (2)
+
+| English | Urdu |
+|---|---|
+| Astrology cannot tell you when, whether or how to have medical treatment or surgery, and it must not be used to choose, delay, stop or replace treatment. Consult a qualified healthcare professional, and do not delay necessary care. This result is a traditional astrological interpretation, not a clinically validated medical prediction. | طبی علاج کے وقت، انتخاب یا فیصلے کا تعین علمِ نجوم کی بنیاد پر نہ کریں۔ تشخیص اور علاج کے لیے مستند طبی ماہر سے رجوع کریں، اور ضروری طبی امداد میں تاخیر نہ کریں۔ یہ نتیجہ روایتی علمِ نجوم کی تعبیر ہے، کوئی طبی پیش گوئی نہیں۔ |
+| Medical treatment · traditional reading | طبی علاج · روایتی تعبیر |
+
+
+
 ## 7. Phase 4 review of the 896 AI-drafted result texts (sections 5.x), NOT native-reviewed
 
 The groups in the table below were read entry by entry against their English source (every source string of the 896 still exists verbatim in the app). Corrections are listed below with the reason; entries that could not be settled are flagged with the question and, where there is one, an alternative. The Urdu is still AI-drafted: no qualified reviewer has approved it. Source: `scripts/i18n/ur/phase4_review.json`.
@@ -5115,5 +5125,36 @@ The 896 AI-drafted result texts and 2,200 AI-drafted UI strings remain AI-drafte
 
 #### Verification (Phase 11, new)
 See the final report for exact commands and output: `tsc`, full Vitest, regeneration determinism, production build.
+
+### Phase 13: medical-election safety notice implemented (approved scope of the Phase 12 proposal)
+
+**Status of the wording: every text below except the Urdu long notice is an AI draft. No medical professional and no native-language reviewer has approved any of it.** French and Arabic need qualified language review; all four need a medical review. Correction to the Phase 11 record: the Arabic *Detailed-mode* void-of-course sentence was already hedged («يميل إلى ألا يثمر»); only the Simple-mode sentence was categorical.
+
+**What now exists.**
+- One source of truth, `src/features/ikhtiyarat/medicalNotice.ts`: long notice, short caution and occasion label in English, Urdu, French and Arabic, plus the helpers for metadata description, share text and card footer. The Urdu long notice is the Phase 10 text, word for word (its wording was not in the approved scope; it still has no "stop or replace" clause and it keeps its sentence-level suffix «یہ طبی دعویٰ نہیں۔» in the rule sentence).
+- In-app: `MedicalElectionNotice` (client) renders for the medical election only, in the interface language (en, ur, fr, ar), with `lang` and `dir` set (rtl for Urdu and Arabic) and `text-start`; used in `CheckDateView`, `DetailSheet`, `ScanDatesView`. The text itself is `MedicalNoticeText` (no hooks) so the server-rendered page can use it.
+- Shared-result page `/ikhtiyarat/r/[date]`: for `election=medical` the body shows the occasion label («Medical treatment · traditional reading» / French with `?lang=fr`) and the full notice under the score; Urdu and Arabic readers get them through the DOM catalogs (exact text of each node; new rows `phase13-ui` in `catalog_ai_draft_ui.py` and two entries in `scripts/i18n/ar/ai_drafts.json`). Non-medical results are unchanged.
+- Metadata: for medical results the description (and the Open Graph and Twitter copies) gets the short caution appended in English or French. Title, robots, canonical, alternates, sitemap and hreflang are untouched (the page sets none of them).
+- Share text (`CheckDateView`) and share-card footer (`app/og/ikhtiyarat/[date]/route.tsx`): medical only; English and French only (the card font is Latin-only).
+- Zodiac Man: `LocalizedBodyPart` now has `en, fr, ar, ur` for all 12 signs (`zodiacMan.ts`); the Arabic note uses the Arabic body part (it printed the English one), and a new Urdu note (`medicalBadges.ts`) is shown in Urdu mode through `pickLabel` in `SunnahBadges.tsx`. The Arabic and Urdu body-part names and the Urdu note are drafts; anatomical terms need a medical reviewer.
+- Arabic Simple-mode void-of-course sentence (`scripts/i18n/ar/ai_drafts.json`, regenerated into `public/i18n/ar-ui.json`; `docs/i18n/ar-ai-drafts.md` mirrors it).
+
+| Surface | Before | After |
+|---|---|---|
+| In-app notice, English / French / Arabic interface | none | the long notice in that language |
+| In-app notice, Urdu interface | Urdu notice | unchanged text |
+| Shared page body (medical) | tier and score only | occasion label + full notice |
+| Shared page description (medical, en) | «2026-11-10 — Acceptable (49/100) for medical treatment, per classical ikhtiyārāt.» | same + «Traditional astrological reading — not medical advice.» |
+| Share text (medical, en) | «2026-11-10 — Acceptable (49/100)» | «2026-11-10 — Acceptable (49/100). Traditional astrological reading — not medical advice.» |
+| Card footer (medical, en) | «For reflection, not prediction · Only Allah knows the unseen» | «Traditional reading, not medical advice · For reflection, not prediction · Only Allah knows the unseen» |
+| Arabic Zodiac Man note | «…يحكم تقليديًا head and face…» | «…يحكم تقليديًا الرأس والوجه…» |
+| Urdu Zodiac Man note | English note | Urdu note (draft) |
+| Arabic Simple-mode void of course | «…العلاج الذي يبدأ في هذه الحال لا يُثمر.» | «…العلاج الذي يبدأ في هذه الحال يميل إلى ألّا يُثمر.» |
+
+**Still open (not implemented, need approval):** renaming the medical tiers («Excellent … Avoid»); hiding scores or tiers on shared pages and cards; disabling medical sharing; any canonical, robots, noindex, sitemap or hreflang change (the shared page is still `index, follow` with no canonical, and not in the sitemap); changing the Urdu notice or dropping its sentence-level suffix; the Sunday sentence and other Urdu wording; religious claims.
+
+**Remaining differences between languages (by design of the approved scope).** The Urdu long notice has no "stop or replace" clause; the Arabic sentences for a journey and for work («…لا يُثمر») are still categorical (non-medical, outside the approved change); the Detailed-mode English and French void-of-course sentence has no "traditionally"; Urdu alone carries a sentence-level suffix in the rule text; short cautions in Urdu and Arabic exist in the module but no surface can show them (shared page and card have no Urdu/Arabic mode).
+
+**Review required.** Medical professional: all four notices, the "stop or replace" and "clinically validated" clauses, the Zodiac Man cautions, the body-part names. Language reviewers: French and Arabic notices, Arabic hedged sentence, Arabic and Urdu body-part names and the Urdu Zodiac note, Urdu short caution and occasion label. Religious reviewer: unchanged from earlier phases.
 
 

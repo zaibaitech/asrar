@@ -10,7 +10,9 @@ import { medicalElectionConfig } from './ikhtiyarat/elections/medical';
 /** Phase 10: fixes from the external Urdu review (urdu-localization-initial-findings.md). Linguistic and safety wording only. */
 const ui = vi.hoisted(() => ({ lang: 'ur' }));
 vi.mock('@/src/contexts/LanguageContext', () => ({ useLanguage: () => ({ uiLanguage: ui.lang }) }));
-import MedicalElectionNotice, { MEDICAL_NOTICE_UR } from '../features/ikhtiyarat/components/MedicalElectionNotice';
+import MedicalElectionNotice from '../features/ikhtiyarat/components/MedicalElectionNotice';
+import { MEDICAL_NOTICE } from '../features/ikhtiyarat/medicalNotice';
+const MEDICAL_NOTICE_UR = MEDICAL_NOTICE.ur.long;
 
 const root = path.resolve(__dirname, '../..');
 const read = (f: string) => readFileSync(path.join(root, f), 'utf8');
@@ -45,10 +47,10 @@ describe('medical election safety notice (Urdu mode only)', () => {
     expect(MEDICAL_NOTICE_UR).toContain('کوئی طبی پیش گوئی نہیں');
   });
 
-  it('shows nothing for other election types or other languages (en/fr/ar are unchanged)', () => {
+  it('shows nothing for other election types (Phase 13: the medical notice is now shown in every interface language, see urdu-phase13 and medical-safety-phase13 tests)', () => {
     expect(html('marriage')).toBe('');
     expect(html('travel')).toBe('');
-    for (const l of ['en', 'fr', 'ar']) { ui.lang = l; expect(html('medical'), l).toBe(''); }
+    expect(html('business')).toBe('');
   });
 
   it('is rendered by all three medical result views', () => {
