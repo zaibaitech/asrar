@@ -34,9 +34,19 @@ Catalog size: 1,390 entries at `origin/main`, 3,018 with the earlier uncommitted
 | "Help & Tutorial", "History" (`MobileMenu.tsx`) | 2 | Translated through the catalog only. |
 | `alt` attributes, OG/share routes, AM/PM times | few | Not translated by the DOM catalog. |
 
-### Not verified in a browser
+### Ikhtiyārāt Detailed mode, checked in a browser (Phase 4)
 
-The Detailed-mode Ikhtiyārāt sentences were verified against the engine output (method C) and a unit test, not by clicking through the rendered Detailed view in Urdu.
+Chromium at 390×844 on the built app, `/ur/ikhtiyarat`, "میری تاریخ جانچیں", Detailed view, for all 7 occasions (marriage, travel, business, business start, medical, home, education); marriage, travel and medical were also checked at 360×740 and 412×915. No horizontal overflow at any width, `lang="ur" dir="rtl"`, degrees/hours/mansion numbers stay next to their text (e.g. «6° کے اندر …»), mixed Arabic/Urdu/Latin lines read correctly. The 18 / 11 / 10 / 10 / 9 / 11 / 9 rule rows per occasion all show Urdu. Latin that remains on the page:
+
+| Text | Where | Status |
+|---|---|---|
+| "Pass", "Penalty", "Bonus" | rule status labels (`ruleStatusLabel` in `src/features/ikhtiyarat/copy.ts`) | not in the catalog; found in this check, not fixed (outside the 896 entries) |
+| "Your Location" | label above the place name | same |
+| "Zodiac Man Caution" | medical badge | same |
+| "Rakkaati Gàmmu" | place name returned by the location lookup | proper noun |
+| "Best Dates (Ikhtiyārāt) (انگریزی میں)" | link to the English page | by design |
+
+The location was faked with a browser geolocation override; the sandbox cannot reach the analytics hosts (two failed requests, unrelated).
 
 ### Open points from the external Urdu audit (18 Oct 2026), left for the native reviewer
 
