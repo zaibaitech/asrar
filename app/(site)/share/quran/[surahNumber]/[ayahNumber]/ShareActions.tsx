@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { imageAlt } from '@/src/lib/i18n/imageAlt';
+import { useLanguage } from '@/src/contexts/LanguageContext';
 
 type ShareActionsProps = {
   deepLinkUrl: string;
@@ -27,6 +29,7 @@ export default function ShareActions({
   deepLinkUrl,
   androidStoreUrl,
 }: ShareActionsProps) {
+  const { uiLanguage } = useLanguage();
   const [platform, setPlatform] = useState<Platform>('desktop');
   const [showInstallBoost, setShowInstallBoost] = useState(false);
 
@@ -87,7 +90,7 @@ export default function ShareActions({
           <div className="mt-4 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
             <img
               src={qrCodeUrl}
-              alt="QR code to install Asrariya from Google Play"
+              alt={imageAlt('playInstallQr', 'QR code to install Asrariya from Google Play', uiLanguage)}
               className="h-[140px] w-[140px] rounded-lg border border-slate-200 bg-white p-2"
               loading="lazy"
             />
