@@ -1938,7 +1938,7 @@ One paragraph per weekday. Source: `app/planet-of-the-day/PlanetOfTheDayPage.tsx
 
 
 
-## 6. AI-drafted UI strings from the Urdu audit (2179 strings, NOT native-reviewed)
+## 6. AI-drafted UI strings from the Urdu audit (2180 strings, NOT native-reviewed)
 
 Found by a browser audit of the /ur pages and of the Urdu language mode on the other pages (menus, tabs, calculators, result tabs, page prose, FAQs), plus a scan of the source for hard-coded English. Drafted by an AI assistant, live on noindex /ur only. Rules: traditional / reflective framing, no prediction or medical claims, planets never agents; Qur'an lines and Divine Names are NOT translated (Arabic comes from the data files: `planetaryZikr.ts`, `lunarMansions.ts`, `burujData.json`, `incense.ts`, the verified `ar-ui.json` Qur'an lines). Edit `scripts/i18n/ur/catalog_ai_draft_ui.py`, then run `build_catalog.py` and `build_review.py`.
 
@@ -2004,6 +2004,7 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 | ikhtiyarat-detail | 176 |
 | phase5-ui | 6 |
 | phase6-ui | 122 |
+| phase6b-ui | 1 |
 
 ### 6.1 incense (10)
 
@@ -4601,6 +4602,14 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 | In ḥisāb al-jummal every Arabic letter has a number (alif 1, bāʾ 2, jīm 3 … shīn 1000 in the Maghribi order used here by default; in the Mashriqi order, also available, ghayn is 1000). The Abjad value of a name is the sum of its letters, counted from its Arabic spelling; vowel marks are not counted. | حسابِ جمل میں ہر عربی حرف کا ایک عدد ہے (الف 1، با 2، جیم 3 … مغربی ترتیب میں، جو یہاں بطورِ ڈیفالٹ استعمال ہوتی ہے، شین 1000 ہے؛ مشرقی ترتیب میں، جو دستیاب بھی ہے، غین 1000 ہے)۔ کسی نام کی ابجد قیمت اس کے حروف کا مجموعہ ہے، جو اس کی عربی املا سے شمار ہوتا ہے؛ اعراب شمار نہیں کیے جاتے۔ |
 | Examples only: use your own mother's name in the calculator above. What each burj means (temperament, dhikr, sadaqah) is explained on the | صرف مثالیں ہیں: اوپر کیلکولیٹر میں اپنی والدہ کا نام استعمال کریں۔ ہر برج کے مطلب (مزاج، ذکر، صدقہ) کی وضاحت یہاں ہے: |
 | Pick a name to see its Abjad value letter by letter and the burj it gives with common mothers' names, or | کسی نام کی ابجد قیمت حرف بہ حرف، اور عام والدہ کے ناموں کے ساتھ اس سے بننے والا برج دیکھنے کے لیے نام چنیں، یا |
+
+
+
+### 6.61 phase6b-ui (1)
+
+| English | Urdu |
+|---|---|
+| Sign-in is temporarily unavailable. Please try again later. | سائن ان عارضی طور پر دستیاب نہیں۔ براہِ کرم بعد میں دوبارہ کوشش کریں۔ |
 
 
 
