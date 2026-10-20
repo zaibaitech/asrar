@@ -505,7 +505,7 @@
    "group": "rules",
    "en": "How scoring works: each rule adds or subtracts points; the total is scaled to a 0–100 score against that election type's own maximum achievable points, so the tier bands (Mumtāz, Jayyid, Maqbūl, Ḍaʿīf, Ijtanib) mean the same thing across marriage, travel, and any future election type.",
    "ur": "اسکور کیسے شمار ہوتا ہے: ہر اصول کے مطابق کچھ پوائنٹس جمع یا منہا کیے جاتے ہیں۔ پھر حاصل شدہ مجموعے کو اسی قسم کے انتخاب کے زیادہ سے زیادہ ممکنہ پوائنٹس کے لحاظ سے 0–100 کے پیمانے پر تبدیل کیا جاتا ہے، تاکہ درجوں (ممتاز، جیّد، مقبول، ضعیف، اجتناب) کا مطلب شادی، سفر اور آئندہ ہر قسم کے انتخاب میں ایک ہی رہے۔",
-   "reason": "Tier names are written in Urdu script (ممتاز، جیّد، مقبول، ضعیف، اجتنب) while the UI badges may still show the transliterations; check the spellings. | Phase 10: Urdu revised after the external review (attributed \"روایتی تعبیر\" wording; tier name spelled «اجتناب» as on the badge); the English source is unchanged. Qualified review still required.",
+   "reason": "Tier names are written in Urdu script (ممتاز، جیّد، مقبول، ضعیف، اجتنب) while the UI badges may still show the transliterations; check the spellings. | Phase 10: Urdu revised after the external review (attributed \"روایتی تعبیر\" wording; tier name spelled «اجتناب» as on the badge); the English source is unchanged. Qualified review still required. | Phase 11: checked in the built app: each Urdu tier badge prints the translated English label and, beside it, the classical band name (e.g. «قابلِ قبول مقبول»); the note lists the five band names, so there is no mismatch. Whether both words should be shown (the Avoid tier shows «اجتناب اجتناب») is an Urdu-editor question.",
    "alternative": "",
    "review": "native Urdu"
   },

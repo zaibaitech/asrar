@@ -272,6 +272,82 @@ Linguistic and safety wording only; English source, scoring, rules and calculati
 
 **Decisions this leaves open.** The notice and the stronger Urdu attribution exist only in Urdu; the English, French and Arabic sentences still say "treatment begun now tends to come to nothing" without the notice. Adding an equivalent notice to EN/FR/AR (needs reviewed French and Arabic wording) or changing the English source is the owner's decision (Phase 8 register, row 2), as is whether Urdu should keep wording that differs in strength from the English source.
 
-**Review register updates.** The Phase 4 record (`phase4_review.json`, 60 flagged entries, 40 corrections) was kept traceable: the 10 affected entries now show the revised Urdu and a "Phase 10" note in their reason; they remain flagged for review. Needs a native Urdu editor: «سلائیڈ منظر», the Sunday sentence, «رجحان سمجھا جاتا ہے» for «tends to», «روایتی تعبیر» used as the standard attribution, and «خاص روایتی نسبت». Needs a medical expert: the medical notice and the medical-timing sentences. Needs a qualified religious reviewer: Thursday/Friday paragraphs, the divine-assistance sentences («Allah grants them…», «divine assistance… always arrives»), and the sadaqah outcome statements.
+**Review register updates.** The Phase 4 record (`phase4_review.json`, 60 flagged entries, 40 corrections) was kept traceable: the 13 distinct affected entries (4 corrections, 10 flags, the first draft of this line said 10) now show the revised Urdu and a "Phase 10" note in their reason; they remain flagged for review. Needs a native Urdu editor: «سلائیڈ منظر», the Sunday sentence, «رجحان سمجھا جاتا ہے» for «tends to», «روایتی تعبیر» used as the standard attribution, and «خاص روایتی نسبت». Needs a medical expert: the medical notice and the medical-timing sentences. Needs a qualified religious reviewer: Thursday/Friday paragraphs, the divine-assistance sentences («Allah grants them…», «divine assistance… always arrives»), and the sadaqah outcome statements.
 
 **Verification (Phase 10, new).** `tsc` clean; Vitest 61 files / 489 tests pass (new: `urdu-phase10-review-fixes`, 13 tests, including a real render of the notice for ur/en/fr/ar and medical/marriage/travel); catalog (3,594 entries), review document and scanner (21 strings) regenerate identically.
+
+### Phase 11: resolution of the Phase 10 audit findings
+
+Source of truth for the findings: the independent audit of `904493a`, `ef5d267`, `540b273`. Nothing here is native-reviewed, medically reviewed or religiously approved.
+
+#### Resolved in Phase 11 (source-of-truth files `catalog_ai_draft_ui.py`, then regenerated)
+
+| Audit finding | Resolution |
+|---|---|
+| 6. «بڑھا ہوا امکان» for "increased risk" | **Fixed.** Every other "risk" row uses «خطرہ/خطرے»; the Phase 10 row alone had been softened without a source reason. Now «روایتی تعبیر کے مطابق تشخیص کے مؤخر، نامکمل یا نظرِ ثانی شدہ ہونے کا بڑھا ہوا خطرہ۔» (attribution kept). Test: every catalog row whose English contains "risk" has «خطر». |
+| 1. Tier names "mismatch" | **Not a defect; the Phase 10 audit diagnosis was wrong.** `TierBadge.tsx` prints `labelEn` and, beside it, `labelAr`; the Urdu catalog translates both (`catalog_source.py` lines 125-129 for `labelAr`, line 314 for `labelEn`). Browser check on the built app (`/ikhtiyarat`, Urdu): the badges read «قابلِ قبول مقبول 58/100», «اجتناب اجتناب 0/100». The scoring note's five names (ممتاز، جیّد، مقبول، ضعیف، اجتناب) are the classical band names, i.e. exactly the second word of each badge; the English note lists the same classical names in transliteration. Phase 10's «اجتنب» → «اجتناب» was a genuine spelling fix. No change to labels. Open for the Urdu editor: each badge shows two Urdu words (and the Avoid tier shows «اجتناب» twice); whether to show both is a design/language decision. Test added: the note lists the catalog values of `labelAr` of all five tiers. |
+| 8. "10 affected entries" in this file | Corrected to 13 distinct entries. |
+| Asrār spelling (earlier review notes) | The /ur pages and the catalog translate the standalone brand as «اسرار» (`urPages.ts` `home`, `Asrār` → `اسرار`); three Phase 6 rows had kept Latin «Asrār»: home heading, home intro, "Join Asrār today". Changed to «اسرار», as on the /ur home page. The product name «Asrār Everyday» stays Latin (legit English), and the mobile-menu About text already renders «اسرار» through the catalog. **Brand owner / Urdu editor to confirm the spelling**; it is a one-word change in 3 rows. |
+
+#### Phase C: wording items, left for an Urdu editor unless noted
+
+| Item | Current | Source meaning | Proposed alternative | Confidence | Status |
+|---|---|---|---|---|---|
+| «رجحان سمجھا جاتا ہے» for "tends to come to nothing" (5 Simple-mode rows, 1 Detailed-mode row) | «…شروع کیے گئے علاج کے بے نتیجہ رہنے کا رجحان سمجھا جاتا ہے» | "traditionally … tends to come to nothing": a stated tendency | The Phase 4 alternative «بے نتیجہ رہنے کا امکان رہتا ہے» says "may", weaker than "tends"; «رجحان» is the literal match but stiff. Another option: «اکثر بے نتیجہ رہنے والا سمجھا جاتا ہے» (re-introduces «اکثر», which the external audit asked to soften) | low: both candidates trade accuracy for naturalness | **Unchanged; editor decides** |
+| «سلائیڈ منظر» (toggle) | names the view the button returns to | `t.planetTransit.carousel` while the all-planets grid is open | «واحد سیارہ منظر» (one-planet view) or «ایک ایک سیارہ»; sibling button «سب دیکھیں» is an action | medium | Unchanged; editor to confirm |
+| Sunday «بااختیار افراد کی تائید اور سرپرستی حاصل کرنے کی کوشش کریں» | support and backing from people in authority | "Seek blessings from those in authority": ambiguous (approval/support vs. prayers) | previous «دعائیں لیں» (prayers) or «اجازت/منظوری لیں» (approval) | low (depends on what the English author meant) | Unchanged; **English author/editor must say which meaning** |
+| «خاص روایتی نسبت», repeated «روایتی تعبیر» | label and attributions | "special blessing" label; attribution frame | scan of the catalog: 5 rows carry two attribution markers (4 sadaqah/cowrie rows and the Monday paragraph); all predate Phase 10, and Phase 10 added no doubled marker | medium | No change |
+| Time-of-day words (ICU day periods) | «دوپہر» for 12:00 and mid-afternoon, «سہ پہر» from about 17:00, «رات» for 20:06 and 00:05 | n/a | «آدھی رات» at midnight is a native-editor call | low | Unchanged; native review |
+
+#### Phase A: medical-safety coverage and cross-language proposal (NOT implemented; approval needed)
+
+**Every surface where a medical tier, score or timing claim can appear**
+
+| # | Surface | Medical content shown | Safety notice today |
+|---|---|---|---|
+| 1 | `CheckDateView.tsx:275` (check my date) | tier, score, rule sentences | Urdu mode only |
+| 2 | `DetailSheet.tsx:96` (calendar/top-five detail) | tier, score, rule sentences | Urdu mode only |
+| 3 | `ScanDatesView.tsx:123` (find best dates: top five, heatmap) | tiers and scores per date | Urdu mode only |
+| 4 | `app/(site)/ikhtiyarat/r/[date]/page.tsx` shared link, `?election=medical` | tier, score, date | **none in any language**; server component, language only `en`/`fr` via `?lang=fr` |
+| 5 | Page metadata of that page | «… (82/100) for medical treatment, per classical ikhtiyārāt.» / French equivalent | none (link-preview text) |
+| 6 | `app/og/ikhtiyarat/[date]/route.tsx` share card | subtitle «Medical treatment», tier, score | only the generic footer «For reflection, not prediction · Only Allah knows the unseen» (en/fr) |
+| 7 | Share text from `CheckDateView.tsx:151-161` | «date — tier (score/100)», the URL carries `election=medical` | none |
+| 8 | `medicalBadges.ts:31-33` Zodiac Man caution | surgery/bloodletting advice, "always follow qualified medical advice" | present in en/fr/ar notes; **no Urdu note** (Urdu mode prints the English and Arabic notes); the Arabic note also interpolates the English body-part name |
+| 9 | Onboarding disclaimer (`copy.ts:41-43`, `92-93`, `133-134`) | marriage-focused, no medical sentence | n/a |
+| 10 | Rule sentences (`ruleSimplification.ts`, `elections/medical.ts`) | the claims | see the comparison below |
+
+**Wording comparison** (7 medical-timing sentences; exact text in `ruleSimplification.ts` and `ar-ui.json`)
+
+| | English | French | Arabic | Urdu |
+|---|---|---|---|---|
+| void-of-course | "traditionally, treatment begun in this state tends to come to nothing" | «traditionnellement … tend à n'aboutir à rien» | «وتقليديًا، العلاج الذي يبدأ في هذه الحال لا يُثمر» (flat: no "tends", i.e. stronger than the source) | «روایتی تعبیر میں … بے نتیجہ رہنے کا رجحان سمجھا جاتا ہے۔ یہ طبی دعویٰ نہیں۔» |
+| the other six | "traditionally / a sign of / traditional significator" | same frame | same frame | same frame plus explicit «روایتی» attribution |
+| notice with the result | none | none | none | yes (Urdu mode, surfaces 1-3 only) |
+
+Safety-relevant differences: (a) the Arabic void-of-course sentence states the outcome without "tends"; (b) only Urdu has a notice and only on surfaces 1-3; (c) the shared page, share card, metadata and share text carry a medical tier and score with no caveat in any language; (d) the Zodiac Man note, the one existing medical-advice sentence, is missing in Urdu.
+
+**Proposal 1 — one notice, same meaning in all four languages, shown on every medical surface.** Single source `src/features/ikhtiyarat/medicalNotice.ts` (`{en, fr, ar, ur}`), used by `MedicalElectionNotice` for any UI language (drop the Urdu-only condition) and by the shared page. Proposed texts (English and Urdu carry the meaning of the Urdu text shipped in Phase 10; **French and Arabic are AI drafts and need qualified language review**, and the medical wording needs a medical reviewer):
+- EN: "Do not use astrology to decide when, whether or how to have medical treatment or surgery. Ask a qualified medical professional about diagnosis and treatment, and do not delay needed care. This result is a traditional astrological reading, not a medical prediction."
+- UR (shipped): «طبی علاج کے وقت، انتخاب یا فیصلے کا تعین علمِ نجوم کی بنیاد پر نہ کریں۔ تشخیص اور علاج کے لیے مستند طبی ماہر سے رجوع کریں، اور ضروری طبی امداد میں تاخیر نہ کریں۔ یہ نتیجہ روایتی علمِ نجوم کی تعبیر ہے، کوئی طبی پیش گوئی نہیں۔»
+- FR (draft): «N'utilisez pas l'astrologie pour décider du moment, de l'opportunité ou de la manière d'un traitement médical ou d'une opération. Adressez-vous à un professionnel de santé qualifié pour le diagnostic et le traitement, et ne retardez pas les soins nécessaires. Ce résultat est une lecture astrologique traditionnelle, et non une prédiction médicale.»
+- AR (draft): «لا تستخدم علم النجوم لتحديد وقت العلاج الطبي أو الجراحة أو إجرائهما من عدمه. راجع طبيبًا أو مختصًا طبيًا مؤهلًا للتشخيص والعلاج، ولا تؤخّر الرعاية الطبية الضرورية. هذه النتيجة قراءة فلكية تقليدية وليست تنبؤًا طبيًا.»
+
+**Proposal 2 — shared page and previews.** In the shared page render the notice under the score when `electionType === 'medical'` (English by default, French with `?lang=fr`; Urdu/Arabic only if the Phase 8 `?lang=` extension is ever approved). Add a short «Not medical advice» line to the medical OG card, and to the metadata description of medical results; change the share text to «date — tier (score/100) — traditional reading, not medical advice» for medical shares. Affected files: `app/(site)/ikhtiyarat/r/[date]/page.tsx`, `app/og/ikhtiyarat/[date]/route.tsx`, `CheckDateView.tsx` (share text), the new `medicalNotice.ts`, `MedicalElectionNotice.tsx`, and tests. Metadata changes touch indexable text on a page that has no robots rule: **explicit SEO decision needed**.
+
+**Proposal 3 — wording of the claims.** Arabic void-of-course sentence: replace the flat «لا يُثمر» by a hedged form such as «يميل إلى ألّا يُثمر» (draft, language reviewer). Zodiac Man note: add an Urdu note (needs an Urdu name table for the body parts, which does not exist) and fix the Arabic note's English body-part name. English and French sentences need no change beyond the notice.
+
+**Proposal 4 — avoid implying astrology decides treatment.** Keep the notice adjacent to the tier badge (above the rule list), never beneath a fold; never present a medical tier as a recommendation: decide whether the five medical tier names («Excellent … Avoid», «بہت عمدہ … اجتناب») should be neutral for the medical election (e.g. «traditionally favourable … traditionally unfavourable»); omit scores from medical share cards, or label them as the traditional reading; no sentence may say or suggest a "safe" or "best" time for surgery. **Decision for the owner** on tier names and on whether medical shares should carry a score at all.
+
+#### Phase D: how the review record distinguishes the claim types
+
+| Category | Items | Where recorded |
+|---|---|---|
+| **Linguistic corrections implemented** (no change of claim) | Carousel, Breadcrumb, scoring-note wording and «اجتناب» spelling, three archetype sentences, Saturday and Monday wording, «خطرہ» restored, brand spelling «اسرار» (3 rows) | Phase 10 table, this section |
+| **Claims given an attribution frame** («روایتی تعبیر / روایتی طور پر», the claim itself unchanged) | the nine medical-timing rule rows (Simple and Detailed mode), «Always beneficial, opens spiritual doors», «Receives consistent divine assistance… help always arrives», «Allah grants them opportunities…», «Solar energy combined with air…», the Water-element career claim (rewritten as a non-guarantee) | Phase 10 table; `phase4_review.json` reasons |
+| **Still requiring religious or scholarly verification** | the two divine-assistance rows above (attribution added, but "help always arrives" and "Allah grants them…" are unchanged assertions), Thursday and Friday paragraphs, the `burj-sadaqah` / `zodiac-sadaqah` outcome claims (21 + 2 already attributed, 10 are statements of intention), the roughly 14 English and 6 French `[SCHOLAR-REVIEW]` rule sentences (Urdu flag «[علما کے جائزے کا منتظر]»), angel and jinn, Divine Name glosses, Fātiḥa renderings, «201 Prophetic Names» | sections 3, 4 and the Phase 8 register |
+| **Still requiring medical review** | the notice and every medical-timing sentence in all four languages | Phase A above |
+
+The 896 AI-drafted result texts and 2,200 AI-drafted UI strings remain AI-drafted and not native-reviewed; Phase 11 examined only the entries named above.
+
+#### Verification (Phase 11, new)
+See the final report for exact commands and output: `tsc`, full Vitest, regeneration determinism, production build.
