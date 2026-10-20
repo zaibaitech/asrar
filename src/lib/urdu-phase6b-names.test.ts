@@ -107,3 +107,17 @@ describe('page wiring', () => {
     expect(src).toContain('<bdi>{n.name}</bdi>');
   });
 });
+
+describe('home page SEO shell (Urdu mode)', () => {
+  it('the heading, intro and every public tool description resolve to Urdu; the Prophetic Names title stays Latin pending religious review', () => {
+    const routes = read('src/lib/siteRoutes.ts');
+    const descriptions = [...routes.matchAll(/^\s{4}description: (?:'((?:[^'\\]|\\.)*)'|"((?:[^"\\]|\\.)*)"),$/gm)].map((m) => (m[1] ?? m[2]).replace(/\\'/g, "'"));
+    expect(descriptions.length).toBe(17);
+    for (const d of descriptions) expect(catalog.get(d), d).toMatch(URDU);
+    expect(catalog.get('Asrār — Planetary Hours, Abjad & Islamic Sacred Sciences')).toMatch(URDU);
+    const dhikr = catalog.get('Track your dhikr: Istighfār, Ṣalawāt, Divine Names and the 201 Prophetic Names practice.')!;
+    expect(dhikr).toContain('201 Prophetic Names');
+    expect(dhikr).toContain('اسمائے حسنیٰ');
+    expect(catalog.get('The 28 lunar mansions: today’s manzil, Arabic names, spiritual focus, and links to birth profile and ikhtiyārāt. For reflection.')).toContain('اٹھائیس');
+  });
+});

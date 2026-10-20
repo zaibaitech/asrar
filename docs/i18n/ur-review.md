@@ -1938,7 +1938,7 @@ One paragraph per weekday. Source: `app/planet-of-the-day/PlanetOfTheDayPage.tsx
 
 
 
-## 6. AI-drafted UI strings from the Urdu audit (2180 strings, NOT native-reviewed)
+## 6. AI-drafted UI strings from the Urdu audit (2200 strings, NOT native-reviewed)
 
 Found by a browser audit of the /ur pages and of the Urdu language mode on the other pages (menus, tabs, calculators, result tabs, page prose, FAQs), plus a scan of the source for hard-coded English. Drafted by an AI assistant, live on noindex /ur only. Rules: traditional / reflective framing, no prediction or medical claims, planets never agents; Qur'an lines and Divine Names are NOT translated (Arabic comes from the data files: `planetaryZikr.ts`, `lunarMansions.ts`, `burujData.json`, `incense.ts`, the verified `ar-ui.json` Qur'an lines). Edit `scripts/i18n/ur/catalog_ai_draft_ui.py`, then run `build_catalog.py` and `build_review.py`.
 
@@ -2004,7 +2004,7 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 | ikhtiyarat-detail | 176 |
 | phase5-ui | 6 |
 | phase6-ui | 122 |
-| phase6b-ui | 1 |
+| phase6b-ui | 21 |
 
 ### 6.1 incense (10)
 
@@ -4605,11 +4605,31 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 
 
 
-### 6.61 phase6b-ui (1)
+### 6.61 phase6b-ui (21)
 
 | English | Urdu |
 |---|---|
 | Sign-in is temporarily unavailable. Please try again later. | سائن ان عارضی طور پر دستیاب نہیں۔ براہِ کرم بعد میں دوبارہ کوشش کریں۔ |
+| Mother's name | والدہ کا نام |
+| Asrār — Planetary Hours, Abjad & Islamic Sacred Sciences | Asrār — ساعاتِ کواکب، ابجد اور اسلامی مقدس علوم |
+| Asrār is a companion for the traditional Islamic sciences of ʿIlm al-Nujūm (celestial timing) and ʿIlm al-Ḥurūf (the science of letters). Find the ruling planet of the current hour and day, follow live planetary transits, build your birth profile, choose auspicious dates with classical ikhtiyārāt, calculate Abjad values, and keep up your daily dhikr. | Asrār علم النجوم (فلکی اوقات) اور علم الحروف (حروف کا علم) کے روایتی اسلامی علوم میں آپ کا رہنما ہے۔ موجودہ گھنٹے اور دن کا حاکم سیارہ معلوم کریں، سیاروں کے براہِ راست گزر دیکھیں، اپنا پیدائشی پروفائل بنائیں، کلاسیکی اختیارات سے مناسب تاریخیں چنیں، ابجد قیمتیں نکالیں اور اپنا روزانہ ذکر جاری رکھیں۔ |
+| Real-time Chaldean planetary hours for your location, with the ruling planet of each hour and what it favours. | آپ کے مقام کے لیے کلدانی ساعاتِ کواکب براہِ راست، ہر ساعت کے حاکم سیارے اور اس کے موافق امور کے ساتھ۔ |
+| Calculate the Abjad (ʿilm al-ḥurūf) value of any Arabic name or phrase, with elemental and letter analysis. | کسی بھی عربی نام یا جملے کی ابجد (علم الحروف) قیمت نکالیں، عنصری اور حروفی تجزیے کے ساتھ۔ |
+| Today's ruling planet, its spiritual qualities, recommended dhikr and daily guidance. | آج کا حاکم سیارہ، اس کی روحانی خصوصیات، تجویز کردہ ذکر اور روزانہ رہنمائی۔ |
+| Live positions of the seven classical planets, their essential dignities and retrograde status. | سات کلاسیکی سیاروں کی براہِ راست پوزیشنیں، ان کے ذاتی شرف و ضعف اور رجعت کی کیفیت۔ |
+| Your ʿIlm al-Nujūm birth profile: Sun and Moon signs, lunar mansion, day ruler and planetary dignities. | آپ کا علم النجوم کا پیدائشی پروفائل: شمس اور قمر کے برج، منزلِ قمر، دن کا حاکم اور سیاروں کے شرف و ضعف۔ |
+| The 28 lunar mansions: today’s manzil, Arabic names, spiritual focus, and links to birth profile and ikhtiyārāt. For reflection. | اٹھائیس منازلِ قمر: آج کی منزل، عربی نام، روحانی توجہ، اور پیدائشی پروفائل و اختیارات کے روابط۔ غور و فکر کے لیے۔ |
+| Classical Islamic electional astrology for choosing an auspicious date for marriage, travel, business and more. | نکاح، سفر، کاروبار اور دیگر کاموں کے لیے مناسب تاریخ چننے کا کلاسیکی اسلامی علمِ اختیارات۔ |
+| Favourable weekdays and planetary hours for marriage, travel, moving home and business, with the next favourable dates. | نکاح، سفر، گھر بدلنے اور کاروبار کے لیے موافق ایامِ ہفتہ اور ساعاتِ کواکب، اگلی موافق تاریخوں کے ساتھ۔ |
+| The days and planetary hours the ikhtiyārāt rules favour for a nikāḥ, Sunnah notes and the next favourable dates. | نکاح کے لیے اختیارات کے اصولوں کے مطابق موافق دن اور ساعاتِ کواکب، سنت سے متعلق نکات اور اگلی موافق تاریخیں۔ |
+| Thursday and early departure in the Sunnah, plus the favourable days and planetary hours for a journey. | سنت میں جمعرات اور صبح سویرے روانگی، نیز سفر کے لیے موافق دن اور ساعاتِ کواکب۔ |
+| The days and planetary hours the ikhtiyārāt rules favour for moving into a new home or laying a foundation. | نئے گھر میں منتقلی یا بنیاد رکھنے کے لیے اختیارات کے اصولوں کے مطابق موافق دن اور ساعاتِ کواکب۔ |
+| The days and planetary hours the ikhtiyārāt rules favour for starting a business or signing a contract. | کاروبار شروع کرنے یا معاہدے پر دستخط کے لیے اختیارات کے اصولوں کے مطابق موافق دن اور ساعاتِ کواکب۔ |
+| Find your burj (ṭabʿ) from the Abjad value of your name and your mother's name, with element, blessed day, dhikr and sadaqah. | اپنے نام اور اپنی والدہ کے نام کی ابجد قیمت سے اپنا برج (طبع) معلوم کریں، عنصر، مبارک دن، ذکر اور صدقہ کے ساتھ۔ |
+| Compare two names with the Abjad soul-connection method (marriage, family, friendship, work) or two dates of birth. | ابجد کے روحانی ربط کے طریقے سے دو ناموں (شادی، خاندان، دوستی، کام) یا دو تاریخِ پیدائش کا موازنہ کریں۔ |
+| Today's recommended sadaqah from West African tradition, with the full table for every day of the week. | مغربی افریقی روایت کے مطابق آج کا تجویز کردہ صدقہ، ہفتے کے ہر دن کے مکمل جدول کے ساتھ۔ |
+| Sadaqah by day of the week, by Hijri birth month (Tamxarit, Gamo, Korité, Tabaski…) and by burj. | ہفتے کے دن، ہجری پیدائشی مہینے (Tamxarit, Gamo, Korité, Tabaski…) اور برج کے مطابق صدقہ۔ |
+| Track your dhikr: Istighfār, Ṣalawāt, Divine Names and the 201 Prophetic Names practice. | اپنے ذکر کا حساب رکھیں: استغفار، صلوات، اسمائے حسنیٰ اور 201 Prophetic Names کا معمول۔ |
 
 
 
