@@ -3,6 +3,10 @@
 Native review of the Urdu (/ur) copy, Oct 2026: the reviewer's corrections
 (56) and answers to the open questions, with how each was applied in the PR.
 Rendered into docs/i18n/ur-review.md by build_review.py.
+
+Sheet 2 (native review of the 2,336 AI-drafted strings, Oct 2026): per-string status
+(reviewed-corrected / reviewed / reviewed-kept / reviewed-flagged, and the Batch 13/14
+drafts) is in review_status.json next to this file.
 """
 
 A = '✅ applied'
