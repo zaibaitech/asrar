@@ -23,6 +23,7 @@ import { translations } from '@/src/lib/translations';
 import { getLocalToday } from '@/src/lib/localDate';
 import { TasbihCounter } from '@/src/features/ramadanChallenges/components/TasbihCounter';
 import { queueDhikrIncrement } from '@/src/features/ramadanChallenges/communityDhikrService';
+import { useLanguage } from '@/src/contexts/LanguageContext';
 
 interface CompactPracticeHintProps {
   /** Simplified dignity tier */
@@ -70,6 +71,9 @@ export function CompactPracticeHint({
   className = '',
 }: CompactPracticeHintProps) {
   const [isCounterOpen, setIsCounterOpen] = useState(false);
+  // Urdu UI: the Arabic is shown just above, so the line under it carries only the meaning
+  // (no transliteration, which the catalog would otherwise turn into the same Arabic again).
+  const isUrduUi = useLanguage().uiLanguage === 'ur';
   const guidance = getPracticeHint(tier, planet);
   const { arabicName, transliteration, meaning, count, instruction } = guidance.primary;
 
@@ -107,7 +111,7 @@ export function CompactPracticeHint({
         <span className={`font-arabic text-xl leading-relaxed ${styles.name}`}>{arabicName}</span>
       </div>
       <div className="text-sm text-slate-600 dark:text-slate-400">
-        {transliteration} <span className="text-slate-400 dark:text-slate-500">— {meaning}</span>
+        {isUrduUi ? meaning : <>{transliteration} <span className="text-slate-400 dark:text-slate-500">— {meaning}</span></>}
       </div>
 
       <p className="text-xs text-slate-500 dark:text-slate-400 mt-1.5 leading-relaxed">

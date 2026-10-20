@@ -736,8 +736,19 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('ramadan', 'Tap a challenge ↓', 'کوئی چیلنج منتخب کرنے کے لیے ٹیپ کریں ↓'),
     ('ramadan', 'Progress', 'پیش رفت'),
     ('ramadan', 'Best dhikr now:', 'اس وقت کے لیے تجویز کردہ ذکر:'),
-    ('ramadan', 'Astaghfirullāh', 'أَسْتَغْفِرُ اللهَ'),
+    # Pass 3 (Ramadan card): this key is the transliteration line under the Arabic, so Urdu shows
+    # the meaning instead of repeating the Arabic (the verified Arabic is rendered just above it).
+    ('ramadan', 'Astaghfirullāh', 'اللہ سے مغفرت مانگنا'),
     ('ramadan', 'Maghrib / Ifṭār', 'مغرب / افطار'),
+    # Pass 3: the other session-tag chips (display only; the stored value stays the EN tag).
+    ('ramadan', 'Fajr', 'فجر'),
+    ('ramadan', 'Ḍuḥā / Morning', 'چاشت / صبح'),
+    ('ramadan', 'Ẓuhr', 'ظہر'),
+    ('ramadan', 'ʿAṣr', 'عصر'),
+    ('ramadan', 'ʿIshāʾ / Tarāwīḥ', 'عشاء / تراویح'),
+    ('ramadan', 'Other', 'دیگر'),
+    # Pass 3 (G3): InfoDisclosure aria-label.
+    ('calculator-aria', 'More information', 'مزید معلومات'),
     ('ramadan', 'Istighfār', 'استغفار'),
     ('ramadan', 'Ramadan Istighfār', 'رمضان کا استغفار'),
     ('ramadan', "Today's Target", 'آج کا ہدف'),
@@ -2231,4 +2242,13 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('practice-night-draft', 'Sunday midnight (Monday night)', 'اتوار اور پیر کی درمیانی رات'),
     ('practice-night-draft', 'Monday midnight (Tuesday night)', 'پیر اور منگل کی درمیانی رات'),
     ('practice-night-draft', 'Tuesday midnight (Wednesday night)', 'منگل اور بدھ کی درمیانی رات'),
+    # Batch 15 (DRAFT, not reviewed): CompactPracticeHint meanings (shown alone under the Arabic in Urdu UI).
+    ('practice-hint-draft', 'I seek forgiveness from Allah', 'اللہ سے مغفرت مانگنا'),
+    ('practice-hint-draft', 'O All-Knowing', 'اے سب کچھ جاننے والے'),
+    ('practice-hint-draft', 'O Light', 'اے نور'),
+    ('practice-hint-draft', 'O Most Loving', 'اے بے حد محبت کرنے والے'),
+    ('practice-hint-draft', 'O Most Merciful', 'اے نہایت رحم کرنے والے'),
+    ('practice-hint-draft', 'O Most Patient', 'اے نہایت صبر والے'),
+    ('practice-hint-draft', 'O Most Strong', 'اے نہایت قوت والے'),
+    ('practice-hint-draft', 'O Provider', 'اے رزق دینے والے'),
 ]
