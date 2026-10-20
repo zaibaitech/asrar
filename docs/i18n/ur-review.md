@@ -1938,7 +1938,7 @@ One paragraph per weekday. Source: `app/planet-of-the-day/PlanetOfTheDayPage.tsx
 
 
 
-## 6. AI-drafted UI strings from the Urdu audit (2167 strings, NOT native-reviewed)
+## 6. AI-drafted UI strings from the Urdu audit (2178 strings, NOT native-reviewed)
 
 Found by a browser audit of the /ur pages and of the Urdu language mode on the other pages (menus, tabs, calculators, result tabs, page prose, FAQs), plus a scan of the source for hard-coded English. Drafted by an AI assistant, live on noindex /ur only. Rules: traditional / reflective framing, no prediction or medical claims, planets never agents; Qur'an lines and Divine Names are NOT translated (Arabic comes from the data files: `planetaryZikr.ts`, `lunarMansions.ts`, `burujData.json`, `incense.ts`, the verified `ar-ui.json` Qur'an lines). Edit `scripts/i18n/ur/catalog_ai_draft_ui.py`, then run `build_catalog.py` and `build_review.py`.
 
@@ -2003,7 +2003,7 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 | burj-spiritual | 4 |
 | ikhtiyarat-detail | 175 |
 | phase5-ui | 6 |
-| phase6-ui | 111 |
+| phase6-ui | 122 |
 
 ### 6.1 incense (10)
 
@@ -4474,7 +4474,7 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 
 
 
-### 6.60 phase6-ui (111)
+### 6.60 phase6-ui (122)
 
 | English | Urdu |
 |---|---|
@@ -4589,6 +4589,17 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 | Ayah Not Found | آیت نہیں ملی |
 | Check a date for yourself | اپنے لیے کوئی تاریخ جانچیں |
 | 25-35 min | 25-35 منٹ |
+| Join Asrār today | آج ہی Asrār سے جڑیں |
+| Already have an account? | کیا آپ کا اکاؤنٹ پہلے سے ہے؟ |
+| Authentication is optional. You can | سائن ان اختیاری ہے۔ آپ بغیر اکاؤنٹ کے |
+| use this app | اس ایپ کو استعمال |
+| without an account. | کر سکتے ہیں۔ |
+| My Profile | میرا پروفائل |
+| Abjad | ابجد |
+| In ʿilm al-ḥurūf (the science of letters) each Arabic letter carries a number, and a name's total is its ḥisāb al-jummal. Combined with the mother's name, it gives the burj used in Istikhārat al-Asmāʾ: a reflection on temperament with a blessed day, a dhikr and a sadaqah. It is not the istikhāra prayer, and it is for reflection, not prediction. | علم الحروف میں ہر عربی حرف ایک عدد رکھتا ہے، اور نام کا مجموعہ اس کا حسابِ جمل کہلاتا ہے۔ والدہ کے نام کے ساتھ مل کر یہ وہ برج دیتا ہے جو استخارۃ الاسماء میں استعمال ہوتا ہے: مزاج پر ایک غور و فکر، جس کے ساتھ ایک مبارک دن، ایک ذکر اور ایک صدقہ ہے۔ یہ نمازِ استخارہ نہیں ہے، اور یہ غور و فکر کے لیے ہے، پیش گوئی کے لیے نہیں۔ |
+| In ḥisāb al-jummal every Arabic letter has a number (alif 1, bāʾ 2, jīm 3 … shīn 1000 in the Maghribi order used here by default; in the Mashriqi order, also available, ghayn is 1000). The Abjad value of a name is the sum of its letters, counted from its Arabic spelling; vowel marks are not counted. | حسابِ جمل میں ہر عربی حرف کا ایک عدد ہے (الف 1، با 2، جیم 3 … مغربی ترتیب میں، جو یہاں بطورِ ڈیفالٹ استعمال ہوتی ہے، شین 1000 ہے؛ مشرقی ترتیب میں، جو دستیاب بھی ہے، غین 1000 ہے)۔ کسی نام کی ابجد قیمت اس کے حروف کا مجموعہ ہے، جو اس کی عربی املا سے شمار ہوتا ہے؛ اعراب شمار نہیں کیے جاتے۔ |
+| Examples only: use your own mother's name in the calculator above. What each burj means (temperament, dhikr, sadaqah) is explained on the | صرف مثالیں ہیں: اوپر کیلکولیٹر میں اپنی والدہ کا نام استعمال کریں۔ ہر برج کے مطلب (مزاج، ذکر، صدقہ) کی وضاحت یہاں ہے: |
+| Pick a name to see its Abjad value letter by letter and the burj it gives with common mothers' names, or | کسی نام کی ابجد قیمت حرف بہ حرف، اور عام والدہ کے ناموں کے ساتھ اس سے بننے والا برج دیکھنے کے لیے نام چنیں، یا |
 
 
 

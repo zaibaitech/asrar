@@ -46,3 +46,11 @@ describe('Phase 6: account screens in Urdu', () => {
     expect(catalog.get('Home')).toBe('ہوم');
   });
 });
+
+describe('Phase 6: fragments around links keep a readable RTL order', () => {
+  it('the optional-sign-in sentence is split by a link (node, link, node): the three Urdu pieces read as one sentence right to left', () => {
+    const read3 = [catalog.get('Authentication is optional. You can'), catalog.get('use this app'), catalog.get('without an account.')];
+    expect(read3.every((x) => x && /[؀-ۿ]/.test(x))).toBe(true);
+    expect(read3.join(' ')).toBe('سائن ان اختیاری ہے۔ آپ بغیر اکاؤنٹ کے اس ایپ کو استعمال کر سکتے ہیں۔');
+  });
+});
