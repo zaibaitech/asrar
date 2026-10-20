@@ -1938,7 +1938,7 @@ One paragraph per weekday. Source: `app/planet-of-the-day/PlanetOfTheDayPage.tsx
 
 
 
-## 6. AI-drafted UI strings from the Urdu audit (2178 strings, NOT native-reviewed)
+## 6. AI-drafted UI strings from the Urdu audit (2179 strings, NOT native-reviewed)
 
 Found by a browser audit of the /ur pages and of the Urdu language mode on the other pages (menus, tabs, calculators, result tabs, page prose, FAQs), plus a scan of the source for hard-coded English. Drafted by an AI assistant, live on noindex /ur only. Rules: traditional / reflective framing, no prediction or medical claims, planets never agents; Qur'an lines and Divine Names are NOT translated (Arabic comes from the data files: `planetaryZikr.ts`, `lunarMansions.ts`, `burujData.json`, `incense.ts`, the verified `ar-ui.json` Qur'an lines). Edit `scripts/i18n/ur/catalog_ai_draft_ui.py`, then run `build_catalog.py` and `build_review.py`.
 
@@ -2001,7 +2001,7 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 | sadaqah-tab | 14 |
 | burj-overview | 3 |
 | burj-spiritual | 4 |
-| ikhtiyarat-detail | 175 |
+| ikhtiyarat-detail | 176 |
 | phase5-ui | 6 |
 | phase6-ui | 122 |
 
@@ -4279,7 +4279,7 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 
 
 
-### 6.58 ikhtiyarat-detail (175)
+### 6.58 ikhtiyarat-detail (176)
 
 | English | Urdu |
 |---|---|
@@ -4367,7 +4367,7 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 | waning into the last quarter approaching new moon. | گھٹتا ہوا، آخری چوتھائی میں، نئے چاند کے قریب۔ |
 | waning. | گھٹتا ہوا۔ |
 | waxing, clear of the beams, before full. | بڑھتا ہوا، شعاعوں سے باہر، بدر سے پہلے۔ |
-| waxing, growing in light; classically favorable for treatments meant to build up or strengthen the body. [SCHOLAR-REVIEW] | بڑھتا ہوا، روشنی میں اضافہ؛ کلاسیکی طور پر جسم کو تقویت دینے والے علاج کے لیے موافق۔ [SCHOLAR-REVIEW] |
+| waxing, growing in light; classically favorable for treatments meant to build up or strengthen the body. [SCHOLAR-REVIEW] | بڑھتا ہوا، روشنی میں اضافہ؛ کلاسیکی طور پر جسم کو تقویت دینے والے علاج کے لیے موافق۔ [علما کے جائزے کا منتظر] |
 | waxing, growing in light; favorable for building and growing a household. | بڑھتا ہوا، روشنی میں اضافہ؛ گھر بسانے اور گھرانے کی افزائش کے لیے موافق۔ |
 | waxing, growing in light; favorable for setting out and making progress. | بڑھتا ہوا، روشنی میں اضافہ؛ روانگی اور پیش رفت کے لیے موافق۔ |
 | waxing, growing in light; favorable for starting and growing an undertaking. | بڑھتا ہوا، روشنی میں اضافہ؛ کام شروع کرنے اور بڑھانے کے لیے موافق۔ |
@@ -4379,13 +4379,13 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 | caution for the nikāḥ contract itself. | نکاح کے عقد کے لیے احتیاط۔ |
 | increased risk of a delayed, incomplete, or revised diagnosis. | تشخیص کے مؤخر، نامکمل یا نظرِ ثانی شدہ ہونے کا بڑھا ہوا خطرہ۔ |
 | increased risk of itinerary changes, lost documents, or miscommunication. | سفری پروگرام میں تبدیلی، دستاویزات کے گم ہونے یا غلط فہمی کا بڑھا ہوا خطرہ۔ |
-| the same classical caution cited against contracts (business.ts) applies here: avoid starting serious study, an exam, or a new course while Mercury retrogrades. | معاہدوں کے خلاف جو کلاسیکی احتیاط بیان کی جاتی ہے وہی یہاں بھی لاگو ہوتی ہے: عطارد کی رجعت کے دوران سنجیدہ تعلیم، امتحان یا نیا کورس شروع کرنے سے بچیں۔ |
+| the same classical caution cited against contracts in the business rules applies here: avoid starting serious study, an exam, or a new course while Mercury retrogrades. | معاہدوں کے خلاف جو کلاسیکی احتیاط بیان کی جاتی ہے وہی یہاں بھی لاگو ہوتی ہے: عطارد کی رجعت کے دوران سنجیدہ تعلیم، امتحان یا نیا کورس شروع کرنے سے بچیں۔ |
 | the single most-cited classical caution against signing contracts, starting negotiations, or finalizing a sale. | معاہدوں پر دستخط، مذاکرات کے آغاز یا فروخت کو حتمی شکل دینے کے خلاف سب سے زیادہ بیان کی جانے والی کلاسیکی احتیاط۔ |
 | increased risk of delays, cost overruns, or rework during construction. | تعمیر کے دوران تاخیر، اخراجات بڑھ جانے یا کام دوبارہ کرنے کا بڑھا ہوا خطرہ۔ |
-| a fixed sign (burj thābit); fixed signs show stability, favoring a foundation or building meant to endure. [SCHOLAR-REVIEW] | ثابت برج؛ ثابت برج استحکام ظاہر کرتے ہیں، جو ایسی بنیاد یا عمارت کے لیے موافق ہے جسے دیرپا ہونا چاہیے۔ [SCHOLAR-REVIEW] |
-| a fixed sign; fixed signs incline to delay and being detained. [SCHOLAR-REVIEW] | ثابت برج؛ ثابت برجوں میں تاخیر اور رکاوٹ کا رجحان ہوتا ہے۔ [SCHOLAR-REVIEW] |
-| a movable sign (burj munqalib); movable signs favor journeys and swift movement. [SCHOLAR-REVIEW] | منقلب برج؛ منقلب برج سفر اور تیز رفتاری کے لیے موافق ہیں۔ [SCHOLAR-REVIEW] |
-| a movable sign; movable signs incline to impermanence, the opposite of what a foundation calls for. [SCHOLAR-REVIEW] | منقلب برج؛ منقلب برجوں میں عدمِ پائیداری کا رجحان ہوتا ہے، جو بنیاد کی ضرورت کے برعکس ہے۔ [SCHOLAR-REVIEW] |
+| a fixed sign (burj thābit); fixed signs show stability, favoring a foundation or building meant to endure. [SCHOLAR-REVIEW] | ثابت برج؛ ثابت برج استحکام ظاہر کرتے ہیں، جو ایسی بنیاد یا عمارت کے لیے موافق ہے جسے دیرپا ہونا چاہیے۔ [علما کے جائزے کا منتظر] |
+| a fixed sign; fixed signs incline to delay and being detained. [SCHOLAR-REVIEW] | ثابت برج؛ ثابت برجوں میں تاخیر اور رکاوٹ کا رجحان ہوتا ہے۔ [علما کے جائزے کا منتظر] |
+| a movable sign (burj munqalib); movable signs favor journeys and swift movement. [SCHOLAR-REVIEW] | منقلب برج؛ منقلب برج سفر اور تیز رفتاری کے لیے موافق ہیں۔ [علما کے جائزے کا منتظر] |
+| a movable sign; movable signs incline to impermanence, the opposite of what a foundation calls for. [SCHOLAR-REVIEW] | منقلب برج؛ منقلب برجوں میں عدمِ پائیداری کا رجحان ہوتا ہے، جو بنیاد کی ضرورت کے برعکس ہے۔ [علما کے جائزے کا منتظر] |
 | a mutable sign, neutral for this purpose. | ذوجسدین برج، اس مقصد کے لیے غیر جانبدار۔ |
 | a mutable sign, neutral for travel timing. | ذوجسدین برج، سفر کے وقت کے انتخاب کے لیے غیر جانبدار۔ |
 | Early departure — "Allāhumma bārik li-ummatī fī bukūrihā" (O Allah, bless my ummah in its early mornings). | صبح سویرے روانگی — "Allāhumma bārik li-ummatī fī bukūrihā" (اے اللہ! میری امت کو اس کی صبح کے وقتوں میں برکت دے)۔ |
@@ -4453,9 +4453,10 @@ Found by a browser audit of the /ur pages and of the Urdu language mode on the o
 | re:^(\w+) is not combust\.$ | $1 محترق نہیں۔ |
 | re:^Moon has no applying aspect before leaving its current sign — void of course, (.+)$ | موجودہ برج چھوڑنے سے پہلے قمر کا کوئی اتصالی نظر نہیں — خالی السیر؛ $1 |
 | re:^Moon in (\w+) — (a (?:fixed\|movable\|mutable) sign.+)$ | قمر برجِ $1 میں ہے — $2 |
-| re:^Moon in lunar mansion (\d+) — (favorable\|neutral\|unfavorable) for (marriage\|travel)\.( \[SCHOLAR-REVIEW\])?$ | قمر منزلِ قمر $p1 میں ہے — $3 کے لیے $2۔$p4 |
+| re:^Moon in lunar mansion (\d+) — (favorable\|neutral\|unfavorable) for (marriage\|travel)\.$ | قمر منزلِ قمر $p1 میں ہے — $3 کے لیے $2۔ |
+| re:^Moon in lunar mansion (\d+) — (favorable\|neutral\|unfavorable) for (marriage\|travel)\. \[SCHOLAR-REVIEW\]$ | قمر منزلِ قمر $p1 میں ہے — $3 کے لیے $2۔ [علما کے جائزے کا منتظر] |
 | re:^This window falls in the planetary hour of (\w+)\.$ | یہ وقفہ $1 کی ساعتِ کواکب میں آتا ہے۔ |
-| re:^This window is in the planetary hour of (\w+), but (\w+) is (combust\|retrograde\|in fall/detriment) — no bonus\. \[SCHOLAR-REVIEW\]$ | یہ وقفہ $1 کی ساعتِ کواکب میں ہے، لیکن $2 $3 ہے — کوئی اضافی نمبر نہیں۔ [SCHOLAR-REVIEW] |
+| re:^This window is in the planetary hour of (\w+), but (\w+) is (combust\|retrograde\|in fall/detriment) — no bonus\. \[SCHOLAR-REVIEW\]$ | یہ وقفہ $1 کی ساعتِ کواکب میں ہے، لیکن $2 $3 ہے — کوئی اضافی نمبر نہیں۔ [علما کے جائزے کا منتظر] |
 | re:^(\w+day)\.$ | $1۔ |
 | re:^(\w+day) \(day of (?:the )?(\w+)\) — favorable for (.+)\.$ | $1 ($2 کا دن) — $3 کے لیے موافق۔ |
 

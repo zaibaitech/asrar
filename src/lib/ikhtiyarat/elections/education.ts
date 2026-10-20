@@ -63,10 +63,10 @@ const mercuryRetrogradeHardFail = rule(
       status: retro ? 'hardfail' : 'pass',
       points: 0,
       detail_en: retro
-        ? 'Mercury is retrograde — the same classical caution cited against contracts (business.ts) applies here: avoid starting serious study, an exam, or a new course while Mercury retrogrades.'
+        ? 'Mercury is retrograde — the same classical caution cited against contracts in the business rules applies here: avoid starting serious study, an exam, or a new course while Mercury retrogrades.'
         : 'Mercury is direct.',
       detail_fr: retro
-        ? "Mercure est rétrograde — la même mise en garde classique citée pour les contrats (business.ts) s'applique ici : éviter de commencer des études sérieuses, un examen, ou un nouveau cours pendant la rétrogradation de Mercure."
+        ? "Mercure est rétrograde — la même mise en garde classique citée pour les contrats dans les règles des affaires s'applique ici : éviter de commencer des études sérieuses, un examen, ou un nouveau cours pendant la rétrogradation de Mercure."
         : 'Mercure est direct.',
     };
   },

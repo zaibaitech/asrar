@@ -9,15 +9,36 @@ const raw: Record<string, string> = JSON.parse(readFileSync(path.join(root, 'pub
 const catalog = makeCatalog(raw);
 
 describe('Phase 6B: source-content issues', () => {
-  it('no Urdu catalog value shows a source file name (business.ts) to the user; Arabic already omits it', () => {
+  it('no user-facing text shows a source file name: the education rule says "in the business rules" in en and fr, and the catalogs follow', () => {
     expect(Object.entries(raw).filter(([, v]) => /\b\w+\.tsx?\b/.test(v)).map(([k]) => k)).toEqual([]);
-    const ur = catalog.get('Mercury is retrograde — the same classical caution cited against contracts (business.ts) applies here: avoid starting serious study, an exam, or a new course while Mercury retrogrades.');
-    expect(ur).toBeTruthy();
+    const edu = readFileSync(path.join(root, 'src/lib/ikhtiyarat/elections/education.ts'), 'utf8');
+    expect(edu).toContain('cited against contracts in the business rules applies here');
+    expect(edu).toContain("citée pour les contrats dans les règles des affaires s'applique ici");
+    expect(edu).not.toMatch(/(detail_(en|fr)[^\n]*|'|")[^'"\n]*\(business\.ts\)/);
+    const en = 'Mercury is retrograde — the same classical caution cited against contracts in the business rules applies here: avoid starting serious study, an exam, or a new course while Mercury retrogrades.';
+    expect(catalog.get(en)).toBeTruthy();
+    const ar = JSON.parse(readFileSync(path.join(root, 'public/i18n/ar-ui.json'), 'utf8')) as Record<string, string>;
+    expect(ar[en]).toBeTruthy();
   });
 
-  it('the [SCHOLAR-REVIEW] flag is carried over verbatim (same as en/fr) until the owner decides how to show it', () => {
-    const k = Object.keys(raw).find((x) => x.startsWith('re:^This window is in the planetary hour'))!;
-    expect(raw[k]).toContain('[SCHOLAR-REVIEW]');
+  it('in Urdu the [SCHOLAR-REVIEW] flag reads «[علما کے جائزے کا منتظر]» (awaiting scholarly review: it never says a scholar approved), in en/fr it is unchanged', () => {
+    const LABEL = '[علما کے جائزے کا منتظر]';
+    const marked = Object.entries(raw).filter(([k]) => k.includes('SCHOLAR-REVIEW'));
+    expect(marked.length).toBeGreaterThanOrEqual(7);
+    for (const [k, v] of marked) {
+      expect(v, k).toContain(LABEL);
+      expect(v, k).not.toContain('SCHOLAR');
+      expect(v, k).not.toMatch(/منظور|تصدیق شدہ|مصدقہ/);
+    }
+    expect(Object.values(raw).some((v) => v.includes('SCHOLAR-REVIEW'))).toBe(false);
+    const rule = makeCatalog(raw).get('Moon in lunar mansion 7 — favorable for marriage. [SCHOLAR-REVIEW]')!;
+    expect(rule).toBe('قمر منزلِ قمر 7 میں ہے — شادی کے لیے موافق۔ ' + LABEL);
+  });
+
+  it('English and French rule text keep the marker and its test (useSimpleMode documents it as Detailed-mode terminology)', () => {
+    const marriage = readFileSync(path.join(root, 'src/lib/ikhtiyarat/elections/marriage.ts'), 'utf8');
+    expect(marriage).toContain('[SCHOLAR-REVIEW]`');
+    expect(marriage.match(/detail_fr:[^\n]*\[SCHOLAR-REVIEW\]/)).not.toBeNull();
   });
 
   it('the "Show N more traits" button expands the traits (its handler is no longer empty)', () => {

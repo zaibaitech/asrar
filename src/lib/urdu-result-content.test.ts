@@ -149,7 +149,7 @@ describe('Ikhtiyārāt rules, Detailed mode: labels and dynamic sentences', () =
   ];
   // Latin that is allowed to stay: an internal review flag, a file name that the source text itself prints,
   // and the transliteration of the quoted du'ā'.
-  const ALLOWED = /\[SCHOLAR-REVIEW\]|business\.ts|Allāhumma bārik li-ummatī fī bukūrihā|Maliki|Ya \w+/g;
+  const ALLOWED = /Allāhumma bārik li-ummatī fī bukūrihā|Maliki|Ya \w+/g;
 
   it('every rule label and detail the engine produces over 150 dates resolves to Urdu with its numbers intact', () => {
     const seen = new Map<string, string>();

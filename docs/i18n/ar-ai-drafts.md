@@ -4471,7 +4471,7 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 3858 | AI-draft | جيد (Jayyid) | جيد |
 | 3859 | AI-draft | اجتناب (Ijtanib) | اجتنب |
 | 3860 | AI-draft | Mercury Retrograde (Study/Comprehension) | رجوع عطارد (الدراسة والفهم) |
-| 3861 | AI-draft | Mercury is retrograde — the same classical caution cited against contracts (business.ts) applies here: avoid starting serious study, an exam, or a new course while Mercury retrogrades. | عطارد راجع — ويسري هنا التحذير الكلاسيكي نفسه المذكور في العقود: تجنّب بدء دراسة جادّة أو امتحان أو مقرّر جديد وعطارد راجع. |
+| 3861 | AI-draft | Mercury is retrograde — the same classical caution cited against contracts in the business rules applies here: avoid starting serious study, an exam, or a new course while Mercury retrogrades. | عطارد راجع — ويسري هنا التحذير الكلاسيكي نفسه المذكور في العقود: تجنّب بدء دراسة جادّة أو امتحان أو مقرّر جديد وعطارد راجع. |
 | 3862 | AI-draft | Moon Applying to Jupiter (Wisdom/Comprehension) | اتّصال القمر بالمشتري (الحكمة والفهم) |
 | 3863 | AI-draft | ° — Jupiter is the classical significator of wisdom and comprehension. | ° — المشتري هو الدالّ الكلاسيكي على الحكمة والفهم. |
 | 3864 | AI-draft | Moon Applying to Mercury (Retention) | اتّصال القمر بعطارد (الحفظ) |
