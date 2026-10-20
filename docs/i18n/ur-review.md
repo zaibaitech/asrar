@@ -4732,7 +4732,7 @@ The groups in the table below were read entry by entry against their English sou
 
 ### Still in English on /ur (not part of this change)
 
-English that is still shown to Urdu users, after the Phase 5 audit of the Urdu audit (Oct 2026). **Urdu is not fully localized**: the tools and result tabs are translated, the account/profile/auth screens, the name-guide pages, the share pages and the social-preview images are not, and the religious items below are deliberately held. Numbers are UNIQUE English strings. /ur stays noindex, out of the sitemap and out of hreflang until these are resolved and a qualified reviewer has approved the Urdu.
+English that is still shown to Urdu users, after the Phase 5 audit of the Urdu audit (Oct 2026). **Urdu is not fully localized**: the tools and result tabs are translated, the sign-in, profile and name-guide labels and the Quran share actions are translated (Phase 6), but the long server-rendered prose of the name pages, the social-preview images, page metadata and image `alt` text are not, and the religious items below are deliberately held. Numbers are UNIQUE English strings. /ur stays noindex, out of the sitemap and out of hreflang until these are resolved and a qualified reviewer has approved the Urdu.
 
 ### How these were counted
 
@@ -4779,11 +4779,12 @@ Not in method D but also visible: the mobile-menu About body (3 strings; a sente
 | English renderings of the Fātiḥa verses | burujData `quranic_verse` (9) | Needs a published Urdu translation; none was invented. |
 | "Recite the Angel name / Jinn name" instructions | burujData `instructions` (17) | Same as angel/jinn. |
 
-**4. Source-content problems that need an editorial decision (not translation)**
-- Internal flag `[SCHOLAR-REVIEW]` is printed in the English rule text and therefore also in Urdu.
-- A file name, "(business.ts)", is printed inside the Mercury-retrograde education sentence.
-- The "Show N more traits" button on the personality tab has an empty click handler (`onClick={() => {}}`), so it does nothing in any language.
-- Medical-timing sentences ("treatment begun now tends to come to nothing", "classically favorable for treatments…") and unhedged tradition claims (protective ring, cowries, "your most spiritually aligned day", the "Prophet ﷺ preferred Thursday" line). They are translated as the source states them; no medical advice was added or removed.
+**4. Source-content problems**
+- `[SCHOLAR-REVIEW]` is printed at the end of about 14 English and 6 French rule sentences (`src/lib/ikhtiyarat/elections/{marriage,travel,home,medical,business,education}.ts`). It is deliberate, not a leak: `useSimpleMode.ts` documents it as opt-in "Detailed" terminology and `marriage.scholar-review.test.ts` asserts it. Urdu repeats it verbatim. **Decision for the owner:** keep as is, show it as a localized "awaiting scholarly review" badge in all four languages, or hide it. Not changed.
+- "(business.ts)" is a developer file name inside one English and one French sentence (`elections/education.ts:66,69`, the Mercury-retrograde study rule). Arabic already omits it; **Phase 6 omits it from the Urdu value** (so Urdu reads cleanly). The EN/FR source still prints it: **decision for the owner** (proposed edit: replace "(business.ts)" with "in the business election"), it also changes the catalog keys, so it was not done silently.
+- "Show N more traits" (personality tab, `IstikharaResults.tsx`): intent is clear (the `showAll` prop, `slice(0, 5)` and the label exist, only the handler was empty). **Fixed in Phase 6**: the button now expands the list (local state), all languages.
+- Auth page: when Supabase is not configured the page prints a diagnostics block ("URL: ✗ Missing", "Key: ✗ Missing", "Build Time: …"). It only shows on a misconfigured deployment, so it is left in English; **decision**: hide it in production builds.
+- Medical-timing sentences ("treatment begun now tends to come to nothing", "classically favorable for treatments…") and unhedged tradition claims (protective ring, cowries, "your most spiritually aligned day", the "Prophet ﷺ preferred Thursday" line). They are translated as the source states them and flagged for editorial review.
 - Strong marriage warnings in the archetype texts; "Friday is the most sacred day" and similar religious statements (see `ur-review.md`, section 7.2).
 
 **5. Unused data that does not reach the UI**
@@ -4813,5 +4814,17 @@ Not applied, because they change meaning or need a source check:
 - Source texts that state tradition claims without hedging, translated as they stand and flagged for review: the Charity-tab items about a protective ring, cowries (petaw) and dreams, the "heaviness of the zodiac" remark for Leo, "Give secretly… as it purifies the heart", and "your most spiritually aligned day" in the burj overview.
 - New terms drafted for the Detailed-mode sentences, for the reviewer to confirm: aspect names قران / تسدیس / تربیع / تثلیث / مقابلہ; ثابت / منقلب / ذوجسدین برج; «دلالت کنندہ» for "significator"; «زاویائی فرق» for "orb"; «زاویائی فاصلہ» for "elongation"; «غیر موافق» for the literal "unfavorable".
 - Thursday/Friday statements: confirm the Islamic claims against sources.
+
+### Phase 6 (release-candidate pass)
+
+Translated (catalog rows, section `phase6-ui`, 122 entries, 3,572 in total): sign-in page (23), profile view/edit/setup and profile pages (51), name-guide labels, FAQ and rules (33), Quran share actions (8), Ikhtiyārāt share page "Check a date for yourself", Ramadan modal "25-35 min", "My Profile", the three-piece optional-sign-in sentence, and the two /names prose paragraphs. The mobile-menu About text is rendered as whole Urdu sentences (the English one is split by bold terms; en/fr/ar are unchanged).
+
+Still English, by decision or limit:
+- **Social-preview images (8 strings)**: drawn on the server by satori with Noto Sans only; there is no Urdu/Arabic-script font, no shaping/RTL there and no `lang=ur` route. Needs a font, plumbing and a canonical-URL decision; cannot be verified without crawlers. Not changed.
+- **Page metadata** (title/description of `/ikhtiyarat/r/[date]`, `/names/*`): crawlers see only the en/fr route text; `/ur` is noindex so nothing is lost today. Part of the same decision.
+- **`alt` text** (6 images: QR code, profile preview, Google Play badge, profile photo, Cherno, Wave QR): `ArabicDomTranslator` translates only `placeholder`, `title`, `aria-label`. Adding `alt` also changes Arabic output, so it needs a decision (extend for ar+ur, or Urdu only).
+- **AM/PM**: times are rendered by `toLocaleTimeString('en-US', {hour12:true})` in `ActNowButtons.tsx`; the catalog passes the Latin time through unchanged ("3:45 PM"). Urdu convention (قبل/بعد دوپہر or صبح/شام) needs a decision.
+- **Name-guide prose (`/names/[slug]`)**: the sentences are built from the name, its Abjad number and its burj and are split into several text nodes by `<strong>`/links, so the DOM catalog cannot translate them without scrambling RTL order. Needs a server-side Urdu template. The 12 names themselves stay in Latin letters (they are search spellings).
+- Religious items in section 3 unchanged (angel/jinn, Divine Name glosses, Fātiḥa renderings).
 
 
