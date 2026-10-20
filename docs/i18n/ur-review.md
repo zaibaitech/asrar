@@ -5157,4 +5157,74 @@ See the final report for exact commands and output: `tsc`, full Vitest, regenera
 
 **Review required.** Medical professional: all four notices, the "stop or replace" and "clinically validated" clauses, the Zodiac Man cautions, the body-part names. Language reviewers: French and Arabic notices, Arabic hedged sentence, Arabic and Urdu body-part names and the Urdu Zodiac note, Urdu short caution and occasion label. Religious reviewer: unchanged from earlier phases.
 
+### Phase 15: remediation, medical consistency review and Google-indexing readiness
+
+Baseline: HEAD `5f73973`, clean tree. Nothing below is native-reviewed, medically reviewed or religiously approved. **No indexing control was changed** (the owner has not approved a route list): every `/ur` page is still `noindex, follow` (page metadata, layout and middleware `X-Robots-Tag`), absent from the sitemap and from every hreflang set.
+
+#### A. Fixed in Phase 15 (commit `4df3a5a`)
+| Item | Defect or decision | Change |
+|---|---|---|
+| Arabic Zodiac Man note | Defect (confirmed in Phase 14): `SunnahBadges.tsx` printed the English/French note and then the Arabic one. Every badge note has a real Arabic text (test over 2 years of Sunnah dates, 7 weekdays × 5 hours of travel results, 12 signs × 7 weekdays of medical results) | In the Arabic interface only the Arabic note is shown (in the normal text colour); English, French and Urdu keep both lines. The badge label (catalog Arabic plus the label's own Arabic, two different phrases) is unchanged: a separate wording question for the Arabic reviewer |
+| «اسرار» spelling | Decision settled by the established mapping (/ur pages, catalog) | The Urdu About text in `MobileMenu.tsx` wrote Latin «Asrār» (the catalog turned it into «اسرار» at render); now «اسرار» in the source. «Asrār Everyday» stays Latin. Phase 11 changed three catalog rows |
+
+#### B. Outstanding wording items: not changed, with the reason
+| Item | Why no change | Options | Who decides |
+|---|---|---|---|
+| «رجحان سمجھا جاتا ہے» vs «بے نتیجہ رہنے کا امکان رہتا ہے» | The English says "tends": «رجحان» is the literal match but stiff; «امکان» says "may", weaker than the source. No glossary entry covers it | keep; or «…کی طرف مائل سمجھا جاتا ہے» | Urdu editor |
+| «سلائیڈ منظر» (toggle) | A view name next to the action «سب دیکھیں»; no source or glossary term | «واحد سیارہ منظر», «ایک ایک سیارہ» | Urdu editor |
+| Sunday: "Seek blessings from those in authority" | The English is ambiguous (approval/support or prayers) | support/backing (current), «دعائیں لیں» (prayers), «منظوری لیں» (approval) | English author, then Urdu editor |
+| Midnight in the time words | ICU gives «رات» for 20:06 and 00:05; «آدھی رات» would need custom code | keep ICU; or special-case 00:00-00:59 | Urdu editor |
+| Tier badges show two Urdu words («قابلِ قبول مقبول», «اجتناب اجتناب») | `TierBadge` prints the translated English label and, beside it, the classical band name; the scoring note lists the band names, so the two are consistent, but the Avoid tier repeats one word | (a) keep (mirrors the English+Arabic pattern); (b) in Urdu show the band name once; (c) show only the translated label | product owner and Urdu editor |
+
+#### C. Medical-safety consistency (review of Phases 12-14; no new copy change)
+- The notice (long text) is in English, Urdu, French and Arabic on `CheckDateView`, `DetailSheet`, `ScanDatesView` and the shared page (browser-checked in Phase 14 at 360, 390 and 412 px, medical vs marriage); the Urdu long text is unchanged. Short caution: metadata description, share text, card footer (English and French).
+- No sentence tells users to delay, stop or choose treatment by astrology; the notice says the opposite. Remaining wording differences, unchanged: the Urdu notice has no "stop or replace" clause; the Arabic Simple-mode sentences for a journey and for work are still categorical (non-medical); the Detailed-mode English and French void-of-course sentence has no "traditionally"; the Urdu rule sentence has a sentence-level suffix the other languages lack. All AI-drafted medical wording needs a medical reviewer and French/Arabic language review.
+- **Recommendation on tier names, scores and sharing (nothing changed):** a medical result prints «Excellent … Avoid» with `NN/100`, on a shared page and card that name the occasion only in small print. Read alone, «Avoid» can mean "avoid treatment" and «Excellent» "go ahead". Proposed, in order of impact: (1) for the medical election use neutral tier names («traditionally favourable / neutral / unfavourable» and equivalents in four languages); (2) drop the numeric score from the medical share page and card (keep it in the app next to the notice); (3) keep sharing enabled, with the caution already added. Each is a product decision and a display change; (1) and (2) also need reviewed French and Arabic wording.
+
+#### D. Indexing-readiness audit of the Urdu route group (built app, Chromium at 360/390/412 px)
+All 7 public Urdu routes: HTTP 200; `lang="ur" dir="rtl"`; Urdu title and description; one canonical (`https://www.asrar.app/ur…`, same host as robots.txt and the sitemap); no hreflang; `noindex, follow`; FAQ JSON-LD on 6 of 7 (not on `/ur`); no horizontal overflow at any width; no image without `alt`. `/ur/` redirects (308) to `/ur`; unknown `/ur/*` returns 404 with the noindex header; robots.txt does not block `/ur` (so a later `noindex` is readable). The titles are unique.
+
+| Route | Visible text nodes in the default state, by provenance | Held or flagged content visible | Other findings |
+|---|---|---|---|
+| `/ur` | 124 hand-written catalog, 73 static page copy, 12 AI-drafted UI, 2 AI-drafted result (manzil), 11 Latin-only | **Divine Name card «Yā Razzāq» with English gloss «O Provider · For provision and barakah»** (held); incense names | 2 `<main>` landmarks, 1 unnamed link, CLS 0.14–0.25 (English `/`: 0.03) |
+| `/ur/abjad` | 36 catalog, 48 static copy, 10 AI-drafted UI | none in the default state | CLS 0.15 (English `/abjad`: 0) |
+| `/ur/compatibility` | 38 catalog, 51 static copy, 9 AI-drafted UI | none by default; the result shows 148 AI-drafted archetype texts including strong marriage warnings (Phase 4 flags) | 3 visible `<h1>` (tool headings) |
+| `/ur/name-and-mother-burj` | 85 catalog, 56 static copy, 19 AI-drafted UI | none by default; **results contain angel/jinn, Divine Name glosses, Fātiḥa renderings (held, in English)** and 355 AI-drafted career texts | 2 visible `<h1>` |
+| `/ur/planetary-hours` | 146 catalog, 63 static copy, 12 AI-drafted UI, 3 AI-drafted result | **Divine Name card with English gloss** | unnamed icon button, CLS 0.13 (English: 0.02) |
+| `/ur/planet-of-the-day` | 94 catalog, 51 static copy, 13 AI-drafted UI, 4 AI-drafted result (potd weekday paragraph) | **Divine Name names**; weekday paragraph (Thursday/Friday religious claims need religious review) | 1 unnamed control (not inspected) |
+| `/ur/ikhtiyarat` | 69 catalog, 28 static copy, 10 AI-drafted UI, 11 AI-drafted rules | **medical election text and notice (medical review pending), 14+6 `[SCHOLAR-REVIEW]` rule sentences with the Urdu flag** | CLS 0.37 (English `/ikhtiyarat`: 0.34) |
+
+"Hand-written" means written by the project, not reviewed by a native Urdu editor: no category is reviewed. Counts are visible text nodes, attributes included, in the default state; interactive results add much more AI-drafted and held text. CLS was measured headless and unthrottled, two runs, so treat it as a comparison, not a field value.
+
+Other readiness findings:
+1. **No crawlable internal link points into `/ur`.** The home, `/abjad`, `/compatibility`, `/name-and-mother-burj`, `/fr` and `/ar` contain none (the language switch is client state). The sitemap or a link from an indexable page would be needed for discovery.
+2. The tools are client-rendered in English and translated by the DOM catalog after hydration; the FAQ and page copy are server-rendered Urdu (about 700 Urdu-script words versus 200 Latin on `/ur/abjad` before JavaScript). Whether Google's renderer sees the translated tool UI is unverified.
+3. Layout shift is higher in Urdu than in English on 4 of 7 routes (text swap after hydration). This should be fixed or accepted before indexing: it is a Core Web Vitals risk. The a11y items (duplicate `<main>`, unnamed icon controls, several `<h1>`) come from shared components and were not compared with the English pages.
+4. `/ur/sadaqa` and other English-only pages have no Urdu route (404): correct, not thin pages.
+
+#### E. Human-review gate: recommendation
+**Approach 2: keep all seven pages excluded now.** No page's visible content has passed language or safety review, and four pages show held religious content in the default state. Proposed order once review exists (the list below is for approval; nothing was changed):
+
+| Wave | URL | Reason it qualifies | Conditions before it can be switched on |
+|---|---|---|---|
+| 1 (pilot) | `https://www.asrar.app/ur/abjad` | numerical tool; no held content by default; only 10 AI-drafted UI strings among 95 text nodes | Urdu editor signs off the page copy, FAQ, metadata and the 10 UI strings; CLS fixed or accepted |
+| 2 | `https://www.asrar.app/ur/compatibility` | no held content by default | editor and religious reviewer sign off the 148 archetype texts and marriage warnings |
+| 2 | `https://www.asrar.app/ur/name-and-mother-burj` | public tool, canonical, FAQ | the held angel/jinn, Divine Name and Fātiḥa content in results is resolved (reviewed Urdu or intentionally English and labelled) and the career texts are reviewed |
+| hold | `/ur`, `/ur/planetary-hours`, `/ur/planet-of-the-day`, `/ur/ikhtiyarat` | the hub should go last, when the pages it links to are approved | Divine Name gloss approved or removed on the first three; weekday religious claims reviewed; `/ur/ikhtiyarat` needs the medical review, the `[SCHOLAR-REVIEW]` rules and the medical tier/score decision |
+| never | `/ikhtiyarat/r/*` shared results, `/profile`, `/auth`, `/api`, `/ur` 404s and any `/ur/*` outside the seven, user-specific or thin pages | private, per-user or parameter-generated | — |
+
+**Proposed change list on approval (not implemented):** `src/lib/i18nRoutes.ts` (an explicit `UR_INDEXABLE_PATHS`, as `isIndexableArAppPath` does for Arabic, and `hreflangLanguages` adding `ur` for those paths only, reciprocal on the English, French, Arabic and Urdu pages plus `x-default`); `src/lib/urMetadata.ts` (robots and `alternates.languages` per path); `middleware.ts` (the `X-Robots-Tag: noindex` only for paths not in the list); `app/(ur)/ur/layout.tsx` (keep the noindex default, pages override); `app/sitemap.ts` (the approved Urdu URLs with alternates); a crawlable link from the matching English page; tests (`urdu-seo-rtl`, `urdu-indexing-readiness`); the CLS and a11y fixes above.
+
+`src/lib/urdu-indexing-readiness.test.ts` (new) pins the current controls and the technical invariants every route already meets (7 routes, Urdu title and description, self-canonical on the canonical host, no hreflang yet, unique titles, noindex in metadata, layout and middleware, no Urdu in the sitemap source or in any hreflang set).
+
+#### F. Google Search Console checklist (to do by the site owner; nothing was accessed)
+1. Verify ownership of `https://www.asrar.app` (domain property by DNS, or the URL-prefix property) and confirm the canonical host redirect (apex vs `www`).
+2. Only after approval and deployment: submit `https://www.asrar.app/sitemap.xml`, which must list only approved, indexable URLs.
+3. URL Inspection on each approved Urdu URL (live test): the rendered HTML must not contain `noindex` and the response must not carry `X-Robots-Tag: noindex`; "Google-selected canonical" must equal the declared canonical; page fetch and rendering without errors (check the screenshot for the translated tool UI).
+4. Check that the pages are discoverable (sitemap and an internal link) and that the Urdu pages appear in the hreflang report without "no return tag" errors.
+5. Monitor Pages (indexing) and Core Web Vitals reports and crawl stats for coverage or crawl errors. A submitted sitemap does not mean the pages will be indexed: Google decides whether and when.
+
+#### G. Verification (Phase 15, new)
+See the final report for the exact `tsc`, Vitest, regeneration, build and browser results.
+
 
