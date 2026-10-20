@@ -1,0 +1,100 @@
+{
+ "note": "English text in reachable production components that /ur-ui.json does not cover (Phase 5 audit). Classified in scripts/i18n/ur/still_english.md. Regenerate with: npx tsx scripts/i18n/ur/update_known_english.ts",
+ "files": {
+  "app/(site)/auth/page.tsx": [
+   "Create Account",
+   "Email Address",
+   "Must be at least 6 characters",
+   "Password",
+   "Processing...",
+   "Send Reset Link",
+   "Sign in",
+   "Sign up",
+   "Supabase not configured"
+  ],
+  "app/(site)/ikhtiyarat/r/[date]/page.tsx": [
+   "Ikhtiyārāt Result"
+  ],
+  "app/(site)/names/[slug]/page.tsx": [
+   "All names →",
+   "Burj",
+   "How the burj is found",
+   "Letter",
+   "Names",
+   "Other names",
+   "Spellings",
+   "Value"
+  ],
+  "app/(site)/names/page.tsx": [
+   "Why a name has a number"
+  ],
+  "app/(site)/profile/page.tsx": [
+   "Home"
+  ],
+  "app/(site)/profile/setup/page.tsx": [
+   "Loading profile..."
+  ],
+  "app/(site)/share/quran/[surahNumber]/[ayahNumber]/ShareActions.tsx": [
+   "Android users can install Asrariya today on Google Play.",
+   "Asrariya for iOS is coming soon.",
+   "Open in Asrariya",
+   "Open this ayah in Asrariya on Android.",
+   "Scan the QR code or open Google Play."
+  ],
+  "app/og/ikhtiyarat/[date]/route.tsx": [
+   "For reflection, not prediction · Only Allah knows the unseen",
+   "Ikhtiyārāt · Result",
+   "Marriage (nikāḥ)",
+   "Moving or building",
+   "Per classical ikhtiyārāt",
+   "Starting a business"
+  ],
+  "app/og/quran/[surahNumber]/[ayahNumber].png/route.tsx": [
+   "Share Ayah"
+  ],
+  "app/opengraph-image.tsx": [
+   "Planetary Hours · Abjad Numerology · Zikr Challenges · Name Destiny"
+  ],
+  "src/components/ProfileEdit.tsx": [
+   "Edit Profile",
+   "Full Name",
+   "Location Name",
+   "Personal Information",
+   "Preferred Language",
+   "Profile Picture",
+   "Remove current picture",
+   "Used for Name Destiny calculations",
+   "Used for planetary hour calculations"
+  ],
+  "src/components/ProfileView.tsx": [
+   "Account Information",
+   "Complete Profile",
+   "Complete Your Profile",
+   "Complete your profile to unlock all features and get personalized guidance.",
+   "Creating your profile...",
+   "Edit Profile",
+   "Not set",
+   "Personal Information",
+   "Profile Completion"
+  ],
+  "src/features/istikhara/components/DhikrCounter.tsx": [
+   "Associated Angel",
+   "Associated Jinn King"
+  ],
+  "src/features/istikhara/components/SpiritualPracticeTab.tsx": [
+   "About Angels",
+   "About Jinn",
+   "Angel",
+   "Angels (Malāʾika) are celestial beings of light who serve as divine messengers and guardians. Each element is associated with specific angelic forces that can be invoked for spiritual support.",
+   "Associated Angel (Rawḥānī)",
+   "Associated Jinn King",
+   "Celestial Guardian",
+   "Elemental Force",
+   "Jinn King",
+   "Jinn are beings created from smokeless fire, existing in a parallel realm. In Islamic mystical tradition, certain Jinn kings govern elemental forces and can be understood through spiritual knowledge."
+  ],
+  "src/features/ramadanChallenges/components/AddChallengeModal.tsx": [
+   "25-35 min"
+  ]
+ }
+}
