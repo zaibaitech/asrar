@@ -249,8 +249,10 @@ function makeEducationPlanetaryHourBonus(strict: boolean): Rule {
           else if (isRetro) { reason = 'retrograde'; reasonFr = 'rétrograde'; }
           return {
             status: 'pass', points: 0,
-            detail_en: `This window is in the planetary hour of ${planet}, but ${planet} is ${reason} — no bonus. [SCHOLAR-REVIEW]`,
-            detail_fr: `Cette fenêtre se situe dans l'heure planétaire de ${planetFr[planet!] ?? planet}, mais ${planetFr[planet!] ?? planet} est ${reasonFr} — aucun bonus. [SCHOLAR-REVIEW]`,
+            detail_en: `This window is in the planetary hour of ${planet}, but ${planet} is ${reason} — no bonus.`,
+            // SCHOLAR-REVIEW: classical rule pending scholarly review (data flag, not shown to users).
+            scholarReview: true,
+            detail_fr: `Cette fenêtre se situe dans l'heure planétaire de ${planetFr[planet!] ?? planet}, mais ${planetFr[planet!] ?? planet} est ${reasonFr} — aucun bonus.`,
           };
         }
       }

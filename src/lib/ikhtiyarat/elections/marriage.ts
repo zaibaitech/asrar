@@ -398,8 +398,10 @@ function makePlanetaryHourBonus(strict: boolean): Rule {
           else if (isRetro) { reason = 'retrograde'; reasonFr = 'rétrograde'; }
           return {
             status: 'pass', points: 0,
-            detail_en: `This window is in the planetary hour of ${planet}, but ${planet} is ${reason} — no bonus. [SCHOLAR-REVIEW]`,
-            detail_fr: `Cette fenêtre se situe dans l'heure planétaire de ${planetFr[planet!] ?? planet}, mais ${planetFr[planet!] ?? planet} est ${reasonFr} — aucun bonus. [SCHOLAR-REVIEW]`,
+            detail_en: `This window is in the planetary hour of ${planet}, but ${planet} is ${reason} — no bonus.`,
+            // SCHOLAR-REVIEW: classical rule pending scholarly review (data flag, not shown to users).
+            scholarReview: true,
+            detail_fr: `Cette fenêtre se situe dans l'heure planétaire de ${planetFr[planet!] ?? planet}, mais ${planetFr[planet!] ?? planet} est ${reasonFr} — aucun bonus.`,
           };
         }
       }
@@ -420,16 +422,20 @@ const lunarMansionBonus = rule(
       return {
         status: 'bonus',
         points: 6,
-        detail_en: `Moon in lunar mansion ${mansionNumber} — favorable for marriage. [SCHOLAR-REVIEW]`,
-        detail_fr: `Lune dans le manoir lunaire ${mansionNumber} — favorable au mariage. [À VÉRIFIER PAR UN SAVANT]`,
+        detail_en: `Moon in lunar mansion ${mansionNumber} — favorable for marriage.`,
+        // SCHOLAR-REVIEW: classical rule pending scholarly review (data flag, not shown to users).
+        scholarReview: true,
+        detail_fr: `Lune dans le manoir lunaire ${mansionNumber} — favorable au mariage.`,
       };
     }
     if (favorability === 'unfavorable') {
       return {
         status: 'penalty',
         points: -6,
-        detail_en: `Moon in lunar mansion ${mansionNumber} — unfavorable for marriage. [SCHOLAR-REVIEW]`,
-        detail_fr: `Lune dans le manoir lunaire ${mansionNumber} — défavorable au mariage. [À VÉRIFIER PAR UN SAVANT]`,
+        detail_en: `Moon in lunar mansion ${mansionNumber} — unfavorable for marriage.`,
+        // SCHOLAR-REVIEW: classical rule pending scholarly review (data flag, not shown to users).
+        scholarReview: true,
+        detail_fr: `Lune dans le manoir lunaire ${mansionNumber} — défavorable au mariage.`,
       };
     }
     return {

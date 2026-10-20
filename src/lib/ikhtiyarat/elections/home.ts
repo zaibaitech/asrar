@@ -132,16 +132,20 @@ const moonModality = rule(
       return {
         status: 'bonus',
         points: 12,
-        detail_en: `Moon in ${sign} — a fixed sign (burj thābit); fixed signs show stability, favoring a foundation or building meant to endure. [SCHOLAR-REVIEW]`,
-        detail_fr: `Lune en ${sign} — un signe fixe (burj thābit) ; les signes fixes montrent la stabilité, favorables à une fondation ou une construction destinée à durer. [À VÉRIFIER PAR UN SAVANT]`,
+        detail_en: `Moon in ${sign} — a fixed sign (burj thābit); fixed signs show stability, favoring a foundation or building meant to endure.`,
+        // SCHOLAR-REVIEW: classical rule pending scholarly review (data flag, not shown to users).
+        scholarReview: true,
+        detail_fr: `Lune en ${sign} — un signe fixe (burj thābit) ; les signes fixes montrent la stabilité, favorables à une fondation ou une construction destinée à durer.`,
       };
     }
     if (MOVABLE_SIGNS.includes(sign)) {
       return {
         status: 'penalty',
         points: -8,
-        detail_en: `Moon in ${sign} — a movable sign; movable signs incline to impermanence, the opposite of what a foundation calls for. [SCHOLAR-REVIEW]`,
-        detail_fr: `Lune en ${sign} — un signe mobile ; les signes mobiles inclinent à l'impermanence, l'inverse de ce qu'exige une fondation. [À VÉRIFIER PAR UN SAVANT]`,
+        detail_en: `Moon in ${sign} — a movable sign; movable signs incline to impermanence, the opposite of what a foundation calls for.`,
+        // SCHOLAR-REVIEW: classical rule pending scholarly review (data flag, not shown to users).
+        scholarReview: true,
+        detail_fr: `Lune en ${sign} — un signe mobile ; les signes mobiles inclinent à l'impermanence, l'inverse de ce qu'exige une fondation.`,
       };
     }
     return {
@@ -276,8 +280,10 @@ function makeHomePlanetaryHourBonus(strict: boolean): Rule {
           else if (isRetro) { reason = 'retrograde'; reasonFr = 'rétrograde'; }
           return {
             status: 'pass', points: 0,
-            detail_en: `This window is in the planetary hour of ${planet}, but ${planet} is ${reason} — no bonus. [SCHOLAR-REVIEW]`,
-            detail_fr: `Cette fenêtre se situe dans l'heure planétaire de ${planetFr[planet!] ?? planet}, mais ${planetFr[planet!] ?? planet} est ${reasonFr} — aucun bonus. [SCHOLAR-REVIEW]`,
+            detail_en: `This window is in the planetary hour of ${planet}, but ${planet} is ${reason} — no bonus.`,
+            // SCHOLAR-REVIEW: classical rule pending scholarly review (data flag, not shown to users).
+            scholarReview: true,
+            detail_fr: `Cette fenêtre se situe dans l'heure planétaire de ${planetFr[planet!] ?? planet}, mais ${planetFr[planet!] ?? planet} est ${reasonFr} — aucun bonus.`,
           };
         }
       }

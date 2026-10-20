@@ -143,6 +143,13 @@ cat.update(PAT)
 for s in src.values(): bump(s)
 bump('patterns', len(PAT))
 
+# The visible "[SCHOLAR-REVIEW]" tag was removed from the rule texts (it is now the internal
+# RuleResult.scholarReview data flag, Oct 2026), so its Arabic label is dropped with it.
+for k in [k for k in cat if '[SCHOLAR-REVIEW]' in k]:
+    nk = k.replace(' \\[SCHOLAR-REVIEW\\]', '').replace(' [SCHOLAR-REVIEW]', '')
+    v = cat.pop(k).replace(' [للمراجعة العلمية]', '')
+    cat.setdefault(nk, v)
+
 json.dump(cat, open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 json.dump(dict(sorted(pending.items())), open(P('mt-pending.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 reasons = {}

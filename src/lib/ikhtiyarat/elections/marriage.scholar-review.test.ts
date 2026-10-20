@@ -52,7 +52,8 @@ describe('SCHOLAR-REVIEW: strictHourRuler conditional planetary-hour bonus', () 
     const hourRule = window!.rules.find(r => r.id === 'planetary-hour');
     expect(hourRule?.status).toBe('pass');
     expect(hourRule?.points).toBe(0);
-    expect(hourRule?.detail_en).toContain('[SCHOLAR-REVIEW]');
+    expect(hourRule?.scholarReview).toBe(true);
+    expect(hourRule?.detail_en).not.toContain('SCHOLAR-REVIEW');
     expect(hourRule?.detail_en).toContain('fall');
   });
 

@@ -132,16 +132,20 @@ const moonModality = rule(
       return {
         status: 'bonus',
         points: 12,
-        detail_en: `Moon in ${sign} — a movable sign (burj munqalib); movable signs favor journeys and swift movement. [SCHOLAR-REVIEW]`,
-        detail_fr: `Lune en ${sign} — un signe mobile (burj munqalib) ; les signes mobiles favorisent les voyages et les déplacements rapides. [À VÉRIFIER PAR UN SAVANT]`,
+        detail_en: `Moon in ${sign} — a movable sign (burj munqalib); movable signs favor journeys and swift movement.`,
+        // SCHOLAR-REVIEW: classical rule pending scholarly review (data flag, not shown to users).
+        scholarReview: true,
+        detail_fr: `Lune en ${sign} — un signe mobile (burj munqalib) ; les signes mobiles favorisent les voyages et les déplacements rapides.`,
       };
     }
     if (FIXED_SIGNS.includes(sign)) {
       return {
         status: 'penalty',
         points: -8,
-        detail_en: `Moon in ${sign} — a fixed sign; fixed signs incline to delay and being detained. [SCHOLAR-REVIEW]`,
-        detail_fr: `Lune en ${sign} — un signe fixe ; les signes fixes inclinent au retard et à la rétention. [À VÉRIFIER PAR UN SAVANT]`,
+        detail_en: `Moon in ${sign} — a fixed sign; fixed signs incline to delay and being detained.`,
+        // SCHOLAR-REVIEW: classical rule pending scholarly review (data flag, not shown to users).
+        scholarReview: true,
+        detail_fr: `Lune en ${sign} — un signe fixe ; les signes fixes inclinent au retard et à la rétention.`,
       };
     }
     return {
@@ -232,8 +236,10 @@ function makeTravelPlanetaryHourBonus(strict: boolean): Rule {
           else if (isRetro) { reason = 'retrograde'; reasonFr = 'rétrograde'; }
           return {
             status: 'pass', points: 0,
-            detail_en: `This window is in the planetary hour of ${planet}, but ${planet} is ${reason} — no bonus. [SCHOLAR-REVIEW]`,
-            detail_fr: `Cette fenêtre se situe dans l'heure planétaire de ${planetFr[planet!] ?? planet}, mais ${planetFr[planet!] ?? planet} est ${reasonFr} — aucun bonus. [SCHOLAR-REVIEW]`,
+            detail_en: `This window is in the planetary hour of ${planet}, but ${planet} is ${reason} — no bonus.`,
+            // SCHOLAR-REVIEW: classical rule pending scholarly review (data flag, not shown to users).
+            scholarReview: true,
+            detail_fr: `Cette fenêtre se situe dans l'heure planétaire de ${planetFr[planet!] ?? planet}, mais ${planetFr[planet!] ?? planet} est ${reasonFr} — aucun bonus.`,
           };
         }
       }
@@ -273,16 +279,20 @@ const travelManzilBonus = rule(
       return {
         status: 'bonus',
         points: 6,
-        detail_en: `Moon in lunar mansion ${mansionNumber} — favorable for travel. [SCHOLAR-REVIEW]`,
-        detail_fr: `Lune dans le manoir lunaire ${mansionNumber} — favorable au voyage. [À VÉRIFIER PAR UN SAVANT]`,
+        detail_en: `Moon in lunar mansion ${mansionNumber} — favorable for travel.`,
+        // SCHOLAR-REVIEW: classical rule pending scholarly review (data flag, not shown to users).
+        scholarReview: true,
+        detail_fr: `Lune dans le manoir lunaire ${mansionNumber} — favorable au voyage.`,
       };
     }
     if (favorability === 'unfavorable') {
       return {
         status: 'penalty',
         points: -6,
-        detail_en: `Moon in lunar mansion ${mansionNumber} — unfavorable for travel. [SCHOLAR-REVIEW]`,
-        detail_fr: `Lune dans le manoir lunaire ${mansionNumber} — défavorable au voyage. [À VÉRIFIER PAR UN SAVANT]`,
+        detail_en: `Moon in lunar mansion ${mansionNumber} — unfavorable for travel.`,
+        // SCHOLAR-REVIEW: classical rule pending scholarly review (data flag, not shown to users).
+        scholarReview: true,
+        detail_fr: `Lune dans le manoir lunaire ${mansionNumber} — défavorable au voyage.`,
       };
     }
     return {
