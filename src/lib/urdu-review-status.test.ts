@@ -29,13 +29,27 @@ describe('Urdu review status', () => {
     expect(read('src/features/calculator/i18n/ur.ts')).toContain('STATUS: REVIEWED');
   });
 
-  it('Batch 15 (calculator result data, practice-hint meanings) is draft and wired into the catalog', () => {
-    expect(status.batch15.length).toBeGreaterThan(170);
+  it('Batch 15 (calculator result data, practice-hint meanings) is reviewed (pass 4) and wired into the catalog', () => {
+    expect(status.batch15.length).toBe(180);
     for (const r of status.batch15 as Row[]) {
-      expect(r.status).toBe('draft');
+      expect(r.status).toMatch(/^reviewed/);
       expect(json[r.en], r.en).toBe(r.ur);
     }
+    const n = (s: string) => (status.batch15 as Row[]).filter((r) => r.status === s).length;
+    expect(n('reviewed-corrected')).toBe(15);
+    expect(n('reviewed-corrected (optional)')).toBe(8);
     for (const r of status.pass3_reviewer_data as Row[]) expect(json[r.en], r.en).toBe(r.ur);
+  });
+
+  it('pass 4 shared keys: Prophet-name glosses and the confidence label get forms that fit both uses', () => {
+    expect(json['The Witness']).toBe('گواہ'); // also Shāhid, propheticNames201.ts
+    expect(json['The Last']).toBe('سب سے آخری'); // also ʿĀqib
+    expect(json['The One']).toBe('ایک'); // also Wāḥid
+    expect(json['Confidence']).toBe('اعتماد'); // also IlmHurufPanel "Confidence: 87%"
+    expect(json['The Creator']).toBe('تخلیق کرنے والا'); // reviewer fallback until the EN split; never «خالق»
+    expect(json['Creativity, expression, joy. Sacred trinity of body, mind, and spirit.']).toBe('تخلیقی صلاحیت، اظہار اور خوشی۔ جسم، ذہن اور روح: تینوں کی ہم آہنگی۔');
+    expect(json['Karma']).toBe('مکافاتِ عمل');
+    expect(json['Creativity, expression, joy. Sacred trinity of body, mind, and spirit.']).not.toMatch(/تثلیث/);
   });
 
   it('the calculator Urdu locale only has keys from en.ts, and all 192 interface strings resolve', () => {

@@ -1,5 +1,5 @@
 {
- "about": "Review status of the Urdu (/ur) strings. Sheet 2 = /workspace review file asrar-ur-review-2.md (2,336 rows), all reviewed by the native Language Reviewer (Oct 2026). reviewed-corrected: correction applied; reviewed: confirmed as is; reviewed-kept: reviewer suggestion not applied on purpose (see note); reviewed-flagged: left for Mario / the source owner. Batch 13 (/ur/abjad calculator UI, src/features/calculator/i18n/ur.ts) and Batch 14 (burujData.json practice nights) were reviewed in pass 3. Batch 15 (calculator result data and practice-hint meanings) is DRAFT, not reviewed; pass3_reviewer_data are the reviewer-written result-data strings (reviewed).",
+ "about": "Review status of the Urdu (/ur) strings. Sheet 2 = /workspace review file asrar-ur-review-2.md (2,336 rows), all reviewed by the native Language Reviewer (Oct 2026). reviewed-corrected: correction applied; reviewed: confirmed as is; reviewed-kept: reviewer suggestion not applied on purpose (see note); reviewed-flagged: left for Mario / the source owner. Batch 13 (/ur/abjad calculator UI, src/features/calculator/i18n/ur.ts) and Batch 14 (burujData.json practice nights) were reviewed in pass 3. Batch 15 (calculator result data and practice-hint meanings) was reviewed in pass 4; pass3_reviewer_data are the reviewer-written result-data strings (reviewed).",
  "counts": {
   "sheet2": {
    "reviewed-corrected": 417,
@@ -15,7 +15,11 @@
   "batch14_reviewed": 5,
   "pass3_ramadan": 9,
   "pass3_reviewer_data": 33,
-  "batch15_draft": 180
+  "batch15": {
+   "reviewed": 157,
+   "reviewed-corrected": 15,
+   "reviewed-corrected (optional)": 8
+  }
  },
  "sheet2": {
   "1.1": {
@@ -13196,1260 +13200,1263 @@
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[1]",
    "en": "The Most Compassionate",
    "ur": "نہایت مہربان",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.2",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[2]",
    "en": "The Most Merciful",
    "ur": "نہایت رحم والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.3",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[3]",
    "en": "The King, The Sovereign",
    "ur": "بادشاہ، حقیقی حکمران",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.4",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[4]",
    "en": "The Most Holy, The Pure",
    "ur": "نہایت پاک، ہر عیب سے منزہ",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.5",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[5]",
    "en": "The Source of Peace",
    "ur": "سلامتی کا سرچشمہ",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.6",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[6]",
    "en": "The Giver of Faith and Security",
    "ur": "ایمان اور امن عطا کرنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.7",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[7]",
    "en": "The Guardian, The Protector",
    "ur": "نگہبان، حفاظت کرنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.8",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[8]",
    "en": "The Almighty, The Mighty",
    "ur": "غالب، زبردست",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.9",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[9]",
    "en": "The Compeller, The Irresistible",
    "ur": "زور آور، جس کے ارادے کو کوئی روک نہیں سکتا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.10",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[10]",
    "en": "The Supreme in Greatness",
    "ur": "کبریائی والا، سب سے بڑا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.11",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[11]",
    "en": "The Creator",
    "ur": "تخلیق کرنے والا",
-   "status": "draft"
+   "status": "reviewed",
+   "note": "Reviewer fallback kept for both uses (Divine gloss and archetype 3 title) until the EN key split (\"The Creative\") is approved; never «خالق»."
   },
   {
    "id": "15.12",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[12]",
    "en": "The Evolver, The Maker",
    "ur": "وجود بخشنے والا، بنانے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.13",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[13]",
    "en": "The Fashioner, The Shaper",
    "ur": "صورت گری کرنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.14",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[14]",
    "en": "The Ever-Forgiving",
-   "ur": "بار بار معاف کرنے والا",
-   "status": "draft"
+   "ur": "بار بار بخشنے والا",
+   "status": "reviewed-corrected"
   },
   {
    "id": "15.15",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[15]",
    "en": "The Subduer, The Dominant",
    "ur": "سب پر غالب، قہر والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.16",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[16]",
    "en": "The Bestower",
    "ur": "بے حساب عطا کرنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.17",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[17]",
    "en": "The Provider",
    "ur": "رزق دینے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.18",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[18]",
    "en": "The Opener, The Judge",
    "ur": "کھولنے والا، فیصلہ فرمانے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.19",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[19]",
    "en": "The All-Knowing",
    "ur": "سب کچھ جاننے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.20",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[20]",
    "en": "The Constrictor, The Withholder",
    "ur": "تنگی دینے والا، روک لینے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.21",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[21]",
    "en": "The Expander, The Reliever",
    "ur": "کشادگی دینے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.22",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[22]",
    "en": "The Abaser, The Humbler",
    "ur": "پست کرنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.23",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[23]",
    "en": "The Exalter",
    "ur": "بلند کرنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.24",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[24]",
    "en": "The Bestower of Honor",
    "ur": "عزت دینے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.25",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[25]",
    "en": "The Humiliator",
    "ur": "ذلت دینے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.26",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[26]",
    "en": "The All-Hearing",
    "ur": "سب کچھ سننے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.27",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[27]",
    "en": "The All-Seeing",
    "ur": "سب کچھ دیکھنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.28",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[28]",
    "en": "The Judge, The Arbitrator",
    "ur": "حاکم، فیصلہ کرنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.29",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[29]",
    "en": "The Utterly Just",
    "ur": "سراسر عدل والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.30",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[30]",
    "en": "The Subtle, The Gentle",
    "ur": "باریک بین، نہایت لطف والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.31",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[31]",
    "en": "The All-Aware",
    "ur": "ہر بات سے باخبر",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.32",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[32]",
    "en": "The Forbearing, The Clement",
    "ur": "بردبار، حلم والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.33",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[33]",
    "en": "The Magnificent, The Supreme",
    "ur": "عظمت والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.34",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[34]",
    "en": "The All-Forgiving",
    "ur": "بہت بخشنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.35",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[35]",
    "en": "The Most Appreciative",
    "ur": "قدر دان",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.36",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[36]",
    "en": "The Most High",
    "ur": "بلند و برتر",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.37",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[37]",
    "en": "The Greatest, The Most Great",
    "ur": "سب سے بڑا، بڑائی والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.38",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[38]",
    "en": "The Preserver, The Guardian",
    "ur": "حفاظت کرنے والا، نگہبان",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.39",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[39]",
    "en": "The Sustainer, The Nourisher",
    "ur": "روزی اور قوت دینے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.40",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[40]",
    "en": "The Reckoner",
    "ur": "حساب لینے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.41",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[41]",
    "en": "The Majestic",
    "ur": "جلال والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.42",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[42]",
    "en": "The Most Generous",
    "ur": "نہایت کریم",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.43",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[43]",
    "en": "The Watchful",
    "ur": "نگرانی کرنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.44",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[44]",
    "en": "The Responsive, The Answerer",
    "ur": "دعا قبول کرنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.45",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[45]",
    "en": "The All-Encompassing, The Vast",
    "ur": "وسعت والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.46",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[46]",
    "en": "The All-Wise",
    "ur": "حکمت والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.47",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[47]",
    "en": "The Most Loving",
    "ur": "محبت کرنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.48",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[48]",
    "en": "The Glorious, The Magnificent",
    "ur": "بزرگی اور شان والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.49",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[49]",
    "en": "The Resurrector",
    "ur": "دوبارہ زندہ اٹھانے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.50",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[50]",
    "en": "The Witness",
-   "ur": "ہر چیز پر گواہ",
-   "status": "draft"
+   "ur": "گواہ",
+   "status": "reviewed-corrected",
+   "note": "Shared key with the Prophet's name Shāhid (propheticNames201.ts:71)."
   },
   {
    "id": "15.51",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[51]",
    "en": "The Absolute Truth",
    "ur": "حق، سراسر سچائی",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.52",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[52]",
    "en": "The Trustee, The Advocate",
    "ur": "کارساز، جس پر بھروسا کیا جائے",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.53",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[53]",
    "en": "The Most Strong",
    "ur": "قوت والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.54",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[54]",
    "en": "The Firm, The Steadfast",
-   "ur": "مضبوط، ثابت قدم",
-   "status": "draft"
+   "ur": "نہایت مضبوط، زبردست قوت والا",
+   "status": "reviewed-corrected"
   },
   {
    "id": "15.55",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[55]",
    "en": "The Protecting Friend",
-   "ur": "حمایتی دوست، سرپرست",
-   "status": "draft"
+   "ur": "دوست اور مددگار، سرپرست",
+   "status": "reviewed-corrected"
   },
   {
    "id": "15.56",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[56]",
    "en": "The All-Praiseworthy",
    "ur": "ہر تعریف کے لائق",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.57",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[57]",
    "en": "The Accounter, The Reckoner",
    "ur": "شمار رکھنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.58",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[58]",
    "en": "The Originator",
    "ur": "پہلی بار پیدا کرنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.59",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[59]",
    "en": "The Restorer",
-   "ur": "دوبارہ لوٹانے والا",
-   "status": "draft"
+   "ur": "دوبارہ پیدا کرنے والا",
+   "status": "reviewed-corrected"
   },
   {
    "id": "15.60",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[60]",
    "en": "The Giver of Life",
    "ur": "زندگی دینے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.61",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[61]",
    "en": "The Bringer of Death",
    "ur": "موت دینے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.62",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[62]",
    "en": "The Ever-Living",
    "ur": "ہمیشہ زندہ",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.63",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[63]",
    "en": "The Self-Subsisting Sustainer",
    "ur": "خود قائم، سب کو قائم رکھنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.64",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[64]",
    "en": "The Perceiver, The Finder",
    "ur": "پانے والا، جس سے کچھ اوجھل نہیں",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.65",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[65]",
    "en": "The All-Noble, The Glorious",
    "ur": "بزرگی والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.66",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[66]",
    "en": "The One",
    "ur": "ایک",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.67",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[67]",
    "en": "The Only One",
    "ur": "یکتا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.68",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[68]",
    "en": "The Self-Sufficient Master",
    "ur": "بے نیاز، سب کا سہارا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.69",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[69]",
    "en": "The All-Powerful",
    "ur": "قدرت والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.70",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[70]",
    "en": "The Powerful, The Dominant",
    "ur": "کامل قدرت والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.71",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[71]",
    "en": "The Expediter, The Promoter",
    "ur": "آگے کرنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.72",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[72]",
    "en": "The Delayer",
    "ur": "پیچھے کرنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.73",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[73]",
    "en": "The First",
    "ur": "سب سے پہلا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.74",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[74]",
    "en": "The Last",
-   "ur": "سب سے آخر",
-   "status": "draft"
+   "ur": "سب سے آخری",
+   "status": "reviewed-corrected"
   },
   {
    "id": "15.75",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[75]",
    "en": "The Manifest, The Evident",
    "ur": "ظاہر",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.76",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[76]",
    "en": "The Hidden, The Inward",
    "ur": "باطن، پوشیدہ",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.77",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[77]",
    "en": "The Governor, The Protecting Master",
    "ur": "کارساز، مالک و سرپرست",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.78",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[78]",
    "en": "The Most Exalted",
    "ur": "سب سے بلند",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.79",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[79]",
    "en": "The Source of All Goodness",
    "ur": "ہر بھلائی کا سرچشمہ",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.80",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[80]",
    "en": "The Ever-Relenting",
    "ur": "توبہ قبول کرنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.81",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[81]",
    "en": "The Avenger",
    "ur": "بدلہ لینے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.82",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[82]",
    "en": "The Pardoner",
    "ur": "درگزر کرنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.83",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[83]",
    "en": "The Most Kind",
    "ur": "نہایت شفیق",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.84",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[84]",
    "en": "The Owner of All Sovereignty",
    "ur": "ساری بادشاہی کا مالک",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.85",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[85]",
    "en": "The Lord of Majesty and Generosity",
    "ur": "جلال اور اکرام والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.86",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[86]",
    "en": "The Equitable",
    "ur": "انصاف کرنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.87",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[87]",
    "en": "The Gatherer",
    "ur": "جمع کرنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.88",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[88]",
    "en": "The Self-Sufficient, The Rich",
    "ur": "بے نیاز، غنی",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.89",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[89]",
    "en": "The Enricher",
    "ur": "غنی کر دینے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.90",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[90]",
    "en": "The Preventer",
    "ur": "روکنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.91",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[91]",
    "en": "The Distresser (by His decree)",
    "ur": "(اپنی حکمت سے) تکلیف پہنچانے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.92",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[92]",
    "en": "The Propitious, The Benefactor",
    "ur": "نفع پہنچانے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.93",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[93]",
    "en": "The Light",
    "ur": "نور",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.94",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[94]",
    "en": "The Guide",
    "ur": "ہدایت دینے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.95",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[95]",
    "en": "The Incomparable Originator",
-   "ur": "بے مثال موجد",
-   "status": "draft"
+   "ur": "بغیر کسی نمونے کے پیدا کرنے والا",
+   "status": "reviewed-corrected"
   },
   {
    "id": "15.96",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[96]",
    "en": "The Everlasting",
    "ur": "ہمیشہ باقی رہنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.97",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[97]",
    "en": "The Inheritor of All",
    "ur": "سب کا وارث",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.98",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[98]",
    "en": "The Guide to the Right Path",
    "ur": "سیدھی راہ دکھانے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.99",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[99]",
    "en": "The Most Patient",
    "ur": "نہایت صبر والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.100",
    "loc": "calculatorContent.ts ARCHETYPES[1].title",
    "en": "The Leader",
    "ur": "رہنما",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.101",
    "loc": "calculatorContent.ts ARCHETYPES[1].description",
    "en": "Leadership, independence, pioneering spirit. The number of divine unity (Tawḥīd).",
    "ur": "قیادت، خود مختاری اور پیش قدمی کا جذبہ۔ توحید کا عدد۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.102",
    "loc": "calculatorContent.ts ARCHETYPES[1].qualities[0]",
    "en": "Initiative",
    "ur": "پہل",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.103",
    "loc": "calculatorContent.ts ARCHETYPES[1].qualities[1]",
    "en": "Confidence",
-   "ur": "خود اعتمادی",
-   "status": "draft"
+   "ur": "اعتماد",
+   "status": "reviewed-corrected",
+   "note": "Shared key with the transliteration-confidence label (IlmHurufPanel.tsx:873)."
   },
   {
    "id": "15.104",
    "loc": "calculatorContent.ts ARCHETYPES[1].qualities[2]",
    "en": "Innovation",
    "ur": "جدت",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.105",
    "loc": "calculatorContent.ts ARCHETYPES[1].qualities[3]",
    "en": "Self-reliance",
    "ur": "خود انحصاری",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.106",
    "loc": "calculatorContent.ts ARCHETYPES[2].title",
    "en": "The Harmonizer",
-   "ur": "ہم آہنگی پیدا کرنے والا",
-   "status": "draft"
+   "ur": "صلح جو",
+   "status": "reviewed-corrected (optional)"
   },
   {
    "id": "15.107",
    "loc": "calculatorContent.ts ARCHETYPES[2].description",
    "en": "Balance, partnership, diplomacy. Represents duality seeking unity.",
    "ur": "توازن، شراکت اور معاملہ فہمی۔ دوئی کی علامت جو وحدت کی طلب میں ہے۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.108",
    "loc": "calculatorContent.ts ARCHETYPES[2].qualities[1]",
    "en": "Sensitivity",
    "ur": "حساسیت",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.109",
    "loc": "calculatorContent.ts ARCHETYPES[2].qualities[3]",
    "en": "Mediation",
-   "ur": "صلح کرانا",
-   "status": "draft"
+   "ur": "مصالحت",
+   "status": "reviewed-corrected"
   },
   {
    "id": "15.110",
    "loc": "calculatorContent.ts ARCHETYPES[3].description",
    "en": "Creativity, expression, joy. Sacred trinity of body, mind, and spirit.",
-   "ur": "تخلیقی صلاحیت، اظہار اور خوشی۔ جسم، ذہن اور روح کا باہمی ربط۔",
-   "status": "draft"
+   "ur": "تخلیقی صلاحیت، اظہار اور خوشی۔ جسم، ذہن اور روح: تینوں کی ہم آہنگی۔",
+   "status": "reviewed-corrected"
   },
   {
    "id": "15.111",
    "loc": "calculatorContent.ts ARCHETYPES[3].qualities[0]",
    "en": "Creativity",
    "ur": "تخلیقی صلاحیت",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.112",
    "loc": "calculatorContent.ts ARCHETYPES[3].qualities[2]",
    "en": "Optimism",
-   "ur": "امید پسندی",
-   "status": "draft"
+   "ur": "رجائیت",
+   "status": "reviewed-corrected (optional)"
   },
   {
    "id": "15.113",
    "loc": "calculatorContent.ts ARCHETYPES[3].qualities[3]",
    "en": "Self-expression",
-   "ur": "اپنا اظہار",
-   "status": "draft"
+   "ur": "اظہارِ ذات",
+   "status": "reviewed-corrected"
   },
   {
    "id": "15.114",
    "loc": "calculatorContent.ts ARCHETYPES[4].title",
    "en": "The Builder",
    "ur": "معمار",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.115",
    "loc": "calculatorContent.ts ARCHETYPES[4].description",
    "en": "Stability, foundation, discipline. Four elements, four sacred months.",
    "ur": "استحکام، بنیاد اور نظم و ضبط۔ چار عناصر، چار حرمت والے مہینے۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.116",
    "loc": "calculatorContent.ts ARCHETYPES[4].qualities[0]",
    "en": "Organization",
    "ur": "تنظیم",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.117",
    "loc": "calculatorContent.ts ARCHETYPES[4].qualities[1]",
    "en": "Practicality",
    "ur": "عملی سوچ",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.118",
    "loc": "calculatorContent.ts ARCHETYPES[4].qualities[2]",
    "en": "Determination",
    "ur": "عزم",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.119",
    "loc": "calculatorContent.ts ARCHETYPES[4].qualities[3]",
    "en": "Trustworthiness",
    "ur": "امانت داری",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.120",
    "loc": "calculatorContent.ts ARCHETYPES[5].title",
    "en": "The Adventurer",
    "ur": "مہم جو",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.121",
    "loc": "calculatorContent.ts ARCHETYPES[5].description",
    "en": "Freedom, change, versatility. Five pillars of Islam, five daily prayers.",
    "ur": "آزادی، تبدیلی اور ہمہ جہتی۔ اسلام کے پانچ ارکان، پانچ وقت کی نماز۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.122",
    "loc": "calculatorContent.ts ARCHETYPES[5].qualities[0]",
    "en": "Adaptability",
-   "ur": "حالات کے مطابق ڈھلنا",
-   "status": "draft"
+   "ur": "لچک",
+   "status": "reviewed-corrected (optional)"
   },
   {
    "id": "15.123",
    "loc": "calculatorContent.ts ARCHETYPES[5].qualities[1]",
    "en": "Curiosity",
    "ur": "جستجو",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.124",
    "loc": "calculatorContent.ts ARCHETYPES[5].qualities[2]",
    "en": "Freedom",
    "ur": "آزادی",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.125",
    "loc": "calculatorContent.ts ARCHETYPES[5].qualities[3]",
    "en": "Resourcefulness",
    "ur": "تدبیر اور سوجھ بوجھ",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.126",
    "loc": "calculatorContent.ts ARCHETYPES[6].title",
    "en": "The Nurturer",
-   "ur": "پرورش کرنے والا",
-   "status": "draft"
+   "ur": "مربّی",
+   "status": "reviewed-corrected (optional)"
   },
   {
    "id": "15.127",
    "loc": "calculatorContent.ts ARCHETYPES[6].description",
    "en": "Love, responsibility, harmony. Six days of creation.",
    "ur": "محبت، ذمہ داری اور ہم آہنگی۔ تخلیق کے چھ دن۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.128",
    "loc": "calculatorContent.ts ARCHETYPES[6].qualities[0]",
    "en": "Compassion",
    "ur": "ہمدردی",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.129",
    "loc": "calculatorContent.ts ARCHETYPES[6].qualities[1]",
    "en": "Service",
    "ur": "خدمت",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.130",
    "loc": "calculatorContent.ts ARCHETYPES[6].qualities[2]",
    "en": "Responsibility",
    "ur": "ذمہ داری",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.131",
    "loc": "calculatorContent.ts ARCHETYPES[6].qualities[3]",
    "en": "Balance",
    "ur": "توازن",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.132",
    "loc": "calculatorContent.ts ARCHETYPES[7].title",
    "en": "The Seeker",
-   "ur": "جویا",
-   "status": "draft"
+   "ur": "متلاشی",
+   "status": "reviewed-corrected (optional)"
   },
   {
    "id": "15.133",
    "loc": "calculatorContent.ts ARCHETYPES[7].description",
    "en": "Wisdom, spirituality, introspection. Seven heavens, seven earths.",
    "ur": "حکمت، روحانیت اور اپنے باطن پر غور۔ سات آسمان، سات زمینیں۔",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.134",
    "loc": "calculatorContent.ts ARCHETYPES[7].qualities[0]",
    "en": "Spiritual depth",
    "ur": "روحانی گہرائی",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.135",
    "loc": "calculatorContent.ts ARCHETYPES[7].qualities[1]",
    "en": "Analysis",
    "ur": "تجزیہ",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.136",
    "loc": "calculatorContent.ts ARCHETYPES[7].qualities[2]",
    "en": "Contemplation",
    "ur": "غور و فکر",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.137",
    "loc": "calculatorContent.ts ARCHETYPES[7].qualities[3]",
    "en": "Mysticism",
    "ur": "تصوف",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.138",
    "loc": "calculatorContent.ts ARCHETYPES[8].title",
    "en": "The Achiever",
-   "ur": "کامیابی حاصل کرنے والا",
-   "status": "draft"
+   "ur": "کامران",
+   "status": "reviewed-corrected (optional)"
   },
   {
    "id": "15.139",
    "loc": "calculatorContent.ts ARCHETYPES[8].description",
    "en": "Power, abundance, manifestation. Eight angels carrying the Throne.",
-   "ur": "قوت، فراوانی اور ظہور۔ عرش اٹھانے والے آٹھ فرشتے۔",
-   "status": "draft"
+   "ur": "قوت، فراوانی اور ارادوں کی تکمیل۔ عرش اٹھانے والے آٹھ فرشتے۔",
+   "status": "reviewed-corrected"
   },
   {
    "id": "15.140",
    "loc": "calculatorContent.ts ARCHETYPES[8].qualities[0]",
    "en": "Ambition",
    "ur": "بلند حوصلگی",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.141",
    "loc": "calculatorContent.ts ARCHETYPES[8].qualities[1]",
    "en": "Authority",
    "ur": "اختیار",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.142",
    "loc": "calculatorContent.ts ARCHETYPES[8].qualities[2]",
    "en": "Material success",
    "ur": "مادی کامیابی",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.143",
    "loc": "calculatorContent.ts ARCHETYPES[8].qualities[3]",
    "en": "Karma",
-   "ur": "عمل اور اس کا نتیجہ",
-   "status": "draft"
+   "ur": "مکافاتِ عمل",
+   "status": "reviewed-corrected"
   },
   {
    "id": "15.144",
    "loc": "calculatorContent.ts ARCHETYPES[9].title",
    "en": "The Humanitarian",
    "ur": "انسان دوست",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.145",
    "loc": "calculatorContent.ts ARCHETYPES[9].description",
    "en": "Completion, universal love, enlightenment. The number of completion and perfection.",
-   "ur": "تکمیل، سب سے محبت اور روشن ضمیری۔ تکمیل اور کمال کا عدد۔",
-   "status": "draft"
+   "ur": "تکمیل، ہمہ گیر محبت اور روشن ضمیری۔ تکمیل اور کمال کا عدد۔",
+   "status": "reviewed-corrected (optional)"
   },
   {
    "id": "15.146",
    "loc": "calculatorContent.ts ARCHETYPES[9].qualities[1]",
    "en": "Service to others",
    "ur": "دوسروں کی خدمت",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.147",
    "loc": "calculatorContent.ts ARCHETYPES[9].qualities[3]",
    "en": "Completion",
    "ur": "تکمیل",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.148",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[1] (Allah)",
    "en": "The God, The One True God",
    "ur": "اللہ، واحد معبودِ برحق",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.149",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[2] (Al-Bāqī)",
    "en": "The Everlasting, The Eternal",
    "ur": "ہمیشہ باقی رہنے والا، ابدی",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.150",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[3] (Al-Jāmiʿ)",
    "en": "The Gatherer, The Uniter",
    "ur": "جمع کرنے والا، یکجا کرنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.151",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[4] (Ad-Dāʾim)",
    "en": "The Eternal, The Everlasting",
    "ur": "دائم، ہمیشہ رہنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.152",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[5] (Al-Hādī)",
    "en": "The Guide, The One Who Guides",
    "ur": "ہادی، ہدایت دینے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.153",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[6] (Al-Wadūd)",
    "en": "The Loving, The Most Affectionate",
    "ur": "محبت کرنے والا، نہایت شفیق",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.154",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[7] (Az-Zakī)",
    "en": "The Pure, The Immaculate",
-   "ur": "پاکیزہ، بے داغ",
-   "status": "draft"
+   "ur": "پاکیزہ، ہر عیب سے پاک",
+   "status": "reviewed-corrected"
   },
   {
    "id": "15.155",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[8] (Al-Ḥakīm)",
    "en": "The Wise, The All-Wise",
    "ur": "حکیم، کامل حکمت والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.156",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[9] (Aṭ-Ṭāhir)",
    "en": "The Purifier, The Pure One",
    "ur": "پاک کرنے والا، پاک",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.157",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[10] (Al-Yaqīn)",
    "en": "The Certain, The Certainty",
    "ur": "یقین، یقینی حق",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.158",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[11] (Al-Karīm)",
    "en": "The Generous, The Most Bountiful",
    "ur": "کریم، بے حد عطا والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.159",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[12] (Al-Laṭīf)",
    "en": "The Subtle, The Most Kind",
    "ur": "باریک بین، نہایت مہربان",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.160",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[13] (Al-Muʾmin)",
    "en": "The Believer, The Giver of Faith",
    "ur": "امن دینے والا، ایمان عطا کرنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.161",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[14] (An-Nūr)",
    "en": "The Light, The Illuminator",
    "ur": "نور، روشن کرنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.162",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[15] (As-Salām)",
    "en": "The Peace, The Source of Peace",
    "ur": "سلامتی، سلامتی کا سرچشمہ",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.163",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[16] (Al-ʿAlīm)",
    "en": "The All-Knowing, The Omniscient",
    "ur": "علیم، سب کچھ جاننے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.164",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[17] (Al-Fard)",
    "en": "The Unique, The One and Only",
    "ur": "یکتا، بے مثل",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.165",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[18] (Aṣ-Ṣabūr)",
    "en": "The Patient, The Most Forbearing",
    "ur": "صابر، نہایت بردبار",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.166",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[19] (Al-Qādir)",
    "en": "The Able, The All-Powerful",
    "ur": "قادر، ہر چیز پر قدرت والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.167",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[20] (Ar-Raḥmān)",
    "en": "The Most Merciful, The Beneficent",
-   "ur": "نہایت رحم والا، بے حد مہربان",
-   "status": "draft"
+   "ur": "بے حد مہربان، نہایت رحم والا",
+   "status": "reviewed-corrected"
   },
   {
    "id": "15.168",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[21] (Ash-Shakūr)",
    "en": "The Grateful, The Appreciative",
    "ur": "قدر دان، شکر قبول کرنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.169",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[22] (At-Tawwāb)",
    "en": "The Acceptor of Repentance",
    "ur": "توبہ قبول کرنے والا",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.170",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[24] (Al-Khabīr)",
    "en": "The Aware, The All-Informed",
    "ur": "خبیر، ہر بات سے باخبر",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.171",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[25] (Dhul-Jalāli wal-Ikrām)",
    "en": "The Lord of Majesty and Bounty",
    "ur": "جلال اور اکرام والا رب",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.172",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[26] (Aḍ-Ḍārr)",
    "en": "The Distresser, The Corrector",
-   "ur": "(اپنی حکمت سے) تکلیف دینے والا، اصلاح کرنے والا",
-   "status": "draft"
+   "ur": "(اپنی حکمت سے) تکلیف پہنچانے والا، اصلاح کرنے والا",
+   "status": "reviewed-corrected (optional)"
   },
   {
    "id": "15.173",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[28] (Al-Ghanī)",
    "en": "The Rich, The Self-Sufficient",
    "ur": "غنی، بے نیاز",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.174",
    "loc": "src/lib/planetary/practice-hints.ts (CompactPracticeHint meaning)",
    "en": "O All-Knowing",
    "ur": "اے سب کچھ جاننے والے",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.175",
    "loc": "src/lib/planetary/practice-hints.ts (CompactPracticeHint meaning)",
    "en": "O Light",
    "ur": "اے نور",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.176",
    "loc": "src/lib/planetary/practice-hints.ts (CompactPracticeHint meaning)",
    "en": "O Most Loving",
    "ur": "اے بے حد محبت کرنے والے",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.177",
    "loc": "src/lib/planetary/practice-hints.ts (CompactPracticeHint meaning)",
    "en": "O Most Merciful",
    "ur": "اے نہایت رحم کرنے والے",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.178",
    "loc": "src/lib/planetary/practice-hints.ts (CompactPracticeHint meaning)",
    "en": "O Most Patient",
    "ur": "اے نہایت صبر والے",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.179",
    "loc": "src/lib/planetary/practice-hints.ts (CompactPracticeHint meaning)",
    "en": "O Most Strong",
    "ur": "اے نہایت قوت والے",
-   "status": "draft"
+   "status": "reviewed"
   },
   {
    "id": "15.180",
    "loc": "src/lib/planetary/practice-hints.ts (CompactPracticeHint meaning)",
    "en": "O Provider",
    "ur": "اے رزق دینے والے",
-   "status": "draft"
+   "status": "reviewed"
   }
  ]
 }
