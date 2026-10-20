@@ -6,7 +6,7 @@ Pages: `/ur`, `/ur/name-and-mother-burj`, `/ur/compatibility`, `/ur/abjad`, `/ur
 
 Every string was translated by hand (no machine translation), **except the AI-drafted result texts in section 5**, which were drafted by an AI assistant, are NOT native-reviewed and are listed there for the Language Reviewer. The mobile app (zaibaitech/asrar-mobile) has no Urdu, so nothing was reused. Qur'an and Divine Names stay in Arabic.
 
-**String count: 722** (14 SEO metadata, 161 page copy, 53 shared UI in TypeScript, 494 tool-UI catalog entries incl. 27 patterns). Not counted here: 896 AI-drafted result texts (section 5), which are not native-reviewed.
+**String count: 723** (14 SEO metadata, 161 page copy, 54 shared UI in TypeScript, 494 tool-UI catalog entries incl. 27 patterns). Not counted here: 896 AI-drafted result texts (section 5), which are not native-reviewed.
 
 Sources (edit there, then regenerate this file with `python3 scripts/i18n/ur/build_review.py`):
 
@@ -26,6 +26,13 @@ Sources (edit there, then regenerate this file with `python3 scripts/i18n/ur/bui
 6. Astro technical terms in the Ikhtiyārāt breakdown (محترق، خالی السیر، تحت الشعاع، ہبوط، وبال، رجعت، الطریقۃ المحترقۃ) follow classical Arabic/Persian usage; please confirm they are understood by Urdu readers.
 7. Urdu-typed names in the Abjad count: RESOLVED. Urdu letters are converted before counting (see the reviewer answers below, Q7).
 8. Soul-connection archetype meanings, burj career texts, per-date rule explanations (Simple mode), manzil descriptions and day guidance paragraphs are now AI-drafted (section 5, awaiting native review). Other result texts are still English (see “Still in English” at the end); the pages keep saying “ٹول کے کچھ حصے ابھی انگریزی میں ہیں۔”
+9. Glossary audit (Phase 2): «مغربی» is both “Maghribi” and “Western”, so the small “Western” gloss under the Maghribi button («مغربی ترتیب») repeats the label and does not tell an Urdu reader more; the same for «مشرقی ترتیب». The English UI repeats itself in the same way (“Maghribi / Western”), and the region is given by the note line. Options: keep as is; or shorten the gloss to «مغربی» / «مشرقی»; or gloss it with the region («شمالی افریقی» / «مشرقِ وسطیٰ و ایشیا»). Not changed.
+10. Glossary audit (Phase 2): the selector label “Maghribi System:” is «مغربی نظام:» but the same concept is «مغربی ترتیب» on the pages and in the FAQ (“Maghribi and Mashriqi orders”). Use one word everywhere (ترتیب = letter order, نظام = the whole system), or keep both because the English source uses both?
+11. Glossary audit (Phase 2): “connection” appears as «ربط» (“a supportive connection”, soul connection «روحانی ربط») and the classical Moon “Applying to” as «اتصال». Should the plain-language sentences about the Moon forming a connection with Jupiter/Venus use «اتصال» too, or stay in plain «ربط»?
+12. Glossary audit (Phase 2): “unfavourable” strength — «کم موافق» (“less favourable”) is used for mild cases; a few sadaqah lines about foods that “disrupt the element severely” use «غیر موافق». Keep the two strengths, or use one term?
+13. Glossary audit (Phase 2): “dignity” is «ذاتی قوت» in “Moon Essential Dignity” but «وقار / وقار کی حالت» in newer strings and «حالت» in “Check the Dignity”. Pick one term for the planetary-dignity concept (candidates: «ذاتی قوت», «وقار», «حالت»).
+14. Glossary audit (Phase 2): “conflict” is «جھگڑا» (label “Conflict”, “Unnecessary conflict”) but «تنازع» in compounds (“low-conflict”, “conflict resolution”). Intentional register split (quarrel vs state), or unify?
+15. Glossary audit (Phase 2): “auspicious” is «موافق» in some strings but «مناسب» / «موزوں» in the Ikhtiyārāt and Sadaqah page copy (“Choose an auspicious date…”). «موافق» is the glossary term for favourable; should “auspicious” always follow it?
 
 ### New strings for the Language Reviewer (0 pending)
 
@@ -202,6 +209,16 @@ Also in Arabic inside the Urdu copy: ﷺ (after نبی کریم), the example sp
 | Zodiac: Aries … Pisces | حمل، ثور، جوزا، سرطان، اسد، سنبلہ، میزان، عقرب، قوس، جدی، دلو، حوت |  |
 | Elements: fire, earth, air, water | آگ، مٹی، ہوا، پانی | Adjective once: ہوائی برج. |
 | Weekdays: Sunday … Saturday | اتوار، پیر، منگل، بدھ، جمعرات، جمعہ، ہفتہ |  |
+| favourable / less favourable (traditional) | موافق / کم موافق | Ikhtiyārāt and planetary-hour wording; “Auspicious” → موافق. “Unfavourable” is not a separate term in the app text (see open question on «غیر موافق»). |
+| supportive (hour, planet) | معاون | e.g. “a planetary hour traditionally seen as supportive” → معاون; “a supportive connection” → موافق ربط. |
+| Moon Applying to / Separating from | اتصال / انصراف (جدا ہونا) | Classical terms for the Moon moving toward / away from a planet. Do not use ربط for these two (ربط is the plain-language “connection”, see open question). |
+| aspect / hard aspect | نظر / سخت نظر |  |
+| benefic planet | سعد سیارہ | Used for Jupiter and Venus. The app has no “malefic” string yet; «نحس» is not used. |
+| elemental nature / temperament | عنصری مزاج | Element + مزاج: آتشی / زمینی / ہوائی / آبی مزاج. «فطرت» is not used for the four elements (فطرت keeps its ordinary meaning “inborn character”, e.g. “Your nature” in the Istikhāra result). Never the Arabic spellings «عنصري/عنصرية». |
+| friction / tension / strain / conflict | اختلاف / تناؤ / کشیدگی / تنازع / جھگڑا | اختلاف = friction or disagreement between people; تناؤ = tension; کشیدگی = strain; تنازع = conflict as a state or process (“low-conflict”, “conflict resolution”); جھگڑا = quarrel. «رگڑ» (physical rubbing) is never used for people. |
+| essential dignities: domicile, exaltation, detriment, fall | بیت، شرف، وبال، ہبوط | “Domicile/Exaltation” is «بیت/شرف»; «بیت الشرف» conflates the two and is not used. |
+| combust / retrograde | محترق / رجعت | Mercury retrograde → عطارد رجعت میں. |
+| Maghribi System vs Maghribi order | مغربی نظام / مغربی ترتیب | The Abjad selector says “System” → «نظام»; page copy says “order” → «ترتیب» (the letter order). Same concept, two source words; see open question. “Western” (the small gloss under the Maghribi button) is «مغربی ترتیب» and so repeats the label. |
 | Hijri (AH) | ہجری (ھ) |  |
 
 
@@ -491,6 +508,7 @@ Titles and descriptions (`urMetadata.ts`). The title gets “ | اسرار” ap
 | ur.ts nav.planetaryHours | Planetary Hours | ساعاتِ کواکب |
 | ur.ts nav.planetary | Planetary Alignment | کواکب کی ہم آہنگی |
 | ur.ts nav.about | About | تعارف |
+| ur.ts nav.aboutApp | About This App | اس ایپ کے بارے میں |
 | ur.ts nav.guidance | Life Guidance | زندگی کی رہنمائی |
 | ur.ts nav.advanced | Who Am I? | میں کون ہوں؟ |
 | ur.ts nav.menu | Menu | مینو |
