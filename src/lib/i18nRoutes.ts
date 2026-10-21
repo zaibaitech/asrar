@@ -97,13 +97,15 @@ export function arabicUrl(enPath: string): string | null {
   return null;
 }
 
-/** hreflang map (en, fr, ar when it exists, x-default -> en) for a localized page. */
+/** hreflang map (en, fr, ar when it exists, ur for the reviewed Urdu pages, x-default -> en) for a localized page. */
 export function hreflangLanguages(enPath: string): Record<string, string> {
   const ar = arabicUrl(enPath);
+  const ur = indexableUrduUrl(enPath);
   return {
     en: localizedUrl(enPath, 'en'),
     fr: localizedUrl(enPath, 'fr'),
     ...(ar ? { ar } : {}),
+    ...(ur ? { ur } : {}),
     'x-default': localizedUrl(enPath, 'en'),
   };
 }
@@ -164,10 +166,10 @@ export function arAppPath(enPath: string): string {
 /* Urdu (/ur/...), phase 1 — under native review.                            */
 /*                                                                           */
 /* Dedicated route files (app/ur/**) with Urdu copy around the unchanged     */
-/* tool component, like the /ar landing pages. Until the Urdu copy has been  */
-/* reviewed every /ur page is noindex and deliberately left OUT of the       */
-/* sitemap and of hreflang (hreflangLanguages / localeAlternates above do    */
-/* not know about Urdu).                                                     */
+/* tool component, like the /ar landing pages. Every /ur page is noindex and */
+/* out of the sitemap and hreflang, EXCEPT the allow-listed pages in         */
+/* INDEXABLE_UR_PATHS (only /ur/abjad), which are indexable, in the sitemap  */
+/* and paired with EN/FR/AR through hreflang `ur`.                           */
 /* ------------------------------------------------------------------------ */
 
 export const UR_PREFIX = '/ur';
@@ -190,7 +192,30 @@ export function stripUrPrefix(pathname: string): string | null {
   return null;
 }
 
-/** True for any URL under /ur (all of them noindex for now). */
+/** True for any URL under /ur. */
 export function isUrPath(pathname: string): boolean {
   return stripUrPrefix(pathname) !== null;
+}
+
+/**
+ * Indexable-Urdu allow-list (21 Oct 2026): EN paths whose Urdu page has passed the native review
+ * and is indexable, with hreflang `ur` both ways and a sitemap entry. Every other /ur page keeps
+ * the noindex default (layout metadata + X-Robots-Tag in middleware).
+ */
+export const INDEXABLE_UR_PATHS: readonly string[] = ['/abjad'];
+
+/** True when the EN path's Urdu page is on the allow-list. */
+export function isIndexableUrEnPath(enPath: string): boolean {
+  return INDEXABLE_UR_PATHS.includes(enPath) && enPath in UR_PATHS;
+}
+
+/** True for an allow-listed /ur URL ('/ur/abjad'); false for every other /ur URL. */
+export function isIndexableUrPath(pathname: string): boolean {
+  const en = stripUrPrefix(pathname);
+  return en !== null && isIndexableUrEnPath(en) && pathname.replace(/\/+$/, '') === UR_PATHS[en];
+}
+
+/** Absolute URL of the indexable Urdu page for an EN path, or null. */
+export function indexableUrduUrl(enPath: string): string | null {
+  return isIndexableUrEnPath(enPath) ? absoluteUrl(UR_PATHS[enPath]) : null;
 }

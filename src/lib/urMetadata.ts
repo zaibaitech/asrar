@@ -2,13 +2,14 @@
  * Urdu titles and descriptions for the /ur pages (phase 1), hand-translated,
  * with their English source for the native review (docs/i18n/ur-review.md).
  *
- * All /ur pages are noindex for now and have NO hreflang alternates and no
- * sitemap entry: the canonical is the page itself, nothing links Urdu into the
- * EN/FR/AR hreflang sets until the Urdu copy has been reviewed.
+ * /ur pages are noindex with NO hreflang alternates and no sitemap entry (the
+ * canonical is the page itself), except the reviewed pages on the allow-list
+ * (INDEXABLE_UR_PATHS in i18nRoutes.ts: /ur/abjad only), which are indexable and
+ * carry the full EN/FR/AR/UR hreflang set.
  */
 import type { Metadata } from 'next';
 import { absoluteUrl } from './siteRoutes';
-import { UR_PATHS } from './i18nRoutes';
+import { UR_PATHS, hreflangLanguages, isIndexableUrEnPath } from './i18nRoutes';
 import { ogImageUrl, ogKeyForPath, OG_SIZE } from './og/urls';
 
 export interface UrMeta {
@@ -91,8 +92,9 @@ export const UR_META: Readonly<Record<string, UrMeta>> = {
 };
 
 /**
- * Metadata for a /ur page: Urdu title and description, noindex, self
- * canonical and no hreflang languages. The share card is the page's existing
+ * Metadata for a /ur page: Urdu title and description, self canonical. Noindex
+ * and no hreflang languages, unless the page is on the indexable allow-list
+ * (then index, follow and the hreflang set, overriding the /ur layout's noindex). The share card is the page's existing
  * (Latin-script) card: the OG renderer cannot shape Urdu text.
  */
 export function urduMetadata(enPath: string): Metadata {
@@ -107,8 +109,8 @@ export function urduMetadata(enPath: string): Metadata {
   return {
     title: { absolute: enPath === '/' ? title : `${title} | اسرار` },
     description,
-    robots: { index: false, follow: true },
-    alternates: { canonical: url },
+    robots: { index: isIndexableUrEnPath(enPath), follow: true },
+    alternates: isIndexableUrEnPath(enPath) ? { canonical: url, languages: hreflangLanguages(enPath) } : { canonical: url },
     openGraph: {
       type: 'website',
       url,

@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { PUBLIC_TOOLS, absoluteUrl } from '../src/lib/siteRoutes';
 import { COMMON_NAMES } from '../src/lib/names/commonNames';
 import { NAME_PAGE_PATHS } from '../src/lib/names/seo';
-import { LOCALIZED_PATHS, arabicUrl, hreflangLanguages, localizedUrl } from '../src/lib/i18nRoutes';
+import { LOCALIZED_PATHS, arabicUrl, hreflangLanguages, indexableUrduUrl, localizedUrl } from '../src/lib/i18nRoutes';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entry = (path: string, priority: number) => {
@@ -12,11 +12,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // EN URL, its /fr mirror (and /ar page if any), each listing all as hreflang alternates.
     const alternates = { languages: hreflangLanguages(path) };
     const ar = arabicUrl(path);
+    const ur = indexableUrduUrl(path); // reviewed Urdu page on the allow-list (/ur/abjad only)
     return [
       { url: localizedUrl(path, 'en'), ...base, alternates },
       { url: localizedUrl(path, 'fr'), ...base, alternates },
       // Arabic version: dedicated landing page (AR_PATHS) or the /ar app mirror.
       ...(ar ? [{ url: ar, ...base, alternates }] : []),
+      ...(ur ? [{ url: ur, ...base, alternates }] : []),
     ];
   };
 

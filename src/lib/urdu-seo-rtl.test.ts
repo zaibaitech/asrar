@@ -26,14 +26,20 @@ function pages(dir: string, out: string[] = []): string[] {
   return out;
 }
 
-describe('/ur stays out of the sitemap, robots.txt and hreflang', () => {
-  it('the generated sitemap lists no /ur URL and no Urdu alternate', () => {
+describe('/ur stays out of the sitemap, robots.txt and hreflang, except the allow-listed /ur/abjad', () => {
+  it('the generated sitemap lists /ur/abjad (with alternates) and no other /ur URL', () => {
     const entries = sitemap();
     expect(entries.length).toBeGreaterThan(20);
-    const text = JSON.stringify(entries);
-    expect(text).not.toMatch(/\/ur(\/|")/);
-    expect(text).not.toMatch(/"ur"/);
-    expect(text).not.toMatch(/hreflang.*ur/i);
+    const urUrls = entries.map((e) => e.url).filter((u) => /\/ur(\/|$)/.test(u));
+    expect(urUrls).toEqual(['https://www.asrar.app/ur/abjad']);
+    const abjadSet = ['https://www.asrar.app/abjad', 'https://www.asrar.app/fr/abjad', 'https://www.asrar.app/ar/abjad', 'https://www.asrar.app/ur/abjad'];
+    for (const u of abjadSet) {
+      const e = entries.find((x) => x.url === u)!;
+      expect(e, u).toBeDefined();
+      expect(e.alternates?.languages, u).toEqual({ en: abjadSet[0], fr: abjadSet[1], ar: abjadSet[2], ur: abjadSet[3], 'x-default': abjadSet[0] });
+    }
+    const others = entries.filter((e) => !abjadSet.includes(e.url));
+    expect(JSON.stringify(others)).not.toMatch(/\/ur(\/|")|"ur"/);
   });
 
   it('robots.txt does not mention /ur (it stays crawlable so the noindex tag can be seen) and has no Urdu sitemap', () => {
@@ -44,16 +50,22 @@ describe('/ur stays out of the sitemap, robots.txt and hreflang', () => {
     expect(r.sitemap).toMatch(/sitemap\.xml$/);
   });
 
-  it('no English/French/Arabic page lists an Urdu alternate, for any localized tool path', () => {
+  it('no English/French/Arabic page lists an Urdu alternate, for any localized tool path except /abjad', () => {
     const paths = [...new Set([...LOCALIZED_PATHS, ...PUBLIC_TOOLS.map((t) => t.path), ...Object.keys(UR_PATHS)])];
     for (const p of paths) {
       const alt = JSON.stringify([hreflangLanguages(p), localeAlternates(p, 'en'), localeAlternates(p, 'fr'), localeAlternates(p, 'ar')]);
-      expect(alt, p).not.toMatch(/\/ur(\/|")|"ur"/);
+      if (p === '/abjad') {
+        for (const l of ['en', 'fr', 'ar'] as const) expect(localeAlternates(p, l).languages.ur, l).toBe('https://www.asrar.app/ur/abjad');
+      } else expect(alt, p).not.toMatch(/\/ur(\/|")|"ur"/);
     }
+  });
+
+  it('the English /abjad page links to /ur/abjad with a crawlable <a href hrefLang="ur">', () => {
+    expect(read('app/(site)/abjad/page.tsx')).toMatch(/<a href=\{UR_PATHS\['\/abjad'\]\} hrefLang="ur"/);
   });
 });
 
-describe('/ur is noindex everywhere', () => {
+describe('/ur is noindex everywhere except /ur/abjad', () => {
   it('every page file under app/(ur)/ur declares the noindex metadata through urduMetadata()', () => {
     const files = pages(path.join(root, 'app/(ur)/ur'));
     expect(files.length).toBe(Object.keys(UR_PATHS).length); // one page file per mapped Urdu page (7)
@@ -66,8 +78,12 @@ describe('/ur is noindex everywhere', () => {
     expect(src).toMatch(/lang="ur"\s+dir="rtl"/);
   });
 
-  it('the middleware sends X-Robots-Tag: noindex on /ur and /ur/<page>, and not on the English pages', async () => {
-    for (const p of ['/ur', '/ur/abjad', '/ur/ikhtiyarat', '/ur/name-and-mother-burj']) {
+  it('the middleware sends X-Robots-Tag: noindex on /ur and /ur/<page> except /ur/abjad, and not on the English pages', async () => {
+    for (const p of ['/ur/abjad', '/ur/abjad/']) {
+      const res = await middleware(new NextRequest(`https://asrar.app${p}`));
+      expect(res.headers.get('x-robots-tag'), p).toBeNull();
+    }
+    for (const p of ['/ur', '/ur/', '/ur/compatibility', '/ur/planetary-hours', '/ur/planet-of-the-day', '/ur/ikhtiyarat', '/ur/name-and-mother-burj', '/ur/abjad/x', '/ur/manazil']) {
       expect(isUrPath(p)).toBe(true);
       const res = await middleware(new NextRequest(`https://asrar.app${p}`));
       expect(res.headers.get('x-robots-tag'), p).toMatch(/noindex/);
