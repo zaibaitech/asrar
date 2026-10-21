@@ -1,5 +1,5 @@
 {
- "about": "Review status of the Urdu (/ur) strings. Sheet 2 = /workspace review file asrar-ur-review-2.md (2,336 rows), all reviewed by the native Language Reviewer (Oct 2026). reviewed-corrected: correction applied; reviewed: confirmed as is; reviewed-kept: reviewer suggestion not applied on purpose (see note); reviewed-flagged: left for Mario / the source owner. Batch 13 (/ur/abjad calculator UI, src/features/calculator/i18n/ur.ts) and Batch 14 (burujData.json practice nights) were reviewed in pass 3. Batch 15 (calculator result data and practice-hint meanings) was reviewed in pass 4; pass3_reviewer_data are the reviewer-written result-data strings (reviewed). Source fixes approved by Mario on 21 Oct 2026 (option A) moved reviewed Urdu to the new English keys; 6 keys whose meaning changed got new Urdu drafts (status draft) — see source_fixes_2026_10_21. Batch 16 (pass 5, 21 Oct 2026): the Language Reviewer checked the PR #101 source-fix strings; the 6 drafts are now reviewed (S2 and F3b corrected), P1–P11 and 5.178/5.207 corrected.",
+ "about": "Review status of the Urdu (/ur) strings. Sheet 2 = /workspace review file asrar-ur-review-2.md (2,336 rows), all reviewed by the native Language Reviewer (Oct 2026). reviewed-corrected: correction applied; reviewed: confirmed as is; reviewed-kept: reviewer suggestion not applied on purpose (see note); reviewed-flagged: left for Mario / the source owner. Batch 13 (/ur/abjad calculator UI, src/features/calculator/i18n/ur.ts) and Batch 14 (burujData.json practice nights) were reviewed in pass 3. Batch 15 (calculator result data and practice-hint meanings) was reviewed in pass 4; pass3_reviewer_data are the reviewer-written result-data strings (reviewed). Source fixes approved by Mario on 21 Oct 2026 (option A) moved reviewed Urdu to the new English keys; 6 keys whose meaning changed got new Urdu drafts (status draft) — see source_fixes_2026_10_21. Batch 16 (pass 5, 21 Oct 2026): the Language Reviewer checked the PR #101 source-fix strings; the 6 drafts are now reviewed (S2 and F3b corrected), P1–P11 and 5.178/5.207 corrected. Sheet 3 (asrar-ur-review-3.md, the 838 catalog_ai_draft.py strings): Batches 17–19 (299 rows) reviewed in pass 6 (48 corrections + 20 optional applied); Batches 20–25 (539 rows) still AI drafts.",
  "counts": {
   "sheet2": {
    "reviewed-corrected": 415,
@@ -28,6 +28,11 @@
    "fix": 12,
    "optional_applied": 3,
    "ok_marked_reviewed": 5
+  },
+  "sheet3_pass6": {
+   "reviewed": 231,
+   "reviewed-corrected": 48,
+   "reviewed-corrected (optional)": 20
   }
  },
  "sheet2": {
@@ -14881,6 +14886,2101 @@
    "ur": "رات کا آخری حصہ / تہجد",
    "status": "reviewed",
    "note": "Written by the Language Reviewer (pass 4, Q3)."
+  }
+ ],
+ "sheet3": [
+  {
+   "id": "17.1",
+   "loc": "catalog_ai_draft.py:27 [career-ui]",
+   "en": "Traditional Islamic Guidance",
+   "ur": "روایتی اسلامی رہنمائی",
+   "status": "reviewed"
+  },
+  {
+   "id": "17.2",
+   "loc": "catalog_ai_draft.py:37 [career-ui]",
+   "en": "These industries may not align optimally with your spiritual energy. While not forbidden, they may present more challenges or require extra effort.",
+   "ur": "ممکن ہے یہ صنعتیں آپ کی روحانی توانائی سے پوری طرح ہم آہنگ نہ ہوں۔ یہ ممنوع نہیں ہیں، مگر ان میں زیادہ مشکلات پیش آ سکتی ہیں یا اضافی محنت درکار ہو سکتی ہے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "17.3",
+   "loc": "catalog_ai_draft.py:69 [rules]",
+   "en": "This falls on Friday — the day most recommended in Islamic tradition for this occasion.",
+   "ur": "یہ جمعہ کا دن ہے — اسلامی روایت میں اس موقع کے لیے سب سے زیادہ پسندیدہ دن۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "17.4",
+   "loc": "catalog_ai_draft.py:84 [rules]",
+   "en": "This is an early-morning departure — the Prophet ﷺ asked Allah to bless the early mornings of his ummah.",
+   "ur": "یہ صبح سویرے کی روانگی ہے — نبی کریم ﷺ نے اپنی امت کے لیے صبح سویرے کے اوقات میں برکت کی دعا فرمائی۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "17.5",
+   "loc": "catalog_ai_draft.py:138 [arch]",
+   "en": "Shared spiritual goals, regular renewal practices, gratitude, and acts of charity (sadaqah) together.",
+   "ur": "مشترکہ روحانی مقاصد، تجدید کے باقاعدہ معمولات، شکرگزاری، اور مل کر صدقہ و خیرات۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "17.6",
+   "loc": "catalog_ai_draft.py:200 [arch]",
+   "en": "Blessed",
+   "ur": "مبارک",
+   "status": "reviewed"
+  },
+  {
+   "id": "17.7",
+   "loc": "catalog_ai_draft.py:203 [arch]",
+   "en": "The Blessed Path",
+   "ur": "مبارک راستہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "17.8",
+   "loc": "catalog_ai_draft.py:204 [arch]",
+   "en": "Traditionally blessed; harmony and growth",
+   "ur": "روایتی طور پر مبارک؛ ہم آہنگی اور ترقی",
+   "status": "reviewed"
+  },
+  {
+   "id": "17.9",
+   "loc": "catalog_ai_draft.py:205 [arch]",
+   "en": "Distraction from blessings, excess in comfort, and taking abundance for granted.",
+   "ur": "نعمتوں میں مشغول ہو کر غافل ہو جانا، آسائش میں حد سے بڑھ جانا، اور فراوانی کو معمولی سمجھ لینا۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "17.10",
+   "loc": "catalog_ai_draft.py:206 [arch]",
+   "en": "Gratitude practices, structured spiritual life together, and using blessings to support others.",
+   "ur": "شکرگزاری کے معمولات، مل کر منظم روحانی زندگی، اور نعمتوں کو دوسروں کی مدد کے لیے استعمال کرنا۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "17.11",
+   "loc": "catalog_ai_draft.py:207 [arch]",
+   "en": "Traditionally considered very favorable — blessing, natural harmony, and growth tend to flow more easily.",
+   "ur": "روایتی طور پر بہت موافق سمجھا جاتا ہے — برکت، فطری ہم آہنگی اور ترقی عموماً زیادہ آسانی سے میسر آتی ہیں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "17.12",
+   "loc": "catalog_ai_draft.py:208 [arch]",
+   "en": "Traditionally considered very favorable for marriage. Associated with blessing, natural harmony, children, and spiritual growth.",
+   "ur": "شادی کے لیے روایتی طور پر بہت موافق سمجھا جاتا ہے۔ برکت، فطری ہم آہنگی، اولاد اور روحانی ترقی سے منسوب۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "17.13",
+   "loc": "catalog_ai_draft.py:212 [arch]",
+   "en": "This connection is traditionally favorable — harmony, growth, and ease tend to flow naturally between the two. Gratitude keeps the blessing from being taken for granted.",
+   "ur": "یہ تعلق روایتی طور پر موافق سمجھا جاتا ہے — دونوں کے درمیان ہم آہنگی، ترقی اور آسانی عموماً فطری طور پر پیدا ہوتی ہیں۔ شکرگزاری اس نعمت کو معمولی سمجھے جانے سے بچاتی ہے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "17.14",
+   "loc": "catalog_ai_draft.py:213 [arch]",
+   "en": "Marriage is traditionally blessed. Harmony, children, and shared spiritual life are often supported. Guard against excess and distraction.",
+   "ur": "شادی روایتی طور پر مبارک سمجھی جاتی ہے۔ ہم آہنگی، اولاد اور مشترکہ روحانی زندگی کو اکثر سہارا ملتا ہے۔ حد سے بڑھنے اور غفلت سے بچیں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "17.15",
+   "loc": "catalog_ai_draft.py:214 [arch]",
+   "en": "A genuinely blessed friendship — trust, ease, and mutual growth come naturally. Keep showing up for each other so the bond doesn't drift into complacency.",
+   "ur": "حقیقی معنوں میں ایک بابرکت دوستی — اعتماد، آسانی اور باہمی ترقی عموماً فطری طور پر آتی ہے۔ ایک دوسرے کے لیے موجود رہیں تاکہ رشتے میں بے پروائی نہ آ جائے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "17.16",
+   "loc": "catalog_ai_draft.py:215 [arch]",
+   "en": "Family ties here tend to be a source of real blessing — warmth, support, and shared growth. Nurture the bond actively rather than assuming it as given.",
+   "ur": "یہاں خاندانی رشتے اکثر حقیقی برکت کا ذریعہ بنتے ہیں — گرم جوشی، سہارا اور مشترکہ ترقی۔ رشتے کو بنا بنایا سمجھنے کے بجائے اس کی مسلسل آبیاری کریں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "17.17",
+   "loc": "catalog_ai_draft.py:223 [arch]",
+   "en": "Conflict resolution skills, self-work (especially anger and ego), forgiveness practices, and regular spiritual remembrance (dhikr).",
+   "ur": "تنازع حل کرنے کی مہارتیں، اپنی اصلاح (خاص طور پر غصے اور انا کے معاملے میں)، معاف کرنے کی عادت، اور باقاعدہ ذکرِ الٰہی۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "17.18",
+   "loc": "catalog_ai_draft.py:237 [arch]",
+   "en": "Traditionally best; blessings after obstacles",
+   "ur": "روایتی طور پر بہترین؛ رکاوٹوں کے بعد برکتیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "17.19",
+   "loc": "catalog_ai_draft.py:238 [arch]",
+   "en": "Pride in the blessing, external interference early on, and assuming ease means no effort is needed.",
+   "ur": "نعمت پر غرور، شروع میں بیرونی مداخلت، اور یہ سمجھ لینا کہ آسانی کا مطلب ہے کہ کوشش کی ضرورت نہیں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "17.20",
+   "loc": "catalog_ai_draft.py:239 [arch]",
+   "en": "Humility, trust in divine timing, gratitude, and alignment in spiritual values.",
+   "ur": "عاجزی، اللہ کی حکمت اور اس کے مقرر کیے ہوئے وقت پر بھروسا، شکرگزاری، اور روحانی اقدار میں ہم آہنگی۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "17.21",
+   "loc": "catalog_ai_draft.py:240 [arch]",
+   "en": "Traditionally considered the most favorable of all patterns — early obstacles often give way to strong blessings and alignment.",
+   "ur": "روایتی طور پر تمام صورتوں میں سب سے زیادہ موافق سمجھا جاتا ہے — ابتدائی رکاوٹوں کے بعد اکثر بھرپور برکت اور ہم آہنگی حاصل ہوتی ہے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "17.22",
+   "loc": "catalog_ai_draft.py:241 [arch]",
+   "en": "Traditionally considered the most favorable for marriage. May face obstacles early on, but strong blessings and alignment often follow.",
+   "ur": "شادی کے لیے روایتی طور پر سب سے زیادہ موافق سمجھا جاتا ہے۔ شروع میں رکاوٹیں آ سکتی ہیں، مگر اس کے بعد اکثر بھرپور برکت اور ہم آہنگی حاصل ہوتی ہے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "17.23",
+   "loc": "catalog_ai_draft.py:246 [arch]",
+   "en": "Marriage is traditionally highly blessed. Challenges before union often make the bond stronger. This path carries spiritual favor.",
+   "ur": "شادی روایتی طور پر بہت مبارک سمجھی جاتی ہے۔ نکاح سے پہلے کی مشکلات اکثر رشتے کو مضبوط بناتی ہیں۔ روایت میں اس راستے کو روحانی فضل کا حامل سمجھا جاتا ہے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "17.24",
+   "loc": "catalog_ai_draft.py:574 [career]",
+   "en": "Fast-casual dining concepts",
+   "ur": "فوری سروس والے ریستوران",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "17.25",
+   "loc": "catalog_ai_draft.py:664 [career]",
+   "en": "Fish and seafood trading, fashion and clothing business, earth-based products (blessed despite being water element)",
+   "ur": "مچھلی اور سمندری خوراک کی تجارت، فیشن اور ملبوسات کا کاروبار، زمینی مصنوعات (پانی کے عنصر کے باوجود بابرکت)",
+   "status": "reviewed"
+  },
+  {
+   "id": "17.26",
+   "loc": "catalog_ai_draft.py:694 [career]",
+   "en": "Earth Products (Blessed)",
+   "ur": "زمینی مصنوعات (بابرکت)",
+   "status": "reviewed"
+  },
+  {
+   "id": "17.27",
+   "loc": "catalog_ai_draft.py:828 [career]",
+   "en": "Religious scholarship",
+   "ur": "دینی علم و تحقیق",
+   "status": "reviewed"
+  },
+  {
+   "id": "17.28",
+   "loc": "catalog_ai_draft.py:896 [career]",
+   "en": "Islamic education",
+   "ur": "اسلامی تعلیم",
+   "status": "reviewed"
+  },
+  {
+   "id": "17.29",
+   "loc": "catalog_ai_draft.py:905 [career]",
+   "en": "Service & Charity",
+   "ur": "خدمت اور خیرات",
+   "status": "reviewed"
+  },
+  {
+   "id": "17.30",
+   "loc": "catalog_ai_draft.py:906 [career]",
+   "en": "Charity work",
+   "ur": "خیراتی کام",
+   "status": "reviewed"
+  },
+  {
+   "id": "17.31",
+   "loc": "catalog_ai_draft.py:915 [potd]",
+   "en": "Wednesday is the day of the scholar and the merchant. Ideal for studying, writing, signing contracts, teaching, and all forms of communication. Engage the mind — read, research, debate. Mercury rewards precision and clarity. This is also an excellent day for Zikr that involves recitation (tilāwah).",
+   "ur": "بدھ عالم اور تاجر کا دن ہے، اور روایت میں اسے عطارد سے منسوب کیا جاتا ہے۔ یہ دن مطالعہ، تحریر، معاہدوں پر دستخط، تدریس اور ہر طرح کی گفتگو کے لیے موزوں سمجھا جاتا ہے۔ ذہن کو مشغول رکھیں — پڑھیں، تحقیق کریں، مباحثہ کریں۔ اس دن درستی اور وضاحت کو اپنا شعار بنائیں۔ روایت میں یہ دن تلاوت پر مشتمل ذکر کے لیے بھی موزوں سمجھا جاتا ہے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "17.32",
+   "loc": "catalog_ai_draft.py:916 [potd]",
+   "en": "Thursday is the most blessed day for spiritual elevation, wealth-seeking, and expansion. Make du'ā' for rizq (sustenance). Begin long-term projects. Seek knowledge, visit scholars, and perform generous acts of sadaqah. Thursday night (eve of Friday) is especially blessed — use it for extra worship.",
+   "ur": "روایت میں جمعرات روحانی بلندی، رزق کی طلب اور وسعت کے لیے خاص طور پر بابرکت سمجھی جاتی ہے۔ رزق کے لیے دعا کریں۔ طویل مدتی منصوبے شروع کریں۔ علم حاصل کریں، اہلِ علم سے ملیں، اور فراخ دلی سے صدقہ کریں۔ جمعرات اور جمعہ کی درمیانی رات (شبِ جمعہ) خاص طور پر بابرکت سمجھی جاتی ہے — اسے اضافی عبادت میں گزاریں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "17.33",
+   "loc": "catalog_ai_draft.py:917 [potd]",
+   "en": "Friday is the most sacred day in Islam (Yawm al-Jum'ah). Venus and Friday align in beauty, community, and gratitude. Attend Jumu'ah, send abundant Ṣalawāt upon the Prophet ﷺ, and perform acts of beauty (charity, kind words, reconciliation). It is a day for love, forgiveness, and peace.",
+   "ur": "جمعہ اسلام میں سب سے افضل دن ہے (یومُ الجمعہ)۔ روایتی علمِ نجوم اسے زہرہ سے منسوب کرتا ہے، جو حسن، اجتماع اور شکرگزاری کی علامت ہے۔ جمعہ کی نماز میں شریک ہوں، نبی کریم ﷺ پر کثرت سے درود شریف پڑھیں، اور حسنِ عمل (صدقہ، نرم گفتگو، صلح) اختیار کریں۔ یہ محبت، معافی اور سکون کا دن ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.1",
+   "loc": "catalog_ai_draft.py:280 [manzil]",
+   "en": "The Two Signs",
+   "ur": "دو نشان",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.2",
+   "loc": "catalog_ai_draft.py:281 [manzil]",
+   "en": "New Beginnings, Initiative",
+   "ur": "نئے آغاز، پہل",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.3",
+   "loc": "catalog_ai_draft.py:282 [manzil]",
+   "en": "Starting fresh with courage and trust in Allah",
+   "ur": "ہمت اور اللہ پر بھروسے کے ساتھ نئے سرے سے آغاز",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.4",
+   "loc": "catalog_ai_draft.py:283 [manzil]",
+   "en": "New ventures",
+   "ur": "نئے کام",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.5",
+   "loc": "catalog_ai_draft.py:284 [manzil]",
+   "en": "Medical treatment",
+   "ur": "طبی علاج (معالج کے مشورے سے)",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "18.6",
+   "loc": "catalog_ai_draft.py:285 [manzil]",
+   "en": "Loans",
+   "ur": "قرض",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.7",
+   "loc": "catalog_ai_draft.py:286 [manzil]",
+   "en": "Partnerships with strangers",
+   "ur": "اجنبیوں کے ساتھ شراکت",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.8",
+   "loc": "catalog_ai_draft.py:287 [manzil]",
+   "en": "Beginnings invite intention (niyyah) and remembrance — the Moon’s stations are signs, not decrees.",
+   "ur": "آغاز نیت اور ذکر کا تقاضا کرتا ہے — قمر کی منازل نشانیاں ہیں، فیصلے نہیں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.9",
+   "loc": "catalog_ai_draft.py:288 [manzil]",
+   "en": "Educational reflection (Qurʾān 10:5)",
+   "ur": "تعلیمی غور و فکر (قرآن 10:5)",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.10",
+   "loc": "catalog_ai_draft.py:289 [manzil]",
+   "en": "The Little Belly",
+   "ur": "چھوٹا پیٹ",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.11",
+   "loc": "catalog_ai_draft.py:290 [manzil]",
+   "en": "Nourishment, Growth",
+   "ur": "غذا، نشوونما",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.12",
+   "loc": "catalog_ai_draft.py:291 [manzil]",
+   "en": "Cultivating inner strength and spiritual nourishment",
+   "ur": "باطنی قوت اور روحانی غذا کی پرورش",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.13",
+   "loc": "catalog_ai_draft.py:292 [manzil]",
+   "en": "Building",
+   "ur": "تعمیر",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.14",
+   "loc": "catalog_ai_draft.py:293 [manzil]",
+   "en": "Planting",
+   "ur": "کاشت",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.15",
+   "loc": "catalog_ai_draft.py:294 [manzil]",
+   "en": "Business ventures",
+   "ur": "کاروباری منصوبے",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.16",
+   "loc": "catalog_ai_draft.py:295 [manzil]",
+   "en": "Seeking knowledge",
+   "ur": "علم کی طلب",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.17",
+   "loc": "catalog_ai_draft.py:296 [manzil]",
+   "en": "Sea travel",
+   "ur": "بحری سفر",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.18",
+   "loc": "catalog_ai_draft.py:297 [manzil]",
+   "en": "Hasty decisions",
+   "ur": "عجلت میں کیے گئے فیصلے",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "18.19",
+   "loc": "catalog_ai_draft.py:298 [manzil]",
+   "en": "As the body needs nourishment, the heart needs what draws it nearer to Allah.",
+   "ur": "جیسے جسم کو غذا چاہیے، دل کو وہ چاہیے جو اسے اللہ کے قریب کرے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.20",
+   "loc": "catalog_ai_draft.py:299 [manzil]",
+   "en": "Educational reflection (anwāʾ theme)",
+   "ur": "تعلیمی غور و فکر (انواء کا موضوع)",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.21",
+   "loc": "catalog_ai_draft.py:300 [manzil]",
+   "en": "The Pleiades",
+   "ur": "ثریا",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.22",
+   "loc": "catalog_ai_draft.py:301 [manzil]",
+   "en": "Beauty, Abundance, Gathering",
+   "ur": "حسن، فراوانی، اجتماع",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.23",
+   "loc": "catalog_ai_draft.py:302 [manzil]",
+   "en": "Appreciating divine beauty in creation and community",
+   "ur": "تخلیق اور معاشرے میں اللہ کے حسن کی قدردانی",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.24",
+   "loc": "catalog_ai_draft.py:303 [manzil]",
+   "en": "Gatherings",
+   "ur": "اجتماعات",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.25",
+   "loc": "catalog_ai_draft.py:304 [manzil]",
+   "en": "Reconciliation",
+   "ur": "مصالحت",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.26",
+   "loc": "catalog_ai_draft.py:305 [manzil]",
+   "en": "Art and beauty",
+   "ur": "فن اور حسن",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.27",
+   "loc": "catalog_ai_draft.py:306 [manzil]",
+   "en": "Separation",
+   "ur": "جدائی",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.28",
+   "loc": "catalog_ai_draft.py:307 [manzil]",
+   "en": "Conflict",
+   "ur": "جھگڑا",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.29",
+   "loc": "catalog_ai_draft.py:308 [manzil]",
+   "en": "Harsh speech",
+   "ur": "سخت کلامی",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.30",
+   "loc": "catalog_ai_draft.py:310 [manzil]",
+   "en": "Educational reflection (anwāʾ / Al-Bīrūnī tradition of naming)",
+   "ur": "تعلیمی غور و فکر (انواء / البیرونی کے ہاں ناموں کی روایت)",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "18.31",
+   "loc": "catalog_ai_draft.py:311 [manzil]",
+   "en": "The Follower",
+   "ur": "پیچھے آنے والا",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.32",
+   "loc": "catalog_ai_draft.py:312 [manzil]",
+   "en": "Loyalty, Persistence, Following Truth",
+   "ur": "وفاداری، استقامت، حق کی پیروی",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.33",
+   "loc": "catalog_ai_draft.py:313 [manzil]",
+   "en": "Following the prophetic example with steadfastness",
+   "ur": "ثابت قدمی کے ساتھ سنتِ نبوی ﷺ کی پیروی",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "18.34",
+   "loc": "catalog_ai_draft.py:314 [manzil]",
+   "en": "Alliances",
+   "ur": "اتحاد",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.35",
+   "loc": "catalog_ai_draft.py:315 [manzil]",
+   "en": "Long-term projects",
+   "ur": "طویل مدتی منصوبے",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.36",
+   "loc": "catalog_ai_draft.py:316 [manzil]",
+   "en": "Seeking teachers",
+   "ur": "اساتذہ کی تلاش",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.37",
+   "loc": "catalog_ai_draft.py:317 [manzil]",
+   "en": "Study",
+   "ur": "مطالعہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.38",
+   "loc": "catalog_ai_draft.py:318 [manzil]",
+   "en": "Breaking commitments",
+   "ur": "عہد توڑنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.39",
+   "loc": "catalog_ai_draft.py:320 [manzil]",
+   "en": "Al-Dabarān “follows” Thurayyā across the sky — a picture of steadfast following, not blind haste.",
+   "ur": "الدبران آسمان میں ثریا کے «پیچھے چلتا» ہے — یہ ثابت قدم پیروی کی تصویر ہے، اندھی جلد بازی کی نہیں۔",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "18.40",
+   "loc": "catalog_ai_draft.py:321 [manzil]",
+   "en": "Educational reflection (star-name lore)",
+   "ur": "تعلیمی غور و فکر (ستاروں کے ناموں کی روایت)",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.41",
+   "loc": "catalog_ai_draft.py:322 [manzil]",
+   "en": "The White Spot",
+   "ur": "سفید نشان",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.42",
+   "loc": "catalog_ai_draft.py:323 [manzil]",
+   "en": "Clarity, Purification, Truth",
+   "ur": "وضاحت، تزکیہ، سچائی",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.43",
+   "loc": "catalog_ai_draft.py:324 [manzil]",
+   "en": "Seeking clarity and purifying intentions",
+   "ur": "وضاحت کی طلب اور نیتوں کو خالص کرنا",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "18.44",
+   "loc": "catalog_ai_draft.py:325 [manzil]",
+   "en": "Spiritual purification",
+   "ur": "روحانی تزکیہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.45",
+   "loc": "catalog_ai_draft.py:326 [manzil]",
+   "en": "Learning",
+   "ur": "سیکھنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.46",
+   "loc": "catalog_ai_draft.py:327 [manzil]",
+   "en": "Communication",
+   "ur": "گفتگو",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.47",
+   "loc": "catalog_ai_draft.py:328 [manzil]",
+   "en": "Writing",
+   "ur": "تحریر",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.48",
+   "loc": "catalog_ai_draft.py:329 [manzil]",
+   "en": "Deception",
+   "ur": "دھوکا",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.49",
+   "loc": "catalog_ai_draft.py:330 [manzil]",
+   "en": "Unclear contracts",
+   "ur": "غیر واضح معاہدے",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.50",
+   "loc": "catalog_ai_draft.py:331 [manzil]",
+   "en": "Confusion",
+   "ur": "الجھن",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.51",
+   "loc": "catalog_ai_draft.py:333 [manzil]",
+   "en": "Educational reflection",
+   "ur": "تعلیمی غور و فکر",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.52",
+   "loc": "catalog_ai_draft.py:335 [manzil]",
+   "en": "Marking, Identity, Recognition",
+   "ur": "نشان، شناخت، پہچان",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.53",
+   "loc": "catalog_ai_draft.py:336 [manzil]",
+   "en": "Recognizing one's unique spiritual purpose and calling",
+   "ur": "اپنے منفرد روحانی مقصد اور ذمہ داری کو پہچاننا",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "18.54",
+   "loc": "catalog_ai_draft.py:337 [manzil]",
+   "en": "Establishing identity",
+   "ur": "شناخت قائم کرنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.55",
+   "loc": "catalog_ai_draft.py:338 [manzil]",
+   "en": "Clear naming",
+   "ur": "واضح نام رکھنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.56",
+   "loc": "catalog_ai_draft.py:339 [manzil]",
+   "en": "Public speaking",
+   "ur": "عوامی خطاب",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.57",
+   "loc": "catalog_ai_draft.py:340 [manzil]",
+   "en": "Contracts",
+   "ur": "معاہدے",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.58",
+   "loc": "catalog_ai_draft.py:341 [manzil]",
+   "en": "Anonymity",
+   "ur": "گمنامی",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.59",
+   "loc": "catalog_ai_draft.py:342 [manzil]",
+   "en": "Hiding truth",
+   "ur": "حق چھپانا",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.60",
+   "loc": "catalog_ai_draft.py:343 [manzil]",
+   "en": "Dishonesty",
+   "ur": "بے ایمانی",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.61",
+   "loc": "catalog_ai_draft.py:344 [manzil]",
+   "en": "Names and marks in the old star calendar were for recognition — know yourself before Allah, not for show.",
+   "ur": "ستاروں کی قدیم تقویم میں نام اور نشان پہچان کے لیے تھے — اللہ کے حضور اپنی پہچان کریں، دکھاوے کے لیے نہیں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "18.62",
+   "loc": "catalog_ai_draft.py:345 [manzil]",
+   "en": "The Forearm",
+   "ur": "بازو",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.63",
+   "loc": "catalog_ai_draft.py:346 [manzil]",
+   "en": "Reach, Extension, Generosity",
+   "ur": "رسائی، وسعت، سخاوت",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.64",
+   "loc": "catalog_ai_draft.py:347 [manzil]",
+   "en": "Extending help to others and reaching for higher wisdom",
+   "ur": "دوسروں کی مدد کے لیے ہاتھ بڑھانا اور اعلیٰ حکمت تک رسائی",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.65",
+   "loc": "catalog_ai_draft.py:348 [manzil]",
+   "en": "Building alliances",
+   "ur": "اتحاد قائم کرنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.66",
+   "loc": "catalog_ai_draft.py:349 [manzil]",
+   "en": "Expansion",
+   "ur": "وسعت",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.67",
+   "loc": "catalog_ai_draft.py:350 [manzil]",
+   "en": "Selfishness",
+   "ur": "خود غرضی",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.68",
+   "loc": "catalog_ai_draft.py:351 [manzil]",
+   "en": "Hoarding",
+   "ur": "ذخیرہ اندوزی",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.69",
+   "loc": "catalog_ai_draft.py:352 [manzil]",
+   "en": "Isolation",
+   "ur": "تنہائی",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.70",
+   "loc": "catalog_ai_draft.py:353 [manzil]",
+   "en": "The forearm that gives in charity teaches reach without grasping.",
+   "ur": "وہ بازو جو صدقے میں دیتا ہے ہمیں سکھاتا ہے کہ رسائی ہو مگر لالچ نہ ہو۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.71",
+   "loc": "catalog_ai_draft.py:354 [manzil]",
+   "en": "The Gap",
+   "ur": "درمیانی خلا",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.72",
+   "loc": "catalog_ai_draft.py:355 [manzil]",
+   "en": "Mystery, Threshold, Sacred Space",
+   "ur": "راز، دہلیز، مقدس جگہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.73",
+   "loc": "catalog_ai_draft.py:356 [manzil]",
+   "en": "Contemplating the mysteries of faith and divine wisdom",
+   "ur": "ایمان کے رازوں اور الٰہی حکمت پر غور",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.74",
+   "loc": "catalog_ai_draft.py:357 [manzil]",
+   "en": "Meditation",
+   "ur": "مراقبہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.75",
+   "loc": "catalog_ai_draft.py:358 [manzil]",
+   "en": "Retreat",
+   "ur": "خلوت",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.76",
+   "loc": "catalog_ai_draft.py:359 [manzil]",
+   "en": "Inner work",
+   "ur": "باطن کی اصلاح",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "18.77",
+   "loc": "catalog_ai_draft.py:360 [manzil]",
+   "en": "Spiritual practices",
+   "ur": "روحانی معمولات",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.78",
+   "loc": "catalog_ai_draft.py:361 [manzil]",
+   "en": "Excessive worldly activity",
+   "ur": "حد سے زیادہ دنیوی مصروفیت",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.79",
+   "loc": "catalog_ai_draft.py:362 [manzil]",
+   "en": "Noise",
+   "ur": "شور",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.80",
+   "loc": "catalog_ai_draft.py:363 [manzil]",
+   "en": "Distraction",
+   "ur": "انتشارِ توجہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.81",
+   "loc": "catalog_ai_draft.py:364 [manzil]",
+   "en": "In quiet gaps — between tasks, between breaths — remember the One who ordered the Moon’s phases.",
+   "ur": "خاموش وقفوں میں — کاموں کے درمیان، سانسوں کے درمیان — اُس ذات کو یاد کریں جس نے چاند کی منزلیں مقرر فرمائیں۔",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "18.82",
+   "loc": "catalog_ai_draft.py:365 [manzil]",
+   "en": "Educational reflection (Qurʾān 36:39)",
+   "ur": "تعلیمی غور و فکر (قرآن 36:39)",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.83",
+   "loc": "catalog_ai_draft.py:366 [manzil]",
+   "en": "The Glance",
+   "ur": "نگاہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.84",
+   "loc": "catalog_ai_draft.py:367 [manzil]",
+   "en": "Vision, Attentiveness",
+   "ur": "بصیرت، توجہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.85",
+   "loc": "catalog_ai_draft.py:369 [manzil]",
+   "en": "Careful observation",
+   "ur": "محتاط مشاہدہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.86",
+   "loc": "catalog_ai_draft.py:370 [manzil]",
+   "en": "Reviewing plans",
+   "ur": "منصوبوں پر نظرِ ثانی",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.87",
+   "loc": "catalog_ai_draft.py:371 [manzil]",
+   "en": "Seeking counsel",
+   "ur": "مشورہ لینا",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.88",
+   "loc": "catalog_ai_draft.py:372 [manzil]",
+   "en": "Hasty judgments",
+   "ur": "جلد بازی میں رائے قائم کرنا",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "18.89",
+   "loc": "catalog_ai_draft.py:373 [manzil]",
+   "en": "Gossip",
+   "ur": "غیبت",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.90",
+   "loc": "catalog_ai_draft.py:374 [manzil]",
+   "en": "Spying on others",
+   "ur": "دوسروں کی جاسوسی",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.91",
+   "loc": "catalog_ai_draft.py:375 [manzil]",
+   "en": "Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.",
+   "ur": "منازلِ قمر غور و فکر اور اوقات کے آداب کی منزلیں ہیں، غیب کی پیش گوئی کا ذریعہ نہیں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "18.92",
+   "loc": "catalog_ai_draft.py:376 [manzil]",
+   "en": "Educational framing (Qurʾān 10:5; 36:39)",
+   "ur": "تعلیمی پس منظر (قرآن 10:5؛ 36:39)",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.93",
+   "loc": "catalog_ai_draft.py:377 [manzil]",
+   "en": "The Forehead",
+   "ur": "پیشانی",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.94",
+   "loc": "catalog_ai_draft.py:378 [manzil]",
+   "en": "Dignity, Responsibility",
+   "ur": "وقار، ذمہ داری",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.95",
+   "loc": "catalog_ai_draft.py:379 [manzil]",
+   "en": "Carry dignity with humility — leadership here means service and clear intention before Allah.",
+   "ur": "وقار کے ساتھ عاجزی بھی اختیار کریں — یہاں قیادت کا مطلب خدمت اور اللہ کے سامنے صاف نیت ہے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "18.96",
+   "loc": "catalog_ai_draft.py:380 [manzil]",
+   "en": "Formal commitments",
+   "ur": "باضابطہ عہد و پیمان",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "18.97",
+   "loc": "catalog_ai_draft.py:381 [manzil]",
+   "en": "Public trust",
+   "ur": "عوامی اعتماد",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.98",
+   "loc": "catalog_ai_draft.py:382 [manzil]",
+   "en": "Marriage discussions",
+   "ur": "رشتے کی بات چیت",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.99",
+   "loc": "catalog_ai_draft.py:383 [manzil]",
+   "en": "Arrogance",
+   "ur": "تکبر",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.100",
+   "loc": "catalog_ai_draft.py:384 [manzil]",
+   "en": "Empty show",
+   "ur": "کھوکھلا دکھاوا",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.101",
+   "loc": "catalog_ai_draft.py:385 [manzil]",
+   "en": "Neglecting counsel",
+   "ur": "مشورے کو نظر انداز کرنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.102",
+   "loc": "catalog_ai_draft.py:386 [manzil]",
+   "en": "The Mane",
+   "ur": "ایال",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.103",
+   "loc": "catalog_ai_draft.py:387 [manzil]",
+   "en": "Strength, Presence",
+   "ur": "قوت، شخصیت کا اثر",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "18.104",
+   "loc": "catalog_ai_draft.py:388 [manzil]",
+   "en": "Strength is a trust: use presence to protect and encourage, not to dominate.",
+   "ur": "قوت ایک امانت ہے: اپنی شخصیت کے اثر کو حفاظت اور حوصلہ افزائی کے لیے استعمال کریں، دوسروں پر غلبہ پانے کے لیے نہیں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "18.105",
+   "loc": "catalog_ai_draft.py:389 [manzil]",
+   "en": "Encouraging others",
+   "ur": "دوسروں کی حوصلہ افزائی",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.106",
+   "loc": "catalog_ai_draft.py:390 [manzil]",
+   "en": "Steady work",
+   "ur": "مسلسل کام",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.107",
+   "loc": "catalog_ai_draft.py:391 [manzil]",
+   "en": "Protecting the vulnerable",
+   "ur": "کمزوروں کی حفاظت",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.108",
+   "loc": "catalog_ai_draft.py:392 [manzil]",
+   "en": "Long efforts",
+   "ur": "طویل کوششیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.109",
+   "loc": "catalog_ai_draft.py:393 [manzil]",
+   "en": "Boastfulness",
+   "ur": "شیخی",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.110",
+   "loc": "catalog_ai_draft.py:394 [manzil]",
+   "en": "Aggression",
+   "ur": "جارحیت",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.111",
+   "loc": "catalog_ai_draft.py:395 [manzil]",
+   "en": "Wasting energy",
+   "ur": "توانائی ضائع کرنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.112",
+   "loc": "catalog_ai_draft.py:396 [manzil]",
+   "en": "The Changer",
+   "ur": "بدلنے والا",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.113",
+   "loc": "catalog_ai_draft.py:397 [manzil]",
+   "en": "Transition, Turning",
+   "ur": "تبدیلی، موڑ",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.114",
+   "loc": "catalog_ai_draft.py:398 [manzil]",
+   "en": "Seasons turn: release what no longer serves, and turn toward what Allah has made clearer.",
+   "ur": "موسم بدلتے ہیں: جو اب کام کا نہیں اسے چھوڑیں، اور اس طرف رخ کریں جسے اللہ نے زیادہ واضح کر دیا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.115",
+   "loc": "catalog_ai_draft.py:399 [manzil]",
+   "en": "Course corrections",
+   "ur": "راستے کی اصلاح",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.116",
+   "loc": "catalog_ai_draft.py:400 [manzil]",
+   "en": "Ending harmful habits",
+   "ur": "نقصان دہ عادات ترک کرنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.117",
+   "loc": "catalog_ai_draft.py:401 [manzil]",
+   "en": "Repentance",
+   "ur": "توبہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.118",
+   "loc": "catalog_ai_draft.py:402 [manzil]",
+   "en": "Reorganizing",
+   "ur": "ازسرِ نو ترتیب",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.119",
+   "loc": "catalog_ai_draft.py:403 [manzil]",
+   "en": "Clinging to the obsolete",
+   "ur": "فرسودہ چیزوں سے چمٹے رہنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.120",
+   "loc": "catalog_ai_draft.py:404 [manzil]",
+   "en": "Forced abrupt breaks without counsel",
+   "ur": "مشورے کے بغیر اچانک اور زبردستی تعلق توڑنا",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "18.121",
+   "loc": "catalog_ai_draft.py:405 [manzil]",
+   "en": "The Barker",
+   "ur": "بھونکنے والا",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.122",
+   "loc": "catalog_ai_draft.py:406 [manzil]",
+   "en": "Gathering, Calling",
+   "ur": "اجتماع، پکار",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.123",
+   "loc": "catalog_ai_draft.py:407 [manzil]",
+   "en": "Call others to what is good — a voice used for gathering and warning, not for needless noise.",
+   "ur": "دوسروں کو نیکی کی طرف بلائیں — اپنی آواز لوگوں کو جمع کرنے اور خبردار کرنے کے لیے استعمال کریں، بے وجہ شور کے لیے نہیں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "18.124",
+   "loc": "catalog_ai_draft.py:408 [manzil]",
+   "en": "Community work",
+   "ur": "اجتماعی کام",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.125",
+   "loc": "catalog_ai_draft.py:409 [manzil]",
+   "en": "Clear announcements",
+   "ur": "واضح اعلانات",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.126",
+   "loc": "catalog_ai_draft.py:410 [manzil]",
+   "en": "Spreading alarm without cause",
+   "ur": "بلاوجہ خوف پھیلانا",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.127",
+   "loc": "catalog_ai_draft.py:411 [manzil]",
+   "en": "Division",
+   "ur": "تفرقہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.128",
+   "loc": "catalog_ai_draft.py:412 [manzil]",
+   "en": "The Unarmed",
+   "ur": "نہتا",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "18.129",
+   "loc": "catalog_ai_draft.py:413 [manzil]",
+   "en": "Balance, Harvest",
+   "ur": "توازن، فصل کی کٹائی",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "18.130",
+   "loc": "catalog_ai_draft.py:414 [manzil]",
+   "en": "Al-Simāk al-Aʿzal (“the unarmed”) invites fair measure — harvest with gratitude, without grasping.",
+   "ur": "سماکِ اعزل («نہتا») منصفانہ ناپ تول کی دعوت دیتا ہے — شکرگزاری کے ساتھ فصل کاٹیں، لالچ کے بغیر۔",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "18.131",
+   "loc": "catalog_ai_draft.py:415 [manzil]",
+   "en": "Fair dealing",
+   "ur": "منصفانہ لین دین",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.132",
+   "loc": "catalog_ai_draft.py:416 [manzil]",
+   "en": "Harvest and completion of work",
+   "ur": "فصل کی کٹائی اور کام کی تکمیل",
+   "status": "reviewed"
+  },
+  {
+   "id": "18.133",
+   "loc": "catalog_ai_draft.py:417 [manzil]",
+   "en": "Partnerships",
+   "ur": "شراکتیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.1",
+   "loc": "catalog_ai_draft.py:418 [manzil]",
+   "en": "Beauty with restraint",
+   "ur": "حسن و آرائش میں اعتدال",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "19.2",
+   "loc": "catalog_ai_draft.py:419 [manzil]",
+   "en": "Greed",
+   "ur": "لالچ",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.3",
+   "loc": "catalog_ai_draft.py:420 [manzil]",
+   "en": "Unfair advantage",
+   "ur": "ناجائز فائدہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.4",
+   "loc": "catalog_ai_draft.py:421 [manzil]",
+   "en": "Neglecting zakāh and rights",
+   "ur": "زکوٰۃ اور حقوق کو نظر انداز کرنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.5",
+   "loc": "catalog_ai_draft.py:422 [manzil]",
+   "en": "The Covering",
+   "ur": "پردہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.6",
+   "loc": "catalog_ai_draft.py:423 [manzil]",
+   "en": "Covering, Discretion",
+   "ur": "پردہ پوشی، رازداری",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.7",
+   "loc": "catalog_ai_draft.py:424 [manzil]",
+   "en": "Cover faults — your own and others’ — and prefer discretion over exposure.",
+   "ur": "عیب چھپائیں — اپنے بھی اور دوسروں کے بھی — اور پردہ فاش کرنے پر رازداری کو ترجیح دیں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.8",
+   "loc": "catalog_ai_draft.py:425 [manzil]",
+   "en": "Private repentance",
+   "ur": "تنہائی میں توبہ",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "19.9",
+   "loc": "catalog_ai_draft.py:426 [manzil]",
+   "en": "Protecting privacy",
+   "ur": "رازداری کا تحفظ",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.10",
+   "loc": "catalog_ai_draft.py:427 [manzil]",
+   "en": "Quiet charity",
+   "ur": "چھپا کر صدقہ دینا",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "19.11",
+   "loc": "catalog_ai_draft.py:428 [manzil]",
+   "en": "Exposing others",
+   "ur": "دوسروں کو بے نقاب کرنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.12",
+   "loc": "catalog_ai_draft.py:429 [manzil]",
+   "en": "Scandal",
+   "ur": "رسوائی",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.13",
+   "loc": "catalog_ai_draft.py:430 [manzil]",
+   "en": "Public shaming",
+   "ur": "سرِعام شرمندہ کرنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.14",
+   "loc": "catalog_ai_draft.py:431 [manzil]",
+   "en": "The Claws",
+   "ur": "پنجے",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.15",
+   "loc": "catalog_ai_draft.py:432 [manzil]",
+   "en": "Boundaries, Careful Cuts",
+   "ur": "حدود، سوچ سمجھ کر قطع کرنا",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "19.16",
+   "loc": "catalog_ai_draft.py:433 [manzil]",
+   "en": "Set boundaries with justice: cut what harms, without cruelty.",
+   "ur": "انصاف کے ساتھ حدود قائم کریں: جو نقصان دہ ہو اسے الگ کر دیں، مگر سنگدلی کے بغیر۔",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "19.17",
+   "loc": "catalog_ai_draft.py:434 [manzil]",
+   "en": "Clear agreements",
+   "ur": "واضح معاہدے",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.18",
+   "loc": "catalog_ai_draft.py:435 [manzil]",
+   "en": "Ending harmful ties with adab",
+   "ur": "نقصان دہ تعلقات کو ادب کے ساتھ ختم کرنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.19",
+   "loc": "catalog_ai_draft.py:436 [manzil]",
+   "en": "Legal clarity",
+   "ur": "قانونی وضاحت",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.20",
+   "loc": "catalog_ai_draft.py:437 [manzil]",
+   "en": "Self-discipline",
+   "ur": "ضبطِ نفس",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.21",
+   "loc": "catalog_ai_draft.py:438 [manzil]",
+   "en": "Spiteful severance",
+   "ur": "کینے کی بنا پر قطع تعلق",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "19.22",
+   "loc": "catalog_ai_draft.py:439 [manzil]",
+   "en": "Ambiguous contracts",
+   "ur": "مبہم معاہدے",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.23",
+   "loc": "catalog_ai_draft.py:440 [manzil]",
+   "en": "Unnecessary conflict",
+   "ur": "غیر ضروری جھگڑا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.24",
+   "loc": "catalog_ai_draft.py:441 [manzil]",
+   "en": "The Crown",
+   "ur": "تاج",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.25",
+   "loc": "catalog_ai_draft.py:442 [manzil]",
+   "en": "Honor, Trust",
+   "ur": "عزت، امانت",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.26",
+   "loc": "catalog_ai_draft.py:443 [manzil]",
+   "en": "Honor is a trust worn lightly — crowns in the sky remind of responsibility, not entitlement.",
+   "ur": "عزت ایک امانت ہے، اسے غرور کے بغیر سنبھالیں — آسمان کے تاج ذمہ داری کی یاد دلاتے ہیں، استحقاق کی نہیں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "19.27",
+   "loc": "catalog_ai_draft.py:444 [manzil]",
+   "en": "Keeping trusts",
+   "ur": "امانتوں کی حفاظت",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.28",
+   "loc": "catalog_ai_draft.py:445 [manzil]",
+   "en": "Formal roles",
+   "ur": "باضابطہ مناصب",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "19.29",
+   "loc": "catalog_ai_draft.py:446 [manzil]",
+   "en": "Guarding dignity",
+   "ur": "وقار کی حفاظت",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.30",
+   "loc": "catalog_ai_draft.py:447 [manzil]",
+   "en": "Responsible leadership",
+   "ur": "ذمہ دارانہ قیادت",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.31",
+   "loc": "catalog_ai_draft.py:448 [manzil]",
+   "en": "Pride",
+   "ur": "غرور",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.32",
+   "loc": "catalog_ai_draft.py:449 [manzil]",
+   "en": "Betrayal of trust",
+   "ur": "امانت میں خیانت",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.33",
+   "loc": "catalog_ai_draft.py:450 [manzil]",
+   "en": "Seeking status for its own sake",
+   "ur": "محض مرتبے کی خاطر مرتبہ چاہنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.34",
+   "loc": "catalog_ai_draft.py:451 [manzil]",
+   "en": "The Heart",
+   "ur": "دل",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.35",
+   "loc": "catalog_ai_draft.py:452 [manzil]",
+   "en": "Sincerity, Courage of Heart",
+   "ur": "اخلاص، دل کی ہمت",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.36",
+   "loc": "catalog_ai_draft.py:453 [manzil]",
+   "en": "Return to the heart: sincerity (ikhlāṣ) before intensity — courage without crushing others.",
+   "ur": "دل کی طرف لوٹیں: جوش سے پہلے اخلاص، اور ایسی ہمت جو دوسروں کو کچلے نہیں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "19.37",
+   "loc": "catalog_ai_draft.py:454 [manzil]",
+   "en": "Heartfelt duʿāʾ",
+   "ur": "دل سے دعا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.38",
+   "loc": "catalog_ai_draft.py:455 [manzil]",
+   "en": "Honest conversations",
+   "ur": "دیانت دارانہ گفتگو",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.39",
+   "loc": "catalog_ai_draft.py:456 [manzil]",
+   "en": "Courageous apology",
+   "ur": "جرأت مندانہ معذرت",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.40",
+   "loc": "catalog_ai_draft.py:457 [manzil]",
+   "en": "Deep study",
+   "ur": "گہرا مطالعہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.41",
+   "loc": "catalog_ai_draft.py:458 [manzil]",
+   "en": "Hard-heartedness",
+   "ur": "سنگدلی",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.42",
+   "loc": "catalog_ai_draft.py:459 [manzil]",
+   "en": "Emotional recklessness",
+   "ur": "جذباتی بے احتیاطی",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.43",
+   "loc": "catalog_ai_draft.py:460 [manzil]",
+   "en": "Crushing speech",
+   "ur": "دل توڑ دینے والی باتیں",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "19.44",
+   "loc": "catalog_ai_draft.py:461 [manzil]",
+   "en": "The Sting",
+   "ur": "ڈنک",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.45",
+   "loc": "catalog_ai_draft.py:462 [manzil]",
+   "en": "Restraint, Defense of Dignity",
+   "ur": "ضبط، وقار کا دفاع",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.46",
+   "loc": "catalog_ai_draft.py:463 [manzil]",
+   "en": "The sting is for defense, not attack — restrain the tongue and hand unless justice requires otherwise.",
+   "ur": "ڈنک دفاع کے لیے ہے، حملے کے لیے نہیں — جب تک انصاف کا تقاضا نہ ہو زبان اور ہاتھ کو روکے رکھیں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.47",
+   "loc": "catalog_ai_draft.py:464 [manzil]",
+   "en": "Self-restraint",
+   "ur": "ضبطِ نفس",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.48",
+   "loc": "catalog_ai_draft.py:465 [manzil]",
+   "en": "Protecting the weak",
+   "ur": "کمزوروں کی حفاظت",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.49",
+   "loc": "catalog_ai_draft.py:466 [manzil]",
+   "en": "Cautious travel planning",
+   "ur": "احتیاط کے ساتھ سفر کی منصوبہ بندی",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.50",
+   "loc": "catalog_ai_draft.py:467 [manzil]",
+   "en": "Saying less",
+   "ur": "کم بولنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.51",
+   "loc": "catalog_ai_draft.py:468 [manzil]",
+   "en": "Retaliation for ego",
+   "ur": "انا کی خاطر بدلہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.52",
+   "loc": "catalog_ai_draft.py:469 [manzil]",
+   "en": "Provocation",
+   "ur": "اشتعال دلانا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.53",
+   "loc": "catalog_ai_draft.py:470 [manzil]",
+   "en": "Reckless risk",
+   "ur": "بے جا خطرہ مول لینا",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "19.54",
+   "loc": "catalog_ai_draft.py:471 [manzil]",
+   "en": "The Ostriches",
+   "ur": "شتر مرغ",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.55",
+   "loc": "catalog_ai_draft.py:472 [manzil]",
+   "en": "Journey, Openness",
+   "ur": "سفر، کشادگی",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.56",
+   "loc": "catalog_ai_draft.py:473 [manzil]",
+   "en": "Wide spaces invite travel of body and heart — move with tawakkul and good company.",
+   "ur": "وسیع جگہیں جسم اور دل دونوں کے سفر کی دعوت دیتی ہیں — توکل اور اچھی صحبت کے ساتھ چلیں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.57",
+   "loc": "catalog_ai_draft.py:474 [manzil]",
+   "en": "Exploration of knowledge",
+   "ur": "علم کی کھوج",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.58",
+   "loc": "catalog_ai_draft.py:475 [manzil]",
+   "en": "Outdoor work",
+   "ur": "کھلی فضا میں کام",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.59",
+   "loc": "catalog_ai_draft.py:476 [manzil]",
+   "en": "Expanding horizons with adab",
+   "ur": "ادب کے دائرے میں رہ کر اپنے افق وسیع کرنا",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "19.60",
+   "loc": "catalog_ai_draft.py:477 [manzil]",
+   "en": "Aimless wandering",
+   "ur": "بے مقصد آوارہ گردی",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.61",
+   "loc": "catalog_ai_draft.py:478 [manzil]",
+   "en": "Leaving duties unfinished",
+   "ur": "فرائض ادھورے چھوڑنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.62",
+   "loc": "catalog_ai_draft.py:479 [manzil]",
+   "en": "Isolation from good counsel",
+   "ur": "اچھے مشورے سے دوری",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.63",
+   "loc": "catalog_ai_draft.py:480 [manzil]",
+   "en": "The City",
+   "ur": "شہر",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.64",
+   "loc": "catalog_ai_draft.py:481 [manzil]",
+   "en": "Settlement, Order",
+   "ur": "ٹھہراؤ، نظم و ترتیب",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "19.65",
+   "loc": "catalog_ai_draft.py:482 [manzil]",
+   "en": "Cities need order and neighbors’ rights — settle what is due before chasing the next road.",
+   "ur": "شہروں کو نظم اور پڑوسیوں کے حقوق چاہییں — اگلی راہ پکڑنے سے پہلے جو واجب ہے وہ ادا کریں۔",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "19.66",
+   "loc": "catalog_ai_draft.py:483 [manzil]",
+   "en": "Settling affairs",
+   "ur": "معاملات نمٹانا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.67",
+   "loc": "catalog_ai_draft.py:484 [manzil]",
+   "en": "Neighborhood care",
+   "ur": "پڑوس کا خیال",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.68",
+   "loc": "catalog_ai_draft.py:485 [manzil]",
+   "en": "Local commitments",
+   "ur": "مقامی ذمہ داریاں",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.69",
+   "loc": "catalog_ai_draft.py:486 [manzil]",
+   "en": "Organizing home",
+   "ur": "گھر کی ترتیب",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.70",
+   "loc": "catalog_ai_draft.py:487 [manzil]",
+   "en": "Neglecting neighbors' rights",
+   "ur": "پڑوسیوں کے حقوق نظر انداز کرنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.71",
+   "loc": "catalog_ai_draft.py:488 [manzil]",
+   "en": "Chaos in commitments",
+   "ur": "ذمہ داریوں میں انتشار",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.72",
+   "loc": "catalog_ai_draft.py:489 [manzil]",
+   "en": "Fleeing responsibility",
+   "ur": "ذمہ داری سے فرار",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.73",
+   "loc": "catalog_ai_draft.py:491 [manzil]",
+   "en": "Offering, Commitment",
+   "ur": "ایثار، عہد",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "19.74",
+   "loc": "catalog_ai_draft.py:492 [manzil]",
+   "en": "Named among the saʿd stations: reflect on what you are willing to offer — wealth, time, ego — for Allah’s sake. (Educational theme only; not a ritual prescription.)",
+   "ur": "یہ اُن منازل میں سے ہے جن کے نام «سعد» سے شروع ہوتے ہیں: غور کریں کہ آپ اللہ کی خاطر کیا پیش کرنے کو تیار ہیں — مال، وقت، انا۔ (محض تعلیمی موضوع؛ کوئی مقررہ عبادت یا عمل نہیں۔)",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "19.75",
+   "loc": "catalog_ai_draft.py:493 [manzil]",
+   "en": "Charitable giving",
+   "ur": "خیرات و صدقات",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.76",
+   "loc": "catalog_ai_draft.py:494 [manzil]",
+   "en": "Keeping vows",
+   "ur": "عہد و پیمان کی پاسداری",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "19.77",
+   "loc": "catalog_ai_draft.py:495 [manzil]",
+   "en": "Serious commitments",
+   "ur": "سنجیدہ وعدے",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.78",
+   "loc": "catalog_ai_draft.py:496 [manzil]",
+   "en": "Simplifying lifestyle",
+   "ur": "طرزِ زندگی کو سادہ بنانا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.79",
+   "loc": "catalog_ai_draft.py:497 [manzil]",
+   "en": "Wasteful spending",
+   "ur": "فضول خرچی",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.80",
+   "loc": "catalog_ai_draft.py:498 [manzil]",
+   "en": "Empty vows",
+   "ur": "کھوکھلے وعدے",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.81",
+   "loc": "catalog_ai_draft.py:499 [manzil]",
+   "en": "Harming animals or people",
+   "ur": "جانوروں یا انسانوں کو نقصان پہنچانا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.82",
+   "loc": "catalog_ai_draft.py:500 [manzil]",
+   "en": "The Fortunate Swallower",
+   "ur": "سعد بلع (نگل لینے والا)",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.83",
+   "loc": "catalog_ai_draft.py:501 [manzil]",
+   "en": "Depth, Absorption",
+   "ur": "گہرائی، جذب",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.84",
+   "loc": "catalog_ai_draft.py:502 [manzil]",
+   "en": "Absorb lessons slowly: take in knowledge and counsel, then digest before speaking.",
+   "ur": "اسباق کو آہستہ آہستہ جذب کریں: علم اور مشورہ لیں، پھر بولنے سے پہلے اسے ہضم کریں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.85",
+   "loc": "catalog_ai_draft.py:503 [manzil]",
+   "en": "Listening",
+   "ur": "سننا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.86",
+   "loc": "catalog_ai_draft.py:504 [manzil]",
+   "en": "Patience with difficulty",
+   "ur": "مشکل میں صبر",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.87",
+   "loc": "catalog_ai_draft.py:505 [manzil]",
+   "en": "Swallowing anger into resentment",
+   "ur": "غصے کو نگل کر رنجش بنا لینا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.88",
+   "loc": "catalog_ai_draft.py:506 [manzil]",
+   "en": "Consuming without reflection",
+   "ur": "بغیر سوچے سمجھے کھانا اور اپنانا",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "19.89",
+   "loc": "catalog_ai_draft.py:509 [manzil]",
+   "en": "Gratitude, Hope",
+   "ur": "شکرگزاری، امید",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.90",
+   "loc": "catalog_ai_draft.py:511 [manzil]",
+   "en": "Gratitude practices",
+   "ur": "شکرگزاری کے معمولات",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.91",
+   "loc": "catalog_ai_draft.py:512 [manzil]",
+   "en": "Beginning hopeful works",
+   "ur": "پُرامید کاموں کا آغاز",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.92",
+   "loc": "catalog_ai_draft.py:513 [manzil]",
+   "en": "Sharing ease with others",
+   "ur": "آسانی دوسروں کے ساتھ بانٹنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.93",
+   "loc": "catalog_ai_draft.py:514 [manzil]",
+   "en": "Taking ease for granted",
+   "ur": "آسانی کو معمولی سمجھ لینا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.94",
+   "loc": "catalog_ai_draft.py:515 [manzil]",
+   "en": "Complacency",
+   "ur": "غفلت اور بے فکری",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "19.95",
+   "loc": "catalog_ai_draft.py:516 [manzil]",
+   "en": "Forgetting the Giver",
+   "ur": "عطا کرنے والے کو بھول جانا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.96",
+   "loc": "catalog_ai_draft.py:518 [manzil]",
+   "en": "Shelter, Hospitality",
+   "ur": "پناہ، مہمان نوازی",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.97",
+   "loc": "catalog_ai_draft.py:519 [manzil]",
+   "en": "Tents mean shelter and guests: open your space with generosity and guard those who seek safety.",
+   "ur": "خیمے پناہ اور مہمانوں کی علامت ہیں: فراخ دلی سے اپنے دروازے کھولیں اور پناہ مانگنے والوں کی حفاظت کریں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "19.98",
+   "loc": "catalog_ai_draft.py:520 [manzil]",
+   "en": "Hospitality",
+   "ur": "مہمان نوازی",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.99",
+   "loc": "catalog_ai_draft.py:521 [manzil]",
+   "en": "Shelter and housing matters",
+   "ur": "رہائش اور پناہ کے معاملات",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.100",
+   "loc": "catalog_ai_draft.py:522 [manzil]",
+   "en": "Protecting family",
+   "ur": "خاندان کی حفاظت",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.101",
+   "loc": "catalog_ai_draft.py:523 [manzil]",
+   "en": "Welcoming the stranger with adab",
+   "ur": "اجنبی کا ادب کے ساتھ استقبال",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.102",
+   "loc": "catalog_ai_draft.py:524 [manzil]",
+   "en": "Inhospitality",
+   "ur": "مہمان نوازی نہ کرنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.103",
+   "loc": "catalog_ai_draft.py:525 [manzil]",
+   "en": "Neglecting dependents",
+   "ur": "زیرِ کفالت افراد کو نظر انداز کرنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.104",
+   "loc": "catalog_ai_draft.py:526 [manzil]",
+   "en": "Closing doors out of pride",
+   "ur": "غرور میں دروازے بند کرنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.105",
+   "loc": "catalog_ai_draft.py:527 [manzil]",
+   "en": "The Former Spout",
+   "ur": "اگلا دہانہ",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "19.106",
+   "loc": "catalog_ai_draft.py:528 [manzil]",
+   "en": "Opening, Outflow",
+   "ur": "کھلنا، بہاؤ",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.107",
+   "loc": "catalog_ai_draft.py:529 [manzil]",
+   "en": "The former spout of the bucket: begin letting good flow — speech, charity, and help — with measured opening.",
+   "ur": "ڈول کا اگلا دہانہ: بھلائی کو بہنے دیں — بات، صدقہ اور مدد — مگر سوچ سمجھ کر اور اعتدال سے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "19.108",
+   "loc": "catalog_ai_draft.py:530 [manzil]",
+   "en": "Starting helpful projects",
+   "ur": "مفید منصوبے شروع کرنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.109",
+   "loc": "catalog_ai_draft.py:531 [manzil]",
+   "en": "Releasing stuck affairs",
+   "ur": "اٹکے ہوئے معاملات سلجھانا",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "19.110",
+   "loc": "catalog_ai_draft.py:532 [manzil]",
+   "en": "Marriage and union talks",
+   "ur": "نکاح اور رشتے کی بات چیت",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.111",
+   "loc": "catalog_ai_draft.py:533 [manzil]",
+   "en": "Generosity",
+   "ur": "سخاوت",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.112",
+   "loc": "catalog_ai_draft.py:534 [manzil]",
+   "en": "Reckless disclosure",
+   "ur": "بے احتیاطی سے راز کھولنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.113",
+   "loc": "catalog_ai_draft.py:535 [manzil]",
+   "en": "Draining resources without plan",
+   "ur": "منصوبہ بندی کے بغیر وسائل ختم کر دینا",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "19.114",
+   "loc": "catalog_ai_draft.py:536 [manzil]",
+   "en": "Gossip as “release”",
+   "ur": "غیبت کو «دل کا بوجھ ہلکا کرنا» سمجھنا",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "19.115",
+   "loc": "catalog_ai_draft.py:537 [manzil]",
+   "en": "The Latter Spout",
+   "ur": "پچھلا دہانہ",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "19.116",
+   "loc": "catalog_ai_draft.py:538 [manzil]",
+   "en": "Completion, Emptying",
+   "ur": "تکمیل، خالی کرنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.117",
+   "loc": "catalog_ai_draft.py:539 [manzil]",
+   "en": "The latter spout completes the pouring — finish what you opened, and empty the heart of grudges.",
+   "ur": "پچھلا دہانہ انڈیلنے کا عمل پورا کرتا ہے — جو شروع کیا اسے مکمل کریں، اور دل کو کینوں سے خالی کریں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "19.118",
+   "loc": "catalog_ai_draft.py:540 [manzil]",
+   "en": "Completing projects",
+   "ur": "منصوبے مکمل کرنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.119",
+   "loc": "catalog_ai_draft.py:541 [manzil]",
+   "en": "Settling debts",
+   "ur": "قرض چکانا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.120",
+   "loc": "catalog_ai_draft.py:542 [manzil]",
+   "en": "Forgiving leftovers",
+   "ur": "بچی کھچی رنجشیں معاف کرنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.121",
+   "loc": "catalog_ai_draft.py:544 [manzil]",
+   "en": "Leaving ends untied",
+   "ur": "کام ادھورے چھوڑ دینا",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "19.122",
+   "loc": "catalog_ai_draft.py:545 [manzil]",
+   "en": "Hoarding grudges",
+   "ur": "دل میں کینہ پالنا",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "19.123",
+   "loc": "catalog_ai_draft.py:546 [manzil]",
+   "en": "Starting too many new things",
+   "ur": "بہت سی نئی چیزیں شروع کر لینا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.124",
+   "loc": "catalog_ai_draft.py:547 [manzil]",
+   "en": "Belly of the Fish",
+   "ur": "مچھلی کا پیٹ",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.125",
+   "loc": "catalog_ai_draft.py:548 [manzil]",
+   "en": "Wholeness, Hidden Depths",
+   "ur": "کاملیت، پوشیدہ گہرائیاں",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.126",
+   "loc": "catalog_ai_draft.py:549 [manzil]",
+   "en": "The belly of the fish closes the circuit of twenty-eight — honor what is hidden, and seek wholeness through tawakkul.",
+   "ur": "مچھلی کا پیٹ اٹھائیس منازل کا دائرہ مکمل کرتا ہے — جو پوشیدہ ہے اس کی قدر کریں اور توکل کے ساتھ کمال کی طلب کریں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "19.127",
+   "loc": "catalog_ai_draft.py:550 [manzil]",
+   "en": "Quiet reflection",
+   "ur": "خاموش غور و فکر",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.128",
+   "loc": "catalog_ai_draft.py:551 [manzil]",
+   "en": "Caring for the unseen needs of others",
+   "ur": "دوسروں کی ان دیکھی ضرورتوں کا خیال رکھنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.129",
+   "loc": "catalog_ai_draft.py:552 [manzil]",
+   "en": "Patience with the hidden",
+   "ur": "پوشیدہ باتوں پر صبر",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.130",
+   "loc": "catalog_ai_draft.py:553 [manzil]",
+   "en": "Integrating lessons",
+   "ur": "سیکھی ہوئی باتوں کو زندگی کا حصہ بنانا",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "19.131",
+   "loc": "catalog_ai_draft.py:554 [manzil]",
+   "en": "Forced exposure",
+   "ur": "زبردستی بے نقاب کرنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.132",
+   "loc": "catalog_ai_draft.py:555 [manzil]",
+   "en": "Denying the unseen",
+   "ur": "غیب کا انکار",
+   "status": "reviewed"
+  },
+  {
+   "id": "19.133",
+   "loc": "catalog_ai_draft.py:556 [manzil]",
+   "en": "Despair in darkness",
+   "ur": "اندھیرے میں مایوسی",
+   "status": "reviewed"
   }
  ]
 }

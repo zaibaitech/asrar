@@ -456,10 +456,12 @@
   {
    "group": "rules",
    "en": "This is an early-morning departure — the Prophet ﷺ asked Allah to bless the early mornings of his ummah.",
-   "ur": "یہ صبح سویرے کی روانگی ہے — نبی کریم ﷺ نے اللہ سے اپنی امت کی صبحوں میں برکت کی دعا فرمائی تھی۔",
+   "ur": "یہ صبح سویرے کی روانگی ہے — نبی کریم ﷺ نے اپنی امت کے لیے صبح سویرے کے اوقات میں برکت کی دعا فرمائی۔",
    "reason": "Religious statement (Friday as the recommended day; the Prophet ﷺ’s du‘ā’ for early mornings) kept as in the source; the sources are not cited in the app.",
    "alternative": "keep as source",
-   "review": "religious scholar"
+   "review": "religious scholar",
+   "ur_flagged": "یہ صبح سویرے کی روانگی ہے — نبی کریم ﷺ نے اللہ سے اپنی امت کی صبحوں میں برکت کی دعا فرمائی تھی۔",
+   "resolved": "Native review, sheet 3 row 17.4 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "rules",
@@ -520,10 +522,12 @@
   {
    "group": "potd",
    "en": "Thursday is the most blessed day for spiritual elevation, wealth-seeking, and expansion. Make du'ā' for rizq (sustenance). Begin long-term projects. Seek knowledge, visit scholars, and perform generous acts of sadaqah. Thursday night (eve of Friday) is especially blessed — use it for extra worship.",
-   "ur": "روایت میں جمعرات روحانی بلندی، رزق کی طلب اور وسعت کے لیے خاص طور پر بابرکت سمجھی جاتی ہے۔ رزق کے لیے دعا کریں۔ طویل مدتی منصوبے شروع کریں۔ علم حاصل کریں، اہلِ علم سے ملیں، اور فراخ دلی سے صدقہ کریں۔ جمعرات کی رات (جمعہ کی شب) کو خاص طور پر بابرکت سمجھا جاتا ہے — اسے اضافی عبادت کے لیے استعمال کریں۔",
+   "ur": "روایت میں جمعرات روحانی بلندی، رزق کی طلب اور وسعت کے لیے خاص طور پر بابرکت سمجھی جاتی ہے۔ رزق کے لیے دعا کریں۔ طویل مدتی منصوبے شروع کریں۔ علم حاصل کریں، اہلِ علم سے ملیں، اور فراخ دلی سے صدقہ کریں۔ جمعرات اور جمعہ کی درمیانی رات (شبِ جمعہ) خاص طور پر بابرکت سمجھی جاتی ہے — اسے اضافی عبادت میں گزاریں۔",
    "reason": "Religious/astrological claim (\"most blessed day\", the night before Friday \"especially blessed\") kept hedged («سمجھی جاتی ہے»); the source is not cited. Confirm against Islamic sources (external audit).",
    "alternative": "",
-   "review": "religious scholar"
+   "review": "religious scholar",
+   "ur_flagged": "روایت میں جمعرات روحانی بلندی، رزق کی طلب اور وسعت کے لیے خاص طور پر بابرکت سمجھی جاتی ہے۔ رزق کے لیے دعا کریں۔ طویل مدتی منصوبے شروع کریں۔ علم حاصل کریں، اہلِ علم سے ملیں، اور فراخ دلی سے صدقہ کریں۔ جمعرات کی رات (جمعہ کی شب) کو خاص طور پر بابرکت سمجھا جاتا ہے — اسے اضافی عبادت کے لیے استعمال کریں۔",
+   "resolved": "Native review, sheet 3 row 17.32 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "potd",
@@ -560,10 +564,12 @@
   {
    "group": "arch",
    "en": "A genuinely blessed friendship — trust, ease, and mutual growth come naturally. Keep showing up for each other so the bond doesn't drift into complacency.",
-   "ur": "ایک حقیقی معنوں میں مبارک دوستی — اعتماد، آسانی اور باہمی ترقی فطری طور پر آتی ہے۔ ایک دوسرے کے لیے موجود رہیں تاکہ رشتہ خود اطمینانی میں نہ ڈھل جائے۔",
+   "ur": "حقیقی معنوں میں ایک بابرکت دوستی — اعتماد، آسانی اور باہمی ترقی عموماً فطری طور پر آتی ہے۔ ایک دوسرے کے لیے موجود رہیں تاکہ رشتے میں بے پروائی نہ آ جائے۔",
    "reason": "\"complacency\" rendered «خود اطمینانی» (see above).",
    "alternative": "«غفلت / آسودگی میں بے پروائی»",
-   "review": "native Urdu"
+   "review": "native Urdu",
+   "ur_flagged": "ایک حقیقی معنوں میں مبارک دوستی — اعتماد، آسانی اور باہمی ترقی فطری طور پر آتی ہے۔ ایک دوسرے کے لیے موجود رہیں تاکہ رشتہ خود اطمینانی میں نہ ڈھل جائے۔",
+   "resolved": "Native review, sheet 3 row 17.15 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "arch",
@@ -576,18 +582,22 @@
   {
    "group": "arch",
    "en": "Conflict resolution skills, self-work (especially anger and ego), forgiveness practices, and regular spiritual remembrance (dhikr).",
-   "ur": "تنازع حل کرنے کی مہارتیں، خود احتسابی (خاص طور پر غصے اور انا میں)، معافی کے معمولات، اور باقاعدہ ذکرِ الٰہی۔",
+   "ur": "تنازع حل کرنے کی مہارتیں، اپنی اصلاح (خاص طور پر غصے اور انا کے معاملے میں)، معاف کرنے کی عادت، اور باقاعدہ ذکرِ الٰہی۔",
    "reason": "«خود احتسابی» for \"self-work\" (see the label).",
    "alternative": "«خود اصلاحی»",
-   "review": "native Urdu"
+   "review": "native Urdu",
+   "ur_flagged": "تنازع حل کرنے کی مہارتیں، خود احتسابی (خاص طور پر غصے اور انا میں)، معافی کے معمولات، اور باقاعدہ ذکرِ الٰہی۔",
+   "resolved": "Native review, sheet 3 row 17.17 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "arch",
    "en": "Marriage is traditionally highly blessed. Challenges before union often make the bond stronger. This path carries spiritual favor.",
-   "ur": "شادی روایتی طور پر بہت مبارک ہے۔ نکاح سے پہلے کی مشکلات اکثر رشتے کو مضبوط بناتی ہیں۔ اس راستے میں روحانی فضل کا پہلو ہے۔",
+   "ur": "شادی روایتی طور پر بہت مبارک سمجھی جاتی ہے۔ نکاح سے پہلے کی مشکلات اکثر رشتے کو مضبوط بناتی ہیں۔ روایت میں اس راستے کو روحانی فضل کا حامل سمجھا جاتا ہے۔",
    "reason": "\"This path carries spiritual favor\" is stated as fact in the source («روحانی فضل کا پہلو ہے»).",
    "alternative": "keep as source; religious scholar to confirm it can stay",
-   "review": "religious scholar + product decision"
+   "review": "religious scholar + product decision",
+   "ur_flagged": "شادی روایتی طور پر بہت مبارک ہے۔ نکاح سے پہلے کی مشکلات اکثر رشتے کو مضبوط بناتی ہیں۔ اس راستے میں روحانی فضل کا پہلو ہے۔",
+   "resolved": "Native review, sheet 3 row 17.23 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "arch",
@@ -640,10 +650,12 @@
   {
    "group": "arch",
    "en": "Marriage is traditionally blessed. Harmony, children, and shared spiritual life are often supported. Guard against excess and distraction.",
-   "ur": "شادی روایتی طور پر مبارک ہے۔ ہم آہنگی، اولاد اور مشترکہ روحانی زندگی کو اکثر سہارا ملتا ہے۔ زیادتی اور غفلت سے بچیں۔",
+   "ur": "شادی روایتی طور پر مبارک سمجھی جاتی ہے۔ ہم آہنگی، اولاد اور مشترکہ روحانی زندگی کو اکثر سہارا ملتا ہے۔ حد سے بڑھنے اور غفلت سے بچیں۔",
    "reason": "\"children\" and \"blessing\" are traditional associations stated for marriage; not guarantees.",
    "alternative": "",
-   "review": "subject-matter"
+   "review": "subject-matter",
+   "ur_flagged": "شادی روایتی طور پر مبارک ہے۔ ہم آہنگی، اولاد اور مشترکہ روحانی زندگی کو اکثر سہارا ملتا ہے۔ زیادتی اور غفلت سے بچیں۔",
+   "resolved": "Native review, sheet 3 row 17.14 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "manzil",
@@ -656,42 +668,52 @@
   {
    "group": "manzil",
    "en": "The Former Spout",
-   "ur": "پہلا نالہ",
+   "ur": "اگلا دہانہ",
    "reason": "\"Spout\" (الفرغ, the pouring lip of the star-bucket) is «نالہ», which in Urdu also means a drain or a lament; the astronomical meaning needs a specialist.",
    "alternative": "«ڈول کا پہلا / دوسرا منہ»",
-   "review": "astronomy / native Urdu"
+   "review": "astronomy / native Urdu",
+   "ur_flagged": "پہلا نالہ",
+   "resolved": "Native review, sheet 3 row 19.105 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "manzil",
    "en": "The former spout of the bucket: begin letting good flow — speech, charity, and help — with measured opening.",
-   "ur": "ڈول کا پہلا نالہ: بھلائی کو بہنے دینا شروع کریں — بات، صدقہ اور مدد — ناپ تول کے ساتھ کھولتے ہوئے۔",
+   "ur": "ڈول کا اگلا دہانہ: بھلائی کو بہنے دیں — بات، صدقہ اور مدد — مگر سوچ سمجھ کر اور اعتدال سے۔",
    "reason": "\"Spout\" (الفرغ, the pouring lip of the star-bucket) is «نالہ», which in Urdu also means a drain or a lament; the astronomical meaning needs a specialist.",
    "alternative": "«ڈول کا پہلا / دوسرا منہ»",
-   "review": "astronomy / native Urdu"
+   "review": "astronomy / native Urdu",
+   "ur_flagged": "ڈول کا پہلا نالہ: بھلائی کو بہنے دینا شروع کریں — بات، صدقہ اور مدد — ناپ تول کے ساتھ کھولتے ہوئے۔",
+   "resolved": "Native review, sheet 3 row 19.107 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "manzil",
    "en": "The Latter Spout",
-   "ur": "دوسرا نالہ",
+   "ur": "پچھلا دہانہ",
    "reason": "\"Spout\" (الفرغ, the pouring lip of the star-bucket) is «نالہ», which in Urdu also means a drain or a lament; the astronomical meaning needs a specialist.",
    "alternative": "«ڈول کا پہلا / دوسرا منہ»",
-   "review": "astronomy / native Urdu"
+   "review": "astronomy / native Urdu",
+   "ur_flagged": "دوسرا نالہ",
+   "resolved": "Native review, sheet 3 row 19.115 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "manzil",
    "en": "The latter spout completes the pouring — finish what you opened, and empty the heart of grudges.",
-   "ur": "دوسرا نالہ انڈیلنے کو مکمل کرتا ہے — جو کھولا اسے پورا کریں، اور دل کو کینوں سے خالی کریں۔",
+   "ur": "پچھلا دہانہ انڈیلنے کا عمل پورا کرتا ہے — جو شروع کیا اسے مکمل کریں، اور دل کو کینوں سے خالی کریں۔",
    "reason": "\"Spout\" (الفرغ, the pouring lip of the star-bucket) is «نالہ», which in Urdu also means a drain or a lament; the astronomical meaning needs a specialist.",
    "alternative": "«ڈول کا پہلا / دوسرا منہ»",
-   "review": "astronomy / native Urdu"
+   "review": "astronomy / native Urdu",
+   "ur_flagged": "دوسرا نالہ انڈیلنے کو مکمل کرتا ہے — جو کھولا اسے پورا کریں، اور دل کو کینوں سے خالی کریں۔",
+   "resolved": "Native review, sheet 3 row 19.117 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "manzil",
    "en": "Complacency",
-   "ur": "خود اطمینانی",
+   "ur": "غفلت اور بے فکری",
    "reason": "\"Complacency\" rendered «خود اطمینانی» (see the archetype flags).",
    "alternative": "«غفلت / آسودگی میں بے پروائی»",
-   "review": "native Urdu"
+   "review": "native Urdu",
+   "ur_flagged": "خود اطمینانی",
+   "resolved": "Native review, sheet 3 row 19.94 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "manzil",
@@ -704,10 +726,12 @@
   {
    "group": "manzil",
    "en": "Gossip as “release”",
-   "ur": "غیبت کو “اظہارِ دل” سمجھنا",
+   "ur": "غیبت کو «دل کا بوجھ ہلکا کرنا» سمجھنا",
    "reason": "\"Gossip\" is rendered «غیبت» (backbiting, a religious term); «چغلی / گپ شپ» are the plain words.",
    "alternative": "«چغلی» / «غیبت و گپ شپ»",
-   "review": "native Urdu"
+   "review": "native Urdu",
+   "ur_flagged": "غیبت کو “اظہارِ دل” سمجھنا",
+   "resolved": "Native review, sheet 3 row 19.114 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "manzil",
@@ -736,10 +760,12 @@
   {
    "group": "manzil",
    "en": "Names and marks in the old star calendar were for recognition — know yourself before Allah, not for show.",
-   "ur": "پرانے ستارہ کیلنڈر میں نام اور نشان پہچان کے لیے تھے — اپنے آپ کو اللہ کے سامنے پہچانیں، دکھاوے کے لیے نہیں۔",
+   "ur": "ستاروں کی قدیم تقویم میں نام اور نشان پہچان کے لیے تھے — اللہ کے حضور اپنی پہچان کریں، دکھاوے کے لیے نہیں۔",
    "reason": "Statement on knowing oneself \"before Allah, not for show\" (religious framing added by the app text) kept as in the source.",
    "alternative": "",
-   "review": "religious scholar"
+   "review": "religious scholar",
+   "ur_flagged": "پرانے ستارہ کیلنڈر میں نام اور نشان پہچان کے لیے تھے — اپنے آپ کو اللہ کے سامنے پہچانیں، دکھاوے کے لیے نہیں۔",
+   "resolved": "Native review, sheet 3 row 18.61 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "career",

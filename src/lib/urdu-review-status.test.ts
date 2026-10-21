@@ -122,3 +122,23 @@ describe('Surah list (pass 3)', () => {
     for (const m of Object.values(QURAN_META)) expect(m.nameAr).toMatch(/^[\u0600-\u06FF ]+$/);
   });
 });
+
+describe('Urdu review sheet 3 (pass 6: Batches 17–19)', () => {
+  const rows = status.sheet3 as (Row & { id: string })[];
+  it('299 rows are reviewed (48 corrections + 20 optional applied) and the catalog serves the reviewed Urdu', () => {
+    expect(rows).toHaveLength(299);
+    expect(rows.every((r) => r.status.startsWith('reviewed'))).toBe(true);
+    expect(rows.filter((r) => r.status === 'reviewed-corrected')).toHaveLength(48);
+    expect(rows.filter((r) => r.status === 'reviewed-corrected (optional)')).toHaveLength(20);
+    expect(rows.filter((r) => json[r.en] !== r.ur).map((r) => r.id)).toEqual([]);
+  });
+  it('priority rows: Thursday night, hedging, medical qualifier and vows', () => {
+    const ur = (id: string) => json[rows.find((r) => r.id === id)!.en];
+    expect(ur('17.32')).toContain('جمعرات اور جمعہ کی درمیانی رات (شبِ جمعہ)');
+    expect(ur('17.14')).toContain('مبارک سمجھی جاتی ہے');
+    expect(ur('18.5')).toBe('طبی علاج (معالج کے مشورے سے)');
+    expect(ur('19.76')).toBe('عہد و پیمان کی پاسداری');
+    const all = rows.map((r) => json[r.en]).join('\n');
+    expect(all).not.toMatch(/منت|نذر|عنصریت|ہلکے پن سے|نالہ/);
+  });
+});

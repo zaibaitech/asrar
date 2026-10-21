@@ -34,7 +34,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career-ui', 'Guiding Principle', 'رہنما اصول'),
     ('career-ui', 'Let this principle guide your career decisions and professional journey.', 'اس اصول کو اپنے پیشہ ورانہ فیصلوں اور سفر میں رہنما بنائیں۔'),
     ('career-ui', 'Fields to Consider Carefully', 'جن شعبوں پر احتیاط سے غور کریں'),
-    ('career-ui', 'These industries may not align optimally with your spiritual energy. While not forbidden, they may present more challenges or require extra effort.', 'یہ صنعتیں آپ کی روحانی توانائی سے بہترین طور پر ہم آہنگ نہ ہوں۔ یہ ممنوع نہیں ہیں، مگر ان میں زیادہ چیلنجز آ سکتے ہیں یا اضافی محنت درکار ہو سکتی ہے۔'),
+    ('career-ui', 'These industries may not align optimally with your spiritual energy. While not forbidden, they may present more challenges or require extra effort.', 'ممکن ہے یہ صنعتیں آپ کی روحانی توانائی سے پوری طرح ہم آہنگ نہ ہوں۔ یہ ممنوع نہیں ہیں، مگر ان میں زیادہ مشکلات پیش آ سکتی ہیں یا اضافی محنت درکار ہو سکتی ہے۔'),  # reviewed 17.2 (pass 6)
     ('career-ui', 'Traditional Guidance:', 'روایتی رہنمائی:'),
     ('career-ui', 'Modern Application:', 'جدید اطلاق:'),
     ('career-ui', "This doesn't mean complete avoidance—some individuals still succeed in these fields. However, the spiritual alignment suggests focusing your primary efforts on the recommended fields above for optimal results.", 'اس کا مطلب مکمل پرہیز نہیں — کچھ لوگ ان شعبوں میں بھی کامیاب ہوتے ہیں۔ تاہم روحانی ہم آہنگی کا اشارہ ہے کہ بہترین نتائج کے لیے اپنی بنیادی کوششیں اوپر بیان کردہ تجویز کردہ شعبوں پر مرکوز کریں۔'),
@@ -81,7 +81,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('rules', 'The Moon is growing in light right now — traditionally favorable for setting out and making progress.', 'قمر کی روشنی اس وقت بڑھ رہی ہے — روانگی اور پیش رفت کے لیے روایتی طور پر موافق ہے۔'),
     ('rules', 'The Moon is forming a supportive connection with Venus or Jupiter right now — a sign of a smooth, well-supported journey.', 'قمر اس وقت زہرہ یا مشتری کے ساتھ موافق ربط بنا رہا ہے — ہموار اور معاون سفر کی علامت۔'),
     ('rules', 'This specific time window aligns with a planetary hour traditionally seen as supportive for travel.', 'یہ مخصوص وقت ایک ایسی ساعتِ کواکب سے مطابقت رکھتا ہے جسے روایتی طور پر سفر کے لیے معاون سمجھا جاتا ہے۔'),
-    ('rules', 'This is an early-morning departure — the Prophet ﷺ asked Allah to bless the early mornings of his ummah.', 'یہ صبح سویرے کی روانگی ہے — نبی کریم ﷺ نے اللہ سے اپنی امت کی صبحوں میں برکت کی دعا فرمائی تھی۔'),
+    ('rules', 'This is an early-morning departure — the Prophet ﷺ asked Allah to bless the early mornings of his ummah.', 'یہ صبح سویرے کی روانگی ہے — نبی کریم ﷺ نے اپنی امت کے لیے صبح سویرے کے اوقات میں برکت کی دعا فرمائی۔'),  # reviewed 17.4 (pass 6)
     ('rules', 'The Moon is passing through a lunar "station" traditionally considered favorable for travel.', 'قمر ایسی منزل سے گزر رہا ہے جسے سفر کے لیے روایتی طور پر موافق سمجھا جاتا ہے۔'),
     ('rules', 'The Moon is passing through a lunar "station" traditionally considered less favorable for travel.', 'قمر ایسی منزل سے گزر رہا ہے جسے سفر کے لیے روایتی طور پر کم موافق سمجھا جاتا ہے۔'),
     ('rules', 'Mercury is in a comfortable position right now, supporting clear plans and communication.', 'عطارد اس وقت موافق حالت میں ہے، جو واضح منصوبہ بندی اور بات چیت میں معاون ہے۔'),
@@ -202,17 +202,17 @@ AI_ENTRIES = [  # (section, en, ur)
     ('arch', 'Gratitude', 'شکرگزاری'),
     ('arch', 'The Blessed Path', 'مبارک راستہ'),
     ('arch', 'Traditionally blessed; harmony and growth', 'روایتی طور پر مبارک؛ ہم آہنگی اور ترقی'),
-    ('arch', 'Distraction from blessings, excess in comfort, and taking abundance for granted.', 'نعمتوں سے توجہ ہٹنا، آسائش میں حد سے بڑھ جانا، اور فراوانی کو معمولی سمجھ لینا۔'),
+    ('arch', 'Distraction from blessings, excess in comfort, and taking abundance for granted.', 'نعمتوں میں مشغول ہو کر غافل ہو جانا، آسائش میں حد سے بڑھ جانا، اور فراوانی کو معمولی سمجھ لینا۔'),  # reviewed 17.9 (pass 6)
     ('arch', 'Gratitude practices, structured spiritual life together, and using blessings to support others.', 'شکرگزاری کے معمولات، مل کر منظم روحانی زندگی، اور نعمتوں کو دوسروں کی مدد کے لیے استعمال کرنا۔'),
-    ('arch', 'Traditionally considered very favorable — blessing, natural harmony, and growth tend to flow more easily.', 'روایتی طور پر بہت موافق سمجھا جاتا ہے — برکت، فطری ہم آہنگی اور ترقی زیادہ آسانی سے آتی ہے۔'),
+    ('arch', 'Traditionally considered very favorable — blessing, natural harmony, and growth tend to flow more easily.', 'روایتی طور پر بہت موافق سمجھا جاتا ہے — برکت، فطری ہم آہنگی اور ترقی عموماً زیادہ آسانی سے میسر آتی ہیں۔'),  # reviewed 17.11 (pass 6)
     ('arch', 'Traditionally considered very favorable for marriage. Associated with blessing, natural harmony, children, and spiritual growth.', 'شادی کے لیے روایتی طور پر بہت موافق سمجھا جاتا ہے۔ برکت، فطری ہم آہنگی، اولاد اور روحانی ترقی سے منسوب۔'),
     ('arch', 'Traditionally considered very favorable — trust, harmony, and mutual growth tend to flow naturally in this friendship.', 'روایتی طور پر بہت موافق سمجھا جاتا ہے — اس دوستی میں اعتماد، ہم آہنگی اور باہمی ترقی فطری طور پر آتی ہے۔'),
     ('arch', 'Traditionally considered very favorable — warmth, harmony, and shared growth tend to mark this family bond.', 'روایتی طور پر بہت موافق سمجھا جاتا ہے — اس خاندانی رشتے کی پہچان عموماً گرم جوشی، ہم آہنگی اور مشترکہ ترقی ہوتی ہے۔'),
     ('arch', 'Traditionally considered very favorable — harmony and productive growth tend to flow naturally in this partnership.', 'روایتی طور پر بہت موافق سمجھا جاتا ہے — اس شراکت میں ہم آہنگی اور نتیجہ خیز ترقی فطری طور پر آتی ہے۔'),
-    ('arch', 'This connection is traditionally favorable — harmony, growth, and ease tend to flow naturally between the two. Gratitude keeps the blessing from being taken for granted.', 'یہ تعلق روایتی طور پر موافق ہے — دونوں کے درمیان ہم آہنگی، ترقی اور آسانی فطری طور پر چلتی ہے۔ شکرگزاری اس نعمت کو معمولی سمجھے جانے سے بچاتی ہے۔'),
-    ('arch', 'Marriage is traditionally blessed. Harmony, children, and shared spiritual life are often supported. Guard against excess and distraction.', 'شادی روایتی طور پر مبارک ہے۔ ہم آہنگی، اولاد اور مشترکہ روحانی زندگی کو اکثر سہارا ملتا ہے۔ زیادتی اور غفلت سے بچیں۔'),
-    ('arch', "A genuinely blessed friendship — trust, ease, and mutual growth come naturally. Keep showing up for each other so the bond doesn't drift into complacency.", 'ایک حقیقی معنوں میں مبارک دوستی — اعتماد، آسانی اور باہمی ترقی فطری طور پر آتی ہے۔ ایک دوسرے کے لیے موجود رہیں تاکہ رشتہ خود اطمینانی میں نہ ڈھل جائے۔'),
-    ('arch', 'Family ties here tend to be a source of real blessing — warmth, support, and shared growth. Nurture the bond actively rather than assuming it as given.', 'یہاں خاندانی رشتے حقیقی برکت کا ذریعہ بنتے ہیں — گرم جوشی، سہارا اور مشترکہ ترقی۔ رشتے کو بنا بنایا سمجھنے کے بجائے فعال طور پر سینچیں۔'),
+    ('arch', 'This connection is traditionally favorable — harmony, growth, and ease tend to flow naturally between the two. Gratitude keeps the blessing from being taken for granted.', 'یہ تعلق روایتی طور پر موافق سمجھا جاتا ہے — دونوں کے درمیان ہم آہنگی، ترقی اور آسانی عموماً فطری طور پر پیدا ہوتی ہیں۔ شکرگزاری اس نعمت کو معمولی سمجھے جانے سے بچاتی ہے۔'),  # reviewed 17.13 (pass 6)
+    ('arch', 'Marriage is traditionally blessed. Harmony, children, and shared spiritual life are often supported. Guard against excess and distraction.', 'شادی روایتی طور پر مبارک سمجھی جاتی ہے۔ ہم آہنگی، اولاد اور مشترکہ روحانی زندگی کو اکثر سہارا ملتا ہے۔ حد سے بڑھنے اور غفلت سے بچیں۔'),  # reviewed 17.14 (pass 6)
+    ('arch', "A genuinely blessed friendship — trust, ease, and mutual growth come naturally. Keep showing up for each other so the bond doesn't drift into complacency.", 'حقیقی معنوں میں ایک بابرکت دوستی — اعتماد، آسانی اور باہمی ترقی عموماً فطری طور پر آتی ہے۔ ایک دوسرے کے لیے موجود رہیں تاکہ رشتے میں بے پروائی نہ آ جائے۔'),  # reviewed 17.15 (pass 6)
+    ('arch', 'Family ties here tend to be a source of real blessing — warmth, support, and shared growth. Nurture the bond actively rather than assuming it as given.', 'یہاں خاندانی رشتے اکثر حقیقی برکت کا ذریعہ بنتے ہیں — گرم جوشی، سہارا اور مشترکہ ترقی۔ رشتے کو بنا بنایا سمجھنے کے بجائے اس کی مسلسل آبیاری کریں۔'),  # reviewed 17.16 (pass 6)
     ('arch', 'A productive, mutually beneficial working relationship where success tends to come naturally. Stay grounded and avoid overconfidence as things go well.', 'ایک نتیجہ خیز، باہمی فائدے والا پیشہ ورانہ تعلق جس میں کامیابی فطری طور پر آتی ہے۔ حالات اچھے ہوں تو بھی زمین سے جڑے رہیں اور حد سے زیادہ خود اعتمادی سے بچیں۔'),
     ('arch', 'Trial', 'آزمائش'),
     ('arch', 'Forgiveness', 'معافی'),
@@ -220,7 +220,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('arch', 'The Trial Path', 'آزمائش کا راستہ'),
     ('arch', 'Quarrels and ego tests', 'جھگڑے اور انا کے امتحان'),
     ('arch', 'Power struggles, recurring arguments, and cycles of blame. Pride and unresolved anger amplify friction.', 'طاقت کی کشمکش، بار بار کی بحثیں اور الزام تراشی کے چکر۔ غرور اور حل نہ ہوا غصہ کشیدگی کو بڑھا دیتے ہیں۔'),
-    ('arch', 'Conflict resolution skills, self-work (especially anger and ego), forgiveness practices, and regular spiritual remembrance (dhikr).', 'تنازع حل کرنے کی مہارتیں، خود احتسابی (خاص طور پر غصے اور انا میں)، معافی کے معمولات، اور باقاعدہ ذکرِ الٰہی۔'),
+    ('arch', 'Conflict resolution skills, self-work (especially anger and ego), forgiveness practices, and regular spiritual remembrance (dhikr).', 'تنازع حل کرنے کی مہارتیں، اپنی اصلاح (خاص طور پر غصے اور انا کے معاملے میں)، معاف کرنے کی عادت، اور باقاعدہ ذکرِ الٰہی۔'),  # reviewed 17.17 (pass 6)
     ('arch', 'Traditionally shows recurring quarrels and discord — tests of anger, pride, and ego are common until inner work is done.', 'روایتی طور پر بار بار کے جھگڑے اور اختلاف دکھاتا ہے — جب تک اندرونی اصلاح نہ ہو، غصے، غرور اور انا کے امتحان عام رہتے ہیں۔'),
     ('arch', 'Traditionally shows recurring quarrels and discord in marriage. Tests of anger, pride, and ego are common.', 'روایتی طور پر شادی میں بار بار کے جھگڑے اور اختلاف دکھاتا ہے۔ غصے، غرور اور انا کے امتحان عام ہیں۔'),
     ('arch', 'Traditionally shows recurring small quarrels — tests of pride and ego may repeat until self-awareness grows.', 'روایتی طور پر بار بار کے چھوٹے جھگڑے دکھاتا ہے — خود آگاہی بڑھنے تک غرور اور انا کے امتحان دہرائے جا سکتے ہیں۔'),
@@ -236,14 +236,14 @@ AI_ENTRIES = [  # (section, en, ur)
     ('arch', 'The Chosen Path', 'منتخب راستہ'),
     ('arch', 'Traditionally best; blessings after obstacles', 'روایتی طور پر بہترین؛ رکاوٹوں کے بعد برکتیں'),
     ('arch', 'Pride in the blessing, external interference early on, and assuming ease means no effort is needed.', 'نعمت پر غرور، شروع میں بیرونی مداخلت، اور یہ سمجھ لینا کہ آسانی کا مطلب ہے کہ کوشش کی ضرورت نہیں۔'),
-    ('arch', 'Humility, trust in divine timing, gratitude, and alignment in spiritual values.', 'عاجزی، اللہ کے وقت پر بھروسا، شکرگزاری، اور روحانی اقدار میں ہم آہنگی۔'),
-    ('arch', 'Traditionally considered the most favorable of all patterns — early obstacles often give way to strong blessings and alignment.', 'روایتی طور پر تمام نمونوں میں سب سے زیادہ موافق سمجھا جاتا ہے — ابتدائی رکاوٹیں اکثر مضبوط برکتوں اور ہم آہنگی کو راستہ دیتی ہیں۔'),
-    ('arch', 'Traditionally considered the most favorable for marriage. May face obstacles early on, but strong blessings and alignment often follow.', 'شادی کے لیے روایتی طور پر سب سے زیادہ موافق سمجھا جاتا ہے۔ شروع میں رکاوٹیں آ سکتی ہیں، مگر اکثر مضبوط برکتیں اور ہم آہنگی پیچھے آتی ہیں۔'),
+    ('arch', 'Humility, trust in divine timing, gratitude, and alignment in spiritual values.', 'عاجزی، اللہ کی حکمت اور اس کے مقرر کیے ہوئے وقت پر بھروسا، شکرگزاری، اور روحانی اقدار میں ہم آہنگی۔'),  # reviewed 17.20 (pass 6)
+    ('arch', 'Traditionally considered the most favorable of all patterns — early obstacles often give way to strong blessings and alignment.', 'روایتی طور پر تمام صورتوں میں سب سے زیادہ موافق سمجھا جاتا ہے — ابتدائی رکاوٹوں کے بعد اکثر بھرپور برکت اور ہم آہنگی حاصل ہوتی ہے۔'),  # reviewed 17.21 (pass 6)
+    ('arch', 'Traditionally considered the most favorable for marriage. May face obstacles early on, but strong blessings and alignment often follow.', 'شادی کے لیے روایتی طور پر سب سے زیادہ موافق سمجھا جاتا ہے۔ شروع میں رکاوٹیں آ سکتی ہیں، مگر اس کے بعد اکثر بھرپور برکت اور ہم آہنگی حاصل ہوتی ہے۔'),  # reviewed 17.22 (pass 6)
     ('arch', 'Traditionally considered one of the most favorable patterns for friendship — early distance often resolves into deep loyalty.', 'دوستی کے لیے روایتی طور پر سب سے زیادہ موافق نمونوں میں سے ایک سمجھا جاتا ہے — شروع کی دوری اکثر گہری وفاداری میں بدل جاتی ہے۔'),
     ('arch', 'Traditionally considered one of the most favorable patterns for family bonds — early difficulty often gives way to lasting depth.', 'خاندانی رشتوں کے لیے روایتی طور پر سب سے زیادہ موافق نمونوں میں سے ایک سمجھا جاتا ہے — شروع کی مشکل اکثر دیرپا گہرائی کو راستہ دیتی ہے۔'),
     ('arch', 'Traditionally considered one of the most favorable patterns for partnership — early friction often resolves into a highly aligned collaboration.', 'شراکت کے لیے روایتی طور پر سب سے زیادہ موافق نمونوں میں سے ایک سمجھا جاتا ہے — شروع کا اختلاف اکثر ایک نہایت ہم آہنگ تعاون میں بدل جاتا ہے۔'),
     ('arch', 'Traditionally the most favorable connection — early obstacles often give way to a deep, aligned bond. Trust the process rather than forcing it.', 'روایتی طور پر سب سے زیادہ موافق تعلق — ابتدائی رکاوٹیں اکثر ایک گہرے اور ہم آہنگ رشتے کو راستہ دیتی ہیں۔ عمل کو زبردستی چلانے کے بجائے اس پر بھروسا کریں۔'),
-    ('arch', 'Marriage is traditionally highly blessed. Challenges before union often make the bond stronger. This path carries spiritual favor.', 'شادی روایتی طور پر بہت مبارک ہے۔ نکاح سے پہلے کی مشکلات اکثر رشتے کو مضبوط بناتی ہیں۔ اس راستے میں روحانی فضل کا پہلو ہے۔'),
+    ('arch', 'Marriage is traditionally highly blessed. Challenges before union often make the bond stronger. This path carries spiritual favor.', 'شادی روایتی طور پر بہت مبارک سمجھی جاتی ہے۔ نکاح سے پہلے کی مشکلات اکثر رشتے کو مضبوط بناتی ہیں۔ روایت میں اس راستے کو روحانی فضل کا حامل سمجھا جاتا ہے۔'),  # reviewed 17.23 (pass 6)
     ('arch', 'One of the strongest friendship patterns — any early distance or misunderstanding tends to resolve into a deeply loyal bond. Let it develop at its own pace.', 'دوستی کے مضبوط ترین نمونوں میں سے ایک — شروع کی کوئی بھی دوری یا غلط فہمی عموماً ایک گہرے وفادار رشتے میں بدل جاتی ہے۔ اسے اپنی رفتار سے پنپنے دیں۔'),
     ('arch', 'Family bonds here often carry real depth, even if the relationship faced early distance or difficulty. What follows tends to be lasting and meaningful.', 'یہاں خاندانی رشتوں میں اکثر حقیقی گہرائی ہوتی ہے، چاہے رشتے کو شروع میں دوری یا مشکل کا سامنا رہا ہو۔ جو آگے آتا ہے وہ عموماً دیرپا اور بامعنی ہوتا ہے۔'),
     ('arch', 'A strong working alliance — early friction or slow starts often lead to a highly effective, trusted partnership. Give it time to align.', 'ایک مضبوط پیشہ ورانہ اتحاد — شروع کے اختلافات یا سست آغاز اکثر ایک نہایت مؤثر اور قابلِ اعتماد شراکت تک لے جاتے ہیں۔ اسے ہم آہنگ ہونے کا وقت دیں۔'),
@@ -281,7 +281,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('manzil', 'New Beginnings, Initiative', 'نئے آغاز، پہل'),
     ('manzil', 'Starting fresh with courage and trust in Allah', 'ہمت اور اللہ پر بھروسے کے ساتھ نئے سرے سے آغاز'),
     ('manzil', 'New ventures', 'نئے کام'),
-    ('manzil', 'Medical treatment', 'طبی علاج'),
+    ('manzil', 'Medical treatment', 'طبی علاج (معالج کے مشورے سے)'),  # reviewed 18.5 (pass 6)
     ('manzil', 'Loans', 'قرض'),
     ('manzil', 'Partnerships with strangers', 'اجنبیوں کے ساتھ شراکت'),
     ('manzil', 'Beginnings invite intention (niyyah) and remembrance — the Moon’s stations are signs, not decrees.', 'آغاز نیت اور ذکر کا تقاضا کرتا ہے — قمر کی منازل نشانیاں ہیں، فیصلے نہیں۔'),
@@ -294,7 +294,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('manzil', 'Business ventures', 'کاروباری منصوبے'),
     ('manzil', 'Seeking knowledge', 'علم کی طلب'),
     ('manzil', 'Sea travel', 'بحری سفر'),
-    ('manzil', 'Hasty decisions', 'جلد بازی کے فیصلے'),
+    ('manzil', 'Hasty decisions', 'عجلت میں کیے گئے فیصلے'),  # reviewed 18.18 (pass 6)
     ('manzil', 'As the body needs nourishment, the heart needs what draws it nearer to Allah.', 'جیسے جسم کو غذا چاہیے، دل کو وہ چاہیے جو اسے اللہ کے قریب کرے۔'),
     ('manzil', 'Educational reflection (anwāʾ theme)', 'تعلیمی غور و فکر (انواء کا موضوع)'),
     ('manzil', 'The Pleiades', 'ثریا'),
@@ -307,21 +307,21 @@ AI_ENTRIES = [  # (section, en, ur)
     ('manzil', 'Conflict', 'جھگڑا'),
     ('manzil', 'Harsh speech', 'سخت کلامی'),
     ('manzil', 'Al-Thurayyā was among the best-known stations in Arab star lore — a reminder to gather in beauty and good company.', 'الثریا عربوں کی ستاروں کی روایت میں سب سے معروف منازل میں سے تھی — حسن اور اچھی صحبت میں جمع ہونے کی یاد دہانی۔'),
-    ('manzil', 'Educational reflection (anwāʾ / Al-Bīrūnī tradition of naming)', 'تعلیمی غور و فکر (انواء / البیرونی کی نام رکھنے کی روایت)'),
+    ('manzil', 'Educational reflection (anwāʾ / Al-Bīrūnī tradition of naming)', 'تعلیمی غور و فکر (انواء / البیرونی کے ہاں ناموں کی روایت)'),  # reviewed 18.30 (pass 6)
     ('manzil', 'The Follower', 'پیچھے آنے والا'),
     ('manzil', 'Loyalty, Persistence, Following Truth', 'وفاداری، استقامت، حق کی پیروی'),
-    ('manzil', 'Following the prophetic example with steadfastness', 'نبوی نمونے کی ثابت قدمی کے ساتھ پیروی'),
+    ('manzil', 'Following the prophetic example with steadfastness', 'ثابت قدمی کے ساتھ سنتِ نبوی ﷺ کی پیروی'),  # reviewed 18.33 (pass 6)
     ('manzil', 'Alliances', 'اتحاد'),
     ('manzil', 'Long-term projects', 'طویل مدتی منصوبے'),
     ('manzil', 'Seeking teachers', 'اساتذہ کی تلاش'),
     ('manzil', 'Study', 'مطالعہ'),
     ('manzil', 'Breaking commitments', 'عہد توڑنا'),
     ('manzil', 'Impulsive changes', 'بے سوچی سمجھی تبدیلیاں'),
-    ('manzil', 'Al-Dabarān “follows” Thurayyā across the sky — a picture of steadfast following, not blind haste.', 'الدبران آسمان میں ثریا کے “پیچھے چلتا” ہے — یہ ثابت قدم پیروی کی تصویر ہے، اندھی جلد بازی کی نہیں۔'),
+    ('manzil', 'Al-Dabarān “follows” Thurayyā across the sky — a picture of steadfast following, not blind haste.', 'الدبران آسمان میں ثریا کے «پیچھے چلتا» ہے — یہ ثابت قدم پیروی کی تصویر ہے، اندھی جلد بازی کی نہیں۔'),  # reviewed 18.39 (pass 6)
     ('manzil', 'Educational reflection (star-name lore)', 'تعلیمی غور و فکر (ستاروں کے ناموں کی روایت)'),
     ('manzil', 'The White Spot', 'سفید نشان'),
     ('manzil', 'Clarity, Purification, Truth', 'وضاحت، تزکیہ، سچائی'),
-    ('manzil', 'Seeking clarity and purifying intentions', 'وضاحت کی طلب اور نیتوں کی صفائی'),
+    ('manzil', 'Seeking clarity and purifying intentions', 'وضاحت کی طلب اور نیتوں کو خالص کرنا'),  # reviewed 18.43 (pass 6)
     ('manzil', 'Spiritual purification', 'روحانی تزکیہ'),
     ('manzil', 'Learning', 'سیکھنا'),
     ('manzil', 'Communication', 'گفتگو'),
@@ -333,7 +333,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('manzil', 'Educational reflection', 'تعلیمی غور و فکر'),
     ('manzil', 'The Brand', 'نشان'),
     ('manzil', 'Marking, Identity, Recognition', 'نشان، شناخت، پہچان'),
-    ('manzil', "Recognizing one's unique spiritual purpose and calling", 'اپنے منفرد روحانی مقصد اور بلاوے کو پہچاننا'),
+    ('manzil', "Recognizing one's unique spiritual purpose and calling", 'اپنے منفرد روحانی مقصد اور ذمہ داری کو پہچاننا'),  # reviewed 18.53 (pass 6)
     ('manzil', 'Establishing identity', 'شناخت قائم کرنا'),
     ('manzil', 'Clear naming', 'واضح نام رکھنا'),
     ('manzil', 'Public speaking', 'عوامی خطاب'),
@@ -341,7 +341,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('manzil', 'Anonymity', 'گمنامی'),
     ('manzil', 'Hiding truth', 'حق چھپانا'),
     ('manzil', 'Dishonesty', 'بے ایمانی'),
-    ('manzil', 'Names and marks in the old star calendar were for recognition — know yourself before Allah, not for show.', 'پرانے ستارہ کیلنڈر میں نام اور نشان پہچان کے لیے تھے — اپنے آپ کو اللہ کے سامنے پہچانیں، دکھاوے کے لیے نہیں۔'),
+    ('manzil', 'Names and marks in the old star calendar were for recognition — know yourself before Allah, not for show.', 'ستاروں کی قدیم تقویم میں نام اور نشان پہچان کے لیے تھے — اللہ کے حضور اپنی پہچان کریں، دکھاوے کے لیے نہیں۔'),  # reviewed 18.61 (pass 6)
     ('manzil', 'The Forearm', 'بازو'),
     ('manzil', 'Reach, Extension, Generosity', 'رسائی، وسعت، سخاوت'),
     ('manzil', 'Extending help to others and reaching for higher wisdom', 'دوسروں کی مدد کے لیے ہاتھ بڑھانا اور اعلیٰ حکمت تک رسائی'),
@@ -356,12 +356,12 @@ AI_ENTRIES = [  # (section, en, ur)
     ('manzil', 'Contemplating the mysteries of faith and divine wisdom', 'ایمان کے رازوں اور الٰہی حکمت پر غور'),
     ('manzil', 'Meditation', 'مراقبہ'),
     ('manzil', 'Retreat', 'خلوت'),
-    ('manzil', 'Inner work', 'باطنی کام'),
+    ('manzil', 'Inner work', 'باطن کی اصلاح'),  # reviewed 18.76 (pass 6)
     ('manzil', 'Spiritual practices', 'روحانی معمولات'),
     ('manzil', 'Excessive worldly activity', 'حد سے زیادہ دنیوی مصروفیت'),
     ('manzil', 'Noise', 'شور'),
     ('manzil', 'Distraction', 'انتشارِ توجہ'),
-    ('manzil', 'In quiet gaps — between tasks, between breaths — remember the One who ordered the Moon’s phases.', 'خاموش وقفوں میں — کاموں کے درمیان، سانسوں کے درمیان — اس ہستی کو یاد کریں جس نے قمر کے مراحل کو ترتیب دیا۔'),
+    ('manzil', 'In quiet gaps — between tasks, between breaths — remember the One who ordered the Moon’s phases.', 'خاموش وقفوں میں — کاموں کے درمیان، سانسوں کے درمیان — اُس ذات کو یاد کریں جس نے چاند کی منزلیں مقرر فرمائیں۔'),  # reviewed 18.81 (pass 6)
     ('manzil', 'Educational reflection (Qurʾān 36:39)', 'تعلیمی غور و فکر (قرآن 36:39)'),
     ('manzil', 'The Glance', 'نگاہ'),
     ('manzil', 'Vision, Attentiveness', 'بصیرت، توجہ'),
@@ -369,23 +369,23 @@ AI_ENTRIES = [  # (section, en, ur)
     ('manzil', 'Careful observation', 'محتاط مشاہدہ'),
     ('manzil', 'Reviewing plans', 'منصوبوں پر نظرِ ثانی'),
     ('manzil', 'Seeking counsel', 'مشورہ لینا'),
-    ('manzil', 'Hasty judgments', 'جلد بازی کے فیصلے'),
+    ('manzil', 'Hasty judgments', 'جلد بازی میں رائے قائم کرنا'),  # reviewed 18.88 (pass 6)
     ('manzil', 'Gossip', 'غیبت'),
     ('manzil', 'Spying on others', 'دوسروں کی جاسوسی'),
-    ('manzil', 'Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.', 'منازلِ قمر غور و فکر اور اوقات کے آداب کے مقامات ہیں — غیب کی پیش گوئی نہیں۔'),
+    ('manzil', 'Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.', 'منازلِ قمر غور و فکر اور اوقات کے آداب کی منزلیں ہیں، غیب کی پیش گوئی کا ذریعہ نہیں۔'),  # reviewed 18.91 (pass 6)
     ('manzil', 'Educational framing (Qurʾān 10:5; 36:39)', 'تعلیمی پس منظر (قرآن 10:5؛ 36:39)'),
     ('manzil', 'The Forehead', 'پیشانی'),
     ('manzil', 'Dignity, Responsibility', 'وقار، ذمہ داری'),
-    ('manzil', 'Carry dignity with humility — leadership here means service and clear intention before Allah.', 'وقار کو عاجزی کے ساتھ اٹھائیں — یہاں قیادت کا مطلب خدمت اور اللہ کے سامنے واضح نیت ہے۔'),
-    ('manzil', 'Formal commitments', 'رسمی وعدے'),
+    ('manzil', 'Carry dignity with humility — leadership here means service and clear intention before Allah.', 'وقار کے ساتھ عاجزی بھی اختیار کریں — یہاں قیادت کا مطلب خدمت اور اللہ کے سامنے صاف نیت ہے۔'),  # reviewed 18.95 (pass 6)
+    ('manzil', 'Formal commitments', 'باضابطہ عہد و پیمان'),  # reviewed 18.96 (pass 6)
     ('manzil', 'Public trust', 'عوامی اعتماد'),
     ('manzil', 'Marriage discussions', 'رشتے کی بات چیت'),
     ('manzil', 'Arrogance', 'تکبر'),
     ('manzil', 'Empty show', 'کھوکھلا دکھاوا'),
     ('manzil', 'Neglecting counsel', 'مشورے کو نظر انداز کرنا'),
     ('manzil', 'The Mane', 'ایال'),
-    ('manzil', 'Strength, Presence', 'قوت، موجودگی'),
-    ('manzil', 'Strength is a trust: use presence to protect and encourage, not to dominate.', 'قوت ایک امانت ہے: موجودگی کو تحفظ اور حوصلہ افزائی کے لیے استعمال کریں، غلبہ پانے کے لیے نہیں۔'),
+    ('manzil', 'Strength, Presence', 'قوت، شخصیت کا اثر'),  # reviewed 18.103 (pass 6)
+    ('manzil', 'Strength is a trust: use presence to protect and encourage, not to dominate.', 'قوت ایک امانت ہے: اپنی شخصیت کے اثر کو حفاظت اور حوصلہ افزائی کے لیے استعمال کریں، دوسروں پر غلبہ پانے کے لیے نہیں۔'),  # reviewed 18.104 (pass 6)
     ('manzil', 'Encouraging others', 'دوسروں کی حوصلہ افزائی'),
     ('manzil', 'Steady work', 'مسلسل کام'),
     ('manzil', 'Protecting the vulnerable', 'کمزوروں کی حفاظت'),
@@ -401,48 +401,48 @@ AI_ENTRIES = [  # (section, en, ur)
     ('manzil', 'Repentance', 'توبہ'),
     ('manzil', 'Reorganizing', 'ازسرِ نو ترتیب'),
     ('manzil', 'Clinging to the obsolete', 'فرسودہ چیزوں سے چمٹے رہنا'),
-    ('manzil', 'Forced abrupt breaks without counsel', 'مشورے کے بغیر زبردستی اچانک ٹوٹ پھوٹ'),
+    ('manzil', 'Forced abrupt breaks without counsel', 'مشورے کے بغیر اچانک اور زبردستی تعلق توڑنا'),  # reviewed 18.120 (pass 6)
     ('manzil', 'The Barker', 'بھونکنے والا'),
     ('manzil', 'Gathering, Calling', 'اجتماع، پکار'),
-    ('manzil', 'Call others to what is good — a voice used for gathering and warning, not for needless noise.', 'دوسروں کو نیکی کی طرف بلائیں — آواز کو جمع کرنے اور خبردار کرنے کے لیے استعمال کریں، بے وجہ شور کے لیے نہیں۔'),
+    ('manzil', 'Call others to what is good — a voice used for gathering and warning, not for needless noise.', 'دوسروں کو نیکی کی طرف بلائیں — اپنی آواز لوگوں کو جمع کرنے اور خبردار کرنے کے لیے استعمال کریں، بے وجہ شور کے لیے نہیں۔'),  # reviewed 18.123 (pass 6)
     ('manzil', 'Community work', 'اجتماعی کام'),
     ('manzil', 'Clear announcements', 'واضح اعلانات'),
     ('manzil', 'Spreading alarm without cause', 'بلاوجہ خوف پھیلانا'),
     ('manzil', 'Division', 'تفرقہ'),
-    ('manzil', 'The Unarmed', 'بے ہتھیار'),
-    ('manzil', 'Balance, Harvest', 'توازن، فصل'),
-    ('manzil', 'Al-Simāk al-Aʿzal (“the unarmed”) invites fair measure — harvest with gratitude, without grasping.', 'السماک الاعزل (“بے ہتھیار”) منصفانہ ناپ تول کی دعوت دیتا ہے — شکرگزاری کے ساتھ فصل کاٹیں، لالچ کے بغیر۔'),
+    ('manzil', 'The Unarmed', 'نہتا'),  # reviewed 18.128 (pass 6)
+    ('manzil', 'Balance, Harvest', 'توازن، فصل کی کٹائی'),  # reviewed 18.129 (pass 6)
+    ('manzil', 'Al-Simāk al-Aʿzal (“the unarmed”) invites fair measure — harvest with gratitude, without grasping.', 'سماکِ اعزل («نہتا») منصفانہ ناپ تول کی دعوت دیتا ہے — شکرگزاری کے ساتھ فصل کاٹیں، لالچ کے بغیر۔'),  # reviewed 18.130 (pass 6)
     ('manzil', 'Fair dealing', 'منصفانہ لین دین'),
     ('manzil', 'Harvest and completion of work', 'فصل کی کٹائی اور کام کی تکمیل'),
     ('manzil', 'Partnerships', 'شراکتیں'),
-    ('manzil', 'Beauty with restraint', 'ضبط کے ساتھ حسن'),
+    ('manzil', 'Beauty with restraint', 'حسن و آرائش میں اعتدال'),  # reviewed 19.1 (pass 6)
     ('manzil', 'Greed', 'لالچ'),
     ('manzil', 'Unfair advantage', 'ناجائز فائدہ'),
     ('manzil', 'Neglecting zakāh and rights', 'زکوٰۃ اور حقوق کو نظر انداز کرنا'),
     ('manzil', 'The Covering', 'پردہ'),
     ('manzil', 'Covering, Discretion', 'پردہ پوشی، رازداری'),
     ('manzil', 'Cover faults — your own and others’ — and prefer discretion over exposure.', 'عیب چھپائیں — اپنے بھی اور دوسروں کے بھی — اور پردہ فاش کرنے پر رازداری کو ترجیح دیں۔'),
-    ('manzil', 'Private repentance', 'نجی توبہ'),
+    ('manzil', 'Private repentance', 'تنہائی میں توبہ'),  # reviewed 19.8 (pass 6)
     ('manzil', 'Protecting privacy', 'رازداری کا تحفظ'),
-    ('manzil', 'Quiet charity', 'خاموش صدقہ'),
+    ('manzil', 'Quiet charity', 'چھپا کر صدقہ دینا'),  # reviewed 19.10 (pass 6)
     ('manzil', 'Exposing others', 'دوسروں کو بے نقاب کرنا'),
     ('manzil', 'Scandal', 'رسوائی'),
     ('manzil', 'Public shaming', 'سرِعام شرمندہ کرنا'),
     ('manzil', 'The Claws', 'پنجے'),
-    ('manzil', 'Boundaries, Careful Cuts', 'حدود، محتاط کاٹ'),
-    ('manzil', 'Set boundaries with justice: cut what harms, without cruelty.', 'انصاف کے ساتھ حدود قائم کریں: جو نقصان دہ ہے اسے کاٹیں، بغیر سنگدلی کے۔'),
+    ('manzil', 'Boundaries, Careful Cuts', 'حدود، سوچ سمجھ کر قطع کرنا'),  # reviewed 19.15 (pass 6)
+    ('manzil', 'Set boundaries with justice: cut what harms, without cruelty.', 'انصاف کے ساتھ حدود قائم کریں: جو نقصان دہ ہو اسے الگ کر دیں، مگر سنگدلی کے بغیر۔'),  # reviewed 19.16 (pass 6)
     ('manzil', 'Clear agreements', 'واضح معاہدے'),
     ('manzil', 'Ending harmful ties with adab', 'نقصان دہ تعلقات کو ادب کے ساتھ ختم کرنا'),
     ('manzil', 'Legal clarity', 'قانونی وضاحت'),
     ('manzil', 'Self-discipline', 'ضبطِ نفس'),
-    ('manzil', 'Spiteful severance', 'کینہ پرور قطع تعلق'),
+    ('manzil', 'Spiteful severance', 'کینے کی بنا پر قطع تعلق'),  # reviewed 19.21 (pass 6)
     ('manzil', 'Ambiguous contracts', 'مبہم معاہدے'),
     ('manzil', 'Unnecessary conflict', 'غیر ضروری جھگڑا'),
     ('manzil', 'The Crown', 'تاج'),
     ('manzil', 'Honor, Trust', 'عزت، امانت'),
-    ('manzil', 'Honor is a trust worn lightly — crowns in the sky remind of responsibility, not entitlement.', 'عزت ایک امانت ہے جسے ہلکے پن سے پہنا جاتا ہے — آسمان کے تاج ذمہ داری کی یاد دلاتے ہیں، استحقاق کی نہیں۔'),
+    ('manzil', 'Honor is a trust worn lightly — crowns in the sky remind of responsibility, not entitlement.', 'عزت ایک امانت ہے، اسے غرور کے بغیر سنبھالیں — آسمان کے تاج ذمہ داری کی یاد دلاتے ہیں، استحقاق کی نہیں۔'),  # reviewed 19.26 (pass 6)
     ('manzil', 'Keeping trusts', 'امانتوں کی حفاظت'),
-    ('manzil', 'Formal roles', 'رسمی ذمہ داریاں'),
+    ('manzil', 'Formal roles', 'باضابطہ مناصب'),  # reviewed 19.28 (pass 6)
     ('manzil', 'Guarding dignity', 'وقار کی حفاظت'),
     ('manzil', 'Responsible leadership', 'ذمہ دارانہ قیادت'),
     ('manzil', 'Pride', 'غرور'),
@@ -450,14 +450,14 @@ AI_ENTRIES = [  # (section, en, ur)
     ('manzil', 'Seeking status for its own sake', 'محض مرتبے کی خاطر مرتبہ چاہنا'),
     ('manzil', 'The Heart', 'دل'),
     ('manzil', 'Sincerity, Courage of Heart', 'اخلاص، دل کی ہمت'),
-    ('manzil', 'Return to the heart: sincerity (ikhlāṣ) before intensity — courage without crushing others.', 'دل کی طرف لوٹیں: شدت سے پہلے اخلاص — بغیر دوسروں کو کچلے ہمت۔'),
+    ('manzil', 'Return to the heart: sincerity (ikhlāṣ) before intensity — courage without crushing others.', 'دل کی طرف لوٹیں: جوش سے پہلے اخلاص، اور ایسی ہمت جو دوسروں کو کچلے نہیں۔'),  # reviewed 19.36 (pass 6)
     ('manzil', 'Heartfelt duʿāʾ', 'دل سے دعا'),
     ('manzil', 'Honest conversations', 'دیانت دارانہ گفتگو'),
     ('manzil', 'Courageous apology', 'جرأت مندانہ معذرت'),
     ('manzil', 'Deep study', 'گہرا مطالعہ'),
     ('manzil', 'Hard-heartedness', 'سنگدلی'),
     ('manzil', 'Emotional recklessness', 'جذباتی بے احتیاطی'),
-    ('manzil', 'Crushing speech', 'کچل دینے والی گفتگو'),
+    ('manzil', 'Crushing speech', 'دل توڑ دینے والی باتیں'),  # reviewed 19.43 (pass 6)
     ('manzil', 'The Sting', 'ڈنک'),
     ('manzil', 'Restraint, Defense of Dignity', 'ضبط، وقار کا دفاع'),
     ('manzil', 'The sting is for defense, not attack — restrain the tongue and hand unless justice requires otherwise.', 'ڈنک دفاع کے لیے ہے، حملے کے لیے نہیں — جب تک انصاف کا تقاضا نہ ہو زبان اور ہاتھ کو روکے رکھیں۔'),
@@ -467,19 +467,19 @@ AI_ENTRIES = [  # (section, en, ur)
     ('manzil', 'Saying less', 'کم بولنا'),
     ('manzil', 'Retaliation for ego', 'انا کی خاطر بدلہ'),
     ('manzil', 'Provocation', 'اشتعال دلانا'),
-    ('manzil', 'Reckless risk', 'بے احتیاطی کا خطرہ'),
+    ('manzil', 'Reckless risk', 'بے جا خطرہ مول لینا'),  # reviewed 19.53 (pass 6)
     ('manzil', 'The Ostriches', 'شتر مرغ'),
     ('manzil', 'Journey, Openness', 'سفر، کشادگی'),
     ('manzil', 'Wide spaces invite travel of body and heart — move with tawakkul and good company.', 'وسیع جگہیں جسم اور دل دونوں کے سفر کی دعوت دیتی ہیں — توکل اور اچھی صحبت کے ساتھ چلیں۔'),
     ('manzil', 'Exploration of knowledge', 'علم کی کھوج'),
     ('manzil', 'Outdoor work', 'کھلی فضا میں کام'),
-    ('manzil', 'Expanding horizons with adab', 'آداب کے ساتھ افق کی وسعت'),
+    ('manzil', 'Expanding horizons with adab', 'ادب کے دائرے میں رہ کر اپنے افق وسیع کرنا'),  # reviewed 19.59 (pass 6)
     ('manzil', 'Aimless wandering', 'بے مقصد آوارہ گردی'),
     ('manzil', 'Leaving duties unfinished', 'فرائض ادھورے چھوڑنا'),
     ('manzil', 'Isolation from good counsel', 'اچھے مشورے سے دوری'),
     ('manzil', 'The City', 'شہر'),
-    ('manzil', 'Settlement, Order', 'آباد ہونا، نظم'),
-    ('manzil', 'Cities need order and neighbors’ rights — settle what is due before chasing the next road.', 'شہروں کو نظم اور پڑوسیوں کے حقوق چاہییں — اگلے راستے کے پیچھے جانے سے پہلے جو واجب ہے وہ ادا کریں۔'),
+    ('manzil', 'Settlement, Order', 'ٹھہراؤ، نظم و ترتیب'),  # reviewed 19.64 (pass 6)
+    ('manzil', 'Cities need order and neighbors’ rights — settle what is due before chasing the next road.', 'شہروں کو نظم اور پڑوسیوں کے حقوق چاہییں — اگلی راہ پکڑنے سے پہلے جو واجب ہے وہ ادا کریں۔'),  # reviewed 19.65 (pass 6)
     ('manzil', 'Settling affairs', 'معاملات نمٹانا'),
     ('manzil', 'Neighborhood care', 'پڑوس کا خیال'),
     ('manzil', 'Local commitments', 'مقامی ذمہ داریاں'),
@@ -488,10 +488,10 @@ AI_ENTRIES = [  # (section, en, ur)
     ('manzil', 'Chaos in commitments', 'ذمہ داریوں میں انتشار'),
     ('manzil', 'Fleeing responsibility', 'ذمہ داری سے فرار'),
     ('manzil', 'The Fortunate Sacrificer', 'سعد الذابح (قربانی کرنے والا)'),
-    ('manzil', 'Offering, Commitment', 'پیشکش، وعدہ'),
-    ('manzil', 'Named among the saʿd stations: reflect on what you are willing to offer — wealth, time, ego — for Allah’s sake. (Educational theme only; not a ritual prescription.)', 'سعد منازل میں شمار ہوتی ہے: غور کریں کہ آپ اللہ کی خاطر کیا پیش کرنے کو تیار ہیں — مال، وقت، انا۔ (محض تعلیمی موضوع؛ کوئی عبادتی نسخہ نہیں۔)'),
+    ('manzil', 'Offering, Commitment', 'ایثار، عہد'),  # reviewed 19.73 (pass 6)
+    ('manzil', 'Named among the saʿd stations: reflect on what you are willing to offer — wealth, time, ego — for Allah’s sake. (Educational theme only; not a ritual prescription.)', 'یہ اُن منازل میں سے ہے جن کے نام «سعد» سے شروع ہوتے ہیں: غور کریں کہ آپ اللہ کی خاطر کیا پیش کرنے کو تیار ہیں — مال، وقت، انا۔ (محض تعلیمی موضوع؛ کوئی مقررہ عبادت یا عمل نہیں۔)'),  # reviewed 19.74 (pass 6)
     ('manzil', 'Charitable giving', 'خیرات و صدقات'),
-    ('manzil', 'Keeping vows', 'منتوں اور وعدوں کی پاسداری'),
+    ('manzil', 'Keeping vows', 'عہد و پیمان کی پاسداری'),  # reviewed 19.76 (pass 6)
     ('manzil', 'Serious commitments', 'سنجیدہ وعدے'),
     ('manzil', 'Simplifying lifestyle', 'طرزِ زندگی کو سادہ بنانا'),
     ('manzil', 'Wasteful spending', 'فضول خرچی'),
@@ -503,7 +503,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('manzil', 'Listening', 'سننا'),
     ('manzil', 'Patience with difficulty', 'مشکل میں صبر'),
     ('manzil', 'Swallowing anger into resentment', 'غصے کو نگل کر رنجش بنا لینا'),
-    ('manzil', 'Consuming without reflection', 'بغیر سوچے سمجھے لینا'),
+    ('manzil', 'Consuming without reflection', 'بغیر سوچے سمجھے کھانا اور اپنانا'),  # reviewed 19.88 (pass 6)
     ('manzil', 'Overindulgence', 'حد سے زیادہ لطف اندوزی'),
     ('manzil', 'The Most Fortunate', 'سعد السعود (سب سے زیادہ خوش بخت)'),
     ('manzil', 'Gratitude, Hope', 'شکرگزاری، امید'),
@@ -512,11 +512,11 @@ AI_ENTRIES = [  # (section, en, ur)
     ('manzil', 'Beginning hopeful works', 'پُرامید کاموں کا آغاز'),
     ('manzil', 'Sharing ease with others', 'آسانی دوسروں کے ساتھ بانٹنا'),
     ('manzil', 'Taking ease for granted', 'آسانی کو معمولی سمجھ لینا'),
-    ('manzil', 'Complacency', 'خود اطمینانی'),
+    ('manzil', 'Complacency', 'غفلت اور بے فکری'),  # reviewed 19.94 (pass 6)
     ('manzil', 'Forgetting the Giver', 'عطا کرنے والے کو بھول جانا'),
     ('manzil', 'The Fortunate Tents', 'سعد الاخبیہ (خیمے)'),
     ('manzil', 'Shelter, Hospitality', 'پناہ، مہمان نوازی'),
-    ('manzil', 'Tents mean shelter and guests: open your space with generosity and guard those who seek safety.', 'خیموں کا مطلب پناہ اور مہمان ہے: فراخ دلی سے اپنی جگہ کھولیں اور پناہ مانگنے والوں کی حفاظت کریں۔'),
+    ('manzil', 'Tents mean shelter and guests: open your space with generosity and guard those who seek safety.', 'خیمے پناہ اور مہمانوں کی علامت ہیں: فراخ دلی سے اپنے دروازے کھولیں اور پناہ مانگنے والوں کی حفاظت کریں۔'),  # reviewed 19.97 (pass 6)
     ('manzil', 'Hospitality', 'مہمان نوازی'),
     ('manzil', 'Shelter and housing matters', 'رہائش اور پناہ کے معاملات'),
     ('manzil', 'Protecting family', 'خاندان کی حفاظت'),
@@ -524,33 +524,33 @@ AI_ENTRIES = [  # (section, en, ur)
     ('manzil', 'Inhospitality', 'مہمان نوازی نہ کرنا'),
     ('manzil', 'Neglecting dependents', 'زیرِ کفالت افراد کو نظر انداز کرنا'),
     ('manzil', 'Closing doors out of pride', 'غرور میں دروازے بند کرنا'),
-    ('manzil', 'The Former Spout', 'پہلا نالہ'),
+    ('manzil', 'The Former Spout', 'اگلا دہانہ'),  # reviewed 19.105 (pass 6)
     ('manzil', 'Opening, Outflow', 'کھلنا، بہاؤ'),
-    ('manzil', 'The former spout of the bucket: begin letting good flow — speech, charity, and help — with measured opening.', 'ڈول کا پہلا نالہ: بھلائی کو بہنے دینا شروع کریں — بات، صدقہ اور مدد — ناپ تول کے ساتھ کھولتے ہوئے۔'),
+    ('manzil', 'The former spout of the bucket: begin letting good flow — speech, charity, and help — with measured opening.', 'ڈول کا اگلا دہانہ: بھلائی کو بہنے دیں — بات، صدقہ اور مدد — مگر سوچ سمجھ کر اور اعتدال سے۔'),  # reviewed 19.107 (pass 6)
     ('manzil', 'Starting helpful projects', 'مفید منصوبے شروع کرنا'),
-    ('manzil', 'Releasing stuck affairs', 'رکے ہوئے معاملات کو کھولنا'),
+    ('manzil', 'Releasing stuck affairs', 'اٹکے ہوئے معاملات سلجھانا'),  # reviewed 19.109 (pass 6)
     ('manzil', 'Marriage and union talks', 'نکاح اور رشتے کی بات چیت'),
     ('manzil', 'Generosity', 'سخاوت'),
     ('manzil', 'Reckless disclosure', 'بے احتیاطی سے راز کھولنا'),
-    ('manzil', 'Draining resources without plan', 'منصوبے کے بغیر وسائل خالی کرنا'),
-    ('manzil', 'Gossip as “release”', 'غیبت کو “اظہارِ دل” سمجھنا'),
-    ('manzil', 'The Latter Spout', 'دوسرا نالہ'),
+    ('manzil', 'Draining resources without plan', 'منصوبہ بندی کے بغیر وسائل ختم کر دینا'),  # reviewed 19.113 (pass 6)
+    ('manzil', 'Gossip as “release”', 'غیبت کو «دل کا بوجھ ہلکا کرنا» سمجھنا'),  # reviewed 19.114 (pass 6)
+    ('manzil', 'The Latter Spout', 'پچھلا دہانہ'),  # reviewed 19.115 (pass 6)
     ('manzil', 'Completion, Emptying', 'تکمیل، خالی کرنا'),
-    ('manzil', 'The latter spout completes the pouring — finish what you opened, and empty the heart of grudges.', 'دوسرا نالہ انڈیلنے کو مکمل کرتا ہے — جو کھولا اسے پورا کریں، اور دل کو کینوں سے خالی کریں۔'),
+    ('manzil', 'The latter spout completes the pouring — finish what you opened, and empty the heart of grudges.', 'پچھلا دہانہ انڈیلنے کا عمل پورا کرتا ہے — جو شروع کیا اسے مکمل کریں، اور دل کو کینوں سے خالی کریں۔'),  # reviewed 19.117 (pass 6)
     ('manzil', 'Completing projects', 'منصوبے مکمل کرنا'),
     ('manzil', 'Settling debts', 'قرض چکانا'),
     ('manzil', 'Forgiving leftovers', 'بچی کھچی رنجشیں معاف کرنا'),
     ('manzil', 'Closing cycles cleanly', 'ادوار کو صفائی سے بند کرنا'),
-    ('manzil', 'Leaving ends untied', 'سرے کھلے چھوڑ دینا'),
-    ('manzil', 'Hoarding grudges', 'کینے سنبھال کر رکھنا'),
+    ('manzil', 'Leaving ends untied', 'کام ادھورے چھوڑ دینا'),  # reviewed 19.121 (pass 6)
+    ('manzil', 'Hoarding grudges', 'دل میں کینہ پالنا'),  # reviewed 19.122 (pass 6)
     ('manzil', 'Starting too many new things', 'بہت سی نئی چیزیں شروع کر لینا'),
     ('manzil', 'Belly of the Fish', 'مچھلی کا پیٹ'),
     ('manzil', 'Wholeness, Hidden Depths', 'کاملیت، پوشیدہ گہرائیاں'),
-    ('manzil', 'The belly of the fish closes the circuit of twenty-eight — honor what is hidden, and seek wholeness through tawakkul.', 'مچھلی کا پیٹ اٹھائیس کے دائرے کو مکمل کرتا ہے — جو پوشیدہ ہے اس کی قدر کریں اور توکل کے ذریعے کاملیت کی طلب کریں۔'),
+    ('manzil', 'The belly of the fish closes the circuit of twenty-eight — honor what is hidden, and seek wholeness through tawakkul.', 'مچھلی کا پیٹ اٹھائیس منازل کا دائرہ مکمل کرتا ہے — جو پوشیدہ ہے اس کی قدر کریں اور توکل کے ساتھ کمال کی طلب کریں۔'),  # reviewed 19.126 (pass 6)
     ('manzil', 'Quiet reflection', 'خاموش غور و فکر'),
     ('manzil', 'Caring for the unseen needs of others', 'دوسروں کی ان دیکھی ضرورتوں کا خیال رکھنا'),
     ('manzil', 'Patience with the hidden', 'پوشیدہ باتوں پر صبر'),
-    ('manzil', 'Integrating lessons', 'اسباق کو یکجا کرنا'),
+    ('manzil', 'Integrating lessons', 'سیکھی ہوئی باتوں کو زندگی کا حصہ بنانا'),  # reviewed 19.130 (pass 6)
     ('manzil', 'Forced exposure', 'زبردستی بے نقاب کرنا'),
     ('manzil', 'Denying the unseen', 'غیب کا انکار'),
     ('manzil', 'Despair in darkness', 'اندھیرے میں مایوسی'),
@@ -571,7 +571,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Food delivery platforms', 'کھانے کی ترسیل کے پلیٹ فارم'),
     ('career', 'Farm-to-table businesses', 'کھیت سے دسترخوان تک کے کاروبار'),
     ('career', 'Fresh food markets', 'تازہ خوراک کے بازار'),
-    ('career', 'Fast-casual dining concepts', 'فاسٹ کیژوئل کھانے کے تصورات'),
+    ('career', 'Fast-casual dining concepts', 'فوری سروس والے ریستوران'),  # reviewed 17.24 (pass 6)
     ('career', 'Agricultural Trading', 'زرعی تجارت'),
     ('career', 'Livestock commodities trading', 'مویشی اجناس کی تجارت'),
     ('career', 'Grain futures and commodities', 'اناج کے فیوچرز اور اجناس'),
@@ -912,8 +912,8 @@ AI_ENTRIES = [  # (section, en, ur)
     ('potd', "The Sun's day is best for bold, visible action. Begin projects you want recognized. Seek blessings from those in authority. Make decisions that require confidence and leadership. Avoid hiding or working in secrecy — the Sun illuminates.", 'روایتی علمِ نجوم میں اتوار کو شمس سے منسوب کیا جاتا ہے، اور اسے جرأت مندانہ اور نمایاں اقدام کے لیے موزوں دن سمجھا جاتا ہے۔ جن منصوبوں کی پہچان چاہتے ہوں انہیں شروع کریں۔ بااختیار افراد کی تائید اور سرپرستی حاصل کرنے کی کوشش کریں۔ ایسے فیصلے کریں جن میں اعتماد اور قیادت درکار ہو۔ چھپنے یا پوشیدگی میں کام کرنے سے بچیں — شمس روشنی کی علامت ہے۔'),
     ('potd', "Monday is ideal for matters of the home, family, and emotional wellbeing. Engage in travel or movement — the Moon governs journeys. Practice emotional healing, prayer, and du'ā'. Reflect on your inner world. Avoid confrontation; the Moon's waters prefer calm.", 'روایتی علمِ نجوم میں پیر کو قمر سے منسوب کیا جاتا ہے، اور یہ گھر، خاندان اور جذباتی بہبود کے معاملات کے لیے موزوں دن سمجھا جاتا ہے۔ سفر یا نقل و حرکت اختیار کریں — روایت میں قمر کو اسفار سے جوڑا جاتا ہے۔ جذباتی سکون اور بہتری کے لیے نماز اور دعا کا اہتمام کریں۔ اپنے باطن پر غور کریں۔ ٹکراؤ سے بچیں؛ اس دن سکون اور تحمل کو ترجیح دیں۔'),
     ('potd', 'Tuesday strengthens courage and decisive action. Tackle difficult tasks requiring force or conviction. Physical training, surgery if medically required, and overcoming fears align with Mars. Channel Mars energy into productive determination — not aggression. Start with Bismillah and firm niyyah.', 'روایتی علمِ نجوم میں منگل کو مریخ سے منسوب کیا جاتا ہے، اور اسے ہمت اور فیصلہ کن اقدام کا دن سمجھا جاتا ہے۔ قوت یا پختہ ارادے والے مشکل کام نمٹائیں۔ جسمانی تربیت اور خوف پر قابو پانا اسی نسبت سے مناسب سمجھا جاتا ہے۔ سرجری کا فیصلہ صرف طبی ضرورت اور ڈاکٹر کے مشورے پر ہونا چاہیے، دن یا سیارے کی نسبت پر نہیں۔ ہمت اور قوت کو جارحیت نہیں بلکہ بامقصد عزم میں ڈھالیں۔ بسم اللہ اور پختہ نیت سے آغاز کریں۔'),
-    ('potd', 'Wednesday is the day of the scholar and the merchant. Ideal for studying, writing, signing contracts, teaching, and all forms of communication. Engage the mind — read, research, debate. Mercury rewards precision and clarity. This is also an excellent day for Zikr that involves recitation (tilāwah).', 'بدھ عالم اور تاجر کا دن ہے، اور روایت میں اسے عطارد سے منسوب کیا جاتا ہے۔ مطالعہ، تحریر، معاہدوں پر دستخط، تدریس اور ہر طرح کی گفتگو کے لیے موزوں ہے۔ ذہن کو مشغول رکھیں — پڑھیں، تحقیق کریں، مباحثہ کریں۔ اس دن درستی اور وضاحت کو اپنا شعار بنائیں۔ یہ تلاوت پر مشتمل ذکر کے لیے بھی بہترین دن ہے۔'),
-    ('potd', "Thursday is the most blessed day for spiritual elevation, wealth-seeking, and expansion. Make du'ā' for rizq (sustenance). Begin long-term projects. Seek knowledge, visit scholars, and perform generous acts of sadaqah. Thursday night (eve of Friday) is especially blessed — use it for extra worship.", 'روایت میں جمعرات روحانی بلندی، رزق کی طلب اور وسعت کے لیے خاص طور پر بابرکت سمجھی جاتی ہے۔ رزق کے لیے دعا کریں۔ طویل مدتی منصوبے شروع کریں۔ علم حاصل کریں، اہلِ علم سے ملیں، اور فراخ دلی سے صدقہ کریں۔ جمعرات کی رات (جمعہ کی شب) کو خاص طور پر بابرکت سمجھا جاتا ہے — اسے اضافی عبادت کے لیے استعمال کریں۔'),
+    ('potd', 'Wednesday is the day of the scholar and the merchant. Ideal for studying, writing, signing contracts, teaching, and all forms of communication. Engage the mind — read, research, debate. Mercury rewards precision and clarity. This is also an excellent day for Zikr that involves recitation (tilāwah).', 'بدھ عالم اور تاجر کا دن ہے، اور روایت میں اسے عطارد سے منسوب کیا جاتا ہے۔ یہ دن مطالعہ، تحریر، معاہدوں پر دستخط، تدریس اور ہر طرح کی گفتگو کے لیے موزوں سمجھا جاتا ہے۔ ذہن کو مشغول رکھیں — پڑھیں، تحقیق کریں، مباحثہ کریں۔ اس دن درستی اور وضاحت کو اپنا شعار بنائیں۔ روایت میں یہ دن تلاوت پر مشتمل ذکر کے لیے بھی موزوں سمجھا جاتا ہے۔'),  # reviewed 17.31 (pass 6)
+    ('potd', "Thursday is the most blessed day for spiritual elevation, wealth-seeking, and expansion. Make du'ā' for rizq (sustenance). Begin long-term projects. Seek knowledge, visit scholars, and perform generous acts of sadaqah. Thursday night (eve of Friday) is especially blessed — use it for extra worship.", 'روایت میں جمعرات روحانی بلندی، رزق کی طلب اور وسعت کے لیے خاص طور پر بابرکت سمجھی جاتی ہے۔ رزق کے لیے دعا کریں۔ طویل مدتی منصوبے شروع کریں۔ علم حاصل کریں، اہلِ علم سے ملیں، اور فراخ دلی سے صدقہ کریں۔ جمعرات اور جمعہ کی درمیانی رات (شبِ جمعہ) خاص طور پر بابرکت سمجھی جاتی ہے — اسے اضافی عبادت میں گزاریں۔'),  # reviewed 17.32 (pass 6)
     ('potd', "Friday is the most sacred day in Islam (Yawm al-Jum'ah). Venus and Friday align in beauty, community, and gratitude. Attend Jumu'ah, send abundant Ṣalawāt upon the Prophet ﷺ, and perform acts of beauty (charity, kind words, reconciliation). It is a day for love, forgiveness, and peace.", 'جمعہ اسلام میں سب سے افضل دن ہے (یومُ الجمعہ)۔ روایتی علمِ نجوم اسے زہرہ سے منسوب کرتا ہے، جو حسن، اجتماع اور شکرگزاری کی علامت ہے۔ جمعہ کی نماز میں شریک ہوں، نبی کریم ﷺ پر کثرت سے درود شریف پڑھیں، اور حسنِ عمل (صدقہ، نرم گفتگو، صلح) اختیار کریں۔ یہ محبت، معافی اور سکون کا دن ہے۔'),
     ('potd', 'Saturday is governed by the slowest and most disciplined of the classical planets. It is a day for long-term commitments, serious study, and patient effort. Engage in property matters, legal affairs, and building lasting structures. Avoid rushing — Saturn rewards consistent, sustained effort over time.', 'روایتی علمِ نجوم میں ہفتے کو زحل سے منسوب کیا جاتا ہے، جو کلاسیکی سیاروں میں سب سے سست اور سب سے منظم ہے۔ یہ طویل مدتی وعدوں، سنجیدہ مطالعے اور صبر و استقامت والی محنت کا دن ہے۔ جائیداد، قانونی معاملات اور دیرپا اور مضبوط ڈھانچے تعمیر کرنے پر توجہ دیں۔ جلد بازی سے بچیں — اس دن مسلسل اور دیرپا محنت کو ترجیح دیں۔'),
     ('rules', "How scoring works: each rule adds or subtracts points; the total is scaled to a 0–100 score against that election type's own maximum achievable points, so the tier bands (Mumtāz, Jayyid, Maqbūl, Ḍaʿīf, Ijtanib) mean the same thing across marriage, travel, and any future election type.", 'اسکور کیسے شمار ہوتا ہے: ہر اصول کے مطابق کچھ نمبر جمع یا منہا کیے جاتے ہیں۔ پھر حاصل شدہ مجموعے کو اسی قسم کے انتخاب کے زیادہ سے زیادہ ممکنہ نمبروں کے لحاظ سے 0–100 کے پیمانے پر تبدیل کیا جاتا ہے، تاکہ درجوں (ممتاز، جیّد، مقبول، ضعیف، اجتناب) کا مطلب شادی، سفر اور آئندہ ہر قسم کے انتخاب میں ایک ہی رہے۔'),
