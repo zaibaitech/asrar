@@ -328,10 +328,12 @@
   {
    "group": "rules",
    "en": "The Moon is forming a supportive connection with Venus or Jupiter right now — a sign of a smooth, well-supported journey.",
-   "ur": "قمر اس وقت زہرہ یا مشتری کے ساتھ موافق ربط بنا رہا ہے — ہموار اور معاون سفر کی علامت۔",
+   "ur": "قمر اس وقت زہرہ یا مشتری کے ساتھ موافق ربط بنا رہا ہے — روایت میں اسے ہموار اور آسان سفر کی علامت سمجھا جاتا ہے۔",
    "reason": "«ربط» (plain \"connection\") is used for the Moon forming an applying aspect; the glossary term for the classical Moon \"Applying to\" is «اتصال» (Phase 2 open question 11).",
    "alternative": "«قمر اس وقت … سے اتصال کر رہا ہے» (the wording used in the Detailed mode)",
-   "review": "native Urdu + astrology"
+   "review": "native Urdu + astrology",
+   "ur_flagged": "قمر اس وقت زہرہ یا مشتری کے ساتھ موافق ربط بنا رہا ہے — ہموار اور معاون سفر کی علامت۔",
+   "resolved": "Native review, sheet 3 row 20.27 (pass 7, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "rules",
@@ -376,18 +378,22 @@
   {
    "group": "rules",
    "en": "The Moon is forming a supportive connection with Mercury right now — favorable for retention and a receptive mind.",
-   "ur": "قمر اس وقت عطارد کے ساتھ موافق ربط بنا رہا ہے — یادداشت اور قبول کرنے والے ذہن کے لیے موافق۔",
+   "ur": "قمر اس وقت عطارد کے ساتھ موافق ربط بنا رہا ہے — یادداشت اور سیکھنے پر آمادہ ذہن کے لیے موافق۔",
    "reason": "«ربط» (plain \"connection\") is used for the Moon forming an applying aspect; the glossary term for the classical Moon \"Applying to\" is «اتصال» (Phase 2 open question 11).",
    "alternative": "«قمر اس وقت … سے اتصال کر رہا ہے» (the wording used in the Detailed mode)",
-   "review": "native Urdu + astrology"
+   "review": "native Urdu + astrology",
+   "ur_flagged": "قمر اس وقت عطارد کے ساتھ موافق ربط بنا رہا ہے — یادداشت اور قبول کرنے والے ذہن کے لیے موافق۔",
+   "resolved": "Native review, sheet 3 row 20.60 (pass 7, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "rules",
    "en": "Mercury is too close to the Sun right now and appears \"hidden\" — this weakens the deal's own significator.",
-   "ur": "عطارد اس وقت شمس کے بہت قریب ہے اور “پوشیدہ” ہو گیا ہے — اس سے سودے کی اپنی علامت کمزور سمجھی جاتی ہے۔",
+   "ur": "عطارد اس وقت شمس کے بہت قریب ہے اور «پوشیدہ» ہو گیا ہے — اس سے سودے کی اپنی علامت کمزور سمجھی جاتی ہے۔",
    "reason": "English \"significator\" is rendered «علامت» here but «دلالت کنندہ» in the Detailed-mode sentences (Phase 3); the term is not settled.",
    "alternative": "«دلالت کنندہ» everywhere, if the reviewer approves",
-   "review": "astrology terminology"
+   "review": "astrology terminology",
+   "ur_flagged": "عطارد اس وقت شمس کے بہت قریب ہے اور “پوشیدہ” ہو گیا ہے — اس سے سودے کی اپنی علامت کمزور سمجھی جاتی ہے۔",
+   "resolved": "Native review, sheet 3 row 20.34 (pass 7, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "rules",
@@ -400,10 +406,12 @@
   {
    "group": "rules",
    "en": "The Moon is too close to the Sun right now and appears \"hidden\" — this weakens the matter's own significator.",
-   "ur": "قمر اس وقت شمس کے بہت قریب ہے اور “پوشیدہ” ہو گیا ہے — اس سے اس معاملے کی اپنی علامت کمزور سمجھی جاتی ہے۔",
+   "ur": "قمر اس وقت شمس کے بہت قریب ہے اور «پوشیدہ» ہو گیا ہے — اس سے اس معاملے کی اپنی علامت کمزور سمجھی جاتی ہے۔",
    "reason": "English \"significator\" is rendered «علامت» here but «دلالت کنندہ» in the Detailed-mode sentences (Phase 3); the term is not settled.",
    "alternative": "«دلالت کنندہ» everywhere, if the reviewer approves",
-   "review": "astrology terminology"
+   "review": "astrology terminology",
+   "ur_flagged": "قمر اس وقت شمس کے بہت قریب ہے اور “پوشیدہ” ہو گیا ہے — اس سے اس معاملے کی اپنی علامت کمزور سمجھی جاتی ہے۔",
+   "resolved": "Native review, sheet 3 row 20.48 (pass 7, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "rules",
@@ -416,26 +424,32 @@
   {
    "group": "rules",
    "en": "Mercury is too close to the Sun right now and appears \"hidden\" — this weakens the significator of the intellect and study itself.",
-   "ur": "عطارد اس وقت شمس کے بہت قریب ہے اور “پوشیدہ” ہو گیا ہے — اس سے عقل اور تعلیم کی اپنی علامت کمزور سمجھی جاتی ہے۔",
+   "ur": "عطارد اس وقت شمس کے بہت قریب ہے اور «پوشیدہ» ہو گیا ہے — اس سے عقل اور تعلیم کی اپنی علامت کمزور سمجھی جاتی ہے۔",
    "reason": "English \"significator\" is rendered «علامت» here but «دلالت کنندہ» in the Detailed-mode sentences (Phase 3); the term is not settled.",
    "alternative": "«دلالت کنندہ» everywhere, if the reviewer approves",
-   "review": "astrology terminology"
+   "review": "astrology terminology",
+   "ur_flagged": "عطارد اس وقت شمس کے بہت قریب ہے اور “پوشیدہ” ہو گیا ہے — اس سے عقل اور تعلیم کی اپنی علامت کمزور سمجھی جاتی ہے۔",
+   "resolved": "Native review, sheet 3 row 20.58 (pass 7, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "rules",
    "en": "The Moon is too close to the Sun right now and appears \"hidden\" — traditionally, this weakens the body's own vital force in the chart.",
-   "ur": "قمر اس وقت شمس کے بہت قریب ہے اور “پوشیدہ” ہو گیا ہے — روایت میں اس سے زائچے میں جسم کی اپنی قوتِ حیات کمزور سمجھی جاتی ہے۔",
+   "ur": "قمر اس وقت شمس کے بہت قریب ہے اور «پوشیدہ» ہو گیا ہے — روایت میں اس سے زائچے میں جسم کی اپنی قوتِ حیات کمزور سمجھی جاتی ہے۔",
    "reason": "Medical-timing claim kept as in the English source. It must not be read as a reason to delay or avoid medical care; whether the source text needs a note is a separate content decision (Mario).",
    "alternative": "keep as source; add a doctor note to EN/FR/AR/UR together or not at all",
-   "review": "subject-matter + product decision"
+   "review": "subject-matter + product decision",
+   "ur_flagged": "قمر اس وقت شمس کے بہت قریب ہے اور “پوشیدہ” ہو گیا ہے — روایت میں اس سے زائچے میں جسم کی اپنی قوتِ حیات کمزور سمجھی جاتی ہے۔",
+   "resolved": "Native review, sheet 3 row 20.42 (pass 7, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "rules",
    "en": "The Moon is in a tense position with Saturn or Mars right now — a traditional warning of complication or slow healing.",
-   "ur": "قمر اس وقت زحل یا مریخ کے ساتھ تناؤ والی نسبت (سخت نظر) میں ہے — پیچیدگی یا سست شفایابی کی روایتی انتباہی علامت۔",
+   "ur": "قمر اس وقت زحل یا مریخ کے ساتھ تناؤ والی نسبت میں ہے — روایت میں اسے پیچیدگی یا دیر سے صحت یابی کی علامت سمجھا جاتا ہے۔",
    "reason": "Medical-timing claim kept as in the English source. It must not be read as a reason to delay or avoid medical care; whether the source text needs a note is a separate content decision (Mario).",
    "alternative": "keep as source; add a doctor note to EN/FR/AR/UR together or not at all",
-   "review": "subject-matter + product decision"
+   "review": "subject-matter + product decision",
+   "ur_flagged": "قمر اس وقت زحل یا مریخ کے ساتھ تناؤ والی نسبت (سخت نظر) میں ہے — پیچیدگی یا سست شفایابی کی روایتی انتباہی علامت۔",
+   "resolved": "Native review, sheet 3 row 20.43 (pass 7, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "rules",
@@ -548,10 +562,12 @@
   {
    "group": "arch",
    "en": "Marriage may start smoothly but requires intentional renewal to avoid complacency. Focus on shared goals and gratitude practices.",
-   "ur": "شادی ہموار شروع ہو سکتی ہے مگر خود اطمینانی سے بچنے کے لیے شعوری تجدید ضروری ہے۔ مشترکہ اہداف اور شکرگزاری کے معمولات پر توجہ دیں۔",
+   "ur": "شادی ہموار شروع ہو سکتی ہے مگر بے پروائی سے بچنے کے لیے شعوری تجدید ضروری ہے۔ مشترکہ اہداف اور شکرگزاری کے معمولات پر توجہ دیں۔",
    "reason": "\"complacency\" is rendered «خود اطمینانی» (self-contentment), which can read as a positive; no better single Urdu word is certain.",
    "alternative": "«غفلت / آسودگی میں بے پروائی»",
-   "review": "native Urdu"
+   "review": "native Urdu",
+   "ur_flagged": "شادی ہموار شروع ہو سکتی ہے مگر خود اطمینانی سے بچنے کے لیے شعوری تجدید ضروری ہے۔ مشترکہ اہداف اور شکرگزاری کے معمولات پر توجہ دیں۔",
+   "resolved": "Native review, sheet 3 row 21.11 (pass 7, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "arch",
@@ -574,10 +590,12 @@
   {
    "group": "arch",
    "en": "Self-work",
-   "ur": "خود احتسابی",
+   "ur": "اپنی اصلاح",
    "reason": "\"Self-work\" (inner work on oneself) is «خود احتسابی» (self-accounting, a religiously loaded word); the Urdu body text uses «اندرونی اصلاح» for \"inner work\".",
    "alternative": "«خود اصلاحی» or «باطنی اصلاح»",
-   "review": "native Urdu"
+   "review": "native Urdu",
+   "ur_flagged": "خود احتسابی",
+   "resolved": "Native review, sheet 3 row 21.71 (pass 7, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "arch",
@@ -626,10 +644,12 @@
   {
    "group": "arch",
    "en": "Traditionally a difficult pattern, associated with sudden breaks and recurring strain. Extreme caution and spiritual protection are advised.",
-   "ur": "روایتی طور پر ایک مشکل نمونہ، جو اچانک ٹوٹ پھوٹ اور بار بار کے دباؤ سے منسوب ہے۔ انتہائی احتیاط اور روحانی حفاظت کا مشورہ دیا جاتا ہے۔",
+   "ur": "روایتی طور پر ایک مشکل نمونہ، جو اچانک تعلق ٹوٹنے اور بار بار کے دباؤ سے منسوب ہے۔ بہت احتیاط کریں، اور دعا و اذکار کے ذریعے اللہ کی حفاظت طلب کریں۔",
    "reason": "Strong warnings about marriage/binding commitments kept as traditional framing; whether such a warning should be shown to users at all is a product decision (not changed here).",
    "alternative": "",
-   "review": "product decision + native Urdu"
+   "review": "product decision + native Urdu",
+   "ur_flagged": "روایتی طور پر ایک مشکل نمونہ، جو اچانک ٹوٹ پھوٹ اور بار بار کے دباؤ سے منسوب ہے۔ انتہائی احتیاط اور روحانی حفاظت کا مشورہ دیا جاتا ہے۔",
+   "resolved": "Native review, sheet 3 row 21.110 (pass 7, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "arch",

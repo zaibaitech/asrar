@@ -1,5 +1,5 @@
 {
- "about": "Review status of the Urdu (/ur) strings. Sheet 2 = /workspace review file asrar-ur-review-2.md (2,336 rows), all reviewed by the native Language Reviewer (Oct 2026). reviewed-corrected: correction applied; reviewed: confirmed as is; reviewed-kept: reviewer suggestion not applied on purpose (see note); reviewed-flagged: left for Mario / the source owner. Batch 13 (/ur/abjad calculator UI, src/features/calculator/i18n/ur.ts) and Batch 14 (burujData.json practice nights) were reviewed in pass 3. Batch 15 (calculator result data and practice-hint meanings) was reviewed in pass 4; pass3_reviewer_data are the reviewer-written result-data strings (reviewed). Source fixes approved by Mario on 21 Oct 2026 (option A) moved reviewed Urdu to the new English keys; 6 keys whose meaning changed got new Urdu drafts (status draft) — see source_fixes_2026_10_21. Batch 16 (pass 5, 21 Oct 2026): the Language Reviewer checked the PR #101 source-fix strings; the 6 drafts are now reviewed (S2 and F3b corrected), P1–P11 and 5.178/5.207 corrected. Sheet 3 (asrar-ur-review-3.md, the 838 catalog_ai_draft.py strings): Batches 17–19 (299 rows) reviewed in pass 6 (48 corrections + 20 optional applied); Batches 20–25 (539 rows) still AI drafts.",
+ "about": "Review status of the Urdu (/ur) strings. Sheet 2 = /workspace review file asrar-ur-review-2.md (2,336 rows), all reviewed by the native Language Reviewer (Oct 2026). reviewed-corrected: correction applied; reviewed: confirmed as is; reviewed-kept: reviewer suggestion not applied on purpose (see note); reviewed-flagged: left for Mario / the source owner. Batch 13 (/ur/abjad calculator UI, src/features/calculator/i18n/ur.ts) and Batch 14 (burujData.json practice nights) were reviewed in pass 3. Batch 15 (calculator result data and practice-hint meanings) was reviewed in pass 4; pass3_reviewer_data are the reviewer-written result-data strings (reviewed). Source fixes approved by Mario on 21 Oct 2026 (option A) moved reviewed Urdu to the new English keys; 6 keys whose meaning changed got new Urdu drafts (status draft) — see source_fixes_2026_10_21. Batch 16 (pass 5, 21 Oct 2026): the Language Reviewer checked the PR #101 source-fix strings; the 6 drafts are now reviewed (S2 and F3b corrected), P1–P11 and 5.178/5.207 corrected. Sheet 3 (asrar-ur-review-3.md, the 838 catalog_ai_draft.py strings): Batches 17–19 (299 rows) reviewed in pass 6 (48 corrections + 20 optional applied); Batches 20–21 (176 rows) reviewed in pass 7 (34 corrections + 15 optional applied); Batches 22–25 (363 rows) still AI drafts.",
  "counts": {
   "sheet2": {
    "reviewed-corrected": 415,
@@ -33,6 +33,11 @@
    "reviewed": 231,
    "reviewed-corrected": 48,
    "reviewed-corrected (optional)": 20
+  },
+  "sheet3_pass7": {
+   "reviewed": 127,
+   "reviewed-corrected (optional)": 15,
+   "reviewed-corrected": 34
   }
  },
  "sheet2": {
@@ -16981,6 +16986,1238 @@
    "en": "Despair in darkness",
    "ur": "اندھیرے میں مایوسی",
    "status": "reviewed"
+  },
+  {
+   "id": "20.1",
+   "loc": "catalog_ai_draft.py:47 [rules]",
+   "en": "The Moon is in its darkest phase right before a new moon — traditionally a time to wait, not begin.",
+   "ur": "نئے چاند سے ذرا پہلے قمر اپنے تاریک ترین مرحلے (محاق) میں ہوتا ہے — روایتی طور پر یہ انتظار کا وقت ہے، آغاز کا نہیں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.2",
+   "loc": "catalog_ai_draft.py:48 [rules]",
+   "en": "The Moon is too close to the Sun right now and appears \"hidden\" — this weakens its influence.",
+   "ur": "قمر اس وقت شمس کے بہت قریب ہے اور «پوشیدہ» (محترق) ہو جاتا ہے — اس سے اس کا اثر کمزور سمجھا جاتا ہے۔",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "20.3",
+   "loc": "catalog_ai_draft.py:50 [rules]",
+   "en": "The Moon is in a tense position with Saturn or Mars right now — a traditional warning sign for this kind of start.",
+   "ur": "قمر اس وقت زحل یا مریخ کے ساتھ تناؤ والی نسبت میں ہے — اس قسم کے آغاز کے لیے یہ روایتی انتباہی علامت ہے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "20.4",
+   "loc": "catalog_ai_draft.py:52 [rules]",
+   "en": "The Moon is close enough to the Sun to be dimmed, though not fully hidden — a mild weakening.",
+   "ur": "قمر شمس کے اتنا قریب ہے کہ اس کی روشنی ماند پڑ گئی ہے، مگر وہ مکمل پوشیدہ نہیں — یہ ہلکی کمزوری ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.5",
+   "loc": "catalog_ai_draft.py:55 [rules]",
+   "en": "The Moon is in a sign where it traditionally expresses its qualities less comfortably.",
+   "ur": "قمر اس برج میں ہے جہاں روایت کے مطابق اس کی خصوصیات کم آسانی سے ظاہر ہوتی ہیں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "20.6",
+   "loc": "catalog_ai_draft.py:56 [rules]",
+   "en": "Venus — the planet of love and harmony — is too close to the Sun right now and appears \"hidden,\" weakening its supportive influence.",
+   "ur": "زہرہ — محبت اور ہم آہنگی کا سیارہ — اس وقت شمس کے بہت قریب ہے اور «پوشیدہ» ہو گئی ہے، اس لیے اس کا معاون اثر کمزور سمجھا جاتا ہے۔",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "20.7",
+   "loc": "catalog_ai_draft.py:57 [rules]",
+   "en": "Venus appears to be moving backward right now — traditionally a caution for matters of love and relationships.",
+   "ur": "زہرہ اس وقت الٹی چال (رجعت) میں نظر آتی ہے — محبت اور تعلقات کے معاملات میں روایتی طور پر احتیاط کی علامت ہے۔",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "20.8",
+   "loc": "catalog_ai_draft.py:58 [rules]",
+   "en": "Venus is in a sign where it traditionally expresses its qualities less comfortably.",
+   "ur": "زہرہ اس برج میں ہے جہاں روایت کے مطابق اس کی خصوصیات کم آسانی سے ظاہر ہوتی ہیں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "20.9",
+   "loc": "catalog_ai_draft.py:59 [rules]",
+   "en": "Mercury appears to be moving backward right now — a mild caution specifically for the paperwork/contract side of things.",
+   "ur": "عطارد اس وقت الٹی چال (رجعت) میں نظر آتا ہے — خاص طور پر کاغذی کارروائی اور معاہدوں کے پہلو میں ہلکی احتیاط کی علامت ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.10",
+   "loc": "catalog_ai_draft.py:60 [rules]",
+   "en": "The Moon isn't currently connecting with either of the two traditionally supportive planets (Venus or Jupiter).",
+   "ur": "قمر اس وقت دونوں روایتی سعد سیاروں (زہرہ یا مشتری) میں سے کسی سے ربط نہیں بنا رہا۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.11",
+   "loc": "catalog_ai_draft.py:61 [rules]",
+   "en": "The Moon is growing in light and clear of the Sun's glare right now — one of the most favorable classical signs for a fresh start.",
+   "ur": "قمر کی روشنی بڑھ رہی ہے اور وہ شمس کی چمک سے دور ہے — نئے آغاز کے لیے کلاسیکی علامات میں سب سے موافق علامتوں میں سے ایک ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.12",
+   "loc": "catalog_ai_draft.py:63 [rules]",
+   "en": "The Moon is in the sign of its greatest traditional strength.",
+   "ur": "قمر اپنی سب سے زیادہ روایتی قوت والے برج میں ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.13",
+   "loc": "catalog_ai_draft.py:64 [rules]",
+   "en": "The Moon is in a sign that gives it a mild traditional boost here.",
+   "ur": "قمر ایسے برج میں ہے جو اسے یہاں روایتی طور پر ہلکی تقویت دیتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.14",
+   "loc": "catalog_ai_draft.py:65 [rules]",
+   "en": "The Moon is forming a supportive connection with Venus, the planet of love and harmony, right now.",
+   "ur": "قمر اس وقت زہرہ — محبت اور ہم آہنگی کے سیارے — کے ساتھ موافق ربط بنا رہا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.15",
+   "loc": "catalog_ai_draft.py:68 [rules]",
+   "en": "Venus is in the sign of its greatest traditional strength.",
+   "ur": "زہرہ اپنی سب سے زیادہ روایتی قوت والے برج میں ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.16",
+   "loc": "catalog_ai_draft.py:70 [rules]",
+   "en": "This falls on Thursday, a day traditionally seen as favorable.",
+   "ur": "یہ جمعرات کا دن ہے، جسے روایت میں موافق سمجھا جاتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.17",
+   "loc": "catalog_ai_draft.py:71 [rules]",
+   "en": "This falls on Monday, a day traditionally seen as mildly favorable.",
+   "ur": "یہ پیر کا دن ہے، جسے روایت میں کسی حد تک موافق سمجھا جاتا ہے۔",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "20.18",
+   "loc": "catalog_ai_draft.py:72 [rules]",
+   "en": "This specific time window aligns with a planetary hour traditionally seen as supportive.",
+   "ur": "یہ مخصوص وقت ایک ایسی ساعتِ کواکب سے مطابقت رکھتا ہے جسے روایتی طور پر معاون سمجھا جاتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.19",
+   "loc": "catalog_ai_draft.py:73 [rules]",
+   "en": "The Moon is passing through a lunar \"station\" traditionally considered favorable for this occasion.",
+   "ur": "قمر ایسی منزل سے گزر رہا ہے جسے اس موقع کے لیے روایتی طور پر موافق سمجھا جاتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.20",
+   "loc": "catalog_ai_draft.py:74 [rules]",
+   "en": "The Moon is passing through a lunar \"station\" traditionally considered less favorable for this occasion.",
+   "ur": "قمر ایسی منزل سے گزر رہا ہے جسے اس موقع کے لیے روایتی طور پر کم موافق سمجھا جاتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.21",
+   "loc": "catalog_ai_draft.py:76 [rules]",
+   "en": "The Moon is in a tense position with Saturn or Mars right now — a traditional warning of danger or delay en route.",
+   "ur": "قمر اس وقت زحل یا مریخ کے ساتھ تناؤ والی نسبت میں ہے — روایت میں اسے راستے میں خطرے یا تاخیر کی انتباہی علامت سمجھا جاتا ہے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "20.22",
+   "loc": "catalog_ai_draft.py:77 [rules]",
+   "en": "The Moon is too close to the Sun right now and appears \"hidden\" — this weakens the traveler's own influence in the chart.",
+   "ur": "قمر اس وقت شمس کے بہت قریب ہے اور «پوشیدہ» ہو گیا ہے — اس سے زائچے میں مسافر کا اپنا اثر کمزور سمجھا جاتا ہے۔",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "20.23",
+   "loc": "catalog_ai_draft.py:78 [rules]",
+   "en": "The Moon is in a sign associated with quick movement — traditionally favorable for setting out.",
+   "ur": "قمر ایسے برج میں ہے جو تیز رفتاری سے منسوب ہے — روانگی کے لیے روایتی طور پر موافق۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.24",
+   "loc": "catalog_ai_draft.py:79 [rules]",
+   "en": "The Moon is in a sign associated with staying put — traditionally a caution for travel, suggesting possible delay.",
+   "ur": "قمر ایسے برج میں ہے جو ٹھہراؤ سے منسوب ہے — سفر کے لیے روایتی طور پر احتیاط کی علامت، جس میں ممکنہ تاخیر کا اشارہ ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.25",
+   "loc": "catalog_ai_draft.py:80 [rules]",
+   "en": "Mercury appears to be moving backward right now — traditionally linked to itinerary changes, lost documents, or mix-ups.",
+   "ur": "عطارد اس وقت الٹی چال (رجعت) میں نظر آتا ہے — روایت میں اسے سفری پروگرام کی تبدیلی، دستاویزات کے گم ہونے یا الجھن سے جوڑا جاتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.26",
+   "loc": "catalog_ai_draft.py:81 [rules]",
+   "en": "The Moon is growing in light right now — traditionally favorable for setting out and making progress.",
+   "ur": "قمر کی روشنی اس وقت بڑھ رہی ہے — روانگی اور پیش رفت کے لیے روایتی طور پر موافق ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.27",
+   "loc": "catalog_ai_draft.py:82 [rules]",
+   "en": "The Moon is forming a supportive connection with Venus or Jupiter right now — a sign of a smooth, well-supported journey.",
+   "ur": "قمر اس وقت زہرہ یا مشتری کے ساتھ موافق ربط بنا رہا ہے — روایت میں اسے ہموار اور آسان سفر کی علامت سمجھا جاتا ہے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "20.28",
+   "loc": "catalog_ai_draft.py:83 [rules]",
+   "en": "This specific time window aligns with a planetary hour traditionally seen as supportive for travel.",
+   "ur": "یہ مخصوص وقت ایک ایسی ساعتِ کواکب سے مطابقت رکھتا ہے جسے روایتی طور پر سفر کے لیے معاون سمجھا جاتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.29",
+   "loc": "catalog_ai_draft.py:85 [rules]",
+   "en": "The Moon is passing through a lunar \"station\" traditionally considered favorable for travel.",
+   "ur": "قمر ایسی منزل سے گزر رہا ہے جسے سفر کے لیے روایتی طور پر موافق سمجھا جاتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.30",
+   "loc": "catalog_ai_draft.py:86 [rules]",
+   "en": "The Moon is passing through a lunar \"station\" traditionally considered less favorable for travel.",
+   "ur": "قمر ایسی منزل سے گزر رہا ہے جسے سفر کے لیے روایتی طور پر کم موافق سمجھا جاتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.31",
+   "loc": "catalog_ai_draft.py:87 [rules]",
+   "en": "Mercury is in a comfortable position right now, supporting clear plans and communication.",
+   "ur": "عطارد اس وقت موافق حالت میں ہے، جو واضح منصوبہ بندی اور بات چیت میں معاون ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.32",
+   "loc": "catalog_ai_draft.py:88 [rules]",
+   "en": "This falls on Wednesday, a day traditionally linked to travel and communication.",
+   "ur": "یہ بدھ کا دن ہے، جسے روایت میں سفر اور رابطے سے جوڑا جاتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.33",
+   "loc": "catalog_ai_draft.py:89 [rules]",
+   "en": "Mercury appears to be moving backward right now — the single most-cited traditional caution against signing contracts or starting negotiations.",
+   "ur": "عطارد اس وقت الٹی چال (رجعت) میں نظر آتا ہے — معاہدوں پر دستخط یا مذاکرات کے آغاز کے خلاف سب سے زیادہ بیان کی جانے والی روایتی احتیاط۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.34",
+   "loc": "catalog_ai_draft.py:91 [rules]",
+   "en": "Mercury is too close to the Sun right now and appears \"hidden\" — this weakens the deal's own significator.",
+   "ur": "عطارد اس وقت شمس کے بہت قریب ہے اور «پوشیدہ» ہو گیا ہے — اس سے سودے کی اپنی علامت کمزور سمجھی جاتی ہے۔",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "20.35",
+   "loc": "catalog_ai_draft.py:92 [rules]",
+   "en": "The Moon is in a tense position with Saturn or Mars right now — a traditional warning of dispute or a deal turning sour.",
+   "ur": "قمر اس وقت زحل یا مریخ کے ساتھ تناؤ والی نسبت میں ہے — جھگڑے یا سودے کے بگڑ جانے کی روایتی انتباہی علامت۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "20.36",
+   "loc": "catalog_ai_draft.py:93 [rules]",
+   "en": "The Moon is growing in light right now — traditionally favorable for starting and growing a venture.",
+   "ur": "قمر کی روشنی اس وقت بڑھ رہی ہے — کاروبار شروع کرنے اور بڑھانے کے لیے روایتی طور پر موافق ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.37",
+   "loc": "catalog_ai_draft.py:94 [rules]",
+   "en": "The Moon is forming a supportive connection with Jupiter right now — traditionally the planet of profit and gain.",
+   "ur": "قمر اس وقت مشتری — روایتی طور پر نفع اور کمائی کے سیارے — کے ساتھ موافق ربط بنا رہا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.38",
+   "loc": "catalog_ai_draft.py:95 [rules]",
+   "en": "The Moon is forming a supportive connection with Venus right now — favorable for amicable dealing between both sides.",
+   "ur": "قمر اس وقت زہرہ کے ساتھ موافق ربط بنا رہا ہے — دونوں فریقوں کے درمیان خوش اسلوبی سے لین دین کے لیے موافق۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.39",
+   "loc": "catalog_ai_draft.py:97 [rules]",
+   "en": "Mercury is in a comfortable position right now, free of traditional weaknesses.",
+   "ur": "عطارد اس وقت موافق حالت میں ہے اور روایتی کمزوریوں سے خالی ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.40",
+   "loc": "catalog_ai_draft.py:98 [rules]",
+   "en": "This specific time window aligns with a planetary hour traditionally seen as supportive for business.",
+   "ur": "یہ مخصوص وقت ایک ایسی ساعتِ کواکب سے مطابقت رکھتا ہے جسے روایتی طور پر کاروبار کے لیے معاون سمجھا جاتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.41",
+   "loc": "catalog_ai_draft.py:99 [rules]",
+   "en": "This falls on Wednesday or Thursday — days traditionally linked to negotiation and profit.",
+   "ur": "یہ بدھ یا جمعرات کا دن ہے — وہ دن جنہیں روایت میں مذاکرات اور نفع سے جوڑا جاتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.42",
+   "loc": "catalog_ai_draft.py:101 [rules]",
+   "en": "The Moon is too close to the Sun right now and appears \"hidden\" — traditionally, this weakens the body's own vital force in the chart.",
+   "ur": "قمر اس وقت شمس کے بہت قریب ہے اور «پوشیدہ» ہو گیا ہے — روایت میں اس سے زائچے میں جسم کی اپنی قوتِ حیات کمزور سمجھی جاتی ہے۔",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "20.43",
+   "loc": "catalog_ai_draft.py:102 [rules]",
+   "en": "The Moon is in a tense position with Saturn or Mars right now — a traditional warning of complication or slow healing.",
+   "ur": "قمر اس وقت زحل یا مریخ کے ساتھ تناؤ والی نسبت میں ہے — روایت میں اسے پیچیدگی یا دیر سے صحت یابی کی علامت سمجھا جاتا ہے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "20.44",
+   "loc": "catalog_ai_draft.py:103 [rules]",
+   "en": "The Moon is growing in light right now — traditionally favorable for treatments meant to build up or strengthen the body.",
+   "ur": "قمر کی روشنی اس وقت بڑھ رہی ہے — جسم کو تقویت دینے والے علاج کے لیے روایتی طور پر موافق ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.45",
+   "loc": "catalog_ai_draft.py:105 [rules]",
+   "en": "Jupiter — the traditional significator of recovery — is in a comfortable position right now.",
+   "ur": "مشتری — روایتی طور پر صحت یابی کی علامت — اس وقت موافق حالت میں ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.46",
+   "loc": "catalog_ai_draft.py:108 [rules]",
+   "en": "This specific time window aligns with a planetary hour traditionally seen as supportive for health matters.",
+   "ur": "یہ مخصوص وقت ایک ایسی ساعتِ کواکب سے مطابقت رکھتا ہے جسے روایتی طور پر صحت کے معاملات کے لیے معاون سمجھا جاتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.47",
+   "loc": "catalog_ai_draft.py:109 [rules]",
+   "en": "This falls on Monday or Thursday — days traditionally linked to the body and to recovery.",
+   "ur": "یہ پیر یا جمعرات کا دن ہے — وہ دن جنہیں روایت میں جسم اور صحت یابی سے جوڑا جاتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.48",
+   "loc": "catalog_ai_draft.py:111 [rules]",
+   "en": "The Moon is too close to the Sun right now and appears \"hidden\" — this weakens the matter's own significator.",
+   "ur": "قمر اس وقت شمس کے بہت قریب ہے اور «پوشیدہ» ہو گیا ہے — اس سے اس معاملے کی اپنی علامت کمزور سمجھی جاتی ہے۔",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "20.49",
+   "loc": "catalog_ai_draft.py:112 [rules]",
+   "en": "The Moon is in a tense position with Mars right now — a traditional warning of accident or damage during construction.",
+   "ur": "قمر اس وقت مریخ کے ساتھ تناؤ والی نسبت میں ہے — تعمیر کے دوران حادثے یا نقصان کی روایتی انتباہی علامت۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "20.50",
+   "loc": "catalog_ai_draft.py:113 [rules]",
+   "en": "The Moon is in a sign associated with stability — traditionally favorable for something meant to last.",
+   "ur": "قمر ایسے برج میں ہے جو استحکام سے منسوب ہے — دیرپا چیز کے لیے روایتی طور پر موافق۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.51",
+   "loc": "catalog_ai_draft.py:114 [rules]",
+   "en": "The Moon is in a sign associated with change and impermanence — the opposite of what a lasting foundation calls for.",
+   "ur": "قمر ایسے برج میں ہے جو تبدیلی اور ناپائیداری سے منسوب ہے — جو دیرپا بنیاد کے تقاضے کے برعکس ہے۔",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "20.52",
+   "loc": "catalog_ai_draft.py:115 [rules]",
+   "en": "The Moon is growing in light right now — traditionally favorable for building and growing a household.",
+   "ur": "قمر کی روشنی اس وقت بڑھ رہی ہے — گھر بسانے اور گھرانے کی افزائش کے لیے روایتی طور پر موافق ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.53",
+   "loc": "catalog_ai_draft.py:118 [rules]",
+   "en": "Saturn is in a comfortable position right now, supporting a solid foundation.",
+   "ur": "زحل اس وقت موافق حالت میں ہے، جو مضبوط بنیاد میں معاون ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.54",
+   "loc": "catalog_ai_draft.py:119 [rules]",
+   "en": "Saturn appears to be moving backward right now — traditionally linked to delays, cost overruns, or rework.",
+   "ur": "زحل اس وقت الٹی چال (رجعت) میں نظر آتا ہے — روایت میں اسے تاخیر، اخراجات کے بڑھ جانے یا کام دوبارہ کرنے سے جوڑا جاتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.55",
+   "loc": "catalog_ai_draft.py:120 [rules]",
+   "en": "This specific time window aligns with a planetary hour traditionally seen as supportive for foundations and building.",
+   "ur": "یہ مخصوص وقت ایک ایسی ساعتِ کواکب سے مطابقت رکھتا ہے جسے روایتی طور پر بنیاد رکھنے اور تعمیر کے لیے معاون سمجھا جاتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.56",
+   "loc": "catalog_ai_draft.py:121 [rules]",
+   "en": "This falls on Saturday or Thursday — days traditionally linked to foundations and a supported household.",
+   "ur": "یہ ہفتہ یا جمعرات کا دن ہے — وہ دن جنہیں روایت میں مضبوط بنیادوں اور خوش حال گھرانے سے جوڑا جاتا ہے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "20.57",
+   "loc": "catalog_ai_draft.py:122 [rules]",
+   "en": "Mercury appears to be moving backward right now — the same traditional caution cited against contracts applies to starting serious study.",
+   "ur": "عطارد اس وقت الٹی چال (رجعت) میں نظر آتا ہے — معاہدوں کے خلاف جو روایتی احتیاط بیان کی جاتی ہے وہی سنجیدہ تعلیم کے آغاز پر بھی لاگو ہوتی ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.58",
+   "loc": "catalog_ai_draft.py:124 [rules]",
+   "en": "Mercury is too close to the Sun right now and appears \"hidden\" — this weakens the significator of the intellect and study itself.",
+   "ur": "عطارد اس وقت شمس کے بہت قریب ہے اور «پوشیدہ» ہو گیا ہے — اس سے عقل اور تعلیم کی اپنی علامت کمزور سمجھی جاتی ہے۔",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "20.59",
+   "loc": "catalog_ai_draft.py:125 [rules]",
+   "en": "The Moon is forming a supportive connection with Jupiter right now — traditionally the planet of wisdom and comprehension.",
+   "ur": "قمر اس وقت مشتری — روایتی طور پر حکمت اور فہم کے سیارے — کے ساتھ موافق ربط بنا رہا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.60",
+   "loc": "catalog_ai_draft.py:126 [rules]",
+   "en": "The Moon is forming a supportive connection with Mercury right now — favorable for retention and a receptive mind.",
+   "ur": "قمر اس وقت عطارد کے ساتھ موافق ربط بنا رہا ہے — یادداشت اور سیکھنے پر آمادہ ذہن کے لیے موافق۔",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "20.61",
+   "loc": "catalog_ai_draft.py:129 [rules]",
+   "en": "Jupiter is in a comfortable position right now, supporting comprehension and wisdom.",
+   "ur": "مشتری اس وقت موافق حالت میں ہے، جو فہم اور حکمت میں معاون ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.62",
+   "loc": "catalog_ai_draft.py:130 [rules]",
+   "en": "This specific time window aligns with a planetary hour traditionally seen as supportive for study.",
+   "ur": "یہ مخصوص وقت ایک ایسی ساعتِ کواکب سے مطابقت رکھتا ہے جسے روایتی طور پر تعلیم کے لیے معاون سمجھا جاتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "20.63",
+   "loc": "catalog_ai_draft.py:131 [rules]",
+   "en": "This falls on Wednesday or Thursday — days traditionally linked to the intellect and wisdom.",
+   "ur": "یہ بدھ یا جمعرات کا دن ہے — وہ دن جنہیں روایت میں عقل اور حکمت سے جوڑا جاتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.1",
+   "loc": "catalog_ai_draft.py:132 [arch]",
+   "en": "Grounded",
+   "ur": "زمین سے جڑا",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.2",
+   "loc": "catalog_ai_draft.py:133 [arch]",
+   "en": "Stability",
+   "ur": "استحکام",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.3",
+   "loc": "catalog_ai_draft.py:134 [arch]",
+   "en": "Renewal",
+   "ur": "تجدید",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.4",
+   "loc": "catalog_ai_draft.py:135 [arch]",
+   "en": "The Grounded Path",
+   "ur": "زمین سے جڑا راستہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.5",
+   "loc": "catalog_ai_draft.py:136 [arch]",
+   "en": "May start easy; later can feel stagnant",
+   "ur": "آغاز آسان ہو سکتا ہے؛ بعد میں جمود محسوس ہو سکتا ہے",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.6",
+   "loc": "catalog_ai_draft.py:137 [arch]",
+   "en": "Emotional coldness and taking each other for granted. Growth in provision may slow without conscious effort.",
+   "ur": "جذباتی سردمہری اور ایک دوسرے کو معمولی سمجھ لینا۔ شعوری کوشش کے بغیر رزق میں ترقی سست پڑ سکتی ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.7",
+   "loc": "catalog_ai_draft.py:139 [arch]",
+   "en": "This pattern traditionally shows an easy, comfortable beginning that can settle into stagnation if never renewed.",
+   "ur": "یہ نمونہ روایتی طور پر ایک آسان اور آرام دہ آغاز دکھاتا ہے جو تجدید نہ ہونے پر جمود میں بدل سکتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.8",
+   "loc": "catalog_ai_draft.py:141 [arch]",
+   "en": "This pattern traditionally shows a friendship that starts with natural ease but can quietly stagnate without renewal.",
+   "ur": "یہ نمونہ روایتی طور پر ایسی دوستی دکھاتا ہے جو فطری آسانی سے شروع ہوتی ہے مگر تجدید کے بغیر خاموشی سے جمود کا شکار ہو سکتی ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.9",
+   "loc": "catalog_ai_draft.py:143 [arch]",
+   "en": "This pattern traditionally shows a working relationship that starts smoothly but can plateau without new goals.",
+   "ur": "یہ نمونہ روایتی طور پر ایسا پیشہ ورانہ تعلق دکھاتا ہے جو ہموار شروع ہوتا ہے مگر نئے اہداف کے بغیر ایک سطح پر رک سکتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.10",
+   "loc": "catalog_ai_draft.py:144 [arch]",
+   "en": "This connection often starts with ease and comfort, but can settle into routine if never renewed. Shared purpose and intentional effort keep it alive.",
+   "ur": "یہ تعلق اکثر آسانی اور آرام سے شروع ہوتا ہے، مگر تجدید نہ ہو تو معمول میں ڈھل سکتا ہے۔ مشترکہ مقصد اور شعوری کوشش اسے زندہ رکھتے ہیں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.11",
+   "loc": "catalog_ai_draft.py:145 [arch]",
+   "en": "Marriage may start smoothly but requires intentional renewal to avoid complacency. Focus on shared goals and gratitude practices.",
+   "ur": "شادی ہموار شروع ہو سکتی ہے مگر بے پروائی سے بچنے کے لیے شعوری تجدید ضروری ہے۔ مشترکہ اہداف اور شکرگزاری کے معمولات پر توجہ دیں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "21.12",
+   "loc": "catalog_ai_draft.py:146 [arch]",
+   "en": "Friendships under this pattern begin naturally and comfortably, but may drift into routine without shared activities or new experiences. Regular effort keeps the connection warm.",
+   "ur": "اس نمونے میں دوستیاں فطری اور آرام سے شروع ہوتی ہیں، مگر مشترکہ سرگرمیوں یا نئے تجربات کے بغیر معمول میں ڈھل سکتی ہیں۔ باقاعدہ کوشش تعلق کو گرم جوش رکھتی ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.13",
+   "loc": "catalog_ai_draft.py:147 [arch]",
+   "en": "Family ties here tend to feel steady and dependable, though closeness can fade into distance if never actively nurtured. Checking in regularly keeps the bond warm.",
+   "ur": "یہاں خاندانی رشتے عموماً مستحکم اور قابلِ اعتماد محسوس ہوتے ہیں، تاہم اگر ان کی مسلسل آبیاری نہ کی جائے تو قربت دوری میں بدل سکتی ہے۔ باقاعدگی سے خیریت پوچھتے رہنا رشتے میں گرم جوشی برقرار رکھتا ہے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "21.14",
+   "loc": "catalog_ai_draft.py:149 [arch]",
+   "en": "Harmony",
+   "ur": "ہم آہنگی",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.15",
+   "loc": "catalog_ai_draft.py:150 [arch]",
+   "en": "Cooperation",
+   "ur": "تعاون",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.16",
+   "loc": "catalog_ai_draft.py:151 [arch]",
+   "en": "Companionship",
+   "ur": "رفاقت",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.17",
+   "loc": "catalog_ai_draft.py:152 [arch]",
+   "en": "The Harmonious Bond",
+   "ur": "ہم آہنگ رشتہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.18",
+   "loc": "catalog_ai_draft.py:153 [arch]",
+   "en": "Traditionally good for cooperation",
+   "ur": "روایتی طور پر تعاون کے لیے اچھا",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.19",
+   "loc": "catalog_ai_draft.py:154 [arch]",
+   "en": "Over-dependency and avoiding difficult conversations. One partner may lean too heavily on the other.",
+   "ur": "حد سے زیادہ انحصار اور مشکل گفتگو سے بچنا۔ ایک فریق دوسرے پر ضرورت سے زیادہ انحصار کر سکتا ہے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "21.20",
+   "loc": "catalog_ai_draft.py:155 [arch]",
+   "en": "Clear communication, shared responsibility, and maintaining individual growth alongside partnership.",
+   "ur": "واضح گفتگو، مشترکہ ذمہ داری، اور شراکت کے ساتھ ساتھ ہر فرد کی اپنی نشوونما کو برقرار رکھنا۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.21",
+   "loc": "catalog_ai_draft.py:156 [arch]",
+   "en": "Traditionally considered a favorable pattern — natural cooperation and mutual understanding flow more easily than opposition.",
+   "ur": "روایتی طور پر موافق نمونہ سمجھا جاتا ہے — فطری تعاون اور باہمی سمجھ مخالفت کے مقابلے میں زیادہ آسانی سے آتی ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.22",
+   "loc": "catalog_ai_draft.py:157 [arch]",
+   "en": "Traditionally considered favorable for marriage. This pattern supports natural cooperation, companionship, and mutual understanding.",
+   "ur": "شادی کے لیے روایتی طور پر موافق سمجھا جاتا ہے۔ یہ نمونہ فطری تعاون، رفاقت اور باہمی سمجھ کو سہارا دیتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.23",
+   "loc": "catalog_ai_draft.py:158 [arch]",
+   "en": "Traditionally considered a favorable pattern for friendship — ease, cooperation, and mutual understanding come naturally.",
+   "ur": "دوستی کے لیے روایتی طور پر موافق نمونہ سمجھا جاتا ہے — آسانی، تعاون اور باہمی سمجھ فطری طور پر آتی ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.24",
+   "loc": "catalog_ai_draft.py:159 [arch]",
+   "en": "Traditionally considered a favorable pattern for family bonds — natural cooperation and understanding tend to prevail over conflict.",
+   "ur": "خاندانی رشتوں کے لیے روایتی طور پر موافق نمونہ سمجھا جاتا ہے — فطری تعاون اور سمجھ عموماً تنازع پر غالب رہتی ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.25",
+   "loc": "catalog_ai_draft.py:160 [arch]",
+   "en": "Traditionally considered a favorable pattern for collaboration — natural cooperation and mutual understanding support the partnership.",
+   "ur": "مل کر کام کرنے کے لیے روایتی طور پر موافق نمونہ سمجھا جاتا ہے — فطری تعاون اور باہمی سمجھ شراکت کو سہارا دیتی ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.26",
+   "loc": "catalog_ai_draft.py:161 [arch]",
+   "en": "This bond naturally supports cooperation and ease. Two people connected this way tend to understand each other quickly, though one may lean too heavily on the other.",
+   "ur": "یہ رشتہ فطری طور پر تعاون اور آسانی کو سہارا دیتا ہے۔ اس طرح جڑے ہوئے دو افراد عموماً ایک دوسرے کو جلد سمجھ لیتے ہیں، تاہم ایک فریق دوسرے پر ضرورت سے زیادہ انحصار کر سکتا ہے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "21.27",
+   "loc": "catalog_ai_draft.py:162 [arch]",
+   "en": "Marriage is traditionally supported. Companionship and teamwork are natural strengths. Guard against dependency.",
+   "ur": "روایتی طور پر یہ نمونہ شادی کے لیے موافق سمجھا جاتا ہے۔ رفاقت اور مل کر چلنا اس کی فطری خوبیاں ہیں۔ انحصار سے بچیں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "21.28",
+   "loc": "catalog_ai_draft.py:163 [arch]",
+   "en": "A naturally easy, low-friction friendship — you tend to understand each other quickly and rarely clash. Watch that neither friend becomes overly reliant on the other.",
+   "ur": "فطری طور پر آسان دوستی جس میں اختلافات کم ہوتے ہیں — آپ عموماً ایک دوسرے کو جلد سمجھ لیتے ہیں اور کم ہی ٹکراتے ہیں۔ خیال رکھیں کہ کوئی ایک دوست دوسرے پر حد سے زیادہ انحصار نہ کرنے لگے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "21.29",
+   "loc": "catalog_ai_draft.py:164 [arch]",
+   "en": "Family members connected this way tend to get along with little friction and genuine mutual understanding. Encourage each other's independence alongside the closeness.",
+   "ur": "اس طرح جڑے ہوئے اہلِ خانہ عموماً کم اختلافات کے ساتھ ایک دوسرے سے نبھاتے ہیں اور حقیقی باہمی سمجھ رکھتے ہیں۔ قربت کے ساتھ ایک دوسرے کی خود مختاری کی بھی حوصلہ افزائی کریں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.30",
+   "loc": "catalog_ai_draft.py:165 [arch]",
+   "en": "A cooperative, low-conflict working relationship where tasks divide naturally. Guard against one person carrying too much of the shared workload.",
+   "ur": "تعاون پر مبنی، کم تنازع والا پیشہ ورانہ تعلق جس میں کام فطری طور پر بٹ جاتا ہے۔ خیال رکھیں کہ مشترکہ کام کا بوجھ ایک ہی شخص پر نہ پڑ جائے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.31",
+   "loc": "catalog_ai_draft.py:166 [arch]",
+   "en": "Friction",
+   "ur": "اختلاف",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.32",
+   "loc": "catalog_ai_draft.py:167 [arch]",
+   "en": "Patience",
+   "ur": "صبر",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.33",
+   "loc": "catalog_ai_draft.py:168 [arch]",
+   "en": "Discipline",
+   "ur": "نظم و ضبط",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.34",
+   "loc": "catalog_ai_draft.py:169 [arch]",
+   "en": "The Friction Path",
+   "ur": "اختلاف اور تناؤ کا راستہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.35",
+   "loc": "catalog_ai_draft.py:170 [arch]",
+   "en": "Often difficult; tension and strain",
+   "ur": "اکثر مشکل؛ تناؤ اور دباؤ",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.36",
+   "loc": "catalog_ai_draft.py:171 [arch]",
+   "en": "Constant arguments, financial instability, and emotional burnout. This path tests endurance.",
+   "ur": "مسلسل بحث، مالی عدم استحکام اور جذباتی تھکن۔ یہ راستہ برداشت کا امتحان لیتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.37",
+   "loc": "catalog_ai_draft.py:172 [arch]",
+   "en": "Patience (sabr), structured routines, spiritual discipline, and wise counsel from trusted elders.",
+   "ur": "صبر، منظم معمولات، روحانی نظم و ضبط، اور قابلِ اعتماد بزرگوں کا دانشمندانہ مشورہ۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.38",
+   "loc": "catalog_ai_draft.py:173 [arch]",
+   "en": "Traditionally associated with difficulty — tension, frequent disagreements, and pressure may arise, requiring patience and discipline.",
+   "ur": "روایتی طور پر مشکل سے منسوب — تناؤ، بار بار اختلاف اور دباؤ پیدا ہو سکتا ہے، جس کے لیے صبر اور نظم و ضبط درکار ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.39",
+   "loc": "catalog_ai_draft.py:174 [arch]",
+   "en": "Traditionally associated with difficulty in marriage. Tension, frequent disagreements, and financial pressure may arise.",
+   "ur": "شادی میں روایتی طور پر مشکل سے منسوب۔ تناؤ، بار بار اختلاف اور مالی دباؤ پیدا ہو سکتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.40",
+   "loc": "catalog_ai_draft.py:176 [arch]",
+   "en": "Traditionally associated with difficulty — recurring tension, sometimes over responsibilities, may strain the family bond.",
+   "ur": "روایتی طور پر مشکل سے منسوب — بار بار کا تناؤ، بعض اوقات ذمہ داریوں پر، خاندانی رشتے پر دباؤ ڈال سکتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.41",
+   "loc": "catalog_ai_draft.py:177 [arch]",
+   "en": "Traditionally associated with difficulty — friction over resources, deadlines, or decisions may strain the partnership.",
+   "ur": "روایتی طور پر مشکل سے منسوب — وسائل، آخری تاریخوں یا فیصلوں پر اختلاف شراکت پر دباؤ ڈال سکتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.42",
+   "loc": "catalog_ai_draft.py:178 [arch]",
+   "en": "This connection often carries tension and frequent friction. Patience and structure are needed to keep disagreements from escalating.",
+   "ur": "یہ تعلق اکثر تناؤ اور بار بار کے اختلافات لیے ہوتا ہے۔ اختلافات کو بڑھنے سے روکنے کے لیے صبر اور نظم درکار ہیں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.43",
+   "loc": "catalog_ai_draft.py:179 [arch]",
+   "en": "Marriage may face continuous challenges. Strain in provision and emotional harmony often requires outside support and spiritual discipline.",
+   "ur": "شادی کو مسلسل مشکلات کا سامنا ہو سکتا ہے۔ رزق میں تنگی اور جذباتی ہم آہنگی میں دباؤ کے لیے اکثر باہر سے مدد اور روحانی نظم و ضبط کی ضرورت پڑتی ہے۔",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "21.44",
+   "loc": "catalog_ai_draft.py:180 [arch]",
+   "en": "Friendships under this pattern can feel effortful — frequent small disagreements and mismatched expectations are common. The bond can hold, but needs conscious care.",
+   "ur": "اس نمونے میں دوستیاں محنت طلب محسوس ہو سکتی ہیں — چھوٹے چھوٹے اختلافات اور مختلف توقعات عام ہیں۔ رشتہ قائم رہ سکتا ہے، مگر شعوری دیکھ بھال چاہتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.45",
+   "loc": "catalog_ai_draft.py:181 [arch]",
+   "en": "Family ties here often carry recurring tension, sometimes over money or responsibilities. Structure, patience, and outside support help ease the strain.",
+   "ur": "یہاں خاندانی رشتوں میں اکثر بار بار کا تناؤ ہوتا ہے، بعض اوقات پیسوں یا ذمہ داریوں پر۔ نظم، صبر اور باہر سے مدد دباؤ کم کرنے میں معاون ہوتے ہیں۔",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "21.46",
+   "loc": "catalog_ai_draft.py:182 [arch]",
+   "en": "Professional partnerships under this pattern often hit friction over resources, deadlines, or decisions. Clear agreements and structured communication reduce the strain.",
+   "ur": "اس نمونے میں پیشہ ورانہ شراکتوں میں اکثر وسائل، آخری تاریخوں یا فیصلوں پر اختلاف پیدا ہوتا ہے۔ واضح معاہدے اور منظم گفتگو دباؤ کم کرتے ہیں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.47",
+   "loc": "catalog_ai_draft.py:183 [arch]",
+   "en": "Burden",
+   "ur": "بوجھ",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.48",
+   "loc": "catalog_ai_draft.py:184 [arch]",
+   "en": "Health",
+   "ur": "صحت",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.49",
+   "loc": "catalog_ai_draft.py:185 [arch]",
+   "en": "Maturity",
+   "ur": "پختگی",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.50",
+   "loc": "catalog_ai_draft.py:186 [arch]",
+   "en": "The Burdened Path",
+   "ur": "بوجھل راستہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.51",
+   "loc": "catalog_ai_draft.py:187 [arch]",
+   "en": "Heavy trials; health and strain",
+   "ur": "بھاری آزمائشیں؛ صحت اور دباؤ",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.52",
+   "loc": "catalog_ai_draft.py:188 [arch]",
+   "en": "Burnout, neglecting physical or mental wellbeing, and resentment building from unspoken burdens.",
+   "ur": "تھکن، جسمانی یا ذہنی صحت کو نظر انداز کرنا، اور ان کہے بوجھ سے پیدا ہونے والی رنجش۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.53",
+   "loc": "catalog_ai_draft.py:190 [arch]",
+   "en": "Traditionally seen as a heavy pattern — health concerns and emotional strain may be present, especially without emotional maturity.",
+   "ur": "روایتی طور پر ایک بھاری نمونہ سمجھا جاتا ہے — صحت کے خدشات اور جذباتی دباؤ ہو سکتا ہے، خاص طور پر جذباتی پختگی کے بغیر۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.54",
+   "loc": "catalog_ai_draft.py:191 [arch]",
+   "en": "Traditionally seen as a heavy path for marriage. Health concerns and emotional strain may be present.",
+   "ur": "شادی کے لیے روایتی طور پر ایک بھاری راستہ سمجھا جاتا ہے۔ صحت کے خدشات اور جذباتی دباؤ ہو سکتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.55",
+   "loc": "catalog_ai_draft.py:192 [arch]",
+   "en": "Traditionally seen as a heavy pattern — one friend's stress or unresolved struggles may surface within the bond.",
+   "ur": "روایتی طور پر ایک بھاری نمونہ سمجھا جاتا ہے — کسی دوست کا دباؤ یا حل طلب مسائل رشتے کے اندر ابھر سکتے ہیں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.56",
+   "loc": "catalog_ai_draft.py:193 [arch]",
+   "en": "Traditionally seen as a heavy pattern — caretaking or shared hardship, often tied to health, may mark the family bond.",
+   "ur": "روایتی طور پر ایک بھاری نمونہ سمجھا جاتا ہے — تیمارداری یا مشترکہ مشکل، جو اکثر صحت سے جڑی ہوتی ہے، خاندانی رشتے کی پہچان ہو سکتی ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.57",
+   "loc": "catalog_ai_draft.py:194 [arch]",
+   "en": "Traditionally seen as a heavy pattern — stress or burnout risk may surface within the working relationship.",
+   "ur": "روایتی طور پر ایک بھاری نمونہ سمجھا جاتا ہے — پیشہ ورانہ تعلق میں دباؤ یا تھکن کا خطرہ ابھر سکتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.58",
+   "loc": "catalog_ai_draft.py:195 [arch]",
+   "en": "This bond often carries a sense of weight — health, stress, or emotional burden tend to surface. Maturity and calm help carry it well.",
+   "ur": "اس رشتے میں اکثر بوجھ کا احساس رہتا ہے — صحت کی فکر، دباؤ یا جذباتی بوجھ اکثر سامنے آ جاتے ہیں۔ پختگی اور سکون اسے اچھی طرح نبھانے میں مدد دیتے ہیں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "21.59",
+   "loc": "catalog_ai_draft.py:196 [arch]",
+   "en": "Marriage may feel like a test. Health (physical or emotional) often becomes a central concern. Requires emotional maturity and calm.",
+   "ur": "شادی ایک امتحان محسوس ہو سکتی ہے۔ روایت میں اس نمونے کے ساتھ صحت (جسمانی یا جذباتی) کی فکر کا ذکر ملتا ہے۔ اس کے لیے جذباتی پختگی اور سکون درکار ہے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "21.60",
+   "loc": "catalog_ai_draft.py:197 [arch]",
+   "en": "Friendships here can feel heavy at times, often surfacing one person's stress or unresolved struggles. Steady, patient support matters more than constant closeness.",
+   "ur": "یہاں دوستیاں بعض اوقات بھاری محسوس ہو سکتی ہیں، جن میں اکثر کسی ایک کا دباؤ یا حل طلب مسائل سامنے آتے ہیں۔ مسلسل قربت سے زیادہ مستقل اور صبر بھری معاونت اہم ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.61",
+   "loc": "catalog_ai_draft.py:198 [arch]",
+   "en": "Family bonds under this pattern often involve caretaking or shared hardship — health concerns are common threads. Calm routines and honest communication ease the load.",
+   "ur": "اس نمونے میں خاندانی رشتوں میں اکثر تیمارداری یا مشترکہ مشکل شامل ہوتی ہے — صحت کی فکریں بھی اکثر ساتھ رہتی ہیں۔ پُرسکون معمولات اور دیانت دارانہ گفتگو بوجھ ہلکا کرتے ہیں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "21.62",
+   "loc": "catalog_ai_draft.py:199 [arch]",
+   "en": "Working relationships here can feel draining, with stress or burnout as recurring risks. Clear boundaries and realistic workloads protect the partnership.",
+   "ur": "یہاں پیشہ ورانہ تعلقات تھکا دینے والے محسوس ہو سکتے ہیں، جن میں دباؤ یا تھکن بار بار کا خطرہ ہے۔ واضح حدود اور حقیقت پسندانہ کام کا بوجھ شراکت کی حفاظت کرتے ہیں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.63",
+   "loc": "catalog_ai_draft.py:201 [arch]",
+   "en": "Growth",
+   "ur": "نشوونما",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.64",
+   "loc": "catalog_ai_draft.py:202 [arch]",
+   "en": "Gratitude",
+   "ur": "شکرگزاری",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.65",
+   "loc": "catalog_ai_draft.py:209 [arch]",
+   "en": "Traditionally considered very favorable — trust, harmony, and mutual growth tend to flow naturally in this friendship.",
+   "ur": "روایتی طور پر بہت موافق سمجھا جاتا ہے — اس دوستی میں اعتماد، ہم آہنگی اور باہمی ترقی عموماً فطری طور پر پروان چڑھتی ہیں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "21.66",
+   "loc": "catalog_ai_draft.py:210 [arch]",
+   "en": "Traditionally considered very favorable — warmth, harmony, and shared growth tend to mark this family bond.",
+   "ur": "روایتی طور پر بہت موافق سمجھا جاتا ہے — اس خاندانی رشتے کی پہچان عموماً گرم جوشی، ہم آہنگی اور مشترکہ ترقی ہوتی ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.67",
+   "loc": "catalog_ai_draft.py:211 [arch]",
+   "en": "Traditionally considered very favorable — harmony and productive growth tend to flow naturally in this partnership.",
+   "ur": "روایتی طور پر بہت موافق سمجھا جاتا ہے — اس شراکت میں ہم آہنگی اور نتیجہ خیز ترقی عموماً فطری طور پر حاصل ہوتی ہیں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "21.68",
+   "loc": "catalog_ai_draft.py:216 [arch]",
+   "en": "A productive, mutually beneficial working relationship where success tends to come naturally. Stay grounded and avoid overconfidence as things go well.",
+   "ur": "ایک نتیجہ خیز، باہمی فائدے والا پیشہ ورانہ تعلق جس میں کامیابی عموماً آسانی سے ملتی ہے۔ حالات اچھے ہوں تب بھی قدم زمین پر رکھیں اور حد سے زیادہ خود اعتمادی سے بچیں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "21.69",
+   "loc": "catalog_ai_draft.py:217 [arch]",
+   "en": "Trial",
+   "ur": "آزمائش",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.70",
+   "loc": "catalog_ai_draft.py:218 [arch]",
+   "en": "Forgiveness",
+   "ur": "معافی",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.71",
+   "loc": "catalog_ai_draft.py:219 [arch]",
+   "en": "Self-work",
+   "ur": "اپنی اصلاح",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "21.72",
+   "loc": "catalog_ai_draft.py:220 [arch]",
+   "en": "The Trial Path",
+   "ur": "آزمائش کا راستہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.73",
+   "loc": "catalog_ai_draft.py:221 [arch]",
+   "en": "Quarrels and ego tests",
+   "ur": "جھگڑے اور انا کے امتحان",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.74",
+   "loc": "catalog_ai_draft.py:222 [arch]",
+   "en": "Power struggles, recurring arguments, and cycles of blame. Pride and unresolved anger amplify friction.",
+   "ur": "طاقت کی کشمکش، بار بار کی بحثیں اور الزام تراشی کے چکر۔ غرور اور حل نہ ہوا غصہ کشیدگی کو بڑھا دیتے ہیں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.75",
+   "loc": "catalog_ai_draft.py:224 [arch]",
+   "en": "Traditionally shows recurring quarrels and discord — tests of anger, pride, and ego are common until inner work is done.",
+   "ur": "روایتی طور پر بار بار کے جھگڑے اور اختلاف دکھاتا ہے — جب تک اندرونی اصلاح نہ ہو، غصے، غرور اور انا کے امتحان عام رہتے ہیں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.76",
+   "loc": "catalog_ai_draft.py:225 [arch]",
+   "en": "Traditionally shows recurring quarrels and discord in marriage. Tests of anger, pride, and ego are common.",
+   "ur": "روایتی طور پر شادی میں بار بار کے جھگڑے اور اختلاف دکھاتا ہے۔ غصے، غرور اور انا کے امتحان عام ہیں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.77",
+   "loc": "catalog_ai_draft.py:226 [arch]",
+   "en": "Traditionally shows recurring small quarrels — tests of pride and ego may repeat until self-awareness grows.",
+   "ur": "روایتی طور پر بار بار کے چھوٹے جھگڑے دکھاتا ہے — خود آگاہی بڑھنے تک غرور اور انا کے امتحان دہرائے جا سکتے ہیں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.78",
+   "loc": "catalog_ai_draft.py:227 [arch]",
+   "en": "Traditionally shows recurring discord — old patterns of pride and ego may resurface until addressed with forgiveness.",
+   "ur": "روایتی طور پر بار بار کا اختلاف دکھاتا ہے — غرور اور انا کے پرانے انداز اس وقت تک پھر ابھر سکتے ہیں جب تک انہیں معافی کے ساتھ نہ نمٹایا جائے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.79",
+   "loc": "catalog_ai_draft.py:228 [arch]",
+   "en": "Traditionally shows recurring friction — tests of ego and power may repeat until clear roles and respect are established.",
+   "ur": "روایتی طور پر بار بار کے اختلافات دکھاتا ہے — انا اور طاقت کے امتحان اس وقت تک دہرائے جا سکتے ہیں جب تک واضح کردار اور باہمی احترام قائم نہ ہو۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.80",
+   "loc": "catalog_ai_draft.py:230 [arch]",
+   "en": "Marriage often involves power struggles and repeated conflicts. Both partners must work on self-awareness and forgiveness.",
+   "ur": "شادی میں اکثر طاقت کی کشمکش اور بار بار کے تنازعات ہوتے ہیں۔ دونوں فریقوں کو خود آگاہی بڑھانے اور معاف کرنے کی عادت اپنانے کی ضرورت ہے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "21.81",
+   "loc": "catalog_ai_draft.py:232 [arch]",
+   "en": "Family relationships under this pattern often carry old, recurring disagreements. Forgiveness and honest self-reflection are what finally shift the pattern.",
+   "ur": "اس نمونے میں خاندانی رشتوں میں اکثر پرانے اور بار بار کے اختلافات ہوتے ہیں۔ معافی اور دیانت دارانہ خود احتسابی ہی بالآخر اس انداز کو بدلتی ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.82",
+   "loc": "catalog_ai_draft.py:233 [arch]",
+   "en": "Working relationships here can involve power struggles or clashing egos. Clear roles and mutual respect prevent recurring conflict.",
+   "ur": "یہاں پیشہ ورانہ تعلقات میں طاقت کی کشمکش یا انا کا ٹکراؤ ہو سکتا ہے۔ واضح کردار اور باہمی احترام بار بار کے تنازع کو روکتے ہیں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.83",
+   "loc": "catalog_ai_draft.py:234 [arch]",
+   "en": "Chosen",
+   "ur": "منتخب",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.84",
+   "loc": "catalog_ai_draft.py:235 [arch]",
+   "en": "Alignment",
+   "ur": "ہم آہنگی",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.85",
+   "loc": "catalog_ai_draft.py:236 [arch]",
+   "en": "The Chosen Path",
+   "ur": "منتخب راستہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.86",
+   "loc": "catalog_ai_draft.py:242 [arch]",
+   "en": "Traditionally considered one of the most favorable patterns for friendship — early distance often resolves into deep loyalty.",
+   "ur": "دوستی کے لیے روایتی طور پر سب سے زیادہ موافق نمونوں میں سے ایک سمجھا جاتا ہے — شروع کی دوری اکثر گہری وفاداری میں بدل جاتی ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.87",
+   "loc": "catalog_ai_draft.py:243 [arch]",
+   "en": "Traditionally considered one of the most favorable patterns for family bonds — early difficulty often gives way to lasting depth.",
+   "ur": "خاندانی رشتوں کے لیے روایتی طور پر سب سے زیادہ موافق نمونوں میں سے ایک سمجھا جاتا ہے — شروع کی مشکل کے بعد اکثر دیرپا گہرائی پیدا ہوتی ہے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "21.88",
+   "loc": "catalog_ai_draft.py:244 [arch]",
+   "en": "Traditionally considered one of the most favorable patterns for partnership — early friction often resolves into a highly aligned collaboration.",
+   "ur": "شراکت کے لیے روایتی طور پر سب سے زیادہ موافق نمونوں میں سے ایک سمجھا جاتا ہے — شروع کا اختلاف اکثر ایک نہایت ہم آہنگ تعاون میں بدل جاتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.89",
+   "loc": "catalog_ai_draft.py:245 [arch]",
+   "en": "Traditionally the most favorable connection — early obstacles often give way to a deep, aligned bond. Trust the process rather than forcing it.",
+   "ur": "روایتی طور پر سب سے زیادہ موافق تعلق سمجھا جاتا ہے — ابتدائی رکاوٹوں کے بعد اکثر ایک گہرا اور ہم آہنگ رشتہ بنتا ہے۔ زبردستی کرنے کے بجائے معاملے کو اپنی رفتار سے آگے بڑھنے دیں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "21.90",
+   "loc": "catalog_ai_draft.py:247 [arch]",
+   "en": "One of the strongest friendship patterns — any early distance or misunderstanding tends to resolve into a deeply loyal bond. Let it develop at its own pace.",
+   "ur": "دوستی کے مضبوط ترین نمونوں میں سے ایک — شروع کی کوئی بھی دوری یا غلط فہمی عموماً ایک گہرے وفادار رشتے میں بدل جاتی ہے۔ اسے اپنی رفتار سے پنپنے دیں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.91",
+   "loc": "catalog_ai_draft.py:248 [arch]",
+   "en": "Family bonds here often carry real depth, even if the relationship faced early distance or difficulty. What follows tends to be lasting and meaningful.",
+   "ur": "یہاں خاندانی رشتوں میں اکثر حقیقی گہرائی ہوتی ہے، چاہے رشتے کو شروع میں دوری یا مشکل کا سامنا رہا ہو۔ بعد کا تعلق عموماً دیرپا اور بامعنی ہوتا ہے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "21.92",
+   "loc": "catalog_ai_draft.py:249 [arch]",
+   "en": "A strong working alliance — early friction or slow starts often lead to a highly effective, trusted partnership. Give it time to align.",
+   "ur": "ایک مضبوط پیشہ ورانہ اتحاد — شروع کے اختلافات یا سست آغاز اکثر ایک نہایت مؤثر اور قابلِ اعتماد شراکت تک لے جاتے ہیں۔ اسے ہم آہنگ ہونے کا وقت دیں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.93",
+   "loc": "catalog_ai_draft.py:250 [arch]",
+   "en": "Long-term",
+   "ur": "طویل مدتی",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.94",
+   "loc": "catalog_ai_draft.py:251 [arch]",
+   "en": "Wisdom",
+   "ur": "حکمت",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.95",
+   "loc": "catalog_ai_draft.py:252 [arch]",
+   "en": "The Path of Patience",
+   "ur": "صبر کا راستہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.96",
+   "loc": "catalog_ai_draft.py:253 [arch]",
+   "en": "Very good long-term; early struggles",
+   "ur": "طویل مدت میں بہت اچھا؛ شروع میں مشکلات",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.97",
+   "loc": "catalog_ai_draft.py:254 [arch]",
+   "en": "Judging the relationship too quickly in the beginning. Early friction may cause premature endings.",
+   "ur": "شروع ہی میں رشتے کے بارے میں جلد فیصلہ کر لینا۔ ابتدائی اختلافات قبل از وقت اختتام کا سبب بن سکتے ہیں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.98",
+   "loc": "catalog_ai_draft.py:255 [arch]",
+   "en": "Patience (sabr), emotional intelligence, gentle communication, and giving time for mutual understanding to deepen.",
+   "ur": "صبر، جذباتی فہم، نرم گفتگو، اور باہمی سمجھ کے گہرا ہونے کے لیے وقت دینا۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.99",
+   "loc": "catalog_ai_draft.py:256 [arch]",
+   "en": "Traditionally very good for the long term, though early misunderstandings are common — patience transforms this into a strong bond.",
+   "ur": "روایتی طور پر طویل مدت کے لیے بہت اچھا ہے، اگرچہ ابتدائی غلط فہمیاں عام ہیں — صبر اسے ایک مضبوط رشتے میں بدل سکتا ہے۔",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "21.100",
+   "loc": "catalog_ai_draft.py:257 [arch]",
+   "en": "Traditionally very good for marriage over the long term, though early misunderstandings are common.",
+   "ur": "روایتی طور پر شادی کے لیے طویل مدت میں بہت اچھا ہے، اگرچہ ابتدائی غلط فہمیاں عام ہیں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.101",
+   "loc": "catalog_ai_draft.py:259 [arch]",
+   "en": "Traditionally very good for the long term — early distance is common, but the family bond tends to deepen with time.",
+   "ur": "روایتی طور پر طویل مدت کے لیے بہت اچھا ہے — شروع کی دوری عام ہے، مگر خاندانی رشتہ عموماً وقت کے ساتھ گہرا ہوتا جاتا ہے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "21.102",
+   "loc": "catalog_ai_draft.py:260 [arch]",
+   "en": "Traditionally very good for the long term — early friction is common, but patience often builds a highly reliable partnership.",
+   "ur": "روایتی طور پر طویل مدت کے لیے بہت اچھا ہے — شروع کے اختلافات عام ہیں، مگر صبر اکثر ایک نہایت قابلِ بھروسا شراکت بنا دیتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.103",
+   "loc": "catalog_ai_draft.py:261 [arch]",
+   "en": "This connection often starts with confusion or misjudgment but strengthens significantly with time. Patience is what unlocks its real depth.",
+   "ur": "یہ تعلق اکثر الجھن یا غلط اندازے سے شروع ہوتا ہے مگر وقت کے ساتھ نمایاں طور پر مضبوط ہو سکتا ہے۔ صبر ہی اس کی حقیقی گہرائی کو سامنے لاتا ہے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "21.104",
+   "loc": "catalog_ai_draft.py:262 [arch]",
+   "en": "Marriage starts with confusion or misjudgment but becomes very strong over time. Patience is the key to unlocking this bond's strength.",
+   "ur": "ایسی شادی کا آغاز اکثر الجھن یا غلط اندازے سے ہوتا ہے، مگر وقت کے ساتھ یہ بہت مضبوط ہو سکتی ہے۔ صبر ہی اس رشتے کی قوت کو سامنے لانے کی کنجی ہے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "21.105",
+   "loc": "catalog_ai_draft.py:264 [arch]",
+   "en": "Family relationships under this pattern may start with distance or misunderstanding but tend to deepen meaningfully over the years. Give the bond time.",
+   "ur": "اس نمونے میں خاندانی رشتے دوری یا غلط فہمی سے شروع ہو سکتے ہیں مگر برسوں کے ساتھ عموماً گہرے اور بامعنی ہوتے جاتے ہیں۔ رشتے کو وقت دیں۔",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "21.106",
+   "loc": "catalog_ai_draft.py:265 [arch]",
+   "en": "Working relationships here often start rocky — mismatched expectations or slow trust-building — but tend to become highly reliable partnerships over time.",
+   "ur": "یہاں پیشہ ورانہ تعلقات اکثر مشکل سے شروع ہوتے ہیں — مختلف توقعات یا اعتماد بننے میں سستی — مگر وقت کے ساتھ عموماً نہایت قابلِ بھروسا شراکت بن جاتے ہیں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "21.107",
+   "loc": "catalog_ai_draft.py:266 [arch]",
+   "en": "The Severed Path",
+   "ur": "کٹا ہوا راستہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.108",
+   "loc": "catalog_ai_draft.py:268 [arch]",
+   "en": "Sudden separations, recurring harm cycles, and patterns that repeat despite efforts. This path requires vigilance.",
+   "ur": "اچانک جدائیاں، نقصان کے بار بار کے چکر، اور ایسے انداز جو کوشش کے باوجود دہرائے جاتے ہیں۔ اس راستے میں چوکسی درکار ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.109",
+   "loc": "catalog_ai_draft.py:273 [arch]",
+   "en": "Traditionally associated with real difficulty in family bonds — estrangement and recurring conflict are common risks.",
+   "ur": "خاندانی رشتوں میں روایتی طور پر حقیقی مشکل سے منسوب — بے رخی اور بار بار کا تنازع عام خطرات ہیں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "21.110",
+   "loc": "catalog_ai_draft.py:275 [arch]",
+   "en": "Traditionally a difficult pattern, associated with sudden breaks and recurring strain. Extreme caution and spiritual protection are advised.",
+   "ur": "روایتی طور پر ایک مشکل نمونہ، جو اچانک تعلق ٹوٹنے اور بار بار کے دباؤ سے منسوب ہے۔ بہت احتیاط کریں، اور دعا و اذکار کے ذریعے اللہ کی حفاظت طلب کریں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "21.111",
+   "loc": "catalog_ai_draft.py:277 [arch]",
+   "en": "Friendships under this pattern can be prone to sudden falling-outs or repeated hurt. Approach with awareness, and don't ignore recurring red flags.",
+   "ur": "اس نمونے میں دوستیاں اچانک بگاڑ یا بار بار کی دل آزاری کا شکار ہو سکتی ہیں۔ آگاہی کے ساتھ آگے بڑھیں، اور بار بار سامنے آنے والی خطرے کی علامتوں کو نظر انداز نہ کریں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "21.112",
+   "loc": "catalog_ai_draft.py:278 [arch]",
+   "en": "Family ties here can carry real difficulty, including estrangement or repeated conflict. Seek wise counsel and increase protective practices rather than forcing closeness.",
+   "ur": "یہاں خاندانی رشتوں میں حقیقی مشکل ہو سکتی ہے، جن میں بے رخی یا بار بار کا تنازع شامل ہے۔ زبردستی قربت پیدا کرنے کے بجائے دانشمندانہ مشورہ لیں، اور دعا و اذکار کے ذریعے اللہ کی حفاظت طلب کرتے رہیں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "21.113",
+   "loc": "catalog_ai_draft.py:279 [arch]",
+   "en": "Professional partnerships under this pattern carry real risk — sudden fallout or repeated breakdowns in trust are common. Proceed with caution and clear agreements.",
+   "ur": "اس نمونے میں پیشہ ورانہ شراکتوں کو حقیقی خطرات کا سامنا ہو سکتا ہے — اچانک بگاڑ یا اعتماد کا بار بار ٹوٹنا اکثر دیکھا جاتا ہے۔ احتیاط اور واضح معاہدوں کے ساتھ آگے بڑھیں۔",
+   "status": "reviewed-corrected"
   }
  ]
 }

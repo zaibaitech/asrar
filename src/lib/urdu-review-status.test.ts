@@ -123,13 +123,13 @@ describe('Surah list (pass 3)', () => {
   });
 });
 
-describe('Urdu review sheet 3 (pass 6: Batches 17–19)', () => {
+describe('Urdu review sheet 3 (passes 6–7: Batches 17–21)', () => {
   const rows = status.sheet3 as (Row & { id: string })[];
-  it('299 rows are reviewed (48 corrections + 20 optional applied) and the catalog serves the reviewed Urdu', () => {
-    expect(rows).toHaveLength(299);
+  it('475 rows are reviewed (Batches 17–21: 82 corrections + 35 optional applied) and the catalog serves the reviewed Urdu', () => {
+    expect(rows).toHaveLength(299 + 176);
     expect(rows.every((r) => r.status.startsWith('reviewed'))).toBe(true);
-    expect(rows.filter((r) => r.status === 'reviewed-corrected')).toHaveLength(48);
-    expect(rows.filter((r) => r.status === 'reviewed-corrected (optional)')).toHaveLength(20);
+    expect(rows.filter((r) => r.status === 'reviewed-corrected')).toHaveLength(48 + 34);
+    expect(rows.filter((r) => r.status === 'reviewed-corrected (optional)')).toHaveLength(20 + 15);
     expect(rows.filter((r) => json[r.en] !== r.ur).map((r) => r.id)).toEqual([]);
   });
   it('priority rows: Thursday night, hedging, medical qualifier and vows', () => {
@@ -139,6 +139,16 @@ describe('Urdu review sheet 3 (pass 6: Batches 17–19)', () => {
     expect(ur('18.5')).toBe('طبی علاج (معالج کے مشورے سے)');
     expect(ur('19.76')).toBe('عہد و پیمان کی پاسداری');
     const all = rows.map((r) => json[r.en]).join('\n');
-    expect(all).not.toMatch(/منت|نذر|عنصریت|ہلکے پن سے|نالہ/);
+    expect(all).not.toMatch(/منتوں|منّت|(^|\s)منت(\s|$)|نذر|عنصریت|ہلکے پن سے|نالہ/);
+  });
+  it('pass 7 priority rows: no evil-eye «نظر», protection sought from Allah, health hedged', () => {
+    const ur = (id: string) => json[rows.find((r) => r.id === id)!.en];
+    for (const id of ['20.3', '20.21', '20.35', '20.43', '20.49']) expect(ur(id)).not.toContain('سخت نظر');
+    expect(ur('20.43')).toContain('روایت میں اسے');
+    for (const id of ['21.110', '21.112']) expect(ur(id)).toContain('اللہ کی حفاظت طلب');
+    expect(ur('21.59')).toContain('روایت میں اس نمونے کے ساتھ');
+    expect(ur('21.104')).toContain('مضبوط ہو سکتی ہے');
+    expect(ur('21.113')).toContain('سامنا ہو سکتا ہے');
+    expect(Object.values(json).join('\n')).toContain('ساعتِ کواکب');
   });
 });
