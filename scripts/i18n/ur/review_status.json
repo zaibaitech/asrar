@@ -1,5 +1,5 @@
 {
- "about": "Review status of the Urdu (/ur) strings. Sheet 2 = /workspace review file asrar-ur-review-2.md (2,336 rows), all reviewed by the native Language Reviewer (Oct 2026). reviewed-corrected: correction applied; reviewed: confirmed as is; reviewed-kept: reviewer suggestion not applied on purpose (see note); reviewed-flagged: left for Mario / the source owner. Batch 13 (/ur/abjad calculator UI, src/features/calculator/i18n/ur.ts) and Batch 14 (burujData.json practice nights) were reviewed in pass 3. Batch 15 (calculator result data and practice-hint meanings) was reviewed in pass 4; pass3_reviewer_data are the reviewer-written result-data strings (reviewed). Source fixes approved by Mario on 21 Oct 2026 (option A) moved reviewed Urdu to the new English keys; 6 keys whose meaning changed got new Urdu drafts (status draft) — see source_fixes_2026_10_21. Batch 16 (pass 5, 21 Oct 2026): the Language Reviewer checked the PR #101 source-fix strings; the 6 drafts are now reviewed (S2 and F3b corrected), P1–P11 and 5.178/5.207 corrected. Sheet 3 (asrar-ur-review-3.md, the 838 catalog_ai_draft.py strings): Batches 17–19 (299 rows) reviewed in pass 6 (48 corrections + 20 optional applied); Batches 20–21 (176 rows) reviewed in pass 7 (34 corrections + 15 optional applied); Batches 22–25 (363 rows) reviewed in pass 8 (19 corrections + 14 optional applied). Sheet 3 is complete: all 838 rows reviewed (101 corrections + 49 optional).",
+ "about": "Review status of the Urdu (/ur) strings. Sheet 2 = /workspace review file asrar-ur-review-2.md (2,336 rows), all reviewed by the native Language Reviewer (Oct 2026). reviewed-corrected: correction applied; reviewed: confirmed as is; reviewed-kept: reviewer suggestion not applied on purpose (see note); reviewed-flagged: left for Mario / the source owner. Batch 13 (/ur/abjad calculator UI, src/features/calculator/i18n/ur.ts) and Batch 14 (burujData.json practice nights) were reviewed in pass 3. Batch 15 (calculator result data and practice-hint meanings) was reviewed in pass 4; pass3_reviewer_data are the reviewer-written result-data strings (reviewed). Source fixes approved by Mario on 21 Oct 2026 (option A) moved reviewed Urdu to the new English keys; 6 keys whose meaning changed got new Urdu drafts (status draft) — see source_fixes_2026_10_21. Batch 16 (pass 5, 21 Oct 2026): the Language Reviewer checked the PR #101 source-fix strings; the 6 drafts are now reviewed (S2 and F3b corrected), P1–P11 and 5.178/5.207 corrected. Sheet 3 (asrar-ur-review-3.md, the 838 catalog_ai_draft.py strings): Batches 17–19 (299 rows) reviewed in pass 6 (48 corrections + 20 optional applied); Batches 20–21 (176 rows) reviewed in pass 7 (34 corrections + 15 optional applied); Batches 22–25 (363 rows) reviewed in pass 8 (19 corrections + 14 optional applied). Sheet 3 is complete: all 838 rows reviewed (101 corrections + 49 optional). Spot-check of sheet 3 (21 Oct 2026): clean; the last six «سخت نظر» strings (8.93, 8.150, 8.151, 10.120, 5.96 and the round-1 title) were corrected. The Language Reviewer cleared the Urdu for the PR #101 merge.",
  "counts": {
   "sheet2": {
    "reviewed-corrected": 415,
@@ -49,7 +49,8 @@
    "reviewed-corrected": 101,
    "reviewed-corrected (optional)": 49
   },
-  "rekeyed_reviewed": 8
+  "rekeyed_reviewed": 8,
+  "spotcheck_sakht_nazar": 6
  },
  "sheet2": {
   "1.1": {
@@ -3267,7 +3268,8 @@
   "5.96": {
    "en": "These conditions rule a window out entirely: Dark of the Moon (Muḥāq); Moon Combust (Muḥtaraq); Moon Void of Course (Khāliya al-Sayr); Moon Applying to Saturn/Mars (Hard Aspect); Eclipse Proximity.",
    "loc": "catalog_ai_draft_ui.py:838 [best-day]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "spotcheck": "«سخت نظر» → «تناؤ والی نسبت» (Language Reviewer spot-check, 21 Oct 2026)"
   },
   "5.97": {
    "en": "Does a favourable date guarantee a happy marriage?",
@@ -6731,7 +6733,8 @@
   "8.93": {
    "en": "Moon Applying to Mars (Hard Aspect)",
    "loc": "catalog_ai_draft_ui.py:1948 [ikhtiyarat-detail]",
-   "status": "reviewed"
+   "status": "reviewed-corrected",
+   "spotcheck": "«سخت نظر» → «تناؤ والی نسبت» (Language Reviewer spot-check, 21 Oct 2026)"
   },
   "8.94": {
    "en": "Saturn Dignified (Domicile)",
@@ -7016,12 +7019,14 @@
   "8.150": {
    "en": "Moon is not applying to a hard aspect with Mars.",
    "loc": "catalog_ai_draft_ui.py:2015 [ikhtiyarat-detail]",
-   "status": "reviewed"
+   "status": "reviewed-corrected",
+   "spotcheck": "«سخت نظر» → «تناؤ والی نسبت» (Language Reviewer spot-check, 21 Oct 2026)"
   },
   "8.151": {
    "en": "Moon is not applying to a hard aspect with Saturn or Mars.",
    "loc": "catalog_ai_draft_ui.py:2016 [ikhtiyarat-detail]",
-   "status": "reviewed"
+   "status": "reviewed-corrected",
+   "spotcheck": "«سخت نظر» → «تناؤ والی نسبت» (Language Reviewer spot-check, 21 Oct 2026)"
   },
   "8.152": {
    "en": "Moon is not in the favorable waxing band.",
@@ -9126,7 +9131,8 @@
   "10.120": {
    "en": "The Moon is in a tense position with Saturn or Mars right now — a traditional warning of frustration or blocked progress.",
    "loc": "catalog_ai_draft.py:127 [rules]",
-   "status": "reviewed"
+   "status": "reviewed-corrected",
+   "spotcheck": "«سخت نظر» → «تناؤ والی نسبت» (Language Reviewer spot-check, 21 Oct 2026)"
   },
   "10.121": {
    "en": "Mercury is in a sign it traditionally feels very at home in — strong for comprehension and memory.",
@@ -20820,6 +20826,56 @@
    "ur": "بڑھتا ہوا چاند (روشنی میں اضافہ)؛ کلاسیکی طور پر جسم کو تقویت دینے والے علاج کے لیے موافق۔",
    "status": "reviewed",
    "note": "Reviewed under an earlier EN key: sheet 2 row 4.4 (reviewed-corrected); key lost the [SCHOLAR-REVIEW] tag (523efbc)"
+  }
+ ],
+ "spotcheck_sakht_nazar": [
+  {
+   "id": "5.96",
+   "en": "These conditions rule a window out entirely: Dark of the Moon (Muḥāq); Moon Combust (Muḥtaraq); Moon Void of Course (Khāliya al-Sayr); Moon Applying to Saturn/Mars (Hard Aspect); Eclipse Proximity.",
+   "ur_before": "یہ حالتیں کسی وقت کو مکمل طور پر خارج کر دیتی ہیں: محاقِ قمر؛ قمر محترق؛ قمر خالی السیر؛ قمر کا زحل/مریخ سے اتصال (سخت نظر)؛ گرہن کی قربت۔",
+   "ur": "یہ حالتیں کسی وقت کو مکمل طور پر خارج کر دیتی ہیں: محاقِ قمر؛ قمر محترق؛ قمر خالی السیر؛ قمر کا زحل یا مریخ سے اتصال (تناؤ والی نسبت)؛ گرہن کی قربت۔",
+   "status": "reviewed-corrected",
+   "note": "«سخت نظر» removed: «نظر» reads as the evil eye (spot-check of sheet 3, asrar-ur-corrections-3.md)"
+  },
+  {
+   "id": "8.93",
+   "en": "Moon Applying to Mars (Hard Aspect)",
+   "ur_before": "قمر کا مریخ سے اتصال (سخت نظر)",
+   "ur": "قمر کا مریخ سے اتصال (تناؤ والی نسبت)",
+   "status": "reviewed-corrected",
+   "note": "«سخت نظر» removed: «نظر» reads as the evil eye (spot-check of sheet 3, asrar-ur-corrections-3.md)"
+  },
+  {
+   "id": "R1 title (asrar-ur-corrections.md:99)",
+   "en": "Moon Applying to Saturn/Mars (Hard Aspect)",
+   "ur_before": "قمر کا زحل/مریخ سے اتصال (سخت نظر)",
+   "ur": "قمر کا زحل یا مریخ سے اتصال (تناؤ والی نسبت)",
+   "status": "reviewed-corrected",
+   "note": "«سخت نظر» removed: «نظر» reads as the evil eye (spot-check of sheet 3, asrar-ur-corrections-3.md)"
+  },
+  {
+   "id": "8.150",
+   "en": "Moon is not applying to a hard aspect with Mars.",
+   "ur_before": "قمر مریخ کے ساتھ کسی سخت نظر میں اتصال نہیں کر رہا۔",
+   "ur": "قمر مریخ سے تناؤ والی نسبت میں اتصال نہیں کر رہا۔",
+   "status": "reviewed-corrected",
+   "note": "«سخت نظر» removed: «نظر» reads as the evil eye (spot-check of sheet 3, asrar-ur-corrections-3.md)"
+  },
+  {
+   "id": "8.151",
+   "en": "Moon is not applying to a hard aspect with Saturn or Mars.",
+   "ur_before": "قمر زحل یا مریخ کے ساتھ کسی سخت نظر میں اتصال نہیں کر رہا۔",
+   "ur": "قمر زحل یا مریخ سے تناؤ والی نسبت میں اتصال نہیں کر رہا۔",
+   "status": "reviewed-corrected",
+   "note": "«سخت نظر» removed: «نظر» reads as the evil eye (spot-check of sheet 3, asrar-ur-corrections-3.md)"
+  },
+  {
+   "id": "10.120",
+   "en": "The Moon is in a tense position with Saturn or Mars right now — a traditional warning of frustration or blocked progress.",
+   "ur_before": "قمر اس وقت زحل یا مریخ کے ساتھ تناؤ والی نسبت (سخت نظر) میں ہے — مایوسی یا رکی ہوئی پیش رفت کی روایتی انتباہی علامت۔",
+   "ur": "قمر اس وقت زحل یا مریخ کے ساتھ تناؤ والی نسبت میں ہے — مایوسی یا رکی ہوئی پیش رفت کی روایتی انتباہی علامت۔",
+   "status": "reviewed-corrected",
+   "note": "«سخت نظر» removed: «نظر» reads as the evil eye (spot-check of sheet 3, asrar-ur-corrections-3.md)"
   }
  ]
 }

@@ -171,3 +171,17 @@ describe('Urdu review sheet 3 (passes 6–8: Batches 17–25)', () => {
     expect(keys.filter((k) => !reviewed.has(k))).toEqual([]);
   });
 });
+
+describe('Spot-check of sheet 3: «سخت نظر»', () => {
+  it('«سخت نظر» (reads as the evil eye) is gone from the whole Urdu catalog; the six strings say «تناؤ والی نسبت»', () => {
+    expect(Object.values(json).join('\n')).not.toContain('سخت نظر');
+    const rows = status.spotcheck_sakht_nazar as (Row & { id: string })[];
+    expect(rows).toHaveLength(6);
+    for (const r of rows) {
+      expect(r.status).toBe('reviewed-corrected');
+      expect(json[r.en]).toBe(r.ur);
+      expect(r.ur).toContain('تناؤ والی نسبت');
+    }
+    expect(json['Moon Applying to Saturn/Mars (Hard Aspect)']).toBe('قمر کا زحل یا مریخ سے اتصال (تناؤ والی نسبت)');
+  });
+});

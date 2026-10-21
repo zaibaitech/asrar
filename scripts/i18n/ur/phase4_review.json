@@ -136,8 +136,10 @@
    "group": "rules",
    "en": "The Moon is in a tense position with Saturn or Mars right now — a traditional warning of frustration or blocked progress.",
    "before": "قمر اس وقت زحل یا مریخ کے ساتھ تناؤ والی نسبت (سخت نظر) میں ہے — بیزاری یا رکی ہوئی پیش رفت کی روایتی انتباہی علامت۔",
-   "after": "قمر اس وقت زحل یا مریخ کے ساتھ تناؤ والی نسبت (سخت نظر) میں ہے — مایوسی یا رکی ہوئی پیش رفت کی روایتی انتباہی علامت۔",
-   "reason": "\"frustration\" is «مایوسی» (Phase 3 wording); «بیزاری» means aversion/boredom"
+   "after": "قمر اس وقت زحل یا مریخ کے ساتھ تناؤ والی نسبت میں ہے — مایوسی یا رکی ہوئی پیش رفت کی روایتی انتباہی علامت۔",
+   "reason": "\"frustration\" is «مایوسی» (Phase 3 wording); «بیزاری» means aversion/boredom",
+   "after_phase4": "قمر اس وقت زحل یا مریخ کے ساتھ تناؤ والی نسبت (سخت نظر) میں ہے — مایوسی یا رکی ہوئی پیش رفت کی روایتی انتباہی علامت۔",
+   "resolved": "Native review: «سخت نظر» removed in the sheet-3 spot-check (21 Oct 2026)."
   },
   {
    "group": "arch",

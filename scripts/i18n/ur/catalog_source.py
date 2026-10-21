@@ -315,7 +315,7 @@ U = [
     ('Day of the Week', 'ہفتے کا دن'), ('Favorable Planetary Hour', 'موافق ساعت'),
     ('No concern here — this factor looks neutral for this date.', 'یہاں کوئی تشویش نہیں — اس تاریخ کے لیے یہ عنصر معتدل ہے۔'),
     ('Dark of the Moon (Muḥāq)', 'محاق (چاند کی تاریک راتیں)'), ('Moon Combust (Muḥtaraq)', 'قمر محترق'),
-    ('Moon Void of Course (Khāliya al-Sayr)', 'قمر خالی السیر (کسی سیارے سے اتصال نہیں)'), ('Moon Applying to Saturn/Mars (Hard Aspect)', 'قمر کا زحل/مریخ سے اتصال (سخت نظر)'),
+    ('Moon Void of Course (Khāliya al-Sayr)', 'قمر خالی السیر (کسی سیارے سے اتصال نہیں)'), ('Moon Applying to Saturn/Mars (Hard Aspect)', 'قمر کا زحل یا مریخ سے اتصال (تناؤ والی نسبت)'),
     ('Eclipse Proximity', 'گرہن کی قربت'), ('Moon Under the Sun’s Beams (Taḥt al-Shuʿāʿ)', 'قمر تحت الشعاع'), ('Moon Waning', 'گھٹتا چاند'),
     ('Via Combusta (Al-Ṭarīqa al-Muḥtariqa)', 'الطریقۃ المحترقۃ (میزان و عقرب کا مخصوص حصہ)'), ('Moon in Fall or Detriment', 'قمر ہبوط یا وبال میں'),
     ('Venus Combust', 'زہرہ محترق'), ('Venus Retrograde', 'زہرہ رجعت میں'), ('Venus in Fall or Detriment', 'زہرہ ہبوط یا وبال میں'),
