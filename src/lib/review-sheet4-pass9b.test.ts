@@ -51,11 +51,30 @@ describe('Pass 9b follow-ups', () => {
     const txt = JSON.stringify(Object.values(d).map((b) => [b.blessed_day, b.sadaqah]));
     expect(txt).not.toMatch(/[Hh]ealing|guérison(?! \(shifāʾ\))|karmic|karmiques/);
   });
-  it('changed Urdu is draft and listed (7 Urdu, 2 Arabic); nothing else is draft', () => {
+  it('Pass 9b reviewed (review 4): L1, A2, B4, B5 corrected, optional B3 applied; 2 Arabic confirmed; zero drafts remain', () => {
     const p = status.pass9b as { en: string; ur: string; status: string }[];
-    expect(p.filter((e) => e.status === 'draft')).toHaveLength(7);
-    for (const e of p) expect(ur[e.en], e.en).toBe(e.ur);
-    expect(Object.values(arFixes).filter((e) => e.id.endsWith('(pass 9b)') && e.status === 'draft')).toHaveLength(2);
+    expect(p).toHaveLength(13);
+    for (const e of p) { expect(ur[e.en], e.en).toBe(e.ur); expect(e.status).toMatch(/^reviewed/); }
+    expect(p.filter((e) => e.status === 'reviewed-corrected')).toHaveLength(3);
+    expect(p.filter((e) => e.status === 'reviewed-corrected (optional)')).toHaveLength(1);
+    const pass9bAr = Object.values(arFixes).filter((e) => e.id.endsWith('(pass 9b)'));
+    expect(pass9bAr).toHaveLength(2);
+    for (const e of pass9bAr) expect(e.status).toBe('reviewed');
+    expect(Object.values(arFixes).filter((e) => e.status === 'draft')).toEqual([]);
+    expect(JSON.stringify(status)).not.toMatch(/"status": ?"draft"/);
+    const monday = Object.keys(ur).find((k) => k.startsWith('Monday is ideal for matters of the home'))!;
+    expect(ur[monday]).toContain('جذباتی عافیت');
+    expect(Object.values(ur).join('\n')).not.toMatch(/جذباتی بہبود|جذباتی سہولت/);
+    expect(ur['When seeking emotional calm and wellbeing']).toBe('جب جذباتی سکون اور عافیت مقصود ہو');
+    expect(ur['Emotional wellbeing, and counselling when needed']).toBe('جذباتی عافیت، اور ضرورت ہو تو کسی ماہر سے مشاورت');
+    const goat = Object.keys(ur).find((k) => k.startsWith('The red goat'))!;
+    expect(ur[goat]).toContain('گہری باطنی اصلاح');
+    expect(ur[goat]).not.toContain('ذریعہ سمجھا جاتا');
+  });
+  it('unused old keys are pruned from the Arabic catalog', () => {
+    expect(ar['Empty vows']).toBeUndefined();
+    expect(ar['Keeping vows']).toBeUndefined();
+    expect(Object.keys(ar).some((k) => k.startsWith('Thursday is the most blessed day'))).toBe(false);
     expect(Object.values(ur).join('\n')).not.toMatch(/عنصریت/);
     expect(Object.values(arFixes).map((e) => e.ar).join('\n')).not.toMatch(/عنصري|عنصرية|عناصري/);
   });

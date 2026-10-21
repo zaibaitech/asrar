@@ -102,6 +102,11 @@ for k, e in rev.items():
 for k, e in load('source-fixes-2026-10.json', {}).items():
     put(k, e['ar'], 'reviewed' if e['status'] != 'draft' else 'ai')
 
+# Old English keys replaced by the source fixes and no longer referenced anywhere in the app
+# (verified with rg over src/ and app/, 21 Oct 2026): drop them from the served catalog.
+for k in [k for k in cat if k in ('Empty vows', 'Keeping vows') or k.startswith('Thursday is the most blessed day for spiritual elevation')]:
+    cat.pop(k); src.pop(k, None); pending.pop(k, None)
+
 for old, new in REKEY.items():
     if old in cat:
         put(new, cat.pop(old), src.pop(old))

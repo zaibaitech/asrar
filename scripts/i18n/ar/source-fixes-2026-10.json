@@ -251,18 +251,18 @@
  },
  "Do not panic if this appears. Seek counsel from trusted spiritual guides. If already bound, keep asking Allah for protection through duʿāʾ and remembrance, give charity, and seek guidance. Avoid fatalistic thinking — free will and divine mercy remain.": {
   "ar": "لا تفزعا إن ظهر هذا. اطلبا المشورة من مرشدين روحيين موثوقين. إن كنتما مرتبطين بالفعل، فداوِما على سؤال الله الحفظ بالدعاء والذكر، وتصدّقا، واطلبا الإرشاد. تجنبا التفكير القدري السلبي — الإرادة الحرة والرحمة الإلهية باقيتان.",
-  "status": "draft",
+  "status": "reviewed",
   "id": "9b.K (pass 9b)",
   "en_before": "Do not panic if this appears. Seek counsel from trusted spiritual guides. If already bound, increase protection practices (duʿāʾ, charity, guidance). Avoid fatalistic thinking — free will and divine mercy remain.",
   "ar_before": "لا تفزعا إن ظهر هذا. اطلبا المشورة من مرشدين روحيين موثوقين. إن كنتما مرتبطين بالفعل، زيدا من ممارسات الحماية (الدعاء، الصدقة، الإرشاد). تجنبا التفكير القدري السلبي — الإرادة الحرة والرحمة الإلهية باقيتان.",
-  "review": "pending (Pass 9b)"
+  "review": "review 4 Pass 9b: OK (Language Reviewer, 21 Oct 2026)"
  },
  "Empty promises": {
   "ar": "الوعود الجوفاء",
-  "status": "draft",
+  "status": "reviewed",
   "id": "9b.V (pass 9b)",
   "en_before": "Empty vows",
   "ar_before": "النذور الجوفاء",
-  "review": "pending (Pass 9b)"
+  "review": "review 4 Pass 9b: OK (Language Reviewer, 21 Oct 2026)"
  }
 }

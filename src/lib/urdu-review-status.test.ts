@@ -20,7 +20,7 @@ describe('Urdu review status', () => {
     expect(rows).toHaveLength(2336);
     for (const r of rows) {
       if (r.source_fix_pass9b && r.status === 'draft') continue; // Pass 9b follow-up: new Urdu draft, pending review
-      expect(r.status).toMatch(/^reviewed(-corrected|-kept|-flagged)?$/);
+      expect(r.status).toMatch(/^reviewed(-corrected|-kept|-flagged)?( \(optional\))?$/);
     }
     // Batch 16 cleared the list-1 drafts and sheet 4 the list-2 drafts; the only drafts left are Pass 9b follow-ups.
     expect(rows.filter((r) => r.status === 'draft' && !r.source_fix_pass9b)).toEqual([]);
