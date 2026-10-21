@@ -1,5 +1,5 @@
 {
- "about": "Review status of the Urdu (/ur) strings. Sheet 2 = /workspace review file asrar-ur-review-2.md (2,336 rows), all reviewed by the native Language Reviewer (Oct 2026). reviewed-corrected: correction applied; reviewed: confirmed as is; reviewed-kept: reviewer suggestion not applied on purpose (see note); reviewed-flagged: left for Mario / the source owner. Batch 13 (/ur/abjad calculator UI, src/features/calculator/i18n/ur.ts) and Batch 14 (burujData.json practice nights) were reviewed in pass 3. Batch 15 (calculator result data and practice-hint meanings) was reviewed in pass 4; pass3_reviewer_data are the reviewer-written result-data strings (reviewed). Source fixes approved by Mario on 21 Oct 2026 (option A) moved reviewed Urdu to the new English keys; 6 keys whose meaning changed got new Urdu drafts (status draft) — see source_fixes_2026_10_21. Batch 16 (pass 5, 21 Oct 2026): the Language Reviewer checked the PR #101 source-fix strings; the 6 drafts are now reviewed (S2 and F3b corrected), P1–P11 and 5.178/5.207 corrected. Sheet 3 (asrar-ur-review-3.md, the 838 catalog_ai_draft.py strings): Batches 17–19 (299 rows) reviewed in pass 6 (48 corrections + 20 optional applied); Batches 20–21 (176 rows) reviewed in pass 7 (34 corrections + 15 optional applied); Batches 22–25 (363 rows) still AI drafts.",
+ "about": "Review status of the Urdu (/ur) strings. Sheet 2 = /workspace review file asrar-ur-review-2.md (2,336 rows), all reviewed by the native Language Reviewer (Oct 2026). reviewed-corrected: correction applied; reviewed: confirmed as is; reviewed-kept: reviewer suggestion not applied on purpose (see note); reviewed-flagged: left for Mario / the source owner. Batch 13 (/ur/abjad calculator UI, src/features/calculator/i18n/ur.ts) and Batch 14 (burujData.json practice nights) were reviewed in pass 3. Batch 15 (calculator result data and practice-hint meanings) was reviewed in pass 4; pass3_reviewer_data are the reviewer-written result-data strings (reviewed). Source fixes approved by Mario on 21 Oct 2026 (option A) moved reviewed Urdu to the new English keys; 6 keys whose meaning changed got new Urdu drafts (status draft) — see source_fixes_2026_10_21. Batch 16 (pass 5, 21 Oct 2026): the Language Reviewer checked the PR #101 source-fix strings; the 6 drafts are now reviewed (S2 and F3b corrected), P1–P11 and 5.178/5.207 corrected. Sheet 3 (asrar-ur-review-3.md, the 838 catalog_ai_draft.py strings): Batches 17–19 (299 rows) reviewed in pass 6 (48 corrections + 20 optional applied); Batches 20–21 (176 rows) reviewed in pass 7 (34 corrections + 15 optional applied); Batches 22–25 (363 rows) reviewed in pass 8 (19 corrections + 14 optional applied). Sheet 3 is complete: all 838 rows reviewed (101 corrections + 49 optional).",
  "counts": {
   "sheet2": {
    "reviewed-corrected": 415,
@@ -38,7 +38,18 @@
    "reviewed": 127,
    "reviewed-corrected (optional)": 15,
    "reviewed-corrected": 34
-  }
+  },
+  "sheet3_pass8": {
+   "reviewed": 330,
+   "reviewed-corrected (optional)": 14,
+   "reviewed-corrected": 19
+  },
+  "sheet3_total": {
+   "reviewed": 688,
+   "reviewed-corrected": 101,
+   "reviewed-corrected (optional)": 49
+  },
+  "rekeyed_reviewed": 8
  },
  "sheet2": {
   "1.1": {
@@ -18218,6 +18229,2597 @@
    "en": "Professional partnerships under this pattern carry real risk — sudden fallout or repeated breakdowns in trust are common. Proceed with caution and clear agreements.",
    "ur": "اس نمونے میں پیشہ ورانہ شراکتوں کو حقیقی خطرات کا سامنا ہو سکتا ہے — اچانک بگاڑ یا اعتماد کا بار بار ٹوٹنا اکثر دیکھا جاتا ہے۔ احتیاط اور واضح معاہدوں کے ساتھ آگے بڑھیں۔",
    "status": "reviewed-corrected"
+  },
+  {
+   "id": "22.1",
+   "loc": "catalog_ai_draft.py:557 [career]",
+   "en": "Livestock trading, fashion and clothing business, fruit wholesaling (sell wholesale for quick turnover to prevent spoilage)",
+   "ur": "مویشیوں کی تجارت، فیشن اور ملبوسات کا کاروبار، پھلوں کی تھوک فروخت (خراب ہونے سے بچانے کے لیے جلد نکاسی کی خاطر تھوک میں بیچنا)",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.2",
+   "loc": "catalog_ai_draft.py:558 [career]",
+   "en": "Quick turnover, fresh goods, dynamic movement, and energetic action align perfectly with your fiery nature and passionate energy",
+   "ur": "تیز رفتار نکاسی، تازہ مال، متحرک سرگرمی اور توانا عمل روایتی طور پر آپ کے آتشی مزاج اور پُرجوش توانائی سے ہم آہنگ سمجھی جاتی ہیں",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "22.3",
+   "loc": "catalog_ai_draft.py:559 [career]",
+   "en": "None specified - Fire element has freedom in career choices",
+   "ur": "کوئی مخصوص پابندی نہیں — آتشی عنصر کو پیشے کے انتخاب میں آزادی حاصل ہے",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.4",
+   "loc": "catalog_ai_draft.py:560 [career]",
+   "en": "Slow-moving inventory, long-term storage businesses, or careers requiring extreme patience",
+   "ur": "سست رفتار ذخیرہ، طویل مدتی گودام کے کاروبار، یا ایسے پیشے جن میں انتہائی صبر درکار ہو",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.5",
+   "loc": "catalog_ai_draft.py:561 [career]",
+   "en": "Fashion & Apparel",
+   "ur": "فیشن اور ملبوسات",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.6",
+   "loc": "catalog_ai_draft.py:562 [career]",
+   "en": "E-commerce clothing platforms",
+   "ur": "ملبوسات کے ای کامرس پلیٹ فارم",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.7",
+   "loc": "catalog_ai_draft.py:563 [career]",
+   "en": "Fashion retail stores",
+   "ur": "فیشن کی خوردہ دکانیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.8",
+   "loc": "catalog_ai_draft.py:564 [career]",
+   "en": "Textile manufacturing",
+   "ur": "ٹیکسٹائل کی صنعت",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.9",
+   "loc": "catalog_ai_draft.py:565 [career]",
+   "en": "Clothing brand development",
+   "ur": "ملبوسات کے برانڈ کی تشکیل",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.10",
+   "loc": "catalog_ai_draft.py:566 [career]",
+   "en": "Fashion wholesale distribution",
+   "ur": "فیشن کی تھوک تقسیم",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.11",
+   "loc": "catalog_ai_draft.py:567 [career]",
+   "en": "Custom tailoring services",
+   "ur": "ناپ کے مطابق سلائی کی خدمات",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "22.12",
+   "loc": "catalog_ai_draft.py:568 [career]",
+   "en": "Food & Hospitality",
+   "ur": "خوراک اور مہمان نوازی",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.13",
+   "loc": "catalog_ai_draft.py:569 [career]",
+   "en": "Restaurant ownership",
+   "ur": "ریستوران کی ملکیت",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.14",
+   "loc": "catalog_ai_draft.py:570 [career]",
+   "en": "Catering services",
+   "ur": "کیٹرنگ کی خدمات",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.15",
+   "loc": "catalog_ai_draft.py:571 [career]",
+   "en": "Food delivery platforms",
+   "ur": "کھانے کی ترسیل کے پلیٹ فارم",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.16",
+   "loc": "catalog_ai_draft.py:572 [career]",
+   "en": "Farm-to-table businesses",
+   "ur": "کھیت سے دسترخوان تک کے کاروبار",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.17",
+   "loc": "catalog_ai_draft.py:573 [career]",
+   "en": "Fresh food markets",
+   "ur": "تازہ خوراک کے بازار",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.18",
+   "loc": "catalog_ai_draft.py:575 [career]",
+   "en": "Agricultural Trading",
+   "ur": "زرعی تجارت",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.19",
+   "loc": "catalog_ai_draft.py:576 [career]",
+   "en": "Livestock commodities trading",
+   "ur": "مویشیوں کی تجارت (اجناس منڈی میں)",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "22.20",
+   "loc": "catalog_ai_draft.py:577 [career]",
+   "en": "Grain futures and commodities",
+   "ur": "اناج کے فیوچرز اور اجناس",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.21",
+   "loc": "catalog_ai_draft.py:578 [career]",
+   "en": "Agricultural supply chains",
+   "ur": "زرعی سپلائی چین",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.22",
+   "loc": "catalog_ai_draft.py:579 [career]",
+   "en": "Restaurant supply wholesale",
+   "ur": "ریستورانوں کو سامان کی تھوک فراہمی",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.23",
+   "loc": "catalog_ai_draft.py:580 [career]",
+   "en": "Meat processing and distribution",
+   "ur": "گوشت کی پروسیسنگ اور تقسیم",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.24",
+   "loc": "catalog_ai_draft.py:581 [career]",
+   "en": "Perishable Goods Logistics",
+   "ur": "جلد خراب ہونے والی اشیا کی لاجسٹکس",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.25",
+   "loc": "catalog_ai_draft.py:582 [career]",
+   "en": "Fresh goods distribution",
+   "ur": "تازہ مال کی تقسیم",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.26",
+   "loc": "catalog_ai_draft.py:583 [career]",
+   "en": "Cold chain logistics",
+   "ur": "کولڈ چین لاجسٹکس",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.27",
+   "loc": "catalog_ai_draft.py:584 [career]",
+   "en": "Quick-turnover inventory management",
+   "ur": "جلد نکاسی والے ذخیرے کا انتظام",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.28",
+   "loc": "catalog_ai_draft.py:585 [career]",
+   "en": "Time-sensitive product sales",
+   "ur": "جلد فروخت کی متقاضی مصنوعات کی تجارت",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "22.29",
+   "loc": "catalog_ai_draft.py:587 [career]",
+   "en": "Agriculture and farming, mining and mineral extraction, gold trading, petroleum and natural resources, earth-derived products",
+   "ur": "زراعت اور کاشتکاری، کان کنی اور معدنیات کا استخراج، سونے کی تجارت، پیٹرولیم اور قدرتی وسائل، زمین سے حاصل ہونے والی اشیا",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.30",
+   "loc": "catalog_ai_draft.py:588 [career]",
+   "en": "Stability, long-term growth, tangible assets, and connection to the earth's bounty align perfectly with your grounded nature and patient disposition",
+   "ur": "استحکام، طویل مدتی ترقی، ٹھوس اثاثے، اور زمین کی نعمتوں سے تعلق روایتی طور پر آپ کے زمینی مزاج اور صبر سے ہم آہنگ سمجھے جاتے ہیں",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "22.31",
+   "loc": "catalog_ai_draft.py:589 [career]",
+   "en": "Fish and all fish-related products or businesses",
+   "ur": "مچھلی اور مچھلی سے متعلق تمام مصنوعات یا کاروبار",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.32",
+   "loc": "catalog_ai_draft.py:590 [career]",
+   "en": "Seafood industry, aquaculture, fish markets, sushi restaurants, fishing equipment - all water-based food commerce",
+   "ur": "سمندری خوراک کی صنعت، آبی زراعت، مچھلی منڈیاں، سوشی ریستوران، ماہی گیری کا سامان — پانی سے متعلق تمام خوراکی تجارت",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.33",
+   "loc": "catalog_ai_draft.py:591 [career]",
+   "en": "Agriculture & Farming",
+   "ur": "زراعت اور کاشتکاری",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.34",
+   "loc": "catalog_ai_draft.py:592 [career]",
+   "en": "Commercial farming operations",
+   "ur": "تجارتی کاشتکاری کے منصوبے",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.35",
+   "loc": "catalog_ai_draft.py:593 [career]",
+   "en": "Organic agriculture businesses",
+   "ur": "نامیاتی زراعت کے کاروبار",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.36",
+   "loc": "catalog_ai_draft.py:594 [career]",
+   "en": "Agricultural technology (AgriTech)",
+   "ur": "زرعی ٹیکنالوجی (ایگری ٹیک)",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.37",
+   "loc": "catalog_ai_draft.py:595 [career]",
+   "en": "Crop trading and commodities",
+   "ur": "فصلوں اور اجناس کی تجارت",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.38",
+   "loc": "catalog_ai_draft.py:596 [career]",
+   "en": "Sustainable farming consultancy",
+   "ur": "پائیدار کاشتکاری کی مشاورت",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.39",
+   "loc": "catalog_ai_draft.py:597 [career]",
+   "en": "Greenhouse operations",
+   "ur": "گرین ہاؤس میں کاشت",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "22.40",
+   "loc": "catalog_ai_draft.py:598 [career]",
+   "en": "Mining & Natural Resources",
+   "ur": "کان کنی اور قدرتی وسائل",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.41",
+   "loc": "catalog_ai_draft.py:599 [career]",
+   "en": "Mining operations and management",
+   "ur": "کان کنی کے کام اور انتظام",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.42",
+   "loc": "catalog_ai_draft.py:600 [career]",
+   "en": "Precious metals trading",
+   "ur": "قیمتی دھاتوں کی تجارت",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.43",
+   "loc": "catalog_ai_draft.py:601 [career]",
+   "en": "Mineral extraction companies",
+   "ur": "معدنیات نکالنے والی کمپنیاں",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.44",
+   "loc": "catalog_ai_draft.py:602 [career]",
+   "en": "Quarry operations",
+   "ur": "پتھر کی کانوں کے کام",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.45",
+   "loc": "catalog_ai_draft.py:603 [career]",
+   "en": "Natural resource consulting",
+   "ur": "قدرتی وسائل کی مشاورت",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.46",
+   "loc": "catalog_ai_draft.py:604 [career]",
+   "en": "Gemstone trading",
+   "ur": "قیمتی پتھروں کی تجارت",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.47",
+   "loc": "catalog_ai_draft.py:605 [career]",
+   "en": "Real Estate & Construction",
+   "ur": "رئیل اسٹیٹ اور تعمیرات",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.48",
+   "loc": "catalog_ai_draft.py:606 [career]",
+   "en": "Real estate development",
+   "ur": "جائیداد کی تعمیر و ترقی (رئیل اسٹیٹ ڈیولپمنٹ)",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "22.49",
+   "loc": "catalog_ai_draft.py:607 [career]",
+   "en": "Property management",
+   "ur": "جائیداد کا انتظام",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.50",
+   "loc": "catalog_ai_draft.py:608 [career]",
+   "en": "Construction companies",
+   "ur": "تعمیراتی کمپنیاں",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.51",
+   "loc": "catalog_ai_draft.py:609 [career]",
+   "en": "Land investment",
+   "ur": "زمین میں سرمایہ کاری",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.52",
+   "loc": "catalog_ai_draft.py:610 [career]",
+   "en": "Building materials supply",
+   "ur": "تعمیراتی مواد کی فراہمی",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.53",
+   "loc": "catalog_ai_draft.py:611 [career]",
+   "en": "Infrastructure development",
+   "ur": "بنیادی ڈھانچے کی ترقی",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.54",
+   "loc": "catalog_ai_draft.py:612 [career]",
+   "en": "Energy & Petroleum",
+   "ur": "توانائی اور پیٹرولیم",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.55",
+   "loc": "catalog_ai_draft.py:613 [career]",
+   "en": "Oil and gas industry",
+   "ur": "تیل اور گیس کی صنعت",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.56",
+   "loc": "catalog_ai_draft.py:614 [career]",
+   "en": "Renewable energy projects",
+   "ur": "قابلِ تجدید توانائی کے منصوبے",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.57",
+   "loc": "catalog_ai_draft.py:615 [career]",
+   "en": "Energy consulting",
+   "ur": "توانائی کی مشاورت",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.58",
+   "loc": "catalog_ai_draft.py:616 [career]",
+   "en": "Petroleum distribution",
+   "ur": "پیٹرولیم کی تقسیم",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.59",
+   "loc": "catalog_ai_draft.py:617 [career]",
+   "en": "Alternative energy solutions",
+   "ur": "متبادل توانائی کے حل",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.60",
+   "loc": "catalog_ai_draft.py:618 [career]",
+   "en": "Power generation facilities",
+   "ur": "بجلی پیدا کرنے کی تنصیبات",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.61",
+   "loc": "catalog_ai_draft.py:619 [career]",
+   "en": "Earth Products",
+   "ur": "زمینی مصنوعات",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.62",
+   "loc": "catalog_ai_draft.py:620 [career]",
+   "en": "Grains and cereals wholesale",
+   "ur": "اناج اور غلے کی تھوک فروخت",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.63",
+   "loc": "catalog_ai_draft.py:621 [career]",
+   "en": "Crop distribution networks",
+   "ur": "فصلوں کی تقسیم کے نیٹ ورک",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.64",
+   "loc": "catalog_ai_draft.py:622 [career]",
+   "en": "Food processing from crops",
+   "ur": "فصلوں سے خوراک کی پروسیسنگ",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.65",
+   "loc": "catalog_ai_draft.py:623 [career]",
+   "en": "Seed and fertilizer supply",
+   "ur": "بیج اور کھاد کی فراہمی",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.66",
+   "loc": "catalog_ai_draft.py:624 [career]",
+   "en": "Agricultural equipment sales",
+   "ur": "زرعی آلات کی فروخت",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.67",
+   "loc": "catalog_ai_draft.py:625 [career]",
+   "en": "Fruits and vegetables trading, fashion and clothing business - items that move and circulate like air",
+   "ur": "پھلوں اور سبزیوں کی تجارت، فیشن اور ملبوسات کا کاروبار — وہ اشیا جو ہوا کی طرح حرکت اور گردش کرتی ہیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.68",
+   "loc": "catalog_ai_draft.py:626 [career]",
+   "en": "Movement, circulation, communication, and fresh exchange align with your airy nature. Like wind, you thrive with constant motion and change.",
+   "ur": "حرکت، گردش، رابطہ اور تازہ لین دین آپ کے ہوائی مزاج سے ہم آہنگ ہیں۔ ہوا کی طرح آپ اکثر مسلسل حرکت اور تبدیلی میں پھلتے پھولتے ہیں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "22.69",
+   "loc": "catalog_ai_draft.py:627 [career]",
+   "en": "Fish and all fish-related products - disrupts air element severely",
+   "ur": "مچھلی اور مچھلی سے متعلق تمام مصنوعات — روایتی طور پر ہوائی عنصر سے غیر موافق سمجھی جاتی ہیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.70",
+   "loc": "catalog_ai_draft.py:628 [career]",
+   "en": "Seafood industry, aquaculture, fishing, fish markets - any water-based food business. Also avoid slow, stagnant businesses that lack movement.",
+   "ur": "سمندری خوراک کی صنعت، آبی زراعت، ماہی گیری، مچھلی منڈیاں — پانی سے متعلق ہر خوراکی کاروبار۔ ایسے سست اور جامد کاروبار سے بھی بچیں جن میں حرکت نہ ہو۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.71",
+   "loc": "catalog_ai_draft.py:629 [career]",
+   "en": "Fashion & Retail",
+   "ur": "فیشن اور خوردہ فروشی",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.72",
+   "loc": "catalog_ai_draft.py:630 [career]",
+   "en": "Clothing boutiques and stores",
+   "ur": "ملبوسات کے بوتیک اور دکانیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.73",
+   "loc": "catalog_ai_draft.py:631 [career]",
+   "en": "Fashion design studios",
+   "ur": "فیشن ڈیزائن اسٹوڈیوز",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.74",
+   "loc": "catalog_ai_draft.py:632 [career]",
+   "en": "Textile trading",
+   "ur": "ٹیکسٹائل کی تجارت",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.75",
+   "loc": "catalog_ai_draft.py:633 [career]",
+   "en": "Online fashion platforms",
+   "ur": "آن لائن فیشن پلیٹ فارم",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.76",
+   "loc": "catalog_ai_draft.py:634 [career]",
+   "en": "Trendy retail concepts",
+   "ur": "نئے رجحانات پر مبنی دکانیں",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "22.77",
+   "loc": "catalog_ai_draft.py:635 [career]",
+   "en": "Seasonal fashion collections",
+   "ur": "موسمی فیشن مجموعے",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.78",
+   "loc": "catalog_ai_draft.py:636 [career]",
+   "en": "Fresh Produce",
+   "ur": "تازہ پیداوار",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.79",
+   "loc": "catalog_ai_draft.py:637 [career]",
+   "en": "Fruit and vegetable wholesale",
+   "ur": "پھلوں اور سبزیوں کی تھوک فروخت",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.80",
+   "loc": "catalog_ai_draft.py:638 [career]",
+   "en": "Fresh produce markets",
+   "ur": "تازہ پیداوار کے بازار",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.81",
+   "loc": "catalog_ai_draft.py:639 [career]",
+   "en": "Organic produce distribution",
+   "ur": "نامیاتی پیداوار کی تقسیم",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.82",
+   "loc": "catalog_ai_draft.py:640 [career]",
+   "en": "Farm fresh delivery services",
+   "ur": "کھیت سے تازہ ترسیل کی خدمات",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.83",
+   "loc": "catalog_ai_draft.py:641 [career]",
+   "en": "Juice bars and smoothie shops",
+   "ur": "جوس بار اور اسموتھی کی دکانیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.84",
+   "loc": "catalog_ai_draft.py:642 [career]",
+   "en": "Healthy food retail",
+   "ur": "صحت بخش خوراک کی خوردہ فروخت",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.85",
+   "loc": "catalog_ai_draft.py:643 [career]",
+   "en": "Communication & Media",
+   "ur": "ابلاغ اور ذرائع ابلاغ",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.86",
+   "loc": "catalog_ai_draft.py:644 [career]",
+   "en": "Digital media companies",
+   "ur": "ڈیجیٹل میڈیا کمپنیاں",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.87",
+   "loc": "catalog_ai_draft.py:645 [career]",
+   "en": "Public relations firms",
+   "ur": "تعلقاتِ عامہ کے ادارے",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.88",
+   "loc": "catalog_ai_draft.py:646 [career]",
+   "en": "Broadcasting and radio",
+   "ur": "نشریات اور ریڈیو",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.89",
+   "loc": "catalog_ai_draft.py:647 [career]",
+   "en": "Social media management",
+   "ur": "سوشل میڈیا کا انتظام",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.90",
+   "loc": "catalog_ai_draft.py:648 [career]",
+   "en": "Content creation agencies",
+   "ur": "مواد تخلیق کرنے والی ایجنسیاں",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.91",
+   "loc": "catalog_ai_draft.py:649 [career]",
+   "en": "Marketing and advertising",
+   "ur": "مارکیٹنگ اور اشتہارات",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.92",
+   "loc": "catalog_ai_draft.py:650 [career]",
+   "en": "Travel & Transportation",
+   "ur": "سفر اور نقل و حمل",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.93",
+   "loc": "catalog_ai_draft.py:651 [career]",
+   "en": "Travel agencies",
+   "ur": "ٹریول ایجنسیاں",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.94",
+   "loc": "catalog_ai_draft.py:652 [career]",
+   "en": "Airline industry careers",
+   "ur": "فضائی صنعت کے پیشے",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.95",
+   "loc": "catalog_ai_draft.py:653 [career]",
+   "en": "Transportation logistics",
+   "ur": "نقل و حمل کی لاجسٹکس",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.96",
+   "loc": "catalog_ai_draft.py:654 [career]",
+   "en": "Tourism businesses",
+   "ur": "سیاحت کے کاروبار",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.97",
+   "loc": "catalog_ai_draft.py:655 [career]",
+   "en": "Delivery services",
+   "ur": "ترسیل کی خدمات",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.98",
+   "loc": "catalog_ai_draft.py:656 [career]",
+   "en": "Courier companies",
+   "ur": "کوریئر کمپنیاں",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.99",
+   "loc": "catalog_ai_draft.py:657 [career]",
+   "en": "Technology & Innovation",
+   "ur": "ٹیکنالوجی اور جدت",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.100",
+   "loc": "catalog_ai_draft.py:658 [career]",
+   "en": "Tech startups",
+   "ur": "ٹیکنالوجی اسٹارٹ اپس",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.101",
+   "loc": "catalog_ai_draft.py:659 [career]",
+   "en": "Software development",
+   "ur": "سافٹ ویئر کی تیاری",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.102",
+   "loc": "catalog_ai_draft.py:660 [career]",
+   "en": "App development",
+   "ur": "ایپ کی تیاری",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.103",
+   "loc": "catalog_ai_draft.py:661 [career]",
+   "en": "Cloud services",
+   "ur": "کلاؤڈ خدمات",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.104",
+   "loc": "catalog_ai_draft.py:662 [career]",
+   "en": "IT consulting",
+   "ur": "آئی ٹی مشاورت",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.105",
+   "loc": "catalog_ai_draft.py:663 [career]",
+   "en": "Digital innovation",
+   "ur": "ڈیجیٹل جدت",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.106",
+   "loc": "catalog_ai_draft.py:665 [career]",
+   "en": "Flow, adaptability, emotional intelligence, and nurturing energy align with your water nature. Like water, you find success in filling needs and providing sustenance.",
+   "ur": "بہاؤ، لچک، جذباتی فہم اور پرورش کرنے والی توانائی آپ کے آبی مزاج سے ہم آہنگ ہیں۔ پانی کی طرح آپ اکثر دوسروں کی ضرورتیں پوری کرنے اور خوراک و ضروریات مہیا کرنے میں کامیابی پاتے ہیں۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "22.107",
+   "loc": "catalog_ai_draft.py:666 [career]",
+   "en": "Fruits and vegetables - these disrupt water element balance severely",
+   "ur": "پھل اور سبزیاں — یہ روایتی طور پر آبی عنصر سے غیر موافق سمجھی جاتی ہیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.108",
+   "loc": "catalog_ai_draft.py:667 [career]",
+   "en": "Fresh produce markets, fruit wholesale, vegetable trading, juice bars (from fruits), salad businesses - any fruit/vegetable-focused enterprise",
+   "ur": "تازہ پیداوار کے بازار، پھلوں کی تھوک فروخت، سبزیوں کی تجارت، (پھلوں سے بنے) جوس بار، سلاد کے کاروبار — پھلوں یا سبزیوں پر مبنی ہر کاروبار",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.109",
+   "loc": "catalog_ai_draft.py:668 [career]",
+   "en": "Seafood & Marine",
+   "ur": "سمندری خوراک اور بحری مصنوعات",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.110",
+   "loc": "catalog_ai_draft.py:669 [career]",
+   "en": "Fish markets and wholesaling",
+   "ur": "مچھلی منڈیاں اور تھوک فروخت",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.111",
+   "loc": "catalog_ai_draft.py:670 [career]",
+   "en": "Seafood restaurants",
+   "ur": "سمندری خوراک کے ریستوران",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.112",
+   "loc": "catalog_ai_draft.py:671 [career]",
+   "en": "Aquaculture and fish farming",
+   "ur": "آبی زراعت اور مچھلی فارمنگ",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.113",
+   "loc": "catalog_ai_draft.py:672 [career]",
+   "en": "Marine products distribution",
+   "ur": "بحری مصنوعات کی تقسیم",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.114",
+   "loc": "catalog_ai_draft.py:673 [career]",
+   "en": "Sushi and seafood retail",
+   "ur": "سوشی اور سمندری خوراک کی خوردہ فروخت",
+   "status": "reviewed"
+  },
+  {
+   "id": "22.115",
+   "loc": "catalog_ai_draft.py:674 [career]",
+   "en": "Fish processing facilities",
+   "ur": "مچھلی کی پروسیسنگ کی تنصیبات",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.1",
+   "loc": "catalog_ai_draft.py:675 [career]",
+   "en": "Fashion & Textiles",
+   "ur": "فیشن اور ٹیکسٹائل",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.2",
+   "loc": "catalog_ai_draft.py:676 [career]",
+   "en": "Clothing retail and wholesale",
+   "ur": "ملبوسات کی خوردہ اور تھوک فروخت",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.3",
+   "loc": "catalog_ai_draft.py:677 [career]",
+   "en": "Fashion boutiques",
+   "ur": "فیشن بوتیک",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.4",
+   "loc": "catalog_ai_draft.py:678 [career]",
+   "en": "Fabric trading",
+   "ur": "کپڑے کی تجارت",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.5",
+   "loc": "catalog_ai_draft.py:679 [career]",
+   "en": "Garment manufacturing",
+   "ur": "ملبوسات کی تیاری",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.6",
+   "loc": "catalog_ai_draft.py:680 [career]",
+   "en": "Healing & Wellness",
+   "ur": "صحت و تندرستی (ویلنس)",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "23.7",
+   "loc": "catalog_ai_draft.py:681 [career]",
+   "en": "Spa and wellness centers",
+   "ur": "اسپا اور ویلنس سینٹر",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.8",
+   "loc": "catalog_ai_draft.py:682 [career]",
+   "en": "Hydrotherapy facilities",
+   "ur": "ہائیڈروتھراپی کی سہولیات",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.9",
+   "loc": "catalog_ai_draft.py:683 [career]",
+   "en": "Healing arts practices",
+   "ur": "نگہداشت اور معالجے کے پیشے (باقاعدہ تربیت کے ساتھ)",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "23.10",
+   "loc": "catalog_ai_draft.py:684 [career]",
+   "en": "Counseling and therapy",
+   "ur": "مشاورت اور تھراپی",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.11",
+   "loc": "catalog_ai_draft.py:685 [career]",
+   "en": "Alternative medicine",
+   "ur": "متبادل طب",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.12",
+   "loc": "catalog_ai_draft.py:686 [career]",
+   "en": "Wellness coaching",
+   "ur": "ویلنس کوچنگ",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.13",
+   "loc": "catalog_ai_draft.py:687 [career]",
+   "en": "Beverages & Liquids",
+   "ur": "مشروبات اور مائعات",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.14",
+   "loc": "catalog_ai_draft.py:688 [career]",
+   "en": "Bottled water distribution",
+   "ur": "بوتل بند پانی کی تقسیم",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.15",
+   "loc": "catalog_ai_draft.py:689 [career]",
+   "en": "Juice and smoothie businesses",
+   "ur": "جوس اور اسموتھی کے کاروبار",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.16",
+   "loc": "catalog_ai_draft.py:690 [career]",
+   "en": "Beverage manufacturing",
+   "ur": "مشروبات کی تیاری",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.17",
+   "loc": "catalog_ai_draft.py:691 [career]",
+   "en": "Coffee and tea shops",
+   "ur": "کافی اور چائے کی دکانیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.18",
+   "loc": "catalog_ai_draft.py:692 [career]",
+   "en": "Liquid product trading",
+   "ur": "مائع مصنوعات کی تجارت",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.19",
+   "loc": "catalog_ai_draft.py:693 [career]",
+   "en": "Water purification services",
+   "ur": "پانی صاف کرنے کی خدمات",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.20",
+   "loc": "catalog_ai_draft.py:695 [career]",
+   "en": "Agricultural products",
+   "ur": "زرعی مصنوعات",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.21",
+   "loc": "catalog_ai_draft.py:696 [career]",
+   "en": "Grain and crop trading",
+   "ur": "اناج اور فصلوں کی تجارت",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.22",
+   "loc": "catalog_ai_draft.py:697 [career]",
+   "en": "Organic farming",
+   "ur": "نامیاتی کاشتکاری",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.23",
+   "loc": "catalog_ai_draft.py:698 [career]",
+   "en": "Earth-derived goods",
+   "ur": "زمین سے حاصل ہونے والی اشیا",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.24",
+   "loc": "catalog_ai_draft.py:699 [career]",
+   "en": "Natural products retail",
+   "ur": "قدرتی مصنوعات کی خوردہ فروخت",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.25",
+   "loc": "catalog_ai_draft.py:700 [career]",
+   "en": "Leadership roles, entrepreneurship, any venture requiring courage and initiative",
+   "ur": "قیادتی کردار، کاروباری سرگرمیاں، اور ہر وہ کام جس میں ہمت اور پہل درکار ہو",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.26",
+   "loc": "catalog_ai_draft.py:701 [career]",
+   "en": "Leadership, innovation, courage, and pioneering spirit align with your solar fire nature",
+   "ur": "قیادت، جدت، ہمت اور اولیت کا جذبہ آپ کے شمسی آتشی مزاج سے ہم آہنگ ہیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.27",
+   "loc": "catalog_ai_draft.py:702 [career]",
+   "en": "Routine, repetitive work lacking creativity or leadership opportunity",
+   "ur": "معمول کا، دہرایا جانے والا کام جس میں تخلیقی صلاحیت یا قیادت کا موقع نہ ہو",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.28",
+   "loc": "catalog_ai_draft.py:703 [career]",
+   "en": "Subordinate roles without autonomy, micromanaged positions, careers suppressing initiative",
+   "ur": "خود مختاری کے بغیر ماتحت کردار، سخت نگرانی والے عہدے، اور وہ پیشے جو پہل کو دبا دیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.29",
+   "loc": "catalog_ai_draft.py:704 [career]",
+   "en": "Leadership & Management",
+   "ur": "قیادت اور انتظام",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.30",
+   "loc": "catalog_ai_draft.py:705 [career]",
+   "en": "Executive leadership positions",
+   "ur": "اعلیٰ انتظامی قیادت کے عہدے",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.31",
+   "loc": "catalog_ai_draft.py:706 [career]",
+   "en": "Business management",
+   "ur": "کاروباری انتظام",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.32",
+   "loc": "catalog_ai_draft.py:707 [career]",
+   "en": "Project management",
+   "ur": "پروجیکٹ مینجمنٹ",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.33",
+   "loc": "catalog_ai_draft.py:708 [career]",
+   "en": "Team leadership roles",
+   "ur": "ٹیم کی قیادت کے کردار",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.34",
+   "loc": "catalog_ai_draft.py:709 [career]",
+   "en": "Entrepreneurship",
+   "ur": "کاروباری سرگرمی",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.35",
+   "loc": "catalog_ai_draft.py:710 [career]",
+   "en": "Startup founding",
+   "ur": "اسٹارٹ اپ کی بنیاد رکھنا",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.36",
+   "loc": "catalog_ai_draft.py:711 [career]",
+   "en": "Innovation & Technology",
+   "ur": "جدت اور ٹیکنالوجی",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.37",
+   "loc": "catalog_ai_draft.py:712 [career]",
+   "en": "Product development",
+   "ur": "نئی مصنوعات کی تشکیل",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "23.38",
+   "loc": "catalog_ai_draft.py:713 [career]",
+   "en": "Innovation consulting",
+   "ur": "جدت کی مشاورت",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.39",
+   "loc": "catalog_ai_draft.py:714 [career]",
+   "en": "Digital transformation",
+   "ur": "ڈیجیٹل تبدیلی",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.40",
+   "loc": "catalog_ai_draft.py:715 [career]",
+   "en": "Venture capital",
+   "ur": "وینچر کیپیٹل",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.41",
+   "loc": "catalog_ai_draft.py:716 [career]",
+   "en": "Business incubation",
+   "ur": "کاروباری انکیوبیشن",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.42",
+   "loc": "catalog_ai_draft.py:717 [career]",
+   "en": "Public Service",
+   "ur": "عوامی خدمت",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.43",
+   "loc": "catalog_ai_draft.py:718 [career]",
+   "en": "Government leadership",
+   "ur": "حکومتی قیادت",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.44",
+   "loc": "catalog_ai_draft.py:719 [career]",
+   "en": "Community organizing",
+   "ur": "کمیونٹی کی تنظیم",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.45",
+   "loc": "catalog_ai_draft.py:720 [career]",
+   "en": "Political advocacy",
+   "ur": "سیاسی وکالت",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.46",
+   "loc": "catalog_ai_draft.py:721 [career]",
+   "en": "Non-profit leadership",
+   "ur": "غیر منافع بخش اداروں کی قیادت",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.47",
+   "loc": "catalog_ai_draft.py:722 [career]",
+   "en": "Social entrepreneurship",
+   "ur": "سماجی کاروباری سرگرمی",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.48",
+   "loc": "catalog_ai_draft.py:723 [career]",
+   "en": "Public policy",
+   "ur": "عوامی پالیسی",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.49",
+   "loc": "catalog_ai_draft.py:724 [career]",
+   "en": "Creative Industries",
+   "ur": "تخلیقی صنعتیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.50",
+   "loc": "catalog_ai_draft.py:725 [career]",
+   "en": "Film and media production",
+   "ur": "فلم اور میڈیا پروڈکشن",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.51",
+   "loc": "catalog_ai_draft.py:726 [career]",
+   "en": "Creative direction",
+   "ur": "تخلیقی ہدایت کاری",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.52",
+   "loc": "catalog_ai_draft.py:727 [career]",
+   "en": "Brand development",
+   "ur": "برانڈ کی تشکیل",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.53",
+   "loc": "catalog_ai_draft.py:728 [career]",
+   "en": "Entertainment industry",
+   "ur": "تفریحی صنعت",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.54",
+   "loc": "catalog_ai_draft.py:729 [career]",
+   "en": "Arts administration",
+   "ur": "فنون کا انتظام",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.55",
+   "loc": "catalog_ai_draft.py:730 [career]",
+   "en": "Cultural initiatives",
+   "ur": "ثقافتی اقدامات",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.56",
+   "loc": "catalog_ai_draft.py:731 [career]",
+   "en": "Similar to Buruj 2 - agriculture, real estate, construction, earth resources",
+   "ur": "برج 2 کی طرح — زراعت، رئیل اسٹیٹ، تعمیرات، زمینی وسائل",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.57",
+   "loc": "catalog_ai_draft.py:732 [career]",
+   "en": "Long-term stability, tangible assets, and foundational structures align with your earth nature",
+   "ur": "طویل مدتی استحکام، ٹھوس اثاثے اور بنیادی ڈھانچے آپ کے زمینی مزاج سے ہم آہنگ ہیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.58",
+   "loc": "catalog_ai_draft.py:733 [career]",
+   "en": "Fish and fish-related products",
+   "ur": "مچھلی اور مچھلی سے متعلق مصنوعات",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.59",
+   "loc": "catalog_ai_draft.py:735 [career]",
+   "en": "Real Estate & Property",
+   "ur": "رئیل اسٹیٹ اور جائیداد",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.60",
+   "loc": "catalog_ai_draft.py:736 [career]",
+   "en": "Real estate investment",
+   "ur": "رئیل اسٹیٹ میں سرمایہ کاری",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.61",
+   "loc": "catalog_ai_draft.py:737 [career]",
+   "en": "Property development",
+   "ur": "جائیداد کی تعمیر و ترقی",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "23.62",
+   "loc": "catalog_ai_draft.py:738 [career]",
+   "en": "Land management",
+   "ur": "زمین کا انتظام",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.63",
+   "loc": "catalog_ai_draft.py:739 [career]",
+   "en": "Architecture firms",
+   "ur": "آرکیٹیکچر کی کمپنیاں",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.64",
+   "loc": "catalog_ai_draft.py:740 [career]",
+   "en": "Finance & Banking",
+   "ur": "مالیات اور بینکاری",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.65",
+   "loc": "catalog_ai_draft.py:741 [career]",
+   "en": "Banking and finance",
+   "ur": "بینکاری اور مالیات",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.66",
+   "loc": "catalog_ai_draft.py:742 [career]",
+   "en": "Investment management",
+   "ur": "سرمایہ کاری کا انتظام",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.67",
+   "loc": "catalog_ai_draft.py:743 [career]",
+   "en": "Financial planning",
+   "ur": "مالی منصوبہ بندی",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.68",
+   "loc": "catalog_ai_draft.py:744 [career]",
+   "en": "Wealth management",
+   "ur": "دولت کا انتظام",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.69",
+   "loc": "catalog_ai_draft.py:745 [career]",
+   "en": "Accounting services",
+   "ur": "اکاؤنٹنگ کی خدمات",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.70",
+   "loc": "catalog_ai_draft.py:746 [career]",
+   "en": "Insurance",
+   "ur": "بیمہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.71",
+   "loc": "catalog_ai_draft.py:747 [career]",
+   "en": "Agriculture & Natural Resources",
+   "ur": "زراعت اور قدرتی وسائل",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.72",
+   "loc": "catalog_ai_draft.py:748 [career]",
+   "en": "Large-scale farming",
+   "ur": "بڑے پیمانے کی کاشتکاری",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.73",
+   "loc": "catalog_ai_draft.py:749 [career]",
+   "en": "Agricultural land management",
+   "ur": "زرعی زمین کا انتظام",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.74",
+   "loc": "catalog_ai_draft.py:750 [career]",
+   "en": "Natural resource management",
+   "ur": "قدرتی وسائل کا انتظام",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.75",
+   "loc": "catalog_ai_draft.py:751 [career]",
+   "en": "Mining operations",
+   "ur": "کان کنی کے کام",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.76",
+   "loc": "catalog_ai_draft.py:752 [career]",
+   "en": "Forestry management",
+   "ur": "جنگلات کا انتظام",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.77",
+   "loc": "catalog_ai_draft.py:753 [career]",
+   "en": "Environmental conservation",
+   "ur": "ماحولیاتی تحفظ",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.78",
+   "loc": "catalog_ai_draft.py:754 [career]",
+   "en": "Infrastructure",
+   "ur": "بنیادی ڈھانچہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.79",
+   "loc": "catalog_ai_draft.py:755 [career]",
+   "en": "Civil engineering",
+   "ur": "سول انجینئرنگ",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.80",
+   "loc": "catalog_ai_draft.py:756 [career]",
+   "en": "Urban planning",
+   "ur": "شہری منصوبہ بندی",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.81",
+   "loc": "catalog_ai_draft.py:757 [career]",
+   "en": "Transportation systems",
+   "ur": "نقل و حمل کے نظام",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.82",
+   "loc": "catalog_ai_draft.py:758 [career]",
+   "en": "Public works",
+   "ur": "عوامی تعمیرات",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.83",
+   "loc": "catalog_ai_draft.py:759 [career]",
+   "en": "Municipal projects",
+   "ur": "بلدیاتی منصوبے",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.84",
+   "loc": "catalog_ai_draft.py:760 [career]",
+   "en": "Similar to Buruj 3 - communication, trade, fashion, fresh produce",
+   "ur": "برج 3 کی طرح — ابلاغ، تجارت، فیشن، تازہ پیداوار",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.85",
+   "loc": "catalog_ai_draft.py:761 [career]",
+   "en": "Communication, movement, variety, and intellectual exchange align with your airy nature",
+   "ur": "ابلاغ، حرکت، تنوع اور فکری تبادلہ آپ کے ہوائی مزاج سے ہم آہنگ ہیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.86",
+   "loc": "catalog_ai_draft.py:762 [career]",
+   "en": "Seafood industry, isolated work, repetitive tasks without variety",
+   "ur": "سمندری خوراک کی صنعت، تنہائی میں کیا جانے والا کام، بغیر تنوع کے دہرائے جانے والے کام",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "23.87",
+   "loc": "catalog_ai_draft.py:763 [career]",
+   "en": "Media & Communications",
+   "ur": "ذرائع ابلاغ اور رابطہ کاری",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.88",
+   "loc": "catalog_ai_draft.py:764 [career]",
+   "en": "Journalism and reporting",
+   "ur": "صحافت اور رپورٹنگ",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.89",
+   "loc": "catalog_ai_draft.py:765 [career]",
+   "en": "Public relations",
+   "ur": "تعلقاتِ عامہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.90",
+   "loc": "catalog_ai_draft.py:766 [career]",
+   "en": "Broadcasting",
+   "ur": "نشریات",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.91",
+   "loc": "catalog_ai_draft.py:767 [career]",
+   "en": "Content creation",
+   "ur": "مواد کی تخلیق",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.92",
+   "loc": "catalog_ai_draft.py:768 [career]",
+   "en": "Digital marketing",
+   "ur": "ڈیجیٹل مارکیٹنگ",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.93",
+   "loc": "catalog_ai_draft.py:769 [career]",
+   "en": "Education & Training",
+   "ur": "تعلیم و تربیت",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.94",
+   "loc": "catalog_ai_draft.py:770 [career]",
+   "en": "Teaching and education",
+   "ur": "تدریس اور تعلیم",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.95",
+   "loc": "catalog_ai_draft.py:771 [career]",
+   "en": "Corporate training",
+   "ur": "کارپوریٹ تربیت",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.96",
+   "loc": "catalog_ai_draft.py:772 [career]",
+   "en": "Online course creation",
+   "ur": "آن لائن کورس کی تیاری",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.97",
+   "loc": "catalog_ai_draft.py:773 [career]",
+   "en": "Educational technology",
+   "ur": "تعلیمی ٹیکنالوجی",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.98",
+   "loc": "catalog_ai_draft.py:774 [career]",
+   "en": "Language instruction",
+   "ur": "زبان کی تدریس",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.99",
+   "loc": "catalog_ai_draft.py:775 [career]",
+   "en": "Academic consulting",
+   "ur": "تعلیمی مشاورت",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.100",
+   "loc": "catalog_ai_draft.py:776 [career]",
+   "en": "Sales & Networking",
+   "ur": "فروخت اور روابط",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.101",
+   "loc": "catalog_ai_draft.py:777 [career]",
+   "en": "Sales and business development",
+   "ur": "فروخت اور کاروباری ترقی",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.102",
+   "loc": "catalog_ai_draft.py:778 [career]",
+   "en": "Network marketing",
+   "ur": "نیٹ ورک مارکیٹنگ",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.103",
+   "loc": "catalog_ai_draft.py:779 [career]",
+   "en": "Brand ambassadorship",
+   "ur": "برانڈ ایمبیسڈر شپ",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.104",
+   "loc": "catalog_ai_draft.py:780 [career]",
+   "en": "Client relations",
+   "ur": "گاہکوں سے تعلقات",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.105",
+   "loc": "catalog_ai_draft.py:781 [career]",
+   "en": "Partnership development",
+   "ur": "شراکتوں کی ترقی",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.106",
+   "loc": "catalog_ai_draft.py:782 [career]",
+   "en": "Community management",
+   "ur": "کمیونٹی کا انتظام",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.107",
+   "loc": "catalog_ai_draft.py:783 [career]",
+   "en": "Writing & Publishing",
+   "ur": "تحریر و اشاعت",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.108",
+   "loc": "catalog_ai_draft.py:784 [career]",
+   "en": "Writing and authorship",
+   "ur": "تحریر اور تصنیف",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.109",
+   "loc": "catalog_ai_draft.py:785 [career]",
+   "en": "Publishing",
+   "ur": "اشاعت",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.110",
+   "loc": "catalog_ai_draft.py:786 [career]",
+   "en": "Copywriting",
+   "ur": "کاپی رائٹنگ",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.111",
+   "loc": "catalog_ai_draft.py:787 [career]",
+   "en": "Technical writing",
+   "ur": "تکنیکی تحریر",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.112",
+   "loc": "catalog_ai_draft.py:788 [career]",
+   "en": "Translation services",
+   "ur": "ترجمے کی خدمات",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.113",
+   "loc": "catalog_ai_draft.py:789 [career]",
+   "en": "Editorial work",
+   "ur": "ادارتی کام",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.114",
+   "loc": "catalog_ai_draft.py:790 [career]",
+   "en": "Similar to Buruj 4 - fish trading, deep work, transformative professions",
+   "ur": "برج 4 کی طرح — مچھلی کی تجارت، گہرا کام، تبدیلی لانے والے پیشے",
+   "status": "reviewed"
+  },
+  {
+   "id": "23.115",
+   "loc": "catalog_ai_draft.py:791 [career]",
+   "en": "Depth, transformation, healing, and uncovering hidden truths align with your Scorpionic water nature",
+   "ur": "گہرائی، تبدیلی، دوسروں کی دل جوئی و نگہداشت، اور پوشیدہ سچائیوں کی کھوج آپ کے عقربی آبی مزاج سے ہم آہنگ ہیں",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "24.1",
+   "loc": "catalog_ai_draft.py:792 [career]",
+   "en": "Fruits and vegetables",
+   "ur": "پھل اور سبزیاں",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.2",
+   "loc": "catalog_ai_draft.py:793 [career]",
+   "en": "Fresh produce business, fruit wholesale, superficial work lacking depth",
+   "ur": "تازہ پیداوار کا کاروبار، پھلوں کی تھوک فروخت، گہرائی سے خالی سطحی کام",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.3",
+   "loc": "catalog_ai_draft.py:794 [career]",
+   "en": "Healing & Therapy",
+   "ur": "تھراپی اور نفسیاتی نگہداشت",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "24.4",
+   "loc": "catalog_ai_draft.py:795 [career]",
+   "en": "Psychotherapy and counseling",
+   "ur": "نفسیاتی علاج اور مشاورت",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.5",
+   "loc": "catalog_ai_draft.py:796 [career]",
+   "en": "Trauma healing work",
+   "ur": "صدمے سے بحالی میں معاونت (ٹراما تھراپی)",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "24.6",
+   "loc": "catalog_ai_draft.py:797 [career]",
+   "en": "Deep healing modalities",
+   "ur": "نفسیاتی بحالی کے گہرے طریقے (تربیت یافتہ ماہرین کے ذریعے)",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "24.7",
+   "loc": "catalog_ai_draft.py:799 [career]",
+   "en": "Crisis intervention",
+   "ur": "بحران میں مداخلت",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.8",
+   "loc": "catalog_ai_draft.py:800 [career]",
+   "en": "Transformational coaching",
+   "ur": "تبدیلی لانے والی کوچنگ",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.9",
+   "loc": "catalog_ai_draft.py:801 [career]",
+   "en": "Investigation & Research",
+   "ur": "تفتیش اور تحقیق",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.10",
+   "loc": "catalog_ai_draft.py:802 [career]",
+   "en": "Detective work",
+   "ur": "سراغ رسانی کا کام",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.11",
+   "loc": "catalog_ai_draft.py:803 [career]",
+   "en": "Research and analysis",
+   "ur": "تحقیق اور تجزیہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.12",
+   "loc": "catalog_ai_draft.py:804 [career]",
+   "en": "Forensic sciences",
+   "ur": "فرانزک سائنسز",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.13",
+   "loc": "catalog_ai_draft.py:805 [career]",
+   "en": "Investigative journalism",
+   "ur": "تحقیقاتی صحافت",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.14",
+   "loc": "catalog_ai_draft.py:806 [career]",
+   "en": "Scientific research",
+   "ur": "سائنسی تحقیق",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.15",
+   "loc": "catalog_ai_draft.py:807 [career]",
+   "en": "Data analysis",
+   "ur": "ڈیٹا تجزیہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.16",
+   "loc": "catalog_ai_draft.py:808 [career]",
+   "en": "Finance & Resources",
+   "ur": "مالیات اور وسائل",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.17",
+   "loc": "catalog_ai_draft.py:809 [career]",
+   "en": "Investment banking",
+   "ur": "انویسٹمنٹ بینکنگ",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.18",
+   "loc": "catalog_ai_draft.py:810 [career]",
+   "en": "Financial analysis",
+   "ur": "مالیاتی تجزیہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.19",
+   "loc": "catalog_ai_draft.py:811 [career]",
+   "en": "Estate planning",
+   "ur": "وراثت اور ترکے کی منصوبہ بندی",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "24.20",
+   "loc": "catalog_ai_draft.py:812 [career]",
+   "en": "Insurance underwriting",
+   "ur": "بیمہ انڈر رائٹنگ",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.21",
+   "loc": "catalog_ai_draft.py:813 [career]",
+   "en": "Resource management",
+   "ur": "وسائل کا انتظام",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.22",
+   "loc": "catalog_ai_draft.py:814 [career]",
+   "en": "Mergers and acquisitions",
+   "ur": "انضمام اور حصول",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.23",
+   "loc": "catalog_ai_draft.py:815 [career]",
+   "en": "Transformative Work",
+   "ur": "تبدیلی لانے والا کام",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.24",
+   "loc": "catalog_ai_draft.py:816 [career]",
+   "en": "Life coaching",
+   "ur": "لائف کوچنگ",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.25",
+   "loc": "catalog_ai_draft.py:817 [career]",
+   "en": "Spiritual counseling",
+   "ur": "روحانی مشاورت",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.26",
+   "loc": "catalog_ai_draft.py:818 [career]",
+   "en": "Crisis management",
+   "ur": "بحران کا انتظام",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.27",
+   "loc": "catalog_ai_draft.py:819 [career]",
+   "en": "Organizational transformation",
+   "ur": "تنظیمی تبدیلی",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.28",
+   "loc": "catalog_ai_draft.py:820 [career]",
+   "en": "Change management consulting",
+   "ur": "تبدیلی کے انتظام کی مشاورت",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.29",
+   "loc": "catalog_ai_draft.py:821 [career]",
+   "en": "Hospice and end-of-life care",
+   "ur": "تسکینی اور آخری ایام کی نگہداشت",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.30",
+   "loc": "catalog_ai_draft.py:822 [career]",
+   "en": "Teaching, trade, long-distance commerce, knowledge-based professions",
+   "ur": "تدریس، تجارت، دور دراز علاقوں سے تجارت، علم پر مبنی پیشے",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "24.31",
+   "loc": "catalog_ai_draft.py:823 [career]",
+   "en": "Expansion, knowledge, truth-seeking, and freedom align with Sagittarius fire",
+   "ur": "وسعت، علم، حق کی تلاش اور آزادی قوس کے آتشی مزاج سے ہم آہنگ ہیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.32",
+   "loc": "catalog_ai_draft.py:824 [career]",
+   "en": "None specified for this buruj",
+   "ur": "اس برج کے لیے کوئی مخصوص پابندی نہیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.33",
+   "loc": "catalog_ai_draft.py:825 [career]",
+   "en": "Confined spaces, restrictive roles, work without meaning or purpose",
+   "ur": "تنگ جگہیں، پابندی والے کردار، اور بے معنی یا بے مقصد کام",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.34",
+   "loc": "catalog_ai_draft.py:826 [career]",
+   "en": "Education & Philosophy",
+   "ur": "تعلیم اور فلسفہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.35",
+   "loc": "catalog_ai_draft.py:827 [career]",
+   "en": "Higher education teaching",
+   "ur": "اعلیٰ تعلیم کی تدریس",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.36",
+   "loc": "catalog_ai_draft.py:829 [career]",
+   "en": "Philosophy and ethics",
+   "ur": "فلسفہ اور اخلاقیات",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.37",
+   "loc": "catalog_ai_draft.py:830 [career]",
+   "en": "International education",
+   "ur": "بین الاقوامی تعلیم",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.38",
+   "loc": "catalog_ai_draft.py:831 [career]",
+   "en": "Cultural studies",
+   "ur": "ثقافتی مطالعات",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.39",
+   "loc": "catalog_ai_draft.py:832 [career]",
+   "en": "Academic research",
+   "ur": "تعلیمی تحقیق",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.40",
+   "loc": "catalog_ai_draft.py:833 [career]",
+   "en": "Travel & International",
+   "ur": "سفر اور بین الاقوامی امور",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.41",
+   "loc": "catalog_ai_draft.py:834 [career]",
+   "en": "International business",
+   "ur": "بین الاقوامی کاروبار",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.42",
+   "loc": "catalog_ai_draft.py:835 [career]",
+   "en": "Import/export trading",
+   "ur": "درآمد و برآمد کی تجارت",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.43",
+   "loc": "catalog_ai_draft.py:836 [career]",
+   "en": "Travel industry",
+   "ur": "سفر کی صنعت",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.44",
+   "loc": "catalog_ai_draft.py:837 [career]",
+   "en": "International relations",
+   "ur": "بین الاقوامی تعلقات",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.45",
+   "loc": "catalog_ai_draft.py:838 [career]",
+   "en": "Cross-cultural consulting",
+   "ur": "بین الثقافتی مشاورت",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.46",
+   "loc": "catalog_ai_draft.py:839 [career]",
+   "en": "Global logistics",
+   "ur": "عالمی لاجسٹکس",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.47",
+   "loc": "catalog_ai_draft.py:840 [career]",
+   "en": "Publishing & Media",
+   "ur": "اشاعت اور ذرائع ابلاغ",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.48",
+   "loc": "catalog_ai_draft.py:841 [career]",
+   "en": "Publishing houses",
+   "ur": "اشاعتی ادارے",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.49",
+   "loc": "catalog_ai_draft.py:842 [career]",
+   "en": "Book writing and authorship",
+   "ur": "کتابوں کی تحریر اور تصنیف",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.50",
+   "loc": "catalog_ai_draft.py:843 [career]",
+   "en": "Educational media",
+   "ur": "تعلیمی میڈیا",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.51",
+   "loc": "catalog_ai_draft.py:844 [career]",
+   "en": "Documentary production",
+   "ur": "دستاویزی فلموں کی تیاری",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.52",
+   "loc": "catalog_ai_draft.py:845 [career]",
+   "en": "International journalism",
+   "ur": "بین الاقوامی صحافت",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.53",
+   "loc": "catalog_ai_draft.py:846 [career]",
+   "en": "Knowledge platforms",
+   "ur": "علمی پلیٹ فارم",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.54",
+   "loc": "catalog_ai_draft.py:847 [career]",
+   "en": "Similar to other earth buruj - agriculture, construction, earth resources, property",
+   "ur": "دیگر زمینی بروج کی طرح — زراعت، تعمیرات، زمینی وسائل، جائیداد",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.55",
+   "loc": "catalog_ai_draft.py:848 [career]",
+   "en": "Structure, discipline, long-term achievement, and mastery align with Capricorn earth",
+   "ur": "نظم و ترتیب، نظم و ضبط، طویل مدتی کامیابی اور مہارت جدی کے زمینی مزاج سے ہم آہنگ ہیں",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "24.56",
+   "loc": "catalog_ai_draft.py:849 [career]",
+   "en": "Seafood industry, unstable ventures, roles without clear authority",
+   "ur": "سمندری خوراک کی صنعت، غیر مستحکم منصوبے، واضح اختیار کے بغیر کردار",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.57",
+   "loc": "catalog_ai_draft.py:850 [career]",
+   "en": "Corporate executive leadership",
+   "ur": "کارپوریٹ اعلیٰ انتظامی قیادت",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.58",
+   "loc": "catalog_ai_draft.py:851 [career]",
+   "en": "Government positions",
+   "ur": "حکومتی عہدے",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.59",
+   "loc": "catalog_ai_draft.py:852 [career]",
+   "en": "Military leadership",
+   "ur": "عسکری قیادت",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.60",
+   "loc": "catalog_ai_draft.py:853 [career]",
+   "en": "Institutional management",
+   "ur": "ادارہ جاتی انتظام",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.61",
+   "loc": "catalog_ai_draft.py:854 [career]",
+   "en": "Long-term strategic planning",
+   "ur": "طویل مدتی حکمتِ عملی کی منصوبہ بندی",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.62",
+   "loc": "catalog_ai_draft.py:855 [career]",
+   "en": "Organizational development",
+   "ur": "تنظیمی ترقی",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.63",
+   "loc": "catalog_ai_draft.py:856 [career]",
+   "en": "Traditional Professions",
+   "ur": "روایتی پیشے",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.64",
+   "loc": "catalog_ai_draft.py:857 [career]",
+   "en": "Law and judiciary",
+   "ur": "قانون اور عدلیہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.65",
+   "loc": "catalog_ai_draft.py:858 [career]",
+   "en": "Accounting and auditing",
+   "ur": "اکاؤنٹنگ اور آڈیٹنگ",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.66",
+   "loc": "catalog_ai_draft.py:859 [career]",
+   "en": "Engineering",
+   "ur": "انجینئرنگ",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.67",
+   "loc": "catalog_ai_draft.py:860 [career]",
+   "en": "Architecture",
+   "ur": "آرکیٹیکچر",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.68",
+   "loc": "catalog_ai_draft.py:861 [career]",
+   "en": "Medicine (surgery)",
+   "ur": "طب (سرجری)",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.69",
+   "loc": "catalog_ai_draft.py:862 [career]",
+   "en": "Academic administration",
+   "ur": "تعلیمی انتظامیہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.70",
+   "loc": "catalog_ai_draft.py:863 [career]",
+   "en": "Large-scale construction",
+   "ur": "بڑے پیمانے کی تعمیرات",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.71",
+   "loc": "catalog_ai_draft.py:864 [career]",
+   "en": "Infrastructure projects",
+   "ur": "بنیادی ڈھانچے کے منصوبے",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.72",
+   "loc": "catalog_ai_draft.py:865 [career]",
+   "en": "Property investment",
+   "ur": "جائیداد میں سرمایہ کاری",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.73",
+   "loc": "catalog_ai_draft.py:866 [career]",
+   "en": "Similar to other air buruj - communication, trade, community service",
+   "ur": "دیگر ہوائی بروج کی طرح — ابلاغ، تجارت، کمیونٹی کی خدمت",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.74",
+   "loc": "catalog_ai_draft.py:867 [career]",
+   "en": "Innovation, community service, future vision, and progressive thinking align with Aquarius air",
+   "ur": "جدت، کمیونٹی کی خدمت، دور اندیشی اور ترقی پسند سوچ دلو کے ہوائی مزاج سے ہم آہنگ ہیں",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "24.75",
+   "loc": "catalog_ai_draft.py:868 [career]",
+   "en": "Seafood industry, traditional rigid structures, roles opposing innovation",
+   "ur": "سمندری خوراک کی صنعت، روایتی سخت ڈھانچے، جدت کی مخالفت کرنے والے کردار",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.76",
+   "loc": "catalog_ai_draft.py:869 [career]",
+   "en": "Tech innovation",
+   "ur": "ٹیکنالوجی میں جدت",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.77",
+   "loc": "catalog_ai_draft.py:870 [career]",
+   "en": "AI and machine learning",
+   "ur": "مصنوعی ذہانت اور مشین لرننگ",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.78",
+   "loc": "catalog_ai_draft.py:871 [career]",
+   "en": "Blockchain and crypto",
+   "ur": "بلاک چین اور کرپٹو",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.79",
+   "loc": "catalog_ai_draft.py:872 [career]",
+   "en": "Space technology",
+   "ur": "خلائی ٹیکنالوجی",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.80",
+   "loc": "catalog_ai_draft.py:873 [career]",
+   "en": "Green technology",
+   "ur": "سبز ٹیکنالوجی",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.81",
+   "loc": "catalog_ai_draft.py:874 [career]",
+   "en": "Humanitarian & Social",
+   "ur": "انسانی خدمت اور سماجی شعبہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.82",
+   "loc": "catalog_ai_draft.py:875 [career]",
+   "en": "Human rights advocacy",
+   "ur": "انسانی حقوق کی وکالت",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.83",
+   "loc": "catalog_ai_draft.py:876 [career]",
+   "en": "International development",
+   "ur": "بین الاقوامی ترقی",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.84",
+   "loc": "catalog_ai_draft.py:877 [career]",
+   "en": "Social innovation",
+   "ur": "سماجی جدت",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.85",
+   "loc": "catalog_ai_draft.py:878 [career]",
+   "en": "Science & Research",
+   "ur": "سائنس اور تحقیق",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.86",
+   "loc": "catalog_ai_draft.py:879 [career]",
+   "en": "Environmental science",
+   "ur": "ماحولیاتی سائنس",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.87",
+   "loc": "catalog_ai_draft.py:880 [career]",
+   "en": "Renewable energy",
+   "ur": "قابلِ تجدید توانائی",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.88",
+   "loc": "catalog_ai_draft.py:881 [career]",
+   "en": "Astronomy and space",
+   "ur": "فلکیات اور خلا",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.89",
+   "loc": "catalog_ai_draft.py:882 [career]",
+   "en": "Future studies",
+   "ur": "مستقبلیات (فیوچر اسٹڈیز)",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "24.90",
+   "loc": "catalog_ai_draft.py:883 [career]",
+   "en": "Similar to other water buruj - healing, fish trading, spiritual service",
+   "ur": "دیگر آبی بروج کی طرح — نگہداشت و تیمارداری، مچھلی کی تجارت، روحانی خدمت",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "24.91",
+   "loc": "catalog_ai_draft.py:884 [career]",
+   "en": "Compassion, service, spiritual connection, and healing align with Pisces water",
+   "ur": "ہمدردی، خدمت، روحانی تعلق اور دوسروں کی دل جوئی و نگہداشت حوت کے آبی مزاج سے ہم آہنگ ہیں",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "24.92",
+   "loc": "catalog_ai_draft.py:885 [career]",
+   "en": "Fresh produce business, aggressive sales roles, competitive environments lacking compassion",
+   "ur": "تازہ پیداوار کا کاروبار، جارحانہ فروخت کے کردار، اور ہمدردی سے خالی مسابقتی ماحول",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.93",
+   "loc": "catalog_ai_draft.py:887 [career]",
+   "en": "Nursing and caregiving",
+   "ur": "نرسنگ اور تیمارداری",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.94",
+   "loc": "catalog_ai_draft.py:888 [career]",
+   "en": "Holistic healing",
+   "ur": "ہمہ جہت فلاحِ صحت (ہولسٹک ویلنس؛ طبی علاج کا بدل نہیں)",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "24.95",
+   "loc": "catalog_ai_draft.py:889 [career]",
+   "en": "Mental health counseling",
+   "ur": "ذہنی صحت کی مشاورت",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.96",
+   "loc": "catalog_ai_draft.py:890 [career]",
+   "en": "Hospice care",
+   "ur": "تسکینی نگہداشت",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.97",
+   "loc": "catalog_ai_draft.py:891 [career]",
+   "en": "Energy healing",
+   "ur": "انرجی ہیلنگ (متبادل طریقہ؛ طبی علاج کا بدل نہیں)",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "24.98",
+   "loc": "catalog_ai_draft.py:892 [career]",
+   "en": "Compassionate medicine",
+   "ur": "ہمدردی پر مبنی طبی خدمت",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "24.99",
+   "loc": "catalog_ai_draft.py:893 [career]",
+   "en": "Spiritual & Religious",
+   "ur": "روحانی اور دینی شعبہ",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.100",
+   "loc": "catalog_ai_draft.py:894 [career]",
+   "en": "Chaplaincy",
+   "ur": "اداروں اور ہسپتالوں میں روحانی معاونت (چیپلنسی)",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "24.101",
+   "loc": "catalog_ai_draft.py:895 [career]",
+   "en": "Meditation teaching",
+   "ur": "مراقبہ کی تدریس",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.102",
+   "loc": "catalog_ai_draft.py:897 [career]",
+   "en": "Interfaith work",
+   "ur": "بین المذاہب کام",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.103",
+   "loc": "catalog_ai_draft.py:898 [career]",
+   "en": "Arts & Creativity",
+   "ur": "فنون اور تخلیقی صلاحیت",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.104",
+   "loc": "catalog_ai_draft.py:899 [career]",
+   "en": "Music and poetry",
+   "ur": "موسیقی اور شاعری",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.105",
+   "loc": "catalog_ai_draft.py:900 [career]",
+   "en": "Healing arts",
+   "ur": "نگہداشت اور معالجے کے پیشے (باقاعدہ تربیت کے ساتھ)",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "24.106",
+   "loc": "catalog_ai_draft.py:901 [career]",
+   "en": "Dance and movement therapy",
+   "ur": "رقص اور حرکت کی تھراپی",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.107",
+   "loc": "catalog_ai_draft.py:902 [career]",
+   "en": "Creative arts therapy",
+   "ur": "آرٹ تھراپی",
+   "status": "reviewed-corrected (optional)"
+  },
+  {
+   "id": "24.108",
+   "loc": "catalog_ai_draft.py:903 [career]",
+   "en": "Photography",
+   "ur": "فوٹوگرافی",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.109",
+   "loc": "catalog_ai_draft.py:904 [career]",
+   "en": "Spiritual art",
+   "ur": "روحانی فن",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.110",
+   "loc": "catalog_ai_draft.py:907 [career]",
+   "en": "Humanitarian aid",
+   "ur": "انسانی امداد",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.111",
+   "loc": "catalog_ai_draft.py:908 [career]",
+   "en": "Refugee support",
+   "ur": "مہاجرین کی معاونت",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.112",
+   "loc": "catalog_ai_draft.py:909 [career]",
+   "en": "Animal welfare",
+   "ur": "جانوروں کی بہبود",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.113",
+   "loc": "catalog_ai_draft.py:910 [career]",
+   "en": "Environmental protection",
+   "ur": "ماحول کا تحفظ",
+   "status": "reviewed"
+  },
+  {
+   "id": "24.114",
+   "loc": "catalog_ai_draft.py:911 [career]",
+   "en": "Social services",
+   "ur": "سماجی خدمات",
+   "status": "reviewed"
+  },
+  {
+   "id": "25.1",
+   "loc": "catalog_ai_draft.py:24 [career-ui]",
+   "en": "Career & Vocation Guidance",
+   "ur": "پیشہ اور کیریئر کی رہنمائی",
+   "status": "reviewed"
+  },
+  {
+   "id": "25.2",
+   "loc": "catalog_ai_draft.py:25 [career-ui]",
+   "en": "Career paths that resonate with your spiritual energy and elemental nature",
+   "ur": "وہ پیشہ ورانہ راستے جو آپ کی روحانی توانائی اور آپ کے عنصری مزاج سے ہم آہنگ ہیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "25.3",
+   "loc": "catalog_ai_draft.py:26 [career-ui]",
+   "en": "Traditional Wisdom",
+   "ur": "روایتی حکمت",
+   "status": "reviewed"
+  },
+  {
+   "id": "25.4",
+   "loc": "catalog_ai_draft.py:30 [career-ui]",
+   "en": "Recommended Career Fields",
+   "ur": "تجویز کردہ پیشہ ورانہ شعبے",
+   "status": "reviewed"
+  },
+  {
+   "id": "25.5",
+   "loc": "catalog_ai_draft.py:31 [career-ui]",
+   "en": "Expand All",
+   "ur": "سب کھولیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "25.6",
+   "loc": "catalog_ai_draft.py:32 [career-ui]",
+   "en": "Collapse All",
+   "ur": "سب بند کریں",
+   "status": "reviewed"
+  },
+  {
+   "id": "25.7",
+   "loc": "catalog_ai_draft.py:33 [career-ui]",
+   "en": "opportunities",
+   "ur": "مواقع",
+   "status": "reviewed"
+  },
+  {
+   "id": "25.8",
+   "loc": "catalog_ai_draft.py:34 [career-ui]",
+   "en": "Guiding Principle",
+   "ur": "رہنما اصول",
+   "status": "reviewed"
+  },
+  {
+   "id": "25.9",
+   "loc": "catalog_ai_draft.py:35 [career-ui]",
+   "en": "Let this principle guide your career decisions and professional journey.",
+   "ur": "اس اصول کو اپنے پیشہ ورانہ فیصلوں اور سفر میں رہنما بنائیں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "25.10",
+   "loc": "catalog_ai_draft.py:36 [career-ui]",
+   "en": "Fields to Consider Carefully",
+   "ur": "جن شعبوں پر احتیاط سے غور کریں",
+   "status": "reviewed"
+  },
+  {
+   "id": "25.11",
+   "loc": "catalog_ai_draft.py:38 [career-ui]",
+   "en": "Traditional Guidance:",
+   "ur": "روایتی رہنمائی:",
+   "status": "reviewed"
+  },
+  {
+   "id": "25.12",
+   "loc": "catalog_ai_draft.py:39 [career-ui]",
+   "en": "Modern Application:",
+   "ur": "جدید اطلاق:",
+   "status": "reviewed"
+  },
+  {
+   "id": "25.13",
+   "loc": "catalog_ai_draft.py:40 [career-ui]",
+   "en": "This doesn't mean complete avoidance—some individuals still succeed in these fields. However, the spiritual alignment suggests focusing your primary efforts on the recommended fields above for optimal results.",
+   "ur": "اس کا مطلب مکمل پرہیز نہیں — بہت سے لوگ ان شعبوں میں بھی کامیاب ہوتے ہیں۔ روایتی نقطۂ نظر سے بنیادی کوششیں اوپر دیے گئے شعبوں پر مرکوز کرنا زیادہ موزوں سمجھا جاتا ہے۔",
+   "status": "reviewed-corrected"
+  },
+  {
+   "id": "25.14",
+   "loc": "catalog_ai_draft.py:41 [career-ui]",
+   "en": "Download Career Guide PDF",
+   "ur": "کیریئر گائیڈ (پی ڈی ایف) ڈاؤن لوڈ کریں",
+   "status": "reviewed"
+  },
+  {
+   "id": "25.15",
+   "loc": "catalog_ai_draft.py:42 [career-ui]",
+   "en": "Share Recommendations",
+   "ur": "تجاویز شیئر کریں",
+   "status": "reviewed"
+  },
+  {
+   "id": "25.16",
+   "loc": "catalog_ai_draft.py:43 [career-ui]",
+   "en": "Career Fields",
+   "ur": "پیشہ ورانہ شعبے",
+   "status": "reviewed"
+  },
+  {
+   "id": "25.17",
+   "loc": "catalog_ai_draft.py:44 [career-ui]",
+   "en": "Opportunities",
+   "ur": "مواقع",
+   "status": "reviewed"
+  },
+  {
+   "id": "25.18",
+   "loc": "catalog_ai_draft.py:45 [career-ui]",
+   "en": "Your Element",
+   "ur": "آپ کا عنصر",
+   "status": "reviewed"
+  },
+  {
+   "id": "25.19",
+   "loc": "catalog_ai_draft.py:46 [career-ui]",
+   "en": "Aligned Path",
+   "ur": "ہم آہنگ راستہ",
+   "status": "reviewed"
+  }
+ ],
+ "rekeyed_reviewed": [
+  {
+   "en": "Yā Laṭīf (يا لطيف) · Yā Wadūd (يا ودود)",
+   "ur": "يا لطيف · يا ودود",
+   "status": "reviewed",
+   "note": "Reviewed under an earlier EN key: review sheet 1, row \"Yā Laṭīf (يا لطيف) · Yā Wudd (يا ودود)\"; EN key typo fixed in #95 (Urdu unchanged)"
+  },
+  {
+   "en": "a fixed sign (burj thābit); fixed signs show stability, favoring a foundation or building meant to endure.",
+   "ur": "ثابت برج؛ ثابت برج استحکام ظاہر کرتے ہیں، جو ایسی بنیاد یا عمارت کے لیے موافق ہے جسے دیرپا ہونا چاہیے۔",
+   "status": "reviewed",
+   "note": "Reviewed under an earlier EN key: sheet 2 row 8.133; key lost the [SCHOLAR-REVIEW] tag (523efbc)"
+  },
+  {
+   "en": "a fixed sign; fixed signs incline to delay and being detained.",
+   "ur": "ثابت برج؛ ثابت برجوں میں تاخیر اور رکاوٹ کا رجحان ہوتا ہے۔",
+   "status": "reviewed",
+   "note": "Reviewed under an earlier EN key: sheet 2 row 8.134; key lost the [SCHOLAR-REVIEW] tag (523efbc)"
+  },
+  {
+   "en": "a movable sign (burj munqalib); movable signs favor journeys and swift movement.",
+   "ur": "منقلب برج؛ منقلب برج سفر اور تیز رفتاری کے لیے موافق ہیں۔",
+   "status": "reviewed",
+   "note": "Reviewed under an earlier EN key: sheet 2 row 8.135; key lost the [SCHOLAR-REVIEW] tag (523efbc)"
+  },
+  {
+   "en": "a movable sign; movable signs incline to impermanence, the opposite of what a foundation calls for.",
+   "ur": "منقلب برج؛ منقلب برجوں میں عدمِ پائیداری کا رجحان ہوتا ہے، جو بنیاد کی ضرورت کے برعکس ہے۔",
+   "status": "reviewed",
+   "note": "Reviewed under an earlier EN key: sheet 2 row 8.136; key lost the [SCHOLAR-REVIEW] tag (523efbc)"
+  },
+  {
+   "en": "re:^This window is in the planetary hour of (\\w+), but (\\w+) is (combust|retrograde|in fall/detriment) — no bonus\\.$",
+   "ur": "یہ وقت $1 کی ساعتِ کواکب میں ہے، لیکن $2 $3 ہے — کوئی اضافہ نہیں۔",
+   "status": "reviewed",
+   "note": "Reviewed under an earlier EN key: sheet 2 row 8.204 (reviewed-corrected); key lost the [SCHOLAR-REVIEW] tag (523efbc)"
+  },
+  {
+   "en": "re:^Today is (\\w+)$",
+   "ur": "آج $1 ہے",
+   "status": "reviewed",
+   "note": "Reviewed under an earlier EN key: sheet 2 row 10.133 (reviewed-corrected): the reviewer's word-order fix needed a pattern key (c233e8a)"
+  },
+  {
+   "en": "waxing, growing in light; classically favorable for treatments meant to build up or strengthen the body.",
+   "ur": "بڑھتا ہوا چاند (روشنی میں اضافہ)؛ کلاسیکی طور پر جسم کو تقویت دینے والے علاج کے لیے موافق۔",
+   "status": "reviewed",
+   "note": "Reviewed under an earlier EN key: sheet 2 row 4.4 (reviewed-corrected); key lost the [SCHOLAR-REVIEW] tag (523efbc)"
   }
  ]
 }

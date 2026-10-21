@@ -790,18 +790,22 @@
   {
    "group": "career",
    "en": "Quick turnover, fresh goods, dynamic movement, and energetic action align perfectly with your fiery nature and passionate energy",
-   "ur": "تیز رفتار نکاسی، تازہ مال، متحرک سرگرمی اور توانا عمل آپ کے آتشی مزاج اور پُرجوش توانائی سے پوری طرح ہم آہنگ ہیں",
+   "ur": "تیز رفتار نکاسی، تازہ مال، متحرک سرگرمی اور توانا عمل روایتی طور پر آپ کے آتشی مزاج اور پُرجوش توانائی سے ہم آہنگ سمجھی جاتی ہیں",
    "reason": "Source states alignment/blessing as fact (\"align perfectly\", \"blessed despite being water element\"); the Urdu keeps the same strength. These are traditional associations, not guaranteed career outcomes; whether to hedge them is a content decision.",
    "alternative": "«ہم آہنگ سمجھے جاتے ہیں»",
-   "review": "product decision + native Urdu"
+   "review": "product decision + native Urdu",
+   "ur_flagged": "تیز رفتار نکاسی، تازہ مال، متحرک سرگرمی اور توانا عمل آپ کے آتشی مزاج اور پُرجوش توانائی سے پوری طرح ہم آہنگ ہیں",
+   "resolved": "Native review, sheet 3 row 22.2 (pass 8, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "career",
    "en": "Stability, long-term growth, tangible assets, and connection to the earth's bounty align perfectly with your grounded nature and patient disposition",
-   "ur": "استحکام، طویل مدتی ترقی، ٹھوس اثاثے، اور زمین کی نعمتوں سے تعلق آپ کے زمینی مزاج اور صبر سے پوری طرح ہم آہنگ ہیں",
+   "ur": "استحکام، طویل مدتی ترقی، ٹھوس اثاثے، اور زمین کی نعمتوں سے تعلق روایتی طور پر آپ کے زمینی مزاج اور صبر سے ہم آہنگ سمجھے جاتے ہیں",
    "reason": "Source states alignment/blessing as fact (\"align perfectly\", \"blessed despite being water element\"); the Urdu keeps the same strength. These are traditional associations, not guaranteed career outcomes; whether to hedge them is a content decision.",
    "alternative": "«ہم آہنگ سمجھے جاتے ہیں»",
-   "review": "product decision + native Urdu"
+   "review": "product decision + native Urdu",
+   "ur_flagged": "استحکام، طویل مدتی ترقی، ٹھوس اثاثے، اور زمین کی نعمتوں سے تعلق آپ کے زمینی مزاج اور صبر سے پوری طرح ہم آہنگ ہیں",
+   "resolved": "Native review, sheet 3 row 22.30 (pass 8, 21 Oct 2026): corrected by the Language Reviewer."
   },
   {
    "group": "career",

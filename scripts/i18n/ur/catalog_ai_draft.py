@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Urdu result texts drafted by an AI assistant (Claude), Oct 2026. NOT native-reviewed.
+Urdu result texts drafted by an AI assistant (Claude), Oct 2026. Native-reviewed by the Language Reviewer
+in review sheets 2 and 3 (21 Oct 2026); every entry has a reviewed row in review_status.json
+(sheet2 / sheet3), and "# reviewed <row> (pass N)" marks each corrected line.
 
 English source text (exact, as rendered by the tools) -> Urdu draft. Merged into
 public/i18n/ur-ui.json by build_catalog.py (group 'ai'); every pair is listed in
@@ -37,7 +39,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career-ui', 'These industries may not align optimally with your spiritual energy. While not forbidden, they may present more challenges or require extra effort.', 'ممکن ہے یہ صنعتیں آپ کی روحانی توانائی سے پوری طرح ہم آہنگ نہ ہوں۔ یہ ممنوع نہیں ہیں، مگر ان میں زیادہ مشکلات پیش آ سکتی ہیں یا اضافی محنت درکار ہو سکتی ہے۔'),  # reviewed 17.2 (pass 6)
     ('career-ui', 'Traditional Guidance:', 'روایتی رہنمائی:'),
     ('career-ui', 'Modern Application:', 'جدید اطلاق:'),
-    ('career-ui', "This doesn't mean complete avoidance—some individuals still succeed in these fields. However, the spiritual alignment suggests focusing your primary efforts on the recommended fields above for optimal results.", 'اس کا مطلب مکمل پرہیز نہیں — کچھ لوگ ان شعبوں میں بھی کامیاب ہوتے ہیں۔ تاہم روحانی ہم آہنگی کا اشارہ ہے کہ بہترین نتائج کے لیے اپنی بنیادی کوششیں اوپر بیان کردہ تجویز کردہ شعبوں پر مرکوز کریں۔'),
+    ('career-ui', "This doesn't mean complete avoidance—some individuals still succeed in these fields. However, the spiritual alignment suggests focusing your primary efforts on the recommended fields above for optimal results.", 'اس کا مطلب مکمل پرہیز نہیں — بہت سے لوگ ان شعبوں میں بھی کامیاب ہوتے ہیں۔ روایتی نقطۂ نظر سے بنیادی کوششیں اوپر دیے گئے شعبوں پر مرکوز کرنا زیادہ موزوں سمجھا جاتا ہے۔'),  # reviewed 25.13 (pass 8)
     ('career-ui', 'Download Career Guide PDF', 'کیریئر گائیڈ (پی ڈی ایف) ڈاؤن لوڈ کریں'),
     ('career-ui', 'Share Recommendations', 'تجاویز شیئر کریں'),
     ('career-ui', 'Career Fields', 'پیشہ ورانہ شعبے'),
@@ -555,7 +557,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('manzil', 'Denying the unseen', 'غیب کا انکار'),
     ('manzil', 'Despair in darkness', 'اندھیرے میں مایوسی'),
     ('career', 'Livestock trading, fashion and clothing business, fruit wholesaling (sell wholesale for quick turnover to prevent spoilage)', 'مویشیوں کی تجارت، فیشن اور ملبوسات کا کاروبار، پھلوں کی تھوک فروخت (خراب ہونے سے بچانے کے لیے جلد نکاسی کی خاطر تھوک میں بیچنا)'),
-    ('career', 'Quick turnover, fresh goods, dynamic movement, and energetic action align perfectly with your fiery nature and passionate energy', 'تیز رفتار نکاسی، تازہ مال، متحرک سرگرمی اور توانا عمل آپ کے آتشی مزاج اور پُرجوش توانائی سے پوری طرح ہم آہنگ ہیں'),
+    ('career', 'Quick turnover, fresh goods, dynamic movement, and energetic action align perfectly with your fiery nature and passionate energy', 'تیز رفتار نکاسی، تازہ مال، متحرک سرگرمی اور توانا عمل روایتی طور پر آپ کے آتشی مزاج اور پُرجوش توانائی سے ہم آہنگ سمجھی جاتی ہیں'),  # reviewed 22.2 (pass 8)
     ('career', 'None specified - Fire element has freedom in career choices', 'کوئی مخصوص پابندی نہیں — آتشی عنصر کو پیشے کے انتخاب میں آزادی حاصل ہے'),
     ('career', 'Slow-moving inventory, long-term storage businesses, or careers requiring extreme patience', 'سست رفتار ذخیرہ، طویل مدتی گودام کے کاروبار، یا ایسے پیشے جن میں انتہائی صبر درکار ہو'),
     ('career', 'Fashion & Apparel', 'فیشن اور ملبوسات'),
@@ -564,7 +566,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Textile manufacturing', 'ٹیکسٹائل کی صنعت'),
     ('career', 'Clothing brand development', 'ملبوسات کے برانڈ کی تشکیل'),
     ('career', 'Fashion wholesale distribution', 'فیشن کی تھوک تقسیم'),
-    ('career', 'Custom tailoring services', 'حسبِ ضرورت درزی کی خدمات'),
+    ('career', 'Custom tailoring services', 'ناپ کے مطابق سلائی کی خدمات'),  # reviewed 22.11 (pass 8)
     ('career', 'Food & Hospitality', 'خوراک اور مہمان نوازی'),
     ('career', 'Restaurant ownership', 'ریستوران کی ملکیت'),
     ('career', 'Catering services', 'کیٹرنگ کی خدمات'),
@@ -573,7 +575,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Fresh food markets', 'تازہ خوراک کے بازار'),
     ('career', 'Fast-casual dining concepts', 'فوری سروس والے ریستوران'),  # reviewed 17.24 (pass 6)
     ('career', 'Agricultural Trading', 'زرعی تجارت'),
-    ('career', 'Livestock commodities trading', 'مویشی اجناس کی تجارت'),
+    ('career', 'Livestock commodities trading', 'مویشیوں کی تجارت (اجناس منڈی میں)'),  # reviewed 22.19 (pass 8)
     ('career', 'Grain futures and commodities', 'اناج کے فیوچرز اور اجناس'),
     ('career', 'Agricultural supply chains', 'زرعی سپلائی چین'),
     ('career', 'Restaurant supply wholesale', 'ریستورانوں کو سامان کی تھوک فراہمی'),
@@ -582,10 +584,10 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Fresh goods distribution', 'تازہ مال کی تقسیم'),
     ('career', 'Cold chain logistics', 'کولڈ چین لاجسٹکس'),
     ('career', 'Quick-turnover inventory management', 'جلد نکاسی والے ذخیرے کا انتظام'),
-    ('career', 'Time-sensitive product sales', 'وقت کی پابندی والی مصنوعات کی فروخت'),
+    ('career', 'Time-sensitive product sales', 'جلد فروخت کی متقاضی مصنوعات کی تجارت'),  # reviewed 22.28 (pass 8)
     ('career', 'Produce wholesale networks', 'پیداوار کی تھوک فروخت کے نیٹ ورک'),
     ('career', 'Agriculture and farming, mining and mineral extraction, gold trading, petroleum and natural resources, earth-derived products', 'زراعت اور کاشتکاری، کان کنی اور معدنیات کا استخراج، سونے کی تجارت، پیٹرولیم اور قدرتی وسائل، زمین سے حاصل ہونے والی اشیا'),
-    ('career', "Stability, long-term growth, tangible assets, and connection to the earth's bounty align perfectly with your grounded nature and patient disposition", 'استحکام، طویل مدتی ترقی، ٹھوس اثاثے، اور زمین کی نعمتوں سے تعلق آپ کے زمینی مزاج اور صبر سے پوری طرح ہم آہنگ ہیں'),
+    ('career', "Stability, long-term growth, tangible assets, and connection to the earth's bounty align perfectly with your grounded nature and patient disposition", 'استحکام، طویل مدتی ترقی، ٹھوس اثاثے، اور زمین کی نعمتوں سے تعلق روایتی طور پر آپ کے زمینی مزاج اور صبر سے ہم آہنگ سمجھے جاتے ہیں'),  # reviewed 22.30 (pass 8)
     ('career', 'Fish and all fish-related products or businesses', 'مچھلی اور مچھلی سے متعلق تمام مصنوعات یا کاروبار'),
     ('career', 'Seafood industry, aquaculture, fish markets, sushi restaurants, fishing equipment - all water-based food commerce', 'سمندری خوراک کی صنعت، آبی زراعت، مچھلی منڈیاں، سوشی ریستوران، ماہی گیری کا سامان — پانی سے متعلق تمام خوراکی تجارت'),
     ('career', 'Agriculture & Farming', 'زراعت اور کاشتکاری'),
@@ -594,7 +596,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Agricultural technology (AgriTech)', 'زرعی ٹیکنالوجی (ایگری ٹیک)'),
     ('career', 'Crop trading and commodities', 'فصلوں اور اجناس کی تجارت'),
     ('career', 'Sustainable farming consultancy', 'پائیدار کاشتکاری کی مشاورت'),
-    ('career', 'Greenhouse operations', 'گرین ہاؤس کے کام'),
+    ('career', 'Greenhouse operations', 'گرین ہاؤس میں کاشت'),  # reviewed 22.39 (pass 8)
     ('career', 'Mining & Natural Resources', 'کان کنی اور قدرتی وسائل'),
     ('career', 'Mining operations and management', 'کان کنی کے کام اور انتظام'),
     ('career', 'Precious metals trading', 'قیمتی دھاتوں کی تجارت'),
@@ -603,7 +605,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Natural resource consulting', 'قدرتی وسائل کی مشاورت'),
     ('career', 'Gemstone trading', 'قیمتی پتھروں کی تجارت'),
     ('career', 'Real Estate & Construction', 'رئیل اسٹیٹ اور تعمیرات'),
-    ('career', 'Real estate development', 'رئیل اسٹیٹ کی ترقی'),
+    ('career', 'Real estate development', 'جائیداد کی تعمیر و ترقی (رئیل اسٹیٹ ڈیولپمنٹ)'),  # reviewed 22.48 (pass 8)
     ('career', 'Property management', 'جائیداد کا انتظام'),
     ('career', 'Construction companies', 'تعمیراتی کمپنیاں'),
     ('career', 'Land investment', 'زمین میں سرمایہ کاری'),
@@ -623,7 +625,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Seed and fertilizer supply', 'بیج اور کھاد کی فراہمی'),
     ('career', 'Agricultural equipment sales', 'زرعی آلات کی فروخت'),
     ('career', 'Fruits and vegetables trading, fashion and clothing business - items that move and circulate like air', 'پھلوں اور سبزیوں کی تجارت، فیشن اور ملبوسات کا کاروبار — وہ اشیا جو ہوا کی طرح حرکت اور گردش کرتی ہیں'),
-    ('career', 'Movement, circulation, communication, and fresh exchange align with your airy nature. Like wind, you thrive with constant motion and change.', 'حرکت، گردش، رابطہ اور تازہ لین دین آپ کے ہوائی مزاج سے ہم آہنگ ہیں۔ ہوا کی طرح آپ مسلسل حرکت اور تبدیلی میں پھلتے پھولتے ہیں۔'),
+    ('career', 'Movement, circulation, communication, and fresh exchange align with your airy nature. Like wind, you thrive with constant motion and change.', 'حرکت، گردش، رابطہ اور تازہ لین دین آپ کے ہوائی مزاج سے ہم آہنگ ہیں۔ ہوا کی طرح آپ اکثر مسلسل حرکت اور تبدیلی میں پھلتے پھولتے ہیں۔'),  # reviewed 22.68 (pass 8)
     ('career', 'Fish and all fish-related products - disrupts air element severely', 'مچھلی اور مچھلی سے متعلق تمام مصنوعات — روایتی طور پر ہوائی عنصر سے غیر موافق سمجھی جاتی ہیں'),
     ('career', 'Seafood industry, aquaculture, fishing, fish markets - any water-based food business. Also avoid slow, stagnant businesses that lack movement.', 'سمندری خوراک کی صنعت، آبی زراعت، ماہی گیری، مچھلی منڈیاں — پانی سے متعلق ہر خوراکی کاروبار۔ ایسے سست اور جامد کاروبار سے بھی بچیں جن میں حرکت نہ ہو۔'),
     ('career', 'Fashion & Retail', 'فیشن اور خوردہ فروشی'),
@@ -631,7 +633,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Fashion design studios', 'فیشن ڈیزائن اسٹوڈیوز'),
     ('career', 'Textile trading', 'ٹیکسٹائل کی تجارت'),
     ('career', 'Online fashion platforms', 'آن لائن فیشن پلیٹ فارم'),
-    ('career', 'Trendy retail concepts', 'جدید رجحان کے خوردہ تصورات'),
+    ('career', 'Trendy retail concepts', 'نئے رجحانات پر مبنی دکانیں'),  # reviewed 22.76 (pass 8)
     ('career', 'Seasonal fashion collections', 'موسمی فیشن مجموعے'),
     ('career', 'Fresh Produce', 'تازہ پیداوار'),
     ('career', 'Fruit and vegetable wholesale', 'پھلوں اور سبزیوں کی تھوک فروخت'),
@@ -662,7 +664,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'IT consulting', 'آئی ٹی مشاورت'),
     ('career', 'Digital innovation', 'ڈیجیٹل جدت'),
     ('career', 'Fish and seafood trading, fashion and clothing business, earth-based products (blessed despite being water element)', 'مچھلی اور سمندری خوراک کی تجارت، فیشن اور ملبوسات کا کاروبار، زمینی مصنوعات (پانی کے عنصر کے باوجود بابرکت)'),
-    ('career', 'Flow, adaptability, emotional intelligence, and nurturing energy align with your water nature. Like water, you find success in filling needs and providing sustenance.', 'بہاؤ، لچک، جذباتی فہم اور پرورش کرنے والی توانائی آپ کے آبی مزاج سے ہم آہنگ ہیں۔ پانی کی طرح آپ ضرورتیں پوری کرنے اور رزق مہیا کرنے میں کامیابی پاتے ہیں۔'),
+    ('career', 'Flow, adaptability, emotional intelligence, and nurturing energy align with your water nature. Like water, you find success in filling needs and providing sustenance.', 'بہاؤ، لچک، جذباتی فہم اور پرورش کرنے والی توانائی آپ کے آبی مزاج سے ہم آہنگ ہیں۔ پانی کی طرح آپ اکثر دوسروں کی ضرورتیں پوری کرنے اور خوراک و ضروریات مہیا کرنے میں کامیابی پاتے ہیں۔'),  # reviewed 22.106 (pass 8)
     ('career', 'Fruits and vegetables - these disrupt water element balance severely', 'پھل اور سبزیاں — یہ روایتی طور پر آبی عنصر سے غیر موافق سمجھی جاتی ہیں'),
     ('career', 'Fresh produce markets, fruit wholesale, vegetable trading, juice bars (from fruits), salad businesses - any fruit/vegetable-focused enterprise', 'تازہ پیداوار کے بازار، پھلوں کی تھوک فروخت، سبزیوں کی تجارت، (پھلوں سے بنے) جوس بار، سلاد کے کاروبار — پھلوں یا سبزیوں پر مبنی ہر کاروبار'),
     ('career', 'Seafood & Marine', 'سمندری خوراک اور بحری مصنوعات'),
@@ -677,10 +679,10 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Fashion boutiques', 'فیشن بوتیک'),
     ('career', 'Fabric trading', 'کپڑے کی تجارت'),
     ('career', 'Garment manufacturing', 'ملبوسات کی تیاری'),
-    ('career', 'Healing & Wellness', 'شفا اور تندرستی'),
+    ('career', 'Healing & Wellness', 'صحت و تندرستی (ویلنس)'),  # reviewed 23.6 (pass 8)
     ('career', 'Spa and wellness centers', 'اسپا اور ویلنس سینٹر'),
     ('career', 'Hydrotherapy facilities', 'ہائیڈروتھراپی کی سہولیات'),
-    ('career', 'Healing arts practices', 'شفا بخش فنون کی مشق'),
+    ('career', 'Healing arts practices', 'نگہداشت اور معالجے کے پیشے (باقاعدہ تربیت کے ساتھ)'),  # reviewed 23.9 (pass 8)
     ('career', 'Counseling and therapy', 'مشاورت اور تھراپی'),
     ('career', 'Alternative medicine', 'متبادل طب'),
     ('career', 'Wellness coaching', 'ویلنس کوچنگ'),
@@ -709,7 +711,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Entrepreneurship', 'کاروباری سرگرمی'),
     ('career', 'Startup founding', 'اسٹارٹ اپ کی بنیاد رکھنا'),
     ('career', 'Innovation & Technology', 'جدت اور ٹیکنالوجی'),
-    ('career', 'Product development', 'مصنوعات کی تیاری'),
+    ('career', 'Product development', 'نئی مصنوعات کی تشکیل'),  # reviewed 23.37 (pass 8)
     ('career', 'Innovation consulting', 'جدت کی مشاورت'),
     ('career', 'Digital transformation', 'ڈیجیٹل تبدیلی'),
     ('career', 'Venture capital', 'وینچر کیپیٹل'),
@@ -734,7 +736,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Seafood industry, high-risk volatile ventures, speculative businesses', 'سمندری خوراک کی صنعت، زیادہ خطرے والے غیر مستحکم منصوبے، قیاس آرائی پر مبنی کاروبار'),
     ('career', 'Real Estate & Property', 'رئیل اسٹیٹ اور جائیداد'),
     ('career', 'Real estate investment', 'رئیل اسٹیٹ میں سرمایہ کاری'),
-    ('career', 'Property development', 'جائیداد کی ترقی'),
+    ('career', 'Property development', 'جائیداد کی تعمیر و ترقی'),  # reviewed 23.61 (pass 8)
     ('career', 'Land management', 'زمین کا انتظام'),
     ('career', 'Architecture firms', 'آرکیٹیکچر کی کمپنیاں'),
     ('career', 'Finance & Banking', 'مالیات اور بینکاری'),
@@ -759,7 +761,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Municipal projects', 'بلدیاتی منصوبے'),
     ('career', 'Similar to Buruj 3 - communication, trade, fashion, fresh produce', 'برج 3 کی طرح — ابلاغ، تجارت، فیشن، تازہ پیداوار'),
     ('career', 'Communication, movement, variety, and intellectual exchange align with your airy nature', 'ابلاغ، حرکت، تنوع اور فکری تبادلہ آپ کے ہوائی مزاج سے ہم آہنگ ہیں'),
-    ('career', 'Seafood industry, isolated work, repetitive tasks without variety', 'سمندری خوراک کی صنعت، تنہائی کا کام، بغیر تنوع کے دہرائے جانے والے کام'),
+    ('career', 'Seafood industry, isolated work, repetitive tasks without variety', 'سمندری خوراک کی صنعت، تنہائی میں کیا جانے والا کام، بغیر تنوع کے دہرائے جانے والے کام'),  # reviewed 23.86 (pass 8)
     ('career', 'Media & Communications', 'ذرائع ابلاغ اور رابطہ کاری'),
     ('career', 'Journalism and reporting', 'صحافت اور رپورٹنگ'),
     ('career', 'Public relations', 'تعلقاتِ عامہ'),
@@ -788,13 +790,13 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Translation services', 'ترجمے کی خدمات'),
     ('career', 'Editorial work', 'ادارتی کام'),
     ('career', 'Similar to Buruj 4 - fish trading, deep work, transformative professions', 'برج 4 کی طرح — مچھلی کی تجارت، گہرا کام، تبدیلی لانے والے پیشے'),
-    ('career', 'Depth, transformation, healing, and uncovering hidden truths align with your Scorpionic water nature', 'گہرائی، تبدیلی، شفا اور پوشیدہ سچائیوں کی کھوج آپ کے عقربی آبی مزاج سے ہم آہنگ ہیں'),
+    ('career', 'Depth, transformation, healing, and uncovering hidden truths align with your Scorpionic water nature', 'گہرائی، تبدیلی، دوسروں کی دل جوئی و نگہداشت، اور پوشیدہ سچائیوں کی کھوج آپ کے عقربی آبی مزاج سے ہم آہنگ ہیں'),  # reviewed 23.115 (pass 8)
     ('career', 'Fruits and vegetables', 'پھل اور سبزیاں'),
     ('career', 'Fresh produce business, fruit wholesale, superficial work lacking depth', 'تازہ پیداوار کا کاروبار، پھلوں کی تھوک فروخت، گہرائی سے خالی سطحی کام'),
-    ('career', 'Healing & Therapy', 'شفا اور تھراپی'),
+    ('career', 'Healing & Therapy', 'تھراپی اور نفسیاتی نگہداشت'),  # reviewed 24.3 (pass 8)
     ('career', 'Psychotherapy and counseling', 'نفسیاتی علاج اور مشاورت'),
-    ('career', 'Trauma healing work', 'صدمے سے شفا کا کام'),
-    ('career', 'Deep healing modalities', 'گہرے شفا بخش طریقے'),
+    ('career', 'Trauma healing work', 'صدمے سے بحالی میں معاونت (ٹراما تھراپی)'),  # reviewed 24.5 (pass 8)
+    ('career', 'Deep healing modalities', 'نفسیاتی بحالی کے گہرے طریقے (تربیت یافتہ ماہرین کے ذریعے)'),  # reviewed 24.6 (pass 8)
     ('career', 'Psychiatric services', 'سائیکاٹری (ذہنی امراض کی طب) کی خدمات'),
     ('career', 'Crisis intervention', 'بحران میں مداخلت'),
     ('career', 'Transformational coaching', 'تبدیلی لانے والی کوچنگ'),
@@ -808,7 +810,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Finance & Resources', 'مالیات اور وسائل'),
     ('career', 'Investment banking', 'انویسٹمنٹ بینکنگ'),
     ('career', 'Financial analysis', 'مالیاتی تجزیہ'),
-    ('career', 'Estate planning', 'جائیداد کی منصوبہ بندی'),
+    ('career', 'Estate planning', 'وراثت اور ترکے کی منصوبہ بندی'),  # reviewed 24.19 (pass 8)
     ('career', 'Insurance underwriting', 'بیمہ انڈر رائٹنگ'),
     ('career', 'Resource management', 'وسائل کا انتظام'),
     ('career', 'Mergers and acquisitions', 'انضمام اور حصول'),
@@ -819,7 +821,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Organizational transformation', 'تنظیمی تبدیلی'),
     ('career', 'Change management consulting', 'تبدیلی کے انتظام کی مشاورت'),
     ('career', 'Hospice and end-of-life care', 'تسکینی اور آخری ایام کی نگہداشت'),
-    ('career', 'Teaching, trade, long-distance commerce, knowledge-based professions', 'تدریس، تجارت، دور دراز کا کاروبار، علم پر مبنی پیشے'),
+    ('career', 'Teaching, trade, long-distance commerce, knowledge-based professions', 'تدریس، تجارت، دور دراز علاقوں سے تجارت، علم پر مبنی پیشے'),  # reviewed 24.30 (pass 8)
     ('career', 'Expansion, knowledge, truth-seeking, and freedom align with Sagittarius fire', 'وسعت، علم، حق کی تلاش اور آزادی قوس کے آتشی مزاج سے ہم آہنگ ہیں'),
     ('career', 'None specified for this buruj', 'اس برج کے لیے کوئی مخصوص پابندی نہیں'),
     ('career', 'Confined spaces, restrictive roles, work without meaning or purpose', 'تنگ جگہیں، پابندی والے کردار، اور بے معنی یا بے مقصد کام'),
@@ -845,7 +847,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'International journalism', 'بین الاقوامی صحافت'),
     ('career', 'Knowledge platforms', 'علمی پلیٹ فارم'),
     ('career', 'Similar to other earth buruj - agriculture, construction, earth resources, property', 'دیگر زمینی بروج کی طرح — زراعت، تعمیرات، زمینی وسائل، جائیداد'),
-    ('career', 'Structure, discipline, long-term achievement, and mastery align with Capricorn earth', 'ساخت، نظم و ضبط، طویل مدتی کامیابی اور مہارت جدی کے زمینی مزاج سے ہم آہنگ ہیں'),
+    ('career', 'Structure, discipline, long-term achievement, and mastery align with Capricorn earth', 'نظم و ترتیب، نظم و ضبط، طویل مدتی کامیابی اور مہارت جدی کے زمینی مزاج سے ہم آہنگ ہیں'),  # reviewed 24.55 (pass 8)
     ('career', 'Seafood industry, unstable ventures, roles without clear authority', 'سمندری خوراک کی صنعت، غیر مستحکم منصوبے، واضح اختیار کے بغیر کردار'),
     ('career', 'Corporate executive leadership', 'کارپوریٹ اعلیٰ انتظامی قیادت'),
     ('career', 'Government positions', 'حکومتی عہدے'),
@@ -864,7 +866,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Infrastructure projects', 'بنیادی ڈھانچے کے منصوبے'),
     ('career', 'Property investment', 'جائیداد میں سرمایہ کاری'),
     ('career', 'Similar to other air buruj - communication, trade, community service', 'دیگر ہوائی بروج کی طرح — ابلاغ، تجارت، کمیونٹی کی خدمت'),
-    ('career', 'Innovation, community service, future vision, and progressive thinking align with Aquarius air', 'جدت، کمیونٹی کی خدمت، مستقبل بینی اور ترقی پسند سوچ دلو کے ہوائی مزاج سے ہم آہنگ ہیں'),
+    ('career', 'Innovation, community service, future vision, and progressive thinking align with Aquarius air', 'جدت، کمیونٹی کی خدمت، دور اندیشی اور ترقی پسند سوچ دلو کے ہوائی مزاج سے ہم آہنگ ہیں'),  # reviewed 24.74 (pass 8)
     ('career', 'Seafood industry, traditional rigid structures, roles opposing innovation', 'سمندری خوراک کی صنعت، روایتی سخت ڈھانچے، جدت کی مخالفت کرنے والے کردار'),
     ('career', 'Tech innovation', 'ٹیکنالوجی میں جدت'),
     ('career', 'AI and machine learning', 'مصنوعی ذہانت اور مشین لرننگ'),
@@ -879,27 +881,27 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Environmental science', 'ماحولیاتی سائنس'),
     ('career', 'Renewable energy', 'قابلِ تجدید توانائی'),
     ('career', 'Astronomy and space', 'فلکیات اور خلا'),
-    ('career', 'Future studies', 'مستقبل کے مطالعات'),
-    ('career', 'Similar to other water buruj - healing, fish trading, spiritual service', 'دیگر آبی بروج کی طرح — شفا، مچھلی کی تجارت، روحانی خدمت'),
-    ('career', 'Compassion, service, spiritual connection, and healing align with Pisces water', 'ہمدردی، خدمت، روحانی تعلق اور شفا حوت کے آبی مزاج سے ہم آہنگ ہیں'),
+    ('career', 'Future studies', 'مستقبلیات (فیوچر اسٹڈیز)'),  # reviewed 24.89 (pass 8)
+    ('career', 'Similar to other water buruj - healing, fish trading, spiritual service', 'دیگر آبی بروج کی طرح — نگہداشت و تیمارداری، مچھلی کی تجارت، روحانی خدمت'),  # reviewed 24.90 (pass 8)
+    ('career', 'Compassion, service, spiritual connection, and healing align with Pisces water', 'ہمدردی، خدمت، روحانی تعلق اور دوسروں کی دل جوئی و نگہداشت حوت کے آبی مزاج سے ہم آہنگ ہیں'),  # reviewed 24.91 (pass 8)
     ('career', 'Fresh produce business, aggressive sales roles, competitive environments lacking compassion', 'تازہ پیداوار کا کاروبار، جارحانہ فروخت کے کردار، اور ہمدردی سے خالی مسابقتی ماحول'),
     ('career', 'Healing & Healthcare', 'طب اور صحت کی دیکھ بھال'),
     ('career', 'Nursing and caregiving', 'نرسنگ اور تیمارداری'),
-    ('career', 'Holistic healing', 'ہمہ گیر شفا'),
+    ('career', 'Holistic healing', 'ہمہ جہت فلاحِ صحت (ہولسٹک ویلنس؛ طبی علاج کا بدل نہیں)'),  # reviewed 24.94 (pass 8)
     ('career', 'Mental health counseling', 'ذہنی صحت کی مشاورت'),
     ('career', 'Hospice care', 'تسکینی نگہداشت'),
-    ('career', 'Energy healing', 'توانائی سے شفا'),
-    ('career', 'Compassionate medicine', 'ہمدردانہ طب'),
+    ('career', 'Energy healing', 'انرجی ہیلنگ (متبادل طریقہ؛ طبی علاج کا بدل نہیں)'),  # reviewed 24.97 (pass 8)
+    ('career', 'Compassionate medicine', 'ہمدردی پر مبنی طبی خدمت'),  # reviewed 24.98 (pass 8)
     ('career', 'Spiritual & Religious', 'روحانی اور دینی شعبہ'),
-    ('career', 'Chaplaincy', 'چیپلنسی (روحانی معاونت)'),
+    ('career', 'Chaplaincy', 'اداروں اور ہسپتالوں میں روحانی معاونت (چیپلنسی)'),  # reviewed 24.100 (pass 8)
     ('career', 'Meditation teaching', 'مراقبہ کی تدریس'),
     ('career', 'Islamic education', 'اسلامی تعلیم'),
     ('career', 'Interfaith work', 'بین المذاہب کام'),
     ('career', 'Arts & Creativity', 'فنون اور تخلیقی صلاحیت'),
     ('career', 'Music and poetry', 'موسیقی اور شاعری'),
-    ('career', 'Healing arts', 'شفا بخش فنون'),
+    ('career', 'Healing arts', 'نگہداشت اور معالجے کے پیشے (باقاعدہ تربیت کے ساتھ)'),  # reviewed 24.105 (pass 8)
     ('career', 'Dance and movement therapy', 'رقص اور حرکت کی تھراپی'),
-    ('career', 'Creative arts therapy', 'تخلیقی فنون کی تھراپی'),
+    ('career', 'Creative arts therapy', 'آرٹ تھراپی'),  # reviewed 24.107 (pass 8)
     ('career', 'Photography', 'فوٹوگرافی'),
     ('career', 'Spiritual art', 'روحانی فن'),
     ('career', 'Service & Charity', 'خدمت اور خیرات'),

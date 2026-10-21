@@ -123,13 +123,13 @@ describe('Surah list (pass 3)', () => {
   });
 });
 
-describe('Urdu review sheet 3 (passes 6–7: Batches 17–21)', () => {
+describe('Urdu review sheet 3 (passes 6–8: Batches 17–25)', () => {
   const rows = status.sheet3 as (Row & { id: string })[];
-  it('475 rows are reviewed (Batches 17–21: 82 corrections + 35 optional applied) and the catalog serves the reviewed Urdu', () => {
-    expect(rows).toHaveLength(299 + 176);
+  it('all 838 rows are reviewed (Batches 17–25: 101 corrections + 49 optional applied) and the catalog serves the reviewed Urdu', () => {
+    expect(rows).toHaveLength(838);
     expect(rows.every((r) => r.status.startsWith('reviewed'))).toBe(true);
-    expect(rows.filter((r) => r.status === 'reviewed-corrected')).toHaveLength(48 + 34);
-    expect(rows.filter((r) => r.status === 'reviewed-corrected (optional)')).toHaveLength(20 + 15);
+    expect(rows.filter((r) => r.status === 'reviewed-corrected')).toHaveLength(101);
+    expect(rows.filter((r) => r.status === 'reviewed-corrected (optional)')).toHaveLength(49);
     expect(rows.filter((r) => json[r.en] !== r.ur).map((r) => r.id)).toEqual([]);
   });
   it('priority rows: Thursday night, hedging, medical qualifier and vows', () => {
@@ -150,5 +150,24 @@ describe('Urdu review sheet 3 (passes 6–7: Batches 17–21)', () => {
     expect(ur('21.104')).toContain('مضبوط ہو سکتی ہے');
     expect(ur('21.113')).toContain('سامنا ہو سکتا ہے');
     expect(Object.values(json).join('\n')).toContain('ساعتِ کواکب');
+  });
+  it('pass 8 priority rows: no healing powers, no fortune-telling, no rizq from people', () => {
+    const ur = (id: string) => json[rows.find((r) => r.id === id)!.en];
+    for (const id of ['23.6', '23.9', '23.115', '24.3', '24.5', '24.6', '24.90', '24.91', '24.94', '24.97', '24.105']) expect(ur(id), id).not.toContain('شفا');
+    for (const id of ['24.94', '24.97']) expect(ur(id)).toContain('طبی علاج کا بدل نہیں');
+    expect(ur('24.74')).not.toContain('مستقبل بینی');
+    expect(ur('22.106')).not.toContain('رزق');
+    expect(ur('25.13')).toContain('روایتی نقطۂ نظر سے');
+  });
+  it('no AI-drafted result text is left unreviewed (every catalog_ai_draft.py key has a reviewed row)', () => {
+    const reviewed = new Set<string>();
+    for (const v of Object.values(status)) {
+      const list = Array.isArray(v) ? v : v && typeof v === 'object' ? Object.values(v) : [];
+      for (const e of list as { en?: string; status?: string }[]) if (e && e.en && e.status?.startsWith('reviewed')) reviewed.add(e.en);
+    }
+    const draft = read('scripts/i18n/ur/catalog_ai_draft.py');
+    const keys = [...draft.matchAll(/^\s+\('(?:career-ui|rules|arch|manzil|career|potd)',\s*(['"])((?:\\.|(?!\1).)*)\1,/gm)].map((m) => m[2].replace(/\\(['"\\])/g, '$1'));
+    expect(keys.length).toBe(896);
+    expect(keys.filter((k) => !reviewed.has(k))).toEqual([]);
   });
 });
