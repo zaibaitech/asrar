@@ -23,7 +23,8 @@
   "source_fixes_2026_10_21": {
    "reviewed": 32,
    "draft": 6
-  }
+  },
+  "pass4_reviewer_ramadan": 5
  },
  "sheet2": {
   "1.1": {
@@ -14819,6 +14820,38 @@
    "en_before": "By Seringe Mahdiou Niane — spoken in Wolof",
    "ur": "سیرین مہدیو نیان کی جانب سے — وولوف زبان میں",
    "status": "reviewed"
+  }
+ ],
+ "pass4_reviewer_ramadan": [
+  {
+   "en": "Fajr / Pre-dawn",
+   "ur": "فجر / سحر",
+   "status": "reviewed",
+   "note": "Written by the Language Reviewer (pass 4, Q3)."
+  },
+  {
+   "en": "Morning / Ḍuḥā",
+   "ur": "صبح / چاشت",
+   "status": "reviewed",
+   "note": "Written by the Language Reviewer (pass 4, Q3)."
+  },
+  {
+   "en": "Ẓuhr / Midday",
+   "ur": "ظہر / دوپہر",
+   "status": "reviewed",
+   "note": "Written by the Language Reviewer (pass 4, Q3)."
+  },
+  {
+   "en": "ʿAṣr / Afternoon",
+   "ur": "عصر / سہ پہر",
+   "status": "reviewed",
+   "note": "Written by the Language Reviewer (pass 4, Q3)."
+  },
+  {
+   "en": "Late Night / Tahajjud",
+   "ur": "رات کا آخری حصہ / تہجد",
+   "status": "reviewed",
+   "note": "Written by the Language Reviewer (pass 4, Q3)."
   }
  ]
 }

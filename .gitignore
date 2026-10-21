@@ -55,3 +55,4 @@ zap-*.log
 # Security tool cache
 .snyk
 .trivyignore
+__pycache__/
