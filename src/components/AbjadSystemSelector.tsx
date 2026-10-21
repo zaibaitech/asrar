@@ -4,6 +4,7 @@ import React from 'react';
 import { useAbjad } from '../contexts/AbjadContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Globe2 } from 'lucide-react';
+import { useServerText } from '../features/calculator/i18n/CalculatorTextContext';
 
 /**
  * The one app-wide Abjad system switch. Every calculator reads the same
@@ -17,7 +18,8 @@ export function AbjadSystemSelector({ compact = false, showNote = true }: { comp
   const { system, setSystem } = useAbjad();
   const { t } = useLanguage();
   const a = t.abjadSystem;
-  const note = a?.note ?? 'Maghribi (the Maghreb, al-Andalus & West Africa) · Mashriqi (Egypt, the Middle East & Asia)';
+  const st = useServerText(); // Urdu on /ur/abjad (server HTML); identity elsewhere
+  const note = st(a?.note ?? 'Maghribi (the Maghreb, al-Andalus & West Africa) · Mashriqi (Egypt, the Middle East & Asia)');
 
   if (compact) {
     const toggle = (
@@ -32,7 +34,7 @@ export function AbjadSystemSelector({ compact = false, showNote = true }: { comp
               : 'bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600'
           }`}
         >
-          {a.maghribi}
+          {st(a.maghribi)}
         </button>
         <button
           type="button"
@@ -44,7 +46,7 @@ export function AbjadSystemSelector({ compact = false, showNote = true }: { comp
               : 'bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600'
           }`}
         >
-          {a.mashriqi}
+          {st(a.mashriqi)}
         </button>
       </div>
     );

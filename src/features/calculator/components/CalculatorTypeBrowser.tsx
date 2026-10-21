@@ -1,9 +1,10 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useContext, useMemo, useState } from 'react';
 import { Search, ChevronRight } from 'lucide-react';
 import { CALCULATION_TYPES, CATEGORIES, type CalculationType } from './calculatorTypes';
 import { useCalculatorTranslations, pluralCalculators, type CalculatorLocale } from '../i18n';
+import { CalculatorTextContext } from '../i18n/CalculatorTextContext';
 
 /**
  * Browse-only list of calculator types, grouped by category — selecting one
@@ -13,6 +14,7 @@ import { useCalculatorTranslations, pluralCalculators, type CalculatorLocale } f
  */
 export function CalculatorTypeBrowser({ locale, onSelect }: { locale: CalculatorLocale; onSelect: (type: CalculationType) => void }) {
   const { t } = useCalculatorTranslations(locale);
+  const textOverride = useContext(CalculatorTextContext);
   const [query, setQuery] = useState('');
 
   // Strip apostrophes so "quran" matches "Qur'anic" — a real query users type.
@@ -49,7 +51,7 @@ export function CalculatorTypeBrowser({ locale, onSelect }: { locale: Calculator
         />
       </div>
 
-      <p className="text-sm text-slate-500">{pluralCalculators(totalCount, locale)}</p>
+      <p className="text-sm text-slate-500">{textOverride?.exact?.[pluralCalculators(totalCount, locale)] ?? pluralCalculators(totalCount, locale)}</p>
 
       {grouped.length === 0 ? (
         <p className="rounded-xl border border-slate-200 bg-white px-3 py-4 text-center text-base text-slate-500 dark:border-slate-700 dark:bg-slate-900">
