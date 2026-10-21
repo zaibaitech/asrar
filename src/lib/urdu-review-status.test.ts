@@ -16,14 +16,14 @@ type Row = { en: string; ur: string; status: string };
 
 describe('Urdu review status', () => {
   it('every sheet-2 row (2,336) carries a reviewed status (the 21 Oct source-fix drafts were reviewed in Batch 16)', () => {
-    const rows = Object.values(status.sheet2) as { status: string; source_fix?: string }[];
+    const rows = Object.values(status.sheet2) as { status: string; source_fix?: string; source_fix_list2?: string }[];
     expect(rows).toHaveLength(2336);
     for (const r of rows) {
-      if (r.source_fix && r.status === 'draft') continue; // new English text, new Urdu draft (listed for the Language Reviewer)
+      if (r.source_fix_list2 && r.status === 'draft') continue; // list-2 source fix: new Urdu draft, pending review 4
       expect(r.status).toMatch(/^reviewed(-corrected|-kept|-flagged)?$/);
     }
-    // Batch 16 (pass 5): the re-drafted source-fix rows were reviewed, so none is left as a draft.
-    expect(rows.filter((r) => r.status === 'draft')).toEqual([]);
+    // Batch 16 (pass 5) cleared the list-1 drafts; the only drafts left are list-2 source fixes (review sheet 4).
+    expect(rows.filter((r) => r.status === 'draft' && !r.source_fix_list2)).toEqual([]);
   });
 
   it('Batch 13 and Batch 14 are reviewed (pass 3) and in the catalog', () => {
@@ -124,13 +124,18 @@ describe('Surah list (pass 3)', () => {
 });
 
 describe('Urdu review sheet 3 (passes 6–8: Batches 17–25)', () => {
-  const rows = status.sheet3 as (Row & { id: string })[];
-  it('all 838 rows are reviewed (Batches 17–25: 101 corrections + 49 optional applied) and the catalog serves the reviewed Urdu', () => {
+  const rows = status.sheet3 as (Row & { id: string; source_fix_list2?: string; removed_by_list2?: string; status_before_list2?: string })[];
+  it('all 838 rows were reviewed (Batches 17–25: 101 corrections + 49 optional applied); list-2 drafts are pending review 4; the catalog serves each row', () => {
     expect(rows).toHaveLength(838);
-    expect(rows.every((r) => r.status.startsWith('reviewed'))).toBe(true);
-    expect(rows.filter((r) => r.status === 'reviewed-corrected')).toHaveLength(101);
-    expect(rows.filter((r) => r.status === 'reviewed-corrected (optional)')).toHaveLength(49);
-    expect(rows.filter((r) => json[r.en] !== r.ur).map((r) => r.id)).toEqual([]);
+    const before = (r: (typeof rows)[number]) => r.status_before_list2 ?? r.status;
+    expect(rows.every((r) => before(r).startsWith('reviewed'))).toBe(true);
+    expect(rows.filter((r) => before(r) === 'reviewed-corrected')).toHaveLength(101);
+    expect(rows.filter((r) => before(r) === 'reviewed-corrected (optional)')).toHaveLength(49);
+    // Only list-2 source fixes may be drafts (new English text, new Urdu awaiting the Language Reviewer).
+    expect(rows.filter((r) => r.status === 'draft' && !r.source_fix_list2)).toEqual([]);
+    // Two career items were removed from the source by S10; their rows are kept as history.
+    expect(rows.filter((r) => r.removed_by_list2).map((r) => r.id)).toEqual(['24.6', '24.97']);
+    expect(rows.filter((r) => !r.removed_by_list2 && json[r.en] !== r.ur).map((r) => r.id)).toEqual([]);
   });
   it('priority rows: Thursday night, hedging, medical qualifier and vows', () => {
     const ur = (id: string) => json[rows.find((r) => r.id === id)!.en];
@@ -153,13 +158,15 @@ describe('Urdu review sheet 3 (passes 6–8: Batches 17–25)', () => {
   });
   it('pass 8 priority rows: no healing powers, no fortune-telling, no rizq from people', () => {
     const ur = (id: string) => json[rows.find((r) => r.id === id)!.en];
-    for (const id of ['23.6', '23.9', '23.115', '24.3', '24.5', '24.6', '24.90', '24.91', '24.94', '24.97', '24.105']) expect(ur(id), id).not.toContain('شفا');
-    for (const id of ['24.94', '24.97']) expect(ur(id)).toContain('طبی علاج کا بدل نہیں');
+    for (const id of ['23.6', '23.9', '23.115', '24.3', '24.5', '24.90', '24.91', '24.94', '24.105']) expect(ur(id), id).not.toContain('شفا'); // 24.6 and 24.97 removed from the source (S10, list 2)
+    expect(ur('24.94')).toContain('طبی علاج کا بدل نہیں');
+    expect(Object.keys(json)).not.toContain('Energy healing');
+    expect(Object.keys(json)).not.toContain('Deep healing modalities');
     expect(ur('24.74')).not.toContain('مستقبل بینی');
     expect(ur('22.106')).not.toContain('رزق');
     expect(ur('25.13')).toContain('روایتی نقطۂ نظر سے');
   });
-  it('no AI-drafted result text is left unreviewed (every catalog_ai_draft.py key has a reviewed row)', () => {
+  it('every catalog_ai_draft.py key has a reviewed row, or is a list-2 source-fix draft listed for review sheet 4', () => {
     const reviewed = new Set<string>();
     for (const v of Object.values(status)) {
       const list = Array.isArray(v) ? v : v && typeof v === 'object' ? Object.values(v) : [];
@@ -167,8 +174,13 @@ describe('Urdu review sheet 3 (passes 6–8: Batches 17–25)', () => {
     }
     const draft = read('scripts/i18n/ur/catalog_ai_draft.py');
     const keys = [...draft.matchAll(/^\s+\('(?:career-ui|rules|arch|manzil|career|potd)',\s*(['"])((?:\\.|(?!\1).)*)\1,/gm)].map((m) => m[2].replace(/\\(['"\\])/g, '$1'));
-    expect(keys.length).toBe(896);
-    expect(keys.filter((k) => !reviewed.has(k))).toEqual([]);
+    expect(keys.length).toBe(894); // 896 − 2 career items removed from the source (S10, list 2)
+    const pending = new Set(
+      (status.source_fixes_2026_10_21_list2 as { en: string | null; status: string }[]).filter((e) => e.status === 'draft').map((e) => e.en!),
+    );
+    expect(keys.filter((k) => !reviewed.has(k) && !pending.has(k))).toEqual([]);
+    // the pending drafts are exactly the list-2 keys whose Urdu changed (review sheet 4), nothing else
+    expect(keys.filter((k) => !reviewed.has(k)).sort()).toEqual([...new Set(keys.filter((k) => pending.has(k)))].sort());
   });
 });
 

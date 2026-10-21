@@ -86,7 +86,7 @@ describe('Urdu UI: Arabic comes from the data files, not from a translation', ()
     expect(LUNAR_MANSIONS).toHaveLength(28);
     // R2 (review sheet 2, 9.7–9.27): a name mentioned in Urdu text takes Urdu letter forms (ی ک ہ, no hamza seat).
     const urduForm = (a: string) =>
-      a.replace(/[ًٌٍَُِّْ]/g, '').replace(/[أإآ]/g, 'ا').replace(/ي/g, 'ی').replace(/ك/g, 'ک').replace(/ة/g, 'ہ').replace(/ه/g, 'ہ');
+      a.replace(/[ًٌٍَُِّْ]/g, '').replace(/[أإآ]/g, 'ا').replace(/ي/g, 'ی').replace(/ك/g, 'ک').replace(/ة/g, 'ہ').replace(/ه/g, 'ہ').replace(/ى/g, 'یٰ'); // alif maqṣūra → Urdu «یٰ» (S4, list 2: «الزُّبانَى» → «الزبانیٰ»)
     for (const m of LUNAR_MANSIONS) {
       expect([undefined, m.nameArabic, urduForm(m.nameArabic)], m.nameTransliteration).toContain(raw[m.nameTransliteration]);
     }

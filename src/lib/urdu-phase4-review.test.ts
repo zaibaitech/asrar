@@ -20,9 +20,9 @@ const draft = read('scripts/i18n/ur/catalog_ai_draft.py');
 const countIn = (group: string) => (draft.match(new RegExp(`^\\s+\\('${group}',`, 'gm')) ?? []).length;
 
 describe('Phase 4 review record', () => {
-  it('the original AI draft still has 896 entries in the six groups', () => {
+  it('the AI draft has 894 entries in the six groups (896 − 2 career items removed from the source by S10, list 2)', () => {
     const counts = Object.fromEntries(['career-ui', 'rules', 'arch', 'manzil', 'career', 'potd'].map((g) => [g, countIn(g)]));
-    expect(counts).toEqual({ 'career-ui': 23, rules: 86, arch: 148, manzil: 277, career: 355, potd: 7 });
+    expect(counts).toEqual({ 'career-ui': 23, rules: 86, arch: 148, manzil: 277, career: 353, potd: 7 });
   });
 
   it('every reviewed group has its real total and was reviewed in full', () => {

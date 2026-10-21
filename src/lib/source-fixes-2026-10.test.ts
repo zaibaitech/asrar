@@ -75,8 +75,10 @@ describe('Batch 16 (pass 5): reviewer corrections for the PR #101 strings', () =
   const ur = JSON.parse(readFileSync(path.join(process.cwd(), 'public/i18n/ur-ui.json'), 'utf8')) as Record<string, string>;
   const ar = JSON.parse(readFileSync(path.join(process.cwd(), 'public/i18n/ar-ui.json'), 'utf8')) as Record<string, string>;
   it('P1–P11 say protection is sought from Allah, not that it is held', () => {
-    const p = Object.entries(ur).filter(([k]) => k.startsWith('Traditionally, sought protection'));
-    expect(p.length).toBe(10);
+    // List 2 (B1/B4): the English now says the same — "In this tradition, protection is sought from Allah …" (11 lines).
+    const p = Object.entries(ur).filter(([k]) => /^In this tradition, (protection is sought from Allah|Allah's protection is sought) /.test(k));
+    expect(p.length).toBe(11);
+    expect(Object.keys(ur).some((k) => k.startsWith('Traditionally, sought protection'))).toBe(false);
     for (const [, v] of p) { expect(v).not.toContain('محفوظ سمجھے'); expect(v).toMatch(/اللہ (سے|کی) (حفاظت|پناہ)/); }
     expect(ur['Traditionally, seen as under divine care despite their struggles with anger']).toContain('اللہ کی عنایت');
   });

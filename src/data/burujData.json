@@ -17,7 +17,7 @@
           "social_unpopular": "May face misunderstanding from immediate family who don't see their public persona",
           "dreams": "May occasionally see fire in dreams, though not as frequently as other elements see their symbols",
           "life_blessing": "Usually granted remarkably long life and vitality that endures through challenges",
-          "divine_support": "Receives divine protection in matters of livelihood and sustenance",
+          "divine_support": "In this tradition, protection is sought from Allah in matters of livelihood and sustenance",
           "challenge": "Traditional interpretations mention trials related to children; this is not a prediction."
         },
         "fr": {
@@ -30,7 +30,7 @@
           "social_unpopular": "Peut faire face à l'incompréhension de la famille immédiate qui ne voit pas leur personnalité publique",
           "dreams": "Peut parfois voir du feu dans les rêves, bien que moins fréquemment que d'autres éléments",
           "life_blessing": "Généralement accordé une vie remarquablement longue et une vitalité qui perdure",
-          "divine_support": "Reçoit une protection divine dans les questions de subsistance",
+          "divine_support": "Dans cette tradition, on demande la protection d'Allah dans les questions de subsistance",
           "challenge": "Peut connaître la douleur de la mortalité infantile ou des enfants ayant des difficultés maritales"
         }
       },
@@ -70,7 +70,7 @@
               "icon": "🐄",
               "items": [
                 "Livestock commodities trading",
-                "Grain futures and commodities",
+                "Grain and commodities trading (Sharīʿah-compliant)",
                 "Agricultural supply chains",
                 "Restaurant supply wholesale",
                 "Meat processing and distribution"
@@ -118,7 +118,7 @@
               "icon": "🐄",
               "items": [
                 "Commerce de produits de bétail",
-                "Contrats à terme sur céréales et produits de base",
+                "Commerce de céréales et de produits de base (conforme à la charia)",
                 "Chaînes d'approvisionnement agricole",
                 "Fournitures en gros pour restaurants",
                 "Transformation et distribution de viande"
@@ -181,12 +181,12 @@
         "special_notes": {
           "en": [
             "Mars energy peaks on this day, amplifying your natural fire",
-            "Traditionally regarded as when your charisma and persuasive power are at their strongest",
+            "Traditionally regarded as the day when your charisma and persuasive power are at their strongest",
             "Divine support flows most freely on Tuesdays"
           ],
           "fr": [
             "L'énergie de Mars culmine ce jour, amplifiant votre feu naturel",
-            "Votre charisme et pouvoir de persuasion sont à leur maximum",
+            "Traditionnellement considéré comme le jour où votre charisme et votre pouvoir de persuasion sont à leur maximum",
             "Le soutien divin coule le plus librement les mardis"
           ]
         }
@@ -367,7 +367,7 @@
           "social_unpopular": "May be taken for granted by those closest to them",
           "dreams": "Rich and vivid dreamlife - frequently sees water, vast deserts, ancient cities, and earthly landscapes",
           "life_blessing": "Traditionally understood to be supported by divine help in times of need",
-          "divine_support": "Traditionally, sought protection in matters of sustenance and material provision",
+          "divine_support": "In this tradition, protection is sought from Allah in matters of sustenance and material provision",
           "challenge": "Must learn to set boundaries with family while maintaining their generous nature"
         },
         "fr": {
@@ -380,7 +380,7 @@
           "social_unpopular": "Peut être pris pour acquis par ceux qui leur sont les plus proches",
           "dreams": "Vie onirique riche et vivante - voit fréquemment de l'eau, de vastes déserts, des cités anciennes et des paysages terrestres",
           "life_blessing": "Reçoit une assistance divine constante dans les moments de besoin - l'aide arrive toujours",
-          "divine_support": "Protégé dans les questions de subsistance et de provision matérielle",
+          "divine_support": "Dans cette tradition, on demande la protection d'Allah dans les questions de subsistance et de provision matérielle",
           "challenge": "Doit apprendre à fixer des limites avec la famille tout en maintenant leur nature généreuse"
         }
       },
@@ -1156,7 +1156,7 @@
           "social_unpopular": "Some mistake their patience for weakness or lack of intelligence",
           "dreams": "Water appears very frequently - being in water, near water, flowing water, oceans, rivers. Most with this buruj regularly see water in their dreams.",
           "life_blessing": "Granted deep emotional wisdom and intuitive understanding of others",
-          "divine_support": "Traditionally, sought protection from those who would exploit their kindness",
+          "divine_support": "In this tradition, Allah's protection is sought from those who would exploit their kindness",
           "challenge": "Must learn when to set boundaries without losing their compassionate nature"
         },
         "fr": {
@@ -1169,7 +1169,7 @@
           "social_unpopular": "Certains confondent leur patience avec faiblesse ou manque d'intelligence",
           "dreams": "L'eau apparaît très fréquemment - être dans l'eau, près de l'eau, eau qui coule, océans, rivières. La plupart avec ce buruj voient régulièrement de l'eau dans leurs rêves.",
           "life_blessing": "Accordé une sagesse émotionnelle profonde et une compréhension intuitive des autres",
-          "divine_support": "Protégé de ceux qui exploiteraient leur gentillesse",
+          "divine_support": "Dans cette tradition, on demande la protection d'Allah contre ceux qui exploiteraient leur gentillesse",
           "challenge": "Doit apprendre quand fixer des limites sans perdre leur nature compatissante"
         }
       },
@@ -1205,14 +1205,14 @@
               ]
             },
             {
-              "category": "Healing & Wellness",
+              "category": "Health & Wellness",
               "icon": "💆",
               "items": [
                 "Spa and wellness centers",
                 "Hydrotherapy facilities",
-                "Healing arts practices",
+                "Health-care and caring professions",
                 "Counseling and therapy",
-                "Alternative medicine",
+                "Complementary wellness (alongside medical care)",
                 "Wellness coaching"
               ]
             },
@@ -1266,14 +1266,14 @@
               ]
             },
             {
-              "category": "Guérison & Bien-être",
+              "category": "Santé & Bien-être",
               "icon": "💆",
               "items": [
                 "Centres de spa et bien-être",
                 "Installations d'hydrothérapie",
-                "Pratiques des arts de guérison",
+                "Professions de santé et d'accompagnement",
                 "Conseil et thérapie",
-                "Médecine alternative",
+                "Bien-être complémentaire (en complément des soins médicaux)",
                 "Coaching en bien-être"
               ]
             },
@@ -1313,8 +1313,8 @@
           }
         },
         "principle": {
-          "en": "Flow, adaptability, emotional intelligence, and nurturing energy align with your water nature. Like water, you find success in filling needs and providing sustenance.",
-          "fr": "Flux, adaptabilité, intelligence émotionnelle et énergie nourricière s'alignent avec votre nature aquatique. Comme l'eau, vous trouvez le succès en comblant les besoins et en fournissant la subsistance."
+          "en": "Flow, adaptability, emotional intelligence, and nurturing energy align with your water nature. Like water, you find success in meeting needs and providing for others.",
+          "fr": "Flux, adaptabilité, intelligence émotionnelle et énergie nourricière s'alignent avec votre nature aquatique. Comme l'eau, vous trouvez le succès en répondant aux besoins et en subvenant à ceux des autres."
         }
       },
       "blessed_day": {
@@ -1550,7 +1550,7 @@
           "social_unpopular": "Some find their directness too confrontational",
           "dreams": "Fire, light, sun, and illumination appear in dreams symbolizing clarity",
           "life_blessing": "Granted natural leadership abilities and protective instincts",
-          "divine_support": "Traditionally, sought protection in new ventures and bold initiatives",
+          "divine_support": "In this tradition, protection is sought from Allah in new ventures and bold initiatives",
           "challenge": "Must balance assertiveness with patience and understanding"
         },
         "fr": {
@@ -1563,7 +1563,7 @@
           "social_unpopular": "Certains trouvent leur franchise trop conflictuelle",
           "dreams": "Feu, lumière, soleil et illumination apparaissent dans les rêves symbolisant la clarté",
           "life_blessing": "Accordé des capacités de leadership naturelles et instincts protecteurs",
-          "divine_support": "Protégé dans les nouvelles entreprises et initiatives audacieuses",
+          "divine_support": "Dans cette tradition, on demande la protection d'Allah dans les nouvelles entreprises et les initiatives audacieuses",
           "challenge": "Doit équilibrer l'assertivité avec la patience et la compréhension"
         }
       },
@@ -1594,7 +1594,7 @@
                 "Product development",
                 "Innovation consulting",
                 "Digital transformation",
-                "Venture capital",
+                "Venture capital (Sharīʿah-compliant)",
                 "Business incubation"
               ]
             },
@@ -1644,7 +1644,7 @@
                 "Développement de produits",
                 "Conseil en innovation",
                 "Transformation numérique",
-                "Capital-risque",
+                "Capital-risque (conforme à la charia)",
                 "Incubation d'entreprises"
               ]
             },
@@ -1821,8 +1821,8 @@
             "fr": "Dimanche"
           },
           "note": {
-            "en": "Sunday during the day, OR Sunday night (midnight/before Fajr), OR Thursday night (midnight/before Fajr)",
-            "fr": "Dimanche pendant la journée, OU nuit de dimanche (minuit/avant Fajr), OU nuit de jeudi (minuit/avant Fajr)"
+            "en": "Sunday during the day, OR the night between Saturday and Sunday (midnight/before Fajr), OR the night between Wednesday and Thursday (midnight/before Fajr)",
+            "fr": "Dimanche pendant la journée, OU la nuit entre samedi et dimanche (minuit/avant Fajr), OU la nuit entre mercredi et jeudi (minuit/avant Fajr)"
           }
         },
         "zodiac_sign": {
@@ -1914,7 +1914,7 @@
           "social_unpopular": "Some find their cautiousness frustrating",
           "dreams": "Earth, mountains, buildings, structures appear symbolizing foundation",
           "life_blessing": "Granted unshakeable faith and material security",
-          "divine_support": "Traditionally, sought protection in matters of property and long-term investments",
+          "divine_support": "In this tradition, protection is sought from Allah in matters of property and long-term investments",
           "challenge": "Must learn flexibility while maintaining core stability"
         },
         "fr": {
@@ -1927,7 +1927,7 @@
           "social_unpopular": "Certains trouvent leur prudence frustrante",
           "dreams": "Terre, montagnes, bâtiments, structures apparaissent symbolisant la fondation",
           "life_blessing": "Accordé une foi inébranlable et sécurité matérielle",
-          "divine_support": "Protégé dans les questions de propriété et investissements à long terme",
+          "divine_support": "Dans cette tradition, on demande la protection d'Allah dans les questions de propriété et d'investissements à long terme",
           "challenge": "Doit apprendre la flexibilité tout en maintenant la stabilité de base"
         }
       },
@@ -1951,15 +1951,15 @@
               ]
             },
             {
-              "category": "Finance & Banking",
+              "category": "Islamic Finance & Banking",
               "icon": "🏦",
               "items": [
-                "Banking and finance",
-                "Investment management",
+                "Islamic banking and finance",
+                "Investment management (Sharīʿah-compliant)",
                 "Financial planning",
                 "Wealth management",
                 "Accounting services",
-                "Insurance"
+                "Takāful (Islamic cooperative insurance)"
               ]
             },
             {
@@ -2001,15 +2001,15 @@
               ]
             },
             {
-              "category": "Finance & Banque",
+              "category": "Finance & Banque islamiques",
               "icon": "🏦",
               "items": [
-                "Banque et finance",
-                "Gestion d'investissements",
+                "Banque et finance islamiques",
+                "Gestion d'investissements (conforme à la charia)",
                 "Planification financière",
                 "Gestion de patrimoine",
                 "Services comptables",
-                "Assurance"
+                "Takāful (assurance coopérative islamique)"
               ]
             },
             {
@@ -2290,7 +2290,7 @@
           "social_unpopular": "Some find their restlessness and changeability unsettling",
           "dreams": "Flying, heights, sky, being carried upward, intellectual pursuits in dreams",
           "life_blessing": "Granted exceptional communication abilities and adaptability",
-          "divine_support": "Traditionally, sought protection in intellectual and social endeavors",
+          "divine_support": "In this tradition, protection is sought from Allah in intellectual and social endeavors",
           "challenge": "Must develop depth and follow-through alongside versatility"
         },
         "fr": {
@@ -2303,7 +2303,7 @@
           "social_unpopular": "Certains trouvent leur agitation et changeabilité troublantes",
           "dreams": "Vol, hauteurs, ciel, être porté vers le haut, poursuites intellectuelles dans les rêves",
           "life_blessing": "Accordé des capacités de communication exceptionnelles et adaptabilité",
-          "divine_support": "Protégé dans les efforts intellectuels et sociaux",
+          "divine_support": "Dans cette tradition, on demande la protection d'Allah dans les efforts intellectuels et sociaux",
           "challenge": "Doit développer profondeur et suivi aux côtés de la polyvalence"
         }
       },
@@ -2649,7 +2649,7 @@
           "social_unpopular": "Some fear their ability to see through facades",
           "dreams": "Deep water, oceans, transformation, death and rebirth symbolism, mysteries",
           "life_blessing": "Traditionally associated with deep insight and a gift for comforting others",
-          "divine_support": "Traditionally, sought protection through life's deepest transformations",
+          "divine_support": "In this tradition, protection is sought from Allah through life's deepest transformations",
           "challenge": "Must learn to trust and let go of control"
         },
         "fr": {
@@ -2662,7 +2662,7 @@
           "social_unpopular": "Certains craignent leur capacité à voir à travers les façades",
           "dreams": "Eau profonde, océans, transformation, symbolisme de mort et renaissance, mystères",
           "life_blessing": "Accordé une perspicacité profonde des vérités cachées et des capacités de guérison",
-          "divine_support": "Protégé à travers les transformations les plus profondes de la vie",
+          "divine_support": "Dans cette tradition, on demande la protection d'Allah à travers les transformations les plus profondes de la vie",
           "challenge": "Doit apprendre à faire confiance et à lâcher le contrôle"
         }
       },
@@ -2674,12 +2674,11 @@
         "modern_recommended": {
           "en": [
             {
-              "category": "Healing & Therapy",
+              "category": "Therapy & Psychological Care",
               "icon": "🏥",
               "items": [
                 "Psychotherapy and counseling",
-                "Trauma healing work",
-                "Deep healing modalities",
+                "Trauma recovery support (trauma therapy)",
                 "Psychiatric services",
                 "Crisis intervention",
                 "Transformational coaching"
@@ -2701,10 +2700,10 @@
               "category": "Finance & Resources",
               "icon": "💰",
               "items": [
-                "Investment banking",
+                "Islamic investment banking",
                 "Financial analysis",
                 "Estate planning",
-                "Insurance underwriting",
+                "Takāful underwriting",
                 "Resource management",
                 "Mergers and acquisitions"
               ]
@@ -2724,12 +2723,11 @@
           ],
           "fr": [
             {
-              "category": "Guérison & Thérapie",
+              "category": "Thérapie & Soins psychologiques",
               "icon": "🏥",
               "items": [
                 "Psychothérapie et conseil",
-                "Travail de guérison des traumatismes",
-                "Modalités de guérison profonde",
+                "Accompagnement après un traumatisme (thérapie du trauma)",
                 "Services psychiatriques",
                 "Intervention de crise",
                 "Coaching transformationnel"
@@ -2751,10 +2749,10 @@
               "category": "Finance & Ressources",
               "icon": "💰",
               "items": [
-                "Banque d'investissement",
+                "Banque d'investissement islamique",
                 "Analyse financière",
                 "Planification successorale",
-                "Souscription d'assurance",
+                "Souscription takāful",
                 "Gestion des ressources",
                 "Fusions et acquisitions"
               ]
@@ -2784,8 +2782,8 @@
           }
         },
         "principle": {
-          "en": "Depth, transformation, healing, and uncovering hidden truths align with your Scorpionic water nature",
-          "fr": "Profondeur, transformation, guérison et découverte de vérités cachées s'alignent avec votre nature aquatique scorpionique"
+          "en": "Depth, transformation, caring for others, and uncovering hidden truths align with your Scorpionic water nature",
+          "fr": "Profondeur, transformation, attention aux autres et découverte de vérités cachées s'alignent avec votre nature aquatique scorpionique"
         }
       },
       "blessed_day": {
@@ -2818,13 +2816,13 @@
           "en": [
             "Mars energy intensifies your natural Scorpio power",
             "Perfect day for endings that lead to new beginnings",
-            "Your transformative abilities peak on this day",
+            "Traditionally regarded as a day when your capacity for transformation is strongest",
             "Courage and insight combine powerfully on Tuesdays"
           ],
           "fr": [
             "L'énergie de Mars intensifie votre pouvoir Scorpion naturel",
             "Jour parfait pour les fins qui mènent à de nouveaux départs",
-            "Vos capacités de transformation culminent ce jour",
+            "Traditionnellement considéré comme un jour où votre capacité de transformation est la plus forte",
             "Courage et perspicacité se combinent puissamment les mardis"
           ]
         }
@@ -2938,8 +2936,8 @@
       "spiritual_practice": {
         "practice_night": {
           "primary": {
-            "en": "Saturday night",
-            "fr": "Samedi soir"
+            "en": "The night between Friday and Saturday",
+            "fr": "La nuit entre vendredi et samedi"
           },
           "note": {
             "en": "Deep night hours, after midnight for maximum depth",
@@ -3031,7 +3029,7 @@
           "social_unpopular": "Some find their bluntness too harsh",
           "dreams": "Fire, travel, distant places, learning, spiritual journeys",
           "life_blessing": "Granted wisdom and opportunities for expansion",
-          "divine_support": "Traditionally, sought protection in travel and seeking knowledge",
+          "divine_support": "In this tradition, protection is sought from Allah in travel and seeking knowledge",
           "challenge": "Must develop discipline alongside freedom-seeking nature"
         },
         "fr": {
@@ -3044,7 +3042,7 @@
           "social_unpopular": "Certains trouvent leur franchise trop dure",
           "dreams": "Feu, voyage, lieux lointains, apprentissage, voyages spirituels",
           "life_blessing": "Accordé sagesse et opportunités d'expansion",
-          "divine_support": "Protégé dans le voyage et la recherche de connaissance",
+          "divine_support": "Dans cette tradition, on demande la protection d'Allah dans le voyage et la recherche du savoir",
           "challenge": "Doit développer la discipline aux côtés de la nature cherchant la liberté"
         }
       },
@@ -3361,7 +3359,7 @@
           "social_unpopular": "Some find their seriousness intimidating",
           "dreams": "Mountains, structures, achievements, climbing upward",
           "life_blessing": "Granted patience and ultimate success through perseverance",
-          "divine_support": "Traditionally, sought protection in long-term endeavors and career",
+          "divine_support": "In this tradition, protection is sought from Allah in long-term endeavors and career",
           "challenge": "Must learn to balance ambition with compassion"
         },
         "fr": {
@@ -3374,7 +3372,7 @@
           "social_unpopular": "Certains trouvent leur sérieux intimidant",
           "dreams": "Montagnes, structures, réalisations, escalade vers le haut",
           "life_blessing": "Accordé patience et succès ultime par persévérance",
-          "divine_support": "Protégé dans efforts à long terme et carrière",
+          "divine_support": "Dans cette tradition, on demande la protection d'Allah dans les efforts à long terme et la carrière",
           "challenge": "Doit apprendre à équilibrer ambition avec compassion"
         }
       },
@@ -3508,7 +3506,7 @@
           "en": [
             "Saturday is THE BEST day for this buruj",
             "Saturn energy peaks - most powerful for serious undertakings",
-            "Traditionally regarded as when your natural discipline and authority are strongest",
+            "Traditionally regarded as the day when your natural discipline and authority are strongest",
             "Ideal for establishing lasting structures",
             "Perfect for patient, long-term planning",
             "Most auspicious day for your lifetime sadaqah"
@@ -3516,7 +3514,7 @@
           "fr": [
             "Samedi est LE MEILLEUR jour pour ce buruj",
             "L'énergie de Saturne culmine - le plus puissant pour entreprises sérieuses",
-            "Votre discipline et autorité naturelles sont les plus fortes",
+            "Traditionnellement considéré comme le jour où votre discipline et votre autorité naturelles sont les plus fortes",
             "Idéal pour établir structures durables",
             "Parfait pour planification patiente à long terme",
             "Jour le plus propice pour votre sadaqah de vie"
@@ -3753,7 +3751,7 @@
           "social_unpopular": "Some find their unconventional ideas threatening",
           "dreams": "Flying, future visions, communities, gatherings, innovative solutions",
           "life_blessing": "Granted vision for collective benefit and innovation",
-          "divine_support": "Traditionally, sought protection in community service and humanitarian work",
+          "divine_support": "In this tradition, protection is sought from Allah in community service and humanitarian work",
           "challenge": "Must balance idealism with practical implementation"
         },
         "fr": {
@@ -3766,7 +3764,7 @@
           "social_unpopular": "Certains trouvent leurs idées non conventionnelles menaçantes",
           "dreams": "Vol, visions futures, communautés, rassemblements, solutions innovantes",
           "life_blessing": "Accordé vision pour bénéfice collectif et innovation",
-          "divine_support": "Protégé dans service communautaire et travail humanitaire",
+          "divine_support": "Dans cette tradition, on demande la protection d'Allah dans le service communautaire et le travail humanitaire",
           "challenge": "Doit équilibrer idéalisme avec mise en œuvre pratique"
         }
       },
@@ -3784,7 +3782,7 @@
                 "Tech innovation",
                 "Software development",
                 "AI and machine learning",
-                "Blockchain and crypto",
+                "Blockchain and digital assets (Sharīʿah-compliant)",
                 "Space technology",
                 "Green technology"
               ]
@@ -3822,7 +3820,7 @@
                 "Innovation technologique",
                 "Développement logiciel",
                 "IA et apprentissage automatique",
-                "Blockchain et crypto",
+                "Blockchain et actifs numériques (conformes à la charia)",
                 "Technologie spatiale",
                 "Technologie verte"
               ]
@@ -4085,7 +4083,7 @@
           "social_unpopular": "Some exploit their inability to say no",
           "dreams": "Water, oceans, spiritual visions, mystical experiences, helping others",
           "life_blessing": "Traditionally associated with a deep spiritual connection and a caring nature",
-          "divine_support": "Traditionally, sought protection through service to others",
+          "divine_support": "In this tradition, Allah's protection is sought through service to others",
           "challenge": "Must learn healthy boundaries without losing compassion"
         },
         "fr": {
@@ -4098,26 +4096,25 @@
           "social_unpopular": "Certains exploitent leur incapacité à dire non",
           "dreams": "Eau, océans, visions spirituelles, expériences mystiques, aider les autres",
           "life_blessing": "Accordé connexion spirituelle profonde et capacités de guérison",
-          "divine_support": "Protégé à travers le service aux autres",
+          "divine_support": "Dans cette tradition, on demande la protection d'Allah à travers le service aux autres",
           "challenge": "Doit apprendre limites saines sans perdre compassion"
         }
       },
       "career": {
         "traditional": {
-          "en": "Similar to other water buruj - healing, fish trading, spiritual service",
-          "fr": "Similaire aux autres buruj d'eau - guérison, commerce de poisson, service spirituel"
+          "en": "Similar to other water buruj - caring for others, fish trading, spiritual service",
+          "fr": "Similaire aux autres buruj d'eau - attention aux autres, commerce de poisson, service spirituel"
         },
         "modern_recommended": {
           "en": [
             {
-              "category": "Healing & Healthcare",
+              "category": "Healthcare & Caring Professions",
               "icon": "🏥",
               "items": [
                 "Nursing and caregiving",
-                "Holistic healing",
+                "Holistic wellness (not a substitute for medical care)",
                 "Mental health counseling",
                 "Hospice care",
-                "Energy healing",
                 "Compassionate medicine"
               ]
             },
@@ -4138,7 +4135,7 @@
               "icon": "🎨",
               "items": [
                 "Music and poetry",
-                "Healing arts",
+                "Health-care and caring professions",
                 "Dance and movement therapy",
                 "Creative arts therapy",
                 "Photography",
@@ -4160,14 +4157,13 @@
           ],
           "fr": [
             {
-              "category": "Guérison & Santé",
+              "category": "Santé & Professions d'accompagnement",
               "icon": "🏥",
               "items": [
                 "Soins infirmiers et assistance",
-                "Guérison holistique",
+                "Bien-être holistique (ne remplace pas les soins médicaux)",
                 "Conseil en santé mentale",
                 "Soins palliatifs",
-                "Guérison énergétique",
                 "Médecine compatissante"
               ]
             },
@@ -4188,7 +4184,7 @@
               "icon": "🎨",
               "items": [
                 "Musique et poésie",
-                "Arts de guérison",
+                "Professions de santé et d'accompagnement",
                 "Danse et thérapie par le mouvement",
                 "Thérapie par les arts créatifs",
                 "Photographie",
@@ -4220,8 +4216,8 @@
           }
         },
         "principle": {
-          "en": "Compassion, service, spiritual connection, and healing align with Pisces water",
-          "fr": "Compassion, service, connexion spirituelle et guérison s'alignent avec l'eau Poissons"
+          "en": "Compassion, service, spiritual connection, and caring for others align with Pisces water",
+          "fr": "Compassion, service, connexion spirituelle et attention aux autres s'alignent avec l'eau Poissons"
         }
       },
       "blessed_day": {
@@ -4559,8 +4555,8 @@
         }
       },
       "practice_night": {
-        "en": "Saturday night",
-        "fr": "Nuit du samedi"
+        "en": "The night between Friday and Saturday",
+        "fr": "La nuit entre vendredi et samedi"
       }
     },
     "3": {

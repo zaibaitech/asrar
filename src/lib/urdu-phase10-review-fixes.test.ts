@@ -112,9 +112,10 @@ describe('outcome claims are attributed and guarantees are not made', () => {
     expect(find('Saturday is governed')).toContain('دیرپا اور مضبوط ڈھانچے تعمیر کرنے پر توجہ دیں');
   });
 
-  it('Thursday and Friday religious statements are unchanged (held for qualified religious review)', () => {
+  it('Thursday and Friday religious statements: Thursday is hedged in EN/FR (S2, Mario approved 21 Oct 2026); Friday unchanged', () => {
     const find = (p: string) => raw[Object.keys(raw).find((x) => x.startsWith(p))!];
-    expect(find('Thursday is the most blessed')).toContain('خاص طور پر بابرکت سمجھی جاتی ہے');
+    expect(Object.keys(raw).some((x) => x.startsWith('Thursday is the most blessed'))).toBe(false);
+    expect(find('In tradition, Thursday is an especially blessed day')).toContain('خاص طور پر بابرکت سمجھی جاتی ہے');
     expect(find('Friday is the most sacred')).toContain('جمعہ اسلام میں سب سے افضل دن ہے');
   });
 });

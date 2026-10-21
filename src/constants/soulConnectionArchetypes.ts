@@ -275,30 +275,30 @@ export const SOUL_CONNECTION_ARCHETYPES: Record<number, SoulConnectionArchetype>
     severity: 'red',
     tags: [
       { en: 'Burden', fr: 'Fardeau' },
-      { en: 'Health', fr: 'Santé' },
+      { en: 'Wellbeing', fr: 'Bien-être' },
       { en: 'Maturity', fr: 'Maturité' },
     ],
     title: { en: 'The Burdened Path', fr: 'Le Chemin Chargé' },
     oneLine: {
-      en: 'Heavy trials; health and strain',
-      fr: 'Épreuves lourdes ; santé et pression',
+      en: 'Heavy trials; wellbeing and stress',
+      fr: 'Épreuves lourdes ; bien-être et stress',
     },
     meaning: {
       universal: {
-        en: 'Traditionally seen as a heavy pattern — health concerns and emotional strain may be present, especially without emotional maturity.',
-        fr: "Traditionnellement vu comme un motif lourd — des préoccupations de santé et une pression émotionnelle peuvent être présentes, surtout sans maturité émotionnelle.",
+        en: 'Traditionally seen as a heavy pattern — concerns about wellbeing and emotional strain may be present, especially without emotional maturity.',
+        fr: "Traditionnellement vu comme un motif lourd — des préoccupations de bien-être et une pression émotionnelle peuvent être présentes, surtout sans maturité émotionnelle.",
       },
       marriage: {
-        en: 'Traditionally seen as a heavy path for marriage. Health concerns and emotional strain may be present.',
-        fr: "Traditionnellement vu comme un chemin lourd pour le mariage. Des préoccupations de santé et une pression émotionnelle peuvent être présentes.",
+        en: 'Traditionally seen as a heavy path for marriage. Concerns about wellbeing and emotional strain may be present.',
+        fr: "Traditionnellement vu comme un chemin lourd pour le mariage. Des préoccupations de bien-être et une pression émotionnelle peuvent être présentes.",
       },
       friendship: {
         en: "Traditionally seen as a heavy pattern — one friend's stress or unresolved struggles may surface within the bond.",
         fr: "Traditionnellement vu comme un motif lourd — le stress ou les luttes non résolues d'un ami peuvent surgir au sein du lien.",
       },
       family: {
-        en: 'Traditionally seen as a heavy pattern — caretaking or shared hardship, often tied to health, may mark the family bond.',
-        fr: "Traditionnellement vu comme un motif lourd — des soins ou une épreuve partagée, souvent liés à la santé, peuvent marquer le lien familial.",
+        en: 'Traditionally seen as a heavy pattern — caretaking or shared hardship, often tied to wellbeing and stress, may mark the family bond.',
+        fr: "Traditionnellement vu comme un motif lourd — des soins ou une épreuve partagée, souvent liés au bien-être et au stress, peuvent marquer le lien familial.",
       },
       work: {
         en: 'Traditionally seen as a heavy pattern — stress or burnout risk may surface within the working relationship.',
@@ -307,20 +307,20 @@ export const SOUL_CONNECTION_ARCHETYPES: Record<number, SoulConnectionArchetype>
     },
     outlook: {
       universal: {
-        en: 'This bond often carries a sense of weight — health, stress, or emotional burden tend to surface. Maturity and calm help carry it well.',
-        fr: "Ce lien porte souvent un sentiment de poids — santé, stress ou fardeau émotionnel ont tendance à surgir. Maturité et calme aident à bien le porter.",
+        en: 'This bond often carries a sense of weight — stress, strained wellbeing, or emotional burden may surface. Maturity and calm help carry it well.',
+        fr: "Ce lien porte souvent un sentiment de poids — stress, bien-être fragilisé ou fardeau émotionnel peuvent surgir. Maturité et calme aident à bien le porter.",
       },
       marriage: {
-        en: 'Marriage may feel like a test. Health (physical or emotional) often becomes a central concern. Requires emotional maturity and calm.',
-        fr: 'Le mariage peut sembler une épreuve. La santé (physique ou émotionnelle) devient souvent une préoccupation centrale. Nécessite maturité émotionnelle et calme.',
+        en: 'Marriage may feel like a test; wellbeing and stress may need extra care. Requires emotional maturity and calm.',
+        fr: 'Le mariage peut sembler une épreuve ; le bien-être et le stress peuvent demander une attention particulière. Nécessite maturité émotionnelle et calme.',
       },
       friendship: {
         en: 'Friendships here can feel heavy at times, often surfacing one person\'s stress or unresolved struggles. Steady, patient support matters more than constant closeness.',
         fr: "Les amitiés ici peuvent parfois sembler lourdes, faisant souvent surgir le stress ou les luttes non résolues de l'un des deux. Un soutien stable et patient compte plus qu'une proximité constante.",
       },
       family: {
-        en: 'Family bonds under this pattern often involve caretaking or shared hardship — health concerns are common threads. Calm routines and honest communication ease the load.',
-        fr: "Les liens familiaux sous ce motif impliquent souvent des soins ou une épreuve partagée — les préoccupations de santé sont un fil conducteur commun. Des routines calmes et une communication honnête allègent la charge.",
+        en: 'Family bonds under this pattern often involve caretaking or shared hardship — wellbeing and stress may need extra care. Calm routines and honest communication ease the load.',
+        fr: "Les liens familiaux sous ce motif impliquent souvent des soins ou une épreuve partagée — le bien-être et le stress peuvent demander une attention particulière. Des routines calmes et une communication honnête allègent la charge.",
       },
       work: {
         en: 'Working relationships here can feel draining, with stress or burnout as recurring risks. Clear boundaries and realistic workloads protect the partnership.',
@@ -332,8 +332,8 @@ export const SOUL_CONNECTION_ARCHETYPES: Record<number, SoulConnectionArchetype>
       fr: 'Épuisement, négligence du bien-être physique ou mental, et ressentiment accumulé par des fardeaux non exprimés.',
     },
     keyToSuccess: {
-      en: 'Focus on health (physical and emotional), emotional maturity, calm daily routines, and seeking therapeutic support when needed.',
-      fr: 'Se concentrer sur la santé (physique et émotionnelle), maturité émotionnelle, routines quotidiennes calmes et rechercher un soutien thérapeutique si nécessaire.',
+      en: 'Focus on wellbeing (physical and emotional), emotional maturity, calm daily routines, and seeking therapeutic support when needed.',
+      fr: 'Se concentrer sur le bien-être (physique et émotionnel), maturité émotionnelle, routines quotidiennes calmes et rechercher un soutien thérapeutique si nécessaire.',
     },
   },
   5: {
@@ -575,8 +575,8 @@ export const SOUL_CONNECTION_ARCHETYPES: Record<number, SoulConnectionArchetype>
         fr: "Ce lien commence souvent avec confusion ou mauvais jugement mais se renforce considérablement avec le temps. La patience est ce qui déverrouille sa véritable profondeur.",
       },
       marriage: {
-        en: "Marriage starts with confusion or misjudgment but becomes very strong over time. Patience is the key to unlocking this bond's strength.",
-        fr: 'Le mariage commence avec confusion ou mauvais jugement mais devient très fort avec le temps. La patience est la clé pour déverrouiller la force de ce lien.',
+        en: "Marriage may start with confusion or misjudgment but can become very strong over time. Patience is the key to unlocking this bond's strength.",
+        fr: 'Le mariage peut commencer avec confusion ou mauvais jugement mais peut devenir très fort avec le temps. La patience est la clé pour déverrouiller la force de ce lien.',
       },
       friendship: {
         en: "Friendships here can start awkwardly or take time to click, but often become some of the most enduring bonds. Don't judge it too early.",
@@ -637,24 +637,24 @@ export const SOUL_CONNECTION_ARCHETYPES: Record<number, SoulConnectionArchetype>
     },
     outlook: {
       universal: {
-        en: 'Traditionally a difficult pattern, associated with sudden breaks and recurring strain. Extreme caution and spiritual protection are advised.',
-        fr: "Traditionnellement un motif difficile, associé à des ruptures soudaines et une pression récurrente. Une extrême prudence et une protection spirituelle sont conseillées.",
+        en: 'Traditionally a difficult pattern, associated with sudden breaks and recurring strain. Take great care, and seek Allah\'s protection through duʿāʾ and remembrance.',
+        fr: "Traditionnellement un motif difficile, associé à des ruptures soudaines et une pression récurrente. Faites preuve d'une grande prudence, et demandez la protection d'Allah par l'invocation et le dhikr.",
       },
       marriage: {
-        en: 'Marriage is traditionally discouraged under this pattern. If already in this bond, increase spiritual protection practices and seek wise counsel.',
-        fr: 'Le mariage est traditionnellement découragé sous ce motif. Si déjà dans ce lien, augmentez les pratiques de protection spirituelle et cherchez un conseil avisé.',
+        en: 'Marriage is traditionally discouraged under this pattern. If already in this bond, seek Allah\'s protection through duʿāʾ and remembrance, and seek wise counsel.',
+        fr: 'Le mariage est traditionnellement découragé sous ce motif. Si déjà dans ce lien, demandez la protection d\'Allah par l\'invocation et le dhikr, et cherchez un conseil avisé.',
       },
       friendship: {
         en: "Friendships under this pattern can be prone to sudden falling-outs or repeated hurt. Approach with awareness, and don't ignore recurring red flags.",
         fr: "Les amitiés sous ce motif peuvent être sujettes à des ruptures soudaines ou des blessures répétées. Abordez-les avec conscience, et n'ignorez pas les signaux d'alarme récurrents.",
       },
       family: {
-        en: 'Family ties here can carry real difficulty, including estrangement or repeated conflict. Seek wise counsel and increase protective practices rather than forcing closeness.',
-        fr: "Les liens familiaux ici peuvent porter une réelle difficulté, y compris l'éloignement ou des conflits répétés. Cherchez un conseil avisé et augmentez les pratiques de protection plutôt que de forcer la proximité.",
+        en: 'Family ties here can carry real difficulty, including estrangement or repeated conflict. Seek wise counsel, and keep asking Allah for protection through duʿāʾ and remembrance, rather than forcing closeness.',
+        fr: "Les liens familiaux ici peuvent porter une réelle difficulté, y compris l'éloignement ou des conflits répétés. Cherchez un conseil avisé, et continuez à demander la protection d'Allah par l'invocation et le dhikr, plutôt que de forcer la proximité.",
       },
       work: {
-        en: 'Professional partnerships under this pattern carry real risk — sudden fallout or repeated breakdowns in trust are common. Proceed with caution and clear agreements.',
-        fr: "Les partenariats professionnels sous ce motif portent un risque réel — ruptures soudaines ou effondrements répétés de la confiance sont courants. Procédez avec prudence et des accords clairs.",
+        en: 'Professional partnerships under this pattern may carry real risk — sudden fallout or repeated breakdowns in trust are often seen. Proceed with caution and clear agreements.',
+        fr: "Les partenariats professionnels sous ce motif peuvent porter un risque réel — ruptures soudaines ou effondrements répétés de la confiance sont souvent observés. Procédez avec prudence et des accords clairs.",
       },
     },
     watchOut: {

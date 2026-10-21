@@ -39,7 +39,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career-ui', 'These industries may not align optimally with your spiritual energy. While not forbidden, they may present more challenges or require extra effort.', 'ممکن ہے یہ صنعتیں آپ کی روحانی توانائی سے پوری طرح ہم آہنگ نہ ہوں۔ یہ ممنوع نہیں ہیں، مگر ان میں زیادہ مشکلات پیش آ سکتی ہیں یا اضافی محنت درکار ہو سکتی ہے۔'),  # reviewed 17.2 (pass 6)
     ('career-ui', 'Traditional Guidance:', 'روایتی رہنمائی:'),
     ('career-ui', 'Modern Application:', 'جدید اطلاق:'),
-    ('career-ui', "This doesn't mean complete avoidance—some individuals still succeed in these fields. However, the spiritual alignment suggests focusing your primary efforts on the recommended fields above for optimal results.", 'اس کا مطلب مکمل پرہیز نہیں — بہت سے لوگ ان شعبوں میں بھی کامیاب ہوتے ہیں۔ روایتی نقطۂ نظر سے بنیادی کوششیں اوپر دیے گئے شعبوں پر مرکوز کرنا زیادہ موزوں سمجھا جاتا ہے۔'),  # reviewed 25.13 (pass 8)
+    ('career-ui', "This doesn't mean complete avoidance—some individuals still succeed in these fields. The tradition suggests focusing your main efforts on the recommended fields above.", 'اس کا مطلب مکمل پرہیز نہیں — بہت سے لوگ ان شعبوں میں بھی کامیاب ہوتے ہیں۔ روایتی نقطۂ نظر سے بنیادی کوششیں اوپر دیے گئے شعبوں پر مرکوز کرنا زیادہ موزوں سمجھا جاتا ہے۔'),  # reviewed 25.13 (pass 8); source fix S13 (list 2): EN re-keyed, reviewed Urdu kept
     ('career-ui', 'Download Career Guide PDF', 'کیریئر گائیڈ (پی ڈی ایف) ڈاؤن لوڈ کریں'),
     ('career-ui', 'Share Recommendations', 'تجاویز شیئر کریں'),
     ('career-ui', 'Career Fields', 'پیشہ ورانہ شعبے'),
@@ -183,21 +183,21 @@ AI_ENTRIES = [  # (section, en, ur)
     ('arch', 'Family ties here often carry recurring tension, sometimes over money or responsibilities. Structure, patience, and outside support help ease the strain.', 'یہاں خاندانی رشتوں میں اکثر بار بار کا تناؤ ہوتا ہے، بعض اوقات پیسوں یا ذمہ داریوں پر۔ نظم، صبر اور باہر سے مدد دباؤ کم کرنے میں معاون ہوتے ہیں۔'),  # reviewed 21.45 (pass 7)
     ('arch', 'Professional partnerships under this pattern often hit friction over resources, deadlines, or decisions. Clear agreements and structured communication reduce the strain.', 'اس نمونے میں پیشہ ورانہ شراکتوں میں اکثر وسائل، آخری تاریخوں یا فیصلوں پر اختلاف پیدا ہوتا ہے۔ واضح معاہدے اور منظم گفتگو دباؤ کم کرتے ہیں۔'),
     ('arch', 'Burden', 'بوجھ'),
-    ('arch', 'Health', 'صحت'),
+    ('arch', 'Wellbeing', 'بہبود'),  # source fix S6 (list 2): NEW URDU DRAFT, pending review 4
     ('arch', 'Maturity', 'پختگی'),
     ('arch', 'The Burdened Path', 'بوجھل راستہ'),
-    ('arch', 'Heavy trials; health and strain', 'بھاری آزمائشیں؛ صحت اور دباؤ'),
+    ('arch', 'Heavy trials; wellbeing and stress', 'بھاری آزمائشیں؛ بہبود اور ذہنی دباؤ'),  # source fix S6 (list 2): NEW URDU DRAFT, pending review 4
     ('arch', 'Burnout, neglecting physical or mental wellbeing, and resentment building from unspoken burdens.', 'تھکن، جسمانی یا ذہنی صحت کو نظر انداز کرنا، اور ان کہے بوجھ سے پیدا ہونے والی رنجش۔'),
-    ('arch', 'Focus on health (physical and emotional), emotional maturity, calm daily routines, and seeking therapeutic support when needed.', 'صحت (جسمانی اور جذباتی) پر توجہ، جذباتی پختگی، پُرسکون روزمرہ معمولات، اور ضرورت پڑنے پر کسی ماہر معالج یا ماہرِ نفسیات سے رجوع کرنا۔'),
-    ('arch', 'Traditionally seen as a heavy pattern — health concerns and emotional strain may be present, especially without emotional maturity.', 'روایتی طور پر ایک بھاری نمونہ سمجھا جاتا ہے — صحت کے خدشات اور جذباتی دباؤ ہو سکتا ہے، خاص طور پر جذباتی پختگی کے بغیر۔'),
-    ('arch', 'Traditionally seen as a heavy path for marriage. Health concerns and emotional strain may be present.', 'شادی کے لیے روایتی طور پر ایک بھاری راستہ سمجھا جاتا ہے۔ صحت کے خدشات اور جذباتی دباؤ ہو سکتا ہے۔'),
+    ('arch', 'Focus on wellbeing (physical and emotional), emotional maturity, calm daily routines, and seeking therapeutic support when needed.', 'بہبود (جسمانی اور جذباتی) پر توجہ، جذباتی پختگی، پُرسکون روزمرہ معمولات، اور ضرورت پڑنے پر کسی ماہر معالج یا ماہرِ نفسیات سے رجوع کرنا۔'),  # source fix S6 (list 2): NEW URDU DRAFT, pending review 4
+    ('arch', 'Traditionally seen as a heavy pattern — concerns about wellbeing and emotional strain may be present, especially without emotional maturity.', 'روایتی طور پر ایک بھاری نمونہ سمجھا جاتا ہے — بہبود کی فکر اور جذباتی دباؤ سامنے آ سکتے ہیں، خاص طور پر جذباتی پختگی کے بغیر۔'),  # source fix S6 (list 2): NEW URDU DRAFT, pending review 4
+    ('arch', 'Traditionally seen as a heavy path for marriage. Concerns about wellbeing and emotional strain may be present.', 'شادی کے لیے روایتی طور پر ایک بھاری راستہ سمجھا جاتا ہے۔ بہبود کی فکر اور جذباتی دباؤ سامنے آ سکتے ہیں۔'),  # source fix S6 (list 2): NEW URDU DRAFT, pending review 4
     ('arch', "Traditionally seen as a heavy pattern — one friend's stress or unresolved struggles may surface within the bond.", 'روایتی طور پر ایک بھاری نمونہ سمجھا جاتا ہے — کسی دوست کا دباؤ یا حل طلب مسائل رشتے کے اندر ابھر سکتے ہیں۔'),
-    ('arch', 'Traditionally seen as a heavy pattern — caretaking or shared hardship, often tied to health, may mark the family bond.', 'روایتی طور پر ایک بھاری نمونہ سمجھا جاتا ہے — تیمارداری یا مشترکہ مشکل، جو اکثر صحت سے جڑی ہوتی ہے، خاندانی رشتے کی پہچان ہو سکتی ہے۔'),
+    ('arch', 'Traditionally seen as a heavy pattern — caretaking or shared hardship, often tied to wellbeing and stress, may mark the family bond.', 'روایتی طور پر ایک بھاری نمونہ سمجھا جاتا ہے — تیمارداری یا مشترکہ مشکل، جو اکثر بہبود اور ذہنی دباؤ سے جڑی ہوتی ہے، خاندانی رشتے کی پہچان ہو سکتی ہے۔'),  # source fix S6 (list 2): NEW URDU DRAFT, pending review 4
     ('arch', 'Traditionally seen as a heavy pattern — stress or burnout risk may surface within the working relationship.', 'روایتی طور پر ایک بھاری نمونہ سمجھا جاتا ہے — پیشہ ورانہ تعلق میں دباؤ یا تھکن کا خطرہ ابھر سکتا ہے۔'),
-    ('arch', 'This bond often carries a sense of weight — health, stress, or emotional burden tend to surface. Maturity and calm help carry it well.', 'اس رشتے میں اکثر بوجھ کا احساس رہتا ہے — صحت کی فکر، دباؤ یا جذباتی بوجھ اکثر سامنے آ جاتے ہیں۔ پختگی اور سکون اسے اچھی طرح نبھانے میں مدد دیتے ہیں۔'),  # reviewed 21.58 (pass 7)
-    ('arch', 'Marriage may feel like a test. Health (physical or emotional) often becomes a central concern. Requires emotional maturity and calm.', 'شادی ایک امتحان محسوس ہو سکتی ہے۔ روایت میں اس نمونے کے ساتھ صحت (جسمانی یا جذباتی) کی فکر کا ذکر ملتا ہے۔ اس کے لیے جذباتی پختگی اور سکون درکار ہے۔'),  # reviewed 21.59 (pass 7)
+    ('arch', 'This bond often carries a sense of weight — stress, strained wellbeing, or emotional burden may surface. Maturity and calm help carry it well.', 'اس رشتے میں اکثر بوجھ کا احساس رہتا ہے — ذہنی دباؤ، بہبود میں کمی یا جذباتی بوجھ سامنے آ سکتے ہیں۔ پختگی اور سکون اسے اچھی طرح نبھانے میں مدد دیتے ہیں۔'),  # reviewed 21.58 (pass 7); source fix S6 (list 2): NEW URDU DRAFT, pending review 4
+    ('arch', 'Marriage may feel like a test; wellbeing and stress may need extra care. Requires emotional maturity and calm.', 'شادی ایک امتحان محسوس ہو سکتی ہے؛ روایت میں اس نمونے کے ساتھ بہبود اور ذہنی دباؤ پر خاص توجہ کی ضرورت بتائی جاتی ہے۔ اس کے لیے جذباتی پختگی اور سکون درکار ہے۔'),  # reviewed 21.59 (pass 7); source fix S6 (list 2): NEW URDU DRAFT, pending review 4
     ('arch', "Friendships here can feel heavy at times, often surfacing one person's stress or unresolved struggles. Steady, patient support matters more than constant closeness.", 'یہاں دوستیاں بعض اوقات بھاری محسوس ہو سکتی ہیں، جن میں اکثر کسی ایک کا دباؤ یا حل طلب مسائل سامنے آتے ہیں۔ مسلسل قربت سے زیادہ مستقل اور صبر بھری معاونت اہم ہے۔'),
-    ('arch', 'Family bonds under this pattern often involve caretaking or shared hardship — health concerns are common threads. Calm routines and honest communication ease the load.', 'اس نمونے میں خاندانی رشتوں میں اکثر تیمارداری یا مشترکہ مشکل شامل ہوتی ہے — صحت کی فکریں بھی اکثر ساتھ رہتی ہیں۔ پُرسکون معمولات اور دیانت دارانہ گفتگو بوجھ ہلکا کرتے ہیں۔'),  # reviewed 21.61 (pass 7)
+    ('arch', 'Family bonds under this pattern often involve caretaking or shared hardship — wellbeing and stress may need extra care. Calm routines and honest communication ease the load.', 'اس نمونے میں خاندانی رشتوں میں اکثر تیمارداری یا مشترکہ مشکل شامل ہوتی ہے — بہبود اور ذہنی دباؤ پر خاص توجہ کی ضرورت پڑ سکتی ہے۔ پُرسکون معمولات اور دیانت دارانہ گفتگو بوجھ ہلکا کرتے ہیں۔'),  # reviewed 21.61 (pass 7); source fix S6 (list 2): NEW URDU DRAFT, pending review 4
     ('arch', 'Working relationships here can feel draining, with stress or burnout as recurring risks. Clear boundaries and realistic workloads protect the partnership.', 'یہاں پیشہ ورانہ تعلقات تھکا دینے والے محسوس ہو سکتے ہیں، جن میں دباؤ یا تھکن بار بار کا خطرہ ہے۔ واضح حدود اور حقیقت پسندانہ کام کا بوجھ شراکت کی حفاظت کرتے ہیں۔'),
     ('arch', 'Blessed', 'مبارک'),
     ('arch', 'Growth', 'نشوونما'),
@@ -261,7 +261,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('arch', 'Traditionally very good for the long term — early distance is common, but the family bond tends to deepen with time.', 'روایتی طور پر طویل مدت کے لیے بہت اچھا ہے — شروع کی دوری عام ہے، مگر خاندانی رشتہ عموماً وقت کے ساتھ گہرا ہوتا جاتا ہے۔'),  # reviewed 21.101 (pass 7)
     ('arch', 'Traditionally very good for the long term — early friction is common, but patience often builds a highly reliable partnership.', 'روایتی طور پر طویل مدت کے لیے بہت اچھا ہے — شروع کے اختلافات عام ہیں، مگر صبر اکثر ایک نہایت قابلِ بھروسا شراکت بنا دیتا ہے۔'),
     ('arch', 'This connection often starts with confusion or misjudgment but strengthens significantly with time. Patience is what unlocks its real depth.', 'یہ تعلق اکثر الجھن یا غلط اندازے سے شروع ہوتا ہے مگر وقت کے ساتھ نمایاں طور پر مضبوط ہو سکتا ہے۔ صبر ہی اس کی حقیقی گہرائی کو سامنے لاتا ہے۔'),  # reviewed 21.103 (pass 7)
-    ('arch', "Marriage starts with confusion or misjudgment but becomes very strong over time. Patience is the key to unlocking this bond's strength.", 'ایسی شادی کا آغاز اکثر الجھن یا غلط اندازے سے ہوتا ہے، مگر وقت کے ساتھ یہ بہت مضبوط ہو سکتی ہے۔ صبر ہی اس رشتے کی قوت کو سامنے لانے کی کنجی ہے۔'),  # reviewed 21.104 (pass 7)
+    ('arch', "Marriage may start with confusion or misjudgment but can become very strong over time. Patience is the key to unlocking this bond's strength.", 'ایسی شادی کا آغاز اکثر الجھن یا غلط اندازے سے ہوتا ہے، مگر وقت کے ساتھ یہ بہت مضبوط ہو سکتی ہے۔ صبر ہی اس رشتے کی قوت کو سامنے لانے کی کنجی ہے۔'),  # reviewed 21.104 (pass 7); source fix S7 (list 2): EN re-keyed, reviewed Urdu kept
     ('arch', "Friendships here can start awkwardly or take time to click, but often become some of the most enduring bonds. Don't judge it too early.", 'یہاں دوستیاں جھجک کے ساتھ شروع ہو سکتی ہیں یا ہم آہنگ ہونے میں وقت لے سکتی ہیں، مگر اکثر سب سے پائیدار رشتوں میں سے بن جاتی ہیں۔ جلد فیصلہ نہ کریں۔'),
     ('arch', 'Family relationships under this pattern may start with distance or misunderstanding but tend to deepen meaningfully over the years. Give the bond time.', 'اس نمونے میں خاندانی رشتے دوری یا غلط فہمی سے شروع ہو سکتے ہیں مگر برسوں کے ساتھ عموماً گہرے اور بامعنی ہوتے جاتے ہیں۔ رشتے کو وقت دیں۔'),  # reviewed 21.105 (pass 7)
     ('arch', 'Working relationships here often start rocky — mismatched expectations or slow trust-building — but tend to become highly reliable partnerships over time.', 'یہاں پیشہ ورانہ تعلقات اکثر مشکل سے شروع ہوتے ہیں — مختلف توقعات یا اعتماد بننے میں سستی — مگر وقت کے ساتھ عموماً نہایت قابلِ بھروسا شراکت بن جاتے ہیں۔'),  # reviewed 21.106 (pass 7)
@@ -274,16 +274,16 @@ AI_ENTRIES = [  # (section, en, ur)
     ('arch', 'Traditionally warned against for close, binding friendship — sudden falling-outs and recurring hurt are associated risks.', 'قریبی اور پابند دوستی کے لیے روایتی طور پر اس سے خبردار کیا گیا ہے — اچانک بگاڑ اور بار بار کی چوٹ اس سے منسوب خطرات ہیں۔'),
     ('arch', 'Traditionally associated with real difficulty in family bonds — estrangement and recurring conflict are common risks.', 'خاندانی رشتوں میں روایتی طور پر حقیقی مشکل سے منسوب — بے رخی اور بار بار کا تنازع عام خطرات ہیں۔'),
     ('arch', 'Traditionally warned against for binding partnership — sudden fallout and recurring breakdowns in trust are associated risks.', 'پابند شراکت کے لیے روایتی طور پر اس سے خبردار کیا گیا ہے — اچانک بگاڑ اور اعتماد کا بار بار ٹوٹنا اس سے منسوب خطرات ہیں۔'),
-    ('arch', 'Traditionally a difficult pattern, associated with sudden breaks and recurring strain. Extreme caution and spiritual protection are advised.', 'روایتی طور پر ایک مشکل نمونہ، جو اچانک تعلق ٹوٹنے اور بار بار کے دباؤ سے منسوب ہے۔ بہت احتیاط کریں، اور دعا و اذکار کے ذریعے اللہ کی حفاظت طلب کریں۔'),  # reviewed 21.110 (pass 7)
-    ('arch', 'Marriage is traditionally discouraged under this pattern. If already in this bond, increase spiritual protection practices and seek wise counsel.', 'اس نمونے کے تحت شادی کی روایتی طور پر حوصلہ شکنی کی جاتی ہے۔ اگر آپ پہلے سے اس رشتے میں ہیں تو روحانی حفاظت کے معمولات بڑھائیں اور دانشمندانہ مشورہ لیں۔'),
+    ('arch', "Traditionally a difficult pattern, associated with sudden breaks and recurring strain. Take great care, and seek Allah's protection through duʿāʾ and remembrance.", 'روایتی طور پر ایک مشکل نمونہ، جو اچانک تعلق ٹوٹنے اور بار بار کے دباؤ سے منسوب ہے۔ بہت احتیاط کریں، اور دعا و اذکار کے ذریعے اللہ کی حفاظت طلب کریں۔'),  # reviewed 21.110 (pass 7); source fix S8 (list 2): EN re-keyed, reviewed Urdu kept
+    ('arch', "Marriage is traditionally discouraged under this pattern. If already in this bond, seek Allah's protection through duʿāʾ and remembrance, and seek wise counsel.", 'اس نمونے کے تحت شادی کی روایتی طور پر حوصلہ شکنی کی جاتی ہے۔ اگر آپ پہلے سے اس رشتے میں ہیں تو دعا و اذکار کے ذریعے اللہ کی حفاظت طلب کریں اور دانشمندانہ مشورہ لیں۔'),  # source fix S8 (list 2): NEW URDU DRAFT, pending review 4
     ('arch', "Friendships under this pattern can be prone to sudden falling-outs or repeated hurt. Approach with awareness, and don't ignore recurring red flags.", 'اس نمونے میں دوستیاں اچانک بگاڑ یا بار بار کی دل آزاری کا شکار ہو سکتی ہیں۔ آگاہی کے ساتھ آگے بڑھیں، اور بار بار سامنے آنے والی خطرے کی علامتوں کو نظر انداز نہ کریں۔'),  # reviewed 21.111 (pass 7)
-    ('arch', 'Family ties here can carry real difficulty, including estrangement or repeated conflict. Seek wise counsel and increase protective practices rather than forcing closeness.', 'یہاں خاندانی رشتوں میں حقیقی مشکل ہو سکتی ہے، جن میں بے رخی یا بار بار کا تنازع شامل ہے۔ زبردستی قربت پیدا کرنے کے بجائے دانشمندانہ مشورہ لیں، اور دعا و اذکار کے ذریعے اللہ کی حفاظت طلب کرتے رہیں۔'),  # reviewed 21.112 (pass 7)
-    ('arch', 'Professional partnerships under this pattern carry real risk — sudden fallout or repeated breakdowns in trust are common. Proceed with caution and clear agreements.', 'اس نمونے میں پیشہ ورانہ شراکتوں کو حقیقی خطرات کا سامنا ہو سکتا ہے — اچانک بگاڑ یا اعتماد کا بار بار ٹوٹنا اکثر دیکھا جاتا ہے۔ احتیاط اور واضح معاہدوں کے ساتھ آگے بڑھیں۔'),  # reviewed 21.113 (pass 7)
+    ('arch', 'Family ties here can carry real difficulty, including estrangement or repeated conflict. Seek wise counsel, and keep asking Allah for protection through duʿāʾ and remembrance, rather than forcing closeness.', 'یہاں خاندانی رشتوں میں حقیقی مشکل ہو سکتی ہے، جن میں بے رخی یا بار بار کا تنازع شامل ہے۔ زبردستی قربت پیدا کرنے کے بجائے دانشمندانہ مشورہ لیں، اور دعا و اذکار کے ذریعے اللہ کی حفاظت طلب کرتے رہیں۔'),  # reviewed 21.112 (pass 7); source fix S8 (list 2): EN re-keyed, reviewed Urdu kept
+    ('arch', 'Professional partnerships under this pattern may carry real risk — sudden fallout or repeated breakdowns in trust are often seen. Proceed with caution and clear agreements.', 'اس نمونے میں پیشہ ورانہ شراکتوں کو حقیقی خطرات کا سامنا ہو سکتا ہے — اچانک بگاڑ یا اعتماد کا بار بار ٹوٹنا اکثر دیکھا جاتا ہے۔ احتیاط اور واضح معاہدوں کے ساتھ آگے بڑھیں۔'),  # reviewed 21.113 (pass 7); source fix S7 (list 2): EN re-keyed, reviewed Urdu kept
     ('manzil', 'The Two Signs', 'دو نشان'),
     ('manzil', 'New Beginnings, Initiative', 'نئے آغاز، پہل'),
     ('manzil', 'Starting fresh with courage and trust in Allah', 'ہمت اور اللہ پر بھروسے کے ساتھ نئے سرے سے آغاز'),
     ('manzil', 'New ventures', 'نئے کام'),
-    ('manzil', 'Medical treatment', 'طبی علاج (معالج کے مشورے سے)'),  # reviewed 18.5 (pass 6)
+    ('manzil', 'Starting a treatment your doctor has advised', 'طبی علاج (معالج کے مشورے سے)'),  # reviewed 18.5 (pass 6); source fix S1 (list 2): EN re-keyed, reviewed Urdu kept
     ('manzil', 'Loans', 'قرض'),
     ('manzil', 'Partnerships with strangers', 'اجنبیوں کے ساتھ شراکت'),
     ('manzil', 'Beginnings invite intention (niyyah) and remembrance — the Moon’s stations are signs, not decrees.', 'آغاز نیت اور ذکر کا تقاضا کرتا ہے — قمر کی منازل نشانیاں ہیں، فیصلے نہیں۔'),
@@ -353,7 +353,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('manzil', 'Hoarding', 'ذخیرہ اندوزی'),
     ('manzil', 'Isolation', 'تنہائی'),
     ('manzil', 'The forearm that gives in charity teaches reach without grasping.', 'وہ بازو جو صدقے میں دیتا ہے ہمیں سکھاتا ہے کہ رسائی ہو مگر لالچ نہ ہو۔'),
-    ('manzil', 'The Gap', 'درمیانی خلا'),
+    ('manzil', 'The Muzzle', 'تھوتھنی (شیر کی ناک کا سرا)'),  # source fix S3 (list 2): NEW URDU DRAFT, pending review 4
     ('manzil', 'Mystery, Threshold, Sacred Space', 'راز، دہلیز، مقدس جگہ'),
     ('manzil', 'Contemplating the mysteries of faith and divine wisdom', 'ایمان کے رازوں اور الٰہی حکمت پر غور'),
     ('manzil', 'Meditation', 'مراقبہ'),
@@ -493,7 +493,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('manzil', 'Offering, Commitment', 'ایثار، عہد'),  # reviewed 19.73 (pass 6)
     ('manzil', 'Named among the saʿd stations: reflect on what you are willing to offer — wealth, time, ego — for Allah’s sake. (Educational theme only; not a ritual prescription.)', 'یہ اُن منازل میں سے ہے جن کے نام «سعد» سے شروع ہوتے ہیں: غور کریں کہ آپ اللہ کی خاطر کیا پیش کرنے کو تیار ہیں — مال، وقت، انا۔ (محض تعلیمی موضوع؛ کوئی مقررہ عبادت یا عمل نہیں۔)'),  # reviewed 19.74 (pass 6)
     ('manzil', 'Charitable giving', 'خیرات و صدقات'),
-    ('manzil', 'Keeping vows', 'عہد و پیمان کی پاسداری'),  # reviewed 19.76 (pass 6)
+    ('manzil', "Keeping one's commitments", 'عہد و پیمان کی پاسداری'),  # reviewed 19.76 (pass 6); source fix S5 (list 2): EN re-keyed, reviewed Urdu kept
     ('manzil', 'Serious commitments', 'سنجیدہ وعدے'),
     ('manzil', 'Simplifying lifestyle', 'طرزِ زندگی کو سادہ بنانا'),
     ('manzil', 'Wasteful spending', 'فضول خرچی'),
@@ -576,7 +576,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Fast-casual dining concepts', 'فوری سروس والے ریستوران'),  # reviewed 17.24 (pass 6)
     ('career', 'Agricultural Trading', 'زرعی تجارت'),
     ('career', 'Livestock commodities trading', 'مویشیوں کی تجارت (اجناس منڈی میں)'),  # reviewed 22.19 (pass 8)
-    ('career', 'Grain futures and commodities', 'اناج کے فیوچرز اور اجناس'),
+    ('career', 'Grain and commodities trading (Sharīʿah-compliant)', 'اناج اور اجناس کی تجارت (شرعی اصولوں کے مطابق)'),  # source fix S11 (list 2): NEW URDU DRAFT, pending review 4
     ('career', 'Agricultural supply chains', 'زرعی سپلائی چین'),
     ('career', 'Restaurant supply wholesale', 'ریستورانوں کو سامان کی تھوک فراہمی'),
     ('career', 'Meat processing and distribution', 'گوشت کی پروسیسنگ اور تقسیم'),
@@ -664,7 +664,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'IT consulting', 'آئی ٹی مشاورت'),
     ('career', 'Digital innovation', 'ڈیجیٹل جدت'),
     ('career', 'Fish and seafood trading, fashion and clothing business, earth-based products (blessed despite being water element)', 'مچھلی اور سمندری خوراک کی تجارت، فیشن اور ملبوسات کا کاروبار، زمینی مصنوعات (پانی کے عنصر کے باوجود بابرکت)'),
-    ('career', 'Flow, adaptability, emotional intelligence, and nurturing energy align with your water nature. Like water, you find success in filling needs and providing sustenance.', 'بہاؤ، لچک، جذباتی فہم اور پرورش کرنے والی توانائی آپ کے آبی مزاج سے ہم آہنگ ہیں۔ پانی کی طرح آپ اکثر دوسروں کی ضرورتیں پوری کرنے اور خوراک و ضروریات مہیا کرنے میں کامیابی پاتے ہیں۔'),  # reviewed 22.106 (pass 8)
+    ('career', 'Flow, adaptability, emotional intelligence, and nurturing energy align with your water nature. Like water, you find success in meeting needs and providing for others.', 'بہاؤ، لچک، جذباتی فہم اور پرورش کرنے والی توانائی آپ کے آبی مزاج سے ہم آہنگ ہیں۔ پانی کی طرح آپ اکثر دوسروں کی ضرورتیں پوری کرنے اور خوراک و ضروریات مہیا کرنے میں کامیابی پاتے ہیں۔'),  # reviewed 22.106 (pass 8); source fix S12 (list 2): EN re-keyed, reviewed Urdu kept
     ('career', 'Fruits and vegetables - these disrupt water element balance severely', 'پھل اور سبزیاں — یہ روایتی طور پر آبی عنصر سے غیر موافق سمجھی جاتی ہیں'),
     ('career', 'Fresh produce markets, fruit wholesale, vegetable trading, juice bars (from fruits), salad businesses - any fruit/vegetable-focused enterprise', 'تازہ پیداوار کے بازار، پھلوں کی تھوک فروخت، سبزیوں کی تجارت، (پھلوں سے بنے) جوس بار، سلاد کے کاروبار — پھلوں یا سبزیوں پر مبنی ہر کاروبار'),
     ('career', 'Seafood & Marine', 'سمندری خوراک اور بحری مصنوعات'),
@@ -679,12 +679,12 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Fashion boutiques', 'فیشن بوتیک'),
     ('career', 'Fabric trading', 'کپڑے کی تجارت'),
     ('career', 'Garment manufacturing', 'ملبوسات کی تیاری'),
-    ('career', 'Healing & Wellness', 'صحت و تندرستی (ویلنس)'),  # reviewed 23.6 (pass 8)
+    ('career', 'Health & Wellness', 'صحت و تندرستی (ویلنس)'),  # reviewed 23.6 (pass 8); source fix S10 (list 2): EN re-keyed, reviewed Urdu kept
     ('career', 'Spa and wellness centers', 'اسپا اور ویلنس سینٹر'),
     ('career', 'Hydrotherapy facilities', 'ہائیڈروتھراپی کی سہولیات'),
-    ('career', 'Healing arts practices', 'نگہداشت اور معالجے کے پیشے (باقاعدہ تربیت کے ساتھ)'),  # reviewed 23.9 (pass 8)
+    ('career', 'Health-care and caring professions', 'نگہداشت اور معالجے کے پیشے (باقاعدہ تربیت کے ساتھ)'),  # reviewed 23.9 (pass 8); source fix S10 (list 2): EN re-keyed, reviewed Urdu kept
     ('career', 'Counseling and therapy', 'مشاورت اور تھراپی'),
-    ('career', 'Alternative medicine', 'متبادل طب'),
+    ('career', 'Complementary wellness (alongside medical care)', 'تکمیلی فلاحِ صحت (طبی علاج کے ساتھ ساتھ)'),  # source fix S10 (list 2): NEW URDU DRAFT, pending review 4
     ('career', 'Wellness coaching', 'ویلنس کوچنگ'),
     ('career', 'Beverages & Liquids', 'مشروبات اور مائعات'),
     ('career', 'Bottled water distribution', 'بوتل بند پانی کی تقسیم'),
@@ -714,7 +714,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Product development', 'نئی مصنوعات کی تشکیل'),  # reviewed 23.37 (pass 8)
     ('career', 'Innovation consulting', 'جدت کی مشاورت'),
     ('career', 'Digital transformation', 'ڈیجیٹل تبدیلی'),
-    ('career', 'Venture capital', 'وینچر کیپیٹل'),
+    ('career', 'Venture capital (Sharīʿah-compliant)', 'وینچر کیپیٹل (شرعی اصولوں کے مطابق)'),  # source fix S11 (list 2): NEW URDU DRAFT, pending review 4
     ('career', 'Business incubation', 'کاروباری انکیوبیشن'),
     ('career', 'Public Service', 'عوامی خدمت'),
     ('career', 'Government leadership', 'حکومتی قیادت'),
@@ -739,13 +739,13 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Property development', 'جائیداد کی تعمیر و ترقی'),  # reviewed 23.61 (pass 8)
     ('career', 'Land management', 'زمین کا انتظام'),
     ('career', 'Architecture firms', 'آرکیٹیکچر کی کمپنیاں'),
-    ('career', 'Finance & Banking', 'مالیات اور بینکاری'),
-    ('career', 'Banking and finance', 'بینکاری اور مالیات'),
-    ('career', 'Investment management', 'سرمایہ کاری کا انتظام'),
+    ('career', 'Islamic Finance & Banking', 'اسلامی مالیات اور بینکاری'),  # source fix S11 (list 2): NEW URDU DRAFT, pending review 4
+    ('career', 'Islamic banking and finance', 'اسلامی بینکاری اور مالیات'),  # source fix S11 (list 2): NEW URDU DRAFT, pending review 4
+    ('career', 'Investment management (Sharīʿah-compliant)', 'سرمایہ کاری کا انتظام (شرعی اصولوں کے مطابق)'),  # source fix S11 (list 2): NEW URDU DRAFT, pending review 4
     ('career', 'Financial planning', 'مالی منصوبہ بندی'),
     ('career', 'Wealth management', 'دولت کا انتظام'),
     ('career', 'Accounting services', 'اکاؤنٹنگ کی خدمات'),
-    ('career', 'Insurance', 'بیمہ'),
+    ('career', 'Takāful (Islamic cooperative insurance)', 'تکافل (باہمی تعاون پر مبنی اسلامی بیمہ)'),  # source fix S11 (list 2): NEW URDU DRAFT, pending review 4
     ('career', 'Agriculture & Natural Resources', 'زراعت اور قدرتی وسائل'),
     ('career', 'Large-scale farming', 'بڑے پیمانے کی کاشتکاری'),
     ('career', 'Agricultural land management', 'زرعی زمین کا انتظام'),
@@ -790,13 +790,12 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Translation services', 'ترجمے کی خدمات'),
     ('career', 'Editorial work', 'ادارتی کام'),
     ('career', 'Similar to Buruj 4 - fish trading, deep work, transformative professions', 'برج 4 کی طرح — مچھلی کی تجارت، گہرا کام، تبدیلی لانے والے پیشے'),
-    ('career', 'Depth, transformation, healing, and uncovering hidden truths align with your Scorpionic water nature', 'گہرائی، تبدیلی، دوسروں کی دل جوئی و نگہداشت، اور پوشیدہ سچائیوں کی کھوج آپ کے عقربی آبی مزاج سے ہم آہنگ ہیں'),  # reviewed 23.115 (pass 8)
+    ('career', 'Depth, transformation, caring for others, and uncovering hidden truths align with your Scorpionic water nature', 'گہرائی، تبدیلی، دوسروں کی دل جوئی و نگہداشت، اور پوشیدہ سچائیوں کی کھوج آپ کے عقربی آبی مزاج سے ہم آہنگ ہیں'),  # reviewed 23.115 (pass 8); source fix S10 (list 2): EN re-keyed, reviewed Urdu kept
     ('career', 'Fruits and vegetables', 'پھل اور سبزیاں'),
     ('career', 'Fresh produce business, fruit wholesale, superficial work lacking depth', 'تازہ پیداوار کا کاروبار، پھلوں کی تھوک فروخت، گہرائی سے خالی سطحی کام'),
-    ('career', 'Healing & Therapy', 'تھراپی اور نفسیاتی نگہداشت'),  # reviewed 24.3 (pass 8)
+    ('career', 'Therapy & Psychological Care', 'تھراپی اور نفسیاتی نگہداشت'),  # reviewed 24.3 (pass 8); source fix S10 (list 2): EN re-keyed, reviewed Urdu kept
     ('career', 'Psychotherapy and counseling', 'نفسیاتی علاج اور مشاورت'),
-    ('career', 'Trauma healing work', 'صدمے سے بحالی میں معاونت (ٹراما تھراپی)'),  # reviewed 24.5 (pass 8)
-    ('career', 'Deep healing modalities', 'نفسیاتی بحالی کے گہرے طریقے (تربیت یافتہ ماہرین کے ذریعے)'),  # reviewed 24.6 (pass 8)
+    ('career', 'Trauma recovery support (trauma therapy)', 'صدمے سے بحالی میں معاونت (ٹراما تھراپی)'),  # reviewed 24.5 (pass 8); source fix S10 (list 2): EN re-keyed, reviewed Urdu kept
     ('career', 'Psychiatric services', 'سائیکاٹری (ذہنی امراض کی طب) کی خدمات'),
     ('career', 'Crisis intervention', 'بحران میں مداخلت'),
     ('career', 'Transformational coaching', 'تبدیلی لانے والی کوچنگ'),
@@ -808,10 +807,10 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Scientific research', 'سائنسی تحقیق'),
     ('career', 'Data analysis', 'ڈیٹا تجزیہ'),
     ('career', 'Finance & Resources', 'مالیات اور وسائل'),
-    ('career', 'Investment banking', 'انویسٹمنٹ بینکنگ'),
+    ('career', 'Islamic investment banking', 'اسلامی انویسٹمنٹ بینکنگ'),  # source fix S11 (list 2): NEW URDU DRAFT, pending review 4
     ('career', 'Financial analysis', 'مالیاتی تجزیہ'),
     ('career', 'Estate planning', 'وراثت اور ترکے کی منصوبہ بندی'),  # reviewed 24.19 (pass 8)
-    ('career', 'Insurance underwriting', 'بیمہ انڈر رائٹنگ'),
+    ('career', 'Takāful underwriting', 'تکافل انڈر رائٹنگ'),  # source fix S11 (list 2): NEW URDU DRAFT, pending review 4
     ('career', 'Resource management', 'وسائل کا انتظام'),
     ('career', 'Mergers and acquisitions', 'انضمام اور حصول'),
     ('career', 'Transformative Work', 'تبدیلی لانے والا کام'),
@@ -870,7 +869,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Seafood industry, traditional rigid structures, roles opposing innovation', 'سمندری خوراک کی صنعت، روایتی سخت ڈھانچے، جدت کی مخالفت کرنے والے کردار'),
     ('career', 'Tech innovation', 'ٹیکنالوجی میں جدت'),
     ('career', 'AI and machine learning', 'مصنوعی ذہانت اور مشین لرننگ'),
-    ('career', 'Blockchain and crypto', 'بلاک چین اور کرپٹو'),
+    ('career', 'Blockchain and digital assets (Sharīʿah-compliant)', 'بلاک چین اور ڈیجیٹل اثاثے (شرعی اصولوں کے مطابق)'),  # source fix S11 (list 2): NEW URDU DRAFT, pending review 4
     ('career', 'Space technology', 'خلائی ٹیکنالوجی'),
     ('career', 'Green technology', 'سبز ٹیکنالوجی'),
     ('career', 'Humanitarian & Social', 'انسانی خدمت اور سماجی شعبہ'),
@@ -882,15 +881,14 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Renewable energy', 'قابلِ تجدید توانائی'),
     ('career', 'Astronomy and space', 'فلکیات اور خلا'),
     ('career', 'Future studies', 'مستقبلیات (فیوچر اسٹڈیز)'),  # reviewed 24.89 (pass 8)
-    ('career', 'Similar to other water buruj - healing, fish trading, spiritual service', 'دیگر آبی بروج کی طرح — نگہداشت و تیمارداری، مچھلی کی تجارت، روحانی خدمت'),  # reviewed 24.90 (pass 8)
-    ('career', 'Compassion, service, spiritual connection, and healing align with Pisces water', 'ہمدردی، خدمت، روحانی تعلق اور دوسروں کی دل جوئی و نگہداشت حوت کے آبی مزاج سے ہم آہنگ ہیں'),  # reviewed 24.91 (pass 8)
+    ('career', 'Similar to other water buruj - caring for others, fish trading, spiritual service', 'دیگر آبی بروج کی طرح — نگہداشت و تیمارداری، مچھلی کی تجارت، روحانی خدمت'),  # reviewed 24.90 (pass 8); source fix S10 (list 2): EN re-keyed, reviewed Urdu kept
+    ('career', 'Compassion, service, spiritual connection, and caring for others align with Pisces water', 'ہمدردی، خدمت، روحانی تعلق اور دوسروں کی دل جوئی و نگہداشت حوت کے آبی مزاج سے ہم آہنگ ہیں'),  # reviewed 24.91 (pass 8); source fix S10 (list 2): EN re-keyed, reviewed Urdu kept
     ('career', 'Fresh produce business, aggressive sales roles, competitive environments lacking compassion', 'تازہ پیداوار کا کاروبار، جارحانہ فروخت کے کردار، اور ہمدردی سے خالی مسابقتی ماحول'),
-    ('career', 'Healing & Healthcare', 'طب اور صحت کی دیکھ بھال'),
+    ('career', 'Healthcare & Caring Professions', 'صحت کی دیکھ بھال اور نگہداشت کے پیشے'),  # source fix S10 (list 2): NEW URDU DRAFT, pending review 4
     ('career', 'Nursing and caregiving', 'نرسنگ اور تیمارداری'),
-    ('career', 'Holistic healing', 'ہمہ جہت فلاحِ صحت (ہولسٹک ویلنس؛ طبی علاج کا بدل نہیں)'),  # reviewed 24.94 (pass 8)
+    ('career', 'Holistic wellness (not a substitute for medical care)', 'ہمہ جہت فلاحِ صحت (ہولسٹک ویلنس؛ طبی علاج کا بدل نہیں)'),  # reviewed 24.94 (pass 8); source fix S10 (list 2): EN re-keyed, reviewed Urdu kept
     ('career', 'Mental health counseling', 'ذہنی صحت کی مشاورت'),
     ('career', 'Hospice care', 'تسکینی نگہداشت'),
-    ('career', 'Energy healing', 'انرجی ہیلنگ (متبادل طریقہ؛ طبی علاج کا بدل نہیں)'),  # reviewed 24.97 (pass 8)
     ('career', 'Compassionate medicine', 'ہمدردی پر مبنی طبی خدمت'),  # reviewed 24.98 (pass 8)
     ('career', 'Spiritual & Religious', 'روحانی اور دینی شعبہ'),
     ('career', 'Chaplaincy', 'اداروں اور ہسپتالوں میں روحانی معاونت (چیپلنسی)'),  # reviewed 24.100 (pass 8)
@@ -899,7 +897,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('career', 'Interfaith work', 'بین المذاہب کام'),
     ('career', 'Arts & Creativity', 'فنون اور تخلیقی صلاحیت'),
     ('career', 'Music and poetry', 'موسیقی اور شاعری'),
-    ('career', 'Healing arts', 'نگہداشت اور معالجے کے پیشے (باقاعدہ تربیت کے ساتھ)'),  # reviewed 24.105 (pass 8)
+    ('career', 'Health-care and caring professions', 'نگہداشت اور معالجے کے پیشے (باقاعدہ تربیت کے ساتھ)'),  # reviewed 24.105 (pass 8); source fix S10 (list 2): EN re-keyed, reviewed Urdu kept
     ('career', 'Dance and movement therapy', 'رقص اور حرکت کی تھراپی'),
     ('career', 'Creative arts therapy', 'آرٹ تھراپی'),  # reviewed 24.107 (pass 8)
     ('career', 'Photography', 'فوٹوگرافی'),
@@ -915,7 +913,7 @@ AI_ENTRIES = [  # (section, en, ur)
     ('potd', "Monday is ideal for matters of the home, family, and emotional wellbeing. Engage in travel or movement — the Moon governs journeys. Practice emotional healing, prayer, and du'ā'. Reflect on your inner world. Avoid confrontation; the Moon's waters prefer calm.", 'روایتی علمِ نجوم میں پیر کو قمر سے منسوب کیا جاتا ہے، اور یہ گھر، خاندان اور جذباتی بہبود کے معاملات کے لیے موزوں دن سمجھا جاتا ہے۔ سفر یا نقل و حرکت اختیار کریں — روایت میں قمر کو اسفار سے جوڑا جاتا ہے۔ جذباتی سکون اور بہتری کے لیے نماز اور دعا کا اہتمام کریں۔ اپنے باطن پر غور کریں۔ ٹکراؤ سے بچیں؛ اس دن سکون اور تحمل کو ترجیح دیں۔'),
     ('potd', 'Tuesday strengthens courage and decisive action. Tackle difficult tasks requiring force or conviction. Physical training, surgery if medically required, and overcoming fears align with Mars. Channel Mars energy into productive determination — not aggression. Start with Bismillah and firm niyyah.', 'روایتی علمِ نجوم میں منگل کو مریخ سے منسوب کیا جاتا ہے، اور اسے ہمت اور فیصلہ کن اقدام کا دن سمجھا جاتا ہے۔ قوت یا پختہ ارادے والے مشکل کام نمٹائیں۔ جسمانی تربیت اور خوف پر قابو پانا اسی نسبت سے مناسب سمجھا جاتا ہے۔ سرجری کا فیصلہ صرف طبی ضرورت اور ڈاکٹر کے مشورے پر ہونا چاہیے، دن یا سیارے کی نسبت پر نہیں۔ ہمت اور قوت کو جارحیت نہیں بلکہ بامقصد عزم میں ڈھالیں۔ بسم اللہ اور پختہ نیت سے آغاز کریں۔'),
     ('potd', 'Wednesday is the day of the scholar and the merchant. Ideal for studying, writing, signing contracts, teaching, and all forms of communication. Engage the mind — read, research, debate. Mercury rewards precision and clarity. This is also an excellent day for Zikr that involves recitation (tilāwah).', 'بدھ عالم اور تاجر کا دن ہے، اور روایت میں اسے عطارد سے منسوب کیا جاتا ہے۔ یہ دن مطالعہ، تحریر، معاہدوں پر دستخط، تدریس اور ہر طرح کی گفتگو کے لیے موزوں سمجھا جاتا ہے۔ ذہن کو مشغول رکھیں — پڑھیں، تحقیق کریں، مباحثہ کریں۔ اس دن درستی اور وضاحت کو اپنا شعار بنائیں۔ روایت میں یہ دن تلاوت پر مشتمل ذکر کے لیے بھی موزوں سمجھا جاتا ہے۔'),  # reviewed 17.31 (pass 6)
-    ('potd', "Thursday is the most blessed day for spiritual elevation, wealth-seeking, and expansion. Make du'ā' for rizq (sustenance). Begin long-term projects. Seek knowledge, visit scholars, and perform generous acts of sadaqah. Thursday night (eve of Friday) is especially blessed — use it for extra worship.", 'روایت میں جمعرات روحانی بلندی، رزق کی طلب اور وسعت کے لیے خاص طور پر بابرکت سمجھی جاتی ہے۔ رزق کے لیے دعا کریں۔ طویل مدتی منصوبے شروع کریں۔ علم حاصل کریں، اہلِ علم سے ملیں، اور فراخ دلی سے صدقہ کریں۔ جمعرات اور جمعہ کی درمیانی رات (شبِ جمعہ) خاص طور پر بابرکت سمجھی جاتی ہے — اسے اضافی عبادت میں گزاریں۔'),  # reviewed 17.32 (pass 6)
+    ('potd', "In tradition, Thursday is an especially blessed day for spiritual elevation, wealth-seeking, and expansion. Make du'ā' for rizq (sustenance). Begin long-term projects. Seek knowledge, visit scholars, and perform generous acts of sadaqah. The night between Thursday and Friday is especially blessed — use it for extra worship.", 'روایت میں جمعرات روحانی بلندی، رزق کی طلب اور وسعت کے لیے خاص طور پر بابرکت سمجھی جاتی ہے۔ رزق کے لیے دعا کریں۔ طویل مدتی منصوبے شروع کریں۔ علم حاصل کریں، اہلِ علم سے ملیں، اور فراخ دلی سے صدقہ کریں۔ جمعرات اور جمعہ کی درمیانی رات (شبِ جمعہ) خاص طور پر بابرکت سمجھی جاتی ہے — اسے اضافی عبادت میں گزاریں۔'),  # reviewed 17.32 (pass 6); source fix S2 (list 2): EN re-keyed, reviewed Urdu kept
     ('potd', "Friday is the most sacred day in Islam (Yawm al-Jum'ah). Venus and Friday align in beauty, community, and gratitude. Attend Jumu'ah, send abundant Ṣalawāt upon the Prophet ﷺ, and perform acts of beauty (charity, kind words, reconciliation). It is a day for love, forgiveness, and peace.", 'جمعہ اسلام میں سب سے افضل دن ہے (یومُ الجمعہ)۔ روایتی علمِ نجوم اسے زہرہ سے منسوب کرتا ہے، جو حسن، اجتماع اور شکرگزاری کی علامت ہے۔ جمعہ کی نماز میں شریک ہوں، نبی کریم ﷺ پر کثرت سے درود شریف پڑھیں، اور حسنِ عمل (صدقہ، نرم گفتگو، صلح) اختیار کریں۔ یہ محبت، معافی اور سکون کا دن ہے۔'),
     ('potd', 'Saturday is governed by the slowest and most disciplined of the classical planets. It is a day for long-term commitments, serious study, and patient effort. Engage in property matters, legal affairs, and building lasting structures. Avoid rushing — Saturn rewards consistent, sustained effort over time.', 'روایتی علمِ نجوم میں ہفتے کو زحل سے منسوب کیا جاتا ہے، جو کلاسیکی سیاروں میں سب سے سست اور سب سے منظم ہے۔ یہ طویل مدتی وعدوں، سنجیدہ مطالعے اور صبر و استقامت والی محنت کا دن ہے۔ جائیداد، قانونی معاملات اور دیرپا اور مضبوط ڈھانچے تعمیر کرنے پر توجہ دیں۔ جلد بازی سے بچیں — اس دن مسلسل اور دیرپا محنت کو ترجیح دیں۔'),
     ('rules', "How scoring works: each rule adds or subtracts points; the total is scaled to a 0–100 score against that election type's own maximum achievable points, so the tier bands (Mumtāz, Jayyid, Maqbūl, Ḍaʿīf, Ijtanib) mean the same thing across marriage, travel, and any future election type.", 'اسکور کیسے شمار ہوتا ہے: ہر اصول کے مطابق کچھ نمبر جمع یا منہا کیے جاتے ہیں۔ پھر حاصل شدہ مجموعے کو اسی قسم کے انتخاب کے زیادہ سے زیادہ ممکنہ نمبروں کے لحاظ سے 0–100 کے پیمانے پر تبدیل کیا جاتا ہے، تاکہ درجوں (ممتاز، جیّد، مقبول، ضعیف، اجتناب) کا مطلب شادی، سفر اور آئندہ ہر قسم کے انتخاب میں ایک ہی رہے۔'),

@@ -1,5 +1,5 @@
 {
- "note": "Phase 4 review of the 896 AI-drafted entries (catalog_ai_draft.py). Not native-reviewed.",
+ "note": "Phase 4 review of the 896 AI-drafted entries (catalog_ai_draft.py). Not native-reviewed. List 2 source fixes (21 Oct 2026): career \"Deep healing modalities\" and \"Energy healing\" removed from the source (S10), so career has 353 entries and the draft 894.",
  "groups": {
   "potd": {
    "total": 7,
@@ -22,8 +22,8 @@
    "reviewed": 277
   },
   "career": {
-   "total": 355,
-   "reviewed": 355
+   "total": 353,
+   "reviewed": 353
   }
  },
  "corrections": [
@@ -150,10 +150,13 @@
   },
   {
    "group": "arch",
-   "en": "Focus on health (physical and emotional), emotional maturity, calm daily routines, and seeking therapeutic support when needed.",
+   "en": "Focus on wellbeing (physical and emotional), emotional maturity, calm daily routines, and seeking therapeutic support when needed.",
    "before": "صحت (جسمانی اور جذباتی) پر توجہ، جذباتی پختگی، پُرسکون روزمرہ معمولات، اور ضرورت پڑنے پر ماہرانہ معاونت لینا۔",
-   "after": "صحت (جسمانی اور جذباتی) پر توجہ، جذباتی پختگی، پُرسکون روزمرہ معمولات، اور ضرورت پڑنے پر کسی ماہر معالج یا ماہرِ نفسیات سے رجوع کرنا۔",
-   "reason": "\"therapeutic support\" was rendered «ماہرانہ» (expert); the therapeutic sense is restored Superseded by the native review (sheet 2, Oct 2026); the \"after\" text is the reviewed one."
+   "after": "بہبود (جسمانی اور جذباتی) پر توجہ، جذباتی پختگی، پُرسکون روزمرہ معمولات، اور ضرورت پڑنے پر کسی ماہر معالج یا ماہرِ نفسیات سے رجوع کرنا۔",
+   "reason": "\"therapeutic support\" was rendered «ماہرانہ» (expert); the therapeutic sense is restored Superseded by the native review (sheet 2, Oct 2026); the \"after\" text is the reviewed one.",
+   "en_before_list2": "Focus on health (physical and emotional), emotional maturity, calm daily routines, and seeking therapeutic support when needed.",
+   "source_fix_list2": "S6",
+   "after_phase4": "صحت (جسمانی اور جذباتی) پر توجہ، جذباتی پختگی، پُرسکون روزمرہ معمولات، اور ضرورت پڑنے پر کسی ماہر معالج یا ماہرِ نفسیات سے رجوع کرنا۔"
   },
   {
    "group": "arch",
@@ -220,10 +223,13 @@
   },
   {
    "group": "arch",
-   "en": "Marriage is traditionally discouraged under this pattern. If already in this bond, increase spiritual protection practices and seek wise counsel.",
+   "en": "Marriage is traditionally discouraged under this pattern. If already in this bond, seek Allah's protection through duʿāʾ and remembrance, and seek wise counsel.",
    "before": "اس نمونے کے تحت شادی کو روایتی طور پر ناپسند کیا گیا ہے۔ اگر آپ پہلے سے اس رشتے میں ہیں تو روحانی حفاظت کے معمولات بڑھائیں اور دانشمندانہ مشورہ لیں۔",
-   "after": "اس نمونے کے تحت شادی کی روایتی طور پر حوصلہ شکنی کی جاتی ہے۔ اگر آپ پہلے سے اس رشتے میں ہیں تو روحانی حفاظت کے معمولات بڑھائیں اور دانشمندانہ مشورہ لیں۔",
-   "reason": "\"discouraged\" is not «ناپسند» (disliked / disapproved)"
+   "after": "اس نمونے کے تحت شادی کی روایتی طور پر حوصلہ شکنی کی جاتی ہے۔ اگر آپ پہلے سے اس رشتے میں ہیں تو دعا و اذکار کے ذریعے اللہ کی حفاظت طلب کریں اور دانشمندانہ مشورہ لیں۔",
+   "reason": "\"discouraged\" is not «ناپسند» (disliked / disapproved)",
+   "en_before_list2": "Marriage is traditionally discouraged under this pattern. If already in this bond, increase spiritual protection practices and seek wise counsel.",
+   "source_fix_list2": "S8",
+   "after_phase4": "اس نمونے کے تحت شادی کی روایتی طور پر حوصلہ شکنی کی جاتی ہے۔ اگر آپ پہلے سے اس رشتے میں ہیں تو روحانی حفاظت کے معمولات بڑھائیں اور دانشمندانہ مشورہ لیں۔"
   },
   {
    "group": "arch",
@@ -304,10 +310,13 @@
   },
   {
    "group": "career",
-   "en": "Healing & Healthcare",
+   "en": "Healthcare & Caring Professions",
    "before": "شفا اور صحتِ عامہ",
-   "after": "طب اور صحت کی دیکھ بھال",
-   "reason": "«صحتِ عامہ» is public health; \"healthcare\" is «طبی نگہداشت» Superseded by the native review (sheet 2, Oct 2026); the \"after\" text is the reviewed one."
+   "after": "صحت کی دیکھ بھال اور نگہداشت کے پیشے",
+   "reason": "«صحتِ عامہ» is public health; \"healthcare\" is «طبی نگہداشت» Superseded by the native review (sheet 2, Oct 2026); the \"after\" text is the reviewed one.",
+   "en_before_list2": "Healing & Healthcare",
+   "source_fix_list2": "S10",
+   "after_phase4": "طب اور صحت کی دیکھ بھال"
   }
  ],
  "flags": [
@@ -537,13 +546,16 @@
   },
   {
    "group": "potd",
-   "en": "Thursday is the most blessed day for spiritual elevation, wealth-seeking, and expansion. Make du'ā' for rizq (sustenance). Begin long-term projects. Seek knowledge, visit scholars, and perform generous acts of sadaqah. Thursday night (eve of Friday) is especially blessed — use it for extra worship.",
+   "en": "In tradition, Thursday is an especially blessed day for spiritual elevation, wealth-seeking, and expansion. Make du'ā' for rizq (sustenance). Begin long-term projects. Seek knowledge, visit scholars, and perform generous acts of sadaqah. The night between Thursday and Friday is especially blessed — use it for extra worship.",
    "ur": "روایت میں جمعرات روحانی بلندی، رزق کی طلب اور وسعت کے لیے خاص طور پر بابرکت سمجھی جاتی ہے۔ رزق کے لیے دعا کریں۔ طویل مدتی منصوبے شروع کریں۔ علم حاصل کریں، اہلِ علم سے ملیں، اور فراخ دلی سے صدقہ کریں۔ جمعرات اور جمعہ کی درمیانی رات (شبِ جمعہ) خاص طور پر بابرکت سمجھی جاتی ہے — اسے اضافی عبادت میں گزاریں۔",
    "reason": "Religious/astrological claim (\"most blessed day\", the night before Friday \"especially blessed\") kept hedged («سمجھی جاتی ہے»); the source is not cited. Confirm against Islamic sources (external audit).",
    "alternative": "",
    "review": "religious scholar",
    "ur_flagged": "روایت میں جمعرات روحانی بلندی، رزق کی طلب اور وسعت کے لیے خاص طور پر بابرکت سمجھی جاتی ہے۔ رزق کے لیے دعا کریں۔ طویل مدتی منصوبے شروع کریں۔ علم حاصل کریں، اہلِ علم سے ملیں، اور فراخ دلی سے صدقہ کریں۔ جمعرات کی رات (جمعہ کی شب) کو خاص طور پر بابرکت سمجھا جاتا ہے — اسے اضافی عبادت کے لیے استعمال کریں۔",
-   "resolved": "Native review, sheet 3 row 17.32 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
+   "resolved": "Native review, sheet 3 row 17.32 (pass 6, 21 Oct 2026): corrected by the Language Reviewer.",
+   "en_before_list2": "Thursday is the most blessed day for spiritual elevation, wealth-seeking, and expansion. Make du'ā' for rizq (sustenance). Begin long-term projects. Seek knowledge, visit scholars, and perform generous acts of sadaqah. Thursday night (eve of Friday) is especially blessed — use it for extra worship.",
+   "source_fix_list2": "S2",
+   "resolved_by": "EN source fix S2 (list 2, Mario approved 21 Oct 2026)"
   },
   {
    "group": "potd",
@@ -645,21 +657,28 @@
   },
   {
    "group": "arch",
-   "en": "Traditionally a difficult pattern, associated with sudden breaks and recurring strain. Extreme caution and spiritual protection are advised.",
+   "en": "Traditionally a difficult pattern, associated with sudden breaks and recurring strain. Take great care, and seek Allah's protection through duʿāʾ and remembrance.",
    "ur": "روایتی طور پر ایک مشکل نمونہ، جو اچانک تعلق ٹوٹنے اور بار بار کے دباؤ سے منسوب ہے۔ بہت احتیاط کریں، اور دعا و اذکار کے ذریعے اللہ کی حفاظت طلب کریں۔",
    "reason": "Strong warnings about marriage/binding commitments kept as traditional framing; whether such a warning should be shown to users at all is a product decision (not changed here).",
    "alternative": "",
    "review": "product decision + native Urdu",
    "ur_flagged": "روایتی طور پر ایک مشکل نمونہ، جو اچانک ٹوٹ پھوٹ اور بار بار کے دباؤ سے منسوب ہے۔ انتہائی احتیاط اور روحانی حفاظت کا مشورہ دیا جاتا ہے۔",
-   "resolved": "Native review, sheet 3 row 21.110 (pass 7, 21 Oct 2026): corrected by the Language Reviewer."
+   "resolved": "Native review, sheet 3 row 21.110 (pass 7, 21 Oct 2026): corrected by the Language Reviewer.",
+   "en_before_list2": "Traditionally a difficult pattern, associated with sudden breaks and recurring strain. Extreme caution and spiritual protection are advised.",
+   "source_fix_list2": "S8",
+   "resolved_by": "EN source fix S8 (list 2, Mario approved 21 Oct 2026)"
   },
   {
    "group": "arch",
-   "en": "Marriage is traditionally discouraged under this pattern. If already in this bond, increase spiritual protection practices and seek wise counsel.",
-   "ur": "اس نمونے کے تحت شادی کی روایتی طور پر حوصلہ شکنی کی جاتی ہے۔ اگر آپ پہلے سے اس رشتے میں ہیں تو روحانی حفاظت کے معمولات بڑھائیں اور دانشمندانہ مشورہ لیں۔",
+   "en": "Marriage is traditionally discouraged under this pattern. If already in this bond, seek Allah's protection through duʿāʾ and remembrance, and seek wise counsel.",
+   "ur": "اس نمونے کے تحت شادی کی روایتی طور پر حوصلہ شکنی کی جاتی ہے۔ اگر آپ پہلے سے اس رشتے میں ہیں تو دعا و اذکار کے ذریعے اللہ کی حفاظت طلب کریں اور دانشمندانہ مشورہ لیں۔",
    "reason": "Strong warnings about marriage/binding commitments kept as traditional framing; whether such a warning should be shown to users at all is a product decision (not changed here).",
    "alternative": "",
-   "review": "product decision + native Urdu"
+   "review": "product decision + native Urdu",
+   "en_before_list2": "Marriage is traditionally discouraged under this pattern. If already in this bond, increase spiritual protection practices and seek wise counsel.",
+   "source_fix_list2": "S8",
+   "ur_phase4": "اس نمونے کے تحت شادی کی روایتی طور پر حوصلہ شکنی کی جاتی ہے۔ اگر آپ پہلے سے اس رشتے میں ہیں تو روحانی حفاظت کے معمولات بڑھائیں اور دانشمندانہ مشورہ لیں۔",
+   "resolved_by": "EN source fix S8 (list 2, Mario approved 21 Oct 2026)"
   },
   {
    "group": "arch",

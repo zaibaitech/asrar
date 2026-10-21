@@ -95,5 +95,149 @@
   "id": "F5",
   "en_before": "By Seringe Mahdiou Niane — spoken in Wolof",
   "ar_before": "للشيخ سرين مهديو نيان — بالولوفية"
+ },
+ "Starting a treatment your doctor has advised": {
+  "ar": "البدء بعلاج أشار به طبيبك",
+  "status": "draft",
+  "id": "S1 (list 2)",
+  "en_before": "Medical treatment",
+  "ar_before": "العلاج الطبي",
+  "review": "pending review 4"
+ },
+ "The Muzzle": {
+  "ar": "أنف الأسد",
+  "status": "draft",
+  "id": "S3 (list 2)",
+  "en_before": "The Gap",
+  "ar_before": "الفُرجة",
+  "review": "pending review 4"
+ },
+ "Keeping one's commitments": {
+  "ar": "الوفاء بالعهود",
+  "status": "draft",
+  "id": "S5 (list 2)",
+  "en_before": "Keeping vows",
+  "ar_before": "الوفاء بالنذور",
+  "review": "pending review 4"
+ },
+ "In tradition, Thursday is an especially blessed day for spiritual elevation, wealth-seeking, and expansion. Make du'ā' for rizq (sustenance). Begin long-term projects. Seek knowledge, visit scholars, and perform generous acts of sadaqah. The night between Thursday and Friday is especially blessed — use it for extra worship.": {
+  "ar": "يُعدّ الخميس في التراث يومًا مباركًا خاصّةً للارتقاء الروحي وطلب الرزق والسعة. ادعُ بالرزق، وابدأ المشاريع الطويلة، واطلب العلم، وزُر العلماء، وتصدّق بسخاء. والليلة التي بين الخميس والجمعة مباركة خاصّة — فاغتنمها بمزيد من العبادة.",
+  "status": "draft",
+  "id": "S2 (list 2)",
+  "en_before": "Thursday is the most blessed day for spiritual elevation, wealth-seeking, and expansion. Make du'ā' for rizq (sustenance). Begin long-term projects. Seek knowledge, visit scholars, and perform generous acts of sadaqah. Thursday night (eve of Friday) is especially blessed — use it for extra worship.",
+  "ar_before": "الخميس من أبرك الأيام للارتقاء الروحي وطلب الرزق والسعة. ادعُ بالرزق، وابدأ المشاريع الطويلة، واطلب العلم، وزُر العلماء، وتصدّق بسخاء. وليلة الجمعة مباركة خاصّة — فاغتنمها بمزيد من العبادة.",
+  "review": "pending review 4"
+ },
+ "Wellbeing": {
+  "ar": "العافية",
+  "status": "draft",
+  "id": "S6 (list 2)",
+  "en_before": "Health",
+  "ar_before": "صحة",
+  "review": "pending review 4"
+ },
+ "Traditionally seen as a heavy pattern — concerns about wellbeing and emotional strain may be present, especially without emotional maturity.": {
+  "ar": "يُرى تقليديًا نمطًا ثقيلًا: قد يحضر همّ العافية وضغط عاطفي، لا سيما مع غياب النضج العاطفي.",
+  "status": "draft",
+  "id": "S6 (list 2)",
+  "en_before": "Traditionally seen as a heavy pattern — health concerns and emotional strain may be present, especially without emotional maturity.",
+  "ar_before": "يُرى تقليديًا نمطًا ثقيلًا: قد تحضر هموم صحية وضغط عاطفي، لا سيما مع غياب النضج العاطفي.",
+  "review": "pending review 4"
+ },
+ "Traditionally seen as a heavy path for marriage. Concerns about wellbeing and emotional strain may be present.": {
+  "ar": "يُرى تقليديًا طريقًا ثقيلًا للزواج، وقد يحضر فيه همّ العافية وضغط عاطفي.",
+  "status": "draft",
+  "id": "S6 (list 2)",
+  "en_before": "Traditionally seen as a heavy path for marriage. Health concerns and emotional strain may be present.",
+  "ar_before": "يُرى تقليديًا طريقًا ثقيلًا للزواج، وقد تحضر فيه هموم صحية وضغط عاطفي.",
+  "review": "pending review 4"
+ },
+ "Traditionally seen as a heavy pattern — caretaking or shared hardship, often tied to wellbeing and stress, may mark the family bond.": {
+  "ar": "يُرى تقليديًا نمطًا ثقيلًا — قد تطبع الرعايةُ أو المشقّة المشتركة، المرتبطة غالبًا بالعافية والضغط، الرابطةَ العائلية.",
+  "status": "draft",
+  "id": "S6 (list 2)",
+  "en_before": "Traditionally seen as a heavy pattern — caretaking or shared hardship, often tied to health, may mark the family bond.",
+  "ar_before": "يُرى تقليديًا نمطًا ثقيلًا — قد تطبع الرعايةُ أو المشقّة المشتركة، المرتبطة غالبًا بالصحّة، الرابطةَ العائلية.",
+  "review": "pending review 4"
+ },
+ "This bond often carries a sense of weight — stress, strained wellbeing, or emotional burden may surface. Maturity and calm help carry it well.": {
+  "ar": "كثيرًا ما تحمل هذه الرابطة إحساسًا بالثقل، إذ قد يظهر الضغط أو إرهاق العافية أو الأعباء العاطفية. والنضج والهدوء يعينان على حملها.",
+  "status": "draft",
+  "id": "S6 (list 2)",
+  "en_before": "This bond often carries a sense of weight — health, stress, or emotional burden tend to surface. Maturity and calm help carry it well.",
+  "ar_before": "كثيرًا ما تحمل هذه الرابطة إحساسًا بالثقل، إذ تميل أعباء الصحة أو الضغط أو المشاعر إلى الظهور. والنضج والهدوء يعينان على حملها.",
+  "review": "pending review 4"
+ },
+ "Marriage may feel like a test; wellbeing and stress may need extra care. Requires emotional maturity and calm.": {
+  "ar": "قد يبدو الزواج كأنه اختبار؛ وقد تحتاج العافية والضغط إلى عناية خاصة. يتطلب نضجًا عاطفيًا وهدوءًا.",
+  "status": "draft",
+  "id": "S6 (list 2)",
+  "en_before": "Marriage may feel like a test. Health (physical or emotional) often becomes a central concern. Requires emotional maturity and calm.",
+  "ar_before": "قد يشعر الزواج كأنه اختبار. غالبًا ما تصبح الصحة (الجسدية أو العاطفية) مصدر قلق مركزي. يتطلب نضجًا عاطفيًا وهدوءًا.",
+  "review": "pending review 4"
+ },
+ "Family bonds under this pattern often involve caretaking or shared hardship — wellbeing and stress may need extra care. Calm routines and honest communication ease the load.": {
+  "ar": "تتضمّن الروابط العائلية في هذا النمط غالبًا رعاية أو مشقّة مشتركة — وقد تحتاج العافية والضغط إلى عناية خاصة. والعادات الهادئة والتواصل الصادق تخفّف الحمل.",
+  "status": "draft",
+  "id": "S6 (list 2)",
+  "en_before": "Family bonds under this pattern often involve caretaking or shared hardship — health concerns are common threads. Calm routines and honest communication ease the load.",
+  "ar_before": "تتضمّن الروابط العائلية في هذا النمط غالبًا رعاية أو مشقّة مشتركة — والهموم الصحّية خيط متكرّر. والعادات الهادئة والتواصل الصادق تخفّف الحمل.",
+  "review": "pending review 4"
+ },
+ "Focus on wellbeing (physical and emotional), emotional maturity, calm daily routines, and seeking therapeutic support when needed.": {
+  "ar": "التركيز على العافية (الجسدية والعاطفية)، النضج العاطفي، الروتين الهادئ اليومي، وطلب الدعم العلاجي عند الحاجة.",
+  "status": "draft",
+  "id": "S6 (list 2)",
+  "en_before": "Focus on health (physical and emotional), emotional maturity, calm daily routines, and seeking therapeutic support when needed.",
+  "ar_before": "التركيز على الصحة (الجسدية والعاطفية)، النضج العاطفي، الروتين الهادئ اليومي، وطلب الدعم العلاجي عند الحاجة.",
+  "review": "pending review 4"
+ },
+ "Marriage may start with confusion or misjudgment but can become very strong over time. Patience is the key to unlocking this bond's strength.": {
+  "ar": "قد يبدأ الزواج بارتباك أو سوء تقدير، لكنه قد يصبح قويًا جدًا مع الوقت. الصبر هو المفتاح لفتح قوة هذه الرابطة.",
+  "status": "draft",
+  "id": "S7 (list 2)",
+  "en_before": "Marriage starts with confusion or misjudgment but becomes very strong over time. Patience is the key to unlocking this bond's strength.",
+  "ar_before": "يبدأ الزواج بارتباك أو سوء تقدير لكنه يصبح قويًا جدًا مع الوقت. الصبر هو المفتاح لفتح قوة هذه الرابطة.",
+  "review": "pending review 4"
+ },
+ "Professional partnerships under this pattern may carry real risk — sudden fallout or repeated breakdowns in trust are often seen. Proceed with caution and clear agreements.": {
+  "ar": "قد تحمل الشراكات المهنية في هذا النمط خطرًا حقيقيًا — وكثيرًا ما يُرى الانهيار المفاجئ أو تكرّر فقدان الثقة. تقدّم بحذر واتفاقات واضحة.",
+  "status": "draft",
+  "id": "S7 (list 2)",
+  "en_before": "Professional partnerships under this pattern carry real risk — sudden fallout or repeated breakdowns in trust are common. Proceed with caution and clear agreements.",
+  "ar_before": "تحمل الشراكات المهنية في هذا النمط خطرًا حقيقيًا — الانهيار المفاجئ أو تكرّر فقدان الثقة شائع. تقدّم بحذر واتفاقات واضحة.",
+  "review": "pending review 4"
+ },
+ "Traditionally a difficult pattern, associated with sudden breaks and recurring strain. Take great care, and seek Allah's protection through duʿāʾ and remembrance.": {
+  "ar": "نمط صعب تقليديًا، يرتبط بانقطاعات مفاجئة وعناء متكرّر. فالحذر الشديد مطلوب، مع سؤال الله الحفظ بالدعاء والذكر.",
+  "status": "draft",
+  "id": "S8 (list 2)",
+  "en_before": "Traditionally a difficult pattern, associated with sudden breaks and recurring strain. Extreme caution and spiritual protection are advised.",
+  "ar_before": "نمط صعب تقليديًا، يرتبط بانقطاعات مفاجئة وعناء متكرّر. يُنصح بالحذر الشديد والتحصّن بالأذكار.",
+  "review": "pending review 4"
+ },
+ "Marriage is traditionally discouraged under this pattern. If already in this bond, seek Allah's protection through duʿāʾ and remembrance, and seek wise counsel.": {
+  "ar": "يُثبَّط الزواج تقليديًا وفق هذا النمط. إن كنتما بالفعل في هذه الرابطة، فاسألا الله الحفظ بالدعاء والذكر، واطلبا مشورة حكيمة.",
+  "status": "draft",
+  "id": "S8 (list 2)",
+  "en_before": "Marriage is traditionally discouraged under this pattern. If already in this bond, increase spiritual protection practices and seek wise counsel.",
+  "ar_before": "يُثبَّط الزواج تقليديًا وفق هذا النمط. إذا كنتما بالفعل في هذه الرابطة، زيدا من ممارسات الحماية الروحية واطلبا مشورة حكيمة.",
+  "review": "pending review 4"
+ },
+ "Family ties here can carry real difficulty, including estrangement or repeated conflict. Seek wise counsel, and keep asking Allah for protection through duʿāʾ and remembrance, rather than forcing closeness.": {
+  "ar": "قد تحمل الروابط العائلية هنا صعوبة حقيقية، منها الجفاء أو الخلاف المتكرّر. اطلب نصح الحكماء، وداوِم على سؤال الله الحفظ بالدعاء والذكر، بدل فرض القرب.",
+  "status": "draft",
+  "id": "S8 (list 2)",
+  "en_before": "Family ties here can carry real difficulty, including estrangement or repeated conflict. Seek wise counsel and increase protective practices rather than forcing closeness.",
+  "ar_before": "قد تحمل الروابط العائلية هنا صعوبة حقيقية، منها الجفاء أو الخلاف المتكرّر. اطلب نصح الحكماء وأكثِر من الأذكار بدل فرض القرب.",
+  "review": "pending review 4"
+ },
+ "This doesn't mean complete avoidance—some individuals still succeed in these fields. The tradition suggests focusing your main efforts on the recommended fields above.": {
+  "ar": "ولا يعني هذا اجتنابها كليًا — فبعض الناس ينجحون فيها. لكن التراث يقترح تركيز جهودك الأساسية على المجالات الموصى بها أعلاه.",
+  "status": "draft",
+  "id": "S13 (list 2)",
+  "en_before": "This doesn't mean complete avoidance—some individuals still succeed in these fields. However, the spiritual alignment suggests focusing your primary efforts on the recommended fields above for optimal results.",
+  "ar_before": "ولا يعني هذا اجتنابها كليًا — فبعض الناس ينجحون فيها. لكن الانسجام الروحي يقترح تركيز جهودك الأساسية على المجالات الموصى بها أعلاه.",
+  "review": "pending review 4"
  }
 }

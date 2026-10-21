@@ -133,8 +133,8 @@ const SEVEN_PLANETS = [
     },
     body: { en: 'Liver, hips, thighs', fr: 'Foie, hanches, cuisses' },
     guidance: {
-      en: 'Thursday is the most blessed day for spiritual elevation, wealth-seeking, and expansion. Make du\'ā\' for rizq (sustenance). Begin long-term projects. Seek knowledge, visit scholars, and perform generous acts of sadaqah. Thursday night (eve of Friday) is especially blessed — use it for extra worship.',
-      fr: 'Le jeudi est le jour le plus béni pour l\'élévation spirituelle, la recherche de richesse et l\'expansion. Faites du\'ā\' pour le rizq (subsistance). Commencez des projets à long terme. Cherchez la connaissance, visitez les érudits, et accomplissez des actes généreux de sadaqah. La nuit du jeudi (veille du vendredi) est particulièrement bénie — utilisez-la pour un culte supplémentaire.',
+      en: 'In tradition, Thursday is an especially blessed day for spiritual elevation, wealth-seeking, and expansion. Make du\'ā\' for rizq (sustenance). Begin long-term projects. Seek knowledge, visit scholars, and perform generous acts of sadaqah. The night between Thursday and Friday is especially blessed — use it for extra worship.',
+      fr: 'Dans la tradition, le jeudi est un jour particulièrement béni pour l\'élévation spirituelle, la recherche de richesse et l\'expansion. Faites du\'ā\' pour le rizq (subsistance). Commencez des projets à long terme. Cherchez la connaissance, visitez les érudits, et accomplissez des actes généreux de sadaqah. La nuit entre jeudi et vendredi est particulièrement bénie — utilisez-la pour un culte supplémentaire.',
     },
     dhikr: 'يا كريم · يا وهاب · يا رزاق',
     dhikrLatin: 'Yā Karīm · Yā Wahhāb · Yā Razzāq',
