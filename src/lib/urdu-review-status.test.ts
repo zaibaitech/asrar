@@ -24,6 +24,10 @@ describe('Urdu review status', () => {
     }
     // Batch 16 cleared the list-1 drafts and sheet 4 the list-2 drafts; the only drafts left are Pass 9b follow-ups.
     expect(rows.filter((r) => r.status === 'draft' && !r.source_fix_pass9b)).toEqual([]);
+    // Cleanup PR #102: the Language Reviewer confirmed 9.85 (CU1) and 9.4 (CU2); nothing is pending.
+    expect(JSON.stringify(status)).not.toMatch(/"status": ?"draft-pending-LR"/);
+    expect((status.sheet2 as Record<string, { status: string }>)['9.85'].status).toBe('reviewed-corrected');
+    expect((status.sheet2 as Record<string, { status: string }>)['9.4'].status).toBe('reviewed-corrected');
   });
 
   it('Batch 13 and Batch 14 are reviewed (pass 3) and in the catalog', () => {
@@ -198,5 +202,18 @@ describe('Spot-check of sheet 3: «سخت نظر»', () => {
       expect(r.ur).toContain('تناؤ والی نسبت');
     }
     expect(json['Moon Applying to Saturn/Mars (Hard Aspect)']).toBe('قمر کا زحل یا مریخ سے اتصال (تناؤ والی نسبت)');
+  });
+});
+
+describe('Cleanup PR #102 Language Reviewer verdicts', () => {
+  it('CU1: the About text is the same «ان کی» string in the catalog and MobileMenu.tsx', () => {
+    const about = 'عربی متن میں چھپی عددی قیمتوں اور عناصر سے ان کی نسبتوں کو دریافت کریں، اور زبان کو تخلیق کے گہرے نمونوں سے جوڑیں۔';
+    expect(json['Discover the sacred numerical values and elemental associations within Arabic text, connecting language to the deeper patterns of creation.']).toBe(about);
+    expect(read('src/components/MobileMenu.tsx')).toContain(about);
+  });
+  it('CU2: the mansions explainer opens with «طولِ بروجی»', () => {
+    const v = json['Asrār divides the ecliptic into twenty-eight equal tropical sectors (~12°51′ each) from the Moon’s longitude — a clear computational convention for education and reflection. Classical star-tied (sidereal) bounds differ; we document the equal tropical method so the live card stays consistent with our planetary ephemeris.'];
+    expect(v.startsWith('اسرار قمر کے طولِ بروجی کی بنیاد پر دائرۃ البروج کو اٹھائیس برابر موسمی (ٹراپیکل) حصوں (تقریباً 12°51′ ہر ایک) میں تقسیم کرتا ہے — یہ تعلیم اور غور و فکر کے لیے ایک واضح حسابی طریقہ ہے۔')).toBe(true);
+    expect(v).toContain('تاکہ موجودہ منزل والا (لائیو) کارڈ ہماری سیاروی زیج (ایفیمرس) کے مطابق رہے۔');
   });
 });

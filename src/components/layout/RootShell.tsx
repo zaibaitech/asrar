@@ -24,7 +24,7 @@ export default function RootShell({
   headScript,
   children,
 }: {
-  lang: 'en' | 'ar' | 'ur'
+  lang: 'en' | 'fr' | 'ar' | 'ur'
   dir: 'ltr' | 'rtl'
   /** Optional inline script run before first paint (URL-dependent adjustments). */
   headScript?: string

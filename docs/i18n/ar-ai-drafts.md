@@ -4,7 +4,7 @@ Rows marked **✅ reviewed** were checked by the Language Reviewer (Oct 2026, se
 
 Conventions: Divine Names use the canonical Arabic. Qur'ān lines use the original text (imlāʾī spelling, full tashkīl), with references written as (surah name + āyah number). Ṣalawāt/duʿāʾ are listed separately: they are not Qur'ān. Terms: صاحب اليوم (day ruler), مداري (tropical), وِرد (practice), يُردَّد (recite).
 
-Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divine-Name mappings (reviewed), 5229 UI strings (150 reviewed, 5079 AI-draft).
+Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divine-Name mappings (reviewed), 5231 UI strings (150 reviewed, 5081 AI-draft).
 
 ## Qur'anic lines (✅ reviewed: checked against the muṣḥaf)
 
@@ -5840,3 +5840,5 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 5227 | AI-draft | The Preacher to Nations | خطيب الأمم |
 | 5228 | AI-draft | The Remover of Worries | كاشف الكروب |
 | 5229 | AI-draft | The Might of the Arab | عزّ العرب |
+| 5230 | AI-draft | Astrology cannot tell you when, whether or how to have medical treatment or surgery, and it must not be used to choose, delay, stop or replace treatment. Consult a qualified healthcare professional, and do not delay necessary care. This result is a traditional astrological interpretation, not a clinically validated medical prediction. | لا يمكن لعلم النجوم أن يحدّد وقت العلاج الطبي أو الجراحة أو ما إذا كان ينبغي إجراؤهما، ولا يجوز استخدامه لاختيار العلاج أو تأخيره أو إيقافه أو الاستعاضة عنه. راجع مختصًا صحيًا مؤهلًا، ولا تؤخّر الرعاية الطبية الضرورية. هذه النتيجة تفسير فلكي تقليدي، وليست تنبؤًا طبيًا مثبتًا سريريًا. |
+| 5231 | AI-draft | Medical treatment · traditional reading | العلاج الطبي · قراءة تقليدية |

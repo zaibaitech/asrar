@@ -8,6 +8,10 @@ const NAMES = getDivineNames(ABJAD_MAGHRIBI);
 const MASHRIQI_VALUE = new Map(getDivineNames(ABJAD_MASHRIQI).map((n) => [n.number, n.abjadValue]));
 import { englishPageMetadata } from '@/src/lib/names/seo';
 
+// Static at build time: the (site) root layout reads the /fr route header, and
+// force-static keeps this route static (headers() is empty here, so lang="en").
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = englishPageMetadata('/99-names-of-allah', 'abjad', {
   title: 'The 99 Names of Allah (Asmāʾ al-Ḥusnā): Meanings & Abjad Values',
   description:
