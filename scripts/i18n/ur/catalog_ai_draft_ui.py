@@ -615,7 +615,7 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('sadaqa-page', 'Secret Sadaqah of Virgo — Age 40', 'سنبلہ کا خفیہ صدقہ — چالیس سال کی عمر میں'),
     ('sadaqa-page', 'Seven Yogurts Sadaqah', 'دہی کے سات پیالوں کا صدقہ'),
     ('sadaqa-page', 'Guinea Fowl Sadaqah', 'گنی فاؤل کا صدقہ'),
-    ('sadaqa-page', 'Ring Sadaqah', 'انگوٹھی کا صدقہ'),  # source fix F3a (Mario, 21 Oct 2026) — DRAFT, not reviewed
+    ('sadaqa-page', 'Ring Sadaqah', 'انگوٹھی کا صدقہ'),  # source fix F3a (Mario, 21 Oct 2026) — reviewed, Batch 16 (pass 5)
     ('sadaqa-page', 'White Ram or Sheep Sadaqah', 'سفید مینڈھے یا بھیڑ کا صدقہ'),
     ('sadaqa-page', 'Red Goat Sadaqah During a Favourable Mars Transit', 'مریخ کے موافق عبور کے دوران سرخ بکرے کا صدقہ'),
     ('sadaqa-page', 'Water Sadaqah — For Patients', 'پانی کا صدقہ — مریضوں کے لیے'),
@@ -877,7 +877,7 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('burj-personality', 'May be taken for granted by those closest to them', 'جو لوگ سب سے قریب ہوں وہ انہیں معمولی سمجھ سکتے ہیں'),
     ('burj-personality', 'Rich and vivid dreamlife - frequently sees water, vast deserts, ancient cities, and earthly landscapes', 'خوابوں کی زندگی بھرپور اور واضح — اکثر پانی، وسیع صحرا، قدیم شہر اور زمینی مناظر نظر آتے ہیں'),
     ('burj-personality', 'Traditionally understood to be supported by divine help in times of need', 'روایتی تعبیر کے مطابق ضرورت کے وقت الٰہی مدد شاملِ حال رہتی ہے'),  # source fix C2 (Mario, 21 Oct 2026)
-    ('burj-personality', 'Traditionally, sought protection in matters of sustenance and material provision', 'روایت کے مطابق روزی اور مادی ضروریات کے معاملات میں محفوظ سمجھے جاتے ہیں'),  # source fix P1 (Mario, 21 Oct 2026)
+    ('burj-personality', 'Traditionally, sought protection in matters of sustenance and material provision', 'روایت کے مطابق روزی اور مادی ضروریات کے معاملات میں اللہ سے حفاظت طلب کی جاتی ہے'),  # source fix P1 (Mario, 21 Oct 2026)
     ('burj-personality', 'Must learn to set boundaries with family while maintaining their generous nature', 'اپنی فیاض فطرت برقرار رکھتے ہوئے گھر والوں کے ساتھ حدود قائم کرنا سیکھنا ہوگا'),
     ('burj-personality', 'Sharp and cutting words when upset, speech can wound deeply', 'ناراضی میں الفاظ تیز اور کاٹ دار ہوتے ہیں، بات گہرا زخم دے سکتی ہے'),
     ('burj-personality', 'Extremely short fuse - the slightest provocation can trigger intense reaction', 'بہت جلد بھڑک اٹھتے ہیں — ذرا سی اشتعال انگیزی شدید ردِ عمل پیدا کر سکتی ہے'),
@@ -886,7 +886,7 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('burj-personality', 'Those with patience are drawn to their intellectual brilliance', 'صبر والے لوگ ان کی ذہنی تیزی کی طرف کھنچتے ہیں'),
     ('burj-personality', 'Difficult for most people to cope with their intense emotional swings', 'اکثر لوگوں کے لیے ان کے شدید جذباتی اتار چڑھاؤ کا سامنا کرنا مشکل ہوتا ہے'),
     ('burj-personality', "Frequently dreams of flying in the sky or heavens, being lifted or elevated, carried in people's hands, soaring above the earth", 'اکثر خواب میں آسمان یا فضاؤں میں اڑنا، بلند کیا جانا، لوگوں کے ہاتھوں پر اٹھایا جانا اور زمین کے اوپر بلند ہونا دیکھتے ہیں'),
-    ('burj-personality', 'Traditionally, seen as under divine care despite their struggles with anger', 'روایت کے مطابق غصے سے متعلق مشکلات کے باوجود الٰہی حفاظت حاصل سمجھی جاتی ہے'),  # source fix P2 (Mario, 21 Oct 2026)
+    ('burj-personality', 'Traditionally, seen as under divine care despite their struggles with anger', 'روایت کے مطابق غصے سے متعلق مشکلات کے باوجود اللہ کی عنایت ان کے شاملِ حال سمجھی جاتی ہے'),  # source fix P2 (Mario, 21 Oct 2026)
     ('burj-personality', 'Allah grants them opportunities to learn patience and emotional mastery', 'روایتی تعبیر کے مطابق اللہ انہیں صبر اور جذباتی ضبط سیکھنے کے مواقع عطا فرماتا ہے'),
     ('burj-personality', "Must work consciously to control anger and develop patience - this is their life's spiritual test", 'غصے پر قابو پانے اور صبر پیدا کرنے کے لیے شعوری کوشش کرنی ہوگی — یہی ان کی زندگی کا روحانی امتحان ہے'),
     ('burj-personality', 'Silent and calm usually, but when angry speaks continuously without stopping', 'عموماً خاموش اور پُرسکون رہتے ہیں، مگر غصے میں رکے بغیر مسلسل بولتے جاتے ہیں'),
@@ -897,7 +897,7 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('burj-personality', 'Some mistake their patience for weakness or lack of intelligence', 'بعض لوگ ان کے صبر کو کمزوری یا کم عقلی سمجھ لیتے ہیں'),
     ('burj-personality', 'Water appears very frequently - being in water, near water, flowing water, oceans, rivers. Most with this buruj regularly see water in their dreams.', 'پانی بہت کثرت سے نظر آتا ہے — پانی میں ہونا، پانی کے قریب ہونا، بہتا پانی، سمندر، دریا۔ اس برج والوں کو اکثر خواب میں پانی نظر آتا ہے۔'),
     ('burj-personality', 'Granted deep emotional wisdom and intuitive understanding of others', 'روایت میں گہری جذباتی حکمت اور دوسروں کی وجدانی سمجھ عطا ہونا بیان کیا جاتا ہے'),
-    ('burj-personality', 'Traditionally, sought protection from those who would exploit their kindness', 'روایت کے مطابق ایسے لوگوں سے محفوظ سمجھے جاتے ہیں جو ان کی مہربانی کا ناجائز فائدہ اٹھانا چاہیں'),  # source fix P3 (Mario, 21 Oct 2026)
+    ('burj-personality', 'Traditionally, sought protection from those who would exploit their kindness', 'روایت کے مطابق ایسے لوگوں سے اللہ کی پناہ مانگی جاتی ہے جو ان کی مہربانی کا ناجائز فائدہ اٹھانا چاہیں'),  # source fix P3 (Mario, 21 Oct 2026)
     ('burj-personality', 'Must learn when to set boundaries without losing their compassionate nature', 'یہ سیکھنا ہوگا کہ اپنی ہمدرد فطرت کھوئے بغیر حدود کب قائم کی جائیں'),
     ('burj-personality', 'Speaks with warmth and conviction, inspiring others with fiery words', 'گرم جوشی اور یقین سے بولتے ہیں، آگ جیسے الفاظ سے دوسروں کو متاثر کرتے ہیں'),
     ('burj-personality', 'Slow to anger but fierce when provoked, burns bright but can cool with reason', 'غصہ دیر سے آتا ہے مگر چھیڑنے پر شدید ہوتا ہے؛ تیز بھڑکتے ہیں لیکن دلیل سے ٹھنڈے ہو سکتے ہیں'),
@@ -907,7 +907,7 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('burj-personality', 'Some find their directness too confrontational', 'بعض لوگوں کو ان کی صاف گوئی ضرورت سے زیادہ ٹکراؤ والی لگتی ہے'),
     ('burj-personality', 'Fire, light, sun, and illumination appear in dreams symbolizing clarity', 'خواب میں آگ، روشنی، سورج اور نور نظر آتے ہیں جو وضاحت کی علامت ہیں'),
     ('burj-personality', 'Granted natural leadership abilities and protective instincts', 'روایت میں فطری قیادت کی صلاحیت اور حفاظتی جبلت عطا ہونا بیان کیا جاتا ہے'),
-    ('burj-personality', 'Traditionally, sought protection in new ventures and bold initiatives', 'روایت کے مطابق نئے کاموں اور جرأت مندانہ اقدامات میں محفوظ سمجھے جاتے ہیں'),  # source fix P4 (Mario, 21 Oct 2026)
+    ('burj-personality', 'Traditionally, sought protection in new ventures and bold initiatives', 'روایت کے مطابق نئے کاموں اور جرأت مندانہ اقدامات میں اللہ سے حفاظت طلب کی جاتی ہے'),  # source fix P4 (Mario, 21 Oct 2026)
     ('burj-personality', 'Must balance assertiveness with patience and understanding', 'جرأت اور صبر و فہم کے درمیان توازن رکھنا ہوگا'),
     ('burj-personality', 'Speaks with careful consideration, words carry weight and permanence', 'سوچ سمجھ کر بولتے ہیں، ان کے الفاظ میں وزن اور پائیداری ہوتی ہے'),
     ('burj-personality', 'Slow to provoke but immovable when angered, like a mountain', 'غصہ دیر سے آتا ہے مگر ایک بار آ جائے تو پہاڑ کی طرح اٹل ہو جاتے ہیں'),
@@ -917,7 +917,7 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('burj-personality', 'Some find their cautiousness frustrating', 'بعض لوگوں کو ان کی احتیاط پسندی کھلتی ہے'),
     ('burj-personality', 'Earth, mountains, buildings, structures appear symbolizing foundation', 'زمین، پہاڑ، عمارتیں اور ڈھانچے نظر آتے ہیں جو بنیاد کی علامت ہیں'),
     ('burj-personality', 'Granted unshakeable faith and material security', 'روایت میں غیر متزلزل ایمان اور مادی تحفظ عطا ہونا بیان کیا جاتا ہے'),
-    ('burj-personality', 'Traditionally, sought protection in matters of property and long-term investments', 'روایت کے مطابق جائیداد اور طویل مدتی سرمایہ کاری کے معاملات میں محفوظ سمجھے جاتے ہیں'),  # source fix P5 (Mario, 21 Oct 2026)
+    ('burj-personality', 'Traditionally, sought protection in matters of property and long-term investments', 'روایت کے مطابق جائیداد اور طویل مدتی سرمایہ کاری کے معاملات میں اللہ سے حفاظت طلب کی جاتی ہے'),  # source fix P5 (Mario, 21 Oct 2026)
     ('burj-personality', 'Must learn flexibility while maintaining core stability', 'بنیادی استحکام برقرار رکھتے ہوئے لچک سیکھنی ہوگی'),
     ('burj-personality', 'Articulate and persuasive, natural communicator and teacher', 'فصیح اور قائل کرنے والے، فطری مقرر اور استاد'),
     ('burj-personality', 'Quick to flare up but also quick to cool down, like passing winds', 'جلد بھڑکتے ہیں مگر جلد ٹھنڈے بھی ہو جاتے ہیں، گزرتی ہواؤں کی طرح'),
@@ -927,7 +927,7 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('burj-personality', 'Some find their restlessness and changeability unsettling', 'بعض لوگوں کو ان کی بے چینی اور بدلتا مزاج پریشان کن لگتا ہے'),
     ('burj-personality', 'Flying, heights, sky, being carried upward, intellectual pursuits in dreams', 'خوابوں میں اڑنا، بلندیاں، آسمان، اوپر اٹھایا جانا اور فکری جستجو'),
     ('burj-personality', 'Granted exceptional communication abilities and adaptability', 'روایت میں غیر معمولی ابلاغی صلاحیت اور موافقت عطا ہونا بیان کیا جاتا ہے'),
-    ('burj-personality', 'Traditionally, sought protection in intellectual and social endeavors', 'روایت کے مطابق فکری اور سماجی کاموں میں محفوظ سمجھے جاتے ہیں'),  # source fix P6 (Mario, 21 Oct 2026)
+    ('burj-personality', 'Traditionally, sought protection in intellectual and social endeavors', 'روایت کے مطابق فکری اور سماجی کاموں میں اللہ سے حفاظت طلب کی جاتی ہے'),  # source fix P6 (Mario, 21 Oct 2026)
     ('burj-personality', 'Must develop depth and follow-through alongside versatility', 'ہمہ جہتی کے ساتھ گہرائی اور تکمیلِ کار بھی پیدا کرنی ہوگی'),
     ('burj-personality', 'Speaks with penetrating insight and emotional depth', 'گہری بصیرت اور جذباتی گہرائی کے ساتھ بولتے ہیں'),
     ('burj-personality', "Slow to show anger externally but feels deeply, when released it's a tidal wave", 'غصہ ظاہر کرنے میں دیر لگاتے ہیں مگر اندر سے شدت سے محسوس کرتے ہیں؛ جب غصہ پھوٹتا ہے تو طوفانی لہر بن جاتا ہے'),
@@ -937,7 +937,7 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('burj-personality', 'Some fear their ability to see through facades', 'بعض لوگ ان کی ظاہری پردوں کے آر پار دیکھنے کی صلاحیت سے ڈرتے ہیں'),
     ('burj-personality', 'Deep water, oceans, transformation, death and rebirth symbolism, mysteries', 'گہرا پانی، سمندر، تبدیلی، موت و حیات کی علامتیں اور اسرار'),
     ('burj-personality', 'Traditionally associated with deep insight and a gift for comforting others', 'روایت میں پوشیدہ حقائق کی گہری بصیرت اور دوسروں کو تسکین دینے کی صلاحیت عطا ہونا بیان کیا جاتا ہے'),  # source fix H3 (Mario, 21 Oct 2026)
-    ('burj-personality', "Traditionally, sought protection through life's deepest transformations", 'روایت کے مطابق زندگی کی گہری ترین تبدیلیوں کے دوران محفوظ سمجھے جاتے ہیں'),  # source fix P7 (Mario, 21 Oct 2026)
+    ('burj-personality', "Traditionally, sought protection through life's deepest transformations", 'روایت کے مطابق زندگی کی گہری ترین تبدیلیوں کے دوران اللہ سے حفاظت طلب کی جاتی ہے'),  # source fix P7 (Mario, 21 Oct 2026)
     ('burj-personality', 'Must learn to trust and let go of control', 'بھروسا کرنا اور قابو چھوڑنا سیکھنا ہوگا'),
     ('burj-personality', 'Speaks with enthusiasm and philosophical depth', 'جوش اور فلسفیانہ گہرائی کے ساتھ بولتے ہیں'),
     ('burj-personality', 'Slow to anger, but when provoked speaks with blazing directness', 'غصہ دیر سے آتا ہے، مگر چھیڑنے پر بے لاگ صاف گوئی سے بولتے ہیں'),
@@ -947,7 +947,7 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('burj-personality', 'Some find their bluntness too harsh', 'بعض لوگوں کو ان کی بے باکی ضرورت سے زیادہ سخت لگتی ہے'),
     ('burj-personality', 'Fire, travel, distant places, learning, spiritual journeys', 'آگ، سفر، دور دراز مقامات، علم اور روحانی سفر'),
     ('burj-personality', 'Granted wisdom and opportunities for expansion', 'روایت میں حکمت اور وسعت کے مواقع عطا ہونا بیان کیا جاتا ہے'),
-    ('burj-personality', 'Traditionally, sought protection in travel and seeking knowledge', 'روایت کے مطابق سفر اور علم کی طلب میں محفوظ سمجھے جاتے ہیں'),  # source fix P8 (Mario, 21 Oct 2026)
+    ('burj-personality', 'Traditionally, sought protection in travel and seeking knowledge', 'روایت کے مطابق سفر اور علم کی طلب میں اللہ سے حفاظت طلب کی جاتی ہے'),  # source fix P8 (Mario, 21 Oct 2026)
     ('burj-personality', 'Must develop discipline alongside freedom-seeking nature', 'آزادی پسند فطرت کے ساتھ نظم و ضبط بھی پیدا کرنا ہوگا'),
     ('burj-personality', 'Speaks with authority and measured wisdom', 'اختیار اور ناپی تلی حکمت کے ساتھ بولتے ہیں'),
     ('burj-personality', 'Very slow to anger, but when provoked is immovable like a mountain', 'غصہ بہت دیر سے آتا ہے، مگر چھیڑنے پر پہاڑ کی طرح اٹل ہو جاتے ہیں'),
@@ -957,7 +957,7 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('burj-personality', 'Some find their seriousness intimidating', 'بعض لوگوں کو ان کی سنجیدگی مرعوب کن لگتی ہے'),
     ('burj-personality', 'Mountains, structures, achievements, climbing upward', 'پہاڑ، ڈھانچے، کامیابیاں اور اوپر چڑھنا'),
     ('burj-personality', 'Granted patience and ultimate success through perseverance', 'روایت میں صبر اور استقامت کے ذریعے اعلیٰ کامیابی عطا ہونا بیان کیا جاتا ہے'),
-    ('burj-personality', 'Traditionally, sought protection in long-term endeavors and career', 'روایت کے مطابق طویل مدتی کاموں اور پیشے میں محفوظ سمجھے جاتے ہیں'),  # source fix P9 (Mario, 21 Oct 2026)
+    ('burj-personality', 'Traditionally, sought protection in long-term endeavors and career', 'روایت کے مطابق طویل مدتی کاموں اور پیشے میں اللہ سے حفاظت طلب کی جاتی ہے'),  # source fix P9 (Mario, 21 Oct 2026)
     ('burj-personality', 'Must learn to balance ambition with compassion', 'بلند حوصلگی اور ہمدردی کے درمیان توازن سیکھنا ہوگا'),
     ('burj-personality', 'Speaks with vision for the future and community welfare', 'مستقبل کے نقطۂ نظر اور برادری کی فلاح کے جذبے کے ساتھ بولتے ہیں'),
     ('burj-personality', 'Detached when angry, may become aloof or distant', 'غصے میں الگ تھلگ ہو جاتے ہیں، لاتعلق یا دور ہو سکتے ہیں'),
@@ -967,7 +967,7 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('burj-personality', 'Some find their unconventional ideas threatening', 'بعض لوگوں کو ان کے غیر روایتی خیالات سے خطرہ محسوس ہوتا ہے'),
     ('burj-personality', 'Flying, future visions, communities, gatherings, innovative solutions', 'اڑنا، مستقبل کے تصورات، برادریاں، اجتماعات اور جدید حل'),
     ('burj-personality', 'Granted vision for collective benefit and innovation', 'روایت میں اجتماعی فائدے اور جدت کا وژن عطا ہونا بیان کیا جاتا ہے'),
-    ('burj-personality', 'Traditionally, sought protection in community service and humanitarian work', 'روایت کے مطابق برادری کی خدمت اور انسان دوست کام میں محفوظ سمجھے جاتے ہیں'),  # source fix P10 (Mario, 21 Oct 2026)
+    ('burj-personality', 'Traditionally, sought protection in community service and humanitarian work', 'روایت کے مطابق برادری کی خدمت اور انسان دوست کاموں میں اللہ سے حفاظت طلب کی جاتی ہے'),  # source fix P10 (Mario, 21 Oct 2026)
     ('burj-personality', 'Must balance idealism with practical implementation', 'مثالیت پسندی اور عملی نفاذ کے درمیان توازن رکھنا ہوگا'),
     ('burj-personality', 'Speaks with empathy and spiritual understanding', 'ہمدردی اور روحانی فہم کے ساتھ بولتے ہیں'),
     ('burj-personality', 'Absorbs anger internally, may become withdrawn or melancholic', 'غصہ اندر ہی اندر جذب کر لیتے ہیں، گوشہ نشین یا اداس ہو سکتے ہیں'),
@@ -977,7 +977,7 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('burj-personality', 'Some exploit their inability to say no', 'بعض لوگ ان کے «نہ» نہ کہہ سکنے کا فائدہ اٹھاتے ہیں'),
     ('burj-personality', 'Water, oceans, spiritual visions, mystical experiences, helping others', 'پانی، سمندر، روحانی رؤیا، صوفیانہ تجربات اور دوسروں کی مدد'),
     ('burj-personality', 'Traditionally associated with a deep spiritual connection and a caring nature', 'روایت میں گہرا روحانی تعلق اور دوسروں کو تسکین دینے کی صلاحیت عطا ہونا بیان کیا جاتا ہے'),  # source fix H5 (Mario, 21 Oct 2026)
-    ('burj-personality', 'Traditionally, sought protection through service to others', 'روایت کے مطابق دوسروں کی خدمت کے ذریعے محفوظ سمجھے جاتے ہیں'),  # source fix P11 (Mario, 21 Oct 2026)
+    ('burj-personality', 'Traditionally, sought protection through service to others', 'روایت کے مطابق دوسروں کی خدمت کے ذریعے اللہ کی حفاظت طلب کی جاتی ہے'),  # source fix P11 (Mario, 21 Oct 2026)
     ('burj-personality', 'Must learn healthy boundaries without losing compassion', 'ہمدردی کھوئے بغیر صحت مند حدود قائم کرنا سیکھنا ہوگا'),
     ('burj-blessed-day', 'Starting new business ventures and projects', 'نئے کاروباری منصوبے اور کام شروع کرنا'),
     ('burj-blessed-day', 'Important meetings with potential partners', 'ممکنہ شراکت داروں کے ساتھ اہم ملاقاتیں'),
@@ -987,7 +987,7 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('burj-blessed-day', 'Launching new initiatives', 'نئے اقدامات کا آغاز'),
     ('burj-blessed-day', 'Confronting challenges head-on', 'چیلنجوں کا سامنا ڈٹ کر کرنا'),
     ('burj-blessed-day', 'Mars energy peaks on this day, amplifying your natural fire', 'اس دن مریخ کی توانائی عروج پر سمجھی جاتی ہے، جو آپ کی فطری آتشی کیفیت کو بڑھاتی ہے'),
-    ('burj-blessed-day', 'Traditionally regarded as when your charisma and persuasive power are at their strongest', 'روایت میں آپ کی کشش اور قائل کرنے کی صلاحیت اپنی بلند ترین سطح پر سمجھی جاتی ہے'),  # source fix H8 (Mario, 21 Oct 2026)
+    ('burj-blessed-day', 'Traditionally regarded as when your charisma and persuasive power are at their strongest', 'روایت میں اس دن آپ کی کشش اور قائل کرنے کی صلاحیت اپنی بلند ترین سطح پر سمجھی جاتی ہے'),  # source fix H8 (Mario, 21 Oct 2026)
     ('burj-blessed-day', 'Divine support flows most freely on Tuesdays', 'روایت میں سمجھا جاتا ہے کہ منگل کو الٰہی مدد سب سے زیادہ کشادگی سے ملتی ہے'),
     ('burj-blessed-day', 'Making important financial decisions and investments', 'اہم مالی فیصلے اور سرمایہ کاری کرنا'),
     ('burj-blessed-day', 'Signing property or land contracts', 'جائیداد یا زمین کے معاہدوں پر دستخط'),
@@ -1087,7 +1087,7 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('burj-blessed-day', 'Setting serious intentions', 'سنجیدہ نیتیں کرنا'),
     ('burj-blessed-day', 'Saturday is THE BEST day for this buruj', 'ہفتہ اس برج کے لیے بہترین دن سمجھا جاتا ہے'),
     ('burj-blessed-day', 'Saturn energy peaks - most powerful for serious undertakings', 'روایت میں زحل کی توانائی عروج پر سمجھی جاتی ہے — سنجیدہ کاموں کے لیے سب سے مؤثر'),
-    ('burj-blessed-day', 'Traditionally regarded as when your natural discipline and authority are strongest', 'روایت میں آپ کا فطری نظم و ضبط اور اختیار سب سے مضبوط سمجھے جاتے ہیں'),  # source fix H7 (Mario, 21 Oct 2026)
+    ('burj-blessed-day', 'Traditionally regarded as when your natural discipline and authority are strongest', 'روایت میں اس دن آپ کا فطری نظم و ضبط اور اختیار سب سے مضبوط سمجھے جاتے ہیں'),  # source fix H7 (Mario, 21 Oct 2026)
     ('burj-blessed-day', 'Ideal for establishing lasting structures', 'پائیدار ڈھانچے قائم کرنے کے لیے موزوں'),
     ('burj-blessed-day', 'Perfect for patient, long-term planning', 'صبر و تحمل کے ساتھ طویل مدتی منصوبہ بندی کے لیے بہترین'),
     ('burj-blessed-day', 'Most auspicious day for your lifetime sadaqah', 'آپ کے عمر بھر کے صدقے کے لیے سب سے موزوں دن'),
@@ -1164,7 +1164,7 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('burj-sadaqah', 'Give clothes to charitable organizations', 'فلاحی تنظیموں کو کپڑے دیں'),
     ('burj-sadaqah', 'Provide clothing to refugees and displaced persons', 'مہاجرین اور بے گھر افراد کو لباس فراہم کریں'),
     ('burj-sadaqah', 'Support clothing drives for the needy', 'ضرورت مندوں کے لیے کپڑوں کی مہمات کی مدد کریں'),
-    ('burj-sadaqah', 'Donate to local charitable organizations (e.g. a community food bank or relief charity)', 'مقامی فلاحی اداروں کو عطیہ دیں (مثلاً محلے کا فوڈ بینک یا امدادی ادارہ)'),  # source fix F6 (Mario, 21 Oct 2026) — DRAFT, not reviewed
+    ('burj-sadaqah', 'Donate to local charitable organizations (e.g. a community food bank or relief charity)', 'مقامی فلاحی اداروں کو عطیہ دیں (مثلاً محلے کا فوڈ بینک یا امدادی ادارہ)'),  # source fix F6 (Mario, 21 Oct 2026) — reviewed, Batch 16 (pass 5)
     ('burj-sadaqah', 'Sponsor clothing for children in need', 'ضرورت مند بچوں کے لیے لباس کی کفالت کریں'),
     ('burj-sadaqah', 'One complete outfit: shirt + trousers (or full African dress with trousers) + 1000 cowries OR 1000 of any currency', 'ایک مکمل جوڑا: قمیص + پتلون (یا پتلون کے ساتھ مکمل افریقی لباس) + 1000 کوڑیاں یا کسی بھی کرنسی کے 1000'),
     ('burj-sadaqah', 'Shirt and trouser OR full African traditional attire (kaftan with trouser)', 'قمیص اور پتلون یا مکمل افریقی روایتی لباس (پتلون کے ساتھ کفتان)'),
@@ -1756,13 +1756,13 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('zodiac-sadaqah', '3 chickens — black, white and red', '3 مرغیاں — سیاہ، سفید اور سرخ'),
     ('zodiac-sadaqah', 'Preferred day: Friday when favourable; alternative: Thursday', 'ترجیحی دن: موافق ہونے پر جمعہ؛ متبادل: جمعرات'),
     ('zodiac-sadaqah', 'Mars (al-Mirrīkh / المريخ)', 'مریخ'),
-    ('zodiac-sadaqah', 'A special form of sadaqah associated with Scorpio is giving a ring, with stones such as rose agate or amethyst.', 'عقرب سے منسوب صدقے کی ایک خاص صورت گلابی عقیق یا جمست (ایمتھسٹ) جیسے پتھروں والی انگوٹھی دینا ہے۔'),  # source fix F3b (Mario, 21 Oct 2026) — DRAFT, not reviewed
+    ('zodiac-sadaqah', 'A special form of sadaqah associated with Scorpio is giving a ring, with stones such as rose agate or amethyst.', 'عقرب سے منسوب صدقے کی ایک خاص صورت گلابی عقیق یا جمست (ایمتھسٹ) جیسے نگینے والی انگوٹھی صدقے میں دینا ہے۔'),  # source fix F3b (Mario, 21 Oct 2026) — reviewed, Batch 16 (pass 5)
     ('zodiac-sadaqah', 'Giving a white ram or white sheep, particularly associated with favourable conditions involving Mars.', 'سفید مینڈھا یا سفید بھیڑ دینا، جو خاص طور پر مریخ سے متعلق موافق حالات سے منسوب ہے۔'),
     ('zodiac-sadaqah', 'When Mars is transiting a favourable or friendly zodiac sign, such as Aries, a red goat may be given as sadaqah. The goat is prepared and its meat divided into portions, distributed among people who can benefit from it until the meat has been given out. The emphasis is on distributing the meat, rather than keeping it for personal consumption.', 'جب مریخ کسی موافق یا دوست برج، جیسے حمل، سے گزر رہا ہو تو سرخ بکرا صدقے کے طور پر دیا جا سکتا ہے۔ بکرا تیار کیا جاتا ہے اور اس کا گوشت حصوں میں بانٹ کر ایسے لوگوں میں تقسیم کیا جاتا ہے جو اس سے فائدہ اٹھا سکیں، یہاں تک کہ سارا گوشت بٹ جائے۔ زور گوشت کی تقسیم پر ہے، اسے ذاتی استعمال کے لیے رکھنے پر نہیں۔'),
     ('zodiac-sadaqah', 'Giving water is an important sadaqah for Scorpio, particularly to sick or hospitalised people — for example taking drinking water to a hospital and giving it freely to patients who need it. This form is especially associated with Scorpio when beginning a new project or undertaking a journey.', 'پانی دینا عقرب کے لیے ایک اہم صدقہ ہے، خاص طور پر بیماروں یا ہسپتال میں داخل لوگوں کو — مثلاً پینے کا پانی ہسپتال لے جا کر ضرورت مند مریضوں کو بلا معاوضہ دینا۔ یہ صورت خاص طور پر عقرب سے اس وقت وابستہ ہے جب کوئی نیا منصوبہ شروع کیا جائے یا سفر اختیار کیا جائے۔'),
     ('zodiac-sadaqah', 'Giving rice and fish together as a single sadaqah, both uncooked (raw), distributed to people or families who can benefit from them.', 'چاول اور مچھلی کو ایک ہی صدقے کے طور پر اکٹھے دینا، دونوں کچے (بغیر پکے)، ان لوگوں یا خاندانوں میں تقسیم کیے جائیں جو ان سے فائدہ اٹھا سکیں۔'),
     ('zodiac-sadaqah', 'Tuesday is particularly associated with Scorpio because of its connection with Mars, the planetary ruler of the sign, and can be chosen when Mars is in a favourable or neutral transit. Sunday may also be considered, particularly when the Sun is in a favourable condition. The planetary condition should be considered when selecting the timing according to the tradition.', 'منگل کو عقرب سے خاص نسبت ہے، کیونکہ منگل مریخ کا دن ہے اور مریخ اس برج کا حاکم سیارہ ہے؛ یہ دن اس وقت چنا جا سکتا ہے جب مریخ موافق یا معتدل گزر میں ہو۔ اتوار پر بھی غور کیا جا سکتا ہے، خاص طور پر جب شمس موافق حالت میں ہو۔ روایت کے مطابق وقت کے انتخاب میں سیارے کی حالت کو پیشِ نظر رکھنا چاہیے۔'),
-    ('zodiac-sadaqah', 'Ring — rose agate or amethyst', 'انگوٹھی — گلابی عقیق یا جمست'),  # source fix F3c (Mario, 21 Oct 2026) — DRAFT, not reviewed
+    ('zodiac-sadaqah', 'Ring — rose agate or amethyst', 'انگوٹھی — گلابی عقیق یا جمست'),  # source fix F3c (Mario, 21 Oct 2026) — reviewed, Batch 16 (pass 5)
     ('zodiac-sadaqah', 'White ram or sheep', 'سفید مینڈھا یا بھیڑ'),
     ('zodiac-sadaqah', 'Red goat — during a favourable Mars transit; meat divided and distributed', 'سرخ بکرا — مریخ کے موافق گزر کے دوران؛ گوشت حصوں میں بانٹ کر تقسیم'),
     ('zodiac-sadaqah', 'Water — especially to sick or hospitalised people', 'پانی — خاص طور پر بیماروں یا ہسپتال میں داخل لوگوں کو'),

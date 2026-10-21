@@ -27,8 +27,8 @@ REVIEWER_ENTRIES = [
     ('calculatorContent.ts ELEMENT_GUIDANCE.air', 'Your airy nature brings clarity and communication. Seek knowledge and share wisdom with gentle words and pure intention.', 'روایتی تعبیر میں ہوائی طبیعت وضاحت اور ابلاغ سے منسوب ہے۔ علم حاصل کریں اور نرم الفاظ اور خالص نیت کے ساتھ حکمت بانٹیں۔'),
     ('calculatorContent.ts ELEMENT_GUIDANCE.earth', 'Your grounded nature brings stability and patience. Build your spiritual foundation through consistent practice and gratitude.', 'روایتی تعبیر میں خاکی طبیعت استحکام اور صبر سے منسوب ہے۔ مسلسل معمول اور شکر کے ذریعے اپنی روحانی بنیاد مضبوط کریں۔'),
     ('sacred.ts SACRED_SIGNIFICANCE[7]', 'Seven heavens, seven days of creation', 'سات آسمان، تخلیق کے سات دن'),
-    ('sacred.ts SACRED_SIGNIFICANCE[12]', 'Twelve months of the year (9:36)', 'سال کے بارہ مہینے (9:36)'),  # source fix S1 (Mario, 21 Oct 2026) — DRAFT, not reviewed
-    ('sacred.ts SACRED_SIGNIFICANCE[19]', 'Mentioned in 74:30 («عَلَيْهَا تِسْعَةَ عَشَرَ»); some see a numerical pattern', '74:30 میں مذکور («عَلَيْهَا تِسْعَةَ عَشَرَ»)؛ بعض اس میں عددی ترتیب دیکھتے ہیں'),  # source fix S2 (Mario, 21 Oct 2026) — DRAFT, not reviewed
+    ('sacred.ts SACRED_SIGNIFICANCE[12]', 'Twelve months of the year (9:36)', 'سال کے بارہ مہینے (9:36)'),  # source fix S1 (Mario, 21 Oct 2026) — reviewed, Batch 16 (pass 5)
+    ('sacred.ts SACRED_SIGNIFICANCE[19]', 'Mentioned in 74:30 («عَلَيْهَا تِسْعَةَ عَشَرَ»); some see a numerical pattern', 'سورۂ مدثر (74:30) میں مذکور: ﴿عَلَيْهَا تِسْعَةَ عَشَرَ﴾؛ بعض لوگ اس میں ایک عددی ترتیب دیکھتے ہیں'),  # source fix S2 (Mario, 21 Oct 2026) — reviewed, Batch 16 (pass 5)
     ('sacred.ts SACRED_SIGNIFICANCE[70]', 'Surah Yā-Sīn (يس)', 'سورۂ یٰسٓ (يس)'),
     ('sacred.ts SACRED_SIGNIFICANCE[99]', 'Asmāʾ al-Ḥusnā (Beautiful Names)', 'اسمائے حسنیٰ'),  # source fix S3 (Mario, 21 Oct 2026)
     ('sacred.ts SACRED_SIGNIFICANCE[114]', 'Surahs in the Qurʾan', 'قرآن کی سورتیں'),

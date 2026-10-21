@@ -1,11 +1,11 @@
 {
- "about": "Review status of the Urdu (/ur) strings. Sheet 2 = /workspace review file asrar-ur-review-2.md (2,336 rows), all reviewed by the native Language Reviewer (Oct 2026). reviewed-corrected: correction applied; reviewed: confirmed as is; reviewed-kept: reviewer suggestion not applied on purpose (see note); reviewed-flagged: left for Mario / the source owner. Batch 13 (/ur/abjad calculator UI, src/features/calculator/i18n/ur.ts) and Batch 14 (burujData.json practice nights) were reviewed in pass 3. Batch 15 (calculator result data and practice-hint meanings) was reviewed in pass 4; pass3_reviewer_data are the reviewer-written result-data strings (reviewed). Source fixes approved by Mario on 21 Oct 2026 (option A) moved reviewed Urdu to the new English keys; 6 keys whose meaning changed got new Urdu drafts (status draft) — see source_fixes_2026_10_21.",
+ "about": "Review status of the Urdu (/ur) strings. Sheet 2 = /workspace review file asrar-ur-review-2.md (2,336 rows), all reviewed by the native Language Reviewer (Oct 2026). reviewed-corrected: correction applied; reviewed: confirmed as is; reviewed-kept: reviewer suggestion not applied on purpose (see note); reviewed-flagged: left for Mario / the source owner. Batch 13 (/ur/abjad calculator UI, src/features/calculator/i18n/ur.ts) and Batch 14 (burujData.json practice nights) were reviewed in pass 3. Batch 15 (calculator result data and practice-hint meanings) was reviewed in pass 4; pass3_reviewer_data are the reviewer-written result-data strings (reviewed). Source fixes approved by Mario on 21 Oct 2026 (option A) moved reviewed Urdu to the new English keys; 6 keys whose meaning changed got new Urdu drafts (status draft) — see source_fixes_2026_10_21. Batch 16 (pass 5, 21 Oct 2026): the Language Reviewer checked the PR #101 source-fix strings; the 6 drafts are now reviewed (S2 and F3b corrected), P1–P11 and 5.178/5.207 corrected.",
  "counts": {
   "sheet2": {
-   "reviewed-corrected": 417,
-   "reviewed": 1909,
+   "reviewed-corrected": 415,
+   "reviewed": 1912,
    "reviewed-kept": 6,
-   "reviewed-flagged": 4
+   "reviewed-flagged": 3
   },
   "batch13": {
    "reviewed": 126,
@@ -21,10 +21,14 @@
    "reviewed-corrected (optional)": 8
   },
   "source_fixes_2026_10_21": {
-   "reviewed": 32,
-   "draft": 6
+   "reviewed": 38
   },
-  "pass4_reviewer_ramadan": 5
+  "pass4_reviewer_ramadan": 5,
+  "batch16_pass5": {
+   "fix": 12,
+   "optional_applied": 3,
+   "ok_marked_reviewed": 5
+  }
  },
  "sheet2": {
   "1.1": {
@@ -2004,10 +2008,11 @@
   "3.283": {
    "en": "Ring Sadaqah",
    "loc": "catalog_ai_draft_ui.py:618 [sadaqa-page]",
-   "status": "draft",
+   "status": "reviewed",
    "note": "flag for Mario (EN source)",
    "en_before_source_fix": "Protective Ring Sadaqah",
-   "source_fix": "F3a"
+   "source_fix": "F3a",
+   "batch16": "OK"
   },
   "3.284": {
    "en": "White Ram or Sheep Sadaqah",
@@ -2483,9 +2488,10 @@
   "3.378": {
    "en": "A special form of sadaqah associated with Scorpio is giving a ring, with stones such as rose agate or amethyst.",
    "loc": "catalog_ai_draft_ui.py:1741 [zodiac-sadaqah]",
-   "status": "draft",
+   "status": "reviewed",
    "en_before_source_fix": "A special form of sadaqah associated with Scorpio is having or giving a good protective ring, with stones such as rose agate or amethyst. The ring is regarded within this tradition as having protective and beneficial qualities and is also considered part of the sadaqah practice for Scorpio.",
-   "source_fix": "F3b"
+   "source_fix": "F3b",
+   "batch16": "OK"
   },
   "3.379": {
    "en": "When Mars is transiting a favourable or friendly zodiac sign, such as Aries, a red goat may be given as sadaqah. The goat is prepared and its meat divided into portions, distributed among people who can benefit from it until the meat has been given out. The emphasis is on distributing the meat, rather than keeping it for personal consumption.",
@@ -5134,9 +5140,10 @@
   "7.38": {
    "en": "Donate to local charitable organizations (e.g. a community food bank or relief charity)",
    "loc": "catalog_ai_draft_ui.py:1149 [burj-sadaqah]",
-   "status": "draft",
+   "status": "reviewed",
    "en_before_source_fix": "Donate to organizations like Goodwill or Salvation Army",
-   "source_fix": "F6"
+   "source_fix": "F6",
+   "batch16": "OK"
   },
   "7.39": {
    "en": "Sponsor clothing for children in need",
@@ -11474,9 +11481,10 @@
   "12.91": {
    "en": "Ring — rose agate or amethyst",
    "loc": "catalog_ai_draft_ui.py:1747 [zodiac-sadaqah]",
-   "status": "draft",
+   "status": "reviewed",
    "en_before_source_fix": "Protective ring — rose agate or amethyst",
-   "source_fix": "F3c"
+   "source_fix": "F3c",
+   "batch16": "OK"
   },
   "12.92": {
    "en": "White ram or sheep",
@@ -13170,17 +13178,19 @@
    "loc": "sacred.ts SACRED_SIGNIFICANCE[12]",
    "en": "Twelve months of the year (9:36)",
    "ur": "سال کے بارہ مہینے (9:36)",
-   "status": "draft",
+   "status": "reviewed",
    "en_before_source_fix": "Twelve Imams, twelve months",
-   "source_fix": "S1"
+   "source_fix": "S1",
+   "batch16": "OK"
   },
   {
    "loc": "sacred.ts SACRED_SIGNIFICANCE[19]",
    "en": "Mentioned in 74:30 («عَلَيْهَا تِسْعَةَ عَشَرَ»); some see a numerical pattern",
-   "ur": "74:30 میں مذکور («عَلَيْهَا تِسْعَةَ عَشَرَ»)؛ بعض اس میں عددی ترتیب دیکھتے ہیں",
-   "status": "draft",
+   "ur": "سورۂ مدثر (74:30) میں مذکور: ﴿عَلَيْهَا تِسْعَةَ عَشَرَ﴾؛ بعض لوگ اس میں ایک عددی ترتیب دیکھتے ہیں",
+   "status": "reviewed-corrected",
    "en_before_source_fix": "Numerical miracle of the Qurʾan",
-   "source_fix": "S2"
+   "source_fix": "S2",
+   "batch16": "16.S2"
   },
   {
    "loc": "sacred.ts SACRED_SIGNIFICANCE[70]",
@@ -14601,15 +14611,17 @@
    "id": "H7",
    "en": "Traditionally regarded as when your natural discipline and authority are strongest",
    "en_before": "Your natural discipline and authority are strongest",
-   "ur": "روایت میں آپ کا فطری نظم و ضبط اور اختیار سب سے مضبوط سمجھے جاتے ہیں",
-   "status": "reviewed"
+   "ur": "روایت میں اس دن آپ کا فطری نظم و ضبط اور اختیار سب سے مضبوط سمجھے جاتے ہیں",
+   "status": "reviewed-corrected",
+   "batch16": "16.5.178"
   },
   {
    "id": "H8",
    "en": "Traditionally regarded as when your charisma and persuasive power are at their strongest",
    "en_before": "Your charisma and persuasive power are at their strongest",
-   "ur": "روایت میں آپ کی کشش اور قائل کرنے کی صلاحیت اپنی بلند ترین سطح پر سمجھی جاتی ہے",
-   "status": "reviewed"
+   "ur": "روایت میں اس دن آپ کی کشش اور قائل کرنے کی صلاحیت اپنی بلند ترین سطح پر سمجھی جاتی ہے",
+   "status": "reviewed-corrected",
+   "batch16": "16.5.207"
   },
   {
    "id": "C1",
@@ -14629,78 +14641,89 @@
    "id": "P1",
    "en": "Traditionally, sought protection in matters of sustenance and material provision",
    "en_before": "Protected in matters of sustenance and material provision",
-   "ur": "روایت کے مطابق روزی اور مادی ضروریات کے معاملات میں محفوظ سمجھے جاتے ہیں",
-   "status": "reviewed"
+   "ur": "روایت کے مطابق روزی اور مادی ضروریات کے معاملات میں اللہ سے حفاظت طلب کی جاتی ہے",
+   "status": "reviewed-corrected",
+   "batch16": "16.P1"
   },
   {
    "id": "P2",
    "en": "Traditionally, seen as under divine care despite their struggles with anger",
    "en_before": "Receives divine protection despite their challenges with anger",
-   "ur": "روایت کے مطابق غصے سے متعلق مشکلات کے باوجود الٰہی حفاظت حاصل سمجھی جاتی ہے",
-   "status": "reviewed"
+   "ur": "روایت کے مطابق غصے سے متعلق مشکلات کے باوجود اللہ کی عنایت ان کے شاملِ حال سمجھی جاتی ہے",
+   "status": "reviewed-corrected",
+   "batch16": "16.P2"
   },
   {
    "id": "P3",
    "en": "Traditionally, sought protection from those who would exploit their kindness",
    "en_before": "Protected from those who would exploit their kindness",
-   "ur": "روایت کے مطابق ایسے لوگوں سے محفوظ سمجھے جاتے ہیں جو ان کی مہربانی کا ناجائز فائدہ اٹھانا چاہیں",
-   "status": "reviewed"
+   "ur": "روایت کے مطابق ایسے لوگوں سے اللہ کی پناہ مانگی جاتی ہے جو ان کی مہربانی کا ناجائز فائدہ اٹھانا چاہیں",
+   "status": "reviewed-corrected",
+   "batch16": "16.P3"
   },
   {
    "id": "P4",
    "en": "Traditionally, sought protection in new ventures and bold initiatives",
    "en_before": "Protected in new ventures and bold initiatives",
-   "ur": "روایت کے مطابق نئے کاموں اور جرأت مندانہ اقدامات میں محفوظ سمجھے جاتے ہیں",
-   "status": "reviewed"
+   "ur": "روایت کے مطابق نئے کاموں اور جرأت مندانہ اقدامات میں اللہ سے حفاظت طلب کی جاتی ہے",
+   "status": "reviewed-corrected",
+   "batch16": "16.P4"
   },
   {
    "id": "P5",
    "en": "Traditionally, sought protection in matters of property and long-term investments",
    "en_before": "Protected in matters of property and long-term investments",
-   "ur": "روایت کے مطابق جائیداد اور طویل مدتی سرمایہ کاری کے معاملات میں محفوظ سمجھے جاتے ہیں",
-   "status": "reviewed"
+   "ur": "روایت کے مطابق جائیداد اور طویل مدتی سرمایہ کاری کے معاملات میں اللہ سے حفاظت طلب کی جاتی ہے",
+   "status": "reviewed-corrected",
+   "batch16": "16.P5"
   },
   {
    "id": "P6",
    "en": "Traditionally, sought protection in intellectual and social endeavors",
    "en_before": "Protected in intellectual and social endeavors",
-   "ur": "روایت کے مطابق فکری اور سماجی کاموں میں محفوظ سمجھے جاتے ہیں",
-   "status": "reviewed"
+   "ur": "روایت کے مطابق فکری اور سماجی کاموں میں اللہ سے حفاظت طلب کی جاتی ہے",
+   "status": "reviewed-corrected",
+   "batch16": "16.P6"
   },
   {
    "id": "P7",
    "en": "Traditionally, sought protection through life's deepest transformations",
    "en_before": "Protected through life's deepest transformations",
-   "ur": "روایت کے مطابق زندگی کی گہری ترین تبدیلیوں کے دوران محفوظ سمجھے جاتے ہیں",
-   "status": "reviewed"
+   "ur": "روایت کے مطابق زندگی کی گہری ترین تبدیلیوں کے دوران اللہ سے حفاظت طلب کی جاتی ہے",
+   "status": "reviewed-corrected",
+   "batch16": "16.P7"
   },
   {
    "id": "P8",
    "en": "Traditionally, sought protection in travel and seeking knowledge",
    "en_before": "Protected in travel and seeking knowledge",
-   "ur": "روایت کے مطابق سفر اور علم کی طلب میں محفوظ سمجھے جاتے ہیں",
-   "status": "reviewed"
+   "ur": "روایت کے مطابق سفر اور علم کی طلب میں اللہ سے حفاظت طلب کی جاتی ہے",
+   "status": "reviewed-corrected",
+   "batch16": "16.P8"
   },
   {
    "id": "P9",
    "en": "Traditionally, sought protection in long-term endeavors and career",
    "en_before": "Protected in long-term endeavors and career",
-   "ur": "روایت کے مطابق طویل مدتی کاموں اور پیشے میں محفوظ سمجھے جاتے ہیں",
-   "status": "reviewed"
+   "ur": "روایت کے مطابق طویل مدتی کاموں اور پیشے میں اللہ سے حفاظت طلب کی جاتی ہے",
+   "status": "reviewed-corrected",
+   "batch16": "16.P9"
   },
   {
    "id": "P10",
    "en": "Traditionally, sought protection in community service and humanitarian work",
    "en_before": "Protected in community service and humanitarian work",
-   "ur": "روایت کے مطابق برادری کی خدمت اور انسان دوست کام میں محفوظ سمجھے جاتے ہیں",
-   "status": "reviewed"
+   "ur": "روایت کے مطابق برادری کی خدمت اور انسان دوست کاموں میں اللہ سے حفاظت طلب کی جاتی ہے",
+   "status": "reviewed-corrected",
+   "batch16": "16.P10"
   },
   {
    "id": "P11",
    "en": "Traditionally, sought protection through service to others",
    "en_before": "Protected through service to others",
-   "ur": "روایت کے مطابق دوسروں کی خدمت کے ذریعے محفوظ سمجھے جاتے ہیں",
-   "status": "reviewed"
+   "ur": "روایت کے مطابق دوسروں کی خدمت کے ذریعے اللہ کی حفاظت طلب کی جاتی ہے",
+   "status": "reviewed-corrected",
+   "batch16": "16.P11"
   },
   {
    "id": "F1",
@@ -14714,42 +14737,48 @@
    "en": "Ring Sadaqah",
    "en_before": "Protective Ring Sadaqah",
    "ur": "انگوٹھی کا صدقہ",
-   "status": "draft"
+   "status": "reviewed",
+   "batch16": "OK"
   },
   {
    "id": "F3b",
    "en": "A special form of sadaqah associated with Scorpio is giving a ring, with stones such as rose agate or amethyst.",
    "en_before": "A special form of sadaqah associated with Scorpio is having or giving a good protective ring, with stones such as rose agate or amethyst. The ring is regarded within this tradition as having protective and beneficial qualities and is also considered part of the sadaqah practice for Scorpio.",
-   "ur": "عقرب سے منسوب صدقے کی ایک خاص صورت گلابی عقیق یا جمست (ایمتھسٹ) جیسے پتھروں والی انگوٹھی دینا ہے۔",
-   "status": "draft"
+   "ur": "عقرب سے منسوب صدقے کی ایک خاص صورت گلابی عقیق یا جمست (ایمتھسٹ) جیسے نگینے والی انگوٹھی صدقے میں دینا ہے۔",
+   "status": "reviewed-corrected",
+   "batch16": "16.F3b"
   },
   {
    "id": "F3c",
    "en": "Ring — rose agate or amethyst",
    "en_before": "Protective ring — rose agate or amethyst",
    "ur": "انگوٹھی — گلابی عقیق یا جمست",
-   "status": "draft"
+   "status": "reviewed",
+   "batch16": "OK"
   },
   {
    "id": "F6",
    "en": "Donate to local charitable organizations (e.g. a community food bank or relief charity)",
    "en_before": "Donate to organizations like Goodwill or Salvation Army",
    "ur": "مقامی فلاحی اداروں کو عطیہ دیں (مثلاً محلے کا فوڈ بینک یا امدادی ادارہ)",
-   "status": "draft"
+   "status": "reviewed",
+   "batch16": "OK"
   },
   {
    "id": "S1",
    "en": "Twelve months of the year (9:36)",
    "en_before": "Twelve Imams, twelve months",
    "ur": "سال کے بارہ مہینے (9:36)",
-   "status": "draft"
+   "status": "reviewed",
+   "batch16": "OK"
   },
   {
    "id": "S2",
    "en": "Mentioned in 74:30 («عَلَيْهَا تِسْعَةَ عَشَرَ»); some see a numerical pattern",
    "en_before": "Numerical miracle of the Qurʾan",
-   "ur": "74:30 میں مذکور («عَلَيْهَا تِسْعَةَ عَشَرَ»)؛ بعض اس میں عددی ترتیب دیکھتے ہیں",
-   "status": "draft"
+   "ur": "سورۂ مدثر (74:30) میں مذکور: ﴿عَلَيْهَا تِسْعَةَ عَشَرَ﴾؛ بعض لوگ اس میں ایک عددی ترتیب دیکھتے ہیں",
+   "status": "reviewed-corrected",
+   "batch16": "16.S2"
   },
   {
    "id": "S3",

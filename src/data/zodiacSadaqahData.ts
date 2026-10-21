@@ -528,11 +528,11 @@ export const ZODIAC_SADAQAH: Record<ZodiacSignId, ZodiacSadaqahEntry> = {
     rulingPlanet: { en: 'Mars (al-Mirrīkh / المريخ)', fr: 'Mars (al-Mirrīkh / المريخ)', ar: 'المريخ' },
     specificForms: [
       {
-        title: { en: 'Ring Sadaqah', fr: 'Sadaqah de la bague protectrice', ar: 'صدقة الخاتم الواقي' },
+        title: { en: 'Ring Sadaqah', fr: 'Sadaqah de la bague', ar: 'صدقة الخاتم' },
         body: {
           en: 'A special form of sadaqah associated with Scorpio is giving a ring, with stones such as rose agate or amethyst.',
-          fr: "Une forme particulière de sadaqah associée au Scorpion consiste à posséder ou à offrir une bonne bague protectrice, sertie de pierres telles que l'agate rose ou l'améthyste. Cette bague est considérée dans cette tradition comme ayant des qualités protectrices et bénéfiques, et fait également partie de la pratique de sadaqah du Scorpion.",
-          ar: 'من الأشكال الخاصة للصدقة المرتبطة بالعقرب امتلاك أو تقديم خاتم واقٍ جيد، بأحجار مثل العقيق الوردي أو الجمشت. يُعتبر هذا الخاتم في هذا التقليد ذا خصائص واقية ونافعة، ويُعدّ أيضًا جزءًا من ممارسة الصدقة الخاصة بالعقرب.',
+          fr: "Une forme particulière de sadaqah associée au Scorpion consiste à donner en aumône une bague sertie d'une pierre telle que l'agate rose ou l'améthyste.",
+          ar: 'من صور الصدقة الخاصة ببرج العقرب التصدّقُ بخاتمٍ فصُّه من العقيق الوردي أو الجمشت ونحوهما.',
         },
       },
       {
@@ -578,8 +578,8 @@ export const ZODIAC_SADAQAH: Record<ZodiacSignId, ZodiacSadaqahEntry> = {
     },
     summary: {
       en: ['Ring — rose agate or amethyst', 'White ram or sheep', 'Red goat — during a favourable Mars transit; meat divided and distributed', 'Water — especially to sick or hospitalised people', 'Rice and fish — given together, uncooked', 'Preferred day: Tuesday when Mars is favourable or neutral; alternative: Sunday when the Sun is favourable', 'Special occasions: beginning a project or travelling'],
-      fr: ['Bague protectrice — agate rose ou améthyste', 'Bélier ou brebis blanche', 'Chèvre rouge — lors d\'un transit favorable de Mars ; viande divisée et distribuée', 'Eau — surtout aux malades ou hospitalisés', 'Riz et poisson — donnés ensemble, crus', 'Jour préféré : mardi lorsque Mars est favorable ou neutre ; alternative : dimanche lorsque le Soleil est favorable', 'Occasions particulières : début d\'un projet ou d\'un voyage'],
-      ar: ['خاتم واقٍ — عقيق وردي أو جمشت', 'كبش أو نعجة بيضاء', 'ماعز أحمر — خلال عبور مواتٍ للمريخ؛ يُقسَّم اللحم ويُوزَّع', 'ماء — خاصة للمرضى أو المقيمين في المستشفى', 'أرز وسمك — يُقدَّمان معًا، نيئان', 'اليوم المفضل: الثلاثاء عندما يكون المريخ مواتيًا أو محايدًا؛ البديل: الأحد عندما تكون الشمس مواتية', 'مناسبات خاصة: بدء مشروع أو السفر'],
+      fr: ['Bague — agate rose ou améthyste', 'Bélier ou brebis blanche', 'Chèvre rouge — lors d\'un transit favorable de Mars ; viande divisée et distribuée', 'Eau — surtout aux malades ou hospitalisés', 'Riz et poisson — donnés ensemble, crus', 'Jour préféré : mardi lorsque Mars est favorable ou neutre ; alternative : dimanche lorsque le Soleil est favorable', 'Occasions particulières : début d\'un projet ou d\'un voyage'],
+      ar: ['خاتم — عقيق وردي أو جمشت', 'كبش أو نعجة بيضاء', 'ماعز أحمر — خلال عبور مواتٍ للمريخ؛ يُقسَّم اللحم ويُوزَّع', 'ماء — خاصة للمرضى أو المقيمين في المستشفى', 'أرز وسمك — يُقدَّمان معًا، نيئان', 'اليوم المفضل: الثلاثاء عندما يكون المريخ مواتيًا أو محايدًا؛ البديل: الأحد عندما تكون الشمس مواتية', 'مناسبات خاصة: بدء مشروع أو السفر'],
     },
     videoId: 'wJBDdTZBth4',
   },

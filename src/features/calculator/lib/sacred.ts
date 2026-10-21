@@ -6,8 +6,8 @@ export const SACRED_SET = [7, 12, 19, 70, 99, 114, 313, 786] as const;
 
 export const SACRED_SIGNIFICANCE: Record<number, TriText> = {
   7: { en: 'Seven heavens, seven days of creation', fr: 'Sept cieux, sept jours de la création', ar: 'سبع سماوات، سبعة أيام للخلق' },
-  12: { en: 'Twelve months of the year (9:36)', fr: "Douze mois de l'année", ar: 'اثنا عشر شهرًا' },
-  19: { en: 'Mentioned in 74:30 («عَلَيْهَا تِسْعَةَ عَشَرَ»); some see a numerical pattern', fr: 'Miracle numérique du Coran', ar: 'المعجزة العددية للقرآن' },
+  12: { en: 'Twelve months of the year (9:36)', fr: "Douze mois de l'année", ar: 'اثنا عشر شهرًا في السنة (التوبة: 36)' },
+  19: { en: 'Mentioned in 74:30 («عَلَيْهَا تِسْعَةَ عَشَرَ»); some see a numerical pattern', fr: 'Mentionné en 74:30 ﴿عَلَيْهَا تِسْعَةَ عَشَرَ﴾ ; certains y voient une structure numérique', ar: 'ورد في قوله تعالى: ﴿عَلَيْهَا تِسْعَةَ عَشَرَ﴾ (المدثر: 30)، ويرى بعضهم في هذا العدد نمطًا عدديًا' },
   70: { en: 'Surah Yā-Sīn (يس)', fr: 'Sourate Yā-Sīn (يس)', ar: 'سورة يس' },
   99: { en: 'Asmāʾ al-Ḥusnā (Beautiful Names)', fr: 'Asmāʾ al-Ḥusnā (les Beaux Noms)', ar: 'الأسماء الحسنى' },
   114: { en: 'Surahs in the Qurʾan', fr: 'Sourates du Coran', ar: 'سور القرآن' },

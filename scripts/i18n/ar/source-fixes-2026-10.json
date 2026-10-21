@@ -1,38 +1,43 @@
 {
  "Ring Sadaqah": {
   "ar": "صدقة الخاتم",
-  "status": "draft",
+  "status": "reviewed",
   "id": "F3a",
   "en_before": "Protective Ring Sadaqah",
-  "ar_before": "صدقة خاتم الحفظ"
+  "ar_before": "صدقة خاتم الحفظ",
+  "review": "Batch 16 (pass 5, 21 Oct 2026)"
  },
  "A special form of sadaqah associated with Scorpio is giving a ring, with stones such as rose agate or amethyst.": {
-  "ar": "من الصدقات الخاصّة المرتبطة ببرج العقرب تقديم خاتم بأحجار مثل العقيق الوردي أو الجمشت.",
-  "status": "draft",
+  "ar": "من صور الصدقة الخاصة ببرج العقرب التصدّقُ بخاتمٍ فصُّه من العقيق الوردي أو الجمشت ونحوهما.",
+  "status": "reviewed-corrected",
   "id": "F3b",
   "en_before": "A special form of sadaqah associated with Scorpio is having or giving a good protective ring, with stones such as rose agate or amethyst. The ring is regarded within this tradition as having protective and beneficial qualities and is also considered part of the sadaqah practice for Scorpio.",
-  "ar_before": "من الصدقات الخاصّة المرتبطة ببرج العقرب اقتناء خاتم حافظ حسن أو إهداؤه، بأحجار كالعقيق الوردي أو الجمشت. ويُعدّ الخاتم في هذا التراث ذا خصائص حافظة نافعة، وجزءًا من ممارسة الصدقة للعقرب."
+  "ar_before": "من الصدقات الخاصّة المرتبطة ببرج العقرب اقتناء خاتم حافظ حسن أو إهداؤه، بأحجار كالعقيق الوردي أو الجمشت. ويُعدّ الخاتم في هذا التراث ذا خصائص حافظة نافعة، وجزءًا من ممارسة الصدقة للعقرب.",
+  "review": "Batch 16 (pass 5, 21 Oct 2026)"
  },
  "Ring — rose agate or amethyst": {
   "ar": "خاتم — عقيق وردي أو جمشت",
-  "status": "draft",
+  "status": "reviewed",
   "id": "F3c",
   "en_before": "Protective ring — rose agate or amethyst",
-  "ar_before": "خاتم حافظ — عقيق وردي أو جمشت"
+  "ar_before": "خاتم حافظ — عقيق وردي أو جمشت",
+  "review": "Batch 16 (pass 5, 21 Oct 2026)"
  },
  "Twelve months of the year (9:36)": {
-  "ar": "اثنا عشر شهرًا",
-  "status": "approved-proposal",
+  "ar": "اثنا عشر شهرًا في السنة (التوبة: 36)",
+  "status": "reviewed-corrected",
   "id": "S1",
   "en_before": "Twelve Imams, twelve months",
-  "ar_before": "اثنا عشر إمامًا، اثنا عشر شهرًا"
+  "ar_before": "اثنا عشر إمامًا، اثنا عشر شهرًا",
+  "review": "Batch 16 (pass 5, 21 Oct 2026)"
  },
  "Mentioned in 74:30 («عَلَيْهَا تِسْعَةَ عَشَرَ»); some see a numerical pattern": {
-  "ar": "ورد في 74:30 ﴿عَلَيْهَا تِسْعَةَ عَشَرَ﴾، ويرى بعضهم فيه نمطًا عدديًا",
-  "status": "draft",
+  "ar": "ورد في قوله تعالى: ﴿عَلَيْهَا تِسْعَةَ عَشَرَ﴾ (المدثر: 30)، ويرى بعضهم في هذا العدد نمطًا عدديًا",
+  "status": "reviewed-corrected",
   "id": "S2b",
   "en_before": "Numerical miracle of the Quran",
-  "ar_before": "المعجزة العددية للقرآن"
+  "ar_before": "المعجزة العددية للقرآن",
+  "review": "Batch 16 (pass 5, 21 Oct 2026)"
  },
  "Creativity, expression, joy. Threefold harmony of body, mind, and spirit.": {
   "ar": "الإبداع والتعبير والفرح. تناغم الجسد والعقل والروح.",
@@ -63,11 +68,12 @@
   "ar_before": "المؤمن"
  },
  "The one at whose feet people are gathered": {
-  "ar": "الذي يُحشَر الناس على قدمَيه",
-  "status": "draft",
+  "ar": "الذي يُحشَرُ الناسُ على قدمِه، أي على أثره",
+  "status": "reviewed-corrected",
   "id": "PN1",
   "en_before": "The Gatherer",
-  "ar_before": "الْجَامِع"
+  "ar_before": "الْجَامِع",
+  "review": "Batch 16 (pass 5, 21 Oct 2026)"
  },
  "Each of the twelve burūj has its own traditional sadaqah, according to the teachings of Serigne Mahdiou Niane (with companion videos in Wolof inside the app). Not sure of your burj? Find it from your name and your mother's name.": {
   "ar": "لكل برج من البروج الاثني عشر صدقته التقليدية، بحسب تعاليم الشيخ سرين مهديو نيان (مع مقاطع مصاحبة بالولوفية داخل التطبيق). لست متأكدًا من برجك؟ اعرفه من اسمك واسم أمك.",

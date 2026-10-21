@@ -15,14 +15,15 @@ const catalog = makeCatalog(json);
 type Row = { en: string; ur: string; status: string };
 
 describe('Urdu review status', () => {
-  it('every sheet-2 row (2,336) carries a reviewed status, except rows re-drafted by the 21 Oct source fixes', () => {
+  it('every sheet-2 row (2,336) carries a reviewed status (the 21 Oct source-fix drafts were reviewed in Batch 16)', () => {
     const rows = Object.values(status.sheet2) as { status: string; source_fix?: string }[];
     expect(rows).toHaveLength(2336);
     for (const r of rows) {
       if (r.source_fix && r.status === 'draft') continue; // new English text, new Urdu draft (listed for the Language Reviewer)
       expect(r.status).toMatch(/^reviewed(-corrected|-kept|-flagged)?$/);
     }
-    expect(rows.filter((r) => r.status === 'draft').map((r) => r.source_fix).sort()).toEqual(['F3a', 'F3b', 'F3c', 'F6']);
+    // Batch 16 (pass 5): the re-drafted source-fix rows were reviewed, so none is left as a draft.
+    expect(rows.filter((r) => r.status === 'draft')).toEqual([]);
   });
 
   it('Batch 13 and Batch 14 are reviewed (pass 3) and in the catalog', () => {
