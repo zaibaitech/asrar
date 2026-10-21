@@ -20,10 +20,13 @@ describe('Urdu review status', () => {
     expect(rows).toHaveLength(2336);
     for (const r of rows) {
       if (r.source_fix_pass9b && r.status === 'draft') continue; // Pass 9b follow-up: new Urdu draft, pending review
+      if (r.status === 'draft-pending-LR') continue; // cleanup PR: tracked change awaiting Language Reviewer confirmation
       expect(r.status).toMatch(/^reviewed(-corrected|-kept|-flagged)?( \(optional\))?$/);
     }
     // Batch 16 cleared the list-1 drafts and sheet 4 the list-2 drafts; the only drafts left are Pass 9b follow-ups.
     expect(rows.filter((r) => r.status === 'draft' && !r.source_fix_pass9b)).toEqual([]);
+    // Only sheet-2 9.85 (About text, cleanup PR) is pending the Language Reviewer.
+    expect(Object.entries(status.sheet2).filter(([, r]) => (r as { status: string }).status === 'draft-pending-LR').map(([id]) => id)).toEqual(['9.85']);
   });
 
   it('Batch 13 and Batch 14 are reviewed (pass 3) and in the catalog', () => {

@@ -66,7 +66,7 @@ NOTES = [
     'Planet-of-the-day intro: “a ruling planet that colours its energy” → softened to “روایت کے مطابق … اس دن کی کیفیت کا رنگ متعین کرتا ہے”. Check that the wording does not attribute independent influence to planets.',
     'Astro technical terms in the Ikhtiyārāt breakdown (محترق، خالی السیر، تحت الشعاع، ہبوط، وبال، رجعت، الطریقۃ المحترقۃ) follow classical Arabic/Persian usage; please confirm they are understood by Urdu readers.',
     'Urdu-typed names in the Abjad count: RESOLVED. Urdu letters are converted before counting (see the reviewer answers below, Q7).',
-    'Soul-connection archetype meanings, burj career texts, per-date rule explanations (Simple mode), manzil descriptions and day guidance paragraphs are now AI-drafted (section 5, awaiting native review). Other result texts are still English (see “Still in English” at the end); the pages keep saying “ٹول کے کچھ حصے ابھی انگریزی میں ہیں۔”',
+    'Soul-connection archetype meanings, burj career texts, per-date rule explanations (Simple mode), manzil descriptions and day guidance paragraphs were AI-drafted (section 5) and native-reviewed in review sheet 3 (Oct 2026). Some result texts are still English on purpose (held religious content; see “Still in English” at the end); the pages keep saying “ٹول کے کچھ حصے ابھی انگریزی میں ہیں۔”',
     'Glossary audit (Phase 2): «مغربی» is both “Maghribi” and “Western”, so the small “Western” gloss under the Maghribi button («مغربی ترتیب») repeats the label and does not tell an Urdu reader more; the same for «مشرقی ترتیب». The English UI repeats itself in the same way (“Maghribi / Western”), and the region is given by the note line. Options: keep as is; or shorten the gloss to «مغربی» / «مشرقی»; or gloss it with the region («شمالی افریقی» / «مشرقِ وسطیٰ و ایشیا»). Not changed.',
     'Glossary audit (Phase 2): the selector label “Maghribi System:” is «مغربی نظام:» but the same concept is «مغربی ترتیب» on the pages and in the FAQ (“Maghribi and Mashriqi orders”). Use one word everywhere (ترتیب = letter order, نظام = the whole system), or keep both because the English source uses both?',
     'Glossary audit (Phase 2): “connection” appears as «ربط» (“a supportive connection”, soul connection «روحانی ربط») and the classical Moon “Applying to” as «اتصال». Should the plain-language sentences about the Moon forming a connection with Jupiter/Venus use «اتصال» too, or stay in plain «ربط»?',
@@ -114,10 +114,10 @@ total = n_meta + n_pages + n_ui + n_cat
 
 md = []
 md.append('# Urdu (/ur) — native review sheet\n')
-md.append('Phase 1 Urdu pages for asrar.app. **All /ur pages are noindex and are not in the sitemap or hreflang** until Mario approves indexing. The native review is done and its corrections are applied (see below).\n')
+md.append('Phase 1 Urdu pages for asrar.app. **Only `/ur/abjad` is indexable** (index, follow; in the sitemap and in the hreflang set of the abjad pages since PR #101, 21 Oct 2026). The other six /ur pages stay noindex and out of the sitemap and hreflang until Mario approves them (`INDEXABLE_UR_PATHS` in `src/lib/i18nRoutes.ts`). The native review is done and its corrections are applied (see below).\n')
 md.append('Pages: `/ur`, `/ur/name-and-mother-burj`, `/ur/compatibility`, `/ur/abjad`, `/ur/planetary-hours`, `/ur/planet-of-the-day`, `/ur/ikhtiyarat`.\n')
-md.append('Every string was translated by hand (no machine translation), **except the AI-drafted result texts in section 5**, which were drafted by an AI assistant, are NOT native-reviewed and are listed there for the Language Reviewer. The mobile app (zaibaitech/asrar-mobile) has no Urdu, so nothing was reused. Qur\'an and Divine Names stay in Arabic.\n')
-md.append(f'**String count: {total}** ({n_meta} SEO metadata, {n_pages} page copy, {n_ui} shared UI in TypeScript, {n_cat} tool-UI catalog entries incl. {sum(1 for k in cat if k.startswith("re:"))} patterns). Not counted here: {n_ai} AI-drafted result texts (section 5), which are not native-reviewed.\n')
+md.append('Every string was translated by hand (no machine translation), **except the AI-drafted result texts (section 5) and UI strings (section 6)**, which were first drafted by an AI assistant and then native-reviewed by the Language Reviewer in review sheets 2–4 (Oct 2026; per-string status in `scripts/i18n/ur/review_status.json`). The mobile app (zaibaitech/asrar-mobile) has no Urdu, so nothing was reused. Qur\'an and Divine Names stay in Arabic.\n')
+md.append(f'**String count: {total}** ({n_meta} SEO metadata, {n_pages} page copy, {n_ui} shared UI in TypeScript, {n_cat} tool-UI catalog entries incl. {sum(1 for k in cat if k.startswith("re:"))} patterns). Not counted here: {n_ai} result texts (section 5, AI-drafted, native-reviewed in review sheet 3).\n')
 md.append('Sources (edit there, then regenerate this file with `python3 scripts/i18n/ur/build_review.py`):\n')
 md.append('- SEO metadata: `src/lib/urMetadata.ts`\n- Page copy: `src/lib/i18n/urPages.ts`\n- Shared UI: `src/lib/i18n/ur.ts`, `src/components/seo/relatedTools.ts`\n- Tool UI catalog: `scripts/i18n/ur/catalog_source.py` + AI drafts `scripts/i18n/ur/catalog_ai_draft.py` → `public/i18n/ur-ui.json` (`python3 scripts/i18n/ur/build_catalog.py`)\n')
 md.append('\n## Open questions for the reviewer\n')
@@ -131,7 +131,7 @@ md.append('\n### Reviewer answers (native review, Oct 2026)\n')
 md.append(table([(i, q, a, st) for i, (q, a, st) in enumerate(ANSWERS, 1)], ('#', 'Question', 'Reviewer answer', 'Status')))
 n_applied = sum(1 for c in CORRECTIONS if c[4].startswith('✅'))
 md.append(f'\n\n## Review corrections ({n_applied} of {len(CORRECTIONS)} applied)\n')
-md.append('From the native reviewer (Language Reviewer, Oct 2026). The tables further down show the strings as they are now, with the corrections in place. /ur stays noindex and out of the sitemap and hreflang until Mario approves indexing (Q8, the untranslated result texts, is still open).\n')
+md.append('From the native reviewer (Language Reviewer, Oct 2026). The tables further down show the strings as they are now, with the corrections in place. Since PR #101 (21 Oct 2026) /ur/abjad is indexable. The other /ur pages stay noindex and out of the sitemap and hreflang until Mario approves them.\n')
 md.append(table([c[:5] for c in CORRECTIONS], ('Batch', 'String', 'Before', 'After', 'Status')))
 md.append('\n## 1. Qur\'an / Divine Names\n')
 md.append('Kept in Arabic script. The tool shows transliterations; on /ur they are replaced by the Arabic the tool itself writes. Divine Names in the Urdu page copy (burj table) are marked lang="ar" and rendered in Naskh; inside the tool they use the page font.\n')
@@ -156,8 +156,8 @@ md.append('\n\n### Tool UI catalog (`public/i18n/ur-ui.json`)\n')
 md.append('Exact-match English text in the tools → Urdu. `re:` keys are patterns; `$1`… are replaced by the catalog translation of each captured part, `$pN` keeps the captured text (times).\n')
 md.append(table(ui_cat))
 md.append('\n')
-md.append(f'\n## 5. AI-drafted result texts ({n_ai} strings, NOT native-reviewed)\n')
-md.append('These were drafted by an AI assistant (Claude, Oct 2026), not by a native speaker, to fill the English gaps listed in open question 8. They are live on the **noindex** /ur pages only (no /ur page is indexed, in the sitemap or in hreflang). Please review them like the rest; the register follows the glossary above (traditional, reflective wording; planets are never agents). Divine Names and Qur\'an text are deliberately not in this list: the Arabic comes from the data files.\n')
+md.append(f'\n## 5. Result texts, AI-drafted then native-reviewed ({n_ai} strings; review sheet 3, passes 6–8)\n')
+md.append('These were drafted by an AI assistant (Claude, Oct 2026), not by a native speaker, to fill the English gaps listed in open question 8. They were native-reviewed in review sheet 3 (passes 6–8) and the list-2 / Pass 9b follow-ups in sheet 4. They appear on the /ur pages and in the Urdu UI mode; of the /ur pages only /ur/abjad is indexed; the register follows the glossary above (traditional, reflective wording; planets are never agents). Divine Names and Qur\'an text are deliberately not in this list: the Arabic comes from the data files.\n')
 md.append('To change one, edit `scripts/i18n/ur/catalog_ai_draft.py` and run `python3 scripts/i18n/ur/build_catalog.py` and `python3 scripts/i18n/ur/build_review.py`. `src/lib/urdu-result-coverage.test.ts` fails if an English source string changes without its Urdu pair.\n')
 for sec, title, note in AI_SECTIONS:
     rows = [(en, ur) for sc, en, ur in AI_ENTRIES if sc == sec]
@@ -165,8 +165,8 @@ for sec, title, note in AI_SECTIONS:
     md.append(note + '\n')
     md.append(table(rows))
     md.append('\n')
-md.append(f'\n## 6. AI-drafted UI strings from the Urdu audit ({len({en for _, en, _ in AI_UI_ENTRIES})} strings, NOT native-reviewed)\n')
-md.append('Found by a browser audit of the /ur pages and of the Urdu language mode on the other pages (menus, tabs, calculators, result tabs, page prose, FAQs), plus a scan of the source for hard-coded English. Drafted by an AI assistant, live on noindex /ur only. Rules: traditional / reflective framing, no prediction or medical claims, planets never agents; Qur\'an lines and Divine Names are NOT translated (Arabic comes from the data files: `planetaryZikr.ts`, `lunarMansions.ts`, `burujData.json`, `incense.ts`, the verified `ar-ui.json` Qur\'an lines). Edit `scripts/i18n/ur/catalog_ai_draft_ui.py`, then run `build_catalog.py` and `build_review.py`.\n')
+md.append(f'\n## 6. UI strings from the Urdu audit, AI-drafted then native-reviewed ({len({en for _, en, _ in AI_UI_ENTRIES})} strings; review sheet 2)\n')
+md.append('Found by a browser audit of the /ur pages and of the Urdu language mode on the other pages (menus, tabs, calculators, result tabs, page prose, FAQs), plus a scan of the source for hard-coded English. Drafted by an AI assistant and native-reviewed in review sheet 2 (2,336 rows). Rules: traditional / reflective framing, no prediction or medical claims, planets never agents; Qur\'an lines and Divine Names are NOT translated (Arabic comes from the data files: `planetaryZikr.ts`, `lunarMansions.ts`, `burujData.json`, `incense.ts`, the verified `ar-ui.json` Qur\'an lines). Edit `scripts/i18n/ur/catalog_ai_draft_ui.py`, then run `build_catalog.py` and `build_review.py`.\n')
 _ui_groups = {}
 for sc, en, ur in AI_UI_ENTRIES:
     _ui_groups.setdefault(sc, []).append((en, ur))
@@ -180,8 +180,8 @@ for sc, rows in _ui_groups.items():
 _p4 = os.path.join(os.path.dirname(__file__), 'phase4_review.json')
 if os.path.exists(_p4):
     p4 = json.load(open(_p4, encoding='utf-8'))
-    md.append('\n## 7. Phase 4 review of the 896 AI-drafted result texts (sections 5.x), NOT native-reviewed\n')
-    md.append('The groups in the table below were read entry by entry against their English source (every source string of the 896 still exists verbatim in the app). Corrections are listed below with the reason; entries that could not be settled are flagged with the question and, where there is one, an alternative. The Urdu is still AI-drafted: no qualified reviewer has approved it. Source: `scripts/i18n/ur/phase4_review.json`.\n')
+    md.append('\n## 7. Phase 4 self-review of the 896 AI-drafted result texts (historical, before the native review in sheet 3)\n')
+    md.append('The groups in the table below were read entry by entry against their English source (every source string of the 896 still exists verbatim in the app). Corrections are listed below with the reason; entries that could not be settled are flagged with the question and, where there is one, an alternative. This was an internal pass; the native Language Reviewer later reviewed every entry in sheet 3 (passes 6–8), which supersedes the flags below. Source: `scripts/i18n/ur/phase4_review.json`.\n')
     _rows = []
     for _g, _v in p4['groups'].items():
         _c = sum(1 for x in p4['corrections'] if x['group'] == _g)

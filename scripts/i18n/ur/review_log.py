@@ -52,7 +52,7 @@ CORRECTIONS = [
     ('3B', 'catalog «No concern here — this factor looks neutral…»', '…یہ عنصر غیر جانبدار ہے۔', '…یہ عنصر معتدل ہے۔', A),
     ('3B', 'catalog re: «is neutral in» (both patterns)', '$1 برجِ $2 میں معتدل حالت میں ہے', '$1 برجِ $2 میں معتدل ہے', A),
     ('3B', 'catalog re: «is comfortable in» (both patterns)', '$1 برجِ $2 میں آرام کی حالت میں ہے', '$1 برجِ $2 میں موافق حالت میں ہے', A),
-    ('3B', 'catalog «Moon Applying to Saturn/Mars (Hard Aspect)»', 'قمر کا زحل/مریخ سے سخت نظر کی طرف بڑھنا', 'قمر کا زحل/مریخ سے اتصال (سخت نظر)', A),
+    ('3B', 'catalog «Moon Applying to Saturn/Mars (Hard Aspect)»', 'قمر کا زحل/مریخ سے سخت نظر کی طرف بڑھنا', 'قمر کا زحل/مریخ سے اتصال (سخت نظر)', A + ' (superseded 21 Oct 2026, sheet-3 spot-check: now «قمر کا زحل یا مریخ سے اتصال (تناؤ والی نسبت)»; «سخت نظر» removed catalog-wide)'),
     ('3B', 'catalog «Moon Applying to Venus or Jupiter»', 'قمر کا زہرہ یا مشتری کی طرف بڑھنا', 'قمر کا زہرہ یا مشتری سے اتصال', A),
     ('3B', 'catalog «Moon Separating from Benefics»', 'قمر کا سعد سیاروں سے جدا ہونا', 'قمر کا سعد سیاروں سے انصراف (جدا ہونا)', A),
     ('3B', 'catalog «Moon Void of Course»', 'قمر خالی السیر', 'قمر خالی السیر (کسی سیارے سے اتصال نہیں)', A + ' (Q6 gloss)'),
@@ -108,7 +108,7 @@ ANSWERS = [
     ('Urdu letters in Abjad', 'Recommends normalising ی→ي، ک→ك، ہ/ۃ→ه/ة (ے→ي) before counting, or until then an inline warning.',
      '✅ applied (approved by Mario, Oct 2026): src/lib/urduLetters.ts converts ی ے→ي, ک→ك, ھ ۂ→ه, ہ ۃ→ه (ة at the end of a word, so فاطمہ = فاطمة = 135) before every name/Abjad count (burj, compatibility, Abjad calculator, ʿilm al-ḥurūf). علی = 110, فاطمہ = 135, کریم = 270. ٹ ڈ ڑ ں and پ چ ژ گ have no value (0). Arabic input is untouched (src/lib/urduLetters.test.ts). The spelling note says so (batch 4 wording; Arabic letters in a Naskh span). Batch 4 decisions (Mario, Oct 2026): اللہ, also inside names (عبداللہ), → الله, so total (66) and elements match الله exactly; پ چ ژ گ ٹ ڈ ڑ ں stay at 0 (strict Arabic Abjad, no chronogram values); the hamza/ى rule and the differing letter tables, already on main, are fixed in a separate PR.'),
     ('English interpretive content', 'OK for a noindex phase 1 with UR_COMMON.toolUiNote; translate burj career texts and soul-connection meanings before indexing.',
-     '⏳ partly done: archetype meanings, burj career texts, rule explanations, manzil descriptions and day guidance are now AI-drafted (section 5, pending native review). Other result texts are still English. toolUiNote stays visible; /ur stays noindex.'),
+     '✅ done for language: the section-5 and section-6 drafts were native-reviewed in sheets 2–4 (Oct 2026). Held religious items stay English (see “Still in English”). toolUiNote stays visible. Only /ur/abjad is indexable (PR #101).'),
 ]
 
 

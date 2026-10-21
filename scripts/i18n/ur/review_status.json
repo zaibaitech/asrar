@@ -1,14 +1,16 @@
 {
- "about": "Review status of the Urdu (/ur) strings. Sheet 2 = /workspace review file asrar-ur-review-2.md (2,336 rows), all reviewed by the native Language Reviewer (Oct 2026). reviewed-corrected: correction applied; reviewed: confirmed as is; reviewed-kept: reviewer suggestion not applied on purpose (see note); reviewed-flagged: left for Mario / the source owner. Batch 13 (/ur/abjad calculator UI, src/features/calculator/i18n/ur.ts) and Batch 14 (burujData.json practice nights) were reviewed in pass 3. Batch 15 (calculator result data and practice-hint meanings) was reviewed in pass 4; pass3_reviewer_data are the reviewer-written result-data strings (reviewed). Source fixes approved by Mario on 21 Oct 2026 (option A) moved reviewed Urdu to the new English keys; 6 keys whose meaning changed got new Urdu drafts (status draft) — see source_fixes_2026_10_21. Batch 16 (pass 5, 21 Oct 2026): the Language Reviewer checked the PR #101 source-fix strings; the 6 drafts are now reviewed (S2 and F3b corrected), P1–P11 and 5.178/5.207 corrected. Sheet 3 (asrar-ur-review-3.md, the 838 catalog_ai_draft.py strings): Batches 17–19 (299 rows) reviewed in pass 6 (48 corrections + 20 optional applied); Batches 20–21 (176 rows) reviewed in pass 7 (34 corrections + 15 optional applied); Batches 22–25 (363 rows) reviewed in pass 8 (19 corrections + 14 optional applied). Sheet 3 is complete: all 838 rows reviewed (101 corrections + 49 optional). Spot-check of sheet 3 (21 Oct 2026): clean; the last six «سخت نظر» strings (8.93, 8.150, 8.151, 10.120, 5.96 and the round-1 title) were corrected. The Language Reviewer cleared the Urdu for the PR #101 merge. List 2 source fixes (Mario approved 21 Oct 2026, asrar-source-changes-for-mario-2.md: B1–B5, S1–S13, F9; F2 and F4 skipped): 59 English keys changed (source_fixes_2026_10_21_list2). 33 keep their reviewed Urdu (the Urdu already said what the new English says); 24 got new Urdu drafts (status draft, rows carry status_before_list2 / ur_before_list2) for the Language Reviewer in review sheet 4 (asrar-ur-review-4.md); 2 career items were removed from the source (S10: 24.6, 24.97). S9: «زہرہ» is feminine catalog-wide (no masculine agreement left). The Urdu is NOT cleared for merge until review sheet 4 is done. Review sheet 4 (pass 9, 21 Oct 2026): the Language Reviewer checked all list-2 strings — 11 Urdu draft corrections (A2–A11, A14; «بہبود» → «عافیت»), 2 kept-Urdu corrections (B30, B31) + 2 optional (B14, B17), 7 Arabic corrections (D4, D6–D11; «الضغط» → «الضغط النفسي») + 2 optional (D13, D18), and 4 missing mansion names added (sheet4_additions). All list-2 rows are now reviewed. S4 and S11 kept as drafted; SF1 (scholar note on the career tab) waits for Mario. Pass 9b (21 Oct 2026, Mario approved): French list-1 lines aligned with the approved English (12, FR only); archetype 9 key-to-success asks Allah for protection through duʿāʾ and remembrance; \"Empty vows\" → \"Empty promises\"; remaining \"healing\" wording in the burj blessed-day and sadaqah texts reframed (caring, wellbeing, alongside medical care, asking Allah). Changed Urdu is status draft (section pass9b), Arabic drafts in source-fixes-2026-10.json; listed in asrar-ur-review-4.md, section \"Pass 9b\". Review 4, Pass 9b section (Language Reviewer, 21 Oct 2026): L1, 9b.A2, 9b.B4, 9b.B5 corrected; optional 9b.B3 applied; all other Pass 9b rows and both Arabic drafts confirmed. No drafts remain. SF3 (Mario approved, 21 Oct 2026): buruj 10 number significance no longer says \"establishes ultimate material and spiritual authority\"; EN/FR now \"traditionally associated with\"; reviewed Urdu kept (already symbolic and traditional); no Arabic string exists. No new drafts.",
+ "about": "Review status of the Urdu (/ur) strings. Sheet 2 = /workspace review file asrar-ur-review-2.md (2,336 rows), all reviewed by the native Language Reviewer (Oct 2026). reviewed-corrected: correction applied; reviewed: confirmed as is; reviewed-kept: reviewer suggestion not applied on purpose (see note); reviewed-flagged: left for Mario / the source owner. Batch 13 (/ur/abjad calculator UI, src/features/calculator/i18n/ur.ts) and Batch 14 (burujData.json practice nights) were reviewed in pass 3. Batch 15 (calculator result data and practice-hint meanings) was reviewed in pass 4; pass3_reviewer_data are the reviewer-written result-data strings (reviewed). Source fixes approved by Mario on 21 Oct 2026 (option A) moved reviewed Urdu to the new English keys; 6 keys whose meaning changed got new Urdu drafts, reviewed in Batch 16 (pass 5) — see source_fixes_2026_10_21. Batch 16 (pass 5, 21 Oct 2026): the Language Reviewer checked the PR #101 source-fix strings; the 6 drafts are now reviewed (S2 and F3b corrected), P1–P11 and 5.178/5.207 corrected. Sheet 3 (asrar-ur-review-3.md, the 838 catalog_ai_draft.py strings): Batches 17–19 (299 rows) reviewed in pass 6 (48 corrections + 20 optional applied); Batches 20–21 (176 rows) reviewed in pass 7 (34 corrections + 15 optional applied); Batches 22–25 (363 rows) reviewed in pass 8 (19 corrections + 14 optional applied). Sheet 3 is complete: all 838 rows reviewed (101 corrections + 49 optional). Spot-check of sheet 3 (21 Oct 2026): clean; the last six «سخت نظر» strings (8.93, 8.150, 8.151, 10.120, 5.96 and the round-1 title) were corrected. The Language Reviewer cleared the Urdu for the PR #101 merge. List 2 source fixes (Mario approved 21 Oct 2026, asrar-source-changes-for-mario-2.md: B1–B5, S1–S13, F9; F2 and F4 skipped): 59 English keys changed (source_fixes_2026_10_21_list2). 33 keep their reviewed Urdu (the Urdu already said what the new English says); 24 got new Urdu drafts (rows carry status_before_list2 / ur_before_list2), reviewed in review sheet 4 (pass 9); 2 career items were removed from the source (S10: 24.6, 24.97). S9: «زہرہ» is feminine catalog-wide (no masculine agreement left). Review sheet 4 (pass 9, 21 Oct 2026): the Language Reviewer checked all list-2 strings — 11 Urdu draft corrections (A2–A11, A14; «بہبود» → «عافیت»), 2 kept-Urdu corrections (B30, B31) + 2 optional (B14, B17), 7 Arabic corrections (D4, D6–D11; «الضغط» → «الضغط النفسي») + 2 optional (D13, D18), and 4 missing mansion names added (sheet4_additions). All list-2 rows are now reviewed. S4 and S11 kept as drafted; SF1 (scholar note on the career tab) waits for Mario. Pass 9b (21 Oct 2026, Mario approved): French list-1 lines aligned with the approved English (12, FR only); archetype 9 key-to-success asks Allah for protection through duʿāʾ and remembrance; \"Empty vows\" → \"Empty promises\"; remaining \"healing\" wording in the burj blessed-day and sadaqah texts reframed (caring, wellbeing, alongside medical care, asking Allah). Changed Urdu (7) and Arabic (2) were drafted, listed in asrar-ur-review-4.md section \"Pass 9b\", and reviewed the same day (next sentence). Review 4, Pass 9b section (Language Reviewer, 21 Oct 2026): L1, 9b.A2, 9b.B4, 9b.B5 corrected; optional 9b.B3 applied; all other Pass 9b rows and both Arabic drafts confirmed. No drafts remain. SF3 (Mario approved, 21 Oct 2026): buruj 10 number significance no longer says \"establishes ultimate material and spiritual authority\"; EN/FR now \"traditionally associated with\"; reviewed Urdu kept (already symbolic and traditional); no Arabic string exists. No new drafts. Merged to main in PR #101 (992d6c6, 21 Oct 2026). Only /ur/abjad is indexable (INDEXABLE_UR_PATHS). Open source items: SF1, F2, F4. Cleanup PR (21 Oct 2026, chore/ur-docs-reconcile): sheet-2 2.30 resolved («يَا رَحْمٰنُ», count 298); 3.283 note resolved by F3a; 9.85 (About text) catalog and MobileMenu.tsx aligned to the reviewer's Fix wording, status draft-pending-LR until the Language Reviewer confirms; 9.4 unchanged, reorder flagged for the Language Reviewer.",
  "counts": {
   "sheet2": {
-   "reviewed-corrected": 415,
-   "reviewed": 1912,
+   "reviewed-corrected": 418,
+   "reviewed": 1908,
    "reviewed-kept": 6,
-   "reviewed-flagged": 3
+   "reviewed-flagged": 2,
+   "reviewed-corrected (optional)": 1,
+   "draft-pending-LR": 1
   },
   "batch13": {
-   "reviewed": 126,
+   "reviewed": 127,
    "reviewed-corrected (optional)": 10,
    "reviewed-corrected": 13
   },
@@ -21,7 +23,8 @@
    "reviewed-corrected (optional)": 8
   },
   "source_fixes_2026_10_21": {
-   "reviewed": 38
+   "reviewed": 23,
+   "reviewed-corrected": 15
   },
   "pass4_reviewer_ramadan": 5,
   "batch16_pass5": {
@@ -45,11 +48,11 @@
    "reviewed-corrected": 19
   },
   "sheet3_total": {
-   "reviewed": 688,
-   "reviewed-corrected": 101,
-   "reviewed-corrected (optional)": 49
+   "reviewed": 682,
+   "reviewed-corrected": 105,
+   "reviewed-corrected (optional)": 51
   },
-  "rekeyed_reviewed": 8,
+  "rekeyed_reviewed": 9,
   "spotcheck_sakht_nazar": 6,
   "source_fixes_list2": {
    "removed": 2,
@@ -521,8 +524,9 @@
   "2.30": {
    "en": "Ya Rahman",
    "loc": "catalog_ai_draft_ui.py:176 [potd-page]",
-   "status": "reviewed-flagged",
-   "note": "Qur'an/Divine-Name data change not allowed; count 298 reported to Mario"
+   "status": "reviewed-corrected",
+   "note": "resolved: data and both catalogs use «يَا رَحْمٰنُ» (dagger alif), consistent with count 298 (src/lib/planetaryZikr.ts). Earlier note: Qur'an/Divine-Name data change not allowed; count 298 reported to Mario.",
+   "status_before_cleanup": "reviewed-flagged"
   },
   "2.31": {
    "en": "Ya Raheem",
@@ -2073,7 +2077,7 @@
    "en": "Ring Sadaqah",
    "loc": "catalog_ai_draft_ui.py:618 [sadaqa-page]",
    "status": "reviewed",
-   "note": "flag for Mario (EN source)",
+   "note": "EN source flag resolved by F3a (\"Protective Ring Sadaqah\" → \"Ring Sadaqah\"); scholar view on the practice itself not recorded. Earlier note: flag for Mario (EN source).",
    "en_before_source_fix": "Protective Ring Sadaqah",
    "source_fix": "F3a",
    "batch16": "OK"
@@ -7611,7 +7615,8 @@
   "9.4": {
    "en": "Asrār divides the ecliptic into twenty-eight equal tropical sectors (~12°51′ each) from the Moon’s longitude — a clear computational convention for education and reflection. Classical star-tied (sidereal) bounds differ; we document the equal tropical method so the live card stays consistent with our planetary ephemeris.",
    "loc": "catalog_ai_draft_ui.py:257 [manazil-page]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "note": "Cleanup PR (21 Oct 2026): not changed. Fragments 2 and 3 of the correction are verbatim; the first fragment «…دائرۃ البروج پر قمر کے طول کی بنیاد پر اٹھائیس برابر موسمی (ٹراپیکل) حصوں…» cannot be inserted verbatim into the sentence, which already starts «اسرار دائرۃ البروج کو», without repeating «دائرۃ البروج»; the served wording is reordered. Language Reviewer to confirm (asrar-ur-review-4.md, section \"Cleanup PR\")."
   },
   "9.5": {
    "en": "Browse all 28 manāzil",
@@ -8019,7 +8024,13 @@
   "9.85": {
    "en": "Discover the sacred numerical values and elemental associations within Arabic text, connecting language to the deeper patterns of creation.",
    "loc": "src/components/MobileMenu.tsx:174 About text (Urdu mode)",
-   "status": "reviewed-corrected"
+   "status": "draft-pending-LR",
+   "ur_before_cleanup": {
+    "catalog": "عربی متن میں چھپی عددی قیمتوں اور عناصر کی نسبتوں کو جانیں، اور زبان کو تخلیق کے گہرے نمونوں سے جوڑیں۔",
+    "MobileMenu.tsx": "عربی متن میں چھپی عددی قیمتوں اور عناصر سے ان کی نسبتوں کو دریافت کریں، اور زبان کو تخلیق کے گہرے نمونوں سے جوڑیں۔"
+   },
+   "ur": "عربی متن میں چھپی عددی قیمتوں اور عناصر سے نسبتوں کو دریافت کریں، اور زبان کو تخلیق کے گہرے نمونوں سے جوڑیں۔",
+   "note": "Cleanup PR (21 Oct 2026): catalog and MobileMenu.tsx set to the same string, built from the sheet-2 text with the reviewer's Fix fragment «…عددی قیمتوں اور عناصر سے نسبتوں کو…» verbatim (asrar-ur-corrections-2.md). Pending Language Reviewer confirmation (asrar-ur-review-4.md, section \"Cleanup PR\")."
   },
   "9.86": {
    "en": "About This App",

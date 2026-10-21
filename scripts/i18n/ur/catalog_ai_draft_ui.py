@@ -45,7 +45,7 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('home-menu', '(Science of Letters) and', '(حروف کا علم) اور'),
     ('home-menu', 'ʿIlm al-ʿAdad', 'علم الاعداد'),
     ('home-menu', '(Science of Numbers).', '(اعداد کا علم)۔'),
-    ('home-menu', 'Discover the sacred numerical values and elemental associations within Arabic text, connecting language to the deeper patterns of creation.', 'عربی متن میں چھپی عددی قیمتوں اور عناصر کی نسبتوں کو جانیں، اور زبان کو تخلیق کے گہرے نمونوں سے جوڑیں۔'),
+    ('home-menu', 'Discover the sacred numerical values and elemental associations within Arabic text, connecting language to the deeper patterns of creation.', 'عربی متن میں چھپی عددی قیمتوں اور عناصر سے نسبتوں کو دریافت کریں، اور زبان کو تخلیق کے گہرے نمونوں سے جوڑیں۔'),
     ('home-menu', 'Version 1.0 • © 2025', 'ورژن 1.0 • © 2025'),
     ('home-compat', 'Explore general astrological compatibility from birth dates', 'تاریخِ پیدائش سے عمومی فلکی مطابقت جانیں'),
     ('home-compat', 'Enter Two Birth Dates', 'دونوں افراد کی تاریخِ پیدائش درج کریں'),

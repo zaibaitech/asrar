@@ -3,6 +3,10 @@ import { FaqSection, JsonLd, RelatedLinks, faqJsonLd, type FaqItem, type Related
 import { getCommonNames } from '@/src/lib/names/commonNames';
 import { englishPageMetadata } from '@/src/lib/names/seo';
 
+// Static at build time: the (site) root layout reads the /fr route header, and
+// force-static keeps this route static (headers() is empty here, so lang="en").
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = englishPageMetadata('/names', 'name-and-mother-burj', {
   title: "Muslim Names: Abjad Value & Burj from Name and Mother's Name",
   description:
