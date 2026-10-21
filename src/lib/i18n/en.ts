@@ -764,7 +764,7 @@ export const en = {
     numberArchetypes: {
       1: { title: "The Leader", meaning: "You're naturally independent and driven to create new things. You prefer making decisions yourself." },
       2: { title: "The Peacemaker", meaning: "You're great at bringing people together and finding harmony. You're sensitive to others' feelings." },
-      3: { title: "The Creator", meaning: "You express yourself easily and bring joy wherever you go. Communication is your strength." },
+      3: { title: "The Creative", meaning: "You express yourself easily and bring joy wherever you go. Communication is your strength." },
       4: { title: "The Builder", meaning: "You're reliable and practical. You build solid foundations in everything you do." },
       5: { title: "The Explorer", meaning: "You love freedom and variety. You adapt quickly and learn from diverse experiences." },
       6: { title: "The Caregiver", meaning: "You're responsible and naturally want to help others. Family and service matter deeply to you." },
@@ -2222,7 +2222,7 @@ WITH this knowledge, they understand: "We're both trying to feel safe×just in d
     numberExplanations: {
       1: { title: "The Leader", meaning: "You're naturally independent and driven to create new things. You prefer making your own decisions." },
       2: { title: "The Peacemaker", meaning: "You're good at bringing people together and finding harmony. You're sensitive to others' feelings." },
-      3: { title: "The Creator", meaning: "You express yourself easily and bring joy wherever you go. Communication is your strength." },
+      3: { title: "The Creative", meaning: "You express yourself easily and bring joy wherever you go. Communication is your strength." },
       4: { title: "The Builder", meaning: "You're reliable and practical. You build solid foundations in everything you do." },
       5: { title: "The Explorer", meaning: "You love freedom and variety. You adapt quickly and learn from diverse experiences." },
       6: { title: "The Caregiver", meaning: "You're responsible and naturally want to help others. Family and service matter deeply to you." },

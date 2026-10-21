@@ -16,8 +16,8 @@
   "pass3_ramadan": 9,
   "pass3_reviewer_data": 33,
   "batch15": {
-   "reviewed": 157,
-   "reviewed-corrected": 15,
+   "reviewed": 156,
+   "reviewed-corrected": 16,
    "reviewed-corrected (optional)": 8
   }
  },
@@ -13269,9 +13269,9 @@
    "id": "15.11",
    "loc": "divineNameMeanings.ts DIVINE_NAME_MEANING[11]",
    "en": "The Creator",
-   "ur": "تخلیق کرنے والا",
-   "status": "reviewed",
-   "note": "Reviewer fallback kept for both uses (Divine gloss and archetype 3 title) until the EN key split (\"The Creative\") is approved; never «خالق»."
+   "ur": "خالق، پیدا کرنے والا",
+   "status": "reviewed-corrected",
+   "note": "Pass 4 Q1: key split applied; the human title is now \"The Creative\" → «تخلیق کار»."
   },
   {
    "id": "15.12",
@@ -14456,6 +14456,14 @@
    "loc": "src/lib/planetary/practice-hints.ts (CompactPracticeHint meaning)",
    "en": "O Provider",
    "ur": "اے رزق دینے والے",
+   "status": "reviewed"
+  }
+ ],
+ "pass4_creator_split": [
+  {
+   "id": "15.11b",
+   "en": "The Creative",
+   "ur": "تخلیق کار",
    "status": "reviewed"
   }
  ]

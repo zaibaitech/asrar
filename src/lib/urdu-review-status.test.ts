@@ -36,7 +36,7 @@ describe('Urdu review status', () => {
       expect(json[r.en], r.en).toBe(r.ur);
     }
     const n = (s: string) => (status.batch15 as Row[]).filter((r) => r.status === s).length;
-    expect(n('reviewed-corrected')).toBe(15);
+    expect(n('reviewed-corrected')).toBe(16);
     expect(n('reviewed-corrected (optional)')).toBe(8);
     for (const r of status.pass3_reviewer_data as Row[]) expect(json[r.en], r.en).toBe(r.ur);
   });
@@ -46,7 +46,8 @@ describe('Urdu review status', () => {
     expect(json['The Last']).toBe('سب سے آخری'); // also ʿĀqib
     expect(json['The One']).toBe('ایک'); // also Wāḥid
     expect(json['Confidence']).toBe('اعتماد'); // also IlmHurufPanel "Confidence: 87%"
-    expect(json['The Creator']).toBe('تخلیق کرنے والا'); // reviewer fallback until the EN split; never «خالق»
+    expect(json['The Creator']).toBe('خالق، پیدا کرنے والا'); // Divine gloss of al-Khāliq only
+    expect(json['The Creative']).toBe('تخلیق کار'); // human title (archetype 3, numerology 3, station 3)
     expect(json['Creativity, expression, joy. Sacred trinity of body, mind, and spirit.']).toBe('تخلیقی صلاحیت، اظہار اور خوشی۔ جسم، ذہن اور روح: تینوں کی ہم آہنگی۔');
     expect(json['Karma']).toBe('مکافاتِ عمل');
     expect(json['Creativity, expression, joy. Sacred trinity of body, mind, and spirit.']).not.toMatch(/تثلیث/);

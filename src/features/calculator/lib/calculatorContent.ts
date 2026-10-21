@@ -45,7 +45,7 @@ export const ARCHETYPES: Record<number, Archetype> = {
     },
   },
   3: {
-    title: { en: 'The Creator', fr: 'Le Créateur', ar: 'المبدع' },
+    title: { en: 'The Creative', fr: 'Le Créateur', ar: 'المبدع' },
     description: {
       en: 'Creativity, expression, joy. Sacred trinity of body, mind, and spirit.',
       fr: "Créativité, expression, joie. Trinité sacrée du corps, de l'esprit et de l'âme.",

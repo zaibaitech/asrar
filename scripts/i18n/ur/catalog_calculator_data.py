@@ -57,7 +57,9 @@ BATCH15_DRAFTS = [
     ('divineNameMeanings.ts DIVINE_NAME_MEANING[8]', 'The Almighty, The Mighty', 'غالب، زبردست'),
     ('divineNameMeanings.ts DIVINE_NAME_MEANING[9]', 'The Compeller, The Irresistible', 'زور آور، جس کے ارادے کو کوئی روک نہیں سکتا'),
     ('divineNameMeanings.ts DIVINE_NAME_MEANING[10]', 'The Supreme in Greatness', 'کبریائی والا، سب سے بڑا'),
-    ('divineNameMeanings.ts DIVINE_NAME_MEANING[11]', 'The Creator', 'تخلیق کرنے والا'),
+    ('divineNameMeanings.ts DIVINE_NAME_MEANING[11]', 'The Creator', 'خالق، پیدا کرنے والا'),
+    # Pass 4, Q1: human title of archetype 3 / numerology 3 / station 3, split from the Divine gloss (AR source «المبدع»).
+    ('calculatorContent.ts ARCHETYPES[3].title; en.ts:767,2225; IlmHurufPanel.tsx:3133', 'The Creative', 'تخلیق کار'),
     ('divineNameMeanings.ts DIVINE_NAME_MEANING[12]', 'The Evolver, The Maker', 'وجود بخشنے والا، بنانے والا'),
     ('divineNameMeanings.ts DIVINE_NAME_MEANING[13]', 'The Fashioner, The Shaper', 'صورت گری کرنے والا'),
     ('divineNameMeanings.ts DIVINE_NAME_MEANING[14]', 'The Ever-Forgiving', 'بار بار بخشنے والا'),
