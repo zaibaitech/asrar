@@ -152,7 +152,7 @@
    "group": "arch",
    "en": "Focus on wellbeing (physical and emotional), emotional maturity, calm daily routines, and seeking therapeutic support when needed.",
    "before": "صحت (جسمانی اور جذباتی) پر توجہ، جذباتی پختگی، پُرسکون روزمرہ معمولات، اور ضرورت پڑنے پر ماہرانہ معاونت لینا۔",
-   "after": "بہبود (جسمانی اور جذباتی) پر توجہ، جذباتی پختگی، پُرسکون روزمرہ معمولات، اور ضرورت پڑنے پر کسی ماہر معالج یا ماہرِ نفسیات سے رجوع کرنا۔",
+   "after": "جسمانی اور جذباتی عافیت کا خیال، جذباتی پختگی، پُرسکون روزمرہ معمولات، اور ضرورت پڑنے پر کسی ماہر معالج یا ماہرِ نفسیات سے رجوع کرنا۔",
    "reason": "\"therapeutic support\" was rendered «ماہرانہ» (expert); the therapeutic sense is restored Superseded by the native review (sheet 2, Oct 2026); the \"after\" text is the reviewed one.",
    "en_before_list2": "Focus on health (physical and emotional), emotional maturity, calm daily routines, and seeking therapeutic support when needed.",
    "source_fix_list2": "S6",
@@ -233,10 +233,12 @@
   },
   {
    "group": "arch",
-   "en": "Do not panic if this appears. Seek counsel from trusted spiritual guides. If already bound, increase protection practices (duʿāʾ, charity, guidance). Avoid fatalistic thinking — free will and divine mercy remain.",
+   "en": "Do not panic if this appears. Seek counsel from trusted spiritual guides. If already bound, keep asking Allah for protection through duʿāʾ and remembrance, give charity, and seek guidance. Avoid fatalistic thinking — free will and divine mercy remain.",
    "before": "اگر یہ نتیجہ آئے تو گھبرائیں نہیں۔ قابلِ اعتماد روحانی رہنماؤں سے مشورہ کریں۔ اگر رشتہ پہلے سے بندھا ہوا ہے تو حفاظت کے معمولات (دعا، صدقہ، رہنمائی) بڑھا دیں۔ تقدیر پرستانہ سوچ سے بچیں — انسان کا اختیار اور اللہ کی رحمت باقی ہیں۔",
-   "after": "اگر یہ نتیجہ آئے تو گھبرائیں نہیں۔ قابلِ اعتماد روحانی رہنماؤں سے مشورہ کریں۔ اگر رشتہ پہلے سے بندھا ہوا ہے تو حفاظت کے معمولات (دعا، صدقہ، رہنمائی) بڑھا دیں۔ یہ سوچ کر ہار مان لینے سے بچیں کہ سب کچھ طے ہو چکا ہے — انسان کا اختیار اور اللہ کی رحمت باقی ہیں۔",
-   "reason": "\"fatalistic thinking\" → «تقدیر پرستانہ» reads as faulting belief in qadar itself; the source warns against giving up because \"everything is fixed\""
+   "after": "اگر یہ نتیجہ آئے تو گھبرائیں نہیں۔ قابلِ اعتماد روحانی رہنماؤں سے مشورہ کریں۔ اگر رشتہ پہلے سے بندھا ہوا ہے تو دعا و اذکار کے ذریعے اللہ سے حفاظت طلب کرتے رہیں، صدقہ دیں اور رہنمائی لیں۔ یہ سوچ کر ہار مان لینے سے بچیں کہ سب کچھ طے ہو چکا ہے — انسان کا اختیار اور اللہ کی رحمت باقی ہیں۔",
+   "reason": "\"fatalistic thinking\" → «تقدیر پرستانہ» reads as faulting belief in qadar itself; the source warns against giving up because \"everything is fixed\"",
+   "en_before_pass9b": "Do not panic if this appears. Seek counsel from trusted spiritual guides. If already bound, increase protection practices (duʿāʾ, charity, guidance). Avoid fatalistic thinking — free will and divine mercy remain.",
+   "after_phase4": "اگر یہ نتیجہ آئے تو گھبرائیں نہیں۔ قابلِ اعتماد روحانی رہنماؤں سے مشورہ کریں۔ اگر رشتہ پہلے سے بندھا ہوا ہے تو حفاظت کے معمولات (دعا، صدقہ، رہنمائی) بڑھا دیں۔ یہ سوچ کر ہار مان لینے سے بچیں کہ سب کچھ طے ہو چکا ہے — انسان کا اختیار اور اللہ کی رحمت باقی ہیں۔"
   },
   {
    "group": "manzil",
@@ -312,7 +314,7 @@
    "group": "career",
    "en": "Healthcare & Caring Professions",
    "before": "شفا اور صحتِ عامہ",
-   "after": "صحت کی دیکھ بھال اور نگہداشت کے پیشے",
+   "after": "طبی خدمات اور نگہداشت کے پیشے",
    "reason": "«صحتِ عامہ» is public health; \"healthcare\" is «طبی نگہداشت» Superseded by the native review (sheet 2, Oct 2026); the \"after\" text is the reviewed one.",
    "en_before_list2": "Healing & Healthcare",
    "source_fix_list2": "S10",
@@ -633,11 +635,13 @@
   },
   {
    "group": "arch",
-   "en": "Do not panic if this appears. Seek counsel from trusted spiritual guides. If already bound, increase protection practices (duʿāʾ, charity, guidance). Avoid fatalistic thinking — free will and divine mercy remain.",
-   "ur": "اگر یہ نتیجہ آئے تو گھبرائیں نہیں۔ قابلِ اعتماد روحانی رہنماؤں سے مشورہ کریں۔ اگر رشتہ پہلے سے بندھا ہوا ہے تو حفاظت کے معمولات (دعا، صدقہ، رہنمائی) بڑھا دیں۔ یہ سوچ کر ہار مان لینے سے بچیں کہ سب کچھ طے ہو چکا ہے — انسان کا اختیار اور اللہ کی رحمت باقی ہیں۔",
+   "en": "Do not panic if this appears. Seek counsel from trusted spiritual guides. If already bound, keep asking Allah for protection through duʿāʾ and remembrance, give charity, and seek guidance. Avoid fatalistic thinking — free will and divine mercy remain.",
+   "ur": "اگر یہ نتیجہ آئے تو گھبرائیں نہیں۔ قابلِ اعتماد روحانی رہنماؤں سے مشورہ کریں۔ اگر رشتہ پہلے سے بندھا ہوا ہے تو دعا و اذکار کے ذریعے اللہ سے حفاظت طلب کرتے رہیں، صدقہ دیں اور رہنمائی لیں۔ یہ سوچ کر ہار مان لینے سے بچیں کہ سب کچھ طے ہو چکا ہے — انسان کا اختیار اور اللہ کی رحمت باقی ہیں۔",
    "reason": "Qadar / free will wording: «انسان کا اختیار اور اللہ کی رحمت باقی ہیں» and the advice on \"protection practices (duʿāʾ, charity, guidance)\" are religious statements.",
    "alternative": "",
-   "review": "religious scholar"
+   "review": "religious scholar",
+   "en_before_pass9b": "Do not panic if this appears. Seek counsel from trusted spiritual guides. If already bound, increase protection practices (duʿāʾ, charity, guidance). Avoid fatalistic thinking — free will and divine mercy remain.",
+   "ur_phase4": "اگر یہ نتیجہ آئے تو گھبرائیں نہیں۔ قابلِ اعتماد روحانی رہنماؤں سے مشورہ کریں۔ اگر رشتہ پہلے سے بندھا ہوا ہے تو حفاظت کے معمولات (دعا، صدقہ، رہنمائی) بڑھا دیں۔ یہ سوچ کر ہار مان لینے سے بچیں کہ سب کچھ طے ہو چکا ہے — انسان کا اختیار اور اللہ کی رحمت باقی ہیں۔"
   },
   {
    "group": "arch",

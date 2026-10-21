@@ -282,6 +282,10 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('manazil-page', 'Saʿd al-Akhbiyah', 'سعد الاخبیہ'),
     ('manazil-page', 'Al-Fargh al-Muqaddam', 'الفرغ المقدم'),
     ('manazil-page', 'Al-Fargh al-Muʾakhkhar', 'الفرغ المؤخر'),
+    ('manazil-page', 'Al-Naʿāʾim', 'النعائم'),  # reviewer-written, review sheet 4 section E (4.E1)
+    ('manazil-page', 'Saʿd al-Dhābiḥ', 'سعد الذابح'),  # reviewer-written, review sheet 4 section E (4.E2)
+    ('manazil-page', 'Saʿd al-Suʿūd', 'سعد السعود'),  # reviewer-written, review sheet 4 section E (4.E3)
+    ('manazil-page', 'Baṭn al-Ḥūt', 'بطن الحوت'),  # reviewer-written, review sheet 4 section E (4.E4)
     ('manazil-page', 'Your natal manzil', 'آپ کی پیدائشی منزل'),
     ('manazil-page', 'Your birth profile shows the lunar mansion the Moon occupied at your birth time, together with Sun and Moon signs and day ruler.', 'آپ کا پیدائشی پروفائل وہ منزلِ قمر دکھاتا ہے جس میں آپ کی پیدائش کے وقت قمر تھا، ساتھ شمس و قمر کے برج اور دن کا حاکم سیارہ۔'),
     ('manazil-page', 'Open Birth Profile →', 'پیدائشی پروفائل کھولیں ←'),
@@ -1012,7 +1016,7 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('burj-blessed-day', 'Your mental clarity is sharpest on this day', 'روایت میں اس دن آپ کی ذہنی یکسوئی سب سے زیادہ سمجھی جاتی ہے'),
     ('burj-blessed-day', 'Ideal for learning anger management and patience practices', 'غصے پر قابو اور صبر کے معمولات سیکھنے کے لیے موزوں'),
     ('burj-blessed-day', 'Prophet Musa (Moses)', 'حضرت موسیٰ علیہ السلام'),
-    ('burj-blessed-day', 'Emotional healing and therapy', 'جذباتی سکون، اور ضرورت ہو تو کسی ماہر سے مشاورت'),
+    ('burj-blessed-day', 'Emotional wellbeing, and counselling when needed', 'جذباتی سکون، اور ضرورت ہو تو کسی ماہر سے مشاورت'),  # Pass 9b (9b.H): EN re-keyed, reviewed Urdu kept
     ('burj-blessed-day', 'Making decisions from the heart', 'دل کی آواز سے فیصلے کرنا'),
     ('burj-blessed-day', 'Starting creative projects', 'تخلیقی منصوبے شروع کرنا'),
     ('burj-blessed-day', 'Water-related ventures', 'پانی سے متعلق کام'),
@@ -1054,7 +1058,7 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('burj-blessed-day', 'Building community connections', 'برادری کے تعلقات بنانا'),
     ('burj-blessed-day', 'Friday prayers and spiritual community', 'جمعہ کی نماز اور روحانی برادری'),
     ('burj-blessed-day', "Venus and Jumu'ah energies combine for powerful social blessings", 'روایتی طور پر زہرہ اور جمعہ کی نسبتیں مل کر سماجی برکتوں کا ذریعہ سمجھی جاتی ہیں'),
-    ('burj-blessed-day', 'Your communication abilities peak on this holy day', 'روایت میں اس مبارک دن آپ کی گفتگو کی صلاحیت عروج پر سمجھی جاتی ہے'),
+    ('burj-blessed-day', 'Traditionally regarded as a blessed day when your communication abilities are strongest', 'روایت میں اس مبارک دن آپ کی گفتگو کی صلاحیت عروج پر سمجھی جاتی ہے'),  # Pass 9b (9b.M): EN re-keyed, reviewed Urdu kept
     ('burj-blessed-day', 'Perfect for building bridges between people and ideas', 'لوگوں اور خیالات کے درمیان پل بنانے کے لیے بہترین'),
     ('burj-blessed-day', 'Divine support flows through community connections', 'روایت میں سمجھا جاتا ہے کہ برادری کے روابط کے ذریعے الٰہی مدد ملتی ہے'),
     ('burj-blessed-day', 'Deep transformational work', 'گہرا تبدیلی کا کام'),
@@ -1102,7 +1106,7 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('burj-blessed-day', 'Your humanitarian vision is clearest', 'روایت میں اس دن آپ کا انسان دوست نقطۂ نظر سب سے واضح سمجھا جاتا ہے'),
     ('burj-blessed-day', 'Perfect for launching community initiatives', 'برادری کے اقدامات شروع کرنے کے لیے بہترین'),
     ('burj-blessed-day', 'Divine support flows through collective efforts', 'روایت میں سمجھا جاتا ہے کہ اجتماعی کوششوں کے ذریعے الٰہی مدد ملتی ہے'),
-    ('burj-blessed-day', 'Healing and spiritual work', 'شفا کے لیے دعا اور روحانی کام'),
+    ('burj-blessed-day', 'Prayer for shifāʾ and spiritual work', 'شفا کے لیے دعا اور روحانی کام'),  # Pass 9b (9b.H): EN re-keyed, reviewed Urdu kept
     ('burj-blessed-day', 'Charitable activities and giving', 'خیرات اور سخاوت کے کام'),
     ('burj-blessed-day', 'Meditation and prayer', 'مراقبہ اور دعا'),
     ('burj-blessed-day', 'Helping those in need', 'ضرورت مندوں کی مدد کرنا'),
@@ -1201,7 +1205,7 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('burj-sadaqah', 'Perform on Monday (your blessed day) - OPTIMAL for Water element', 'اپنے مبارک دن پیر کو کریں — آبی عنصر کے لیے بہترین'),
     ('burj-sadaqah', 'During Eid al-Adha for amplified blessings', 'زیادہ برکت کے لیے عیدالاضحیٰ کے دوران'),
     ('burj-sadaqah', 'After major life transitions', 'زندگی کی بڑی تبدیلیوں کے بعد'),
-    ('burj-sadaqah', 'When seeking emotional healing', 'جب جذباتی سکون مقصود ہو'),
+    ('burj-sadaqah', 'When seeking emotional calm and wellbeing', 'جب جذباتی سکون مقصود ہو'),  # Pass 9b (9b.H): EN re-keyed, reviewed Urdu kept
     ('burj-sadaqah', 'A profound spiritual milestone that creates emotional balance for Water element, protects from being overwhelmed, strengthens boundaries while maintaining compassion, and opens doors of sustenance. The combination of elements (goat, cloth, 4 coins) represents complete spiritual protection and the harmonious flow of water energy.', 'ایک گہرا روحانی سنگِ میل، جو روایت میں آبی عنصر کے لیے جذباتی توازن پیدا کرنے، مغلوب ہونے سے بچانے، ہمدردی برقرار رکھتے ہوئے حدود مضبوط کرنے اور رزق کے دروازے کھولنے کا ذریعہ سمجھا جاتا ہے۔ عناصر کا امتزاج (بکرا، کپڑا، 4 سکّے) مکمل روحانی حفاظت اور آبی توانائی کے ہم آہنگ بہاؤ کی علامت ہے۔'),
     ('burj-sadaqah', 'To maintain spiritual balance and cool excessive fire energy', 'روحانی توازن برقرار رکھنے اور حد سے زیادہ آتشی توانائی کو ٹھنڈا کرنے کے لیے'),
     ('burj-sadaqah', 'Balances fiery nature, attracts divine blessings for new beginnings, maintains leadership barakah', 'آتشی مزاج کو متوازن کرتا، نئے آغاز کے لیے الٰہی برکتیں لاتا اور قیادت کی برکت برقرار رکھتا سمجھا جاتا ہے'),
@@ -1267,9 +1271,9 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('burj-sadaqah', 'During times of building community connections', 'برادری سے روابط بنانے کے اوقات میں'),
     ('burj-sadaqah', 'This offering grounds your airy nature through the lamb (earth connection) while the 4 coins represent spreading your gifts in all directions. It ensures your words carry barakah, protects your communication endeavors, and opens doors for meaningful connections. The four coins symbolize reaching the four corners of the earth with your message.', 'یہ صدقہ میمنے (زمین سے تعلق) کے ذریعے آپ کے ہوائی مزاج کو ٹھہراؤ دیتی ہے جبکہ 4 سکّے آپ کی عطاؤں کے ہر سمت پھیلنے کی علامت ہیں۔ روایت میں اسے آپ کے کلام میں برکت کا ذریعہ، آپ کی گفتگو سے متعلق کوششوں کی حفاظت اور بامعنی روابط کے دروازے کھولنے والی سمجھا جاتا ہے۔ چار سکّے آپ کے پیغام کے زمین کے چاروں کونوں تک پہنچنے کی علامت ہیں۔'),
     ('burj-sadaqah', 'To balance intense emotional depth and maintain flow', 'شدید جذباتی گہرائی کو متوازن رکھنے اور بہاؤ برقرار رکھنے کے لیے'),
-    ('burj-sadaqah', 'Releases stuck energy, facilitates transformation, ensures emotional flow, and attracts healing opportunities', 'رکی ہوئی توانائی کو آزاد کرتا، تبدیلی کو آسان بناتا، جذباتی بہاؤ اور سکون کے مواقع کا ذریعہ سمجھا جاتا ہے'),
+    ('burj-sadaqah', 'Traditionally associated with moving past what feels stuck, with transformation, emotional ease, and openings for wellbeing', 'روایت میں اسے جمود سے نکلنے، تبدیلی، جذباتی سہولت اور عافیت کے مواقع سے جوڑا جاتا ہے'),  # Pass 9b (9b.H): NEW URDU DRAFT, pending review
     ('burj-sadaqah', 'Support programs feeding those in crisis', 'بحران میں گھرے لوگوں کو کھانا کھلانے والے پروگراموں کی مدد کریں'),
-    ('burj-sadaqah', 'Provide meals to hospitals and healing centers', 'ہسپتالوں اور شفا خانوں کو کھانا فراہم کریں'),
+    ('burj-sadaqah', 'Provide meals to hospitals and care centres', 'ہسپتالوں اور نگہداشت کے مراکز کو کھانا فراہم کریں'),  # Pass 9b (9b.H): NEW URDU DRAFT, pending review
     ('burj-sadaqah', 'Sponsor food for grief support groups', 'غم میں مبتلا افراد کے معاونتی گروہوں کے لیے کھانے کی کفالت کریں'),
     ('burj-sadaqah', 'Donate to organizations helping trauma survivors', 'صدمے سے گزرنے والوں کی مدد کرنے والی تنظیموں کو عطیہ دیں'),
     ('burj-sadaqah', 'Support meal programs for those in transition', 'تبدیلی کے مرحلے سے گزرنے والوں کے کھانے کے پروگراموں کی مدد کریں'),
@@ -1280,15 +1284,15 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('burj-sadaqah', 'Meat distributed widely among the community', 'گوشت برادری میں وسیع پیمانے پر تقسیم کیا جائے'),
     ('burj-sadaqah', 'Gold/money given as sadaqah to those in need', 'سونا/رقم ضرورت مندوں کو صدقے کے طور پر دی جائے'),
     ('burj-sadaqah', 'Prioritize those going through difficult transitions', 'مشکل تبدیلیوں سے گزرنے والوں کو ترجیح دیں'),
-    ('burj-sadaqah', 'Performed with intention for transformation and healing', 'تبدیلی اور شفا کی نیت سے کیا جائے'),
+    ('burj-sadaqah', 'Given with a sincere intention, asking Allah for positive change and wellbeing', 'خالص نیت سے دیا جائے، اور اللہ سے مثبت تبدیلی اور عافیت کی دعا کی جائے'),  # Pass 9b (9b.H): NEW URDU DRAFT, pending review
     ('burj-sadaqah', 'Perform on Tuesday (your blessed day)', 'اپنے مبارک دن منگل کو کریں'),
     ('burj-sadaqah', 'During Eid al-Adha for maximum transformation', 'زیادہ سے زیادہ تبدیلی کے لیے عیدالاضحیٰ کے دوران'),
     ('burj-sadaqah', 'At major life turning points', 'زندگی کے بڑے موڑ پر'),
-    ('burj-sadaqah', 'When seeking deep healing or release', 'جب گہری شفا یا رہائی مقصود ہو'),
+    ('burj-sadaqah', 'When asking Allah for relief from a heavy burden (alongside any care you need)', 'جب کسی بھاری بوجھ سے نجات کے لیے اللہ سے دعا مقصود ہو (ضروری علاج و نگہداشت کے ساتھ)'),  # Pass 9b (9b.H): NEW URDU DRAFT, pending review
     ('burj-sadaqah', 'During Muharram', 'محرم کے دوران'),  # source fix F1 (Mario, 21 Oct 2026)
     ('burj-sadaqah', 'Capricorn (Jady)', 'جدی'),
     ('burj-sadaqah', "The red goat symbolizes Scorpio's transformative power, while Capricorn represents the structured manifestation of that transformation", 'سرخ بکرا عقرب کی تبدیلی کی قوت کی علامت ہے، جبکہ جدی اس تبدیلی کے منظم اظہار کی نمائندگی کرتا ہے'),
-    ('burj-sadaqah', "The red goat represents the blood of life and the power of transformation specific to buruj 8 (Water-Scorpio). This profound buruj sadaqah facilitates major life transitions, releases karmic patterns, empowers deep healing work, and transforms obstacles into opportunities. The red color symbolizes the intensity and power of Scorpio water - death and rebirth. The gold component (or monetary equivalent) represents the preciousness of transformation and connects to Capricorn's earthly manifestation.", 'سرخ بکرا زندگی کے خون اور برج 8 (آبی-عقرب) سے مخصوص تبدیلی کی قوت کی نمائندگی کرتا ہے۔ یہ گہرا برجی صدقہ روایت میں زندگی کی بڑی تبدیلیوں کو آسان بنانے، پرانے انداز چھوڑنے، گہری روحانی اصلاح کے کام کو تقویت دینے اور رکاوٹوں کو مواقع میں بدلنے کا ذریعہ سمجھا جاتا ہے۔ سرخ رنگ عقربی پانی کی شدت اور قوت — موت اور نئی زندگی — کی علامت ہے۔ سونے کا حصہ (یا اس کے برابر رقم) تبدیلی کی قدر و قیمت کا اظہار ہے اور جدی کے زمینی اظہار سے جڑتا ہے۔'),
+    ('burj-sadaqah', "The red goat represents the blood of life and the power of transformation specific to buruj 8 (Water-Scorpio). In this tradition, this buruj sadaqah is associated with major life transitions, leaving old patterns behind, deep inner reform, and turning obstacles into opportunities. The red color symbolizes the intensity and power of Scorpio water - death and rebirth. The gold component (or monetary equivalent) represents the preciousness of transformation and connects to Capricorn's earthly manifestation.", 'سرخ بکرا زندگی کے خون اور برج 8 (آبی-عقرب) سے مخصوص تبدیلی کی قوت کی نمائندگی کرتا ہے۔ یہ گہرا برجی صدقہ روایت میں زندگی کی بڑی تبدیلیوں کو آسان بنانے، پرانے انداز چھوڑنے، گہری روحانی اصلاح کے کام کو تقویت دینے اور رکاوٹوں کو مواقع میں بدلنے کا ذریعہ سمجھا جاتا ہے۔ سرخ رنگ عقربی پانی کی شدت اور قوت — موت اور نئی زندگی — کی علامت ہے۔ سونے کا حصہ (یا اس کے برابر رقم) تبدیلی کی قدر و قیمت کا اظہار ہے اور جدی کے زمینی اظہار سے جڑتا ہے۔'),  # Pass 9b (9b.H): EN re-keyed, reviewed Urdu kept
     ('burj-sadaqah', 'Every 1-2 months', 'ہر 1 تا 2 ماہ میں'),
     ('burj-sadaqah', 'To balance fire energy and attract continued blessings', 'آتشی توانائی کو متوازن کرنے اور برکتوں کے تسلسل کے لیے'),
     ('burj-sadaqah', 'Maintains spiritual balance and ensures blessings in knowledge and travel', 'روحانی توازن برقرار رکھتا اور علم و سفر میں برکت کا ذریعہ سمجھا جاتا ہے'),
@@ -1383,8 +1387,8 @@ AI_UI_ENTRIES = [  # (section, en, ur)
     ('burj-sadaqah', 'Especially blessed during Ramadan', 'رمضان میں خاص طور پر بابرکت'),
     ('burj-sadaqah', 'At completion of major spiritual journey or transformation', 'کسی بڑے روحانی سفر یا تبدیلی کی تکمیل پر'),
     ('burj-sadaqah', 'When seeking spiritual closure or new beginning', 'جب روحانی اختتام یا نیا آغاز مقصود ہو'),
-    ('burj-sadaqah', 'After major healing or life transition', 'کسی بڑی شفا یا زندگی کی تبدیلی کے بعد'),
-    ('burj-sadaqah', "This is the completion buruj (12th) with 12 portions - representing full spiritual cycle completion. Rice (nourishment) and fish (water element) create complete spiritual protection and healing. The number 12 appears twice (12th buruj + 12 portions) symbolizing ultimate spiritual wholeness. Thursday's Jupiter energy amplifies compassion, mercy, and divine blessings. This sacrifice protects your empathic nature, establishes healthy boundaries while maintaining compassion, attracts divine protection in service to others, and ensures spiritual completion and closure.", 'یہ تکمیل کا برج (12واں) ہے اور 12 حصوں کے ساتھ — مکمل روحانی دور کی تکمیل کی علامت۔ چاول (غذا) اور مچھلی (آبی عنصر) مل کر روایت میں مکمل روحانی حفاظت اور شفا کا ذریعہ سمجھے جاتے ہیں۔ عدد 12 دو بار آتا ہے (12واں برج + 12 حصے) جو مکمل روحانی تکمیل کی علامت ہے۔ جمعرات کی مشتری کی توانائی ہمدردی، رحمت اور الٰہی برکتوں کو بڑھاتی سمجھی جاتی ہے۔ یہ صدقہ روایت میں آپ کی ہمدرد فطرت کی حفاظت، ہمدردی برقرار رکھتے ہوئے صحت مند حدود قائم کرنے، دوسروں کی خدمت میں الٰہی حفاظت کی کشش اور روحانی تکمیل و اختتام کا ذریعہ سمجھا جاتا ہے۔'),
+    ('burj-sadaqah', 'After recovering from an illness, or after a major life transition', 'کسی بیماری سے صحت یابی کے بعد، یا زندگی کی کسی بڑی تبدیلی کے بعد'),  # Pass 9b (9b.H): NEW URDU DRAFT, pending review
+    ('burj-sadaqah', "This is the completion buruj (12th) with 12 portions - representing full spiritual cycle completion. In this tradition, rice (nourishment) and fish (water element) are associated with spiritual protection and wellbeing, which are sought from Allah. The number 12 appears twice (12th buruj + 12 portions) symbolizing ultimate spiritual wholeness. Thursday's Jupiter energy is traditionally said to amplify compassion, mercy, and divine blessings. This sadaqah is given in the hope of safeguarding your empathic nature, keeping healthy boundaries while maintaining compassion, seeking Allah's protection in service to others, and reaching spiritual completion and closure.", 'یہ تکمیل کا برج (12واں) ہے اور 12 حصوں کے ساتھ — مکمل روحانی دور کی تکمیل کی علامت۔ روایت میں چاول (غذا) اور مچھلی (آبی عنصر) کو روحانی حفاظت اور عافیت سے جوڑا جاتا ہے، جو اللہ ہی سے طلب کی جاتی ہیں۔ عدد 12 دو بار آتا ہے (12واں برج + 12 حصے) جو مکمل روحانی تکمیل کی علامت ہے۔ جمعرات کی مشتری کی توانائی ہمدردی، رحمت اور الٰہی برکتوں کو بڑھاتی سمجھی جاتی ہے۔ یہ صدقہ اس امید کے ساتھ دیا جاتا ہے کہ آپ کی ہمدرد فطرت محفوظ رہے، ہمدردی برقرار رکھتے ہوئے صحت مند حدود قائم رہیں، دوسروں کی خدمت میں اللہ کی حفاظت طلب کی جائے، اور روحانی تکمیل و اختتام نصیب ہو۔'),  # Pass 9b (9b.H): NEW URDU DRAFT, pending review
     ('scan-TrackingDashboard', 'Add', 'شامل کریں'),
     ('scan-TrackingDashboard', 'Add Practice Session', 'معمول کی نشست شامل کریں'),
     ('scan-TrackingDashboard', 'Add Record', 'اندراج شامل کریں'),

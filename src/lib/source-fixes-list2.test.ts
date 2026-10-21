@@ -60,7 +60,7 @@ describe('source fixes list 2 (21 Oct 2026)', () => {
     const burdened = a.slice(a.indexOf("title: { en: 'The Burdened Path'"), a.indexOf('  5: {'));
     expect(burdened).not.toMatch(/[Hh]ealth|[Ss]anté/);
     expect(a).not.toMatch(/spiritual protection|protection practices rather|protection spirituelle|pratiques de protection plutôt/);
-    expect(a.match(/protection through duʿāʾ and remembrance/g)).toHaveLength(3);
+    expect(a.match(/protection through duʿāʾ and remembrance/g)).toHaveLength(4); // + archetype 9 key to success (Pass 9b)
     expect(a).not.toContain('Marriage starts with confusion');
     expect(a).not.toContain('trust are common.');
   });
@@ -99,16 +99,18 @@ describe('source fixes list 2 (21 Oct 2026)', () => {
     for (const e of list2) {
       if (e.status === 'removed') { expect(ur[e.en_before], e.en_before).toBeUndefined(); continue; }
       expect(ur[e.en!], e.en!).toBe(e.ur);
-      if (e.status === 'draft') expect(e.ur).not.toBe(e.ur_before);
+      if (e.status.startsWith('reviewed-corrected')) expect(e.ur).not.toBe(e.ur_before);
     }
-    expect(list2.filter((e) => e.status === 'draft')).toHaveLength(24);
-    expect(list2.filter((e) => e.status === 'reviewed')).toHaveLength(33);
+    // Review sheet 4 (pass 9): every list-2 row reviewed — 13 corrections + 2 optional, the rest confirmed.
+    expect(list2.filter((e) => e.status === 'draft')).toEqual([]);
+    expect(list2.filter((e) => e.status === 'reviewed-corrected')).toHaveLength(13);
+    expect(list2.filter((e) => e.status === 'reviewed-corrected (optional)')).toHaveLength(2);
   });
 
-  it('Arabic follows the new English keys (drafts pending review sheet 4)', () => {
+  it('Arabic follows the new English keys (all reviewed in sheet 4)', () => {
     const l2 = Object.entries(arFixes).filter(([, e]) => e.id.endsWith('(list 2)'));
     expect(l2).toHaveLength(18);
-    for (const [k, e] of l2) expect(ar[k], k).toBe(e.ar);
+    for (const [k, e] of l2) { expect(ar[k], k).toBe(e.ar); expect(e.status).toMatch(/^reviewed/); }
     const all = l2.map(([, e]) => e.ar).join('\n');
     expect(all).not.toMatch(/عنصري|عنصرية|عناصري/);
   });

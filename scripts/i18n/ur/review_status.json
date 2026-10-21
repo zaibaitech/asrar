@@ -1,5 +1,5 @@
 {
- "about": "Review status of the Urdu (/ur) strings. Sheet 2 = /workspace review file asrar-ur-review-2.md (2,336 rows), all reviewed by the native Language Reviewer (Oct 2026). reviewed-corrected: correction applied; reviewed: confirmed as is; reviewed-kept: reviewer suggestion not applied on purpose (see note); reviewed-flagged: left for Mario / the source owner. Batch 13 (/ur/abjad calculator UI, src/features/calculator/i18n/ur.ts) and Batch 14 (burujData.json practice nights) were reviewed in pass 3. Batch 15 (calculator result data and practice-hint meanings) was reviewed in pass 4; pass3_reviewer_data are the reviewer-written result-data strings (reviewed). Source fixes approved by Mario on 21 Oct 2026 (option A) moved reviewed Urdu to the new English keys; 6 keys whose meaning changed got new Urdu drafts (status draft) — see source_fixes_2026_10_21. Batch 16 (pass 5, 21 Oct 2026): the Language Reviewer checked the PR #101 source-fix strings; the 6 drafts are now reviewed (S2 and F3b corrected), P1–P11 and 5.178/5.207 corrected. Sheet 3 (asrar-ur-review-3.md, the 838 catalog_ai_draft.py strings): Batches 17–19 (299 rows) reviewed in pass 6 (48 corrections + 20 optional applied); Batches 20–21 (176 rows) reviewed in pass 7 (34 corrections + 15 optional applied); Batches 22–25 (363 rows) reviewed in pass 8 (19 corrections + 14 optional applied). Sheet 3 is complete: all 838 rows reviewed (101 corrections + 49 optional). Spot-check of sheet 3 (21 Oct 2026): clean; the last six «سخت نظر» strings (8.93, 8.150, 8.151, 10.120, 5.96 and the round-1 title) were corrected. The Language Reviewer cleared the Urdu for the PR #101 merge. List 2 source fixes (Mario approved 21 Oct 2026, asrar-source-changes-for-mario-2.md: B1–B5, S1–S13, F9; F2 and F4 skipped): 59 English keys changed (source_fixes_2026_10_21_list2). 33 keep their reviewed Urdu (the Urdu already said what the new English says); 24 got new Urdu drafts (status draft, rows carry status_before_list2 / ur_before_list2) for the Language Reviewer in review sheet 4 (asrar-ur-review-4.md); 2 career items were removed from the source (S10: 24.6, 24.97). S9: «زہرہ» is feminine catalog-wide (no masculine agreement left). The Urdu is NOT cleared for merge until review sheet 4 is done.",
+ "about": "Review status of the Urdu (/ur) strings. Sheet 2 = /workspace review file asrar-ur-review-2.md (2,336 rows), all reviewed by the native Language Reviewer (Oct 2026). reviewed-corrected: correction applied; reviewed: confirmed as is; reviewed-kept: reviewer suggestion not applied on purpose (see note); reviewed-flagged: left for Mario / the source owner. Batch 13 (/ur/abjad calculator UI, src/features/calculator/i18n/ur.ts) and Batch 14 (burujData.json practice nights) were reviewed in pass 3. Batch 15 (calculator result data and practice-hint meanings) was reviewed in pass 4; pass3_reviewer_data are the reviewer-written result-data strings (reviewed). Source fixes approved by Mario on 21 Oct 2026 (option A) moved reviewed Urdu to the new English keys; 6 keys whose meaning changed got new Urdu drafts (status draft) — see source_fixes_2026_10_21. Batch 16 (pass 5, 21 Oct 2026): the Language Reviewer checked the PR #101 source-fix strings; the 6 drafts are now reviewed (S2 and F3b corrected), P1–P11 and 5.178/5.207 corrected. Sheet 3 (asrar-ur-review-3.md, the 838 catalog_ai_draft.py strings): Batches 17–19 (299 rows) reviewed in pass 6 (48 corrections + 20 optional applied); Batches 20–21 (176 rows) reviewed in pass 7 (34 corrections + 15 optional applied); Batches 22–25 (363 rows) reviewed in pass 8 (19 corrections + 14 optional applied). Sheet 3 is complete: all 838 rows reviewed (101 corrections + 49 optional). Spot-check of sheet 3 (21 Oct 2026): clean; the last six «سخت نظر» strings (8.93, 8.150, 8.151, 10.120, 5.96 and the round-1 title) were corrected. The Language Reviewer cleared the Urdu for the PR #101 merge. List 2 source fixes (Mario approved 21 Oct 2026, asrar-source-changes-for-mario-2.md: B1–B5, S1–S13, F9; F2 and F4 skipped): 59 English keys changed (source_fixes_2026_10_21_list2). 33 keep their reviewed Urdu (the Urdu already said what the new English says); 24 got new Urdu drafts (status draft, rows carry status_before_list2 / ur_before_list2) for the Language Reviewer in review sheet 4 (asrar-ur-review-4.md); 2 career items were removed from the source (S10: 24.6, 24.97). S9: «زہرہ» is feminine catalog-wide (no masculine agreement left). The Urdu is NOT cleared for merge until review sheet 4 is done. Review sheet 4 (pass 9, 21 Oct 2026): the Language Reviewer checked all list-2 strings — 11 Urdu draft corrections (A2–A11, A14; «بہبود» → «عافیت»), 2 kept-Urdu corrections (B30, B31) + 2 optional (B14, B17), 7 Arabic corrections (D4, D6–D11; «الضغط» → «الضغط النفسي») + 2 optional (D13, D18), and 4 missing mansion names added (sheet4_additions). All list-2 rows are now reviewed. S4 and S11 kept as drafted; SF1 (scholar note on the career tab) waits for Mario. Pass 9b (21 Oct 2026, Mario approved): French list-1 lines aligned with the approved English (12, FR only); archetype 9 key-to-success asks Allah for protection through duʿāʾ and remembrance; \"Empty vows\" → \"Empty promises\"; remaining \"healing\" wording in the burj blessed-day and sadaqah texts reframed (caring, wellbeing, alongside medical care, asking Allah). Changed Urdu is status draft (section pass9b), Arabic drafts in source-fixes-2026-10.json; listed in asrar-ur-review-4.md, section \"Pass 9b\".",
  "counts": {
   "sheet2": {
    "reviewed-corrected": 415,
@@ -52,9 +52,23 @@
   "rekeyed_reviewed": 8,
   "spotcheck_sakht_nazar": 6,
   "source_fixes_list2": {
-   "reviewed (Urdu kept)": 33,
-   "draft (pending review 4)": 24,
-   "removed": 2
+   "removed": 2,
+   "reviewed": 42,
+   "reviewed-corrected": 13,
+   "reviewed-corrected (optional)": 2
+  },
+  "sheet4_pass9": {
+   "urdu_corrections": 13,
+   "urdu_optional": 2,
+   "arabic_corrections": 7,
+   "arabic_optional": 2,
+   "additions": 4
+  },
+  "pass9b": {
+   "reviewed (Urdu kept)": 6,
+   "draft": 7,
+   "arabic_draft": 2,
+   "fr_only": 12
   }
  },
  "sheet2": {
@@ -129,9 +143,13 @@
    "status": "reviewed"
   },
   "1.15": {
-   "en": "This is the completion buruj (12th) with 12 portions - representing full spiritual cycle completion. Rice (nourishment) and fish (water element) create complete spiritual protection and healing. The number 12 appears twice (12th buruj + 12 portions) symbolizing ultimate spiritual wholeness. Thursday's Jupiter energy amplifies compassion, mercy, and divine blessings. This sacrifice protects your empathic nature, establishes healthy boundaries while maintaining compassion, attracts divine protection in service to others, and ensures spiritual completion and closure.",
+   "en": "This is the completion buruj (12th) with 12 portions - representing full spiritual cycle completion. In this tradition, rice (nourishment) and fish (water element) are associated with spiritual protection and wellbeing, which are sought from Allah. The number 12 appears twice (12th buruj + 12 portions) symbolizing ultimate spiritual wholeness. Thursday's Jupiter energy is traditionally said to amplify compassion, mercy, and divine blessings. This sadaqah is given in the hope of safeguarding your empathic nature, keeping healthy boundaries while maintaining compassion, seeking Allah's protection in service to others, and reaching spiritual completion and closure.",
    "loc": "catalog_ai_draft_ui.py:1369 [burj-sadaqah]",
-   "status": "reviewed-corrected"
+   "status": "draft",
+   "en_before_pass9b": "This is the completion buruj (12th) with 12 portions - representing full spiritual cycle completion. Rice (nourishment) and fish (water element) create complete spiritual protection and healing. The number 12 appears twice (12th buruj + 12 portions) symbolizing ultimate spiritual wholeness. Thursday's Jupiter energy amplifies compassion, mercy, and divine blessings. This sacrifice protects your empathic nature, establishes healthy boundaries while maintaining compassion, attracts divine protection in service to others, and ensures spiritual completion and closure.",
+   "source_fix_pass9b": "9b.H",
+   "status_before_pass9b": "reviewed-corrected",
+   "ur_before_pass9b": "یہ تکمیل کا برج (12واں) ہے اور 12 حصوں کے ساتھ — مکمل روحانی دور کی تکمیل کی علامت۔ چاول (غذا) اور مچھلی (آبی عنصر) مل کر روایت میں مکمل روحانی حفاظت اور شفا کا ذریعہ سمجھے جاتے ہیں۔ عدد 12 دو بار آتا ہے (12واں برج + 12 حصے) جو مکمل روحانی تکمیل کی علامت ہے۔ جمعرات کی مشتری کی توانائی ہمدردی، رحمت اور الٰہی برکتوں کو بڑھاتی سمجھی جاتی ہے۔ یہ صدقہ روایت میں آپ کی ہمدرد فطرت کی حفاظت، ہمدردی برقرار رکھتے ہوئے صحت مند حدود قائم کرنے، دوسروں کی خدمت میں الٰہی حفاظت کی کشش اور روحانی تکمیل و اختتام کا ذریعہ سمجھا جاتا ہے۔"
   },
   "1.16": {
    "en": "Quranic Verse",
@@ -658,9 +676,13 @@
    "status": "reviewed"
   },
   "3.9": {
-   "en": "Do not panic if this appears. Seek counsel from trusted spiritual guides. If already bound, increase protection practices (duʿāʾ, charity, guidance). Avoid fatalistic thinking — free will and divine mercy remain.",
+   "en": "Do not panic if this appears. Seek counsel from trusted spiritual guides. If already bound, keep asking Allah for protection through duʿāʾ and remembrance, give charity, and seek guidance. Avoid fatalistic thinking — free will and divine mercy remain.",
    "loc": "catalog_ai_draft.py:269 [arch]",
-   "status": "reviewed"
+   "status": "draft",
+   "en_before_pass9b": "Do not panic if this appears. Seek counsel from trusted spiritual guides. If already bound, increase protection practices (duʿāʾ, charity, guidance). Avoid fatalistic thinking — free will and divine mercy remain.",
+   "source_fix_pass9b": "9b.K",
+   "status_before_pass9b": "reviewed",
+   "ur_before_pass9b": "اگر یہ نتیجہ آئے تو گھبرائیں نہیں۔ قابلِ اعتماد روحانی رہنماؤں سے مشورہ کریں۔ اگر رشتہ پہلے سے بندھا ہوا ہے تو حفاظت کے معمولات (دعا، صدقہ، رہنمائی) بڑھا دیں۔ یہ سوچ کر ہار مان لینے سے بچیں کہ سب کچھ طے ہو چکا ہے — انسان کا اختیار اور اللہ کی رحمت باقی ہیں۔"
   },
   "3.10": {
    "en": "Sadaqa of the Day",
@@ -1075,9 +1097,11 @@
    "source_fix": "F1"
   },
   "3.92": {
-   "en": "The red goat represents the blood of life and the power of transformation specific to buruj 8 (Water-Scorpio). This profound buruj sadaqah facilitates major life transitions, releases karmic patterns, empowers deep healing work, and transforms obstacles into opportunities. The red color symbolizes the intensity and power of Scorpio water - death and rebirth. The gold component (or monetary equivalent) represents the preciousness of transformation and connects to Capricorn's earthly manifestation.",
+   "en": "The red goat represents the blood of life and the power of transformation specific to buruj 8 (Water-Scorpio). In this tradition, this buruj sadaqah is associated with major life transitions, leaving old patterns behind, deep inner reform, and turning obstacles into opportunities. The red color symbolizes the intensity and power of Scorpio water - death and rebirth. The gold component (or monetary equivalent) represents the preciousness of transformation and connects to Capricorn's earthly manifestation.",
    "loc": "catalog_ai_draft_ui.py:1273 [burj-sadaqah]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_pass9b": "The red goat represents the blood of life and the power of transformation specific to buruj 8 (Water-Scorpio). This profound buruj sadaqah facilitates major life transitions, releases karmic patterns, empowers deep healing work, and transforms obstacles into opportunities. The red color symbolizes the intensity and power of Scorpio water - death and rebirth. The gold component (or monetary equivalent) represents the preciousness of transformation and connects to Capricorn's earthly manifestation.",
+   "source_fix_pass9b": "9b.H"
   },
   "3.93": {
    "en": "To balance fire energy and attract continued blessings",
@@ -2653,7 +2677,7 @@
   "4.1": {
    "en": "Healthcare & Caring Professions",
    "loc": "catalog_ai_draft.py:886 [career]",
-   "status": "draft",
+   "status": "reviewed-corrected",
    "en_before_list2": "Healing & Healthcare",
    "source_fix_list2": "S10",
    "status_before_list2": "reviewed-corrected",
@@ -2977,7 +3001,7 @@
   "5.36": {
    "en": "Focus on wellbeing (physical and emotional), emotional maturity, calm daily routines, and seeking therapeutic support when needed.",
    "loc": "catalog_ai_draft.py:189 [arch]",
-   "status": "draft",
+   "status": "reviewed-corrected",
    "en_before_list2": "Focus on health (physical and emotional), emotional maturity, calm daily routines, and seeking therapeutic support when needed.",
    "source_fix_list2": "S6",
    "status_before_list2": "reviewed-corrected",
@@ -3031,7 +3055,7 @@
   "5.46": {
    "en": "Marriage is traditionally discouraged under this pattern. If already in this bond, seek Allah's protection through duʿāʾ and remembrance, and seek wise counsel.",
    "loc": "catalog_ai_draft.py:276 [arch]",
-   "status": "draft",
+   "status": "reviewed",
    "en_before_list2": "Marriage is traditionally discouraged under this pattern. If already in this bond, increase spiritual protection practices and seek wise counsel.",
    "source_fix_list2": "S8",
    "status_before_list2": "reviewed",
@@ -3536,9 +3560,11 @@
    "status": "reviewed"
   },
   "5.146": {
-   "en": "Your communication abilities peak on this holy day",
+   "en": "Traditionally regarded as a blessed day when your communication abilities are strongest",
    "loc": "catalog_ai_draft_ui.py:1039 [burj-blessed-day]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_pass9b": "Your communication abilities peak on this holy day",
+   "source_fix_pass9b": "9b.M"
   },
   "5.147": {
    "en": "Perfect for building bridges between people and ideas",
@@ -3774,9 +3800,11 @@
    "status": "reviewed"
   },
   "5.192": {
-   "en": "Healing and spiritual work",
+   "en": "Prayer for shifāʾ and spiritual work",
    "loc": "catalog_ai_draft_ui.py:1087 [burj-blessed-day]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_pass9b": "Healing and spiritual work",
+   "source_fix_pass9b": "9b.H"
   },
   "5.193": {
    "en": "Charitable activities and giving",
@@ -3960,9 +3988,11 @@
    "status": "reviewed"
   },
   "5.228": {
-   "en": "Emotional healing and therapy",
+   "en": "Emotional wellbeing, and counselling when needed",
    "loc": "catalog_ai_draft_ui.py:997 [burj-blessed-day]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_pass9b": "Emotional healing and therapy",
+   "source_fix_pass9b": "9b.H"
   },
   "5.229": {
    "en": "Making decisions from the heart",
@@ -4439,7 +4469,7 @@
   "6.89": {
    "en": "In this tradition, protection is sought from Allah in matters of livelihood and sustenance",
    "loc": "catalog_ai_draft_ui.py:852 [burj-personality]",
-   "status": "draft",
+   "status": "reviewed",
    "en_before_list2": "Receives divine protection in matters of livelihood and sustenance",
    "source_fix_list2": "B4",
    "status_before_list2": "reviewed",
@@ -5361,9 +5391,11 @@
    "status": "reviewed"
   },
   "7.68": {
-   "en": "When seeking emotional healing",
+   "en": "When seeking emotional calm and wellbeing",
    "loc": "catalog_ai_draft_ui.py:1186 [burj-sadaqah]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_pass9b": "When seeking emotional healing",
+   "source_fix_pass9b": "9b.H"
   },
   "7.69": {
    "en": "A profound spiritual milestone that creates emotional balance for Water element, protects from being overwhelmed, strengthens boundaries while maintaining compassion, and opens doors of sustenance. The combination of elements (goat, cloth, 4 coins) represents complete spiritual protection and the harmonious flow of water energy.",
@@ -5616,9 +5648,13 @@
    "status": "reviewed"
   },
   "7.119": {
-   "en": "Releases stuck energy, facilitates transformation, ensures emotional flow, and attracts healing opportunities",
+   "en": "Traditionally associated with moving past what feels stuck, with transformation, emotional ease, and openings for wellbeing",
    "loc": "catalog_ai_draft_ui.py:1252 [burj-sadaqah]",
-   "status": "reviewed-corrected"
+   "status": "draft",
+   "en_before_pass9b": "Releases stuck energy, facilitates transformation, ensures emotional flow, and attracts healing opportunities",
+   "source_fix_pass9b": "9b.H",
+   "status_before_pass9b": "reviewed-corrected",
+   "ur_before_pass9b": "رکی ہوئی توانائی کو آزاد کرتا، تبدیلی کو آسان بناتا، جذباتی بہاؤ اور سکون کے مواقع کا ذریعہ سمجھا جاتا ہے"
   },
   "7.120": {
    "en": "Support programs feeding those in crisis",
@@ -5626,9 +5662,13 @@
    "status": "reviewed"
   },
   "7.121": {
-   "en": "Provide meals to hospitals and healing centers",
+   "en": "Provide meals to hospitals and care centres",
    "loc": "catalog_ai_draft_ui.py:1254 [burj-sadaqah]",
-   "status": "reviewed"
+   "status": "draft",
+   "en_before_pass9b": "Provide meals to hospitals and healing centers",
+   "source_fix_pass9b": "9b.H",
+   "status_before_pass9b": "reviewed",
+   "ur_before_pass9b": "ہسپتالوں اور شفا خانوں کو کھانا فراہم کریں"
   },
   "7.122": {
    "en": "Sponsor food for grief support groups",
@@ -5676,9 +5716,13 @@
    "status": "reviewed"
   },
   "7.131": {
-   "en": "Performed with intention for transformation and healing",
+   "en": "Given with a sincere intention, asking Allah for positive change and wellbeing",
    "loc": "catalog_ai_draft_ui.py:1265 [burj-sadaqah]",
-   "status": "reviewed"
+   "status": "draft",
+   "en_before_pass9b": "Performed with intention for transformation and healing",
+   "source_fix_pass9b": "9b.H",
+   "status_before_pass9b": "reviewed",
+   "ur_before_pass9b": "تبدیلی اور شفا کی نیت سے کیا جائے"
   },
   "7.132": {
    "en": "Perform on Tuesday (your blessed day)",
@@ -5691,9 +5735,13 @@
    "status": "reviewed"
   },
   "7.134": {
-   "en": "When seeking deep healing or release",
+   "en": "When asking Allah for relief from a heavy burden (alongside any care you need)",
    "loc": "catalog_ai_draft_ui.py:1269 [burj-sadaqah]",
-   "status": "reviewed"
+   "status": "draft",
+   "en_before_pass9b": "When seeking deep healing or release",
+   "source_fix_pass9b": "9b.H",
+   "status_before_pass9b": "reviewed",
+   "ur_before_pass9b": "جب گہری شفا یا رہائی مقصود ہو"
   },
   "7.135": {
    "en": "Capricorn (Jady)",
@@ -6093,9 +6141,13 @@
    "status": "reviewed"
   },
   "7.214": {
-   "en": "After major healing or life transition",
+   "en": "After recovering from an illness, or after a major life transition",
    "loc": "catalog_ai_draft_ui.py:1368 [burj-sadaqah]",
-   "status": "reviewed"
+   "status": "draft",
+   "en_before_pass9b": "After major healing or life transition",
+   "source_fix_pass9b": "9b.H",
+   "status_before_pass9b": "reviewed",
+   "ur_before_pass9b": "کسی بڑی شفا یا زندگی کی تبدیلی کے بعد"
   },
   "7.215": {
    "en": "Calculating optimal timing...",
@@ -7613,7 +7665,7 @@
   "9.21": {
    "en": "Al-Zubānā",
    "loc": "catalog_ai_draft_ui.py:276 [manazil-page]",
-   "status": "draft",
+   "status": "reviewed",
    "status_before_list2": "reviewed",
    "ur_before_list2": "الزبانا",
    "source_fix_list2": "S4"
@@ -15254,10 +15306,11 @@
    "id": "18.5",
    "loc": "catalog_ai_draft.py:284 [manzil]",
    "en": "Starting a treatment your doctor has advised",
-   "ur": "طبی علاج (معالج کے مشورے سے)",
-   "status": "reviewed-corrected",
+   "ur": "معالج کے مشورے سے علاج شروع کرنا",
+   "status": "reviewed-corrected (optional)",
    "en_before_list2": "Medical treatment",
-   "source_fix_list2": "S1"
+   "source_fix_list2": "S1",
+   "status_before_list2": "reviewed-corrected"
   },
   {
    "id": "18.6",
@@ -15718,8 +15771,8 @@
    "id": "18.71",
    "loc": "catalog_ai_draft.py:354 [manzil]",
    "en": "The Muzzle",
-   "ur": "تھوتھنی (شیر کی ناک کا سرا)",
-   "status": "draft",
+   "ur": "شیر کی ناک",
+   "status": "reviewed-corrected",
    "en_before_list2": "The Gap",
    "source_fix_list2": "S3",
    "status_before_list2": "reviewed",
@@ -16717,9 +16770,11 @@
   {
    "id": "19.80",
    "loc": "catalog_ai_draft.py:498 [manzil]",
-   "en": "Empty vows",
+   "en": "Empty promises",
    "ur": "کھوکھلے وعدے",
-   "status": "reviewed"
+   "status": "reviewed",
+   "en_before_pass9b": "Empty vows",
+   "source_fix_pass9b": "9b.V"
   },
   {
    "id": "19.81",
@@ -17866,8 +17921,8 @@
    "id": "21.48",
    "loc": "catalog_ai_draft.py:184 [arch]",
    "en": "Wellbeing",
-   "ur": "بہبود",
-   "status": "draft",
+   "ur": "عافیت",
+   "status": "reviewed-corrected",
    "en_before_list2": "Health",
    "source_fix_list2": "S6",
    "status_before_list2": "reviewed",
@@ -17891,8 +17946,8 @@
    "id": "21.51",
    "loc": "catalog_ai_draft.py:187 [arch]",
    "en": "Heavy trials; wellbeing and stress",
-   "ur": "بھاری آزمائشیں؛ بہبود اور ذہنی دباؤ",
-   "status": "draft",
+   "ur": "بھاری آزمائشیں؛ عافیت اور ذہنی دباؤ",
+   "status": "reviewed-corrected",
    "en_before_list2": "Heavy trials; health and strain",
    "source_fix_list2": "S6",
    "status_before_list2": "reviewed",
@@ -17909,8 +17964,8 @@
    "id": "21.53",
    "loc": "catalog_ai_draft.py:190 [arch]",
    "en": "Traditionally seen as a heavy pattern — concerns about wellbeing and emotional strain may be present, especially without emotional maturity.",
-   "ur": "روایتی طور پر ایک بھاری نمونہ سمجھا جاتا ہے — بہبود کی فکر اور جذباتی دباؤ سامنے آ سکتے ہیں، خاص طور پر جذباتی پختگی کے بغیر۔",
-   "status": "draft",
+   "ur": "روایتی طور پر ایک بھاری نمونہ سمجھا جاتا ہے — عافیت سے متعلق فکر اور جذباتی دباؤ سامنے آ سکتے ہیں، خاص طور پر جذباتی پختگی کے بغیر۔",
+   "status": "reviewed-corrected",
    "en_before_list2": "Traditionally seen as a heavy pattern — health concerns and emotional strain may be present, especially without emotional maturity.",
    "source_fix_list2": "S6",
    "status_before_list2": "reviewed",
@@ -17920,8 +17975,8 @@
    "id": "21.54",
    "loc": "catalog_ai_draft.py:191 [arch]",
    "en": "Traditionally seen as a heavy path for marriage. Concerns about wellbeing and emotional strain may be present.",
-   "ur": "شادی کے لیے روایتی طور پر ایک بھاری راستہ سمجھا جاتا ہے۔ بہبود کی فکر اور جذباتی دباؤ سامنے آ سکتے ہیں۔",
-   "status": "draft",
+   "ur": "شادی کے لیے روایتی طور پر ایک بھاری راستہ سمجھا جاتا ہے۔ عافیت سے متعلق فکر اور جذباتی دباؤ سامنے آ سکتے ہیں۔",
+   "status": "reviewed-corrected",
    "en_before_list2": "Traditionally seen as a heavy path for marriage. Health concerns and emotional strain may be present.",
    "source_fix_list2": "S6",
    "status_before_list2": "reviewed",
@@ -17938,8 +17993,8 @@
    "id": "21.56",
    "loc": "catalog_ai_draft.py:193 [arch]",
    "en": "Traditionally seen as a heavy pattern — caretaking or shared hardship, often tied to wellbeing and stress, may mark the family bond.",
-   "ur": "روایتی طور پر ایک بھاری نمونہ سمجھا جاتا ہے — تیمارداری یا مشترکہ مشکل، جو اکثر بہبود اور ذہنی دباؤ سے جڑی ہوتی ہے، خاندانی رشتے کی پہچان ہو سکتی ہے۔",
-   "status": "draft",
+   "ur": "روایتی طور پر ایک بھاری نمونہ سمجھا جاتا ہے — تیمارداری یا مشترکہ مشکل، جو اکثر عافیت اور ذہنی دباؤ سے جڑی ہوتی ہے، خاندانی رشتے کی پہچان ہو سکتی ہے۔",
+   "status": "reviewed-corrected",
    "en_before_list2": "Traditionally seen as a heavy pattern — caretaking or shared hardship, often tied to health, may mark the family bond.",
    "source_fix_list2": "S6",
    "status_before_list2": "reviewed",
@@ -17956,8 +18011,8 @@
    "id": "21.58",
    "loc": "catalog_ai_draft.py:195 [arch]",
    "en": "This bond often carries a sense of weight — stress, strained wellbeing, or emotional burden may surface. Maturity and calm help carry it well.",
-   "ur": "اس رشتے میں اکثر بوجھ کا احساس رہتا ہے — ذہنی دباؤ، بہبود میں کمی یا جذباتی بوجھ سامنے آ سکتے ہیں۔ پختگی اور سکون اسے اچھی طرح نبھانے میں مدد دیتے ہیں۔",
-   "status": "draft",
+   "ur": "اس رشتے میں اکثر بوجھ کا احساس رہتا ہے — ذہنی دباؤ، عافیت میں کمی یا جذباتی بوجھ سامنے آ سکتے ہیں۔ پختگی اور سکون اسے اچھی طرح نبھانے میں مدد دیتے ہیں۔",
+   "status": "reviewed-corrected",
    "en_before_list2": "This bond often carries a sense of weight — health, stress, or emotional burden tend to surface. Maturity and calm help carry it well.",
    "source_fix_list2": "S6",
    "status_before_list2": "reviewed-corrected",
@@ -17967,8 +18022,8 @@
    "id": "21.59",
    "loc": "catalog_ai_draft.py:196 [arch]",
    "en": "Marriage may feel like a test; wellbeing and stress may need extra care. Requires emotional maturity and calm.",
-   "ur": "شادی ایک امتحان محسوس ہو سکتی ہے؛ روایت میں اس نمونے کے ساتھ بہبود اور ذہنی دباؤ پر خاص توجہ کی ضرورت بتائی جاتی ہے۔ اس کے لیے جذباتی پختگی اور سکون درکار ہے۔",
-   "status": "draft",
+   "ur": "شادی ایک امتحان محسوس ہو سکتی ہے؛ روایت میں اس نمونے کے ساتھ عافیت اور ذہنی دباؤ پر خاص توجہ کی ضرورت بتائی جاتی ہے۔ اس کے لیے جذباتی پختگی اور سکون درکار ہے۔",
+   "status": "reviewed-corrected",
    "en_before_list2": "Marriage may feel like a test. Health (physical or emotional) often becomes a central concern. Requires emotional maturity and calm.",
    "source_fix_list2": "S6",
    "status_before_list2": "reviewed-corrected",
@@ -17985,8 +18040,8 @@
    "id": "21.61",
    "loc": "catalog_ai_draft.py:198 [arch]",
    "en": "Family bonds under this pattern often involve caretaking or shared hardship — wellbeing and stress may need extra care. Calm routines and honest communication ease the load.",
-   "ur": "اس نمونے میں خاندانی رشتوں میں اکثر تیمارداری یا مشترکہ مشکل شامل ہوتی ہے — بہبود اور ذہنی دباؤ پر خاص توجہ کی ضرورت پڑ سکتی ہے۔ پُرسکون معمولات اور دیانت دارانہ گفتگو بوجھ ہلکا کرتے ہیں۔",
-   "status": "draft",
+   "ur": "اس نمونے میں خاندانی رشتوں میں اکثر تیمارداری یا مشترکہ مشکل شامل ہوتی ہے — عافیت اور ذہنی دباؤ پر خاص توجہ کی ضرورت پڑ سکتی ہے۔ پُرسکون معمولات اور دیانت دارانہ گفتگو بوجھ ہلکا کرتے ہیں۔",
+   "status": "reviewed-corrected",
    "en_before_list2": "Family bonds under this pattern often involve caretaking or shared hardship — health concerns are common threads. Calm routines and honest communication ease the load.",
    "source_fix_list2": "S6",
    "status_before_list2": "reviewed-corrected",
@@ -18290,10 +18345,11 @@
    "id": "21.104",
    "loc": "catalog_ai_draft.py:262 [arch]",
    "en": "Marriage may start with confusion or misjudgment but can become very strong over time. Patience is the key to unlocking this bond's strength.",
-   "ur": "ایسی شادی کا آغاز اکثر الجھن یا غلط اندازے سے ہوتا ہے، مگر وقت کے ساتھ یہ بہت مضبوط ہو سکتی ہے۔ صبر ہی اس رشتے کی قوت کو سامنے لانے کی کنجی ہے۔",
-   "status": "reviewed-corrected",
+   "ur": "ایسی شادی کا آغاز الجھن یا غلط اندازے سے ہو سکتا ہے، مگر وقت کے ساتھ یہ بہت مضبوط ہو سکتی ہے۔ صبر ہی اس رشتے کی قوت کو سامنے لانے کی کنجی ہے۔",
+   "status": "reviewed-corrected (optional)",
    "en_before_list2": "Marriage starts with confusion or misjudgment but becomes very strong over time. Patience is the key to unlocking this bond's strength.",
-   "source_fix_list2": "S7"
+   "source_fix_list2": "S7",
+   "status_before_list2": "reviewed-corrected"
   },
   {
    "id": "21.105",
@@ -18502,7 +18558,7 @@
    "loc": "catalog_ai_draft.py:577 [career]",
    "en": "Grain and commodities trading (Sharīʿah-compliant)",
    "ur": "اناج اور اجناس کی تجارت (شرعی اصولوں کے مطابق)",
-   "status": "draft",
+   "status": "reviewed",
    "en_before_list2": "Grain futures and commodities",
    "source_fix_list2": "S11",
    "status_before_list2": "reviewed",
@@ -19107,10 +19163,11 @@
    "id": "22.106",
    "loc": "catalog_ai_draft.py:665 [career]",
    "en": "Flow, adaptability, emotional intelligence, and nurturing energy align with your water nature. Like water, you find success in meeting needs and providing for others.",
-   "ur": "بہاؤ، لچک، جذباتی فہم اور پرورش کرنے والی توانائی آپ کے آبی مزاج سے ہم آہنگ ہیں۔ پانی کی طرح آپ اکثر دوسروں کی ضرورتیں پوری کرنے اور خوراک و ضروریات مہیا کرنے میں کامیابی پاتے ہیں۔",
+   "ur": "بہاؤ، لچک، جذباتی فہم اور پرورش کرنے والی توانائی آپ کے آبی مزاج سے ہم آہنگ ہیں۔ پانی کی طرح آپ اکثر ضرورتیں پوری کرنے اور دوسروں کی کفالت میں کامیابی پاتے ہیں۔",
    "status": "reviewed-corrected",
    "en_before_list2": "Flow, adaptability, emotional intelligence, and nurturing energy align with your water nature. Like water, you find success in filling needs and providing sustenance.",
-   "source_fix_list2": "S12"
+   "source_fix_list2": "S12",
+   "status_before_list2": "reviewed-corrected"
   },
   {
    "id": "22.107",
@@ -19254,7 +19311,7 @@
    "loc": "catalog_ai_draft.py:685 [career]",
    "en": "Complementary wellness (alongside medical care)",
    "ur": "تکمیلی فلاحِ صحت (طبی علاج کے ساتھ ساتھ)",
-   "status": "draft",
+   "status": "reviewed",
    "en_before_list2": "Alternative medicine",
    "source_fix_list2": "S10",
    "status_before_list2": "reviewed",
@@ -19461,7 +19518,7 @@
    "loc": "catalog_ai_draft.py:715 [career]",
    "en": "Venture capital (Sharīʿah-compliant)",
    "ur": "وینچر کیپیٹل (شرعی اصولوں کے مطابق)",
-   "status": "draft",
+   "status": "reviewed",
    "en_before_list2": "Venture capital",
    "source_fix_list2": "S11",
    "status_before_list2": "reviewed",
@@ -19633,7 +19690,7 @@
    "loc": "catalog_ai_draft.py:740 [career]",
    "en": "Islamic Finance & Banking",
    "ur": "اسلامی مالیات اور بینکاری",
-   "status": "draft",
+   "status": "reviewed",
    "en_before_list2": "Finance & Banking",
    "source_fix_list2": "S11",
    "status_before_list2": "reviewed",
@@ -19644,7 +19701,7 @@
    "loc": "catalog_ai_draft.py:741 [career]",
    "en": "Islamic banking and finance",
    "ur": "اسلامی بینکاری اور مالیات",
-   "status": "draft",
+   "status": "reviewed",
    "en_before_list2": "Banking and finance",
    "source_fix_list2": "S11",
    "status_before_list2": "reviewed",
@@ -19655,7 +19712,7 @@
    "loc": "catalog_ai_draft.py:742 [career]",
    "en": "Investment management (Sharīʿah-compliant)",
    "ur": "سرمایہ کاری کا انتظام (شرعی اصولوں کے مطابق)",
-   "status": "draft",
+   "status": "reviewed",
    "en_before_list2": "Investment management",
    "source_fix_list2": "S11",
    "status_before_list2": "reviewed",
@@ -19687,7 +19744,7 @@
    "loc": "catalog_ai_draft.py:746 [career]",
    "en": "Takāful (Islamic cooperative insurance)",
    "ur": "تکافل (باہمی تعاون پر مبنی اسلامی بیمہ)",
-   "status": "draft",
+   "status": "reviewed",
    "en_before_list2": "Insurance",
    "source_fix_list2": "S11",
    "status_before_list2": "reviewed",
@@ -20134,7 +20191,7 @@
    "loc": "catalog_ai_draft.py:809 [career]",
    "en": "Islamic investment banking",
    "ur": "اسلامی انویسٹمنٹ بینکنگ",
-   "status": "draft",
+   "status": "reviewed",
    "en_before_list2": "Investment banking",
    "source_fix_list2": "S11",
    "status_before_list2": "reviewed",
@@ -20159,7 +20216,7 @@
    "loc": "catalog_ai_draft.py:812 [career]",
    "en": "Takāful underwriting",
    "ur": "تکافل انڈر رائٹنگ",
-   "status": "draft",
+   "status": "reviewed",
    "en_before_list2": "Insurance underwriting",
    "source_fix_list2": "S11",
    "status_before_list2": "reviewed",
@@ -20569,7 +20626,7 @@
    "loc": "catalog_ai_draft.py:871 [career]",
    "en": "Blockchain and digital assets (Sharīʿah-compliant)",
    "ur": "بلاک چین اور ڈیجیٹل اثاثے (شرعی اصولوں کے مطابق)",
-   "status": "draft",
+   "status": "reviewed",
    "en_before_list2": "Blockchain and crypto",
    "source_fix_list2": "S11",
    "status_before_list2": "reviewed",
@@ -20926,10 +20983,11 @@
    "id": "25.13",
    "loc": "catalog_ai_draft.py:40 [career-ui]",
    "en": "This doesn't mean complete avoidance—some individuals still succeed in these fields. The tradition suggests focusing your main efforts on the recommended fields above.",
-   "ur": "اس کا مطلب مکمل پرہیز نہیں — بہت سے لوگ ان شعبوں میں بھی کامیاب ہوتے ہیں۔ روایتی نقطۂ نظر سے بنیادی کوششیں اوپر دیے گئے شعبوں پر مرکوز کرنا زیادہ موزوں سمجھا جاتا ہے۔",
+   "ur": "اس کا مطلب مکمل پرہیز نہیں — کچھ لوگ ان شعبوں میں بھی کامیاب ہوتے ہیں۔ روایتی نقطۂ نظر سے بنیادی کوششیں اوپر دیے گئے شعبوں پر مرکوز کرنا زیادہ موزوں سمجھا جاتا ہے۔",
    "status": "reviewed-corrected",
    "en_before_list2": "This doesn't mean complete avoidance—some individuals still succeed in these fields. However, the spiritual alignment suggests focusing your primary efforts on the recommended fields above for optimal results.",
-   "source_fix_list2": "S13"
+   "source_fix_list2": "S13",
+   "status_before_list2": "reviewed-corrected"
   },
   {
    "id": "25.14",
@@ -21086,11 +21144,12 @@
    "en": "In this tradition, protection is sought from Allah in matters of livelihood and sustenance",
    "en_before": "Receives divine protection in matters of livelihood and sustenance",
    "ur": "روایت کے مطابق روزی اور معاش کے معاملات میں اللہ سے حفاظت طلب کی جاتی ہے",
-   "status": "draft",
+   "status": "reviewed",
    "rows": [
     "sheet2:6.89"
    ],
-   "ur_before": "روایت کے مطابق روزی اور معاش کے معاملات میں انہیں الٰہی حفاظت حاصل ہوتی ہے"
+   "ur_before": "روایت کے مطابق روزی اور معاش کے معاملات میں انہیں الٰہی حفاظت حاصل ہوتی ہے",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "B1",
@@ -21101,7 +21160,8 @@
    "rows": [
     "sheet2:6.97",
     "source_fixes_2026_10_21:P1"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "B1",
@@ -21112,7 +21172,8 @@
    "rows": [
     "sheet2:6.116",
     "source_fixes_2026_10_21:P3"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "B1",
@@ -21123,7 +21184,8 @@
    "rows": [
     "sheet2:6.126",
     "source_fixes_2026_10_21:P4"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "B1",
@@ -21134,7 +21196,8 @@
    "rows": [
     "sheet2:6.135",
     "source_fixes_2026_10_21:P5"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "B1",
@@ -21145,7 +21208,8 @@
    "rows": [
     "sheet2:6.143",
     "source_fixes_2026_10_21:P6"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "B1",
@@ -21156,7 +21220,8 @@
    "rows": [
     "sheet2:6.153",
     "source_fixes_2026_10_21:P7"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "B1",
@@ -21167,7 +21232,8 @@
    "rows": [
     "sheet2:6.163",
     "source_fixes_2026_10_21:P8"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "B1",
@@ -21178,7 +21244,8 @@
    "rows": [
     "sheet2:6.173",
     "source_fixes_2026_10_21:P9"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "B1",
@@ -21189,7 +21256,8 @@
    "rows": [
     "sheet2:6.183",
     "source_fixes_2026_10_21:P10"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "B1",
@@ -21200,7 +21268,8 @@
    "rows": [
     "sheet2:6.193",
     "source_fixes_2026_10_21:P11"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "B2",
@@ -21211,7 +21280,8 @@
    "rows": [
     "sheet2:5.207",
     "source_fixes_2026_10_21:H8"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "B2",
@@ -21222,7 +21292,8 @@
    "rows": [
     "sheet2:5.178",
     "source_fixes_2026_10_21:H7"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "B3",
@@ -21232,28 +21303,33 @@
    "status": "reviewed",
    "rows": [
     "sheet2:5.158"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "S1",
    "en": "Starting a treatment your doctor has advised",
    "en_before": "Medical treatment",
-   "ur": "طبی علاج (معالج کے مشورے سے)",
-   "status": "reviewed",
+   "ur": "معالج کے مشورے سے علاج شروع کرنا",
+   "status": "reviewed-corrected (optional)",
    "rows": [
     "sheet3:18.5"
-   ]
+   ],
+   "ur_kept": "طبی علاج (معالج کے مشورے سے)",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S3",
    "en": "The Muzzle",
    "en_before": "The Gap",
-   "ur": "تھوتھنی (شیر کی ناک کا سرا)",
-   "status": "draft",
+   "ur": "شیر کی ناک",
+   "status": "reviewed-corrected",
    "rows": [
     "sheet3:18.71"
    ],
-   "ur_before": "درمیانی خلا"
+   "ur_before": "درمیانی خلا",
+   "ur_draft": "تھوتھنی (شیر کی ناک کا سرا)",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S5",
@@ -21263,7 +21339,8 @@
    "status": "reviewed",
    "rows": [
     "sheet3:19.76"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "S2",
@@ -21273,116 +21350,137 @@
    "status": "reviewed",
    "rows": [
     "sheet3:17.32"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "S6",
    "en": "Wellbeing",
    "en_before": "Health",
-   "ur": "بہبود",
-   "status": "draft",
+   "ur": "عافیت",
+   "status": "reviewed-corrected",
    "rows": [
     "sheet3:21.48"
    ],
-   "ur_before": "صحت"
+   "ur_before": "صحت",
+   "ur_draft": "بہبود",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S6",
    "en": "Heavy trials; wellbeing and stress",
    "en_before": "Heavy trials; health and strain",
-   "ur": "بھاری آزمائشیں؛ بہبود اور ذہنی دباؤ",
-   "status": "draft",
+   "ur": "بھاری آزمائشیں؛ عافیت اور ذہنی دباؤ",
+   "status": "reviewed-corrected",
    "rows": [
     "sheet3:21.51"
    ],
-   "ur_before": "بھاری آزمائشیں؛ صحت اور دباؤ"
+   "ur_before": "بھاری آزمائشیں؛ صحت اور دباؤ",
+   "ur_draft": "بھاری آزمائشیں؛ بہبود اور ذہنی دباؤ",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S6",
    "en": "Traditionally seen as a heavy pattern — concerns about wellbeing and emotional strain may be present, especially without emotional maturity.",
    "en_before": "Traditionally seen as a heavy pattern — health concerns and emotional strain may be present, especially without emotional maturity.",
-   "ur": "روایتی طور پر ایک بھاری نمونہ سمجھا جاتا ہے — بہبود کی فکر اور جذباتی دباؤ سامنے آ سکتے ہیں، خاص طور پر جذباتی پختگی کے بغیر۔",
-   "status": "draft",
+   "ur": "روایتی طور پر ایک بھاری نمونہ سمجھا جاتا ہے — عافیت سے متعلق فکر اور جذباتی دباؤ سامنے آ سکتے ہیں، خاص طور پر جذباتی پختگی کے بغیر۔",
+   "status": "reviewed-corrected",
    "rows": [
     "sheet3:21.53"
    ],
-   "ur_before": "روایتی طور پر ایک بھاری نمونہ سمجھا جاتا ہے — صحت کے خدشات اور جذباتی دباؤ ہو سکتا ہے، خاص طور پر جذباتی پختگی کے بغیر۔"
+   "ur_before": "روایتی طور پر ایک بھاری نمونہ سمجھا جاتا ہے — صحت کے خدشات اور جذباتی دباؤ ہو سکتا ہے، خاص طور پر جذباتی پختگی کے بغیر۔",
+   "ur_draft": "روایتی طور پر ایک بھاری نمونہ سمجھا جاتا ہے — بہبود کی فکر اور جذباتی دباؤ سامنے آ سکتے ہیں، خاص طور پر جذباتی پختگی کے بغیر۔",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S6",
    "en": "Traditionally seen as a heavy path for marriage. Concerns about wellbeing and emotional strain may be present.",
    "en_before": "Traditionally seen as a heavy path for marriage. Health concerns and emotional strain may be present.",
-   "ur": "شادی کے لیے روایتی طور پر ایک بھاری راستہ سمجھا جاتا ہے۔ بہبود کی فکر اور جذباتی دباؤ سامنے آ سکتے ہیں۔",
-   "status": "draft",
+   "ur": "شادی کے لیے روایتی طور پر ایک بھاری راستہ سمجھا جاتا ہے۔ عافیت سے متعلق فکر اور جذباتی دباؤ سامنے آ سکتے ہیں۔",
+   "status": "reviewed-corrected",
    "rows": [
     "sheet3:21.54"
    ],
-   "ur_before": "شادی کے لیے روایتی طور پر ایک بھاری راستہ سمجھا جاتا ہے۔ صحت کے خدشات اور جذباتی دباؤ ہو سکتا ہے۔"
+   "ur_before": "شادی کے لیے روایتی طور پر ایک بھاری راستہ سمجھا جاتا ہے۔ صحت کے خدشات اور جذباتی دباؤ ہو سکتا ہے۔",
+   "ur_draft": "شادی کے لیے روایتی طور پر ایک بھاری راستہ سمجھا جاتا ہے۔ بہبود کی فکر اور جذباتی دباؤ سامنے آ سکتے ہیں۔",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S6",
    "en": "Traditionally seen as a heavy pattern — caretaking or shared hardship, often tied to wellbeing and stress, may mark the family bond.",
    "en_before": "Traditionally seen as a heavy pattern — caretaking or shared hardship, often tied to health, may mark the family bond.",
-   "ur": "روایتی طور پر ایک بھاری نمونہ سمجھا جاتا ہے — تیمارداری یا مشترکہ مشکل، جو اکثر بہبود اور ذہنی دباؤ سے جڑی ہوتی ہے، خاندانی رشتے کی پہچان ہو سکتی ہے۔",
-   "status": "draft",
+   "ur": "روایتی طور پر ایک بھاری نمونہ سمجھا جاتا ہے — تیمارداری یا مشترکہ مشکل، جو اکثر عافیت اور ذہنی دباؤ سے جڑی ہوتی ہے، خاندانی رشتے کی پہچان ہو سکتی ہے۔",
+   "status": "reviewed-corrected",
    "rows": [
     "sheet3:21.56"
    ],
-   "ur_before": "روایتی طور پر ایک بھاری نمونہ سمجھا جاتا ہے — تیمارداری یا مشترکہ مشکل، جو اکثر صحت سے جڑی ہوتی ہے، خاندانی رشتے کی پہچان ہو سکتی ہے۔"
+   "ur_before": "روایتی طور پر ایک بھاری نمونہ سمجھا جاتا ہے — تیمارداری یا مشترکہ مشکل، جو اکثر صحت سے جڑی ہوتی ہے، خاندانی رشتے کی پہچان ہو سکتی ہے۔",
+   "ur_draft": "روایتی طور پر ایک بھاری نمونہ سمجھا جاتا ہے — تیمارداری یا مشترکہ مشکل، جو اکثر بہبود اور ذہنی دباؤ سے جڑی ہوتی ہے، خاندانی رشتے کی پہچان ہو سکتی ہے۔",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S6",
    "en": "This bond often carries a sense of weight — stress, strained wellbeing, or emotional burden may surface. Maturity and calm help carry it well.",
    "en_before": "This bond often carries a sense of weight — health, stress, or emotional burden tend to surface. Maturity and calm help carry it well.",
-   "ur": "اس رشتے میں اکثر بوجھ کا احساس رہتا ہے — ذہنی دباؤ، بہبود میں کمی یا جذباتی بوجھ سامنے آ سکتے ہیں۔ پختگی اور سکون اسے اچھی طرح نبھانے میں مدد دیتے ہیں۔",
-   "status": "draft",
+   "ur": "اس رشتے میں اکثر بوجھ کا احساس رہتا ہے — ذہنی دباؤ، عافیت میں کمی یا جذباتی بوجھ سامنے آ سکتے ہیں۔ پختگی اور سکون اسے اچھی طرح نبھانے میں مدد دیتے ہیں۔",
+   "status": "reviewed-corrected",
    "rows": [
     "sheet3:21.58"
    ],
-   "ur_before": "اس رشتے میں اکثر بوجھ کا احساس رہتا ہے — صحت کی فکر، دباؤ یا جذباتی بوجھ اکثر سامنے آ جاتے ہیں۔ پختگی اور سکون اسے اچھی طرح نبھانے میں مدد دیتے ہیں۔"
+   "ur_before": "اس رشتے میں اکثر بوجھ کا احساس رہتا ہے — صحت کی فکر، دباؤ یا جذباتی بوجھ اکثر سامنے آ جاتے ہیں۔ پختگی اور سکون اسے اچھی طرح نبھانے میں مدد دیتے ہیں۔",
+   "ur_draft": "اس رشتے میں اکثر بوجھ کا احساس رہتا ہے — ذہنی دباؤ، بہبود میں کمی یا جذباتی بوجھ سامنے آ سکتے ہیں۔ پختگی اور سکون اسے اچھی طرح نبھانے میں مدد دیتے ہیں۔",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S6",
    "en": "Marriage may feel like a test; wellbeing and stress may need extra care. Requires emotional maturity and calm.",
    "en_before": "Marriage may feel like a test. Health (physical or emotional) often becomes a central concern. Requires emotional maturity and calm.",
-   "ur": "شادی ایک امتحان محسوس ہو سکتی ہے؛ روایت میں اس نمونے کے ساتھ بہبود اور ذہنی دباؤ پر خاص توجہ کی ضرورت بتائی جاتی ہے۔ اس کے لیے جذباتی پختگی اور سکون درکار ہے۔",
-   "status": "draft",
+   "ur": "شادی ایک امتحان محسوس ہو سکتی ہے؛ روایت میں اس نمونے کے ساتھ عافیت اور ذہنی دباؤ پر خاص توجہ کی ضرورت بتائی جاتی ہے۔ اس کے لیے جذباتی پختگی اور سکون درکار ہے۔",
+   "status": "reviewed-corrected",
    "rows": [
     "sheet3:21.59"
    ],
-   "ur_before": "شادی ایک امتحان محسوس ہو سکتی ہے۔ روایت میں اس نمونے کے ساتھ صحت (جسمانی یا جذباتی) کی فکر کا ذکر ملتا ہے۔ اس کے لیے جذباتی پختگی اور سکون درکار ہے۔"
+   "ur_before": "شادی ایک امتحان محسوس ہو سکتی ہے۔ روایت میں اس نمونے کے ساتھ صحت (جسمانی یا جذباتی) کی فکر کا ذکر ملتا ہے۔ اس کے لیے جذباتی پختگی اور سکون درکار ہے۔",
+   "ur_draft": "شادی ایک امتحان محسوس ہو سکتی ہے؛ روایت میں اس نمونے کے ساتھ بہبود اور ذہنی دباؤ پر خاص توجہ کی ضرورت بتائی جاتی ہے۔ اس کے لیے جذباتی پختگی اور سکون درکار ہے۔",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S6",
    "en": "Family bonds under this pattern often involve caretaking or shared hardship — wellbeing and stress may need extra care. Calm routines and honest communication ease the load.",
    "en_before": "Family bonds under this pattern often involve caretaking or shared hardship — health concerns are common threads. Calm routines and honest communication ease the load.",
-   "ur": "اس نمونے میں خاندانی رشتوں میں اکثر تیمارداری یا مشترکہ مشکل شامل ہوتی ہے — بہبود اور ذہنی دباؤ پر خاص توجہ کی ضرورت پڑ سکتی ہے۔ پُرسکون معمولات اور دیانت دارانہ گفتگو بوجھ ہلکا کرتے ہیں۔",
-   "status": "draft",
+   "ur": "اس نمونے میں خاندانی رشتوں میں اکثر تیمارداری یا مشترکہ مشکل شامل ہوتی ہے — عافیت اور ذہنی دباؤ پر خاص توجہ کی ضرورت پڑ سکتی ہے۔ پُرسکون معمولات اور دیانت دارانہ گفتگو بوجھ ہلکا کرتے ہیں۔",
+   "status": "reviewed-corrected",
    "rows": [
     "sheet3:21.61"
    ],
-   "ur_before": "اس نمونے میں خاندانی رشتوں میں اکثر تیمارداری یا مشترکہ مشکل شامل ہوتی ہے — صحت کی فکریں بھی اکثر ساتھ رہتی ہیں۔ پُرسکون معمولات اور دیانت دارانہ گفتگو بوجھ ہلکا کرتے ہیں۔"
+   "ur_before": "اس نمونے میں خاندانی رشتوں میں اکثر تیمارداری یا مشترکہ مشکل شامل ہوتی ہے — صحت کی فکریں بھی اکثر ساتھ رہتی ہیں۔ پُرسکون معمولات اور دیانت دارانہ گفتگو بوجھ ہلکا کرتے ہیں۔",
+   "ur_draft": "اس نمونے میں خاندانی رشتوں میں اکثر تیمارداری یا مشترکہ مشکل شامل ہوتی ہے — بہبود اور ذہنی دباؤ پر خاص توجہ کی ضرورت پڑ سکتی ہے۔ پُرسکون معمولات اور دیانت دارانہ گفتگو بوجھ ہلکا کرتے ہیں۔",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S6",
    "en": "Focus on wellbeing (physical and emotional), emotional maturity, calm daily routines, and seeking therapeutic support when needed.",
    "en_before": "Focus on health (physical and emotional), emotional maturity, calm daily routines, and seeking therapeutic support when needed.",
-   "ur": "بہبود (جسمانی اور جذباتی) پر توجہ، جذباتی پختگی، پُرسکون روزمرہ معمولات، اور ضرورت پڑنے پر کسی ماہر معالج یا ماہرِ نفسیات سے رجوع کرنا۔",
-   "status": "draft",
+   "ur": "جسمانی اور جذباتی عافیت کا خیال، جذباتی پختگی، پُرسکون روزمرہ معمولات، اور ضرورت پڑنے پر کسی ماہر معالج یا ماہرِ نفسیات سے رجوع کرنا۔",
+   "status": "reviewed-corrected",
    "rows": [
     "sheet2:5.36"
    ],
-   "ur_before": "صحت (جسمانی اور جذباتی) پر توجہ، جذباتی پختگی، پُرسکون روزمرہ معمولات، اور ضرورت پڑنے پر کسی ماہر معالج یا ماہرِ نفسیات سے رجوع کرنا۔"
+   "ur_before": "صحت (جسمانی اور جذباتی) پر توجہ، جذباتی پختگی، پُرسکون روزمرہ معمولات، اور ضرورت پڑنے پر کسی ماہر معالج یا ماہرِ نفسیات سے رجوع کرنا۔",
+   "ur_draft": "بہبود (جسمانی اور جذباتی) پر توجہ، جذباتی پختگی، پُرسکون روزمرہ معمولات، اور ضرورت پڑنے پر کسی ماہر معالج یا ماہرِ نفسیات سے رجوع کرنا۔",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S7",
    "en": "Marriage may start with confusion or misjudgment but can become very strong over time. Patience is the key to unlocking this bond's strength.",
    "en_before": "Marriage starts with confusion or misjudgment but becomes very strong over time. Patience is the key to unlocking this bond's strength.",
-   "ur": "ایسی شادی کا آغاز اکثر الجھن یا غلط اندازے سے ہوتا ہے، مگر وقت کے ساتھ یہ بہت مضبوط ہو سکتی ہے۔ صبر ہی اس رشتے کی قوت کو سامنے لانے کی کنجی ہے۔",
-   "status": "reviewed",
+   "ur": "ایسی شادی کا آغاز الجھن یا غلط اندازے سے ہو سکتا ہے، مگر وقت کے ساتھ یہ بہت مضبوط ہو سکتی ہے۔ صبر ہی اس رشتے کی قوت کو سامنے لانے کی کنجی ہے۔",
+   "status": "reviewed-corrected (optional)",
    "rows": [
     "sheet3:21.104"
-   ]
+   ],
+   "ur_kept": "ایسی شادی کا آغاز اکثر الجھن یا غلط اندازے سے ہوتا ہے، مگر وقت کے ساتھ یہ بہت مضبوط ہو سکتی ہے۔ صبر ہی اس رشتے کی قوت کو سامنے لانے کی کنجی ہے۔",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S7",
@@ -21392,7 +21490,8 @@
    "status": "reviewed",
    "rows": [
     "sheet3:21.113"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "S8",
@@ -21402,18 +21501,20 @@
    "status": "reviewed",
    "rows": [
     "sheet3:21.110"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "S8",
    "en": "Marriage is traditionally discouraged under this pattern. If already in this bond, seek Allah's protection through duʿāʾ and remembrance, and seek wise counsel.",
    "en_before": "Marriage is traditionally discouraged under this pattern. If already in this bond, increase spiritual protection practices and seek wise counsel.",
    "ur": "اس نمونے کے تحت شادی کی روایتی طور پر حوصلہ شکنی کی جاتی ہے۔ اگر آپ پہلے سے اس رشتے میں ہیں تو دعا و اذکار کے ذریعے اللہ کی حفاظت طلب کریں اور دانشمندانہ مشورہ لیں۔",
-   "status": "draft",
+   "status": "reviewed",
    "rows": [
     "sheet2:5.46"
    ],
-   "ur_before": "اس نمونے کے تحت شادی کی روایتی طور پر حوصلہ شکنی کی جاتی ہے۔ اگر آپ پہلے سے اس رشتے میں ہیں تو روحانی حفاظت کے معمولات بڑھائیں اور دانشمندانہ مشورہ لیں۔"
+   "ur_before": "اس نمونے کے تحت شادی کی روایتی طور پر حوصلہ شکنی کی جاتی ہے۔ اگر آپ پہلے سے اس رشتے میں ہیں تو روحانی حفاظت کے معمولات بڑھائیں اور دانشمندانہ مشورہ لیں۔",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S8",
@@ -21423,7 +21524,8 @@
    "status": "reviewed",
    "rows": [
     "sheet3:21.112"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "S10",
@@ -21433,7 +21535,8 @@
    "status": "reviewed",
    "rows": [
     "sheet3:23.6"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "S10",
@@ -21443,18 +21546,20 @@
    "status": "reviewed",
    "rows": [
     "sheet3:23.9"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "S10",
    "en": "Complementary wellness (alongside medical care)",
    "en_before": "Alternative medicine",
    "ur": "تکمیلی فلاحِ صحت (طبی علاج کے ساتھ ساتھ)",
-   "status": "draft",
+   "status": "reviewed",
    "rows": [
     "sheet3:23.11"
    ],
-   "ur_before": "متبادل طب"
+   "ur_before": "متبادل طب",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S10",
@@ -21464,7 +21569,8 @@
    "status": "reviewed",
    "rows": [
     "sheet3:24.3"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "S10",
@@ -21474,7 +21580,8 @@
    "status": "reviewed",
    "rows": [
     "sheet3:24.5"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "S10",
@@ -21494,7 +21601,8 @@
    "status": "reviewed",
    "rows": [
     "sheet3:24.94"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "S10",
@@ -21514,18 +21622,21 @@
    "status": "reviewed",
    "rows": [
     "sheet3:24.105"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "S10",
    "en": "Healthcare & Caring Professions",
    "en_before": "Healing & Healthcare",
-   "ur": "صحت کی دیکھ بھال اور نگہداشت کے پیشے",
-   "status": "draft",
+   "ur": "طبی خدمات اور نگہداشت کے پیشے",
+   "status": "reviewed-corrected",
    "rows": [
     "sheet2:4.1"
    ],
-   "ur_before": "طب اور صحت کی دیکھ بھال"
+   "ur_before": "طب اور صحت کی دیکھ بھال",
+   "ur_draft": "صحت کی دیکھ بھال اور نگہداشت کے پیشے",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S10",
@@ -21535,7 +21646,8 @@
    "status": "reviewed",
    "rows": [
     "sheet3:24.90"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "S10",
@@ -21545,7 +21657,8 @@
    "status": "reviewed",
    "rows": [
     "sheet3:23.115"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "S10",
@@ -21555,126 +21668,140 @@
    "status": "reviewed",
    "rows": [
     "sheet3:24.91"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "S11",
    "en": "Grain and commodities trading (Sharīʿah-compliant)",
    "en_before": "Grain futures and commodities",
    "ur": "اناج اور اجناس کی تجارت (شرعی اصولوں کے مطابق)",
-   "status": "draft",
+   "status": "reviewed",
    "rows": [
     "sheet3:22.20"
    ],
-   "ur_before": "اناج کے فیوچرز اور اجناس"
+   "ur_before": "اناج کے فیوچرز اور اجناس",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S11",
    "en": "Venture capital (Sharīʿah-compliant)",
    "en_before": "Venture capital",
    "ur": "وینچر کیپیٹل (شرعی اصولوں کے مطابق)",
-   "status": "draft",
+   "status": "reviewed",
    "rows": [
     "sheet3:23.40"
    ],
-   "ur_before": "وینچر کیپیٹل"
+   "ur_before": "وینچر کیپیٹل",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S11",
    "en": "Islamic Finance & Banking",
    "en_before": "Finance & Banking",
    "ur": "اسلامی مالیات اور بینکاری",
-   "status": "draft",
+   "status": "reviewed",
    "rows": [
     "sheet3:23.64"
    ],
-   "ur_before": "مالیات اور بینکاری"
+   "ur_before": "مالیات اور بینکاری",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S11",
    "en": "Islamic banking and finance",
    "en_before": "Banking and finance",
    "ur": "اسلامی بینکاری اور مالیات",
-   "status": "draft",
+   "status": "reviewed",
    "rows": [
     "sheet3:23.65"
    ],
-   "ur_before": "بینکاری اور مالیات"
+   "ur_before": "بینکاری اور مالیات",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S11",
    "en": "Investment management (Sharīʿah-compliant)",
    "en_before": "Investment management",
    "ur": "سرمایہ کاری کا انتظام (شرعی اصولوں کے مطابق)",
-   "status": "draft",
+   "status": "reviewed",
    "rows": [
     "sheet3:23.66"
    ],
-   "ur_before": "سرمایہ کاری کا انتظام"
+   "ur_before": "سرمایہ کاری کا انتظام",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S11",
    "en": "Takāful (Islamic cooperative insurance)",
    "en_before": "Insurance",
    "ur": "تکافل (باہمی تعاون پر مبنی اسلامی بیمہ)",
-   "status": "draft",
+   "status": "reviewed",
    "rows": [
     "sheet3:23.70"
    ],
-   "ur_before": "بیمہ"
+   "ur_before": "بیمہ",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S11",
    "en": "Islamic investment banking",
    "en_before": "Investment banking",
    "ur": "اسلامی انویسٹمنٹ بینکنگ",
-   "status": "draft",
+   "status": "reviewed",
    "rows": [
     "sheet3:24.17"
    ],
-   "ur_before": "انویسٹمنٹ بینکنگ"
+   "ur_before": "انویسٹمنٹ بینکنگ",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S11",
    "en": "Takāful underwriting",
    "en_before": "Insurance underwriting",
    "ur": "تکافل انڈر رائٹنگ",
-   "status": "draft",
+   "status": "reviewed",
    "rows": [
     "sheet3:24.20"
    ],
-   "ur_before": "بیمہ انڈر رائٹنگ"
+   "ur_before": "بیمہ انڈر رائٹنگ",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S11",
    "en": "Blockchain and digital assets (Sharīʿah-compliant)",
    "en_before": "Blockchain and crypto",
    "ur": "بلاک چین اور ڈیجیٹل اثاثے (شرعی اصولوں کے مطابق)",
-   "status": "draft",
+   "status": "reviewed",
    "rows": [
     "sheet3:24.78"
    ],
-   "ur_before": "بلاک چین اور کرپٹو"
+   "ur_before": "بلاک چین اور کرپٹو",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S12",
    "en": "Flow, adaptability, emotional intelligence, and nurturing energy align with your water nature. Like water, you find success in meeting needs and providing for others.",
    "en_before": "Flow, adaptability, emotional intelligence, and nurturing energy align with your water nature. Like water, you find success in filling needs and providing sustenance.",
-   "ur": "بہاؤ، لچک، جذباتی فہم اور پرورش کرنے والی توانائی آپ کے آبی مزاج سے ہم آہنگ ہیں۔ پانی کی طرح آپ اکثر دوسروں کی ضرورتیں پوری کرنے اور خوراک و ضروریات مہیا کرنے میں کامیابی پاتے ہیں۔",
-   "status": "reviewed",
+   "ur": "بہاؤ، لچک، جذباتی فہم اور پرورش کرنے والی توانائی آپ کے آبی مزاج سے ہم آہنگ ہیں۔ پانی کی طرح آپ اکثر ضرورتیں پوری کرنے اور دوسروں کی کفالت میں کامیابی پاتے ہیں۔",
+   "status": "reviewed-corrected",
    "rows": [
     "sheet3:22.106"
-   ]
+   ],
+   "ur_kept": "بہاؤ، لچک، جذباتی فہم اور پرورش کرنے والی توانائی آپ کے آبی مزاج سے ہم آہنگ ہیں۔ پانی کی طرح آپ اکثر دوسروں کی ضرورتیں پوری کرنے اور خوراک و ضروریات مہیا کرنے میں کامیابی پاتے ہیں۔",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "S13",
    "en": "This doesn't mean complete avoidance—some individuals still succeed in these fields. The tradition suggests focusing your main efforts on the recommended fields above.",
    "en_before": "This doesn't mean complete avoidance—some individuals still succeed in these fields. However, the spiritual alignment suggests focusing your primary efforts on the recommended fields above for optimal results.",
-   "ur": "اس کا مطلب مکمل پرہیز نہیں — بہت سے لوگ ان شعبوں میں بھی کامیاب ہوتے ہیں۔ روایتی نقطۂ نظر سے بنیادی کوششیں اوپر دیے گئے شعبوں پر مرکوز کرنا زیادہ موزوں سمجھا جاتا ہے۔",
-   "status": "reviewed",
+   "ur": "اس کا مطلب مکمل پرہیز نہیں — کچھ لوگ ان شعبوں میں بھی کامیاب ہوتے ہیں۔ روایتی نقطۂ نظر سے بنیادی کوششیں اوپر دیے گئے شعبوں پر مرکوز کرنا زیادہ موزوں سمجھا جاتا ہے۔",
+   "status": "reviewed-corrected",
    "rows": [
     "sheet3:25.13"
-   ]
+   ],
+   "ur_kept": "اس کا مطلب مکمل پرہیز نہیں — بہت سے لوگ ان شعبوں میں بھی کامیاب ہوتے ہیں۔ روایتی نقطۂ نظر سے بنیادی کوششیں اوپر دیے گئے شعبوں پر مرکوز کرنا زیادہ موزوں سمجھا جاتا ہے۔",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
   },
   {
    "id": "F9",
@@ -21684,7 +21811,8 @@
    "status": "reviewed",
    "rows": [
     "sheet2:11.241"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "F9",
@@ -21694,7 +21822,8 @@
    "status": "reviewed",
    "rows": [
     "sheet2:11.244"
-   ]
+   ],
+   "review": "sheet 4 (pass 9, 21 Oct 2026): confirmed"
   },
   {
    "id": "S4",
@@ -21702,11 +21831,255 @@
    "en_before": "Al-Zubānā",
    "ur": "الزبانیٰ",
    "ur_before": "الزبانا",
-   "status": "draft",
+   "status": "reviewed",
    "rows": [
     "sheet2:9.21"
    ],
-   "note": "nameArabic in lunarMansions.ts is now the classical «الزُّبانَى» (alif maqṣūra); the Urdu mention takes the Urdu form «الزبانیٰ»"
+   "note": "nameArabic in lunarMansions.ts is now the classical «الزُّبانَى» (alif maqṣūra); the Urdu mention takes the Urdu form «الزبانیٰ»",
+   "review": "sheet 4 (pass 9, 21 Oct 2026)"
+  }
+ ],
+ "sheet4_additions": [
+  {
+   "id": "4.E1",
+   "en": "Al-Naʿāʾim",
+   "ur": "النعائم",
+   "status": "reviewed",
+   "note": "Written by the Language Reviewer (review sheet 4, section E): lunarMansions.ts nameTransliteration had no Urdu."
+  },
+  {
+   "id": "4.E2",
+   "en": "Saʿd al-Dhābiḥ",
+   "ur": "سعد الذابح",
+   "status": "reviewed",
+   "note": "Written by the Language Reviewer (review sheet 4, section E): lunarMansions.ts nameTransliteration had no Urdu."
+  },
+  {
+   "id": "4.E3",
+   "en": "Saʿd al-Suʿūd",
+   "ur": "سعد السعود",
+   "status": "reviewed",
+   "note": "Written by the Language Reviewer (review sheet 4, section E): lunarMansions.ts nameTransliteration had no Urdu."
+  },
+  {
+   "id": "4.E4",
+   "en": "Baṭn al-Ḥūt",
+   "ur": "بطن الحوت",
+   "status": "reviewed",
+   "note": "Written by the Language Reviewer (review sheet 4, section E): lunarMansions.ts nameTransliteration had no Urdu."
+  }
+ ],
+ "pass9b": [
+  {
+   "id": "9b.K",
+   "en": "Do not panic if this appears. Seek counsel from trusted spiritual guides. If already bound, keep asking Allah for protection through duʿāʾ and remembrance, give charity, and seek guidance. Avoid fatalistic thinking — free will and divine mercy remain.",
+   "en_before": "Do not panic if this appears. Seek counsel from trusted spiritual guides. If already bound, increase protection practices (duʿāʾ, charity, guidance). Avoid fatalistic thinking — free will and divine mercy remain.",
+   "ur": "اگر یہ نتیجہ آئے تو گھبرائیں نہیں۔ قابلِ اعتماد روحانی رہنماؤں سے مشورہ کریں۔ اگر رشتہ پہلے سے بندھا ہوا ہے تو دعا و اذکار کے ذریعے اللہ سے حفاظت طلب کرتے رہیں، صدقہ دیں اور رہنمائی لیں۔ یہ سوچ کر ہار مان لینے سے بچیں کہ سب کچھ طے ہو چکا ہے — انسان کا اختیار اور اللہ کی رحمت باقی ہیں۔",
+   "status": "draft",
+   "rows": [
+    "sheet2:3.9"
+   ],
+   "ur_before": "اگر یہ نتیجہ آئے تو گھبرائیں نہیں۔ قابلِ اعتماد روحانی رہنماؤں سے مشورہ کریں۔ اگر رشتہ پہلے سے بندھا ہوا ہے تو حفاظت کے معمولات (دعا، صدقہ، رہنمائی) بڑھا دیں۔ یہ سوچ کر ہار مان لینے سے بچیں کہ سب کچھ طے ہو چکا ہے — انسان کا اختیار اور اللہ کی رحمت باقی ہیں۔"
+  },
+  {
+   "id": "9b.V",
+   "en": "Empty promises",
+   "en_before": "Empty vows",
+   "ur": "کھوکھلے وعدے",
+   "status": "reviewed",
+   "rows": [
+    "sheet3:19.80"
+   ]
+  },
+  {
+   "id": "9b.M",
+   "en": "Traditionally regarded as a blessed day when your communication abilities are strongest",
+   "en_before": "Your communication abilities peak on this holy day",
+   "ur": "روایت میں اس مبارک دن آپ کی گفتگو کی صلاحیت عروج پر سمجھی جاتی ہے",
+   "status": "reviewed",
+   "rows": [
+    "sheet2:5.146"
+   ]
+  },
+  {
+   "id": "9b.H",
+   "en": "Emotional wellbeing, and counselling when needed",
+   "en_before": "Emotional healing and therapy",
+   "ur": "جذباتی سکون، اور ضرورت ہو تو کسی ماہر سے مشاورت",
+   "status": "reviewed",
+   "rows": [
+    "sheet2:5.228"
+   ]
+  },
+  {
+   "id": "9b.H",
+   "en": "When seeking emotional calm and wellbeing",
+   "en_before": "When seeking emotional healing",
+   "ur": "جب جذباتی سکون مقصود ہو",
+   "status": "reviewed",
+   "rows": [
+    "sheet2:7.68"
+   ]
+  },
+  {
+   "id": "9b.H",
+   "en": "Traditionally associated with moving past what feels stuck, with transformation, emotional ease, and openings for wellbeing",
+   "en_before": "Releases stuck energy, facilitates transformation, ensures emotional flow, and attracts healing opportunities",
+   "ur": "روایت میں اسے جمود سے نکلنے، تبدیلی، جذباتی سہولت اور عافیت کے مواقع سے جوڑا جاتا ہے",
+   "status": "draft",
+   "rows": [
+    "sheet2:7.119"
+   ],
+   "ur_before": "رکی ہوئی توانائی کو آزاد کرتا، تبدیلی کو آسان بناتا، جذباتی بہاؤ اور سکون کے مواقع کا ذریعہ سمجھا جاتا ہے"
+  },
+  {
+   "id": "9b.H",
+   "en": "Provide meals to hospitals and care centres",
+   "en_before": "Provide meals to hospitals and healing centers",
+   "ur": "ہسپتالوں اور نگہداشت کے مراکز کو کھانا فراہم کریں",
+   "status": "draft",
+   "rows": [
+    "sheet2:7.121"
+   ],
+   "ur_before": "ہسپتالوں اور شفا خانوں کو کھانا فراہم کریں"
+  },
+  {
+   "id": "9b.H",
+   "en": "Given with a sincere intention, asking Allah for positive change and wellbeing",
+   "en_before": "Performed with intention for transformation and healing",
+   "ur": "خالص نیت سے دیا جائے، اور اللہ سے مثبت تبدیلی اور عافیت کی دعا کی جائے",
+   "status": "draft",
+   "rows": [
+    "sheet2:7.131"
+   ],
+   "ur_before": "تبدیلی اور شفا کی نیت سے کیا جائے"
+  },
+  {
+   "id": "9b.H",
+   "en": "When asking Allah for relief from a heavy burden (alongside any care you need)",
+   "en_before": "When seeking deep healing or release",
+   "ur": "جب کسی بھاری بوجھ سے نجات کے لیے اللہ سے دعا مقصود ہو (ضروری علاج و نگہداشت کے ساتھ)",
+   "status": "draft",
+   "rows": [
+    "sheet2:7.134"
+   ],
+   "ur_before": "جب گہری شفا یا رہائی مقصود ہو"
+  },
+  {
+   "id": "9b.H",
+   "en": "The red goat represents the blood of life and the power of transformation specific to buruj 8 (Water-Scorpio). In this tradition, this buruj sadaqah is associated with major life transitions, leaving old patterns behind, deep inner reform, and turning obstacles into opportunities. The red color symbolizes the intensity and power of Scorpio water - death and rebirth. The gold component (or monetary equivalent) represents the preciousness of transformation and connects to Capricorn's earthly manifestation.",
+   "en_before": "The red goat represents the blood of life and the power of transformation specific to buruj 8 (Water-Scorpio). This profound buruj sadaqah facilitates major life transitions, releases karmic patterns, empowers deep healing work, and transforms obstacles into opportunities. The red color symbolizes the intensity and power of Scorpio water - death and rebirth. The gold component (or monetary equivalent) represents the preciousness of transformation and connects to Capricorn's earthly manifestation.",
+   "ur": "سرخ بکرا زندگی کے خون اور برج 8 (آبی-عقرب) سے مخصوص تبدیلی کی قوت کی نمائندگی کرتا ہے۔ یہ گہرا برجی صدقہ روایت میں زندگی کی بڑی تبدیلیوں کو آسان بنانے، پرانے انداز چھوڑنے، گہری روحانی اصلاح کے کام کو تقویت دینے اور رکاوٹوں کو مواقع میں بدلنے کا ذریعہ سمجھا جاتا ہے۔ سرخ رنگ عقربی پانی کی شدت اور قوت — موت اور نئی زندگی — کی علامت ہے۔ سونے کا حصہ (یا اس کے برابر رقم) تبدیلی کی قدر و قیمت کا اظہار ہے اور جدی کے زمینی اظہار سے جڑتا ہے۔",
+   "status": "reviewed",
+   "rows": [
+    "sheet2:3.92"
+   ]
+  },
+  {
+   "id": "9b.H",
+   "en": "Prayer for shifāʾ and spiritual work",
+   "en_before": "Healing and spiritual work",
+   "ur": "شفا کے لیے دعا اور روحانی کام",
+   "status": "reviewed",
+   "rows": [
+    "sheet2:5.192"
+   ]
+  },
+  {
+   "id": "9b.H",
+   "en": "After recovering from an illness, or after a major life transition",
+   "en_before": "After major healing or life transition",
+   "ur": "کسی بیماری سے صحت یابی کے بعد، یا زندگی کی کسی بڑی تبدیلی کے بعد",
+   "status": "draft",
+   "rows": [
+    "sheet2:7.214"
+   ],
+   "ur_before": "کسی بڑی شفا یا زندگی کی تبدیلی کے بعد"
+  },
+  {
+   "id": "9b.H",
+   "en": "This is the completion buruj (12th) with 12 portions - representing full spiritual cycle completion. In this tradition, rice (nourishment) and fish (water element) are associated with spiritual protection and wellbeing, which are sought from Allah. The number 12 appears twice (12th buruj + 12 portions) symbolizing ultimate spiritual wholeness. Thursday's Jupiter energy is traditionally said to amplify compassion, mercy, and divine blessings. This sadaqah is given in the hope of safeguarding your empathic nature, keeping healthy boundaries while maintaining compassion, seeking Allah's protection in service to others, and reaching spiritual completion and closure.",
+   "en_before": "This is the completion buruj (12th) with 12 portions - representing full spiritual cycle completion. Rice (nourishment) and fish (water element) create complete spiritual protection and healing. The number 12 appears twice (12th buruj + 12 portions) symbolizing ultimate spiritual wholeness. Thursday's Jupiter energy amplifies compassion, mercy, and divine blessings. This sacrifice protects your empathic nature, establishes healthy boundaries while maintaining compassion, attracts divine protection in service to others, and ensures spiritual completion and closure.",
+   "ur": "یہ تکمیل کا برج (12واں) ہے اور 12 حصوں کے ساتھ — مکمل روحانی دور کی تکمیل کی علامت۔ روایت میں چاول (غذا) اور مچھلی (آبی عنصر) کو روحانی حفاظت اور عافیت سے جوڑا جاتا ہے، جو اللہ ہی سے طلب کی جاتی ہیں۔ عدد 12 دو بار آتا ہے (12واں برج + 12 حصے) جو مکمل روحانی تکمیل کی علامت ہے۔ جمعرات کی مشتری کی توانائی ہمدردی، رحمت اور الٰہی برکتوں کو بڑھاتی سمجھی جاتی ہے۔ یہ صدقہ اس امید کے ساتھ دیا جاتا ہے کہ آپ کی ہمدرد فطرت محفوظ رہے، ہمدردی برقرار رکھتے ہوئے صحت مند حدود قائم رہیں، دوسروں کی خدمت میں اللہ کی حفاظت طلب کی جائے، اور روحانی تکمیل و اختتام نصیب ہو۔",
+   "status": "draft",
+   "rows": [
+    "sheet2:1.15"
+   ],
+   "ur_before": "یہ تکمیل کا برج (12واں) ہے اور 12 حصوں کے ساتھ — مکمل روحانی دور کی تکمیل کی علامت۔ چاول (غذا) اور مچھلی (آبی عنصر) مل کر روایت میں مکمل روحانی حفاظت اور شفا کا ذریعہ سمجھے جاتے ہیں۔ عدد 12 دو بار آتا ہے (12واں برج + 12 حصے) جو مکمل روحانی تکمیل کی علامت ہے۔ جمعرات کی مشتری کی توانائی ہمدردی، رحمت اور الٰہی برکتوں کو بڑھاتی سمجھی جاتی ہے۔ یہ صدقہ روایت میں آپ کی ہمدرد فطرت کی حفاظت، ہمدردی برقرار رکھتے ہوئے صحت مند حدود قائم کرنے، دوسروں کی خدمت میں الٰہی حفاظت کی کشش اور روحانی تکمیل و اختتام کا ذریعہ سمجھا جاتا ہے۔"
+  }
+ ],
+ "pass9b_fr_only": [
+  {
+   "id": "9b.F-C1",
+   "file": "src/data/burujData.json",
+   "fr_before": "Peut connaître la douleur de la mortalité infantile ou des enfants ayant des difficultés maritales",
+   "fr": "Les interprétations traditionnelles mentionnent des épreuves liées aux enfants ; ce n'est pas une prédiction."
+  },
+  {
+   "id": "9b.F-C2",
+   "file": "src/data/burujData.json",
+   "fr_before": "Reçoit une assistance divine constante dans les moments de besoin - l'aide arrive toujours",
+   "fr": "Traditionnellement, considéré comme soutenu par l'aide divine dans les moments de besoin"
+  },
+  {
+   "id": "9b.F-P2",
+   "file": "src/data/burujData.json",
+   "fr_before": "Reçoit une protection divine malgré leurs défis avec la colère",
+   "fr": "Traditionnellement, considéré comme sous la sollicitude divine malgré ses difficultés avec la colère"
+  },
+  {
+   "id": "9b.F-H1",
+   "file": "src/data/burujData.json",
+   "fr_before": "Sessions de guérison puissantes",
+   "fr": "Invocation pour la guérison (shifāʾ) et routines spirituelles"
+  },
+  {
+   "id": "9b.F-H2",
+   "file": "src/data/burujData.json",
+   "fr_before": "Vos capacités de guérison et connexion spirituelle sont les plus fortes",
+   "fr": "Traditionnellement considéré comme un jour où votre compassion et votre connexion spirituelle sont les plus fortes"
+  },
+  {
+   "id": "9b.F-H3",
+   "file": "src/data/burujData.json",
+   "fr_before": "Accordé une perspicacité profonde des vérités cachées et des capacités de guérison",
+   "fr": "Traditionnellement associé à une perspicacité profonde et à un don pour réconforter les autres"
+  },
+  {
+   "id": "9b.F-H4",
+   "file": "src/data/burujData.json",
+   "fr_before": "Personnes dans le besoin recherchent naturellement leur présence guérissante",
+   "fr": "Les personnes dans le besoin sont souvent attirées par leur présence réconfortante"
+  },
+  {
+   "id": "9b.F-H5",
+   "file": "src/data/burujData.json",
+   "fr_before": "Accordé connexion spirituelle profonde et capacités de guérison",
+   "fr": "Traditionnellement associé à une connexion spirituelle profonde et à une nature attentionnée"
+  },
+  {
+   "id": "9b.F-H6",
+   "file": "src/data/burujData.json",
+   "fr_before": "Votre empathie naturelle est la plus forte ce jour",
+   "fr": "Dans cette tradition, ce jour est considéré comme celui où votre empathie naturelle est la plus forte"
+  },
+  {
+   "id": "9b.F-F1",
+   "file": "src/data/burujData.json",
+   "fr_before": "Pendant Muharram (mois de transformation)",
+   "fr": "Pendant Muharram"
+  },
+  {
+   "id": "9b.F-F6",
+   "file": "src/data/burujData.json",
+   "fr_before": "Donner aux organisations comme Goodwill ou Armée du Salut",
+   "fr": "Donner à des organisations caritatives locales (p. ex. une banque alimentaire ou une association d'aide)"
+  },
+  {
+   "id": "9b.F-F7",
+   "file": "src/data/burujData.json",
+   "fr_before": "10 est le nombre d'achèvement et de perfection dans la numérologie islamique. Il représente les dix commandements, l'ordre divin complet et la maîtrise. Combiné avec l'élément terre et l'énergie de Saturne, il établit l'autorité matérielle et spirituelle ultime.",
+   "fr": "Dans la tradition numérologique, 10 est le nombre de l'achèvement et de la perfection. Il rappelle les dix commandements donnés au Prophète Mūsā, l'ordre divin complet et la maîtrise. Combiné avec l'élément terre et l'énergie de Saturne, il établit l'autorité matérielle et spirituelle ultime."
   }
  ]
 }

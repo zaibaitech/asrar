@@ -889,8 +889,8 @@ export const LUNAR_MANSIONS: LunarMansion[] = [
       fr: ['Aumône', 'Tenir ses engagements', 'Engagements sérieux', 'Simplifier son mode de vie'],
     },
     unfavorableFor: {
-      en: ['Wasteful spending', 'Empty vows', 'Harming animals or people'],
-      fr: ['Dépenses gaspillées', 'Vœux vides', 'Nuire aux animaux ou aux personnes'],
+      en: ['Wasteful spending', 'Empty promises', 'Harming animals or people'],
+      fr: ['Dépenses gaspillées', 'Promesses creuses', 'Nuire aux animaux ou aux personnes'],
     },
     classicalWisdom: {
       quote: 'Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.',

@@ -48,7 +48,7 @@ GLOSSARY = [
     ('favourable / less favourable (traditional)', 'موافق / کم موافق', 'Ikhtiyārāt and planetary-hour wording; “Auspicious” → موافق. “Unfavourable” is not a separate term in the app text (see open question on «غیر موافق»).'),
     ('supportive (hour, planet)', 'معاون', 'e.g. “a planetary hour traditionally seen as supportive” → معاون; “a supportive connection” → موافق ربط.'),
     ('Moon Applying to / Separating from', 'اتصال / انصراف (جدا ہونا)', 'Classical terms for the Moon moving toward / away from a planet. Do not use ربط for these two (ربط is the plain-language “connection”, see open question).'),
-    ('aspect / hard aspect', 'نظر / سخت نظر', ''),
+    ('aspect / hard aspect', 'نظر / تناؤ والی نسبت', ''),
     ('benefic planet', 'سعد سیارہ', 'Used for Jupiter and Venus. The app has no “malefic” string yet; «نحس» is not used.'),
     ('elemental nature / temperament', 'عنصری مزاج', 'Element + مزاج: آتشی / زمینی / ہوائی / آبی مزاج. «فطرت» is not used for the four elements (فطرت keeps its ordinary meaning “inborn character”, e.g. “Your nature” in the Istikhāra result). Never the Arabic spellings «عنصري/عنصرية».'),
     ('friction / tension / strain / conflict', 'اختلاف / تناؤ / کشیدگی / تنازع / جھگڑا', 'اختلاف = friction or disagreement between people; تناؤ = tension; کشیدگی = strain; تنازع = conflict as a state or process (“low-conflict”, “conflict resolution”); جھگڑا = quarrel. «رگڑ» (physical rubbing) is never used for people.'),

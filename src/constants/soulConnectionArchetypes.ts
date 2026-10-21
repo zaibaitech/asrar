@@ -662,8 +662,8 @@ export const SOUL_CONNECTION_ARCHETYPES: Record<number, SoulConnectionArchetype>
       fr: 'Séparations soudaines, cycles de préjudice récurrents et schémas qui se répètent malgré les efforts. Ce chemin nécessite vigilance.',
     },
     keyToSuccess: {
-      en: 'Do not panic if this appears. Seek counsel from trusted spiritual guides. If already bound, increase protection practices (duʿāʾ, charity, guidance). Avoid fatalistic thinking — free will and divine mercy remain.',
-      fr: "Ne paniquez pas si cela apparaît. Cherchez conseil auprès de guides spirituels de confiance. Si déjà lié, augmentez les pratiques de protection (duʿāʾ, charité, conseil). Évitez la pensée fataliste — le libre arbitre et la miséricorde divine demeurent.",
+      en: 'Do not panic if this appears. Seek counsel from trusted spiritual guides. If already bound, keep asking Allah for protection through duʿāʾ and remembrance, give charity, and seek guidance. Avoid fatalistic thinking — free will and divine mercy remain.',
+      fr: "Ne paniquez pas si cela apparaît. Cherchez conseil auprès de guides spirituels de confiance. Si déjà lié, continuez à demander la protection d'Allah par l'invocation et le dhikr, donnez en aumône et cherchez conseil. Évitez la pensée fataliste — le libre arbitre et la miséricorde divine demeurent.",
     },
   },
 };
