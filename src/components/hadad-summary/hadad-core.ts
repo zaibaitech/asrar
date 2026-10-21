@@ -148,8 +148,8 @@ export const nearestSacred = (n: number): SacredResonance => {
 
 export const sacredSignificance: Record<number, string> = {
   7: 'Seven heavens, seven days of creation',
-  12: 'Twelve Imams, twelve months',
-  19: 'Numerical miracle of the Quran',
+  12: 'Twelve months of the year (9:36)',
+  19: 'Mentioned in 74:30 («عَلَيْهَا تِسْعَةَ عَشَرَ»); some see a numerical pattern',
   70: 'Surah Yā-Sīn (يس)',
   99: 'Asmā\' al-Ḥusnā (Beautiful Names)',
   114: 'Surahs in the Quran',

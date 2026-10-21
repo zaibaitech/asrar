@@ -3130,7 +3130,7 @@ function DestinyResults({ results }: { results: any }) {
                       const stationNames = {
                         1: language === 'fr' ? 'Le Pionnier' : 'The Pioneer',
                         2: language === 'fr' ? 'Le Médiateur' : 'The Mediator',
-                        3: language === 'fr' ? 'Le Créateur' : 'The Creator',
+                        3: language === 'fr' ? 'Le Créateur' : 'The Creative',
                         4: language === 'fr' ? 'Le Bâtisseur' : 'The Builder',
                         5: language === 'fr' ? 'L\'Explorateur' : 'The Explorer',
                         6: language === 'fr' ? 'Le Gardien' : 'The Guardian',

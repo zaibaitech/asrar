@@ -113,8 +113,8 @@ export const LUNAR_MANSIONS: LunarMansion[] = [
       fr: 'Commencer à neuf avec courage et confiance en Allah',
     },
     favorableFor: {
-      en: ['New ventures', 'Travel', 'Medical treatment', 'Marriage'],
-      fr: ['Nouvelles entreprises', 'Voyage', 'Traitement médical', 'Mariage'],
+      en: ['New ventures', 'Travel', 'Starting a treatment your doctor has advised', 'Marriage'],
+      fr: ['Nouvelles entreprises', 'Voyage', 'Commencer un traitement conseillé par votre médecin', 'Mariage'],
     },
     unfavorableFor: {
       en: ['Loans', 'Partnerships with strangers'],
@@ -345,13 +345,13 @@ export const LUNAR_MANSIONS: LunarMansion[] = [
     color: '#3B82F6', // Blue
   },
 
-  // 8. Al-Nathrah (The Gap)
+  // 8. Al-Nathrah (The Muzzle — the lion's nose-tip, al-Bīrūnī)
   {
     number: 8,
     nameArabic: 'النثرة',
     nameTransliteration: 'Al-Nathrah',
-    nameEn: 'The Gap',
-    nameFr: 'L\'Écart',
+    nameEn: 'The Muzzle',
+    nameFr: 'Le Mufle',
     constellation: 'Cancer',
     startDegree: 90,
     element: 'Water',
@@ -648,7 +648,7 @@ export const LUNAR_MANSIONS: LunarMansion[] = [
   // SCHOLAR-REVIEW: fav/unfav themes are educational first-pass — confirm before marketing elections.
   {
     number: 16,
-    nameArabic: 'الزبانا',
+    nameArabic: 'الزُّبانَى',
     nameTransliteration: 'Al-Zubānā',
     nameEn: 'The Claws',
     nameFr: 'Les Griffes',
@@ -885,12 +885,12 @@ export const LUNAR_MANSIONS: LunarMansion[] = [
       fr: 'Parmi les stations saʿd : réfléchir à ce que l’on offre — bien, temps, ego — pour Allah. (Thème éducatif seulement ; pas une prescription rituelle.)',
     },
     favorableFor: {
-      en: ['Charitable giving', 'Keeping vows', 'Serious commitments', 'Simplifying lifestyle'],
-      fr: ['Aumône', 'Tenir ses vœux', 'Engagements sérieux', 'Simplifier son mode de vie'],
+      en: ['Charitable giving', 'Keeping one\'s commitments', 'Serious commitments', 'Simplifying lifestyle'],
+      fr: ['Aumône', 'Tenir ses engagements', 'Engagements sérieux', 'Simplifier son mode de vie'],
     },
     unfavorableFor: {
-      en: ['Wasteful spending', 'Empty vows', 'Harming animals or people'],
-      fr: ['Dépenses gaspillées', 'Vœux vides', 'Nuire aux animaux ou aux personnes'],
+      en: ['Wasteful spending', 'Empty promises', 'Harming animals or people'],
+      fr: ['Dépenses gaspillées', 'Promesses creuses', 'Nuire aux animaux ou aux personnes'],
     },
     classicalWisdom: {
       quote: 'Manāzil al-qamar are stations for reflection and timing adab — not prediction of the unseen.',

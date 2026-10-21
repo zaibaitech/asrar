@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { Copy, Check, QrCode } from 'lucide-react';
 import { WAVE_RECIPIENT, HADIYYA_TEXT } from '../waveDonation';
+import { imageAlt } from '../../../lib/i18n/imageAlt';
+import { useLanguage } from '../../../contexts/LanguageContext';
 
 interface WaveHadiyyaCardProps {
   locale: 'en' | 'fr';
@@ -29,6 +31,7 @@ const SendWaveLogo = () => (
 );
 
 export function WaveHadiyyaCard({ locale }: WaveHadiyyaCardProps) {
+  const { uiLanguage } = useLanguage();
   const [copied, setCopied] = useState(false);
   const [showQR, setShowQR] = useState(false);
   const t = HADIYYA_TEXT[locale];
@@ -76,7 +79,7 @@ export function WaveHadiyyaCard({ locale }: WaveHadiyyaCardProps) {
             <div className="bg-white p-3 rounded-xl shadow-sm">
               <Image
                 src="/images/wave_qr_773363584.png"
-                alt="Wave Sénégal QR Code"
+                alt={imageAlt('waveQr', 'Wave Sénégal QR Code', uiLanguage)}
                 width={200}
                 height={200}
                 className="rounded-lg"

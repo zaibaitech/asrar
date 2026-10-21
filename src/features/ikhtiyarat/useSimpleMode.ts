@@ -31,7 +31,7 @@ function writeStored(value: boolean) {
  * feature, persisted across CheckDateView and DetailSheet so the choice
  * doesn't reset when switching tabs. Defaults to Simple (true) — most
  * users have no astrology background; the technical/classical
- * terminology (Khāliya al-Sayr, muḥtaraq, orb, SCHOLAR-REVIEW) is opt-in
+ * terminology (Khāliya al-Sayr, muḥtaraq, orb) is opt-in
  * via "Detailed", not the default.
  */
 export function useSimpleMode(): [boolean, (value: boolean) => void] {

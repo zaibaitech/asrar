@@ -28,6 +28,12 @@ export interface RuleResult {
   points: number;
   detail_en: string;
   detail_fr: string;
+  /**
+   * SCHOLAR-REVIEW data flag: true when this rule's classical reading is a first-pass
+   * placement still awaiting scholarly review. Internal only — it is never rendered
+   * (the old visible "[SCHOLAR-REVIEW]" text tag was removed from detail_en/detail_fr).
+   */
+  scholarReview?: boolean;
 }
 
 export type Tier = 'excellent' | 'good' | 'acceptable' | 'weak' | 'avoid';

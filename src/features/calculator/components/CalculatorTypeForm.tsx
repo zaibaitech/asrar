@@ -16,6 +16,7 @@ import { SadaqahDayResult } from './SadaqahDayResult';
 import { QuranVerseResult } from './QuranVerseResult';
 import { QURAN_META } from '../lib/quranMeta';
 import { useCalculatorTranslations, type CalculatorLocale } from '../i18n';
+import { useLanguage } from '../../../contexts/LanguageContext';
 import { useTrackCalculation } from '@/src/lib/useAnalytics';
 
 const FIELD_KEYS: Record<'name' | 'phrase' | 'general', { label: string; placeholder: string }> = {
@@ -44,6 +45,8 @@ export function CalculatorTypeForm({
   calcType: CalculationType;
   onBack: () => void;
 }) {
+  // Urdu UI: the surah list shows the Arabic names from QURAN_META (as above the result).
+  const isUrduUi = useLanguage().uiLanguage === 'ur';
   const { t } = useCalculatorTranslations(locale);
   const [text, setText] = useState('');
   const [motherText, setMotherText] = useState('');
@@ -176,7 +179,7 @@ export function CalculatorTypeForm({
               >
                 {Object.entries(QURAN_META).map(([num, meta]) => (
                   <option key={num} value={num}>
-                    {num}. {meta.name}
+                    {num}. {isUrduUi ? meta.nameAr : meta.name}
                   </option>
                 ))}
               </select>

@@ -7,6 +7,8 @@ import { localeAlternates, localizeHref, localizedUrl } from '@/src/lib/i18nRout
 import { AbjadCalculator } from './AbjadCalculator';
 import { FaqSection, JsonLd, faqJsonLd } from '@/src/components/seo/SeoSections';
 import { FAQ_TITLE, ABJAD_FAQS } from '@/src/lib/seo/toolFaqs';
+import { UR_META } from '@/src/lib/urMetadata';
+import { UR_PATHS } from '@/src/lib/i18nRoutes';
 
 type Lang = 'en' | 'fr';
 
@@ -119,6 +121,11 @@ export default async function Page({
         <header className="space-y-3">
           <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100">{c.h1}</h1>
           <p className="text-slate-700 dark:text-slate-300 leading-relaxed">{c.intro}</p>
+          <p className="text-sm text-slate-600 dark:text-slate-400">
+            <a href={UR_PATHS['/abjad']} hrefLang="ur" lang="ur" dir="rtl" className="font-arabic font-semibold text-indigo-700 dark:text-indigo-300 hover:underline">
+              {UR_META['/abjad'].title.ur}
+            </a>
+          </p>
         </header>
 
         <AbjadCalculator />

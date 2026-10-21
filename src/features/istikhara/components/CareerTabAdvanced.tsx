@@ -440,8 +440,8 @@ export function CareerTabAdvanced({ result }: CareerTabAdvancedProps) {
                   <Info className="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" />
                   <span>
                     {language === 'en' 
-                      ? 'This doesn\'t mean complete avoidance—some individuals still succeed in these fields. However, the spiritual alignment suggests focusing your primary efforts on the recommended fields above for optimal results.'
-                      : 'Cela ne signifie pas un évitement complet—certaines personnes réussissent encore dans ces domaines. Cependant, l\'alignement spirituel suggère de concentrer vos principaux efforts sur les domaines recommandés ci-dessus pour des résultats optimaux.'}
+                      ? 'This doesn\'t mean complete avoidance—some individuals still succeed in these fields. The tradition suggests focusing your main efforts on the recommended fields above.'
+                      : 'Cela ne signifie pas un évitement complet—certaines personnes réussissent encore dans ces domaines. La tradition suggère de concentrer vos principaux efforts sur les domaines recommandés ci-dessus.'}
                   </span>
                 </p>
               </div>

@@ -4,16 +4,12 @@ import { ChevronDown, ChevronUp, Search } from 'lucide-react';
 import type { DivineName } from '../data/divine-names';
 import { useDivineNames } from '../hooks/useDivineNames';
 import { COMPAT_THEME, COMPAT_TINTS } from '../constants/compatibilityTheme';
+import { matchesDivineNameQuery } from '../lib/divineNameSearch';
 
 interface AllDivineNamesBrowserProps {
   language?: 'en' | 'fr' | 'ar';
   /** The Names for the selected Abjad system (defaults to the app-wide choice). */
   names?: DivineName[];
-}
-
-/** Strips scholarly transliteration diacritics so a plain-ASCII search like "latif" matches "Al-Laṭīf" — mirrors DivineNamePicker.tsx's own helper. */
-function foldDiacritics(s: string): string {
-  return s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[ʿʾ]/g, '');
 }
 
 /**
@@ -39,14 +35,9 @@ export function AllDivineNamesBrowser({ language = 'en', names }: AllDivineNames
   const [openNumber, setOpenNumber] = useState<number | null>(null);
 
   const results = useMemo(() => {
-    const q = foldDiacritics(query.trim().toLowerCase());
-    if (!q) return list;
-    return list.filter(name =>
-      foldDiacritics(name.transliteration.toLowerCase()).includes(q) ||
-      name.translation.en.toLowerCase().includes(q) ||
-      name.translation.fr.toLowerCase().includes(q) ||
-      name.keywords.some(k => k.includes(q))
-    );
+    // Latin (as before), plus Arabic- and Urdu-script input (src/lib/divineNameSearch.ts).
+    if (!query.trim()) return list;
+    return list.filter(name => matchesDivineNameQuery(name, query));
   }, [query, list]);
 
   return (

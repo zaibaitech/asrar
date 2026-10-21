@@ -18,6 +18,9 @@ import { getDayDegradationNote } from '@/src/lib/ikhtiyarat/degradation';
 import { getPlanetPosition } from '@/src/lib/ikhtiyarat/ephemeris';
 import { shareContent } from '@/src/features/ramadanChallenges/sharing';
 import { UserLocation } from '@/src/types/planetary';
+import { useLanguage } from '@/src/contexts/LanguageContext';
+import MedicalElectionNotice from './MedicalElectionNotice';
+import { shareTextFor } from '../medicalNotice';
 import { getLocalToday } from '@/src/lib/localDate';
 import { TierBadge } from './TierBadge';
 import { RuleRow } from './RuleRow';
@@ -25,7 +28,7 @@ import { SunnahBadges } from './SunnahBadges';
 import { UrfBadge } from './UrfBadge';
 import { SimpleModeToggle } from './SimpleModeToggle';
 import { useSimpleMode } from '../useSimpleMode';
-import { ikhtiyaratCopy, UiLang } from '../copy';
+import { ikhtiyaratCopy, UiLang, pickLabel, yourLocationLabel, YOUR_LOCATION_SENTINEL } from '../copy';
 import { nativeOrCopy, trackEvent } from '@/src/lib/analytics';
 import { useIkhtiyaratTool, useTrackCalculation } from '@/src/lib/useAnalytics';
 
@@ -64,6 +67,7 @@ export function CheckDateView({
   onUseMyLocation?: () => Promise<UserLocation>;
 }) {
   const c = ikhtiyaratCopy[language];
+  const { uiLanguage } = useLanguage();
   const tool = useIkhtiyaratTool();
   const trackCalculation = useTrackCalculation(tool);
   // Set by the Check button so the automatic first check on load is not counted.
@@ -89,7 +93,9 @@ export function CheckDateView({
   const locationName =
     isDefaultLocation && (!location.cityName || location.cityName === 'Mecca (Default)')
       ? c.locationDefault
-      : location.cityName ?? `${location.latitude.toFixed(2)}, ${location.longitude.toFixed(2)}`;
+      : location.cityName === YOUR_LOCATION_SENTINEL
+        ? pickLabel(yourLocationLabel, language, uiLanguage)
+        : location.cityName ?? `${location.latitude.toFixed(2)}, ${location.longitude.toFixed(2)}`;
 
   const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
@@ -151,7 +157,7 @@ export function CheckDateView({
     trackEvent('share_click', { tool, method: nativeOrCopy() });
     const shareResult = await shareContent({
       title: c.title,
-      text: `${dateOnly} — ${tierLabel} (${result.score}/100)`,
+      text: shareTextFor({ dateOnly, tierLabel, score: result.score, electionType, language }),
       url,
     });
     if (shareResult.success && shareResult.method === 'clipboard') {
@@ -266,6 +272,8 @@ export function CheckDateView({
               <SunnahBadges badges={travelBadges} language={language} />
             </div>
           )}
+
+          <MedicalElectionNotice electionType={electionType} />
 
           {medicalBadges.length > 0 && (
             <div>

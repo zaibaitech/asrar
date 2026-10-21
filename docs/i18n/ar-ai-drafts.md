@@ -4471,7 +4471,7 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 3858 | AI-draft | جيد (Jayyid) | جيد |
 | 3859 | AI-draft | اجتناب (Ijtanib) | اجتنب |
 | 3860 | AI-draft | Mercury Retrograde (Study/Comprehension) | رجوع عطارد (الدراسة والفهم) |
-| 3861 | AI-draft | Mercury is retrograde — the same classical caution cited against contracts (business.ts) applies here: avoid starting serious study, an exam, or a new course while Mercury retrogrades. | عطارد راجع — ويسري هنا التحذير الكلاسيكي نفسه المذكور في العقود: تجنّب بدء دراسة جادّة أو امتحان أو مقرّر جديد وعطارد راجع. |
+| 3861 | AI-draft | Mercury is retrograde — the same classical caution cited against contracts in the business rules applies here: avoid starting serious study, an exam, or a new course while Mercury retrogrades. | عطارد راجع — ويسري هنا التحذير الكلاسيكي نفسه المذكور في العقود: تجنّب بدء دراسة جادّة أو امتحان أو مقرّر جديد وعطارد راجع. |
 | 3862 | AI-draft | Moon Applying to Jupiter (Wisdom/Comprehension) | اتّصال القمر بالمشتري (الحكمة والفهم) |
 | 3863 | AI-draft | ° — Jupiter is the classical significator of wisdom and comprehension. | ° — المشتري هو الدالّ الكلاسيكي على الحكمة والفهم. |
 | 3864 | AI-draft | Moon Applying to Mercury (Retention) | اتّصال القمر بعطارد (الحفظ) |
@@ -4623,7 +4623,7 @@ Counts: 65 Qur'anic lines (reviewed), 9 ṣalawāt/duʿāʾ (reviewed), 512 Divi
 | 4010 | AI-draft | The Moon is forming a supportive connection with Jupiter right now — traditionally the planet of profit and gain. | القمر يتّصل الآن اتّصالًا داعمًا بالمشتري — كوكب الربح والكسب تقليديًا. |
 | 4011 | AI-draft | The Moon is forming a supportive connection with Venus right now — favorable for amicable dealing between both sides. | القمر يتّصل الآن اتّصالًا داعمًا بالزهرة — مواتٍ لحسن التعامل بين الطرفين. |
 | 4012 | AI-draft | Mercury is in a sign it traditionally feels very at home in — strong for negotiation and paperwork. | عطارد في برج يكون فيه تقليديًا في بيته — قوي للتفاوض والأوراق. |
-| 4013 | AI-draft | The Moon isn't forming any meaningful connection right now — traditionally, treatment begun in this state tends to come to nothing. | القمر لا يكوّن الآن أي اتّصال ذي معنى — وتقليديًا، العلاج الذي يبدأ في هذه الحال لا يُثمر. |
+| 4013 | AI-draft | The Moon isn't forming any meaningful connection right now — traditionally, treatment begun in this state tends to come to nothing. | القمر لا يكوّن الآن أي اتّصال ذي معنى — وتقليديًا، العلاج الذي يبدأ في هذه الحال يميل إلى ألّا يُثمر. |
 | 4014 | AI-draft | The Moon is too close to the Sun right now and appears "hidden" — traditionally, this weakens the body's own vital force in the chart. | القمر قريب جدًا من الشمس الآن ويبدو «مستترًا» — وتقليديًا يُضعف هذا القوة الحيوية للبدن في الطالع. |
 | 4015 | AI-draft | The Moon is in a tense position with Saturn or Mars right now — a traditional warning of complication or slow healing. | القمر في وضع متوتّر مع زحل أو المريخ الآن — تحذير تقليدي من التعقيد أو بطء الشفاء. |
 | 4016 | AI-draft | The Moon is growing in light right now — traditionally favorable for treatments meant to build up or strengthen the body. | القمر يزداد نورًا الآن — مواتٍ تقليديًا للعلاجات التي تبني البدن وتقوّيه. |

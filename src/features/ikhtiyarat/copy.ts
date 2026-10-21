@@ -7,6 +7,22 @@
 
 export type UiLang = 'en' | 'fr';
 
+/**
+ * A label with an optional Urdu text. Urdu mode reuses the English copy (the rest of the view is
+ * translated by the Urdu catalog); the few labels below carry their own Urdu so that they do not
+ * depend on an exact-match lookup of the English text. French falls back to English when it has none.
+ */
+export type LabelText = { en: string; fr?: string; ur?: string };
+
+export function pickLabel(label: LabelText, language: UiLang, uiLanguage: string): string {
+  if (uiLanguage === 'ur' && label.ur) return label.ur;
+  return label[language] ?? label.en;
+}
+
+/** Shown when the place name cannot be looked up (src/utils/location.ts returns this sentinel). */
+export const YOUR_LOCATION_SENTINEL = 'Your Location';
+export const yourLocationLabel: LabelText = { en: YOUR_LOCATION_SENTINEL, ur: 'آپ کا مقام' };
+
 export const ikhtiyaratCopy = {
   en: {
     title: 'Best Dates',
@@ -120,10 +136,10 @@ export const disclaimerArabic =
 export const howScoringWorksArabic =
   'كيف يُحسب التقييم: كل قاعدة تضيف أو تطرح نقاطًا؛ ويُحوَّل المجموع إلى تقييم من 0 إلى 100 بالنسبة إلى أقصى عدد نقاط يمكن تحقيقه لهذا النوع من الاختيار، بحيث تحمل الفئات (ممتاز، جيد، مقبول، ضعيف، اجتناب) نفس المعنى في الزواج والسفر وأي نوع اختيار مستقبلي.';
 
-export const ruleStatusLabel: Record<string, { en: string; fr: string }> = {
-  pass: { en: 'Pass', fr: 'Réussi' },
-  fail: { en: 'Fail', fr: 'Échec' },
-  bonus: { en: 'Bonus', fr: 'Bonus' },
-  penalty: { en: 'Penalty', fr: 'Pénalité' },
-  hardfail: { en: 'Hard fail', fr: 'Échec critique' },
+export const ruleStatusLabel: Record<string, { en: string; fr: string; ur: string }> = {
+  pass: { en: 'Pass', fr: 'Réussi', ur: 'موافق' },
+  fail: { en: 'Fail', fr: 'Échec', ur: 'ناموافق' },
+  bonus: { en: 'Bonus', fr: 'Bonus', ur: 'اضافہ' },
+  penalty: { en: 'Penalty', fr: 'Pénalité', ur: 'کٹوتی' },
+  hardfail: { en: 'Hard fail', fr: 'Échec critique', ur: 'قطعی رکاوٹ' },
 };

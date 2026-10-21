@@ -8,6 +8,8 @@
 
 import React, { useState, useRef } from 'react';
 import Image from 'next/image';
+import { imageAlt } from '../lib/i18n/imageAlt';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface ProfilePictureUploadProps {
   currentAvatarUrl: string | null;
@@ -20,6 +22,7 @@ export default function ProfilePictureUpload({
   onFileSelect,
   maxSize = 2 * 1024 * 1024, // 2MB default
 }: ProfilePictureUploadProps) {
+  const { uiLanguage } = useLanguage();
   const [preview, setPreview] = useState<string | null>(currentAvatarUrl);
   const [error, setError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -75,7 +78,7 @@ export default function ProfilePictureUpload({
           {preview ? (
             <Image
               src={preview}
-              alt="Profile preview"
+              alt={imageAlt('profilePreview', 'Profile preview', uiLanguage)}
               width={128}
               height={128}
               className="w-full h-full object-cover"

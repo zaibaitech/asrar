@@ -13,6 +13,19 @@ import type { DeepPartial } from './types';
 import type { en } from './en';
 
 export const ur: DeepPartial<typeof en> = {
+  abjadSystem: {
+    note: "مغربی (مراکش تا لیبیا، اندلس اور مغربی افریقہ) · مشرقی (مصر، مشرقِ وسطیٰ اور برصغیر سمیت ایشیا)",
+    title: "ابجد کا نظام",
+    currentMode: "موجودہ نظام:",
+    maghribi: "مغربی",
+    mashriqi: "مشرقی",
+    western: "مغربی ترتیب",
+    eastern: "مشرقی ترتیب",
+    maghribiSystem: "مغربی نظام:",
+    mashriqiSystem: "مشرقی نظام:",
+    maghribiDesc: "مغرب (مراکش تا لیبیا)، اندلس اور مغربی افریقہ کا روایتی طریقہ (ش=1000، غ=900)",
+    mashriqiDesc: "مصر، مشرقِ وسطیٰ اور برصغیر سمیت ایشیا میں رائج مشرقی طریقہ (ش=300، غ=1000)",
+  },
   nav: {
     home: "ہوم",
     calculator: "کیلکولیٹر",
@@ -21,6 +34,7 @@ export const ur: DeepPartial<typeof en> = {
     planetaryHours: "ساعاتِ کواکب",
     planetary: "کواکب کی ہم آہنگی",
     about: "تعارف",
+    aboutApp: "اس ایپ کے بارے میں",
     guidance: "زندگی کی رہنمائی",
     advanced: "میں کون ہوں؟",
     menu: "مینو",

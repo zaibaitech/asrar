@@ -53,7 +53,7 @@ const COPY = {
       'Enter your Gregorian date of birth to find the Hijri (Islamic) month you were born in. Wolof names are shown where they are commonly used (Tamxarit, Gamo, Korité, Tabaski…).',
     burjTitle: 'Sadaqa by burj',
     burjIntro:
-      'Each of the twelve burūj has its own traditional sadaqah, according to the teachings of Seringe Mahdiou Niane (with companion videos in Wolof inside the app). Not sure of your burj? Find it from your name and your mother\'s name.',
+      'Each of the twelve burūj has its own traditional sadaqah, according to the teachings of Serigne Mahdiou Niane (with companion videos in Wolof inside the app). Not sure of your burj? Find it from your name and your mother\'s name.',
     burjLink: "Find your burj from your name & mother's name →",
     bestDay: 'Suggested day',
     faqTitle: 'Frequently asked questions',
@@ -103,7 +103,7 @@ const COPY = {
       "Entrez votre date de naissance grégorienne pour trouver votre mois hégirien (islamique) de naissance. Les noms wolof sont indiqués lorsqu'ils sont courants (Tamxarit, Gamo, Korité, Tabaski…).",
     burjTitle: 'Sadaqa par burj',
     burjIntro:
-      "Chacun des douze burūj a sa sadaqah traditionnelle, selon les enseignements de Seringe Mahdiou Niane (avec des vidéos en wolof dans l'application). Vous ne connaissez pas votre burj ? Trouvez-le avec votre nom et celui de votre mère.",
+      "Chacun des douze burūj a sa sadaqah traditionnelle, selon les enseignements de Serigne Mahdiou Niane (avec des vidéos en wolof dans l'application). Vous ne connaissez pas votre burj ? Trouvez-le avec votre nom et celui de votre mère.",
     burjLink: 'Trouver votre burj par votre nom et celui de votre mère →',
     bestDay: 'Jour conseillé',
     faqTitle: 'Questions fréquentes',

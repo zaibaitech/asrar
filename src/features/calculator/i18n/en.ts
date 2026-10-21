@@ -82,7 +82,7 @@ export const calculatorEn = {
   correspondenceSystemName: 'Maghribi ʿIlm al-Ḥurūf letter classification',
   correspondenceSystemLabel: 'Correspondence system',
   correspondenceNote:
-    'These are symbolic correspondences from the selected letter-classification tradition, not scientific measurements. A separate historical system (Mashriqi) assigns some letters differently; it is not implemented in this app.',
+    'These are symbolic correspondences from the selected letter-classification tradition, not scientific measurements. The Mashriqi letter values are supported, but the Mashriqi element classification, which assigns some letters differently, is not implemented in this app.',
   abjadValueLabel: 'Abjad',
   frequencyLabel: 'Frequency',
   elementLabel: 'Element',
@@ -214,4 +214,5 @@ export const divineNamePickerEn = {
   title: 'Select a Divine Name',
   searchPlaceholder: 'Search by Arabic or transliteration...',
   noResults: 'No names found',
+  close: 'Close',
 } as const;

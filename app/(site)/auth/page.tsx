@@ -7,6 +7,7 @@ import { useLanguage } from '@/src/contexts/LanguageContext';
 import { Mail, Lock, UserPlus, LogIn, Eye, EyeOff, AlertCircle, CheckCircle, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import AsrarLogo from '@/src/components/AsrarLogo';
+import SupabaseConfigNotice, { authErrorMessage } from '@/src/components/auth/SupabaseConfigNotice';
 
 type AuthMode = 'signin' | 'signup' | 'reset';
 
@@ -33,7 +34,7 @@ export default function AuthPage() {
       if (mode === 'reset') {
         const { error } = await resetPassword(email);
         if (error) {
-          setError(error.message || 'Failed to send password reset email');
+          setError(authErrorMessage(error.message, 'Failed to send password reset email', isConfigured));
         } else {
           setSuccess('Password reset email sent! Check your inbox.');
           setTimeout(() => {
@@ -44,7 +45,7 @@ export default function AuthPage() {
       } else if (mode === 'signup') {
         const { error } = await signUpWithEmail(email, password);
         if (error) {
-          setError(error.message || 'Failed to create account');
+          setError(authErrorMessage(error.message, 'Failed to create account', isConfigured));
         } else {
           setSuccess('Account created! Setting up your profile...');
           setTimeout(() => {
@@ -54,7 +55,7 @@ export default function AuthPage() {
       } else {
         const { error } = await signInWithEmail(email, password);
         if (error) {
-          setError(error.message || 'Failed to sign in');
+          setError(authErrorMessage(error.message, 'Failed to sign in', isConfigured));
         } else {
           setSuccess('Successfully signed in!');
           setTimeout(() => {
@@ -103,23 +104,10 @@ export default function AuthPage() {
 
           {/* Supabase Configuration Warning */}
           {!isConfigured && (
-            <div className="mb-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg flex items-start gap-3">
-              <AlertCircle className="w-5 h-5 text-red-600 dark:text-red-400 flex-shrink-0 mt-0.5" />
-              <div className="text-xs">
-                <p className="text-sm text-red-700 dark:text-red-300 font-medium mb-2">Supabase not configured</p>
-                <div className="space-y-1 text-red-600 dark:text-red-400 font-mono">
-                  <div>URL: {process.env.NEXT_PUBLIC_SUPABASE_URL ? '✓ Set' : '✗ Missing'}</div>
-                  <div>Key: {process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ? '✓ Set' : '✗ Missing'}</div>
-                  {process.env.NEXT_PUBLIC_SUPABASE_URL && (
-                    <div className="mt-2">URL Value: {process.env.NEXT_PUBLIC_SUPABASE_URL.substring(0, 30)}...</div>
-                  )}
-                  {process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY && (
-                    <div>Key Length: {process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY.length} chars</div>
-                  )}
-                  <div className="mt-2 text-red-500">Build Time: {new Date().toISOString()}</div>
-                </div>
-              </div>
-            </div>
+            <SupabaseConfigNotice
+              urlSet={Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL)}
+              keySet={Boolean(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY)}
+            />
           )}
 
           {/* Error/Success Messages */}

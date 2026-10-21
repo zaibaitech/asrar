@@ -25,7 +25,7 @@ export function MobileMenu({
   historyCount = 0,
   onSelectGuidance,
 }: MobileMenuProps) {
-  const { t, language } = useLanguage();
+  const { t, language, uiLanguage } = useLanguage();
   const [expandAbout, setExpandAbout] = useState(false);
   const [showFeedback, setShowFeedback] = useState(false);
   return (
@@ -62,7 +62,7 @@ export function MobileMenu({
           {/* Abjad System Selector - UNIQUE TO MOBILE */}
           <div className="space-y-3">
             <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300">
-              📿 Abjad System
+              📿 {t.abjadSystem.title}
             </label>
             <AbjadSystemSelector compact={false} />
           </div>
@@ -155,7 +155,7 @@ export function MobileMenu({
             >
               <div className="flex items-center gap-3">
                 <Info className="w-5 h-5 flex-shrink-0 text-amber-500" />
-                <span className="font-medium text-base">About This App</span>
+                <span className="font-medium text-base">{t.nav.aboutApp}</span>
               </div>
               <BookOpen className={`w-4 h-4 flex-shrink-0 transition-transform ${expandAbout ? 'rotate-180' : ''}`} />
             </button>
@@ -163,12 +163,27 @@ export function MobileMenu({
             {/* About Content - Expandable */}
             {expandAbout && (
               <div className="px-4 py-3 bg-slate-100 dark:bg-slate-600/30 rounded-lg space-y-3 border border-slate-200 dark:border-slate-600">
-                <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-                  <strong>Asrār</strong> is your guide to the Islamic sciences of <strong>ʿIlm al-Ḥurūf</strong> (Science of Letters) and <strong>ʿIlm al-ʿAdad</strong> (Science of Numbers).
-                </p>
-                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                  Discover the sacred numerical values and elemental associations within Arabic text, connecting language to the deeper patterns of creation.
-                </p>
+                {uiLanguage === 'ur' ? (
+                  // The English sentence has bold terms in the middle, so word-by-word translation of its text nodes
+                  // would scramble the RTL sentence; Urdu gets whole sentences with the same bold terms.
+                  <>
+                    <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                      <strong>اسرار</strong> اسلامی علوم <strong>علم الحروف</strong> (حروف کا علم) اور <strong>علم الاعداد</strong> (اعداد کا علم) کے لیے آپ کا رہنما ہے۔
+                    </p>
+                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                      عربی متن میں چھپی عددی قیمتوں اور عناصر سے ان کی نسبتوں کو دریافت کریں، اور زبان کو تخلیق کے گہرے نمونوں سے جوڑیں۔
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                      <strong>Asrār</strong> is your guide to the Islamic sciences of <strong>ʿIlm al-Ḥurūf</strong> (Science of Letters) and <strong>ʿIlm al-ʿAdad</strong> (Science of Numbers).
+                    </p>
+                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                      Discover the sacred numerical values and elemental associations within Arabic text, connecting language to the deeper patterns of creation.
+                    </p>
+                  </>
+                )}
                 <p className="text-xs text-slate-500 dark:text-slate-500 pt-1">
                   Version 1.0 • © 2025
                 </p>

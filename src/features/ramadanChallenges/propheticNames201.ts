@@ -29,7 +29,7 @@ export const PROPHETIC_NAMES_201: PropheticName[] = [
   { number: 5, arabic: 'أَحِيد', transliteration: 'Aḥīd', meaning: 'The Unique', meaningFr: 'L\'Unique' },
   { number: 6, arabic: 'وَاحِد', transliteration: 'Wāḥid', meaning: 'The One', meaningFr: 'L\'Un' },
   { number: 7, arabic: 'مَاحٍ', transliteration: 'Māḥin', meaning: 'The Eraser (of idolatry)', meaningFr: 'Celui qui Efface (l\'idolâtrie)' },
-  { number: 8, arabic: 'حَاشِر', transliteration: 'Ḥāshirun', meaning: 'The Gatherer', meaningFr: 'Le Rassembleur' },
+  { number: 8, arabic: 'حَاشِر', transliteration: 'Ḥāshirun', meaning: 'The one at whose feet people are gathered', meaningFr: 'Celui sur les pas duquel les gens seront rassemblés' },
   { number: 9, arabic: 'عَاقِب', transliteration: 'ʿĀqibun', meaning: 'The Last', meaningFr: 'Le Dernier' },
   { number: 10, arabic: 'طَهَ', transliteration: 'Ṭāhā', meaning: 'O Pure One', meaningFr: 'Ô Pur' },
   { number: 11, arabic: 'يَاسِين', transliteration: 'Yāsīn', meaning: 'O Mighty One', meaningFr: 'Ô Puissant' },

@@ -63,10 +63,10 @@ const mercuryRetrogradeHardFail = rule(
       status: retro ? 'hardfail' : 'pass',
       points: 0,
       detail_en: retro
-        ? 'Mercury is retrograde — the same classical caution cited against contracts (business.ts) applies here: avoid starting serious study, an exam, or a new course while Mercury retrogrades.'
+        ? 'Mercury is retrograde — the same classical caution cited against contracts in the business rules applies here: avoid starting serious study, an exam, or a new course while Mercury retrogrades.'
         : 'Mercury is direct.',
       detail_fr: retro
-        ? "Mercure est rétrograde — la même mise en garde classique citée pour les contrats (business.ts) s'applique ici : éviter de commencer des études sérieuses, un examen, ou un nouveau cours pendant la rétrogradation de Mercure."
+        ? "Mercure est rétrograde — la même mise en garde classique citée pour les contrats dans les règles des affaires s'applique ici : éviter de commencer des études sérieuses, un examen, ou un nouveau cours pendant la rétrogradation de Mercure."
         : 'Mercure est direct.',
     };
   },
@@ -249,8 +249,10 @@ function makeEducationPlanetaryHourBonus(strict: boolean): Rule {
           else if (isRetro) { reason = 'retrograde'; reasonFr = 'rétrograde'; }
           return {
             status: 'pass', points: 0,
-            detail_en: `This window is in the planetary hour of ${planet}, but ${planet} is ${reason} — no bonus. [SCHOLAR-REVIEW]`,
-            detail_fr: `Cette fenêtre se situe dans l'heure planétaire de ${planetFr[planet!] ?? planet}, mais ${planetFr[planet!] ?? planet} est ${reasonFr} — aucun bonus. [SCHOLAR-REVIEW]`,
+            detail_en: `This window is in the planetary hour of ${planet}, but ${planet} is ${reason} — no bonus.`,
+            // SCHOLAR-REVIEW: classical rule pending scholarly review (data flag, not shown to users).
+            scholarReview: true,
+            detail_fr: `Cette fenêtre se situe dans l'heure planétaire de ${planetFr[planet!] ?? planet}, mais ${planetFr[planet!] ?? planet} est ${reasonFr} — aucun bonus.`,
           };
         }
       }

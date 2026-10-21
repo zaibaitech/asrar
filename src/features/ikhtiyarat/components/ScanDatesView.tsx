@@ -6,6 +6,7 @@ import { marriageElectionConfig } from '@/src/lib/ikhtiyarat/elections/marriage'
 import { travelElectionConfig } from '@/src/lib/ikhtiyarat/elections/travel';
 import { businessElectionConfig } from '@/src/lib/ikhtiyarat/elections/business';
 import { medicalElectionConfig } from '@/src/lib/ikhtiyarat/elections/medical';
+import MedicalElectionNotice from './MedicalElectionNotice';
 import { homeElectionConfig } from '@/src/lib/ikhtiyarat/elections/home';
 import { educationElectionConfig } from '@/src/lib/ikhtiyarat/elections/education';
 import { ElectionResult, ElectionType, ElectionRulesConfig } from '@/src/lib/ikhtiyarat/types';
@@ -118,6 +119,8 @@ export function ScanDatesView({
           {loading ? c.loading : c.scanButton}
         </button>
       </div>
+
+      <MedicalElectionNotice electionType={electionType} />
 
       {topFive.length > 0 && (
         <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40 p-4 space-y-2">

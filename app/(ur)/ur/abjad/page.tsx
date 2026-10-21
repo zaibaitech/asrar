@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { RelatedTools } from '@/src/components/seo/RelatedTools';
 import { AbjadCalculator } from '@/app/(site)/abjad/AbjadCalculator';
 import { urduMetadata } from '@/src/lib/urMetadata';
+import { CalculatorTextProvider } from '@/src/features/calculator/i18n/CalculatorTextContext';
+import { urduCalculatorText } from '@/src/features/calculator/i18n/urServer';
 import { UR_ABJAD as C, UR_COMMON } from '@/src/lib/i18n/urPages';
 import { UrduBody, UrduFaq, UrduHeader, UrduLinks, UrduSection, englishPageLink, otherUrduPages, UrduSpellingNote } from '../_shared/UrduLanding';
 
@@ -14,9 +16,11 @@ export default function Page() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <UrduHeader h1={C.h1.ur} lead={C.lead.ur} />
 
-      {/* The same calculator as /abjad, unchanged. */}
+      {/* The same calculator as /abjad, unchanged; its interface text is Urdu in the server HTML. */}
       <div className="max-w-3xl mx-auto px-4">
-        <AbjadCalculator />
+        <CalculatorTextProvider value={urduCalculatorText()}>
+          <AbjadCalculator />
+        </CalculatorTextProvider>
       </div>
 
       <RelatedTools pagePath={EN_PATH} lang="ur" className="max-w-2xl mx-auto px-4 pt-6" />

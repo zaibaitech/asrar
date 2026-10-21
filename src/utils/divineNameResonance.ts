@@ -51,7 +51,7 @@ export const GOVERNING_DIVINE_NAMES: GoverningDivineName[] = [
   { index: 10, letter: 'ي', name: 'يقين', transliteration: 'Yaqīn', translation: { en: 'The Certainty', fr: 'La Certitude' } },
   { index: 11, letter: 'ك', name: 'كريم', transliteration: 'Karīm', translation: { en: 'The Generous', fr: 'Le Généreux' } },
   { index: 12, letter: 'ل', name: 'لطيف', transliteration: 'Laṭīf', translation: { en: 'The Subtle', fr: 'Le Subtil' } },
-  { index: 13, letter: 'م', name: 'مؤمن', transliteration: 'Muʾmin', translation: { en: 'The Believer', fr: 'Le Croyant' } },
+  { index: 13, letter: 'م', name: 'مؤمن', transliteration: 'Muʾmin', translation: { en: 'The Giver of Security, The Giver of Faith', fr: 'Le Croyant' } },
   { index: 14, letter: 'ن', name: 'نور', transliteration: 'Nūr', translation: { en: 'The Light', fr: 'La Lumière' } },
   { index: 15, letter: 'س', name: 'سلام', transliteration: 'Salām', translation: { en: 'The Peace', fr: 'La Paix' } },
   { index: 16, letter: 'ع', name: 'عليم', transliteration: 'ʿAlīm', translation: { en: 'The All-Knowing', fr: 'L\'Omniscient' } },

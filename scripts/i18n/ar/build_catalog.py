@@ -96,6 +96,17 @@ for k, e in rev.items():
     if k0: cat.pop(k0, None); src.pop(k0, None)
     put(k, e['ar'], 'reviewed')
 
+# 6. Source fixes approved by Mario (21 Oct 2026): the new English keys carry the Arabic of the
+#    approved proposal, the reviewed Arabic of the old key (moved), or a draft (status "draft",
+#    listed for the Language Reviewer). Old keys still used elsewhere are kept.
+for k, e in load('source-fixes-2026-10.json', {}).items():
+    put(k, e['ar'], 'reviewed' if e['status'] != 'draft' else 'ai')
+
+# Old English keys replaced by the source fixes and no longer referenced anywhere in the app
+# (verified with rg over src/ and app/, 21 Oct 2026): drop them from the served catalog.
+for k in [k for k in cat if k in ('Empty vows', 'Keeping vows') or k.startswith('Thursday is the most blessed day for spiritual elevation')]:
+    cat.pop(k); src.pop(k, None); pending.pop(k, None)
+
 for old, new in REKEY.items():
     if old in cat:
         put(new, cat.pop(old), src.pop(old))
@@ -142,6 +153,13 @@ for k in list(pending):
 cat.update(PAT)
 for s in src.values(): bump(s)
 bump('patterns', len(PAT))
+
+# The visible "[SCHOLAR-REVIEW]" tag was removed from the rule texts (it is now the internal
+# RuleResult.scholarReview data flag, Oct 2026), so its Arabic label is dropped with it.
+for k in [k for k in cat if '[SCHOLAR-REVIEW]' in k]:
+    nk = k.replace(' \\[SCHOLAR-REVIEW\\]', '').replace(' [SCHOLAR-REVIEW]', '')
+    v = cat.pop(k).replace(' [للمراجعة العلمية]', '')
+    cat.setdefault(nk, v)
 
 json.dump(cat, open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 json.dump(dict(sorted(pending.items())), open(P('mt-pending.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)

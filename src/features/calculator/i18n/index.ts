@@ -1,4 +1,5 @@
-import { useMemo } from 'react';
+import { useContext, useMemo } from 'react';
+import { CalculatorTextContext } from './CalculatorTextContext';
 import { calculatorEn, nameFieldEn, divineNamePickerEn } from './en';
 import { calculatorFr, nameFieldFr, divineNamePickerFr } from './fr';
 import { calculatorAr, nameFieldAr, divineNamePickerAr } from './ar';
@@ -32,8 +33,12 @@ export function pluralCalculators(count: number, locale: CalculatorLocale): stri
 }
 
 export function useCalculatorTranslations(locale: CalculatorLocale, namespace: Namespace = 'calculator') {
+  // /ur/abjad: server-built Urdu text over the English dictionary (locale stays 'en').
+  const override = useContext(CalculatorTextContext);
   return useMemo(() => {
-    const dict = DICTS[locale][namespace] as Record<string, unknown>;
+    const base = DICTS[locale][namespace] as Record<string, unknown>;
+    const extra = locale === 'en' ? override?.[namespace] : undefined;
+    const dict = extra ? { ...base, ...extra } : base;
     function t(key: string, vars?: Record<string, string | number>): string {
       const value = dict[key];
       if (typeof value !== 'string') return key;
@@ -43,5 +48,5 @@ export function useCalculatorTranslations(locale: CalculatorLocale, namespace: N
       return dict[key] as T;
     }
     return { t, raw };
-  }, [locale, namespace]);
+  }, [locale, namespace, override]);
 }

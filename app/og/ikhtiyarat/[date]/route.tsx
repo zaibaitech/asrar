@@ -3,6 +3,7 @@ import { gregorianToHijri } from '@/src/lib/ikhtiyarat/hijri';
 import { electionTypeFromParams, evaluateFromParams, type PageSearchParams } from '@/src/lib/ikhtiyarat/sharedResult';
 import type { ElectionType } from '@/src/lib/ikhtiyarat/types';
 import { renderCard } from '@/src/lib/og/card';
+import { ogFooterFor } from '@/src/features/ikhtiyarat/medicalNotice';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -54,9 +55,13 @@ export async function GET(request: NextRequest, { params }: { params: { date: st
         badge: { text: tier, color: result.tierInfo.color },
         figure: `${result.score}/100`,
       },
-      footer: lang === 'fr'
-        ? "Pour la réflexion, non la prédiction · Seul Allah connaît l'invisible"
-        : 'For reflection, not prediction · Only Allah knows the unseen',
+      footer: ogFooterFor(
+        lang === 'fr'
+          ? "Pour la réflexion, non la prédiction · Seul Allah connaît l'invisible"
+          : 'For reflection, not prediction · Only Allah knows the unseen',
+        electionType,
+        lang,
+      ),
     },
     // Same URL always yields the same verdict.
     604800,

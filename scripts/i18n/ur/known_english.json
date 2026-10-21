@@ -1,0 +1,38 @@
+{
+ "note": "English text in reachable production components that /ur-ui.json does not cover (Phase 5 audit). Classified in scripts/i18n/ur/still_english.md. Regenerate with: npx tsx scripts/i18n/ur/update_known_english.ts",
+ "files": {
+  "app/(site)/ikhtiyarat/r/[date]/page.tsx": [
+   "Ikhtiyārāt Result"
+  ],
+  "app/og/ikhtiyarat/[date]/route.tsx": [
+   "For reflection, not prediction · Only Allah knows the unseen",
+   "Ikhtiyārāt · Result",
+   "Marriage (nikāḥ)",
+   "Moving or building",
+   "Per classical ikhtiyārāt",
+   "Starting a business"
+  ],
+  "app/og/quran/[surahNumber]/[ayahNumber].png/route.tsx": [
+   "Share Ayah"
+  ],
+  "app/opengraph-image.tsx": [
+   "Planetary Hours · Abjad Numerology · Zikr Challenges · Name Destiny"
+  ],
+  "src/features/istikhara/components/DhikrCounter.tsx": [
+   "Associated Angel",
+   "Associated Jinn King"
+  ],
+  "src/features/istikhara/components/SpiritualPracticeTab.tsx": [
+   "About Angels",
+   "About Jinn",
+   "Angel",
+   "Angels (Malāʾika) are celestial beings of light who serve as divine messengers and guardians. Each element is associated with specific angelic forces that can be invoked for spiritual support.",
+   "Associated Angel (Rawḥānī)",
+   "Associated Jinn King",
+   "Celestial Guardian",
+   "Elemental Force",
+   "Jinn King",
+   "Jinn are beings created from smokeless fire, existing in a parallel realm. In Islamic mystical tradition, certain Jinn kings govern elemental forces and can be understood through spiritual knowledge."
+  ]
+ }
+}

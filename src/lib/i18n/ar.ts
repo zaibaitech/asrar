@@ -12,6 +12,16 @@ import type { en } from './en';
 export const ar: DeepPartial<typeof en> = {
   abjadSystem: {
     note: "المغربي (المغرب العربي والأندلس وغرب أفريقيا) · المشرقي (مصر والمشرق وسائر آسيا)", // Language Reviewer batch 5 wording (reviewed)
+    title: "نظام الأبجد",
+    currentMode: "الوضع الحالي:",
+    maghribi: "مغربي",
+    mashriqi: "مشرقي",
+    western: "غربي",
+    eastern: "شرقي",
+    maghribiSystem: "النظام المغربي:",
+    mashriqiSystem: "النظام المشرقي:",
+    maghribiDesc: "Traditional method of the Maghreb (Morocco to Libya), al-Andalus and West Africa (ش=1000, غ=900)",
+    mashriqiDesc: "Eastern method used in Egypt, the Middle East and Asia (ش=300, غ=1000)",
   },
 
   nav: {
@@ -21,6 +31,7 @@ export const ar: DeepPartial<typeof en> = {
     compatibility: "التوافق",
     planetaryHours: "الساعات الكوكبية",
     about: "حول التطبيق",
+    aboutApp: "حول هذا التطبيق",
     guidance: "الإرشاد",
     menu: "القائمة",
     planetary: "🪐 التوافق الكوكبي:",

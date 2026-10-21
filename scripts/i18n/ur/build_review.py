@@ -7,6 +7,7 @@ import json, os, subprocess, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from catalog_source import ENTRIES
 from catalog_ai_draft import AI_ENTRIES
+from catalog_ai_draft_ui import AI_UI_ENTRIES
 from review_log import ANSWERS, CORRECTIONS, PENDING_REVIEW
 
 dump = json.loads(subprocess.check_output(['npx', 'tsx', 'scripts/i18n/ur/dump_ts.ts'], text=True))
@@ -44,6 +45,16 @@ GLOSSARY = [
     ('Zodiac: Aries … Pisces', 'حمل، ثور، جوزا، سرطان، اسد، سنبلہ، میزان، عقرب، قوس، جدی، دلو، حوت', ''),
     ('Elements: fire, earth, air, water', 'آگ، مٹی، ہوا، پانی', 'Adjective once: ہوائی برج.'),
     ('Weekdays: Sunday … Saturday', 'اتوار، پیر، منگل، بدھ، جمعرات، جمعہ، ہفتہ', ''),
+    ('favourable / less favourable (traditional)', 'موافق / کم موافق', 'Ikhtiyārāt and planetary-hour wording; “Auspicious” → موافق. “Unfavourable” is not a separate term in the app text (see open question on «غیر موافق»).'),
+    ('supportive (hour, planet)', 'معاون', 'e.g. “a planetary hour traditionally seen as supportive” → معاون; “a supportive connection” → موافق ربط.'),
+    ('Moon Applying to / Separating from', 'اتصال / انصراف (جدا ہونا)', 'Classical terms for the Moon moving toward / away from a planet. Do not use ربط for these two (ربط is the plain-language “connection”, see open question).'),
+    ('aspect / hard aspect', 'نظر / تناؤ والی نسبت', ''),
+    ('benefic planet', 'سعد سیارہ', 'Used for Jupiter and Venus. The app has no “malefic” string yet; «نحس» is not used.'),
+    ('elemental nature / temperament', 'عنصری مزاج', 'Element + مزاج: آتشی / زمینی / ہوائی / آبی مزاج. «فطرت» is not used for the four elements (فطرت keeps its ordinary meaning “inborn character”, e.g. “Your nature” in the Istikhāra result). Never the Arabic spellings «عنصري/عنصرية».'),
+    ('friction / tension / strain / conflict', 'اختلاف / تناؤ / کشیدگی / تنازع / جھگڑا', 'اختلاف = friction or disagreement between people; تناؤ = tension; کشیدگی = strain; تنازع = conflict as a state or process (“low-conflict”, “conflict resolution”); جھگڑا = quarrel. «رگڑ» (physical rubbing) is never used for people.'),
+    ('essential dignities: domicile, exaltation, detriment, fall', 'بیت، شرف، وبال، ہبوط', '“Domicile/Exaltation” is «بیت/شرف»; «بیت الشرف» conflates the two and is not used.'),
+    ('combust / retrograde', 'محترق / رجعت', 'Mercury retrograde → عطارد رجعت میں.'),
+    ('Maghribi System vs Maghribi order', 'مغربی نظام / مغربی ترتیب', 'The Abjad selector says “System” → «نظام»; page copy says “order” → «ترتیب» (the letter order). Same concept, two source words; see open question. “Western” (the small gloss under the Maghribi button) is «مغربی ترتیب» and so repeats the label.'),
     ('Hijri (AH)', 'ہجری (ھ)', ''),
 ]
 
@@ -56,6 +67,13 @@ NOTES = [
     'Astro technical terms in the Ikhtiyārāt breakdown (محترق، خالی السیر، تحت الشعاع، ہبوط، وبال، رجعت، الطریقۃ المحترقۃ) follow classical Arabic/Persian usage; please confirm they are understood by Urdu readers.',
     'Urdu-typed names in the Abjad count: RESOLVED. Urdu letters are converted before counting (see the reviewer answers below, Q7).',
     'Soul-connection archetype meanings, burj career texts, per-date rule explanations (Simple mode), manzil descriptions and day guidance paragraphs are now AI-drafted (section 5, awaiting native review). Other result texts are still English (see “Still in English” at the end); the pages keep saying “ٹول کے کچھ حصے ابھی انگریزی میں ہیں۔”',
+    'Glossary audit (Phase 2): «مغربی» is both “Maghribi” and “Western”, so the small “Western” gloss under the Maghribi button («مغربی ترتیب») repeats the label and does not tell an Urdu reader more; the same for «مشرقی ترتیب». The English UI repeats itself in the same way (“Maghribi / Western”), and the region is given by the note line. Options: keep as is; or shorten the gloss to «مغربی» / «مشرقی»; or gloss it with the region («شمالی افریقی» / «مشرقِ وسطیٰ و ایشیا»). Not changed.',
+    'Glossary audit (Phase 2): the selector label “Maghribi System:” is «مغربی نظام:» but the same concept is «مغربی ترتیب» on the pages and in the FAQ (“Maghribi and Mashriqi orders”). Use one word everywhere (ترتیب = letter order, نظام = the whole system), or keep both because the English source uses both?',
+    'Glossary audit (Phase 2): “connection” appears as «ربط» (“a supportive connection”, soul connection «روحانی ربط») and the classical Moon “Applying to” as «اتصال». Should the plain-language sentences about the Moon forming a connection with Jupiter/Venus use «اتصال» too, or stay in plain «ربط»?',
+    'Glossary audit (Phase 2): “unfavourable” strength — «کم موافق» (“less favourable”) is used for mild cases; a few sadaqah lines about foods that “disrupt the element severely” use «غیر موافق». Keep the two strengths, or use one term?',
+    'Glossary audit (Phase 2): “dignity” is «ذاتی قوت» in “Moon Essential Dignity” but «وقار / وقار کی حالت» in newer strings and «حالت» in “Check the Dignity”. Pick one term for the planetary-dignity concept (candidates: «ذاتی قوت», «وقار», «حالت»).',
+    'Glossary audit (Phase 2): “conflict” is «جھگڑا» (label “Conflict”, “Unnecessary conflict”) but «تنازع» in compounds (“low-conflict”, “conflict resolution”). Intentional register split (quarrel vs state), or unify?',
+    'Glossary audit (Phase 2): “auspicious” is «موافق» in some strings but «مناسب» / «موزوں» in the Ikhtiyārāt and Sadaqah page copy (“Choose an auspicious date…”). «موافق» is the glossary term for favourable; should “auspicious” always follow it?',
 ]
 
 def esc(s):
@@ -146,6 +164,34 @@ for sec, title, note in AI_SECTIONS:
     md.append(f'\n### 5.{[x[0] for x in AI_SECTIONS].index(sec) + 1} {title} ({len(rows)})\n')
     md.append(note + '\n')
     md.append(table(rows))
+    md.append('\n')
+md.append(f'\n## 6. AI-drafted UI strings from the Urdu audit ({len({en for _, en, _ in AI_UI_ENTRIES})} strings, NOT native-reviewed)\n')
+md.append('Found by a browser audit of the /ur pages and of the Urdu language mode on the other pages (menus, tabs, calculators, result tabs, page prose, FAQs), plus a scan of the source for hard-coded English. Drafted by an AI assistant, live on noindex /ur only. Rules: traditional / reflective framing, no prediction or medical claims, planets never agents; Qur\'an lines and Divine Names are NOT translated (Arabic comes from the data files: `planetaryZikr.ts`, `lunarMansions.ts`, `burujData.json`, `incense.ts`, the verified `ar-ui.json` Qur\'an lines). Edit `scripts/i18n/ur/catalog_ai_draft_ui.py`, then run `build_catalog.py` and `build_review.py`.\n')
+_ui_groups = {}
+for sc, en, ur in AI_UI_ENTRIES:
+    _ui_groups.setdefault(sc, []).append((en, ur))
+md.append('| Area | Strings |\n|---|---|')
+for sc, rows in _ui_groups.items():
+    md.append(f'| {sc} | {len(rows)} |')
+for sc, rows in _ui_groups.items():
+    md.append(f'\n### 6.{list(_ui_groups).index(sc) + 1} {sc} ({len(rows)})\n')
+    md.append(table(rows))
+    md.append('\n')
+_p4 = os.path.join(os.path.dirname(__file__), 'phase4_review.json')
+if os.path.exists(_p4):
+    p4 = json.load(open(_p4, encoding='utf-8'))
+    md.append('\n## 7. Phase 4 review of the 896 AI-drafted result texts (sections 5.x), NOT native-reviewed\n')
+    md.append('The groups in the table below were read entry by entry against their English source (every source string of the 896 still exists verbatim in the app). Corrections are listed below with the reason; entries that could not be settled are flagged with the question and, where there is one, an alternative. The Urdu is still AI-drafted: no qualified reviewer has approved it. Source: `scripts/i18n/ur/phase4_review.json`.\n')
+    _rows = []
+    for _g, _v in p4['groups'].items():
+        _c = sum(1 for x in p4['corrections'] if x['group'] == _g)
+        _fl = sum(1 for x in p4['flags'] if x['group'] == _g)
+        _rows.append((_g, _v['total'], _v['reviewed'], _c, _v['total'] - _c, _fl))
+    md.append(table(_rows, ('Group', 'Entries', 'Reviewed', 'Corrected', 'Unchanged', 'Flagged')))
+    md.append('\n\n### 7.1 Corrections\n')
+    md.append(table([(x['group'], x['en'], x['before'], x['after'], x['reason']) for x in p4['corrections']], ('Group', 'English', 'Before', 'After', 'Why')))
+    md.append('\n\n### 7.2 Flagged for human review\n')
+    md.append(table([(x['group'], x['en'], x['ur'], x['reason'], x['alternative'], x['review']) for x in p4['flags']], ('Group', 'English', 'Urdu (kept provisionally)', 'Question', 'Suggested alternative', 'Review needed')))
     md.append('\n')
 md.append('\n### Still in English on /ur (not part of this change)\n')
 md.append(STILL_ENGLISH)

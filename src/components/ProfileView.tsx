@@ -12,10 +12,13 @@ import { useRouter } from 'next/navigation';
 import { useAuth } from '../contexts/AuthContext';
 import { supabase } from '../lib/supabase';
 import Image from 'next/image';
+import { imageAlt } from '../lib/i18n/imageAlt';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function ProfileView() {
   const router = useRouter();
   const { user } = useAuth();
+  const { uiLanguage } = useLanguage();
   const { profile, isLoading, completionStatus } = useProfile();
   const [isCreating, setIsCreating] = useState(false);
   const [createError, setCreateError] = useState<string | null>(null);
@@ -92,7 +95,7 @@ export default function ProfileView() {
           {profile.avatar_url ? (
             <Image
               src={profile.avatar_url}
-              alt={profile.full_name || 'Profile'}
+              alt={profile.full_name || imageAlt('profileFallback', 'Profile', uiLanguage)}
               width={96}
               height={96}
               className="w-full h-full object-cover"

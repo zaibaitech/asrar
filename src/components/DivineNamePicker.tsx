@@ -6,6 +6,7 @@ import { Search } from 'lucide-react';
 import type { DivineName } from '../data/divine-names';
 import { useDivineNames } from '../hooks/useDivineNames';
 import { COMPAT_THEME } from '../constants/compatibilityTheme';
+import { matchesDivineNameQuery } from '../lib/divineNameSearch';
 
 interface DivineNamePickerProps {
   selected: DivineName | null;
@@ -13,11 +14,6 @@ interface DivineNamePickerProps {
   language?: 'en' | 'fr' | 'ar';
   /** The Names for the selected Abjad system (defaults to the app-wide choice). */
   names?: DivineName[];
-}
-
-/** Strips scholarly transliteration diacritics (ā/ḥ/ṣ/ṭ/ẓ/ʿ/ʾ/etc.) so a plain-ASCII search like "latif" matches "Al-Laṭīf". */
-function foldDiacritics(s: string): string {
-  return s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[ʿʾ]/g, '');
 }
 
 export function DivineNamePicker({ selected, onSelect, language = 'en', names }: DivineNamePickerProps) {
@@ -30,14 +26,9 @@ export function DivineNamePicker({ selected, onSelect, language = 'en', names }:
   const [query, setQuery] = useState('');
 
   const results = useMemo(() => {
-    const q = foldDiacritics(query.trim().toLowerCase());
-    if (!q) return list;
-    return list.filter(name =>
-      foldDiacritics(name.transliteration.toLowerCase()).includes(q) ||
-      name.translation.en.toLowerCase().includes(q) ||
-      name.translation.fr.toLowerCase().includes(q) ||
-      name.keywords.some(k => k.includes(q))
-    );
+    // Latin (as before), plus Arabic- and Urdu-script input (src/lib/divineNameSearch.ts).
+    if (!query.trim()) return list;
+    return list.filter(name => matchesDivineNameQuery(name, query));
   }, [query, list]);
 
   return (

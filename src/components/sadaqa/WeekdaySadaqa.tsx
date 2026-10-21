@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { SADAQAH_BY_DAY } from '@/src/features/calculator/lib/sadaqahByDay';
+import { useLanguage } from '@/src/contexts/LanguageContext';
 
 type Lang = 'en' | 'fr';
 
@@ -45,6 +46,7 @@ export function WeekdaySadaqa({ lang, serverDay }: { lang: Lang; serverDay: numb
   const [today, setToday] = useState(serverDay);
   const [isLocal, setIsLocal] = useState(false);
   const ui = UI[lang];
+  const { uiLanguage } = useLanguage();
 
   useEffect(() => {
     const update = () => {
@@ -70,7 +72,11 @@ export function WeekdaySadaqa({ lang, serverDay }: { lang: Lang; serverDay: numb
           {ui.today}
         </p>
         <h2 id="sadaqa-today-heading" className="text-2xl font-semibold text-slate-900 dark:text-slate-100">
-          {ui.todayIs} {dayName(today, lang)}
+          {uiLanguage === 'ur'
+            ? // One text node, so the Urdu catalog pattern «آج $1 ہے» can put the day before «ہے»
+              // (two nodes gave «آج ہے پیر»). EN, FR and AR keep the two nodes they always had.
+              `${UI.en.todayIs} ${dayName(today, 'en')}`
+            : <>{ui.todayIs} {dayName(today, lang)}</>}
         </h2>
         <p className="text-slate-700 dark:text-slate-300">{todayText.intro}</p>
         <ul className="list-disc pl-5 space-y-1 text-slate-700 dark:text-slate-300">

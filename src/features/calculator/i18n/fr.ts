@@ -223,4 +223,5 @@ export const divineNamePickerFr = {
   title: 'Sélectionner un Nom Divin',
   searchPlaceholder: 'Rechercher par arabe ou translittération...',
   noResults: 'Aucun nom trouvé',
+  close: 'Fermer',
 } as const;

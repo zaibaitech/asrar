@@ -71,15 +71,27 @@ const mapLocale = (l: unknown) => {
   const first = Array.isArray(l) ? l[0] : l;
   return first === undefined || (typeof first === 'string' && /^(en|fr)\b/i.test(first)) ? activeDateLocale : l;
 };
+/**
+ * Urdu writes a 12-hour clock with the period of the day («3:45 دوپہر», «7:30 شام», «9:05 صبح», «12:05 رات»), which
+ * ICU's ur data provides as dayPeriod. Only Urdu asks for it; Arabic keeps its own ص / م, English and French are
+ * never patched. 24-hour requests, explicit styles and calls without an hour are left exactly as they were.
+ */
+export function withUrduDayPeriod(options: Intl.DateTimeFormatOptions | undefined): Intl.DateTimeFormatOptions | undefined {
+  const o = options as (Intl.DateTimeFormatOptions & { dayPeriod?: string }) | undefined;
+  if (!o || o.hour === undefined || o.timeStyle || o.dateStyle || o.dayPeriod) return options;
+  if (o.hour12 === false || o.hourCycle === 'h23' || o.hourCycle === 'h24') return options;
+  return { ...o, dayPeriod: 'short' } as Intl.DateTimeFormatOptions;
+}
+const periodOpts = (o: any) => (activeDateLocale === DATE_LOCALES.ur ? withUrduDayPeriod(o) : o);
 let dateRestore: (() => void) | null = null;
 function installArabicDates() {
   if (dateRestore) return;
   const D = Date.prototype;
   const orig = { ds: D.toLocaleDateString, ts: D.toLocaleTimeString, s: D.toLocaleString, DTF: Intl.DateTimeFormat };
   D.toLocaleDateString = function (l?: any, o?: any) { return orig.ds.call(this, mapLocale(l) as any, o); };
-  D.toLocaleTimeString = function (l?: any, o?: any) { return orig.ts.call(this, mapLocale(l) as any, o); };
-  D.toLocaleString = function (l?: any, o?: any) { return orig.s.call(this, mapLocale(l) as any, o); };
-  const Wrapped = function (this: unknown, l?: any, o?: any) { return new orig.DTF(mapLocale(l) as any, o); } as unknown as typeof Intl.DateTimeFormat;
+  D.toLocaleTimeString = function (l?: any, o?: any) { return orig.ts.call(this, mapLocale(l) as any, periodOpts(o)); };
+  D.toLocaleString = function (l?: any, o?: any) { return orig.s.call(this, mapLocale(l) as any, periodOpts(o)); };
+  const Wrapped = function (this: unknown, l?: any, o?: any) { return new orig.DTF(mapLocale(l) as any, periodOpts(o)); } as unknown as typeof Intl.DateTimeFormat;
   Object.setPrototypeOf(Wrapped, orig.DTF);
   (Wrapped as any).prototype = orig.DTF.prototype;
   (Intl as any).DateTimeFormat = Wrapped;

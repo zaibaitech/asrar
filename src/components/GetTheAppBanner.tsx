@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { imageAlt } from '../lib/i18n/imageAlt';
 
 interface GetTheAppBannerProps {
   /** Hide while a modal/panel/overlay is open so it can never cover their content or controls. */
@@ -12,7 +13,7 @@ interface GetTheAppBannerProps {
 }
 
 export function GetTheAppBanner({ suppressed = false, onVisibleChange }: GetTheAppBannerProps) {
-  const { language } = useLanguage();
+  const { language, uiLanguage } = useLanguage();
   const [visible, setVisible] = useState(false);
   const [isIOS, setIsIOS] = useState(false);
 
@@ -125,7 +126,7 @@ export function GetTheAppBanner({ suppressed = false, onVisibleChange }: GetTheA
         >
           <img
             src={badgeSrc}
-            alt="Get it on Google Play"
+            alt={imageAlt('googlePlayBadge', 'Get it on Google Play', uiLanguage)}
             className="h-9 sm:h-10 w-auto"
           />
         </a>

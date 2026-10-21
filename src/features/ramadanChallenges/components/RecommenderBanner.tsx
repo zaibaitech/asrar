@@ -10,6 +10,7 @@
 import React from 'react';
 import type { Challenge } from '../types';
 import { getBestDhikrNow, getCurrentTimeWindow } from '../recommender';
+import { useLanguage } from '@/src/contexts/LanguageContext';
 
 interface RecommenderBannerProps {
   challenges: Challenge[];
@@ -18,6 +19,11 @@ interface RecommenderBannerProps {
 
 export function RecommenderBanner({ challenges, language = 'en' }: RecommenderBannerProps) {
   const recommendation = getBestDhikrNow(challenges);
+  // Arabic and Urdu UI: show the dhikr itself in Arabic (what is recited), not the
+  // transliteration, whose Urdu catalog value is a description («اللہ سے مغفرت مانگنا»).
+  // data-no-ar keeps the runtime catalog away from it. EN/FR are unchanged.
+  const { uiLanguage } = useLanguage();
+  const arabicUi = uiLanguage === 'ar' || uiLanguage === 'ur';
   const { name: timeWindow, nameAr: timeWindowAr } = getCurrentTimeWindow();
 
   // No active challenges
@@ -43,7 +49,13 @@ export function RecommenderBanner({ challenges, language = 'en' }: RecommenderBa
       <div className="flex-1 min-w-0">
         <p className="text-sm text-teal-700 dark:text-teal-300">
           {language === 'fr' ? "Recommandé maintenant:" : "Best dhikr now:"}{' '}
-          <span className="font-semibold text-teal-800 dark:text-teal-200">{recommendation.challenge.transliteration}</span>
+          {arabicUi && recommendation.challenge.arabicText ? (
+            <span className="font-arabic font-semibold text-teal-800 dark:text-teal-200 truncate" dir="rtl" lang="ar" data-no-ar>
+              {recommendation.challenge.arabicText}
+            </span>
+          ) : (
+            <span className="font-semibold text-teal-800 dark:text-teal-200">{recommendation.challenge.transliteration}</span>
+          )}
           {' · '}
           <span className="text-teal-600 dark:text-teal-400">{timeWindow}</span>
         </p>

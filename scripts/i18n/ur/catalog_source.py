@@ -53,7 +53,7 @@ for en, ur in HIJRI.items():
 for en, ur in WD_SHORT.items():
     add('ui', f're:^Your time: {en}, (\\d{{1,2}}:\\d\\d) (\\S+)$', f'آپ کا وقت: {ur}، $1 $p2')
     add('ui', f're:^{en} (\\d{{1,2}}:\\d\\d)$', f'{ur} $1')
-for state, ur in [('weakened', 'کمزور ہے'), ('strong', 'قوی ہے'), ('neutral', 'معتدل ہے'), ('comfortable', 'موافق حالت میں ہے')]:
+for state, ur in [('weakened', 'کمزور ہے'), ('strong', 'قوی ہے'), ('neutral', 'معتدل ہے'), ('comfortable', 'موافق حالت میں ہے'), ('exalted', 'شرف کی حالت میں ہے'), ('at home', 'اپنے گھر میں (بیت) ہے')]:
     add('ui', f're:^(\\S+) (\\w+) — (\\w+) is {state} in (\\w+)$', f'$1 $2 — $3 برجِ $4 میں {ur}')
     add('ui', f're:^(\\w+) is {state} in (\\w+)$', f'$1 برجِ $2 میں {ur}')
 add('ui', 're:^(\\w+) status: (\\w+)$', '$1 کی حالت: $2')
@@ -224,7 +224,7 @@ U = [
     ('Your Numbers', 'آپ کے اعداد'), ('ID Number', 'شناختی عدد'), ('Total', 'کل'), ('Ḥadad Value', 'عدد کی قیمت'),
     ('Count', 'تعداد'), ('Repetitions', 'تکرار'), ('Your Power Day', 'آپ کا خاص دن'),
     ('Most auspicious for important decisions', 'روایت میں اہم کاموں کے لیے موزوں سمجھا جاتا ہے'), ('Core Trait', 'بنیادی خصوصیت'),
-    ('Key Insights', 'اہم نکات'), ('categories', 'زمرے'), ('Best practiced on', 'بہتر وقت'), ('Wednesday night', 'شبِ بدھ (منگل کی شام)'),
+    ('Key Insights', 'اہم نکات'), ('categories', 'زمرے'), ('Best practiced on', 'بہتر وقت'), ('Wednesday night', 'منگل اور بدھ کی درمیانی رات'),
     ('Social Strengths', 'سماجی خوبیاں'), ('Your Colors', 'آپ کے رنگ'), ('Key Recommendation', 'اہم مشورہ'), ('Priority', 'ترجیح'),
     ('Your spiritual profile at a glance', 'آپ کا روحانی پروفائل ایک نظر میں'), ('Career Direction', 'پیشہ ورانہ سمت'),
     ('Daily Practice', 'روزانہ کا عمل'), ('Recite daily for spiritual balance', 'روحانی توازن کے لیے روزانہ پڑھیں'), ('Next Steps', 'اگلے قدم'),
@@ -315,7 +315,7 @@ U = [
     ('Day of the Week', 'ہفتے کا دن'), ('Favorable Planetary Hour', 'موافق ساعت'),
     ('No concern here — this factor looks neutral for this date.', 'یہاں کوئی تشویش نہیں — اس تاریخ کے لیے یہ عنصر معتدل ہے۔'),
     ('Dark of the Moon (Muḥāq)', 'محاق (چاند کی تاریک راتیں)'), ('Moon Combust (Muḥtaraq)', 'قمر محترق'),
-    ('Moon Void of Course (Khāliya al-Sayr)', 'قمر خالی السیر (کسی سیارے سے اتصال نہیں)'), ('Moon Applying to Saturn/Mars (Hard Aspect)', 'قمر کا زحل/مریخ سے اتصال (سخت نظر)'),
+    ('Moon Void of Course (Khāliya al-Sayr)', 'قمر خالی السیر (کسی سیارے سے اتصال نہیں)'), ('Moon Applying to Saturn/Mars (Hard Aspect)', 'قمر کا زحل یا مریخ سے اتصال (تناؤ والی نسبت)'),
     ('Eclipse Proximity', 'گرہن کی قربت'), ('Moon Under the Sun’s Beams (Taḥt al-Shuʿāʿ)', 'قمر تحت الشعاع'), ('Moon Waning', 'گھٹتا چاند'),
     ('Via Combusta (Al-Ṭarīqa al-Muḥtariqa)', 'الطریقۃ المحترقۃ (میزان و عقرب کا مخصوص حصہ)'), ('Moon in Fall or Detriment', 'قمر ہبوط یا وبال میں'),
     ('Venus Combust', 'زہرہ محترق'), ('Venus Retrograde', 'زہرہ رجعت میں'), ('Venus in Fall or Detriment', 'زہرہ ہبوط یا وبال میں'),

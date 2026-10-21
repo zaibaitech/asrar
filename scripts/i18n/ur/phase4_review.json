@@ -1,0 +1,870 @@
+{
+ "note": "Phase 4 review of the 896 AI-drafted entries (catalog_ai_draft.py). Not native-reviewed. List 2 source fixes (21 Oct 2026): career \"Deep healing modalities\" and \"Energy healing\" removed from the source (S10), so career has 353 entries and the draft 894.",
+ "groups": {
+  "potd": {
+   "total": 7,
+   "reviewed": 7
+  },
+  "career-ui": {
+   "total": 23,
+   "reviewed": 23
+  },
+  "rules": {
+   "total": 86,
+   "reviewed": 86
+  },
+  "arch": {
+   "total": 148,
+   "reviewed": 148
+  },
+  "manzil": {
+   "total": 277,
+   "reviewed": 277
+  },
+  "career": {
+   "total": 353,
+   "reviewed": 353
+  }
+ },
+ "corrections": [
+  {
+   "group": "potd",
+   "en": "The Sun's day is best for bold, visible action. Begin projects you want recognized. Seek blessings from those in authority. Make decisions that require confidence and leadership. Avoid hiding or working in secrecy — the Sun illuminates.",
+   "before": "روایتی علمِ نجوم میں اتوار کو شمس سے منسوب کیا جاتا ہے، اور اسے نمایاں اور واضح اقدام کے لیے موزوں دن سمجھا جاتا ہے۔ جن منصوبوں کی پہچان چاہتے ہوں انہیں شروع کریں۔ بااختیار یا بزرگ افراد سے دعائیں لیں۔ ایسے فیصلے کریں جن میں اعتماد اور قیادت درکار ہو۔ چھپنے یا پوشیدگی میں کام کرنے سے بچیں — شمس روشنی کی علامت ہے۔",
+   "after": "روایتی علمِ نجوم میں اتوار کو شمس سے منسوب کیا جاتا ہے، اور اسے جرأت مندانہ اور نمایاں اقدام کے لیے موزوں دن سمجھا جاتا ہے۔ جن منصوبوں کی پہچان چاہتے ہوں انہیں شروع کریں۔ بااختیار افراد کی تائید اور سرپرستی حاصل کرنے کی کوشش کریں۔ ایسے فیصلے کریں جن میں اعتماد اور قیادت درکار ہو۔ چھپنے یا پوشیدگی میں کام کرنے سے بچیں — شمس روشنی کی علامت ہے۔",
+   "reason": "\"bold\" was lost: source says bold, visible action | Phase 10: Urdu revised after the external review (see still_english.md, Phase 10); the English source is unchanged. Qualified review still required."
+  },
+  {
+   "group": "potd",
+   "en": "Monday is ideal for matters of the home, family, and emotional wellbeing. Engage in travel or movement — the Moon governs journeys. Practice emotional healing, prayer, and du'ā'. Reflect on your inner world. Avoid confrontation; the Moon's waters prefer calm.",
+   "before": "روایتی علمِ نجوم میں پیر کو قمر سے منسوب کیا جاتا ہے، اور یہ گھر، خاندان اور جذباتی سکون کے معاملات کے لیے موزوں دن سمجھا جاتا ہے۔ سفر یا نقل و حرکت اختیار کریں — روایت میں قمر کو اسفار سے جوڑا جاتا ہے۔ جذباتی سکون، نماز اور دعا کا اہتمام کریں۔ اپنے باطن پر غور کریں۔ ٹکراؤ سے بچیں؛ اس دن سکون اور تحمل کو ترجیح دیں۔",
+   "after": "روایتی علمِ نجوم میں پیر کو قمر سے منسوب کیا جاتا ہے، اور یہ گھر، خاندان اور جذباتی عافیت کے معاملات کے لیے موزوں دن سمجھا جاتا ہے۔ سفر یا نقل و حرکت اختیار کریں — روایت میں قمر کو اسفار سے جوڑا جاتا ہے۔ جذباتی سکون اور بہتری کے لیے نماز اور دعا کا اہتمام کریں۔ اپنے باطن پر غور کریں۔ ٹکراؤ سے بچیں؛ اس دن سکون اور تحمل کو ترجیح دیں۔",
+   "reason": "\"emotional wellbeing\" / \"emotional healing\" were both rendered «جذباتی سکون»; now بہبود and بحالی, as in the source | Phase 10: Urdu revised after the external review (see still_english.md, Phase 10); the English source is unchanged. Qualified review still required.",
+   "after_phase4": "روایتی علمِ نجوم میں پیر کو قمر سے منسوب کیا جاتا ہے، اور یہ گھر، خاندان اور جذباتی بہبود کے معاملات کے لیے موزوں دن سمجھا جاتا ہے۔ سفر یا نقل و حرکت اختیار کریں — روایت میں قمر کو اسفار سے جوڑا جاتا ہے۔ جذباتی سکون اور بہتری کے لیے نماز اور دعا کا اہتمام کریں۔ اپنے باطن پر غور کریں۔ ٹکراؤ سے بچیں؛ اس دن سکون اور تحمل کو ترجیح دیں۔"
+  },
+  {
+   "group": "potd",
+   "en": "Saturday is governed by the slowest and most disciplined of the classical planets. It is a day for long-term commitments, serious study, and patient effort. Engage in property matters, legal affairs, and building lasting structures. Avoid rushing — Saturn rewards consistent, sustained effort over time.",
+   "before": "روایتی علمِ نجوم میں ہفتے کو زحل سے منسوب کیا جاتا ہے، جو کلاسیکی سیاروں میں سب سے سست اور سب سے منظم ہے۔ یہ طویل مدتی وعدوں، سنجیدہ مطالعے اور صبر آزما کوشش کا دن ہے۔ جائیداد، قانونی معاملات اور پائیدار ڈھانچے بنانے میں مشغول ہوں۔ جلد بازی سے بچیں — اس دن مسلسل اور دیرپا محنت کو ترجیح دیں۔",
+   "after": "روایتی علمِ نجوم میں ہفتے کو زحل سے منسوب کیا جاتا ہے، جو کلاسیکی سیاروں میں سب سے سست اور سب سے منظم ہے۔ یہ طویل مدتی وعدوں، سنجیدہ مطالعے اور صبر و استقامت والی محنت کا دن ہے۔ جائیداد، قانونی معاملات اور دیرپا اور مضبوط ڈھانچے تعمیر کرنے پر توجہ دیں۔ جلد بازی سے بچیں — اس دن مسلسل اور دیرپا محنت کو ترجیح دیں۔",
+   "reason": "\"lasting structures\" → «دیرپا تعمیرات», the term used for the same phrase in the Ikhtiyārāt text (Phase 3) | Phase 10: Urdu revised after the external review (see still_english.md, Phase 10); the English source is unchanged. Qualified review still required. Superseded by the native review (sheet 2, Oct 2026); the \"after\" text is the reviewed one."
+  },
+  {
+   "group": "rules",
+   "en": "The Moon isn't forming any meaningful connection with another planet right now — traditionally, things begun in this state tend to fizzle out.",
+   "before": "قمر اس وقت کسی دوسرے سیارے سے کوئی نمایاں ربط نہیں بنا رہا — روایت میں اس حالت میں شروع کیے گئے کام اکثر ادھورے رہ جاتے ہیں۔",
+   "after": "قمر اس وقت کسی دوسرے سیارے سے کوئی نمایاں ربط نہیں بنا رہا — روایت میں اس حالت میں شروع کیے گئے کام اکثر بے نتیجہ رہ جاتے ہیں۔",
+   "reason": "\"fizzle out / come to nothing\": consistent with the other void-of-course lines, which say «بے نتیجہ»; «ادھورے» means \"unfinished\""
+  },
+  {
+   "group": "rules",
+   "en": "A solar or lunar eclipse is happening within a day of this date — traditionally treated as an unsettled period to avoid for major beginnings.",
+   "before": "اس تاریخ کے ایک دن کے اندر سورج یا چاند گرہن ہے — روایت میں اسے غیر مستحکم دور سمجھا جاتا ہے، اس لیے بڑے آغاز سے گریز بہتر ہے۔",
+   "after": "اس تاریخ کے ایک دن کے اندر شمسی یا قمری گرہن ہے — روایت میں اسے غیر مستحکم دور مانا جاتا ہے جس میں بڑے آغاز سے پرہیز کیا جاتا ہے۔",
+   "reason": "the advice «اس لیے ... گریز بہتر ہے» stated the avoidance as direct advice; the source says it is what the tradition treats as a period to avoid. «شمسی/قمری گرہن» as in the Ikhtiyārāt text"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is shrinking in light right now (waning) — traditionally less favorable for starting something new.",
+   "before": "قمر کی روشنی اس وقت گھٹ رہی ہے (تنقیص) — نئی چیز شروع کرنے کے لیے روایتی طور پر کم موافق ہے۔",
+   "after": "قمر کی روشنی اس وقت گھٹ رہی ہے (گھٹتا چاند) — نئی چیز شروع کرنے کے لیے روایتی طور پر کم موافق ہے۔",
+   "reason": "«تنقیص» in Urdu means disparagement, not waning; «گھٹتا چاند» is the term already used for \"Moon Waning\""
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is passing through a stretch of the zodiac traditionally considered turbulent (the \"burning path\").",
+   "before": "قمر اس وقت زائچے کے اس حصے سے گزر رہا ہے جسے روایت میں پُرتلاطم سمجھا جاتا ہے (“الطریقۃ المحترقۃ”)۔",
+   "after": "قمر اس وقت دائرۃ البروج کے اس حصے سے گزر رہا ہے جسے روایت میں پُرتلاطم سمجھا جاتا ہے («الطریقۃ المحترقۃ»)۔",
+   "reason": "«زائچہ» is the birth chart; \"a stretch of the zodiac\" is a stretch of the zodiacal circle Superseded by the native review (sheet 2, Oct 2026); the \"after\" text is the reviewed one."
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is in a sign it traditionally feels very at home in.",
+   "before": "قمر ایسے برج میں ہے جہاں اسے روایتی طور پر بہت سہولت ملتی ہے۔",
+   "after": "قمر ایسے برج میں ہے جہاں اسے روایتی طور پر اپنے گھر جیسی سہولت ملتی ہے۔",
+   "reason": "\"feels very at home in\": the «at home» (domicile) image was dropped, only «سہولت» (ease) was left"
+  },
+  {
+   "group": "rules",
+   "en": "Venus is in a sign it traditionally feels very at home in.",
+   "before": "زہرہ ایسے برج میں ہے جہاں اسے روایتی طور پر بہت سہولت ملتی ہے۔",
+   "after": "زہرہ ایسے برج میں ہے جہاں اسے روایتی طور پر اپنے گھر جیسی سہولت ملتی ہے۔",
+   "reason": "\"feels very at home in\": the «at home» (domicile) image was dropped, only «سہولت» (ease) was left"
+  },
+  {
+   "group": "rules",
+   "en": "Mercury is in a sign it traditionally feels very at home in — strong for negotiation and paperwork.",
+   "before": "عطارد ایسے برج میں ہے جہاں اسے روایتی طور پر بہت سہولت ملتی ہے — مذاکرات اور کاغذی کارروائی کے لیے مضبوط۔",
+   "after": "عطارد ایسے برج میں ہے جہاں اسے روایتی طور پر اپنے گھر جیسی سہولت ملتی ہے — مذاکرات اور کاغذی کارروائی کے لیے مضبوط۔",
+   "reason": "\"feels very at home in\": the «at home» (domicile) image was dropped, only «سہولت» (ease) was left"
+  },
+  {
+   "group": "rules",
+   "en": "Mercury is in a sign it traditionally feels very at home in — strong for comprehension and memory.",
+   "before": "عطارد ایسے برج میں ہے جہاں اسے روایتی طور پر بہت سہولت ملتی ہے — فہم اور یادداشت کے لیے مضبوط۔",
+   "after": "عطارد ایسے برج میں ہے جہاں اسے روایتی طور پر اپنے گھر جیسی سہولت ملتی ہے — فہم اور یادداشت کے لیے مضبوط۔",
+   "reason": "\"feels very at home in\": the «at home» (domicile) image was dropped, only «سہولت» (ease) was left"
+  },
+  {
+   "group": "rules",
+   "en": "Saturn — the traditional significator of land and foundations — is in a sign it feels very at home in.",
+   "before": "زحل — روایتی طور پر زمین اور بنیادوں کی علامت — ایسے برج میں ہے جہاں اسے بہت سہولت ملتی ہے۔",
+   "after": "زحل — روایتی طور پر زمین اور بنیادوں کی علامت — ایسے برج میں ہے جہاں اسے اپنے گھر جیسی سہولت ملتی ہے۔",
+   "reason": "\"feels very at home in\": the «at home» (domicile) image was dropped, only «سہولت» (ease) was left"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is forming a supportive connection with Jupiter, the planet of growth and good fortune, right now.",
+   "before": "قمر اس وقت مشتری — نمو اور خیر کے سیارے — کے ساتھ موافق ربط بنا رہا ہے۔",
+   "after": "قمر اس وقت مشتری — نمو اور خوش بختی کے سیارے — کے ساتھ موافق ربط بنا رہا ہے۔",
+   "reason": "\"good fortune\" is «خوش بختی» (as in the Phase 3 glosses of the Fortunate mansions), not «خیر» (goodness)"
+  },
+  {
+   "group": "rules",
+   "en": "Mercury is in a comfortable position right now, supporting a clear diagnosis.",
+   "before": "عطارد اس وقت موافق حالت میں ہے، جو درست تشخیص میں معاون ہے۔",
+   "after": "عطارد اس وقت موافق حالت میں ہے، جسے روایتی طور پر واضح تشخیص میں معاون سمجھا جاتا ہے۔",
+   "reason": "source says \"clear\" diagnosis (Phase 3 uses «واضح تشخیص»); «درست» claims correctness | Phase 10: wording later given the attribution «روایتی طور پر» (external review); the English source is unchanged."
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is forming a supportive connection with Venus or Jupiter right now — a sign of a settled, well-supported household.",
+   "before": "قمر اس وقت زہرہ یا مشتری کے ساتھ موافق ربط بنا رہا ہے — پُرسکون اور معاون گھرانے کی علامت۔",
+   "after": "قمر اس وقت زہرہ یا مشتری کے ساتھ موافق ربط بنا رہا ہے — مستحکم اور معاون گھرانے کی علامت۔",
+   "reason": "\"settled\" household is «مستحکم» (Phase 3 wording); «پُرسکون» means peaceful"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is in a tense position with Saturn or Mars right now — a traditional warning of frustration or blocked progress.",
+   "before": "قمر اس وقت زحل یا مریخ کے ساتھ تناؤ والی نسبت (سخت نظر) میں ہے — بیزاری یا رکی ہوئی پیش رفت کی روایتی انتباہی علامت۔",
+   "after": "قمر اس وقت زحل یا مریخ کے ساتھ تناؤ والی نسبت میں ہے — مایوسی یا رکی ہوئی پیش رفت کی روایتی انتباہی علامت۔",
+   "reason": "\"frustration\" is «مایوسی» (Phase 3 wording); «بیزاری» means aversion/boredom",
+   "after_phase4": "قمر اس وقت زحل یا مریخ کے ساتھ تناؤ والی نسبت (سخت نظر) میں ہے — مایوسی یا رکی ہوئی پیش رفت کی روایتی انتباہی علامت۔",
+   "resolved": "Native review: «سخت نظر» removed in the sheet-3 spot-check (21 Oct 2026)."
+  },
+  {
+   "group": "arch",
+   "en": "Traditionally associated with difficulty — frequent small frictions and mismatched expectations may test the friendship.",
+   "before": "روایتی طور پر مشکل سے منسوب — معمولی اختلافات اور مختلف توقعات دوستی کا امتحان لے سکتی ہیں۔",
+   "after": "روایتی طور پر مشکل سے منسوب — بار بار کے معمولی اختلافات اور مختلف توقعات دوستی کا امتحان لے سکتی ہیں۔",
+   "reason": "\"frequent\" was dropped"
+  },
+  {
+   "group": "arch",
+   "en": "Focus on wellbeing (physical and emotional), emotional maturity, calm daily routines, and seeking therapeutic support when needed.",
+   "before": "صحت (جسمانی اور جذباتی) پر توجہ، جذباتی پختگی، پُرسکون روزمرہ معمولات، اور ضرورت پڑنے پر ماہرانہ معاونت لینا۔",
+   "after": "جسمانی اور جذباتی عافیت کا خیال، جذباتی پختگی، پُرسکون روزمرہ معمولات، اور ضرورت پڑنے پر کسی ماہر معالج یا ماہرِ نفسیات سے رجوع کرنا۔",
+   "reason": "\"therapeutic support\" was rendered «ماہرانہ» (expert); the therapeutic sense is restored Superseded by the native review (sheet 2, Oct 2026); the \"after\" text is the reviewed one.",
+   "en_before_list2": "Focus on health (physical and emotional), emotional maturity, calm daily routines, and seeking therapeutic support when needed.",
+   "source_fix_list2": "S6",
+   "after_phase4": "صحت (جسمانی اور جذباتی) پر توجہ، جذباتی پختگی، پُرسکون روزمرہ معمولات، اور ضرورت پڑنے پر کسی ماہر معالج یا ماہرِ نفسیات سے رجوع کرنا۔"
+  },
+  {
+   "group": "arch",
+   "en": "This bond tends to surface recurring friction tied to pride and ego. Self-awareness on both sides is what breaks the cycle.",
+   "before": "یہ رشتہ غرور اور انا سے جڑی بار بار کے اختلافات کو ابھارتا ہے۔ دونوں طرف کی خود آگاہی ہی اس چکر کو توڑتی ہے۔",
+   "after": "یہ رشتہ غرور اور انا سے جڑے بار بار کے اختلافات کو ابھارتا ہے۔ دونوں طرف کی خود آگاہی ہی اس چکر کو توڑتی ہے۔",
+   "reason": "grammar: «اختلافات» is masculine plural, «جڑی» was feminine"
+  },
+  {
+   "group": "arch",
+   "en": "Friendships here often involve repeated small conflicts, sometimes over who's 'right.' Letting go of ego keeps the friendship from wearing thin.",
+   "before": "یہاں دوستیوں میں اکثر بار بار کے چھوٹے تنازعات ہوتے ہیں، بعض اوقات اس پر کہ کون ’’صحیح‘‘ ہے۔ انا کو چھوڑ دینا دوستی کو گھسنے سے بچاتا ہے۔",
+   "after": "یہاں دوستیوں میں اکثر بار بار کے چھوٹے تنازعات ہوتے ہیں، بعض اوقات اس پر کہ کون ’’صحیح‘‘ ہے۔ انا کو چھوڑ دینا دوستی کو کمزور پڑنے سے بچاتا ہے۔",
+   "reason": "\"wearing thin\" translated word for word («گھسنے»)"
+  },
+  {
+   "group": "arch",
+   "en": "Traditionally very good for the long term — early awkwardness is common, but patience often builds a lasting friendship.",
+   "before": "روایتی طور پر طویل مدت کے لیے بہت اچھا ہے — شروع کی بے ڈھنگی عام ہے، مگر صبر اکثر ایک دیرپا دوستی بنا دیتا ہے۔",
+   "after": "روایتی طور پر طویل مدت کے لیے بہت اچھا ہے — شروع کی جھجک عام ہے، مگر صبر اکثر ایک دیرپا دوستی بنا دیتا ہے۔",
+   "reason": "«بے ڈھنگی» means clumsy/unseemly, not social awkwardness"
+  },
+  {
+   "group": "arch",
+   "en": "Friendships here can start awkwardly or take time to click, but often become some of the most enduring bonds. Don't judge it too early.",
+   "before": "یہاں دوستیاں بے ڈھنگے انداز سے شروع ہو سکتی ہیں یا ہم آہنگ ہونے میں وقت لے سکتی ہیں، مگر اکثر سب سے پائیدار رشتوں میں سے بن جاتی ہیں۔ جلد فیصلہ نہ کریں۔",
+   "after": "یہاں دوستیاں جھجک کے ساتھ شروع ہو سکتی ہیں یا ہم آہنگ ہونے میں وقت لے سکتی ہیں، مگر اکثر سب سے پائیدار رشتوں میں سے بن جاتی ہیں۔ جلد فیصلہ نہ کریں۔",
+   "reason": "«بے ڈھنگے» means clumsy/unseemly, not awkward in the social sense"
+  },
+  {
+   "group": "arch",
+   "en": "Traditionally warned against",
+   "before": "روایتی طور پر اس سے منع کیا گیا ہے",
+   "after": "روایتی طور پر اس سے خبردار کیا گیا ہے",
+   "reason": "\"warned against\" is a caution, not a prohibition: «منع کیا گیا ہے» («forbidden») overstated it (the earlier audit already replaced «ممانعت» for the same reason)"
+  },
+  {
+   "group": "arch",
+   "en": "Traditionally warned against for binding commitments — associated with severe hardship, sudden breaks, and recurring harm.",
+   "before": "پابند کرنے والے عہد و پیمان کے لیے روایتی طور پر اس سے منع کیا گیا ہے — شدید مشکل، اچانک ٹوٹ پھوٹ اور بار بار کے نقصان سے منسوب۔",
+   "after": "پابند کرنے والے عہد و پیمان کے لیے روایتی طور پر اس سے خبردار کیا گیا ہے — شدید مشکل، اچانک ٹوٹ پھوٹ اور بار بار کے نقصان سے منسوب۔",
+   "reason": "\"warned against\" is a caution, not a prohibition: «منع کیا گیا ہے» («forbidden») overstated it (the earlier audit already replaced «ممانعت» for the same reason)"
+  },
+  {
+   "group": "arch",
+   "en": "Traditionally warned against for marriage. Associated with severe hardship, sudden breaks, and recurring harm patterns.",
+   "before": "شادی کے لیے روایتی طور پر اس سے منع کیا گیا ہے۔ شدید مشکل، اچانک ٹوٹ پھوٹ اور بار بار کے نقصان کے انداز سے منسوب۔",
+   "after": "شادی کے لیے روایتی طور پر اس سے خبردار کیا گیا ہے۔ شدید مشکل، اچانک ٹوٹ پھوٹ اور بار بار کے نقصان کے انداز سے منسوب۔",
+   "reason": "\"warned against\" is a caution, not a prohibition: «منع کیا گیا ہے» («forbidden») overstated it (the earlier audit already replaced «ممانعت» for the same reason)"
+  },
+  {
+   "group": "arch",
+   "en": "Traditionally warned against for close, binding friendship — sudden falling-outs and recurring hurt are associated risks.",
+   "before": "قریبی اور پابند دوستی کے لیے روایتی طور پر اس سے منع کیا گیا ہے — اچانک بگاڑ اور بار بار کی چوٹ اس سے منسوب خطرات ہیں۔",
+   "after": "قریبی اور پابند دوستی کے لیے روایتی طور پر اس سے خبردار کیا گیا ہے — اچانک بگاڑ اور بار بار کی چوٹ اس سے منسوب خطرات ہیں۔",
+   "reason": "\"warned against\" is a caution, not a prohibition: «منع کیا گیا ہے» («forbidden») overstated it (the earlier audit already replaced «ممانعت» for the same reason)"
+  },
+  {
+   "group": "arch",
+   "en": "Traditionally warned against for binding partnership — sudden fallout and recurring breakdowns in trust are associated risks.",
+   "before": "پابند شراکت کے لیے روایتی طور پر اس سے منع کیا گیا ہے — اچانک بگاڑ اور اعتماد کا بار بار ٹوٹنا اس سے منسوب خطرات ہیں۔",
+   "after": "پابند شراکت کے لیے روایتی طور پر اس سے خبردار کیا گیا ہے — اچانک بگاڑ اور اعتماد کا بار بار ٹوٹنا اس سے منسوب خطرات ہیں۔",
+   "reason": "\"warned against\" is a caution, not a prohibition: «منع کیا گیا ہے» («forbidden») overstated it (the earlier audit already replaced «ممانعت» for the same reason)"
+  },
+  {
+   "group": "arch",
+   "en": "Marriage is traditionally discouraged under this pattern. If already in this bond, seek Allah's protection through duʿāʾ and remembrance, and seek wise counsel.",
+   "before": "اس نمونے کے تحت شادی کو روایتی طور پر ناپسند کیا گیا ہے۔ اگر آپ پہلے سے اس رشتے میں ہیں تو روحانی حفاظت کے معمولات بڑھائیں اور دانشمندانہ مشورہ لیں۔",
+   "after": "اس نمونے کے تحت شادی کی روایتی طور پر حوصلہ شکنی کی جاتی ہے۔ اگر آپ پہلے سے اس رشتے میں ہیں تو دعا و اذکار کے ذریعے اللہ کی حفاظت طلب کریں اور دانشمندانہ مشورہ لیں۔",
+   "reason": "\"discouraged\" is not «ناپسند» (disliked / disapproved)",
+   "en_before_list2": "Marriage is traditionally discouraged under this pattern. If already in this bond, increase spiritual protection practices and seek wise counsel.",
+   "source_fix_list2": "S8",
+   "after_phase4": "اس نمونے کے تحت شادی کی روایتی طور پر حوصلہ شکنی کی جاتی ہے۔ اگر آپ پہلے سے اس رشتے میں ہیں تو روحانی حفاظت کے معمولات بڑھائیں اور دانشمندانہ مشورہ لیں۔"
+  },
+  {
+   "group": "arch",
+   "en": "Do not panic if this appears. Seek counsel from trusted spiritual guides. If already bound, keep asking Allah for protection through duʿāʾ and remembrance, give charity, and seek guidance. Avoid fatalistic thinking — free will and divine mercy remain.",
+   "before": "اگر یہ نتیجہ آئے تو گھبرائیں نہیں۔ قابلِ اعتماد روحانی رہنماؤں سے مشورہ کریں۔ اگر رشتہ پہلے سے بندھا ہوا ہے تو حفاظت کے معمولات (دعا، صدقہ، رہنمائی) بڑھا دیں۔ تقدیر پرستانہ سوچ سے بچیں — انسان کا اختیار اور اللہ کی رحمت باقی ہیں۔",
+   "after": "اگر یہ نتیجہ آئے تو گھبرائیں نہیں۔ قابلِ اعتماد روحانی رہنماؤں سے مشورہ کریں۔ اگر رشتہ پہلے سے بندھا ہوا ہے تو دعا و اذکار کے ذریعے اللہ سے حفاظت طلب کرتے رہیں، صدقہ دیں اور رہنمائی لیں۔ یہ سوچ کر ہار مان لینے سے بچیں کہ سب کچھ طے ہو چکا ہے — انسان کا اختیار اور اللہ کی رحمت باقی ہیں۔",
+   "reason": "\"fatalistic thinking\" → «تقدیر پرستانہ» reads as faulting belief in qadar itself; the source warns against giving up because \"everything is fixed\"",
+   "en_before_pass9b": "Do not panic if this appears. Seek counsel from trusted spiritual guides. If already bound, increase protection practices (duʿāʾ, charity, guidance). Avoid fatalistic thinking — free will and divine mercy remain.",
+   "after_phase4": "اگر یہ نتیجہ آئے تو گھبرائیں نہیں۔ قابلِ اعتماد روحانی رہنماؤں سے مشورہ کریں۔ اگر رشتہ پہلے سے بندھا ہوا ہے تو حفاظت کے معمولات (دعا، صدقہ، رہنمائی) بڑھا دیں۔ یہ سوچ کر ہار مان لینے سے بچیں کہ سب کچھ طے ہو چکا ہے — انسان کا اختیار اور اللہ کی رحمت باقی ہیں۔"
+  },
+  {
+   "group": "manzil",
+   "en": "Al-Thurayyā was among the best-known stations in Arab star lore — a reminder to gather in beauty and good company.",
+   "before": "الثریا عربوں کے علمِ نجوم میں سب سے معروف منازل میں سے تھی — حسن اور اچھی صحبت میں جمع ہونے کی یاد دہانی۔",
+   "after": "الثریا عربوں کی ستاروں کی روایت میں سب سے معروف منازل میں سے تھی — حسن اور اچھی صحبت میں جمع ہونے کی یاد دہانی۔",
+   "reason": "\"Arab star lore\" is the anwāʾ tradition of naming stars (the same entries say «ستاروں کی روایت»), not «علمِ نجوم» (astrology)"
+  },
+  {
+   "group": "manzil",
+   "en": "Impulsive changes",
+   "before": "جذباتی تبدیلیاں",
+   "after": "بے سوچی سمجھی تبدیلیاں",
+   "reason": "\"impulsive\" ≠ «جذباتی» (emotional)"
+  },
+  {
+   "group": "manzil",
+   "en": "Clarity of intention softens confusion — seek light before you speak or sign.",
+   "before": "نیت کی وضاحت الجھن کو نرم کرتی ہے — بات کرنے یا دستخط کرنے سے پہلے اللہ سے رہنمائی مانگیں۔",
+   "after": "نیت کی وضاحت الجھن کو نرم کرتی ہے — بات کرنے یا دستخط کرنے سے پہلے روشنی (رہنمائی) کی طلب کریں۔",
+   "reason": "the Urdu added \"from Allah\"; the source says \"seek light\" (metaphor)"
+  },
+  {
+   "group": "manzil",
+   "en": "Looking with care: notice what you see before you act, and ask Allah for insight without haste.",
+   "before": "غور سے دیکھنا: عمل سے پہلے جو دیکھیں اسے محسوس کریں، اور جلدی کیے بغیر اللہ سے بصیرت مانگیں۔",
+   "after": "غور سے دیکھنا: عمل سے پہلے جو دیکھیں اس پر غور کریں، اور جلدی کیے بغیر اللہ سے بصیرت مانگیں۔",
+   "reason": "\"notice\" is «غور کریں», not «محسوس کریں» (feel)"
+  },
+  {
+   "group": "manzil",
+   "en": "Overindulgence",
+   "before": "حد سے زیادہ لذت پرستی",
+   "after": "حد سے زیادہ لطف اندوزی",
+   "reason": "«لذت پرستی» is hedonism, stronger than \"overindulgence\""
+  },
+  {
+   "group": "manzil",
+   "en": "Named “most fortunate” in the star calendar — meet ease with shukr, and hardship with hope in Allah alone.",
+   "before": "ستاروں کے کیلنڈر میں “سب سے زیادہ سعد” کہلاتی ہے — آسانی ملے تو شکر ادا کریں، اور مشکل پیش آئے تو صرف اللہ سے امید رکھیں۔",
+   "after": "ستاروں کے کیلنڈر میں اسے “سب سے زیادہ خوش بخت” کہا گیا ہے — آسانی ملے تو شکر ادا کریں، اور مشکل پیش آئے تو صرف اللہ سے امید رکھیں۔",
+   "reason": "awkward «“سب سے زیادہ سعد” کہلاتی ہے» (flagged by the external audit); now matches the gloss «سب سے زیادہ خوش بخت» used in the title"
+  },
+  {
+   "group": "manzil",
+   "en": "Closing cycles cleanly",
+   "before": "دوروں کو صفائی سے بند کرنا",
+   "after": "ادوار کو صفائی سے بند کرنا",
+   "reason": "«دوروں» reads as «دورے» (visits/fits); «ادوار» is cycles/phases"
+  },
+  {
+   "group": "career",
+   "en": "Produce wholesale networks",
+   "before": "پیداوار کی تھوک نیٹ ورکس",
+   "after": "پیداوار کی تھوک فروخت کے نیٹ ورک",
+   "reason": "grammar: «پیداوار کی تھوک نیٹ ورکس» does not agree and drops \"wholesale\"; same pattern as «فصلوں کی تقسیم کے نیٹ ورک»"
+  },
+  {
+   "group": "career",
+   "en": "Seafood industry, high-risk volatile ventures, speculative businesses",
+   "before": "سمندری خوراک کی صنعت، زیادہ خطرے والے غیر مستحکم منصوبے، قیاسی کاروبار",
+   "after": "سمندری خوراک کی صنعت، زیادہ خطرے والے غیر مستحکم منصوبے، قیاس آرائی پر مبنی کاروبار",
+   "reason": "«قیاسی» means conjectural; \"speculative businesses\" is business built on speculation"
+  },
+  {
+   "group": "career",
+   "en": "Psychiatric services",
+   "before": "نفسیاتی خدمات",
+   "after": "سائیکاٹری (ذہنی امراض کی طب) کی خدمات",
+   "reason": "\"Psychiatric\" and \"Psychotherapy\" were both «نفسیاتی»; psychiatry is the medical branch"
+  },
+  {
+   "group": "career",
+   "en": "Healthcare & Caring Professions",
+   "before": "شفا اور صحتِ عامہ",
+   "after": "طبی خدمات اور نگہداشت کے پیشے",
+   "reason": "«صحتِ عامہ» is public health; \"healthcare\" is «طبی نگہداشت» Superseded by the native review (sheet 2, Oct 2026); the \"after\" text is the reviewed one.",
+   "en_before_list2": "Healing & Healthcare",
+   "source_fix_list2": "S10",
+   "after_phase4": "طب اور صحت کی دیکھ بھال"
+  }
+ ],
+ "flags": [
+  {
+   "group": "rules",
+   "en": "The Moon is forming a supportive connection with Venus, the planet of love and harmony, right now.",
+   "ur": "قمر اس وقت زہرہ — محبت اور ہم آہنگی کے سیارے — کے ساتھ موافق ربط بنا رہا ہے۔",
+   "reason": "«ربط» (plain \"connection\") is used for the Moon forming an applying aspect; the glossary term for the classical Moon \"Applying to\" is «اتصال» (Phase 2 open question 11).",
+   "alternative": "«قمر اس وقت … سے اتصال کر رہا ہے» (the wording used in the Detailed mode)",
+   "review": "native Urdu + astrology"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is forming a supportive connection with Jupiter, the planet of growth and good fortune, right now.",
+   "ur": "قمر اس وقت مشتری — نمو اور خوش بختی کے سیارے — کے ساتھ موافق ربط بنا رہا ہے۔",
+   "reason": "«ربط» (plain \"connection\") is used for the Moon forming an applying aspect; the glossary term for the classical Moon \"Applying to\" is «اتصال» (Phase 2 open question 11).",
+   "alternative": "«قمر اس وقت … سے اتصال کر رہا ہے» (the wording used in the Detailed mode)",
+   "review": "native Urdu + astrology"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is forming a supportive connection with Venus or Jupiter right now — a sign of a smooth, well-supported journey.",
+   "ur": "قمر اس وقت زہرہ یا مشتری کے ساتھ موافق ربط بنا رہا ہے — روایت میں اسے ہموار اور آسان سفر کی علامت سمجھا جاتا ہے۔",
+   "reason": "«ربط» (plain \"connection\") is used for the Moon forming an applying aspect; the glossary term for the classical Moon \"Applying to\" is «اتصال» (Phase 2 open question 11).",
+   "alternative": "«قمر اس وقت … سے اتصال کر رہا ہے» (the wording used in the Detailed mode)",
+   "review": "native Urdu + astrology",
+   "ur_flagged": "قمر اس وقت زہرہ یا مشتری کے ساتھ موافق ربط بنا رہا ہے — ہموار اور معاون سفر کی علامت۔",
+   "resolved": "Native review, sheet 3 row 20.27 (pass 7, 21 Oct 2026): corrected by the Language Reviewer."
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is forming a supportive connection with Jupiter right now — traditionally the planet of profit and gain.",
+   "ur": "قمر اس وقت مشتری — روایتی طور پر نفع اور کمائی کے سیارے — کے ساتھ موافق ربط بنا رہا ہے۔",
+   "reason": "«ربط» (plain \"connection\") is used for the Moon forming an applying aspect; the glossary term for the classical Moon \"Applying to\" is «اتصال» (Phase 2 open question 11).",
+   "alternative": "«قمر اس وقت … سے اتصال کر رہا ہے» (the wording used in the Detailed mode)",
+   "review": "native Urdu + astrology"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is forming a supportive connection with Venus right now — favorable for amicable dealing between both sides.",
+   "ur": "قمر اس وقت زہرہ کے ساتھ موافق ربط بنا رہا ہے — دونوں فریقوں کے درمیان خوش اسلوبی سے لین دین کے لیے موافق۔",
+   "reason": "«ربط» (plain \"connection\") is used for the Moon forming an applying aspect; the glossary term for the classical Moon \"Applying to\" is «اتصال» (Phase 2 open question 11).",
+   "alternative": "«قمر اس وقت … سے اتصال کر رہا ہے» (the wording used in the Detailed mode)",
+   "review": "native Urdu + astrology"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is forming a supportive connection with Venus or Jupiter right now — a sign of a smooth course of treatment and recovery.",
+   "ur": "قمر اس وقت زہرہ یا مشتری کے ساتھ موافق ربط بنا رہا ہے — روایتی تعبیر میں علاج اور صحت یابی کے ہموار سلسلے کی علامت سمجھی جاتی ہے۔",
+   "reason": "«ربط» (plain \"connection\") is used for the Moon forming an applying aspect; the glossary term for the classical Moon \"Applying to\" is «اتصال» (Phase 2 open question 11). | Phase 10: Urdu revised after the external review (attributed \"روایتی تعبیر\" wording); the English source is unchanged. Qualified review still required.",
+   "alternative": "«قمر اس وقت … سے اتصال کر رہا ہے» (the wording used in the Detailed mode)",
+   "review": "native Urdu + astrology"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is forming a supportive connection with Venus or Jupiter right now — a sign of a settled, well-supported household.",
+   "ur": "قمر اس وقت زہرہ یا مشتری کے ساتھ موافق ربط بنا رہا ہے — مستحکم اور معاون گھرانے کی علامت۔",
+   "reason": "«ربط» (plain \"connection\") is used for the Moon forming an applying aspect; the glossary term for the classical Moon \"Applying to\" is «اتصال» (Phase 2 open question 11).",
+   "alternative": "«قمر اس وقت … سے اتصال کر رہا ہے» (the wording used in the Detailed mode)",
+   "review": "native Urdu + astrology"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is forming a supportive connection with Jupiter right now — traditionally the planet of wisdom and comprehension.",
+   "ur": "قمر اس وقت مشتری — روایتی طور پر حکمت اور فہم کے سیارے — کے ساتھ موافق ربط بنا رہا ہے۔",
+   "reason": "«ربط» (plain \"connection\") is used for the Moon forming an applying aspect; the glossary term for the classical Moon \"Applying to\" is «اتصال» (Phase 2 open question 11).",
+   "alternative": "«قمر اس وقت … سے اتصال کر رہا ہے» (the wording used in the Detailed mode)",
+   "review": "native Urdu + astrology"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is forming a supportive connection with Mercury right now — favorable for retention and a receptive mind.",
+   "ur": "قمر اس وقت عطارد کے ساتھ موافق ربط بنا رہا ہے — یادداشت اور سیکھنے پر آمادہ ذہن کے لیے موافق۔",
+   "reason": "«ربط» (plain \"connection\") is used for the Moon forming an applying aspect; the glossary term for the classical Moon \"Applying to\" is «اتصال» (Phase 2 open question 11).",
+   "alternative": "«قمر اس وقت … سے اتصال کر رہا ہے» (the wording used in the Detailed mode)",
+   "review": "native Urdu + astrology",
+   "ur_flagged": "قمر اس وقت عطارد کے ساتھ موافق ربط بنا رہا ہے — یادداشت اور قبول کرنے والے ذہن کے لیے موافق۔",
+   "resolved": "Native review, sheet 3 row 20.60 (pass 7, 21 Oct 2026): corrected by the Language Reviewer."
+  },
+  {
+   "group": "rules",
+   "en": "Mercury is too close to the Sun right now and appears \"hidden\" — this weakens the deal's own significator.",
+   "ur": "عطارد اس وقت شمس کے بہت قریب ہے اور «پوشیدہ» ہو گیا ہے — اس سے سودے کی اپنی علامت کمزور سمجھی جاتی ہے۔",
+   "reason": "English \"significator\" is rendered «علامت» here but «دلالت کنندہ» in the Detailed-mode sentences (Phase 3); the term is not settled.",
+   "alternative": "«دلالت کنندہ» everywhere, if the reviewer approves",
+   "review": "astrology terminology",
+   "ur_flagged": "عطارد اس وقت شمس کے بہت قریب ہے اور “پوشیدہ” ہو گیا ہے — اس سے سودے کی اپنی علامت کمزور سمجھی جاتی ہے۔",
+   "resolved": "Native review, sheet 3 row 20.34 (pass 7, 21 Oct 2026): corrected by the Language Reviewer."
+  },
+  {
+   "group": "rules",
+   "en": "Jupiter — the traditional significator of recovery — is in a comfortable position right now.",
+   "ur": "مشتری — روایتی طور پر صحت یابی کی علامت — اس وقت موافق حالت میں ہے۔",
+   "reason": "English \"significator\" is rendered «علامت» here but «دلالت کنندہ» in the Detailed-mode sentences (Phase 3); the term is not settled.",
+   "alternative": "«دلالت کنندہ» everywhere, if the reviewer approves",
+   "review": "astrology terminology"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is too close to the Sun right now and appears \"hidden\" — this weakens the matter's own significator.",
+   "ur": "قمر اس وقت شمس کے بہت قریب ہے اور «پوشیدہ» ہو گیا ہے — اس سے اس معاملے کی اپنی علامت کمزور سمجھی جاتی ہے۔",
+   "reason": "English \"significator\" is rendered «علامت» here but «دلالت کنندہ» in the Detailed-mode sentences (Phase 3); the term is not settled.",
+   "alternative": "«دلالت کنندہ» everywhere, if the reviewer approves",
+   "review": "astrology terminology",
+   "ur_flagged": "قمر اس وقت شمس کے بہت قریب ہے اور “پوشیدہ” ہو گیا ہے — اس سے اس معاملے کی اپنی علامت کمزور سمجھی جاتی ہے۔",
+   "resolved": "Native review, sheet 3 row 20.48 (pass 7, 21 Oct 2026): corrected by the Language Reviewer."
+  },
+  {
+   "group": "rules",
+   "en": "Saturn — the traditional significator of land and foundations — is in a sign it feels very at home in.",
+   "ur": "زحل — روایتی طور پر زمین اور بنیادوں کی علامت — ایسے برج میں ہے جہاں اسے اپنے گھر جیسی سہولت ملتی ہے۔",
+   "reason": "English \"significator\" is rendered «علامت» here but «دلالت کنندہ» in the Detailed-mode sentences (Phase 3); the term is not settled.",
+   "alternative": "«دلالت کنندہ» everywhere, if the reviewer approves",
+   "review": "astrology terminology"
+  },
+  {
+   "group": "rules",
+   "en": "Mercury is too close to the Sun right now and appears \"hidden\" — this weakens the significator of the intellect and study itself.",
+   "ur": "عطارد اس وقت شمس کے بہت قریب ہے اور «پوشیدہ» ہو گیا ہے — اس سے عقل اور تعلیم کی اپنی علامت کمزور سمجھی جاتی ہے۔",
+   "reason": "English \"significator\" is rendered «علامت» here but «دلالت کنندہ» in the Detailed-mode sentences (Phase 3); the term is not settled.",
+   "alternative": "«دلالت کنندہ» everywhere, if the reviewer approves",
+   "review": "astrology terminology",
+   "ur_flagged": "عطارد اس وقت شمس کے بہت قریب ہے اور “پوشیدہ” ہو گیا ہے — اس سے عقل اور تعلیم کی اپنی علامت کمزور سمجھی جاتی ہے۔",
+   "resolved": "Native review, sheet 3 row 20.58 (pass 7, 21 Oct 2026): corrected by the Language Reviewer."
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is too close to the Sun right now and appears \"hidden\" — traditionally, this weakens the body's own vital force in the chart.",
+   "ur": "قمر اس وقت شمس کے بہت قریب ہے اور «پوشیدہ» ہو گیا ہے — روایت میں اس سے زائچے میں جسم کی اپنی قوتِ حیات کمزور سمجھی جاتی ہے۔",
+   "reason": "Medical-timing claim kept as in the English source. It must not be read as a reason to delay or avoid medical care; whether the source text needs a note is a separate content decision (Mario).",
+   "alternative": "keep as source; add a doctor note to EN/FR/AR/UR together or not at all",
+   "review": "subject-matter + product decision",
+   "ur_flagged": "قمر اس وقت شمس کے بہت قریب ہے اور “پوشیدہ” ہو گیا ہے — روایت میں اس سے زائچے میں جسم کی اپنی قوتِ حیات کمزور سمجھی جاتی ہے۔",
+   "resolved": "Native review, sheet 3 row 20.42 (pass 7, 21 Oct 2026): corrected by the Language Reviewer."
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is in a tense position with Saturn or Mars right now — a traditional warning of complication or slow healing.",
+   "ur": "قمر اس وقت زحل یا مریخ کے ساتھ تناؤ والی نسبت میں ہے — روایت میں اسے پیچیدگی یا دیر سے صحت یابی کی علامت سمجھا جاتا ہے۔",
+   "reason": "Medical-timing claim kept as in the English source. It must not be read as a reason to delay or avoid medical care; whether the source text needs a note is a separate content decision (Mario).",
+   "alternative": "keep as source; add a doctor note to EN/FR/AR/UR together or not at all",
+   "review": "subject-matter + product decision",
+   "ur_flagged": "قمر اس وقت زحل یا مریخ کے ساتھ تناؤ والی نسبت (سخت نظر) میں ہے — پیچیدگی یا سست شفایابی کی روایتی انتباہی علامت۔",
+   "resolved": "Native review, sheet 3 row 20.43 (pass 7, 21 Oct 2026): corrected by the Language Reviewer."
+  },
+  {
+   "group": "rules",
+   "en": "The Moon is growing in light right now — traditionally favorable for treatments meant to build up or strengthen the body.",
+   "ur": "قمر کی روشنی اس وقت بڑھ رہی ہے — جسم کو تقویت دینے والے علاج کے لیے روایتی طور پر موافق ہے۔",
+   "reason": "Medical-timing claim kept as in the English source. It must not be read as a reason to delay or avoid medical care; whether the source text needs a note is a separate content decision (Mario).",
+   "alternative": "keep as source; add a doctor note to EN/FR/AR/UR together or not at all",
+   "review": "subject-matter + product decision"
+  },
+  {
+   "group": "rules",
+   "en": "This falls on Friday — the day most recommended in Islamic tradition for this occasion.",
+   "ur": "یہ جمعہ کا دن ہے — اسلامی روایت میں اس موقع کے لیے سب سے زیادہ پسندیدہ دن۔",
+   "reason": "Religious statement (Friday as the recommended day; the Prophet ﷺ’s du‘ā’ for early mornings) kept as in the source; the sources are not cited in the app.",
+   "alternative": "keep as source",
+   "review": "religious scholar"
+  },
+  {
+   "group": "rules",
+   "en": "This is an early-morning departure — the Prophet ﷺ asked Allah to bless the early mornings of his ummah.",
+   "ur": "یہ صبح سویرے کی روانگی ہے — نبی کریم ﷺ نے اپنی امت کے لیے صبح سویرے کے اوقات میں برکت کی دعا فرمائی۔",
+   "reason": "Religious statement (Friday as the recommended day; the Prophet ﷺ’s du‘ā’ for early mornings) kept as in the source; the sources are not cited in the app.",
+   "alternative": "keep as source",
+   "review": "religious scholar",
+   "ur_flagged": "یہ صبح سویرے کی روانگی ہے — نبی کریم ﷺ نے اللہ سے اپنی امت کی صبحوں میں برکت کی دعا فرمائی تھی۔",
+   "resolved": "Native review, sheet 3 row 17.4 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
+  },
+  {
+   "group": "rules",
+   "en": "The Moon isn't forming any meaningful connection right now — traditionally, a journey begun in this state tends to come to nothing.",
+   "ur": "قمر اس وقت کوئی نمایاں ربط نہیں بنا رہا — روایتی تعبیر میں اس حالت میں شروع کیے گئے سفر کے بے نتیجہ رہنے کا رجحان سمجھا جاتا ہے۔",
+   "reason": "\"tends to come to nothing\": stated without a hedge in the source; Urdu «اکثر بے نتیجہ رہتا ہے» keeps that strength (external audit suggested softening). | Phase 10: Urdu revised after the external review (attributed \"روایتی تعبیر\" wording); the English source is unchanged. Qualified review still required.",
+   "alternative": "«بے نتیجہ رہنے کا امکان رہتا ہے»",
+   "review": "native Urdu"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon isn't forming any meaningful connection right now — traditionally, a deal begun in this state tends to come to nothing.",
+   "ur": "قمر اس وقت کوئی نمایاں ربط نہیں بنا رہا — روایتی تعبیر میں اس حالت میں شروع کیے گئے سودے کے بے نتیجہ رہنے کا رجحان سمجھا جاتا ہے۔",
+   "reason": "\"tends to come to nothing\": stated without a hedge in the source; Urdu «اکثر بے نتیجہ رہتا ہے» keeps that strength (external audit suggested softening). | Phase 10: Urdu revised after the external review (attributed \"روایتی تعبیر\" wording); the English source is unchanged. Qualified review still required.",
+   "alternative": "«بے نتیجہ رہنے کا امکان رہتا ہے»",
+   "review": "native Urdu"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon isn't forming any meaningful connection right now — traditionally, treatment begun in this state tends to come to nothing.",
+   "ur": "قمر اس وقت کوئی نمایاں ربط نہیں بنا رہا — روایتی تعبیر میں اس حالت میں شروع کیے گئے علاج کے بے نتیجہ رہنے کا رجحان سمجھا جاتا ہے۔ یہ طبی دعویٰ نہیں۔",
+   "reason": "Medical-timing claim kept as in the English source. It must not be read as a reason to delay or avoid medical care; whether the source text needs a note is a separate content decision (Mario). | \"tends to come to nothing\": stated without a hedge in the source; Urdu «اکثر بے نتیجہ رہتا ہے» keeps that strength (external audit suggested softening). | Phase 10: Urdu revised after the external review (attributed \"روایتی تعبیر\" wording; «طبی دعویٰ نہیں» added for the medical sentence); the English source is unchanged. Qualified review still required.",
+   "alternative": "keep as source; add a doctor note to EN/FR/AR/UR together or not at all | «بے نتیجہ رہنے کا امکان رہتا ہے»",
+   "review": "subject-matter + product decision + native Urdu"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon isn't forming any meaningful connection right now — traditionally, work begun in this state tends to come to nothing.",
+   "ur": "قمر اس وقت کوئی نمایاں ربط نہیں بنا رہا — روایتی تعبیر میں اس حالت میں شروع کیے گئے کام کے بے نتیجہ رہنے کا رجحان سمجھا جاتا ہے۔",
+   "reason": "\"tends to come to nothing\": stated without a hedge in the source; Urdu «اکثر بے نتیجہ رہتا ہے» keeps that strength (external audit suggested softening). | Phase 10: Urdu revised after the external review (attributed \"روایتی تعبیر\" wording); the English source is unchanged. Qualified review still required.",
+   "alternative": "«بے نتیجہ رہنے کا امکان رہتا ہے»",
+   "review": "native Urdu"
+  },
+  {
+   "group": "rules",
+   "en": "The Moon isn't forming any meaningful connection right now — traditionally, study begun in this state tends to come to nothing.",
+   "ur": "قمر اس وقت کوئی نمایاں ربط نہیں بنا رہا — روایتی تعبیر میں اس حالت میں شروع کی گئی تعلیم کے بے نتیجہ رہنے کا رجحان سمجھا جاتا ہے۔",
+   "reason": "\"tends to come to nothing\": stated without a hedge in the source; Urdu «اکثر بے نتیجہ رہتا ہے» keeps that strength (external audit suggested softening). | Phase 10: Urdu revised after the external review (attributed \"روایتی تعبیر\" wording); the English source is unchanged. Qualified review still required.",
+   "alternative": "«بے نتیجہ رہنے کا امکان رہتا ہے»",
+   "review": "native Urdu"
+  },
+  {
+   "group": "rules",
+   "en": "How scoring works: each rule adds or subtracts points; the total is scaled to a 0–100 score against that election type's own maximum achievable points, so the tier bands (Mumtāz, Jayyid, Maqbūl, Ḍaʿīf, Ijtanib) mean the same thing across marriage, travel, and any future election type.",
+   "ur": "اسکور کیسے شمار ہوتا ہے: ہر اصول کے مطابق کچھ نمبر جمع یا منہا کیے جاتے ہیں۔ پھر حاصل شدہ مجموعے کو اسی قسم کے انتخاب کے زیادہ سے زیادہ ممکنہ نمبروں کے لحاظ سے 0–100 کے پیمانے پر تبدیل کیا جاتا ہے، تاکہ درجوں (ممتاز، جیّد، مقبول، ضعیف، اجتناب) کا مطلب شادی، سفر اور آئندہ ہر قسم کے انتخاب میں ایک ہی رہے۔",
+   "reason": "Tier names are written in Urdu script (ممتاز، جیّد، مقبول، ضعیف، اجتنب) while the UI badges may still show the transliterations; check the spellings. | Phase 10: Urdu revised after the external review (attributed \"روایتی تعبیر\" wording; tier name spelled «اجتناب» as on the badge); the English source is unchanged. Qualified review still required. | Phase 11: checked in the built app: each Urdu tier badge prints the translated English label and, beside it, the classical band name (e.g. «قابلِ قبول مقبول»); the note lists the five band names, so there is no mismatch. Whether both words should be shown (the Avoid tier shows «اجتناب اجتناب») is an Urdu-editor question. Text updated by the native review (sheet 2, Oct 2026).",
+   "alternative": "",
+   "review": "native Urdu"
+  },
+  {
+   "group": "career-ui",
+   "en": "Despite being a Water element, you receive special blessings from Earth industries. This unique spiritual gift allows you to thrive in both water-related AND earth-based careers—giving you more pathways to success than most other elements.",
+   "ur": "روایتی تعبیر کے مطابق، آبی مزاج رکھنے والوں کے لیے زمینی صنعتوں کو بھی قابلِ غور سمجھا جاتا ہے۔ اسے کامیابی کی ضمانت یا پیشہ منتخب کرنے کا واحد معیار نہ سمجھیں۔",
+   "reason": "Urdu adds the hedge «روایت کے مطابق» that the source lacks (certainty is lowered, on purpose, after the external audit). The source itself states a spiritual \"gift\" and \"more pathways to success than most other elements\" as fact; whether that claim belongs in the product is a content decision. | Phase 10: Urdu revised after the external review (see still_english.md, Phase 10); the English source is unchanged. Qualified review still required.",
+   "alternative": "keep (hedged)",
+   "review": "subject-matter + product decision"
+  },
+  {
+   "group": "potd",
+   "en": "In tradition, Thursday is an especially blessed day for spiritual elevation, wealth-seeking, and expansion. Make du'ā' for rizq (sustenance). Begin long-term projects. Seek knowledge, visit scholars, and perform generous acts of sadaqah. The night between Thursday and Friday is especially blessed — use it for extra worship.",
+   "ur": "روایت میں جمعرات روحانی بلندی، رزق کی طلب اور وسعت کے لیے خاص طور پر بابرکت سمجھی جاتی ہے۔ رزق کے لیے دعا کریں۔ طویل مدتی منصوبے شروع کریں۔ علم حاصل کریں، اہلِ علم سے ملیں، اور فراخ دلی سے صدقہ کریں۔ جمعرات اور جمعہ کی درمیانی رات (شبِ جمعہ) خاص طور پر بابرکت سمجھی جاتی ہے — اسے اضافی عبادت میں گزاریں۔",
+   "reason": "Religious/astrological claim (\"most blessed day\", the night before Friday \"especially blessed\") kept hedged («سمجھی جاتی ہے»); the source is not cited. Confirm against Islamic sources (external audit).",
+   "alternative": "",
+   "review": "religious scholar",
+   "ur_flagged": "روایت میں جمعرات روحانی بلندی، رزق کی طلب اور وسعت کے لیے خاص طور پر بابرکت سمجھی جاتی ہے۔ رزق کے لیے دعا کریں۔ طویل مدتی منصوبے شروع کریں۔ علم حاصل کریں، اہلِ علم سے ملیں، اور فراخ دلی سے صدقہ کریں۔ جمعرات کی رات (جمعہ کی شب) کو خاص طور پر بابرکت سمجھا جاتا ہے — اسے اضافی عبادت کے لیے استعمال کریں۔",
+   "resolved": "Native review, sheet 3 row 17.32 (pass 6, 21 Oct 2026): corrected by the Language Reviewer.",
+   "en_before_list2": "Thursday is the most blessed day for spiritual elevation, wealth-seeking, and expansion. Make du'ā' for rizq (sustenance). Begin long-term projects. Seek knowledge, visit scholars, and perform generous acts of sadaqah. Thursday night (eve of Friday) is especially blessed — use it for extra worship.",
+   "source_fix_list2": "S2",
+   "resolved_by": "EN source fix S2 (list 2, Mario approved 21 Oct 2026)"
+  },
+  {
+   "group": "potd",
+   "en": "Friday is the most sacred day in Islam (Yawm al-Jum'ah). Venus and Friday align in beauty, community, and gratitude. Attend Jumu'ah, send abundant Ṣalawāt upon the Prophet ﷺ, and perform acts of beauty (charity, kind words, reconciliation). It is a day for love, forgiveness, and peace.",
+   "ur": "جمعہ اسلام میں سب سے افضل دن ہے (یومُ الجمعہ)۔ روایتی علمِ نجوم اسے زہرہ سے منسوب کرتا ہے، جو حسن، اجتماع اور شکرگزاری کی علامت ہے۔ جمعہ کی نماز میں شریک ہوں، نبی کریم ﷺ پر کثرت سے درود شریف پڑھیں، اور حسنِ عمل (صدقہ، نرم گفتگو، صلح) اختیار کریں۔ یہ محبت، معافی اور سکون کا دن ہے۔",
+   "reason": "«افضل» (native reviewer answer, Oct 2026) for \"most sacred\"; \"Venus and Friday align\" is rendered as a traditional attribution. Confirm the wording.",
+   "alternative": "",
+   "review": "native Urdu + religious scholar"
+  },
+  {
+   "group": "potd",
+   "en": "Monday is ideal for matters of the home, family, and emotional wellbeing. Engage in travel or movement — the Moon governs journeys. Practice emotional healing, prayer, and du'ā'. Reflect on your inner world. Avoid confrontation; the Moon's waters prefer calm.",
+   "ur": "روایتی علمِ نجوم میں پیر کو قمر سے منسوب کیا جاتا ہے، اور یہ گھر، خاندان اور جذباتی عافیت کے معاملات کے لیے موزوں دن سمجھا جاتا ہے۔ سفر یا نقل و حرکت اختیار کریں — روایت میں قمر کو اسفار سے جوڑا جاتا ہے۔ جذباتی سکون اور بہتری کے لیے نماز اور دعا کا اہتمام کریں۔ اپنے باطن پر غور کریں۔ ٹکراؤ سے بچیں؛ اس دن سکون اور تحمل کو ترجیح دیں۔",
+   "reason": "The metaphor \"the Moon's waters prefer calm\" is not carried over (Phase 3 rewrite after the external audit flagged the earlier sentence as ungrammatical); the Urdu keeps the advice (avoid confrontation, prefer calm). | Phase 10: Urdu revised after the external review (see still_english.md, Phase 10); the English source is unchanged. Qualified review still required.",
+   "alternative": "«قمر کے پانی سکون پسند کرتے ہیں» is not recommended; a metaphor-preserving wording needs a native reviewer",
+   "review": "native Urdu",
+   "ur_phase4": "روایتی علمِ نجوم میں پیر کو قمر سے منسوب کیا جاتا ہے، اور یہ گھر، خاندان اور جذباتی بہبود کے معاملات کے لیے موزوں دن سمجھا جاتا ہے۔ سفر یا نقل و حرکت اختیار کریں — روایت میں قمر کو اسفار سے جوڑا جاتا ہے۔ جذباتی سکون اور بہتری کے لیے نماز اور دعا کا اہتمام کریں۔ اپنے باطن پر غور کریں۔ ٹکراؤ سے بچیں؛ اس دن سکون اور تحمل کو ترجیح دیں۔"
+  },
+  {
+   "group": "arch",
+   "en": "Marriage may start smoothly but requires intentional renewal to avoid complacency. Focus on shared goals and gratitude practices.",
+   "ur": "شادی ہموار شروع ہو سکتی ہے مگر بے پروائی سے بچنے کے لیے شعوری تجدید ضروری ہے۔ مشترکہ اہداف اور شکرگزاری کے معمولات پر توجہ دیں۔",
+   "reason": "\"complacency\" is rendered «خود اطمینانی» (self-contentment), which can read as a positive; no better single Urdu word is certain.",
+   "alternative": "«غفلت / آسودگی میں بے پروائی»",
+   "review": "native Urdu",
+   "ur_flagged": "شادی ہموار شروع ہو سکتی ہے مگر خود اطمینانی سے بچنے کے لیے شعوری تجدید ضروری ہے۔ مشترکہ اہداف اور شکرگزاری کے معمولات پر توجہ دیں۔",
+   "resolved": "Native review, sheet 3 row 21.11 (pass 7, 21 Oct 2026): corrected by the Language Reviewer."
+  },
+  {
+   "group": "arch",
+   "en": "Working relationships start smoothly and productively, but can grow stale without new goals or challenges. Revisit shared objectives regularly to avoid complacency.",
+   "ur": "پیشہ ورانہ تعلقات ہموار اور نتیجہ خیز شروع ہوتے ہیں، مگر نئے اہداف یا چیلنجز نہ ہوں تو یکسانیت پیدا ہو سکتی ہے۔ خود اطمینانی سے بچنے کے لیے مشترکہ مقاصد پر باقاعدگی سے نظرِ ثانی کریں۔",
+   "reason": "\"complacency\" rendered «خود اطمینانی» (see above). | Phase 10: Urdu revised after the external review (see still_english.md, Phase 10); the English source is unchanged. Qualified review still required.",
+   "alternative": "«غفلت / آسودگی میں بے پروائی»",
+   "review": "native Urdu"
+  },
+  {
+   "group": "arch",
+   "en": "A genuinely blessed friendship — trust, ease, and mutual growth come naturally. Keep showing up for each other so the bond doesn't drift into complacency.",
+   "ur": "حقیقی معنوں میں ایک بابرکت دوستی — اعتماد، آسانی اور باہمی ترقی عموماً فطری طور پر آتی ہے۔ ایک دوسرے کے لیے موجود رہیں تاکہ رشتے میں بے پروائی نہ آ جائے۔",
+   "reason": "\"complacency\" rendered «خود اطمینانی» (see above).",
+   "alternative": "«غفلت / آسودگی میں بے پروائی»",
+   "review": "native Urdu",
+   "ur_flagged": "ایک حقیقی معنوں میں مبارک دوستی — اعتماد، آسانی اور باہمی ترقی فطری طور پر آتی ہے۔ ایک دوسرے کے لیے موجود رہیں تاکہ رشتہ خود اطمینانی میں نہ ڈھل جائے۔",
+   "resolved": "Native review, sheet 3 row 17.15 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
+  },
+  {
+   "group": "arch",
+   "en": "Self-work",
+   "ur": "اپنی اصلاح",
+   "reason": "\"Self-work\" (inner work on oneself) is «خود احتسابی» (self-accounting, a religiously loaded word); the Urdu body text uses «اندرونی اصلاح» for \"inner work\".",
+   "alternative": "«خود اصلاحی» or «باطنی اصلاح»",
+   "review": "native Urdu",
+   "ur_flagged": "خود احتسابی",
+   "resolved": "Native review, sheet 3 row 21.71 (pass 7, 21 Oct 2026): corrected by the Language Reviewer."
+  },
+  {
+   "group": "arch",
+   "en": "Conflict resolution skills, self-work (especially anger and ego), forgiveness practices, and regular spiritual remembrance (dhikr).",
+   "ur": "تنازع حل کرنے کی مہارتیں، اپنی اصلاح (خاص طور پر غصے اور انا کے معاملے میں)، معاف کرنے کی عادت، اور باقاعدہ ذکرِ الٰہی۔",
+   "reason": "«خود احتسابی» for \"self-work\" (see the label).",
+   "alternative": "«خود اصلاحی»",
+   "review": "native Urdu",
+   "ur_flagged": "تنازع حل کرنے کی مہارتیں، خود احتسابی (خاص طور پر غصے اور انا میں)، معافی کے معمولات، اور باقاعدہ ذکرِ الٰہی۔",
+   "resolved": "Native review, sheet 3 row 17.17 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
+  },
+  {
+   "group": "arch",
+   "en": "Marriage is traditionally highly blessed. Challenges before union often make the bond stronger. This path carries spiritual favor.",
+   "ur": "شادی روایتی طور پر بہت مبارک سمجھی جاتی ہے۔ نکاح سے پہلے کی مشکلات اکثر رشتے کو مضبوط بناتی ہیں۔ روایت میں اس راستے کو روحانی فضل کا حامل سمجھا جاتا ہے۔",
+   "reason": "\"This path carries spiritual favor\" is stated as fact in the source («روحانی فضل کا پہلو ہے»).",
+   "alternative": "keep as source; religious scholar to confirm it can stay",
+   "review": "religious scholar + product decision",
+   "ur_flagged": "شادی روایتی طور پر بہت مبارک ہے۔ نکاح سے پہلے کی مشکلات اکثر رشتے کو مضبوط بناتی ہیں۔ اس راستے میں روحانی فضل کا پہلو ہے۔",
+   "resolved": "Native review, sheet 3 row 17.23 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
+  },
+  {
+   "group": "arch",
+   "en": "Do not panic if this appears. Seek counsel from trusted spiritual guides. If already bound, keep asking Allah for protection through duʿāʾ and remembrance, give charity, and seek guidance. Avoid fatalistic thinking — free will and divine mercy remain.",
+   "ur": "اگر یہ نتیجہ آئے تو گھبرائیں نہیں۔ قابلِ اعتماد روحانی رہنماؤں سے مشورہ کریں۔ اگر رشتہ پہلے سے بندھا ہوا ہے تو دعا و اذکار کے ذریعے اللہ سے حفاظت طلب کرتے رہیں، صدقہ دیں اور رہنمائی لیں۔ یہ سوچ کر ہار مان لینے سے بچیں کہ سب کچھ طے ہو چکا ہے — انسان کا اختیار اور اللہ کی رحمت باقی ہیں۔",
+   "reason": "Qadar / free will wording: «انسان کا اختیار اور اللہ کی رحمت باقی ہیں» and the advice on \"protection practices (duʿāʾ, charity, guidance)\" are religious statements.",
+   "alternative": "",
+   "review": "religious scholar",
+   "en_before_pass9b": "Do not panic if this appears. Seek counsel from trusted spiritual guides. If already bound, increase protection practices (duʿāʾ, charity, guidance). Avoid fatalistic thinking — free will and divine mercy remain.",
+   "ur_phase4": "اگر یہ نتیجہ آئے تو گھبرائیں نہیں۔ قابلِ اعتماد روحانی رہنماؤں سے مشورہ کریں۔ اگر رشتہ پہلے سے بندھا ہوا ہے تو حفاظت کے معمولات (دعا، صدقہ، رہنمائی) بڑھا دیں۔ یہ سوچ کر ہار مان لینے سے بچیں کہ سب کچھ طے ہو چکا ہے — انسان کا اختیار اور اللہ کی رحمت باقی ہیں۔"
+  },
+  {
+   "group": "arch",
+   "en": "Traditionally warned against for binding commitments — associated with severe hardship, sudden breaks, and recurring harm.",
+   "ur": "پابند کرنے والے عہد و پیمان کے لیے روایتی طور پر اس سے خبردار کیا گیا ہے — شدید مشکل، اچانک ٹوٹ پھوٹ اور بار بار کے نقصان سے منسوب۔",
+   "reason": "Strong warnings about marriage/binding commitments kept as traditional framing; whether such a warning should be shown to users at all is a product decision (not changed here).",
+   "alternative": "",
+   "review": "product decision + native Urdu"
+  },
+  {
+   "group": "arch",
+   "en": "Traditionally warned against for marriage. Associated with severe hardship, sudden breaks, and recurring harm patterns.",
+   "ur": "شادی کے لیے روایتی طور پر اس سے خبردار کیا گیا ہے۔ شدید مشکل، اچانک ٹوٹ پھوٹ اور بار بار کے نقصان کے انداز سے منسوب۔",
+   "reason": "Strong warnings about marriage/binding commitments kept as traditional framing; whether such a warning should be shown to users at all is a product decision (not changed here).",
+   "alternative": "",
+   "review": "product decision + native Urdu"
+  },
+  {
+   "group": "arch",
+   "en": "Traditionally a difficult pattern, associated with sudden breaks and recurring strain. Take great care, and seek Allah's protection through duʿāʾ and remembrance.",
+   "ur": "روایتی طور پر ایک مشکل نمونہ، جو اچانک تعلق ٹوٹنے اور بار بار کے دباؤ سے منسوب ہے۔ بہت احتیاط کریں، اور دعا و اذکار کے ذریعے اللہ کی حفاظت طلب کریں۔",
+   "reason": "Strong warnings about marriage/binding commitments kept as traditional framing; whether such a warning should be shown to users at all is a product decision (not changed here).",
+   "alternative": "",
+   "review": "product decision + native Urdu",
+   "ur_flagged": "روایتی طور پر ایک مشکل نمونہ، جو اچانک ٹوٹ پھوٹ اور بار بار کے دباؤ سے منسوب ہے۔ انتہائی احتیاط اور روحانی حفاظت کا مشورہ دیا جاتا ہے۔",
+   "resolved": "Native review, sheet 3 row 21.110 (pass 7, 21 Oct 2026): corrected by the Language Reviewer.",
+   "en_before_list2": "Traditionally a difficult pattern, associated with sudden breaks and recurring strain. Extreme caution and spiritual protection are advised.",
+   "source_fix_list2": "S8",
+   "resolved_by": "EN source fix S8 (list 2, Mario approved 21 Oct 2026)"
+  },
+  {
+   "group": "arch",
+   "en": "Marriage is traditionally discouraged under this pattern. If already in this bond, seek Allah's protection through duʿāʾ and remembrance, and seek wise counsel.",
+   "ur": "اس نمونے کے تحت شادی کی روایتی طور پر حوصلہ شکنی کی جاتی ہے۔ اگر آپ پہلے سے اس رشتے میں ہیں تو دعا و اذکار کے ذریعے اللہ کی حفاظت طلب کریں اور دانشمندانہ مشورہ لیں۔",
+   "reason": "Strong warnings about marriage/binding commitments kept as traditional framing; whether such a warning should be shown to users at all is a product decision (not changed here).",
+   "alternative": "",
+   "review": "product decision + native Urdu",
+   "en_before_list2": "Marriage is traditionally discouraged under this pattern. If already in this bond, increase spiritual protection practices and seek wise counsel.",
+   "source_fix_list2": "S8",
+   "ur_phase4": "اس نمونے کے تحت شادی کی روایتی طور پر حوصلہ شکنی کی جاتی ہے۔ اگر آپ پہلے سے اس رشتے میں ہیں تو روحانی حفاظت کے معمولات بڑھائیں اور دانشمندانہ مشورہ لیں۔",
+   "resolved_by": "EN source fix S8 (list 2, Mario approved 21 Oct 2026)"
+  },
+  {
+   "group": "arch",
+   "en": "Traditionally considered very favorable for marriage. Associated with blessing, natural harmony, children, and spiritual growth.",
+   "ur": "شادی کے لیے روایتی طور پر بہت موافق سمجھا جاتا ہے۔ برکت، فطری ہم آہنگی، اولاد اور روحانی ترقی سے منسوب۔",
+   "reason": "\"children\" and \"blessing\" are traditional associations stated for marriage; not guarantees.",
+   "alternative": "",
+   "review": "subject-matter"
+  },
+  {
+   "group": "arch",
+   "en": "Marriage is traditionally blessed. Harmony, children, and shared spiritual life are often supported. Guard against excess and distraction.",
+   "ur": "شادی روایتی طور پر مبارک سمجھی جاتی ہے۔ ہم آہنگی، اولاد اور مشترکہ روحانی زندگی کو اکثر سہارا ملتا ہے۔ حد سے بڑھنے اور غفلت سے بچیں۔",
+   "reason": "\"children\" and \"blessing\" are traditional associations stated for marriage; not guarantees.",
+   "alternative": "",
+   "review": "subject-matter",
+   "ur_flagged": "شادی روایتی طور پر مبارک ہے۔ ہم آہنگی، اولاد اور مشترکہ روحانی زندگی کو اکثر سہارا ملتا ہے۔ زیادتی اور غفلت سے بچیں۔",
+   "resolved": "Native review, sheet 3 row 17.14 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
+  },
+  {
+   "group": "manzil",
+   "en": "The Brand",
+   "ur": "نشان",
+   "reason": "«نشان» for الهنعة (the external audit asked about «داغ»; «داغ» reads as a stain/disgrace). Both title and theme line use «نشان».",
+   "alternative": "«داغ» (rejected), «نشانِ شناخت»",
+   "review": "native Urdu"
+  },
+  {
+   "group": "manzil",
+   "en": "The Former Spout",
+   "ur": "اگلا دہانہ",
+   "reason": "\"Spout\" (الفرغ, the pouring lip of the star-bucket) is «نالہ», which in Urdu also means a drain or a lament; the astronomical meaning needs a specialist.",
+   "alternative": "«ڈول کا پہلا / دوسرا منہ»",
+   "review": "astronomy / native Urdu",
+   "ur_flagged": "پہلا نالہ",
+   "resolved": "Native review, sheet 3 row 19.105 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
+  },
+  {
+   "group": "manzil",
+   "en": "The former spout of the bucket: begin letting good flow — speech, charity, and help — with measured opening.",
+   "ur": "ڈول کا اگلا دہانہ: بھلائی کو بہنے دیں — بات، صدقہ اور مدد — مگر سوچ سمجھ کر اور اعتدال سے۔",
+   "reason": "\"Spout\" (الفرغ, the pouring lip of the star-bucket) is «نالہ», which in Urdu also means a drain or a lament; the astronomical meaning needs a specialist.",
+   "alternative": "«ڈول کا پہلا / دوسرا منہ»",
+   "review": "astronomy / native Urdu",
+   "ur_flagged": "ڈول کا پہلا نالہ: بھلائی کو بہنے دینا شروع کریں — بات، صدقہ اور مدد — ناپ تول کے ساتھ کھولتے ہوئے۔",
+   "resolved": "Native review, sheet 3 row 19.107 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
+  },
+  {
+   "group": "manzil",
+   "en": "The Latter Spout",
+   "ur": "پچھلا دہانہ",
+   "reason": "\"Spout\" (الفرغ, the pouring lip of the star-bucket) is «نالہ», which in Urdu also means a drain or a lament; the astronomical meaning needs a specialist.",
+   "alternative": "«ڈول کا پہلا / دوسرا منہ»",
+   "review": "astronomy / native Urdu",
+   "ur_flagged": "دوسرا نالہ",
+   "resolved": "Native review, sheet 3 row 19.115 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
+  },
+  {
+   "group": "manzil",
+   "en": "The latter spout completes the pouring — finish what you opened, and empty the heart of grudges.",
+   "ur": "پچھلا دہانہ انڈیلنے کا عمل پورا کرتا ہے — جو شروع کیا اسے مکمل کریں، اور دل کو کینوں سے خالی کریں۔",
+   "reason": "\"Spout\" (الفرغ, the pouring lip of the star-bucket) is «نالہ», which in Urdu also means a drain or a lament; the astronomical meaning needs a specialist.",
+   "alternative": "«ڈول کا پہلا / دوسرا منہ»",
+   "review": "astronomy / native Urdu",
+   "ur_flagged": "دوسرا نالہ انڈیلنے کو مکمل کرتا ہے — جو کھولا اسے پورا کریں، اور دل کو کینوں سے خالی کریں۔",
+   "resolved": "Native review, sheet 3 row 19.117 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
+  },
+  {
+   "group": "manzil",
+   "en": "Complacency",
+   "ur": "غفلت اور بے فکری",
+   "reason": "\"Complacency\" rendered «خود اطمینانی» (see the archetype flags).",
+   "alternative": "«غفلت / آسودگی میں بے پروائی»",
+   "review": "native Urdu",
+   "ur_flagged": "خود اطمینانی",
+   "resolved": "Native review, sheet 3 row 19.94 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
+  },
+  {
+   "group": "manzil",
+   "en": "Gossip",
+   "ur": "غیبت",
+   "reason": "\"Gossip\" is rendered «غیبت» (backbiting, a religious term); «چغلی / گپ شپ» are the plain words.",
+   "alternative": "«چغلی» / «غیبت و گپ شپ»",
+   "review": "native Urdu"
+  },
+  {
+   "group": "manzil",
+   "en": "Gossip as “release”",
+   "ur": "غیبت کو «دل کا بوجھ ہلکا کرنا» سمجھنا",
+   "reason": "\"Gossip\" is rendered «غیبت» (backbiting, a religious term); «چغلی / گپ شپ» are the plain words.",
+   "alternative": "«چغلی» / «غیبت و گپ شپ»",
+   "review": "native Urdu",
+   "ur_flagged": "غیبت کو “اظہارِ دل” سمجھنا",
+   "resolved": "Native review, sheet 3 row 19.114 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
+  },
+  {
+   "group": "manzil",
+   "en": "The Fortunate Sacrificer",
+   "ur": "سعد الذابح (قربانی کرنے والا)",
+   "reason": "Gloss «قربانی کرنے والا» follows the English \"Sacrificer\"; the Arabic ذابح is literally \"the slaughterer\".",
+   "alternative": "«ذبح کرنے والا»",
+   "review": "native Urdu"
+  },
+  {
+   "group": "manzil",
+   "en": "The Forearm",
+   "ur": "بازو",
+   "reason": "\"Forearm\" is «بازو» (arm); the Arabic ذراع is the forearm/cubit.",
+   "alternative": "«ساعد» (technical) / keep",
+   "review": "native Urdu"
+  },
+  {
+   "group": "manzil",
+   "en": "Denying the unseen",
+   "ur": "غیب کا انکار",
+   "reason": "«غیب کا انکار» is a theologically loaded phrase (rejecting the ghayb); the source line is a caution in a list of things to avoid.",
+   "alternative": "keep as source",
+   "review": "religious scholar"
+  },
+  {
+   "group": "manzil",
+   "en": "Names and marks in the old star calendar were for recognition — know yourself before Allah, not for show.",
+   "ur": "ستاروں کی قدیم تقویم میں نام اور نشان پہچان کے لیے تھے — اللہ کے حضور اپنی پہچان کریں، دکھاوے کے لیے نہیں۔",
+   "reason": "Statement on knowing oneself \"before Allah, not for show\" (religious framing added by the app text) kept as in the source.",
+   "alternative": "",
+   "review": "religious scholar",
+   "ur_flagged": "پرانے ستارہ کیلنڈر میں نام اور نشان پہچان کے لیے تھے — اپنے آپ کو اللہ کے سامنے پہچانیں، دکھاوے کے لیے نہیں۔",
+   "resolved": "Native review, sheet 3 row 18.61 (pass 6, 21 Oct 2026): corrected by the Language Reviewer."
+  },
+  {
+   "group": "career",
+   "en": "Quick turnover, fresh goods, dynamic movement, and energetic action align perfectly with your fiery nature and passionate energy",
+   "ur": "تیز رفتار نکاسی، تازہ مال، متحرک سرگرمی اور توانا عمل روایتی طور پر آپ کے آتشی مزاج اور پُرجوش توانائی سے ہم آہنگ سمجھی جاتی ہیں",
+   "reason": "Source states alignment/blessing as fact (\"align perfectly\", \"blessed despite being water element\"); the Urdu keeps the same strength. These are traditional associations, not guaranteed career outcomes; whether to hedge them is a content decision.",
+   "alternative": "«ہم آہنگ سمجھے جاتے ہیں»",
+   "review": "product decision + native Urdu",
+   "ur_flagged": "تیز رفتار نکاسی، تازہ مال، متحرک سرگرمی اور توانا عمل آپ کے آتشی مزاج اور پُرجوش توانائی سے پوری طرح ہم آہنگ ہیں",
+   "resolved": "Native review, sheet 3 row 22.2 (pass 8, 21 Oct 2026): corrected by the Language Reviewer."
+  },
+  {
+   "group": "career",
+   "en": "Stability, long-term growth, tangible assets, and connection to the earth's bounty align perfectly with your grounded nature and patient disposition",
+   "ur": "استحکام، طویل مدتی ترقی، ٹھوس اثاثے، اور زمین کی نعمتوں سے تعلق روایتی طور پر آپ کے زمینی مزاج اور صبر سے ہم آہنگ سمجھے جاتے ہیں",
+   "reason": "Source states alignment/blessing as fact (\"align perfectly\", \"blessed despite being water element\"); the Urdu keeps the same strength. These are traditional associations, not guaranteed career outcomes; whether to hedge them is a content decision.",
+   "alternative": "«ہم آہنگ سمجھے جاتے ہیں»",
+   "review": "product decision + native Urdu",
+   "ur_flagged": "استحکام، طویل مدتی ترقی، ٹھوس اثاثے، اور زمین کی نعمتوں سے تعلق آپ کے زمینی مزاج اور صبر سے پوری طرح ہم آہنگ ہیں",
+   "resolved": "Native review, sheet 3 row 22.30 (pass 8, 21 Oct 2026): corrected by the Language Reviewer."
+  },
+  {
+   "group": "career",
+   "en": "Fish and all fish-related products - disrupts air element severely",
+   "ur": "مچھلی اور مچھلی سے متعلق تمام مصنوعات — روایتی طور پر ہوائی عنصر سے غیر موافق سمجھی جاتی ہیں",
+   "reason": "English says \"disrupts … severely\"; the Urdu says «غیر موافق سمجھی جاتی ہیں» (traditionally unfavourable): hedged on purpose after the external audit (no deterministic career claim). «غیر موافق» vs «کم موافق» is a Phase 2 open question.",
+   "alternative": "keep (hedged); decide «غیر موافق» / «کم موافق»",
+   "review": "native Urdu + product decision"
+  },
+  {
+   "group": "career",
+   "en": "Fish and seafood trading, fashion and clothing business, earth-based products (blessed despite being water element)",
+   "ur": "مچھلی اور سمندری خوراک کی تجارت، فیشن اور ملبوسات کا کاروبار، زمینی مصنوعات (پانی کے عنصر کے باوجود بابرکت)",
+   "reason": "Source states alignment/blessing as fact (\"align perfectly\", \"blessed despite being water element\"); the Urdu keeps the same strength. These are traditional associations, not guaranteed career outcomes; whether to hedge them is a content decision.",
+   "alternative": "«ہم آہنگ سمجھے جاتے ہیں»",
+   "review": "product decision + native Urdu"
+  },
+  {
+   "group": "career",
+   "en": "Fruits and vegetables - these disrupt water element balance severely",
+   "ur": "پھل اور سبزیاں — یہ روایتی طور پر آبی عنصر سے غیر موافق سمجھی جاتی ہیں",
+   "reason": "English says \"disrupts … severely\"; the Urdu says «غیر موافق سمجھی جاتی ہیں» (traditionally unfavourable): hedged on purpose after the external audit (no deterministic career claim). «غیر موافق» vs «کم موافق» is a Phase 2 open question.",
+   "alternative": "keep (hedged); decide «غیر موافق» / «کم موافق»",
+   "review": "native Urdu + product decision"
+  },
+  {
+   "group": "career",
+   "en": "Earth Products (Blessed)",
+   "ur": "زمینی مصنوعات (بابرکت)",
+   "reason": "Source states alignment/blessing as fact (\"align perfectly\", \"blessed despite being water element\"); the Urdu keeps the same strength. These are traditional associations, not guaranteed career outcomes; whether to hedge them is a content decision.",
+   "alternative": "«ہم آہنگ سمجھے جاتے ہیں»",
+   "review": "product decision + native Urdu"
+  }
+ ]
+}
