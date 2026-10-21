@@ -15,10 +15,14 @@ const catalog = makeCatalog(json);
 type Row = { en: string; ur: string; status: string };
 
 describe('Urdu review status', () => {
-  it('every sheet-2 row (2,336) carries a reviewed status', () => {
-    const rows = Object.values(status.sheet2) as { status: string }[];
+  it('every sheet-2 row (2,336) carries a reviewed status, except rows re-drafted by the 21 Oct source fixes', () => {
+    const rows = Object.values(status.sheet2) as { status: string; source_fix?: string }[];
     expect(rows).toHaveLength(2336);
-    for (const r of rows) expect(r.status).toMatch(/^reviewed(-corrected|-kept|-flagged)?$/);
+    for (const r of rows) {
+      if (r.source_fix && r.status === 'draft') continue; // new English text, new Urdu draft (listed for the Language Reviewer)
+      expect(r.status).toMatch(/^reviewed(-corrected|-kept|-flagged)?$/);
+    }
+    expect(rows.filter((r) => r.status === 'draft').map((r) => r.source_fix).sort()).toEqual(['F3a', 'F3b', 'F3c', 'F6']);
   });
 
   it('Batch 13 and Batch 14 are reviewed (pass 3) and in the catalog', () => {
@@ -48,9 +52,9 @@ describe('Urdu review status', () => {
     expect(json['Confidence']).toBe('اعتماد'); // also IlmHurufPanel "Confidence: 87%"
     expect(json['The Creator']).toBe('خالق، پیدا کرنے والا'); // Divine gloss of al-Khāliq only
     expect(json['The Creative']).toBe('تخلیق کار'); // human title (archetype 3, numerology 3, station 3)
-    expect(json['Creativity, expression, joy. Sacred trinity of body, mind, and spirit.']).toBe('تخلیقی صلاحیت، اظہار اور خوشی۔ جسم، ذہن اور روح: تینوں کی ہم آہنگی۔');
+    expect(json['Creativity, expression, joy. Threefold harmony of body, mind, and spirit.']).toBe('تخلیقی صلاحیت، اظہار اور خوشی۔ جسم، ذہن اور روح: تینوں کی ہم آہنگی۔');
     expect(json['Karma']).toBe('مکافاتِ عمل');
-    expect(json['Creativity, expression, joy. Sacred trinity of body, mind, and spirit.']).not.toMatch(/تثلیث/);
+    expect(json['Creativity, expression, joy. Threefold harmony of body, mind, and spirit.']).not.toMatch(/تثلیث/);
   });
 
   it('the calculator Urdu locale only has keys from en.ts, and all 192 interface strings resolve', () => {
@@ -72,7 +76,7 @@ describe('Urdu review status', () => {
         }
       }
     }
-    expect(n).toBe(192);
+    expect(n).toBe(193); // 192 + divineNamePicker.close (source fix CL)
   });
 
   it('13.125: the spiritual-reflection sentence stays Urdu (no English list of glosses)', () => {

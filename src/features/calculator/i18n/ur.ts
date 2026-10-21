@@ -183,4 +183,5 @@ export const divineNamePickerUr: Draft<typeof divineNamePickerEn> = {
   title: 'اسمِ الٰہی منتخب کریں',
   searchPlaceholder: 'عربی یا رومن حروف میں تلاش کریں...',
   noResults: 'کوئی نام نہیں ملا',
+  close: 'بند کریں',
 };

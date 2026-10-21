@@ -47,9 +47,9 @@ export const ARCHETYPES: Record<number, Archetype> = {
   3: {
     title: { en: 'The Creative', fr: 'Le Créateur', ar: 'المبدع' },
     description: {
-      en: 'Creativity, expression, joy. Sacred trinity of body, mind, and spirit.',
-      fr: "Créativité, expression, joie. Trinité sacrée du corps, de l'esprit et de l'âme.",
-      ar: 'الإبداع والتعبير والفرح. الثالوث المقدس للجسد والعقل والروح.',
+      en: 'Creativity, expression, joy. Threefold harmony of body, mind, and spirit.',
+      fr: "Créativité, expression, joie. Triple harmonie du corps, de l'esprit et de l'âme.",
+      ar: 'الإبداع والتعبير والفرح. تناغم الجسد والعقل والروح.',
     },
     qualities: {
       en: ['Creativity', 'Communication', 'Optimism', 'Self-expression'],
@@ -112,14 +112,14 @@ export const ARCHETYPES: Record<number, Archetype> = {
   8: {
     title: { en: 'The Achiever', fr: "L'Accomplisseur", ar: 'المُنجِز' },
     description: {
-      en: 'Power, abundance, manifestation. Eight angels carrying the Throne.',
-      fr: 'Pouvoir, abondance, manifestation. Huit anges portant le Trône.',
-      ar: 'القوة والوفرة والتجلي. ثمانية ملائكة يحملون العرش.',
+      en: 'Power, abundance, achievement of goals. Eight angels carrying the Throne.',
+      fr: 'Pouvoir, abondance, réalisation des objectifs. Huit anges portant le Trône.',
+      ar: 'القوة والوفرة وتحقيق الأهداف. ثمانية ملائكة يحملون العرش.',
     },
     qualities: {
-      en: ['Ambition', 'Authority', 'Material success', 'Karma'],
-      fr: ['Ambition', 'Autorité', 'Succès matériel', 'Karma'],
-      ar: ['الطموح', 'السلطة', 'النجاح المادي', 'الكرما'],
+      en: ['Ambition', 'Authority', 'Material success', 'Consequences of one\'s deeds'],
+      fr: ['Ambition', 'Autorité', 'Succès matériel', 'Conséquences de ses actes'],
+      ar: ['الطموح', 'السلطة', 'النجاح المادي', 'الجزاء من جنس العمل'],
     },
   },
   9: {

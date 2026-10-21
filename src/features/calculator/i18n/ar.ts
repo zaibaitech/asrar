@@ -206,4 +206,5 @@ export const divineNamePickerAr = {
   title: 'اختر اسمًا إلهيًا',
   searchPlaceholder: 'ابحث بالعربية أو بالنقحرة...',
   noResults: 'لم يتم العثور على اسم',
+  close: 'إغلاق',
 } as const;

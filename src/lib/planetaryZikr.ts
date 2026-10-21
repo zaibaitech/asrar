@@ -21,7 +21,7 @@ export const PLANETARY_ZIKR: Record<string, PlanetZikr> = {
     color: '#F5A623',
     zikr: [
       { name: 'Ya Allah', arabicName: 'يَا اللهُ', count: '66 or 594', benefit: 'General remembrance and divine connection.' },
-      { name: 'Ya Rahman', arabicName: 'يَا رَحْمَانُ', count: '298', benefit: 'For rizq (wealth and provision).' },
+      { name: 'Ya Rahman', arabicName: 'يَا رَحْمٰنُ', count: '298', benefit: 'For rizq (wealth and provision).' },
       { name: 'Ya Raheem', arabicName: 'يَا رَحِيمُ', count: '258', benefit: 'For fulfilling needs and resolving difficulties.' },
       { name: 'Ya Malik', arabicName: 'يَا مَلِكُ', count: '90', benefit: 'For support and success in endeavors.' },
       { name: 'Ya Quddus', arabicName: 'يَا قُدُّوسُ', count: '170', benefit: 'For purification, forgiveness, and spiritual cleansing.' },
@@ -69,7 +69,7 @@ export const PLANETARY_ZIKR: Record<string, PlanetZikr> = {
     // Counts = abjad values in src/data/divine-names.ts (#1, #2, #30, #47).
     zikr: [
       { name: 'Ya Latif', arabicName: 'يَا لَطِيفُ', count: '129', benefit: 'For gentleness, subtle ease, and calming the heart.' },
-      { name: 'Ya Rahman', arabicName: 'يَا رَحْمَانُ', count: '298', benefit: 'For mercy, ease in transitions, and emotional balance.' },
+      { name: 'Ya Rahman', arabicName: 'يَا رَحْمٰنُ', count: '298', benefit: 'For mercy, ease in transitions, and emotional balance.' },
       { name: 'Ya Raheem', arabicName: 'يَا رَحِيمُ', count: '258', benefit: 'For compassion and softness in family and home matters.' },
       { name: 'Ya Wadud', arabicName: 'يَا وَدُودُ', count: '20', benefit: 'For affection, harmony, and softening of hearts.' },
     ],

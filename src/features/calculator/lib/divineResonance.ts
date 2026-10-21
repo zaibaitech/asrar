@@ -42,7 +42,7 @@ export const DIVINE_RESONANCE_TABLE: Record<number, DivineResonanceEntry> = {
   10: { letter: 'ي', name: 'يقين', nameTashkeel: 'يَقِينٌ', transliteration: 'Al-Yaqīn', translation: { en: 'The Certain, The Certainty', fr: 'Le Certain, la Certitude', ar: 'اليقين الثابت الذي لا شك فيه' } },
   11: { letter: 'ك', name: 'كريم', nameTashkeel: 'كَرِيمٌ', transliteration: 'Al-Karīm', translation: { en: 'The Generous, The Most Bountiful', fr: 'Le Généreux, le Très Généreux', ar: 'الكريم كثير الخير والعطاء' } },
   12: { letter: 'ل', name: 'لطيف', nameTashkeel: 'لَطِيفٌ', transliteration: 'Al-Laṭīf', translation: { en: 'The Subtle, The Most Kind', fr: 'Le Subtil, le Bienveillant', ar: 'اللطيف الرفيق بعباده' } },
-  13: { letter: 'م', name: 'مؤمن', nameTashkeel: 'مُؤْمِنٌ', transliteration: 'Al-Muʾmin', translation: { en: 'The Believer, The Giver of Faith', fr: 'Celui qui donne la foi et la sécurité', ar: 'المؤمن مانح الأمن والإيمان' } },
+  13: { letter: 'م', name: 'مؤمن', nameTashkeel: 'مُؤْمِنٌ', transliteration: 'Al-Muʾmin', translation: { en: 'The Giver of Security, The Giver of Faith', fr: 'Celui qui donne la foi et la sécurité', ar: 'المؤمن مانح الأمن والإيمان' } },
   14: { letter: 'ن', name: 'نور', nameTashkeel: 'نُورٌ', transliteration: 'An-Nūr', translation: { en: 'The Light, The Illuminator', fr: "La Lumière, l'Illuminateur", ar: 'النور الهادي المنير' } },
   15: { letter: 'س', name: 'سلام', nameTashkeel: 'سَلَامٌ', transliteration: 'As-Salām', translation: { en: 'The Peace, The Source of Peace', fr: 'La Paix, la Source de la paix', ar: 'السلام مصدر السلام' } },
   16: { letter: 'ع', name: 'عليم', nameTashkeel: 'عَلِيمٌ', transliteration: 'Al-ʿAlīm', translation: { en: 'The All-Knowing, The Omniscient', fr: "L'Omniscient", ar: 'العليم بكل شيء' } },

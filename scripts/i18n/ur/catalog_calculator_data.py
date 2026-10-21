@@ -27,10 +27,10 @@ REVIEWER_ENTRIES = [
     ('calculatorContent.ts ELEMENT_GUIDANCE.air', 'Your airy nature brings clarity and communication. Seek knowledge and share wisdom with gentle words and pure intention.', 'روایتی تعبیر میں ہوائی طبیعت وضاحت اور ابلاغ سے منسوب ہے۔ علم حاصل کریں اور نرم الفاظ اور خالص نیت کے ساتھ حکمت بانٹیں۔'),
     ('calculatorContent.ts ELEMENT_GUIDANCE.earth', 'Your grounded nature brings stability and patience. Build your spiritual foundation through consistent practice and gratitude.', 'روایتی تعبیر میں خاکی طبیعت استحکام اور صبر سے منسوب ہے۔ مسلسل معمول اور شکر کے ذریعے اپنی روحانی بنیاد مضبوط کریں۔'),
     ('sacred.ts SACRED_SIGNIFICANCE[7]', 'Seven heavens, seven days of creation', 'سات آسمان، تخلیق کے سات دن'),
-    ('sacred.ts SACRED_SIGNIFICANCE[12]', 'Twelve Imams, twelve months', 'بارہ امام، بارہ مہینے'),
-    ('sacred.ts SACRED_SIGNIFICANCE[19]', 'Numerical miracle of the Qurʾan', 'بعض کے نزدیک قرآن کا عددی اعجاز'),
+    ('sacred.ts SACRED_SIGNIFICANCE[12]', 'Twelve months of the year (9:36)', 'سال کے بارہ مہینے (9:36)'),  # source fix S1 (Mario, 21 Oct 2026) — DRAFT, not reviewed
+    ('sacred.ts SACRED_SIGNIFICANCE[19]', 'Mentioned in 74:30 («عَلَيْهَا تِسْعَةَ عَشَرَ»); some see a numerical pattern', '74:30 میں مذکور («عَلَيْهَا تِسْعَةَ عَشَرَ»)؛ بعض اس میں عددی ترتیب دیکھتے ہیں'),  # source fix S2 (Mario, 21 Oct 2026) — DRAFT, not reviewed
     ('sacred.ts SACRED_SIGNIFICANCE[70]', 'Surah Yā-Sīn (يس)', 'سورۂ یٰسٓ (يس)'),
-    ('sacred.ts SACRED_SIGNIFICANCE[99]', 'Asmāʾ al-Ḩusnā (Beautiful Names)', 'اسمائے حسنیٰ'),
+    ('sacred.ts SACRED_SIGNIFICANCE[99]', 'Asmāʾ al-Ḥusnā (Beautiful Names)', 'اسمائے حسنیٰ'),  # source fix S3 (Mario, 21 Oct 2026)
     ('sacred.ts SACRED_SIGNIFICANCE[114]', 'Surahs in the Qurʾan', 'قرآن کی سورتیں'),
     ('sacred.ts SACRED_SIGNIFICANCE[313]', 'Companions at Badr', 'اصحابِ بدر'),
     ('sacred.ts SACRED_SIGNIFICANCE[786]', 'Bismillah value (short form)', 'بسم اللہ کی عددی قیمت (مختصر صورت)'),
@@ -136,6 +136,7 @@ BATCH15_DRAFTS = [
     ('divineNameMeanings.ts DIVINE_NAME_MEANING[85]', 'The Lord of Majesty and Generosity', 'جلال اور اکرام والا'),
     ('divineNameMeanings.ts DIVINE_NAME_MEANING[86]', 'The Equitable', 'انصاف کرنے والا'),
     ('divineNameMeanings.ts DIVINE_NAME_MEANING[87]', 'The Gatherer', 'جمع کرنے والا'),
+    ('divineNameMeanings.ts DIVINE_NAME_MEANING[87]', 'The one at whose feet people are gathered', 'جن کے قدموں میں لوگ جمع کیے جائیں گے'),  # source fix PN1 (Mario, 21 Oct 2026)
     ('divineNameMeanings.ts DIVINE_NAME_MEANING[88]', 'The Self-Sufficient, The Rich', 'بے نیاز، غنی'),
     ('divineNameMeanings.ts DIVINE_NAME_MEANING[89]', 'The Enricher', 'غنی کر دینے والا'),
     ('divineNameMeanings.ts DIVINE_NAME_MEANING[90]', 'The Preventer', 'روکنے والا'),
@@ -158,7 +159,7 @@ BATCH15_DRAFTS = [
     ('calculatorContent.ts ARCHETYPES[2].description', 'Balance, partnership, diplomacy. Represents duality seeking unity.', 'توازن، شراکت اور معاملہ فہمی۔ دوئی کی علامت جو وحدت کی طلب میں ہے۔'),
     ('calculatorContent.ts ARCHETYPES[2].qualities[1]', 'Sensitivity', 'حساسیت'),
     ('calculatorContent.ts ARCHETYPES[2].qualities[3]', 'Mediation', 'مصالحت'),
-    ('calculatorContent.ts ARCHETYPES[3].description', 'Creativity, expression, joy. Sacred trinity of body, mind, and spirit.', 'تخلیقی صلاحیت، اظہار اور خوشی۔ جسم، ذہن اور روح: تینوں کی ہم آہنگی۔'),
+    ('calculatorContent.ts ARCHETYPES[3].description', 'Creativity, expression, joy. Threefold harmony of body, mind, and spirit.', 'تخلیقی صلاحیت، اظہار اور خوشی۔ جسم، ذہن اور روح: تینوں کی ہم آہنگی۔'),  # source fix A3 (Mario, 21 Oct 2026)
     ('calculatorContent.ts ARCHETYPES[3].qualities[0]', 'Creativity', 'تخلیقی صلاحیت'),
     ('calculatorContent.ts ARCHETYPES[3].qualities[2]', 'Optimism', 'رجائیت'),
     ('calculatorContent.ts ARCHETYPES[3].qualities[3]', 'Self-expression', 'اظہارِ ذات'),
@@ -187,11 +188,12 @@ BATCH15_DRAFTS = [
     ('calculatorContent.ts ARCHETYPES[7].qualities[2]', 'Contemplation', 'غور و فکر'),
     ('calculatorContent.ts ARCHETYPES[7].qualities[3]', 'Mysticism', 'تصوف'),
     ('calculatorContent.ts ARCHETYPES[8].title', 'The Achiever', 'کامران'),
-    ('calculatorContent.ts ARCHETYPES[8].description', 'Power, abundance, manifestation. Eight angels carrying the Throne.', 'قوت، فراوانی اور ارادوں کی تکمیل۔ عرش اٹھانے والے آٹھ فرشتے۔'),
+    ('calculatorContent.ts ARCHETYPES[8].description', 'Power, abundance, achievement of goals. Eight angels carrying the Throne.', 'قوت، فراوانی اور ارادوں کی تکمیل۔ عرش اٹھانے والے آٹھ فرشتے۔'),  # source fix A8a (Mario, 21 Oct 2026)
     ('calculatorContent.ts ARCHETYPES[8].qualities[0]', 'Ambition', 'بلند حوصلگی'),
     ('calculatorContent.ts ARCHETYPES[8].qualities[1]', 'Authority', 'اختیار'),
     ('calculatorContent.ts ARCHETYPES[8].qualities[2]', 'Material success', 'مادی کامیابی'),
     ('calculatorContent.ts ARCHETYPES[8].qualities[3]', 'Karma', 'مکافاتِ عمل'),
+    ('calculatorContent.ts ARCHETYPES[8].qualities[3]', "Consequences of one's deeds", 'مکافاتِ عمل'),  # source fix A8b (Mario, 21 Oct 2026)
     ('calculatorContent.ts ARCHETYPES[9].title', 'The Humanitarian', 'انسان دوست'),
     ('calculatorContent.ts ARCHETYPES[9].description', 'Completion, universal love, enlightenment. The number of completion and perfection.', 'تکمیل، ہمہ گیر محبت اور روشن ضمیری۔ تکمیل اور کمال کا عدد۔'),
     ('calculatorContent.ts ARCHETYPES[9].qualities[1]', 'Service to others', 'دوسروں کی خدمت'),
@@ -208,7 +210,7 @@ BATCH15_DRAFTS = [
     ('divineResonance.ts DIVINE_RESONANCE_TABLE[10] (Al-Yaqīn)', 'The Certain, The Certainty', 'یقین، یقینی حق'),
     ('divineResonance.ts DIVINE_RESONANCE_TABLE[11] (Al-Karīm)', 'The Generous, The Most Bountiful', 'کریم، بے حد عطا والا'),
     ('divineResonance.ts DIVINE_RESONANCE_TABLE[12] (Al-Laṭīf)', 'The Subtle, The Most Kind', 'باریک بین، نہایت مہربان'),
-    ('divineResonance.ts DIVINE_RESONANCE_TABLE[13] (Al-Muʾmin)', 'The Believer, The Giver of Faith', 'امن دینے والا، ایمان عطا کرنے والا'),
+    ('divineResonance.ts DIVINE_RESONANCE_TABLE[13] (Al-Muʾmin)', 'The Giver of Security, The Giver of Faith', 'امن دینے والا، ایمان عطا کرنے والا'),  # source fix MU (Mario, 21 Oct 2026)
     ('divineResonance.ts DIVINE_RESONANCE_TABLE[14] (An-Nūr)', 'The Light, The Illuminator', 'نور، روشن کرنے والا'),
     ('divineResonance.ts DIVINE_RESONANCE_TABLE[15] (As-Salām)', 'The Peace, The Source of Peace', 'سلامتی، سلامتی کا سرچشمہ'),
     ('divineResonance.ts DIVINE_RESONANCE_TABLE[16] (Al-ʿAlīm)', 'The All-Knowing, The Omniscient', 'علیم، سب کچھ جاننے والا'),

@@ -170,8 +170,8 @@ export function SadaqaTab({ result }: SadaqaTabProps) {
         </p>
         <p className="text-white/50 text-xs italic">
           {language === "en"
-            ? "According to the teachings of Seringe Mahdiou Niane"
-            : "Selon les enseignements de Seringe Mahdiou Niane"}
+            ? "According to the teachings of Serigne Mahdiou Niane"
+            : "Selon les enseignements de Serigne Mahdiou Niane"}
         </p>
         {tradition.rulingPlanet && (
           <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full ${colors.iconBg}`}>
@@ -284,8 +284,8 @@ export function SadaqaTab({ result }: SadaqaTabProps) {
         )}
         <p className="text-white/50 text-xs italic text-center">
           {language === "en"
-            ? "By Seringe Mahdiou Niane — spoken in Wolof"
-            : "Par Seringe Mahdiou Niane — parlé en wolof"}
+            ? "By Serigne Mahdiou Niane — spoken in Wolof"
+            : "Par Serigne Mahdiou Niane — parlé en wolof"}
         </p>
       </ExpandableSection>
 

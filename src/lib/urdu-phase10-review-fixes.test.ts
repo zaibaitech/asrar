@@ -98,7 +98,7 @@ describe('outcome claims are attributed and guarantees are not made', () => {
   });
 
   it('the formerly bare claims now carry «روایتی تعبیر»', () => {
-    for (const en of ['Always beneficial, opens spiritual doors', 'Receives consistent divine assistance in times of need - help always arrives',
+    for (const en of ['Always beneficial, opens spiritual doors', 'Traditionally understood to be supported by divine help in times of need',
       'Allah grants them opportunities to learn patience and emotional mastery', 'Solar energy combined with air brings illuminating innovation']) {
       expect(raw[en], en).toContain('روایتی تعبیر');
     }

@@ -1,0 +1,93 @@
+{
+ "Ring Sadaqah": {
+  "ar": "صدقة الخاتم",
+  "status": "draft",
+  "id": "F3a",
+  "en_before": "Protective Ring Sadaqah",
+  "ar_before": "صدقة خاتم الحفظ"
+ },
+ "A special form of sadaqah associated with Scorpio is giving a ring, with stones such as rose agate or amethyst.": {
+  "ar": "من الصدقات الخاصّة المرتبطة ببرج العقرب تقديم خاتم بأحجار مثل العقيق الوردي أو الجمشت.",
+  "status": "draft",
+  "id": "F3b",
+  "en_before": "A special form of sadaqah associated with Scorpio is having or giving a good protective ring, with stones such as rose agate or amethyst. The ring is regarded within this tradition as having protective and beneficial qualities and is also considered part of the sadaqah practice for Scorpio.",
+  "ar_before": "من الصدقات الخاصّة المرتبطة ببرج العقرب اقتناء خاتم حافظ حسن أو إهداؤه، بأحجار كالعقيق الوردي أو الجمشت. ويُعدّ الخاتم في هذا التراث ذا خصائص حافظة نافعة، وجزءًا من ممارسة الصدقة للعقرب."
+ },
+ "Ring — rose agate or amethyst": {
+  "ar": "خاتم — عقيق وردي أو جمشت",
+  "status": "draft",
+  "id": "F3c",
+  "en_before": "Protective ring — rose agate or amethyst",
+  "ar_before": "خاتم حافظ — عقيق وردي أو جمشت"
+ },
+ "Twelve months of the year (9:36)": {
+  "ar": "اثنا عشر شهرًا",
+  "status": "approved-proposal",
+  "id": "S1",
+  "en_before": "Twelve Imams, twelve months",
+  "ar_before": "اثنا عشر إمامًا، اثنا عشر شهرًا"
+ },
+ "Mentioned in 74:30 («عَلَيْهَا تِسْعَةَ عَشَرَ»); some see a numerical pattern": {
+  "ar": "ورد في 74:30 ﴿عَلَيْهَا تِسْعَةَ عَشَرَ﴾، ويرى بعضهم فيه نمطًا عدديًا",
+  "status": "draft",
+  "id": "S2b",
+  "en_before": "Numerical miracle of the Quran",
+  "ar_before": "المعجزة العددية للقرآن"
+ },
+ "Creativity, expression, joy. Threefold harmony of body, mind, and spirit.": {
+  "ar": "الإبداع والتعبير والفرح. تناغم الجسد والعقل والروح.",
+  "status": "approved-proposal",
+  "id": "A3",
+  "en_before": "Creativity, expression, joy. Sacred trinity of body, mind, and spirit.",
+  "ar_before": "الإبداع والتعبير والفرح. الثالوث المقدس للجسد والعقل والروح."
+ },
+ "Power, abundance, achievement of goals. Eight angels carrying the Throne.": {
+  "ar": "القوة والوفرة وتحقيق الأهداف. ثمانية ملائكة يحملون العرش.",
+  "status": "approved-proposal",
+  "id": "A8a",
+  "en_before": "Power, abundance, manifestation. Eight angels carrying the Throne.",
+  "ar_before": "القوة والوفرة والتجلي. ثمانية ملائكة يحملون العرش."
+ },
+ "Consequences of one's deeds": {
+  "ar": "الجزاء من جنس العمل",
+  "status": "approved-proposal",
+  "id": "A8b",
+  "en_before": "Karma",
+  "ar_before": "الجزاء (الكارما)"
+ },
+ "The Giver of Security, The Giver of Faith": {
+  "ar": "المؤمن",
+  "status": "moved-reviewed",
+  "id": "MUb",
+  "en_before": "The Believer",
+  "ar_before": "المؤمن"
+ },
+ "The one at whose feet people are gathered": {
+  "ar": "الذي يُحشَر الناس على قدمَيه",
+  "status": "draft",
+  "id": "PN1",
+  "en_before": "The Gatherer",
+  "ar_before": "الْجَامِع"
+ },
+ "Each of the twelve burūj has its own traditional sadaqah, according to the teachings of Serigne Mahdiou Niane (with companion videos in Wolof inside the app). Not sure of your burj? Find it from your name and your mother's name.": {
+  "ar": "لكل برج من البروج الاثني عشر صدقته التقليدية، بحسب تعاليم الشيخ سرين مهديو نيان (مع مقاطع مصاحبة بالولوفية داخل التطبيق). لست متأكدًا من برجك؟ اعرفه من اسمك واسم أمك.",
+  "status": "moved-reviewed",
+  "id": "F5",
+  "en_before": "Each of the twelve burūj has its own traditional sadaqah, according to the teachings of Seringe Mahdiou Niane (with companion videos in Wolof inside the app). Not sure of your burj? Find it from your name and your mother's name.",
+  "ar_before": "لكل برج من البروج الاثني عشر صدقته التقليدية، بحسب تعاليم الشيخ سرين مهديو نيان (مع مقاطع مصاحبة بالولوفية داخل التطبيق). لست متأكدًا من برجك؟ اعرفه من اسمك واسم أمك."
+ },
+ "According to the teachings of Serigne Mahdiou Niane": {
+  "ar": "بحسب تعاليم الشيخ سرين مهديو نيان",
+  "status": "moved-reviewed",
+  "id": "F5",
+  "en_before": "According to the teachings of Seringe Mahdiou Niane",
+  "ar_before": "بحسب تعاليم الشيخ سرين مهديو نيان"
+ },
+ "By Serigne Mahdiou Niane — spoken in Wolof": {
+  "ar": "للشيخ سرين مهديو نيان — بالولوفية",
+  "status": "moved-reviewed",
+  "id": "F5",
+  "en_before": "By Seringe Mahdiou Niane — spoken in Wolof",
+  "ar_before": "للشيخ سرين مهديو نيان — بالولوفية"
+ }
+}

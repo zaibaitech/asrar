@@ -96,6 +96,12 @@ for k, e in rev.items():
     if k0: cat.pop(k0, None); src.pop(k0, None)
     put(k, e['ar'], 'reviewed')
 
+# 6. Source fixes approved by Mario (21 Oct 2026): the new English keys carry the Arabic of the
+#    approved proposal, the reviewed Arabic of the old key (moved), or a draft (status "draft",
+#    listed for the Language Reviewer). Old keys still used elsewhere are kept.
+for k, e in load('source-fixes-2026-10.json', {}).items():
+    put(k, e['ar'], 'reviewed' if e['status'] != 'draft' else 'ai')
+
 for old, new in REKEY.items():
     if old in cat:
         put(new, cat.pop(old), src.pop(old))

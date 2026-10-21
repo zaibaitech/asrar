@@ -1,5 +1,5 @@
 {
- "about": "Review status of the Urdu (/ur) strings. Sheet 2 = /workspace review file asrar-ur-review-2.md (2,336 rows), all reviewed by the native Language Reviewer (Oct 2026). reviewed-corrected: correction applied; reviewed: confirmed as is; reviewed-kept: reviewer suggestion not applied on purpose (see note); reviewed-flagged: left for Mario / the source owner. Batch 13 (/ur/abjad calculator UI, src/features/calculator/i18n/ur.ts) and Batch 14 (burujData.json practice nights) were reviewed in pass 3. Batch 15 (calculator result data and practice-hint meanings) was reviewed in pass 4; pass3_reviewer_data are the reviewer-written result-data strings (reviewed).",
+ "about": "Review status of the Urdu (/ur) strings. Sheet 2 = /workspace review file asrar-ur-review-2.md (2,336 rows), all reviewed by the native Language Reviewer (Oct 2026). reviewed-corrected: correction applied; reviewed: confirmed as is; reviewed-kept: reviewer suggestion not applied on purpose (see note); reviewed-flagged: left for Mario / the source owner. Batch 13 (/ur/abjad calculator UI, src/features/calculator/i18n/ur.ts) and Batch 14 (burujData.json practice nights) were reviewed in pass 3. Batch 15 (calculator result data and practice-hint meanings) was reviewed in pass 4; pass3_reviewer_data are the reviewer-written result-data strings (reviewed). Source fixes approved by Mario on 21 Oct 2026 (option A) moved reviewed Urdu to the new English keys; 6 keys whose meaning changed got new Urdu drafts (status draft) — see source_fixes_2026_10_21.",
  "counts": {
   "sheet2": {
    "reviewed-corrected": 417,
@@ -19,6 +19,10 @@
    "reviewed": 156,
    "reviewed-corrected": 16,
    "reviewed-corrected (optional)": 8
+  },
+  "source_fixes_2026_10_21": {
+   "reviewed": 32,
+   "draft": 6
   }
  },
  "sheet2": {
@@ -1032,9 +1036,11 @@
    "status": "reviewed"
   },
   "3.91": {
-   "en": "During Muharram (month of transformation)",
+   "en": "During Muharram",
    "loc": "catalog_ai_draft_ui.py:1270 [burj-sadaqah]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "During Muharram (month of transformation)",
+   "source_fix": "F1"
   },
   "3.92": {
    "en": "The red goat represents the blood of life and the power of transformation specific to buruj 8 (Water-Scorpio). This profound buruj sadaqah facilitates major life transitions, releases karmic patterns, empowers deep healing work, and transforms obstacles into opportunities. The red color symbolizes the intensity and power of Scorpio water - death and rebirth. The gold component (or monetary equivalent) represents the preciousness of transformation and connects to Capricorn's earthly manifestation.",
@@ -1908,9 +1914,11 @@
    "status": "reviewed"
   },
   "3.266": {
-   "en": "Each of the twelve burūj has its own traditional sadaqah, according to the teachings of Seringe Mahdiou Niane (with companion videos in Wolof inside the app). Not sure of your burj? Find it from your name and your mother's name.",
+   "en": "Each of the twelve burūj has its own traditional sadaqah, according to the teachings of Serigne Mahdiou Niane (with companion videos in Wolof inside the app). Not sure of your burj? Find it from your name and your mother's name.",
    "loc": "catalog_ai_draft_ui.py:586 [sadaqa-page]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "Each of the twelve burūj has its own traditional sadaqah, according to the teachings of Seringe Mahdiou Niane (with companion videos in Wolof inside the app). Not sure of your burj? Find it from your name and your mother's name.",
+   "source_fix": "F5"
   },
   "3.267": {
    "en": "Livestock Sadaqah",
@@ -1993,10 +2001,12 @@
    "status": "reviewed"
   },
   "3.283": {
-   "en": "Protective Ring Sadaqah",
+   "en": "Ring Sadaqah",
    "loc": "catalog_ai_draft_ui.py:618 [sadaqa-page]",
-   "status": "reviewed-flagged",
-   "note": "flag for Mario (EN source)"
+   "status": "draft",
+   "note": "flag for Mario (EN source)",
+   "en_before_source_fix": "Protective Ring Sadaqah",
+   "source_fix": "F3a"
   },
   "3.284": {
    "en": "White Ram or Sheep Sadaqah",
@@ -2470,9 +2480,11 @@
    "status": "reviewed"
   },
   "3.378": {
-   "en": "A special form of sadaqah associated with Scorpio is having or giving a good protective ring, with stones such as rose agate or amethyst. The ring is regarded within this tradition as having protective and beneficial qualities and is also considered part of the sadaqah practice for Scorpio.",
+   "en": "A special form of sadaqah associated with Scorpio is giving a ring, with stones such as rose agate or amethyst.",
    "loc": "catalog_ai_draft_ui.py:1741 [zodiac-sadaqah]",
-   "status": "reviewed-corrected"
+   "status": "draft",
+   "en_before_source_fix": "A special form of sadaqah associated with Scorpio is having or giving a good protective ring, with stones such as rose agate or amethyst. The ring is regarded within this tradition as having protective and beneficial qualities and is also considered part of the sadaqah practice for Scorpio.",
+   "source_fix": "F3b"
   },
   "3.379": {
    "en": "When Mars is transiting a favourable or friendly zodiac sign, such as Aries, a red goat may be given as sadaqah. The goat is prepared and its meat divided into portions, distributed among people who can benefit from it until the meat has been given out. The emphasis is on distributing the meat, rather than keeping it for personal consumption.",
@@ -3325,9 +3337,11 @@
    "status": "reviewed"
   },
   "5.116": {
-   "en": "Your natural empathy is strongest on this day",
+   "en": "In this tradition, this day is regarded as when your natural empathy is strongest",
    "loc": "catalog_ai_draft_ui.py:1005 [burj-blessed-day]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "Your natural empathy is strongest on this day",
+   "source_fix": "H6"
   },
   "5.117": {
    "en": "Perfect for cleansing rituals and renewal",
@@ -3505,9 +3519,11 @@
    "status": "reviewed"
   },
   "5.152": {
-   "en": "Powerful healing sessions",
+   "en": "Prayer for shifāʾ and spiritual routines",
    "loc": "catalog_ai_draft_ui.py:1045 [burj-blessed-day]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "Powerful healing sessions",
+   "source_fix": "H1"
   },
   "5.153": {
    "en": "Confronting difficult truths",
@@ -3635,9 +3651,11 @@
    "status": "reviewed"
   },
   "5.178": {
-   "en": "Your natural discipline and authority are strongest",
+   "en": "Traditionally regarded as when your natural discipline and authority are strongest",
    "loc": "catalog_ai_draft_ui.py:1072 [burj-blessed-day]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "Your natural discipline and authority are strongest",
+   "source_fix": "H7"
   },
   "5.179": {
    "en": "Ideal for establishing lasting structures",
@@ -3735,9 +3753,11 @@
    "status": "reviewed"
   },
   "5.198": {
-   "en": "Your healing abilities and spiritual connection are strongest",
+   "en": "Traditionally regarded as a day when your compassion and spiritual connection are strongest",
    "loc": "catalog_ai_draft_ui.py:1096 [burj-blessed-day]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "Your healing abilities and spiritual connection are strongest",
+   "source_fix": "H2"
   },
   "5.199": {
    "en": "Starting new business ventures and projects",
@@ -3780,9 +3800,11 @@
    "status": "reviewed"
   },
   "5.207": {
-   "en": "Your charisma and persuasive power are at their strongest",
+   "en": "Traditionally regarded as when your charisma and persuasive power are at their strongest",
    "loc": "catalog_ai_draft_ui.py:972 [burj-blessed-day]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "Your charisma and persuasive power are at their strongest",
+   "source_fix": "H8"
   },
   "5.208": {
    "en": "Divine support flows most freely on Tuesdays",
@@ -4367,9 +4389,11 @@
    "status": "reviewed"
   },
   "6.90": {
-   "en": "May experience the pain of child mortality or children facing difficulties in marriage",
+   "en": "Traditional interpretations mention trials related to children; this is not a prediction.",
    "loc": "catalog_ai_draft_ui.py:853 [burj-personality]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "May experience the pain of child mortality or children facing difficulties in marriage",
+   "source_fix": "C1"
   },
   "6.91": {
    "en": "Speaks with groundedness and wisdom, words carry weight and stability",
@@ -4397,14 +4421,18 @@
    "status": "reviewed"
   },
   "6.96": {
-   "en": "Receives consistent divine assistance in times of need - help always arrives",
+   "en": "Traditionally understood to be supported by divine help in times of need",
    "loc": "catalog_ai_draft_ui.py:861 [burj-personality]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "Receives consistent divine assistance in times of need - help always arrives",
+   "source_fix": "C2"
   },
   "6.97": {
-   "en": "Protected in matters of sustenance and material provision",
+   "en": "Traditionally, sought protection in matters of sustenance and material provision",
    "loc": "catalog_ai_draft_ui.py:862 [burj-personality]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "Protected in matters of sustenance and material provision",
+   "source_fix": "P1"
   },
   "6.98": {
    "en": "Must learn to set boundaries with family while maintaining their generous nature",
@@ -4447,9 +4475,11 @@
    "status": "reviewed"
   },
   "6.106": {
-   "en": "Receives divine protection despite their challenges with anger",
+   "en": "Traditionally, seen as under divine care despite their struggles with anger",
    "loc": "catalog_ai_draft_ui.py:871 [burj-personality]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "Receives divine protection despite their challenges with anger",
+   "source_fix": "P2"
   },
   "6.107": {
    "en": "Must work consciously to control anger and develop patience - this is their life's spiritual test",
@@ -4497,9 +4527,11 @@
    "status": "reviewed"
   },
   "6.116": {
-   "en": "Protected from those who would exploit their kindness",
+   "en": "Traditionally, sought protection from those who would exploit their kindness",
    "loc": "catalog_ai_draft_ui.py:882 [burj-personality]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "Protected from those who would exploit their kindness",
+   "source_fix": "P3"
   },
   "6.117": {
    "en": "Must learn when to set boundaries without losing their compassionate nature",
@@ -4547,9 +4579,11 @@
    "status": "reviewed"
   },
   "6.126": {
-   "en": "Protected in new ventures and bold initiatives",
+   "en": "Traditionally, sought protection in new ventures and bold initiatives",
    "loc": "catalog_ai_draft_ui.py:892 [burj-personality]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "Protected in new ventures and bold initiatives",
+   "source_fix": "P4"
   },
   "6.127": {
    "en": "Must balance assertiveness with patience and understanding",
@@ -4592,9 +4626,11 @@
    "status": "reviewed"
   },
   "6.135": {
-   "en": "Protected in matters of property and long-term investments",
+   "en": "Traditionally, sought protection in matters of property and long-term investments",
    "loc": "catalog_ai_draft_ui.py:902 [burj-personality]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "Protected in matters of property and long-term investments",
+   "source_fix": "P5"
   },
   "6.136": {
    "en": "Must learn flexibility while maintaining core stability",
@@ -4632,9 +4668,11 @@
    "status": "reviewed"
   },
   "6.143": {
-   "en": "Protected in intellectual and social endeavors",
+   "en": "Traditionally, sought protection in intellectual and social endeavors",
    "loc": "catalog_ai_draft_ui.py:912 [burj-personality]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "Protected in intellectual and social endeavors",
+   "source_fix": "P6"
   },
   "6.144": {
    "en": "Must develop depth and follow-through alongside versatility",
@@ -4677,14 +4715,18 @@
    "status": "reviewed"
   },
   "6.152": {
-   "en": "Granted profound insight into hidden truths and healing abilities",
+   "en": "Traditionally associated with deep insight and a gift for comforting others",
    "loc": "catalog_ai_draft_ui.py:921 [burj-personality]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "Granted profound insight into hidden truths and healing abilities",
+   "source_fix": "H3"
   },
   "6.153": {
-   "en": "Protected through life's deepest transformations",
+   "en": "Traditionally, sought protection through life's deepest transformations",
    "loc": "catalog_ai_draft_ui.py:922 [burj-personality]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "Protected through life's deepest transformations",
+   "source_fix": "P7"
   },
   "6.154": {
    "en": "Must learn to trust and let go of control",
@@ -4732,9 +4774,11 @@
    "status": "reviewed"
   },
   "6.163": {
-   "en": "Protected in travel and seeking knowledge",
+   "en": "Traditionally, sought protection in travel and seeking knowledge",
    "loc": "catalog_ai_draft_ui.py:932 [burj-personality]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "Protected in travel and seeking knowledge",
+   "source_fix": "P8"
   },
   "6.164": {
    "en": "Must develop discipline alongside freedom-seeking nature",
@@ -4782,9 +4826,11 @@
    "status": "reviewed"
   },
   "6.173": {
-   "en": "Protected in long-term endeavors and career",
+   "en": "Traditionally, sought protection in long-term endeavors and career",
    "loc": "catalog_ai_draft_ui.py:942 [burj-personality]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "Protected in long-term endeavors and career",
+   "source_fix": "P9"
   },
   "6.174": {
    "en": "Must learn to balance ambition with compassion",
@@ -4832,9 +4878,11 @@
    "status": "reviewed"
   },
   "6.183": {
-   "en": "Protected in community service and humanitarian work",
+   "en": "Traditionally, sought protection in community service and humanitarian work",
    "loc": "catalog_ai_draft_ui.py:952 [burj-personality]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "Protected in community service and humanitarian work",
+   "source_fix": "P10"
   },
   "6.184": {
    "en": "Must balance idealism with practical implementation",
@@ -4862,9 +4910,11 @@
    "status": "reviewed"
   },
   "6.189": {
-   "en": "People in need naturally seek their healing presence",
+   "en": "People in need are often drawn to their comforting presence",
    "loc": "catalog_ai_draft_ui.py:958 [burj-personality]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "People in need naturally seek their healing presence",
+   "source_fix": "H4"
   },
   "6.190": {
    "en": "Some exploit their inability to say no",
@@ -4877,14 +4927,18 @@
    "status": "reviewed"
   },
   "6.192": {
-   "en": "Granted deep spiritual connection and healing abilities",
+   "en": "Traditionally associated with a deep spiritual connection and a caring nature",
    "loc": "catalog_ai_draft_ui.py:961 [burj-personality]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "Granted deep spiritual connection and healing abilities",
+   "source_fix": "H5"
   },
   "6.193": {
-   "en": "Protected through service to others",
+   "en": "Traditionally, sought protection through service to others",
    "loc": "catalog_ai_draft_ui.py:962 [burj-personality]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "Protected through service to others",
+   "source_fix": "P11"
   },
   "6.194": {
    "en": "Must learn healthy boundaries without losing compassion",
@@ -5077,9 +5131,11 @@
    "status": "reviewed"
   },
   "7.38": {
-   "en": "Donate to organizations like Goodwill or Salvation Army",
+   "en": "Donate to local charitable organizations (e.g. a community food bank or relief charity)",
    "loc": "catalog_ai_draft_ui.py:1149 [burj-sadaqah]",
-   "status": "reviewed"
+   "status": "draft",
+   "en_before_source_fix": "Donate to organizations like Goodwill or Salvation Army",
+   "source_fix": "F6"
   },
   "7.39": {
    "en": "Sponsor clothing for children in need",
@@ -5727,9 +5783,11 @@
    "status": "reviewed"
   },
   "7.168": {
-   "en": "10 is the number of completion and perfection in Islamic numerology. It represents the ten commandments, complete divine order, and mastery. Combined with earth element and Saturn energy, it establishes ultimate material and spiritual authority.",
+   "en": "In the numerological tradition, 10 is the number of completion and perfection. It recalls the Ten Commandments given to Prophet Mūsā, complete divine order, and mastery. Combined with earth element and Saturn energy, it establishes ultimate material and spiritual authority.",
    "loc": "catalog_ai_draft_ui.py:1314 [burj-sadaqah]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "10 is the number of completion and perfection in Islamic numerology. It represents the ten commandments, complete divine order, and mastery. Combined with earth element and Saturn energy, it establishes ultimate material and spiritual authority.",
+   "source_fix": "F7"
   },
   "7.169": {
    "en": "Saturday (THE BEST day for this buruj) - most powerful timing",
@@ -9572,9 +9630,11 @@
    "status": "reviewed"
   },
   "10.227": {
-   "en": "According to the teachings of Seringe Mahdiou Niane",
+   "en": "According to the teachings of Serigne Mahdiou Niane",
    "loc": "catalog_ai_draft_ui.py:1878 [sadaqah-tab]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "According to the teachings of Seringe Mahdiou Niane",
+   "source_fix": "F5"
   },
   "10.228": {
    "en": "General Forms",
@@ -9602,9 +9662,11 @@
    "status": "reviewed"
   },
   "10.233": {
-   "en": "By Seringe Mahdiou Niane — spoken in Wolof",
+   "en": "By Serigne Mahdiou Niane — spoken in Wolof",
    "loc": "catalog_ai_draft_ui.py:1884 [sadaqah-tab]",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "By Seringe Mahdiou Niane — spoken in Wolof",
+   "source_fix": "F5"
   },
   "10.234": {
    "en": "Start small and increase gradually as you establish the habit",
@@ -11409,9 +11471,11 @@
    "status": "reviewed-corrected"
   },
   "12.91": {
-   "en": "Protective ring — rose agate or amethyst",
+   "en": "Ring — rose agate or amethyst",
    "loc": "catalog_ai_draft_ui.py:1747 [zodiac-sadaqah]",
-   "status": "reviewed-corrected"
+   "status": "draft",
+   "en_before_source_fix": "Protective ring — rose agate or amethyst",
+   "source_fix": "F3c"
   },
   "12.92": {
    "en": "White ram or sheep",
@@ -12167,9 +12231,11 @@
    "id": "13.57",
    "ns": "calculator",
    "key": "correspondenceNote",
-   "en": "These are symbolic correspondences from the selected letter-classification tradition, not scientific measurements. A separate historical system (Mashriqi) assigns some letters differently; it is not implemented in this app.",
+   "en": "These are symbolic correspondences from the selected letter-classification tradition, not scientific measurements. The Mashriqi letter values are supported, but the Mashriqi element classification, which assigns some letters differently, is not implemented in this app.",
    "ur": "یہ منتخب درجہ بندی کی روایت کی علامتی نسبتیں ہیں، سائنسی پیمائش نہیں۔ ایک الگ تاریخی نظام (مشرقی) بعض حروف کو مختلف عناصر سے منسوب کرتا ہے؛ عناصر کی یہ مشرقی درجہ بندی اس ایپ میں شامل نہیں۔",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "These are symbolic correspondences from the selected letter-classification tradition, not scientific measurements. A separate historical system (Mashriqi) assigns some letters differently; it is not implemented in this app.",
+   "source_fix": "K1"
   },
   {
    "id": "13.58",
@@ -12906,6 +12972,14 @@
    "en": "re:^· Weakest correspondence: (Fire|Earth|Air|Water) \\+ (Fire|Earth|Air|Water) \\+ (Fire|Earth|Air|Water)$",
    "ur": "· کمزور ترین نسبت: $1، $2 اور $3",
    "status": "reviewed"
+  },
+  {
+   "id": "13.CL",
+   "en": "Close",
+   "ur": "بند کریں",
+   "status": "reviewed",
+   "note": "Source fix CL (21 Oct 2026): divineNamePicker.close, reuses the reviewed \"Close\".",
+   "loc": "calculator/i18n/ur.ts [divineNamePicker.close]"
   }
  ],
  "batch14": [
@@ -13093,15 +13167,19 @@
   },
   {
    "loc": "sacred.ts SACRED_SIGNIFICANCE[12]",
-   "en": "Twelve Imams, twelve months",
-   "ur": "بارہ امام، بارہ مہینے",
-   "status": "reviewed"
+   "en": "Twelve months of the year (9:36)",
+   "ur": "سال کے بارہ مہینے (9:36)",
+   "status": "draft",
+   "en_before_source_fix": "Twelve Imams, twelve months",
+   "source_fix": "S1"
   },
   {
    "loc": "sacred.ts SACRED_SIGNIFICANCE[19]",
-   "en": "Numerical miracle of the Qurʾan",
-   "ur": "بعض کے نزدیک قرآن کا عددی اعجاز",
-   "status": "reviewed"
+   "en": "Mentioned in 74:30 («عَلَيْهَا تِسْعَةَ عَشَرَ»); some see a numerical pattern",
+   "ur": "74:30 میں مذکور («عَلَيْهَا تِسْعَةَ عَشَرَ»)؛ بعض اس میں عددی ترتیب دیکھتے ہیں",
+   "status": "draft",
+   "en_before_source_fix": "Numerical miracle of the Qurʾan",
+   "source_fix": "S2"
   },
   {
    "loc": "sacred.ts SACRED_SIGNIFICANCE[70]",
@@ -13111,9 +13189,11 @@
   },
   {
    "loc": "sacred.ts SACRED_SIGNIFICANCE[99]",
-   "en": "Asmāʾ al-Ḩusnā (Beautiful Names)",
+   "en": "Asmāʾ al-Ḥusnā (Beautiful Names)",
    "ur": "اسمائے حسنیٰ",
-   "status": "reviewed"
+   "status": "reviewed",
+   "en_before_source_fix": "Asmāʾ al-Ḩusnā (Beautiful Names)",
+   "source_fix": "S3"
   },
   {
    "loc": "sacred.ts SACRED_SIGNIFICANCE[114]",
@@ -13964,9 +14044,11 @@
   {
    "id": "15.110",
    "loc": "calculatorContent.ts ARCHETYPES[3].description",
-   "en": "Creativity, expression, joy. Sacred trinity of body, mind, and spirit.",
+   "en": "Creativity, expression, joy. Threefold harmony of body, mind, and spirit.",
    "ur": "تخلیقی صلاحیت، اظہار اور خوشی۔ جسم، ذہن اور روح: تینوں کی ہم آہنگی۔",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "Creativity, expression, joy. Sacred trinity of body, mind, and spirit.",
+   "source_fix": "A3"
   },
   {
    "id": "15.111",
@@ -14167,9 +14249,11 @@
   {
    "id": "15.139",
    "loc": "calculatorContent.ts ARCHETYPES[8].description",
-   "en": "Power, abundance, manifestation. Eight angels carrying the Throne.",
+   "en": "Power, abundance, achievement of goals. Eight angels carrying the Throne.",
    "ur": "قوت، فراوانی اور ارادوں کی تکمیل۔ عرش اٹھانے والے آٹھ فرشتے۔",
-   "status": "reviewed-corrected"
+   "status": "reviewed-corrected",
+   "en_before_source_fix": "Power, abundance, manifestation. Eight angels carrying the Throne.",
+   "source_fix": "A8a"
   },
   {
    "id": "15.140",
@@ -14314,9 +14398,11 @@
   {
    "id": "15.160",
    "loc": "divineResonance.ts DIVINE_RESONANCE_TABLE[13] (Al-Muʾmin)",
-   "en": "The Believer, The Giver of Faith",
+   "en": "The Giver of Security, The Giver of Faith",
    "ur": "امن دینے والا، ایمان عطا کرنے والا",
-   "status": "reviewed"
+   "status": "reviewed",
+   "en_before_source_fix": "The Believer, The Giver of Faith",
+   "source_fix": "MU"
   },
   {
    "id": "15.161",
@@ -14464,6 +14550,274 @@
    "id": "15.11b",
    "en": "The Creative",
    "ur": "تخلیق کار",
+   "status": "reviewed"
+  }
+ ],
+ "source_fixes_2026_10_21": [
+  {
+   "id": "H1",
+   "en": "Prayer for shifāʾ and spiritual routines",
+   "en_before": "Powerful healing sessions",
+   "ur": "شفا کے لیے دعا اور روحانی معمولات",
+   "status": "reviewed"
+  },
+  {
+   "id": "H2",
+   "en": "Traditionally regarded as a day when your compassion and spiritual connection are strongest",
+   "en_before": "Your healing abilities and spiritual connection are strongest",
+   "ur": "روایت میں اس دن دوسروں کو تسلی اور سہارا دینے کی آپ کی صلاحیت اور روحانی تعلق سب سے مضبوط سمجھے جاتے ہیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "H3",
+   "en": "Traditionally associated with deep insight and a gift for comforting others",
+   "en_before": "Granted profound insight into hidden truths and healing abilities",
+   "ur": "روایت میں پوشیدہ حقائق کی گہری بصیرت اور دوسروں کو تسکین دینے کی صلاحیت عطا ہونا بیان کیا جاتا ہے",
+   "status": "reviewed"
+  },
+  {
+   "id": "H4",
+   "en": "People in need are often drawn to their comforting presence",
+   "en_before": "People in need naturally seek their healing presence",
+   "ur": "ضرورت مند لوگ فطری طور پر ان کی تسکین بخش موجودگی کی طلب کرتے ہیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "H5",
+   "en": "Traditionally associated with a deep spiritual connection and a caring nature",
+   "en_before": "Granted deep spiritual connection and healing abilities",
+   "ur": "روایت میں گہرا روحانی تعلق اور دوسروں کو تسکین دینے کی صلاحیت عطا ہونا بیان کیا جاتا ہے",
+   "status": "reviewed"
+  },
+  {
+   "id": "H6",
+   "en": "In this tradition, this day is regarded as when your natural empathy is strongest",
+   "en_before": "Your natural empathy is strongest on this day",
+   "ur": "روایت میں اس دن آپ کی فطری ہمدردی سب سے مضبوط سمجھی جاتی ہے",
+   "status": "reviewed"
+  },
+  {
+   "id": "H7",
+   "en": "Traditionally regarded as when your natural discipline and authority are strongest",
+   "en_before": "Your natural discipline and authority are strongest",
+   "ur": "روایت میں آپ کا فطری نظم و ضبط اور اختیار سب سے مضبوط سمجھے جاتے ہیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "H8",
+   "en": "Traditionally regarded as when your charisma and persuasive power are at their strongest",
+   "en_before": "Your charisma and persuasive power are at their strongest",
+   "ur": "روایت میں آپ کی کشش اور قائل کرنے کی صلاحیت اپنی بلند ترین سطح پر سمجھی جاتی ہے",
+   "status": "reviewed"
+  },
+  {
+   "id": "C1",
+   "en": "Traditional interpretations mention trials related to children; this is not a prediction.",
+   "en_before": "May experience the pain of child mortality or children facing difficulties in marriage",
+   "ur": "روایتی تعبیر میں اولاد سے متعلق آزمائشوں (صدمے یا ان کی ازدواجی مشکلات) کا ذکر ملتا ہے؛ اسے پیش گوئی نہ سمجھیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "C2",
+   "en": "Traditionally understood to be supported by divine help in times of need",
+   "en_before": "Receives consistent divine assistance in times of need - help always arrives",
+   "ur": "روایتی تعبیر کے مطابق ضرورت کے وقت الٰہی مدد شاملِ حال رہتی ہے",
+   "status": "reviewed"
+  },
+  {
+   "id": "P1",
+   "en": "Traditionally, sought protection in matters of sustenance and material provision",
+   "en_before": "Protected in matters of sustenance and material provision",
+   "ur": "روایت کے مطابق روزی اور مادی ضروریات کے معاملات میں محفوظ سمجھے جاتے ہیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "P2",
+   "en": "Traditionally, seen as under divine care despite their struggles with anger",
+   "en_before": "Receives divine protection despite their challenges with anger",
+   "ur": "روایت کے مطابق غصے سے متعلق مشکلات کے باوجود الٰہی حفاظت حاصل سمجھی جاتی ہے",
+   "status": "reviewed"
+  },
+  {
+   "id": "P3",
+   "en": "Traditionally, sought protection from those who would exploit their kindness",
+   "en_before": "Protected from those who would exploit their kindness",
+   "ur": "روایت کے مطابق ایسے لوگوں سے محفوظ سمجھے جاتے ہیں جو ان کی مہربانی کا ناجائز فائدہ اٹھانا چاہیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "P4",
+   "en": "Traditionally, sought protection in new ventures and bold initiatives",
+   "en_before": "Protected in new ventures and bold initiatives",
+   "ur": "روایت کے مطابق نئے کاموں اور جرأت مندانہ اقدامات میں محفوظ سمجھے جاتے ہیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "P5",
+   "en": "Traditionally, sought protection in matters of property and long-term investments",
+   "en_before": "Protected in matters of property and long-term investments",
+   "ur": "روایت کے مطابق جائیداد اور طویل مدتی سرمایہ کاری کے معاملات میں محفوظ سمجھے جاتے ہیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "P6",
+   "en": "Traditionally, sought protection in intellectual and social endeavors",
+   "en_before": "Protected in intellectual and social endeavors",
+   "ur": "روایت کے مطابق فکری اور سماجی کاموں میں محفوظ سمجھے جاتے ہیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "P7",
+   "en": "Traditionally, sought protection through life's deepest transformations",
+   "en_before": "Protected through life's deepest transformations",
+   "ur": "روایت کے مطابق زندگی کی گہری ترین تبدیلیوں کے دوران محفوظ سمجھے جاتے ہیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "P8",
+   "en": "Traditionally, sought protection in travel and seeking knowledge",
+   "en_before": "Protected in travel and seeking knowledge",
+   "ur": "روایت کے مطابق سفر اور علم کی طلب میں محفوظ سمجھے جاتے ہیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "P9",
+   "en": "Traditionally, sought protection in long-term endeavors and career",
+   "en_before": "Protected in long-term endeavors and career",
+   "ur": "روایت کے مطابق طویل مدتی کاموں اور پیشے میں محفوظ سمجھے جاتے ہیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "P10",
+   "en": "Traditionally, sought protection in community service and humanitarian work",
+   "en_before": "Protected in community service and humanitarian work",
+   "ur": "روایت کے مطابق برادری کی خدمت اور انسان دوست کام میں محفوظ سمجھے جاتے ہیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "P11",
+   "en": "Traditionally, sought protection through service to others",
+   "en_before": "Protected through service to others",
+   "ur": "روایت کے مطابق دوسروں کی خدمت کے ذریعے محفوظ سمجھے جاتے ہیں",
+   "status": "reviewed"
+  },
+  {
+   "id": "F1",
+   "en": "During Muharram",
+   "en_before": "During Muharram (month of transformation)",
+   "ur": "محرم کے دوران",
+   "status": "reviewed"
+  },
+  {
+   "id": "F3a",
+   "en": "Ring Sadaqah",
+   "en_before": "Protective Ring Sadaqah",
+   "ur": "انگوٹھی کا صدقہ",
+   "status": "draft"
+  },
+  {
+   "id": "F3b",
+   "en": "A special form of sadaqah associated with Scorpio is giving a ring, with stones such as rose agate or amethyst.",
+   "en_before": "A special form of sadaqah associated with Scorpio is having or giving a good protective ring, with stones such as rose agate or amethyst. The ring is regarded within this tradition as having protective and beneficial qualities and is also considered part of the sadaqah practice for Scorpio.",
+   "ur": "عقرب سے منسوب صدقے کی ایک خاص صورت گلابی عقیق یا جمست (ایمتھسٹ) جیسے پتھروں والی انگوٹھی دینا ہے۔",
+   "status": "draft"
+  },
+  {
+   "id": "F3c",
+   "en": "Ring — rose agate or amethyst",
+   "en_before": "Protective ring — rose agate or amethyst",
+   "ur": "انگوٹھی — گلابی عقیق یا جمست",
+   "status": "draft"
+  },
+  {
+   "id": "F6",
+   "en": "Donate to local charitable organizations (e.g. a community food bank or relief charity)",
+   "en_before": "Donate to organizations like Goodwill or Salvation Army",
+   "ur": "مقامی فلاحی اداروں کو عطیہ دیں (مثلاً محلے کا فوڈ بینک یا امدادی ادارہ)",
+   "status": "draft"
+  },
+  {
+   "id": "S1",
+   "en": "Twelve months of the year (9:36)",
+   "en_before": "Twelve Imams, twelve months",
+   "ur": "سال کے بارہ مہینے (9:36)",
+   "status": "draft"
+  },
+  {
+   "id": "S2",
+   "en": "Mentioned in 74:30 («عَلَيْهَا تِسْعَةَ عَشَرَ»); some see a numerical pattern",
+   "en_before": "Numerical miracle of the Qurʾan",
+   "ur": "74:30 میں مذکور («عَلَيْهَا تِسْعَةَ عَشَرَ»)؛ بعض اس میں عددی ترتیب دیکھتے ہیں",
+   "status": "draft"
+  },
+  {
+   "id": "S3",
+   "en": "Asmāʾ al-Ḥusnā (Beautiful Names)",
+   "en_before": "Asmāʾ al-Ḩusnā (Beautiful Names)",
+   "ur": "اسمائے حسنیٰ",
+   "status": "reviewed"
+  },
+  {
+   "id": "A3",
+   "en": "Creativity, expression, joy. Threefold harmony of body, mind, and spirit.",
+   "en_before": "Creativity, expression, joy. Sacred trinity of body, mind, and spirit.",
+   "ur": "تخلیقی صلاحیت، اظہار اور خوشی۔ جسم، ذہن اور روح: تینوں کی ہم آہنگی۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "A8a",
+   "en": "Power, abundance, achievement of goals. Eight angels carrying the Throne.",
+   "en_before": "Power, abundance, manifestation. Eight angels carrying the Throne.",
+   "ur": "قوت، فراوانی اور ارادوں کی تکمیل۔ عرش اٹھانے والے آٹھ فرشتے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "A8b",
+   "en": "Consequences of one's deeds",
+   "en_before": "Karma",
+   "ur": "مکافاتِ عمل",
+   "status": "reviewed"
+  },
+  {
+   "id": "MU",
+   "en": "The Giver of Security, The Giver of Faith",
+   "en_before": "The Believer, The Giver of Faith",
+   "ur": "امن دینے والا، ایمان عطا کرنے والا",
+   "status": "reviewed"
+  },
+  {
+   "id": "PN1",
+   "en": "The one at whose feet people are gathered",
+   "en_before": "The Gatherer",
+   "ur": "جن کے قدموں میں لوگ جمع کیے جائیں گے",
+   "status": "reviewed"
+  },
+  {
+   "id": "F7",
+   "en": "In the numerological tradition, 10 is the number of completion and perfection. It recalls the Ten Commandments given to Prophet Mūsā, complete divine order, and mastery. Combined with earth element and Saturn energy, it establishes ultimate material and spiritual authority.",
+   "en_before": "10 is the number of completion and perfection in Islamic numerology. It represents the ten commandments, complete divine order, and mastery. Combined with earth element and Saturn energy, it establishes ultimate material and spiritual authority.",
+   "ur": "علم الاعداد کی روایت میں 10 تکمیل اور کمال کا عدد ہے۔ یہ (حضرت موسیٰؑ کے) دس احکام، مکمل الٰہی نظم اور مہارت کی علامت سمجھا جاتا ہے۔ مٹی کے عنصر اور زحل کی توانائی کے ساتھ مل کر یہ اعلیٰ مادی اور روحانی اختیار کی علامت بنتا ہے۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "F5",
+   "en": "Each of the twelve burūj has its own traditional sadaqah, according to the teachings of Serigne Mahdiou Niane (with companion videos in Wolof inside the app). Not sure of your burj? Find it from your name and your mother's name.",
+   "en_before": "Each of the twelve burūj has its own traditional sadaqah, according to the teachings of Seringe Mahdiou Niane (with companion videos in Wolof inside the app). Not sure of your burj? Find it from your name and your mother's name.",
+   "ur": "بارہ بروج میں سے ہر ایک کا اپنا روایتی صدقہ ہے، سیرین مہدیو نیان کی تعلیمات کے مطابق (ایپ کے اندر وولوف زبان کی ساتھی ویڈیوز کے ساتھ)۔ اپنے برج کا یقین نہیں؟ اسے اپنے نام اور والدہ کے نام سے معلوم کریں۔",
+   "status": "reviewed"
+  },
+  {
+   "id": "F5",
+   "en": "According to the teachings of Serigne Mahdiou Niane",
+   "en_before": "According to the teachings of Seringe Mahdiou Niane",
+   "ur": "سیرین مہدیو نیان کی تعلیمات کے مطابق",
+   "status": "reviewed"
+  },
+  {
+   "id": "F5",
+   "en": "By Serigne Mahdiou Niane — spoken in Wolof",
+   "en_before": "By Seringe Mahdiou Niane — spoken in Wolof",
+   "ur": "سیرین مہدیو نیان کی جانب سے — وولوف زبان میں",
    "status": "reviewed"
   }
  ]
