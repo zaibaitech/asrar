@@ -89,7 +89,7 @@ export const rootMetadata: Metadata = {
     description: bilingualMeta.en.fullDescription,
     images: [
       {
-        url: `${baseUrl}/opengraph-image`,
+        url: `${baseUrl}/opengraph-image?v=2`,
         width: 1200,
         height: 630,
         alt: 'Asrār — Planetary Hours, Abjad Calculator & Islamic Sacred Sciences',
@@ -101,7 +101,7 @@ export const rootMetadata: Metadata = {
     card: 'summary_large_image',
     title: bilingualMeta.en.title,
     description: bilingualMeta.en.fullDescription,
-    images: [`${baseUrl}/opengraph-image`],
+    images: [`${baseUrl}/opengraph-image?v=2`],
     creator: '@AsrarEveryday',
   },
   authors: [
