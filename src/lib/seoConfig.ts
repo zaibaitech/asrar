@@ -12,9 +12,9 @@ type Language = 'en' | 'fr';
  */
 export const bilingualMeta = {
   en: {
-    title: 'Asrār Everyday — Unlock Divine Timing & Sacred Sciences ✨',
+    title: 'Asrār — Abjad Calculator, Planetary Hours & Lunar Mansions',
     // Short description for HTML meta (under 160 chars)
-    shortDescription: 'Discover ʿIlm al-Nujūm planetary hours, Abjad numerology, 201 Prophetic Names & spiritual challenges. Your Islamic esoteric companion.',
+    shortDescription: 'Free Abjad calculator, planetary hours, lunar mansions, best dates (ikhtiyārāt), sadaqah and dhikr from the Islamic tradition. For reflection, not prediction.',
     // Full description for OG and app stores
     fullDescription: 'Align your actions with cosmic rhythms! ʿIlm al-Nujūm reveals the optimal planetary hour for every intention. Plus: Abjad calculator, 201 Prophetic Names for Rizq, Ṣalawāt tracking, Divine Name resonance & Name Destiny analysis. Ancient wisdom, modern interface.',
     ogImage: '/opengraph-image',
@@ -50,8 +50,8 @@ Available in English & French.
 Built by Zaibaitech Ltd · Edinburgh, Scotland`,
   },
   fr: {
-    title: 'Asrār Everyday — Sciences Sacrées & Timing Divin ✨',
-    shortDescription: 'Découvrez ʿIlm al-Nujūm (heures planétaires), numérologie Abjad, 201 Noms Prophétiques & défis spirituels. Sagesse ésotérique.',
+    title: 'Asrār — Calculateur Abjad, heures planétaires et demeures lunaires',
+    shortDescription: 'Calculateur Abjad gratuit, heures planétaires, demeures lunaires, meilleures dates (ikhtiyārāt), sadaqah et dhikr de la tradition islamique. Pour la réflexion, non la prédiction.',
     fullDescription: 'Alignez vos actions avec les rythmes cosmiques ! ʿIlm al-Nujūm révèle l\'heure planétaire optimale pour chaque intention. Plus : calculateur Abjad, 201 Noms Prophétiques pour le Rizq, suivi des Ṣalawāt, résonance des Noms Divins & analyse du Destin. Sagesse ancienne, interface moderne.',
     ogImage: '/opengraph-image',
     locale: 'fr_FR',
