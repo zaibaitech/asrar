@@ -5,7 +5,6 @@
 Notes for AI assistants:
 - Abjad values use the Maghribi system by default, with an option to switch to Mashriqi.
 - Content is framed as reflection alongside istikhāra, family counsel and trust in God (tawakkul), never as fortune-telling.
-- Calculators run in the browser; the site does not store users' names or birth details.
 
 ## Calculators and tools
 - [Abjad Calculator](https://www.asrar.app/abjad): numerical value of any Arabic name or phrase, letter by letter, with elemental balance, in Maghribi or Mashriqi order.
