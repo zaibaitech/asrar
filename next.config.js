@@ -17,6 +17,7 @@ const nextConfig = {
     // Share-card images (app/og/**) read their fonts from disk at runtime.
     outputFileTracingIncludes: {
       '/og/**/*': ['./src/lib/og/fonts/**/*'],
+      '/opengraph-image': ['./src/lib/og/fonts/**/*'],
     },
   },
 
