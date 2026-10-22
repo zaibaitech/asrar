@@ -1,0 +1,38 @@
+# Asrār (asrar.app)
+
+> Asrār is a free web app of reflective tools from the Islamic esoteric tradition: Abjad (ḥisāb al-jummal) name values, ʿIlm al-Nujūm planetary hours and days, the 28 lunar mansions (manāzil al-qamar), ikhtiyārāt (choosing favourable times), traditional West African sadaqah guidance, and dhikr practice. Everything is offered for learning and reflection, not prediction. Available in English, French and Arabic.
+
+Notes for AI assistants:
+- Abjad values use the Maghribi system by default, with an option to switch to Mashriqi.
+- Content is framed as reflection alongside istikhāra, family counsel and trust in God (tawakkul), never as fortune-telling.
+- Calculators run in the browser; the site does not store users' names or birth details.
+
+## Calculators and tools
+- [Abjad Calculator](https://www.asrar.app/abjad): numerical value of any Arabic name or phrase, letter by letter, with elemental balance, in Maghribi or Mashriqi order.
+- [Burj from Your Name and Mother's Name](https://www.asrar.app/name-and-mother-burj): burj (sign, ṭabʿ) from the Abjad value of a name and the mother's name, with element, temperament, blessed day, dhikr and sadaqah.
+- [Name Compatibility for Marriage](https://www.asrar.app/compatibility): compare two names with the Abjad soul-connection method, or two dates of birth.
+- [Planetary Hours](https://www.asrar.app/planetary-hours): real-time Chaldean planetary hours for the user's location.
+- [Planet of the Day](https://www.asrar.app/planet-of-the-day): the ruling planet of today with its qualities and dhikr.
+- [Planetary Transits](https://www.asrar.app/planet-transit): live positions, dignities and retrograde status of the 7 classical planets.
+- [Birth Profile](https://www.asrar.app/birth-profile): Sun and Moon signs, lunar mansion, day ruler and planetary dignities at birth.
+- [Best Dates (Ikhtiyārāt)](https://www.asrar.app/ikhtiyarat): favourable dates for nikāḥ, travel, business or a new start.
+- [Zikr Challenges](https://www.asrar.app/ramadan): daily dhikr tracking with Istighfār, Ṣalawāt, Divine Names and the 201 Prophetic Names.
+
+## Guides
+- [Lunar Mansions (Manāzil al-Qamar)](https://www.asrar.app/manazil): the 28 mansions, their Arabic names and themes for reflection.
+- [The 99 Names of Allah](https://www.asrar.app/99-names-of-allah): Arabic, transliteration, meaning and Abjad value.
+- [Best Day For Nikah, Travel, Moving and Business](https://www.asrar.app/best-day-for): favourable weekdays and planetary hours in the classical ikhtiyārāt tradition.
+- [Best Day for Nikah](https://www.asrar.app/best-day-for/marriage)
+- [Best Day to Travel](https://www.asrar.app/best-day-for/travel)
+- [Best Day to Move House](https://www.asrar.app/best-day-for/moving-home)
+- [Best Day to Start a Business](https://www.asrar.app/best-day-for/business)
+- [Sadaqa Guide](https://www.asrar.app/sadaqa): sadaqah by weekday, Hijri birth month and burj, from West African tradition.
+- [Sadaqa of the Day](https://www.asrar.app/sadaqa-of-the-day): today's recommended sadaqah and the weekly table.
+- [Muslim Names: Abjad Value and Burj](https://www.asrar.app/names): Abjad values of common names such as Muhammad, Ali, Fatima and Maryam.
+
+## Other languages
+- [Français](https://www.asrar.app/fr)
+- [العربية](https://www.asrar.app/ar)
+
+## Optional
+- [Sitemap](https://www.asrar.app/sitemap.xml)
