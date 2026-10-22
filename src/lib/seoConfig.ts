@@ -51,7 +51,7 @@ Built by Zaibaitech Ltd · Edinburgh, Scotland`,
   },
   fr: {
     title: 'Asrār — Calculateur Abjad, heures planétaires et demeures lunaires',
-    shortDescription: 'Calculateur Abjad gratuit, heures planétaires, demeures lunaires, meilleures dates (ikhtiyārāt), sadaqah et dhikr de la tradition islamique. Pour la réflexion, non la prédiction.',
+    shortDescription: 'Calculateur Abjad gratuit, heures planétaires, demeures lunaires, ikhtiyārāt, sadaqah et dhikr de la tradition islamique. Pour la réflexion, non la prédiction.',
     fullDescription: 'Alignez vos actions avec les rythmes cosmiques ! ʿIlm al-Nujūm révèle l\'heure planétaire optimale pour chaque intention. Plus : calculateur Abjad, 201 Noms Prophétiques pour le Rizq, suivi des Ṣalawāt, résonance des Noms Divins & analyse du Destin. Sagesse ancienne, interface moderne.',
     ogImage: '/opengraph-image',
     locale: 'fr_FR',
