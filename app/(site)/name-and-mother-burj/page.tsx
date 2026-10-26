@@ -92,6 +92,7 @@ const COPY = {
       ['/compatibility', 'Name Compatibility for Marriage', 'Compare two names with the Abjad soul-connection method.'],
       ['/abjad', 'Abjad Calculator', 'The Abjad value of any Arabic name or phrase.'],
       ['/birth-profile', 'Birth Profile', 'Your Sun and Moon signs, lunar mansion and planetary dignities.'],
+      ['/names', 'Muslim Names: Abjad Value and Burj', 'Common names such as Muhammad, Ali, Fatima and Maryam.'],
     ] as RelatedLink[],
   },
   fr: {

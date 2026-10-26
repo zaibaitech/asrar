@@ -127,6 +127,7 @@ const ALL_LINKS: Record<string, ArabicLink> = {
   abjad: { href: '/ar/abjad', name: 'حساب الجمل', desc: 'قيمة أي اسم أو عبارة عربية بالترتيب المغربي أو المشرقي.' },
   hours: { href: '/ar/planetary-hours', name: 'ساعات الكواكب اليوم', desc: 'الكوكب الحاكم للساعة الحالية في موقعك.' },
   burj: { href: '/ar/name-and-mother-burj', name: 'برجك من اسمك واسم أمك', desc: 'البرج والعنصر واليوم المبارك والذكر من حساب الجمل.' },
+  compatibility: { href: '/ar/compatibility', name: 'حساب التوافق بالأسماء', desc: 'التوافق بين اسمين بحساب الجمل للزواج أو الصداقة أو العمل، للتأمّل لا للحكم.' },
   sadaqa: { href: '/ar/sadaqa-of-the-day', name: 'صدقة اليوم', desc: 'الصدقة المستحبة لكل يوم من أيام الأسبوع.' },
 };
 
