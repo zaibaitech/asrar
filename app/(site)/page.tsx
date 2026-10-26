@@ -91,6 +91,13 @@ const SHELL_FR = {
   toolsTitle: 'Explorer les outils',
 };
 
+/** Extra crawl links in the English SEO shell (same markup as the tool list): name pages and the French site. */
+const SHELL_EN_EXTRA_LINKS: { href: string; name: string; description: string; lang?: string }[] = [
+  { href: '/names', name: 'Muslim Names: Abjad Value and Burj', description: 'Common names such as Muhammad, Ali, Fatima and Maryam.' },
+  { href: '/99-names-of-allah', name: 'The 99 Names of Allah', description: 'Arabic, meaning and Abjad value of each Name.' },
+  { href: '/fr', name: 'Asrār en français', description: 'Tous les outils, avec leurs explications en français.', lang: 'fr' },
+];
+
 export default async function Home() {
   const routeLang = await getRouteLang();
   if (routeLang === 'fr') {
@@ -144,6 +151,14 @@ export default async function Home() {
                   {tool.name}
                 </a>
                 <p className="text-sm text-slate-600 dark:text-slate-400">{tool.description}</p>
+              </li>
+            ))}
+            {SHELL_EN_EXTRA_LINKS.map((l) => (
+              <li key={l.href} lang={l.lang}>
+                <a href={l.href} hrefLang={l.lang} className="font-semibold text-indigo-700 dark:text-indigo-300 hover:underline">
+                  {l.name}
+                </a>
+                <p className="text-sm text-slate-600 dark:text-slate-400">{l.description}</p>
               </li>
             ))}
           </ul>
