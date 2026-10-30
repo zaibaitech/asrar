@@ -36,13 +36,13 @@ export const UR_META: Readonly<Record<string, UrMeta>> = {
     },
     description: {
       en: "Find your burj from the Abjad values of your name and your mother's (ammi's) name: element, temperament, blessed day, dhikr and sadaqa. A free calculator for reflection, not prediction.",
-      ur: 'اپنے اور امی کے نام کے ابجد اعداد سے برج معلوم کریں: عنصر، مزاج، مبارک دن، ذکر اور صدقہ۔ مفت، غور و فکر کے لیے، پیش گوئی نہیں۔',
+      ur: 'اپنے اور امی کے نام کے ابجد اعداد سے برج معلوم کریں: عنصر، مزاج، روایتی دن، ذکر اور صدقہ۔ مفت، غور و فکر کے لیے، پیش گوئی نہیں۔',
     },
   },
   '/compatibility': {
     title: {
       en: 'Name Compatibility for Marriage: Abjad Calculator',
-      ur: 'شادی کے لیے ناموں کی مطابقت: ابجد کیلکولیٹر',
+      ur: 'ناموں کی ابجد کا موازنہ (ثقافتی غور و فکر): ابجد کیلکولیٹر',
     },
     description: {
       en: "Compare two names with the Abjad 'soul connection' method of ʿilm al-ḥurūf, for marriage, friendship or work. For reflection, not a verdict: choose by dīn, character and istikhāra.",
@@ -66,17 +66,17 @@ export const UR_META: Readonly<Record<string, UrMeta>> = {
     },
     description: {
       en: "Find today's planetary hours: the planet ruling the current hour where you are, the times of the twelve day and twelve night hours in the Chaldean order, and what suits each planet. For reflection and planning your time.",
-      ur: 'آج کی ساعاتِ کواکب: آپ کے شہر میں اس وقت کی ساعت کا سیارہ، دن اور رات کی بارہ بارہ ساعتوں کے اوقات اور ہر ساعت کے مناسب کام، غور و فکر کے لیے۔',
+      ur: 'آج کی ساعاتِ کواکب: آپ کے شہر میں اس وقت کی ساعت کا سیارہ، دن اور رات کی بارہ بارہ ساعتوں کے اوقات اور ہر ساعت کی روایتی نسبتیں، غور و فکر کے لیے۔',
     },
   },
   '/planet-of-the-day': {
     title: {
       en: "Planet of the Day: The Day's Ruler and Its Hours",
-      ur: 'آج کا سیارہ: دن کا حاکم سیارہ اور اس کی ساعتیں',
+      ur: 'آج کا سیارہ: دن کی روایتی سیارہ نسبت اور اس کی ساعتیں',
     },
     description: {
       en: 'Learn which planet rules today in the tradition, the deeds, dhikr and sadaqa that suit it, and its planetary hours for your location.',
-      ur: 'جانیں کہ روایت کے مطابق آج کے دن کا حاکم سیارہ کون سا ہے، اس کے مناسب اعمال، ذکر اور صدقہ کیا ہیں، اور آپ کے مقام کے مطابق اس کی ساعتیں کب ہیں۔',
+      ur: 'جانیں کہ روایت کے مطابق آج کے دن کا منسوب سیارہ کون سا ہے، اس سے منسوب روایتی تجاویز (ان کی کوئی شرعی فضیلت ثابت نہیں) کیا ہیں، اور آپ کے مقام کے مطابق اس کی ساعتیں کب ہیں۔',
     },
   },
   '/ikhtiyarat': {

@@ -16,6 +16,7 @@ import { UrfBadge } from './UrfBadge';
 import { SimpleModeToggle } from './SimpleModeToggle';
 import { useSimpleMode } from '../useSimpleMode';
 import { ikhtiyaratCopy, UiLang } from '../copy';
+import { useLanguage } from '@/src/contexts/LanguageContext';
 
 interface DetailSheetProps {
   result: ElectionResult;
@@ -25,6 +26,7 @@ interface DetailSheetProps {
 
 export function DetailSheet({ result, language, onClose }: DetailSheetProps) {
   const c = ikhtiyaratCopy[language];
+  const { uiLanguage } = useLanguage();
   const hijri = gregorianToHijri(result.date);
   // Sunnah/ʿUrf badges are written specifically about marriage/nikāḥ
   // customs — not shown for other election types (e.g. travel).
@@ -54,7 +56,7 @@ export function DetailSheet({ result, language, onClose }: DetailSheetProps) {
               {result.date.toLocaleDateString(language === 'fr' ? 'fr-FR' : 'en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
             </div>
             <div className="text-xs text-slate-500 dark:text-slate-400">
-              {c.hijriDate}: {hijri.day} {hijri.monthName[language]} ({hijri.monthName.wolof}) {hijri.year} {c.hijriEra}
+              {c.hijriDate}: {hijri.day} {hijri.monthName[language]}{uiLanguage === 'ur' ? '' : ` (${hijri.monthName.wolof})`} {hijri.year} {c.hijriEra}
             </div>
           </div>
           <button

@@ -44,11 +44,11 @@ export const UR_TOOLS = {
   burj: {
     path: '/ur/name-and-mother-burj',
     name: t("Your Burj from Your Name and Your Mother's Name", 'اپنے نام اور والدہ کے نام سے برج'),
-    desc: t('Your burj, element, blessed day, dhikr and sadaqa from the Abjad count.', 'ابجد کے حساب سے آپ کا برج، عنصر، مبارک دن، ذکر اور صدقہ۔'),
+    desc: t('Your burj, element, blessed day, dhikr and sadaqa from the Abjad count.', 'ابجد کے حساب سے آپ کا برج، عنصر، روایتی دن، ذکر اور صدقہ۔'),
   },
   compatibility: {
     path: '/ur/compatibility',
-    name: t('Name Compatibility for Marriage', 'شادی کے لیے ناموں کی مطابقت'),
+    name: t('Name Compatibility for Marriage', 'ناموں کی ابجد کا موازنہ (ثقافتی غور و فکر)'),
     desc: t('Compare two names with the soul-connection method.', 'روحانی ربط کے طریقے سے دو ناموں کا موازنہ۔'),
   },
   abjad: {
@@ -59,12 +59,12 @@ export const UR_TOOLS = {
   hours: {
     path: '/ur/planetary-hours',
     name: t('Planetary Hours Today', 'آج کی ساعاتِ کواکب'),
-    desc: t('The planet ruling the current hour where you are.', 'آپ کے مقام پر موجودہ ساعت کا حاکم سیارہ۔'),
+    desc: t('The planet ruling the current hour where you are.', 'آپ کے مقام پر موجودہ ساعت کی روایتی سیارہ نسبت۔'),
   },
   planetOfDay: {
     path: '/ur/planet-of-the-day',
     name: t('Planet of the Day', 'آج کا سیارہ'),
-    desc: t("Today's ruling planet, the deeds, dhikr and sadaqa that suit it.", 'آج کا حاکم سیارہ، اور اس کے مناسب اعمال، ذکر اور صدقہ۔'),
+    desc: t("Today's ruling planet, the deeds, dhikr and sadaqa that suit it.", 'آج کی روایتی سیارہ نسبت، اور روایتی تجاویز؛ ان کی کوئی شرعی فضیلت ثابت نہیں۔'),
   },
   ikhtiyarat: {
     path: '/ur/ikhtiyarat',
@@ -99,7 +99,7 @@ export const UR_WEEKDAYS: readonly T[] = [
  * calculator and the EN/FR/AR pages are unchanged. Keyed by the bare form.
  */
 const UR_DHIKR_VOCALISED: Readonly<Record<string, string>> = {
-  'يا مالك يا قدوس': 'يَا مَالِكُ يَا قُدُّوسُ',
+  'يا ملك يا قدوس': 'يَا مَلِكُ يَا قُدُّوسُ',
   'يا كافي يا غني': 'يَا كَافِي يَا غَنِيُّ',
   'يا علي يا عظيم': 'يَا عَلِيُّ يَا عَظِيمُ',
   'يا رحمن يا رحيم': 'يَا رَحْمٰنُ يَا رَحِيمُ',
@@ -135,7 +135,7 @@ export const UR_HOME = {
   h1: t('Asrār — Abjad, Burj and Planetary Hours', 'اسرار — ابجد، برج اور ساعاتِ کواکب'),
   intro: t(
     "Asrār is a companion for the traditional Islamic sciences of ʿilm al-ḥurūf (the science of letters) and celestial timing. Find your burj from your name and your mother's name, compare two names, calculate Abjad values, see the planet ruling the current hour and day, and choose suitable dates with classical ikhtiyārāt.",
-    'اسرار علم الحروف (حروف کا علم) اور فلکی اوقات کے روایتی اسلامی علوم میں آپ کا رہنما ہے۔ نام اور والدہ کے نام سے اپنا برج معلوم کریں، دو ناموں کا موازنہ کریں، ابجد کی قیمتیں نکالیں، موجودہ ساعت اور دن کا حاکم سیارہ دیکھیں، اور کلاسیکی اختیارات کے ذریعے مناسب تاریخیں منتخب کریں۔',
+    'اسرار علم الحروف (حروف کا علم) اور فلکی اوقات کے روایتی اسلامی علوم میں آپ کا رہنما ہے۔ نام اور والدہ کے نام سے اپنا برج معلوم کریں، دو ناموں کا موازنہ کریں، ابجد کی قیمتیں نکالیں، موجودہ ساعت اور دن کی روایتی سیارہ نسبت دیکھیں، اور اختیارات کی روایت کے مطابق مناسب تاریخوں کا مطالعہ کریں۔',
   ),
   toolsTitle: t('Tools in Urdu', 'اردو میں ٹولز'),
 };
@@ -147,7 +147,7 @@ export const UR_BURJ = {
   h1: t("Your Burj from Your Name and Your Mother's Name", 'نام اور والدہ کے نام سے برج'),
   lead: t(
     "Write your name and your mother's name to find your burj by the Abjad count, with its element, temperament, blessed day, dhikr and the sadaqa suited to it.",
-    'اپنا نام اور اپنی والدہ کا نام لکھیں اور ابجد کے حساب سے اپنا برج معلوم کریں، ساتھ ہی اس کا عنصر، مزاج، مبارک دن، ذکر اور اس کے مناسب صدقہ بھی۔',
+    'اپنا نام اور اپنی والدہ کا نام لکھیں اور ابجد کے حساب سے اپنا برج معلوم کریں، ساتھ ہی اس کا عنصر، مزاج، روایتی دن، ذکر اور اس کے مناسب صدقہ بھی۔',
   ),
   howTitle: t('How is the burj calculated?', 'برج کا حساب کیسے ہوتا ہے؟'),
   how: [
@@ -165,7 +165,7 @@ export const UR_BURJ = {
     ),
     t(
       'The burj points to your element (fire, earth, air or water), which describes your temperament, and is linked to a blessed day, a dhikr and a sadaqa.',
-      'برج آپ کے عنصر (آگ، مٹی، ہوا یا پانی) کی نشان دہی کرتا ہے جو آپ کے مزاج کو بیان کرتا ہے، اور اس کے ساتھ ایک مبارک دن، ایک ذکر اور ایک صدقہ وابستہ ہے۔',
+      'روایت میں برج کو ایک عنصر (آگ، مٹی، ہوا یا پانی) سے منسوب کیا جاتا ہے اور اس سے مزاج پر غور و فکر کیا جاتا ہے؛ یہ آپ کے بارے میں کوئی فیصلہ نہیں۔ اس کے ساتھ ایک روایتی دن، ایک ذکر اور ایک نیکی کی تجویز جوڑی جاتی ہے؛ ان کی کوئی خاص شرعی فضیلت ثابت نہیں۔',
     ),
   ],
   exampleTitle: t('Worked example', 'حل شدہ مثال'),
@@ -180,12 +180,12 @@ export const UR_BURJ = {
   istikharaTitle: t('This is not ṣalāt al-istikhāra', 'یہ نمازِ استخارہ نہیں ہے'),
   istikhara: t(
     "The traditional name of this reflection is 'istikhāra of names', but it is not istikhāra: true istikhāra is ṣalāt al-istikhāra, the two rakʿas and the duʿāʾ taught by the Prophet ﷺ. Use this tool for reflection and learning, not prediction; only Allah knows the unseen.",
-    'اس غور و فکر کا روایتی نام “ناموں کا استخارہ” ہے، لیکن یہ استخارہ نہیں۔ اصل استخارہ نمازِ استخارہ ہے، یعنی وہ دو رکعتیں اور دعا جو نبی کریم ﷺ نے سکھائیں۔ اس ٹول کو غور و فکر اور سیکھنے کے لیے استعمال کریں، پیش گوئی کے لیے نہیں؛ غیب کا علم صرف اللہ کو ہے۔',
+    'یہ ناموں پر غور (ابجد) ہے، استخارہ نہیں۔ اصل استخارہ نمازِ استخارہ ہے، یعنی وہ دو رکعتیں اور دعا جو نبی کریم ﷺ نے سکھائیں۔ اس ٹول کو غور و فکر اور سیکھنے کے لیے استعمال کریں، پیش گوئی کے لیے نہیں؛ غیب کا علم صرف اللہ کو ہے۔',
   ),
   tableTitle: t('The twelve burūj at a glance', 'بارہ بروج ایک نظر میں'),
   colBurj: t('Burj', 'برج'),
   colElement: t('Element', 'عنصر'),
-  colDay: t('Blessed day', 'مبارک دن'),
+  colDay: t('Blessed day', 'روایتی دن'),
   colDhikr: t('Dhikr', 'ذکر'),
   faqs: [
     {
@@ -199,14 +199,14 @@ export const UR_BURJ = {
       q: t("Why is the mother's name used?", 'والدہ کا نام کیوں لیا جاتا ہے؟'),
       a: t(
         "In ʿilm al-ḥurūf your own name is read as pointing to yourself, and your mother's name to what surrounds you: family inheritance and the circumstances of your path; the burj is drawn from the two together. The method is known in Arab practice, in West Africa (among the Hausa and Wolof) and in South Asia.",
-        'علم الحروف میں آپ کا نام آپ کی اپنی ذات کی طرف اشارہ سمجھا جاتا ہے، اور والدہ کا نام آپ کے گرد و پیش کی طرف: خاندانی ورثہ اور زندگی کے حالات؛ اور برج دونوں کو ملا کر نکالا جاتا ہے۔ یہ طریقہ عرب روایت میں، مغربی افریقہ (ہوسا اور وولوف) میں اور برصغیر میں معروف ہے۔',
+        'روایتی طور پر کہا جاتا ہے کہ علم الحروف میں آپ کا نام آپ کی اپنی ذات کی طرف اشارہ سمجھا جاتا ہے، اور والدہ کا نام آپ کے گرد و پیش کی طرف: خاندانی ورثہ اور زندگی کے حالات؛ اور برج دونوں کو ملا کر نکالا جاتا ہے؛ یہ کوئی ثابت شدہ حقیقت نہیں۔ یہ طریقہ عرب روایت میں، مغربی افریقہ (ہوسا اور وولوف) میں اور برصغیر میں معروف ہے۔',
       ),
     },
     {
       q: t('Is this istikhāra?', 'کیا یہ استخارہ ہے؟'),
       a: t(
         "No. Istikhāra is the prayer of asking Allah for what is good (ṣalāt al-istikhāra). 'Istikhāra of names' is only a traditional label; this calculation is a reflection on names and temperaments, not a prayer and not a way of knowing the unseen.",
-        'نہیں۔ استخارہ اللہ تعالیٰ سے خیر طلب کرنے کی نماز (نمازِ استخارہ) ہے۔ “ناموں کا استخارہ” محض ایک روایتی نام ہے؛ یہ حساب ناموں اور مزاجوں پر غور و فکر ہے، نہ نماز ہے اور نہ غیب جاننے کا ذریعہ۔',
+        'نہیں۔ استخارہ اللہ تعالیٰ سے خیر طلب کرنے کی نماز (نمازِ استخارہ) ہے۔ یہ حساب ناموں پر غور (ابجد) اور مزاجوں پر غور و فکر ہے، نہ نماز ہے اور نہ غیب جاننے کا ذریعہ۔',
       ),
     },
     {
@@ -220,7 +220,7 @@ export const UR_BURJ = {
       q: t('What does my burj tell me?', 'میرا برج مجھے کیا بتاتا ہے؟'),
       a: t(
         'Your element and temperament, a blessed day of the week, one of the Beautiful Names of Allah to remember, and a traditional sadaqa. Read it as encouragement towards good deeds and self-knowledge, not as a forecast of the future.',
-        'آپ کا عنصر اور مزاج، ہفتے کا ایک مبارک دن، اللہ کے اسمائے حسنیٰ میں سے ایک اسم جس کا ذکر کیا جائے، اور ایک روایتی صدقہ۔ اسے نیک اعمال اور خود شناسی کی ترغیب سمجھیں، مستقبل کی پیش گوئی نہیں۔',
+        'روایت میں آپ کے برج سے منسوب عنصر اور مزاج، ایک روایتی دن، ایک ذکر اور ایک نیکی کی تجویز؛ ان کی کوئی خاص شرعی فضیلت ثابت نہیں۔ اسے نیک اعمال اور خود شناسی کی ترغیب سمجھیں، مستقبل کی پیش گوئی نہیں۔',
       ),
     },
   ] as Faq[],
@@ -230,7 +230,7 @@ export const UR_BURJ = {
 /* /ur/compatibility                                                       */
 /* ---------------------------------------------------------------------- */
 export const UR_COMPAT = {
-  h1: t('Name Compatibility for Marriage', 'شادی کے لیے ناموں کی مطابقت'),
+  h1: t('Name Compatibility for Marriage', 'ناموں کی ابجد کا موازنہ (ثقافتی غور و فکر)'),
   lead: t(
     'Enter two names to compare their Abjad totals with the traditional soul-connection method, read first for marriage, with friendship, family and work as other contexts.',
     'دو نام لکھیں اور روایتی “روحانی ربط” کے طریقے سے ان کے ابجد مجموعوں کا موازنہ کریں؛ نتیجہ پہلے شادی کے لحاظ سے، اور پھر دوستی، خاندان اور کام کے لحاظ سے پڑھا جا سکتا ہے۔',
@@ -278,21 +278,21 @@ export const UR_COMPAT = {
       q: t('Can I compare by date of birth instead of names?', 'کیا ناموں کے بجائے تاریخِ پیدائش سے موازنہ ہو سکتا ہے؟'),
       a: t(
         "Yes. Choose 'By Birth Date' to compare two people's Sun, Moon, Venus and Mars signs. This is a general, modern astrological comparison, not a classical Islamic method.",
-        'جی ہاں۔ “تاریخِ پیدائش سے” منتخب کریں تاکہ دو افراد کے سورج، چاند، زہرہ اور مریخ کے بروج کا موازنہ ہو۔ یہ ایک عمومی، جدید علمِ نجوم کا موازنہ ہے، کوئی کلاسیکی اسلامی طریقہ نہیں۔',
+        'جی ہاں۔ “تاریخِ پیدائش سے” منتخب کریں تاکہ دو افراد کے سورج، چاند، زہرہ اور مریخ کے بروج کا موازنہ ہو۔ یہ ایک عمومی، جدید علمِ نجوم کا موازنہ ہے، کوئی کلاسیکی اسلامی طریقہ نہیں۔ یہ مغربی/تاریخی فلکیاتی طریقہ ہے، کوئی اسلامی علم نہیں؛ صرف ثقافتی غور و فکر کے لیے۔',
       ),
     },
     {
       q: t('Is it permissible to rely on name compatibility?', 'کیا ناموں کی مطابقت پر بھروسا کرنا درست ہے؟'),
       a: t(
         'Treat it as cultural reflection, not prediction. Choosing a spouse rests on dīn, character, family counsel and ṣalāt al-istikhāra. No number decides a marriage; Allah alone knows the unseen.',
-        'اسے ثقافتی غور و فکر سمجھیں، پیش گوئی نہیں۔ رشتے کا انتخاب دین، اخلاق، خاندان کے مشورے اور نمازِ استخارہ پر ہوتا ہے۔ کوئی عدد شادی کا فیصلہ نہیں کرتا؛ غیب کا علم صرف اللہ کو ہے۔',
+        'نہیں؛ شادی کا فیصلہ ان اعداد پر نہ رکھیں۔ یہ صرف ثقافتی غور و فکر ہے؛ فیصلہ دین، اخلاق، مشورے اور استخارے پر ہے۔',
       ),
     },
     {
       q: t('What if our result is low?', 'اگر نتیجہ کم آئے تو کیا کریں؟'),
       a: t(
         "A low number is not a prohibition and not a bad omen. It can be an invitation to talk about expectations and patience. Many happy marriages would 'fail' a numeric test.",
-        'کم عدد نہ تو ممانعت ہے اور نہ بدشگونی۔ یہ توقعات اور صبر کے بارے میں بات کرنے کی دعوت ہو سکتی ہے۔ بہت سی خوشگوار شادیاں کسی عددی امتحان میں “ناکام” ہو جاتیں۔',
+        'کم عدد نہ تو ممانعت ہے اور نہ بدشگونی۔ یہ توقعات اور صبر کے بارے میں بات کرنے کی دعوت ہو سکتی ہے۔ بہت سی خوشگوار شادیاں اس عددی طریقے کے لحاظ سے “کم” آتی ہیں۔',
       ),
     },
   ] as Faq[],
@@ -368,10 +368,10 @@ export const UR_ABJAD = {
 /** Same planets, days, elements and "best for" items as the tool's guide (PLANET_GUIDE). */
 export const UR_PLANETS: { name: T; day: number; element: string; bestFor: T }[] = [
   { name: t('Sun', 'شمس (سورج)'), day: 0, element: 'fire', bestFor: t('Leadership decisions, visibility and reputation, official matters', 'قیادت کے فیصلے، شہرت اور ساکھ، سرکاری معاملات') },
-  { name: t('Moon', 'قمر (چاند)'), day: 1, element: 'water', bestFor: t('Travel and movement, emotional healing, family matters', 'سفر اور نقل و حرکت، جذباتی شفا، گھریلو معاملات') },
+  { name: t('Moon', 'قمر (چاند)'), day: 1, element: 'water', bestFor: t('Travel and movement, emotional healing, family matters', 'سفر اور نقل و حرکت، جذباتی سکون، گھریلو معاملات') },
   { name: t('Mars', 'مریخ'), day: 2, element: 'fire', bestFor: t('Courage and initiative, physical work, overcoming obstacles', 'ہمت اور پہل، جسمانی کام، رکاوٹوں پر قابو پانا') },
   { name: t('Mercury', 'عطارد'), day: 3, element: 'air', bestFor: t('Study and learning, writing and communication, trade and contracts', 'پڑھائی اور سیکھنا، تحریر اور رابطہ، تجارت اور معاہدے') },
-  { name: t('Jupiter', 'مشتری'), day: 4, element: 'air', bestFor: t('Provision and abundance, expansion and growth, spiritual elevation', 'رزق اور فراوانی، وسعت اور ترقی، روحانی بلندی') },
+  { name: t('Jupiter', 'مشتری'), day: 4, element: 'air', bestFor: t('Provision and abundance, expansion and growth, spiritual elevation', 'معاشی منصوبہ بندی، وسعت اور ترقی') },
   { name: t('Venus', 'زہرہ'), day: 5, element: 'earth', bestFor: t('Love and relationships, beauty and art, harmony and peace', 'محبت اور تعلقات، حسن اور فن، ہم آہنگی اور امن') },
   { name: t('Saturn', 'زحل'), day: 6, element: 'earth', bestFor: t('Long-term planning, discipline and organisation, land and property', 'طویل مدتی منصوبہ بندی، نظم و ضبط، زمین اور جائیداد') },
 ];
@@ -380,7 +380,7 @@ export const UR_HOURS = {
   h1: t('Planetary Hours Today', 'آج کی ساعاتِ کواکب'),
   lead: t(
     'Find the planet ruling the current hour where you are, the length of each day and night hour, and what suits it in the traditional Islamic science of the stars.',
-    'اپنے مقام پر موجودہ ساعت کا حاکم سیارہ، دن اور رات کی ہر ساعت کی مدت، اور روایتی اسلامی علمِ نجوم میں اس کے مناسب کام معلوم کریں۔',
+    'اپنے مقام پر موجودہ ساعت کی روایتی سیارہ نسبت، دن اور رات کی ہر ساعت کی مدت، اور روایتی اسلامی علمِ نجوم میں اس کے مناسب کام معلوم کریں۔',
   ),
   whatTitle: t('What are planetary hours?', 'ساعاتِ کواکب کیا ہیں؟'),
   what: t(
@@ -389,10 +389,10 @@ export const UR_HOURS = {
   ),
   howTitle: t('How to use planetary hours', 'ساعاتِ کواکب کیسے استعمال کریں'),
   how: [
-    t('Look at the current planetary hour in the tool: note the ruling planet, its element and the time remaining.', 'ٹول میں موجودہ ساعت دیکھیں: حاکم سیارہ، اس کا عنصر اور باقی وقت نوٹ کریں۔'),
+    t('Look at the current planetary hour in the tool: note the ruling planet, its element and the time remaining.', 'ٹول میں موجودہ ساعت دیکھیں: روایتی طور پر منسوب سیارہ، اس کا عنصر اور باقی وقت نوٹ کریں۔'),
     t(
       'Match what you intend to do with what suits the planet (see the table below), and place important work in suitable hours.',
-      'جو کام آپ کرنا چاہتے ہیں اسے سیارے کے مناسب کاموں سے ملائیں (نیچے جدول دیکھیں)، اور اہم کام مناسب ساعتوں میں رکھیں۔',
+      'جو کام آپ کرنا چاہتے ہیں اسے سیارے کے مناسب کاموں سے ملائیں (نیچے جدول دیکھیں)، اور اگر چاہیں تو اسے ایک روایتی خاکہ سمجھیں۔',
     ),
     t('Begin with Bismillāh and the dhikr suited to that planet; the intention matters most.', 'بسم اللہ اور اس سیارے کے مناسب ذکر سے آغاز کریں؛ اصل اہمیت نیت کی ہے۔'),
     t('Use the button that shows all hours to plan the whole day ahead.', 'پورے دن کی پیشگی منصوبہ بندی کے لیے تمام ساعتیں دکھانے والا بٹن استعمال کریں۔'),
@@ -435,7 +435,7 @@ export const UR_HOURS = {
       q: t('Are planetary hours a form of fortune-telling?', 'کیا ساعاتِ کواکب فال یا کہانت ہیں؟'),
       a: t(
         'No. Planetary hours are a traditional tool for reflection and organising time used by Muslim scholars, not divination or fortune-telling. Use them to organise your efforts while always trusting in Allah, and ask people of knowledge about religious rulings.',
-        'نہیں۔ ساعاتِ کواکب غور و فکر اور وقت کی ترتیب کا ایک روایتی ذریعہ ہیں جو مسلمان علما استعمال کرتے رہے ہیں، یہ فال گیری یا کہانت نہیں۔ انہیں اپنی کوششوں کو منظم کرنے کے لیے استعمال کریں، ہمیشہ اللہ پر توکل کے ساتھ، اور شرعی احکام کے بارے میں اہلِ علم سے رجوع کریں۔',
+        'نہیں۔ ساعاتِ کواکب غور و فکر اور وقت کی ترتیب کا ایک روایتی ذریعہ ہیں؛ یہ فال گیری یا کہانت نہیں۔ بعض مسلم ماہرینِ فلکیات نے تاریخی طور پر انہیں استعمال کیا؛ اکثر علما نے نجومی احکام سے منع کیا ہے۔ انہیں اپنی کوششوں کو منظم کرنے کے لیے استعمال کریں، ہمیشہ اللہ پر توکل کے ساتھ، اور شرعی احکام کے بارے میں اہلِ علم سے رجوع کریں۔',
       ),
     },
   ] as Faq[],
@@ -448,12 +448,12 @@ export const UR_POTD = {
   h1: t('Planet of the Day', 'آج کا سیارہ'),
   lead: t(
     'Each weekday has a ruling planet in the tradition. See today\'s planet, what suits it, and when its hours fall where you are.',
-    'روایت میں ہفتے کے ہر دن کا ایک حاکم سیارہ ہے۔ آج کا سیارہ، اس کے مناسب کام، اور آپ کے مقام پر اس کی ساعتوں کے اوقات دیکھیں۔',
+    'روایت میں ہفتے کے ہر دن کی ایک روایتی سیارہ نسبت ہے۔ آج کا سیارہ، اس سے منسوب روایتی تجاویز، اور آپ کے مقام پر اس کی ساعتوں کے اوقات دیکھیں۔',
   ),
-  rulersTitle: t('The rulers of the seven days', 'ساتوں دنوں کے حاکم سیارے'),
+  rulersTitle: t('The rulers of the seven days', 'ساتوں دنوں کی روایتی سیارہ نسبتیں'),
   rulers: t(
     'Sunday: the Sun; Monday: the Moon; Tuesday: Mars; Wednesday: Mercury; Thursday: Jupiter; Friday: Venus; Saturday: Saturn. Whatever its planet, Friday keeps its own special status in Islam: it is the day of jumuʿa, of abundant ṣalawāt on the Prophet ﷺ and of duʿāʾ.',
-    'اتوار: شمس؛ پیر: قمر؛ منگل: مریخ؛ بدھ: عطارد؛ جمعرات: مشتری؛ جمعہ: زہرہ؛ ہفتہ: زحل۔ سیارہ کوئی بھی ہو، جمعہ کا دن اسلام میں اپنی الگ فضیلت رکھتا ہے: یہ نمازِ جمعہ، نبی کریم ﷺ پر کثرت سے درود شریف پڑھنے اور دعا کا دن ہے۔',
+    'اتوار: شمس؛ پیر: قمر؛ منگل: مریخ؛ بدھ: عطارد؛ جمعرات: مشتری؛ جمعہ: زہرہ؛ ہفتہ: زحل۔ سیارہ کوئی بھی ہو، جمعہ کا دن اسلام میں اپنی الگ فضیلت رکھتا ہے: یہ نمازِ جمعہ، نبی کریم ﷺ پر کثرت سے درود شریف پڑھنے اور دعا کا دن ہے۔ یہ روایتی انتخاب ہے؛ ان دنوں سے مخصوص ہونا سنت سے ثابت نہیں۔',
   ),
   faqs: [
     {
@@ -467,7 +467,7 @@ export const UR_POTD = {
       q: t('Does the planet of the day decide whether my day will be good?', 'کیا آج کا سیارہ طے کرتا ہے کہ میرا دن اچھا گزرے گا؟'),
       a: t(
         'No. It is a traditional frame for reflection and for choosing suitable deeds, dhikr and sadaqa. Benefit and harm come only by the will of Allah.',
-        'نہیں۔ یہ غور و فکر اور مناسب اعمال، ذکر اور صدقے کے انتخاب کا ایک روایتی خاکہ ہے۔ نفع اور نقصان صرف اللہ کے حکم سے ہے۔',
+        'نہیں۔ یہ غور و فکر کا ایک روایتی خاکہ ہے، جس میں روایتی تجاویز دی جاتی ہیں؛ ان کی کوئی شرعی فضیلت ثابت نہیں۔ نفع اور نقصان صرف اللہ کے حکم سے ہے۔',
       ),
     },
   ] as Faq[],
@@ -485,7 +485,7 @@ export const UR_IKHTIYARAT = {
   aboutTitle: t('What is ʿilm al-ikhtiyārāt?', 'علمِ اختیارات کیا ہے؟'),
   about: t(
     "Ikhtiyārāt (literally 'choices') is the classical practice of choosing a suitable time to begin an important matter, by looking at the ruler of the day, the planetary hour and the Moon's mansion. It is a tool for reflection: the decision rests on istikhāra, consultation and trust in Allah.",
-    'اختیارات (لفظی معنی: انتخاب) کسی اہم کام کے آغاز کے لیے مناسب وقت چننے کی کلاسیکی روایت ہے، جس میں دن کے حاکم سیارے، ساعت اور منزلِ قمر کو دیکھا جاتا ہے۔ یہ غور و فکر کا ذریعہ ہے؛ فیصلہ استخارے، مشورے اور اللہ پر توکل سے ہوتا ہے۔',
+    'اختیارات (لفظی معنی: انتخاب) کسی اہم کام کے آغاز کے لیے مناسب وقت چننے کی کلاسیکی روایت ہے، جس میں دن کے حاکم سیارے، ساعت اور منزلِ قمر کو دیکھا جاتا ہے۔ یہ غور و فکر کا ذریعہ ہے؛ فیصلہ استخارے، مشورے اور اللہ پر توکل سے ہوتا ہے۔ کسی دن یا ستارے میں خود نفع و نقصان نہیں؛ نفع و نقصان اللہ کے حکم سے ہے۔',
   ),
   faqs: [
     {

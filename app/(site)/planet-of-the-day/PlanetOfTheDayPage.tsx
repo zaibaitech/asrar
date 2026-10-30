@@ -186,8 +186,8 @@ const SEVEN_PLANETS = [
       en: 'Saturday is governed by the slowest and most disciplined of the classical planets. It is a day for long-term commitments, serious study, and patient effort. Engage in property matters, legal affairs, and building lasting structures. Avoid rushing — Saturn rewards consistent, sustained effort over time.',
       fr: 'Le samedi est gouverné par la plus lente et la plus disciplinée des planètes classiques. C\'est un jour pour les engagements à long terme, les études sérieuses et les efforts patients. Engagez-vous dans les affaires immobilières, les affaires juridiques et la construction de structures durables. Évitez de vous précipiter — Saturne récompense les efforts constants et soutenus dans le temps.',
     },
-    dhikr: 'يا صبور · يا متين · يا حافظ',
-    dhikrLatin: 'Yā Ṣabūr · Yā Matīn · Yā Ḥāfiẓ',
+    dhikr: 'يا صبور · يا متين · يا حفيظ',
+    dhikrLatin: 'Yā Ṣabūr · Yā Matīn · Yā Ḥafīẓ',
     rulingSign: { en: 'Capricorn ♑ & Aquarius ♒', fr: 'Capricorne ♑ & Verseau ♒' },
     exaltation: { en: 'Libra ♎', fr: 'Balance ♎' },
   },
@@ -197,7 +197,7 @@ const SEVEN_PLANETS = [
 
 export function PlanetOfTheDayPage() {
   const router = useRouter();
-  const { language } = useLanguage();
+  const { language, uiLanguage } = useLanguage();
   const isEn = language === 'en';
 
   // Compute today's ruling planet (Sun=0, Mon=1...Sat=6)
@@ -301,6 +301,11 @@ export function PlanetOfTheDayPage() {
                 </div>
                 <div className="text-base font-arabic text-slate-800 dark:text-slate-200 mb-0.5" dir="rtl">{today.dhikr}</div>
                 <div className="text-xs text-slate-500 dark:text-slate-400 italic">{today.dhikrLatin}</div>
+                {uiLanguage === 'ur' && (
+                  <p lang="ur" dir="rtl" className="mt-2 text-xs text-slate-500 dark:text-slate-400 leading-loose">
+                    یہ روایتی انتخاب ہے؛ ان دنوں سے مخصوص ہونا سنت سے ثابت نہیں۔
+                  </p>
+                )}
               </div>
             </div>
           );
