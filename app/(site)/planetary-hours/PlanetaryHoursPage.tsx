@@ -68,8 +68,8 @@ const PLANET_GUIDE = [
     border: 'border-red-200 dark:border-red-700/40',
     text: 'text-red-700 dark:text-red-400',
     bestFor: {
-      en: ['Courage & action', 'Physical work', 'Overcoming obstacles', 'Surgery (if needed)', 'Cutting ties'],
-      fr: ['Courage & action', 'Travail physique', 'Surmonter les obstacles', 'Chirurgie (si nécessaire)', 'Couper les liens'],
+      en: ['Courage & action', 'Physical work', 'Overcoming obstacles', 'Surgery (if needed)', 'Setting healthy boundaries'],
+      fr: ['Courage & action', 'Travail physique', 'Surmonter les obstacles', 'Chirurgie (si nécessaire)', 'Poser des limites saines'],
     },
     avoid: {
       en: ['Marriage proposals', 'Peace negotiations', 'Financial decisions'],
@@ -159,11 +159,18 @@ const PLANET_GUIDE = [
   },
 ];
 
+/** Classical Chaldean order (slowest to fastest): Saturn → Jupiter → Mars → Sun → Venus → Mercury → Moon. */
+const CHALDEAN_KEYS = ['Saturn', 'Jupiter', 'Mars', 'Sun', 'Venus', 'Mercury', 'Moon'] as const;
+const CHALDEAN_ORDER = CHALDEAN_KEYS.map((key) => PLANET_GUIDE.find((p) => p.key === key)!);
+
+/** "Best for" items not shown on the Urdu pages (religious review, Oct 2026). */
+const URDU_HIDDEN_BEST_FOR = new Set(['Spiritual elevation', 'Dreams & intuition']);
+
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export function PlanetaryHoursPage() {
   const router = useRouter();
-  const { language } = useLanguage();
+  const { language, uiLanguage } = useLanguage();
   const [latitude, setLatitude] = React.useState<number | undefined>(undefined);
   const [longitude, setLongitude] = React.useState<number | undefined>(undefined);
 
@@ -327,7 +334,9 @@ export function PlanetaryHoursPage() {
                         {isEn ? 'Best for' : 'Idéal pour'}
                       </div>
                       <div className="flex flex-wrap gap-1">
-                        {(isEn ? planet.bestFor.en : planet.bestFor.fr).map((tag, i) => (
+                        {(isEn ? planet.bestFor.en : planet.bestFor.fr)
+                          .filter((tag) => !(uiLanguage === 'ur' && URDU_HIDDEN_BEST_FOR.has(tag)))
+                          .map((tag, i) => (
                           <span key={i} className={`text-xs px-2 py-0.5 rounded-full ${planet.bg} ${planet.text} border ${planet.border}`}>
                             {tag}
                           </span>
@@ -360,13 +369,13 @@ export function PlanetaryHoursPage() {
               : 'Les 7 planètes se succèdent dans cette séquence fixe, chaque heure gouvernée par la planète suivante:'}
           </p>
           <div className="flex items-center gap-1 flex-wrap">
-            {PLANET_GUIDE.map((p, i) => (
+            {CHALDEAN_ORDER.map((p, i) => (
               <React.Fragment key={p.key}>
                 <div className={`flex items-center gap-1 px-2 py-1 rounded-lg text-sm ${p.bg} ${p.border} border`}>
                   <span>{p.symbol}</span>
                   <span className={`font-medium ${p.text}`}>{p.key}</span>
                 </div>
-                {i < PLANET_GUIDE.length - 1 && (
+                {i < CHALDEAN_ORDER.length - 1 && (
                   <span className="inline-block text-slate-400 dark:text-slate-600 rtl:rotate-180" aria-hidden>→</span>
                 )}
               </React.Fragment>
@@ -374,8 +383,8 @@ export function PlanetaryHoursPage() {
           </div>
           <p className="text-xs text-slate-400 dark:text-slate-500 mt-3">
             {isEn
-              ? 'After Saturn, the cycle repeats from ♄ → ♃ → ♂ → ☉ → ♀ → ☿ → ☽ → ♄...'
-              : 'Après Saturne, le cycle se répète depuis ♄ → ♃ → ♂ → ☉ → ♀ → ☿ → ☽ → ♄...'}
+              ? 'After the Moon, the cycle repeats from ♄ → ♃ → ♂ → ☉ → ♀ → ☿ → ☽ → ♄...'
+              : 'Après la Lune, le cycle se répète depuis ♄ → ♃ → ♂ → ☉ → ♀ → ☿ → ☽ → ♄...'}
           </p>
         </div>
 

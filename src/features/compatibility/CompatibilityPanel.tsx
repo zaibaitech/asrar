@@ -56,7 +56,7 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const formRef = useRef<HTMLDivElement>(null);
   const { abjad } = useAbjad();
-  const { language } = useLanguage();
+  const { language, uiLanguage } = useLanguage();
   // calculation_complete when a result screen appears (no names or results are sent).
   useTrackResult('compatibility', showResults);
   const lang = language as 'en' | 'fr' | 'ar';
@@ -361,6 +361,13 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
               </button>
             </div>
           </div>
+        )}
+
+        {/* Urdu pages: the birth-date method is Western/historical astronomy, not an Islamic science. */}
+        {category === 'person-to-person' && inputMode === 'dob' && uiLanguage === 'ur' && (
+          <p lang="ur" dir="rtl" className="text-center text-sm leading-loose" style={{ color: COMPAT_THEME.muted }}>
+            یہ مغربی/تاریخی فلکیاتی طریقہ ہے، کوئی اسلامی علم نہیں؛ صرف ثقافتی غور و فکر کے لیے۔
+          </p>
         )}
 
         {/* Main Content - Form or Results */}

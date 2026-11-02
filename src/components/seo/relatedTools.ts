@@ -37,7 +37,7 @@ const TOOLS: Record<ToolKey, { path: string; name: Record<ToolsLang, string> }> 
   },
   compatibility: {
     path: '/compatibility',
-    name: { en: 'Name Compatibility for Marriage', fr: 'Compatibilité des prénoms pour le mariage', ar: 'توافق الأسماء للزواج', ur: 'شادی کے لیے ناموں کی مطابقت' },
+    name: { en: 'Name Compatibility for Marriage', fr: 'Compatibilité des prénoms pour le mariage', ar: 'توافق الأسماء للزواج', ur: 'ناموں کی ابجد کا موازنہ (ثقافتی غور و فکر)' },
   },
   abjad: {
     path: '/abjad',
@@ -69,19 +69,19 @@ const TOOLS: Record<ToolKey, { path: string; name: Record<ToolsLang, string> }> 
   },
   marriage: {
     path: '/best-day-for/marriage',
-    name: { en: 'Best Day for Nikah (Marriage)', fr: 'Meilleur jour pour le nikāḥ', ar: 'أفضل يوم لعقد النكاح', ur: 'نکاح کے لیے بہترین دن' },
+    name: { en: 'Best Day for Nikah (Marriage)', fr: 'Meilleur jour pour le nikāḥ', ar: 'أفضل يوم لعقد النكاح', ur: 'نکاح کے لیے روایتی طور پر مناسب دن' },
   },
   travel: {
     path: '/best-day-for/travel',
-    name: { en: 'Best Day to Travel', fr: 'Jour favorable pour voyager', ar: 'أفضل يوم للسفر', ur: 'سفر کے لیے بہترین دن' },
+    name: { en: 'Best Day to Travel', fr: 'Jour favorable pour voyager', ar: 'أفضل يوم للسفر', ur: 'سفر کے لیے روایتی طور پر مناسب دن' },
   },
   moving: {
     path: '/best-day-for/moving-home',
-    name: { en: 'Best Day to Move Home', fr: 'Jour favorable pour déménager', ar: 'أفضل يوم للانتقال إلى بيت جديد', ur: 'نئے گھر میں منتقل ہونے کا بہترین دن' },
+    name: { en: 'Best Day to Move Home', fr: 'Jour favorable pour déménager', ar: 'أفضل يوم للانتقال إلى بيت جديد', ur: 'نئے گھر میں منتقل ہونے کا روایتی طور پر مناسب دن' },
   },
   business: {
     path: '/best-day-for/business',
-    name: { en: 'Best Day to Start a Business', fr: 'Jour favorable pour commencer une affaire', ar: 'أفضل يوم لبدء التجارة والعقود', ur: 'کاروبار شروع کرنے کا بہترین دن' },
+    name: { en: 'Best Day to Start a Business', fr: 'Jour favorable pour commencer une affaire', ar: 'أفضل يوم لبدء التجارة والعقود', ur: 'کاروبار شروع کرنے کا روایتی طور پر مناسب دن' },
   },
 };
 

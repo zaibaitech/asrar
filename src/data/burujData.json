@@ -288,7 +288,7 @@
           "arabic": "الحمل"
         },
         "divine_names": {
-          "arabic": "يا مالك يا قدوس",
+          "arabic": "يا ملك يا قدوس",
           "transliteration": "Ya Maliku Ya Quddus",
           "translation": {
             "en": "O Sovereign, O Most Holy",
@@ -2950,8 +2950,8 @@
           "arabic": "ٱلْعَقْرَب"
         },
         "divine_names": {
-          "arabic": "يَا مَالِكُ يَا قُدُّوسُ",
-          "transliteration": "Yā Māliku Yā Quddūs",
+          "arabic": "يَا مَلِكُ يَا قُدُّوسُ",
+          "transliteration": "Yā Maliku Yā Quddūs",
           "translation": {
             "en": "O Sovereign, O Most Holy - The King and The Pure",
             "fr": "Ô Souverain, Ô Très Saint - Le Roi et Le Pur"
@@ -4526,7 +4526,7 @@
       "day_fr": "Mardi",
       "buruj": "Aries/Scorpio (الحمل/العقرب)",
       "divine_names": {
-        "arabic": "يَا مَالِكُ يَا قُدُّوسُ",
+        "arabic": "يَا مَلِكُ يَا قُدُّوسُ",
         "transliteration": "Ya Malik Ya Quddus",
         "translation": {
           "en": "O Sovereign, O Most Holy",
