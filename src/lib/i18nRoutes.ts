@@ -202,7 +202,15 @@ export function isUrPath(pathname: string): boolean {
  * and is indexable, with hreflang `ur` both ways and a sitemap entry. Every other /ur page keeps
  * the noindex default (layout metadata + X-Robots-Tag in middleware).
  */
-export const INDEXABLE_UR_PATHS: readonly string[] = ['/abjad'];
+export const INDEXABLE_UR_PATHS: readonly string[] = [
+  '/',
+  '/abjad',
+  '/name-and-mother-burj',
+  '/compatibility',
+  '/planetary-hours',
+  '/planet-of-the-day',
+  '/ikhtiyarat',
+];
 
 /** True when the EN path's Urdu page is on the allow-list. */
 export function isIndexableUrEnPath(enPath: string): boolean {
