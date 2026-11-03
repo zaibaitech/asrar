@@ -11,10 +11,13 @@
  * elsewhere (MoonManzil). This module adds no calculation.
  *
  * The mansion is identified by NUMBER (1 to 28) and read from the app's own
- * list (src/lib/lunarMansions.ts). The Arabic name shown is al-Būnī's spelling
- * from the table; where it differs from the app's spelling (1 الشرطين / الشرطان,
- * 9 الطرفة / الطرف, 16 الزبانا / الزبانى, 26 and 27 الفرع / الفرغ,
- * 28 الرشا / بطن الحوت) the numbered mansion is the same one.
+ * list (src/lib/lunarMansions.ts). The Arabic name SHOWN is the app's spelling,
+ * the standard lexical form (Ibn Qutayba, Kitāb al-Anwāʾ; Lisān al-ʿArab). Six
+ * names are written differently in al-Būnī's edition; BUNI_TABLE keeps his
+ * spelling for attribution and the view notes it per row:
+ *   1 الشرطين (oblique case) = الشرطان, 9 الطرفة = الطرف, 16 الزبانا = الزبانى,
+ *   26 and 27 الفرع (ʿayn) = الفرغ (ghayn), 28 الرشا = بطن الحوت (also الرشاء).
+ * The numbered mansion is the same one in every case.
  */
 import { LETTER_FORMS } from '../../lib/abjad-maps';
 import { urduToArabicLetters } from '../../lib/urduLetters';
@@ -30,6 +33,8 @@ export const BUNI_TABLE: readonly (readonly [letter: string, name: string])[] = 
   ['ض', 'الفرع المقدم'], ['ظ', 'الفرع المؤخر'], ['غ', 'الرشا'],
 ];
 
+const stripMarks = (t: string): string => t.replace(/[\u064B-\u0652\u0670\u0640]/g, '');
+
 const INDEX_BY_LETTER: Readonly<Record<string, number>> = Object.fromEntries(BUNI_TABLE.map(([l], i) => [l, i + 1]));
 
 /** The 28 letters in the table's order (the Mashriqi abjad order). */
@@ -40,8 +45,10 @@ export interface LetterMansionRow {
   letter: string;
   /** Mansion number, 1 to 28. */
   number: number;
-  /** al-Būnī's name for the mansion, as in the table. */
+  /** al-Būnī's name for the mansion, exactly as in his table. */
   buniName: string;
+  /** True where al-Būnī's edition spells the name differently from the app (6 mansions). */
+  buniDiffers: boolean;
   /** The same numbered mansion in the app's list. */
   mansion: LunarMansion;
 }
@@ -55,7 +62,9 @@ export function lettersMansions(text: string): LetterMansionRow[] {
     const number = INDEX_BY_LETTER[letter];
     if (!number || seen.has(letter)) continue;
     seen.add(letter);
-    rows.push({ letter, number, buniName: BUNI_TABLE[number - 1][1], mansion: LUNAR_MANSIONS[number - 1] });
+    const mansion = LUNAR_MANSIONS[number - 1];
+    const buniName = BUNI_TABLE[number - 1][1];
+    rows.push({ letter, number, buniName, buniDiffers: stripMarks(mansion.nameArabic) !== buniName, mansion });
   }
   return rows;
 }

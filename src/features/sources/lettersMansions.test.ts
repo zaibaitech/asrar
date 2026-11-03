@@ -1,3 +1,5 @@
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import { describe, it, expect } from 'vitest';
 import { BUNI_TABLE, letterOrder, lettersMansions } from './lettersMansions';
 import { ABJAD_MAGHRIBI, ABJAD_MASHRIQI, LETTER_FORMS } from '../../lib/abjad-maps';
@@ -26,15 +28,48 @@ describe("al-Būnī's letters ↔ mansions table (Shams al-Maʿārif, ch. 2)", (
     letterOrder().forEach((l, i) => expect(DIVINE_RESONANCE_TABLE[i + 1].letter).toBe(l));
   });
 
-  it('every entry maps to the app\u2019s mansion of the same number; spellings match except the 6 known variants', () => {
+  it('every entry maps to the app\u2019s mansion of the same number; al-Būnī\u2019s spelling differs only in the 6 known places', () => {
     expect(LUNAR_MANSIONS).toHaveLength(28);
     const variants: number[] = [];
     BUNI_TABLE.forEach(([, name], i) => {
       expect(LUNAR_MANSIONS[i].number).toBe(i + 1);
       if (strip(LUNAR_MANSIONS[i].nameArabic) !== name) variants.push(i + 1);
     });
-    // 1 الشرطين/الشرطان, 9 الطرفة/الطرف, 16 الزبانا/الزبانى, 26-27 الفرع/الفرغ, 28 الرشا = بطن الحوت
     expect(variants).toEqual([1, 9, 16, 26, 27, 28]);
+  });
+
+  it('the app uses the standard spellings for the 6 variant mansions (Ibn Qutayba; Lisān al-ʿArab)', () => {
+    const app = (n: number) => strip(LUNAR_MANSIONS[n - 1].nameArabic);
+    expect(app(1)).toBe('الشرطان'); // nominative; الشرطين is the oblique case
+    expect(app(9)).toBe('الطرف'); // الطرفة is not the mansion's name in Lisān
+    expect(app(16)).toBe('الزبانى'); // الزبانا is a variant
+    expect(app(26)).toBe('الفرغ المقدم'); // ghayn, not ʿayn
+    expect(app(27)).toBe('الفرغ المؤخر');
+    expect(app(28)).toBe('بطن الحوت'); // الرشاء is its other attested name
+  });
+
+  it('shows the app\u2019s spelling and flags al-Būnī\u2019s edition only where it differs', () => {
+    const rows = lettersMansions('اطعضظغب');
+    const byNumber = Object.fromEntries(rows.map((r) => [r.number, r]));
+    [1, 9, 16, 26, 27, 28].forEach((n) => {
+      expect(byNumber[n].buniDiffers).toBe(true);
+      expect(byNumber[n].buniName).toBe(BUNI_TABLE[n - 1][1]);
+    });
+    expect(byNumber[2].buniDiffers).toBe(false);
+  });
+
+  it('every Arabic name on the Who Am I card table matches the app\u2019s mansion list', () => {
+    const src = readFileSync(
+      join(process.cwd(), 'src/features/istikhara/components/IstikharaSummaryCard.tsx'),
+      'utf8',
+    );
+    const entries = [...src.matchAll(/\d+:\s*\{ name: "([^"]+)",\s*arabic: "([^"]+)" \}/g)];
+    expect(entries.length).toBe(12);
+    for (const [, name, arabic] of entries) {
+      const m = LUNAR_MANSIONS.find((x) => x.nameTransliteration === name);
+      expect(m, name).toBeDefined();
+      expect(strip(m!.nameArabic)).toBe(arabic);
+    }
   });
 
   it('looks letters up by the table, with hamza seats, ة and ى folded, once per distinct letter', () => {

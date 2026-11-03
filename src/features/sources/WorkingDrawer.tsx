@@ -103,19 +103,29 @@ function LettersMansions({ text, lang }: { text: string; lang: Lang }) {
         <p className="text-xs">{LABELS.order[lang]}</p>
         <ul className="space-y-1">
           {rows.map((r) => (
-            <li key={r.letter} className="flex items-baseline gap-2" dir="ltr">
-              <span lang="ar" dir="rtl" className="font-arabic w-6 text-lg text-slate-900 dark:text-slate-100">
-                {r.letter}
-              </span>
-              <span className="w-16 text-xs">
-                {LABELS.position[lang]} {r.number}
-              </span>
-              <span className="text-sm text-slate-900 dark:text-slate-100">
-                <span lang="ar" dir="rtl" className="font-arabic">
-                  {r.buniName}
-                </span>{' '}
-                · {r.mansion.nameTransliteration}
-              </span>
+            <li key={r.letter} dir="ltr">
+              <div className="flex items-baseline gap-2">
+                <span lang="ar" dir="rtl" className="font-arabic w-6 text-lg text-slate-900 dark:text-slate-100">
+                  {r.letter}
+                </span>
+                <span className="w-16 text-xs">
+                  {LABELS.position[lang]} {r.number}
+                </span>
+                <span className="text-sm text-slate-900 dark:text-slate-100">
+                  <span lang="ar" dir="rtl" className="font-arabic">
+                    {r.mansion.nameArabic}
+                  </span>{' '}
+                  · {r.mansion.nameTransliteration}
+                </span>
+              </div>
+              {r.buniDiffers && (
+                <p className="ml-8 text-[11px]">
+                  {LABELS.buniEdition[lang]}:{' '}
+                  <span lang="ar" dir="rtl" className="font-arabic">
+                    {r.buniName}
+                  </span>
+                </p>
+              )}
             </li>
           ))}
         </ul>

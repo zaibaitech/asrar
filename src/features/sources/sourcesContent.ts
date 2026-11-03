@@ -111,12 +111,16 @@ export const SOURCES: Record<StepId, StepSource> = {
     ],
   },
   lettersMansions: {
-    note: 'Each letter of the name is set beside the mansion that al-Būnī\u2019s table gives it, in the Mashriqi abjad order (first to last letter). The table is fixed: it does not change with the Maghribi / Mashriqi setting. It is a spiritual correspondence between letters and the mansions, not an astronomical one (for the Moon\u2019s real position, see Manzil (the Moon)). The mansion is matched to the app\u2019s list by number; a few Arabic spellings differ from the app\u2019s (mansions 1, 9, 16, 26, 27 and 28).',
+    note: 'Each letter of the name is set beside the mansion that al-Būnī\u2019s table gives it, in the Mashriqi abjad order (first to last letter). The table is fixed: it does not change with the Maghribi / Mashriqi setting. It is a spiritual correspondence between letters and the mansions, not an astronomical one (for the Moon\u2019s real position, see Manzil (the Moon)). The mansion is matched to the app\u2019s list by number; The Arabic names shown are the app\u2019s standard spellings; al-Būnī\u2019s edition writes six of them differently (mansions 1, 9, 16, 26, 27 and 28) and is noted under those rows.',
     refs: [
       {
         status: 'attributed',
         text: 'Attributed to al-Būnī, Shams al-Maʿārif al-Kubrā, ch. 2. Edition: Muʾassasat al-Nūr, Beirut, as on ablibrary.net; the 28 entries were checked on pp. 16 to 19 of that edition.',
         url: 'https://ablibrary.net/book_content/b/10942/16',
+      },
+      {
+        status: 'attributed',
+        text: 'Spellings of the mansion names follow Ibn Qutayba, Kitāb al-Anwāʾ (chapter headings) and Lisān al-ʿArab (entries ط-ر-ف, ز-ب-ن, ش-ر-ط, ف-ر-غ, ر-ش-و); no page numbers are cited.',
       },
     ],
   },
@@ -153,6 +157,7 @@ export const LABELS = {
     fr: 'Manzil de naissance (date, heure et lieu requis) : Profil de naissance',
     ar: 'منزل الميلاد (يلزم التاريخ والوقت والمكان): الملف الفلكي',
   },
+  buniEdition: { en: 'al-Būnī\u2019s edition', fr: 'édition d\u2019al-Būnī', ar: 'في طبعة البوني' },
   position: { en: 'mansion', fr: 'demeure', ar: 'المنزلة' },
   order: {
     en: 'Mashriqi abjad order, fixed (independent of your Maghribi / Mashriqi setting)',

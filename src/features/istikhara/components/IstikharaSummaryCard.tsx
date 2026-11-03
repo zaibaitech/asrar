@@ -71,15 +71,15 @@ export function IstikharaSummaryCard({ result }: IstikhSummaryCardProps) {
     1:  { name: "Al-Sharaṭān",      arabic: "الشرطان" },      // Aries
     2:  { name: "Al-Dabarān",       arabic: "الدبران" },      // Taurus
     3:  { name: "Al-Dhirāʿ",        arabic: "الذراع" },       // Gemini
-    4:  { name: "Al-Jabha",         arabic: "الجبهة" },       // Cancer
-    5:  { name: "Al-ʿAwwā",         arabic: "العواء" },       // Leo
+    4:  { name: "Al-Jabhah",        arabic: "الجبهة" },       // Cancer
+    5:  { name: "Al-ʿAwwāʾ",        arabic: "العواء" },       // Leo
     6:  { name: "Al-Zubānā",        arabic: "الزبانى" },      // Virgo
     7:  { name: "Al-Ghafr",         arabic: "الغفر" },        // Libra
-    8:  { name: "Al-Shawla",        arabic: "الشولة" },       // Scorpio
+    8:  { name: "Al-Shawlah",       arabic: "الشولة" },       // Scorpio
     9:  { name: "Saʿd al-Dhābiḥ",   arabic: "سعد الذابح" },   // Sagittarius
-    10: { name: "Saʿd al-Akhbiya",  arabic: "سعد الأخبية" },  // Capricorn
+    10: { name: "Saʿd al-Akhbiyah", arabic: "سعد الأخبية" },  // Capricorn
     11: { name: "Saʿd al-Suʿūd",    arabic: "سعد السعود" },   // Aquarius
-    12: { name: "Al-Rishah",        arabic: "الرشاء" },       // Pisces
+    12: { name: "Baṭn al-Ḥūt",      arabic: "بطن الحوت" },    // Pisces
   };
 
   // Get the user's primary mansion based on their zodiac
