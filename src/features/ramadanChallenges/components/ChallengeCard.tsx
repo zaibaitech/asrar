@@ -69,10 +69,10 @@ const TYPE_STYLES: Record<ChallengeType, { bg: string; text: string; label: stri
 // ─── Inspirational Quotes ────────────────────────────────────────────────────────
 
 const QUOTES = [
-  { en: 'The dhikr of Allah is the greatest.', ar: 'وَلَذِكْرُ اللَّهِ أَكْبَرُ' },
+  { en: 'The dhikr of Allah is the greatest.', ar: 'وَلَذِكْرُ اللَّهِ أَكْبَرُ' },
   { en: 'Remember Me, and I will remember you.', ar: 'فَاذْكُرُونِي أَذْكُرْكُمْ' },
-  { en: 'Hearts find rest in the remembrance of Allah.', ar: 'أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ' },
-  { en: 'Glorify Allah morning and evening.', ar: 'وَسَبِّحُوهُ بُكْرَةً وَأَصِيلًا' },
+  { en: 'Hearts find rest in the remembrance of Allah.', ar: 'أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ' },
+  { en: 'Glorify Allah morning and evening.', ar: 'وَسَبِّحُوهُ بُكْرَةً وَأَصِيلًا' },
 ];
 
 // ─── Props ───────────────────────────────────────────────────────────────────────

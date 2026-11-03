@@ -51,138 +51,54 @@ export function validateVerseReference(surah: number, ayah: number): boolean {
 }
 
 /**
- * Fetch a specific verse from the Quran
- * Uses the Quran.com API (https://api.quran.com)
- * Includes validation to prevent invalid requests
- * Has fallback support for multiple API endpoints
- * 
- * @param surahNumber - The surah number (1-114)
- * @param ayahNumber - The ayah number
- * @returns Promise with verse text in Arabic and English translation, or null if not found
+ * Fetch a specific verse for display.
+ * Arabic: our own /api/quran-verse route, which serves the Tanzil Project
+ * Quran text (quran-simple) verbatim. No other source is used for Arabic, so
+ * the displayed text always matches Tanzil exactly.
+ * Translation: Quran.com (Dr. Mustafa Khattab, id 131); if it is unavailable
+ * the Arabic is still shown with a note.
+ *
+ * @returns Arabic + English translation, or null if the Arabic can't be loaded
  */
 export async function fetchQuranVerse(
   surahNumber: number,
   ayahNumber: number
 ): Promise<VerseText | null> {
-  // Validate the verse reference first
   if (!validateVerseReference(surahNumber, ayahNumber)) {
-    console.error(
-      `Invalid verse reference: Surah ${surahNumber}, Ayah ${ayahNumber}. ` +
-      `Valid range: Surah 1-114, Ayah 1-${AYAH_COUNTS[surahNumber] || 'N/A'}`
-    );
     return null;
   }
-  
-  try {
-    // Try primary endpoint first
-    console.log(`Fetching verse: ${surahNumber}:${ayahNumber}`);
-    
-    // Fetch Arabic text
-    const arabicResponse = await fetch(
-      `https://api.quran.com/api/v4/verses/by_key/${surahNumber}:${ayahNumber}?fields=text_uthmani`,
-      { 
-        method: 'GET',
-        headers: {
-          'Accept': 'application/json',
-        }
-      }
-    );
-    
-    if (!arabicResponse.ok) {
-      console.error(`Failed to fetch Arabic verse: ${surahNumber}:${ayahNumber} (Status: ${arabicResponse.status})`);
-      return tryAlternativeAPI(surahNumber, ayahNumber);
-    }
-    
-    const arabicData = await arabicResponse.json();
-    console.log(`Arabic data received:`, arabicData);
-    
-    // Fetch English translation (using Dr. Mustafa Khattab's translation - ID: 131)
-    const translationResponse = await fetch(
-      `https://api.quran.com/api/v4/verses/by_key/${surahNumber}:${ayahNumber}?translations=131`,
-      { 
-        method: 'GET',
-        headers: {
-          'Accept': 'application/json',
-        }
-      }
-    );
-    
-    if (!translationResponse.ok) {
-      console.error(`Failed to fetch translation for ${surahNumber}:${ayahNumber} (Status: ${translationResponse.status})`);
-      // If translation fails, still show Arabic
-      if (arabicData.verse?.text_uthmani) {
-        return {
-          arabic: arabicData.verse.text_uthmani,
-          translation: "Translation not available. Please visit Quran.com for the full translation.",
-          translationName: "Quran.com API"
-        };
-      }
-      return null;
-    }
-    
-    const translationData = await translationResponse.json();
-    console.log(`Translation data received:`, translationData);
-    
-    const verse: VerseText = {
-      arabic: arabicData.verse?.text_uthmani || '',
-      translation: translationData.verse?.translations?.[0]?.text || '',
-      translationName: translationData.verse?.translations?.[0]?.translation_name || "The Clear Quran, Dr. Mustafa Khattab"
-    };
-    
-    // Validate that we got actual content
-    if (!verse.arabic) {
-      console.error(`Verse data incomplete for ${surahNumber}:${ayahNumber}`);
-      return null;
-    }
-    
-    console.log(`Successfully fetched verse ${surahNumber}:${ayahNumber}`);
-    return verse;
-  } catch (error) {
-    console.error(`Error fetching Quran verse ${surahNumber}:${ayahNumber}:`, error);
-    return tryAlternativeAPI(surahNumber, ayahNumber);
-  }
-}
 
-/**
- * Try alternative API endpoint (alquran.cloud) as fallback
- */
-async function tryAlternativeAPI(surahNumber: number, ayahNumber: number): Promise<VerseText | null> {
   try {
-    console.log(`Trying alternative API for ${surahNumber}:${ayahNumber}`);
-    
-    const response = await fetch(
-      `https://api.alquran.cloud/v1/ayah/${surahNumber}:${ayahNumber}/editions/quran-uthmani,en.sahih`,
-      { 
-        method: 'GET',
-        headers: {
-          'Accept': 'application/json',
-        }
-      }
-    );
-    
-    if (!response.ok) {
-      console.error(`Alternative API also failed (Status: ${response.status})`);
-      return null;
-    }
-    
-    const data = await response.json();
-    
-    if (data.data && Array.isArray(data.data) && data.data.length >= 2) {
-      const verse: VerseText = {
-        arabic: data.data[0].text || '',
-        translation: data.data[1].text || '',
-        translationName: "Sahih International"
+    const arabicResponse = await fetch(`/api/quran-verse/${surahNumber}/${ayahNumber}`);
+    if (!arabicResponse.ok) return null;
+    const arabicData = await arabicResponse.json();
+    const arabic: string = arabicData?.text || '';
+    if (!arabic) return null;
+
+    const fallback: VerseText = {
+      arabic,
+      translation: 'Translation not available. Please visit Quran.com for the full translation.',
+      translationName: 'Quran.com',
+    };
+
+    try {
+      const translationResponse = await fetch(
+        `https://api.quran.com/api/v4/verses/by_key/${surahNumber}:${ayahNumber}?translations=131`,
+        { method: 'GET', headers: { Accept: 'application/json' } }
+      );
+      if (!translationResponse.ok) return fallback;
+      const translationData = await translationResponse.json();
+      const entry = translationData.verse?.translations?.[0];
+      if (!entry?.text) return fallback;
+      return {
+        arabic,
+        translation: entry.text,
+        translationName: entry.translation_name || 'The Clear Quran, Dr. Mustafa Khattab',
       };
-      
-      if (verse.arabic) {
-        console.log(`Successfully fetched from alternative API`);
-        return verse;
-      }
+    } catch {
+      return fallback;
     }
-    
-    return null;
-  } catch (error) {
-    console.error(`Alternative API error:`, error);
+  } catch {
     return null;
   }
 }

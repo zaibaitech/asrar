@@ -110,7 +110,7 @@ export function EnhancedLifePathView({ analysis, language = 'en' }: EnhancedLife
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         
         {/* Life Path */}
-        <div className="bg-gradient-to-br from-purple-500 to-indigo-600 text-white p-6 rounded-xl shadow-lg">
+        <div className=" text-white p-6 rounded-xl shadow-sm bg-indigo-600">
           <div className="flex items-center justify-center mb-2">
             <Star className="w-6 h-6" />
           </div>
@@ -124,7 +124,7 @@ export function EnhancedLifePathView({ analysis, language = 'en' }: EnhancedLife
         </div>
         
         {/* Soul Urge */}
-        <div className="bg-gradient-to-br from-rose-500 to-pink-600 text-white p-6 rounded-xl shadow-lg">
+        <div className=" text-white p-6 rounded-xl shadow-sm bg-indigo-600">
           <div className="flex items-center justify-center mb-2">
             <Heart className="w-6 h-6" />
           </div>
@@ -138,7 +138,7 @@ export function EnhancedLifePathView({ analysis, language = 'en' }: EnhancedLife
         </div>
         
         {/* Personality */}
-        <div className="bg-gradient-to-br from-cyan-500 to-blue-600 text-white p-6 rounded-xl shadow-lg">
+        <div className=" text-white p-6 rounded-xl shadow-sm bg-indigo-600">
           <div className="flex items-center justify-center mb-2">
             <User className="w-6 h-6" />
           </div>
@@ -152,7 +152,7 @@ export function EnhancedLifePathView({ analysis, language = 'en' }: EnhancedLife
         </div>
         
         {/* Destiny */}
-        <div className="bg-gradient-to-br from-amber-500 to-orange-600 text-black p-6 rounded-xl shadow-lg">
+        <div className=" text-black p-6 rounded-xl shadow-sm bg-indigo-600">
           <div className="flex items-center justify-center mb-2">
             <Target className="w-6 h-6 text-black" />
           </div>
@@ -165,7 +165,7 @@ export function EnhancedLifePathView({ analysis, language = 'en' }: EnhancedLife
       </div>
       
       {/* Overall Guidance - Prominent Section */}
-      <div className="bg-gradient-to-br from-indigo-100 to-purple-100 dark:from-indigo-900/30 dark:to-purple-900/30 rounded-xl p-6 border-2 border-indigo-300 dark:border-indigo-700 shadow-xl">
+      <div className=" rounded-xl p-6 border border-indigo-300 dark:border-indigo-700 shadow-sm bg-white/60 dark:bg-slate-800/40">
         <div className="flex items-center gap-2 mb-4">
           <Sparkles className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
           <h3 className="text-xl font-bold text-indigo-900 dark:text-indigo-100">
@@ -178,7 +178,7 @@ export function EnhancedLifePathView({ analysis, language = 'en' }: EnhancedLife
       </div>
       
       {/* Life Path Detailed */}
-      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 p-6">
+      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 p-6">
         <div className="flex items-center gap-2 mb-4">
           <div className="text-lg">🌟</div>
           <div>
@@ -192,11 +192,11 @@ export function EnhancedLifePathView({ analysis, language = 'en' }: EnhancedLife
         </div>
         
         {/* Spiritual Station */}
-        <div className="mb-4 p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
-          <div className="font-semibold text-purple-900 dark:text-purple-300 mb-1">
+        <div className="mb-4 p-3 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl">
+          <div className="font-semibold text-indigo-900 dark:text-indigo-300 mb-1">
             {isArabic ? 'المقام الروحاني:' : 'Spiritual Station:'}
           </div>
-          <div className="text-purple-800 dark:text-purple-200">
+          <div className="text-indigo-800 dark:text-indigo-200">
             {isArabic ? lifePath.spiritualStationArabic : lifePath.spiritualStation}
           </div>
         </div>
@@ -214,7 +214,7 @@ export function EnhancedLifePathView({ analysis, language = 'en' }: EnhancedLife
         
         {/* Qualities & Challenges */}
         <div className="grid md:grid-cols-2 gap-4 mb-4">
-          <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
+          <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-xl">
             <div className="font-bold text-green-700 dark:text-green-300 mb-2">
               {isArabic ? '✨ الصفات:' : '✨ Qualities:'}
             </div>
@@ -225,7 +225,7 @@ export function EnhancedLifePathView({ analysis, language = 'en' }: EnhancedLife
             </ul>
           </div>
           
-          <div className="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+          <div className="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-xl">
             <div className="font-bold text-amber-700 dark:text-amber-300 mb-2">
               {isArabic ? '⚡ التحديات:' : '⚡ Challenges:'}
             </div>
@@ -238,7 +238,7 @@ export function EnhancedLifePathView({ analysis, language = 'en' }: EnhancedLife
         </div>
         
         {/* Quranic Resonance */}
-        <div className="p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg border border-emerald-200 dark:border-emerald-800">
+        <div className="p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl border border-emerald-200 dark:border-emerald-800">
           <div className="font-bold text-emerald-700 dark:text-emerald-300 mb-2 flex items-center gap-2">
             <Book className="w-4 h-4" />
             {isArabic ? 'صدى قرآني:' : 'Quranic Resonance:'}
@@ -249,8 +249,8 @@ export function EnhancedLifePathView({ analysis, language = 'en' }: EnhancedLife
         </div>
         
         {/* Advice */}
-        <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-          <div className="font-bold text-blue-700 dark:text-blue-300 mb-2">
+        <div className="mt-4 p-4 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl">
+          <div className="font-bold text-indigo-700 dark:text-indigo-300 mb-2">
             {isArabic ? '💡 نصائح للنمو:' : '💡 Advice for Growth:'}
           </div>
           <ul className="space-y-1">
@@ -262,17 +262,17 @@ export function EnhancedLifePathView({ analysis, language = 'en' }: EnhancedLife
       </div>
       
       {/* Current Cycle & Timing */}
-      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 p-6">
+      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 p-6">
         <div className="flex items-center gap-2 mb-4">
-          <Clock className="w-5 h-5 text-purple-500" />
+          <Clock className="w-5 h-5 text-indigo-500" />
           <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
             {isArabic ? 'موقعك الحالي' : 'Your Current Position'}
           </h3>
         </div>
         
         <div className="grid md:grid-cols-3 gap-4">
-          <div className="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg text-center">
-            <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-1">
+          <div className="p-4 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl text-center">
+            <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-1">
               {currentCycle.cycleNumber}
             </div>
             <div className="text-sm text-slate-700 dark:text-slate-300">
@@ -283,7 +283,7 @@ export function EnhancedLifePathView({ analysis, language = 'en' }: EnhancedLife
             </div>
           </div>
           
-          <div className="p-4 bg-indigo-50 dark:bg-indigo-900/20 rounded-lg text-center">
+          <div className="p-4 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl text-center">
             <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-1">
               {currentCycle.yearNumber}
             </div>
@@ -295,8 +295,8 @@ export function EnhancedLifePathView({ analysis, language = 'en' }: EnhancedLife
             </div>
           </div>
           
-          <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-center">
-            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-1">
+          <div className="p-4 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl text-center">
+            <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-1">
               {personalYear}
             </div>
             <div className="text-sm text-slate-700 dark:text-slate-300">
@@ -309,8 +309,8 @@ export function EnhancedLifePathView({ analysis, language = 'en' }: EnhancedLife
         </div>
         
         {/* Year Focus */}
-        <div className="mt-4 p-4 bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20 rounded-lg">
-          <div className="font-bold text-purple-900 dark:text-purple-300 mb-2">
+        <div className="mt-4 p-4 rounded-xl bg-white/60 dark:bg-slate-800/40">
+          <div className="font-bold text-indigo-900 dark:text-indigo-300 mb-2">
             {isArabic ? '🎯 تركيز هذه السنة:' : '🎯 This Year\'s Focus:'}
           </div>
           <ul className="space-y-1">
@@ -323,7 +323,7 @@ export function EnhancedLifePathView({ analysis, language = 'en' }: EnhancedLife
       
       {/* Karmic Debts (if any) */}
       {karmicDebts.length > 0 && (
-        <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-amber-300 dark:border-amber-700 p-6">
+        <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-amber-300 dark:border-amber-700 p-6">
           <div className="flex items-center gap-2 mb-4">
             <AlertTriangle className="w-5 h-5 text-amber-500" />
             <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
@@ -332,7 +332,7 @@ export function EnhancedLifePathView({ analysis, language = 'en' }: EnhancedLife
           </div>
           
           {karmicDebts.map((debt, idx) => (
-            <div key={idx} className="mb-4 last:mb-0 p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
+            <div key={idx} className="mb-4 last:mb-0 p-4 bg-amber-50 dark:bg-amber-900/20 rounded-xl">
               <div className="font-bold text-amber-900 dark:text-amber-300 mb-2">
                 {isArabic ? `${debt.number}: ${debt.nameArabic}` : `${debt.number}: ${debt.name}`}
               </div>
@@ -354,7 +354,7 @@ export function EnhancedLifePathView({ analysis, language = 'en' }: EnhancedLife
       
       {/* Sacred Numbers (if any) */}
       {sacredNumbers.length > 0 && (
-        <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-emerald-300 dark:border-emerald-700 p-6">
+        <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-emerald-300 dark:border-emerald-700 p-6">
           <div className="flex items-center gap-2 mb-4">
             <Zap className="w-5 h-5 text-emerald-500" />
             <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
@@ -364,7 +364,7 @@ export function EnhancedLifePathView({ analysis, language = 'en' }: EnhancedLife
           
           <div className="grid gap-3">
             {sacredNumbers.map((sacred, idx) => (
-              <div key={idx} className="p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg border border-emerald-200 dark:border-emerald-800">
+              <div key={idx} className="p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl border border-emerald-200 dark:border-emerald-800">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">
                     {sacred.number}
@@ -383,7 +383,7 @@ export function EnhancedLifePathView({ analysis, language = 'en' }: EnhancedLife
       )}
       
       {/* Spiritual Focus for the Year */}
-      <div className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white rounded-xl shadow-xl p-6">
+      <div className=" text-white rounded-xl shadow-sm p-6 bg-indigo-600">
         <div className="flex items-center gap-2 mb-4">
           <Award className="w-6 h-6" />
           <h3 className="text-xl font-bold">

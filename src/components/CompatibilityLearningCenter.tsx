@@ -250,12 +250,12 @@ export function CompatibilityLearningCenter({ language = 'en' }: CompatibilityLe
   const data = isFrench ? content.fr : content.en;
 
   return (
-    <div className="space-y-8 p-8 bg-white dark:bg-slate-900 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700">
+    <div className="space-y-8 p-8 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700">
       
       {/* Header */}
       <div className="text-center space-y-3">
         <div className="flex items-center justify-center gap-3">
-          <BookOpen className="w-10 h-10 text-rose-500" />
+          <BookOpen className="w-10 h-10 text-indigo-500" />
           <h2 className="text-4xl font-bold text-slate-900 dark:text-slate-50">
             {data.title}
           </h2>
@@ -270,10 +270,10 @@ export function CompatibilityLearningCenter({ language = 'en' }: CompatibilityLe
         {data.sections.map((section, idx) => {
           const Icon = section.icon;
           const colorClasses = {
-            rose: 'bg-rose-50 dark:bg-rose-950/30 border-rose-200 dark:border-rose-800 text-rose-600 dark:text-rose-400',
-            blue: 'bg-blue-50 dark:bg-blue-950/30 border-blue-200 dark:border-blue-800 text-blue-600 dark:text-blue-400',
+            rose: 'bg-indigo-50 dark:bg-indigo-950/30 border-slate-200 dark:border-slate-700 text-indigo-600 dark:text-indigo-400',
+            blue: 'bg-indigo-50 dark:bg-indigo-950/30 border-slate-200 dark:border-slate-700 text-indigo-600 dark:text-indigo-400',
             amber: 'bg-amber-50 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800 text-amber-600 dark:text-amber-400',
-            purple: 'bg-purple-50 dark:bg-purple-950/30 border-purple-200 dark:border-purple-800 text-purple-600 dark:text-purple-400',
+            purple: 'bg-indigo-50 dark:bg-indigo-950/30 border-slate-200 dark:border-slate-700 text-indigo-600 dark:text-indigo-400',
             indigo: 'bg-indigo-50 dark:bg-indigo-950/30 border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-indigo-400'
           }[section.color];
 
@@ -304,7 +304,7 @@ export function CompatibilityLearningCenter({ language = 'en' }: CompatibilityLe
       </div>
 
       {/* Footer Note */}
-      <div className="p-6 bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/30 dark:to-purple-950/30 rounded-xl border border-indigo-200 dark:border-indigo-800">
+      <div className="p-6 rounded-xl border border-indigo-200 dark:border-indigo-800 bg-white/60 dark:bg-slate-800/40">
         <p className="text-center text-slate-700 dark:text-slate-300 leading-relaxed">
           <span className="font-bold text-slate-900 dark:text-slate-50">
             {isFrench ? '💡 Rappelez-vous:' : '💡 Remember:'}

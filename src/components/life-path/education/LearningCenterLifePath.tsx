@@ -48,9 +48,9 @@ export const LearningCenterLifePath: React.FC = () => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
+              className={`flex items-center gap-2 px-4 py-2 rounded-xl font-medium transition-all ${
                 isActive
-                  ? 'bg-blue-600 dark:bg-blue-700 text-slate-50 shadow-lg'
+                  ? 'bg-indigo-600 dark:bg-indigo-700 text-slate-50 shadow-sm'
                   : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
               }`}
             >
@@ -62,7 +62,7 @@ export const LearningCenterLifePath: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-8">
+      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm p-8">
         {activeTab === 'intro' && <IntroductionContent isArabic={isArabic} isFrench={isFrench} />}
         {activeTab === 'islamic' && <IslamicContextContent isArabic={isArabic} isFrench={isFrench} />}
         {activeTab === 'calculations' && <CalculationsContent isArabic={isArabic} isFrench={isFrench} />}
@@ -70,7 +70,7 @@ export const LearningCenterLifePath: React.FC = () => {
       </div>
 
       {/* Disclaimer */}
-      <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
+      <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-4">
         <div className="flex items-start gap-3">
           <Info className="w-5 h-5 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
           <p className="text-sm text-amber-900 dark:text-amber-100">
@@ -103,25 +103,25 @@ const IntroductionContent: React.FC<{ isArabic: boolean; isFrench: boolean }> = 
             ? 'Les nombres de chemin de vie sont un système spirituel ancien révélant la signification et le but encodés dans votre date de naissance et votre nom. Dans les traditions islamiques, cela s\'appelle ʿIlm al-Ḥurūf - la science des lettres et des nombres reliant les valeurs numériques aux vérités spirituelles.'
             : 'Life Path numbers are an ancient spiritual system revealing the meaning and purpose encoded in your birth date and name. In Islamic traditions, this is known as ʿIlm al-Ḥurūf - the science of letters and numbers connecting numerical values to spiritual truths.'}
         </p>
-        <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 mt-4">
-          <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
+        <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-4 mt-4">
+          <h4 className="font-semibold text-indigo-900 dark:text-indigo-100 mb-2">
             {isArabic ? 'الأرقام الأساسية الأربعة:' : isFrench ? 'Les Quatre Nombres Fondamentaux:' : 'The Four Core Numbers:'}
           </h4>
           <ul className="space-y-2 text-slate-700 dark:text-slate-300">
             <li className="flex items-start gap-2">
-              <ChevronRight className="w-4 h-4 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" />
+              <ChevronRight className="w-4 h-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-1" />
               <span><strong>{isArabic ? 'رقم مسار الحياة' : isFrench ? 'Chemin de Vie' : 'Life Path'}</strong> - {isArabic ? 'جوهرك الروحي ورسالة حياتك' : isFrench ? 'Votre essence spirituelle et mission de vie' : 'Your spiritual essence and life mission'}</span>
             </li>
             <li className="flex items-start gap-2">
-              <ChevronRight className="w-4 h-4 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" />
+              <ChevronRight className="w-4 h-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-1" />
               <span><strong>{isArabic ? 'رقم رغبة الروح' : isFrench ? 'Désir de l\'Âme' : 'Soul Urge'}</strong> - {isArabic ? 'رغباتك الأعمق وما يحققك روحياً' : isFrench ? 'Vos désirs les plus profonds et ce qui vous épanouit spirituellement' : 'Your deepest desires and what fulfills you spiritually'}</span>
             </li>
             <li className="flex items-start gap-2">
-              <ChevronRight className="w-4 h-4 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" />
+              <ChevronRight className="w-4 h-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-1" />
               <span><strong>{isArabic ? 'رقم الشخصية' : isFrench ? 'Personnalité' : 'Personality'}</strong> - {isArabic ? 'كيف يراك الآخرون والانطباع الذي تتركه' : isFrench ? 'Comment les autres vous voient et l\'impression que vous laissez' : 'How others see you and the impression you make'}</span>
             </li>
             <li className="flex items-start gap-2">
-              <ChevronRight className="w-4 h-4 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" />
+              <ChevronRight className="w-4 h-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-1" />
               <span><strong>{isArabic ? 'رقم المصير' : isFrench ? 'Destinée' : 'Destiny'}</strong> - {isArabic ? 'هدفك الأسمى وعملك في الحياة' : isFrench ? 'Votre but suprême et œuvre de vie' : 'Your higher purpose and life work'}</span>
             </li>
           </ul>
@@ -170,10 +170,10 @@ const IntroductionContent: React.FC<{ isArabic: boolean; isFrench: boolean }> = 
         <div className="grid md:grid-cols-3 gap-3 mt-4">
           {[
             { years: '1-3', phase: isArabic ? 'التأسيس' : isFrench ? 'Fondation' : 'Foundation', color: 'bg-green-100 dark:bg-green-900/30 text-green-900 dark:text-green-100' },
-            { years: '4-6', phase: isArabic ? 'النمو' : isFrench ? 'Croissance' : 'Growth', color: 'bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-100' },
-            { years: '7-9', phase: isArabic ? 'الإكمال' : isFrench ? 'Achèvement' : 'Completion', color: 'bg-purple-100 dark:bg-purple-900/30 text-purple-900 dark:text-purple-100' }
+            { years: '4-6', phase: isArabic ? 'النمو' : isFrench ? 'Croissance' : 'Growth', color: 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-900 dark:text-indigo-100' },
+            { years: '7-9', phase: isArabic ? 'الإكمال' : isFrench ? 'Achèvement' : 'Completion', color: 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-900 dark:text-indigo-100' }
           ].map(({ years, phase, color }) => (
-            <div key={years} className={`rounded-lg p-4 ${color}`}>
+            <div key={years} className={`rounded-xl p-4 ${color}`}>
               <div className="font-bold text-lg mb-1">{isArabic ? `السنوات ${years}` : isFrench ? `Années ${years}` : `Years ${years}`}</div>
               <div className="text-sm font-semibold">{phase}</div>
             </div>
@@ -201,7 +201,7 @@ const IslamicContextContent: React.FC<{ isArabic: boolean; isFrench: boolean }> 
             ? 'ʿIlm al-Ḥurūf est une science islamique traditionnelle explorant les significations spirituelles encodées dans les lettres et nombres arabes. Elle remonte à l\'âge d\'or islamique et est associée à de grands savants comme l\'Imam al-Ghazālī, Ibn ʿArabī et al-Būnī.'
             : 'ʿIlm al-Ḥurūf is a traditional Islamic science exploring the spiritual meanings encoded in Arabic letters and numbers. It dates back to the Islamic Golden Age and is associated with great scholars like Imam al-Ghazālī, Ibn ʿArabī, and al-Būnī.'}
         </p>
-        <div className="bg-emerald-50 dark:bg-emerald-900/20 rounded-lg p-4 mt-4">
+        <div className="bg-emerald-50 dark:bg-emerald-900/20 rounded-xl p-4 mt-4">
           <h4 className="font-semibold text-emerald-900 dark:text-emerald-100 mb-2">
             {isArabic ? 'المبادئ الأساسية:' : isFrench ? 'Principes Fondamentaux:' : 'Core Principles:'}
           </h4>
@@ -258,7 +258,7 @@ const IslamicContextContent: React.FC<{ isArabic: boolean; isFrench: boolean }> 
             ? 'Le système Abjad attribue à chaque lettre arabe une valeur numérique. Cela est utilisé pour calculer la valeur des noms, mots et dates, révélant leurs significations spirituelles cachées.'
             : 'The Abjad system assigns each Arabic letter a numerical value. This is used to calculate the value of names, words, and dates, revealing their hidden spiritual meanings.'}
         </p>
-        <div className="bg-slate-100 dark:bg-slate-900 rounded-lg p-4 overflow-x-auto">
+        <div className="bg-slate-100 dark:bg-slate-900 rounded-xl p-4 overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-slate-300 dark:border-slate-700">
@@ -301,10 +301,10 @@ const IslamicContextContent: React.FC<{ isArabic: boolean; isFrench: boolean }> 
             { num: 8, station: isArabic ? 'الشكر' : isFrench ? 'Shukr' : 'Shukr', meaning: isArabic ? 'الشكر' : isFrench ? 'Gratitude' : 'Gratitude' },
             { num: 9, station: isArabic ? 'المحبة' : isFrench ? 'Maḥabbah' : 'Maḥabbah', meaning: isArabic ? 'الحب الإلهي' : isFrench ? 'Amour Divin' : 'Divine Love' }
           ].map(({ num, station, meaning }) => (
-            <div key={num} className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-lg p-3 border border-purple-200 dark:border-purple-800">
-              <div className="text-2xl font-bold text-purple-700 dark:text-purple-300 mb-1">{num}</div>
-              <div className="text-sm font-semibold text-purple-900 dark:text-purple-100">{station}</div>
-              <div className="text-xs text-purple-700 dark:text-purple-300 mt-1">{meaning}</div>
+            <div key={num} className=" rounded-xl p-3 border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40">
+              <div className="text-2xl font-bold text-indigo-700 dark:text-indigo-300 mb-1">{num}</div>
+              <div className="text-sm font-semibold text-indigo-900 dark:text-indigo-100">{station}</div>
+              <div className="text-xs text-indigo-700 dark:text-indigo-300 mt-1">{meaning}</div>
             </div>
           ))}
         </div>
@@ -330,8 +330,8 @@ const CalculationsContent: React.FC<{ isArabic: boolean; isFrench: boolean }> = 
             ? 'Le nombre de chemin de vie se calcule à partir de votre date de naissance en réduisant chaque composant (jour, mois, année) à un seul chiffre, puis en les additionnant.'
             : 'Life Path number is calculated from your birth date by reducing each component (day, month, year) to a single digit, then adding them together.'}
         </p>
-        <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6">
-          <h4 className="font-bold text-blue-900 dark:text-blue-100 mb-4">
+        <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-6">
+          <h4 className="font-bold text-indigo-900 dark:text-indigo-100 mb-4">
             {isArabic ? 'مثال: 15 يونيو 1990' : isFrench ? 'Exemple: 15 Juin 1990' : 'Example: June 15, 1990'}
           </h4>
           <div className="space-y-3 text-slate-700 dark:text-slate-300">
@@ -350,18 +350,18 @@ const CalculationsContent: React.FC<{ isArabic: boolean; isFrench: boolean }> = 
               <span>→</span>
               <span>1 + 9 + 9 + 0 = 19 → 1 + 9 = 10 → 1 + 0 = 1</span>
             </div>
-            <div className="border-t border-blue-300 dark:border-blue-700 pt-3 mt-3">
+            <div className="border-t border-slate-200 dark:border-slate-700 pt-3 mt-3">
               <div className="flex items-center gap-3 text-lg font-bold">
                 <span>{isArabic ? 'المجموع' : isFrench ? 'Total' : 'Total'}:</span>
                 <span>6 + 6 + 1 = 13 → 1 + 3 = 4</span>
               </div>
-              <div className="mt-2 text-blue-900 dark:text-blue-100">
+              <div className="mt-2 text-indigo-900 dark:text-indigo-100">
                 <strong>{isArabic ? 'رقم مسار الحياة: 4' : isFrench ? 'Nombre de Chemin de Vie: 4' : 'Life Path Number: 4'}</strong>
               </div>
             </div>
           </div>
         </div>
-        <div className="mt-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
+        <div className="mt-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-4">
           <p className="text-sm text-amber-900 dark:text-amber-100">
             <strong>{isArabic ? 'ملاحظة:' : isFrench ? 'Note:' : 'Note:'}</strong> {isArabic ? 'إذا واجهت 11 أو 22 أو 33 أثناء التقليل، توقف! هذه أرقام رئيسية ولا تُقلّل أكثر.' : isFrench ? 'Si vous rencontrez 11, 22 ou 33 pendant la réduction, arrêtez! Ce sont des nombres maîtres et ne doivent pas être réduits davantage.' : 'If you encounter 11, 22, or 33 during reduction, stop! These are master numbers and should not be reduced further.'}
           </p>
@@ -378,11 +378,11 @@ const CalculationsContent: React.FC<{ isArabic: boolean; isFrench: boolean }> = 
             ? 'Le nombre de Désir de l\'Âme se calcule à partir des voyelles de votre nom complet. En arabe, cela inclut les ḥarakāt et les lettres d\'allongement.'
             : 'Soul Urge number is calculated from the vowels in your full name. In Arabic, this includes ḥarakāt (diacritics) and elongation letters.'}
         </p>
-        <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-4">
-          <p className="text-sm text-purple-900 dark:text-purple-100">
+        <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-4">
+          <p className="text-sm text-indigo-900 dark:text-indigo-100">
             {isArabic ? 'مثال: محمد (Muḥammad)' : isFrench ? 'Exemple: محمد (Muḥammad)' : 'Example: محمد (Muḥammad)'}
           </p>
-          <p className="text-sm text-purple-800 dark:text-purple-200 mt-2">
+          <p className="text-sm text-indigo-800 dark:text-indigo-200 mt-2">
             {isArabic ? 'حروف العلة: ُ (u) + َ (a) + َ (a) → احسب قيمها الأبجدية' : isFrench ? 'Voyelles: ُ (u) + َ (a) + َ (a) → Calculez leurs valeurs Abjad' : 'Vowels: ُ (u) + َ (a) + َ (a) → Calculate their Abjad values'}
           </p>
         </div>
@@ -492,7 +492,7 @@ const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title
 );
 
 const MasterNumberCard: React.FC<{ number: number; name: string; description: string }> = ({ number, name, description }) => (
-  <div className="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
+  <div className=" border border-amber-200 dark:border-amber-800 rounded-xl p-4 bg-white/60 dark:bg-slate-800/40">
     <div className="text-3xl font-bold text-amber-700 dark:text-amber-300 mb-2">{number}</div>
     <div className="font-semibold text-amber-900 dark:text-amber-100 mb-1">{name}</div>
     <div className="text-sm text-amber-800 dark:text-amber-200">{description}</div>
@@ -500,9 +500,9 @@ const MasterNumberCard: React.FC<{ number: number; name: string; description: st
 );
 
 const ScholarCard: React.FC<{ name: string; work: string; contribution: string }> = ({ name, work, contribution }) => (
-  <div className="bg-gradient-to-r from-teal-50 to-cyan-50 dark:from-teal-900/20 dark:to-cyan-900/20 border border-teal-200 dark:border-teal-800 rounded-lg p-4">
-    <h4 className="font-bold text-teal-900 dark:text-teal-100 mb-1">{name}</h4>
-    <p className="text-sm text-teal-700 dark:text-teal-300 italic mb-2">{work}</p>
+  <div className=" border border-slate-200 dark:border-slate-700 rounded-xl p-4 bg-white/60 dark:bg-slate-800/40">
+    <h4 className="font-bold text-indigo-900 dark:text-indigo-100 mb-1">{name}</h4>
+    <p className="text-sm text-indigo-700 dark:text-indigo-300 italic mb-2">{work}</p>
     <p className="text-sm text-slate-700 dark:text-slate-300">{contribution}</p>
   </div>
 );
@@ -511,10 +511,10 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, ans
   const [isOpen, setIsOpen] = useState(false);
   
   return (
-    <div className="border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden">
+    <div className="border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+        className="w-full flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors min-h-[44px]"
       >
         <span className="font-semibold text-slate-900 dark:text-white text-left">{question}</span>
         <ChevronRight className={`w-5 h-5 text-slate-500 transition-transform ${isOpen ? 'rotate-90' : ''}`} />

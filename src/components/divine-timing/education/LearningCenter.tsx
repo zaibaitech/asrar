@@ -249,9 +249,9 @@ export default function LearningCenter({ currentLanguage = 'en' }: LearningSecti
           <button
             key={tab.id}
             onClick={() => setActiveSection(tab.id as any)}
-            className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all ${
+            className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all ${
               activeSection === tab.id
-                ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg scale-105'
+                ? ' text-white shadow-sm scale-105 bg-indigo-600'
                 : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
             }`}
           >
@@ -262,7 +262,7 @@ export default function LearningCenter({ currentLanguage = 'en' }: LearningSecti
       </div>
 
       {/* Content Area */}
-      <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl">
+      <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-sm">
         {activeSection !== 'faq' ? (
           <>
             {/* Section Header */}
@@ -309,7 +309,7 @@ export default function LearningCenter({ currentLanguage = 'en' }: LearningSecti
 
             <div className="space-y-6">
               {content.faq.questions.map((item, index) => (
-                <div key={index} className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-gray-700 dark:to-gray-600 rounded-lg p-6">
+                <div key={index} className=" rounded-xl p-6 bg-white/60 dark:bg-slate-800/40">
                   <h3 className="text-xl font-bold text-indigo-900 dark:text-indigo-200 mb-3">
                     Q: {item.q[lang]}
                   </h3>
@@ -324,7 +324,7 @@ export default function LearningCenter({ currentLanguage = 'en' }: LearningSecti
       </div>
 
       {/* Footer Note */}
-      <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 rounded-lg p-6">
+      <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 rounded-xl p-6">
         <div className="flex gap-3">
           <div className="text-amber-600 dark:text-amber-400 text-2xl">⚠️</div>
           <div>

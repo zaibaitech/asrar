@@ -101,13 +101,13 @@ export function EnergyCard({
   const getGradient = () => {
     switch (alignment.quality) {
       case 'strong':
-        return 'from-emerald-50 via-green-50 to-teal-50 dark:from-emerald-950/40 dark:via-green-950/40 dark:to-teal-950/40';
+        return '';
       case 'moderate':
-        return 'from-blue-50 via-indigo-50 to-purple-50 dark:from-blue-950/40 dark:via-indigo-950/40 dark:to-purple-950/40';
+        return '';
       case 'neutral':
-        return 'from-yellow-50 via-amber-50 to-orange-50 dark:from-yellow-950/40 dark:via-amber-950/40 dark:to-orange-950/40';
+        return '';
       case 'weak':
-        return 'from-orange-50 via-red-50 to-pink-50 dark:from-orange-950/40 dark:via-red-950/40 dark:to-pink-950/40';
+        return '';
     }
   };
 
@@ -228,7 +228,7 @@ export function EnergyCard({
   const recommendations = getActionRecommendations();
 
   return (
-    <div className={`relative overflow-hidden rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-gradient-to-br ${getGradient()} p-6 md:p-8 shadow-xl`}>
+    <div className={`relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40${getGradient()} p-6 md:p-8 shadow-sm`}>
       {/* Header */}
       <div className="flex items-start justify-between mb-6">
         <div className="flex-1">
@@ -272,7 +272,7 @@ export function EnergyCard({
         </div>
         <div className="h-3 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
           <div 
-            className="h-full bg-gradient-to-r from-amber-400 to-amber-600 transition-all duration-1000 ease-linear rounded-full"
+            className="h-full transition-all duration-1000 ease-linear rounded-full bg-white/60 dark:bg-slate-800/40"
             style={{ width: `${progress}%` }}
           />
         </div>

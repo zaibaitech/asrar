@@ -43,14 +43,14 @@ export function TemperamentDisplay({
   // Element colors
   const elementColors = {
     fire: 'text-orange-500 bg-orange-500/10 border-orange-500/20',
-    water: 'text-blue-500 bg-blue-500/10 border-blue-500/20',
-    air: 'text-cyan-500 bg-cyan-500/10 border-cyan-500/20',
+    water: 'text-indigo-500 bg-indigo-500/10 border-slate-300/20',
+    air: 'text-indigo-500 bg-indigo-500/10 border-slate-300/20',
     earth: 'text-emerald-500 bg-emerald-500/10 border-emerald-500/20'
   };
 
   if (compact) {
     return (
-      <div className={`p-4 rounded-lg border ${elementColors[element]}`}>
+      <div className={`p-4 rounded-xl border ${elementColors[element]}`}>
         <div className="flex items-center gap-2 mb-2">
           <ElementIcon className="w-5 h-5" />
           <h3 className="font-semibold">
@@ -67,7 +67,7 @@ export function TemperamentDisplay({
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className={`p-4 rounded-lg border ${elementColors[element]}`}>
+      <div className={`p-4 rounded-xl border ${elementColors[element]}`}>
         <div className="flex items-center gap-3 mb-2">
           <ElementIcon className="w-6 h-6" />
           <h2 className="text-2xl font-bold">
@@ -201,7 +201,7 @@ export function TemperamentDisplay({
       )}
 
       {/* Disclaimer */}
-      <div className="p-3 rounded-lg bg-white/5 border border-white/10 text-xs opacity-70">
+      <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-xs opacity-70">
         <p>
           {isFrench 
             ? "Ces profils sont des tendances générales, pas des règles absolues. Vos expériences, compétences et choix façonnent votre parcours unique." 
@@ -229,8 +229,8 @@ export function TemperamentBadge({ element }: { element: TemperamentElement }) {
   
   const elementColors = {
     fire: 'text-orange-500 bg-orange-500/10',
-    water: 'text-blue-500 bg-blue-500/10',
-    air: 'text-cyan-500 bg-cyan-500/10',
+    water: 'text-indigo-500 bg-indigo-500/10',
+    air: 'text-indigo-500 bg-indigo-500/10',
     earth: 'text-emerald-500 bg-emerald-500/10'
   };
   

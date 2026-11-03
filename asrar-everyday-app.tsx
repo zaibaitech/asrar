@@ -18,6 +18,7 @@ import { useAuth } from './src/contexts/AuthContext';
 import { CalculatorDisclaimerBanner } from './src/components/CalculatorDisclaimerBanner';
 import { GetTheAppBanner } from './src/components/GetTheAppBanner';
 import { DailyReflectionCard } from './src/components/DailyReflectionCard';
+import { LIFE_GUIDANCE_PREVIEW } from './src/lib/lifeGuidancePreview';
 
 // Only the default (planetary) view and the shell are needed for first paint; the other views and
 // modals load on demand so the home page ships less JavaScript to parse before it is interactive.
@@ -401,8 +402,8 @@ export default function AsrarEveryday() {
                 <span className="hidden sm:inline">{t.nav.planetary}</span>
                 <span className="sm:hidden">ʿIlm Nujūm</span>
               </button>
-              {/* Life Guidance — dev only */}
-              {process.env.NODE_ENV === 'development' && (
+              {/* Life Guidance — preview flag (NEXT_PUBLIC_LIFE_GUIDANCE_PREVIEW) */}
+              {LIFE_GUIDANCE_PREVIEW && (
                 <button
                   onClick={() => setViewMode('guidance')}
                   className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all whitespace-nowrap text-sm sm:text-base ${
@@ -556,7 +557,7 @@ export default function AsrarEveryday() {
             isOpen={showMobileMenu}
             onClose={() => setShowMobileMenu(false)}
             onShowTutorial={() => setShowOnboarding(true)}
-            onSelectGuidance={process.env.NODE_ENV === 'development' ? () => setViewMode('guidance') : undefined}
+            onSelectGuidance={LIFE_GUIDANCE_PREVIEW ? () => setViewMode('guidance') : undefined}
           />
         )}
 

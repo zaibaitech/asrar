@@ -90,7 +90,7 @@ export default function EnergyFlowChart({
   };
 
   return (
-    <div className="bg-gradient-to-br from-slate-50 to-gray-50 dark:from-slate-900 dark:to-gray-900 rounded-xl p-6 border border-slate-200 dark:border-slate-700">
+    <div className=" rounded-xl p-6 border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40">
       {/* Header */}
       <div className="mb-6">
         <div className="flex items-center gap-2 mb-2">
@@ -115,7 +115,7 @@ export default function EnergyFlowChart({
           </span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+          <div className="w-3 h-3 rounded-full bg-indigo-500"></div>
           <span className="font-medium text-slate-900 dark:text-slate-200">
             {isFr ? 'Bon (60-79)' : 'Good (60-79)'}
           </span>
@@ -151,7 +151,7 @@ export default function EnergyFlowChart({
                 isCurrent || isSelected
                   ? 'ring-2 ring-offset-2 ring-amber-500 dark:ring-offset-slate-900'
                   : 'hover:ring-2 hover:ring-slate-300 dark:hover:ring-slate-600'
-              } rounded-lg overflow-hidden`}
+              } rounded-xl overflow-hidden`}
             >
               <div className="flex items-center">
                 {/* Time label */}
@@ -185,7 +185,7 @@ export default function EnergyFlowChart({
                         {hour.planet.name}
                       </span>
                       {isCurrent && (
-                        <span className="text-xs bg-amber-500 text-white px-2 py-0.5 rounded-full font-bold shadow-md">
+                        <span className="text-xs bg-amber-500 text-white px-2 py-0.5 rounded-full font-bold shadow-sm">
                           {isFr ? 'Actuel' : 'Current'}
                         </span>
                       )}
@@ -203,7 +203,7 @@ export default function EnergyFlowChart({
 
       {/* Selected Hour Details */}
       {selectedHour && (
-        <div className="p-4 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/30 dark:to-orange-950/30 rounded-lg border border-amber-200 dark:border-amber-800 animate-fade-in">
+        <div className="p-4 rounded-xl border border-amber-200 dark:border-amber-800 bg-white/60 dark:bg-slate-800/40">
           <div className="flex items-center gap-2 mb-2">
             <span className="text-lg">🔍</span>
             <div className="text-sm font-semibold text-amber-900 dark:text-amber-100">
@@ -267,7 +267,7 @@ export default function EnergyFlowChart({
             </div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+            <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
               {hours.filter(h => {
                 const score = calculateHarmony(h.planet.element);
                 return score >= 60 && score < 80;

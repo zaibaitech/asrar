@@ -1,5 +1,6 @@
 import Groq from 'groq-sdk';
 import { NextRequest, NextResponse } from 'next/server';
+import { rateLimit, readJsonCapped } from '@/src/lib/apiGuard';
 
 const groq = new Groq({
   apiKey: process.env.GROQ_API_KEY || process.env.EXPO_PUBLIC_GROQ_API_KEY || ''
@@ -7,6 +8,9 @@ const groq = new Groq({
 
 export async function POST(request: NextRequest) {
   try {
+    const limited = rateLimit(request, 'ai-chat', { max: 15, windowMs: 60_000 });
+    if (limited) return limited;
+
     if (!process.env.GROQ_API_KEY && !process.env.EXPO_PUBLIC_GROQ_API_KEY) {
       return NextResponse.json(
         { error: 'Groq API key not configured.' },
@@ -14,14 +18,19 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const body = await request.json();
-    const { message, calculationData, analysisType, language = 'en', conversationHistory = [] } = body;
+    const parsed = await readJsonCapped(request, 16_000);
+    if ('error' in parsed) return parsed.error;
+    const { message, calculationData, analysisType, language = 'en', conversationHistory = [] } = parsed.body ?? {};
 
-    if (!message) {
+    if (!message || typeof message !== 'string') {
       return NextResponse.json(
         { error: 'Message is required' },
         { status: 400 }
       );
+    }
+
+    if (message.length > 2000) {
+      return NextResponse.json({ error: 'Message is too long.' }, { status: 413 });
     }
 
     // Build context-aware system prompt
@@ -33,7 +42,10 @@ export async function POST(request: NextRequest) {
         role: 'system',
         content: systemPrompt,
       },
-      ...conversationHistory.slice(-10), // Keep last 10 messages for context
+      ...(Array.isArray(conversationHistory) ? conversationHistory : [])
+        .filter((m: any) => m && (m.role === 'user' || m.role === 'assistant') && typeof m.content === 'string')
+        .slice(-10) // Keep last 10 messages for context
+        .map((m: any) => ({ role: m.role, content: m.content.slice(0, 2000) })),
       {
         role: 'user',
         content: message,
@@ -56,7 +68,8 @@ export async function POST(request: NextRequest) {
     });
 
   } catch (error: any) {
-    console.error('AI Chat Error:', error);
+    // Do not log the error object: it can echo request content. Log a status only.
+    console.error('AI Chat Error', error?.status ?? error?.name ?? 'unknown');
     return NextResponse.json(
       { error: error.message || 'Failed to get response' },
       { status: 500 }

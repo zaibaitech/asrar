@@ -81,7 +81,7 @@ export default function PrayerTimeIntegration({
 
   if (!prayerPeriod) {
     return (
-      <div className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950 dark:to-teal-950 rounded-xl p-6 border border-emerald-200 dark:border-emerald-800">
+      <div className=" rounded-xl p-6 border border-emerald-200 dark:border-emerald-800 bg-white/60 dark:bg-slate-800/40">
         <div className="text-center text-gray-600 dark:text-gray-400">
           {isFr ? 'Calcul des heures de prière...' : 'Calculating prayer times...'}
         </div>
@@ -98,7 +98,7 @@ export default function PrayerTimeIntegration({
     <div className="space-y-4">
       {/* Special Time Alert */}
       {specialTime && (
-        <div className="bg-gradient-to-r from-amber-100 to-yellow-100 dark:from-amber-900/30 dark:to-yellow-900/30 rounded-xl p-4 border-2 border-amber-300 dark:border-amber-700 shadow-lg animate-pulse-slow">
+        <div className=" rounded-xl p-4 border border-amber-300 dark:border-amber-700 shadow-sm bg-white/60 dark:bg-slate-800/40">
           <div className="flex items-center gap-3 mb-2">
             <span className="text-3xl">{getPrayerEmoji(specialTime.name)}</span>
             <div>
@@ -117,7 +117,7 @@ export default function PrayerTimeIntegration({
       )}
 
       {/* Main Prayer Time Card */}
-      <div className="relative bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 dark:from-emerald-950 dark:via-teal-950 dark:to-cyan-950 rounded-xl p-6 border border-emerald-200 dark:border-emerald-800 shadow-lg overflow-hidden">
+      <div className="relative rounded-xl p-6 border border-emerald-200 dark:border-emerald-800 shadow-sm overflow-hidden bg-white/60 dark:bg-slate-800/40">
         {/* Islamic Pattern Background */}
         <div className="absolute inset-0 opacity-5 dark:opacity-10">
           <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -147,7 +147,7 @@ export default function PrayerTimeIntegration({
           </div>
 
           {/* Current Period */}
-          <div className="mb-4 p-4 bg-white/50 dark:bg-black/20 rounded-lg">
+          <div className="mb-4 p-4 bg-white/50 dark:bg-black/20 rounded-xl">
             <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">
               {isFr ? 'Période actuelle' : 'Current Period'}
             </div>
@@ -168,7 +168,7 @@ export default function PrayerTimeIntegration({
           </div>
 
           {/* Next Prayer */}
-          <div className="mb-4 p-4 bg-gradient-to-r from-teal-100 to-cyan-100 dark:from-teal-900/30 dark:to-cyan-900/30 rounded-lg">
+          <div className="mb-4 p-4 rounded-xl bg-white/60 dark:bg-slate-800/40">
             <div className="flex items-center justify-between mb-2">
               <div className="text-sm text-gray-600 dark:text-gray-400">
                 {isFr ? 'Prochaine prière' : 'Next Prayer'}
@@ -180,10 +180,10 @@ export default function PrayerTimeIntegration({
             <div className="flex items-center gap-3">
               <span className="text-3xl">{getPrayerEmoji(prayerPeriod.next as any)}</span>
               <div>
-                <div className="text-xl font-bold text-teal-900 dark:text-teal-100">
+                <div className="text-xl font-bold text-indigo-900 dark:text-indigo-100">
                   {prayerPeriod.next}
                 </div>
-                <div className="text-sm text-teal-700 dark:text-teal-300">
+                <div className="text-sm text-indigo-700 dark:text-indigo-300">
                   {isFr ? 'dans' : 'in'} <span className="font-semibold">{prayerPeriod.timeUntil}</span>
                 </div>
               </div>
@@ -192,10 +192,10 @@ export default function PrayerTimeIntegration({
 
           {/* Planetary Synergy */}
           {synergy && (
-            <div className={`p-3 rounded-lg border-2 mb-4 ${
+            <div className={`p-3 rounded-xl border mb-4 ${
               synergy.synergy === 'high'
                 ? 'bg-green-50 dark:bg-green-950/30 border-green-300 dark:border-green-700'
-                : 'bg-blue-50 dark:bg-blue-950/30 border-blue-300 dark:border-blue-700'
+                : 'bg-indigo-50 dark:bg-indigo-950/30 border-slate-200 dark:border-slate-700'
             }`}>
               <div className="flex items-center gap-2 mb-1">
                 <span className="text-lg">{synergy.synergy === 'high' ? '⚡' : '✨'}</span>
@@ -216,11 +216,11 @@ export default function PrayerTimeIntegration({
                 {allPrayers.map((prayer) => (
                   <div
                     key={prayer.name}
-                    className={`flex items-center justify-between p-2 rounded-lg transition-colors ${
+                    className={`flex items-center justify-between p-2 rounded-xl transition-colors ${
                       prayer.isCurrent
                         ? 'bg-emerald-200 dark:bg-emerald-800'
                         : prayer.isNext
-                        ? 'bg-teal-100 dark:bg-teal-900/50'
+                        ? 'bg-indigo-100 dark:bg-indigo-900/50'
                         : prayer.isPassed
                         ? 'bg-gray-100 dark:bg-gray-800/50 opacity-60'
                         : 'bg-white/30 dark:bg-white/5'
@@ -241,7 +241,7 @@ export default function PrayerTimeIntegration({
                         </span>
                       )}
                       {prayer.isNext && (
-                        <span className="text-xs bg-teal-600 text-white px-2 py-0.5 rounded-full">
+                        <span className="text-xs bg-indigo-600 text-white px-2 py-0.5 rounded-full">
                           {isFr ? 'Prochain' : 'Next'}
                         </span>
                       )}

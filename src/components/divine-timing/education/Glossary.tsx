@@ -288,17 +288,6 @@ export default function Glossary({ currentLanguage = 'en' }: GlossaryProps) {
     return matchesCategory && matchesSearch;
   });
 
-  const getCategoryColor = (category: string) => {
-    const colors = {
-      planet: 'from-purple-500 to-indigo-500',
-      element: 'from-orange-500 to-red-500',
-      divine: 'from-yellow-500 to-amber-500',
-      concept: 'from-blue-500 to-cyan-500',
-      practice: 'from-green-500 to-emerald-500',
-    };
-    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600';
-  };
-
   return (
     <div className="w-full max-w-6xl mx-auto p-6 space-y-6">
       {/* Header */}
@@ -316,14 +305,14 @@ export default function Glossary({ currentLanguage = 'en' }: GlossaryProps) {
       </div>
 
       {/* Search Bar */}
-      <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg">
+      <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm">
         <div className="relative">
           <input
             type="text"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder={lang === 'en' ? 'Search terms...' : 'Rechercher des termes...'}
-            className="w-full px-4 py-3 pl-12 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+            className="w-full px-4 py-3 pl-12 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent min-h-[44px] text-base sm:text-sm"
           />
           <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
             🔍
@@ -337,9 +326,9 @@ export default function Glossary({ currentLanguage = 'en' }: GlossaryProps) {
           <button
             key={category.id}
             onClick={() => setSelectedCategory(category.id)}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg font-semibold transition-all ${
+            className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${
               selectedCategory === category.id
-                ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg scale-105'
+                ? ' text-white shadow-sm scale-105 bg-indigo-600'
                 : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
             }`}
           >
@@ -359,7 +348,7 @@ export default function Glossary({ currentLanguage = 'en' }: GlossaryProps) {
         {filteredTerms.map((term, index) => (
           <div
             key={index}
-            className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+            className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm transition-shadow"
           >
             <div className="flex items-start justify-between mb-3">
               <div className="flex-1">
@@ -369,9 +358,7 @@ export default function Glossary({ currentLanguage = 'en' }: GlossaryProps) {
                 </div>
               </div>
               <div
-                className={`px-3 py-1 rounded-full bg-gradient-to-r ${getCategoryColor(
-                  term.category
-                )} text-white text-sm font-semibold`}
+                className={`px-3 py-1 rounded-full bg-indigo-600 text-white text-sm font-semibold`}
               >
                 {categories.find((c) => c.id === term.category)?.label[lang]}
               </div>

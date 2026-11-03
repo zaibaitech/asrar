@@ -108,6 +108,9 @@ export const PLANETARY_HOURS_ORDER: Planet[] = [
   'Saturn', 'Jupiter', 'Mars', 'Sun', 'Venus', 'Mercury', 'Moon'
 ];
 
+/** Day rulers by weekday index (0 = Sunday). */
+const WEEKDAY_RULERS: Planet[] = ['Sun', 'Moon', 'Mars', 'Mercury', 'Jupiter', 'Venus', 'Saturn'];
+
 // ============================================================================
 // HELPER FUNCTIONS FOR NAME DESTINY MODULE
 // ============================================================================
@@ -557,7 +560,6 @@ export function analyzeNameDestiny(name: string, abjad: Record<string, number> =
   
   // Compute Qur'anic Resonance from Kabīr (Hadad)
   const quranResonance = computeQuranResonance(kabir);
-  console.log('✨ analyzeNameDestiny - Kabir:', kabir, 'QuranResonance:', quranResonance);
   
   // Analyze letter geometry
   const geometry = analyzeGeometry(name);
@@ -1749,18 +1751,21 @@ export function calculatePlanetaryHour(date: Date): {
   favorable: string[];
   avoid: string[];
 } {
-  const dayOfWeek = date.getDay(); // 0 = Sunday
-  const planetOrder: Planet[] = ['Sun', 'Moon', 'Mars', 'Mercury', 'Jupiter', 'Venus', 'Saturn'];
-  const dayPlanet = planetOrder[dayOfWeek];
-  
+  // The planetary day starts at dawn, not midnight. This helper keeps the
+  // simplified 06:00 dawn (the sunrise-based version is utils/planetaryHours),
+  // so before 06:00 we are still in the previous day's hours.
   const hour = date.getHours();
-  const isDaytime = hour >= 6 && hour < 18;
-  
-  // Calculate planetary hour (simplified)
-  const hoursSinceDawn = isDaytime ? hour - 6 : hour + 6;
-  const planetIndex = (planetOrder.indexOf(dayPlanet) + hoursSinceDawn) % 7;
+  const dayOfWeek = hour < 6 ? (date.getDay() + 6) % 7 : date.getDay(); // 0 = Sunday
+  const dayPlanet = WEEKDAY_RULERS[dayOfWeek];
+
+  // Hours counted from dawn: 0-11 daytime, 12-23 night.
+  const hoursSinceDawn = hour >= 6 ? hour - 6 : hour + 18;
+
+  // Chaldean order (Saturn, Jupiter, Mars, Sun, Venus, Mercury, Moon): the first
+  // hour belongs to the day ruler, then each hour moves one step down the order.
+  const planetIndex = (PLANETARY_HOURS_ORDER.indexOf(dayPlanet) + hoursSinceDawn) % 7;
   const currentPlanet = PLANETARY_HOURS_ORDER[planetIndex];
-  
+
   const qualities: Record<Planet, { quality: string; favorable: string[]; avoid: string[] }> = {
     'Sun': {
       quality: 'Leadership, Authority, Success',

@@ -250,7 +250,7 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
   const handleAddDebtRelief = () => {
     onAdd('DEBT_RELIEF', {
       title: language === 'fr' ? DEBT_RELIEF_PRACTICE_INFO.titleFr : DEBT_RELIEF_PRACTICE_INFO.title,
-      arabicText: 'وَمَا ذَٰلِكَ عَلَى اللَّهِ بِعَزِيزٍ',
+      arabicText: 'وَمَا ذَٰلِكَ عَلَى اللَّهِ بِعَزِيزٍ',
       transliteration: 'Wamā dhālika ʿalā llāhi bi-ʿAzīzin',
       meaning: language === 'fr' ? DEBT_RELIEF_PRACTICE_INFO.descriptionFr : DEBT_RELIEF_PRACTICE_INFO.description,
       dailyTarget: 1000,
@@ -709,7 +709,7 @@ export function AddChallengeModal({ isOpen, onClose, onAdd, existingChallenges =
             {/* Verse display */}
             <div className="p-4 rounded-xl bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-teal-900/20 dark:to-cyan-900/20 border border-teal-200 dark:border-teal-800/50 text-center">
               <p className="text-2xl font-arabic text-teal-900 dark:text-teal-100 mb-2 leading-loose">
-                وَمَا ذَٰلِكَ عَلَى اللَّهِ بِعَزِيزٍ
+                وَمَا ذَٰلِكَ عَلَى اللَّهِ بِعَزِيزٍ
               </p>
               <p className="text-sm text-slate-700 dark:text-slate-300 italic mb-1">
                 Wamā dhālika ʿalā llāhi bi-ʿAzīzin

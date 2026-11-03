@@ -42,9 +42,9 @@ export function NameDestinyLearningCenter({ currentLanguage = 'en' }: LearningCe
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
+              className={`flex items-center gap-2 px-4 py-2 rounded-xl font-medium transition-all ${
                 isActive
-                  ? 'bg-purple-600 text-white shadow-md'
+                  ? 'bg-indigo-600 text-white shadow-sm'
                   : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
               }`}
             >
@@ -56,7 +56,7 @@ export function NameDestinyLearningCenter({ currentLanguage = 'en' }: LearningCe
       </div>
 
       {/* Content */}
-      <div className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg">
+      <div className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm">
         {activeTab === 'intro' && <IntroductionTab isFrench={isFrench} />}
         {activeTab === 'islamic' && <IslamicContextTab isFrench={isFrench} />}
         {activeTab === 'calculations' && <CalculationsTab isFrench={isFrench} />}
@@ -89,14 +89,14 @@ function IntroductionTab({ isFrench }: { isFrench: boolean }) {
         </p>
       </div>
 
-      <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-5 border border-purple-200 dark:border-purple-700">
-        <h3 className="font-bold text-purple-900 dark:text-purple-100 mb-3 flex items-center gap-2">
+      <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-5 border border-slate-200 dark:border-slate-700">
+        <h3 className="font-bold text-indigo-900 dark:text-indigo-100 mb-3 flex items-center gap-2">
           <span className="text-2xl">✨</span>
           {isFrench ? 'Principes Fondamentaux' : 'Core Principles'}
         </h3>
         <ul className="space-y-2">
           <li className="flex items-start gap-2">
-            <ChevronRight className="w-4 h-4 text-purple-600 dark:text-purple-400 flex-shrink-0 mt-1" />
+            <ChevronRight className="w-4 h-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-1" />
             <span className="text-slate-700 dark:text-slate-300">
               {isFrench 
                 ? "Chaque lettre arabe a une valeur numérique unique (Abjad)"
@@ -104,7 +104,7 @@ function IntroductionTab({ isFrench }: { isFrench: boolean }) {
             </span>
           </li>
           <li className="flex items-start gap-2">
-            <ChevronRight className="w-4 h-4 text-purple-600 dark:text-purple-400 flex-shrink-0 mt-1" />
+            <ChevronRight className="w-4 h-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-1" />
             <span className="text-slate-700 dark:text-slate-300">
               {isFrench
                 ? "Les lettres sont associées aux quatre éléments (Feu, Terre, Air, Eau)"
@@ -112,7 +112,7 @@ function IntroductionTab({ isFrench }: { isFrench: boolean }) {
             </span>
           </li>
           <li className="flex items-start gap-2">
-            <ChevronRight className="w-4 h-4 text-purple-600 dark:text-purple-400 flex-shrink-0 mt-1" />
+            <ChevronRight className="w-4 h-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-1" />
             <span className="text-slate-700 dark:text-slate-300">
               {isFrench
                 ? "Les noms révèlent des schémas spirituels et des qualités personnelles"
@@ -120,7 +120,7 @@ function IntroductionTab({ isFrench }: { isFrench: boolean }) {
             </span>
           </li>
           <li className="flex items-start gap-2">
-            <ChevronRight className="w-4 h-4 text-purple-600 dark:text-purple-400 flex-shrink-0 mt-1" />
+            <ChevronRight className="w-4 h-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-1" />
             <span className="text-slate-700 dark:text-slate-300">
               {isFrench
                 ? "Cette science est utilisée pour la réflexion, non la divination"
@@ -130,8 +130,8 @@ function IntroductionTab({ isFrench }: { isFrench: boolean }) {
         </ul>
       </div>
 
-      <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-5 border border-blue-200 dark:border-blue-700">
-        <h3 className="font-bold text-blue-900 dark:text-blue-100 mb-3 flex items-center gap-2">
+      <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-5 border border-slate-200 dark:border-slate-700">
+        <h3 className="font-bold text-indigo-900 dark:text-indigo-100 mb-3 flex items-center gap-2">
           <span className="text-2xl">📚</span>
           {isFrench ? 'Histoire et Tradition' : 'History & Tradition'}
         </h3>
@@ -163,7 +163,7 @@ function IslamicContextTab({ isFrench }: { isFrench: boolean }) {
         </p>
       </div>
 
-      <div className="bg-emerald-50 dark:bg-emerald-900/20 rounded-lg p-5 border border-emerald-200 dark:border-emerald-700">
+      <div className="bg-emerald-50 dark:bg-emerald-900/20 rounded-xl p-5 border border-emerald-200 dark:border-emerald-700">
         <h3 className="font-bold text-emerald-900 dark:text-emerald-100 mb-3 flex items-center gap-2">
           <span className="text-2xl">🕌</span>
           {isFrench ? 'Érudits Clés' : 'Key Scholars'}
@@ -196,7 +196,7 @@ function IslamicContextTab({ isFrench }: { isFrench: boolean }) {
         </div>
       </div>
 
-      <div className="bg-amber-50 dark:bg-amber-900/20 rounded-lg p-5 border border-amber-200 dark:border-amber-700">
+      <div className="bg-amber-50 dark:bg-amber-900/20 rounded-xl p-5 border border-amber-200 dark:border-amber-700">
         <h3 className="font-bold text-amber-900 dark:text-amber-100 mb-3 flex items-center gap-2">
           <span className="text-2xl">⚖️</span>
           {isFrench ? 'Perspective Spirituelle' : 'Spiritual Perspective'}
@@ -264,8 +264,8 @@ function CalculationsTab({ isFrench }: { isFrench: boolean }) {
       </div>
 
       {/* Abjad System */}
-      <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-5 border border-purple-200 dark:border-purple-700">
-        <h3 className="font-bold text-purple-900 dark:text-purple-100 mb-3 flex items-center gap-2">
+      <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-5 border border-slate-200 dark:border-slate-700">
+        <h3 className="font-bold text-indigo-900 dark:text-indigo-100 mb-3 flex items-center gap-2">
           <span className="text-2xl">🔢</span>
           {isFrench ? 'Système Abjad' : 'Abjad System'}
         </h3>
@@ -292,8 +292,8 @@ function CalculationsTab({ isFrench }: { isFrench: boolean }) {
 
       {/* Key Calculations */}
       <div className="space-y-4">
-        <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-5 border border-blue-200 dark:border-blue-700">
-          <h4 className="font-bold text-blue-900 dark:text-blue-100 mb-2">
+        <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-5 border border-slate-200 dark:border-slate-700">
+          <h4 className="font-bold text-indigo-900 dark:text-indigo-100 mb-2">
             {isFrench ? '1. Kabīr (Grand Total - الكبير)' : '1. Kabīr (Grand Total - الكبير)'}
           </h4>
           <p className="text-sm text-slate-700 dark:text-slate-300">
@@ -301,12 +301,12 @@ function CalculationsTab({ isFrench }: { isFrench: boolean }) {
               ? "La somme de toutes les valeurs des lettres dans votre nom. Représente votre potentiel spirituel total."
               : "The sum of all letter values in your name. Represents your total spiritual potential."}
           </p>
-          <div className="mt-2 bg-blue-100 dark:bg-blue-900/50 p-3 rounded text-sm">
+          <div className="mt-2 bg-indigo-100 dark:bg-indigo-900/50 p-3 rounded text-sm">
             <strong>{isFrench ? 'Exemple:' : 'Example:'}</strong> محمد = م(40) + ح(8) + م(40) + د(4) = 92
           </div>
         </div>
 
-        <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-5 border border-green-200 dark:border-green-700">
+        <div className="bg-green-50 dark:bg-green-900/20 rounded-xl p-5 border border-green-200 dark:border-green-700">
           <h4 className="font-bold text-green-900 dark:text-green-100 mb-2">
             {isFrench ? '2. Ṣaghīr (Racine Réduite - الصغير)' : '2. Ṣaghīr (Reduced Root - الصغير)'}
           </h4>
@@ -320,7 +320,7 @@ function CalculationsTab({ isFrench }: { isFrench: boolean }) {
           </div>
         </div>
 
-        <div className="bg-amber-50 dark:bg-amber-900/20 rounded-lg p-5 border border-amber-200 dark:border-amber-700">
+        <div className="bg-amber-50 dark:bg-amber-900/20 rounded-xl p-5 border border-amber-200 dark:border-amber-700">
           <h4 className="font-bold text-amber-900 dark:text-amber-100 mb-2">
             {isFrench ? '3. Ḥadath (Valeur Élémentale - الحدث)' : '3. Ḥadath (Elemental Value - الحدث)'}
           </h4>
@@ -336,8 +336,8 @@ function CalculationsTab({ isFrench }: { isFrench: boolean }) {
           </div>
         </div>
 
-        <div className="bg-pink-50 dark:bg-pink-900/20 rounded-lg p-5 border border-pink-200 dark:border-pink-700">
-          <h4 className="font-bold text-pink-900 dark:text-pink-100 mb-2">
+        <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-5 border border-slate-200 dark:border-slate-700">
+          <h4 className="font-bold text-indigo-900 dark:text-indigo-100 mb-2">
             {isFrench ? '4. Distribution Élémentale des Lettres' : '4. Elemental Letter Distribution'}
           </h4>
           <p className="text-sm text-slate-700 dark:text-slate-300 mb-2">
@@ -352,7 +352,7 @@ function CalculationsTab({ isFrench }: { isFrench: boolean }) {
             <div className="bg-yellow-100 dark:bg-yellow-900/30 p-2 rounded">
               💨 <strong>{isFrench ? 'Air:' : 'Air:'}</strong> ب و ي ن ض ظ غ
             </div>
-            <div className="bg-blue-100 dark:bg-blue-900/30 p-2 rounded">
+            <div className="bg-indigo-100 dark:bg-indigo-900/30 p-2 rounded">
               💧 <strong>{isFrench ? 'Eau:' : 'Water:'}</strong> ج ز ك س ق ث خ
             </div>
             <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded">
@@ -417,9 +417,9 @@ function FAQTab({ isFrench }: { isFrench: boolean }) {
       
       <div className="space-y-4">
         {faqs.map((faq, index) => (
-          <div key={index} className="bg-slate-50 dark:bg-slate-900 rounded-lg p-5 border border-slate-200 dark:border-slate-700">
+          <div key={index} className="bg-slate-50 dark:bg-slate-900 rounded-xl p-5 border border-slate-200 dark:border-slate-700">
             <h3 className="font-bold text-slate-900 dark:text-white mb-2 flex items-start gap-2">
-              <span className="text-purple-600 dark:text-purple-400 flex-shrink-0">Q{index + 1}:</span>
+              <span className="text-indigo-600 dark:text-indigo-400 flex-shrink-0">Q{index + 1}:</span>
               <span>{faq.q}</span>
             </h3>
             <p className="text-slate-700 dark:text-slate-300 pl-8">
@@ -429,8 +429,8 @@ function FAQTab({ isFrench }: { isFrench: boolean }) {
         ))}
       </div>
 
-      <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-5 border border-blue-200 dark:border-blue-700">
-        <h3 className="font-bold text-blue-900 dark:text-blue-100 mb-2 flex items-center gap-2">
+      <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-5 border border-slate-200 dark:border-slate-700">
+        <h3 className="font-bold text-indigo-900 dark:text-indigo-100 mb-2 flex items-center gap-2">
           <span className="text-2xl">💡</span>
           {isFrench ? 'Rappel Important' : 'Important Reminder'}
         </h3>

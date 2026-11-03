@@ -634,102 +634,54 @@ export function IlmHurufPanel() {
   return (
     <div className="space-y-4 max-w-full overflow-x-hidden">
       {/* Mode Selection Header - Compact for Mobile */}
-      <div className="bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 dark:from-purple-900/20 dark:via-blue-900/20 dark:to-indigo-900/20 rounded-xl p-4 md:p-6 shadow-md">
+      <div className=" rounded-xl p-4 md:p-6 shadow-sm bg-white/60 dark:bg-slate-800/40">
         <h2 className="text-xl md:text-2xl font-bold mb-1 text-slate-900 dark:text-slate-100 flex items-center gap-2">
-          <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-purple-500" />
+          <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-indigo-500" />
           {t.ilmHuruf.title}
         </h2>
         <p className="text-xs md:text-sm text-slate-600 dark:text-slate-400 mb-4">
           {t.ilmHuruf.subtitle}
         </p>
         
-        {/* Mode Selection Grid - Compact 2x2 Mobile Layout */}
-        <div className="grid grid-cols-2 gap-2 md:gap-3">
-          {/* Destiny Mode */}
-          <button
-            onClick={() => handleModeChange('destiny')}
-            className={`relative group p-3 md:p-4 rounded-lg md:rounded-xl border-2 transition-all duration-300 transform ${
-              mode === 'destiny'
-                ? 'border-purple-500 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/40 dark:to-purple-800/40 scale-[1.02] shadow-lg ring-2 ring-purple-500 ring-offset-1 dark:ring-offset-slate-900'
-                : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-purple-400 hover:shadow-md active:scale-95'
-            }`}
-            aria-pressed={mode === 'destiny'}
-          >
-            <div className="relative">
-              <Target className={`w-5 h-5 md:w-6 md:h-6 mx-auto mb-1 md:mb-2 transition-colors ${mode === 'destiny' ? 'text-purple-600' : 'text-purple-500 group-hover:text-purple-600'}`} />
-              <div className={`text-xs md:text-sm font-bold text-slate-900 dark:text-slate-100 transition-all leading-tight ${mode === 'destiny' ? 'animate-scale-in' : ''}`}>
-                {t.ilmHuruf.nameDestiny}
-              </div>
-              {mode === 'destiny' && (
-                <div className="absolute top-0 right-0 animate-scale-in">
-                  <CheckCircle2 className="w-3 h-3 md:w-4 md:h-4 text-purple-600" />
-                </div>
-              )}
-            </div>
-          </button>
-          
-          {/* Life Path Mode */}
-          <button
-            onClick={() => handleModeChange('life-path')}
-            className={`relative group p-3 md:p-4 rounded-lg md:rounded-xl border-2 transition-all duration-300 transform ${
-              mode === 'life-path'
-                ? 'border-blue-500 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/40 dark:to-blue-800/40 scale-[1.02] shadow-lg ring-2 ring-blue-500 ring-offset-1 dark:ring-offset-slate-900'
-                : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-blue-400 hover:shadow-md active:scale-95'
-            }`}
-            aria-pressed={mode === 'life-path'}
-          >
-            <div className="relative">
-              <Compass className={`w-5 h-5 md:w-6 md:h-6 mx-auto mb-1 md:mb-2 transition-colors ${mode === 'life-path' ? 'text-blue-600' : 'text-blue-500 group-hover:text-blue-600'}`} />
-              <div className={`text-xs md:text-sm font-bold text-slate-900 dark:text-slate-100 transition-all leading-tight ${mode === 'life-path' ? 'animate-scale-in' : ''}`}>
-                {t.ilmHuruf.lifePath}
-              </div>
-              {mode === 'life-path' && (
-                <div className="absolute top-0 right-0 animate-scale-in">
-                  <CheckCircle2 className="w-3 h-3 md:w-4 md:h-4 text-blue-600" />
-                </div>
-              )}
-            </div>
-          </button>
-          
-          {/* Divine Timing Mode */}
-          <button
-            onClick={() => handleModeChange('timing')}
-            className={`relative group p-3 md:p-4 rounded-lg md:rounded-xl border-2 transition-all duration-300 transform ${
-              mode === 'timing'
-                ? 'border-amber-500 bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-900/40 dark:to-amber-800/40 scale-[1.02] shadow-lg ring-2 ring-amber-500 ring-offset-1 dark:ring-offset-slate-900'
-                : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-amber-400 hover:shadow-md active:scale-95'
-            }`}
-            aria-pressed={mode === 'timing'}
-          >
-            <div className="relative">
-              <Clock className={`w-5 h-5 md:w-6 md:h-6 mx-auto mb-1 md:mb-2 transition-colors ${mode === 'timing' ? 'text-amber-600' : 'text-amber-500 group-hover:text-amber-600'}`} />
-              <div className={`text-xs md:text-sm font-bold text-slate-900 dark:text-slate-100 transition-all leading-tight ${mode === 'timing' ? 'animate-scale-in' : ''}`}>
-                {t.ilmHuruf.divineTiming}
-              </div>
-              {mode === 'timing' && (
-                <div className="absolute top-0 right-0 animate-scale-in">
-                  <CheckCircle2 className="w-3 h-3 md:w-4 md:h-4 text-amber-600" />
-                </div>
-              )}
-            </div>
-          </button>
+        {/* Mode selector: segmented control (same pattern as the live tool pages) */}
+        <div role="group" className="flex gap-1 rounded-xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40 p-1">
+          {([
+            { id: 'destiny', label: t.ilmHuruf.nameDestiny, Icon: Target },
+            { id: 'life-path', label: t.ilmHuruf.lifePath, Icon: Compass },
+            { id: 'timing', label: t.ilmHuruf.divineTiming, Icon: Clock },
+          ] as const).map(({ id, label, Icon }) => (
+            <button
+              key={id}
+              type="button"
+              onClick={() => handleModeChange(id)}
+              aria-pressed={mode === id}
+              className={`flex-1 min-h-[48px] flex flex-col items-center justify-center gap-0.5 rounded-xl px-1 py-2 text-xs sm:text-sm font-semibold transition-colors active:scale-[0.98] ${
+                mode === id
+                  ? 'bg-indigo-600 text-white shadow-sm'
+                  : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700'
+              }`}
+            >
+              <Icon className="w-4 h-4" />
+              <span className="leading-tight text-center">{label}</span>
+            </button>
+          ))}
         </div>
       </div>
 
       {/* Input Section with Highlight Animation - Compact */}
       <div 
         ref={formSectionRef}
-        className={`bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 p-4 md:p-6 transition-all duration-300 ${
-          highlightInput ? 'animate-soft-highlight' : ''
+        className={`bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 p-4 md:p-6 transition-all duration-300 ${
+          highlightInput ? '' : ''
         }`}
       >
         <div className="mb-4 pb-3 border-b border-slate-200 dark:border-slate-700">
           <h3 className="text-lg md:text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
             <span className={`inline-block w-2 h-2 rounded-full transition-colors ${
-              mode === 'destiny' ? 'bg-purple-500' : 
-              mode === 'compatibility' ? 'bg-pink-500' : 
-              mode === 'life-path' ? 'bg-blue-500' : 
-              'bg-amber-500'
+              mode === 'destiny' ? 'bg-indigo-500' : 
+              mode === 'compatibility' ? 'bg-indigo-500' : 
+              mode === 'life-path' ? 'bg-indigo-500' : 
+              'bg-indigo-500'
             }`}></span>
             {mode === 'destiny' && t.ilmHuruf.discoverNameDestiny}
             {mode === 'compatibility' && t.ilmHuruf.analyzeTwoSouls}
@@ -746,7 +698,7 @@ export function IlmHurufPanel() {
         
         {/* Name Destiny Mode Selector */}
         {mode === 'destiny' && (
-          <div className="mb-6 animate-slide-up">
+          <div className="mb-6 ">
             <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">
               {t.mothersNameStrategy.modeSelector.title}
             </h3>
@@ -754,10 +706,10 @@ export function IlmHurufPanel() {
               {/* General Mode */}
               <button
                 onClick={() => setNameDestinyMode('general')}
-                className={`p-4 rounded-lg border-2 transition-all text-left ${
+                className={`p-4 rounded-xl border transition-all text-left ${
                   nameDestinyMode === 'general'
-                    ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20'
-                    : 'border-slate-300 dark:border-slate-600 hover:border-purple-300 dark:hover:border-purple-700'
+                    ? 'border-slate-300 bg-indigo-50 dark:bg-indigo-900/20'
+                    : 'border-slate-300 dark:border-slate-600 hover:border-slate-200 dark:hover:border-slate-700'
                 }`}
               >
                 <div className="flex items-start gap-3">
@@ -779,13 +731,13 @@ export function IlmHurufPanel() {
               {/* Personal Mode */}
               <button
                 onClick={() => setNameDestinyMode('personal')}
-                className={`p-4 rounded-lg border-2 transition-all text-left relative ${
+                className={`p-4 rounded-xl border transition-all text-left relative ${
                   nameDestinyMode === 'personal'
-                    ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20'
-                    : 'border-slate-300 dark:border-slate-600 hover:border-purple-300 dark:hover:border-purple-700'
+                    ? 'border-slate-300 bg-indigo-50 dark:bg-indigo-900/20'
+                    : 'border-slate-300 dark:border-slate-600 hover:border-slate-200 dark:hover:border-slate-700'
                 }`}
               >
-                <div className="absolute top-2 right-2 text-xs font-bold text-purple-600 dark:text-purple-400">
+                <div className="absolute top-2 right-2 text-xs font-bold text-indigo-600 dark:text-indigo-400">
                   {t.mothersNameStrategy.modeSelector.personalMode.recommended}
                 </div>
                 <div className="flex items-start gap-3">
@@ -806,11 +758,11 @@ export function IlmHurufPanel() {
             </div>
 
             {/* Why Personal is Better */}
-            <div className="mt-3 p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-200 dark:border-purple-700">
-              <div className="text-sm font-medium text-purple-900 dark:text-purple-100 mb-2">
+            <div className="mt-3 p-3 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl border border-slate-200 dark:border-slate-700">
+              <div className="text-sm font-medium text-indigo-900 dark:text-indigo-100 mb-2">
                 {t.mothersNameStrategy.modeSelector.whyPersonalBetter}
               </div>
-              <ul className="space-y-1 text-xs text-purple-800 dark:text-purple-200">
+              <ul className="space-y-1 text-xs text-indigo-800 dark:text-indigo-200">
                 <li>✓ {t.mothersNameStrategy.modeSelector.reason1}</li>
                 <li>✓ {t.mothersNameStrategy.modeSelector.reason2}</li>
                 <li>✓ {t.mothersNameStrategy.modeSelector.reason3}</li>
@@ -821,7 +773,7 @@ export function IlmHurufPanel() {
         
         {/* Autofill Toggle - User Profile */}
         {profile && (
-          <div className="mb-4 p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700">
+          <div className="mb-4 p-3 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700">
             <label className="flex items-center justify-between cursor-pointer">
               <div>
                 <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
@@ -835,7 +787,7 @@ export function IlmHurufPanel() {
                 onClick={() => setEnableAutofill(!enableAutofill)}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                   enableAutofill 
-                    ? 'bg-purple-600' 
+                    ? 'bg-indigo-600' 
                     : 'bg-slate-300 dark:bg-slate-600'
                 }`}
               >
@@ -849,7 +801,7 @@ export function IlmHurufPanel() {
           </div>
         )}
         
-        <div className="space-y-3 animate-slide-up">
+        <div className="space-y-3 ">
           {(mode === 'destiny' || mode === 'life-path') && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {/* Latin Input with Autocomplete */}
@@ -887,7 +839,7 @@ export function IlmHurufPanel() {
                     type="date"
                     value={birthDate}
                     onChange={(e) => setBirthDate(e.target.value)}
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 min-h-[44px] text-base sm:text-sm"
                   />
                 </div>
               )}
@@ -895,11 +847,11 @@ export function IlmHurufPanel() {
               {/* Mother's Name field - REQUIRED for life-path mode (always visible) */}
               {mode === 'life-path' && (
                 <div className="md:col-span-2">
-                  <div className="bg-rose-50 dark:bg-rose-900/20 rounded-lg p-4 border-2 border-rose-300 dark:border-rose-700 space-y-3">
+                  <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-4 border border-slate-200 dark:border-slate-700 space-y-3">
                     <div className="flex items-center justify-between">
-                      <label className="block text-sm font-medium text-rose-700 dark:text-rose-300">
+                      <label className="block text-sm font-medium text-indigo-700 dark:text-indigo-300">
                         {t.mothersNameStrategy.lifePath.motherNameRequired}
-                        <span className="text-xs text-rose-600 dark:text-rose-400 block mt-1">
+                        <span className="text-xs text-indigo-600 dark:text-indigo-400 block mt-1">
                           {t.mothersNameStrategy.lifePath.explanation}
                         </span>
                       </label>
@@ -907,7 +859,7 @@ export function IlmHurufPanel() {
                         onClick={() => {
                           alert(t.mothersNameStrategy.lifePath.detailedExplanation);
                         }}
-                        className="text-rose-500 hover:text-rose-700 dark:text-rose-400 dark:hover:text-rose-300"
+                        className="text-indigo-500 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300 min-h-[44px]"
                         title={t.mothersNameStrategy.lifePath.whyRequired}
                       >
                         <Info className="h-4 w-4" />
@@ -916,7 +868,7 @@ export function IlmHurufPanel() {
                       
                       {/* Mother's Latin Input with Autocomplete */}
                       <div>
-                        <label className="block text-xs font-medium mb-1 text-rose-600 dark:text-rose-400">
+                        <label className="block text-xs font-medium mb-1 text-indigo-600 dark:text-indigo-400">
                           {language === 'fr' ? "Tapez en lettres latines" : "Type in Latin letters"}
                         </label>
                         <NameAutocomplete
@@ -942,14 +894,14 @@ export function IlmHurufPanel() {
                       {/* Mother's Arabic Input */}
                       <div>
                         <div className="flex items-center justify-between mb-1">
-                          <label className="block text-xs font-medium text-rose-600 dark:text-rose-400">
+                          <label className="block text-xs font-medium text-indigo-600 dark:text-indigo-400">
                             {language === 'fr' ? "Ou en arabe" : "Or in Arabic"}
                           </label>
                           <button
                             onClick={() => setShowMotherKeyboard(!showMotherKeyboard)}
                             className={`flex items-center gap-1 px-2 py-1 rounded text-xs font-medium transition-colors ${
                               showMotherKeyboard
-                                ? 'bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300 border border-rose-300 dark:border-rose-700'
+                                ? 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-slate-200 dark:border-slate-700'
                                 : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-400 border border-slate-300 dark:border-slate-600 hover:bg-slate-200 dark:hover:bg-slate-600'
                             }`}
                           >
@@ -966,7 +918,7 @@ export function IlmHurufPanel() {
                           }}
                           dir="rtl"
                           placeholder={language === 'fr' ? "اسم الأم" : "Mother's name in Arabic"}
-                          className="w-full px-4 py-2 rounded-lg border border-rose-300 dark:border-rose-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100 text-right"
+                          className="w-full px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 text-right min-h-[44px] text-base sm:text-sm"
                         />
                         
                         {/* Mother's Virtual Keyboard */}
@@ -990,20 +942,20 @@ export function IlmHurufPanel() {
                 <div className="md:col-span-2">
                   {/* Personal Mode - Mother's name required */}
                   {nameDestinyMode === 'personal' && (
-                    <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-4 border border-purple-200 dark:border-purple-700 space-y-3">
+                    <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-4 border border-slate-200 dark:border-slate-700 space-y-3">
                       <div className="flex items-center justify-between">
-                        <label className="block text-sm font-medium text-purple-700 dark:text-purple-300">
+                        <label className="block text-sm font-medium text-indigo-700 dark:text-indigo-300">
                           {t.mothersNameStrategy.nameInput.motherNameRequired}
-                          <span className="text-xs text-purple-600 dark:text-purple-400 block mt-1">
+                          <span className="text-xs text-indigo-600 dark:text-indigo-400 block mt-1">
                             {t.mothersNameStrategy.nameInput.personalModeSubtitle}
                           </span>
                         </label>
-                        <Info className="h-4 w-4 text-purple-500 dark:text-purple-400" />
+                        <Info className="h-4 w-4 text-indigo-500 dark:text-indigo-400" />
                       </div>
                       
                       {/* Mother's Latin Input */}
                       <div>
-                        <label className="block text-xs font-medium mb-1 text-purple-600 dark:text-purple-400">
+                        <label className="block text-xs font-medium mb-1 text-indigo-600 dark:text-indigo-400">
                           {language === 'fr' ? "Tapez en lettres latines" : "Type in Latin letters"}
                         </label>
                         <NameAutocomplete
@@ -1029,14 +981,14 @@ export function IlmHurufPanel() {
                       {/* Mother's Arabic Input */}
                       <div>
                         <div className="flex items-center justify-between mb-1">
-                          <label className="block text-xs font-medium text-purple-600 dark:text-purple-400">
+                          <label className="block text-xs font-medium text-indigo-600 dark:text-indigo-400">
                             {language === 'fr' ? "Ou en arabe" : "Or in Arabic"}
                           </label>
                           <button
                             onClick={() => setShowMotherKeyboard(!showMotherKeyboard)}
                             className={`flex items-center gap-1 px-2 py-1 rounded text-xs font-medium transition-colors ${
                               showMotherKeyboard
-                                ? 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-300 dark:border-purple-700'
+                                ? 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-slate-200 dark:border-slate-700'
                                 : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-400 border border-slate-300 dark:border-slate-600 hover:bg-slate-200 dark:hover:bg-slate-600'
                             }`}
                           >
@@ -1053,7 +1005,7 @@ export function IlmHurufPanel() {
                           }}
                           dir="rtl"
                           placeholder={t.ilmHuruf.motherNamePlaceholderAr}
-                          className="w-full px-4 py-2 rounded-lg border border-purple-300 dark:border-purple-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100 text-right"
+                          className="w-full px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 text-right min-h-[44px] text-base sm:text-sm"
                         />
                         
                         {/* Mother's Virtual Keyboard */}
@@ -1073,7 +1025,7 @@ export function IlmHurufPanel() {
 
                   {/* General Mode - Mother's name optional with explanation */}
                   {nameDestinyMode === 'general' && !motherName && (
-                    <div className="p-3 bg-amber-50 dark:bg-amber-900/20 rounded-lg border border-amber-200 dark:border-amber-700">
+                    <div className="p-3 bg-amber-50 dark:bg-amber-900/20 rounded-xl border border-amber-200 dark:border-amber-700">
                       <div className="flex items-start gap-2">
                         <AlertCircle className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
                         <div className="flex-1">
@@ -1082,7 +1034,7 @@ export function IlmHurufPanel() {
                           </p>
                           <button
                             onClick={() => setNameDestinyMode('personal')}
-                            className="mt-2 text-sm font-medium text-amber-900 dark:text-amber-100 underline hover:no-underline"
+                            className="mt-2 text-sm font-medium text-amber-900 dark:text-amber-100 underline hover:no-underline min-h-[44px]"
                           >
                             {t.mothersNameStrategy.nameInput.switchToPersonal}
                           </button>
@@ -1101,9 +1053,9 @@ export function IlmHurufPanel() {
                   </label>
                   <button
                     onClick={() => setShowKeyboard(!showKeyboard)}
-                    className={`flex items-center gap-1 px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
+                    className={`flex items-center gap-1 px-3 py-1 rounded-xl text-xs font-medium transition-colors ${
                       showKeyboard
-                        ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border border-blue-300 dark:border-blue-700'
+                        ? 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-slate-200 dark:border-slate-700'
                         : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-400 border border-slate-300 dark:border-slate-600 hover:bg-slate-200 dark:hover:bg-slate-600'
                     }`}
                   >
@@ -1119,7 +1071,7 @@ export function IlmHurufPanel() {
                     setLatinInput(''); // Clear latin if user types Arabic directly
                   }}
                   placeholder={t.ilmHuruf.namePlaceholderAr}
-                  className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100 text-right text-xl font-arabic"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 text-right text-xl font-arabic min-h-[44px]"
                   dir="rtl"
                   style={{ fontFamily: "'Noto Naskh Arabic', 'Amiri', serif" }}
                 />
@@ -1184,9 +1136,9 @@ export function IlmHurufPanel() {
                     </label>
                     <button
                       onClick={() => setShowKeyboard(!showKeyboard)}
-                      className={`flex items-center gap-1 px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
+                      className={`flex items-center gap-1 px-3 py-1 rounded-xl text-xs font-medium transition-colors ${
                         showKeyboard
-                          ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border border-blue-300 dark:border-blue-700'
+                          ? 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-slate-200 dark:border-slate-700'
                           : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-400 border border-slate-300 dark:border-slate-600 hover:bg-slate-200 dark:hover:bg-slate-600'
                       }`}
                     >
@@ -1202,7 +1154,7 @@ export function IlmHurufPanel() {
                       setLatinInput('');
                     }}
                     placeholder={t.ilmHuruf.namePlaceholderAr}
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100 text-right text-xl font-arabic"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 text-right text-xl font-arabic min-h-[44px]"
                     dir="rtl"
                     style={{ fontFamily: "'Noto Naskh Arabic', 'Amiri', serif" }}
                   />
@@ -1225,8 +1177,8 @@ export function IlmHurufPanel() {
               {/* Person 2 Inputs */}
               <div className="space-y-3">
                 <div className="flex items-center gap-2 mb-1">
-                  <div className="w-8 h-8 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center">
-                    <span className="text-purple-600 dark:text-purple-400 font-bold">2</span>
+                  <div className="w-8 h-8 rounded-full bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center">
+                    <span className="text-indigo-600 dark:text-indigo-400 font-bold">2</span>
                   </div>
                   <h4 className="font-semibold text-slate-700 dark:text-slate-300">
                     {t.fourLayerCompatibility?.person2Name || "Second Person's Name"}
@@ -1258,9 +1210,9 @@ export function IlmHurufPanel() {
                   </label>
                   <button
                     onClick={() => setShowKeyboard2(!showKeyboard2)}
-                    className={`flex items-center gap-1 px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
+                    className={`flex items-center gap-1 px-3 py-1 rounded-xl text-xs font-medium transition-colors ${
                       showKeyboard2
-                        ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border border-blue-300 dark:border-blue-700'
+                        ? 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-slate-200 dark:border-slate-700'
                         : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-400 border border-slate-300 dark:border-slate-600 hover:bg-slate-200 dark:hover:bg-slate-600'
                     }`}
                   >
@@ -1276,7 +1228,7 @@ export function IlmHurufPanel() {
                     setLatinInput2(''); // Clear latin if user types Arabic directly
                   }}
                   placeholder={t.ilmHuruf.motherNamePlaceholderAr}
-                  className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100 text-right text-xl font-arabic"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 text-right text-xl font-arabic min-h-[44px]"
                   dir="rtl"
                   style={{ fontFamily: "'Noto Naskh Arabic', 'Amiri', serif" }}
                 />
@@ -1330,9 +1282,9 @@ export function IlmHurufPanel() {
                     </label>
                     <button
                       onClick={() => setShowKeyboard(!showKeyboard)}
-                      className={`flex items-center gap-1 px-3 py-1 rounded-lg text-xs font-medium transition-colors ${
+                      className={`flex items-center gap-1 px-3 py-1 rounded-xl text-xs font-medium transition-colors ${
                         showKeyboard
-                          ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border border-blue-300 dark:border-blue-700'
+                          ? 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-slate-200 dark:border-slate-700'
                           : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-400 border border-slate-300 dark:border-slate-600 hover:bg-slate-200 dark:hover:bg-slate-600'
                       }`}
                     >
@@ -1348,7 +1300,7 @@ export function IlmHurufPanel() {
                       setLatinInput('');
                     }}
                     placeholder={t.ilmHuruf.namePlaceholderAr}
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100 text-right text-xl font-arabic"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 text-right text-xl font-arabic min-h-[44px]"
                     dir="rtl"
                     style={{ fontFamily: "'Noto Naskh Arabic', 'Amiri', serif" }}
                   />
@@ -1379,7 +1331,7 @@ export function IlmHurufPanel() {
                     value={birthDate}
                     onChange={(e) => setBirthDate(e.target.value)}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 min-h-[44px] text-base sm:text-sm"
                   />
                   <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
                     {t.ilmHuruf.birthDateUsage}
@@ -1391,7 +1343,7 @@ export function IlmHurufPanel() {
           
           <button
             onClick={handleAnalyze}
-            className="w-full bg-gradient-to-r from-violet-600 to-purple-700 hover:from-violet-700 hover:to-purple-800 text-white font-medium py-3 px-6 rounded-lg transition-all shadow-lg hover:shadow-xl"
+            className="w-full text-white font-medium py-3 px-6 rounded-xl transition-all shadow-sm bg-emerald-600 hover:bg-emerald-700 min-h-[44px]"
           >
             <Sparkles className="w-5 h-5 inline mr-2" />
             {t.ilmHuruf.analyzeButton}
@@ -1442,64 +1394,64 @@ export function IlmHurufPanel() {
 
 const elementColors = {
   fire: {
-    gradient: "from-red-600 via-orange-500 to-yellow-500",
-    bgGradient: "from-red-900/20 via-orange-900/15 to-yellow-900/10",
-    bgPattern: "from-red-500/5 via-orange-500/5 to-yellow-500/5",
+    gradient: "",
+    bgGradient: "",
+    bgPattern: "",
     border: "border-red-400/50",
     text: "text-red-200",
     textBright: "text-red-100",
     progressColor: "#ef4444",
     progressGlow: "shadow-red-500/50",
-    cardGlow: "shadow-xl shadow-red-500/20",
+    cardGlow: "shadow-sm shadow-red-500/20",
     glowRing: "ring-red-500/30",
     accentBg: "bg-red-500/20",
-    hoverScale: "hover:shadow-2xl hover:shadow-red-500/30",
+    hoverScale: " hover:shadow-red-500/30",
     pulseColor: "bg-red-500"
   },
   earth: {
-    gradient: "from-amber-600 via-yellow-500 to-green-500",
-    bgGradient: "from-amber-900/20 via-yellow-900/15 to-green-900/10",
-    bgPattern: "from-amber-500/5 via-yellow-500/5 to-green-500/5",
+    gradient: "",
+    bgGradient: "",
+    bgPattern: "",
     border: "border-amber-400/50",
     text: "text-amber-200",
     textBright: "text-amber-100",
     progressColor: "#f59e0b",
     progressGlow: "shadow-amber-500/50",
-    cardGlow: "shadow-xl shadow-amber-500/20",
+    cardGlow: "shadow-sm shadow-amber-500/20",
     glowRing: "ring-amber-500/30",
     accentBg: "bg-amber-500/20",
-    hoverScale: "hover:shadow-2xl hover:shadow-amber-500/30",
+    hoverScale: " hover:shadow-amber-500/30",
     pulseColor: "bg-amber-500"
   },
   air: {
-    gradient: "from-cyan-600 via-blue-500 to-indigo-500",
-    bgGradient: "from-cyan-900/20 via-blue-900/15 to-indigo-900/10",
-    bgPattern: "from-cyan-500/5 via-blue-500/5 to-indigo-500/5",
-    border: "border-cyan-400/50",
-    text: "text-cyan-200",
-    textBright: "text-cyan-100",
+    gradient: "",
+    bgGradient: "",
+    bgPattern: "",
+    border: "border-slate-300/50",
+    text: "text-indigo-200",
+    textBright: "text-indigo-100",
     progressColor: "#06b6d4",
-    progressGlow: "shadow-cyan-500/50",
-    cardGlow: "shadow-xl shadow-cyan-500/20",
+    progressGlow: "shadow-indigo-500/50",
+    cardGlow: "shadow-sm shadow-indigo-500/20",
     glowRing: "ring-cyan-500/30",
-    accentBg: "bg-cyan-500/20",
-    hoverScale: "hover:shadow-2xl hover:shadow-cyan-500/30",
-    pulseColor: "bg-cyan-500"
+    accentBg: "bg-indigo-500/20",
+    hoverScale: " hover:shadow-indigo-500/30",
+    pulseColor: "bg-indigo-500"
   },
   water: {
-    gradient: "from-blue-600 via-indigo-500 to-purple-500",
-    bgGradient: "from-blue-900/20 via-indigo-900/15 to-purple-900/10",
-    bgPattern: "from-blue-500/5 via-indigo-500/5 to-purple-500/5",
-    border: "border-blue-400/50",
-    text: "text-blue-200",
-    textBright: "text-blue-100",
+    gradient: "",
+    bgGradient: "",
+    bgPattern: "",
+    border: "border-slate-300/50",
+    text: "text-indigo-200",
+    textBright: "text-indigo-100",
     progressColor: "#3b82f6",
-    progressGlow: "shadow-blue-500/50",
-    cardGlow: "shadow-xl shadow-blue-500/20",
+    progressGlow: "shadow-indigo-500/50",
+    cardGlow: "shadow-sm shadow-indigo-500/20",
     glowRing: "ring-blue-500/30",
-    accentBg: "bg-blue-500/20",
-    hoverScale: "hover:shadow-2xl hover:shadow-blue-500/30",
-    pulseColor: "bg-blue-500"
+    accentBg: "bg-indigo-500/20",
+    hoverScale: " hover:shadow-indigo-500/30",
+    pulseColor: "bg-indigo-500"
   }
 };
 
@@ -1538,7 +1490,6 @@ function DestinyResults({ results }: { results: any }) {
   // Fetch Quranic verse when quranResonance is available
   useEffect(() => {
     if (results?.quranResonance) {
-      console.log('•Œ Fetching Quranic Resonance:', results.quranResonance);
       setLoadingVerse(true);
       setVerseError(null);
       setVerseText(null);
@@ -1550,7 +1501,6 @@ function DestinyResults({ results }: { results: any }) {
         );
         
         if (verse) {
-          console.log('œ… Successfully fetched verse:', verse);
           setVerseText(verse);
         } else {
           console.warn('⚠️ Verse fetch returned null');
@@ -1579,7 +1529,6 @@ function DestinyResults({ results }: { results: any }) {
   const station = results.destiny;
   
   // Debug log
-  console.log('DestinyResults rendering. Has quranResonance?', !!results.quranResonance, results.quranResonance);
   
   // Extract language - already imported at top
   const isFr = language === 'fr';
@@ -1595,7 +1544,7 @@ function DestinyResults({ results }: { results: any }) {
       {results.nameDestiny && (
         <div className="space-y-6">
           {/* Header Section */}
-          <div className="bg-gradient-to-r from-indigo-100 to-purple-100 dark:from-indigo-900/40 dark:to-purple-900/40 rounded-xl p-6 border-2 border-indigo-300 dark:border-indigo-600">
+          <div className=" rounded-xl p-6 border border-indigo-300 dark:border-indigo-600 bg-white/60 dark:bg-slate-800/40">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <User className="w-7 h-7 text-indigo-700 dark:text-indigo-300" />
@@ -1614,15 +1563,15 @@ function DestinyResults({ results }: { results: any }) {
 
 
           {/* Section 1: Core Numerology Values - Enhanced UI with Element-Based Theming */}
-          <div className={`relative overflow-hidden bg-gradient-to-br ${(() => {
+          <div className={`relative overflow-hidden bg-slate-800 dark:bg-slate-900 ${(() => {
             const userElement = (isFr ? results.nameDestiny.element.fr : results.nameDestiny.element.en).toLowerCase();
             const userElementKey = userElement === 'feu' ? 'fire' : userElement === 'eau' ? 'water' : userElement === 'terre' ? 'earth' : userElement;
             return elementColors[userElementKey as keyof typeof elementColors].bgGradient;
-          })()} backdrop-blur-xl rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 ${(() => {
+          })()} backdrop-blur-xl rounded-2xl sm:rounded-2xl p-4 sm:p-6 md:p-8 lg:p-10 ${(() => {
             const userElement = (isFr ? results.nameDestiny.element.fr : results.nameDestiny.element.en).toLowerCase();
             const userElementKey = userElement === 'feu' ? 'fire' : userElement === 'eau' ? 'water' : userElement === 'terre' ? 'earth' : userElement;
             return elementColors[userElementKey as keyof typeof elementColors].cardGlow;
-          })()} border-2 ${(() => {
+          })()} border ${(() => {
             const userElement = (isFr ? results.nameDestiny.element.fr : results.nameDestiny.element.en).toLowerCase();
             const userElementKey = userElement === 'feu' ? 'fire' : userElement === 'eau' ? 'water' : userElement === 'terre' ? 'earth' : userElement;
             return elementColors[userElementKey as keyof typeof elementColors].border;
@@ -1640,7 +1589,7 @@ function DestinyResults({ results }: { results: any }) {
             })()} />
             
             {/* Floating Sparkle Effects */}
-            <div className="absolute top-4 sm:top-6 right-4 sm:right-6 animate-pulse">
+            <div className="absolute top-4 sm:top-6 right-4 sm:right-6 ">
               <Sparkles className={`w-5 h-5 sm:w-6 sm:h-6 ${(() => {
                 const userElement = (isFr ? results.nameDestiny.element.fr : results.nameDestiny.element.en).toLowerCase();
                 const userElementKey = userElement === 'feu' ? 'fire' : userElement === 'eau' ? 'water' : userElement === 'terre' ? 'earth' : userElement;
@@ -1670,13 +1619,13 @@ function DestinyResults({ results }: { results: any }) {
                     </p>
                   </div>
                 </div>
-                <div className="hidden md:block h-12 w-px bg-gradient-to-b from-white/20 to-white/10" />
+                <div className="hidden md:block h-12 w-px bg-white/60 dark:bg-slate-800/40" />
               </div>
 
               {/* Enhanced Grid: Total, Saghir, Element, Burj with glassmorphism */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-6 sm:mb-8">
                 {/* Total Ḥadad Kabīr */}
-                <div className="group bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/20 flex flex-col items-center transition-all duration-300 hover:bg-white/20 hover:scale-105">
+                <div className="group bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/20 flex flex-col items-center transition-all duration-300 hover:bg-white/20 ">
                   <div className="text-xs uppercase tracking-wider text-white/70 font-semibold mb-2">
                     {t.nameDestiny.nameChart.total}
                   </div>
@@ -1691,7 +1640,7 @@ function DestinyResults({ results }: { results: any }) {
                 </div>
 
                 {/* Digital Root (Ṣaghīr) */}
-                <div className="group bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/20 flex flex-col items-center transition-all duration-300 hover:bg-white/20 hover:scale-105">
+                <div className="group bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/20 flex flex-col items-center transition-all duration-300 hover:bg-white/20 ">
                   <div className="text-xs uppercase tracking-wider text-white/70 font-semibold mb-2">
                     {t.nameDestiny.nameChart.saghir}
                   </div>
@@ -1701,11 +1650,11 @@ function DestinyResults({ results }: { results: any }) {
                 </div>
 
                 {/* Element (Ṭabʿ) - YOUR PERSONAL ELEMENT with enhanced styling */}
-                <div className={`group bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 border-2 ${(() => {
+                <div className={`group bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 border ${(() => {
                   const userElement = (isFr ? results.nameDestiny.element.fr : results.nameDestiny.element.en).toLowerCase();
                   const userElementKey = userElement === 'feu' ? 'fire' : userElement === 'eau' ? 'water' : userElement === 'terre' ? 'earth' : userElement;
                   return elementColors[userElementKey as keyof typeof elementColors].border;
-                })()} flex flex-col items-center transition-all duration-300 hover:bg-white/20 hover:scale-105 relative overflow-hidden`}>
+                })()} flex flex-col items-center transition-all duration-300 hover:bg-white/20 relative overflow-hidden`}>
                   {/* Glow effect */}
                   <div className={`absolute inset-0 ${(() => {
                     const userElement = (isFr ? results.nameDestiny.element.fr : results.nameDestiny.element.en).toLowerCase();
@@ -1731,7 +1680,7 @@ function DestinyResults({ results }: { results: any }) {
                 </div>
 
                 {/* Burj (Zodiac) */}
-                <div className="group bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/20 flex flex-col items-center transition-all duration-300 hover:bg-white/20 hover:scale-105">
+                <div className="group bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/20 flex flex-col items-center transition-all duration-300 hover:bg-white/20 ">
                   <div className="text-xs uppercase tracking-wider text-white/70 font-semibold mb-2">
                     {t.nameDestiny.nameChart.burj}
                   </div>
@@ -1771,7 +1720,7 @@ function DestinyResults({ results }: { results: any }) {
                     {t.nameDestiny.nameChart.hour}
                     <span className="relative group/tooltip">
                       <Info className="h-3 w-3 text-white/50 cursor-help" />
-                      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-3 bg-slate-900 text-white text-xs rounded-lg shadow-lg opacity-0 group-hover/tooltip:opacity-100 transition-opacity pointer-events-none z-10">
+                      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-3 bg-slate-900 text-white text-xs rounded-xl shadow-sm opacity-0 group-hover/tooltip:opacity-100 transition-opacity pointer-events-none z-10">
                         {t.nameDestiny.nameChart.hourTip}
                       </div>
                     </span>
@@ -1788,21 +1737,21 @@ function DestinyResults({ results }: { results: any }) {
           {results.nameDestiny.foundation && (
             <>
               {/* ========== INHERITED INFLUENCES SECTION (Mother's Name Impact) ========== */}
-              <div className="relative overflow-hidden bg-gradient-to-r from-rose-100 to-pink-100 dark:from-rose-900/40 dark:to-pink-900/40 rounded-2xl sm:rounded-3xl p-4 sm:p-6 mt-6 mb-4 border-2 border-rose-300 dark:border-rose-600 shadow-xl hover:shadow-2xl transition-all duration-700">
+              <div className="relative overflow-hidden rounded-2xl sm:rounded-2xl p-4 sm:p-6 mt-6 mb-4 border border-slate-200 dark:border-slate-700 shadow-sm transition-all duration-700 bg-white/60 dark:bg-slate-800/40">
                 {/* Decorative Background Pattern */}
                 <div className="absolute inset-0 opacity-20">
-                  <div className="absolute top-0 left-0 w-32 h-32 bg-rose-300 rounded-full blur-3xl"></div>
-                  <div className="absolute bottom-0 right-0 w-32 h-32 bg-pink-300 rounded-full blur-3xl"></div>
+                  <div className="absolute top-0 left-0 w-32 h-32 bg-indigo-300 rounded-full blur-3xl"></div>
+                  <div className="absolute bottom-0 right-0 w-32 h-32 bg-indigo-300 rounded-full blur-3xl"></div>
                 </div>
                 
                 <div className="relative z-10 flex items-center justify-between">
                   <div className="flex items-center gap-2 sm:gap-3">
-                    <Users className="w-5 h-5 sm:w-6 sm:h-6 text-rose-700 dark:text-rose-300" />
+                    <Users className="w-5 h-5 sm:w-6 sm:h-6 text-indigo-700 dark:text-indigo-300" />
                     <div>
-                      <h2 className="text-lg sm:text-xl font-bold text-rose-900 dark:text-rose-100">
+                      <h2 className="text-lg sm:text-xl font-bold text-indigo-900 dark:text-indigo-100">
                         {t.nameDestiny.inheritedInfluences}
                       </h2>
-                      <p className="text-xs sm:text-sm text-rose-700 dark:text-rose-300 mt-0.5">
+                      <p className="text-xs sm:text-sm text-indigo-700 dark:text-indigo-300 mt-0.5">
                         {t.nameDestiny.inheritedInfluencesDesc}
                       </p>
                     </div>
@@ -1811,7 +1760,7 @@ function DestinyResults({ results }: { results: any }) {
                 </div>
               </div>
 
-              <div className={`relative overflow-hidden bg-gradient-to-br ${(() => {
+              <div className={`relative overflow-hidden bg-slate-800 dark:bg-slate-900 ${(() => {
                 // Determine which element pair we're working with
                 const expressionElem = isFr ? results.nameDestiny.expression.fr : results.nameDestiny.expression.en;
                 const foundationElem = isFr ? results.nameDestiny.foundation.fr : results.nameDestiny.foundation.en;
@@ -1833,11 +1782,11 @@ function DestinyResults({ results }: { results: any }) {
                   return elementColors[expr].bgGradient;
                 } else {
                   // Blend the two element colors
-                  const color1 = elementColors[expr].bgGradient.split(' ')[0];
-                  const color2 = elementColors[found].bgGradient.split(' ')[2];
-                  return `${color1} via-purple-900/15 ${color2}`;
-                }
-              })()} backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 shadow-xl hover:shadow-2xl border-2 border-rose-200 dark:border-rose-700 transition-all duration-700`}>
+                  
+                  
+                  return '';
+ }
+ })()} backdrop-blur-xl rounded-2xl sm:rounded-2xl p-6 sm:p-8 md:p-10 shadow-sm border border-slate-200 dark:border-slate-700 transition-all duration-700`}>
                 
                 {/* Sacred Geometry Background - Dual element blend */}
                 <div className="absolute inset-0 opacity-30">
@@ -1850,45 +1799,45 @@ function DestinyResults({ results }: { results: any }) {
                         <line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" strokeWidth="0.2" opacity="0.3" />
                       </pattern>
                     </defs>
-                    <rect width="100" height="100" fill="url(#inheritance-pattern)" className="text-rose-300 dark:text-rose-500" />
+                    <rect width="100" height="100" fill="url(#inheritance-pattern)" className="text-indigo-300 dark:text-indigo-500" />
                   </svg>
                 </div>
                 
                 {/* Floating Heart Icon */}
-                <div className="absolute top-6 right-6 animate-pulse">
-                  <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-rose-400 dark:text-rose-500 opacity-60" />
+                <div className="absolute top-6 right-6 ">
+                  <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-indigo-400 dark:text-indigo-500 opacity-60" />
                 </div>
 
                 <div className="relative z-10">
                   <div className="text-center mb-6 sm:mb-8">
-                    <div className="text-xs sm:text-sm uppercase tracking-wider text-rose-700 dark:text-rose-300 font-semibold mb-3 sm:mb-4">
+                    <div className="text-xs sm:text-sm uppercase tracking-wider text-indigo-700 dark:text-indigo-300 font-semibold mb-3 sm:mb-4">
                       {t.nameDestiny.origin.inheritance}
                     </div>
               <div className="flex items-center justify-center gap-6 mb-3">
                 {/* Expression (Person) */}
                 <div className="text-center">
-                  <div className="text-xs text-rose-600 dark:text-rose-400 mb-1 font-semibold">
+                  <div className="text-xs text-indigo-600 dark:text-indigo-400 mb-1 font-semibold">
                     {t.nameDestiny.origin.expression}
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-3xl">{results.nameDestiny.expression.icon}</span>
-                    <span className="text-lg font-bold text-rose-900 dark:text-rose-100">
+                    <span className="text-lg font-bold text-indigo-900 dark:text-indigo-100">
                       {isFr ? results.nameDestiny.expression.fr : results.nameDestiny.expression.en}
                     </span>
                   </div>
                 </div>
 
                 {/* Arrow */}
-                <div className="text-3xl text-rose-400">†”</div>
+                <div className="text-3xl text-indigo-400">†”</div>
 
                 {/* Foundation (Mother) */}
                 <div className="text-center">
-                  <div className="text-xs text-rose-600 dark:text-rose-400 mb-1 font-semibold">
+                  <div className="text-xs text-indigo-600 dark:text-indigo-400 mb-1 font-semibold">
                     {t.nameDestiny.origin.foundation}
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-3xl">{results.nameDestiny.foundation.icon}</span>
-                    <span className="text-lg font-bold text-rose-900 dark:text-rose-100">
+                    <span className="text-lg font-bold text-indigo-900 dark:text-indigo-100">
                       {isFr ? results.nameDestiny.foundation.fr : results.nameDestiny.foundation.en}
                     </span>
                   </div>
@@ -1909,9 +1858,9 @@ function DestinyResults({ results }: { results: any }) {
                 if (expressionElem === foundationElem) {
                   harmonyType = t.nameDestiny.nameChart.unified;
                   harmonyIcon = '🌟';
-                  harmonyColor = 'text-purple-900 dark:text-purple-100';
-                  harmonyBg = 'bg-purple-100/80 dark:bg-purple-900/40';
-                  harmonyGlow = 'shadow-lg shadow-purple-500/30';
+                  harmonyColor = 'text-indigo-900 dark:text-indigo-100';
+                  harmonyBg = 'bg-indigo-100/80 dark:bg-indigo-900/40';
+                  harmonyGlow = 'shadow-sm shadow-indigo-500/30';
                 } else if (
                   (expressionElem === 'Fire' || expressionElem === 'Feu') && (foundationElem === 'Air' || foundationElem === 'Air') ||
                   (expressionElem === 'Air' || expressionElem === 'Air') && (foundationElem === 'Fire' || foundationElem === 'Feu') ||
@@ -1922,7 +1871,7 @@ function DestinyResults({ results }: { results: any }) {
                   harmonyIcon = '✨';
                   harmonyColor = 'text-emerald-900 dark:text-emerald-100';
                   harmonyBg = 'bg-emerald-100/80 dark:bg-emerald-900/40';
-                  harmonyGlow = 'shadow-lg shadow-emerald-500/30';
+                  harmonyGlow = 'shadow-sm shadow-emerald-500/30';
                 } else if (
                   (expressionElem === 'Fire' || expressionElem === 'Feu') && (foundationElem === 'Earth' || foundationElem === 'Terre') ||
                   (expressionElem === 'Earth' || expressionElem === 'Terre') && (foundationElem === 'Air' || foundationElem === 'Air') ||
@@ -1931,23 +1880,23 @@ function DestinyResults({ results }: { results: any }) {
                 ) {
                   harmonyType = t.nameDestiny.nameChart.nourishing;
                   harmonyIcon = '🌱';
-                  harmonyColor = 'text-blue-900 dark:text-blue-100';
-                  harmonyBg = 'bg-blue-100/80 dark:bg-blue-900/40';
-                  harmonyGlow = 'shadow-lg shadow-blue-500/30';
+                  harmonyColor = 'text-indigo-900 dark:text-indigo-100';
+                  harmonyBg = 'bg-indigo-100/80 dark:bg-indigo-900/40';
+                  harmonyGlow = 'shadow-sm shadow-indigo-500/30';
                 } else {
                   harmonyType = t.nameDestiny.nameChart.transformative;
                   harmonyIcon = '⚡';
                   harmonyColor = 'text-amber-900 dark:text-amber-100';
                   harmonyBg = 'bg-amber-100/80 dark:bg-amber-900/40';
-                  harmonyGlow = 'shadow-lg shadow-amber-500/30';
+                  harmonyGlow = 'shadow-sm shadow-amber-500/30';
                 }
                 
                 return (
                   <div className="flex flex-col items-center gap-3">
-                    <div className="text-xs text-rose-600 dark:text-rose-400 font-semibold uppercase tracking-wide">
+                    <div className="text-xs text-indigo-600 dark:text-indigo-400 font-semibold uppercase tracking-wide">
                       {t.nameDestiny.nameChart.elementHarmony}
                     </div>
-                    <div className={`inline-flex items-center gap-2 px-6 py-3 rounded-full backdrop-blur-md border-2 text-sm sm:text-base font-bold ${harmonyColor} ${harmonyBg} ${harmonyGlow} border-white/30 transition-all duration-300 hover:scale-105`}>
+                    <div className={`inline-flex items-center gap-2 px-6 py-3 rounded-full backdrop-blur-md border text-sm sm:text-base font-bold ${harmonyColor} ${harmonyBg} ${harmonyGlow} border-white/30 transition-all duration-300 `}>
                       <span className="text-xl sm:text-2xl">{harmonyIcon}</span>
                       <span>{harmonyType}</span>
                     </div>
@@ -1958,16 +1907,16 @@ function DestinyResults({ results }: { results: any }) {
 
             {/* Enhanced Inheritance Insight Card with multi-layer depth */}
             {results.motherAnalysis && (
-              <div className="relative overflow-hidden bg-gradient-to-br from-white/60 to-rose-50/60 dark:from-slate-800/60 dark:to-rose-900/20 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-6 border-2 border-rose-200 dark:border-rose-700 shadow-lg mt-6">
+              <div className="relative overflow-hidden backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-6 border border-slate-200 dark:border-slate-700 shadow-sm mt-6 bg-white/60 dark:bg-slate-800/40">
                 {/* Subtle pattern overlay */}
                 <div className="absolute inset-0 opacity-10">
-                  <div className="absolute top-0 left-0 w-20 h-20 bg-rose-300 rounded-full blur-2xl"></div>
-                  <div className="absolute bottom-0 right-0 w-20 h-20 bg-pink-300 rounded-full blur-2xl"></div>
+                  <div className="absolute top-0 left-0 w-20 h-20 bg-indigo-300 rounded-full blur-2xl"></div>
+                  <div className="absolute bottom-0 right-0 w-20 h-20 bg-indigo-300 rounded-full blur-2xl"></div>
                 </div>
                 
                 <div className="relative z-10">
                   <div className="flex items-start gap-3 mb-4">
-                    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-rose-400 to-pink-500 rounded-xl flex items-center justify-center shadow-lg">
+                    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center shadow-sm bg-white/60 dark:bg-slate-800/40">
                       <Lightbulb className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
                     <div className="flex-1">
@@ -2009,16 +1958,16 @@ function DestinyResults({ results }: { results: any }) {
                   </div>
 
                   {/* Additional metadata */}
-                  <div className="flex flex-wrap gap-2 pt-4 border-t border-rose-200 dark:border-rose-800">
-                    <div className="flex items-center gap-1.5 px-3 py-1.5 bg-rose-100 dark:bg-rose-900/40 rounded-full text-xs font-medium text-rose-800 dark:text-rose-200">
+                  <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-200 dark:border-slate-700">
+                    <div className="flex items-center gap-1.5 px-3 py-1.5 bg-indigo-100 dark:bg-indigo-900/40 rounded-full text-xs font-medium text-indigo-800 dark:text-indigo-200">
                       <span>📊</span>
                       <span>{t.nameDestiny.origin.kabir}: {results.motherAnalysis.kabir}</span>
                     </div>
-                    <div className="flex items-center gap-1.5 px-3 py-1.5 bg-rose-100 dark:bg-rose-900/40 rounded-full text-xs font-medium text-rose-800 dark:text-rose-200">
+                    <div className="flex items-center gap-1.5 px-3 py-1.5 bg-indigo-100 dark:bg-indigo-900/40 rounded-full text-xs font-medium text-indigo-800 dark:text-indigo-200">
                       <span>✨</span>
                       <span>{t.nameDestiny.origin.saghir}: {results.motherAnalysis.saghir}</span>
                     </div>
-                    <div className="flex items-center gap-1.5 px-3 py-1.5 bg-rose-100 dark:bg-rose-900/40 rounded-full text-xs font-medium text-rose-800 dark:text-rose-200">
+                    <div className="flex items-center gap-1.5 px-3 py-1.5 bg-indigo-100 dark:bg-indigo-900/40 rounded-full text-xs font-medium text-indigo-800 dark:text-indigo-200">
                       <span>🔢</span>
                       <span>{t.nameDestiny.origin.hadath}: {results.motherAnalysis.hadath}</span>
                     </div>
@@ -2040,13 +1989,13 @@ function DestinyResults({ results }: { results: any }) {
 
       {/* Section 2: Element Distribution Chart */}
       {results.nameDestiny && results.nameDestiny.arabicName && (
-        <div className="relative overflow-hidden bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50 dark:from-teal-900/20 dark:via-cyan-900/20 dark:to-blue-900/20 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 border-2 border-teal-200 dark:border-teal-700 shadow-2xl hover:shadow-3xl transition-all duration-700">
+        <div className="relative overflow-hidden rounded-2xl sm:rounded-2xl p-6 sm:p-8 md:p-10 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-3xl transition-all duration-700 bg-white/60 dark:bg-slate-800/40">
           
           {/* Animated Background Pattern */}
           <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-10 left-10 w-40 h-40 bg-teal-400 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-10 right-10 w-40 h-40 bg-cyan-400 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-blue-400 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+            <div className="absolute top-10 left-10 w-40 h-40 bg-indigo-400 rounded-full blur-3xl "></div>
+            <div className="absolute bottom-10 right-10 w-40 h-40 bg-indigo-400 rounded-full blur-3xl " style={{ animationDelay: '1s' }}></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-indigo-400 rounded-full blur-3xl " style={{ animationDelay: '0.5s' }}></div>
           </div>
 
           {/* Sacred Geometry Background for Letter Analysis */}
@@ -2059,12 +2008,12 @@ function DestinyResults({ results }: { results: any }) {
                   <path d="M 7.5 3.5 L 7.5 11.5 M 3.5 7.5 L 11.5 7.5" stroke="currentColor" strokeWidth="0.2" opacity="0.2" />
                 </pattern>
               </defs>
-              <rect width="100" height="100" fill="url(#letter-pattern)" className="text-teal-400" />
+              <rect width="100" height="100" fill="url(#letter-pattern)" className="text-indigo-400" />
             </svg>
           </div>
           
           {/* Floating Element Icons */}
-          <div className="absolute top-6 right-6 flex gap-2 animate-pulse">
+          <div className="absolute top-6 right-6 flex gap-2 ">
             <span className="text-2xl opacity-60">🔥</span>
             <span className="text-2xl opacity-60" style={{ animationDelay: '0.3s' }}>💨</span>
             <span className="text-2xl opacity-60" style={{ animationDelay: '0.6s' }}>💧</span>
@@ -2074,17 +2023,17 @@ function DestinyResults({ results }: { results: any }) {
           <div className="relative z-10">
             {/* Header with enhanced styling */}
             <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
-              <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg">
+              <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-sm bg-indigo-600">
                 <Flame className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
               </div>
               <div className="flex-1">
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-teal-900 dark:text-teal-100">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-indigo-900 dark:text-indigo-100">
                   {t.nameDestiny.elementChart.title}
                 </h3>
-                <p className="text-sm sm:text-base text-teal-700 dark:text-teal-300 mt-1">
+                <p className="text-sm sm:text-base text-indigo-700 dark:text-indigo-300 mt-1">
                   {t.nameDestiny.elementChart.subtitle}
                 </p>
-                <p className="text-xs sm:text-sm text-teal-600 dark:text-teal-400 italic mt-1">
+                <p className="text-xs sm:text-sm text-indigo-600 dark:text-indigo-400 italic mt-1">
                   {isFr ? '(Composition des lettres du nom - à titre informatif)' : '(Name letter composition - informational only)'}
                 </p>
               </div>
@@ -2110,33 +2059,33 @@ function DestinyResults({ results }: { results: any }) {
                 fire: { 
                   icon: '🔥', 
                   color: 'text-red-600 dark:text-red-400', 
-                  bg: 'bg-gradient-to-br from-red-100 to-orange-100 dark:from-red-900/30 dark:to-orange-900/30',
-                  bar: 'bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500',
-                  glow: 'shadow-lg shadow-red-500/30',
+                  bg: ' bg-white/60 dark:bg-slate-800/40',
+                  bar: ' bg-indigo-600',
+                  glow: 'shadow-sm shadow-red-500/30',
                   border: 'border-red-300 dark:border-red-700'
                 },
                 air: { 
                   icon: '💨', 
-                  color: 'text-sky-600 dark:text-sky-400', 
-                  bg: 'bg-gradient-to-br from-sky-100 to-cyan-100 dark:from-sky-900/30 dark:to-cyan-900/30',
-                  bar: 'bg-gradient-to-r from-sky-500 via-cyan-500 to-blue-500',
-                  glow: 'shadow-lg shadow-sky-500/30',
-                  border: 'border-sky-300 dark:border-sky-700'
+                  color: 'text-indigo-600 dark:text-indigo-400', 
+                  bg: ' bg-white/60 dark:bg-slate-800/40',
+                  bar: ' bg-indigo-600',
+                  glow: 'shadow-sm shadow-indigo-500/30',
+                  border: 'border-slate-200 dark:border-slate-700'
                 },
                 water: { 
                   icon: '💧', 
-                  color: 'text-blue-600 dark:text-blue-400', 
-                  bg: 'bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30',
-                  bar: 'bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500',
-                  glow: 'shadow-lg shadow-blue-500/30',
-                  border: 'border-blue-300 dark:border-blue-700'
+                  color: 'text-indigo-600 dark:text-indigo-400', 
+                  bg: ' bg-white/60 dark:bg-slate-800/40',
+                  bar: ' bg-indigo-600',
+                  glow: 'shadow-sm shadow-indigo-500/30',
+                  border: 'border-slate-200 dark:border-slate-700'
                 },
                 earth: { 
                   icon: '🌍', 
                   color: 'text-amber-600 dark:text-amber-400', 
-                  bg: 'bg-gradient-to-br from-amber-100 to-yellow-100 dark:from-amber-900/30 dark:to-yellow-900/30',
-                  bar: 'bg-gradient-to-r from-amber-600 via-yellow-500 to-green-500',
-                  glow: 'shadow-lg shadow-amber-500/30',
+                  bg: ' bg-white/60 dark:bg-slate-800/40',
+                  bar: ' bg-indigo-600',
+                  glow: 'shadow-sm shadow-amber-500/30',
                   border: 'border-amber-300 dark:border-amber-700'
                 }
               };
@@ -2154,11 +2103,11 @@ function DestinyResults({ results }: { results: any }) {
                       return (
                         <div 
                           key={elem} 
-                          className={`group relative overflow-hidden ${config.bg} backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 border-2 ${config.border} ${config.glow} transition-all duration-300 hover:scale-[1.02] ${isDominant ? 'ring-2 ring-offset-2 ring-teal-500 dark:ring-offset-slate-900' : ''}`}
+                          className={`group relative overflow-hidden ${config.bg} backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-5 border ${config.border} ${config.glow} transition-all duration-300 ${isDominant ? 'ring-2 ring-offset-2 ring-indigo-500 dark:ring-offset-slate-900' : ''}`}
                         >
                           {/* Dominant badge */}
                           {isDominant && (
-                            <div className="absolute top-2 right-2 sm:top-3 sm:right-3 px-2 py-1 bg-gradient-to-r from-teal-500 to-cyan-600 text-white text-xs font-bold rounded-full shadow-lg animate-pulse">
+                            <div className="absolute top-2 right-2 sm:top-3 sm:right-3 px-2 py-1 text-white text-xs font-bold rounded-full shadow-sm bg-indigo-600">
                               {language === 'fr' ? 'DOMINANT' : 'DOMINANT'}
                             </div>
                           )}
@@ -2167,7 +2116,7 @@ function DestinyResults({ results }: { results: any }) {
                             {/* Element Header */}
                             <div className="flex items-center justify-between mb-3">
                               <div className="flex items-center gap-2 sm:gap-3">
-                                <div className={`w-10 h-10 sm:w-12 sm:h-12 ${config.bg} rounded-xl flex items-center justify-center shadow-md border-2 ${config.border}`}>
+                                <div className={`w-10 h-10 sm:w-12 sm:h-12 ${config.bg} rounded-xl flex items-center justify-center shadow-sm border ${config.border}`}>
                                   <span className="text-2xl sm:text-3xl">{config.icon}</span>
                                 </div>
                                 <div>
@@ -2197,7 +2146,7 @@ function DestinyResults({ results }: { results: any }) {
                                   style={{ width: `${pct}%` }}
                                 >
                                   {/* Animated shine effect */}
-                                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer"></div>
+                                  <div className="absolute inset-0 bg-white/60 dark:bg-slate-800/40"></div>
                                 </div>
                               </div>
                               {/* Percentage markers */}
@@ -2216,7 +2165,7 @@ function DestinyResults({ results }: { results: any }) {
                   </div>
 
                   {/* Dominant Element Analysis - Enhanced Card */}
-                  <div className={`relative overflow-hidden ${elementConfig[dominantElement].bg} backdrop-blur-md rounded-xl sm:rounded-2xl p-6 sm:p-8 border-2 ${elementConfig[dominantElement].border} ${elementConfig[dominantElement].glow} shadow-2xl`}>
+                  <div className={`relative overflow-hidden ${elementConfig[dominantElement].bg} backdrop-blur-md rounded-xl sm:rounded-2xl p-6 sm:p-8 border ${elementConfig[dominantElement].border} ${elementConfig[dominantElement].glow} shadow-sm`}>
                     {/* Decorative elements */}
                     <div className="absolute top-0 left-0 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
                     <div className="absolute bottom-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
@@ -2224,7 +2173,7 @@ function DestinyResults({ results }: { results: any }) {
                     <div className="relative z-10">
                       {/* Header */}
                       <div className="flex items-center gap-3 mb-6">
-                        <div className={`w-14 h-14 sm:w-16 sm:h-16 ${elementConfig[dominantElement].bg} rounded-2xl flex items-center justify-center shadow-lg border-2 ${elementConfig[dominantElement].border}`}>
+                        <div className={`w-14 h-14 sm:w-16 sm:h-16 ${elementConfig[dominantElement].bg} rounded-2xl flex items-center justify-center shadow-sm border ${elementConfig[dominantElement].border}`}>
                           <span className="text-4xl sm:text-5xl">{elementConfig[dominantElement].icon}</span>
                         </div>
                         <div className="flex-1">
@@ -2251,13 +2200,13 @@ function DestinyResults({ results }: { results: any }) {
                         </div>
 
                         {/* Balancing Dhikr */}
-                        <div className="bg-gradient-to-br from-emerald-100 to-teal-100 dark:from-emerald-900/40 dark:to-teal-900/40 backdrop-blur-sm rounded-xl p-4 sm:p-5 border-2 border-emerald-300 dark:border-emerald-700 shadow-lg">
+                        <div className=" backdrop-blur-sm rounded-xl p-4 sm:p-5 border border-emerald-300 dark:border-emerald-700 shadow-sm bg-white/60 dark:bg-slate-800/40">
                           <div className="flex items-center gap-2 text-sm font-semibold text-emerald-900 dark:text-emerald-100 mb-3">
                             <BookOpen className="w-4 h-4 sm:w-5 sm:h-5" />
                             <span>{t.nameDestiny.elementChart.balancingDhikr}</span>
                           </div>
                           <div className="space-y-3">
-                            <div className="text-center p-3 bg-white/50 dark:bg-slate-800/50 rounded-lg">
+                            <div className="text-center p-3 bg-white/50 dark:bg-slate-800/50 rounded-xl">
                               <p className="text-xl sm:text-2xl font-bold text-emerald-900 dark:text-emerald-100 font-arabic mb-1">
                                 {t.nameDestiny.elementChart.dhikr[dominantElement]}
                               </p>
@@ -2284,14 +2233,14 @@ function DestinyResults({ results }: { results: any }) {
                       </div>
 
                       {/* Important Note about Letter Composition */}
-                      <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-500">
+                      <div className="mt-6 p-4 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl border-l-4 border-slate-300">
                         <div className="flex items-start gap-3">
-                          <Info className="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" />
+                          <Info className="w-5 h-5 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
                           <div className="flex-1">
-                            <p className="text-sm text-blue-900 dark:text-blue-100 font-semibold mb-1">
+                            <p className="text-sm text-indigo-900 dark:text-indigo-100 font-semibold mb-1">
                               {language === 'fr' ? 'Note Importante' : 'Important Note'}
                             </p>
-                            <p className="text-xs sm:text-sm text-blue-800 dark:text-blue-200 leading-relaxed">
+                            <p className="text-xs sm:text-sm text-indigo-800 dark:text-indigo-200 leading-relaxed">
                               {language === 'fr' 
                                 ? 'Cette analyse montre la composition des lettres de votre nom (à titre informatif). Votre élément PERSONNEL (Ṭabʿ) ci-dessus est votre véritable essence spirituelle et est utilisé pour toutes les analyses principales.'
                                 : 'This analysis shows your name\'s letter composition (informational only). Your PERSONAL element (Ṭabʿ) above is your true spiritual essence and is used for all main analyses.'}
@@ -2306,7 +2255,7 @@ function DestinyResults({ results }: { results: any }) {
             })()}
 
             {/* Disclaimer */}
-            <div className="mt-6 text-xs sm:text-sm text-center text-teal-600 dark:text-teal-400 italic">
+            <div className="mt-6 text-xs sm:text-sm text-center text-indigo-600 dark:text-indigo-400 italic">
               {t.nameDestiny.disclaimer.reflectionOnly}
             </div>
           </div>
@@ -2318,16 +2267,16 @@ function DestinyResults({ results }: { results: any }) {
         const [showFullProfile, setShowFullProfile] = useState(false);
         
         return (
-          <div className={`relative overflow-hidden bg-gradient-to-br ${(() => {
+          <div className={`relative overflow-hidden bg-slate-800 dark:bg-slate-900 ${(() => {
             const userElement = results.nameDestiny.element.en.toLowerCase() as 'fire' | 'air' | 'water' | 'earth';
             return elementColors[userElement].bgGradient;
-          })()} backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 border-2 ${(() => {
+          })()} backdrop-blur-xl rounded-2xl sm:rounded-2xl p-6 sm:p-8 md:p-10 border ${(() => {
             const userElement = results.nameDestiny.element.en.toLowerCase() as 'fire' | 'air' | 'water' | 'earth';
             return elementColors[userElement].border;
           })()} ${(() => {
             const userElement = results.nameDestiny.element.en.toLowerCase() as 'fire' | 'air' | 'water' | 'earth';
             return elementColors[userElement].cardGlow;
-          })()} shadow-2xl hover:shadow-3xl transition-all duration-700`}>
+          })()} shadow-sm hover:shadow-3xl transition-all duration-700`}>
             
             {/* Sacred Geometry Background */}
             <SacredGeometryBackground colors={(() => {
@@ -2337,18 +2286,18 @@ function DestinyResults({ results }: { results: any }) {
             
             {/* Animated Floating Orbs */}
             <div className="absolute inset-0 opacity-20 pointer-events-none">
-              <div className={`absolute top-10 left-10 w-32 h-32 rounded-full blur-3xl animate-pulse ${(() => {
+              <div className={`absolute top-10 left-10 w-32 h-32 rounded-full blur-3xl ${(() => {
                 const userElement = results.nameDestiny.element.en.toLowerCase() as 'fire' | 'air' | 'water' | 'earth';
                 return elementColors[userElement].pulseColor;
               })()}`}></div>
-              <div className={`absolute bottom-10 right-10 w-40 h-40 rounded-full blur-3xl animate-pulse ${(() => {
+              <div className={`absolute bottom-10 right-10 w-40 h-40 rounded-full blur-3xl ${(() => {
                 const userElement = results.nameDestiny.element.en.toLowerCase() as 'fire' | 'air' | 'water' | 'earth';
                 return elementColors[userElement].pulseColor;
               })()}`} style={{ animationDelay: '1s' }}></div>
             </div>
             
             {/* Sparkles in Corner */}
-            <div className="absolute top-6 right-6 animate-pulse">
+            <div className="absolute top-6 right-6 ">
               <Sparkles className={`w-6 h-6 sm:w-8 sm:h-8 ${(() => {
                 const userElement = results.nameDestiny.element.en.toLowerCase() as 'fire' | 'air' | 'water' | 'earth';
                 return elementColors[userElement].text;
@@ -2364,15 +2313,15 @@ function DestinyResults({ results }: { results: any }) {
                 {/* Element Badge - Prominent Display */}
                 <div className="flex flex-col md:flex-row items-center md:items-start gap-4 sm:gap-6 mb-6">
                   {/* Large Element Icon Card */}
-                  <div className={`group relative bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-2xl sm:rounded-3xl p-6 sm:p-8 border-2 ${(() => {
+                  <div className={`group relative bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-2xl sm:rounded-2xl p-6 sm:p-8 border ${(() => {
                     const userElement = results.nameDestiny.element.en.toLowerCase() as 'fire' | 'air' | 'water' | 'earth';
                     return elementColors[userElement].border;
-                  })()} shadow-lg hover:scale-105 transition-all duration-300`}>
+                  })()} shadow-sm transition-all duration-300`}>
                     {/* Glow effect */}
                     <div className={`absolute inset-0 ${(() => {
                       const userElement = results.nameDestiny.element.en.toLowerCase() as 'fire' | 'air' | 'water' | 'earth';
                       return elementColors[userElement].accentBg;
-                    })()} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl sm:rounded-3xl`} />
+                    })()} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl sm:rounded-2xl`} />
                     
                     <div className="relative z-10 text-center">
                       <span className="text-6xl sm:text-7xl md:text-8xl block mb-3">
@@ -2429,7 +2378,7 @@ function DestinyResults({ results }: { results: any }) {
                 {/* Core Qualities Card */}
                 <div className="bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-xl p-5 border border-white/20 hover:bg-white/15 transition-all duration-300">
                   <div className="flex items-center gap-2 mb-4">
-                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${(() => {
+                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${(() => {
                       const userElement = results.nameDestiny.element.en.toLowerCase() as 'fire' | 'air' | 'water' | 'earth';
                       return elementColors[userElement].accentBg;
                     })()}`}>
@@ -2473,7 +2422,7 @@ function DestinyResults({ results }: { results: any }) {
                 {/* Growth Areas Card */}
                 <div className="bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-xl p-5 border border-white/20 hover:bg-white/15 transition-all duration-300">
                   <div className="flex items-center gap-2 mb-4">
-                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${(() => {
+                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${(() => {
                       const userElement = results.nameDestiny.element.en.toLowerCase() as 'fire' | 'air' | 'water' | 'earth';
                       return elementColors[userElement].accentBg;
                     })()}`}>
@@ -2519,7 +2468,7 @@ function DestinyResults({ results }: { results: any }) {
               <div className="text-center mb-6">
                 <button
                   onClick={() => setShowFullProfile(!showFullProfile)}
-                  className={`inline-flex items-center gap-2 px-6 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-xl border-2 border-white/30 text-white font-semibold transition-all duration-300 hover:scale-105 shadow-lg`}
+                  className={`inline-flex items-center gap-2 px-6 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-xl border border-white/30 text-white font-semibold transition-all duration-300 shadow-sm`}
                 >
                   {showFullProfile ? (
                     <>
@@ -2537,7 +2486,7 @@ function DestinyResults({ results }: { results: any }) {
 
               {/* Collapsible Full Profile Section */}
               {showFullProfile && (
-                <div className="bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 border border-white/20 shadow-inner mb-6 animate-in fade-in slide-in-from-top-4 duration-500">
+                <div className="bg-white/10 dark:bg-white/5 backdrop-blur-md rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 border border-white/20 shadow-inner mb-6 fade-in slide-in-from-top-4 duration-500">
                   <TemperamentDisplay 
                     element={
                       results.nameDestiny.element.en.toLowerCase() as 'fire' | 'air' | 'water' | 'earth'
@@ -2550,16 +2499,16 @@ function DestinyResults({ results }: { results: any }) {
               )}
 
               {/* Balancing Practice Card - Always Visible */}
-              <div className={`bg-gradient-to-br from-emerald-100 to-teal-100 dark:from-emerald-900/40 dark:to-teal-900/40 backdrop-blur-md rounded-xl sm:rounded-2xl p-5 sm:p-6 border-2 border-emerald-300 dark:border-emerald-700 shadow-xl hover:shadow-2xl transition-all duration-300`}>
+              <div className={` backdrop-blur-md rounded-xl sm:rounded-2xl p-5 sm:p-6 border border-emerald-300 dark:border-emerald-700 shadow-sm transition-all duration-300 bg-white/60 dark:bg-slate-800/40`}>
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg">
+                  <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-sm bg-indigo-600">
                     <BookOpen className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                   </div>
                   <div className="flex-1">
                     <h4 className="text-lg sm:text-xl font-bold text-emerald-900 dark:text-emerald-100 mb-3">
                       {language === 'fr' ? 'Pratique d\'Équilibrage' : 'Balancing Practice'}
                     </h4>
-                    <div className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm rounded-lg p-4 mb-3">
+                    <div className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm rounded-xl p-4 mb-3">
                       <p className="text-xl sm:text-2xl font-bold text-emerald-900 dark:text-emerald-100 text-center font-arabic mb-2">
                         {(() => {
                           const element = results.nameDestiny.element.en.toLowerCase() as 'fire' | 'air' | 'water' | 'earth';
@@ -2635,15 +2584,15 @@ function DestinyResults({ results }: { results: any }) {
         const palette = elementColorPalette[userElement];
 
         return (
-          <div className="relative overflow-hidden bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-slate-900 dark:via-purple-900/30 dark:to-slate-900 rounded-2xl border border-purple-200/50 dark:border-purple-700/50 shadow-xl">
+          <div className="relative overflow-hidden rounded-2xl border border-slate-200/50 dark:border-slate-700/50 shadow-sm bg-white/60 dark:bg-slate-800/40">
             {/* Sacred Geometry Background - Interlocking Circles (Divine Unity) */}
             <div className="absolute inset-0 opacity-5 dark:opacity-10 pointer-events-none">
               <svg className="w-full h-full" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <pattern id="unity-circles" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-                    <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-purple-600 dark:text-purple-400"/>
-                    <circle cx="80" cy="50" r="30" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-purple-600 dark:text-purple-400"/>
-                    <circle cx="20" cy="50" r="30" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-purple-600 dark:text-purple-400"/>
+                    <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-indigo-600 dark:text-indigo-400"/>
+                    <circle cx="80" cy="50" r="30" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-indigo-600 dark:text-indigo-400"/>
+                    <circle cx="20" cy="50" r="30" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-indigo-600 dark:text-indigo-400"/>
                   </pattern>
                 </defs>
                 <rect width="400" height="400" fill="url(#unity-circles)" />
@@ -2651,43 +2600,42 @@ function DestinyResults({ results }: { results: any }) {
             </div>
 
             {/* Radiant Central Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-radial from-purple-400/20 via-pink-300/10 to-transparent blur-3xl animate-pulse pointer-events-none"></div>
 
             <div className="relative p-6 sm:p-8 space-y-6">
               {/* Section Header */}
               <div className="text-center space-y-2">
-                <h3 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 dark:from-purple-400 dark:via-pink-400 dark:to-indigo-400 bg-clip-text text-transparent">
+                <h3 className="text-2xl sm:text-3xl font-bold bg-clip-text text-transparent bg-indigo-600">
                   ✨ {t.nameDestiny.higherResonance.title}
                 </h3>
-                <p className="text-sm text-purple-700 dark:text-purple-300 max-w-2xl mx-auto">
+                <p className="text-sm text-indigo-700 dark:text-indigo-300 max-w-2xl mx-auto">
                   {t.nameDestiny.higherResonance.subtitle}
                 </p>
               </div>
 
               {/* Divine Name Resonance - Premium Card */}
               {results.nameDestiny.divineNameResonance && (
-                <div className="relative overflow-hidden bg-white/70 dark:bg-slate-800/70 backdrop-blur-md rounded-2xl border-2 border-purple-300/50 dark:border-purple-600/50 shadow-2xl p-6 sm:p-8">
+                <div className="relative overflow-hidden bg-white/70 dark:bg-slate-800/70 backdrop-blur-md rounded-2xl border border-slate-200/50 dark:border-slate-700/50 shadow-sm p-6 sm:p-8">
                   {/* Decorative Corner Borders */}
-                  <div className="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-purple-400 dark:border-purple-500 rounded-tl-2xl"></div>
-                  <div className="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-purple-400 dark:border-purple-500 rounded-tr-2xl"></div>
-                  <div className="absolute bottom-0 left-0 w-16 h-16 border-b-4 border-l-4 border-purple-400 dark:border-purple-500 rounded-bl-2xl"></div>
-                  <div className="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-purple-400 dark:border-purple-500 rounded-br-2xl"></div>
+                  <div className="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-slate-300 dark:border-slate-300 rounded-tl-2xl"></div>
+                  <div className="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-slate-300 dark:border-slate-300 rounded-tr-2xl"></div>
+                  <div className="absolute bottom-0 left-0 w-16 h-16 border-b-4 border-l-4 border-slate-300 dark:border-slate-300 rounded-bl-2xl"></div>
+                  <div className="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-slate-300 dark:border-slate-300 rounded-br-2xl"></div>
 
                   <div className="flex items-center justify-center gap-3 mb-6">
                     <span className="text-4xl">🕌</span>
-                    <h4 className="text-xl sm:text-2xl font-bold text-purple-900 dark:text-purple-200">
+                    <h4 className="text-xl sm:text-2xl font-bold text-indigo-900 dark:text-indigo-200">
                       {isFr ? 'Nom Divin Gouvernant' : 'Governing Divine Name'}
                     </h4>
                   </div>
 
                   {/* Divine Name Display */}
                   <div className="text-center mb-6 space-y-3">
-                    <p className="text-sm text-purple-700 dark:text-purple-300">
+                    <p className="text-sm text-indigo-700 dark:text-indigo-300">
                       {isFr 
                         ? 'Le Nom Divin correspondant à votre nom (Cycle de 28 Lettres)'
                         : 'The Divine Name corresponding to your name (28-Letter Cycle)'}
                     </p>
-                    <div className="bg-gradient-to-br from-violet-600 via-purple-700 to-indigo-700 dark:from-violet-500 dark:via-purple-600 dark:to-indigo-600 rounded-2xl p-6 sm:p-8 text-white shadow-2xl border border-purple-400/30">
+                    <div className=" rounded-2xl p-6 sm:p-8 text-white shadow-sm border border-slate-300/30 bg-indigo-600">
                       <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-3 font-arabic leading-tight">
                         {results.nameDestiny.divineNameResonance.arabic}
                       </div>
@@ -2705,13 +2653,13 @@ function DestinyResults({ results }: { results: any }) {
 
                   {/* How it was derived */}
                   {results.nameDestiny.divineNameResonance.abjadTotal && results.nameDestiny.divineNameResonance.resonanceIndex && (
-                    <div className="mb-6 bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-900/30 dark:to-blue-900/30 rounded-xl p-5 border border-indigo-200 dark:border-indigo-700">
+                    <div className="mb-6 rounded-xl p-5 border border-indigo-200 dark:border-indigo-700 bg-white/60 dark:bg-slate-800/40">
                       <h5 className="text-base font-bold text-indigo-900 dark:text-indigo-200 mb-4 flex items-center gap-2">
                         <Info className="w-5 h-5" />
                         <span>{isFr ? 'Comment cela a été dérivé' : 'How it was derived'}</span>
                       </h5>
                       <div className="grid sm:grid-cols-2 gap-4">
-                        <div className="bg-white/50 dark:bg-slate-800/50 rounded-lg p-4 border border-indigo-300 dark:border-indigo-600">
+                        <div className="bg-white/50 dark:bg-slate-800/50 rounded-xl p-4 border border-indigo-300 dark:border-indigo-600">
                           <div className="text-xs uppercase tracking-wider text-indigo-700 dark:text-indigo-300 mb-1 font-semibold">
                             {isFr ? 'Total Abjad (Kabīr)' : 'Abjad Total (Kabīr)'}
                           </div>
@@ -2722,15 +2670,15 @@ function DestinyResults({ results }: { results: any }) {
                             {isFr ? 'Valeur totale des lettres' : 'Sum of letter values'}
                           </div>
                         </div>
-                        <div className="bg-white/50 dark:bg-slate-800/50 rounded-lg p-4 border border-purple-300 dark:border-purple-600">
-                          <div className="text-xs uppercase tracking-wider text-purple-700 dark:text-purple-300 mb-1 font-semibold">
+                        <div className="bg-white/50 dark:bg-slate-800/50 rounded-xl p-4 border border-slate-200 dark:border-slate-700">
+                          <div className="text-xs uppercase tracking-wider text-indigo-700 dark:text-indigo-300 mb-1 font-semibold">
                             {isFr ? 'Index de Résonance' : 'Resonance Index'}
                           </div>
-                          <div className="text-3xl font-bold text-purple-900 dark:text-purple-200">
+                          <div className="text-3xl font-bold text-indigo-900 dark:text-indigo-200">
                             {results.nameDestiny.divineNameResonance.resonanceIndex}
-                            <span className="text-base font-normal text-purple-600 dark:text-purple-400 ml-1">/28</span>
+                            <span className="text-base font-normal text-indigo-600 dark:text-indigo-400 ml-1">/28</span>
                           </div>
-                          <div className="text-xs text-purple-600 dark:text-purple-400 mt-1">
+                          <div className="text-xs text-indigo-600 dark:text-indigo-400 mt-1">
                             {isFr ? 'Cycle de 28 lettres arabes' : '28-letter Arabic cycle'}
                           </div>
                         </div>
@@ -2753,13 +2701,13 @@ function DestinyResults({ results }: { results: any }) {
 
                   {/* Dhikr (Optional) */}
                   {results.nameDestiny.divineNameResonance.dhikrCount && (
-                    <div className="mb-6 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30 rounded-xl p-5 border border-emerald-200 dark:border-emerald-700">
+                    <div className="mb-6 rounded-xl p-5 border border-emerald-200 dark:border-emerald-700 bg-white/60 dark:bg-slate-800/40">
                       <h5 className="text-base font-bold text-emerald-900 dark:text-emerald-200 mb-3 flex items-center gap-2">
                         <Sparkles className="w-5 h-5" />
                         <span>{isFr ? 'Dhikr (Optionnel)' : 'Dhikr (Optional)'}</span>
                       </h5>
                       <div className="space-y-3">
-                        <div className="bg-white/50 dark:bg-slate-800/50 rounded-lg p-4 border border-emerald-300 dark:border-emerald-600 text-center">
+                        <div className="bg-white/50 dark:bg-slate-800/50 rounded-xl p-4 border border-emerald-300 dark:border-emerald-600 text-center">
                           <div className="text-sm text-emerald-700 dark:text-emerald-300 mb-2">
                             {isFr ? 'Compte recommandé' : 'Recommended count'}
                           </div>
@@ -2800,26 +2748,26 @@ function DestinyResults({ results }: { results: any }) {
 
               {/* Color Resonance - Element-Based Palette */}
               {results.nameDestiny.colorResonance && (
-                <div className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-md rounded-2xl border border-pink-300/50 dark:border-pink-700/50 shadow-xl p-6">
+                <div className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-md rounded-2xl border border-slate-200/50 dark:border-slate-700/50 shadow-sm p-6">
                   <div className="flex items-center justify-center gap-3 mb-5">
                     <span className="text-3xl">🎨</span>
-                    <h4 className="text-xl sm:text-2xl font-bold text-pink-900 dark:text-pink-200">
+                    <h4 className="text-xl sm:text-2xl font-bold text-indigo-900 dark:text-indigo-200">
                       {t.nameDestiny.colorResonance.title}
                     </h4>
                   </div>
 
-                  <p className="text-sm text-center text-pink-700 dark:text-pink-300 mb-6">
+                  <p className="text-sm text-center text-indigo-700 dark:text-indigo-300 mb-6">
                     {t.nameDestiny.colorResonance.subtitle}
                   </p>
 
                   {/* Element Color Palette Grid */}
                   <div className="grid sm:grid-cols-3 gap-4 mb-6">
                     {palette.map((color, idx) => (
-                      <div key={idx} className="group relative bg-gradient-to-br from-slate-50 to-white dark:from-slate-700 dark:to-slate-800 rounded-xl p-4 border border-slate-200 dark:border-slate-600 hover:shadow-lg transition-all hover:scale-105">
+                      <div key={idx} className="group relative rounded-xl p-4 border border-slate-200 dark:border-slate-600 transition-all bg-white/60 dark:bg-slate-800/40">
                         {/* Color Swatch */}
                         <div className="relative mb-3">
                           <div 
-                            className="w-full h-24 rounded-lg shadow-md border-2 border-slate-300 dark:border-slate-600 transition-transform group-hover:scale-110"
+                            className="w-full h-24 rounded-xl shadow-sm border border-slate-300 dark:border-slate-600 transition-transform "
                             style={{ backgroundColor: color.hex }}
                           ></div>
                           <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded font-mono">
@@ -2845,26 +2793,26 @@ function DestinyResults({ results }: { results: any }) {
                   </div>
 
                   {/* Color Usage Guide */}
-                  <div className="bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-900/30 dark:to-indigo-900/30 rounded-xl p-5 border border-purple-200 dark:border-purple-700">
-                    <div className="flex items-center gap-2 mb-3 text-purple-900 dark:text-purple-200">
+                  <div className=" rounded-xl p-5 border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40">
+                    <div className="flex items-center gap-2 mb-3 text-indigo-900 dark:text-indigo-200">
                       <Palette className="w-5 h-5" />
                       <h5 className="font-bold text-base">{isFr ? 'Guide d\'Utilisation des Couleurs' : 'Color Usage Guide'}</h5>
                     </div>
-                    <ul className="space-y-2 text-sm text-purple-800 dark:text-purple-300">
+                    <ul className="space-y-2 text-sm text-indigo-800 dark:text-indigo-300">
                       <li className="flex items-start gap-2">
-                        <span className="text-purple-500 dark:text-purple-400 font-bold">•</span>
+                        <span className="text-indigo-500 dark:text-indigo-400 font-bold">•</span>
                         <span>{isFr ? 'Portez ces couleurs lors de pratiques spirituelles pour amplifier votre connexion' : 'Wear these colors during spiritual practices to amplify your connection'}</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-purple-500 dark:text-purple-400 font-bold">•</span>
+                        <span className="text-indigo-500 dark:text-indigo-400 font-bold">•</span>
                         <span>{isFr ? 'Intégrez-les dans votre environnement (décoration, vêtements)' : 'Integrate them into your environment (decoration, clothing)'}</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-purple-500 dark:text-purple-400 font-bold">•</span>
+                        <span className="text-indigo-500 dark:text-indigo-400 font-bold">•</span>
                         <span>{isFr ? 'Méditez en visualisant ces couleurs pour harmoniser votre énergie' : 'Meditate while visualizing these colors to harmonize your energy'}</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-purple-500 dark:text-purple-400 font-bold">•</span>
+                        <span className="text-indigo-500 dark:text-indigo-400 font-bold">•</span>
                         <span>{isFr ? 'Combinez-les selon vos intentions (courage + clarté, paix + croissance, etc.)' : 'Combine them according to your intentions (courage + clarity, peace + growth, etc.)'}</span>
                       </li>
                     </ul>
@@ -2873,7 +2821,7 @@ function DestinyResults({ results }: { results: any }) {
               )}
 
               {/* Disclaimer */}
-              <div className="text-center text-xs text-purple-600 dark:text-purple-400 italic px-4">
+              <div className="text-center text-xs text-indigo-600 dark:text-indigo-400 italic px-4">
                 {t.nameDestiny.disclaimer.reflectionOnly}
               </div>
             </div>
@@ -2887,7 +2835,7 @@ function DestinyResults({ results }: { results: any }) {
         const colors = elementColors[userElementKey];
         
         return (
-        <div className={`relative overflow-hidden bg-gradient-to-br ${colors.bgGradient} backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 border-2 ${colors.border} ${colors.cardGlow} shadow-2xl hover:shadow-3xl transition-all duration-700`}>
+        <div className={`relative overflow-hidden bg-slate-800 dark:bg-slate-900 ${colors.bgGradient} backdrop-blur-xl rounded-2xl sm:rounded-2xl p-6 sm:p-8 md:p-10 border ${colors.border} ${colors.cardGlow} shadow-sm hover:shadow-3xl transition-all duration-700`}>
           
           {/* Sacred Geometry Background - Number Pattern */}
           <div className="absolute inset-0 opacity-5">
@@ -2911,17 +2859,17 @@ function DestinyResults({ results }: { results: any }) {
           
           {/* Animated Orbiting Elements */}
           <div className="absolute inset-0 opacity-20 pointer-events-none">
-            <div className={`absolute top-20 left-20 w-24 h-24 rounded-full blur-2xl animate-pulse ${(() => {
+            <div className={`absolute top-20 left-20 w-24 h-24 rounded-full blur-2xl ${(() => {
               const userElementKey = getElementKey(results.nameDestiny.element);
               
               return elementColors[userElementKey].pulseColor;
             })()}`}></div>
-            <div className={`absolute bottom-20 right-20 w-32 h-32 rounded-full blur-2xl animate-pulse ${(() => {
+            <div className={`absolute bottom-20 right-20 w-32 h-32 rounded-full blur-2xl ${(() => {
               const userElementKey = getElementKey(results.nameDestiny.element);
               
               return elementColors[userElementKey].pulseColor;
             })()}`} style={{ animationDelay: '0.5s' }}></div>
-            <div className={`absolute top-1/2 right-10 w-20 h-20 rounded-full blur-2xl animate-pulse ${(() => {
+            <div className={`absolute top-1/2 right-10 w-20 h-20 rounded-full blur-2xl ${(() => {
               const userElementKey = getElementKey(results.nameDestiny.element);
               
               return elementColors[userElementKey].pulseColor;
@@ -2929,7 +2877,7 @@ function DestinyResults({ results }: { results: any }) {
           </div>
           
           {/* Sparkles */}
-          <div className="absolute top-6 right-6 animate-pulse">
+          <div className="absolute top-6 right-6 ">
             <Target className={`w-6 h-6 sm:w-8 sm:h-8 ${(() => {
               const userElementKey = getElementKey(results.nameDestiny.element);
               
@@ -2965,17 +2913,17 @@ function DestinyResults({ results }: { results: any }) {
             {/* Dual Number Display - Kabīr and Saghīr */}
             <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-10">
               {/* Kabīr Card */}
-              <div className={`group relative bg-gradient-to-br from-white/20 to-white/5 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 border-2 ${(() => {
+              <div className={`group relative backdrop-blur-xl rounded-2xl sm:rounded-2xl p-6 sm:p-8 border bg-slate-800 dark:bg-slate-900 ${(() => {
                 const userElementKey = getElementKey(results.nameDestiny.element);
                 
                 return elementColors[userElementKey].border;
-              })()} shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-500`}>
+              })()} shadow-sm transition-all duration-500`}>
                 {/* Glow Effect */}
                 <div className={`absolute inset-0 ${(() => {
                   const userElementKey = getElementKey(results.nameDestiny.element);
                   
                   return elementColors[userElementKey].accentBg;
-                })()} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl sm:rounded-3xl`} />
+                })()} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl sm:rounded-2xl`} />
                 
                 <div className="relative z-10 text-center">
                   {/* Label */}
@@ -2986,11 +2934,11 @@ function DestinyResults({ results }: { results: any }) {
                   </div>
                   
                   {/* Number Circle */}
-                  <div className={`mx-auto w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-gradient-to-br ${(() => {
+                  <div className={`mx-auto w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-indigo-600 ${(() => {
                     const userElementKey = getElementKey(results.nameDestiny.element);
                     
                     return elementColors[userElementKey].gradient;
-                  })()} flex items-center justify-center shadow-2xl border-4 border-white/30 mb-4`}>
+                  })()} flex items-center justify-center shadow-sm border-4 border-white/30 mb-4`}>
                     <span className="text-5xl sm:text-6xl font-extrabold text-white">
                       {results.nameDestiny.personKabir}
                     </span>
@@ -3011,17 +2959,17 @@ function DestinyResults({ results }: { results: any }) {
               </div>
 
               {/* Saghīr Card */}
-              <div className={`group relative bg-gradient-to-br from-white/20 to-white/5 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 border-2 ${(() => {
+              <div className={`group relative backdrop-blur-xl rounded-2xl sm:rounded-2xl p-6 sm:p-8 border bg-slate-800 dark:bg-slate-900 ${(() => {
                 const userElementKey = getElementKey(results.nameDestiny.element);
                 
                 return elementColors[userElementKey].border;
-              })()} shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-500`}>
+              })()} shadow-sm transition-all duration-500`}>
                 {/* Glow Effect */}
                 <div className={`absolute inset-0 ${(() => {
                   const userElementKey = getElementKey(results.nameDestiny.element);
                   
                   return elementColors[userElementKey].accentBg;
-                })()} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl sm:rounded-3xl`} />
+                })()} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl sm:rounded-2xl`} />
                 
                 <div className="relative z-10 text-center">
                   {/* Label */}
@@ -3032,11 +2980,11 @@ function DestinyResults({ results }: { results: any }) {
                   </div>
                   
                   {/* Number Circle */}
-                  <div className={`mx-auto w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-gradient-to-br ${(() => {
+                  <div className={`mx-auto w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-indigo-600 ${(() => {
                     const userElementKey = getElementKey(results.nameDestiny.element);
                     
                     return elementColors[userElementKey].gradient;
-                  })()} flex items-center justify-center shadow-2xl border-4 border-white/30 mb-4`}>
+                  })()} flex items-center justify-center shadow-sm border-4 border-white/30 mb-4`}>
                     <span className="text-5xl sm:text-6xl font-extrabold text-white">
                       {results.nameDestiny.saghir}
                     </span>
@@ -3064,7 +3012,7 @@ function DestinyResults({ results }: { results: any }) {
                   const userElementKey = getElementKey(results.nameDestiny.element);
                   
                   return elementColors[userElementKey].accentBg;
-                })()} shadow-lg`}>
+                })()} shadow-sm`}>
                   <Lightbulb className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                 </div>
                 <div className="flex-1">
@@ -3102,15 +3050,15 @@ function DestinyResults({ results }: { results: any }) {
               </div>
 
               {/* Station Display Card */}
-              <div className={`relative bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 border-2 border-white/30 shadow-2xl`}>
+              <div className={`relative backdrop-blur-xl rounded-2xl sm:rounded-2xl p-6 sm:p-8 md:p-10 border border-white/30 shadow-sm bg-white/60 dark:bg-slate-800/40`}>
                 {/* Decorative Elements */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center shadow-xl border-4 border-white/30">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full flex items-center justify-center shadow-sm border-4 border-white/30 bg-white/60 dark:bg-slate-800/40">
                   <span className="text-3xl">🎯</span>
                 </div>
                 
                 <div className="mt-8 text-center">
                   {/* Station Number Badge */}
-                  <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full border-2 border-white/30 mb-6">
+                  <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full border border-white/30 mb-6">
                     <span className={`text-2xl font-extrabold ${(() => {
                       const userElementKey = getElementKey(results.nameDestiny.element);
                       
@@ -3227,7 +3175,7 @@ function DestinyResults({ results }: { results: any }) {
                       if (!stationQuality) return null;
                       
                       return stationQuality.keywords.map((keyword, idx) => (
-                        <div key={idx} className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
+                        <div key={idx} className="bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/20">
                           <div className="text-2xl mb-1">{idx === 0 ? stationQuality.icon : '✦'}</div>
                           <div className="text-sm font-semibold text-white">{keyword}</div>
                         </div>
@@ -3238,16 +3186,16 @@ function DestinyResults({ results }: { results: any }) {
               </div>
 
               {/* Guidance Card */}
-              <div className={`bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900/40 dark:to-cyan-900/40 backdrop-blur-md rounded-xl sm:rounded-2xl p-5 sm:p-6 border-2 border-blue-300 dark:border-blue-700 shadow-xl`}>
+              <div className={` backdrop-blur-md rounded-xl sm:rounded-2xl p-5 sm:p-6 border border-slate-200 dark:border-slate-700 shadow-sm bg-white/60 dark:bg-slate-800/40`}>
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg">
+                  <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-sm bg-indigo-600">
                     <Compass className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h5 className="text-lg sm:text-xl font-bold text-blue-900 dark:text-blue-100 mb-3">
+                    <h5 className="text-lg sm:text-xl font-bold text-indigo-900 dark:text-indigo-100 mb-3">
                       {language === 'fr' ? 'Guidance pour Votre Station' : 'Guidance for Your Station'}
                     </h5>
-                    <p className="text-sm text-blue-800 dark:text-blue-200 leading-relaxed">
+                    <p className="text-sm text-indigo-800 dark:text-indigo-200 leading-relaxed">
                       {language === 'fr'
                         ? 'Votre station de vie n\'est pas fixe - elle représente votre chemin actuel. En honorant les qualités de cette station et en travaillant sur ses défis, vous progressez naturellement sur votre voyage spirituel. Méditez sur votre Saghīr pour vous connecter à l\'énergie de votre station.'
                         : 'Your life station is not fixed - it represents your current path. By honoring the qualities of this station and working on its challenges, you naturally progress on your spiritual journey. Meditate on your Saghīr to connect with the energy of your station.'}
@@ -3263,11 +3211,11 @@ function DestinyResults({ results }: { results: any }) {
 
       {/* Section 7: Soul Triad - Three Aspects of Self */}
       {results.nameDestiny && results.nameDestiny.saghir && results.nameDestiny.soulUrgeNumber && results.nameDestiny.personalityNumber && (
-        <div className={`relative overflow-hidden bg-gradient-to-br ${(() => {
+        <div className={`relative overflow-hidden bg-slate-800 dark:bg-slate-900 ${(() => {
           const userElementKey = getElementKey(results.nameDestiny.element);
           
           return elementColors[userElementKey].bgGradient;
-        })()} backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 border-2 ${(() => {
+        })()} backdrop-blur-xl rounded-2xl sm:rounded-2xl p-6 sm:p-8 md:p-10 border ${(() => {
           const userElementKey = getElementKey(results.nameDestiny.element);
           
           return elementColors[userElementKey].border;
@@ -3275,7 +3223,7 @@ function DestinyResults({ results }: { results: any }) {
           const userElementKey = getElementKey(results.nameDestiny.element);
           
           return elementColors[userElementKey].cardGlow;
-        })()} shadow-2xl hover:shadow-3xl transition-all duration-700`}>
+        })()} shadow-sm hover:shadow-3xl transition-all duration-700`}>
           
           {/* Sacred Geometry Background - Triad Pattern */}
           <div className="absolute inset-0 opacity-5">
@@ -3302,17 +3250,17 @@ function DestinyResults({ results }: { results: any }) {
           
           {/* Animated Trinity Orbs */}
           <div className="absolute inset-0 opacity-20 pointer-events-none">
-            <div className={`absolute top-20 left-1/2 -translate-x-1/2 w-28 h-28 rounded-full blur-3xl animate-pulse ${(() => {
+            <div className={`absolute top-20 left-1/2 -translate-x-1/2 w-28 h-28 rounded-full blur-3xl ${(() => {
               const userElementKey = getElementKey(results.nameDestiny.element);
               
               return elementColors[userElementKey].pulseColor;
             })()}`}></div>
-            <div className={`absolute bottom-32 left-1/4 w-24 h-24 rounded-full blur-3xl animate-pulse ${(() => {
+            <div className={`absolute bottom-32 left-1/4 w-24 h-24 rounded-full blur-3xl ${(() => {
               const userElementKey = getElementKey(results.nameDestiny.element);
               
               return elementColors[userElementKey].pulseColor;
             })()}`} style={{ animationDelay: '0.5s' }}></div>
-            <div className={`absolute bottom-32 right-1/4 w-24 h-24 rounded-full blur-3xl animate-pulse ${(() => {
+            <div className={`absolute bottom-32 right-1/4 w-24 h-24 rounded-full blur-3xl ${(() => {
               const userElementKey = getElementKey(results.nameDestiny.element);
               
               return elementColors[userElementKey].pulseColor;
@@ -3320,7 +3268,7 @@ function DestinyResults({ results }: { results: any }) {
           </div>
           
           {/* Sparkles */}
-          <div className="absolute top-6 right-6 animate-pulse">
+          <div className="absolute top-6 right-6 ">
             <Users className={`w-6 h-6 sm:w-8 sm:h-8 ${(() => {
               const userElementKey = getElementKey(results.nameDestiny.element);
               
@@ -3369,14 +3317,14 @@ function DestinyResults({ results }: { results: any }) {
             <div className="grid lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-10">
               
               {/* 1. Life Destiny / Expression Number */}
-              <div className={`group relative bg-gradient-to-br from-rose-500/20 to-pink-500/20 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 border-2 border-rose-300/50 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-500`}>
+              <div className={`group relative backdrop-blur-xl rounded-2xl sm:rounded-2xl p-6 sm:p-8 border border-slate-200/50 shadow-sm transition-all duration-500 bg-indigo-600`}>
                 {/* Glow Effect */}
-                <div className="absolute inset-0 bg-rose-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl sm:rounded-3xl" />
+                <div className="absolute inset-0 bg-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl sm:rounded-2xl" />
                 
                 <div className="relative z-10">
                   {/* Icon */}
                   <div className="flex justify-center mb-4">
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-rose-400 to-pink-600 flex items-center justify-center shadow-lg border-4 border-white/30">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-sm border-4 border-white/30 bg-white/60 dark:bg-slate-800/40">
                       <Fingerprint className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                     </div>
                   </div>
@@ -3389,7 +3337,7 @@ function DestinyResults({ results }: { results: any }) {
                   </div>
                   
                   {/* Number Circle */}
-                  <div className="mx-auto w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center shadow-2xl border-4 border-white/30 mb-4">
+                  <div className="mx-auto w-20 h-20 sm:w-24 sm:h-24 rounded-full flex items-center justify-center shadow-sm border-4 border-white/30 mb-4 bg-indigo-600">
                     <span className="text-3xl sm:text-4xl font-extrabold text-white">
                       {results.nameDestiny.saghir}
                     </span>
@@ -3408,21 +3356,21 @@ function DestinyResults({ results }: { results: any }) {
                   </p>
                   
                   {/* Key Aspects */}
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 space-y-2">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 space-y-2">
                     <div className="flex items-start gap-2">
-                      <span className="text-rose-300">▸</span>
+                      <span className="text-indigo-300">▸</span>
                       <span className="text-xs text-white/90">
                         {language === 'fr' ? 'Talents innés' : 'Innate talents'}
                       </span>
                     </div>
                     <div className="flex items-start gap-2">
-                      <span className="text-rose-300">▸</span>
+                      <span className="text-indigo-300">▸</span>
                       <span className="text-xs text-white/90">
                         {language === 'fr' ? 'Capacités naturelles' : 'Natural abilities'}
                       </span>
                     </div>
                     <div className="flex items-start gap-2">
-                      <span className="text-rose-300">▸</span>
+                      <span className="text-indigo-300">▸</span>
                       <span className="text-xs text-white/90">
                         {language === 'fr' ? 'Chemin de vie' : 'Life path'}
                       </span>
@@ -3432,14 +3380,14 @@ function DestinyResults({ results }: { results: any }) {
               </div>
 
               {/* 2. Soul Urge / Heart's Desire */}
-              <div className={`group relative bg-gradient-to-br from-violet-500/20 to-purple-500/20 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 border-2 border-violet-300/50 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-500`}>
+              <div className={`group relative backdrop-blur-xl rounded-2xl sm:rounded-2xl p-6 sm:p-8 border border-slate-200/50 shadow-sm transition-all duration-500 bg-indigo-600`}>
                 {/* Glow Effect */}
-                <div className="absolute inset-0 bg-violet-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl sm:rounded-3xl" />
+                <div className="absolute inset-0 bg-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl sm:rounded-2xl" />
                 
                 <div className="relative z-10">
                   {/* Icon */}
                   <div className="flex justify-center mb-4">
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-violet-400 to-purple-600 flex items-center justify-center shadow-lg border-4 border-white/30">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-sm border-4 border-white/30 bg-white/60 dark:bg-slate-800/40">
                       <Heart className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                     </div>
                   </div>
@@ -3452,7 +3400,7 @@ function DestinyResults({ results }: { results: any }) {
                   </div>
                   
                   {/* Number Circle */}
-                  <div className="mx-auto w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center shadow-2xl border-4 border-white/30 mb-4">
+                  <div className="mx-auto w-20 h-20 sm:w-24 sm:h-24 rounded-full flex items-center justify-center shadow-sm border-4 border-white/30 mb-4 bg-indigo-600">
                     <span className="text-3xl sm:text-4xl font-extrabold text-white">
                       {results.nameDestiny.soulUrgeNumber}
                     </span>
@@ -3471,21 +3419,21 @@ function DestinyResults({ results }: { results: any }) {
                   </p>
                   
                   {/* Key Aspects */}
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 space-y-2">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 space-y-2">
                     <div className="flex items-start gap-2">
-                      <span className="text-violet-300">▸</span>
+                      <span className="text-indigo-300">▸</span>
                       <span className="text-xs text-white/90">
                         {language === 'fr' ? 'Motivations profondes' : 'Deep motivations'}
                       </span>
                     </div>
                     <div className="flex items-start gap-2">
-                      <span className="text-violet-300">▸</span>
+                      <span className="text-indigo-300">▸</span>
                       <span className="text-xs text-white/90">
                         {language === 'fr' ? 'Aspirations du cœur' : 'Heart aspirations'}
                       </span>
                     </div>
                     <div className="flex items-start gap-2">
-                      <span className="text-violet-300">▸</span>
+                      <span className="text-indigo-300">▸</span>
                       <span className="text-xs text-white/90">
                         {language === 'fr' ? 'Besoins spirituels' : 'Spiritual needs'}
                       </span>
@@ -3495,14 +3443,14 @@ function DestinyResults({ results }: { results: any }) {
               </div>
 
               {/* 3. Outer Personality / Persona */}
-              <div className={`group relative bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 border-2 border-cyan-300/50 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-500`}>
+              <div className={`group relative backdrop-blur-xl rounded-2xl sm:rounded-2xl p-6 sm:p-8 border border-slate-200/50 shadow-sm transition-all duration-500 bg-indigo-600`}>
                 {/* Glow Effect */}
-                <div className="absolute inset-0 bg-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl sm:rounded-3xl" />
+                <div className="absolute inset-0 bg-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl sm:rounded-2xl" />
                 
                 <div className="relative z-10">
                   {/* Icon */}
                   <div className="flex justify-center mb-4">
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center shadow-lg border-4 border-white/30">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-sm border-4 border-white/30 bg-white/60 dark:bg-slate-800/40">
                       <Eye className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                     </div>
                   </div>
@@ -3515,7 +3463,7 @@ function DestinyResults({ results }: { results: any }) {
                   </div>
                   
                   {/* Number Circle */}
-                  <div className="mx-auto w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-2xl border-4 border-white/30 mb-4">
+                  <div className="mx-auto w-20 h-20 sm:w-24 sm:h-24 rounded-full flex items-center justify-center shadow-sm border-4 border-white/30 mb-4 bg-indigo-600">
                     <span className="text-3xl sm:text-4xl font-extrabold text-white">
                       {results.nameDestiny.personalityNumber}
                     </span>
@@ -3534,21 +3482,21 @@ function DestinyResults({ results }: { results: any }) {
                   </p>
                   
                   {/* Key Aspects */}
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 space-y-2">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 space-y-2">
                     <div className="flex items-start gap-2">
-                      <span className="text-cyan-300">▸</span>
+                      <span className="text-indigo-300">▸</span>
                       <span className="text-xs text-white/90">
                         {language === 'fr' ? 'Première impression' : 'First impression'}
                       </span>
                     </div>
                     <div className="flex items-start gap-2">
-                      <span className="text-cyan-300">▸</span>
+                      <span className="text-indigo-300">▸</span>
                       <span className="text-xs text-white/90">
                         {language === 'fr' ? 'Image sociale' : 'Social image'}
                       </span>
                     </div>
                     <div className="flex items-start gap-2">
-                      <span className="text-cyan-300">▸</span>
+                      <span className="text-indigo-300">▸</span>
                       <span className="text-xs text-white/90">
                         {language === 'fr' ? 'Masque public' : 'Public mask'}
                       </span>
@@ -3584,12 +3532,12 @@ function DestinyResults({ results }: { results: any }) {
                             stroke="url(#triad-gradient)" 
                             strokeWidth="2" 
                             strokeDasharray="5,5"
-                            className="animate-pulse"/>
+                            className=""/>
                     </svg>
                     
                     {/* Top: Life Destiny (Expression) */}
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 text-center">
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-rose-400 to-pink-600 flex items-center justify-center shadow-lg border-4 border-white/30 mb-2">
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-sm border-4 border-white/30 mb-2 bg-white/60 dark:bg-slate-800/40">
                         <span className="text-xl sm:text-2xl font-bold text-white">
                           {results.nameDestiny.saghir}
                         </span>
@@ -3601,7 +3549,7 @@ function DestinyResults({ results }: { results: any }) {
                     
                     {/* Bottom Left: Soul Urge (Desire) */}
                     <div className="absolute bottom-0 left-[15%] -translate-x-1/2 text-center">
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-violet-400 to-purple-600 flex items-center justify-center shadow-lg border-4 border-white/30 mb-2">
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-sm border-4 border-white/30 mb-2 bg-white/60 dark:bg-slate-800/40">
                         <span className="text-xl sm:text-2xl font-bold text-white">
                           {results.nameDestiny.soulUrgeNumber}
                         </span>
@@ -3613,7 +3561,7 @@ function DestinyResults({ results }: { results: any }) {
                     
                     {/* Bottom Right: Outer Personality (Persona) */}
                     <div className="absolute bottom-0 right-[15%] translate-x-1/2 text-center">
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center shadow-lg border-4 border-white/30 mb-2">
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center shadow-sm border-4 border-white/30 mb-2 bg-white/60 dark:bg-slate-800/40">
                         <span className="text-xl sm:text-2xl font-bold text-white">
                           {results.nameDestiny.personalityNumber}
                         </span>
@@ -3625,11 +3573,11 @@ function DestinyResults({ results }: { results: any }) {
                     
                     {/* Center - Integration Point */}
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                      <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${(() => {
+                      <div className={`w-12 h-12 rounded-full bg-indigo-600 ${(() => {
                         const userElementKey = getElementKey(results.nameDestiny.element);
                         
                         return elementColors[userElementKey].gradient;
-                      })()} flex items-center justify-center shadow-xl border-4 border-white/50 animate-pulse`}>
+                      })()} flex items-center justify-center shadow-sm border-4 border-white/50 `}>
                         <Sparkles className="w-6 h-6 text-white" />
                       </div>
                     </div>
@@ -3639,9 +3587,9 @@ function DestinyResults({ results }: { results: any }) {
             </div>
 
             {/* Integration Analysis */}
-            <div className={`bg-gradient-to-br from-amber-100 to-orange-100 dark:from-amber-900/40 dark:to-orange-900/40 backdrop-blur-md rounded-xl sm:rounded-2xl p-6 sm:p-8 border-2 border-amber-300 dark:border-amber-700 shadow-xl mb-8 sm:mb-10`}>
+            <div className={` backdrop-blur-md rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-amber-300 dark:border-amber-700 shadow-sm mb-8 sm:mb-10 bg-white/60 dark:bg-slate-800/40`}>
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg">
+                <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-sm bg-indigo-600">
                   <Lightbulb className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                 </div>
                 <div className="flex-1">
@@ -3667,9 +3615,9 @@ function DestinyResults({ results }: { results: any }) {
             {/* Balancing the Triad - Guidance */}
             <div className="grid sm:grid-cols-3 gap-4 sm:gap-6">
               {/* Expression Balance */}
-              <div className="bg-gradient-to-br from-rose-500/10 to-pink-500/10 backdrop-blur-sm rounded-xl p-5 border border-rose-300/30">
+              <div className=" backdrop-blur-sm rounded-xl p-5 border border-slate-200/30 bg-indigo-600">
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-rose-400 to-pink-600 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-xl flex items-center justify-center bg-white/60 dark:bg-slate-800/40">
                     <Fingerprint className="w-4 h-4 text-white" />
                   </div>
                   <h5 className="text-sm font-bold text-white">
@@ -3684,9 +3632,9 @@ function DestinyResults({ results }: { results: any }) {
               </div>
 
               {/* Desire Balance */}
-              <div className="bg-gradient-to-br from-violet-500/10 to-purple-500/10 backdrop-blur-sm rounded-xl p-5 border border-violet-300/30">
+              <div className=" backdrop-blur-sm rounded-xl p-5 border border-slate-200/30 bg-indigo-600">
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-400 to-purple-600 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-xl flex items-center justify-center bg-white/60 dark:bg-slate-800/40">
                     <Heart className="w-4 h-4 text-white" />
                   </div>
                   <h5 className="text-sm font-bold text-white">
@@ -3701,9 +3649,9 @@ function DestinyResults({ results }: { results: any }) {
               </div>
 
               {/* Persona Balance */}
-              <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-xl p-5 border border-cyan-300/30">
+              <div className=" backdrop-blur-sm rounded-xl p-5 border border-slate-200/30 bg-indigo-600">
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-xl flex items-center justify-center bg-white/60 dark:bg-slate-800/40">
                     <Eye className="w-4 h-4 text-white" />
                   </div>
                   <h5 className="text-sm font-bold text-white">
@@ -3723,8 +3671,8 @@ function DestinyResults({ results }: { results: any }) {
 
       {/* Section 8: Qur'anic Resonance */}
       {results.quranResonance && (
-        <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg border-2 border-emerald-500 dark:border-emerald-600 overflow-hidden">
-          <div className="bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-5">
+        <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-emerald-500 dark:border-emerald-600 overflow-hidden">
+          <div className=" px-6 py-5 bg-indigo-600">
             <div className="flex items-center gap-3">
               <BookOpen className="w-7 h-7 text-white" />
               <div>
@@ -3736,7 +3684,7 @@ function DestinyResults({ results }: { results: any }) {
             </div>
           </div>
           
-          <div className="p-6 space-y-5 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-800 dark:to-slate-900">
+          <div className="p-6 space-y-5 bg-white/60 dark:bg-slate-800/40">
             <div className="text-center space-y-3">
               <div className="text-4xl font-bold text-black dark:text-white mb-2" style={{ fontFamily: 'Amiri, serif' }}>
                 {results.quranResonance.surahNameArabic}
@@ -3744,7 +3692,7 @@ function DestinyResults({ results }: { results: any }) {
               <div className="text-2xl font-bold text-black dark:text-white">
                 {results.quranResonance.surahName}
               </div>
-              <div className="inline-block px-5 py-2 bg-emerald-600 dark:bg-emerald-700 rounded-lg shadow-md">
+              <div className="inline-block px-5 py-2 bg-emerald-600 dark:bg-emerald-700 rounded-xl shadow-sm">
                 <div className="text-base font-bold text-white">
                   Ayah {results.quranResonance.ayahNumber} of {results.quranResonance.totalAyahsInSurah}
                 </div>
@@ -3753,14 +3701,14 @@ function DestinyResults({ results }: { results: any }) {
             
             {/* Verse Text Display */}
             {loadingVerse && (
-              <div className="text-center py-8 bg-emerald-50 dark:bg-slate-700 rounded-lg">
-                <div className="inline-block animate-spin rounded-full h-8 w-8 border-4 border-emerald-300 border-t-emerald-600"></div>
+              <div className="text-center py-8 bg-emerald-50 dark:bg-slate-700 rounded-xl">
+                <div className="inline-block rounded-full h-8 w-8 border-4 border-emerald-300 border-t-emerald-600"></div>
                 <p className="text-sm text-black dark:text-slate-300 mt-3 font-medium">Loading Qur'anic verse...</p>
               </div>
             )}
             
             {verseError && !loadingVerse && !verseText && (
-              <div className="text-center py-6 bg-amber-50 dark:bg-amber-900/20 rounded-lg border border-amber-200 dark:border-amber-700">
+              <div className="text-center py-6 bg-amber-50 dark:bg-amber-900/20 rounded-xl border border-amber-200 dark:border-amber-700">
                 <p className="text-sm text-amber-800 dark:text-amber-300">{verseError}</p>
                 <p className="text-xs text-amber-700 dark:text-amber-400 mt-2">
                   The verse reference is valid (Surah {results.quranResonance.surahNumber}:{results.quranResonance.ayahNumber}), but we're having trouble fetching it.
@@ -3769,17 +3717,20 @@ function DestinyResults({ results }: { results: any }) {
             )}
             
             {verseText && !loadingVerse && (
-              <div className="space-y-4 bg-white dark:bg-slate-750 rounded-lg p-6 border-2 border-emerald-200 dark:border-emerald-700">
+              <div className="space-y-4 bg-white dark:bg-slate-750 rounded-xl p-6 border border-emerald-200 dark:border-emerald-700">
                 {/* Arabic Text */}
                 {verseText.arabic && (
                   <div className="space-y-2">
                     <h4 className="text-sm font-semibold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">Arabic Text</h4>
-                    <div className="text-right bg-gradient-to-l from-emerald-50 to-transparent dark:from-slate-800 dark:to-transparent rounded p-5 border-r-4 border-emerald-500">
+                    <div className="text-right rounded p-5 border-r-4 border-emerald-500 bg-white/60 dark:bg-slate-800/40">
                       <p className="text-2xl md:text-3xl font-semibold leading-relaxed text-black dark:text-white" 
                          style={{ fontFamily: 'Amiri, Scheherazade, serif', lineHeight: '2', direction: 'rtl' }}>
                         {verseText.arabic}
                       </p>
                     </div>
+                    <p className="text-xs text-slate-500 dark:text-slate-400" dir="ltr">
+                      tanzil.net
+                    </p>
                   </div>
                 )}
                 
@@ -3787,7 +3738,7 @@ function DestinyResults({ results }: { results: any }) {
                 {verseText.translation && (
                   <div className="space-y-2">
                     <h4 className="text-sm font-semibold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider">English Translation</h4>
-                    <div className="bg-gradient-to-r from-blue-50 to-transparent dark:from-blue-900/10 dark:to-transparent rounded p-5 border-l-4 border-blue-400">
+                    <div className=" rounded p-5 border-l-4 border-slate-300 bg-white/60 dark:bg-slate-800/40">
                       <p className="text-base text-black dark:text-slate-200 leading-relaxed mb-3">
                         "{verseText.translation}"
                       </p>
@@ -3811,7 +3762,7 @@ function DestinyResults({ results }: { results: any }) {
                 href={results.quranResonance.quranLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg transition-all duration-200 font-bold shadow-lg hover:shadow-xl text-base"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl transition-all duration-200 font-bold shadow-sm text-base"
               >
                 <BookOpen className="w-5 h-5" />
                 Read Full Verse on Quran.com
@@ -3830,14 +3781,14 @@ function DestinyResults({ results }: { results: any }) {
 
       {/* Section 8: Spiritual Origin (Mother's Name Analysis) */}
       {results.motherAnalysis && (
-        <div className="bg-gradient-to-br from-rose-50 to-pink-50 dark:from-rose-900/20 dark:to-pink-900/20 rounded-xl border-2 border-rose-200 dark:border-rose-800 p-6 shadow-lg">
+        <div className=" rounded-xl border border-slate-200 dark:border-slate-700 p-6 shadow-sm bg-white/60 dark:bg-slate-800/40">
           <div className="flex items-center gap-3 mb-5">
-            <Heart className="h-6 w-6 text-rose-500" />
+            <Heart className="h-6 w-6 text-indigo-500" />
             <div>
-              <h3 className="text-2xl font-bold text-rose-900 dark:text-rose-100">
+              <h3 className="text-2xl font-bold text-indigo-900 dark:text-indigo-100">
                 {t.nameDestiny.origin.title}
               </h3>
-              <p className="text-sm text-rose-700 dark:text-rose-300 mt-1">
+              <p className="text-sm text-indigo-700 dark:text-indigo-300 mt-1">
                 {t.nameDestiny.motherOrigin.subtitle}
               </p>
             </div>
@@ -3845,12 +3796,12 @@ function DestinyResults({ results }: { results: any }) {
           
           <div className="space-y-4">
             {/* Mother's Element */}
-            <div className="p-4 bg-white dark:bg-slate-800 rounded-lg border border-rose-200 dark:border-rose-700">
+            <div className="p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
               <p className="text-sm text-slate-600 dark:text-slate-400 mb-2">
                 {t.nameDestiny.origin.motherElement}
               </p>
               <div className="flex items-center gap-3">
-                <div className="text-2xl font-bold text-rose-600 dark:text-rose-400">
+                <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
                   {results.motherAnalysis.element}
                 </div>
                 <div className="text-lg font-arabic text-slate-700 dark:text-slate-300">
@@ -3863,21 +3814,21 @@ function DestinyResults({ results }: { results: any }) {
             </div>
             
             {/* Element Inheritance Comparison */}
-            <div className="p-4 bg-white dark:bg-slate-800 rounded-lg border border-rose-200 dark:border-rose-700">
+            <div className="p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
               <p className="text-sm font-medium mb-3 text-black dark:text-slate-300">
                 {t.nameDestiny.origin.inheritance}:
               </p>
               <div className="flex items-center gap-4">
-                <div className="flex-1 text-center p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+                <div className="flex-1 text-center p-3 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl">
                   <p className="text-xs text-slate-500 dark:text-slate-400 mb-1">{t.nameDestiny.origin.yourExpression}</p>
-                  <p className="font-bold text-purple-600 dark:text-purple-400">
+                  <p className="font-bold text-indigo-600 dark:text-indigo-400">
                     {isFr ? results.nameDestiny.expression.fr : results.nameDestiny.expression.en}
                   </p>
                 </div>
                 <div className="text-3xl text-slate-400">†”</div>
-                <div className="flex-1 text-center p-3 bg-rose-50 dark:bg-rose-900/20 rounded-lg">
+                <div className="flex-1 text-center p-3 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl">
                   <p className="text-xs text-slate-500 dark:text-slate-400 mb-1">{t.nameDestiny.origin.yourFoundation}</p>
-                  <p className="font-bold text-rose-600 dark:text-rose-400">
+                  <p className="font-bold text-indigo-600 dark:text-indigo-400">
                     {results.motherAnalysis.element}
                   </p>
                 </div>
@@ -3885,7 +3836,7 @@ function DestinyResults({ results }: { results: any }) {
             </div>
             
             {/* Inheritance Insight */}
-            <div className="p-4 bg-gradient-to-br from-white to-rose-50 dark:from-slate-800 dark:to-rose-900/10 rounded-lg border border-rose-200 dark:border-rose-700">
+            <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40">
               <p className="text-sm font-semibold text-black dark:text-slate-100 mb-2 flex items-center gap-2">
                 <Lightbulb className="h-4 w-4 text-amber-500" />
                 {t.nameDestiny.origin.insight}:
@@ -3943,7 +3894,7 @@ function DestinyResults({ results }: { results: any }) {
 
       {/* Section 9: Letter Geometry & Form Analysis */}
       {results.geometry && (
-        <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 rounded-xl shadow-lg border-2 border-indigo-200 dark:border-indigo-800 p-6">
+        <div className=" rounded-xl shadow-sm border border-indigo-200 dark:border-indigo-800 p-6 bg-white/60 dark:bg-slate-800/40">
           <div className="flex items-center gap-3 mb-5">
             <Compass className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
             <div>
@@ -3959,7 +3910,7 @@ function DestinyResults({ results }: { results: any }) {
             {/* Vertical */}
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <ArrowUp className="w-4 h-4 text-blue-600" />
+                <ArrowUp className="w-4 h-4 text-indigo-600" />
                 <span className="text-sm font-bold uppercase text-black dark:text-indigo-300">
                   {isFr ? GEOMETRY_NAMES.vertical.fr : GEOMETRY_NAMES.vertical.en} ({GEOMETRY_NAMES.vertical.transliteration} - {GEOMETRY_NAMES.vertical.ar})
                   <span className="ml-2 text-xs font-normal">({results.geometry.vertical.count} {isFr ? 'lettres' : 'letters'})</span>
@@ -3971,7 +3922,7 @@ function DestinyResults({ results }: { results: any }) {
                     {results.geometry.vertical.letters.map((letter: string, i: number) => (
                       <span 
                         key={i}
-                        className="text-3xl p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg text-blue-900 dark:text-blue-100"
+                        className="text-3xl p-2 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl text-indigo-900 dark:text-indigo-100"
                         style={{ fontFamily: "'Amiri', 'Scheherazade New', serif" }}
                       >
                         {letter}
@@ -3992,7 +3943,7 @@ function DestinyResults({ results }: { results: any }) {
             {/* Round */}
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <Circle className="w-4 h-4 text-rose-600" />
+                <Circle className="w-4 h-4 text-indigo-600" />
                 <span className="text-sm font-bold uppercase text-black dark:text-indigo-300">
                   {isFr ? GEOMETRY_NAMES.round.fr : GEOMETRY_NAMES.round.en} ({GEOMETRY_NAMES.round.transliteration} - {GEOMETRY_NAMES.round.ar})
                   <span className="ml-2 text-xs font-normal">({results.geometry.round.count} {isFr ? 'lettres' : 'letters'})</span>
@@ -4004,7 +3955,7 @@ function DestinyResults({ results }: { results: any }) {
                     {results.geometry.round.letters.map((letter: string, i: number) => (
                       <span 
                         key={i}
-                        className="text-3xl p-2 bg-rose-100 dark:bg-rose-900/30 rounded-lg text-rose-900 dark:text-rose-100"
+                        className="text-3xl p-2 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl text-indigo-900 dark:text-indigo-100"
                         style={{ fontFamily: "'Amiri', 'Scheherazade New', serif" }}
                       >
                         {letter}
@@ -4037,7 +3988,7 @@ function DestinyResults({ results }: { results: any }) {
                     {results.geometry.flat.letters.map((letter: string, i: number) => (
                       <span 
                         key={i}
-                        className="text-3xl p-2 bg-amber-100 dark:bg-amber-900/30 rounded-lg text-amber-900 dark:text-amber-100"
+                        className="text-3xl p-2 bg-amber-100 dark:bg-amber-900/30 rounded-xl text-amber-900 dark:text-amber-100"
                         style={{ fontFamily: "'Amiri', 'Scheherazade New', serif" }}
                       >
                         {letter}
@@ -4070,7 +4021,7 @@ function DestinyResults({ results }: { results: any }) {
                     {results.geometry.angular.letters.map((letter: string, i: number) => (
                       <span 
                         key={i}
-                        className="text-3xl p-2 bg-orange-100 dark:bg-orange-900/30 rounded-lg text-orange-900 dark:text-orange-100"
+                        className="text-3xl p-2 bg-orange-100 dark:bg-orange-900/30 rounded-xl text-orange-900 dark:text-orange-100"
                         style={{ fontFamily: "'Amiri', 'Scheherazade New', serif" }}
                       >
                         {letter}
@@ -4087,7 +4038,7 @@ function DestinyResults({ results }: { results: any }) {
             </div>
 
             {/* Geometric Profile */}
-            <div className="mt-4 p-4 bg-indigo-100 dark:bg-indigo-900/30 rounded-lg border-l-4 border-indigo-500">
+            <div className="mt-4 p-4 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl border-l-4 border-indigo-500">
               <div className="flex items-start gap-2">
                 <Lightbulb className="w-5 h-5 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
                 <div>
@@ -4117,15 +4068,15 @@ function DestinyResults({ results }: { results: any }) {
       )}
 
       {/* Soul Triad */}
-      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 p-6">
+      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 p-6">
         <h3 className="text-lg font-bold mb-4 text-black dark:text-slate-100 flex items-center gap-2">
-          <Target className="w-5 h-5 text-purple-500" />
+          <Target className="w-5 h-5 text-indigo-500" />
           {t.nameDestiny.triad.title}
         </h3>
         
         <div className="space-y-4">
-          <div className="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
-            <div className="font-bold text-black dark:text-purple-300 mb-1">
+          <div className="p-4 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl">
+            <div className="font-bold text-black dark:text-indigo-300 mb-1">
               {t.nameDestiny.triad.lifeDestiny} ({results.saghir})
             </div>
             <div className="text-sm text-black dark:text-slate-300">
@@ -4133,8 +4084,8 @@ function DestinyResults({ results }: { results: any }) {
             </div>
           </div>
           
-          <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-            <div className="font-bold text-black dark:text-blue-300 mb-1">
+          <div className="p-4 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl">
+            <div className="font-bold text-black dark:text-indigo-300 mb-1">
               {t.nameDestiny.triad.soulUrge} ({results.soulUrge?.name})
             </div>
             <div className="text-sm text-black dark:text-slate-300">
@@ -4148,7 +4099,7 @@ function DestinyResults({ results }: { results: any }) {
             </div>
           </div>
           
-          <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
+          <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-xl">
             <div className="font-bold text-black dark:text-green-300 mb-1">
               {t.nameDestiny.triad.outerPersonality} ({results.personality?.name})
             </div>
@@ -4166,7 +4117,7 @@ function DestinyResults({ results }: { results: any }) {
       </div>
 
       {/* Life Guidance */}
-      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700 p-6">
+      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 p-6">
         <h3 className="text-lg font-bold mb-4 text-slate-900 dark:text-slate-100 flex items-center gap-2">
           <Lightbulb className="w-5 h-5 text-amber-500" />
           {t.nameDestiny.guidance.title}
@@ -4216,7 +4167,7 @@ function DestinyResults({ results }: { results: any }) {
           </div>
           
           <div>
-            <div className="font-semibold text-blue-700 dark:text-blue-400 mb-1 flex items-center gap-2">
+            <div className="font-semibold text-indigo-700 dark:text-indigo-400 mb-1 flex items-center gap-2">
               📖 {t.nameDestiny.guidance.quranicGuidance}
             </div>
             <p className="text-xs text-slate-500 dark:text-slate-400 mb-2 italic">
@@ -4239,7 +4190,7 @@ function DestinyResults({ results }: { results: any }) {
             </p>
           </div>
           
-          <div className="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg border-l-4 border-amber-500">
+          <div className="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-xl border-l-4 border-amber-500">
             <div className="font-semibold text-amber-900 dark:text-amber-300 mb-1 flex items-center gap-2">
               ⚠️ {t.nameDestiny.guidance.shadowToWatch}
             </div>
@@ -4254,14 +4205,14 @@ function DestinyResults({ results }: { results: any }) {
       </div>
 
       {/* Educational Materials for Name Destiny */}
-      <div className="bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20 rounded-xl p-6 border-2 border-purple-200 dark:border-purple-700">
+      <div className=" rounded-xl p-6 border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40">
         <div className="flex items-center gap-3 mb-6">
-          <BookMarked className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+          <BookMarked className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
           <div>
-            <h3 className="text-2xl font-bold text-purple-900 dark:text-purple-100">
+            <h3 className="text-2xl font-bold text-indigo-900 dark:text-indigo-100">
               {language === 'fr' ? 'Matériel Éducatif' : 'Educational Materials'}
             </h3>
-            <p className="text-sm text-purple-700 dark:text-purple-300 mt-1">
+            <p className="text-sm text-indigo-700 dark:text-indigo-300 mt-1">
               {language === 'fr' 
                 ? 'Apprenez-en plus sur la Science des Lettres'
                 : 'Learn more about the Science of Letters'}
@@ -4525,8 +4476,8 @@ function CompatibilityResults({ results }: { results: any }) {
     
     const qualityColors: Record<string, string> = {
       'excellent': 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400',
-      'very-good': 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400',
-      'good': 'bg-sky-100 text-sky-800 dark:bg-sky-900/30 dark:text-sky-400',
+      'very-good': 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-400',
+      'good': 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-400',
       'moderate': 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400',
       'challenging': 'bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-400'
     };
@@ -4540,13 +4491,13 @@ function CompatibilityResults({ results }: { results: any }) {
       <div className="space-y-6">
         
         {/* Tab Navigation with Scroll Controls */}
-        <div className="bg-white dark:bg-slate-900 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700">
+        <div className="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700">
           <div className="flex items-center gap-2 p-2 border-b border-slate-200 dark:border-slate-700">
             
             {/* Left Scroll Arrow */}
             <button
               onClick={() => scrollTabs('left')}
-              className="flex-shrink-0 p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all"
+              className="flex-shrink-0 p-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all min-h-[44px]"
               title={language === 'fr' ? 'Défiler à gauche' : 'Scroll left'}
               aria-label={language === 'fr' ? 'Défiler à gauche' : 'Scroll left'}
             >
@@ -4571,7 +4522,7 @@ function CompatibilityResults({ results }: { results: any }) {
               
               <button
                 onClick={() => setActiveTab('results')}
-                className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all whitespace-nowrap flex-shrink-0 ${
+                className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all whitespace-nowrap flex-shrink-0 ${
                   activeTab === 'results'
                     ? 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300'
                     : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
@@ -4583,7 +4534,7 @@ function CompatibilityResults({ results }: { results: any }) {
               
               <button
                 onClick={() => setActiveTab('learning')}
-                className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all whitespace-nowrap flex-shrink-0 ${
+                className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all whitespace-nowrap flex-shrink-0 ${
                   activeTab === 'learning'
                     ? 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300'
                     : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
@@ -4595,7 +4546,7 @@ function CompatibilityResults({ results }: { results: any }) {
               
               <button
                 onClick={() => setActiveTab('methods')}
-                className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all whitespace-nowrap flex-shrink-0 ${
+                className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all whitespace-nowrap flex-shrink-0 ${
                   activeTab === 'methods'
                     ? 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300'
                     : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
@@ -4607,7 +4558,7 @@ function CompatibilityResults({ results }: { results: any }) {
               
               <button
                 onClick={() => setActiveTab('glossary')}
-                className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all whitespace-nowrap flex-shrink-0 ${
+                className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all whitespace-nowrap flex-shrink-0 ${
                   activeTab === 'glossary'
                     ? 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300'
                     : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
@@ -4621,7 +4572,7 @@ function CompatibilityResults({ results }: { results: any }) {
             {/* Right Scroll Arrow */}
             <button
               onClick={() => scrollTabs('right')}
-              className="flex-shrink-0 p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all"
+              className="flex-shrink-0 p-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all min-h-[44px]"
               title={language === 'fr' ? 'Défiler à droite' : 'Scroll right'}
               aria-label={language === 'fr' ? 'Défiler à droite' : 'Scroll right'}
             >
@@ -4647,11 +4598,11 @@ function CompatibilityResults({ results }: { results: any }) {
         <div className="space-y-8">
         
         {/* Enhanced Names Header with Beautiful Gradient */}
-        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-rose-100 via-pink-50 to-purple-100 dark:from-rose-950/40 dark:via-pink-950/30 dark:to-purple-950/40 p-8 border-2 border-rose-200 dark:border-rose-800">
+        <div className="relative overflow-hidden rounded-2xl p-8 border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40">
           {/* Decorative Background Pattern */}
           <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-32 h-32 bg-rose-300 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 right-0 w-32 h-32 bg-purple-300 rounded-full blur-3xl"></div>
+            <div className="absolute top-0 left-0 w-32 h-32 bg-indigo-300 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 right-0 w-32 h-32 bg-indigo-300 rounded-full blur-3xl"></div>
           </div>
           
           <div className="relative space-y-2">
@@ -4666,8 +4617,8 @@ function CompatibilityResults({ results }: { results: any }) {
                 {person1.name}
               </span>
               <div className="relative">
-                <Heart className="w-10 h-10 text-rose-500 fill-rose-500 animate-pulse" />
-                <div className="absolute inset-0 w-10 h-10 bg-rose-300 rounded-full blur-lg opacity-50"></div>
+                <Heart className="w-10 h-10 text-indigo-500 fill-indigo-500 " />
+                <div className="absolute inset-0 w-10 h-10 bg-indigo-300 rounded-full blur-lg opacity-50"></div>
               </div>
               <span className="text-gray-900 dark:text-gray-50 bg-white/60 dark:bg-slate-800/60 px-4 py-2 rounded-xl backdrop-blur-sm">
                 {person2.name}
@@ -4677,15 +4628,15 @@ function CompatibilityResults({ results }: { results: any }) {
         </div>
         
         {/* Overall Score - Enhanced */}
-        <div className="relative overflow-hidden bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-indigo-950/30 dark:via-purple-950/30 dark:to-pink-950/30 rounded-2xl p-8 border-2 border-indigo-200 dark:border-indigo-800 shadow-xl">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-purple-400/10 to-pink-400/10 rounded-full blur-3xl"></div>
+        <div className="relative overflow-hidden rounded-2xl p-8 border border-indigo-200 dark:border-indigo-800 shadow-sm bg-white/60 dark:bg-slate-800/40">
+          <div className="absolute top-0 right-0 w-64 h-64 rounded-full blur-3xl bg-white/60 dark:bg-slate-800/40"></div>
           <div className="relative z-10 flex flex-col items-center space-y-4">
             <CompatibilityGauge 
               score={overallScore} 
               size="lg"
               label={language === 'fr' ? "Compatibilité Globale" : "Overall Compatibility"}
             />
-            <div className={`px-6 py-3 rounded-full font-bold text-lg ${qualityColors[overallQuality] || qualityColors['moderate']} border-2`}>
+            <div className={`px-6 py-3 rounded-full font-bold text-lg ${qualityColors[overallQuality] || qualityColors['moderate']} border`}>
               {displayOverallQuality}
             </div>
             
@@ -4722,17 +4673,17 @@ function CompatibilityResults({ results }: { results: any }) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
             {/* Spiritual Destiny - Enhanced */}
-            <div className="group hover:shadow-2xl transition-all duration-300 p-6 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-950/30 dark:to-purple-900/30 rounded-2xl border-2 border-purple-200 dark:border-purple-800 space-y-4">
+            <div className="group transition-all duration-300 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-4 bg-white/60 dark:bg-slate-800/40">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center text-2xl">
+                  <div className="w-12 h-12 bg-indigo-500 rounded-xl flex items-center justify-center text-2xl">
                     🌙
                   </div>
                   <div>
                     <h4 className="font-bold text-lg text-slate-900 dark:text-slate-50">
                       {language === 'fr' ? 'Connexion des Âmes' : 'Soul Connection'}
                     </h4>
-                    <p className="text-sm text-purple-600 dark:text-purple-400">
+                    <p className="text-sm text-indigo-600 dark:text-indigo-400">
                       {language === 'fr' ? 'Votre alignement spirituel' : 'Your spiritual alignment'}
                     </p>
                   </div>
@@ -4753,24 +4704,24 @@ function CompatibilityResults({ results }: { results: any }) {
                 </p>
               </div>
               
-              <div className="flex items-center gap-2 text-xs text-purple-600 dark:text-purple-400">
+              <div className="flex items-center gap-2 text-xs text-indigo-600 dark:text-indigo-400">
                 <Sparkles className="w-4 h-4" />
                 <span>{language === 'fr' ? 'Nombre sacré:' : 'Sacred number:'} {methods.spiritualDestiny.remainder}</span>
               </div>
             </div>
 
             {/* Elemental Temperament - Enhanced */}
-            <div className="group hover:shadow-2xl transition-all duration-300 p-6 bg-gradient-to-br from-cyan-50 to-cyan-100 dark:from-cyan-950/30 dark:to-cyan-900/30 rounded-2xl border-2 border-cyan-200 dark:border-cyan-800 space-y-4">
+            <div className="group transition-all duration-300 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-4 bg-white/60 dark:bg-slate-800/40">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-cyan-500 rounded-xl flex items-center justify-center text-2xl">
+                  <div className="w-12 h-12 bg-indigo-500 rounded-xl flex items-center justify-center text-2xl">
                     🎨
                   </div>
                   <div>
                     <h4 className="font-bold text-lg text-slate-900 dark:text-slate-50">
                       {language === 'fr' ? 'Équilibre des Tempéraments' : 'Personality Balance'}
                     </h4>
-                    <p className="text-sm text-cyan-600 dark:text-cyan-400">
+                    <p className="text-sm text-indigo-600 dark:text-indigo-400">
                       {language === 'fr' ? 'Vos natures élémentales' : 'Your elemental natures'}
                     </p>
                   </div>
@@ -4790,14 +4741,14 @@ function CompatibilityResults({ results }: { results: any }) {
                 </p>
               </div>
               
-              <div className="flex items-center gap-2 text-xs text-cyan-600 dark:text-cyan-400">
+              <div className="flex items-center gap-2 text-xs text-indigo-600 dark:text-indigo-400">
                 <Flame className="w-4 h-4" />
                 <span>{language === 'fr' ? 'Élément:' : 'Element:'} {language === 'fr' ? methods.elementalTemperament.sharedElementFrench : methods.elementalTemperament.sharedElement}</span>
               </div>
             </div>
 
             {/* Planetary Cosmic - Enhanced */}
-            <div className="group hover:shadow-2xl transition-all duration-300 p-6 bg-gradient-to-br from-indigo-50 to-indigo-100 dark:from-indigo-950/30 dark:to-indigo-900/30 rounded-2xl border-2 border-indigo-200 dark:border-indigo-800 space-y-4">
+            <div className="group transition-all duration-300 p-6 rounded-2xl border border-indigo-200 dark:border-indigo-800 space-y-4 bg-white/60 dark:bg-slate-800/40">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-indigo-500 rounded-xl flex items-center justify-center text-2xl">
@@ -4834,7 +4785,7 @@ function CompatibilityResults({ results }: { results: any }) {
             </div>
 
             {/* Daily Interaction - Enhanced */}
-            <div className="group hover:shadow-2xl transition-all duration-300 p-6 bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-950/30 dark:to-amber-900/30 rounded-2xl border-2 border-amber-200 dark:border-amber-800 space-y-4">
+            <div className="group transition-all duration-300 p-6 rounded-2xl border border-amber-200 dark:border-amber-800 space-y-4 bg-white/60 dark:bg-slate-800/40">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center text-2xl">
@@ -4878,7 +4829,7 @@ function CompatibilityResults({ results }: { results: any }) {
         </div>
 
         {/* Letter Chemistry - Your Personality Balance */}
-        <div className="p-6 bg-gradient-to-br from-rose-50 to-orange-50 dark:from-rose-950/20 dark:to-orange-950/20 rounded-xl space-y-4 border-2 border-rose-200 dark:border-rose-800">
+        <div className="p-6 rounded-xl space-y-4 border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40">
           {/* Title with Explanation */}
           <div className="text-center space-y-3 mb-4">
             <div className="space-y-1">
@@ -4935,11 +4886,11 @@ function CompatibilityResults({ results }: { results: any }) {
                   <p className="text-xs italic text-gray-600 dark:text-gray-400 text-center">
                     {t.compatibilityResults.combinedHarmonyExplain}
                   </p>
-                  <div className="flex h-6 rounded-full overflow-hidden border-2 border-white dark:border-slate-700 shadow-inner">
+                  <div className="flex h-6 rounded-full overflow-hidden border border-white dark:border-slate-700 shadow-inner">
                     {combined.fire > 0 && (
                       <div 
                         style={{ width: `${combined.fire}%` }}
-                        className="bg-gradient-to-r from-red-500 to-orange-500 flex items-center justify-center text-white text-xs font-bold"
+                        className=" flex items-center justify-center text-white text-xs font-bold bg-indigo-600"
                         title={`${getElementName('fire', language === 'fr' ? 'fr' : 'en')} ${combined.fire}%`}
                       >
                         {combined.fire >= 15 && `🔥 ${combined.fire}%`}
@@ -4948,7 +4899,7 @@ function CompatibilityResults({ results }: { results: any }) {
                     {combined.air > 0 && (
                       <div 
                         style={{ width: `${combined.air}%` }}
-                        className="bg-gradient-to-r from-cyan-400 to-blue-400 flex items-center justify-center text-white text-xs font-bold"
+                        className=" flex items-center justify-center text-white text-xs font-bold bg-white/60 dark:bg-slate-800/40"
                         title={`${getElementName('air', language === 'fr' ? 'fr' : 'en')} ${combined.air}%`}
                       >
                         {combined.air >= 15 && `🌬️ ${combined.air}%`}
@@ -4957,7 +4908,7 @@ function CompatibilityResults({ results }: { results: any }) {
                     {combined.water > 0 && (
                       <div 
                         style={{ width: `${combined.water}%` }}
-                        className="bg-gradient-to-r from-blue-500 to-indigo-500 flex items-center justify-center text-white text-xs font-bold"
+                        className=" flex items-center justify-center text-white text-xs font-bold bg-indigo-600"
                         title={`${getElementName('water', language === 'fr' ? 'fr' : 'en')} ${combined.water}%`}
                       >
                         {combined.water >= 15 && `💧 ${combined.water}%`}
@@ -4966,7 +4917,7 @@ function CompatibilityResults({ results }: { results: any }) {
                     {combined.earth > 0 && (
                       <div 
                         style={{ width: `${combined.earth}%` }}
-                        className="bg-gradient-to-r from-green-600 to-emerald-600 flex items-center justify-center text-white text-xs font-bold"
+                        className=" flex items-center justify-center text-white text-xs font-bold bg-indigo-600"
                         title={`${getElementName('earth', language === 'fr' ? 'fr' : 'en')} ${combined.earth}%`}
                       >
                         {combined.earth >= 15 && `🌍 ${combined.earth}%`}
@@ -4976,7 +4927,7 @@ function CompatibilityResults({ results }: { results: any }) {
                 </div>
 
                 {/* NEW FEATURE 2: Dominant Element Pair Insight */}
-                <div className="mt-4 p-4 bg-white/50 dark:bg-slate-800/50 rounded-lg border border-rose-200 dark:border-rose-800">
+                <div className="mt-4 p-4 bg-white/50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700">
                   <div className="flex items-center justify-center gap-3 mb-2">
                     <span className="text-2xl">{getElementIcon(dominant1)}</span>
                     <span className="text-xl font-bold text-gray-700 dark:text-gray-300">
@@ -4995,7 +4946,7 @@ function CompatibilityResults({ results }: { results: any }) {
 
                 {/* Individual breakdowns */}
                 <div className="grid md:grid-cols-2 gap-4 mt-4">
-                  <div className="p-4 bg-purple-50 dark:bg-purple-950/20 rounded-lg border border-purple-200 dark:border-purple-800">
+                  <div className="p-4 bg-indigo-50 dark:bg-indigo-950/20 rounded-xl border border-slate-200 dark:border-slate-700">
                     <div className="space-y-2 mb-3">
                       <div className="font-semibold text-sm text-gray-900 dark:text-gray-100">
                         {person1.name}
@@ -5003,7 +4954,7 @@ function CompatibilityResults({ results }: { results: any }) {
                       {/* Element Temperament Tag */}
                       <div className="flex items-center gap-2 flex-wrap">
                         <span className="text-lg">{getElementIcon(dominant1)}</span>
-                        <span className="text-xs font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-slate-800 px-2 py-1 rounded-full border border-purple-300 dark:border-purple-700">
+                        <span className="text-xs font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-slate-800 px-2 py-1 rounded-full border border-slate-200 dark:border-slate-700">
                           {(() => {
                             const key = `${dominant1}Temperament` as 'fireTemperament' | 'airTemperament' | 'waterTemperament' | 'earthTemperament';
                             return t.compatibilityResults[key];
@@ -5020,8 +4971,8 @@ function CompatibilityResults({ results }: { results: any }) {
                               <div 
                                 className={`h-2 rounded-full ${
                                   el === 'fire' ? 'bg-red-500' :
-                                  el === 'air' ? 'bg-cyan-500' :
-                                  el === 'water' ? 'bg-blue-500' : 'bg-green-600'
+                                  el === 'air' ? 'bg-indigo-500' :
+                                  el === 'water' ? 'bg-indigo-500' : 'bg-green-600'
                                 }`}
                                 style={{ width: `${person1Dist[el]}%` }}
                               />
@@ -5035,7 +4986,7 @@ function CompatibilityResults({ results }: { results: any }) {
                     </div>
                   </div>
 
-                  <div className="p-4 bg-pink-50 dark:bg-pink-950/20 rounded-lg border border-pink-200 dark:border-pink-800">
+                  <div className="p-4 bg-indigo-50 dark:bg-indigo-950/20 rounded-xl border border-slate-200 dark:border-slate-700">
                     <div className="space-y-2 mb-3">
                       <div className="font-semibold text-sm text-gray-900 dark:text-gray-100">
                         {person2.name}
@@ -5043,7 +4994,7 @@ function CompatibilityResults({ results }: { results: any }) {
                       {/* Element Temperament Tag */}
                       <div className="flex items-center gap-2 flex-wrap">
                         <span className="text-lg">{getElementIcon(dominant2)}</span>
-                        <span className="text-xs font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-slate-800 px-2 py-1 rounded-full border border-pink-300 dark:border-pink-700">
+                        <span className="text-xs font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-slate-800 px-2 py-1 rounded-full border border-slate-200 dark:border-slate-700">
                           {(() => {
                             const key = `${dominant2}Temperament` as 'fireTemperament' | 'airTemperament' | 'waterTemperament' | 'earthTemperament';
                             return t.compatibilityResults[key];
@@ -5060,8 +5011,8 @@ function CompatibilityResults({ results }: { results: any }) {
                               <div 
                                 className={`h-2 rounded-full ${
                                   el === 'fire' ? 'bg-red-500' :
-                                  el === 'air' ? 'bg-cyan-500' :
-                                  el === 'water' ? 'bg-blue-500' : 'bg-green-600'
+                                  el === 'air' ? 'bg-indigo-500' :
+                                  el === 'water' ? 'bg-indigo-500' : 'bg-green-600'
                                 }`}
                                 style={{ width: `${person2Dist[el]}%` }}
                               />
@@ -5081,7 +5032,7 @@ function CompatibilityResults({ results }: { results: any }) {
         </div>
 
         {/* Spiritual Guidance for Your Relationship */}
-        <div className="p-6 bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-950/20 dark:to-yellow-950/20 rounded-xl border-2 border-amber-200 dark:border-amber-800">
+        <div className="p-6 rounded-xl border border-amber-200 dark:border-amber-800 bg-white/60 dark:bg-slate-800/40">
           <div className="text-center space-y-3 mb-4">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 flex items-center justify-center gap-2">
               <span>🕊️</span>
@@ -5110,7 +5061,7 @@ function CompatibilityResults({ results }: { results: any }) {
             
             return (
               <div className="grid md:grid-cols-2 gap-4">
-                <div className="p-4 bg-white/70 dark:bg-slate-800/70 rounded-lg">
+                <div className="p-4 bg-white/70 dark:bg-slate-800/70 rounded-xl">
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-2xl">{getElementIcon(dominant1)}</span>
                     <div>
@@ -5128,7 +5079,7 @@ function CompatibilityResults({ results }: { results: any }) {
                 </div>
                 
                 {secondaryDhikr && (
-                  <div className="p-4 bg-white/70 dark:bg-slate-800/70 rounded-lg">
+                  <div className="p-4 bg-white/70 dark:bg-slate-800/70 rounded-xl">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="text-2xl">{getElementIcon(dominant2)}</span>
                       <div>
@@ -5163,7 +5114,7 @@ function CompatibilityResults({ results }: { results: any }) {
             {displayRecommendations.map((rec, idx) => (
               <li 
                 key={idx}
-                className="flex items-start gap-2 p-3 bg-amber-50 dark:bg-amber-950/20 rounded-lg"
+                className="flex items-start gap-2 p-3 bg-amber-50 dark:bg-amber-950/20 rounded-xl"
               >
                 <span className="text-amber-600 dark:text-amber-400 font-bold">•</span>
                 <span className="text-sm text-gray-700 dark:text-gray-300">{rec}</span>
@@ -5184,7 +5135,7 @@ function CompatibilityResults({ results }: { results: any }) {
   return (
     <div className="space-y-6">
       {/* Harmony Score */}
-      <div className={`${harmonyBg} rounded-xl p-6 border-2 ${harmonyColor.replace('text-', 'border-')}`}>
+      <div className={`${harmonyBg} rounded-xl p-6 border ${harmonyColor.replace('text-', 'border-')}`}>
         <div className="text-center">
           <div className={`text-6xl font-bold mb-2 ${harmonyColor}`}>{results.harmonyScore}%</div>
           <div className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">
@@ -5196,9 +5147,9 @@ function CompatibilityResults({ results }: { results: any }) {
 
       {/* Individual Profiles */}
       <div className="grid md:grid-cols-2 gap-4">
-        <div className="bg-white dark:bg-slate-800 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
+        <div className="bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-200 dark:border-slate-700">
           <div className="text-center mb-3">
-            <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">
+            <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400">
               {results.person1.saghir}
             </div>
             <div className="text-sm font-medium text-slate-600 dark:text-slate-400">
@@ -5210,9 +5161,9 @@ function CompatibilityResults({ results }: { results: any }) {
           </div>
         </div>
         
-        <div className="bg-white dark:bg-slate-800 rounded-lg p-4 border border-slate-200 dark:border-slate-700">
+        <div className="bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-200 dark:border-slate-700">
           <div className="text-center mb-3">
-            <div className="text-3xl font-bold text-pink-600 dark:text-pink-400">
+            <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400">
               {results.person2.saghir}
             </div>
             <div className="text-sm font-medium text-slate-600 dark:text-slate-400">
@@ -5227,7 +5178,7 @@ function CompatibilityResults({ results }: { results: any }) {
 
       {/* Strengths & Challenges */}
       <div className="grid md:grid-cols-2 gap-4">
-        <div className="bg-white dark:bg-slate-800 rounded-lg p-5 border border-slate-200 dark:border-slate-700">
+        <div className="bg-white dark:bg-slate-800 rounded-xl p-5 border border-slate-200 dark:border-slate-700">
           <h4 className="font-bold text-green-700 dark:text-green-400 mb-3 flex items-center gap-2">
             <Heart className="w-4 h-4" />
             Strengths
@@ -5242,7 +5193,7 @@ function CompatibilityResults({ results }: { results: any }) {
           </ul>
         </div>
         
-        <div className="bg-white dark:bg-slate-800 rounded-lg p-5 border border-slate-200 dark:border-slate-700">
+        <div className="bg-white dark:bg-slate-800 rounded-xl p-5 border border-slate-200 dark:border-slate-700">
           <h4 className="font-bold text-amber-700 dark:text-amber-400 mb-3 flex items-center gap-2">
             <Lightbulb className="w-4 h-4" />
             Growth Areas

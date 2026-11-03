@@ -32,9 +32,9 @@ export function QuranicVerseDisplay({
   const [showRelevance, setShowRelevance] = useState(false);
 
   return (
-    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 dark:from-emerald-950/30 dark:via-teal-950/30 dark:to-cyan-950/30 border border-emerald-200 dark:border-emerald-800/50 p-6">
+    <div className="relative overflow-hidden rounded-2xl border border-emerald-200 dark:border-emerald-800/50 p-6 bg-white/60 dark:bg-slate-800/40">
       {/* Decorative Border Pattern */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500"></div>
+      <div className="absolute top-0 left-0 right-0 h-1 bg-indigo-600"></div>
       
       {/* Content */}
       <div className="relative z-10">
@@ -71,21 +71,21 @@ export function QuranicVerseDisplay({
         <div className="mb-4">
           <button
             onClick={() => setShowRelevance(!showRelevance)}
-            className="w-full text-sm text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors flex items-center justify-center gap-1"
+            className="w-full text-sm text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors flex items-center justify-center gap-1 min-h-[44px]"
           >
             <span>{showRelevance ? '▼' : '▶'}</span>
             <span>{isFr ? 'Pertinence pour cette heure' : 'Relevance to this hour'}</span>
           </button>
           
           {showRelevance && (
-            <div className="mt-3 p-4 bg-white/60 dark:bg-slate-900/40 rounded-lg border border-emerald-200/50 dark:border-emerald-800/30 text-sm text-emerald-800 dark:text-emerald-200 leading-relaxed animate-fade-in">
+            <div className="mt-3 p-4 bg-white/60 dark:bg-slate-900/40 rounded-xl border border-emerald-200/50 dark:border-emerald-800/30 text-sm text-emerald-800 dark:text-emerald-200 leading-relaxed ">
               {isFr ? verse.relevanceFr : verse.relevance}
             </div>
           )}
         </div>
 
         {/* Reflection Prompt */}
-        <div className="p-4 bg-gradient-to-r from-emerald-100 to-teal-100 dark:from-emerald-900/30 dark:to-teal-900/30 rounded-lg border border-emerald-300/50 dark:border-emerald-700/30">
+        <div className="p-4 rounded-xl border border-emerald-300/50 dark:border-emerald-700/30 bg-white/60 dark:bg-slate-800/40">
           <div className="flex items-start gap-3">
             <Lightbulb className="w-5 h-5 text-emerald-600 dark:text-emerald-400 flex-shrink-0 mt-0.5" />
             <div>

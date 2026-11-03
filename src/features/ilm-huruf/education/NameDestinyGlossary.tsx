@@ -76,7 +76,7 @@ export default function NameDestinyGlossary({ language = 'en' }: GlossaryProps) 
     <div className="max-w-5xl mx-auto p-6 space-y-6">
       <div className="text-center mb-8">
         <h1 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-3 flex items-center justify-center gap-3">
-          <BookOpen className="w-8 h-8 text-purple-600 dark:text-purple-400" />
+          <BookOpen className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
           {isFrench ? "Glossaire de ʿIlm al-Ḥurūf" : "ʿIlm al-Ḥurūf Glossary"}
         </h1>
         <p className="text-slate-600 dark:text-slate-400">
@@ -88,15 +88,15 @@ export default function NameDestinyGlossary({ language = 'en' }: GlossaryProps) 
 
       <div className="grid gap-4">
         {terms.map((item, index) => (
-          <div key={index} className="bg-white dark:bg-slate-800 rounded-lg p-5 shadow-md border border-slate-200 dark:border-slate-700">
+          <div key={index} className="bg-white dark:bg-slate-800 rounded-xl p-5 shadow-sm border border-slate-200 dark:border-slate-700">
             <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center text-purple-600 dark:text-purple-400 font-bold">
+              <div className="flex-shrink-0 w-12 h-12 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl flex items-center justify-center text-indigo-600 dark:text-indigo-400 font-bold">
                 {index + 1}
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">
                   {item.term}
-                  <span className="text-purple-600 dark:text-purple-400 font-arabic ml-3 text-lg">
+                  <span className="text-indigo-600 dark:text-indigo-400 font-arabic ml-3 text-lg">
                     {item.arabic}
                   </span>
                 </h3>
@@ -109,8 +109,8 @@ export default function NameDestinyGlossary({ language = 'en' }: GlossaryProps) 
         ))}
       </div>
 
-      <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-5 border border-blue-200 dark:border-blue-700">
-        <p className="text-sm text-blue-900 dark:text-blue-100 text-center">
+      <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-5 border border-slate-200 dark:border-slate-700">
+        <p className="text-sm text-indigo-900 dark:text-indigo-100 text-center">
           {isFrench
             ? "Ces termes sont utilisés tout au long de votre analyse de destinée nominale"
             : "These terms are used throughout your name destiny analysis"}
