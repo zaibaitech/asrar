@@ -94,8 +94,8 @@ function Steps({ w, lang }: { w: WorkingResult; lang: Lang }) {
   );
 }
 
-function LettersMansions({ text, abjad, lang }: { text: string; abjad: Record<string, number>; lang: Lang }) {
-  const rows = lettersMansions(text, abjad);
+function LettersMansions({ text, lang }: { text: string; lang: Lang }) {
+  const rows = lettersMansions(text);
   if (rows.length === 0) return null;
   return (
     <InfoDisclosure label={LABELS.steps.lettersMansions[lang]} icon="chevron">
@@ -107,12 +107,12 @@ function LettersMansions({ text, abjad, lang }: { text: string; abjad: Record<st
               <span lang="ar" dir="rtl" className="font-arabic w-6 text-lg text-slate-900 dark:text-slate-100">
                 {r.letter}
               </span>
-              <span className="w-12 text-xs">
-                {LABELS.position[lang]} {r.position}
+              <span className="w-16 text-xs">
+                {LABELS.position[lang]} {r.number}
               </span>
               <span className="text-sm text-slate-900 dark:text-slate-100">
                 <span lang="ar" dir="rtl" className="font-arabic">
-                  {r.mansion.nameArabic}
+                  {r.buniName}
                 </span>{' '}
                 · {r.mansion.nameTransliteration}
               </span>
@@ -161,7 +161,7 @@ export function WorkingDrawer({
             <MoonManzil lang={lang} />
           </Step>
         )}
-        <LettersMansions text={name} abjad={abjad} lang={lang} />
+        <LettersMansions text={name} lang={lang} />
       </div>
     </InfoDisclosure>
   );

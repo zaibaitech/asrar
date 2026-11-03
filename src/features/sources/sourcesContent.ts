@@ -5,6 +5,7 @@
  * reference carries a status:
  *   'cited-in-repo' - taken from a comment in this repository's own source; the
  *                     original has NOT been re-checked here;
+ *   'attributed'    - a named classical source whose text was read; the edition is linked;
  *   'quran'         - a Qur'an reference; the Arabic is fetched from the bundled
  *                     Tanzil text (/api/quran-verse), never typed in;
  *   'to-verify'     - a direction only; book, chapter and page still have to be
@@ -19,13 +20,15 @@ export type StepId = 'letters' | 'kabir' | 'saghir' | 'tabi' | 'burj' | 'manzil'
 export type Lang = 'en' | 'fr' | 'ar';
 type L3 = Record<Lang, string>;
 
-export type RefStatus = 'cited-in-repo' | 'quran' | 'to-verify';
+export type RefStatus = 'cited-in-repo' | 'quran' | 'to-verify' | 'attributed';
 
 export interface SourceRef {
   status: RefStatus;
   text: string;
   /** For status 'quran': surah and ayah, fetched verbatim from Tanzil. */
   quran?: { surah: number; ayah: number };
+  /** Optional link to the edition used. */
+  url?: string;
 }
 
 export interface StepSource {
@@ -108,15 +111,12 @@ export const SOURCES: Record<StepId, StepSource> = {
     ],
   },
   lettersMansions: {
-    note: 'Each letter of the name is set beside the mansion at the same place (1 to 28) in the letter order: the first letter with the first mansion, and so on. The order is the abjad order of the system you selected (Maghribi or Mashriqi), not the alphabetical order. This is a pairing by position only.',
+    note: 'Each letter of the name is set beside the mansion that al-Būnī\u2019s table gives it, in the Mashriqi abjad order (first to last letter). The table is fixed: it does not change with the Maghribi / Mashriqi setting. It is a spiritual correspondence between letters and the mansions, not an astronomical one (for the Moon\u2019s real position, see Manzil (the Moon)). The mansion is matched to the app\u2019s list by number; a few Arabic spellings differ from the app\u2019s (mansions 1, 9, 16, 26, 27 and 28).',
     refs: [
       {
-        status: 'to-verify',
-        text: 'The repo has the 28 letters in abjad order and the numbered list of the 28 mansions, but no stored letter-to-mansion table and no source for one. A classical text that states this correspondence, and which letter order it uses (abjad or alphabetical): to verify.',
-      },
-      {
-        status: 'to-verify',
-        text: 'The app\u2019s Divine Name resonance table lists its 28 letters in the Mashriqi order even when Maghribi is selected. This view follows the selected system instead. Which one a source supports: to verify.',
+        status: 'attributed',
+        text: 'Attributed to al-Būnī, Shams al-Maʿārif al-Kubrā, ch. 2. Edition: Muʾassasat al-Nūr, Beirut, as on ablibrary.net; the 28 entries were checked on pp. 16 to 19 of that edition.',
+        url: 'https://ablibrary.net/book_content/b/10942/16',
       },
     ],
   },
@@ -127,6 +127,7 @@ export const LABELS = {
   notCounted: { en: 'not counted', fr: 'non compté', ar: 'لا يُحسب' },
   showSource: { en: 'Show source', fr: 'Voir la source', ar: 'عرض المصدر' },
   hideSource: { en: 'Hide source', fr: 'Masquer la source', ar: 'إخفاء المصدر' },
+  attributed: { en: 'attributed', fr: 'attribué', ar: 'منسوب' },
   toVerify: { en: 'to verify', fr: 'à vérifier', ar: 'للتحقق' },
   citedInRepo: { en: 'cited in the app\u2019s code, not re-checked', fr: 'cité dans le code, non revérifié', ar: 'مذكور في شيفرة التطبيق، لم يُراجع' },
   quranSrc: { en: 'Qur\u2019an (Tanzil text)', fr: 'Coran (texte Tanzil)', ar: 'القرآن (نص تنزيل)' },
@@ -152,6 +153,10 @@ export const LABELS = {
     fr: 'Manzil de naissance (date, heure et lieu requis) : Profil de naissance',
     ar: 'منزل الميلاد (يلزم التاريخ والوقت والمكان): الملف الفلكي',
   },
-  position: { en: 'place', fr: 'rang', ar: 'الموضع' },
-  order: { en: 'Abjad order of the selected system', fr: 'Ordre abjad du système choisi', ar: 'ترتيب الجُمَّل للنظام المختار' },
+  position: { en: 'mansion', fr: 'demeure', ar: 'المنزلة' },
+  order: {
+    en: 'Mashriqi abjad order, fixed (independent of your Maghribi / Mashriqi setting)',
+    fr: 'Ordre abjad mashriqi, fixe (indépendant de votre réglage maghribi / mashriqi)',
+    ar: 'ترتيب الجُمَّل المشرقي، ثابت (لا يتأثر باختيار النظام)',
+  },
 } satisfies Record<string, L3 | Record<StepId, L3>>;
