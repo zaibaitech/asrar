@@ -4,6 +4,9 @@ import React, { useEffect, useState } from "react";
 import { useLanguage } from "../../../contexts/LanguageContext";
 import { translations } from "../../../lib/translations";
 import { getCurrentLunarMansion, type CurrentMansion } from "../../../lib/lunarMansions";
+import { LIFE_GUIDANCE_PREVIEW } from "../../../lib/lifeGuidancePreview";
+import { WorkingDrawer } from "../../sources/LazyWorkingDrawer";
+import { useAbjad } from "../../../contexts/AbjadContext";
 import type { IstikharaCalculationResult } from "../types";
 import { 
   Sparkles, 
@@ -82,12 +85,18 @@ export function IstikharaSummaryCard({ result }: IstikhSummaryCardProps) {
   // Get the user's primary mansion based on their zodiac
   const userPrimaryMansion = ZODIAC_PRIMARY_MANSIONS[result.burujRemainder] || ZODIAC_PRIMARY_MANSIONS[1];
   
+  const { abjad } = useAbjad();
   // Animation states
   const [mainProgress, setMainProgress] = useState(0);
   const [secondaryProgress, setSecondaryProgress] = useState(0);
   const [tertiaryProgress, setTertiaryProgress] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [lunarMansion, setLunarMansion] = useState<CurrentMansion | null>(null);
+  // Preview flag on: show the Moon's actual mansion (existing ephemeris code), once it is computed.
+  const tileMansion =
+    LIFE_GUIDANCE_PREVIEW && lunarMansion
+      ? { name: lunarMansion.mansion.nameTransliteration, arabic: lunarMansion.mansion.nameArabic }
+      : userPrimaryMansion;
 
   // Animated progress on mount
   useEffect(() => {
@@ -476,18 +485,20 @@ export function IstikharaSummaryCard({ result }: IstikhSummaryCardProps) {
           </h4>
 
           <div className="grid grid-cols-2 gap-3">
-            {/* Lunar Mansion - Based on User's Zodiac Sign */}
+            {/* Lunar Mansion. Preview flag on: the Moon's real mansion today (astronomy), never a name-derived one.
+                Flag off (production): unchanged, the burj-based "primary mansion". */}
             <div className={`group relative p-4 rounded-xl border-2 ${config.border} bg-black/30 backdrop-blur-sm hover:bg-black/40 transition-all duration-300 hover:scale-105 ${config.progressGlow}`}>
               <div className={`absolute top-2 right-2 w-2 h-2 rounded-full ${config.pulseColor} animate-ping`}></div>
               <div className="text-2xl mb-1">🌙</div>
               <div className={`text-xs font-semibold ${config.text} mb-1`}>
                 {language === "en" ? "Manāzil" : "Manāzil"}
+                {LIFE_GUIDANCE_PREVIEW && lunarMansion ? (language === "en" ? " · today" : " · aujourd'hui") : ""}
               </div>
               <div className={`text-base font-bold ${config.textBright} mb-1 group-hover:scale-105 transition-transform leading-tight`}>
-                {userPrimaryMansion.name}
+                {tileMansion.name}
               </div>
               <div className="text-sm font-arabic text-white/90" dir="rtl">
-                {userPrimaryMansion.arabic}
+                {tileMansion.arabic}
               </div>
             </div>
 
@@ -537,6 +548,20 @@ export function IstikharaSummaryCard({ result }: IstikhSummaryCardProps) {
               </div>
             )}
           </div>
+
+          {/* Preview only (NEXT_PUBLIC_LIFE_GUIDANCE_PREVIEW): the working and sources behind these numbers. */}
+          {LIFE_GUIDANCE_PREVIEW && result.calculationMethod !== 'birth-date' && (
+            <div className="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-3">
+              <WorkingDrawer
+                name={result.personName}
+                mother={result.motherName}
+                abjad={abjad}
+                lang={language === 'fr' ? 'fr' : 'en'}
+                expected={{ person: result.personTotal, mother: result.motherTotal }}
+                showMoon
+              />
+            </div>
+          )}
 
           {/* Blessed Day Card */}
           <div className={`p-5 rounded-xl border-2 ${config.border} bg-gradient-to-br ${config.bgGradient} backdrop-blur-sm`}>

@@ -13,6 +13,12 @@ const nextConfig = {
   compress: true,
   productionBrowserSourceMaps: false,
 
+  // Inline the preview flag even when it is unset (as ''), so the bundler sees a
+  // build-time constant and drops all flag-gated preview code from production.
+  env: {
+    NEXT_PUBLIC_LIFE_GUIDANCE_PREVIEW: process.env.NEXT_PUBLIC_LIFE_GUIDANCE_PREVIEW || '',
+  },
+
   experimental: {
     // Share-card images (app/og/**) read their fonts from disk at runtime.
     outputFileTracingIncludes: {
