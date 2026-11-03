@@ -1,12 +1,16 @@
 import Groq from 'groq-sdk';
 import { NextRequest, NextResponse } from 'next/server';
 import { rateLimit, readJsonCapped } from '@/src/lib/apiGuard';
+import { AI_CHAT_ENABLED } from '@/src/lib/aiFeatures';
 
 const groq = new Groq({
   apiKey: process.env.GROQ_API_KEY || process.env.EXPO_PUBLIC_GROQ_API_KEY || ''
 });
 
 export async function POST(request: NextRequest) {
+  if (!AI_CHAT_ENABLED) {
+    return NextResponse.json({ error: 'Not found' }, { status: 404 });
+  }
   try {
     const limited = rateLimit(request, 'ai-analysis', { max: 10, windowMs: 60_000 });
     if (limited) return limited;

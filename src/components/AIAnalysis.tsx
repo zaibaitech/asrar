@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Sparkles, Loader2, ChevronDown, ChevronUp } from 'lucide-react';
 import { requestAIAnalysis, parseAIResponse, type AnalysisRequest } from '../lib/ai-analysis';
+import { AI_CHAT_ENABLED } from '@/src/lib/aiFeatures';
 
 interface AIAnalysisProps {
   calculationData: any;
@@ -13,8 +14,8 @@ interface AIAnalysisProps {
   className?: string;
 }
 
-// Hide AI features in production
-const IS_AI_ENABLED = process.env.NODE_ENV !== 'production';
+// Disabled by default; see src/lib/aiFeatures.ts
+const IS_AI_ENABLED = AI_CHAT_ENABLED;
 
 export default function AIAnalysis(props: AIAnalysisProps) {
   if (!IS_AI_ENABLED) return null;
