@@ -13,7 +13,6 @@ export function calculateAccuratePlanetaryHours(
   let sunrise = times.sunrise;
   let sunset = times.sunset;
   
-  console.log('Initial SunCalc times:', { sunrise: sunrise?.toISOString(), sunset: sunset?.toISOString(), latitude, longitude });
   
   // Handle edge cases (polar regions, invalid times)
   if (!sunrise || !sunset || isNaN(sunrise.getTime()) || isNaN(sunset.getTime())) {
@@ -26,7 +25,6 @@ export function calculateAccuratePlanetaryHours(
   // If current time is before sunrise, use yesterday's sunrise/sunset for night hours
   // and today's sunrise for day hours boundary
   if (now < sunrise.getTime()) {
-    console.log('Current time is before sunrise, adjusting calculations...');
     
     const yesterday = new Date(date);
     yesterday.setDate(yesterday.getDate() - 1);
@@ -37,7 +35,6 @@ export function calculateAccuratePlanetaryHours(
     // Get yesterday's sunrise
     sunrise = yesterdayTimes.sunrise;
     
-    console.log('Adjusted times (using yesterday):', { sunrise: sunrise?.toISOString(), sunset: sunset?.toISOString() });
   }
   
   // Calculate day and night durations in milliseconds
@@ -51,7 +48,6 @@ export function calculateAccuratePlanetaryHours(
   const nextSunrise = SunCalc.getTimes(nextDay, latitude, longitude).sunrise;
   const nightDuration = nextSunrise.getTime() - dayEnd;
   
-  console.log('Day/Night durations:', { dayDuration, nightDuration });
   
   // Each planetary hour is 1/12 of day or night
   const dayHourLength = dayDuration / 12;
@@ -65,7 +61,6 @@ export function calculateAccuratePlanetaryHours(
   }
   const sequence = PLANETARY_SEQUENCES[dayOfWeek];
   
-  console.log('Day of week:', dayOfWeek, 'Sequence length:', sequence.length);
   
   const hours: AccuratePlanetaryHour[] = [];
   
@@ -113,7 +108,6 @@ export function calculateAccuratePlanetaryHours(
     });
   }
   
-  console.log('Calculated hours count:', hours.length);
   return hours;
 }
 
@@ -153,8 +147,6 @@ export function getCurrentPlanetaryHour(
   hours: AccuratePlanetaryHour[]
 ): AccuratePlanetaryHour | null {
   const now = Date.now();
-  console.log('Looking for current hour at time:', now, new Date(now).toISOString());
-  console.log('Available hours:', hours.length);
   
   if (hours.length === 0) {
     console.warn('No hours calculated');
@@ -164,7 +156,6 @@ export function getCurrentPlanetaryHour(
   const found = hours.find(h => {
     const isInRange = now >= h.startTime.getTime() && now < h.endTime.getTime();
     if (isInRange) {
-      console.log('Found current hour:', h.planet.name, h.startTime.toISOString(), '-', h.endTime.toISOString());
     }
     return isInRange;
   });
@@ -172,10 +163,6 @@ export function getCurrentPlanetaryHour(
   if (!found) {
     console.warn('No current hour found. Time range check:');
     if (hours.length > 0) {
-      console.log('First hour:', hours[0].startTime.toISOString(), '-', hours[0].endTime.toISOString());
-      console.log('Last hour:', hours[hours.length - 1].startTime.toISOString(), '-', hours[hours.length - 1].endTime.toISOString());
-      console.log('Current time vs first:', now, 'vs', hours[0].startTime.getTime());
-      console.log('Current time vs last:', now, 'vs', hours[hours.length - 1].endTime.getTime());
     }
   } else {
     // Mark this hour as current

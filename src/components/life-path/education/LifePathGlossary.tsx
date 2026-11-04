@@ -336,10 +336,10 @@ export const LifePathGlossary: React.FC = () => {
 
   const categories: Array<{ id: TermCategory | 'all'; label: { en: string; fr: string; ar: string }; color: string }> = [
     { id: 'all', label: { en: 'All Terms', fr: 'Tous les Termes', ar: 'كل المصطلحات' }, color: 'bg-slate-600' },
-    { id: 'core', label: { en: 'Core Numbers', fr: 'Nombres Fondamentaux', ar: 'الأرقام الأساسية' }, color: 'bg-blue-600' },
+    { id: 'core', label: { en: 'Core Numbers', fr: 'Nombres Fondamentaux', ar: 'الأرقام الأساسية' }, color: 'bg-indigo-600' },
     { id: 'master', label: { en: 'Master Numbers', fr: 'Nombres Maîtres', ar: 'الأرقام الرئيسية' }, color: 'bg-amber-600' },
     { id: 'karmic', label: { en: 'Karmic Debts', fr: 'Dettes Karmiques', ar: 'الديون الكرمية' }, color: 'bg-red-600' },
-    { id: 'cycles', label: { en: 'Cycles & Timing', fr: 'Cycles & Timing', ar: 'الدورات والتوقيت' }, color: 'bg-purple-600' },
+    { id: 'cycles', label: { en: 'Cycles & Timing', fr: 'Cycles & Timing', ar: 'الدورات والتوقيت' }, color: 'bg-indigo-600' },
     { id: 'elements', label: { en: 'Elements', fr: 'Éléments', ar: 'العناصر' }, color: 'bg-emerald-600' }
   ];
 
@@ -374,7 +374,7 @@ export const LifePathGlossary: React.FC = () => {
       </div>
 
       {/* Search and Filters */}
-      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6 space-y-4">
+      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm p-6 space-y-4">
         {/* Search Bar */}
         <div className="relative">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
@@ -383,7 +383,7 @@ export const LifePathGlossary: React.FC = () => {
             placeholder={isArabic ? 'ابحث عن مصطلح...' : isFrench ? 'Rechercher un terme...' : 'Search for a term...'}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-11 pr-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-slate-900 dark:text-white"
+            className="w-full pl-11 pr-4 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 text-slate-900 dark:text-white min-h-[44px] text-base sm:text-sm"
           />
         </div>
 
@@ -394,9 +394,9 @@ export const LifePathGlossary: React.FC = () => {
             <button
               key={cat.id}
               onClick={() => setSelectedCategory(cat.id)}
-              className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${
-                selectedCategory === cat.id
-                  ? `${cat.color} text-white shadow-lg`
+              className={`px-4 py-2 rounded-xl font-medium text-sm transition-all ${
+ selectedCategory === cat.id
+ ? `${cat.color} text-white shadow-lg`
                   : 'bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600'
               }`}
             >
@@ -428,7 +428,7 @@ export const LifePathGlossary: React.FC = () => {
             />
           ))
         ) : (
-          <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-12 text-center">
+          <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm p-12 text-center">
             <p className="text-slate-600 dark:text-slate-400 text-lg">
               {isArabic ? 'لم يتم العثور على مصطلحات' : isFrench ? 'Aucun terme trouvé' : 'No terms found'}
             </p>
@@ -457,10 +457,10 @@ const GlossaryTermCard: React.FC<{
     : term.category;
 
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden border border-slate-200 dark:border-slate-700">
+    <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm overflow-hidden border border-slate-200 dark:border-slate-700">
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="w-full p-6 text-left hover:bg-slate-50 dark:hover:bg-slate-750 transition-colors"
+        className="w-full p-6 text-left hover:bg-slate-50 dark:hover:bg-slate-750 transition-colors min-h-[44px]"
       >
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1">
@@ -488,7 +488,7 @@ const GlossaryTermCard: React.FC<{
       {isExpanded && (
         <div className="px-6 pb-6 border-t border-slate-200 dark:border-slate-700 pt-4">
           {/* Definition */}
-          <div className="bg-slate-50 dark:bg-slate-900 rounded-lg p-4 mb-4">
+          <div className="bg-slate-50 dark:bg-slate-900 rounded-xl p-4 mb-4">
             <h4 className="font-semibold text-slate-900 dark:text-white mb-2 text-sm">
               {isArabic ? 'التعريف:' : isFrench ? 'Définition:' : 'Definition:'}
             </h4>
@@ -509,7 +509,7 @@ const GlossaryTermCard: React.FC<{
                   return relatedTerm ? (
                     <span
                       key={relatedId}
-                      className="bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-xs font-medium"
+                      className="bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-200 px-3 py-1 rounded-full text-xs font-medium"
                     >
                       {relatedTerm.transliteration}
                     </span>

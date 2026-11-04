@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Sparkles, Loader2, ChevronDown, ChevronUp } from 'lucide-react';
 import { requestAIAnalysis, parseAIResponse, type AnalysisRequest } from '../lib/ai-analysis';
+import { AI_CHAT_ENABLED } from '@/src/lib/aiFeatures';
 
 interface AIAnalysisProps {
   calculationData: any;
@@ -13,8 +14,8 @@ interface AIAnalysisProps {
   className?: string;
 }
 
-// Hide AI features in production
-const IS_AI_ENABLED = process.env.NODE_ENV !== 'production';
+// Disabled by default; see src/lib/aiFeatures.ts
+const IS_AI_ENABLED = AI_CHAT_ENABLED;
 
 export default function AIAnalysis(props: AIAnalysisProps) {
   if (!IS_AI_ENABLED) return null;
@@ -64,11 +65,11 @@ function AIAnalysisInner({
         <button
           onClick={handleAnalyze}
           disabled={isAnalyzing}
-          className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-6 py-4 rounded-xl font-semibold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 shadow-lg hover:shadow-xl transform hover:scale-[1.02]"
+          className="w-full text-white px-6 py-4 rounded-xl font-semibold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 shadow-sm transform bg-emerald-600 hover:bg-emerald-700 min-h-[44px]"
         >
           {isAnalyzing ? (
             <>
-              <Loader2 className="w-5 h-5 animate-spin" />
+              <Loader2 className="w-5 h-5 " />
               <span>{language === 'ar' ? 'جاري التحليل...' : 'Analyzing...'}</span>
             </>
           ) : (
@@ -82,7 +83,7 @@ function AIAnalysisInner({
 
       {/* Error Message */}
       {error && (
-        <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
+        <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-xl text-red-800">
           <p className="font-semibold">{language === 'ar' ? 'خطأ:' : 'Error:'}</p>
           <p className="text-sm mt-1">{error}</p>
           {error.includes('API key') && (
@@ -97,10 +98,10 @@ function AIAnalysisInner({
 
       {/* Analysis Result */}
       {analysis && parsedAnalysis && (
-        <div className="mt-4 bg-gradient-to-br from-purple-50 to-indigo-50 border-2 border-purple-200 rounded-xl overflow-hidden shadow-lg">
+        <div className="mt-4 border border-slate-200 rounded-xl overflow-hidden shadow-sm bg-white/60 dark:bg-slate-800/40">
           {/* Header */}
           <div 
-            className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-4 flex items-center justify-between cursor-pointer"
+            className=" text-white p-4 flex items-center justify-between cursor-pointer bg-indigo-600"
             onClick={() => setIsExpanded(!isExpanded)}
           >
             <div className="flex items-center gap-3">
@@ -109,7 +110,7 @@ function AIAnalysisInner({
                 {language === 'ar' ? 'التحليل العميق بالذكاء الاصطناعي' : 'Deep AI Analysis'}
               </h3>
             </div>
-            <button className="hover:bg-white/20 p-2 rounded-lg transition-colors">
+            <button className="hover:bg-white/20 p-2 rounded-xl transition-colors min-h-[44px]">
               {isExpanded ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
             </button>
           </div>
@@ -118,7 +119,7 @@ function AIAnalysisInner({
           {isExpanded && (
             <div className={`p-6 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
               {parsedAnalysis.title && (
-                <h4 className="text-2xl font-bold text-purple-900 mb-6">
+                <h4 className="text-2xl font-bold text-indigo-900 mb-6">
                   {parsedAnalysis.title}
                 </h4>
               )}
@@ -126,7 +127,7 @@ function AIAnalysisInner({
               {parsedAnalysis.sections.length > 0 ? (
                 <div className="space-y-6">
                   {parsedAnalysis.sections.map((section: { heading: string; content: string }, index: number) => (
-                    <div key={index} className="bg-white/70 rounded-lg p-5 shadow-sm">
+                    <div key={index} className="bg-white/70 rounded-xl p-5 shadow-sm">
                       <h5 className="text-lg font-bold text-indigo-900 mb-3 flex items-center gap-2">
                         <span className="w-2 h-2 bg-indigo-600 rounded-full"></span>
                         {section.heading}
@@ -138,7 +139,7 @@ function AIAnalysisInner({
                   ))}
                 </div>
               ) : (
-                <div className="bg-white/70 rounded-lg p-5 shadow-sm">
+                <div className="bg-white/70 rounded-xl p-5 shadow-sm">
                   <div className="text-gray-800 whitespace-pre-wrap leading-relaxed">
                     {parsedAnalysis.rawText}
                   </div>
@@ -146,15 +147,15 @@ function AIAnalysisInner({
               )}
 
               {/* Re-analyze Button */}
-              <div className="mt-6 pt-6 border-t border-purple-200">
+              <div className="mt-6 pt-6 border-t border-slate-200">
                 <button
                   onClick={handleAnalyze}
                   disabled={isAnalyzing}
-                  className="bg-white/80 hover:bg-white text-purple-700 px-4 py-2 rounded-lg font-semibold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 mx-auto shadow-sm hover:shadow-md"
+                  className="bg-white/80 hover:bg-white text-indigo-700 px-4 py-2 rounded-xl font-semibold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 mx-auto shadow-sm min-h-[44px]"
                 >
                   {isAnalyzing ? (
                     <>
-                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <Loader2 className="w-4 h-4 " />
                       <span>{language === 'ar' ? 'جاري التحليل...' : 'Analyzing...'}</span>
                     </>
                   ) : (

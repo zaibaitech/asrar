@@ -96,7 +96,7 @@ export const PLANETARY_SPIRITUALITY: Record<string, PlanetarySpiritualInfo> = {
       primaryVerse: {
         surah: 91,
         ayah: 1,
-        textArabic: 'وَالشَّمْسِ وَضُحَاهَا',
+        textArabic: 'وَالشَّمْسِ وَضُحَاهَا',
         translationEn: 'By the sun and its brightness',
         translationFr: 'Par le soleil et sa clarté',
         reference: 'Surah Ash-Shams 91:1',
@@ -159,7 +159,7 @@ export const PLANETARY_SPIRITUALITY: Record<string, PlanetarySpiritualInfo> = {
       primaryVerse: {
         surah: 36,
         ayah: 39,
-        textArabic: 'وَالْقَمَرَ قَدَّرْنَاهُ مَنَازِلَ',
+        textArabic: 'وَالْقَمَرَ قَدَّرْنَاهُ مَنَازِلَ',
         translationEn: 'And the moon - We have determined for it phases',
         translationFr: 'Et la lune, Nous lui avons déterminé des phases',
         reference: 'Surah Ya-Sin 36:39',
@@ -348,7 +348,7 @@ export const PLANETARY_SPIRITUALITY: Record<string, PlanetarySpiritualInfo> = {
       primaryVerse: {
         surah: 8,
         ayah: 66,
-        textArabic: 'إِن يَكُن مِّنكُمْ عِشْرُونَ صَابِرُونَ يَغْلِبُوا مِائَتَيْنِ',
+        textArabic: 'إِن يَكُن مِّنكُمْ عِشْرُونَ صَابِرُونَ يَغْلِبُوا مِائَتَيْنِ',
         translationEn: 'If there are among you twenty who are patient and steadfast, they will overcome two hundred',
         translationFr: 'S\'il y a parmi vous vingt endurants, ils vaincront deux cents',
         reference: 'Surah Al-Anfal 8:66',
@@ -411,7 +411,7 @@ export const PLANETARY_SPIRITUALITY: Record<string, PlanetarySpiritualInfo> = {
       primaryVerse: {
         surah: 2,
         ayah: 261,
-        textArabic: 'مَّثَلُ الَّذِينَ يُنفِقُونَ أَمْوَالَهُمْ فِي سَبِيلِ اللَّهِ كَمَثَلِ حَبَّةٍ أَنبَتَتْ سَبْعَ سَنَابِلَ',
+        textArabic: 'مَّثَلُ الَّذِينَ يُنفِقُونَ أَمْوَالَهُمْ فِي سَبِيلِ اللَّهِ كَمَثَلِ حَبَّةٍ أَنبَتَتْ سَبْعَ سَنَابِلَ',
         translationEn: 'The example of those who spend in the way of Allah is like a seed which grows seven spikes',
         translationFr: 'Ceux qui dépensent dans le sentier d\'Allah ressemblent à une graine d\'où naissent sept épis',
         reference: 'Surah Al-Baqarah 2:261',
@@ -474,7 +474,7 @@ export const PLANETARY_SPIRITUALITY: Record<string, PlanetarySpiritualInfo> = {
       primaryVerse: {
         surah: 103,
         ayah: 3,
-        textArabic: 'وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ',
+        textArabic: 'وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ',
         translationEn: 'And advised each other to truth and advised each other to patience',
         translationFr: 'Se recommandent mutuellement la vérité et se recommandent mutuellement l\'endurance',
         reference: 'Surah Al-Asr 103:3',

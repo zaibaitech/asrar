@@ -50,7 +50,7 @@ export const NumberGuidePanel: React.FC = () => {
       </div>
 
       {/* Number Selector */}
-      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6">
+      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm p-6">
         <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">
           {isArabic ? 'اختر رقماً:' : isFrench ? 'Sélectionnez un Nombre:' : 'Select a Number:'}
         </h3>
@@ -62,11 +62,11 @@ export const NumberGuidePanel: React.FC = () => {
               <button
                 key={num}
                 onClick={() => setSelectedNumber(num)}
-                className={`relative p-4 rounded-lg font-bold text-lg transition-all ${
+                className={`relative p-4 rounded-xl font-bold text-lg transition-all ${
                   isSelected
                     ? isMaster
-                      ? 'bg-gradient-to-br from-amber-500 to-orange-600 text-slate-50 shadow-lg scale-110'
-                      : 'bg-gradient-to-br from-blue-500 to-purple-600 text-slate-50 shadow-lg scale-110'
+                      ? ' text-slate-50 shadow-sm scale-110 bg-indigo-600'
+                      : ' text-slate-50 shadow-sm scale-110 bg-indigo-600'
                     : 'bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600'
                 }`}
               >
@@ -91,9 +91,9 @@ export const NumberGuidePanel: React.FC = () => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
+              className={`flex items-center gap-2 px-4 py-2 rounded-xl font-medium transition-all ${
                 isActive
-                  ? 'bg-purple-600 dark:bg-purple-700 text-slate-50 shadow-lg'
+                  ? 'bg-indigo-600 dark:bg-indigo-700 text-slate-50 shadow-sm'
                   : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
               }`}
             >
@@ -105,7 +105,7 @@ export const NumberGuidePanel: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-8">
+      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm p-8">
         {activeTab === 'overview' && <OverviewTab number={selectedNumber} data={numberData} isArabic={isArabic} isFrench={isFrench} />}
         {activeTab === 'spiritual' && <SpiritualTab number={selectedNumber} data={numberData} isArabic={isArabic} isFrench={isFrench} />}
         {activeTab === 'practical' && <PracticalTab number={selectedNumber} data={numberData} isArabic={isArabic} isFrench={isFrench} />}
@@ -128,8 +128,8 @@ const OverviewTab: React.FC<{ number: NumberType; data: any; isArabic: boolean; 
       <div className="text-center pb-6 border-b border-slate-200 dark:border-slate-700">
         <div className={`inline-block text-6xl font-bold mb-4 ${
           isMaster 
-            ? 'bg-gradient-to-br from-amber-500 to-orange-600 text-transparent bg-clip-text' 
-            : 'bg-gradient-to-br from-blue-500 to-purple-600 text-transparent bg-clip-text'
+            ? ' text-transparent bg-clip-text bg-indigo-600' 
+            : ' text-transparent bg-clip-text bg-indigo-600'
         }`}>
           {number}
         </div>
@@ -168,12 +168,12 @@ const OverviewTab: React.FC<{ number: NumberType; data: any; isArabic: boolean; 
             title={isArabic ? 'المقام الروحي' : isFrench ? 'Station Spirituelle' : 'Spiritual Station'}
             value={isArabic ? data.stationArabic : data.station}
             icon="✨"
-            color="bg-purple-50 dark:bg-purple-900/20 text-purple-900 dark:text-purple-100"
+            color="bg-indigo-50 dark:bg-indigo-900/20 text-indigo-900 dark:text-indigo-100"
           />
         </div>
 
         {/* Right Column */}
-        <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 rounded-lg p-6">
+        <div className=" rounded-xl p-6 bg-white/60 dark:bg-slate-800/40">
           <h4 className="font-bold text-slate-900 dark:text-white mb-4">
             {isArabic ? 'الغرض من الحياة' : isFrench ? 'But de Vie' : 'Life Purpose'}
           </h4>
@@ -226,8 +226,8 @@ const SpiritualTab: React.FC<{ number: NumberType; data: any; isArabic: boolean;
   return (
     <div className="space-y-6">
       {/* Quranic Resonance */}
-      <div className="bg-gradient-to-r from-teal-50 to-cyan-50 dark:from-teal-900/20 dark:to-cyan-900/20 border border-teal-200 dark:border-teal-800 rounded-lg p-6">
-        <h4 className="font-bold text-teal-900 dark:text-teal-100 mb-3 flex items-center gap-2">
+      <div className=" border border-slate-200 dark:border-slate-700 rounded-xl p-6 bg-white/60 dark:bg-slate-800/40">
+        <h4 className="font-bold text-indigo-900 dark:text-indigo-100 mb-3 flex items-center gap-2">
           <span className="text-2xl">📖</span>
           {isArabic ? 'الرنين القرآني' : isFrench ? 'Résonance Coranique' : 'Quranic Resonance'}
         </h4>
@@ -243,12 +243,12 @@ const SpiritualTab: React.FC<{ number: NumberType; data: any; isArabic: boolean;
         </h4>
         <div className="grid md:grid-cols-2 gap-4">
           {getSpiritualQualities(number, isArabic, isFrench).map((quality, index) => (
-            <div key={index} className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-4 border border-purple-200 dark:border-purple-800">
+            <div key={index} className="bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-4 border border-slate-200 dark:border-slate-700">
               <div className="flex items-start gap-3">
                 <span className="text-2xl">{quality.icon}</span>
                 <div>
-                  <h5 className="font-semibold text-purple-900 dark:text-purple-100 mb-1">{quality.title}</h5>
-                  <p className="text-sm text-purple-800 dark:text-purple-200">{quality.description}</p>
+                  <h5 className="font-semibold text-indigo-900 dark:text-indigo-100 mb-1">{quality.title}</h5>
+                  <p className="text-sm text-indigo-800 dark:text-indigo-200">{quality.description}</p>
                 </div>
               </div>
             </div>
@@ -258,8 +258,8 @@ const SpiritualTab: React.FC<{ number: NumberType; data: any; isArabic: boolean;
 
       {/* Deepest Desire */}
       {data.deepestDesire && (
-        <div className="bg-gradient-to-br from-rose-50 to-pink-50 dark:from-rose-900/20 dark:to-pink-900/20 border border-rose-200 dark:border-rose-800 rounded-lg p-6">
-          <h4 className="font-bold text-rose-900 dark:text-rose-100 mb-3 flex items-center gap-2">
+        <div className=" border border-slate-200 dark:border-slate-700 rounded-xl p-6 bg-white/60 dark:bg-slate-800/40">
+          <h4 className="font-bold text-indigo-900 dark:text-indigo-100 mb-3 flex items-center gap-2">
             <Heart className="w-5 h-5" />
             {isArabic ? 'أعمق رغبة' : isFrench ? 'Désir le Plus Profond' : 'Deepest Desire'}
           </h4>
@@ -276,8 +276,8 @@ const SpiritualTab: React.FC<{ number: NumberType; data: any; isArabic: boolean;
         </h4>
         <div className="space-y-3">
           {getSpiritualPractices(number, isArabic, isFrench).map((practice, index) => (
-            <div key={index} className="flex items-start gap-3 bg-slate-50 dark:bg-slate-900 rounded-lg p-4">
-              <ChevronRight className="w-5 h-5 text-purple-600 dark:text-purple-400 flex-shrink-0 mt-0.5" />
+            <div key={index} className="flex items-start gap-3 bg-slate-50 dark:bg-slate-900 rounded-xl p-4">
+              <ChevronRight className="w-5 h-5 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
               <div>
                 <div className="font-semibold text-slate-900 dark:text-white mb-1">{practice.title}</div>
                 <div className="text-sm text-slate-600 dark:text-slate-400">{practice.description}</div>
@@ -305,8 +305,8 @@ const PracticalTab: React.FC<{ number: NumberType; data: any; isArabic: boolean;
         </h4>
         <div className="grid md:grid-cols-2 gap-3">
           {getCareerPaths(number, isArabic, isFrench).map((career, index) => (
-            <div key={index} className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-              <div className="font-semibold text-blue-900 dark:text-blue-100">{career}</div>
+            <div key={index} className="bg-indigo-50 dark:bg-indigo-900/20 border border-slate-200 dark:border-slate-700 rounded-xl p-4">
+              <div className="font-semibold text-indigo-900 dark:text-indigo-100">{career}</div>
             </div>
           ))}
         </div>
@@ -315,16 +315,16 @@ const PracticalTab: React.FC<{ number: NumberType; data: any; isArabic: boolean;
       {/* Relationship Dynamics */}
       <div>
         <h4 className="font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-          <Heart className="w-5 h-5 text-rose-600 dark:text-rose-400" />
+          <Heart className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
           {isArabic ? 'ديناميكيات العلاقات' : isFrench ? 'Dynamiques Relationnelles' : 'Relationship Dynamics'}
         </h4>
-        <div className="bg-rose-50 dark:bg-rose-900/20 border border-rose-200 dark:border-rose-800 rounded-lg p-6">
+        <div className="bg-indigo-50 dark:bg-indigo-900/20 border border-slate-200 dark:border-slate-700 rounded-xl p-6">
           <p className="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
             {getRelationshipDynamics(number, isArabic, isFrench)}
           </p>
           <div className="space-y-2">
             <div className="text-sm">
-              <span className="font-semibold text-rose-900 dark:text-rose-100">
+              <span className="font-semibold text-indigo-900 dark:text-indigo-100">
                 {isArabic ? 'الأكثر توافقاً مع:' : isFrench ? 'Plus Compatible Avec:' : 'Most Compatible With:'}
               </span>
               <span className="text-slate-700 dark:text-slate-300 ml-2">
@@ -343,7 +343,7 @@ const PracticalTab: React.FC<{ number: NumberType; data: any; isArabic: boolean;
         </h4>
         <div className="space-y-3">
           {getDailyPractices(number, isArabic, isFrench).map((practice, index) => (
-            <div key={index} className="flex items-start gap-3 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg p-4 border border-emerald-200 dark:border-emerald-800">
+            <div key={index} className="flex items-start gap-3 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl p-4 border border-emerald-200 dark:border-emerald-800">
               <span className="text-xl">{practice.icon}</span>
               <div>
                 <div className="font-semibold text-emerald-900 dark:text-emerald-100 mb-1">{practice.title}</div>
@@ -362,7 +362,7 @@ const PracticalTab: React.FC<{ number: NumberType; data: any; isArabic: boolean;
         </h4>
         <div className="space-y-4">
           {getLifeExamples(number, isArabic, isFrench).map((example, index) => (
-            <div key={index} className="bg-slate-50 dark:bg-slate-900 rounded-lg p-5 border-l-4 border-purple-500">
+            <div key={index} className="bg-slate-50 dark:bg-slate-900 rounded-xl p-5 border-l-4 border-slate-300">
               <h5 className="font-semibold text-slate-900 dark:text-white mb-2">{example.title}</h5>
               <p className="text-sm text-slate-600 dark:text-slate-400">{example.description}</p>
             </div>
@@ -387,7 +387,7 @@ const ClassicalTab: React.FC<{ number: NumberType; data: any; isArabic: boolean;
         </h4>
         <div className="space-y-4">
           {getClassicalTeachings(number, isArabic, isFrench).map((teaching, index) => (
-            <div key={index} className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-6">
+            <div key={index} className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-6">
               <div className="flex items-start gap-4">
                 <span className="text-3xl">📜</span>
                 <div>
@@ -406,8 +406,8 @@ const ClassicalTab: React.FC<{ number: NumberType; data: any; isArabic: boolean;
       </div>
 
       {/* Historical Context */}
-      <div className="bg-teal-50 dark:bg-teal-900/20 border border-teal-200 dark:border-teal-800 rounded-lg p-6">
-        <h4 className="font-bold text-teal-900 dark:text-teal-100 mb-4 flex items-center gap-2">
+      <div className="bg-indigo-50 dark:bg-indigo-900/20 border border-slate-200 dark:border-slate-700 rounded-xl p-6">
+        <h4 className="font-bold text-indigo-900 dark:text-indigo-100 mb-4 flex items-center gap-2">
           <span className="text-2xl">🕌</span>
           {isArabic ? 'السياق التاريخي' : isFrench ? 'Contexte Historique' : 'Historical Context'}
         </h4>
@@ -425,8 +425,8 @@ const ClassicalTab: React.FC<{ number: NumberType; data: any; isArabic: boolean;
           </h4>
           <div className="grid md:grid-cols-2 gap-3">
             {(isArabic ? data.famousArchetypesArabic || data.famousArchetypes : data.famousArchetypes).map((archetype: string, index: number) => (
-              <div key={index} className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg p-4">
-                <div className="text-purple-900 dark:text-purple-100 font-medium">{archetype}</div>
+              <div key={index} className="bg-indigo-50 dark:bg-indigo-900/20 border border-slate-200 dark:border-slate-700 rounded-xl p-4">
+                <div className="text-indigo-900 dark:text-indigo-100 font-medium">{archetype}</div>
               </div>
             ))}
           </div>
@@ -456,7 +456,7 @@ const ClassicalTab: React.FC<{ number: NumberType; data: any; isArabic: boolean;
 // ============================================================================
 
 const AttributeCard: React.FC<{ title: string; value: string; icon: string; color: string }> = ({ title, value, icon, color }) => (
-  <div className={`rounded-lg p-4 ${color}`}>
+  <div className={`rounded-xl p-4 ${color}`}>
     <div className="flex items-center gap-3">
       <span className="text-2xl">{icon}</span>
       <div>

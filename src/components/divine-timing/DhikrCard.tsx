@@ -140,8 +140,8 @@ export function DhikrCard({ planetName, planetElement, planetNameArabic, onClose
   const isComplete = count === dhikr.count;
 
   return (
-    <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/20 dark:to-pink-950/20 
-      rounded-2xl shadow-lg border border-purple-200 dark:border-purple-800 p-6 md:p-8">
+    <div className=" 
+ rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 p-6 md:p-8 bg-white/60 dark:bg-slate-800/40">
       
       {/* Header with Back Button */}
       <div className="flex items-center justify-between mb-6">
@@ -156,16 +156,15 @@ export function DhikrCard({ planetName, planetElement, planetNameArabic, onClose
         <div className="flex items-center gap-2">
           <button
             onClick={() => setShowInfo(!showInfo)}
-            className="p-2 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-colors"
+            className="p-2 rounded-xl hover:bg-indigo-100 dark:hover:bg-indigo-900/30 transition-colors min-h-[44px]"
             aria-label={isFr ? 'Information' : 'Information'}
           >
-            <Info className={`w-5 h-5 ${showInfo ? 'text-purple-600 dark:text-purple-400' : 'text-slate-400'}`} />
+            <Info className={`w-5 h-5 ${showInfo ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-400'}`} />
           </button>
           {onClose && (
             <button
               onClick={onClose}
-              className="px-4 py-2 text-sm font-medium bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 
-                rounded-lg hover:bg-amber-200 dark:hover:bg-amber-900/50 transition-colors flex items-center gap-2"
+              className="px-4 py-2 text-sm font-medium bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-xl hover:bg-amber-200 dark:hover:bg-amber-900/50 transition-colors flex items-center gap-2 min-h-[44px]"
             >
               <span className="text-lg">←</span>
               <span>{isFr ? 'Retour' : 'Back'}</span>
@@ -176,7 +175,7 @@ export function DhikrCard({ planetName, planetElement, planetNameArabic, onClose
 
       {/* Info Panel */}
       {showInfo && (
-        <div className="mb-6 p-4 bg-white dark:bg-slate-900/50 rounded-lg border border-purple-200 dark:border-purple-800 space-y-2 animate-slide-down">
+        <div className="mb-6 p-4 bg-white dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-700 space-y-2 ">
           <p className="text-sm text-slate-700 dark:text-slate-300">
             <span className="font-semibold">{isFr ? 'Pourquoi ce dhikr?' : 'Why this dhikr?'}</span>
           </p>
@@ -185,7 +184,7 @@ export function DhikrCard({ planetName, planetElement, planetNameArabic, onClose
               ? `Traditionnellement, l'heure de ${planetNameArabic} (${planetName}) résonne avec les qualités divines de "${dhikr.name}". Ce dhikr amplifie l'énergie positive de cette heure.`
               : `Traditionally, the hour of ${planetNameArabic} (${planetName}) resonates with the divine qualities of "${dhikr.name}". This dhikr amplifies the positive energy of this hour.`}
           </p>
-          <div className="pt-2 border-t border-purple-200 dark:border-purple-800">
+          <div className="pt-2 border-t border-slate-200 dark:border-slate-700">
             <p className="text-xs text-slate-500 dark:text-slate-400 italic">
               {isFr 
                 ? '💡 Conseil: Récitez avec présence et sincérité. La qualité compte plus que la quantité.'
@@ -197,13 +196,13 @@ export function DhikrCard({ planetName, planetElement, planetNameArabic, onClose
 
       {/* Arabic Calligraphy - Large and Beautiful */}
       <div className="text-center mb-6">
-        <div className={`text-6xl md:text-7xl lg:text-8xl font-arabic text-purple-700 dark:text-purple-300 mb-4 
-          transition-transform duration-200 ${isAnimating ? 'scale-110' : 'scale-100'}`}
+        <div className={`text-6xl md:text-7xl lg:text-8xl font-arabic text-indigo-700 dark:text-indigo-300 mb-4 
+ transition-transform duration-200 ${isAnimating ? 'scale-110' : 'scale-100'}`}
           style={{ fontFamily: 'Noto Naskh Arabic, Amiri, serif', lineHeight: 1.5 }}
         >
           {dhikr.arabic}
         </div>
-        <div className="text-xl md:text-2xl font-semibold text-purple-600 dark:text-purple-400 mb-2">
+        <div className="text-xl md:text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-2">
           {dhikr.transliteration}
         </div>
         <div className="text-sm text-slate-600 dark:text-slate-400">
@@ -214,23 +213,23 @@ export function DhikrCard({ planetName, planetElement, planetNameArabic, onClose
       {/* Counter Display */}
       <div className="mb-6">
         <div className="text-center mb-4">
-          <div className="text-5xl md:text-6xl font-bold text-purple-700 dark:text-purple-300">
+          <div className="text-5xl md:text-6xl font-bold text-indigo-700 dark:text-indigo-300">
             {count}
             <span className="text-2xl md:text-3xl text-slate-400 dark:text-slate-500">
               {' '}/ {dhikr.count}
             </span>
           </div>
           {isComplete && (
-            <div className="mt-2 text-green-600 dark:text-green-400 font-semibold animate-pulse">
+            <div className="mt-2 text-green-600 dark:text-green-400 font-semibold ">
               ✨ {isFr ? 'Complet! Maasha Allah!' : 'Complete! Maasha Allah!'} ✨
             </div>
           )}
         </div>
 
         {/* Progress Bar */}
-        <div className="w-full h-3 bg-purple-100 dark:bg-purple-900/30 rounded-full overflow-hidden">
+        <div className="w-full h-3 bg-indigo-100 dark:bg-indigo-900/30 rounded-full overflow-hidden">
           <div 
-            className="h-full bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300 ease-out"
+            className="h-full transition-all duration-300 ease-out bg-indigo-600"
             style={{ width: `${progress}%` }}
           />
         </div>
@@ -245,10 +244,7 @@ export function DhikrCard({ planetName, planetElement, planetNameArabic, onClose
         <button
           onClick={decrement}
           disabled={count === 0}
-          className="flex items-center justify-center gap-2 py-4 rounded-xl bg-white dark:bg-slate-800 
-            border-2 border-purple-200 dark:border-purple-800 text-slate-700 dark:text-slate-300
-            hover:bg-purple-50 dark:hover:bg-purple-900/20 disabled:opacity-50 disabled:cursor-not-allowed
-            transition-all active:scale-95"
+          className="flex items-center justify-center gap-2 py-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all active:scale-[0.98] min-h-[44px]"
         >
           <Minus className="w-5 h-5" />
           <span className="font-semibold text-sm">{isFr ? 'Retirer' : 'Remove'}</span>
@@ -257,10 +253,7 @@ export function DhikrCard({ planetName, planetElement, planetNameArabic, onClose
         {/* Increment - Primary Action */}
         <button
           onClick={increment}
-          className="flex items-center justify-center gap-2 py-4 rounded-xl 
-            bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold
-            hover:from-purple-700 hover:to-pink-700 transition-all active:scale-95
-            shadow-lg hover:shadow-xl"
+          className="flex items-center justify-center gap-2 py-4 rounded-xl text-white font-bold transition-all active:scale-[0.98] shadow-sm bg-emerald-600 hover:bg-emerald-700 min-h-[44px]"
         >
           <Plus className="w-6 h-6" />
           <span>{isFr ? 'Ajouter' : 'Add'}</span>
@@ -270,10 +263,7 @@ export function DhikrCard({ planetName, planetElement, planetNameArabic, onClose
         <button
           onClick={reset}
           disabled={count === 0}
-          className="flex items-center justify-center gap-2 py-4 rounded-xl bg-white dark:bg-slate-800 
-            border-2 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300
-            hover:bg-slate-50 dark:hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed
-            transition-all active:scale-95"
+          className="flex items-center justify-center gap-2 py-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all active:scale-[0.98] min-h-[44px]"
         >
           <RotateCcw className="w-5 h-5" />
           <span className="font-semibold text-sm">{isFr ? 'Réinitialiser' : 'Reset'}</span>
@@ -281,8 +271,8 @@ export function DhikrCard({ planetName, planetElement, planetNameArabic, onClose
       </div>
 
       {/* Benefit Description */}
-      <div className="p-4 bg-white dark:bg-slate-900/50 rounded-lg border border-purple-200 dark:border-purple-800">
-        <p className="text-sm font-semibold text-purple-700 dark:text-purple-300 mb-1">
+      <div className="p-4 bg-white dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-700">
+        <p className="text-sm font-semibold text-indigo-700 dark:text-indigo-300 mb-1">
           {isFr ? '🌟 Bienfait Spirituel:' : '🌟 Spiritual Benefit:'}
         </p>
         <p className="text-sm text-slate-600 dark:text-slate-400">

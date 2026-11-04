@@ -94,14 +94,14 @@ const REST_PRACTICES: RestPractice[] = [
 
 const SACRED_QUOTES = [
   {
-    arabic: 'إِنَّ مَعَ الْعُسْرِ يُسْرًا',
+    arabic: 'إِنَّ مَعَ الْعُسْرِ يُسْرًا',
     transliteration: 'Inna maʿa al-ʿusri yusrā',
     meaningEn: 'Indeed, with hardship comes ease',
     meaningFr: 'En vérité, avec la difficulté vient la facilité',
     reference: 'Quran 94:6'
   },
   {
-    arabic: 'وَفِي السَّمَاءِ رِزْقُكُمْ وَمَا تُوعَدُونَ',
+    arabic: 'وَفِي السَّمَاءِ رِزْقُكُمْ وَمَا تُوعَدُونَ',
     transliteration: 'Wa fī as-samāʾi rizqukum wa mā tūʿadūn',
     meaningEn: 'And in the sky is your provision and whatever you are promised',
     meaningFr: 'Et dans le ciel est votre subsistance et tout ce qui vous est promis',
@@ -135,13 +135,13 @@ export function RestDayView({ userElement, hours, nextGoodHour }: RestDayViewPro
     : null;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-indigo-950 via-purple-900 to-slate-900 relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden bg-indigo-600">
       {/* Animated Stars Background */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(50)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 bg-white rounded-full animate-twinkle"
+            className="absolute w-1 h-1 bg-white rounded-full "
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -156,7 +156,7 @@ export function RestDayView({ userElement, hours, nextGoodHour }: RestDayViewPro
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-block mb-4">
-            <Moon className="w-16 h-16 md:w-20 md:h-20 text-indigo-300 animate-pulse" />
+            <Moon className="w-16 h-16 md:w-20 md:h-20 text-indigo-300 " />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             {isFr ? '🌙 Jour de Repos' : '🌙 Rest Day'}
@@ -176,7 +176,7 @@ export function RestDayView({ userElement, hours, nextGoodHour }: RestDayViewPro
         </div>
 
         {/* Sacred Quote Card */}
-        <div className="mb-12 p-8 bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 shadow-2xl">
+        <div className="mb-12 p-8 bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 shadow-sm">
           <div className="text-center">
             <div className="text-3xl md:text-4xl text-indigo-200 mb-4 font-arabic" style={{ fontFamily: 'Noto Naskh Arabic, Amiri, serif', lineHeight: 1.8 }}>
               {quote.arabic}
@@ -233,8 +233,8 @@ export function RestDayView({ userElement, hours, nextGoodHour }: RestDayViewPro
                   onClick={() => setSelectedPractice(isSelected ? null : practice.id)}
                   className={`group p-6 rounded-xl transition-all duration-300 text-left
                     ${isSelected 
-                      ? 'bg-white/20 border-2 border-white/40 shadow-xl scale-105' 
-                      : 'bg-white/10 border border-white/20 hover:bg-white/15 hover:scale-102'
+                      ? 'bg-white/20 border border-white/40 shadow-sm scale-105' 
+                      : 'bg-white/10 border border-white/20 hover:bg-white/15 '
                     } backdrop-blur-sm`}
                 >
                   <div className="flex items-start gap-3 mb-3">
@@ -265,14 +265,14 @@ export function RestDayView({ userElement, hours, nextGoodHour }: RestDayViewPro
         </div>
 
         {/* Gentle Reminder */}
-        <div className="p-6 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-xl border border-purple-400/30 text-center">
-          <Droplets className="w-8 h-8 text-purple-300 mx-auto mb-3" />
+        <div className="p-6 backdrop-blur-sm rounded-xl border border-slate-300/30 text-center bg-indigo-600">
+          <Droplets className="w-8 h-8 text-indigo-300 mx-auto mb-3" />
           <p className="text-lg text-white mb-2">
             {isFr 
               ? '🌸 Le repos n\'est pas une faiblesse'
               : '🌸 Rest is not weakness'}
           </p>
-          <p className="text-sm text-purple-100">
+          <p className="text-sm text-indigo-100">
             {isFr 
               ? 'Même les plus grands arbres ont besoin de périodes de repos pour grandir plus fort. Honorez ce moment sacré.'
               : 'Even the mightiest trees need periods of rest to grow stronger. Honor this sacred time.'}
@@ -290,14 +290,14 @@ export function RestDayView({ userElement, hours, nextGoodHour }: RestDayViewPro
       </div>
 
       <style jsx>{`
-        @keyframes twinkle {
-          0%, 100% { opacity: 0.3; }
-          50% { opacity: 1; }
-        }
-        .animate-twinkle {
-          animation: twinkle 3s infinite;
-        }
-      `}</style>
+ @keyframes twinkle {
+ 0%, 100% { opacity: 0.3; }
+ 50% { opacity: 1; }
+ }
+ . {
+ animation: twinkle 3s infinite;
+ }
+ `}</style>
     </div>
   );
 }

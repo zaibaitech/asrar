@@ -22,7 +22,7 @@ const purposes = [
     emoji: '💼',
     labelEn: 'Work & Projects',
     labelFr: 'Travail & Projets',
-    color: 'from-blue-500 to-indigo-600',
+    color: '',
   },
   {
     id: 'prayer',
@@ -30,7 +30,7 @@ const purposes = [
     emoji: '🤲',
     labelEn: 'Prayer & Worship',
     labelFr: 'Prière & Adoration',
-    color: 'from-purple-500 to-pink-600',
+    color: '',
   },
   {
     id: 'conversations',
@@ -38,7 +38,7 @@ const purposes = [
     emoji: '💬',
     labelEn: 'Conversations',
     labelFr: 'Conversations',
-    color: 'from-green-500 to-emerald-600',
+    color: '',
   },
   {
     id: 'learning',
@@ -46,7 +46,7 @@ const purposes = [
     emoji: '📚',
     labelEn: 'Learning',
     labelFr: 'Apprentissage',
-    color: 'from-amber-500 to-orange-600',
+    color: '',
   },
   {
     id: 'finance',
@@ -54,7 +54,7 @@ const purposes = [
     emoji: '💰',
     labelEn: 'Finance',
     labelFr: 'Finance',
-    color: 'from-teal-500 to-cyan-600',
+    color: '',
   },
   {
     id: 'relationships',
@@ -62,7 +62,7 @@ const purposes = [
     emoji: '👥',
     labelEn: 'Relationships',
     labelFr: 'Relations',
-    color: 'from-rose-500 to-red-600',
+    color: '',
   },
 ];
 
@@ -285,10 +285,10 @@ export function PurposeSelector({
             <button
               key={purpose.id}
               onClick={() => onSelectPurpose(isSelected ? '' : purpose.id)}
-              className={`relative p-4 rounded-xl border-2 transition-all ${
+              className={`relative p-4 rounded-xl border transition-all ${
                 isSelected
-                  ? 'border-amber-500 bg-amber-50 dark:bg-amber-950/30 scale-105 shadow-lg'
-                  : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-amber-300 hover:scale-102'
+                  ? 'border-amber-500 bg-amber-50 dark:bg-amber-950/30 scale-105 shadow-sm'
+                  : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-amber-300 '
               }`}
             >
               <div className="text-center space-y-2">
@@ -304,7 +304,7 @@ export function PurposeSelector({
 
       {/* Show guidance when purpose is selected */}
       {selectedPurpose && (
-        <div className="p-4 bg-gradient-to-r from-amber-50 to-yellow-50 dark:from-amber-950/20 dark:to-yellow-950/20 border border-amber-200 dark:border-amber-800 rounded-xl animate-slide-up">
+        <div className="p-4 border border-amber-200 dark:border-amber-800 rounded-xl bg-white/60 dark:bg-slate-800/40">
           <p className="text-sm text-slate-800 dark:text-slate-200 leading-relaxed">
             {getGuidanceForPurpose(selectedPurpose)}
           </p>

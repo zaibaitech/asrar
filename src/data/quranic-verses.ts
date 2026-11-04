@@ -22,7 +22,7 @@ export const QURANIC_VERSES: QuranicVerse[] = [
   {
     chapter: 1,
     verse: 1,
-    arabic: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+    arabic: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
     transliteration: "Bismi Allāhi ar-Raḥmāni ar-Raḥīm",
     translation: {
       en: "In the name of Allah, the Most Gracious, the Most Merciful",
@@ -54,7 +54,7 @@ export const QURANIC_VERSES: QuranicVerse[] = [
   {
     chapter: 2,
     verse: 255,
-    arabic: "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ",
+    arabic: "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ",
     transliteration: "Allāhu lā ilāha illā Huwa al-Ḥayyu al-Qayyūm",
     translation: {
       en: "Allah - there is no deity except Him, the Ever-Living, the Sustainer",
@@ -70,7 +70,7 @@ export const QURANIC_VERSES: QuranicVerse[] = [
   {
     chapter: 112,
     verse: 1,
-    arabic: "قُلْ هُوَ اللَّهُ أَحَدٌ",
+    arabic: "قُلْ هُوَ اللَّهُ أَحَدٌ",
     transliteration: "Qul Huwa Allāhu Aḥad",
     translation: {
       en: "Say: He is Allah, the One",
@@ -86,7 +86,7 @@ export const QURANIC_VERSES: QuranicVerse[] = [
   {
     chapter: 17,
     verse: 82,
-    arabic: "وَنُنَزِّلُ مِنَ الْقُرْآنِ مَا هُوَ شِفَاءٌ وَرَحْمَةٌ",
+    arabic: "وَنُنَزِّلُ مِنَ الْقُرْآنِ مَا هُوَ شِفَاءٌ وَرَحْمَةٌ",
     transliteration: "Wa nunazzilu mina al-Qur'āni mā huwa shifā'un wa raḥmah",
     translation: {
       en: "And We send down from the Quran that which is healing and mercy",
@@ -102,7 +102,7 @@ export const QURANIC_VERSES: QuranicVerse[] = [
   {
     chapter: 55,
     verse: 13,
-    arabic: "فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ",
+    arabic: "فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ",
     transliteration: "Fa bi-ayyi ālā'i Rabbikumā tukadhdhiban",
     translation: {
       en: "So which of the favors of your Lord would you deny?",
@@ -118,7 +118,7 @@ export const QURANIC_VERSES: QuranicVerse[] = [
   {
     chapter: 2,
     verse: 286,
-    arabic: "لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا",
+    arabic: "لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا",
     transliteration: "Lā yukallifu Allāhu nafsan illā wus'ahā",
     translation: {
       en: "Allah does not burden a soul beyond what it can bear",
@@ -134,7 +134,7 @@ export const QURANIC_VERSES: QuranicVerse[] = [
   {
     chapter: 94,
     verse: 6,
-    arabic: "إِنَّ مَعَ الْعُسْرِ يُسْرًا",
+    arabic: "إِنَّ مَعَ الْعُسْرِ يُسْرًا",
     transliteration: "Inna ma'a al-'usri yusrā",
     translation: {
       en: "Indeed, with hardship comes ease",
@@ -150,7 +150,7 @@ export const QURANIC_VERSES: QuranicVerse[] = [
   {
     chapter: 3,
     verse: 26,
-    arabic: "قُلِ اللَّهُمَّ مَالِكَ الْمُلْكِ",
+    arabic: "قُلِ اللَّهُمَّ مَالِكَ الْمُلْكِ",
     transliteration: "Quli Allāhumma Mālika al-Mulk",
     translation: {
       en: "Say: O Allah, Owner of Sovereignty",
@@ -166,7 +166,7 @@ export const QURANIC_VERSES: QuranicVerse[] = [
   {
     chapter: 18,
     verse: 10,
-    arabic: "رَبَّنَا آتِنَا مِن لَّدُنكَ رَحْمَةً",
+    arabic: "رَبَّنَا آتِنَا مِن لَّدُنكَ رَحْمَةً",
     transliteration: "Rabbanā ātinā min ladunka raḥmah",
     translation: {
       en: "Our Lord, grant us mercy from Yourself",

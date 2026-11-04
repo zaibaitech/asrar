@@ -1,12 +1,20 @@
 import Groq from 'groq-sdk';
 import { NextRequest, NextResponse } from 'next/server';
+import { rateLimit, readJsonCapped } from '@/src/lib/apiGuard';
+import { AI_CHAT_ENABLED } from '@/src/lib/aiFeatures';
 
 const groq = new Groq({
   apiKey: process.env.GROQ_API_KEY || process.env.EXPO_PUBLIC_GROQ_API_KEY || ''
 });
 
 export async function POST(request: NextRequest) {
+  if (!AI_CHAT_ENABLED) {
+    return NextResponse.json({ error: 'Not found' }, { status: 404 });
+  }
   try {
+    const limited = rateLimit(request, 'ai-analysis', { max: 10, windowMs: 60_000 });
+    if (limited) return limited;
+
     if (!process.env.GROQ_API_KEY && !process.env.EXPO_PUBLIC_GROQ_API_KEY) {
       return NextResponse.json(
         { error: 'Groq API key not configured. Please add GROQ_API_KEY to your .env file.' },
@@ -14,8 +22,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const body = await request.json();
-    const { calculationData, analysisType, language = 'ar' } = body;
+    const parsed = await readJsonCapped(request, 16_000);
+    if ('error' in parsed) return parsed.error;
+    const { calculationData, analysisType, language = 'ar' } = parsed.body ?? {};
 
     if (!calculationData) {
       return NextResponse.json(
@@ -49,7 +58,8 @@ export async function POST(request: NextRequest) {
     });
 
   } catch (error: any) {
-    console.error('AI Analysis Error:', error);
+    // Do not log the error object: it can echo request content. Log a status only.
+    console.error('AI Analysis Error', error?.status ?? error?.name ?? 'unknown');
     return NextResponse.json(
       { error: error.message || 'Failed to generate AI analysis' },
       { status: 500 }

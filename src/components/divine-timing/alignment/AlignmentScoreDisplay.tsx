@@ -52,7 +52,7 @@ export default function AlignmentScoreDisplay({
   return (
     <div className="space-y-4">
       {/* Main Alignment Card */}
-      <div className="relative bg-gradient-to-br from-violet-50 via-fuchsia-50 to-pink-50 dark:from-violet-950 dark:via-fuchsia-950 dark:to-pink-950 rounded-xl p-6 border border-violet-200 dark:border-violet-800 shadow-lg overflow-hidden">
+      <div className="relative rounded-xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden bg-white/60 dark:bg-slate-800/40">
         {/* Geometric Pattern Background */}
         <div className="absolute inset-0 opacity-5 dark:opacity-10">
           <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -68,7 +68,7 @@ export default function AlignmentScoreDisplay({
           {/* Header */}
           <div className="flex items-center gap-2 mb-6">
             <span className="text-2xl">⚡</span>
-            <h3 className="text-lg font-bold text-violet-900 dark:text-violet-100">
+            <h3 className="text-lg font-bold text-indigo-900 dark:text-indigo-100">
               {isFr ? 'Alignement Personnel' : 'Personal Alignment'}
             </h3>
           </div>
@@ -149,7 +149,7 @@ export default function AlignmentScoreDisplay({
               </div>
               <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-gradient-to-r from-orange-400 to-red-500 transition-all duration-500"
+                  className="h-full transition-all duration-500 bg-white/60 dark:bg-slate-800/40"
                   style={{ width: `${(alignment.breakdown.elementalHarmony / 30) * 100}%` }}
                 />
               </div>
@@ -170,7 +170,7 @@ export default function AlignmentScoreDisplay({
               </div>
               <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-gradient-to-r from-blue-400 to-indigo-500 transition-all duration-500"
+                  className="h-full transition-all duration-500 bg-white/60 dark:bg-slate-800/40"
                   style={{ width: `${(alignment.breakdown.planetaryResonance / 30) * 100}%` }}
                 />
               </div>
@@ -191,7 +191,7 @@ export default function AlignmentScoreDisplay({
               </div>
               <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-gradient-to-r from-purple-400 to-fuchsia-500 transition-all duration-500"
+                  className="h-full transition-all duration-500 bg-white/60 dark:bg-slate-800/40"
                   style={{ width: `${(alignment.breakdown.numericalAlignment / 20) * 100}%` }}
                 />
               </div>
@@ -212,7 +212,7 @@ export default function AlignmentScoreDisplay({
               </div>
               <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-gradient-to-r from-emerald-400 to-teal-500 transition-all duration-500"
+                  className="h-full transition-all duration-500 bg-white/60 dark:bg-slate-800/40"
                   style={{ width: `${(alignment.breakdown.sacredConnection / 20) * 100}%` }}
                 />
               </div>
@@ -220,7 +220,7 @@ export default function AlignmentScoreDisplay({
           </div>
 
           {/* Recommendations */}
-          <div className="p-4 bg-white/50 dark:bg-black/20 rounded-lg">
+          <div className="p-4 bg-white/50 dark:bg-black/20 rounded-xl">
             <div className="flex items-center gap-2 mb-3">
               <span className="text-lg">💡</span>
               <div className="text-sm font-semibold text-gray-800 dark:text-gray-200">
@@ -230,7 +230,7 @@ export default function AlignmentScoreDisplay({
             <ul className="space-y-2">
               {(isFr ? alignment.recommendations.fr : alignment.recommendations.en).map((rec, idx) => (
                 <li key={idx} className="text-sm text-gray-700 dark:text-gray-300 flex items-start gap-2">
-                  <span className="text-violet-600 dark:text-violet-400 mt-0.5">•</span>
+                  <span className="text-indigo-600 dark:text-indigo-400 mt-0.5">•</span>
                   {rec}
                 </li>
               ))}
@@ -240,7 +240,7 @@ export default function AlignmentScoreDisplay({
       </div>
 
       {/* Best Hours of the Day */}
-      <div className="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950 dark:to-orange-950 rounded-xl p-6 border border-amber-200 dark:border-amber-800">
+      <div className=" rounded-xl p-6 border border-amber-200 dark:border-amber-800 bg-white/60 dark:bg-slate-800/40">
         <div className="flex items-center gap-2 mb-4">
           <span className="text-2xl">🌟</span>
           <h4 className="text-base font-bold text-amber-900 dark:text-amber-100">
@@ -252,7 +252,7 @@ export default function AlignmentScoreDisplay({
           {topThreeHours.map((hour, idx) => (
             <div
               key={hour.planet}
-              className="flex items-center justify-between p-3 bg-white/50 dark:bg-black/20 rounded-lg"
+              className="flex items-center justify-between p-3 bg-white/50 dark:bg-black/20 rounded-xl"
             >
               <div className="flex items-center gap-3">
                 <div className="text-lg font-bold text-amber-700 dark:text-amber-300">

@@ -258,7 +258,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
   ];
 
   return (
-    <div className="w-full space-y-8 p-6 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 rounded-xl shadow-lg">
+    <div className="w-full space-y-8 p-6 rounded-xl shadow-sm bg-white/60 dark:bg-slate-800/40">
       {/* Header */}
       <div className="text-center border-b-2 border-slate-200 dark:border-slate-700 pb-6">
         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-3 flex items-center justify-center gap-3">
@@ -270,10 +270,10 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
       <div className="flex gap-2 overflow-x-auto pb-2 border-b-2 border-slate-200 dark:border-slate-700">
         <button
           onClick={() => setActiveTab('overview')}
-          className={`flex items-center gap-2 px-5 py-3 rounded-lg font-semibold text-sm whitespace-nowrap transition-all ${
+          className={`flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm whitespace-nowrap transition-all ${
             activeTab === 'overview'
-              ? 'bg-purple-600 dark:bg-purple-700 text-slate-50 shadow-lg scale-105'
-              : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-purple-50 dark:hover:bg-slate-700'
+              ? 'bg-indigo-600 dark:bg-indigo-700 text-slate-50 shadow-sm scale-105'
+              : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-indigo-50 dark:hover:bg-slate-700'
           }`}
         >
           <Sparkles className="w-4 h-4" />
@@ -282,10 +282,10 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
         
         <button
           onClick={() => setActiveTab('learning')}
-          className={`flex items-center gap-2 px-5 py-3 rounded-lg font-semibold text-sm whitespace-nowrap transition-all ${
+          className={`flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm whitespace-nowrap transition-all ${
             activeTab === 'learning'
-              ? 'bg-blue-600 dark:bg-blue-700 text-slate-50 shadow-lg scale-105'
-              : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-blue-50 dark:hover:bg-slate-700'
+              ? 'bg-indigo-600 dark:bg-indigo-700 text-slate-50 shadow-sm scale-105'
+              : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-indigo-50 dark:hover:bg-slate-700'
           }`}
         >
           <BookOpen className="w-4 h-4" />
@@ -294,9 +294,9 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
 
         <button
           onClick={() => setActiveTab('numbers')}
-          className={`flex items-center gap-2 px-5 py-3 rounded-lg font-semibold text-sm whitespace-nowrap transition-all ${
+          className={`flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm whitespace-nowrap transition-all ${
             activeTab === 'numbers'
-              ? 'bg-emerald-600 dark:bg-emerald-700 text-slate-50 shadow-lg scale-105'
+              ? 'bg-emerald-600 dark:bg-emerald-700 text-slate-50 shadow-sm scale-105'
               : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-emerald-50 dark:hover:bg-slate-700'
           }`}
         >
@@ -306,9 +306,9 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
 
         <button
           onClick={() => setActiveTab('glossary')}
-          className={`flex items-center gap-2 px-5 py-3 rounded-lg font-semibold text-sm whitespace-nowrap transition-all ${
+          className={`flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm whitespace-nowrap transition-all ${
             activeTab === 'glossary'
-              ? 'bg-amber-600 dark:bg-amber-700 text-slate-50 shadow-lg scale-105'
+              ? 'bg-amber-600 dark:bg-amber-700 text-slate-50 shadow-sm scale-105'
               : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-amber-50 dark:hover:bg-slate-700'
           }`}
         >
@@ -318,10 +318,10 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
 
         <button
           onClick={() => setActiveTab('timeline')}
-          className={`flex items-center gap-2 px-5 py-3 rounded-lg font-semibold text-sm whitespace-nowrap transition-all ${
+          className={`flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm whitespace-nowrap transition-all ${
             activeTab === 'timeline'
-              ? 'bg-pink-600 dark:bg-pink-700 text-slate-50 shadow-lg scale-105'
-              : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-pink-50 dark:hover:bg-slate-700'
+              ? 'bg-indigo-600 dark:bg-indigo-700 text-slate-50 shadow-sm scale-105'
+              : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-indigo-50 dark:hover:bg-slate-700'
           }`}
         >
           <Clock className="w-4 h-4" />
@@ -348,7 +348,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
           return (
           <div
             key={card.title}
-            className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-l-4"
+            className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm transition-all duration-300 border-l-4"
             style={{ borderLeftColor: card.color }}
           >
             {/* Icon and Number */}
@@ -383,7 +383,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
             </p>
 
             {/* Quick stat */}
-            <div className="text-sm bg-slate-50 dark:bg-slate-700/50 p-3 rounded-lg border border-slate-100 dark:border-slate-600">
+            <div className="text-sm bg-slate-50 dark:bg-slate-700/50 p-3 rounded-xl border border-slate-100 dark:border-slate-600">
               <span className="text-slate-700 dark:text-slate-300 font-medium">
                 {isFrench ? 'Élément: ' : 'Element: '}
               </span>
@@ -397,14 +397,14 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
       </div>
 
       {/* Color Legend */}
-      <div className="bg-gradient-to-r from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-700 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-600">
+      <div className=" rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-600 bg-white/60 dark:bg-slate-800/40">
         <button
           type="button"
           onClick={() => setShowColorLegend(!showColorLegend)}
-          className="w-full flex items-center justify-between text-left group"
+          className="w-full flex items-center justify-between text-left group min-h-[44px]"
         >
           <div className="flex items-center gap-3">
-            <Sparkles className="w-6 h-6 text-purple-500 group-hover:text-purple-600 transition-colors" />
+            <Sparkles className="w-6 h-6 text-indigo-500 group-hover:text-indigo-600 transition-colors" />
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">
               {isFrench ? 'Légende des Couleurs' : 'Number Meanings'}
             </h3>
@@ -425,11 +425,11 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
             {Object.entries(SIMPLE_TERMS[isFrench ? 'fr' : (isArabic ? 'ar' : 'en')].colorLegend.numbers).map(([num, data]) => (
               <div
                 key={num}
-                className="flex items-center gap-3 bg-white dark:bg-slate-800 rounded-xl p-4 border-l-4 transition-all duration-200 hover:scale-105 hover:shadow-md"
+                className="flex items-center gap-3 bg-white dark:bg-slate-800 rounded-xl p-4 border-l-4 transition-all duration-200 "
                 style={{ borderLeftColor: data.color }}
               >
                 <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-base shadow-md"
+                  className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-base shadow-sm"
                   style={{ backgroundColor: data.color }}
                 >
                   {num}
@@ -445,14 +445,14 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
 
       {/* Life Path Interpretation */}
       {lifePathMeaning && (
-        <div className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+        <div className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-700">
           <button
             type="button"
             onClick={() => setShowInterpretation(!showInterpretation)}
-            className="w-full flex items-center justify-between text-left mb-5 group"
+            className="w-full flex items-center justify-between text-left mb-5 group min-h-[44px]"
           >
             <div className="flex items-center gap-3">
-              <Flame className="w-6 h-6 group-hover:scale-110 transition-transform" style={{ color: getColorForNumber(lifePathNumber) }} />
+              <Flame className="w-6 h-6 transition-transform" style={{ color: getColorForNumber(lifePathNumber) }} />
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">
                 {isFrench ? 'Interprétation' : 'Interpretation'}
               </h3>
@@ -477,7 +477,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
                 <div>
                   <h5 className="font-bold text-slate-900 dark:text-white mb-3 text-base flex items-center gap-2">
                     {isFrench ? 'Qualités Positives' : 'Positive Qualities'}
-                    <span className="text-xs text-blue-600 dark:text-blue-400 font-normal">✨</span>
+                    <span className="text-xs text-indigo-600 dark:text-indigo-400 font-normal">✨</span>
                   </h5>
                   <div className="flex flex-wrap gap-2.5">
                     {(isFrench && (lifePathMeaning as any).qualitiesFrench 
@@ -486,7 +486,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
                     ).map((quality: string, idx: number) => (
                         <span
                           key={idx}
-                          className="px-4 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 rounded-full text-sm font-semibold border border-blue-200 dark:border-blue-800 shadow-sm"
+                          className="px-4 py-2 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-200 rounded-full text-sm font-semibold border border-slate-200 dark:border-slate-700 shadow-sm"
                         >
                           {quality}
                         </span>
@@ -524,7 +524,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
             {/* Right Column */}
             <div className="space-y-6">
               {/* Life Purpose */}
-              <div className="bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 rounded-xl p-5 border border-purple-200 dark:border-purple-800">
+              <div className=" rounded-xl p-5 border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40">
                 <h5 className="font-bold text-slate-900 dark:text-white mb-3 text-base flex items-center gap-2">
                   {isFrench ? 'But de Vie' : 'Life Purpose'}
                   <span className="text-xs">🎯</span>
@@ -538,7 +538,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
 
               {/* Deepest Desire */}
               {(lifePathMeaning as any).deepestDesire && (
-              <div className="bg-gradient-to-br from-pink-50 to-rose-50 dark:from-pink-900/20 dark:to-rose-900/20 rounded-xl p-5 border border-pink-200 dark:border-pink-800">
+              <div className=" rounded-xl p-5 border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40">
                 <h5 className="font-bold text-slate-900 dark:text-white mb-3 text-base flex items-center gap-2">
                   {isFrench ? 'Désir Profond' : 'Deepest Desire'}
                   <span className="text-xs">💫</span>
@@ -553,7 +553,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
 
               {/* Quranic Resonance */}
               {(lifePathMeaning as any).quranResonance && (
-              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 rounded-xl p-5 border border-emerald-200 dark:border-emerald-800">
+              <div className=" rounded-xl p-5 border border-emerald-200 dark:border-emerald-800 bg-white/60 dark:bg-slate-800/40">
                 <h5 className="font-bold text-slate-900 dark:text-white mb-3 text-base flex items-center gap-2">
                   {isFrench ? 'Résonance Coranique' : 'Quranic Resonance'}
                   <span className="text-xs">📖</span>
@@ -573,14 +573,14 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
 
       {/* Current Life Cycle */}
       {cycle && typeof cycle !== 'number' && 'cycle' in cycle && (
-        <div className="bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/40 dark:to-blue-900/40 rounded-xl p-6 shadow-lg border border-purple-200 dark:border-purple-700">
+        <div className=" rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40">
           <button
             type="button"
             onClick={() => setShowCycleDetails(!showCycleDetails)}
-            className="w-full flex items-center justify-between text-left mb-4 group"
+            className="w-full flex items-center justify-between text-left mb-4 group min-h-[44px]"
           >
             <div className="flex items-center gap-3">
-              <CircleDot className="w-6 h-6 text-purple-600 dark:text-purple-400 group-hover:rotate-90 transition-transform duration-300" />
+              <CircleDot className="w-6 h-6 text-indigo-600 dark:text-indigo-400 group-hover:rotate-90 transition-transform duration-300" />
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">
                 {isFrench ? 'Cycle de Vie Actuel' : 'Current Life Cycle'}
               </h3>
@@ -602,7 +602,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               <p className="text-sm text-slate-600 dark:text-slate-400 mb-1">
                 {isFrench ? 'Année dans le Cycle' : 'Year in Cycle'}
               </p>
-              <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">
+              <p className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
                 {cyclePosition}/9
               </p>
             </div>
@@ -642,14 +642,14 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
       {/* PHASE 1 ENHANCEMENTS */}
       
       {/* 1. Elemental Composition */}
-      <div className="bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-purple-900/40 dark:to-indigo-900/40 rounded-xl p-6 shadow-lg border border-purple-200 dark:border-purple-700">
+      <div className=" rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40">
         <button
           type="button"
           onClick={() => setShowElemental(!showElemental)}
-          className="w-full flex items-center justify-between text-left mb-4 group"
+          className="w-full flex items-center justify-between text-left mb-4 group min-h-[44px]"
         >
           <div className="flex items-center gap-3">
-            <Flame className="w-6 h-6 text-purple-600 dark:text-purple-400 group-hover:scale-110 transition-transform" />
+            <Flame className="w-6 h-6 text-indigo-600 dark:text-indigo-400 transition-transform" />
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">
               {t.lifePath.elementalComposition}
             </h3>
@@ -666,7 +666,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
             showElemental ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="bg-white dark:bg-slate-800 rounded-xl p-5 border border-purple-200 dark:border-purple-700 space-y-4">
+          <div className="bg-white dark:bg-slate-800 rounded-xl p-5 border border-slate-200 dark:border-slate-700 space-y-4">
             <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">
               {t.lifePath.elementalCompositionDesc}
             </p>
@@ -700,7 +700,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
             </div>
             
             {/* Dominant Element */}
-            <div className="mt-4 pt-4 border-t border-purple-200 dark:border-purple-700">
+            <div className="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
               <p className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
                 {t.lifePath.dominantElement}:
               </p>
@@ -723,14 +723,14 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
 
       {/* 2. Career Guidance */}
       {careerGuidance && (
-        <div className="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/40 dark:to-cyan-900/40 rounded-xl p-6 shadow-lg border border-blue-200 dark:border-blue-700">
+        <div className=" rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40">
           <button
             type="button"
             onClick={() => setShowCareer(!showCareer)}
-            className="w-full flex items-center justify-between text-left mb-4 group"
+            className="w-full flex items-center justify-between text-left mb-4 group min-h-[44px]"
           >
             <div className="flex items-center gap-3">
-              <Briefcase className="w-6 h-6 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform" />
+              <Briefcase className="w-6 h-6 text-indigo-600 dark:text-indigo-400 transition-transform" />
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">
                 {t.lifePath.careerGuidance}
               </h3>
@@ -747,14 +747,14 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               showCareer ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
             }`}
           >
-            <div className="bg-white dark:bg-slate-800 rounded-xl p-5 border border-blue-200 dark:border-blue-700 space-y-4">
+            <div className="bg-white dark:bg-slate-800 rounded-xl p-5 border border-slate-200 dark:border-slate-700 space-y-4">
               <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">
                 {t.lifePath.careerGuidanceIntro}
               </p>
               
               {/* Why These Fit */}
-              <div className="bg-blue-50 dark:bg-blue-900/30 rounded-lg p-3 mb-4">
-                <p className="text-sm font-semibold text-blue-900 dark:text-blue-200 mb-1">
+              <div className="bg-indigo-50 dark:bg-indigo-900/30 rounded-xl p-3 mb-4">
+                <p className="text-sm font-semibold text-indigo-900 dark:text-indigo-200 mb-1">
                   {t.lifePath.whyTheseFit}
                 </p>
                 <p className="text-sm text-slate-700 dark:text-slate-300">
@@ -804,14 +804,14 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
 
       {/* 3. Balance & Self-Care Tips */}
       {balanceTips.length > 0 && (
-        <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/40 dark:to-emerald-900/40 rounded-xl p-6 shadow-lg border border-green-200 dark:border-green-700">
+        <div className=" rounded-xl p-6 shadow-sm border border-green-200 dark:border-green-700 bg-white/60 dark:bg-slate-800/40">
           <button
             type="button"
             onClick={() => setShowBalance(!showBalance)}
-            className="w-full flex items-center justify-between text-left mb-4 group"
+            className="w-full flex items-center justify-between text-left mb-4 group min-h-[44px]"
           >
             <div className="flex items-center gap-3">
-              <Heart className="w-6 h-6 text-green-600 dark:text-green-400 group-hover:scale-110 transition-transform" />
+              <Heart className="w-6 h-6 text-green-600 dark:text-green-400 transition-transform" />
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">
                 {t.lifePath.balanceTips}
               </h3>
@@ -847,14 +847,14 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
 
       {/* 4. Shadow Work & Growth Edges */}
       {shadowWork.length > 0 && (
-        <div className="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/40 dark:to-orange-900/40 rounded-xl p-6 shadow-lg border border-amber-200 dark:border-amber-700">
+        <div className=" rounded-xl p-6 shadow-sm border border-amber-200 dark:border-amber-700 bg-white/60 dark:bg-slate-800/40">
           <button
             type="button"
             onClick={() => setShowShadow(!showShadow)}
-            className="w-full flex items-center justify-between text-left mb-4 group"
+            className="w-full flex items-center justify-between text-left mb-4 group min-h-[44px]"
           >
             <div className="flex items-center gap-3">
-              <AlertTriangle className="w-6 h-6 text-amber-600 dark:text-amber-400 group-hover:scale-110 transition-transform" />
+              <AlertTriangle className="w-6 h-6 text-amber-600 dark:text-amber-400 transition-transform" />
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">
                 {t.lifePath.shadowWork}
               </h3>
@@ -875,7 +875,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">
                 {t.lifePath.shadowWorkIntro}
               </p>
-              <div className="bg-amber-50 dark:bg-amber-900/30 rounded-lg p-3 mb-3">
+              <div className="bg-amber-50 dark:bg-amber-900/30 rounded-xl p-3 mb-3">
                 <p className="text-xs font-semibold text-amber-900 dark:text-amber-200">
                   {t.lifePath.growthOpportunities}
                 </p>
@@ -895,14 +895,14 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
 
       {/* 5. Practical Guidance */}
       {practicalGuidance && (
-        <div className="bg-gradient-to-r from-violet-50 to-purple-50 dark:from-violet-900/40 dark:to-purple-900/40 rounded-xl p-6 shadow-lg border border-violet-200 dark:border-violet-700">
+        <div className=" rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40">
           <button
             type="button"
             onClick={() => setShowPractical(!showPractical)}
-            className="w-full flex items-center justify-between text-left mb-4 group"
+            className="w-full flex items-center justify-between text-left mb-4 group min-h-[44px]"
           >
             <div className="flex items-center gap-3">
-              <Sparkles className="w-6 h-6 text-violet-600 dark:text-violet-400 group-hover:scale-110 transition-transform" />
+              <Sparkles className="w-6 h-6 text-indigo-600 dark:text-indigo-400 transition-transform" />
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">
                 {t.lifePath.practicalGuidance}
               </h3>
@@ -919,11 +919,11 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               showPractical ? 'max-h-[700px] opacity-100' : 'max-h-0 opacity-0'
             }`}
           >
-            <div className="bg-white dark:bg-slate-800 rounded-xl p-5 border border-violet-200 dark:border-violet-700 space-y-4">
+            <div className="bg-white dark:bg-slate-800 rounded-xl p-5 border border-slate-200 dark:border-slate-700 space-y-4">
               
               {/* Path Summary */}
               <div>
-                <p className="text-sm font-semibold text-violet-700 dark:text-violet-300 mb-1">
+                <p className="text-sm font-semibold text-indigo-700 dark:text-indigo-300 mb-1">
                   {t.lifePath.pathSummary}
                 </p>
                 <p className="text-sm text-slate-700 dark:text-slate-300 italic">
@@ -932,8 +932,8 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               </div>
               
               {/* Spiritual Practice */}
-              <div className="pt-3 border-t border-violet-200 dark:border-violet-700">
-                <p className="text-sm font-semibold text-violet-700 dark:text-violet-300 mb-1">
+              <div className="pt-3 border-t border-slate-200 dark:border-slate-700">
+                <p className="text-sm font-semibold text-indigo-700 dark:text-indigo-300 mb-1">
                   {t.lifePath.spiritualPractice}
                 </p>
                 <p className="text-sm text-slate-700 dark:text-slate-300">
@@ -942,14 +942,14 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               </div>
               
               {/* Weekly Actions */}
-              <div className="pt-3 border-t border-violet-200 dark:border-violet-700">
-                <p className="text-sm font-semibold text-violet-700 dark:text-violet-300 mb-2">
+              <div className="pt-3 border-t border-slate-200 dark:border-slate-700">
+                <p className="text-sm font-semibold text-indigo-700 dark:text-indigo-300 mb-2">
                   {t.lifePath.weeklyActions}
                 </p>
                 <ul className="space-y-2">
                   {practicalGuidance.weeklyActions.map((action, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <span className="text-violet-600 dark:text-violet-400 font-bold text-xs mt-0.5">
+                      <span className="text-indigo-600 dark:text-indigo-400 font-bold text-xs mt-0.5">
                         {idx + 1}.
                       </span>
                       <span className="text-sm text-slate-700 dark:text-slate-300">{action}</span>
@@ -959,7 +959,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               </div>
               
               {/* Shadow to Avoid */}
-              <div className="pt-3 border-t border-violet-200 dark:border-violet-700 bg-amber-50 dark:bg-amber-900/20 rounded-lg p-3">
+              <div className="pt-3 border-t border-slate-200 dark:border-slate-700 bg-amber-50 dark:bg-amber-900/20 rounded-xl p-3">
                 <p className="text-sm font-semibold text-amber-800 dark:text-amber-300 mb-1 flex items-center gap-2">
                   <AlertTriangle className="w-4 h-4" />
                   {t.lifePath.shadowToAvoid}
@@ -975,14 +975,14 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
 
       {/* PHASE 2: Quranic Wisdom */}
       {quranicConnection && (
-        <div className="bg-gradient-to-r from-emerald-50 to-green-50 dark:from-emerald-900/40 dark:to-green-900/40 rounded-xl p-6 shadow-lg border border-emerald-200 dark:border-emerald-700">
+        <div className=" rounded-xl p-6 shadow-sm border border-emerald-200 dark:border-emerald-700 bg-white/60 dark:bg-slate-800/40">
           <button
             type="button"
             onClick={() => setShowQuranic(!showQuranic)}
-            className="w-full flex items-center justify-between text-left mb-4 group"
+            className="w-full flex items-center justify-between text-left mb-4 group min-h-[44px]"
           >
             <div className="flex items-center gap-3">
-              <BookOpen className="w-6 h-6 text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform" />
+              <BookOpen className="w-6 h-6 text-emerald-600 dark:text-emerald-400 transition-transform" />
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">
                 {isFrench ? 'Sagesse Coranique' : 'Quranic Wisdom'}
               </h3>
@@ -1002,7 +1002,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
             <div className="bg-white dark:bg-slate-800 rounded-xl p-5 border border-emerald-200 dark:border-emerald-700 space-y-4">
               
               {/* Quranic Verse */}
-              <div className="bg-gradient-to-r from-emerald-100 to-green-100 dark:from-emerald-900/30 dark:to-green-900/30 rounded-lg p-4">
+              <div className=" rounded-xl p-4 bg-white/60 dark:bg-slate-800/40">
                 <p className="text-lg font-arabic text-center text-slate-900 dark:text-white mb-3 leading-loose">
                   {quranicConnection.verseArabic}
                 </p>
@@ -1041,7 +1041,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               </div>
 
               {/* Daily Practice */}
-              <div className="pt-3 border-t border-emerald-200 dark:border-emerald-700 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg p-3">
+              <div className="pt-3 border-t border-emerald-200 dark:border-emerald-700 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl p-3">
                 <p className="text-sm font-semibold text-emerald-800 dark:text-emerald-300 mb-2">
                   {isFrench ? 'Pratique Quotidienne' : 'Daily Practice'}
                 </p>
@@ -1056,14 +1056,14 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
 
       {/* PHASE 2: Personal Year Guidance */}
       {personalYearGuidance && (
-        <div className="bg-gradient-to-r from-sky-50 to-blue-50 dark:from-sky-900/40 dark:to-blue-900/40 rounded-xl p-6 shadow-lg border border-sky-200 dark:border-sky-700">
+        <div className=" rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40">
           <button
             type="button"
             onClick={() => setShowPersonalYear(!showPersonalYear)}
-            className="w-full flex items-center justify-between text-left mb-4 group"
+            className="w-full flex items-center justify-between text-left mb-4 group min-h-[44px]"
           >
             <div className="flex items-center gap-3">
-              <Clock className="w-6 h-6 text-sky-600 dark:text-sky-400 group-hover:scale-110 transition-transform" />
+              <Clock className="w-6 h-6 text-indigo-600 dark:text-indigo-400 transition-transform" />
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">
                 {isFrench ? `Année Personnelle ${personalYear}` : `Personal Year ${personalYear}`}
               </h3>
@@ -1080,11 +1080,11 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               showPersonalYear ? 'max-h-[1200px] opacity-100' : 'max-h-0 opacity-0'
             }`}
           >
-            <div className="bg-white dark:bg-slate-800 rounded-xl p-5 border border-sky-200 dark:border-sky-700 space-y-4">
+            <div className="bg-white dark:bg-slate-800 rounded-xl p-5 border border-slate-200 dark:border-slate-700 space-y-4">
               
               {/* Theme */}
-              <div className="bg-gradient-to-r from-sky-100 to-blue-100 dark:from-sky-900/30 dark:to-blue-900/30 rounded-lg p-4 text-center">
-                <p className="text-2xl font-bold text-sky-900 dark:text-sky-100">
+              <div className=" rounded-xl p-4 text-center bg-white/60 dark:bg-slate-800/40">
+                <p className="text-2xl font-bold text-indigo-900 dark:text-indigo-100">
                   {personalYearGuidance.theme}
                 </p>
               </div>
@@ -1097,14 +1097,14 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               </div>
 
               {/* Focus Areas */}
-              <div className="pt-3 border-t border-sky-200 dark:border-sky-700">
-                <p className="text-sm font-semibold text-sky-700 dark:text-sky-300 mb-3">
+              <div className="pt-3 border-t border-slate-200 dark:border-slate-700">
+                <p className="text-sm font-semibold text-indigo-700 dark:text-indigo-300 mb-3">
                   {isFrench ? 'Domaines de Focus' : 'Focus Areas'}
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {personalYearGuidance.focusAreas.map((area, idx) => (
-                    <div key={idx} className="flex items-center gap-2 bg-sky-50 dark:bg-sky-900/20 rounded-lg p-2">
-                      <Target className="w-4 h-4 text-sky-600 dark:text-sky-400 flex-shrink-0" />
+                    <div key={idx} className="flex items-center gap-2 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-2">
+                      <Target className="w-4 h-4 text-indigo-600 dark:text-indigo-400 flex-shrink-0" />
                       <span className="text-sm text-slate-700 dark:text-slate-300">{area}</span>
                     </div>
                   ))}
@@ -1112,14 +1112,14 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               </div>
 
               {/* Monthly Themes */}
-              <div className="pt-3 border-t border-sky-200 dark:border-sky-700">
-                <p className="text-sm font-semibold text-sky-700 dark:text-sky-300 mb-3">
+              <div className="pt-3 border-t border-slate-200 dark:border-slate-700">
+                <p className="text-sm font-semibold text-indigo-700 dark:text-indigo-300 mb-3">
                   {isFrench ? 'Thèmes Mensuels' : 'Monthly Themes'}
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
                   {Object.entries(personalYearGuidance.monthlyThemes).map(([month, theme]) => (
-                    <div key={month} className="bg-sky-50 dark:bg-sky-900/20 rounded-lg p-2">
-                      <p className="text-xs font-semibold text-sky-600 dark:text-sky-400">
+                    <div key={month} className="bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-2">
+                      <p className="text-xs font-semibold text-indigo-600 dark:text-indigo-400">
                         {isFrench ? 'Mois' : 'Month'} {month}
                       </p>
                       <p className="text-xs text-slate-700 dark:text-slate-300">{theme}</p>
@@ -1129,14 +1129,14 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               </div>
 
               {/* Action Steps */}
-              <div className="pt-3 border-t border-sky-200 dark:border-sky-700">
-                <p className="text-sm font-semibold text-sky-700 dark:text-sky-300 mb-2">
+              <div className="pt-3 border-t border-slate-200 dark:border-slate-700">
+                <p className="text-sm font-semibold text-indigo-700 dark:text-indigo-300 mb-2">
                   {isFrench ? 'Étapes d\'Action' : 'Action Steps'}
                 </p>
                 <ul className="space-y-2">
                   {personalYearGuidance.actionSteps.map((step, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <TrendingUp className="w-4 h-4 text-sky-600 dark:text-sky-400 mt-0.5 flex-shrink-0" />
+                      <TrendingUp className="w-4 h-4 text-indigo-600 dark:text-indigo-400 mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-slate-700 dark:text-slate-300">{step}</span>
                     </li>
                   ))}
@@ -1149,14 +1149,14 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
 
       {/* PHASE 2: Karmic Debt */}
       {karmicDebtData && (
-        <div className="bg-gradient-to-r from-rose-50 to-pink-50 dark:from-rose-900/40 dark:to-pink-900/40 rounded-xl p-6 shadow-lg border border-rose-200 dark:border-rose-700">
+        <div className=" rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40">
           <button
             type="button"
             onClick={() => setShowKarmicDebt(!showKarmicDebt)}
-            className="w-full flex items-center justify-between text-left mb-4 group"
+            className="w-full flex items-center justify-between text-left mb-4 group min-h-[44px]"
           >
             <div className="flex items-center gap-3">
-              <AlertTriangle className="w-6 h-6 text-rose-600 dark:text-rose-400 group-hover:scale-110 transition-transform" />
+              <AlertTriangle className="w-6 h-6 text-indigo-600 dark:text-indigo-400 transition-transform" />
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">
                 {isFrench ? `Dette Karmique ${karmicDebtData.debtNumber}` : `Karmic Debt ${karmicDebtData.debtNumber}`}
               </h3>
@@ -1173,21 +1173,21 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               showKarmicDebt ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
             }`}
           >
-            <div className="bg-white dark:bg-slate-800 rounded-xl p-5 border border-rose-200 dark:border-rose-700 space-y-4">
+            <div className="bg-white dark:bg-slate-800 rounded-xl p-5 border border-slate-200 dark:border-slate-700 space-y-4">
               
               {/* Reduces To */}
-              <div className="bg-rose-100 dark:bg-rose-900/30 rounded-lg p-3 text-center">
-                <p className="text-sm text-rose-700 dark:text-rose-300 mb-1">
+              <div className="bg-indigo-100 dark:bg-indigo-900/30 rounded-xl p-3 text-center">
+                <p className="text-sm text-indigo-700 dark:text-indigo-300 mb-1">
                   {isFrench ? 'Se réduit à' : 'Reduces to'}
                 </p>
-                <p className="text-3xl font-bold text-rose-900 dark:text-rose-100">
+                <p className="text-3xl font-bold text-indigo-900 dark:text-indigo-100">
                   {karmicDebtData.reducesTo}
                 </p>
               </div>
 
               {/* Past Life Pattern */}
-              <div className="pt-3 border-t border-rose-200 dark:border-rose-700">
-                <p className="text-sm font-semibold text-rose-700 dark:text-rose-300 mb-2">
+              <div className="pt-3 border-t border-slate-200 dark:border-slate-700">
+                <p className="text-sm font-semibold text-indigo-700 dark:text-indigo-300 mb-2">
                   {isFrench ? 'Schéma de Vie Passée' : 'Past Life Pattern'}
                 </p>
                 <p className="text-sm text-slate-700 dark:text-slate-300">
@@ -1196,8 +1196,8 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               </div>
 
               {/* This Life Challenge */}
-              <div className="pt-3 border-t border-rose-200 dark:border-rose-700">
-                <p className="text-sm font-semibold text-rose-700 dark:text-rose-300 mb-2">
+              <div className="pt-3 border-t border-slate-200 dark:border-slate-700">
+                <p className="text-sm font-semibold text-indigo-700 dark:text-indigo-300 mb-2">
                   {isFrench ? 'Défi de Cette Vie' : 'This Life Challenge'}
                 </p>
                 <p className="text-sm text-slate-700 dark:text-slate-300">
@@ -1206,14 +1206,14 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               </div>
 
               {/* Lessons to Learn */}
-              <div className="pt-3 border-t border-rose-200 dark:border-rose-700">
-                <p className="text-sm font-semibold text-rose-700 dark:text-rose-300 mb-2">
+              <div className="pt-3 border-t border-slate-200 dark:border-slate-700">
+                <p className="text-sm font-semibold text-indigo-700 dark:text-indigo-300 mb-2">
                   {isFrench ? 'Leçons à Apprendre' : 'Lessons to Learn'}
                 </p>
                 <ul className="space-y-2">
                   {karmicDebtData.lessonsToLearn.map((lesson, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <Lightbulb className="w-4 h-4 text-rose-600 dark:text-rose-400 mt-0.5 flex-shrink-0" />
+                      <Lightbulb className="w-4 h-4 text-indigo-600 dark:text-indigo-400 mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-slate-700 dark:text-slate-300">{lesson}</span>
                     </li>
                   ))}
@@ -1221,7 +1221,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               </div>
 
               {/* Transformation Path */}
-              <div className="pt-3 border-t border-rose-200 dark:border-rose-700 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-lg p-3">
+              <div className="pt-3 border-t border-slate-200 dark:border-slate-700 rounded-xl p-3 bg-white/60 dark:bg-slate-800/40">
                 <p className="text-sm font-semibold text-green-800 dark:text-green-300 mb-2">
                   {isFrench ? 'Chemin de Transformation' : 'Transformation Path'}
                 </p>
@@ -1231,8 +1231,8 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               </div>
 
               {/* Spiritual Practice */}
-              <div className="pt-3 border-t border-rose-200 dark:border-rose-700">
-                <p className="text-sm font-semibold text-rose-700 dark:text-rose-300 mb-2">
+              <div className="pt-3 border-t border-slate-200 dark:border-slate-700">
+                <p className="text-sm font-semibold text-indigo-700 dark:text-indigo-300 mb-2">
                   {isFrench ? 'Pratique Spirituelle' : 'Spiritual Practice'}
                 </p>
                 <p className="text-sm text-slate-700 dark:text-slate-300">
@@ -1241,7 +1241,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               </div>
 
               {/* Warning Sign */}
-              <div className="pt-3 border-t border-rose-200 dark:border-rose-700 bg-amber-50 dark:bg-amber-900/20 rounded-lg p-3">
+              <div className="pt-3 border-t border-slate-200 dark:border-slate-700 bg-amber-50 dark:bg-amber-900/20 rounded-xl p-3">
                 <p className="text-sm font-semibold text-amber-800 dark:text-amber-300 mb-2 flex items-center gap-2">
                   <AlertTriangle className="w-4 h-4" />
                   {isFrench ? 'Signe d\'Avertissement' : 'Warning Sign'}
@@ -1252,8 +1252,8 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               </div>
 
               {/* Mastery Gift */}
-              <div className="pt-3 border-t border-rose-200 dark:border-rose-700 bg-gradient-to-r from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 rounded-lg p-3">
-                <p className="text-sm font-semibold text-purple-800 dark:text-purple-300 mb-2 flex items-center gap-2">
+              <div className="pt-3 border-t border-slate-200 dark:border-slate-700 rounded-xl p-3 bg-white/60 dark:bg-slate-800/40">
+                <p className="text-sm font-semibold text-indigo-800 dark:text-indigo-300 mb-2 flex items-center gap-2">
                   <Sparkles className="w-4 h-4" />
                   {isFrench ? 'Don de Maîtrise' : 'Mastery Gift'}
                 </p>
@@ -1267,14 +1267,14 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
       )}
 
       {/* PHASE 3A: Life Path Compatibility Calculator */}
-      <div className="bg-gradient-to-r from-pink-50 to-rose-50 dark:from-pink-900/40 dark:to-rose-900/40 rounded-xl p-6 shadow-lg border border-pink-200 dark:border-pink-700">
+      <div className=" rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40">
         <button
           type="button"
           onClick={() => setShowCompatibility(!showCompatibility)}
-          className="w-full flex items-center justify-between text-left mb-4 group"
+          className="w-full flex items-center justify-between text-left mb-4 group min-h-[44px]"
         >
           <div className="flex items-center gap-3">
-            <Users className="w-6 h-6 text-pink-600 dark:text-pink-400 group-hover:scale-110 transition-transform" />
+            <Users className="w-6 h-6 text-indigo-600 dark:text-indigo-400 transition-transform" />
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">
               {isFrench ? 'Calculateur de Compatibilité' : 'Compatibility Calculator'}
             </h3>
@@ -1291,17 +1291,17 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
             showCompatibility ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="bg-white dark:bg-slate-800 rounded-xl p-5 border border-pink-200 dark:border-pink-700 space-y-4">
+          <div className="bg-white dark:bg-slate-800 rounded-xl p-5 border border-slate-200 dark:border-slate-700 space-y-4">
             
             {/* Life Path Selection */}
             <div>
-              <label className="block text-sm font-semibold text-pink-700 dark:text-pink-300 mb-2">
+              <label className="block text-sm font-semibold text-indigo-700 dark:text-indigo-300 mb-2">
                 {isFrench ? 'Sélectionnez le Chemin de Vie de votre partenaire:' : 'Select your partner\'s Life Path number:'}
               </label>
               <select
                 value={selectedPartnerLifePath || ''}
                 onChange={(e) => setSelectedPartnerLifePath(e.target.value ? Number(e.target.value) : null)}
-                className="w-full px-4 py-2 rounded-lg border-2 border-pink-300 dark:border-pink-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white font-semibold focus:outline-none focus:ring-2 focus:ring-pink-500"
+                className="w-full px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500 min-h-[44px] text-base sm:text-sm"
               >
                 <option value="">
                   {isFrench ? '-- Choisir un numéro --' : '-- Choose a number --'}
@@ -1319,26 +1319,26 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               <>
                 {/* Compatibility Level Badge */}
                 <div className="flex items-center justify-center gap-3 py-4">
-                  <div className={`px-6 py-3 rounded-full text-white font-bold text-lg shadow-lg ${
-                    compatibilityData.level === 'soulmate' ? 'bg-gradient-to-r from-purple-500 to-pink-500' :
-                    compatibilityData.level === 'harmonious' ? 'bg-gradient-to-r from-green-500 to-emerald-500' :
-                    compatibilityData.level === 'challenging' ? 'bg-gradient-to-r from-orange-500 to-red-500' :
-                    compatibilityData.level === 'karmic' ? 'bg-gradient-to-r from-violet-500 to-purple-500' :
-                    'bg-gradient-to-r from-blue-500 to-cyan-500'
+                  <div className={`px-6 py-3 rounded-full text-white font-bold text-lg shadow-sm ${
+                    compatibilityData.level === 'soulmate' ? ' bg-indigo-600' :
+                    compatibilityData.level === 'harmonious' ? ' bg-indigo-600' :
+                    compatibilityData.level === 'challenging' ? ' bg-indigo-600' :
+                    compatibilityData.level === 'karmic' ? ' bg-indigo-600' :
+                    ' bg-indigo-600'
                   }`}>
                     {compatibilityData.level.charAt(0).toUpperCase() + compatibilityData.level.slice(1)}
                   </div>
                 </div>
 
                 {/* Summary */}
-                <div className="bg-pink-50 dark:bg-pink-900/20 rounded-lg p-4">
+                <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-4">
                   <p className="text-sm text-slate-700 dark:text-slate-300 italic text-center">
                     {compatibilityData.summary}
                   </p>
                 </div>
 
                 {/* Strengths */}
-                <div className="pt-3 border-t border-pink-200 dark:border-pink-700">
+                <div className="pt-3 border-t border-slate-200 dark:border-slate-700">
                   <div className="flex items-center gap-2 mb-3">
                     <TrendingUp className="w-5 h-5 text-green-600 dark:text-green-400" />
                     <p className="text-sm font-semibold text-green-700 dark:text-green-300">
@@ -1356,7 +1356,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
                 </div>
 
                 {/* Challenges */}
-                <div className="pt-3 border-t border-pink-200 dark:border-pink-700">
+                <div className="pt-3 border-t border-slate-200 dark:border-slate-700">
                   <div className="flex items-center gap-2 mb-3">
                     <AlertTriangle className="w-5 h-5 text-amber-600 dark:text-amber-400" />
                     <p className="text-sm font-semibold text-amber-700 dark:text-amber-300">
@@ -1374,10 +1374,10 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
                 </div>
 
                 {/* Advice */}
-                <div className="pt-3 border-t border-pink-200 dark:border-pink-700 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-lg p-4">
+                <div className="pt-3 border-t border-slate-200 dark:border-slate-700 rounded-xl p-4 bg-white/60 dark:bg-slate-800/40">
                   <div className="flex items-center gap-2 mb-2">
-                    <Lightbulb className="w-5 h-5 text-purple-600 dark:text-purple-400" />
-                    <p className="text-sm font-semibold text-purple-700 dark:text-purple-300">
+                    <Lightbulb className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
+                    <p className="text-sm font-semibold text-indigo-700 dark:text-indigo-300">
                       {isFrench ? 'Conseil' : 'Advice'}
                     </p>
                   </div>
@@ -1404,14 +1404,14 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
 
       {/* PHASE 3A: Personal Month Guidance */}
       {personalMonth && personalYearGuidance && (
-        <div className="bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-indigo-900/40 dark:to-blue-900/40 rounded-xl p-6 shadow-lg border border-indigo-200 dark:border-indigo-700">
+        <div className=" rounded-xl p-6 shadow-sm border border-indigo-200 dark:border-indigo-700 bg-white/60 dark:bg-slate-800/40">
           <button
             type="button"
             onClick={() => setShowPersonalMonth(!showPersonalMonth)}
-            className="w-full flex items-center justify-between text-left mb-4 group"
+            className="w-full flex items-center justify-between text-left mb-4 group min-h-[44px]"
           >
             <div className="flex items-center gap-3">
-              <Calendar className="w-6 h-6 text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform" />
+              <Calendar className="w-6 h-6 text-indigo-600 dark:text-indigo-400 transition-transform" />
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">
                 {isFrench ? `Mois Personnel ${personalMonth}` : `Personal Month ${personalMonth}`}
               </h3>
@@ -1431,7 +1431,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
             <div className="bg-white dark:bg-slate-800 rounded-xl p-5 border border-indigo-200 dark:border-indigo-700 space-y-4">
               
               {/* Month Position */}
-              <div className="bg-gradient-to-r from-indigo-100 to-blue-100 dark:from-indigo-900/30 dark:to-blue-900/30 rounded-lg p-4 text-center">
+              <div className=" rounded-xl p-4 text-center bg-white/60 dark:bg-slate-800/40">
                 <p className="text-sm text-indigo-700 dark:text-indigo-300 mb-1">
                   {isFrench ? `Mois ${personalMonth} dans l'Année ${personalYear}` : `Month ${personalMonth} in Year ${personalYear}`}
                 </p>
@@ -1450,7 +1450,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               </div>
 
               {/* Monthly Focus */}
-              <div className="pt-3 border-t border-indigo-200 dark:border-indigo-700 bg-indigo-50 dark:bg-indigo-900/20 rounded-lg p-3">
+              <div className="pt-3 border-t border-indigo-200 dark:border-indigo-700 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-3">
                 <p className="text-sm font-semibold text-indigo-800 dark:text-indigo-300 mb-2">
                   {isFrench ? 'Focus du Mois' : 'Monthly Focus'}
                 </p>
@@ -1467,14 +1467,14 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
 
       {/* PHASE 3A: Pinnacles & Challenges Timeline */}
       {pinnaclesAndChallenges && (
-        <div className="bg-gradient-to-r from-amber-50 to-yellow-50 dark:from-amber-900/40 dark:to-yellow-900/40 rounded-xl p-6 shadow-lg border border-amber-200 dark:border-amber-700">
+        <div className=" rounded-xl p-6 shadow-sm border border-amber-200 dark:border-amber-700 bg-white/60 dark:bg-slate-800/40">
           <button
             type="button"
             onClick={() => setShowPinnacles(!showPinnacles)}
-            className="w-full flex items-center justify-between text-left mb-4 group"
+            className="w-full flex items-center justify-between text-left mb-4 group min-h-[44px]"
           >
             <div className="flex items-center gap-3">
-              <TrendingUp className="w-6 h-6 text-amber-600 dark:text-amber-400 group-hover:scale-110 transition-transform" />
+              <TrendingUp className="w-6 h-6 text-amber-600 dark:text-amber-400 transition-transform" />
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">
                 {isFrench ? 'Sommets et Défis de Vie' : 'Life Pinnacles & Challenges'}
               </h3>
@@ -1503,7 +1503,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               {/* Pinnacles Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {/* Pinnacle 1 */}
-                <div className="bg-amber-50 dark:bg-amber-900/20 rounded-lg p-4 border-l-4 border-amber-500">
+                <div className="bg-amber-50 dark:bg-amber-900/20 rounded-xl p-4 border-l-4 border-amber-500">
                   <p className="text-xs font-semibold text-amber-700 dark:text-amber-300 mb-1">
                     {isFrench ? 'Sommet 1' : 'Pinnacle 1'}
                   </p>
@@ -1516,7 +1516,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
                 </div>
 
                 {/* Pinnacle 2 */}
-                <div className="bg-orange-50 dark:bg-orange-900/20 rounded-lg p-4 border-l-4 border-orange-500">
+                <div className="bg-orange-50 dark:bg-orange-900/20 rounded-xl p-4 border-l-4 border-orange-500">
                   <p className="text-xs font-semibold text-orange-700 dark:text-orange-300 mb-1">
                     {isFrench ? 'Sommet 2' : 'Pinnacle 2'}
                   </p>
@@ -1529,7 +1529,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
                 </div>
 
                 {/* Pinnacle 3 */}
-                <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-4 border-l-4 border-yellow-500">
+                <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-xl p-4 border-l-4 border-yellow-500">
                   <p className="text-xs font-semibold text-yellow-700 dark:text-yellow-300 mb-1">
                     {isFrench ? 'Sommet 3' : 'Pinnacle 3'}
                   </p>
@@ -1542,11 +1542,11 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
                 </div>
 
                 {/* Pinnacle 4 */}
-                <div className="bg-lime-50 dark:bg-lime-900/20 rounded-lg p-4 border-l-4 border-lime-500">
-                  <p className="text-xs font-semibold text-lime-700 dark:text-lime-300 mb-1">
+                <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-4 border-l-4 border-slate-300">
+                  <p className="text-xs font-semibold text-indigo-700 dark:text-indigo-300 mb-1">
                     {isFrench ? 'Sommet 4' : 'Pinnacle 4'}
                   </p>
-                  <p className="text-2xl font-bold text-lime-900 dark:text-lime-100">
+                  <p className="text-2xl font-bold text-indigo-900 dark:text-indigo-100">
                     {pinnaclesAndChallenges.pinnacle4}
                   </p>
                   <p className="text-xs text-slate-600 dark:text-slate-400 mt-1">
@@ -1556,8 +1556,8 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               </div>
 
               {/* Current Status */}
-              <div className="mt-4 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-lg p-3">
-                <p className="text-sm font-semibold text-purple-800 dark:text-purple-300">
+              <div className="mt-4 rounded-xl p-3 bg-white/60 dark:bg-slate-800/40">
+                <p className="text-sm font-semibold text-indigo-800 dark:text-indigo-300">
                   {isFrench ? 'Actuellement:' : 'Currently:'} {isFrench ? 'Sommet' : 'Pinnacle'} {pinnaclesAndChallenges.currentPinnacle} | {isFrench ? 'Défi' : 'Challenge'} {pinnaclesAndChallenges.currentChallenge}
                 </p>
               </div>
@@ -1567,14 +1567,14 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
       )}
 
       {/* Phase 3B: Sacred Numbers - ALWAYS SHOW */}
-      <div className="bg-gradient-to-r from-amber-50 to-yellow-50 dark:from-amber-900/40 dark:to-yellow-900/40 rounded-xl p-6 shadow-lg border border-amber-200 dark:border-amber-700">
+      <div className=" rounded-xl p-6 shadow-sm border border-amber-200 dark:border-amber-700 bg-white/60 dark:bg-slate-800/40">
         <button
           type="button"
           onClick={() => setShowSacredNumbers(!showSacredNumbers)}
-          className="w-full flex items-center justify-between text-left mb-4 group"
+          className="w-full flex items-center justify-between text-left mb-4 group min-h-[44px]"
         >
           <div className="flex items-center gap-3">
-            <Star className="w-6 h-6 text-amber-600 dark:text-amber-400 group-hover:scale-110 transition-transform" />
+            <Star className="w-6 h-6 text-amber-600 dark:text-amber-400 transition-transform" />
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">
               {isFrench ? 'Nombres Sacrés dans Votre Nom' : 'Sacred Numbers in Your Name'}
             </h3>
@@ -1601,7 +1601,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
                   {sacredNumbers.map((num) => (
                     <div 
                       key={num}
-                      className="bg-white dark:bg-slate-800 rounded-lg p-4 border-l-4 border-amber-500 dark:border-amber-600 shadow-sm"
+                      className="bg-white dark:bg-slate-800 rounded-xl p-4 border-l-4 border-amber-500 dark:border-amber-600 shadow-sm"
                     >
                       <div className="flex items-start gap-3">
                         <div className="flex-shrink-0 w-12 h-12 bg-amber-100 dark:bg-amber-900/30 rounded-full flex items-center justify-center">
@@ -1619,7 +1619,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
                   ))}
                 </div>
 
-                <div className="mt-4 p-4 bg-amber-100/50 dark:bg-amber-900/20 rounded-lg">
+                <div className="mt-4 p-4 bg-amber-100/50 dark:bg-amber-900/20 rounded-xl">
                   <p className="text-sm text-slate-700 dark:text-slate-300 italic">
                     {isFrench 
                       ? `Ces nombres sacrés dans votre nom suggèrent une connexion profonde avec la tradition spirituelle islamique et portent des énergies spécifiques qui peuvent guider votre chemin de vie.`
@@ -1629,7 +1629,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
                 </div>
               </>
             ) : (
-              <div className="bg-white dark:bg-slate-800 rounded-lg p-6 border border-amber-200 dark:border-amber-700">
+              <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-amber-200 dark:border-amber-700">
                 <p className="text-slate-600 dark:text-slate-400 text-center">
                   {isFrench
                     ? `Aucun nombre sacré islamique spécifique détecté dans votre nom pour l'instant. Les nombres sacrés incluent : 7 (création), 12 (mois/Imams), 19 (miracle coranique), 40 (transformation), 70 (nations), 99 (noms d'Allah), 111 (Al-Ikhlas), 313 (guerriers de Badr), 786 (Bismillah), 1000 (perfection).`
@@ -1643,14 +1643,14 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
       </div>
 
       {/* PHASE 3B: Maternal Influence - ALWAYS SHOW */}
-      <div className="bg-gradient-to-r from-rose-50 to-pink-50 dark:from-rose-900/40 dark:to-pink-900/40 rounded-xl p-6 shadow-lg border border-rose-200 dark:border-rose-700">
+      <div className=" rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40">
         <button
           type="button"
           onClick={() => setShowMaternalInfluence(!showMaternalInfluence)}
-          className="w-full flex items-center justify-between text-left mb-4 group"
+          className="w-full flex items-center justify-between text-left mb-4 group min-h-[44px]"
         >
           <div className="flex items-center gap-3">
-            <Heart className="w-6 h-6 text-rose-600 dark:text-rose-400 group-hover:scale-110 transition-transform" />
+            <Heart className="w-6 h-6 text-indigo-600 dark:text-indigo-400 transition-transform" />
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">
               {isFrench ? 'Influence Maternelle' : 'Maternal Influence'}
             </h3>
@@ -1668,21 +1668,21 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
           }`}
         >
           {maternalInfluence ? (
-            <div className="bg-white dark:bg-slate-800 rounded-xl p-5 border border-rose-200 dark:border-rose-700 space-y-4">
+            <div className="bg-white dark:bg-slate-800 rounded-xl p-5 border border-slate-200 dark:border-slate-700 space-y-4">
               
               {/* Maternal Number */}
-              <div className="bg-gradient-to-r from-rose-100 to-pink-100 dark:from-rose-900/30 dark:to-pink-900/30 rounded-lg p-4 text-center">
-                <p className="text-sm text-rose-700 dark:text-rose-300 mb-2">
+              <div className=" rounded-xl p-4 text-center bg-white/60 dark:bg-slate-800/40">
+                <p className="text-sm text-indigo-700 dark:text-indigo-300 mb-2">
                   {isFrench ? 'Nombre d\'Influence Maternelle' : 'Maternal Influence Number'}
                 </p>
-                <p className="text-4xl font-bold text-rose-900 dark:text-rose-100">
+                <p className="text-4xl font-bold text-indigo-900 dark:text-indigo-100">
                   {maternalInfluence}
                 </p>
               </div>
 
               {/* Influence Description */}
               <div>
-                <p className="text-sm font-semibold text-rose-700 dark:text-rose-300 mb-2">
+                <p className="text-sm font-semibold text-indigo-700 dark:text-indigo-300 mb-2">
                   {isFrench ? 'Influence Énergétique' : 'Energetic Influence'}
                 </p>
                 <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
@@ -1693,8 +1693,8 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               </div>
 
               {/* Nurturing Qualities */}
-              <div className="pt-3 border-t border-rose-200 dark:border-rose-700 bg-rose-50 dark:bg-rose-900/20 rounded-lg p-3">
-                <p className="text-sm font-semibold text-rose-800 dark:text-rose-300 mb-2">
+              <div className="pt-3 border-t border-slate-200 dark:border-slate-700 bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-3">
+                <p className="text-sm font-semibold text-indigo-800 dark:text-indigo-300 mb-2">
                   {isFrench ? 'Qualités Nourricières' : 'Nurturing Qualities'}
                 </p>
                 <p className="text-sm text-slate-700 dark:text-slate-300">
@@ -1705,7 +1705,7 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
               </div>
             </div>
           ) : (
-            <div className="bg-white dark:bg-slate-800 rounded-lg p-6 border border-rose-200 dark:border-rose-700">
+            <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700">
               <p className="text-slate-600 dark:text-slate-400 text-center">
                 {isFrench
                   ? `Pour voir l'influence maternelle, veuillez fournir le nom de votre mère lors du calcul. Cette section montre comment l'énergie numérologique de votre mère influence votre développement émotionnel et spirituel.`
@@ -1718,14 +1718,14 @@ const EnhancedLifePathDisplay: React.FC<EnhancedLifePathDisplayProps> = ({
       </div>
 
       {/* Synthesis */}
-      <div className="bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/40 dark:to-teal-900/40 rounded-xl p-6 shadow-lg border border-emerald-200 dark:border-emerald-700">
+      <div className=" rounded-xl p-6 shadow-sm border border-emerald-200 dark:border-emerald-700 bg-white/60 dark:bg-slate-800/40">
         <button
           type="button"
           onClick={() => setShowSynthesis(!showSynthesis)}
-          className="w-full flex items-center justify-between text-left mb-4 group"
+          className="w-full flex items-center justify-between text-left mb-4 group min-h-[44px]"
         >
           <div className="flex items-center gap-3">
-            <Shield className="w-6 h-6 text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition-transform" />
+            <Shield className="w-6 h-6 text-emerald-600 dark:text-emerald-400 transition-transform" />
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">
               {isFrench ? 'Synthèse' : 'Synthesis'}
             </h3>

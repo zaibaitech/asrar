@@ -29,12 +29,12 @@ export function DisclaimerModal({ onAccept }: DisclaimerModalProps) {
       }`}
     >
       <div 
-        className={`bg-white dark:bg-slate-900 rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all duration-300 ${
+        className={`bg-white dark:bg-slate-900 rounded-2xl shadow-sm max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all duration-300 ${
           isVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
         }`}
       >
         {/* Header */}
-        <div className="sticky top-0 bg-gradient-to-r from-amber-600 to-orange-600 text-white p-6 rounded-t-2xl">
+        <div className="sticky top-0 text-white p-6 rounded-t-2xl bg-indigo-600">
           <div className="flex items-center gap-3 mb-2">
             <AlertCircle className="w-8 h-8" />
             <h2 className="text-2xl font-bold">
@@ -51,7 +51,7 @@ export function DisclaimerModal({ onAccept }: DisclaimerModalProps) {
         {/* Content */}
         <div className="p-6 space-y-6">
           {/* Main Message */}
-          <div className="p-5 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700">
+          <div className="p-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40">
             <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-3 flex items-center gap-2">
               <span className="text-2xl">🕌</span>
               {isFr ? 'Nature de cet outil' : 'Nature of This Tool'}
@@ -71,7 +71,7 @@ export function DisclaimerModal({ onAccept }: DisclaimerModalProps) {
             </h3>
 
             {/* Point 1 */}
-            <div className="flex gap-3 p-4 bg-red-50 dark:bg-red-950/20 rounded-lg border border-red-200 dark:border-red-900">
+            <div className="flex gap-3 p-4 bg-red-50 dark:bg-red-950/20 rounded-xl border border-red-200 dark:border-red-900">
               <div className="text-2xl flex-shrink-0">❌</div>
               <div>
                 <div className="font-semibold text-red-900 dark:text-red-200 mb-1">
@@ -86,13 +86,13 @@ export function DisclaimerModal({ onAccept }: DisclaimerModalProps) {
             </div>
 
             {/* Point 2 */}
-            <div className="flex gap-3 p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg border border-blue-200 dark:border-blue-900">
+            <div className="flex gap-3 p-4 bg-indigo-50 dark:bg-indigo-950/20 rounded-xl border border-slate-200 dark:border-slate-700">
               <div className="text-2xl flex-shrink-0">🤲</div>
               <div>
-                <div className="font-semibold text-blue-900 dark:text-blue-200 mb-1">
+                <div className="font-semibold text-indigo-900 dark:text-indigo-200 mb-1">
                   {isFr ? 'Le libre arbitre et le Qadr' : 'Free Will and Qadr'}
                 </div>
-                <div className="text-sm text-blue-800 dark:text-blue-300">
+                <div className="text-sm text-indigo-800 dark:text-indigo-300">
                   {isFr
                     ? 'Votre libre arbitre (ikhtiyār / اختيار) et vos choix restent les vôtres. Tous les résultats sont déterminés par Allah seul (Qadr / قدر). Utilisez cette sagesse comme outil de réflexion, pas comme remplacement de votre jugement.'
                     : 'Your free will (ikhtiyār / اختيار) and choices remain yours. All outcomes are determined by Allah alone (Qadr / قدر). Use this wisdom as a reflection tool, not as a replacement for your judgment.'}
@@ -101,13 +101,13 @@ export function DisclaimerModal({ onAccept }: DisclaimerModalProps) {
             </div>
 
             {/* Point 3 */}
-            <div className="flex gap-3 p-4 bg-purple-50 dark:bg-purple-950/20 rounded-lg border border-purple-200 dark:border-purple-900">
+            <div className="flex gap-3 p-4 bg-indigo-50 dark:bg-indigo-950/20 rounded-xl border border-slate-200 dark:border-slate-700">
               <div className="text-2xl flex-shrink-0">⚖️</div>
               <div>
-                <div className="font-semibold text-purple-900 dark:text-purple-200 mb-1">
+                <div className="font-semibold text-indigo-900 dark:text-indigo-200 mb-1">
                   {isFr ? 'Ce n\'est pas un avis juridique islamique' : 'Not Islamic Legal Guidance'}
                 </div>
-                <div className="text-sm text-purple-800 dark:text-purple-300">
+                <div className="text-sm text-indigo-800 dark:text-indigo-300">
                   {isFr
                     ? 'Cet outil n\'est PAS une fatwa (فتوى) ou un avis juridique islamique. Pour des questions religieuses, consultez des savants qualifiés. Pour des décisions importantes, consultez des professionnels.'
                     : 'This tool is NOT a fatwa (فتوى) or Islamic legal ruling. For religious questions, consult qualified scholars. For important decisions, seek professional advice.'}
@@ -116,7 +116,7 @@ export function DisclaimerModal({ onAccept }: DisclaimerModalProps) {
             </div>
 
             {/* Point 4 */}
-            <div className="flex gap-3 p-4 bg-green-50 dark:bg-green-950/20 rounded-lg border border-green-200 dark:border-green-900">
+            <div className="flex gap-3 p-4 bg-green-50 dark:bg-green-950/20 rounded-xl border border-green-200 dark:border-green-900">
               <div className="text-2xl flex-shrink-0">🌟</div>
               <div>
                 <div className="font-semibold text-green-900 dark:text-green-200 mb-1">
@@ -145,7 +145,7 @@ export function DisclaimerModal({ onAccept }: DisclaimerModalProps) {
           </div>
 
           {/* Final Reminder */}
-          <div className="text-center p-5 bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 rounded-xl">
+          <div className="text-center p-5 rounded-xl bg-white/60 dark:bg-slate-800/40">
             <div 
               className="text-2xl font-arabic text-slate-700 dark:text-slate-300 mb-2"
               style={{ fontFamily: 'Amiri, Scheherazade, serif' }}
@@ -167,7 +167,7 @@ export function DisclaimerModal({ onAccept }: DisclaimerModalProps) {
         <div className="sticky bottom-0 bg-slate-50 dark:bg-slate-800 p-6 rounded-b-2xl border-t border-slate-200 dark:border-slate-700">
           <button
             onClick={handleAccept}
-            className="w-full py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+            className="w-full py-4 text-white rounded-xl font-semibold transition-all shadow-sm flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 min-h-[44px]"
           >
             <CheckCircle className="w-5 h-5" />
             <span>

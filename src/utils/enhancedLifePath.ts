@@ -1773,7 +1773,7 @@ const QURANIC_CONNECTIONS: Record<number, QuranicConnection> = {
     verse: {
       en: `Say: He is Allah, the One and Only`,
       fr: `Dis: Il est Allah, l'Unique`,
-      arabic: `قُلْ هُوَ اللَّهُ أَحَدٌ`
+      arabic: `قُلْ هُوَ اللَّهُ أَحَدٌ`
     },
     reference: "Surah Al-Ikhlas 112:1",
     divineAttribute: {
@@ -1794,7 +1794,7 @@ const QURANIC_CONNECTIONS: Record<number, QuranicConnection> = {
     verse: {
       en: `And We have enjoined upon man goodness to his parents`,
       fr: `Et Nous avons enjoint à l'homme la bonté envers ses parents`,
-      arabic: `وَوَصَّيْنَا الْإِنسَانَ بِوَالِدَيْهِ إِحْسَانًا`
+      arabic: `وَوَصَّيْنَا الْإِنسَانَ بِوَالِدَيْهِ إِحْسَانًا`
     },
     reference: "Surah Al-Ahqaf 46:15",
     divineAttribute: {
@@ -1815,7 +1815,7 @@ const QURANIC_CONNECTIONS: Record<number, QuranicConnection> = {
     verse: {
       en: `So relate the stories, perhaps they will reflect`,
       fr: `Raconte donc les récits, peut-être réfléchiront-ils`,
-      arabic: `فَاقْصُصِ الْقَصَصَ لَعَلَّهُمْ يَتَفَكَّرُونَ`
+      arabic: `فَاقْصُصِ الْقَصَصَ لَعَلَّهُمْ يَتَفَكَّرُونَ`
     },
     reference: "Surah Al-A'raf 7:176",
     divineAttribute: {
@@ -1836,7 +1836,7 @@ const QURANIC_CONNECTIONS: Record<number, QuranicConnection> = {
     verse: {
       en: `And We have made the heaven a guarded canopy`,
       fr: `Et Nous avons fait du ciel un toit protégé`,
-      arabic: `وَجَعَلْنَا السَّمَاءَ سَقْفًا مَّحْفُوظًا`
+      arabic: `وَجَعَلْنَا السَّمَاءَ سَقْفًا مَّحْفُوظًا`
     },
     reference: "Surah Al-Anbiya 21:32",
     divineAttribute: {
@@ -1878,7 +1878,7 @@ const QURANIC_CONNECTIONS: Record<number, QuranicConnection> = {
     verse: {
       en: `And lower to them the wing of humility out of mercy`,
       fr: `Et abaisse pour eux l'aile de l'humilité par miséricorde`,
-      arabic: `وَاخْفِضْ لَهُمَا جَنَاحَ الذُّلِّ مِنَ الرَّحْمَةِ`
+      arabic: `وَاخْفِضْ لَهُمَا جَنَاحَ الذُّلِّ مِنَ الرَّحْمَةِ`
     },
     reference: "Surah Al-Isra 17:24",
     divineAttribute: {
@@ -1920,7 +1920,7 @@ const QURANIC_CONNECTIONS: Record<number, QuranicConnection> = {
     verse: {
       en: `And to Allah belongs the dominion of the heavens and the earth`,
       fr: `Et à Allah appartient le royaume des cieux et de la terre`,
-      arabic: `وَلِلَّهِ مُلْكُ السَّمَاوَاتِ وَالْأَرْضِ`
+      arabic: `وَلِلَّهِ مُلْكُ السَّمَاوَاتِ وَالْأَرْضِ`
     },
     reference: "Surah Ali 'Imran 3:189",
     divineAttribute: {
@@ -1941,7 +1941,7 @@ const QURANIC_CONNECTIONS: Record<number, QuranicConnection> = {
     verse: {
       en: `And spend in the way of Allah and do not throw yourselves into destruction`,
       fr: `Et dépensez dans le chemin d'Allah et ne vous jetez pas de vos propres mains dans la destruction`,
-      arabic: `وَأَنفِقُوا فِي سَبِيلِ اللَّهِ وَلَا تُلْقُوا بِأَيْدِيكُمْ إِلَى التَّهْلُكَةِ`
+      arabic: `وَأَنفِقُوا فِي سَبِيلِ اللَّهِ وَلَا تُلْقُوا بِأَيْدِيكُمْ إِلَى التَّهْلُكَةِ`
     },
     reference: "Surah Al-Baqarah 2:195",
     divineAttribute: {
@@ -1962,7 +1962,7 @@ const QURANIC_CONNECTIONS: Record<number, QuranicConnection> = {
     verse: {
       en: `Allah is the Light of the heavens and the earth`,
       fr: `Allah est la Lumière des cieux et de la terre`,
-      arabic: `اللَّهُ نُورُ السَّمَاوَاتِ وَالْأَرْضِ`
+      arabic: `اللَّهُ نُورُ السَّمَاوَاتِ وَالْأَرْضِ`
     },
     reference: "Surah An-Nur 24:35",
     divineAttribute: {
@@ -1983,7 +1983,7 @@ const QURANIC_CONNECTIONS: Record<number, QuranicConnection> = {
     verse: {
       en: `And We made from water every living thing`,
       fr: `Et Nous avons fait de l'eau toute chose vivante`,
-      arabic: `وَجَعَلْنَا مِنَ الْمَاءِ كُلَّ شَيْءٍ حَيٍّ`
+      arabic: `وَجَعَلْنَا مِنَ الْمَاءِ كُلَّ شَيْءٍ حَيٍّ`
     },
     reference: "Surah Al-Anbiya 21:30",
     divineAttribute: {
@@ -2004,7 +2004,7 @@ const QURANIC_CONNECTIONS: Record<number, QuranicConnection> = {
     verse: {
       en: `Indeed, Allah is with those who are patient`,
       fr: `Certes, Allah est avec les endurants`,
-      arabic: `إِنَّ اللَّهَ مَعَ الصَّابِرِينَ`
+      arabic: `إِنَّ اللَّهَ مَعَ الصَّابِرِينَ`
     },
     reference: "Surah Al-Baqarah 2:153",
     divineAttribute: {

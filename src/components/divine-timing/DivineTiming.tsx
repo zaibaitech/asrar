@@ -45,7 +45,6 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
   const { t, language } = useLanguage();
   const isFr = language === 'fr';
   
-  console.log('DivineTiming rendered with:', { userElement, userName, birthDate, nameTotal });
   
   // State management
   const [location, setLocation] = useState<UserLocation | null>(null);
@@ -280,7 +279,7 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
   if (isLoadingLocation) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[400px] p-8">
-        <Loader2 className="w-12 h-12 text-amber-500 animate-spin mb-4" />
+        <Loader2 className="w-12 h-12 text-amber-500 mb-4" />
         <p className="text-lg text-slate-700 dark:text-slate-300">
           {isFr ? 'Obtention de votre position...' : 'Getting your location...'}
         </p>
@@ -334,11 +333,11 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
   // Phase 3: Educational Content Views
   if (educationView === 'learning') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900 dark:to-gray-900">
+      <div className="min-h-screen bg-white/60 dark:bg-slate-800/40">
         <div className="max-w-7xl mx-auto p-6">
           <button
             onClick={() => setEducationView('none')}
-            className="mb-6 px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg shadow-lg hover:shadow-xl transition-all flex items-center gap-2 hover:bg-gray-50 dark:hover:bg-gray-700"
+            className="mb-6 px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-xl shadow-sm transition-all flex items-center gap-2 hover:bg-gray-50 dark:hover:bg-gray-700 min-h-[44px]"
           >
             <span className="text-xl">←</span>
             <span className="font-medium">{isFr ? 'Retour au Moment Divin' : 'Back to Divine Timing'}</span>
@@ -351,11 +350,11 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
 
   if (educationView === 'planets') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900 dark:to-gray-900">
+      <div className="min-h-screen bg-white/60 dark:bg-slate-800/40">
         <div className="max-w-7xl mx-auto p-6">
           <button
             onClick={() => setEducationView('none')}
-            className="mb-6 px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg shadow-lg hover:shadow-xl transition-all flex items-center gap-2 hover:bg-gray-50 dark:hover:bg-gray-700"
+            className="mb-6 px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-xl shadow-sm transition-all flex items-center gap-2 hover:bg-gray-50 dark:hover:bg-gray-700 min-h-[44px]"
           >
             <span className="text-xl">←</span>
             <span className="font-medium">{isFr ? 'Retour au Moment Divin' : 'Back to Divine Timing'}</span>
@@ -371,11 +370,11 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
 
   if (educationView === 'glossary') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900 dark:to-gray-900">
+      <div className="min-h-screen bg-white/60 dark:bg-slate-800/40">
         <div className="max-w-7xl mx-auto p-6">
           <button
             onClick={() => setEducationView('none')}
-            className="mb-6 px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg shadow-lg hover:shadow-xl transition-all flex items-center gap-2 hover:bg-gray-50 dark:hover:bg-gray-700"
+            className="mb-6 px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-xl shadow-sm transition-all flex items-center gap-2 hover:bg-gray-50 dark:hover:bg-gray-700 min-h-[44px]"
           >
             <span className="text-xl">←</span>
             <span className="font-medium">{isFr ? 'Retour au Moment Divin' : 'Back to Divine Timing'}</span>
@@ -388,11 +387,11 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
 
   if (educationView === 'energy') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900 dark:to-gray-900">
+      <div className="min-h-screen bg-white/60 dark:bg-slate-800/40">
         <div className="max-w-7xl mx-auto p-6">
           <button
             onClick={() => setEducationView('none')}
-            className="mb-6 px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg shadow-lg hover:shadow-xl transition-all flex items-center gap-2 hover:bg-gray-50 dark:hover:bg-gray-700"
+            className="mb-6 px-6 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-xl shadow-sm transition-all flex items-center gap-2 hover:bg-gray-50 dark:hover:bg-gray-700 min-h-[44px]"
           >
             <span className="text-xl">←</span>
             <span className="font-medium">{isFr ? 'Retour au Moment Divin' : 'Back to Divine Timing'}</span>
@@ -428,12 +427,12 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
   }
 
   return (
-    <div className="space-y-6 animate-fade-in">
+    <div className="space-y-6 ">
       {/* Header with back button */}
       <div className="flex items-center justify-between">
         <button
           onClick={() => window.history.back()}
-          className="flex items-center gap-2 px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
+          className="flex items-center gap-2 px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 min-h-[44px]"
         >
           <span className="text-xl">←</span>
           <span className="font-medium">{isFr ? 'Retour à l\'Accueil' : 'Back to Home'}</span>
@@ -446,7 +445,7 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
       {/* Location indicator with Date Picker */}
       <div className="space-y-3">
         {/* Location Display */}
-        <div className="flex items-center justify-between p-3 bg-gradient-to-r from-slate-50 to-gray-50 dark:from-slate-800 dark:to-gray-800 rounded-lg border border-slate-200 dark:border-slate-700">
+        <div className="flex items-center justify-between p-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-800/40">
           <div className="flex items-center gap-3">
             <MapPin className="w-5 h-5 text-amber-600 dark:text-amber-400" />
             <div>
@@ -468,16 +467,16 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
           <button
             onClick={requestLocation}
             disabled={isLoadingLocation}
-            className="flex items-center gap-2 px-3 py-2 text-amber-600 dark:text-amber-400 hover:bg-amber-50 dark:hover:bg-amber-950/20 rounded-lg transition-colors disabled:opacity-50"
+            className="flex items-center gap-2 px-3 py-2 text-amber-600 dark:text-amber-400 hover:bg-amber-50 dark:hover:bg-amber-950/20 rounded-xl transition-colors disabled:opacity-50 min-h-[44px]"
             title={isFr ? 'Actualiser la position' : 'Refresh location'}
           >
-            <RefreshCw className={`w-4 h-4 ${isLoadingLocation ? 'animate-spin' : ''}`} />
+            <RefreshCw className={`w-4 h-4 ${isLoadingLocation ? '' : ''}`} />
             <span className="text-sm font-medium">{isFr ? 'Actualiser' : 'Refresh'}</span>
           </button>
         </div>
 
         {/* Date Picker */}
-        <div className="flex items-center justify-between p-3 bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/40 dark:to-purple-950/40 rounded-lg border border-indigo-200 dark:border-indigo-800">
+        <div className="flex items-center justify-between p-3 rounded-xl border border-indigo-200 dark:border-indigo-800 bg-white/60 dark:bg-slate-800/40">
           <div className="flex items-center gap-3">
             <Calendar className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
             <div>
@@ -500,7 +499,7 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
             {selectedDate.toDateString() !== new Date().toDateString() && (
               <button
                 onClick={() => setSelectedDate(new Date())}
-                className="px-3 py-2 text-xs font-medium bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors"
+                className="px-3 py-2 text-xs font-medium bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors min-h-[44px]"
               >
                 {isFr ? 'Aujourd\'hui' : 'Today'}
               </button>
@@ -509,14 +508,14 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
               type="date"
               value={selectedDate.toISOString().split('T')[0]}
               onChange={(e) => setSelectedDate(new Date(e.target.value + 'T12:00:00'))}
-              className="px-3 py-2 text-sm font-medium bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-200 border border-indigo-300 dark:border-indigo-700 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors cursor-pointer"
+              className="px-3 py-2 font-medium bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 border border-indigo-300 dark:border-indigo-700 rounded-xl hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors cursor-pointer min-h-[44px] text-base sm:text-sm"
             />
           </div>
         </div>
       </div>
 
       {locationError && (
-        <div className="p-3 bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800 rounded-lg text-sm text-amber-800 dark:text-amber-200">
+        <div className="p-3 bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800 rounded-xl text-sm text-amber-800 dark:text-amber-200">
           {locationError}
         </div>
       )}
@@ -600,7 +599,7 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
       <div className="grid grid-cols-2 gap-3">
         <button
           onClick={() => setShowTimeline(true)}
-          className="p-4 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/30 dark:to-purple-950/30 border border-indigo-200 dark:border-indigo-800 rounded-xl hover:shadow-lg transition-all"
+          className="p-4 border border-indigo-200 dark:border-indigo-800 rounded-xl transition-all bg-white/60 dark:bg-slate-800/40 min-h-[44px]"
         >
           <div className="text-2xl mb-2">📅</div>
           <div className="font-semibold text-slate-900 dark:text-slate-100">
@@ -613,7 +612,7 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
 
         <button
           onClick={() => setShowDhikr(true)}
-          className="p-4 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 border border-emerald-200 dark:border-emerald-800 rounded-xl hover:shadow-lg transition-all"
+          className="p-4 border border-emerald-200 dark:border-emerald-800 rounded-xl transition-all bg-white/60 dark:bg-slate-800/40 min-h-[44px]"
         >
           <div className="text-2xl mb-2">📿</div>
           <div className="font-semibold text-slate-900 dark:text-slate-100">
@@ -626,7 +625,7 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
       </div>
 
       {/* Phase 3: Educational Resources Section */}
-      <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/30 dark:to-purple-950/30 rounded-2xl p-8 border border-indigo-200 dark:border-indigo-800">
+      <div className=" rounded-2xl p-8 border border-indigo-200 dark:border-indigo-800 bg-white/60 dark:bg-slate-800/40">
         <div className="text-center mb-6">
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
             {isFr ? '📚 Ressources Éducatives' : '📚 Educational Resources'}
@@ -642,9 +641,9 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
           {/* Learning Center */}
           <button
             onClick={() => setEducationView('learning')}
-            className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all group"
+            className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm transition-all group min-h-[44px]"
           >
-            <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">📚</div>
+            <div className="text-4xl mb-3 transition-transform">📚</div>
             <h4 className="font-bold text-gray-900 dark:text-white mb-2">
               {isFr ? 'Centre d\'Apprentissage' : 'Learning Center'}
             </h4>
@@ -658,9 +657,9 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
           {/* Planet Guides */}
           <button
             onClick={() => setEducationView('planets')}
-            className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all group"
+            className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm transition-all group min-h-[44px]"
           >
-            <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🪐</div>
+            <div className="text-4xl mb-3 transition-transform">🪐</div>
             <h4 className="font-bold text-gray-900 dark:text-white mb-2">
               {isFr ? 'Guides Planétaires' : 'Planet Guides'}
             </h4>
@@ -674,9 +673,9 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
           {/* Glossary */}
           <button
             onClick={() => setEducationView('glossary')}
-            className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all group"
+            className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm transition-all group min-h-[44px]"
           >
-            <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">📖</div>
+            <div className="text-4xl mb-3 transition-transform">📖</div>
             <h4 className="font-bold text-gray-900 dark:text-white mb-2">
               {isFr ? 'Glossaire' : 'Glossary'}
             </h4>
@@ -690,9 +689,9 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
           {/* Energy Flow */}
           <button
             onClick={() => setEducationView('energy')}
-            className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all group"
+            className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm transition-all group min-h-[44px]"
           >
-            <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">⚡</div>
+            <div className="text-4xl mb-3 transition-transform">⚡</div>
             <h4 className="font-bold text-gray-900 dark:text-white mb-2">
               {isFr ? 'Flux d\'Énergie' : 'Energy Flow'}
             </h4>
@@ -706,7 +705,7 @@ export function DivineTiming({ userElement, userName, birthDate, nameTotal }: Di
       </div>
 
       {/* Disclaimer */}
-      <div className="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg text-xs text-slate-600 dark:text-slate-400 text-center">
+      <div className="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl text-xs text-slate-600 dark:text-slate-400 text-center">
         {isFr 
           ? '🌙 Les heures planétaires sont calculées selon les traditions islamiques classiques. Utilisez ce guide avec votre propre discernement.'
           : '🌙 Planetary hours are calculated according to classical Islamic traditions. Use this guidance with your own discernment.'}

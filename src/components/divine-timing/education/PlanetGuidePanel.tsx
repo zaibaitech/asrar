@@ -30,9 +30,9 @@ export default function PlanetGuidePanel({
           <button
             key={planetName}
             onClick={() => setActivePlanet(planetName)}
-            className={`px-4 py-2 rounded-lg font-semibold transition-all ${
+            className={`px-4 py-2 rounded-xl font-semibold transition-all ${
               activePlanet === planetName
-                ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg scale-105'
+                ? ' text-white shadow-sm scale-105 bg-indigo-600'
                 : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
             }`}
           >
@@ -42,7 +42,7 @@ export default function PlanetGuidePanel({
       </div>
 
       {/* Planet Header */}
-      <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 shadow-xl">
+      <div className=" rounded-2xl p-8 shadow-sm bg-white/60 dark:bg-slate-800/40">
         <div className="flex items-start justify-between">
           <div>
             <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
@@ -108,7 +108,7 @@ export default function PlanetGuidePanel({
       </div>
 
       {/* Tab Content */}
-      <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg">
+      <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-sm">
         {/* Overview Tab */}
         {activeTab === 'overview' && (
           <div className="space-y-8">
@@ -117,7 +117,7 @@ export default function PlanetGuidePanel({
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 {lang === 'en' ? 'Primary Divine Name' : 'Nom Divin Principal'}
               </h2>
-              <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-gray-700 dark:to-gray-600 rounded-lg p-6">
+              <div className=" rounded-xl p-6 bg-white/60 dark:bg-slate-800/40">
                 <div className="text-4xl text-center mb-2">{guide.divineNames.primary.arabic}</div>
                 <div className="text-xl text-center text-indigo-600 dark:text-indigo-400 mb-3">
                   {guide.divineNames.primary.transliteration}
@@ -149,7 +149,7 @@ export default function PlanetGuidePanel({
               </h3>
               <div className="grid md:grid-cols-2 gap-4">
                 {guide.divineNames.secondary.map((name, index) => (
-                  <div key={index} className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                  <div key={index} className="bg-gray-50 dark:bg-gray-700 rounded-xl p-4">
                     <div className="text-2xl mb-1">{name.arabic}</div>
                     <div className="text-sm text-indigo-600 dark:text-indigo-400 mb-2">
                       {name.transliteration}
@@ -186,7 +186,7 @@ export default function PlanetGuidePanel({
                 {guide.spiritualQualities[lang].map((quality, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-3 bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-gray-700 dark:to-gray-600 rounded-lg p-4"
+                    className="flex items-center gap-3 rounded-xl p-4 bg-white/60 dark:bg-slate-800/40"
                   >
                     <div className="w-2 h-2 rounded-full bg-indigo-600" />
                     <span className="text-gray-900 dark:text-white font-medium">{quality}</span>
@@ -219,7 +219,7 @@ export default function PlanetGuidePanel({
               </h3>
               <div className="space-y-3">
                 {guide.examples[lang].map((example, index) => (
-                  <div key={index} className="flex gap-3 bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                  <div key={index} className="flex gap-3 bg-gray-50 dark:bg-gray-700 rounded-xl p-4">
                     <div className="text-indigo-600 dark:text-indigo-400 font-bold">{index + 1}.</div>
                     <p className="text-gray-700 dark:text-gray-300">{example}</p>
                   </div>
@@ -241,7 +241,7 @@ export default function PlanetGuidePanel({
                 {guide.favorableFor[lang].map((activity, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-3 bg-green-50 dark:bg-green-900/20 rounded-lg p-4"
+                    className="flex items-center gap-3 bg-green-50 dark:bg-green-900/20 rounded-xl p-4"
                   >
                     <div className="text-green-600 dark:text-green-400 text-xl">✓</div>
                     <span className="text-gray-900 dark:text-white">{activity}</span>
@@ -259,7 +259,7 @@ export default function PlanetGuidePanel({
                 {guide.unfavorableFor[lang].map((activity, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-3 bg-orange-50 dark:bg-orange-900/20 rounded-lg p-4"
+                    className="flex items-center gap-3 bg-orange-50 dark:bg-orange-900/20 rounded-xl p-4"
                   >
                     <div className="text-orange-600 dark:text-orange-400 text-xl">✗</div>
                     <span className="text-gray-900 dark:text-white">{activity}</span>

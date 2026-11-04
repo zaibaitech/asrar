@@ -438,7 +438,7 @@ export function CompatibilityGlossary({ language = 'en' }: CompatibilityGlossary
   const categories = Array.from(new Set(data.terms.map(t => t.category)));
 
   return (
-    <div className="space-y-6 p-8 bg-white dark:bg-slate-900 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700">
+    <div className="space-y-6 p-8 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700">
       
       {/* Header */}
       <div className="text-center space-y-3">
@@ -461,7 +461,7 @@ export function CompatibilityGlossary({ language = 'en' }: CompatibilityGlossary
           placeholder={data.searchPlaceholder}
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full pl-12 pr-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-50 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="w-full pl-12 pr-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl text-slate-900 dark:text-slate-50 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 min-h-[44px] text-base sm:text-sm"
         />
       </div>
 
@@ -479,7 +479,7 @@ export function CompatibilityGlossary({ language = 'en' }: CompatibilityGlossary
 
               <div className="grid gap-4">
                 {categoryTerms.map((term, idx) => (
-                  <div key={idx} className="p-5 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-indigo-300 dark:hover:border-indigo-700 transition-colors">
+                  <div key={idx} className="p-5 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-indigo-300 dark:hover:border-indigo-700 transition-colors">
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
                       <div>
                         <h4 className="font-bold text-lg text-slate-900 dark:text-slate-50">

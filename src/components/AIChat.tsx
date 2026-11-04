@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { MessageCircle, Send, X, Loader2, Sparkles, Bot, User } from 'lucide-react';
 import Image from 'next/image';
+import { AI_CHAT_ENABLED } from '@/src/lib/aiFeatures';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -17,8 +18,8 @@ interface AIChatProps {
   position?: 'bottom-right' | 'bottom-left';
 }
 
-// Hide AI features in production
-const IS_AI_ENABLED = process.env.NODE_ENV !== 'production';
+// Disabled by default; see src/lib/aiFeatures.ts
+const IS_AI_ENABLED = AI_CHAT_ENABLED;
 
 export default function AIChat(props: AIChatProps) {
   if (!IS_AI_ENABLED) return null;

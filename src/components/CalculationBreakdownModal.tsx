@@ -45,7 +45,7 @@ export function CalculationBreakdownModal({
   if (!isOpen) return null;
 
   const PersonCard = ({ person, title }: { person: PersonCalculation; title: string }) => (
-    <div className="p-4 bg-slate-50 dark:bg-slate-900/40 rounded-lg border border-slate-200 dark:border-slate-700">
+    <div className="p-4 bg-slate-50 dark:bg-slate-900/40 rounded-xl border border-slate-200 dark:border-slate-700">
       <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-3">{title}</h4>
       <div className="space-y-2 text-sm">
         <div className="flex justify-between">
@@ -68,7 +68,7 @@ export function CalculationBreakdownModal({
           <span className="text-gray-600 dark:text-gray-400">
             {language === 'fr' ? 'Total Abjad (Ḥadath):' : 'Abjad Total (Ḥadath):'}
           </span>
-          <span className="text-lg font-bold text-purple-600 dark:text-purple-400">
+          <span className="text-lg font-bold text-indigo-600 dark:text-indigo-400">
             {person.abjadTotal}
           </span>
         </div>
@@ -77,16 +77,16 @@ export function CalculationBreakdownModal({
             {language === 'fr' ? 'Ḥadath ÷ 4 =':'Ḥadath ÷ 4 ='}
           </span>
           <span className="font-mono text-gray-900 dark:text-gray-100">
-            {person.abjadTotal} ÷ 4 = {Math.floor(person.abjadTotal / 4)} <span className="text-purple-600 dark:text-purple-400 font-bold">r{person.hadath}</span>
+            {person.abjadTotal} ÷ 4 = {Math.floor(person.abjadTotal / 4)} <span className="text-indigo-600 dark:text-indigo-400 font-bold">r{person.hadath}</span>
           </span>
         </div>
-        <div className="flex justify-between items-center p-2 bg-purple-50 dark:bg-purple-950/30 rounded">
+        <div className="flex justify-between items-center p-2 bg-indigo-50 dark:bg-indigo-950/30 rounded">
           <span className="text-gray-600 dark:text-gray-400">
             {language === 'fr' ? 'Élément:' : 'Element:'}
           </span>
           <span className="font-bold text-gray-900 dark:text-gray-100">
             {language === 'fr' ? person.elementFrench : person.element}
-            <span className="ml-2 text-purple-600 dark:text-purple-400 font-arabic">
+            <span className="ml-2 text-indigo-600 dark:text-indigo-400 font-arabic">
               {person.elementArabic}
             </span>
           </span>
@@ -96,13 +96,13 @@ export function CalculationBreakdownModal({
   );
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm fade-in duration-200">
       <div 
-        className="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[85vh] overflow-hidden animate-in zoom-in-95 duration-200"
+        className="bg-white dark:bg-slate-800 rounded-2xl shadow-sm max-w-4xl w-full max-h-[85vh] overflow-hidden zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="sticky top-0 bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-700 dark:to-purple-700 p-6 text-white">
+        <div className="sticky top-0 p-6 text-white bg-indigo-600">
           <div className="flex items-start justify-between">
             <div>
               <h2 className="text-2xl font-bold mb-1">
@@ -114,7 +114,7 @@ export function CalculationBreakdownModal({
             </div>
             <button
               onClick={onClose}
-              className="p-2 hover:bg-white/20 rounded-lg transition-colors"
+              className="p-2 hover:bg-white/20 rounded-xl transition-colors min-h-[44px]"
               aria-label="Close calculation details"
             >
               <X className="w-5 h-5" />
@@ -147,7 +147,7 @@ export function CalculationBreakdownModal({
           {(person1Mother || person2Mother) && (
             <div>
               <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
-                <span className="flex items-center justify-center w-7 h-7 rounded-full bg-purple-600 text-white text-sm font-bold">2</span>
+                <span className="flex items-center justify-center w-7 h-7 rounded-full bg-indigo-600 text-white text-sm font-bold">2</span>
                 {language === 'fr' ? 'Calculs des mères (Tempérament Cosmique)' : "Mothers' Calculations (Cosmic Temperament)"}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -170,12 +170,12 @@ export function CalculationBreakdownModal({
           {/* Step 3: Layer Scores */}
           <div>
             <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
-              <span className="flex items-center justify-center w-7 h-7 rounded-full bg-cyan-600 text-white text-sm font-bold">3</span>
+              <span className="flex items-center justify-center w-7 h-7 rounded-full bg-indigo-600 text-white text-sm font-bold">3</span>
               {language === 'fr' ? 'Calcul des couches de compatibilité' : 'Layer Compatibility Calculations'}
             </h3>
             <div className="space-y-3">
               {layers.layer1 && (
-                <div className="p-3 bg-indigo-50 dark:bg-indigo-950/20 rounded-lg border-l-4 border-indigo-600">
+                <div className="p-3 bg-indigo-50 dark:bg-indigo-950/20 rounded-xl border-l-4 border-indigo-600">
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-900 dark:text-gray-100">
                       {language === 'fr' ? 'Couche 1: Vie quotidienne' : 'Layer 1: Daily Life'}
@@ -190,12 +190,12 @@ export function CalculationBreakdownModal({
                 </div>
               )}
               {layers.layer2 && (
-                <div className="p-3 bg-purple-50 dark:bg-purple-950/20 rounded-lg border-l-4 border-purple-600">
+                <div className="p-3 bg-indigo-50 dark:bg-indigo-950/20 rounded-xl border-l-4 border-slate-700">
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-900 dark:text-gray-100">
                       {language === 'fr' ? 'Couche 2: Fondation émotionnelle' : 'Layer 2: Emotional Foundation'}
                     </span>
-                    <span className="text-lg font-bold text-purple-600 dark:text-purple-400">
+                    <span className="text-lg font-bold text-indigo-600 dark:text-indigo-400">
                       {layers.layer2.percentage}%
                     </span>
                   </div>
@@ -205,12 +205,12 @@ export function CalculationBreakdownModal({
                 </div>
               )}
               {layers.layer3 && (
-                <div className="p-3 bg-cyan-50 dark:bg-cyan-950/20 rounded-lg border-l-4 border-cyan-600">
+                <div className="p-3 bg-indigo-50 dark:bg-indigo-950/20 rounded-xl border-l-4 border-slate-700">
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-900 dark:text-gray-100">
                       {language === 'fr' ? 'Couche 3: Dynamique croisée' : 'Layer 3: Cross Dynamic'}
                     </span>
-                    <span className="text-lg font-bold text-cyan-600 dark:text-cyan-400">
+                    <span className="text-lg font-bold text-indigo-600 dark:text-indigo-400">
                       {layers.layer3.percentage}%
                     </span>
                   </div>
@@ -220,12 +220,12 @@ export function CalculationBreakdownModal({
                 </div>
               )}
               {layers.layer4 && (
-                <div className="p-3 bg-teal-50 dark:bg-teal-950/20 rounded-lg border-l-4 border-teal-600">
+                <div className="p-3 bg-indigo-50 dark:bg-indigo-950/20 rounded-xl border-l-4 border-slate-700">
                   <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-900 dark:text-gray-100">
                       {language === 'fr' ? 'Couche 4: Dynamique croisée' : 'Layer 4: Cross Dynamic'}
                     </span>
-                    <span className="text-lg font-bold text-teal-600 dark:text-teal-400">
+                    <span className="text-lg font-bold text-indigo-600 dark:text-indigo-400">
                       {layers.layer4.percentage}%
                     </span>
                   </div>
@@ -243,7 +243,7 @@ export function CalculationBreakdownModal({
               <span className="flex items-center justify-center w-7 h-7 rounded-full bg-green-600 text-white text-sm font-bold">4</span>
               {language === 'fr' ? 'Score global pondéré' : 'Weighted Overall Score'}
             </h3>
-            <div className="p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20 rounded-lg border-2 border-green-300 dark:border-green-700">
+            <div className="p-4 rounded-xl border border-green-300 dark:border-green-700 bg-white/60 dark:bg-slate-800/40">
               <div className="font-mono text-sm text-gray-700 dark:text-gray-300 space-y-1 mb-3">
                 {layers.layer1 && <div>L1 ({layers.layer1.percentage}%) × 0.30 = {(layers.layer1.percentage * 0.30).toFixed(1)}</div>}
                 {layers.layer2 && <div>L2 ({layers.layer2.percentage}%) × 0.40 = {(layers.layer2.percentage * 0.40).toFixed(1)}</div>}
@@ -265,7 +265,7 @@ export function CalculationBreakdownModal({
         <div className="sticky bottom-0 bg-slate-100 dark:bg-slate-900 p-4 border-t border-slate-200 dark:border-slate-700">
           <button
             onClick={onClose}
-            className="w-full px-4 py-2 bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-700 dark:hover:bg-indigo-600 text-white font-semibold rounded-lg transition-colors"
+            className="w-full px-4 py-2 bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-700 dark:hover:bg-indigo-600 text-white font-semibold rounded-xl transition-colors min-h-[44px]"
           >
             {language === 'fr' ? 'Fermer' : 'Close'}
           </button>

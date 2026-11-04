@@ -44,7 +44,7 @@ export default function LunarMansionDisplay({ currentPlanet }: LunarMansionDispl
 
   if (!currentMansion) {
     return (
-      <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950 dark:to-purple-950 rounded-xl p-6 border border-indigo-200 dark:border-indigo-800">
+      <div className=" rounded-xl p-6 border border-indigo-200 dark:border-indigo-800 bg-white/60 dark:bg-slate-800/40">
         <div className="text-center text-gray-600 dark:text-gray-400">
           {isFr ? 'Calcul du manoir lunaire...' : 'Calculating lunar mansion...'}
         </div>
@@ -60,7 +60,7 @@ export default function LunarMansionDisplay({ currentPlanet }: LunarMansionDispl
     : null;
 
   return (
-    <div className="relative bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-indigo-950 dark:via-purple-950 dark:to-pink-950 rounded-xl p-6 border border-indigo-200 dark:border-indigo-800 shadow-lg overflow-hidden">
+    <div className="relative rounded-xl p-6 border border-indigo-200 dark:border-indigo-800 shadow-sm overflow-hidden bg-white/60 dark:bg-slate-800/40">
       {/* Crescent Moon Background Pattern */}
       <div className="absolute inset-0 opacity-5 dark:opacity-10">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -86,7 +86,7 @@ export default function LunarMansionDisplay({ currentPlanet }: LunarMansionDispl
         </div>
 
         {/* Mansion Name Card */}
-        <div className="mb-4 p-4 bg-white/50 dark:bg-black/20 rounded-lg">
+        <div className="mb-4 p-4 bg-white/50 dark:bg-black/20 rounded-xl">
           {/* Arabic Name */}
           <div 
             className="text-4xl font-amiri font-bold text-center mb-2 text-indigo-800 dark:text-indigo-200"
@@ -109,27 +109,27 @@ export default function LunarMansionDisplay({ currentPlanet }: LunarMansionDispl
         {/* Quick Info Grid */}
         <div className="grid grid-cols-2 gap-3 mb-4">
           {/* Moon Phase */}
-          <div className="p-3 bg-purple-100 dark:bg-purple-900/30 rounded-lg">
+          <div className="p-3 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl">
             <div className="text-xs text-gray-600 dark:text-gray-400 mb-1">
               {isFr ? 'Phase Lunaire' : 'Moon Phase'}
             </div>
-            <div className="text-sm font-semibold text-purple-900 dark:text-purple-100">
+            <div className="text-sm font-semibold text-indigo-900 dark:text-indigo-100">
               {moonPhase}
             </div>
           </div>
 
           {/* Element */}
-          <div className="p-3 bg-pink-100 dark:bg-pink-900/30 rounded-lg">
+          <div className="p-3 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl">
             <div className="text-xs text-gray-600 dark:text-gray-400 mb-1">
               {isFr ? 'Élément' : 'Element'}
             </div>
-            <div className="text-sm font-semibold text-pink-900 dark:text-pink-100">
+            <div className="text-sm font-semibold text-indigo-900 dark:text-indigo-100">
               {mansion.element}
             </div>
           </div>
 
           {/* Planetary Ruler */}
-          <div className="p-3 bg-indigo-100 dark:bg-indigo-900/30 rounded-lg col-span-2">
+          <div className="p-3 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl col-span-2">
             <div className="text-xs text-gray-600 dark:text-gray-400 mb-1">
               {isFr ? 'Gouverneur Planétaire' : 'Planetary Ruler'}
             </div>
@@ -140,17 +140,17 @@ export default function LunarMansionDisplay({ currentPlanet }: LunarMansionDispl
         </div>
 
         {/* Divine Quality */}
-        <div className="mb-4 p-4 bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 rounded-lg">
+        <div className="mb-4 p-4 rounded-xl bg-white/60 dark:bg-slate-800/40">
           <div className="text-xs text-gray-600 dark:text-gray-400 mb-1">
             {isFr ? 'Qualité Divine' : 'Divine Quality'}
           </div>
-          <div className="text-base font-semibold text-purple-900 dark:text-purple-100">
+          <div className="text-base font-semibold text-indigo-900 dark:text-indigo-100">
             {isFr ? mansion.divineQuality.fr : mansion.divineQuality.en}
           </div>
         </div>
 
         {/* Spiritual Focus */}
-        <div className="mb-4 p-3 bg-indigo-50 dark:bg-indigo-950/50 rounded-lg border border-indigo-200 dark:border-indigo-800">
+        <div className="mb-4 p-3 bg-indigo-50 dark:bg-indigo-950/50 rounded-xl border border-indigo-200 dark:border-indigo-800">
           <div className="flex items-center gap-2 mb-2">
             <span className="text-lg">✨</span>
             <div className="text-xs font-semibold uppercase tracking-wide text-gray-600 dark:text-gray-400">
@@ -164,11 +164,11 @@ export default function LunarMansionDisplay({ currentPlanet }: LunarMansionDispl
 
         {/* Planetary Synergy */}
         {synergy && (
-          <div className={`mb-4 p-3 rounded-lg border-2 ${
+          <div className={`mb-4 p-3 rounded-xl border ${
             synergy.synergy === 'high'
               ? 'bg-green-50 dark:bg-green-950/30 border-green-300 dark:border-green-700'
               : synergy.synergy === 'medium'
-              ? 'bg-blue-50 dark:bg-blue-950/30 border-blue-300 dark:border-blue-700'
+              ? 'bg-indigo-50 dark:bg-indigo-950/30 border-slate-200 dark:border-slate-700'
               : 'bg-gray-50 dark:bg-gray-900/30 border-gray-300 dark:border-gray-700'
           }`}>
             <div className="flex items-center gap-2 mb-1">
@@ -188,7 +188,7 @@ export default function LunarMansionDisplay({ currentPlanet }: LunarMansionDispl
         {/* Expandable Details */}
         <button
           onClick={() => setShowDetails(!showDetails)}
-          className="w-full mb-3 px-4 py-2 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 rounded-lg hover:bg-indigo-200 dark:hover:bg-indigo-800 transition-colors text-sm font-medium"
+          className="w-full mb-3 px-4 py-2 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 rounded-xl hover:bg-indigo-200 dark:hover:bg-indigo-800 transition-colors text-sm font-medium min-h-[44px]"
         >
           {showDetails 
             ? (isFr ? '▼ Masquer les détails' : '▼ Hide Details')
@@ -197,9 +197,9 @@ export default function LunarMansionDisplay({ currentPlanet }: LunarMansionDispl
         </button>
 
         {showDetails && (
-          <div className="space-y-3 animate-fade-in">
+          <div className="space-y-3 ">
             {/* Favorable Activities */}
-            <div className="p-3 bg-green-50 dark:bg-green-950/30 rounded-lg border border-green-200 dark:border-green-800">
+            <div className="p-3 bg-green-50 dark:bg-green-950/30 rounded-xl border border-green-200 dark:border-green-800">
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-lg">✅</span>
                 <div className="text-xs font-semibold uppercase tracking-wide text-green-700 dark:text-green-300">
@@ -217,7 +217,7 @@ export default function LunarMansionDisplay({ currentPlanet }: LunarMansionDispl
             </div>
 
             {/* Unfavorable Activities */}
-            <div className="p-3 bg-red-50 dark:bg-red-950/30 rounded-lg border border-red-200 dark:border-red-800">
+            <div className="p-3 bg-red-50 dark:bg-red-950/30 rounded-xl border border-red-200 dark:border-red-800">
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-lg">⚠️</span>
                 <div className="text-xs font-semibold uppercase tracking-wide text-red-700 dark:text-red-300">
@@ -235,7 +235,7 @@ export default function LunarMansionDisplay({ currentPlanet }: LunarMansionDispl
             </div>
 
             {/* Classical Wisdom */}
-            <div className="p-4 bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-950/30 dark:to-yellow-950/30 rounded-lg border border-amber-200 dark:border-amber-800">
+            <div className="p-4 rounded-xl border border-amber-200 dark:border-amber-800 bg-white/60 dark:bg-slate-800/40">
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-lg">📜</span>
                 <div className="text-xs font-semibold uppercase tracking-wide text-amber-700 dark:text-amber-300">

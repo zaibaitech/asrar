@@ -155,7 +155,7 @@ export function GlossaryModal() {
       {/* Trigger Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
+        className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-100 rounded-xl transition-colors min-h-[44px]"
         title={t?.glossary?.openTitle || "Open Islamic Numerology Glossary"}
       >
         <BookOpen className="w-4 h-4" />
@@ -169,7 +169,7 @@ export function GlossaryModal() {
 
       {/* Modal */}
       {isOpen && (
-        <div className="fixed inset-4 md:inset-12 bg-white rounded-lg shadow-xl z-50 flex flex-col overflow-hidden">
+        <div className="fixed inset-4 md:inset-12 bg-white rounded-xl shadow-sm z-50 flex flex-col overflow-hidden">
           {/* Header */}
           <div className="border-b border-slate-200 p-6 flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -178,7 +178,7 @@ export function GlossaryModal() {
             </div>
             <button
               onClick={() => setIsOpen(false)}
-              className="p-2 hover:bg-slate-100 rounded-lg transition-colors"
+              className="p-2 hover:bg-slate-100 rounded-xl transition-colors min-h-[44px]"
               aria-label={t?.glossary?.closeLabel || "Close glossary"}
             >
               <X className="w-6 h-6 text-slate-600" />
@@ -192,7 +192,7 @@ export function GlossaryModal() {
               placeholder={t?.glossary?.searchPlaceholder || "Search terms... (e.g., 'Saghir', 'element', 'destiny')"}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-400"
+              className="w-full px-4 py-2 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-400 min-h-[44px] text-base sm:text-sm"
             />
             <p className="text-xs text-slate-600 mt-2">
               {filteredTerms.length} of {GLOSSARY_TERMS.length} terms
@@ -226,7 +226,7 @@ export function GlossaryModal() {
           <div className="border-t border-slate-200 px-6 py-4 bg-slate-50 flex justify-end">
             <button
               onClick={() => setIsOpen(false)}
-              className="px-6 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors"
+              className="px-6 py-2 bg-slate-900 text-white rounded-xl hover:bg-slate-800 transition-colors min-h-[44px]"
             >
               Close
             </button>

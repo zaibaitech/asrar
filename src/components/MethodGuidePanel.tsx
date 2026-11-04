@@ -430,7 +430,7 @@ export function MethodGuidePanel({ language = 'en' }: MethodGuidePanelProps) {
   const activeData = data[activeMethod];
 
   return (
-    <div className="space-y-6 p-8 bg-white dark:bg-slate-900 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700">
+    <div className="space-y-6 p-8 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700">
       
       {/* Header */}
       <div className="text-center space-y-2">
@@ -465,8 +465,8 @@ export function MethodGuidePanel({ language = 'en' }: MethodGuidePanelProps) {
         {/* Spiritual Method */}
         {activeMethod === 'spiritual' && (
           <div className="space-y-6">
-            <div className="flex items-center gap-3 p-4 bg-purple-50 dark:bg-purple-950/30 rounded-lg">
-              <Sparkles className="w-8 h-8 text-purple-600 dark:text-purple-400" />
+            <div className="flex items-center gap-3 p-4 bg-indigo-50 dark:bg-indigo-950/30 rounded-xl">
+              <Sparkles className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
               <div>
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-50">
                   {data.spiritual.title}
@@ -476,7 +476,7 @@ export function MethodGuidePanel({ language = 'en' }: MethodGuidePanelProps) {
             </div>
 
             {data.spiritual.sections.map((section: any, idx: number) => (
-              <div key={idx} className="p-5 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
+              <div key={idx} className="p-5 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
                 <h4 className="font-bold text-lg text-slate-900 dark:text-slate-50 mb-2">
                   {section.heading}
                 </h4>
@@ -491,7 +491,7 @@ export function MethodGuidePanel({ language = 'en' }: MethodGuidePanelProps) {
         {/* Elemental Method */}
         {activeMethod === 'elemental' && (
           <div className="space-y-6">
-            <div className="flex items-center gap-3 p-4 bg-orange-50 dark:bg-orange-950/30 rounded-lg">
+            <div className="flex items-center gap-3 p-4 bg-orange-50 dark:bg-orange-950/30 rounded-xl">
               <Flame className="w-8 h-8 text-orange-600 dark:text-orange-400" />
               <div>
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-50">
@@ -501,7 +501,7 @@ export function MethodGuidePanel({ language = 'en' }: MethodGuidePanelProps) {
               </div>
             </div>
 
-            <p className="text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-800/50 p-4 rounded-lg">
+            <p className="text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-800/50 p-4 rounded-xl">
               {data.elemental.intro}
             </p>
 
@@ -511,7 +511,7 @@ export function MethodGuidePanel({ language = 'en' }: MethodGuidePanelProps) {
                 {isFrench ? 'Les Quatre Éléments' : 'The Four Elements'}
               </h4>
               {data.elemental.elements.map((element: any, idx: number) => (
-                <div key={idx} className="p-5 bg-gradient-to-r from-slate-50 to-slate-100 dark:from-slate-800/50 dark:to-slate-800/30 rounded-lg">
+                <div key={idx} className="p-5 rounded-xl bg-white/60 dark:bg-slate-800/40">
                   <h5 className="font-bold text-lg text-slate-900 dark:text-slate-50 mb-2">
                     {element.name}
                   </h5>
@@ -539,7 +539,7 @@ export function MethodGuidePanel({ language = 'en' }: MethodGuidePanelProps) {
                 {isFrench ? 'Compatibilité des Paires' : 'Compatibility Pairs'}
               </h4>
               {data.elemental.compatibility.map((pair: any, idx: number) => (
-                <div key={idx} className="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
+                <div key={idx} className="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
                   <div className="flex justify-between items-start mb-2">
                     <h5 className="font-bold text-slate-900 dark:text-slate-50">{pair.pair}</h5>
                     <span className="text-sm text-indigo-600 dark:text-indigo-400 font-semibold">
@@ -558,7 +558,7 @@ export function MethodGuidePanel({ language = 'en' }: MethodGuidePanelProps) {
         {/* Planetary Method */}
         {activeMethod === 'planetary' && (
           <div className="space-y-6">
-            <div className="flex items-center gap-3 p-4 bg-indigo-50 dark:bg-indigo-950/30 rounded-lg">
+            <div className="flex items-center gap-3 p-4 bg-indigo-50 dark:bg-indigo-950/30 rounded-xl">
               <Star className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
               <div>
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-50">
@@ -569,7 +569,7 @@ export function MethodGuidePanel({ language = 'en' }: MethodGuidePanelProps) {
             </div>
 
             {data.planetary.sections.map((section: any, idx: number) => (
-              <div key={idx} className="p-5 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
+              <div key={idx} className="p-5 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
                 <h4 className="font-bold text-lg text-slate-900 dark:text-slate-50 mb-2">
                   {section.heading}
                 </h4>
@@ -585,7 +585,7 @@ export function MethodGuidePanel({ language = 'en' }: MethodGuidePanelProps) {
                 {isFrench ? 'Les Planètes et Leurs Influences' : 'The Planets and Their Influences'}
               </h4>
               {data.planetary.planets.map((planet: any, idx: number) => (
-                <div key={idx} className="p-5 bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/30 dark:to-purple-950/30 rounded-lg border border-indigo-200 dark:border-indigo-800">
+                <div key={idx} className="p-5 rounded-xl border border-indigo-200 dark:border-indigo-800 bg-white/60 dark:bg-slate-800/40">
                   <h5 className="font-bold text-lg text-slate-900 dark:text-slate-50 mb-3">
                     {planet.name}
                   </h5>
@@ -599,7 +599,7 @@ export function MethodGuidePanel({ language = 'en' }: MethodGuidePanelProps) {
                     <p className="text-green-700 dark:text-green-400">
                       <span className="font-semibold">✓ {isFrench ? 'Compatible avec:' : 'Compatible with:'}</span> {planet.compatibleWith}
                     </p>
-                    <p className="text-rose-700 dark:text-rose-400">
+                    <p className="text-indigo-700 dark:text-indigo-400">
                       <span className="font-semibold">✗ {isFrench ? 'Difficile avec:' : 'Challenging with:'}</span> {planet.challengingWith}
                     </p>
                   </div>

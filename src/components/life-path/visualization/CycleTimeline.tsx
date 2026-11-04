@@ -98,9 +98,9 @@ export const CycleTimeline: React.FC<CycleTimelineProps> = ({ currentYear, birth
 
   const getPhaseColor = (phase: 'foundation' | 'growth' | 'completion') => {
     switch (phase) {
-      case 'foundation': return 'from-green-400 to-emerald-600';
-      case 'growth': return 'from-blue-400 to-indigo-600';
-      case 'completion': return 'from-purple-400 to-pink-600';
+      case 'foundation': return '';
+      case 'growth': return '';
+      case 'completion': return '';
     }
   };
 
@@ -132,7 +132,7 @@ export const CycleTimeline: React.FC<CycleTimelineProps> = ({ currentYear, birth
 
       {/* Phase Indicators */}
       <div className="grid md:grid-cols-3 gap-4">
-        <div className={`bg-gradient-to-br ${getPhaseColor('foundation')} text-slate-50 rounded-xl p-6 shadow-lg`}>
+        <div className={` bg-white/60 dark:bg-slate-800/40${getPhaseColor('foundation')} text-slate-50 rounded-xl p-6 shadow-sm`}>
           <div className="text-sm font-semibold opacity-95 mb-2">
             {isArabic ? 'السنوات 1-3' : isFrench ? 'Années 1-3' : 'Years 1-3'}
           </div>
@@ -141,7 +141,7 @@ export const CycleTimeline: React.FC<CycleTimelineProps> = ({ currentYear, birth
             {isArabic ? 'بناء الأساس وزرع البذور' : isFrench ? 'Construire la fondation et planter des graines' : 'Building foundation and planting seeds'}
           </p>
         </div>
-        <div className={`bg-gradient-to-br ${getPhaseColor('growth')} text-slate-50 rounded-xl p-6 shadow-lg`}>
+        <div className={` bg-white/60 dark:bg-slate-800/40${getPhaseColor('growth')} text-slate-50 rounded-xl p-6 shadow-sm`}>
           <div className="text-sm font-semibold opacity-95 mb-2">
             {isArabic ? 'السنوات 4-6' : isFrench ? 'Années 4-6' : 'Years 4-6'}
           </div>
@@ -150,7 +150,7 @@ export const CycleTimeline: React.FC<CycleTimelineProps> = ({ currentYear, birth
             {isArabic ? 'التوسع والتطور' : isFrench ? 'Expansion et développement' : 'Expansion and development'}
           </p>
         </div>
-        <div className={`bg-gradient-to-br ${getPhaseColor('completion')} text-slate-50 rounded-xl p-6 shadow-lg`}>
+        <div className={` bg-white/60 dark:bg-slate-800/40${getPhaseColor('completion')} text-slate-50 rounded-xl p-6 shadow-sm`}>
           <div className="text-sm font-semibold opacity-95 mb-2">
             {isArabic ? 'السنوات 7-9' : isFrench ? 'Années 7-9' : 'Years 7-9'}
           </div>
@@ -162,7 +162,7 @@ export const CycleTimeline: React.FC<CycleTimelineProps> = ({ currentYear, birth
       </div>
 
       {/* Timeline */}
-      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-4 md:p-8">
+      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm p-4 md:p-8">
         <div className="mb-8">
           <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 text-center">
             {isArabic ? 'الجدول الزمني للدورة' : isFrench ? 'Chronologie du Cycle' : 'Cycle Timeline'}
@@ -179,7 +179,7 @@ export const CycleTimeline: React.FC<CycleTimelineProps> = ({ currentYear, birth
             <div className="absolute top-[40px] left-8 right-8 h-2 bg-slate-200 dark:bg-slate-700 rounded-full" />
             {currentYear && (
               <div 
-                className="absolute top-[40px] left-8 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-500"
+                className="absolute top-[40px] left-8 h-2 rounded-full transition-all duration-500 bg-indigo-600"
                 style={{ width: `calc(((100% - 4rem) / 8) * ${currentYear - 1})` }}
               />
             )}
@@ -195,23 +195,23 @@ export const CycleTimeline: React.FC<CycleTimelineProps> = ({ currentYear, birth
                   <button
                     key={cycle.year}
                     onClick={() => setSelectedYear(cycle.year)}
-                    className="flex flex-col items-center gap-2 group flex-shrink-0"
+                    className="flex flex-col items-center gap-2 group flex-shrink-0 min-h-[44px]"
                   >
                     <div className={`relative w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center font-bold text-base md:text-lg transition-all ${
                       isSelected
-                        ? `bg-gradient-to-br ${getPhaseColor(cycle.phase)} text-slate-50 shadow-lg scale-110 md:scale-125`
-                        : isCurrent
-                        ? 'bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 border-2 md:border-4 border-purple-500'
-                        : isPast
-                        ? 'bg-slate-300 dark:bg-slate-600 text-slate-600 dark:text-slate-400'
-                        : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-2 border-slate-300 dark:border-slate-600'
-                    }`}>
+                        ? `bg-indigo-600 ${getPhaseColor(cycle.phase)} text-slate-50 shadow-sm`
+ : isCurrent
+ ? 'bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 border md:border-4 border-slate-300'
+ : isPast
+ ? 'bg-slate-300 dark:bg-slate-600 text-slate-600 dark:text-slate-400'
+ : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-600'
+ }`}>
                       {cycle.year}
                       {isPast && !isCurrent && (
                         <CheckCircle2 className="absolute -top-1 -right-1 w-4 h-4 md:w-5 md:h-5 text-green-600 dark:text-green-400 fill-current" />
                       )}
                       {isCurrent && (
-                        <div className="absolute -inset-1 bg-purple-500 rounded-full animate-ping opacity-25" />
+                        <div className="absolute -inset-1 bg-indigo-500 rounded-full opacity-25" />
                       )}
                     </div>
                     <div className={`text-xs font-medium transition-opacity text-center max-w-[60px] ${
@@ -230,7 +230,7 @@ export const CycleTimeline: React.FC<CycleTimelineProps> = ({ currentYear, birth
         {selectedCycle && (
           <div className="mt-8 md:mt-12 space-y-6">
             {/* Year Header */}
-            <div className={`bg-gradient-to-br ${getPhaseColor(selectedCycle.phase)} text-slate-50 rounded-xl p-6 md:p-8 text-center`}>
+            <div className={` bg-white/60 dark:bg-slate-800/40${getPhaseColor(selectedCycle.phase)} text-slate-50 rounded-xl p-6 md:p-8 text-center`}>
               <div className="text-5xl md:text-6xl font-bold mb-3 md:mb-4">{selectedCycle.year}</div>
               <h3 className="text-2xl md:text-3xl font-bold mb-2">
                 {isArabic ? selectedCycle.theme.ar : isFrench ? selectedCycle.theme.fr : selectedCycle.theme.en}
@@ -241,7 +241,7 @@ export const CycleTimeline: React.FC<CycleTimelineProps> = ({ currentYear, birth
             </div>
 
             {/* Description */}
-            <div className="bg-slate-50 dark:bg-slate-900 rounded-lg p-4 md:p-6">
+            <div className="bg-slate-50 dark:bg-slate-900 rounded-xl p-4 md:p-6">
               <p className="text-slate-700 dark:text-slate-300 text-base md:text-lg leading-relaxed">
                 {isArabic ? selectedCycle.description.ar : isFrench ? selectedCycle.description.fr : selectedCycle.description.en}
               </p>
@@ -254,8 +254,8 @@ export const CycleTimeline: React.FC<CycleTimelineProps> = ({ currentYear, birth
               </h4>
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
                 {(isArabic ? selectedCycle.focus.ar : isFrench ? selectedCycle.focus.fr : selectedCycle.focus.en).map((focus, index) => (
-                  <div key={index} className="flex items-center gap-2 md:gap-3 bg-white dark:bg-slate-800 rounded-lg p-3 md:p-4 border border-slate-200 dark:border-slate-700">
-                    <ChevronRight className={`w-4 h-4 md:w-5 md:h-5 flex-shrink-0 ${selectedCycle.phase === 'foundation' ? 'text-green-600' : selectedCycle.phase === 'growth' ? 'text-blue-600' : 'text-purple-600'}`} />
+                  <div key={index} className="flex items-center gap-2 md:gap-3 bg-white dark:bg-slate-800 rounded-xl p-3 md:p-4 border border-slate-200 dark:border-slate-700">
+                    <ChevronRight className={`w-4 h-4 md:w-5 md:h-5 flex-shrink-0 ${selectedCycle.phase === 'foundation' ? 'text-green-600' : selectedCycle.phase === 'growth' ? 'text-indigo-600' : 'text-indigo-600'}`} />
                     <span className="text-slate-700 dark:text-slate-300 font-medium text-sm md:text-base">{focus}</span>
                   </div>
                 ))}
@@ -266,7 +266,7 @@ export const CycleTimeline: React.FC<CycleTimelineProps> = ({ currentYear, birth
             <div className="flex items-center justify-between pt-6 border-t border-slate-200 dark:border-slate-700 gap-4">
               <button
                 onClick={() => setSelectedYear(selectedYear > 1 ? selectedYear - 1 : 9)}
-                className="flex items-center gap-2 px-3 md:px-4 py-2 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-300 rounded-lg font-medium transition-colors text-sm md:text-base"
+                className="flex items-center gap-2 px-3 md:px-4 py-2 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-300 rounded-xl font-medium transition-colors text-sm md:text-base"
               >
                 <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
                 <span className="hidden sm:inline">{isArabic ? 'السنة السابقة' : isFrench ? 'Année Précédente' : 'Previous Year'}</span>
@@ -274,7 +274,7 @@ export const CycleTimeline: React.FC<CycleTimelineProps> = ({ currentYear, birth
               </button>
               <button
                 onClick={() => setSelectedYear(selectedYear < 9 ? selectedYear + 1 : 1)}
-                className="flex items-center gap-2 px-3 md:px-4 py-2 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-300 rounded-lg font-medium transition-colors text-sm md:text-base"
+                className="flex items-center gap-2 px-3 md:px-4 py-2 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-300 rounded-xl font-medium transition-colors text-sm md:text-base"
               >
                 <span className="hidden sm:inline">{isArabic ? 'السنة التالية' : isFrench ? 'Année Suivante' : 'Next Year'}</span>
                 <span className="sm:hidden">{isArabic ? 'التالي' : isFrench ? 'Suiv.' : 'Next'}</span>
@@ -286,7 +286,7 @@ export const CycleTimeline: React.FC<CycleTimelineProps> = ({ currentYear, birth
       </div>
 
       {/* Disclaimer */}
-      <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4 text-center">
+      <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-4 text-center">
         <p className="text-sm text-amber-900 dark:text-amber-100">
           {isArabic
             ? 'تذكر: الدورات أدوات للتأمل والتخطيط، وليست قدراً ثابتاً. الله وحده يعلم الغيب.'

@@ -13,7 +13,7 @@ interface MobileMenuProps {
   /** History is optional; omit both to hide the entry entirely. */
   onShowHistory?: () => void;
   historyCount?: number;
-  /** Life Guidance is dev-only; omit to hide the entry entirely. */
+  /** Life Guidance is a flagged preview; omit to hide the entry entirely. */
   onSelectGuidance?: () => void;
 }
 
