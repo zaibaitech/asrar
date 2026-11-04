@@ -1,19 +1,19 @@
 /**
  * "Letters and their mansions": each letter of a name set beside the lunar
- * mansion that al-Būnī gives it. A fixed table, attributed to al-Būnī, Shams
- * al-Maʿārif al-Kubrā, ch. 2 (entries 1 to 28 checked against pp. 16 to 19 of the
- * ablibrary.net edition, https://ablibrary.net/book_content/b/10942/16).
+ * mansion given by a fixed table attributed to al-Būnī (attribution disputed),
+ * Shams al-Maʿārif al-Kubrā, al-faṣl al-thānī (entries 1 to 28 checked against pp. 16 to 19 of the
+ * ablibrary.net edition, https://ablibrary.net/books/10942).
  *
  * It follows the MASHRIQI abjad order (ا ب ج د ه و ز ح ط ي ك ل م ن س ع ف ص ق ر ش ت ث خ ذ ض ظ غ)
  * and is INDEPENDENT of the user's Maghribi / Mashriqi setting: letter n goes
- * with mansion n, always. It is a spiritual correspondence between letters and
- * the mansions, not an astronomical one; the Moon's real mansion is computed
+ * with mansion n, always. It is a traditional correspondence described in the asrār
+ * literature, not an astronomical one; the Moon's real mansion is computed
  * elsewhere (MoonManzil). This module adds no calculation.
  *
  * The mansion is identified by NUMBER (1 to 28) and read from the app's own
  * list (src/lib/lunarMansions.ts). The Arabic name SHOWN is the app's spelling,
  * the standard lexical form (Ibn Qutayba, Kitāb al-Anwāʾ; Lisān al-ʿArab). Six
- * names are written differently in al-Būnī's edition; BUNI_TABLE keeps his
+ * names are written differently in the cited edition; BUNI_TABLE keeps that
  * spelling for attribution and the view notes it per row:
  *   1 الشرطين (oblique case) = الشرطان, 9 الطرفة = الطرف, 16 الزبانا = الزبانى,
  *   26 and 27 الفرع (ʿayn) = الفرغ (ghayn), 28 الرشا = بطن الحوت (also الرشاء).
@@ -23,7 +23,7 @@ import { LETTER_FORMS } from '../../lib/abjad-maps';
 import { urduToArabicLetters } from '../../lib/urduLetters';
 import { LUNAR_MANSIONS, type LunarMansion } from '../../lib/lunarMansions';
 
-/** Mansion number (index + 1) → [letter, al-Būnī's name for the mansion]. */
+/** Mansion number (index + 1) → [letter, the mansion name in the cited edition]. */
 export const BUNI_TABLE: readonly (readonly [letter: string, name: string])[] = [
   ['ا', 'الشرطين'], ['ب', 'البطين'], ['ج', 'الثريا'], ['د', 'الدبران'], ['ه', 'الهقعة'],
   ['و', 'الهنعة'], ['ز', 'الذراع'], ['ح', 'النثرة'], ['ط', 'الطرفة'], ['ي', 'الجبهة'],
@@ -45,9 +45,9 @@ export interface LetterMansionRow {
   letter: string;
   /** Mansion number, 1 to 28. */
   number: number;
-  /** al-Būnī's name for the mansion, exactly as in his table. */
+  /** The mansion name as in the cited edition (article normalised: 20 is «نعائم» there). */
   buniName: string;
-  /** True where al-Būnī's edition spells the name differently from the app (6 mansions). */
+  /** True where the cited edition spells the name differently from the app (6 mansions). */
   buniDiffers: boolean;
   /** The same numbered mansion in the app's list. */
   mansion: LunarMansion;

@@ -5,11 +5,12 @@ import { BUNI_TABLE, letterOrder, lettersMansions } from './lettersMansions';
 import { ABJAD_MAGHRIBI, ABJAD_MASHRIQI, LETTER_FORMS } from '../../lib/abjad-maps';
 import { DIVINE_RESONANCE_TABLE } from '../calculator/lib/divineResonance';
 import { LUNAR_MANSIONS } from '../../lib/lunarMansions';
+import { SOURCES, LABELS } from './sourcesContent';
 
 const base = (t: Record<string, number>) => Object.keys(t).filter((c) => !(c in LETTER_FORMS));
 const strip = (s: string) => s.replace(/[\u064B-\u0652\u0670\u0640]/g, '').replace(/\s+/g, ' ');
 
-describe("al-Būnī's letters ↔ mansions table (Shams al-Maʿārif, ch. 2)", () => {
+describe("Letters ↔ mansions table attributed to al-Būnī (Shams al-Maʿārif al-Kubrā, al-faṣl al-thānī)", () => {
   it('has 28 entries; all 28 letters and all 28 mansion names are unique', () => {
     expect(BUNI_TABLE).toHaveLength(28);
     expect(new Set(BUNI_TABLE.map(([l]) => l)).size).toBe(28);
@@ -28,7 +29,7 @@ describe("al-Būnī's letters ↔ mansions table (Shams al-Maʿārif, ch. 2)", (
     letterOrder().forEach((l, i) => expect(DIVINE_RESONANCE_TABLE[i + 1].letter).toBe(l));
   });
 
-  it('every entry maps to the app\u2019s mansion of the same number; al-Būnī\u2019s spelling differs only in the 6 known places', () => {
+  it('every entry maps to the app\u2019s mansion of the same number; the cited edition\u2019s spelling differs only in the 6 known places', () => {
     expect(LUNAR_MANSIONS).toHaveLength(28);
     const variants: number[] = [];
     BUNI_TABLE.forEach(([, name], i) => {
@@ -48,7 +49,7 @@ describe("al-Būnī's letters ↔ mansions table (Shams al-Maʿārif, ch. 2)", (
     expect(app(28)).toBe('بطن الحوت'); // الرشاء is its other attested name
   });
 
-  it('shows the app\u2019s spelling and flags al-Būnī\u2019s edition only where it differs', () => {
+  it('shows the app\u2019s spelling and flags the cited edition only where it differs', () => {
     const rows = lettersMansions('اطعضظغب');
     const byNumber = Object.fromEntries(rows.map((r) => [r.number, r]));
     [1, 9, 16, 26, 27, 28].forEach((n) => {
@@ -86,5 +87,21 @@ describe("al-Būnī's letters ↔ mansions table (Shams al-Maʿārif, ch. 2)", (
   it('gives the same rows whichever abjad setting is selected (no abjad table is consulted)', () => {
     expect(lettersMansions.length).toBe(1);
     expect(lettersMansions('صالح').map((r) => r.number)).toEqual([18, 1, 12, 8]);
+  });
+
+  it('source wording follows the language review (attribution, links, labels)', () => {
+    const src = SOURCES.lettersMansions;
+    expect(src.note).toContain('attributed to al-Būnī (attribution disputed)');
+    expect(src.note).toContain('traditional correspondence described in the asrār literature');
+    expect(src.note).not.toMatch(/spiritual/i);
+    expect(src.refs[0].text.startsWith('Table attributed to al-Būnī')).toBe(true);
+    expect(src.refs[0].url).toBe('https://ablibrary.net/books/10942');
+    expect(src.refs[1].text).toContain('«الفرغ الأول / الفرغ الثانى / الحوت»');
+    expect(src.refs[1].text).toContain('ف-ر-غ');
+    expect(src.refs[1].urls?.length).toBeGreaterThan(0);
+    expect(LABELS.buniEdition).toEqual({ en: 'in the cited edition', fr: 'dans l\u2019édition citée', ar: 'في الطبعة المشار إليها' });
+    expect(LABELS.position.ar).toBe('منزل القمر');
+    expect(LABELS.steps.manzil.ar).toBe('٦ · منزل القمر');
+    expect(LABELS.preview.fr).toContain('«\u00a0à vérifier\u00a0»');
   });
 });

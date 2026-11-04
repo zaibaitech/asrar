@@ -29,6 +29,8 @@ export interface SourceRef {
   quran?: { surah: number; ayah: number };
   /** Optional link to the edition used. */
   url?: string;
+  /** Optional further links (dictionary entries, editions). */
+  urls?: readonly string[];
 }
 
 export interface StepSource {
@@ -111,16 +113,27 @@ export const SOURCES: Record<StepId, StepSource> = {
     ],
   },
   lettersMansions: {
-    note: 'Each letter of the name is set beside the mansion that al-Būnī\u2019s table gives it, in the Mashriqi abjad order (first to last letter). The table is fixed: it does not change with the Maghribi / Mashriqi setting. It is a spiritual correspondence between letters and the mansions, not an astronomical one (for the Moon\u2019s real position, see Manzil (the Moon)). The mansion is matched to the app\u2019s list by number; The Arabic names shown are the app\u2019s standard spellings; al-Būnī\u2019s edition writes six of them differently (mansions 1, 9, 16, 26, 27 and 28) and is noted under those rows.',
+    note: 'Each letter of the name is set beside the mansion given by the table attributed to al-Būnī (attribution disputed), in the Mashriqi abjad order (first to last letter). The table is fixed: it does not change with the Maghribi / Mashriqi setting. It is a traditional correspondence described in the asrār literature, not an astronomical one (for the Moon\u2019s real position, see Manzil (the Moon)). The mansion is matched to the app\u2019s list by number. The Arabic names shown are the app\u2019s standard spellings; the cited edition writes six of them differently (mansions 1, 9, 16, 26, 27 and 28) and is noted under those rows.',
     refs: [
       {
         status: 'attributed',
-        text: 'Attributed to al-Būnī, Shams al-Maʿārif al-Kubrā, ch. 2. Edition: Muʾassasat al-Nūr, Beirut, as on ablibrary.net; the 28 entries were checked on pp. 16 to 19 of that edition.',
-        url: 'https://ablibrary.net/book_content/b/10942/16',
+        text: 'Table attributed to al-Būnī in Shams al-Maʿārif al-Kubrā, al-faṣl al-thānī. Its attribution to al-Būnī (d. 622/1225, or 630/1232 per Ḥājjī Khalīfa) is disputed in modern scholarship. Edition: Muʾassasat al-Nūr, Beirut, as on ablibrary.net; the 28 entries were checked on pp. 16 to 19 of that edition.',
+        url: 'https://ablibrary.net/books/10942',
       },
       {
         status: 'attributed',
-        text: 'Spellings of the mansion names follow Ibn Qutayba, Kitāb al-Anwāʾ (chapter headings) and Lisān al-ʿArab (entries ط-ر-ف, ز-ب-ن, ش-ر-ط, ف-ر-غ, ر-ش-و); no page numbers are cited.',
+        text: 'Mansion names follow Lisān al-ʿArab (ش-ر-ط الشرطان; ط-ر-ف الطرف; ز-ب-ن الزباني; ف-ر-غ فرغ الدلو المقدَّم / المؤخَّر, shortened in the app to الفرغ المقدم / المؤخر; ر-ش-و الرِّشاء, i.e. بطن الحوت) and Ibn Qutayba, Kitāb al-Anwāʾ fī Mawāsim al-ʿArab, whose headings read الشرطان, الطرف and الزبانى, and «الفرغ الأول / الفرغ الثانى / الحوت» for 26 to 28. No page numbers are cited.',
+        urls: [
+          'https://usul.ai/ar/t/anwa-fi-mawasim',
+          'https://read.shamela.ws/book/9093/18',
+          'https://shamela.ws/book/9093/115',
+          'https://www.islamweb.net/ar/library/content/122/4221/شرط',
+          'https://www.islamweb.net/ar/library/content/122/5047/طرف',
+          'https://www.islamweb.net/ar/library/content/122/3398/زبن',
+          'https://www.islamweb.net/ar/library/content/122/6200/فرغ',
+          'https://arabiclexicon.hawramani.com/رشا/',
+          'https://www.laneslexicon.com/word/فرغ/n33640',
+        ],
       },
     ],
   },
@@ -139,7 +152,7 @@ export const LABELS = {
   remainder: { en: 'remainder', fr: 'reste', ar: 'الباقي' },
   preview: {
     en: 'Preview. Sources marked “to verify” are not yet confirmed.',
-    fr: 'Aperçu. Les sources « à vérifier » ne sont pas encore confirmées.',
+    fr: 'Aperçu. Les sources «\u00a0à vérifier\u00a0» ne sont pas encore confirmées.',
     ar: 'نسخة تجريبية. المصادر المعلَّمة «للتحقق» لم تُؤكَّد بعد.',
   },
   steps: {
@@ -148,7 +161,7 @@ export const LABELS = {
     saghir: { en: '3 · Ṣaghīr (root)', fr: '3 · Ṣaghīr (racine)', ar: '٣ · الصغير' },
     tabi: { en: '4 · Ṭabʿ (÷ 4)', fr: '4 · Ṭabʿ (÷ 4)', ar: '٤ · الطبع' },
     burj: { en: '5 · Burj (÷ 12)', fr: '5 · Burj (÷ 12)', ar: '٥ · البرج' },
-    manzil: { en: '6 · Manzil (the Moon)', fr: '6 · Manzil (la Lune)', ar: '٦ · المنزل (القمر)' },
+    manzil: { en: '6 · Manzil (the Moon)', fr: '6 · Manzil (la Lune)', ar: '٦ · منزل القمر' },
     lettersMansions: { en: 'Letters and their mansions', fr: 'Les lettres et leurs demeures', ar: 'الحروف ومنازلها' },
   } as Record<StepId, L3>,
   manzilToday: { en: 'Today\u2019s manzil', fr: 'Le manzil d\u2019aujourd\u2019hui', ar: 'منزل اليوم' },
@@ -157,8 +170,8 @@ export const LABELS = {
     fr: 'Manzil de naissance (date, heure et lieu requis) : Profil de naissance',
     ar: 'منزل الميلاد (يلزم التاريخ والوقت والمكان): الملف الفلكي',
   },
-  buniEdition: { en: 'al-Būnī\u2019s edition', fr: 'édition d\u2019al-Būnī', ar: 'في طبعة البوني' },
-  position: { en: 'mansion', fr: 'demeure', ar: 'المنزلة' },
+  buniEdition: { en: 'in the cited edition', fr: 'dans l\u2019édition citée', ar: 'في الطبعة المشار إليها' },
+  position: { en: 'mansion', fr: 'demeure', ar: 'منزل القمر' },
   order: {
     en: 'Mashriqi abjad order, fixed (independent of your Maghribi / Mashriqi setting)',
     fr: 'Ordre abjad mashriqi, fixe (indépendant de votre réglage maghribi / mashriqi)',

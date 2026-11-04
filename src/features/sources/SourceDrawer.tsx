@@ -53,11 +53,11 @@ export function SourceDrawer({ step, lang }: { step: StepId; lang: Lang }) {
                 {badgeText(r, lang)}
               </span>
               <p>{r.text}</p>
-              {r.url && (
-                <a href={r.url} target="_blank" rel="noopener noreferrer" className="inline-block min-h-[44px] py-2 text-sm font-medium text-indigo-600 dark:text-indigo-400 underline break-all" dir="ltr">
-                  ablibrary.net/book_content/b/10942/16
+              {[...(r.url ? [r.url] : []), ...(r.urls ?? [])].map((u) => (
+                <a key={u} href={u} target="_blank" rel="noopener noreferrer" className="inline-block min-h-[44px] py-2 text-sm font-medium text-indigo-600 dark:text-indigo-400 underline break-all" dir="ltr">
+                  {u.replace(/^https?:\/\/(www\.)?/, '')}
                 </a>
-              )}
+              ))}
               {r.quran && <QuranExcerpt surah={r.quran.surah} ayah={r.quran.ayah} />}
             </li>
           ))}
