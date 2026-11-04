@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Star, Link2 } from 'lucide-react';
 import { Card } from './Card';
 import { pick, ELEMENT_NAME, type Locale } from '../lib/i18nText';
+import { WorkingDrawer } from '../../sources/LazyWorkingDrawer';
 import { getLetterBreakdown, calculateSaghir } from '../lib/coreCalculations';
 import { getAbjadMap } from '../../../lib/abjad-maps';
 import { findLatinForArabic } from '../lib/nameTransliterations';
@@ -126,6 +127,15 @@ export function CalculatorResult({
           <InfoDisclosure label={t('howCalculated')} icon="chevron">
             {t('howCalculatedBody')}
           </InfoDisclosure>
+        </div>
+        {/* Preview only (NEXT_PUBLIC_LIFE_GUIDANCE_PREVIEW): the working and sources behind these numbers. */}
+        <div className="mt-1 w-full text-start">
+          <WorkingDrawer
+            name={profile.normalizedText}
+            abjad={getAbjadMap(profile.system)}
+            lang={locale}
+            expected={{ person: profile.kabir }}
+          />
         </div>
       </div>
 

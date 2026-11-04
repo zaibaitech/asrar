@@ -4,6 +4,9 @@ import React, { useEffect, useState } from "react";
 import { useLanguage } from "../../../contexts/LanguageContext";
 import { translations } from "../../../lib/translations";
 import { getCurrentLunarMansion, type CurrentMansion } from "../../../lib/lunarMansions";
+import { LIFE_GUIDANCE_PREVIEW } from "../../../lib/lifeGuidancePreview";
+import { WorkingDrawer, TileTodaySuffix } from "../../sources/LazyWorkingDrawer";
+import { useAbjad } from "../../../contexts/AbjadContext";
 import type { IstikharaCalculationResult } from "../types";
 import { 
   Sparkles, 
@@ -68,26 +71,32 @@ export function IstikharaSummaryCard({ result }: IstikhSummaryCardProps) {
     1:  { name: "Al-Sharaṭān",      arabic: "الشرطان" },      // Aries
     2:  { name: "Al-Dabarān",       arabic: "الدبران" },      // Taurus
     3:  { name: "Al-Dhirāʿ",        arabic: "الذراع" },       // Gemini
-    4:  { name: "Al-Jabha",         arabic: "الجبهة" },       // Cancer
-    5:  { name: "Al-ʿAwwā",         arabic: "العواء" },       // Leo
+    4:  { name: "Al-Jabhah",        arabic: "الجبهة" },       // Cancer
+    5:  { name: "Al-ʿAwwāʾ",        arabic: "العواء" },       // Leo
     6:  { name: "Al-Zubānā",        arabic: "الزبانى" },      // Virgo
     7:  { name: "Al-Ghafr",         arabic: "الغفر" },        // Libra
-    8:  { name: "Al-Shawla",        arabic: "الشولة" },       // Scorpio
+    8:  { name: "Al-Shawlah",       arabic: "الشولة" },       // Scorpio
     9:  { name: "Saʿd al-Dhābiḥ",   arabic: "سعد الذابح" },   // Sagittarius
-    10: { name: "Saʿd al-Akhbiya",  arabic: "سعد الأخبية" },  // Capricorn
+    10: { name: "Saʿd al-Akhbiyah", arabic: "سعد الأخبية" },  // Capricorn
     11: { name: "Saʿd al-Suʿūd",    arabic: "سعد السعود" },   // Aquarius
-    12: { name: "Al-Rishah",        arabic: "الرشاء" },       // Pisces
+    12: { name: "Baṭn al-Ḥūt",      arabic: "بطن الحوت" },    // Pisces
   };
 
   // Get the user's primary mansion based on their zodiac
   const userPrimaryMansion = ZODIAC_PRIMARY_MANSIONS[result.burujRemainder] || ZODIAC_PRIMARY_MANSIONS[1];
   
+  const { abjad } = useAbjad();
   // Animation states
   const [mainProgress, setMainProgress] = useState(0);
   const [secondaryProgress, setSecondaryProgress] = useState(0);
   const [tertiaryProgress, setTertiaryProgress] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [lunarMansion, setLunarMansion] = useState<CurrentMansion | null>(null);
+  // Preview flag on: show the Moon's actual mansion (existing ephemeris code), once it is computed.
+  const tileMansion =
+    LIFE_GUIDANCE_PREVIEW && lunarMansion
+      ? { name: lunarMansion.mansion.nameTransliteration, arabic: lunarMansion.mansion.nameArabic }
+      : userPrimaryMansion;
 
   // Animated progress on mount
   useEffect(() => {
@@ -476,18 +485,20 @@ export function IstikharaSummaryCard({ result }: IstikhSummaryCardProps) {
           </h4>
 
           <div className="grid grid-cols-2 gap-3">
-            {/* Lunar Mansion - Based on User's Zodiac Sign */}
+            {/* Lunar Mansion. Preview flag on: the Moon's real mansion today (astronomy), never a name-derived one.
+                Flag off (production): unchanged, the burj-based "primary mansion". */}
             <div className={`group relative p-4 rounded-xl border-2 ${config.border} bg-black/30 backdrop-blur-sm hover:bg-black/40 transition-all duration-300 hover:scale-105 ${config.progressGlow}`}>
               <div className={`absolute top-2 right-2 w-2 h-2 rounded-full ${config.pulseColor} animate-ping`}></div>
               <div className="text-2xl mb-1">🌙</div>
               <div className={`text-xs font-semibold ${config.text} mb-1`}>
                 {language === "en" ? "Manāzil" : "Manāzil"}
+                {LIFE_GUIDANCE_PREVIEW && lunarMansion ? <TileTodaySuffix /> : ""}
               </div>
-              <div className={`text-base font-bold ${config.textBright} mb-1 group-hover:scale-105 transition-transform leading-tight`}>
-                {userPrimaryMansion.name}
+              <div className={`text-base font-bold ${config.textBright} mb-1 group-hover:scale-105 transition-transform leading-tight${LIFE_GUIDANCE_PREVIEW ? " min-w-0 break-words [overflow-wrap:anywhere]" : ""}`}>
+                {tileMansion.name}
               </div>
               <div className="text-sm font-arabic text-white/90" dir="rtl">
-                {userPrimaryMansion.arabic}
+                {tileMansion.arabic}
               </div>
             </div>
 
@@ -537,6 +548,19 @@ export function IstikharaSummaryCard({ result }: IstikhSummaryCardProps) {
               </div>
             )}
           </div>
+
+          {/* Preview only (NEXT_PUBLIC_LIFE_GUIDANCE_PREVIEW): the working and sources behind these numbers. */}
+          {LIFE_GUIDANCE_PREVIEW && result.calculationMethod !== 'birth-date' && (
+            <div className="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-3">
+              <WorkingDrawer
+                name={result.personName}
+                mother={result.motherName}
+                abjad={abjad}
+                expected={{ person: result.personTotal, mother: result.motherTotal }}
+                showMoon
+              />
+            </div>
+          )}
 
           {/* Blessed Day Card */}
           <div className={`p-5 rounded-xl border-2 ${config.border} bg-gradient-to-br ${config.bgGradient} backdrop-blur-sm`}>

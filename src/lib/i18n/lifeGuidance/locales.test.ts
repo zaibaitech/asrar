@@ -1,5 +1,8 @@
 import { describe, it, expect } from 'vitest';
 import { LIFE_GUIDANCE_STRINGS, LIFE_GUIDANCE_REVIEW } from './index';
+import { SOURCES, LABELS, LANGS } from '../../../features/sources/sourcesContent';
+import { ELEMENT_NAME } from '../../../features/calculator/lib/i18nText';
+import { ZODIAC_IDENTITY_MAP } from '../../../features/calculator/lib/zodiac';
 
 type Tree = Record<string, unknown>;
 const leaves = (t: unknown, p = '', out = new Map<string, unknown>()): Map<string, unknown> => {
@@ -40,5 +43,26 @@ describe('Life Guidance strings: every key in every locale', () => {
   });
   it('machine translations are never marked reviewed', () => {
     expect(LIFE_GUIDANCE_REVIEW).toEqual({ en: 'reference', fr: 'draft', ar: 'draft', ur: 'draft' });
+  });
+
+  it('every source note, reference text and label resolves to a non-empty string in en, fr, ar and ur', () => {
+    expect(LANGS).toEqual(['en', 'fr', 'ar', 'ur']);
+    for (const [step, src] of Object.entries(SOURCES)) {
+      for (const l of LANGS) {
+        expect(src.note[l]?.trim(), `${step}.note.${l}`).toBeTruthy();
+        src.refs.forEach((r, i) => expect(r.text[l]?.trim(), `${step}.refs[${i}].${l}`).toBeTruthy());
+      }
+    }
+    for (const [key, v] of Object.entries(LABELS)) {
+      const recs = key === 'steps' ? Object.values(v as Record<string, Record<string, string>>) : [v as Record<string, string>];
+      for (const rec of recs) for (const l of LANGS) expect(rec[l]?.trim(), `${key}.${l}`).toBeTruthy();
+    }
+  });
+  it('element and zodiac names in en, fr and ar match the app\u2019s existing data (no drift)', () => {
+    for (const l of ['en', 'fr', 'ar'] as const) {
+      for (const [k, v] of Object.entries(LIFE_GUIDANCE_STRINGS[l].sources.elements)) expect(v).toBe(ELEMENT_NAME[k][l]);
+      for (const [k, v] of Object.entries(LIFE_GUIDANCE_STRINGS[l].sources.zodiac))
+        expect(v).toBe(ZODIAC_IDENTITY_MAP[k as keyof typeof ZODIAC_IDENTITY_MAP][l]);
+    }
   });
 });
