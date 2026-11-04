@@ -14,3 +14,9 @@ export const WorkingDrawer =
   process.env.NEXT_PUBLIC_LIFE_GUIDANCE_PREVIEW === 'true' || process.env.NEXT_PUBLIC_LIFE_GUIDANCE_PREVIEW === '1'
   ? dynamic(() => import('./WorkingDrawer').then((m) => m.WorkingDrawer), { ssr: false })
   : () => null;
+
+/** " · today" suffix on the Who Am I Manāzil tile, in the UI language. Same flag gate and lazy load. */
+export const TileTodaySuffix =
+  process.env.NEXT_PUBLIC_LIFE_GUIDANCE_PREVIEW === 'true' || process.env.NEXT_PUBLIC_LIFE_GUIDANCE_PREVIEW === '1'
+  ? dynamic(() => import('./TileToday').then((m) => m.TileToday), { ssr: false })
+  : () => null;

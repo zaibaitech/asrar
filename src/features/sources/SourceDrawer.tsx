@@ -39,10 +39,10 @@ export function SourceDrawer({ step, lang }: { step: StepId; lang: Lang }) {
   return (
     <InfoDisclosure label={LABELS.showSource[lang]}>
       <div className="space-y-2">
-        <p>{src.note}</p>
+        <p className="min-w-0 break-words [overflow-wrap:anywhere]">{src.note[lang]}</p>
         <ul className="space-y-2">
           {src.refs.map((r, i) => (
-            <li key={i} className="space-y-0.5">
+            <li key={i} className="min-w-0 space-y-0.5">
               <span
                 className={`inline-block rounded-full border px-2 py-0.5 text-xs font-medium ${
                   r.status === 'to-verify'
@@ -52,9 +52,9 @@ export function SourceDrawer({ step, lang }: { step: StepId; lang: Lang }) {
               >
                 {badgeText(r, lang)}
               </span>
-              <p>{r.text}</p>
+              <p className="min-w-0 break-words [overflow-wrap:anywhere]">{r.text[lang]}</p>
               {[...(r.url ? [r.url] : []), ...(r.urls ?? [])].map((u) => (
-                <a key={u} href={u} target="_blank" rel="noopener noreferrer" className="inline-block min-h-[44px] py-2 text-sm font-medium text-indigo-600 dark:text-indigo-400 underline break-all" dir="ltr">
+                <a key={u} href={u} target="_blank" rel="noopener noreferrer" className="inline-block min-h-[44px] py-2 text-sm font-medium text-indigo-600 dark:text-indigo-400 underline break-all [overflow-wrap:anywhere] max-w-full" dir="ltr">
                   {u.replace(/^https?:\/\/(www\.)?/, '')}
                 </a>
               ))}

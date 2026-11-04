@@ -6,7 +6,13 @@ import { buildWorking, type NameLetters, type WorkingResult } from './working';
 import { lettersMansions } from './lettersMansions';
 import { SourceDrawer } from './SourceDrawer';
 import { MoonManzil } from './MoonManzil';
-import { LABELS, type Lang, type StepId } from './sourcesContent';
+import { LABELS, elementName, zodiacName, type Lang, type StepId } from './sourcesContent';
+import { useLanguage } from '../../contexts/LanguageContext';
+import { isRtl } from '../../lib/translations';
+
+const dirOf = (lang: Lang): 'rtl' | 'ltr' => (isRtl(lang) ? 'rtl' : 'ltr');
+/** Wraps long words, URLs and mixed Arabic / Latin lines instead of overflowing on narrow phones. */
+const WRAP = 'min-w-0 break-words [overflow-wrap:anywhere]';
 
 const MUTED = 'text-slate-600 dark:text-slate-400';
 const STRONG = 'font-semibold text-slate-900 dark:text-slate-100';
@@ -14,7 +20,7 @@ const STRONG = 'font-semibold text-slate-900 dark:text-slate-100';
 function Step({ id, lang, children }: { id: StepId; lang: Lang; children?: ReactNode }) {
   return (
     <div className="space-y-1 border-t border-slate-300/60 dark:border-slate-700 pt-2 first:border-t-0 first:pt-0">
-      <p className={`text-sm ${STRONG}`}>{LABELS.steps[id][lang]}</p>
+      <p className={`text-sm ${STRONG} ${WRAP}`}>{LABELS.steps[id][lang]}</p>
       {children}
       <SourceDrawer step={id} lang={lang} />
     </div>
@@ -46,9 +52,12 @@ const sumLine = (n: NameLetters) => n.letters.filter((l) => l.counted).map((l) =
 
 function Mod({ total, divisor, remainder, index, lang }: { total: number; divisor: number; remainder: number; index?: number; lang: Lang }) {
   return (
-    <p className={`text-sm ${MUTED}`} dir="ltr">
-      {total} ÷ {divisor} → {LABELS.remainder[lang]} {remainder}
-      {index !== undefined && remainder === 0 ? ` → ${index}` : ''}
+    <p className={`text-sm ${MUTED} ${WRAP}`} dir={dirOf(lang)}>
+      <bdi dir="ltr">
+        {total} ÷ {divisor}
+      </bdi>{' '}
+      {isRtl(lang) ? '←' : '→'} {LABELS.remainder[lang]} <bdi dir="ltr">{remainder}</bdi>
+      {index !== undefined && remainder === 0 ? ` ${isRtl(lang) ? '←' : '→'} ${index}` : ''}
     </p>
   );
 }
@@ -61,33 +70,33 @@ function Steps({ w, lang }: { w: WorkingResult; lang: Lang }) {
         {w.mother && <Chips n={w.mother} lang={lang} />}
       </Step>
       <Step id="kabir" lang={lang}>
-        <p className={`text-sm ${MUTED}`} dir="ltr">
+        <p className={`text-sm ${MUTED} ${WRAP}`} dir="ltr">
           {sumLine(w.person)} = {w.person.kabir}
         </p>
         {w.mother && (
-          <p className={`text-sm ${MUTED}`} dir="ltr">
+          <p className={`text-sm ${MUTED} ${WRAP}`} dir="ltr">
             {sumLine(w.mother)} = {w.mother.kabir} → {w.person.kabir} + {w.mother.kabir}
           </p>
         )}
-        <p className={STRONG} dir="ltr">
-          {LABELS.total[lang]}: {w.total}
+        <p className={`${STRONG} ${WRAP}`} dir={dirOf(lang)}>
+          {LABELS.total[lang]}: <bdi dir="ltr">{w.total}</bdi>
         </p>
       </Step>
       <Step id="saghir" lang={lang}>
-        <p className={`text-sm ${MUTED}`} dir="ltr">
+        <p className={`text-sm ${MUTED} ${WRAP}`} dir="ltr">
           {w.saghirChain.join(' → ')}
         </p>
       </Step>
       <Step id="tabi" lang={lang}>
         <Mod total={w.total} divisor={4} remainder={w.tabi.remainder} lang={lang} />
         <p className={STRONG}>
-          {w.tabi.emoji} {w.tabi.names[lang]}
+          {w.tabi.emoji} {elementName(w.tabi.element, lang)}
         </p>
       </Step>
       <Step id="burj" lang={lang}>
         <Mod total={w.total} divisor={12} remainder={w.burj.remainder} index={w.burj.index} lang={lang} />
         <p className={STRONG}>
-          {w.burj.zodiac.symbol} {w.burj.zodiac[lang]}
+          {w.burj.zodiac.symbol} {zodiacName(w.burj.zodiac.key, lang)}
         </p>
       </Step>
     </>
@@ -100,26 +109,26 @@ function LettersMansions({ text, lang }: { text: string; lang: Lang }) {
   return (
     <InfoDisclosure label={LABELS.steps.lettersMansions[lang]} icon="chevron">
       <div className="space-y-2">
-        <p className="text-xs">{LABELS.order[lang]}</p>
+        <p className={`text-xs ${WRAP}`}>{LABELS.order[lang]}</p>
         <ul className="space-y-1">
           {rows.map((r) => (
-            <li key={r.letter} dir="ltr">
-              <div className="flex items-baseline gap-2">
-                <span lang="ar" dir="rtl" className="font-arabic w-6 text-lg text-slate-900 dark:text-slate-100">
+            <li key={r.letter} dir={dirOf(lang)} className="min-w-0">
+              <div className="flex min-w-0 items-baseline gap-2">
+                <span lang="ar" dir="rtl" className="font-arabic w-6 shrink-0 text-lg text-slate-900 dark:text-slate-100">
                   {r.letter}
                 </span>
-                <span className="w-16 text-xs">
-                  {LABELS.position[lang]} {r.number}
+                <span className="min-w-[4rem] shrink-0 whitespace-nowrap text-xs">
+                  {LABELS.position[lang]} <bdi dir="ltr">{r.number}</bdi>
                 </span>
-                <span className="text-sm text-slate-900 dark:text-slate-100">
+                <span className={`flex-1 text-sm text-slate-900 dark:text-slate-100 ${WRAP}`}>
                   <span lang="ar" dir="rtl" className="font-arabic">
                     {r.mansion.nameArabic}
                   </span>{' '}
-                  · {r.mansion.nameTransliteration}
+                  · <bdi dir="ltr">{r.mansion.nameTransliteration}</bdi>
                 </span>
               </div>
               {r.buniDiffers && (
-                <p className="ml-8 text-[11px]">
+                <p className={`ms-8 text-[11px] ${WRAP}`}>
                   {LABELS.buniEdition[lang]}:{' '}
                   <span lang="ar" dir="rtl" className="font-arabic">
                     {r.buniName}
@@ -146,24 +155,26 @@ export function WorkingDrawer({
   name,
   mother,
   abjad,
-  lang,
   expected,
   showMoon = false,
 }: {
   name: string;
   mother?: string;
   abjad: Record<string, number>;
-  lang: Lang;
+  /** Ignored: the drawer follows the visitor's UI language (en, fr, ar or ur). Kept so hosts need no change. */
+  lang?: Lang;
   expected?: { person?: number; mother?: number };
   showMoon?: boolean;
 }) {
+  const { uiLanguage } = useLanguage();
+  const lang: Lang = uiLanguage;
   const w = buildWorking(name, mother, abjad);
   if (!w) return null;
   if (expected?.person !== undefined && expected.person !== w.person.kabir) return null;
   if (expected?.mother !== undefined && expected.mother !== (w.mother?.kabir ?? 0)) return null;
   return (
     <InfoDisclosure label={LABELS.title[lang]} icon="chevron">
-      <div className="space-y-2" data-testid="working-drawer">
+      <div className={`space-y-2 ${WRAP}`} data-testid="working-drawer" data-no-ar dir={dirOf(lang)} lang={lang}>
         <p className="text-xs text-amber-800 dark:text-amber-300">{LABELS.preview[lang]}</p>
         <Steps w={w} lang={lang} />
         {showMoon && (

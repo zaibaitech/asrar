@@ -1,5 +1,10 @@
 /**
- * Copy and source notes for the "Show the working + sources" layer (preview only).
+ * Structure of the "Show the working + sources" layer (preview only): which
+ * references each step has, their status, Qur'an refs and links. ALL visible
+ * text (labels, notes, reference texts) lives in the i18n files
+ * src/lib/i18n/lifeGuidance/{en,fr,ar,ur}.ts, so a wording change is a
+ * translation edit only. EN is the reference; FR, AR and UR are drafts until the
+ * Language Reviewer signs them off (docs/i18n/life-guidance-l10n.md).
  *
  * Source rules (set by Mario): never invent a citation or page number. Each
  * reference carries a status:
@@ -10,21 +15,21 @@
  *                     Tanzil text (/api/quran-verse), never typed in;
  *   'to-verify'     - a direction only; book, chapter and page still have to be
  *                     confirmed against a printed edition by a reviewer.
- *
- * UI labels: EN is the reference text. FR and AR are DRAFTS written for this
- * preview and must be reviewed before the preview flag is removed (machine
- * translations never go live automatically). Urdu falls back to EN.
  */
+import type { Language } from '../../lib/translations';
+import { LIFE_GUIDANCE_STRINGS } from '../../lib/i18n/lifeGuidance';
 
 export type StepId = 'letters' | 'kabir' | 'saghir' | 'tabi' | 'burj' | 'manzil' | 'lettersMansions';
-export type Lang = 'en' | 'fr' | 'ar';
-type L3 = Record<Lang, string>;
+export type Lang = Language;
+export const LANGS: readonly Lang[] = ['en', 'fr', 'ar', 'ur'];
+type L4 = Record<Lang, string>;
 
 export type RefStatus = 'cited-in-repo' | 'quran' | 'to-verify' | 'attributed';
 
 export interface SourceRef {
   status: RefStatus;
-  text: string;
+  /** Reference text in every UI language (from the i18n files). */
+  text: L4;
   /** For status 'quran': surah and ayah, fetched verbatim from Tanzil. */
   quran?: { surah: number; ayah: number };
   /** Optional link to the edition used. */
@@ -34,147 +39,71 @@ export interface SourceRef {
 }
 
 export interface StepSource {
-  /** What the step does, in one plain sentence (EN). */
-  note: string;
+  /** What the step does, in one plain sentence, in every UI language. */
+  note: L4;
   refs: SourceRef[];
 }
 
-export const SOURCES: Record<StepId, StepSource> = {
-  letters: {
-    note: 'Each letter is given its value from the app-wide abjad table (ḥisāb al-jummal). Maghribi is the default; Mashriqi differs only for س ص ش ض ظ غ.',
-    refs: [
-      {
-        status: 'cited-in-repo',
-        text: 'Values and the two letter orders (أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ / صعفض قرست ثخذ ظغش) are documented in src/lib/abjad-maps.ts, which cites Wikipedia "Abjad numerals" (after Macdonald 1986) and Encyclopaedia Iranica "Abjad" (G. Krotkoff, 1982). Not re-checked here.',
-      },
-      {
-        status: 'to-verify',
-        text: 'A classical Arabic text that gives the Maghribi order, with its page, is still needed for the source library.',
-      },
-    ],
-  },
-  kabir: {
-    note: 'Kabīr (الكبير) is the plain sum of the letter values. With a mother\u2019s name, the two sums are added.',
-    refs: [
-      {
-        status: 'to-verify',
-        text: 'Adding the name\u2019s letters (and the mother\u2019s name) is the standard jafr / ḥisāb al-jummal practice. Book, chapter and page: to verify.',
-      },
-    ],
-  },
-  saghir: {
-    note: 'Ṣaghīr (الصغير) is the kabīr reduced by adding its digits until one digit remains (1 to 9).',
-    refs: [
-      {
-        status: 'to-verify',
-        text: 'Source for reducing the kabīr to a single digit in the classical ḥisāb: to verify. The app uses the same reduction in all its tools.',
-      },
-    ],
-  },
-  tabi: {
-    note: 'Ṭabʿ (الطبع): the kabīr divided by 4. The remainder gives the element (1 Fire, 2 Earth, 3 Air, 4 or 0 Water). It is read from the total, not from the letters, so it does not depend on any letter-to-element table.',
-    refs: [
-      {
-        status: 'cited-in-repo',
-        text: 'The rule and its element order are written as the Maghribi convention in src/features/ilm-huruf/core.ts. Not re-checked here.',
-      },
-      {
-        status: 'to-verify',
-        text: 'The classical text for ÷ 4 and this element order: to verify.',
-      },
-    ],
-  },
-  burj: {
-    note: 'Burj (البرج): the kabīr divided by 12. The remainder gives the sign of the zodiac in order (1 Aries … 12 Pisces; 0 counts as 12).',
-    refs: [
-      {
-        status: 'to-verify',
-        text: 'The classical text for ÷ 12 applied to a name total: to verify.',
-      },
-      {
-        status: 'to-verify',
-        text: 'For the signs themselves, al-Bīrūnī, Kitāb al-Tafhīm li-awāʾil ṣināʿat al-tanjīm, is the general reference named in src/lib/lunarMansions.ts. Chapter and page: to verify.',
-      },
-    ],
-  },
-  manzil: {
-    note: 'Manzil (المنزل) is only ever the Moon\u2019s real place among the 28 mansions: the Moon\u2019s ecliptic longitude, computed with astronomy-engine, falls in one of 28 equal sectors of 12.857\u00b0 counted from 0\u00b0 of the zodiac. Today\u2019s mansion is shown here. A person\u2019s natal mansion needs a birth date, time and place: use Birth profile. The name is not used for the manzil.',
-    refs: [
-      { status: 'quran', text: 'The Qur\u2019an speaks of the moon\u2019s stations (manāzil):', quran: { surah: 36, ayah: 39 } },
-      { status: 'quran', text: 'and in', quran: { surah: 10, ayah: 5 } },
-      {
-        status: 'cited-in-repo',
-        text: 'The list of the 28 mansions cites al-Bīrūnī, Kitāb al-Tafhīm, and Arab anwāʾ astronomy in src/lib/lunarMansions.ts, which also states that 28 equal tropical sectors is the convention used here. Not re-checked.',
-      },
-      {
-        status: 'to-verify',
-        text: 'Where the count of the 28 sectors starts (tropical 0\u00b0 Aries here) and whether classical sources use equal sectors: to verify.',
-      },
-    ],
-  },
-  lettersMansions: {
-    note: 'Each letter of the name is set beside the mansion given by the table attributed to al-Būnī (attribution disputed), in the Mashriqi abjad order (first to last letter). The table is fixed: it does not change with the Maghribi / Mashriqi setting. It is a traditional correspondence described in the asrār literature, not an astronomical one (for the Moon\u2019s real position, see Manzil (the Moon)). The mansion is matched to the app\u2019s list by number. The Arabic names shown are the app\u2019s standard spellings; the cited edition writes six of them differently (mansions 1, 9, 16, 26, 27 and 28) and is noted under those rows.',
-    refs: [
-      {
-        status: 'attributed',
-        text: 'Table attributed to al-Būnī in Shams al-Maʿārif al-Kubrā, al-faṣl al-thānī. Its attribution to al-Būnī (d. 622/1225, or 630/1232 per Ḥājjī Khalīfa) is disputed in modern scholarship. Edition: Muʾassasat al-Nūr, Beirut, as on ablibrary.net; the 28 entries were checked on pp. 16 to 19 of that edition.',
-        url: 'https://ablibrary.net/books/10942',
-      },
-      {
-        status: 'attributed',
-        text: 'Mansion names follow Lisān al-ʿArab (ش-ر-ط الشرطان; ط-ر-ف الطرف; ز-ب-ن الزباني; ف-ر-غ فرغ الدلو المقدَّم / المؤخَّر, shortened in the app to الفرغ المقدم / المؤخر; ر-ش-و الرِّشاء, i.e. بطن الحوت) and Ibn Qutayba, Kitāb al-Anwāʾ fī Mawāsim al-ʿArab, whose headings read الشرطان, الطرف and الزبانى, and «الفرغ الأول / الفرغ الثانى / الحوت» for 26 to 28. No page numbers are cited.',
-        urls: [
-          'https://usul.ai/ar/t/anwa-fi-mawasim',
-          'https://read.shamela.ws/book/9093/18',
-          'https://shamela.ws/book/9093/115',
-          'https://www.islamweb.net/ar/library/content/122/4221/شرط',
-          'https://www.islamweb.net/ar/library/content/122/5047/طرف',
-          'https://www.islamweb.net/ar/library/content/122/3398/زبن',
-          'https://www.islamweb.net/ar/library/content/122/6200/فرغ',
-          'https://arabiclexicon.hawramani.com/رشا/',
-          'https://www.laneslexicon.com/word/فرغ/n33640',
-        ],
-      },
-    ],
-  },
+/** Per step: status, Qur'an ref and links of each reference, in the order of the i18n refs. */
+const REF_META: Record<StepId, Omit<SourceRef, 'text'>[]> = {
+  letters: [{ status: 'cited-in-repo' }, { status: 'to-verify' }],
+  kabir: [{ status: 'to-verify' }],
+  saghir: [{ status: 'to-verify' }],
+  tabi: [{ status: 'cited-in-repo' }, { status: 'to-verify' }],
+  burj: [{ status: 'to-verify' }, { status: 'to-verify' }],
+  manzil: [
+    { status: 'quran', quran: { surah: 36, ayah: 39 } },
+    { status: 'quran', quran: { surah: 10, ayah: 5 } },
+    { status: 'cited-in-repo' },
+    { status: 'to-verify' },
+  ],
+  lettersMansions: [
+    { status: 'attributed', url: 'https://ablibrary.net/books/10942' },
+    {
+      status: 'attributed',
+      urls: [
+        'https://usul.ai/ar/t/anwa-fi-mawasim',
+        'https://read.shamela.ws/book/9093/18',
+        'https://shamela.ws/book/9093/115',
+        'https://www.islamweb.net/ar/library/content/122/4221/شرط',
+        'https://www.islamweb.net/ar/library/content/122/5047/طرف',
+        'https://www.islamweb.net/ar/library/content/122/3398/زبن',
+        'https://www.islamweb.net/ar/library/content/122/6200/فرغ',
+        'https://arabiclexicon.hawramani.com/رشا/',
+        'https://www.laneslexicon.com/word/فرغ/n33640',
+      ],
+    },
+  ],
 };
 
+const STEP_IDS: StepId[] = ['letters', 'kabir', 'saghir', 'tabi', 'burj', 'manzil', 'lettersMansions'];
+const S = (lang: Lang) => LIFE_GUIDANCE_STRINGS[lang].sources;
+const l4 = (pick: (lang: Lang) => string): L4 => Object.fromEntries(LANGS.map((l) => [l, pick(l)])) as L4;
+
+export const SOURCES: Record<StepId, StepSource> = Object.fromEntries(
+  STEP_IDS.map((id) => [
+    id,
+    {
+      note: l4((l) => S(l).notes[id]),
+      refs: REF_META[id].map((meta, i) => ({ ...meta, text: l4((l) => S(l).refs[id][i]) })),
+    },
+  ]),
+) as Record<StepId, StepSource>;
+
+type LabelKey = Exclude<keyof ReturnType<typeof S>, 'steps' | 'notes' | 'refs' | 'elements' | 'zodiac'>;
+const LABEL_KEYS: LabelKey[] = [
+  'title', 'notCounted', 'showSource', 'hideSource', 'attributed', 'toVerify', 'citedInRepo', 'quranSrc',
+  'total', 'remainder', 'preview', 'manzilToday', 'manzilNatal', 'buniEdition', 'position', 'order', 'tileToday',
+];
+
+/** UI labels as `LABELS.key[lang]` (and `LABELS.steps[id][lang]`), read from the i18n files. */
 export const LABELS = {
-  title: { en: 'Show the working + sources', fr: 'Voir le calcul + sources', ar: 'عرض الحساب والمصادر' },
-  notCounted: { en: 'not counted', fr: 'non compté', ar: 'لا يُحسب' },
-  showSource: { en: 'Show source', fr: 'Voir la source', ar: 'عرض المصدر' },
-  hideSource: { en: 'Hide source', fr: 'Masquer la source', ar: 'إخفاء المصدر' },
-  attributed: { en: 'attributed', fr: 'attribué', ar: 'منسوب' },
-  toVerify: { en: 'to verify', fr: 'à vérifier', ar: 'للتحقق' },
-  citedInRepo: { en: 'cited in the app\u2019s code, not re-checked', fr: 'cité dans le code, non revérifié', ar: 'مذكور في شيفرة التطبيق، لم يُراجع' },
-  quranSrc: { en: 'Qur\u2019an (Tanzil text)', fr: 'Coran (texte Tanzil)', ar: 'القرآن (نص تنزيل)' },
-  total: { en: 'Total', fr: 'Total', ar: 'المجموع' },
-  remainder: { en: 'remainder', fr: 'reste', ar: 'الباقي' },
-  preview: {
-    en: 'Preview. Sources marked “to verify” are not yet confirmed.',
-    fr: 'Aperçu. Les sources «\u00a0à vérifier\u00a0» ne sont pas encore confirmées.',
-    ar: 'نسخة تجريبية. المصادر المعلَّمة «للتحقق» لم تُؤكَّد بعد.',
-  },
-  steps: {
-    letters: { en: '1 · Letters and values', fr: '1 · Lettres et valeurs', ar: '١ · الحروف وقيمها' },
-    kabir: { en: '2 · Kabīr (sum)', fr: '2 · Kabīr (somme)', ar: '٢ · الكبير' },
-    saghir: { en: '3 · Ṣaghīr (root)', fr: '3 · Ṣaghīr (racine)', ar: '٣ · الصغير' },
-    tabi: { en: '4 · Ṭabʿ (÷ 4)', fr: '4 · Ṭabʿ (÷ 4)', ar: '٤ · الطبع' },
-    burj: { en: '5 · Burj (÷ 12)', fr: '5 · Burj (÷ 12)', ar: '٥ · البرج' },
-    manzil: { en: '6 · Manzil (the Moon)', fr: '6 · Manzil (la Lune)', ar: '٦ · منزل القمر' },
-    lettersMansions: { en: 'Letters and their mansions', fr: 'Les lettres et leurs demeures', ar: 'الحروف ومنازلها' },
-  } as Record<StepId, L3>,
-  manzilToday: { en: 'Today\u2019s manzil', fr: 'Le manzil d\u2019aujourd\u2019hui', ar: 'منزل اليوم' },
-  manzilNatal: {
-    en: 'Natal manzil (needs birth date, time and place): Birth profile',
-    fr: 'Manzil de naissance (date, heure et lieu requis) : Profil de naissance',
-    ar: 'منزل الميلاد (يلزم التاريخ والوقت والمكان): الملف الفلكي',
-  },
-  buniEdition: { en: 'in the cited edition', fr: 'dans l\u2019édition citée', ar: 'في الطبعة المشار إليها' },
-  position: { en: 'mansion', fr: 'demeure', ar: 'منزل القمر' },
-  order: {
-    en: 'Mashriqi abjad order, fixed (independent of your Maghribi / Mashriqi setting)',
-    fr: 'Ordre abjad mashriqi, fixe (indépendant de votre réglage maghribi / mashriqi)',
-    ar: 'ترتيب الجُمَّل المشرقي، ثابت (لا يتأثر باختيار النظام)',
-  },
-} satisfies Record<string, L3 | Record<StepId, L3>>;
+  ...(Object.fromEntries(LABEL_KEYS.map((key) => [key, l4((l) => S(l)[key])])) as Record<LabelKey, L4>),
+  steps: Object.fromEntries(STEP_IDS.map((id) => [id, l4((l) => S(l).steps[id])])) as Record<StepId, L4>,
+};
+
+/** Element and zodiac names in every UI language (Urdu included). */
+export const elementName = (element: string, lang: Lang): string =>
+  S(lang).elements[element as keyof ReturnType<typeof S>['elements']] ?? element;
+export const zodiacName = (key: string, lang: Lang): string =>
+  S(lang).zodiac[key as keyof ReturnType<typeof S>['zodiac']] ?? key;

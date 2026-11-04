@@ -5,7 +5,7 @@ import { useLanguage } from "../../../contexts/LanguageContext";
 import { translations } from "../../../lib/translations";
 import { getCurrentLunarMansion, type CurrentMansion } from "../../../lib/lunarMansions";
 import { LIFE_GUIDANCE_PREVIEW } from "../../../lib/lifeGuidancePreview";
-import { WorkingDrawer } from "../../sources/LazyWorkingDrawer";
+import { WorkingDrawer, TileTodaySuffix } from "../../sources/LazyWorkingDrawer";
 import { useAbjad } from "../../../contexts/AbjadContext";
 import type { IstikharaCalculationResult } from "../types";
 import { 
@@ -492,9 +492,9 @@ export function IstikharaSummaryCard({ result }: IstikhSummaryCardProps) {
               <div className="text-2xl mb-1">🌙</div>
               <div className={`text-xs font-semibold ${config.text} mb-1`}>
                 {language === "en" ? "Manāzil" : "Manāzil"}
-                {LIFE_GUIDANCE_PREVIEW && lunarMansion ? (language === "en" ? " · today" : " · aujourd'hui") : ""}
+                {LIFE_GUIDANCE_PREVIEW && lunarMansion ? <TileTodaySuffix /> : ""}
               </div>
-              <div className={`text-base font-bold ${config.textBright} mb-1 group-hover:scale-105 transition-transform leading-tight`}>
+              <div className={`text-base font-bold ${config.textBright} mb-1 group-hover:scale-105 transition-transform leading-tight${LIFE_GUIDANCE_PREVIEW ? " min-w-0 break-words [overflow-wrap:anywhere]" : ""}`}>
                 {tileMansion.name}
               </div>
               <div className="text-sm font-arabic text-white/90" dir="rtl">
@@ -556,7 +556,6 @@ export function IstikharaSummaryCard({ result }: IstikhSummaryCardProps) {
                 name={result.personName}
                 mother={result.motherName}
                 abjad={abjad}
-                lang={language === 'fr' ? 'fr' : 'en'}
                 expected={{ person: result.personTotal, mother: result.motherTotal }}
                 showMoon
               />

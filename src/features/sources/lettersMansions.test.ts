@@ -91,15 +91,19 @@ describe("Letters ↔ mansions table attributed to al-Būnī (Shams al-Maʿārif
 
   it('source wording follows the language review (attribution, links, labels)', () => {
     const src = SOURCES.lettersMansions;
-    expect(src.note).toContain('attributed to al-Būnī (attribution disputed)');
-    expect(src.note).toContain('traditional correspondence described in the asrār literature');
-    expect(src.note).not.toMatch(/spiritual/i);
-    expect(src.refs[0].text.startsWith('Table attributed to al-Būnī')).toBe(true);
+    expect(src.note.en).toContain('attributed to al-Būnī (attribution disputed)');
+    expect(src.note.en).toContain('traditional correspondence described in the asrār literature');
+    for (const l of ['en', 'fr', 'ar', 'ur'] as const) expect(src.note[l]).not.toMatch(/spiritual|spirituelle|روحاني|روحانی/i);
+    expect(src.refs[0].text.en.startsWith('Table attributed to al-Būnī')).toBe(true);
     expect(src.refs[0].url).toBe('https://ablibrary.net/books/10942');
-    expect(src.refs[1].text).toContain('«الفرغ الأول / الفرغ الثانى / الحوت»');
-    expect(src.refs[1].text).toContain('ف-ر-غ');
+    for (const l of ['en', 'fr', 'ar', 'ur'] as const) {
+      // Verified Arabic forms are kept verbatim in every language.
+      expect(src.refs[1].text[l]).toContain('«الفرغ الأول / الفرغ الثانى / الحوت»');
+      expect(src.refs[1].text[l]).toContain('ف-ر-غ فرغ الدلو المقدَّم / المؤخَّر');
+      expect(src.refs[1].text[l]).toContain('الرِّشاء');
+    }
     expect(src.refs[1].urls?.length).toBeGreaterThan(0);
-    expect(LABELS.buniEdition).toEqual({ en: 'in the cited edition', fr: 'dans l\u2019édition citée', ar: 'في الطبعة المشار إليها' });
+    expect(LABELS.buniEdition).toEqual({ en: 'in the cited edition', fr: 'dans l\u2019édition citée', ar: 'في الطبعة المشار إليها', ur: 'حوالہ دیے گئے نسخے میں' });
     expect(LABELS.position.ar).toBe('منزل القمر');
     expect(LABELS.steps.manzil.ar).toBe('٦ · منزل القمر');
     expect(LABELS.preview.fr).toContain('«\u00a0à vérifier\u00a0»');
