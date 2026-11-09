@@ -8,6 +8,8 @@ describe('analytics allow-list', () => {
     expect(sanitizeEventParams('language_switch', { from: 'en', to: 'fr' })).toEqual({ from: 'en', to: 'fr' });
     expect(sanitizeEventParams('related_tool_click', { from_tool: 'burj', to_tool: 'abjad' })).toEqual({ from_tool: 'burj', to_tool: 'abjad' });
     expect(sanitizeEventParams('install_app_click', { store: 'google_play' })).toEqual({ store: 'google_play' });
+    expect(sanitizeEventParams('donation_click', { location: 'sadaqa', locale: 'ar' })).toEqual({ location: 'sadaqa', locale: 'ar' });
+    expect(sanitizeEventParams('donation_click', { location: 'dashboard', locale: 'ur' })).toEqual({ location: 'dashboard', locale: 'ur' });
   });
 
   it('strips any param that is not on the allow-list (user input never gets through)', () => {
@@ -30,6 +32,12 @@ describe('analytics allow-list', () => {
     expect(sanitizeEventParams('calculation_complete', { tool: 'محمد', lang: 'xx' })).toEqual({});
     expect(sanitizeEventParams('share_click', { tool: 'burj', method: 'https://evil.example/?q=name' })).toEqual({ tool: 'burj' });
     expect(sanitizeEventParams('calculation_complete', { tool: { toString: () => 'burj' }, lang: 1 })).toEqual({});
+    expect(
+      sanitizeEventParams('donation_click', {
+        location: 'https://www.gofundme.com/f/masjid-at-amdallai-hamdallah-gambia',
+        locale: 'en',
+      }),
+    ).toEqual({ locale: 'en' });
   });
 
   it('rejects unknown event names and inherited keys', () => {
