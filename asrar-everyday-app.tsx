@@ -17,6 +17,7 @@ import AsrarLogo from './src/components/AsrarLogo';
 import { useAuth } from './src/contexts/AuthContext';
 import { CalculatorDisclaimerBanner } from './src/components/CalculatorDisclaimerBanner';
 import { GetTheAppBanner } from './src/components/GetTheAppBanner';
+import { HamdallahDonationCard } from './src/components/donation/HamdallahDonationCard';
 import { DailyReflectionCard } from './src/components/DailyReflectionCard';
 
 // Only the default (planetary) view and the shell are needed for first paint; the other views and
@@ -536,6 +537,11 @@ export default function AsrarEveryday() {
           )}
           </div>
         </main>
+
+        {/* External masjid donation card — below tools, above footer (never above the fold). */}
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 mb-2">
+          <HamdallahDonationCard location="dashboard" locale={uiLanguage} className="max-w-xl" />
+        </div>
         
         {/* Modals */}
         {showCompatibility && (

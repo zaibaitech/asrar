@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { RelatedTools } from '@/src/components/seo/RelatedTools';
 import type { FaqItem } from '@/src/components/seo/SeoSections';
 import { SadaqaDateChecker } from '@/src/components/sadaqa/SadaqaDateChecker';
+import { HamdallahDonationCard } from '@/src/components/donation/HamdallahDonationCard';
 import { ArabicTodaySadaqa } from './ArabicTodaySadaqa';
 import { arabicItemsFor } from './arabicSadaqa';
 import {
@@ -84,6 +85,10 @@ export default function Page() {
           <SadaqaDateChecker lang="en" mode="day" />
         </div>
       </section>
+
+      <div className="max-w-2xl mx-auto px-4 pt-6">
+        <HamdallahDonationCard location="sadaqa" locale="ar" />
+      </div>
 
       <RelatedTools pagePath={EN_PATH} lang="ar" className="max-w-2xl mx-auto px-4 pt-6" />
 

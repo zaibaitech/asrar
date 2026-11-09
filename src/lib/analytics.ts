@@ -40,6 +40,10 @@ export type ShareMethod = (typeof SHARE_METHODS)[number];
 export const STORES = ['google_play'] as const;
 export type Store = (typeof STORES)[number];
 
+/** Fixed UI placements for donation_click — never a URL or free text. */
+export const DONATION_LOCATIONS = ['sadaqa', 'dashboard'] as const;
+export type DonationLocationParam = (typeof DONATION_LOCATIONS)[number];
+
 /** Allowed params per event, each with its allowed values. Anything else is stripped. */
 export const EVENT_SCHEMA = {
   calculation_complete: { tool: TOOLS, lang: LANGS },
@@ -47,6 +51,8 @@ export const EVENT_SCHEMA = {
   language_switch: { from: LANGS, to: LANGS },
   related_tool_click: { from_tool: TOOLS, to_tool: TOOLS },
   install_app_click: { store: STORES },
+  /** External GoFundMe card. Only placement + locale enums — never the URL or typed text. */
+  donation_click: { location: DONATION_LOCATIONS, locale: LANGS },
 } as const satisfies Record<string, Record<string, readonly string[]>>;
 
 export type EventName = keyof typeof EVENT_SCHEMA;

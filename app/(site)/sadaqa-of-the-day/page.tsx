@@ -6,6 +6,7 @@ import { localizeHref } from '@/src/lib/i18nRoutes';
 import { FaqSection, JsonLd, RelatedLinks, faqJsonLd, type FaqItem, type RelatedLink } from '@/src/components/seo/SeoSections';
 import { WeekdaySadaqa } from '@/src/components/sadaqa/WeekdaySadaqa';
 import { SadaqaDateChecker } from '@/src/components/sadaqa/SadaqaDateChecker';
+import { HamdallahDonationCard } from '@/src/components/donation/HamdallahDonationCard';
 
 const PATH = '/sadaqa-of-the-day';
 
@@ -174,6 +175,8 @@ export default async function Page({
           <p className="text-slate-700 dark:text-slate-300">{c.checkerIntro}</p>
           <SadaqaDateChecker lang={lang} mode="day" />
         </section>
+
+        <HamdallahDonationCard location="sadaqa" locale={served === 'ar' ? 'ar' : lang} />
 
         <RelatedTools pagePath="/sadaqa-of-the-day" lang={served === 'ar' ? 'ar' : lang} routeLang={served} />
         <FaqSection id="sadaqa-day-faq-heading" title={c.faqTitle} faqs={c.faqs} />

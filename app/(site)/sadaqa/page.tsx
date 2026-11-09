@@ -8,6 +8,7 @@ import { buildToolMetadata, getRouteLang, getServedLang, resolvePageLang, type P
 import { localizeHref } from '@/src/lib/i18nRoutes';
 import { FaqSection, JsonLd, RelatedLinks, faqJsonLd, type FaqItem, type RelatedLink } from '@/src/components/seo/SeoSections';
 import { SadaqaDateChecker } from '@/src/components/sadaqa/SadaqaDateChecker';
+import { HamdallahDonationCard } from '@/src/components/donation/HamdallahDonationCard';
 
 const PATH = '/sadaqa';
 
@@ -241,6 +242,8 @@ export default async function Page({
             })}
           </div>
         </section>
+
+        <HamdallahDonationCard location="sadaqa" locale={served === 'ar' ? 'ar' : lang} />
 
         <RelatedTools pagePath="/sadaqa" lang={served === 'ar' ? 'ar' : lang} routeLang={served} />
         <FaqSection id="sadaqa-faq-heading" title={c.faqTitle} faqs={c.faqs} />
