@@ -4,8 +4,7 @@
  * Flip `enabled` to false (or wait until after `endDate`) to hide every card
  * in one place. asrar.app never collects funds — the button opens GoFundMe.
  *
- * Copy: English is final. fr / ar / ur are machine translations pending
- * Language Reviewer review — do not treat them as final.
+ * Copy: all locales final (fr / ar / ur checked by Language Reviewer, 2026-11-09).
  */
 
 import type { Lang } from './analytics';
@@ -30,7 +29,7 @@ export type DonationCopy = {
 
 /**
  * en = final (Mario-approved wording).
- * fr / ar / ur = machine translations — need Language Reviewer before merge-to-final.
+ * fr / ar / ur = checked by Language Reviewer (2026-11-09).
  */
 export const DONATION_COPY: Record<Lang, DonationCopy> = {
   en: {
@@ -41,21 +40,21 @@ export const DONATION_COPY: Record<Lang, DonationCopy> = {
   },
   fr: {
     title: 'Soutenir une mosquée en Gambie',
-    body: 'Aidez à achever l\'agrandissement de la mosquée Hamdallah (Amdallai) : une nouvelle salle de prière et des salles de classe coraniques.',
+    body: 'Aidez à achever l\'agrandissement de la mosquée Hamdallah (Amdallai) : une nouvelle salle de prière et des classes coraniques.',
     button: 'Faire un don sur GoFundMe',
-    note: 'Campagne externe — asrar.app ne collecte pas les fonds.',
+    note: 'Campagne externe — asrar.app ne collecte aucun fonds.',
   },
   ar: {
     title: 'ادعم مسجدًا في غامبيا',
-    body: 'ساعد في إتمام توسعة مسجد حمد الله (أمدالاي): قاعة صلاة جديدة وقاعات لتعليم القرآن.',
+    body: 'ساعد في إتمام توسعة مسجد حمد الله (أمدالاي): قاعة صلاة جديدة وفصول لتعليم القرآن.',
     button: 'تبرّع عبر GoFundMe',
     note: 'حملة خارجية — لا يجمع asrar.app التبرعات.',
   },
   ur: {
     title: 'گیمبیا میں ایک مسجد کی مدد کریں',
-    body: 'حمداللہ (امڈالائی) مسجد کی توسیع مکمل کرنے میں مدد کریں: نئی نماز کی ہال اور قرآنی کلاس رومز۔',
+    body: 'حمداللہ (امڈالائی) مسجد کی توسیع مکمل کرنے میں مدد کریں: نماز کا نیا ہال اور قرآنی تعلیم کے کمرے۔',
     button: 'GoFundMe پر عطیہ دیں',
-    note: 'بیرونی مہم — asrar.app فنڈ جمع نہیں کرتا۔',
+    note: 'بیرونی مہم — asrar.app خود کوئی رقم جمع نہیں کرتا۔',
   },
 };
 
