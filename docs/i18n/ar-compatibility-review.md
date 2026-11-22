@@ -48,6 +48,8 @@ Catalog note: rows 13–16 also update the matching `ar-ui.json` / `manual.json`
 | D3 | `COPY.ar.disclaimer` | ففي علم النجوم الإسلامي الكلاسيكي يُختار… | ففي التراث الفلكي عند المسلمين يُختار… |
 | D4 | `buildGuidanceTextAr.optimal` closing (all categories) | (none) | …موافقةً مباشرة؛ والإجابة بيد الله سبحانه. |
 
+Also fixed in the same push: the **"Find the Best Names"** list (الاسم الإلهي والنية → اعثر على أفضل الأسماء) was still showing the English guidance sentence on /ar. It now shows the same reviewed `buildGuidanceTextAr` sentence, so there are no new strings.
+
 Not changed, for LR to look at: «الأفضل تقليديًا؛ بركات بعد العقبات» ("Traditionally best; blessings after obstacles"). It describes a traditional reading, not a date the app calls blessed.
 
 

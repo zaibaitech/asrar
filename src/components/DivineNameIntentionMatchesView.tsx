@@ -98,7 +98,7 @@ export function DivineNameIntentionMatchesView({ intention, onSelectName, langua
                 </div>
                 <div className="px-5 py-3" style={{ background: '#FFFFFF' }}>
                   <p className="text-[13px] leading-[1.6] m-0" style={{ color: COMPAT_THEME.muted }}>
-                    {entry.sourceNote[contentLang]}
+                    {isArabicUi ? entry.sourceNote.ar : entry.sourceNote[contentLang]}
                   </p>
                 </div>
               </button>

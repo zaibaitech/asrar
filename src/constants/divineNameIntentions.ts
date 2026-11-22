@@ -130,7 +130,8 @@ export interface IntentionNameEntry {
   divineNameNumber: number;
   /** 'hadith-or-quran'/'meaning-based' are no longer produced by INTENTION_NAME_MAP (kept in the union in case older callers still branch on them); 'optimal'/'suitable' are this feature's current classicalFunction-based tiers. */
   grade: 'hadith-or-quran' | 'meaning-based' | 'optimal' | 'suitable';
-  sourceNote: { en: string; fr: string };
+  /** `ar` is the reviewed Arabic guidance (buildGuidanceTextAr), shown on /ar. */
+  sourceNote: { en: string; fr: string; ar: string };
 }
 
 /**
@@ -170,7 +171,7 @@ function buildIntentionNameMap(): Record<DivineIntention, IntentionNameEntry[]> 
       .map((s) => ({
         divineNameNumber: s.divineName.number,
         grade: s.compat.alignment as 'optimal' | 'suitable',
-        sourceNote: s.sourceNote,
+        sourceNote: { ...s.sourceNote, ar: s.compat.guidance.ar },
       }));
   });
 

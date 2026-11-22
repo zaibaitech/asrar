@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs';
 import { buildGuidanceTextAr, calculateDivineNameIntentionCompatibility } from '@/src/utils/divineNameCompatibility';
 import { DIVINE_NAME_METADATA } from '@/src/constants/divineNameCompatibilityData';
 import { DIVINE_NAMES } from '@/src/data/divine-names';
+import { INTENTION_NAME_MAP } from '@/src/constants/divineNameIntentions';
 
 describe('/ar/compatibility', () => {
   it('Arabic intention guidance uses the verified Arabic Name from the divine-names data', () => {
@@ -19,6 +20,14 @@ describe('/ar/compatibility', () => {
     expect(heal).toContain('والإجابة بيد الله سبحانه');
     const r = calculateDivineNameIntentionCompatibility(DIVINE_NAME_METADATA[0], 'peace', DIVINE_NAME_METADATA);
     expect(r.guidance.ar).toContain(DIVINE_NAME_METADATA[0].arabic);
+  });
+
+  it('the Find the Best Names list carries the Arabic guidance for /ar', () => {
+    for (const entries of Object.values(INTENTION_NAME_MAP)) for (const e of entries) {
+      expect(e.sourceNote.ar).toContain(DIVINE_NAMES.find((n) => n.number === e.divineNameNumber)!.arabic);
+      expect(e.sourceNote.ar).not.toMatch(/[A-Za-z]/);
+    }
+    expect(INTENTION_NAME_MAP.healing[0].sourceNote.ar).toContain('طلبًا للشفاء');
   });
 
   it('the Arabic page copy is the existing runtime-catalog Arabic, linked to /ar pages', () => {
