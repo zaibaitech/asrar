@@ -41,7 +41,7 @@ const TOOLS: Record<ToolKey, { path: string; name: Record<ToolsLang, string> }> 
   },
   abjad: {
     path: '/abjad',
-    name: { en: 'Abjad Calculator', fr: 'Calculateur Abjad', ar: 'حساب الجمل', ur: 'ابجد کیلکولیٹر' },
+    name: { en: 'Abjad Calculator', fr: 'Calculateur Abjad', ar: 'حاسبة الأبجد', ur: 'ابجد کیلکولیٹر' },
   },
   hours: {
     path: '/planetary-hours',

@@ -36,13 +36,13 @@ const COPY = {
   ar: {
     eyebrow: 'ASRĀR · COMPATIBILITY',
     title: 'ما مدى توافقكما؟',
-    disclaimer: 'توافق فلكي عام (برج الشمس، برج القمر، الزهرة-المريخ) — وليس أسلوبًا كلاسيكيًا من علم النجوم. علم النجوم الإسلامي الكلاسيكي يختار وقت الزواج بدلاً من مقارنة تاريخي ميلاد — راجع ميزة الاختيارات (أفضل التواريخ) لذلك.',
+    disclaimer: 'مقارنة فلكية عامة (برج الشمس وبرج القمر والزهرة والمريخ)، وليست طريقة كلاسيكية من علم النجوم. ففي التراث الفلكي عند المسلمين يُختار وقت عقد الزواج بدلًا من المقارنة بين تاريخَي ميلاد؛ وانظر لذلك ميزة «الاختيارات» (أفضل التواريخ).',
     matchStrength: 'قوة التوافق',
     breakdown: 'التفاصيل',
     sunSign: 'برج الشمس',
     moonSign: 'برج القمر',
     venusMars: 'الانجذاب (الزهرة-المريخ)',
-    uncertainNote: 'أحد تاريخي الميلاد قريب من تغيّر برج القمر — دون وقت ميلاد دقيق، قد لا يكون برج القمر المعروض دقيقًا.',
+    uncertainNote: 'أحد تاريخَي الميلاد قريب من انتقال القمر إلى برج آخر، ومع عدم معرفة وقت الميلاد بدقة قد لا يكون برج القمر المعروض صحيحًا.',
   },
 };
 
@@ -58,6 +58,9 @@ export function AstrologicalCompatibilityView({ compatibility, language = 'en' }
   const c = COPY[language] ?? COPY.en;
   const { person1, person2, methods, overallScore, overallQuality } = compatibility;
   const scoreRange = getScoreRange(overallScore, language);
+  // Arabic UI: the sign's Arabic name from ZODIAC_DATA; EN/FR keep the sign key as before.
+  const signName = (sign: string) =>
+    language === 'ar' ? (ZODIAC_DATA as Record<string, { arabicName?: string }>)[sign]?.arabicName ?? sign : sign;
   const qColor = qualityColor[overallQuality];
 
   return (
@@ -115,7 +118,7 @@ export function AstrologicalCompatibilityView({ compatibility, language = 'en' }
               icon="☀️"
               title={c.sunSign}
               score={methods.sunSign.score}
-              signLine={`${ZODIAC_DATA[methods.sunSign.person1Sign].symbol} ${methods.sunSign.person1Sign} × ${ZODIAC_DATA[methods.sunSign.person2Sign].symbol} ${methods.sunSign.person2Sign}`}
+              signLine={`${ZODIAC_DATA[methods.sunSign.person1Sign].symbol} ${signName(methods.sunSign.person1Sign)} × ${ZODIAC_DATA[methods.sunSign.person2Sign].symbol} ${signName(methods.sunSign.person2Sign)}`}
               description={methods.sunSign.description}
             />
 
@@ -124,7 +127,7 @@ export function AstrologicalCompatibilityView({ compatibility, language = 'en' }
               icon="🌙"
               title={c.moonSign}
               score={methods.moonSign.score}
-              signLine={`${ZODIAC_DATA[methods.moonSign.person1Sign].symbol} ${methods.moonSign.person1Sign} × ${ZODIAC_DATA[methods.moonSign.person2Sign].symbol} ${methods.moonSign.person2Sign}`}
+              signLine={`${ZODIAC_DATA[methods.moonSign.person1Sign].symbol} ${signName(methods.moonSign.person1Sign)} × ${ZODIAC_DATA[methods.moonSign.person2Sign].symbol} ${signName(methods.moonSign.person2Sign)}`}
               description={methods.moonSign.description}
             >
               {methods.moonSign.uncertain && (
@@ -143,7 +146,7 @@ export function AstrologicalCompatibilityView({ compatibility, language = 'en' }
               icon="💫"
               title={c.venusMars}
               score={methods.venusMars.score}
-              signLine={`♀ ${methods.venusMars.person1VenusSign} × ♂ ${methods.venusMars.person2MarsSign}`}
+              signLine={`♀ ${signName(methods.venusMars.person1VenusSign)} × ♂ ${signName(methods.venusMars.person2MarsSign)}`}
               description={methods.venusMars.description}
             />
 

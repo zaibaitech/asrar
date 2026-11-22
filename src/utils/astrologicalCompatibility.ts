@@ -159,22 +159,22 @@ function describeElementRelation(
     same: {
       en: `Both share ${e1} ${subject.en} — an easy, instinctive rapport.`,
       fr: `Les deux partagent un ${subject.fr} de ${e1} — une entente facile et instinctive.`,
-      ar: `يشترك الاثنان في ${subject.ar} ${e1} — انسجام سهل وفطري.`,
+      ar: `يجمع الطرفين عنصرُ ${e1} في ${subject.ar} — وفي ذلك انسجام سهل فطري.`,
     },
     complementary: {
       en: `${e1} and ${e2} ${subject.en}s naturally support each other.`,
       fr: `Les ${subject.fr}s de ${e1} et ${e2} se soutiennent naturellement.`,
-      ar: `${subject.ar} ${e1} و${e2} يدعمان بعضهما بشكل طبيعي.`,
+      ar: `عنصرا ${e1} و${e2} في ${subject.ar} يدعم كلٌّ منهما الآخر بصورة طبيعية.`,
     },
     opposing: {
       en: `${e1} and ${e2} ${subject.en}s can create friction without conscious effort.`,
       fr: `Les ${subject.fr}s de ${e1} et ${e2} peuvent créer des frictions sans effort conscient.`,
-      ar: `${subject.ar} ${e1} و${e2} قد يخلقان احتكاكًا دون جهد واعٍ.`,
+      ar: `قد يُحدث عنصرا ${e1} و${e2} في ${subject.ar} شيئًا من الاحتكاك ما لم يُبذل جهد واعٍ.`,
     },
     neutral: {
       en: `${e1} and ${e2} ${subject.en}s are independent — neither reinforcing nor clashing.`,
       fr: `Les ${subject.fr}s de ${e1} et ${e2} sont indépendants — ni renforcement ni conflit.`,
-      ar: `${subject.ar} ${e1} و${e2} مستقلان — لا تعزيز ولا تعارض.`,
+      ar: `عنصرا ${e1} و${e2} في ${subject.ar} مستقلّان — لا يعزّز أحدهما الآخر ولا يعارضه.`,
     },
   };
 
@@ -191,12 +191,12 @@ function describeVenusMars(relation: 'same' | 'complementary' | 'opposing' | 'ne
     complementary: {
       en: 'A workable attraction dynamic — different styles that can still click.',
       fr: "Une dynamique d'attraction viable — des styles différents qui peuvent tout de même s'accorder.",
-      ar: 'ديناميكية انجذاب قابلة للعمل — أساليب مختلفة يمكن أن تنسجم رغم ذلك.',
+      ar: 'انجذاب يمكن أن يستقيم — أساليب مختلفة قد تنسجم مع ذلك.',
     },
     neutral: {
       en: 'A mixed attraction dynamic, neither especially easy nor especially hard.',
       fr: "Une dynamique d'attraction mitigée, ni particulièrement facile ni particulièrement difficile.",
-      ar: 'ديناميكية انجذاب متفاوتة، لا سهلة ولا صعبة بشكل خاص.',
+      ar: 'انجذاب متفاوت، ليس سهلًا بوجه خاص ولا صعبًا.',
     },
     opposing: {
       en: 'Attraction styles pull in different directions — may take deliberate effort to align.',
