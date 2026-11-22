@@ -25,7 +25,7 @@ describe('Related tools links', () => {
   it('burj page links to compatibility, abjad, planetary hours and planet of the day', () => {
     expect(relatedToolLinks('/name-and-mother-burj', 'ar')).toEqual([
       ['/ar/compatibility', 'توافق الأسماء للزواج'],
-      ['/ar/abjad', 'حساب الجمل'],
+      ['/ar/abjad', 'حاسبة الأبجد'],
       ['/ar/planetary-hours', 'ساعات الكواكب اليوم'],
       ['/ar/planet-of-the-day', 'كوكب اليوم'],
     ]);

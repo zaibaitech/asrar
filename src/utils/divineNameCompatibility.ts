@@ -34,7 +34,7 @@ const CATEGORY_LABEL: Record<IntentionCategory, { en: string; fr: string; ar: st
   patience: { en: 'patience', fr: 'patience', ar: 'الصبر' },
   provision: { en: 'provision', fr: 'subsistance', ar: 'الرزق' },
   healing: { en: 'healing', fr: 'guérison', ar: 'الشفاء' },
-  protection: { en: 'protection', fr: 'protection', ar: 'الحماية' },
+  protection: { en: 'protection', fr: 'protection', ar: 'الحفظ' },
   guidance: { en: 'guidance', fr: 'guidance', ar: 'الهداية' },
   strength: { en: 'strength', fr: 'force', ar: 'القوة' },
   peace: { en: 'peace', fr: 'paix', ar: 'السكينة' },
@@ -62,14 +62,18 @@ export function buildGuidanceTextAr(
   const name = divineName.arabic;
   switch (alignment) {
     case 'optimal':
-      return `يُدعى باسم ${name} تقليديًا في باب ${cat}، فهو مطابق مباشرةً لهذه النية.`;
+      // Healing (decision D2, 2026-11-22): phrased as du'a to Allah seeking shifa, never as the Name healing.
+      if (intention === 'healing') {
+        return `اسم ${name} من الأسماء التي يُدعى اللهُ تعالى بها تقليديًا طلبًا للشفاء، فهو موافق لهذه النية موافقةً مباشرة؛ والإجابة بيد الله سبحانه.`;
+      }
+      return `اسم ${name} من الأسماء التي يُدعى اللهُ تعالى بها تقليديًا في باب ${cat}، فهو موافق لهذه النية موافقةً مباشرة؛ والإجابة بيد الله سبحانه.`;
     case 'suitable':
       return `لا يرتبط اسم ${name} تقليديًا بباب ${cat} ارتباطًا مباشرًا، لكن معناه قريب منه.`;
     case 'not-recommended':
-      return `لا تتوافق الوظيفة التقليدية لاسم ${name} توافقًا وثيقًا مع باب ${cat}. انظر أحد البدائل أدناه.`;
+      return `لا يرتبط اسم ${name} في الاستعمال التقليدي بباب ${cat} ارتباطًا وثيقًا، فانظر في الأسماء المقترحة أدناه.`;
     case 'neutral':
     default:
-      return `ليس لاسم ${name} ارتباط تقليدي قوي بباب ${cat}، ولم يُعثر على بديل أقرب.`;
+      return `ليس لاسم ${name} ارتباط تقليدي قوي بباب ${cat}، ولم نجد اسمًا أقرب منه إلى هذه النية.`;
   }
 }
 

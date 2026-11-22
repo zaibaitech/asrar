@@ -14,6 +14,9 @@ describe('/ar/compatibility', () => {
         expect(ar).not.toMatch(/[A-Za-z]/);
       }
     }
+    const heal = buildGuidanceTextAr(DIVINE_NAME_METADATA[0], 'healing', 'optimal');
+    expect(heal).toContain('يُدعى اللهُ تعالى بها تقليديًا طلبًا للشفاء');
+    expect(heal).toContain('والإجابة بيد الله سبحانه');
     const r = calculateDivineNameIntentionCompatibility(DIVINE_NAME_METADATA[0], 'peace', DIVINE_NAME_METADATA);
     expect(r.guidance.ar).toContain(DIVINE_NAME_METADATA[0].arabic);
   });

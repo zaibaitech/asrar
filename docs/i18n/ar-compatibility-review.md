@@ -5,6 +5,52 @@ Branch `feat/ar-compatibility-arabic`. **Every string in sections 1–3 is a dra
 Divine Names in the guidance sentences are inserted from the divine-names data (`divineName.arabic`), never typed by hand. No Qur'an text was added.
 
 
+
+## Language Reviewer check: 2026-11-22 (AI-assisted, advisory)
+
+Status: **reviewed, AI-assisted advisory.** This is not a scholarly sign-off. The religious wording should still be confirmed by a qualified human teacher. All 21 corrections were applied exactly as written. On 2026-11-22 Mario delegated the 4 open decisions (D1–D4) to the bot, and they are applied as listed below. The tables in sections 1–4 below show the **pre-review drafts**, kept for history. The live strings are the "now" column here.
+
+| # | key | now |
+|---|---|---|
+| 1 | `describeElementRelation.same` | يجمع الطرفين عنصرُ {e1} في {subject} — وفي ذلك انسجام سهل فطري. |
+| 2 | `describeElementRelation.complementary` | عنصرا {e1} و{e2} في {subject} يدعم كلٌّ منهما الآخر بصورة طبيعية. |
+| 3 | `describeElementRelation.opposing` (meaning fix) | قد يُحدث عنصرا {e1} و{e2} في {subject} شيئًا من الاحتكاك ما لم يُبذل جهد واعٍ. |
+| 4 | `describeElementRelation.neutral` | عنصرا {e1} و{e2} في {subject} مستقلّان — لا يعزّز أحدهما الآخر ولا يعارضه. |
+| 5 | `venusMars.complementary` | انجذاب يمكن أن يستقيم — أساليب مختلفة قد تنسجم مع ذلك. |
+| 6 | `venusMars.neutral` | انجذاب متفاوت، ليس سهلًا بوجه خاص ولا صعبًا. |
+| 7 | `AstrologicalCompatibilityView COPY.ar.disclaimer` | مقارنة فلكية عامة (برج الشمس وبرج القمر والزهرة والمريخ)، وليست طريقة كلاسيكية من علم النجوم. ففي التراث الفلكي عند المسلمين يُختار وقت عقد الزواج بدلًا من المقارنة بين تاريخَي ميلاد؛ وانظر لذلك ميزة «الاختيارات» (أفضل التواريخ). *(term per decision D3)*
+| 8 | `AstrologicalCompatibilityView COPY.ar.uncertainNote` | أحد تاريخَي الميلاد قريب من انتقال القمر إلى برج آخر، ومع عدم معرفة وقت الميلاد بدقة قد لا يكون برج القمر المعروض صحيحًا. |
+| 9 | `buildGuidanceTextAr.optimal` | اسم {Name} من الأسماء التي يُدعى اللهُ تعالى بها تقليديًا في باب {category}، فهو موافق لهذه النية موافقةً مباشرة؛ والإجابة بيد الله سبحانه. *(closing clause kept per D4; healing variant per D2)*
+| 10 | `buildGuidanceTextAr.not-recommended` | لا يرتبط اسم {Name} في الاستعمال التقليدي بباب {category} ارتباطًا وثيقًا، فانظر في الأسماء المقترحة أدناه. |
+| 11 | `buildGuidanceTextAr.neutral` | ليس لاسم {Name} ارتباط تقليدي قوي بباب {category}، ولم نجد اسمًا أقرب منه إلى هذه النية. |
+| 12 | `CATEGORY_LABEL.protection` | الحفظ |
+| 13 | page `COPY.ar` adab box | …للتأمّل والحديث، لا للحكم؛… |
+| 14 | page `COPY.ar` intro 1 | (الأبجد أو حساب الجُمَّل) |
+| 15 | page `COPY.ar` intro 2 | …أو إيجاد اسم من أسماء الله الحسنى يناسب نيّتك. |
+| 16 | page `COPY.ar` related, birth-profile | برجا الشمس والقمر ومنزل القمر وحظوظ الكواكب من القوة. |
+| 17 | `ar-ui.json` / `mobile.json` "Soul Connection" | صلة الأرواح |
+| 18 | `relatedTools.ts` `/ar/abjad` name (+ test) | حاسبة الأبجد |
+| 19 | `ar-ui.json` pattern "N of 99 Names resonate strongly with {name}" | عدد الأسماء الحسنى التي تتناغم بقوة مع {name}: N من 99 |
+| 20 | `ar-ui.json` "May start easy; later can feel stagnant" | قد يبدأ سهلًا، ثم قد يعتريه الركود لاحقًا |
+| 21 | `ar-ui.json` "Very good long-term; early struggles" | جيد جدًا على المدى الطويل؛ مع صعوبات في البداية |
+
+Unchanged (LR PASS): `buildGuidanceTextAr.suitable`, the other 9 `CATEGORY_LABEL`s, and everything else in sections 1–4.
+Catalog note: rows 13–16 also update the matching `ar-ui.json` / `manual.json` entries, so the server copy and the runtime catalog agree.
+
+### Decisions D1–D4: decided 2026-11-22, pending LR spot-check
+
+| decision | key | before | now |
+|---|---|---|---|
+| D1 | page `COPY.ar` related, ikhtiyarat (+ `ar-ui.json` "Choose an auspicious date for the nikāḥ.") | اختر تاريخًا مباركًا للنكاح. | اختر تاريخًا مناسبًا للنكاح. |
+| D1 | page `COPY.ar` related, name-and-mother-burj (+ `ar-ui.json` "Your burj, blessed day, dhikr and sadaqah.") | برجك ويومك المبارك وذكرك وصدقتك. | برجك ويومك المناسب وذكرك وصدقتك. |
+| D1 ("and similar") | `ar-ui.json` "Traditionally blessed; harmony and growth" (soul-connection tag on this page) | مبارك تقليديًا؛ انسجام ونمو | مناسب تقليديًا؛ انسجام ونمو |
+| D2 | `buildGuidanceTextAr.optimal` when the intention is healing (label «الشفاء» kept) | (generic) …في باب الشفاء… | اسم {Name} من الأسماء التي يُدعى اللهُ تعالى بها تقليديًا طلبًا للشفاء، فهو موافق لهذه النية موافقةً مباشرة؛ والإجابة بيد الله سبحانه. |
+| D3 | `COPY.ar.disclaimer` | ففي علم النجوم الإسلامي الكلاسيكي يُختار… | ففي التراث الفلكي عند المسلمين يُختار… |
+| D4 | `buildGuidanceTextAr.optimal` closing (all categories) | (none) | …موافقةً مباشرة؛ والإجابة بيد الله سبحانه. |
+
+Not changed, for LR to look at: «الأفضل تقليديًا؛ بركات بعد العقبات» ("Traditionally best; blessings after obstacles"). It describes a traditional reading, not a date the app calls blessed.
+
+
 ## 1. New Arabic drafts (written for this PR)
 
 | key | English | Arabic draft |
