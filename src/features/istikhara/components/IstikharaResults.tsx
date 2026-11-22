@@ -39,6 +39,7 @@ import {
   BookOpen
 } from "lucide-react";
 import { nativeOrCopy, trackEvent } from '@/src/lib/analytics';
+import { currentPageUrl, withShareUtm } from '@/src/lib/shareUrl';
 
 interface IstikharaResultsProps {
   result: IstikharaCalculationResult;
@@ -225,7 +226,7 @@ export function IstikharaResults({ result, onReset }: IstikharaResultsProps) {
         await navigator.share({
           title: 'My Istikhara Profile',
           text: shareText,
-          url: window.location.href
+          url: withShareUtm(currentPageUrl(), 'native')
         });
       } catch (err) {
         console.log('Share cancelled');

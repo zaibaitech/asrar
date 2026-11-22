@@ -36,6 +36,7 @@ const RELATED: RelatedLink[] = [
   ['/name-and-mother-burj', "Burj from Your Name & Mother's Name", 'Calculate with any name, and see the 12 burūj at a glance.'],
   ['/99-names-of-allah', 'The 99 Names of Allah', 'Arabic, meaning and Abjad value of each Name.'],
   ['/abjad', 'Abjad Calculator', 'The Abjad value of any Arabic name or phrase.'],
+  ['/compatibility', 'Name Compatibility for Marriage', 'Compare two names with the Abjad soul-connection method.'],
 ];
 
 export default function Page() {

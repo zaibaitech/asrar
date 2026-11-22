@@ -31,8 +31,7 @@ import { useSimpleMode } from '../useSimpleMode';
 import { ikhtiyaratCopy, UiLang, pickLabel, yourLocationLabel, YOUR_LOCATION_SENTINEL } from '../copy';
 import { nativeOrCopy, trackEvent } from '@/src/lib/analytics';
 import { useIkhtiyaratTool, useTrackCalculation } from '@/src/lib/useAnalytics';
-
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
+import { currentPageUrl } from '@/src/lib/shareUrl';
 
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -153,7 +152,10 @@ export function CheckDateView({
     if (!result) return;
     const tierLabel = language === 'fr' ? result.tierInfo.labelFr : result.tierInfo.labelEn;
     const dateOnly = result.date.toISOString().slice(0, 10);
-    const url = `${BASE_URL}/ikhtiyarat/r/${dateOnly}?lat=${location.latitude}&lon=${location.longitude}&tz=${encodeURIComponent(tz)}&election=${electionType}${language === 'fr' ? '&lang=fr' : ''}`;
+    // Privacy: share this tool page only (UTM-tagged). The old /ikhtiyarat/r/<date>?lat=&lon=&tz= link
+    // put the visitor's chosen date and exact location in the URL.
+    // shareContent() adds the UTM tags (native vs copy).
+    const url = currentPageUrl();
     trackEvent('share_click', { tool, method: nativeOrCopy() });
     const shareResult = await shareContent({
       title: c.title,

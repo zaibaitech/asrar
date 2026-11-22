@@ -74,3 +74,40 @@ describe('trackEvent', () => {
     expect(clarity).toHaveBeenCalledWith('event', 'calculation_complete');
   });
 });
+
+describe('trackFirstCalculation', () => {
+  afterEach(() => vi.unstubAllGlobals());
+
+  function fakeStorage() {
+    const m = new Map<string, string>();
+    return {
+      getItem: (k: string) => (m.has(k) ? m.get(k)! : null),
+      setItem: (k: string, v: string) => void m.set(k, v),
+    } as unknown as Storage;
+  }
+
+  it('sends first_calculation once per browser with only calculator + locale', async () => {
+    const { trackFirstCalculation, FIRST_CALC_KEY } = await import('./analytics');
+    const gtag = vi.fn();
+    const localStorage = fakeStorage();
+    vi.stubGlobal('window', { gtag, localStorage });
+    trackFirstCalculation('compatibility', 'ar');
+    trackFirstCalculation('burj', 'en');
+    const calls = gtag.mock.calls.filter((c) => c[1] === 'first_calculation');
+    expect(calls).toEqual([['event', 'first_calculation', { calculator: 'compatibility', locale: 'ar' }]]);
+    expect(localStorage.getItem(FIRST_CALC_KEY)).toBe('1');
+  });
+
+  it('does not use up the flag when gtag is missing', async () => {
+    const { trackFirstCalculation, FIRST_CALC_KEY } = await import('./analytics');
+    const localStorage = fakeStorage();
+    vi.stubGlobal('window', { localStorage });
+    trackFirstCalculation('abjad', 'fr');
+    expect(localStorage.getItem(FIRST_CALC_KEY)).toBeNull();
+  });
+
+  it('strips anything outside the enums', () => {
+    expect(sanitizeEventParams('first_calculation', { calculator: 'burj', locale: 'ur', name: 'Ali' })).toEqual({ calculator: 'burj', locale: 'ur' });
+    expect(sanitizeEventParams('first_calculation', { calculator: 'Fatima', locale: 'en' })).toEqual({ locale: 'en' });
+  });
+});

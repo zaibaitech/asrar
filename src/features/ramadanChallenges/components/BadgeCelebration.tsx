@@ -11,6 +11,7 @@ import { X, Sparkles } from 'lucide-react';
 import type { Badge } from '../badges';
 import { BadgeDisplay } from './BadgeDisplay';
 import { nativeOrCopy, trackEvent } from '@/src/lib/analytics';
+import { withShareUtm } from '@/src/lib/shareUrl';
 
 interface BadgeCelebrationProps {
   badge: Badge;
@@ -56,22 +57,22 @@ export function BadgeCelebration({ badge, language = 'en', onClose }: BadgeCeleb
       ? `🎖️ Je viens de gagner le badge "${badgeName}" sur Asrār!\n\n${badgeDesc}\n\nRejoignez-moi dans ce défi spirituel!`
       : `🎖️ I just earned the "${badgeName}" badge on Asrār!\n\n${badgeDesc}\n\nJoin me in this spiritual challenge!`;
     
-    const shareUrl = `${typeof window !== 'undefined' ? window.location.origin : ''}/ramadan`;
+    const pageUrl = `${typeof window !== 'undefined' ? window.location.origin : 'https://www.asrar.app'}/ramadan`;
 
     if (navigator.share) {
       try {
         await navigator.share({
           title: t.congrats,
           text: shareText,
-          url: shareUrl,
+          url: withShareUtm(pageUrl, 'native'),
         });
       } catch (err) {
         // User cancelled or error - just copy to clipboard
-        await navigator.clipboard.writeText(`${shareText}\n\n${shareUrl}`);
+        await navigator.clipboard.writeText(`${shareText}\n\n${withShareUtm(pageUrl, 'copy')}`);
       }
     } else {
       // Fallback: copy to clipboard
-      await navigator.clipboard.writeText(`${shareText}\n\n${shareUrl}`);
+      await navigator.clipboard.writeText(`${shareText}\n\n${withShareUtm(pageUrl, 'copy')}`);
     }
   };
 

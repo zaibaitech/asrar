@@ -17,6 +17,7 @@ import { toLocalDateString } from '@/src/lib/localDate';
 import { TasbihCounter } from './TasbihCounter';
 import { translations } from '@/src/lib/translations';
 import { nativeOrCopy, trackEvent } from '@/src/lib/analytics';
+import { withShareUtm, type ShareSource } from '@/src/lib/shareUrl';
 import { useLanguage } from '@/src/contexts/LanguageContext';
 
 // ─── Type Badge Colors ───────────────────────────────────────────────────────────
@@ -165,16 +166,16 @@ export function ChallengeCard({
     return typeToSlug[challenge.type] || 'custom';
   };
 
-  const getShareUrl = () => {
+  const getShareUrl = (source: ShareSource) => {
     const challengeSlug = getChallengeSlug();
     const langParam = language === 'fr' ? '&lang=fr' : '';
-    return `${BASE_URL}/ramadan?challenge=${challengeSlug}${langParam}`;
+    return withShareUtm(`${BASE_URL}/ramadan?challenge=${challengeSlug}${langParam}`, source, { keep: ['challenge', 'lang'] });
   };
 
   const handleNativeShare = async () => {
     // Without the Web Share API this only opens the share sheet; its buttons are tracked below.
     if (typeof navigator.share === 'function') trackEvent('share_click', { tool: 'ramadan', method: 'native' });
-    const shareUrl = getShareUrl();
+    const shareUrl = getShareUrl('native');
     
     // Special captivating message for Debt Relief Wird
     if (challenge.type === 'DEBT_RELIEF') {
@@ -228,7 +229,7 @@ export function ChallengeCard({
 
   const copyLink = async () => {
     trackEvent('share_click', { tool: 'ramadan', method: 'copy_link' });
-    const shareUrl = getShareUrl();
+    const shareUrl = getShareUrl('copy');
     try {
       await navigator.clipboard.writeText(shareUrl);
       setLinkCopied(true);
@@ -248,7 +249,7 @@ export function ChallengeCard({
 
   const shareWhatsApp = () => {
     trackEvent('share_click', { tool: 'ramadan', method: 'whatsapp' });
-    const shareUrl = getShareUrl();
+    const shareUrl = getShareUrl('whatsapp');
     const text = language === 'fr'
       ? `🤲 Rejoignez-moi dans ${challenge.title}!\n\n${challenge.arabicText}\n\nSuivez votre dhikr quotidien:`
       : `🤲 Join me in ${challenge.title}!\n\n${challenge.arabicText}\n\nTrack your daily dhikr:`;
@@ -257,7 +258,7 @@ export function ChallengeCard({
 
   const shareTelegram = () => {
     trackEvent('share_click', { tool: 'ramadan', method: 'telegram' });
-    const shareUrl = getShareUrl();
+    const shareUrl = getShareUrl('telegram');
     const text = language === 'fr'
       ? `🤲 Rejoignez-moi dans ${challenge.title}!\n\n${challenge.arabicText}`
       : `🤲 Join me in ${challenge.title}!\n\n${challenge.arabicText}`;
