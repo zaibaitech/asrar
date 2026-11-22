@@ -47,6 +47,8 @@ export type DonationLocationParam = (typeof DONATION_LOCATIONS)[number];
 /** Allowed params per event, each with its allowed values. Anything else is stripped. */
 export const EVENT_SCHEMA = {
   calculation_complete: { tool: TOOLS, lang: LANGS },
+  /** Sent at most once per browser, alongside the visitor's first calculation_complete. */
+  first_calculation: { calculator: TOOLS, locale: LANGS },
   share_click: { tool: TOOLS, method: SHARE_METHODS },
   language_switch: { from: LANGS, to: LANGS },
   related_tool_click: { from_tool: TOOLS, to_tool: TOOLS },
@@ -89,6 +91,29 @@ export function trackEvent<E extends EventName>(name: E, params: EventParams<E>)
     const w = window as unknown as { gtag?: Gtag; clarity?: Clarity };
     if (typeof w.gtag === 'function') w.gtag('event', name, clean);
     if (typeof w.clarity === 'function') w.clarity('event', name);
+  } catch {
+    /* analytics must never break the page */
+  }
+}
+
+/** localStorage flag: set once this browser has sent first_calculation. */
+export const FIRST_CALC_KEY = 'asrar.analytics.firstCalc';
+
+/**
+ * Send `first_calculation` {calculator, locale} the first time this browser
+ * completes any calculation (a cleaner "converted visitor" count than
+ * calculation_complete, which fires on every result). Only fixed enums are
+ * sent. Skipped while gtag is absent so the flag is not used up by a visit
+ * where analytics was blocked; if localStorage is unavailable nothing is sent.
+ */
+export function trackFirstCalculation(calculator: Tool, locale: Lang): void {
+  if (typeof window === 'undefined') return;
+  try {
+    const w = window as unknown as { gtag?: unknown; localStorage?: Storage };
+    if (typeof w.gtag !== 'function' || !w.localStorage) return;
+    if (w.localStorage.getItem(FIRST_CALC_KEY)) return;
+    w.localStorage.setItem(FIRST_CALC_KEY, '1');
+    trackEvent('first_calculation', { calculator, locale });
   } catch {
     /* analytics must never break the page */
   }

@@ -33,6 +33,7 @@ import { translations } from '@/src/lib/translations';
 import { getLocalToday } from '@/src/lib/localDate';
 import { queueDhikrIncrement } from '../communityDhikrService';
 import { nativeOrCopy, trackEvent } from '@/src/lib/analytics';
+import { withShareUtm, type ShareSource } from '@/src/lib/shareUrl';
 
 // ─── Types ───────────────────────────────────────────────────────────────────────
 
@@ -127,15 +128,15 @@ export function PropheticNamesCard({
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app';
 
   // Generate shareable URL with language parameter
-  const getShareUrl = () => {
+  const getShareUrl = (source: ShareSource) => {
     const langParam = language === 'fr' ? '&lang=fr' : '';
-    return `${BASE_URL}/ramadan?challenge=prophetic-names${langParam}`;
+    return withShareUtm(`${BASE_URL}/ramadan?challenge=prophetic-names${langParam}`, source, { keep: ['challenge', 'lang'] });
   };
 
   // Handle native share (Web Share API)
   const handleNativeShare = async () => {
     if (typeof navigator.share === 'function') trackEvent('share_click', { tool: 'ramadan', method: 'native' });
-    const shareUrl = getShareUrl();
+    const shareUrl = getShareUrl('native');
     if (navigator.share) {
       try {
         await navigator.share({
@@ -154,7 +155,7 @@ export function PropheticNamesCard({
   // Share via WhatsApp
   const shareWhatsApp = () => {
     trackEvent('share_click', { tool: 'ramadan', method: 'whatsapp' });
-    const shareUrl = getShareUrl();
+    const shareUrl = getShareUrl('whatsapp');
     const text = encodeURIComponent(`${t.shareText}\n\n${shareUrl}`);
     window.open(`whatsapp://send?text=${text}`, '_blank');
     setShowShareModal(false);
@@ -163,7 +164,7 @@ export function PropheticNamesCard({
   // Share via Telegram
   const shareTelegram = () => {
     trackEvent('share_click', { tool: 'ramadan', method: 'telegram' });
-    const shareUrl = getShareUrl();
+    const shareUrl = getShareUrl('telegram');
     const text = encodeURIComponent(t.shareText);
     window.open(`tg://msg_url?url=${encodeURIComponent(shareUrl)}&text=${text}`, '_blank');
     setShowShareModal(false);
@@ -172,7 +173,7 @@ export function PropheticNamesCard({
   // Share via Twitter/X
   const shareTwitter = () => {
     trackEvent('share_click', { tool: 'ramadan', method: 'twitter' });
-    const shareUrl = getShareUrl();
+    const shareUrl = getShareUrl('x');
     const text = encodeURIComponent(t.shareText);
     window.open(`https://twitter.com/intent/tweet?text=${text}&url=${encodeURIComponent(shareUrl)}`, '_blank');
     setShowShareModal(false);
@@ -181,7 +182,7 @@ export function PropheticNamesCard({
   // Copy link to clipboard
   const copyLink = async () => {
     trackEvent('share_click', { tool: 'ramadan', method: 'copy_link' });
-    const shareUrl = getShareUrl();
+    const shareUrl = getShareUrl('copy');
     try {
       await navigator.clipboard.writeText(shareUrl);
       setLinkCopied(true);

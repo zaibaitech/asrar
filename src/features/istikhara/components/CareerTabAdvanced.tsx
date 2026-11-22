@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import type { IstikharaCalculationResult } from "../types";
 import { nativeOrCopy, trackEvent } from '@/src/lib/analytics';
+import { currentPageUrl, withShareUtm } from '@/src/lib/shareUrl';
 
 interface CareerTabAdvancedProps {
   result: IstikharaCalculationResult;
@@ -140,7 +141,7 @@ export function CareerTabAdvanced({ result }: CareerTabAdvancedProps) {
         await navigator.share({
           title: 'Istikhara Career Guidance',
           text: shareText,
-          url: window.location.href
+          url: withShareUtm(currentPageUrl(), 'native')
         });
       } catch (err) {
         console.log('Share cancelled');

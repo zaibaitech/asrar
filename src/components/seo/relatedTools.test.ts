@@ -51,3 +51,19 @@ describe('Related tools analytics ids', () => {
     expect(pageEventId('/planetary-hours')).toBe('planetary_hours');
   });
 });
+
+describe('Internal links to the top converting pages', () => {
+  it('burj links to compatibility, abjad and planetary hours, and each of them links back to burj', () => {
+    expect(RELATED_TOOLS['/name-and-mother-burj']).toEqual(expect.arrayContaining(['compatibility', 'abjad', 'hours']));
+    for (const page of ['/compatibility', '/abjad', '/planetary-hours']) expect(RELATED_TOOLS[page]).toContain('burj');
+    expect(RELATED_TOOLS['/abjad']).toContain('compatibility');
+  });
+
+  it('keeps those links in the locale of the URL (en, fr, ar, ur)', () => {
+    expect(relatedToolLinks('/compatibility', 'ar').map(([h]) => h)).toContain('/ar/name-and-mother-burj');
+    expect(relatedToolLinks('/compatibility', 'fr').map(([h]) => h)).toContain('/fr/name-and-mother-burj');
+    expect(relatedToolLinks('/compatibility', 'ur').map(([h]) => h)).toContain('/ur/name-and-mother-burj');
+    expect(relatedToolLinks('/name-and-mother-burj', 'ur').map(([h]) => h)).toContain('/ur/compatibility');
+    expect(relatedToolLinks('/planetary-hours', 'ar').map(([h]) => h)).toContain('/ar/name-and-mother-burj');
+  });
+});

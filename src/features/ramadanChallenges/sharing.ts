@@ -5,6 +5,11 @@
  */
 
 import type { Challenge, ChallengeType } from './types';
+import { withShareUtm, type ShareSource } from '@/src/lib/shareUrl';
+
+/** Fixed (non-user) params our share URLs may carry; everything else is stripped. */
+const SHARE_KEEP = ['challenge', 'lang'] as const;
+const tag = (url: string, source: ShareSource) => withShareUtm(url, source, { keep: SHARE_KEEP });
 
 export interface ShareData {
   title: string;
@@ -185,7 +190,7 @@ export function generateMilestoneShareText(
  * Share via Web Share API or fallback to clipboard
  */
 export async function shareContent(shareData: ShareData): Promise<{ success: boolean; method: 'native' | 'clipboard' }> {
-  const fullText = `${shareData.text}\n\n${shareData.url}`;
+  const fullText = `${shareData.text}\n\n${tag(shareData.url, 'copy')}`;
   
   // Try native share first
   if (navigator.share) {
@@ -193,7 +198,7 @@ export async function shareContent(shareData: ShareData): Promise<{ success: boo
       await navigator.share({
         title: shareData.title,
         text: shareData.text,
-        url: shareData.url,
+        url: tag(shareData.url, 'native'),
       });
       return { success: true, method: 'native' };
     } catch (err) {
@@ -219,12 +224,12 @@ export async function shareContent(shareData: ShareData): Promise<{ success: boo
  */
 export function getSocialShareUrls(shareData: ShareData) {
   const encodedText = encodeURIComponent(shareData.text);
-  const encodedUrl = encodeURIComponent(shareData.url);
+  const enc = (source: ShareSource) => encodeURIComponent(tag(shareData.url, source));
   
   return {
-    whatsapp: `https://wa.me/?text=${encodedText}%0A%0A${encodedUrl}`,
-    twitter: `https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`,
-    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedText}`,
-    telegram: `https://t.me/share/url?url=${encodedUrl}&text=${encodedText}`,
+    whatsapp: `https://wa.me/?text=${encodedText}%0A%0A${enc('whatsapp')}`,
+    twitter: `https://twitter.com/intent/tweet?text=${encodedText}&url=${enc('x')}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${enc('facebook')}&quote=${encodedText}`,
+    telegram: `https://t.me/share/url?url=${enc('telegram')}&text=${encodedText}`,
   };
 }

@@ -34,10 +34,11 @@ export default function RootShell({
     <html lang={lang} dir={dir} className={arabicUi.variable} suppressHydrationWarning>
       <head>
         {headScript ? <script dangerouslySetInnerHTML={{ __html: headScript }} /> : null}
-        {/* dataLayer/gtag stub: early events queue here until gtag.js (lazyOnload) loads and replays them. */}
+        {/* dataLayer/gtag stub: early events queue here until gtag.js (lazyOnload) loads and replays them.
+            display_mode user property: 'standalone' (opened from the home screen) or 'browser'. No user data. */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-VTWVCR2EJN');`,
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());try{gtag('set','user_properties',{display_mode:((window.matchMedia&&window.matchMedia('(display-mode: standalone)').matches)||navigator.standalone===true)?'standalone':'browser'})}catch(e){}gtag('config','G-VTWVCR2EJN');`,
           }}
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

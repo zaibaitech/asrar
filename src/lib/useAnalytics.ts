@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import { useLanguage } from '../contexts/LanguageContext';
-import { toLang, trackEvent, type Lang, type Tool } from './analytics';
+import { toLang, trackEvent, trackFirstCalculation, type Lang, type Tool } from './analytics';
 
 /** /ar and /fr URLs decide the language; otherwise the visitor's UI language. */
 function langFor(uiLanguage: string): Lang {
@@ -17,7 +17,8 @@ function langFor(uiLanguage: string): Lang {
 }
 
 /**
- * Returns a callback that sends `calculation_complete` {tool, lang}. No user
+ * Returns a callback that sends `calculation_complete` {tool, lang}, plus
+ * `first_calculation` {calculator, locale} the first time in this browser. No user
  * data. Pass a tool to the callback to override the default (multi-tool forms).
  */
 export function useTrackCalculation(tool: Tool) {
@@ -26,7 +27,13 @@ export function useTrackCalculation(tool: Tool) {
   const uiRef = useRef(uiLanguage);
   uiRef.current = uiLanguage;
   return useCallback(
-    (override?: Tool) => trackEvent('calculation_complete', { tool: override ?? tool, lang: langFor(uiRef.current) }),
+    (override?: Tool) => {
+      const t = override ?? tool;
+      const lang = langFor(uiRef.current);
+      trackEvent('calculation_complete', { tool: t, lang });
+      // Once per browser (localStorage flag); same enums, never inputs.
+      trackFirstCalculation(t, lang);
+    },
     [tool],
   );
 }

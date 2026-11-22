@@ -25,6 +25,7 @@ import { ShareButton } from '@/src/features/ramadanChallenges/components/ShareBu
 import { getEarnedBadges, getNewlyEarnedBadges, type Badge } from '@/src/features/ramadanChallenges/badges';
 import { generateProgressShareText } from '@/src/features/ramadanChallenges/sharing';
 import { nativeOrCopy, trackEvent } from '@/src/lib/analytics';
+import { nativeOrCopySource, withShareUtm } from '@/src/lib/shareUrl';
 
 // ─── Translations ────────────────────────────────────────────────────────────────
 
@@ -264,7 +265,7 @@ export function RamadanPage() {
   // ─── Share functionality ───
   const handleShare = async () => {
     trackEvent('share_click', { tool: 'ramadan', method: nativeOrCopy() });
-    const shareUrl = `${process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app'}/ramadan${language === 'fr' ? '?lang=fr' : ''}`;
+    const shareUrl = withShareUtm(`${process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app'}/ramadan${language === 'fr' ? '?lang=fr' : ''}`, nativeOrCopySource(), { keep: ['lang'] });
     const shareTitle = t.title;
     const shareText = language === 'fr'
       ? '📿 Rejoignez-moi dans mes défis de zikr sur Asrār!'
