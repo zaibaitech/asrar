@@ -6,6 +6,7 @@ import { COMPAT_THEME, COMPAT_TINTS } from '../constants/compatibilityTheme';
 import { DIVINE_INTENTIONS, DivineIntention, INTENTION_EMOJI, INTENTION_COMPANION_DUA } from '../constants/divineNameIntentions';
 import type { DivineNameIntentionCompatibility, DivineNameMetadata, AlignmentTier } from '../constants/divineNameCompatibilityData';
 import { AllDivineNamesBrowser } from './AllDivineNamesBrowser';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface DivineNameIntentionResultViewProps {
   intention: DivineIntention;
@@ -40,6 +41,8 @@ export function DivineNameIntentionResultView({
   const divineNames = useDivineNames();
   const contentLang: 'en' | 'fr' = language === 'fr' ? 'fr' : 'en';
   const isFrench = contentLang === 'fr';
+  // /ar: the Arabic guidance (Name from the verified data) instead of the English sentence.
+  const isArabicUi = useLanguage().uiLanguage === 'ar';
   const info = DIVINE_INTENTIONS.find(i => i.id === intention)!;
   const dua = INTENTION_COMPANION_DUA[intention];
   const tint = COMPAT_TINTS[ALIGNMENT_TINT[result.alignment]];
@@ -85,7 +88,7 @@ export function DivineNameIntentionResultView({
           </div>
           <div className="px-5 py-4" style={{ background: '#FFFFFF' }}>
             <p className="text-[14px] leading-[1.6] m-0" style={{ color: COMPAT_THEME.muted }}>
-              {guidance[contentLang]}
+              {isArabicUi && result.guidance.ar ? result.guidance.ar : guidance[contentLang]}
             </p>
           </div>
         </div>

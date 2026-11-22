@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { RelatedTools } from '@/src/components/seo/RelatedTools';
-import { arabicMetadata } from '@/src/lib/arMetadata';
+import { AR_META, arabicMetadata } from '@/src/lib/arMetadata';
+import { SITE_URL } from '@/src/lib/siteRoutes';
 import { buildToolMetadata, getRouteLang, getServedLang, resolvePageLang } from '@/src/lib/pageLang';
 import { FaqSection, JsonLd, RelatedLinks, faqJsonLd, type FaqItem, type RelatedLink } from '@/src/components/seo/SeoSections';
 import { CompatibilityCalculator } from './CompatibilityCalculator';
@@ -129,7 +130,75 @@ const COPY = {
       ['/birth-profile', 'Profil de naissance', 'Vos signes solaire et lunaire, demeure lunaire et dignités planétaires.'],
     ] as RelatedLink[],
   },
+  /**
+   * /ar/compatibility (served by this route with ROUTE_LANG_HEADER=ar). Every string is the
+   * existing Arabic from public/i18n/ar-ui.json (what the runtime catalog already showed on
+   * /ar), now server-rendered; links point at the /ar pages. Review list:
+   * docs/i18n/ar-compatibility-review.md.
+   */
+  ar: {
+    h1: 'توافق الأسماء للزواج — حاسبة صلة الأرواح بالأبجد',
+    intro1:
+      'قبل النكاح تحبّ أسر كثيرة أن تنظر في الانسجام بين الاسمين. ففي علم الحروف لكل حرف عربي عدد (الأبجد أو حساب الجمل)، فلكل اسم مجموع. تقارن هذه الحاسبة بين المجموعين بطريقة «صلة الأرواح» التقليدية، وتقرأ النتيجة للزواج أولًا، ثم للصداقة والعائلة والعمل.',
+    intro2:
+      'يمكنك أيضًا مقارنة تاريخَي ميلاد (مقارنة فلكية عامة حديثة لأبراج الشمس والقمر والزهرة والمريخ)، أو النظر في رنين شخص مع اسم من أسماء الله الحسنى، أو إيجاد الاسم الحسن المناسب لنيّة.',
+    adabTitle: 'الأدب أولًا',
+    adab:
+      'لا يستطيع عدد الاسم أن يخبرك بنجاح الزواج. اسأل عن الدين والخُلق، واستشر الأسرتين، وصلِّ صلاة الاستخارة، وتوكّل على الله. واستعمل هذه الأداة للتأمّل والحديث، لا حكمًا؛ والله وحده يعلم الغيب.',
+    howTitle: 'كيف تعمل طريقة الأسماء',
+    how: [
+      'اكتب الاسمين بالحروف العربية (أو اكتبهما بالحروف اللاتينية واختر الكتابة العربية).',
+      'يُحوَّل كل اسم إلى مجموعه في الأبجد الكبير، بقيم الحروف المغربية أو المشرقية التي تختارها.',
+      'يُجمع المجموعان مع 7 ويُقسم الناتج على 9؛ والباقي (1–9، والصفر يُعدّ 9) هو عدد صلة الأرواح.',
+      'لكل عدد معنى ونظرة تقليديان، يُعرضان بحسب سياق العلاقة الذي تختاره: زواج، عام، صداقة، عائلة أو عمل.',
+    ],
+    faqTitle: 'أسئلة شائعة',
+    faqs: [
+      {
+        q: 'كيف أتحقق من توافق الأسماء للزواج؟',
+        a: 'أدخل الاسمين واختر سياق «الزواج» ثم احسب. تجمع الأداة قيمتي الأبجد للاسمين مع 7، وتقسم على 9، وتعرض معنى الباقي في الزواج.',
+      },
+      {
+        q: 'أي نظام أبجد يُستعمل؟',
+        a: 'يمكنك التبديل بين الترتيب المغربي (المغرب العربي والأندلس وغرب أفريقيا) والترتيب المشرقي (مصر والمشرق وسائر آسيا). وأكثر الأسماء تعطي المجموع نفسه في الترتيبين؛ أما الأسماء التي فيها أحد الحروف الستة: الصاد والضاد والسين والظاء والغين والشين، فقد يختلف مجموعها.',
+      },
+      {
+        q: 'هل يمكنني المقارنة بتاريخ الميلاد بدلًا من الأسماء؟',
+        a: 'نعم. اختر «بتاريخ الميلاد» لتقارن بين أبراج الشمس والقمر والزهرة والمريخ لشخصين. وهذه مقارنة فلكية عامة حديثة، لا طريقة إسلامية كلاسيكية، ولا تستعمل وقت الميلاد ولا البيوت.',
+      },
+      {
+        q: 'هل يجوز الاعتماد على توافق الأسماء؟',
+        a: 'اجعله تأمّلًا ثقافيًا لا تنبّؤًا. فاختيار الزوج قائم على الدين والخُلق ومشورة الأهل وصلاة الاستخارة. ولا يحسم عددٌ زواجًا؛ والله وحده يعلم الغيب.',
+      },
+      {
+        q: 'ماذا لو كانت نتيجتنا منخفضة؟',
+        a: 'العدد المنخفض ليس تحريمًا ولا شؤمًا، بل قد يكون دعوة للحديث عن التوقّعات والصبر. وكثير من الزيجات السعيدة كانت «سترسب» في اختبار رقمي.',
+      },
+    ] as FaqItem[],
+    relatedTitle: 'ذات صلة',
+    related: [
+      ['/ar/ikhtiyarat', 'أفضل التواريخ (الاختيارات)', 'اختر تاريخًا مباركًا للنكاح.'],
+      ['/ar/name-and-mother-burj', 'برجك من اسمك واسم أمك', 'برجك ويومك المبارك وذكرك وصدقتك.'],
+      ['/ar/abjad', 'حاسبة الأبجد', 'قيمة الأبجد لأي اسم أو عبارة عربية.'],
+      ['/ar/sadaqa', 'دليل الصدقة', 'الصدقة بحسب يوم الأسبوع وشهر الميلاد الهجري والبرج.'],
+      ['/ar/birth-profile', 'ملف الميلاد', 'برجا الشمس والقمر والمنزلة القمرية وحظوظ الكواكب من القوة.'],
+    ] as RelatedLink[],
+  },
 } as const;
+
+/** WebApplication schema for /ar/compatibility (name and description reuse AR_META / the Arabic links). */
+const AR_WEB_APP_JSON_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: 'حساب التوافق بالأسماء',
+  url: `${SITE_URL}/ar/compatibility`,
+  inLanguage: 'ar',
+  applicationCategory: 'LifestyleApplication',
+  operatingSystem: 'Web',
+  description: AR_META['/compatibility'].description,
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  isAccessibleForFree: true,
+};
 
 export default async function Page({
   searchParams,
@@ -137,9 +206,11 @@ export default async function Page({
   searchParams: Promise<{ lang?: string }>;
 }) {
   const lang = await resolvePageLang(searchParams);
-  const c = COPY[lang];
   const routeLang = await getRouteLang();
   const served = await getServedLang();
+  // /ar/compatibility: Arabic copy, RTL list padding, Arabic JSON-LD. EN and FR are unchanged.
+  const isAr = served === 'ar';
+  const c = isAr ? COPY.ar : COPY[lang];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
@@ -162,7 +233,7 @@ export default async function Page({
         <RelatedTools pagePath="/compatibility" lang={served === 'ar' ? 'ar' : lang} routeLang={served} />
         <section className="space-y-3">
           <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100">{c.howTitle}</h2>
-          <ol className="list-decimal pl-5 space-y-1 text-slate-700 dark:text-slate-300">
+          <ol className={`list-decimal ${isAr ? 'pr-5' : 'pl-5'} space-y-1 text-slate-700 dark:text-slate-300`}>
             {c.how.map((step) => (
               <li key={step}>{step}</li>
             ))}
@@ -172,7 +243,14 @@ export default async function Page({
         <RelatedLinks title={c.relatedTitle} links={c.related} routeLang={routeLang} />
       </div>
 
-      <JsonLd data={faqJsonLd(c.faqs)} />
+      {isAr ? (
+        <>
+          <JsonLd data={{ ...faqJsonLd(c.faqs), inLanguage: 'ar' }} />
+          <JsonLd data={AR_WEB_APP_JSON_LD} />
+        </>
+      ) : (
+        <JsonLd data={faqJsonLd(c.faqs)} />
+      )}
     </div>
   );
 }

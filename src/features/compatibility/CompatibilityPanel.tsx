@@ -60,6 +60,8 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
   // calculation_complete when a result screen appears (no names or results are sent).
   useTrackResult('compatibility', showResults);
   const lang = language as 'en' | 'fr' | 'ar';
+  // The birth-date comparison already has Arabic templates; use them on /ar (EN/FR unchanged).
+  const astroLang: 'en' | 'fr' | 'ar' = uiLanguage === 'ar' ? 'ar' : lang;
 
   const handleRelationshipCalculate = async (
     person1Name: string,
@@ -110,7 +112,7 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
     try {
       setIsTransitioning(true);
 
-      const result = analyzeAstrologicalCompatibility(person1Name, person1Dob, person2Name, person2Dob, lang);
+      const result = analyzeAstrologicalCompatibility(person1Name, person1Dob, person2Name, person2Dob, astroLang);
 
       await new Promise(resolve => setTimeout(resolve, 300));
 
@@ -416,7 +418,7 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
             <div className="space-y-6">
               <AstrologicalCompatibilityView
                 compatibility={astrologicalResult}
-                language={lang}
+                language={astroLang}
               />
 
               {/* Calculate Again Button */}

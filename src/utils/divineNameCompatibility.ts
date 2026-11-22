@@ -29,17 +29,17 @@ export function hasRelatedFunction(
   return (RELATED_INTENTION_GROUPS[targetIntention] || []).some(rel => nameFunctions.includes(rel));
 }
 
-const CATEGORY_LABEL: Record<IntentionCategory, { en: string; fr: string }> = {
-  clarity: { en: 'clarity', fr: 'clarté' },
-  patience: { en: 'patience', fr: 'patience' },
-  provision: { en: 'provision', fr: 'subsistance' },
-  healing: { en: 'healing', fr: 'guérison' },
-  protection: { en: 'protection', fr: 'protection' },
-  guidance: { en: 'guidance', fr: 'guidance' },
-  strength: { en: 'strength', fr: 'force' },
-  peace: { en: 'peace', fr: 'paix' },
-  knowledge: { en: 'knowledge', fr: 'savoir' },
-  forgiveness: { en: 'forgiveness', fr: 'pardon' },
+const CATEGORY_LABEL: Record<IntentionCategory, { en: string; fr: string; ar: string }> = {
+  clarity: { en: 'clarity', fr: 'clarté', ar: 'الوضوح' },
+  patience: { en: 'patience', fr: 'patience', ar: 'الصبر' },
+  provision: { en: 'provision', fr: 'subsistance', ar: 'الرزق' },
+  healing: { en: 'healing', fr: 'guérison', ar: 'الشفاء' },
+  protection: { en: 'protection', fr: 'protection', ar: 'الحماية' },
+  guidance: { en: 'guidance', fr: 'guidance', ar: 'الهداية' },
+  strength: { en: 'strength', fr: 'force', ar: 'القوة' },
+  peace: { en: 'peace', fr: 'paix', ar: 'السكينة' },
+  knowledge: { en: 'knowledge', fr: 'savoir', ar: 'العلم' },
+  forgiveness: { en: 'forgiveness', fr: 'pardon', ar: 'المغفرة' },
 };
 
 export const ALIGNMENT_LABEL: Record<AlignmentTier, { en: string; fr: string }> = {
@@ -48,6 +48,30 @@ export const ALIGNMENT_LABEL: Record<AlignmentTier, { en: string; fr: string }> 
   neutral: { en: 'Neutral', fr: 'Neutre' },
   'not-recommended': { en: 'Not Recommended', fr: 'Non recommandé' },
 };
+
+/**
+ * Arabic guidance text for /ar (Language Reviewer draft, see docs/i18n/ar-compatibility-review.md).
+ * The Name is the verified Arabic from the divine-names data (divineName.arabic), never a translation.
+ */
+export function buildGuidanceTextAr(
+  divineName: DivineNameMetadata,
+  intention: IntentionCategory,
+  alignment: AlignmentTier,
+): string {
+  const cat = CATEGORY_LABEL[intention].ar;
+  const name = divineName.arabic;
+  switch (alignment) {
+    case 'optimal':
+      return `يُدعى باسم ${name} تقليديًا في باب ${cat}، فهو مطابق مباشرةً لهذه النية.`;
+    case 'suitable':
+      return `لا يرتبط اسم ${name} تقليديًا بباب ${cat} ارتباطًا مباشرًا، لكن معناه قريب منه.`;
+    case 'not-recommended':
+      return `لا تتوافق الوظيفة التقليدية لاسم ${name} توافقًا وثيقًا مع باب ${cat}. انظر أحد البدائل أدناه.`;
+    case 'neutral':
+    default:
+      return `ليس لاسم ${name} ارتباط تقليدي قوي بباب ${cat}، ولم يُعثر على بديل أقرب.`;
+  }
+}
 
 /** Bilingual (en/fr) guidance text for the current web UI's sourceNote field, keyed the same way as `guidanceKey`. */
 export function buildGuidanceTextEnFr(
@@ -110,7 +134,7 @@ export function calculateDivineNameIntentionCompatibility(
     divineName,
     intention,
     alignment,
-    guidance: { en: guidanceEnFr.en, ar: '' },
+    guidance: { en: guidanceEnFr.en, ar: buildGuidanceTextAr(divineName, intention, alignment) },
     guidanceKey: `${intention}.${alignment}`,
     alternativeSuggestions,
   };
