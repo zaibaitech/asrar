@@ -7,6 +7,7 @@ import { getRouteLang } from '../../src/lib/pageLang';
 import { localeAlternates, localizeHref, localizedUrl } from '../../src/lib/i18nRoutes';
 import AsrarEveryday from '../../asrar-everyday-app';
 import { HomeSeoShell } from './HomeSeoShell';
+import { HomeJsonLd } from '../../src/components/seo/HomeJsonLd';
 
 const baseUrl = SITE_URL;
 
@@ -59,7 +60,7 @@ export async function generateMetadata({
       url: localizedUrl('/', routeLang),
       siteName: 'Asrār Everyday',
       title: meta.title,
-      description: meta.fullDescription,
+      description: meta.shortDescription,
       images: [
         {
           url: defaultImageUrl,
@@ -72,7 +73,7 @@ export async function generateMetadata({
     twitter: {
       card: 'summary_large_image',
       title: meta.title,
-      description: meta.fullDescription,
+      description: meta.shortDescription,
       images: [defaultImageUrl],
     },
   };
@@ -103,6 +104,7 @@ export default async function Home() {
   if (routeLang === 'fr') {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+        <HomeJsonLd />
         <AsrarEveryday />
         <HomeSeoShell>
           <main lang="fr" className="max-w-3xl mx-auto px-4 py-10">
@@ -128,6 +130,7 @@ export default async function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+      <HomeJsonLd />
       <AsrarEveryday />
       <HomeSeoShell>
         <main className="max-w-3xl mx-auto px-4 py-10">

@@ -24,6 +24,7 @@ export async function generateMetadata({
     description,
     alternates: {
       canonical: absoluteUrl('/planet-transit'),
+      languages: { 'x-default': absoluteUrl('/planet-transit') },
     },
     openGraph: {
       title,

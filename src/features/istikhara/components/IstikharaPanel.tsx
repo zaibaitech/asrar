@@ -565,9 +565,9 @@ export function IstikharaPanel() {
 
       {/* Simplified Header Section - Compact when results showing */}
       <div className={`text-center max-w-3xl mx-auto ${showResults ? 'space-y-0.5 pt-0' : 'space-y-2 pt-2 sm:pt-4'}`}>
-        <h1 className={`font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent ${showResults ? 'text-lg sm:text-xl' : 'text-2xl sm:text-3xl md:text-4xl'}`}>
+        <h2 className={`font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent ${showResults ? 'text-lg sm:text-xl' : 'text-2xl sm:text-3xl md:text-4xl'}`}>
           {t.title}
-        </h1>
+        </h2>
         
         {!showResults && (
           <p className="text-lg sm:text-xl text-purple-200 font-arabic tracking-wide">

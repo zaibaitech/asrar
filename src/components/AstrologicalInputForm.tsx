@@ -45,9 +45,9 @@ export function AstrologicalInputForm({ onCalculate, language = 'en', isLoading 
           <div className="font-technical text-[11px] tracking-[4px] font-bold" style={{ color: COMPAT_THEME.indigo }}>
             {isFrench ? 'ASRĀR · COMPATIBILITÉ' : 'ASRĀR · COMPATIBILITY'}
           </div>
-          <h1 className="font-display font-semibold text-4xl mt-3.5 leading-tight">
+          <h2 className="font-display font-semibold text-4xl mt-3.5 leading-tight">
             {isFrench ? 'Entrez Deux Dates de Naissance' : 'Enter Two Birth Dates'}
-          </h1>
+          </h2>
           <p className="text-sm mt-2.5" style={{ color: COMPAT_THEME.muted }}>
             {isFrench
               ? "Compatibilité astrologique générale basée sur le signe solaire, lunaire et Vénus-Mars — sans heure de naissance"

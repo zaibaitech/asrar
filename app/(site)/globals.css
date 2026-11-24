@@ -181,6 +181,8 @@ body {
   border: 1px solid;
   border-radius: 12px;
   margin-top: 16px;
+  /* Collapsed header height (padding + label). Reserves space before client mount. */
+  min-height: 54px;
   background: rgba(255, 255, 255, 0.48);
   backdrop-filter: blur(8px);
   overflow: hidden;

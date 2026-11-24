@@ -54,6 +54,8 @@ function PlanetOfTheDaySkeleton() {
         ))}
       </div>
       <div className="h-5 w-32 rounded bg-slate-200 dark:bg-slate-700 animate-pulse" />
+      {/* Reserved space for the collapsed .zikr-panel so the card does not shift when it mounts */}
+      <div className="zikr-panel-slot mt-4 h-[54px] rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-200/70 dark:bg-slate-700/50 animate-pulse" aria-hidden="true" />
     </div>
   );
 }

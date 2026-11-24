@@ -227,3 +227,22 @@ export function isIndexableUrPath(pathname: string): boolean {
 export function indexableUrduUrl(enPath: string): string | null {
   return isIndexableUrEnPath(enPath) ? absoluteUrl(UR_PATHS[enPath]) : null;
 }
+
+/**
+ * Equivalent path for a locale switcher link. Returns null when that locale
+ * has no page for the current path, so the toggle must not point at a 404.
+ * Accepts EN, /fr, /ar or /ur pathnames.
+ */
+export function equivalentLocalePath(pathname: string, lang: 'en' | 'fr' | 'ar' | 'ur'): string | null {
+  const raw = (pathname.split(/[?#]/)[0] || '/').replace(/\/+$/, '') || '/';
+  const enPath = stripFrPrefix(raw) ?? stripArPrefix(raw) ?? stripUrPrefix(raw) ?? raw;
+
+  if (lang === 'en') return enPath;
+  if (lang === 'fr') return isLocalizedPath(enPath) ? frPath(enPath) : null;
+  if (lang === 'ar') {
+    if (enPath in AR_PATHS || isArAppPath(enPath)) return arAppPath(enPath);
+    return null;
+  }
+  if (lang === 'ur') return enPath in UR_PATHS ? UR_PATHS[enPath] : null;
+  return null;
+}

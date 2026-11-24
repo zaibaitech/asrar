@@ -97,3 +97,31 @@ describe('/ar app mirror', () => {
     expect(arAppPath('/')).toBe('/ar');
   });
 });
+
+import { equivalentLocalePath } from './i18nRoutes';
+
+describe('equivalentLocalePath', () => {
+  it('maps a localized tool to EN/FR/AR/UR pages that exist', () => {
+    expect(equivalentLocalePath('/abjad', 'en')).toBe('/abjad');
+    expect(equivalentLocalePath('/abjad', 'fr')).toBe('/fr/abjad');
+    expect(equivalentLocalePath('/abjad', 'ar')).toBe('/ar/abjad');
+    expect(equivalentLocalePath('/abjad', 'ur')).toBe('/ur/abjad');
+    expect(equivalentLocalePath('/fr/abjad', 'en')).toBe('/abjad');
+    expect(equivalentLocalePath('/ar/abjad', 'ur')).toBe('/ur/abjad');
+    expect(equivalentLocalePath('/ur/abjad?x=1', 'fr')).toBe('/fr/abjad');
+  });
+
+  it('returns null rather than a 404 when a locale page does not exist', () => {
+    expect(equivalentLocalePath('/names/fatima', 'fr')).toBeNull();
+    expect(equivalentLocalePath('/names/fatima', 'ar')).toBeNull();
+    expect(equivalentLocalePath('/names/fatima', 'ur')).toBeNull();
+    expect(equivalentLocalePath('/names/fatima', 'en')).toBe('/names/fatima');
+    expect(equivalentLocalePath('/planet-transit', 'fr')).toBeNull();
+    expect(equivalentLocalePath('/planet-transit', 'ar')).toBe('/ar/planet-transit');
+    expect(equivalentLocalePath('/planet-transit', 'ur')).toBeNull();
+    expect(equivalentLocalePath('/sadaqa', 'ur')).toBeNull();
+    expect(equivalentLocalePath('/', 'fr')).toBe('/fr');
+    expect(equivalentLocalePath('/', 'ar')).toBe('/ar');
+    expect(equivalentLocalePath('/', 'ur')).toBe('/ur');
+  });
+});

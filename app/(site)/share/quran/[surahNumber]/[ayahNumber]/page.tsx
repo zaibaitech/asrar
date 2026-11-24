@@ -166,6 +166,7 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: url,
+      languages: { 'x-default': url },
     },
   };
 }

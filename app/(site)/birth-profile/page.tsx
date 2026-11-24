@@ -24,6 +24,7 @@ export async function generateMetadata({
     description,
     alternates: {
       canonical: absoluteUrl('/birth-profile'),
+      languages: { 'x-default': absoluteUrl('/birth-profile') },
     },
     openGraph: {
       title,

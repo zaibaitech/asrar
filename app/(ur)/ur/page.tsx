@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import AsrarEveryday from '../../../asrar-everyday-app';
 import { HomeSeoShell } from '@/app/(site)/HomeSeoShell';
+import { HomeJsonLd } from '@/src/components/seo/HomeJsonLd';
 import { urduMetadata } from '@/src/lib/urMetadata';
 import { UR_COMMON, UR_HOME as C, UR_TOOLS, type UrToolKey } from '@/src/lib/i18n/urPages';
 
@@ -14,6 +15,7 @@ export const metadata: Metadata = urduMetadata('/');
 export default function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+      <HomeJsonLd />
       <AsrarEveryday />
       <HomeSeoShell>
         <main className="max-w-3xl mx-auto px-4 py-10">
