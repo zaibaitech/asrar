@@ -65,19 +65,8 @@ describe('indexing controls: only allow-listed /ur pages are indexable', () => {
       '/best-day-for/business',
     ]);
     for (const p of INDEXABLE_UR_PATHS) expect(p in UR_PATHS, p).toBe(true);
-    expect([...PENDING_UR_INDEX_PATHS]).toEqual([
-      '/sadaqa',
-      '/sadaqa-of-the-day',
-      '/99-names-of-allah',
-      '/manazil',
-      '/best-day-for',
-      '/best-day-for/marriage',
-      '/best-day-for/travel',
-      '/best-day-for/moving-home',
-      '/best-day-for/business',
-    ]);
-    for (const p of PENDING_UR_INDEX_PATHS) expect(isIndexableUrEnPath(p), p).toBe(false);
-    expect(isIndexableUrEnPath('/abjad')).toBe(true);
+    expect([...PENDING_UR_INDEX_PATHS]).toEqual([]);
+    for (const p of INDEXABLE_UR_PATHS) expect(isIndexableUrEnPath(p), p).toBe(true);
   });
 
   it('allow-listed routes are index, follow in metadata; every other route is noindex; the layout default and the middleware header stay noindex', () => {
@@ -93,8 +82,9 @@ describe('indexing controls: only allow-listed /ur pages are indexable', () => {
       if (isIndexableUrEnPath(p)) expect(hreflangLanguages(p).ur, p).toBe(absoluteUrl(UR_PATHS[p]));
       else expect(Object.keys(hreflangLanguages(p)), p).not.toContain('ur');
     }
-    expect(Object.keys(hreflangLanguages('/sadaqa'))).not.toContain('ur');
-    expect(Object.keys(hreflangLanguages('/manazil'))).not.toContain('ur');
+    expect(hreflangLanguages('/sadaqa').ur).toBe(absoluteUrl(UR_PATHS['/sadaqa']));
+    expect(hreflangLanguages('/manazil').ur).toBe(absoluteUrl(UR_PATHS['/manazil']));
+    expect(Object.keys(hreflangLanguages('/planet-transit'))).not.toContain('ur');
   });
 
   it('the Urdu routes are the mapped route files and none is a private, shared-result or user-specific page', () => {

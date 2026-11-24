@@ -35,7 +35,9 @@ describe('Urdu public routes and indexing allow-list', () => {
         expect(localeAlternates(p, l).languages.ur, `${p} ${l}`).toBe(`https://www.asrar.app${UR_PATHS[p]}`);
       }
     }
-    for (const p of ['/sadaqa', '/sadaqa-of-the-day', '/manazil', '/99-names-of-allah']) {
+    expect(hreflangLanguages('/sadaqa').ur).toBe('https://www.asrar.app/ur/sadaqa');
+    expect(hreflangLanguages('/manazil').ur).toBe('https://www.asrar.app/ur/manazil');
+    for (const p of ['/planet-transit', '/ramadan']) {
       expect(hreflangLanguages(p).ur, p).toBeUndefined();
     }
   });

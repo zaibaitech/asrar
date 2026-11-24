@@ -95,7 +95,7 @@ describe('/ur layout default stays noindex; middleware honors the allow-list', (
       const res = await middleware(new NextRequest(`https://asrar.app${p}`));
       expect(res.headers.get('x-robots-tag'), p).toBeNull();
     }
-    for (const p of ['/ur/abjad/x', '/ur/manazil', '/ur/sadaqa', '/ur/sadaqa-of-the-day', '/ur/99-names-of-allah']) {
+    for (const p of ['/ur/abjad/x', '/ur/ramadan', '/ur/planet-transit']) {
       expect(isUrPath(p)).toBe(true);
       expect(isIndexableUrPath(p), p).toBe(false);
       const res = await middleware(new NextRequest(`https://asrar.app${p}`));

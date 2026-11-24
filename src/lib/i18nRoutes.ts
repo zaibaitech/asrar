@@ -242,18 +242,9 @@ export const INDEXABLE_UR_PATHS: readonly string[] = [
  * Subset of INDEXABLE_UR_PATHS kept noindex, out of the sitemap and out of
  * hreflang until Language Reviewer PASSes the Urdu copy. Clear a path from
  * this list (and leave it on INDEXABLE_UR_PATHS) to go live.
+ * Empty after LR PASS on the sadaqa, 99 Names, manāzil and best-day-for landings.
  */
-export const PENDING_UR_INDEX_PATHS: readonly string[] = [
-  '/sadaqa',
-  '/sadaqa-of-the-day',
-  '/99-names-of-allah',
-  '/manazil',
-  '/best-day-for',
-  '/best-day-for/marriage',
-  '/best-day-for/travel',
-  '/best-day-for/moving-home',
-  '/best-day-for/business',
-];
+export const PENDING_UR_INDEX_PATHS: readonly string[] = [];
 
 /** True when the EN path's Urdu page is on the allow-list and is not pending review. */
 export function isIndexableUrEnPath(enPath: string): boolean {
