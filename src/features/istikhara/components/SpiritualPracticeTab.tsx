@@ -527,7 +527,8 @@ export function SpiritualPracticeTab({ result }: SpiritualPracticeTabProps) {
 }
 
 // Enhanced Monthly Sadaqah Section
-function EnhancedMonthlySadaqahSection({ 
+/** Name + mother's name sadaqah (burujData). Rendered by SadaqaTab, not by this tab. */
+export function EnhancedMonthlySadaqahSection({ 
   result, 
   colors 
 }: { 
@@ -674,7 +675,8 @@ function EnhancedMonthlySadaqahSection({
 }
 
 // Enhanced Lifetime Offering Section
-function EnhancedLifetimeOfferingSection({ 
+/** Name + mother's name lifetime offering (burujData). Rendered by SadaqaTab, not by this tab. */
+export function EnhancedLifetimeOfferingSection({ 
   result, 
   colors 
 }: { 

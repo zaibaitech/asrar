@@ -22,6 +22,11 @@ import {
   ZODIAC_SIGN_SYMBOL,
   type SadaqahForm,
 } from "../../../data/zodiacSadaqahData";
+import { isBirthDateSadaqah } from "../sadaqahSource";
+import {
+  EnhancedLifetimeOfferingSection,
+  EnhancedMonthlySadaqahSection,
+} from "./SpiritualPracticeTab";
 
 type UiLang = "en" | "fr";
 
@@ -89,8 +94,10 @@ function ExpandableSection({
 }
 
 /**
- * SadaqaTab - Traditional per-sign sadaqah (charity) recommendations,
- * keyed off the person's computed zodiac sign.
+ * SadaqaTab — sadaqah for the "Who Am I?" result.
+ * Date of birth keeps the existing zodiac (Niane) guidance below.
+ * Name + mother's name uses the burujData monthly/lifetime guidance
+ * (same source as asrar-mobile), rendered with the existing sections.
  */
 export function SadaqaTab({ result }: SadaqaTabProps) {
   const { language } = useLanguage();
@@ -139,6 +146,61 @@ export function SadaqaTab({ result }: SadaqaTabProps) {
   };
 
   const colors = elementColors[elementKey];
+
+  // Name + mother's name: monthly + lifetime guidance from burujData
+  // (asrar-mobile's name-based sadaqah). Date of birth keeps the block below.
+  if (!isBirthDateSadaqah(result)) {
+    return (
+      <div className="space-y-8">
+        <EnhancedMonthlySadaqahSection result={result} colors={colors} />
+        <EnhancedLifetimeOfferingSection result={result} colors={colors} />
+        <div className="p-6 bg-gradient-to-br from-yellow-900/30 to-orange-900/20 border-2 border-yellow-500/30 rounded-xl">
+          <div className="flex items-start gap-3">
+            <AlertCircle className="w-6 h-6 text-yellow-400 flex-shrink-0 mt-1" />
+            <div>
+              <h4 className="font-bold text-white mb-3">
+                {language === "en" ? "Getting Started with Sadaqah" : "Commencer avec la Sadaqah"}
+              </h4>
+              <ul className="space-y-2 text-sm text-white/90">
+                <li className="flex items-start gap-2">
+                  <span className="text-yellow-400 mt-0.5">•</span>
+                  <span>
+                    {language === "en"
+                      ? "Set a monthly reminder for your regular sadaqah"
+                      : "Définissez un rappel mensuel pour votre sadaqah régulière"}
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-yellow-400 mt-0.5">•</span>
+                  <span>
+                    {language === "en"
+                      ? "Start small and increase gradually as you establish the habit"
+                      : "Commencez petit et augmentez progressivement à mesure que vous établissez l'habitude"}
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-yellow-400 mt-0.5">•</span>
+                  <span>
+                    {language === "en"
+                      ? "The intention (niyyah) is as important as the action itself"
+                      : "L'intention (niyyah) est aussi importante que l'action elle-même"}
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-yellow-400 mt-0.5">•</span>
+                  <span>
+                    {language === "en"
+                      ? "Give secretly when possible, as it purifies the heart"
+                      : "Donnez en secret quand c'est possible, car cela purifie le cœur"}
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   // Traditional (Wolof/Senegalese) per-sign sadaqah practices, keyed off the
   // same burujRemainder (1-12) used for the element theme above.
