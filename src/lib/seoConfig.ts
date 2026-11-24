@@ -183,7 +183,7 @@ export function getChallengeOGMeta(
   }
 
   const langParam = language === 'fr' ? '&lang=fr' : '';
-  const url = `${baseUrl}/ramadan?challenge=${challengeSlug}${langParam}`;
+  const url = `${baseUrl}/zikr?challenge=${challengeSlug}${langParam}`;
   
   // Ensure absolute URL for OG image (Facebook requirement)
   const imageUrl = meta.image.startsWith('http') ? meta.image : `${baseUrl}${meta.image}`;

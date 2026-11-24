@@ -7,13 +7,14 @@ import { rootMetadata } from './rootMetadata';
 const read = (rel: string) => readFileSync(resolve(process.cwd(), rel), 'utf8');
 
 describe('SEO audit quick wins', () => {
-  it('keeps /ramadan on the site but out of the sitemap, and stamps lastModified', () => {
+  it('lists the year-round Zikr Portal (/zikr) in the sitemap, not the old /ramadan URL, and stamps lastModified', () => {
     const entries = sitemap();
     const urls = entries.map((e) => e.url);
     expect(urls.some((u) => u.includes('/ramadan'))).toBe(false);
+    expect(urls).toContain('https://www.asrar.app/zikr');
     expect(urls).toContain('https://www.asrar.app/');
     expect(urls).toContain('https://www.asrar.app/abjad');
-    expect(read('src/lib/siteRoutes.ts')).toMatch(/path: '\/ramadan'/);
+    expect(read('src/lib/siteRoutes.ts')).toMatch(/path: '\/zikr'/);
     for (const e of entries) {
       expect(e.lastModified, e.url).toBeInstanceOf(Date);
     }

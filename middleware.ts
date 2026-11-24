@@ -22,7 +22,7 @@ const LANGUAGE_COOKIE = 'asrar_lang';
 /** Old manifest shortcut ids -> the routes the shortcuts now point to directly. */
 const LEGACY_SHORTCUTS: Record<string, string> = {
   'planetary-hours': '/planetary-hours',
-  zikr: '/ramadan',
+  zikr: '/zikr',
 };
 
 /**
@@ -52,11 +52,11 @@ function detectLanguage(request: NextRequest): Language {
 }
 
 export function middleware(request: NextRequest) {
-  // Redirect legacy /?challenge=... links to /ramadan?challenge=...
+  // Redirect legacy /?challenge=... links to /zikr?challenge=...
   const challengeParam = request.nextUrl.searchParams.get('challenge');
   if (challengeParam && request.nextUrl.pathname === '/') {
     const url = request.nextUrl.clone();
-    url.pathname = '/ramadan';
+    url.pathname = '/zikr';
     // searchParams (challenge, lang) are preserved automatically
     return NextResponse.redirect(url, 301);
   }

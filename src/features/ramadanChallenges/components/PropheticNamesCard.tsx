@@ -130,7 +130,7 @@ export function PropheticNamesCard({
   // Generate shareable URL with language parameter
   const getShareUrl = (source: ShareSource) => {
     const langParam = language === 'fr' ? '&lang=fr' : '';
-    return withShareUtm(`${BASE_URL}/ramadan?challenge=prophetic-names${langParam}`, source, { keep: ['challenge', 'lang'] });
+    return withShareUtm(`${BASE_URL}/zikr?challenge=prophetic-names${langParam}`, source, { keep: ['challenge', 'lang'] });
   };
 
   // Handle native share (Web Share API)

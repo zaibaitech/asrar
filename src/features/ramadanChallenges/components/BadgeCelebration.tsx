@@ -57,7 +57,7 @@ export function BadgeCelebration({ badge, language = 'en', onClose }: BadgeCeleb
       ? `🎖️ Je viens de gagner le badge "${badgeName}" sur Asrār!\n\n${badgeDesc}\n\nRejoignez-moi dans ce défi spirituel!`
       : `🎖️ I just earned the "${badgeName}" badge on Asrār!\n\n${badgeDesc}\n\nJoin me in this spiritual challenge!`;
     
-    const pageUrl = `${typeof window !== 'undefined' ? window.location.origin : 'https://www.asrar.app'}/ramadan`;
+    const pageUrl = `${typeof window !== 'undefined' ? window.location.origin : 'https://www.asrar.app'}/zikr`;
 
     if (navigator.share) {
       try {

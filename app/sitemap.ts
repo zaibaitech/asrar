@@ -34,8 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // English-only name pages (no FR/AR versions yet, so no hreflang alternates).
   const namePages = [...NAME_PAGE_PATHS, ...COMMON_NAMES.map((n) => `/names/${n.slug}`)].flatMap((p) => entry(p, 0.6));
 
-  // Keep /ramadan on the site, but out of the sitemap until it has real indexable copy.
-  const tools = PUBLIC_TOOLS.filter((tool) => tool.path !== '/ramadan');
+  const tools = PUBLIC_TOOLS;
   const infoPages = INFO_PAGES.flatMap((page) => entry(page.path, 0.6));
   return [...entry('/', 1), ...tools.flatMap((tool) => entry(tool.path, 0.8)), ...namePages, ...infoPages];
 }

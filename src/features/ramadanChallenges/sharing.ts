@@ -55,7 +55,7 @@ export function generateProgressShareText(
     return {
       title: 'Mon Défi Spirituel',
       text,
-      url: `${baseUrl}/ramadan`,
+      url: `${baseUrl}/zikr`,
     };
   } else {
     const text = `🌟 My Spiritual Challenge on Asrār\n\n` +
@@ -68,7 +68,7 @@ export function generateProgressShareText(
     return {
       title: 'My Spiritual Challenge',
       text,
-      url: `${baseUrl}/ramadan`,
+      url: `${baseUrl}/zikr`,
     };
   }
 }
@@ -102,7 +102,7 @@ export function generateChallengeShareText(
       return {
         title: '💰 Wird pour Soulagement des Dettes',
         text,
-        url: `${baseUrl}/ramadan?challenge=${getChallengeSlug(challenge.type)}&lang=fr`,
+        url: `${baseUrl}/zikr?challenge=${getChallengeSlug(challenge.type)}&lang=fr`,
       };
     } else {
       const text = `💰✨ Miraculous Debt Relief - Powerful Wird\n\n` +
@@ -119,7 +119,7 @@ export function generateChallengeShareText(
       return {
         title: '💰 Debt Relief Wird',
         text,
-        url: `${baseUrl}/ramadan?challenge=${getChallengeSlug(challenge.type)}`,
+        url: `${baseUrl}/zikr?challenge=${getChallengeSlug(challenge.type)}`,
       };
     }
   }
@@ -136,7 +136,7 @@ export function generateChallengeShareText(
     return {
       title: challenge.title,
       text,
-      url: `${baseUrl}/ramadan?challenge=${getChallengeSlug(challenge.type)}`,
+      url: `${baseUrl}/zikr?challenge=${getChallengeSlug(challenge.type)}`,
     };
   } else {
     const text = `🤲 ${challenge.title}\n\n` +
@@ -149,7 +149,7 @@ export function generateChallengeShareText(
     return {
       title: challenge.title,
       text,
-      url: `${baseUrl}/ramadan?challenge=${getChallengeSlug(challenge.type)}`,
+      url: `${baseUrl}/zikr?challenge=${getChallengeSlug(challenge.type)}`,
     };
   }
 }
@@ -171,7 +171,7 @@ export function generateMilestoneShareText(
     return {
       title: `${milestone.toLocaleString()} Dhikr Atteints!`,
       text,
-      url: `${baseUrl}/ramadan`,
+      url: `${baseUrl}/zikr`,
     };
   } else {
     const text = `🎉 I reached ${milestone.toLocaleString()} dhikr on Asrār!\n\n` +
@@ -181,7 +181,7 @@ export function generateMilestoneShareText(
     return {
       title: `${milestone.toLocaleString()} Dhikr Reached!`,
       text,
-      url: `${baseUrl}/ramadan`,
+      url: `${baseUrl}/zikr`,
     };
   }
 }
