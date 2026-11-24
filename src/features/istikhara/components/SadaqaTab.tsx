@@ -26,31 +26,31 @@ import {
   zodiacSadaqahInWolofLabel,
   zodiacSadaqahWolofLine,
 } from "../../../lib/zodiacSadaqahWolofCopy";
+import { localeList, localeText } from "../../../lib/localeText";
+import { sadaqahUiCopy } from "../../../lib/sadaqahUiCopy";
 import { isBirthDateSadaqah } from "../sadaqahSource";
 import {
   EnhancedLifetimeOfferingSection,
   EnhancedMonthlySadaqahSection,
 } from "./SpiritualPracticeTab";
 
-type UiLang = "en" | "fr";
-
 interface SadaqaTabProps {
   result: IstikharaCalculationResult;
 }
 
 // Card for a single traditional sadaqah practice (title/body/optional bullets)
-function TraditionFormCard({ form, language, colors }: { form: SadaqahForm; language: UiLang; colors: any }) {
+function TraditionFormCard({ form, colors }: { form: SadaqahForm; colors: any }) {
   const { uiLanguage } = useLanguage();
   return (
     <div className="p-4 bg-white/5 rounded-lg space-y-2">
-      <h5 className="font-semibold text-white">{form.title[language]}</h5>
+      <h5 className="font-semibold text-white">{localeText(form.title, uiLanguage)}</h5>
       {form.wolof && (
         <p className="text-xs leading-snug text-white/55">{zodiacSadaqahWolofLine(uiLanguage, form.wolof)}</p>
       )}
-      <p className="text-white/90 text-sm leading-relaxed">{form.body[language]}</p>
+      <p className="text-white/90 text-sm leading-relaxed">{localeText(form.body, uiLanguage)}</p>
       {form.bullets && (
         <ul className="space-y-1.5 pt-1">
-          {form.bullets[language].map((bullet, i) => (
+          {localeList(form.bullets, uiLanguage).map((bullet, i) => (
             <li key={i} className="flex items-start gap-2 text-sm text-white/90">
               <Check className={`w-4 h-4 ${colors.text} flex-shrink-0 mt-0.5`} />
               <span>{bullet}</span>
@@ -108,7 +108,8 @@ function ExpandableSection({
  * (same source as asrar-mobile), rendered with the existing sections.
  */
 export function SadaqaTab({ result }: SadaqaTabProps) {
-  const { language, uiLanguage } = useLanguage();
+  const { uiLanguage } = useLanguage();
+  const ui = sadaqahUiCopy(uiLanguage);
   const [expandedSections, setExpandedSections] = useState<string[]>([
     "general",
     "specific",
@@ -167,39 +168,31 @@ export function SadaqaTab({ result }: SadaqaTabProps) {
             <AlertCircle className="w-6 h-6 text-yellow-400 flex-shrink-0 mt-1" />
             <div>
               <h4 className="font-bold text-white mb-3">
-                {language === "en" ? "Getting Started with Sadaqah" : "Commencer avec la Sadaqah"}
+                {ui.gettingStartedSadaqah}
               </h4>
               <ul className="space-y-2 text-sm text-white/90">
                 <li className="flex items-start gap-2">
                   <span className="text-yellow-400 mt-0.5">•</span>
                   <span>
-                    {language === "en"
-                      ? "Set a monthly reminder for your regular sadaqah"
-                      : "Définissez un rappel mensuel pour votre sadaqah régulière"}
+{ui.tipMonthlyReminder}
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-yellow-400 mt-0.5">•</span>
                   <span>
-                    {language === "en"
-                      ? "Start small and increase gradually as you establish the habit"
-                      : "Commencez petit et augmentez progressivement à mesure que vous établissez l'habitude"}
+{ui.tipStartSmall}
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-yellow-400 mt-0.5">•</span>
                   <span>
-                    {language === "en"
-                      ? "The intention (niyyah) is as important as the action itself"
-                      : "L'intention (niyyah) est aussi importante que l'action elle-même"}
+{ui.tipIntention}
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-yellow-400 mt-0.5">•</span>
                   <span>
-                    {language === "en"
-                      ? "Give secretly when possible, as it purifies the heart"
-                      : "Donnez en secret quand c'est possible, car cela purifie le cœur"}
+{ui.tipGiveSecretly}
                   </span>
                 </li>
               </ul>
@@ -228,64 +221,58 @@ export function SadaqaTab({ result }: SadaqaTabProps) {
         <div className="flex items-center justify-center gap-3">
           <span className="text-4xl leading-none">{ZODIAC_SIGN_SYMBOL[zodiacSignId]}</span>
           <h2 className="text-3xl font-bold text-white">
-            {language === "en"
-              ? `Sadaqah Guidance — ${tradition.en}`
-              : `Guidance Sadaqah — ${tradition.fr}`}
+            {`${ui.sadaqahGuidance} — ${localeText({ en: tradition.en, fr: tradition.fr, ar: tradition.ar, ur: tradition.ur }, uiLanguage)}`}
           </h2>
         </div>
         <p className="text-white/80 max-w-2xl mx-auto">
-          {language === "en"
-            ? "Traditional charity forms associated with your sign, for ongoing blessings and spiritual balance."
-            : "Formes de charité traditionnelles associées à votre signe, pour des bénédictions continues et l'équilibre spirituel."}
+          {ui.dobIntro}
         </p>
         <p className="text-white/50 text-xs italic">
-          {language === "en"
-            ? "According to the teachings of Serigne Mahdiou Niane"
-            : "Selon les enseignements de Serigne Mahdiou Niane"}
+          {ui.accordingToNiane}
         </p>
         {tradition.rulingPlanet && (
           <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full ${colors.iconBg}`}>
             <Sparkles className={`w-4 h-4 ${colors.text}`} />
-            <span className="text-sm text-white/90">{tradition.rulingPlanet[language]}</span>
+            <span className="text-sm text-white/90">{localeText(tradition.rulingPlanet, uiLanguage)}</span>
           </div>
         )}
       </div>
 
       {tradition.generalNote && (
         <div className="p-4 bg-white/5 border border-white/10 rounded-lg">
-          <p className="text-white/90 text-sm leading-relaxed italic">{tradition.generalNote[language]}</p>
+          <p className="text-white/90 text-sm leading-relaxed italic">{localeText(tradition.generalNote, uiLanguage)}</p>
         </div>
       )}
 
       {tradition.generalForms && tradition.generalForms.length > 0 && (
         <ExpandableSection
-          title={language === "en" ? "General Forms" : "Formes Générales"}
+          title={ui.generalForms}
           icon={<Gift className={`w-5 h-5 ${colors.text}`} />}
           isExpanded={expandedSections.includes("general")}
           onToggle={() => toggleSection("general")}
           colors={colors}
         >
           {tradition.generalForms.map((form, i) => (
-            <TraditionFormCard key={i} form={form} language={language} colors={colors} />
+            <TraditionFormCard key={i} form={form} colors={colors} />
           ))}
         </ExpandableSection>
       )}
 
       <ExpandableSection
-        title={language === "en" ? "Specific Forms" : "Formes Spécifiques"}
+        title={ui.specificForms}
         icon={<Star className={`w-5 h-5 ${colors.text}`} />}
         isExpanded={expandedSections.includes("specific")}
         onToggle={() => toggleSection("specific")}
         colors={colors}
       >
         {tradition.specificForms.map((form, i) => (
-          <TraditionFormCard key={i} form={form} language={language} colors={colors} />
+          <TraditionFormCard key={i} form={form} colors={colors} />
         ))}
       </ExpandableSection>
 
       {tradition.timing && (
         <ExpandableSection
-          title={language === "en" ? "Best Timing" : "Meilleur Moment"}
+          title={ui.bestTiming}
           icon={<Clock className={`w-5 h-5 ${colors.text}`} />}
           isExpanded={expandedSections.includes("timing")}
           onToggle={() => toggleSection("timing")}
@@ -295,9 +282,9 @@ export function SadaqaTab({ result }: SadaqaTabProps) {
             <div className={`p-2 ${colors.iconBg} rounded-full`}>
               <Clock className={`w-4 h-4 ${colors.text}`} />
             </div>
-            <p className="text-white font-semibold">{tradition.timing.day[language]}</p>
+            <p className="text-white font-semibold">{localeText(tradition.timing.day, uiLanguage)}</p>
           </div>
-          <p className="text-white/90 text-sm leading-relaxed">{tradition.timing.note[language]}</p>
+          <p className="text-white/90 text-sm leading-relaxed">{localeText(tradition.timing.note, uiLanguage)}</p>
         </ExpandableSection>
       )}
 
@@ -306,21 +293,21 @@ export function SadaqaTab({ result }: SadaqaTabProps) {
           <div className="flex items-start gap-3">
             <AlertCircle className="w-6 h-6 text-amber-400 flex-shrink-0 mt-0.5" />
             <div className="space-y-2">
-              <h4 className="font-bold text-white">{tradition.guidance.title[language]}</h4>
-              <p className="text-amber-100/90 text-sm leading-relaxed">{tradition.guidance.body[language]}</p>
+              <h4 className="font-bold text-white">{localeText(tradition.guidance.title, uiLanguage)}</h4>
+              <p className="text-amber-100/90 text-sm leading-relaxed">{localeText(tradition.guidance.body, uiLanguage)}</p>
             </div>
           </div>
         </div>
       )}
 
-      {tradition.summary && tradition.summary[language].length > 0 && (
+      {tradition.summary && localeList(tradition.summary, uiLanguage).length > 0 && (
         <div className={`p-5 bg-gradient-to-br ${colors.bgGradient} border-2 ${colors.border} rounded-xl space-y-3`}>
           <div className="flex items-center gap-2">
             <Heart className={`w-5 h-5 ${colors.text}`} />
-            <h4 className="font-bold text-white">{language === "en" ? "Summary" : "Résumé"}</h4>
+            <h4 className="font-bold text-white">{ui.summary}</h4>
           </div>
           <ul className="space-y-2">
-            {tradition.summary[language].map((line, i) => (
+            {localeList(tradition.summary, uiLanguage).map((line, i) => (
               <li key={i} className="flex items-start gap-2 text-sm text-white/90">
                 <Check className={`w-4 h-4 ${colors.text} flex-shrink-0 mt-0.5`} />
                 <span>{line}</span>
@@ -329,7 +316,7 @@ export function SadaqaTab({ result }: SadaqaTabProps) {
           </ul>
           {tradition.summaryNote && (
             <p className="text-white/70 text-xs leading-relaxed pt-2 border-t border-white/10">
-              {tradition.summaryNote[language]}
+              {localeText(tradition.summaryNote, uiLanguage)}
             </p>
           )}
         </div>
@@ -337,31 +324,29 @@ export function SadaqaTab({ result }: SadaqaTabProps) {
 
       {tradition.intention && (
         <div className="p-4 bg-white/5 border border-white/10 rounded-lg">
-          <p className="text-white/90 text-sm leading-relaxed italic">{tradition.intention[language]}</p>
+          <p className="text-white/90 text-sm leading-relaxed italic">{localeText(tradition.intention, uiLanguage)}</p>
         </div>
       )}
 
       <ExpandableSection
-        title={language === "en" ? "Teaching Video (in Wolof)" : "Vidéo d'Enseignement (en Wolof)"}
+        title={ui.teachingVideo}
         icon={<BookOpen className={`w-5 h-5 ${colors.text}`} />}
         isExpanded={expandedSections.includes("video")}
         onToggle={() => toggleSection("video")}
         colors={colors}
       >
         <div className="space-y-1.5">
-          <VideoEmbed videoId={tradition.videoId} title={`${tradition.en} — Sadaqah`} />
+          <VideoEmbed videoId={tradition.videoId} title={`${localeText({ en: tradition.en, fr: tradition.fr, ar: tradition.ar, ur: tradition.ur }, uiLanguage)} — Sadaqah`} />
           <p className="text-xs text-white/50">{zodiacSadaqahInWolofLabel(uiLanguage)}</p>
         </div>
         {tradition.altVideoId && (
           <div className="space-y-1.5">
-            <VideoEmbed videoId={tradition.altVideoId} title={`${tradition.en} — Sadaqah (2)`} />
+            <VideoEmbed videoId={tradition.altVideoId} title={`${localeText({ en: tradition.en, fr: tradition.fr, ar: tradition.ar, ur: tradition.ur }, uiLanguage)} — Sadaqah (2)`} />
             <p className="text-xs text-white/50">{zodiacSadaqahInWolofLabel(uiLanguage)}</p>
           </div>
         )}
         <p className="text-white/50 text-xs italic text-center">
-          {language === "en"
-            ? "By Serigne Mahdiou Niane — spoken in Wolof"
-            : "Par Serigne Mahdiou Niane — parlé en wolof"}
+          {ui.videoAttribution}
         </p>
       </ExpandableSection>
 
@@ -371,39 +356,31 @@ export function SadaqaTab({ result }: SadaqaTabProps) {
           <AlertCircle className="w-6 h-6 text-yellow-400 flex-shrink-0 mt-1" />
           <div>
             <h4 className="font-bold text-white mb-3">
-              {language === "en" ? "Getting Started with Sadaqah" : "Commencer avec la Sadaqah"}
+              {ui.gettingStartedSadaqah}
             </h4>
             <ul className="space-y-2 text-sm text-white/90">
               <li className="flex items-start gap-2">
                 <span className="text-yellow-400 mt-0.5">•</span>
                 <span>
-                  {language === "en"
-                    ? "Set a monthly reminder for your regular sadaqah"
-                    : "Définissez un rappel mensuel pour votre sadaqah régulière"}
+{ui.tipMonthlyReminder}
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-yellow-400 mt-0.5">•</span>
                 <span>
-                  {language === "en"
-                    ? "Start small and increase gradually as you establish the habit"
-                    : "Commencez petit et augmentez progressivement à mesure que vous établissez l'habitude"}
+{ui.tipStartSmall}
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-yellow-400 mt-0.5">•</span>
                 <span>
-                  {language === "en"
-                    ? "The intention (niyyah) is as important as the action itself"
-                    : "L'intention (niyyah) est aussi importante que l'action elle-même"}
+{ui.tipIntention}
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-yellow-400 mt-0.5">•</span>
                 <span>
-                  {language === "en"
-                    ? "Give secretly when possible, as it purifies the heart"
-                    : "Donnez en secret quand c'est possible, car cela purifie le cœur"}
+{ui.tipGiveSecretly}
                 </span>
               </li>
             </ul>

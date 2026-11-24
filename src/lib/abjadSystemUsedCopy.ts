@@ -1,7 +1,6 @@
 /**
  * Copy for the small "calculated with … Abjad" line under letter-table totals.
- * EN/FR wording is fixed. Arabic and Urdu reuse the existing Maghribi/Mashriqi
- * labels and keep the sentence frame in English until those strings are reviewed.
+ * EN/FR wording is fixed. Arabic and Urdu are provided for Language Review.
  */
 import type { AbjadSystem } from '../contexts/AbjadContext';
 import type { Language } from './translations';
@@ -16,6 +15,7 @@ export function abjadSystemUsedCopy(
   labels: { maghribi: string; mashriqi: string }
 ): { line: string; change: string } {
   const ghayn = abjadGhaynValue(system);
+  const label = system === 'Mashriqi' ? labels.mashriqi : labels.maghribi;
   if (lang === 'fr') {
     const name = system === 'Mashriqi' ? 'mashriqi' : 'maghribi';
     return {
@@ -23,11 +23,17 @@ export function abjadSystemUsedCopy(
       change: 'Modifier',
     };
   }
-  if (lang === 'ar' || lang === 'ur') {
-    const label = system === 'Mashriqi' ? labels.mashriqi : labels.maghribi;
+  if (lang === 'ar') {
+    const arName = system === 'Mashriqi' ? 'المشرقي' : 'المغربي';
     return {
-      line: `Calculated with ${label} Abjad (غ = ${ghayn})`,
-      change: 'Change',
+      line: `حُسِب بحسب الأبجد ${arName} (غ = ${ghayn})`,
+      change: 'تغيير',
+    };
+  }
+  if (lang === 'ur') {
+    return {
+      line: `${label} ابجد سے حساب کیا گیا (غ = ${ghayn})`,
+      change: 'تبدیل کریں',
     };
   }
   return {
