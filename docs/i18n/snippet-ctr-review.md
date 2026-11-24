@@ -3,7 +3,7 @@
 **Branch:** `seo/snippet-ctr-titles` (not merged)
 **Scope:** New or changed Arabic and Urdu strings only. French title/meta changes are listed at the end for context and do not need Language Reviewer.
 **Rules followed:** reflection, not prediction; no geomancy; never عنصري/عنصرية/عناصري.
-**Status:** Language Reviewer corrections from `/workspace/snippet-ctr-corrections.md` (24 Nov 2026) have been applied. All 8 CORRECTION items were applied exactly. The 8 PASS strings were left unchanged. The 5 decision items were not applied; existing conservative wording was kept («اليوم المبارك», «الكوكب الحاكم», «امی», «أداة تقليدية», and the quoted search phrase in FAQ Q2).
+**Status:** Language Reviewer corrections from `/workspace/snippet-ctr-corrections.md` (24 Nov 2026) have been applied. All 8 CORRECTION items were applied exactly. The 8 PASS strings were left unchanged, except where Mario later decided a decision item (D3). Mario's decisions on the 5 items: (1) keep «الطالع» in FAQ Q2 only as the quoted search phrase drafted by Language Reviewer; (2) use «اليوم المناسب» instead of «اليوم المبارك» in the burj meta and FAQ Q2 only (other on-page uses were left as they were); (3) use «الكوكب المنسوب للساعة الحالية» in the `/ar/planetary-hours` meta (og/twitter follow the same description); (4) keep «امی» in the Urdu title and meta; (5) keep «أداة تقليدية» unchanged.
 
 SERP titles below are the visible string after the site suffix (` | Asrār` on Arabic landing pages and French pages; ` | أسرار` on `/ar/compatibility`; ` | اسرار` on `/ur` pages). **Old** is the pre-PR live wording. **Draft** (where shown) is the first PR wording. **New** is the wording now on the branch.
 
@@ -22,7 +22,8 @@ SERP titles below are the visible string after the site suffix (` | Asrār` on A
 ### Meta description (also `og:description`)
 - **Old:** اعرف برجك (طبعك) من قيمة اسمك واسم أمك بحساب الجمل: العنصر والطبع واليوم المبارك والذكر والصدقة. حاسبة مجانية للتأمّل، لا للتنبّؤ.
 - **Draft:** اعرف برجك باسم الأم من اسمك واسم أمك في حاسبة مجانية بحساب الجمل: الطبع واليوم المبارك والذكر. للتأمّل، لا للتنبّؤ؛ ولا يعلم الغيب إلا الله.
-- **New (Language Reviewer):** اعرف برجك (طبعك) من اسمك واسم أمك في حاسبة مجانية بحساب الجُمَّل: الطبع واليوم المبارك والذكر. للتأمّل، لا للتنبّؤ؛ ولا يعلم الغيب إلا الله.
+- **Language Reviewer:** اعرف برجك (طبعك) من اسمك واسم أمك في حاسبة مجانية بحساب الجُمَّل: الطبع واليوم المبارك والذكر. للتأمّل، لا للتنبّؤ؛ ولا يعلم الغيب إلا الله.
+- **New (Language Reviewer + Mario D2):** اعرف برجك (طبعك) من اسمك واسم أمك في حاسبة مجانية بحساب الجُمَّل: الطبع واليوم المناسب والذكر. للتأمّل، لا للتنبّؤ؛ ولا يعلم الغيب إلا الله.
 
 ---
 
@@ -39,13 +40,14 @@ These FAQ items are new (no pre-PR value).
 
 ### Q2
 - **Draft (q):** كيف أستخدم حاسبة البرج الطالع من اسم الأم؟
-- **New (q, Language Reviewer):** كيف أستخدم حاسبة برج الاسم إذا بحثت عن «البرج الطالع من اسم الأم»؟
+- **New (q, Language Reviewer; Mario D1: keep the quoted search phrase):** كيف أستخدم حاسبة برج الاسم إذا بحثت عن «البرج الطالع من اسم الأم»؟
 - **Draft (a):** اكتب اسمك واسم أمك بالحروف العربية في الحاسبة أعلاه، فتظهر نتيجة برج الاسم (وقد يسمّيه بعضهم الطالع) مع العنصر والطبع واليوم المبارك والذكر. اقرأ النتيجة للتأمّل والتعلّم، لا حكمًا على الغيب ولا بديلاً عن صلاة الاستخارة.
-- **New (a, Language Reviewer):** اكتب اسمك واسم أمك بالحروف العربية في الحاسبة أعلاه، فتظهر نتيجة برج الاسم (وقد يسمّيه بعضهم الطالع) مع العنصر والطبع واليوم المبارك والذكر. اقرأ النتيجة للتأمّل والتعلّم، لا حكمًا على الغيب ولا بديلاً عن صلاة الاستخارة؛ ولا يعلم الغيب إلا الله.
+- **Language Reviewer (a):** اكتب اسمك واسم أمك بالحروف العربية في الحاسبة أعلاه، فتظهر نتيجة برج الاسم (وقد يسمّيه بعضهم الطالع) مع العنصر والطبع واليوم المبارك والذكر. اقرأ النتيجة للتأمّل والتعلّم، لا حكمًا على الغيب ولا بديلاً عن صلاة الاستخارة؛ ولا يعلم الغيب إلا الله.
+- **New (a, Language Reviewer + Mario D2):** اكتب اسمك واسم أمك بالحروف العربية في الحاسبة أعلاه، فتظهر نتيجة برج الاسم (وقد يسمّيه بعضهم الطالع) مع العنصر والطبع واليوم المناسب والذكر. اقرأ النتيجة للتأمّل والتعلّم، لا حكمًا على الغيب ولا بديلاً عن صلاة الاستخارة؛ ولا يعلم الغيب إلا الله.
 
 ### Q3
 - **New (q, PASS):** هل برج الاسم أو الطالع من الاسمين يخبر عن المستقبل؟
-- **New (a, PASS):** لا. برج الاسم المستخرج من اسمك واسم أمك أداة تقليدية للتأمّل في الطباع، وليس وسيلة لمعرفة الغيب أو توقّع الأحداث. صلِّ الاستخارة وتوكّل على الله؛ ولا يعلم الغيب إلا الله.
+- **New (a, PASS; Mario D5: keep «أداة تقليدية»):** لا. برج الاسم المستخرج من اسمك واسم أمك أداة تقليدية للتأمّل في الطباع، وليس وسيلة لمعرفة الغيب أو توقّع الأحداث. صلِّ الاستخارة وتوكّل على الله؛ ولا يعلم الغيب إلا الله.
 
 Intent: explain that searches for «حساب الطالع من الاسم واسم الام» and «حاسبة البرج الطالع من اسم الام» are answered as the same name-based burj calculation, as reflection, not a natal ascendant or a forecast. The FAQ question no longer names the tool «حاسبة البرج الطالع».
 
@@ -77,9 +79,10 @@ Intent: explain that searches for «حساب الطالع من الاسم واس
 - **New:** الساعة الكوكبية الآن: ساعات الكواكب اليوم
 - **Visible with suffix:** الساعة الكوكبية الآن: ساعات الكواكب اليوم | Asrār (49 characters)
 
-### Meta description (PASS)
+### Meta description
 - **Old:** اعرف الكوكب الحاكم للساعة الحالية في موقعك، ومواقيت ساعات النهار والليل الاثنتي عشرة وفق الترتيب الكلداني، وما يناسب كل كوكب من الأعمال. للتأمّل وتنظيم الوقت.
-- **New:** حاسبة مجانية للساعة الكوكبية الآن وساعات الكواكب اليوم في موقعك: الكوكب الحاكم للساعة الحالية ومواقيت النهار والليل. للتأمّل وتنظيم الوقت، لا للتنبّؤ.
+- **Draft / Language Reviewer PASS:** حاسبة مجانية للساعة الكوكبية الآن وساعات الكواكب اليوم في موقعك: الكوكب الحاكم للساعة الحالية ومواقيت النهار والليل. للتأمّل وتنظيم الوقت، لا للتنبّؤ.
+- **New (Mario D3):** حاسبة مجانية للساعة الكوكبية الآن وساعات الكواكب اليوم في موقعك: الكوكب المنسوب للساعة الحالية ومواقيت النهار والليل. للتأمّل وتنظيم الوقت، لا للتنبّؤ.
 
 ---
 
@@ -92,7 +95,7 @@ Intent: explain that searches for «حساب الطالع من الاسم واس
 - **New:** نام اور امی کے نام سے برج معلوم کریں — مفت کیلکولیٹر
 - **Visible with suffix:** نام اور امی کے نام سے برج معلوم کریں — مفت کیلکولیٹر | اسرار (60 characters)
 
-Kept «امی» to match the previously reviewed title wording (decision item, not changed).
+Kept «امی» to match the previously reviewed title wording (Mario D4).
 
 ### Meta description
 - **Old:** اپنے اور امی کے نام کے ابجد اعداد سے برج معلوم کریں: عنصر، مزاج، روایتی دن، ذکر اور صدقہ۔ مفت، غور و فکر کے لیے، پیش گوئی نہیں۔
