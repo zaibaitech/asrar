@@ -1,10 +1,10 @@
 import { describe, expect, it } from 'vitest';
-import { UR_PATHS, isUrPath, stripUrPrefix, hreflangLanguages, localeAlternates } from './i18nRoutes';
+import { UR_PATHS, INDEXABLE_UR_PATHS, isUrPath, stripUrPrefix, hreflangLanguages, localeAlternates, isIndexableUrEnPath } from './i18nRoutes';
 import { UR_META, urduMetadata } from './urMetadata';
 import { relatedToolHref } from '../components/seo/relatedTools';
 import catalog from '../../public/i18n/ur-ui.json';
 
-describe('Urdu (phase 1, noindex)', () => {
+describe('Urdu public routes and indexing allow-list', () => {
   it('maps the public Urdu pages', () => {
     expect(Object.keys(UR_PATHS)).toHaveLength(9);
     expect(UR_PATHS['/abjad']).toBe('/ur/abjad');
@@ -14,13 +14,13 @@ describe('Urdu (phase 1, noindex)', () => {
     expect(stripUrPrefix('/ur/abjad')).toBe('/abjad');
   });
 
-  it('every Urdu page has metadata and is noindex without hreflang, except the allow-listed /ur/abjad', () => {
+  it('every Urdu page has metadata; allow-listed pages are indexable with hreflang, others stay noindex without hreflang', () => {
     for (const enPath of Object.keys(UR_PATHS)) {
       expect(UR_META[enPath]).toBeDefined();
       const m = urduMetadata(enPath);
-      if (enPath === '/abjad') {
+      if (isIndexableUrEnPath(enPath)) {
         expect(m.robots).toMatchObject({ index: true, follow: true });
-        expect(m.alternates?.languages).toMatchObject({ en: 'https://www.asrar.app/abjad', fr: 'https://www.asrar.app/fr/abjad', ar: 'https://www.asrar.app/ar/abjad', ur: 'https://www.asrar.app/ur/abjad', 'x-default': 'https://www.asrar.app/abjad' });
+        expect(m.alternates?.languages).toEqual(hreflangLanguages(enPath));
       } else {
         expect(m.robots).toMatchObject({ index: false });
         expect(m.alternates?.languages).toBeUndefined();
@@ -28,10 +28,16 @@ describe('Urdu (phase 1, noindex)', () => {
     }
   });
 
-  it('lists /ur in hreflang only for /abjad', () => {
-    for (const l of ['en', 'fr', 'ar'] as const) expect(localeAlternates('/abjad', l).languages.ur).toBe('https://www.asrar.app/ur/abjad');
-    const alt = JSON.stringify([hreflangLanguages('/ikhtiyarat'), localeAlternates('/planetary-hours', 'en'), localeAlternates('/', 'ar'), hreflangLanguages('/compatibility')]);
-    expect(alt).not.toContain('/ur');
+  it('lists /ur in hreflang for every allow-listed path, and not for tools that have no indexable Urdu page', () => {
+    expect(INDEXABLE_UR_PATHS.length).toBeGreaterThan(1);
+    for (const p of INDEXABLE_UR_PATHS) {
+      for (const l of ['en', 'fr', 'ar'] as const) {
+        expect(localeAlternates(p, l).languages.ur, `${p} ${l}`).toBe(`https://www.asrar.app${UR_PATHS[p]}`);
+      }
+    }
+    for (const p of ['/sadaqa', '/sadaqa-of-the-day', '/manazil', '/99-names-of-allah']) {
+      expect(hreflangLanguages(p).ur, p).toBeUndefined();
+    }
   });
 
   it('links related tools to /ur only where an Urdu page exists', () => {

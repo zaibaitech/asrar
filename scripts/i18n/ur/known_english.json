@@ -4,6 +4,11 @@
   "app/(site)/ikhtiyarat/r/[date]/page.tsx": [
    "Ikhtiyārāt Result"
   ],
+  "app/(site)/page.tsx": [
+   "Ce qu’est l’application, qui la conçoit, et la position « réflexion, non prédiction ».",
+   "Comment fonctionnent les outils Abjad, burj, heures planétaires, manāzil, ikhtiyārāt et sadaqah.",
+   "Méthodologie"
+  ],
   "app/og/ikhtiyarat/[date]/route.tsx": [
    "For reflection, not prediction · Only Allah knows the unseen",
    "Ikhtiyārāt · Result",
@@ -14,9 +19,6 @@
   ],
   "app/og/quran/[surahNumber]/[ayahNumber].png/route.tsx": [
    "Share Ayah"
-  ],
-  "app/opengraph-image.tsx": [
-   "Planetary Hours · Abjad Numerology · Zikr Challenges · Name Destiny"
   ],
   "src/features/istikhara/components/DhikrCounter.tsx": [
    "Associated Angel",

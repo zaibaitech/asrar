@@ -132,7 +132,7 @@ export function middleware(request: NextRequest) {
   } else {
     response = NextResponse.next({ request: { headers: requestHeaders } });
     // Urdu pages (app/ur/**): noindex (also set in their metadata), except the reviewed,
-    // allow-listed pages (INDEXABLE_UR_PATHS: /ur/abjad only).
+    // allow-listed pages in INDEXABLE_UR_PATHS.
     if (isUrPath(pathname) && !isIndexableUrPath(pathname)) response.headers.set('X-Robots-Tag', 'noindex, follow');
     language = detectLanguage(request);
   }

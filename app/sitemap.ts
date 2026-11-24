@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // EN URL, its /fr mirror (and /ar page if any), each listing all as hreflang alternates.
     const alternates = { languages: hreflangLanguages(path) };
     const ar = arabicUrl(path);
-    const ur = indexableUrduUrl(path); // reviewed Urdu page on the allow-list (/ur/abjad only)
+    const ur = indexableUrduUrl(path); // reviewed Urdu page on INDEXABLE_UR_PATHS
     return [
       { url: localizedUrl(path, 'en'), ...base, alternates },
       { url: localizedUrl(path, 'fr'), ...base, alternates },
