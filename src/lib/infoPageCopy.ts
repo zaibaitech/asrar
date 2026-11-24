@@ -15,17 +15,21 @@ export const METHODOLOGY_LEAD =
 
 export interface InfoMeta {
   title: string;
+  /** Optional full <title> (used as-is, no " | Asrār" suffix) when a qualifier reads better than the bare name. */
+  seoTitle?: string;
   description: string;
 }
 
 export const ABOUT_META: Record<InfoLocale, InfoMeta> = {
   en: {
     title: 'About Asrār',
+    seoTitle: 'About Asrār: Free Islamic Reflection Tools by Zaibai Tech',
     description:
       'Asrār (asrar.app) is a free web app of reflective Islamic tools built by Zaibai Tech, a UK company. For learning and reflection, not prediction. Only Allah knows the unseen.',
   },
   fr: {
     title: 'À propos d’Asrār',
+    seoTitle: 'À propos d’Asrār : outils islamiques de réflexion gratuits',
     description:
       'Asrār (asrar.app) est une application web gratuite d’outils islamiques de réflexion, conçue par Zaibai Tech, une société britannique. Pour l’apprentissage et la réflexion, non pour la prédiction. Seul Allah connaît l’invisible.',
   },
@@ -44,11 +48,13 @@ export const ABOUT_META: Record<InfoLocale, InfoMeta> = {
 export const METHODOLOGY_META: Record<InfoLocale, InfoMeta> = {
   en: {
     title: 'Methodology',
+    seoTitle: 'Methodology: How Asrār’s Abjad, Burj and Hours Work',
     description:
       'How Asrār calculates Abjad values, the name-and-mother burj, planetary hours, manāzil, ikhtiyārāt and sadaqah, and how Qur’an text is sourced. For reflection, not prediction.',
   },
   fr: {
     title: 'Méthodologie',
+    seoTitle: 'Méthodologie : comment fonctionnent les outils d’Asrār',
     description:
       'Comment Asrār calcule les valeurs Abjad, le burj à partir du nom et du nom de la mère, les heures planétaires, les manāzil, l’ikhtiyārāt et la sadaqah, et d’où vient le texte coranique. Pour la réflexion, non la prédiction.',
   },

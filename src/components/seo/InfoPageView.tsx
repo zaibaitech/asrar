@@ -3,6 +3,7 @@
  * (English, /fr rewrite, dedicated /ar and /ur route files).
  */
 import type { Metadata } from 'next';
+import { LocaleLinks } from './LocaleLinks';
 import { JsonLd } from '@/src/components/seo/SeoSections';
 import { FACEBOOK_PAGE_URL } from '@/src/components/seo/HomeJsonLd';
 import { SITE_URL, absoluteUrl } from '@/src/lib/siteRoutes';
@@ -57,7 +58,7 @@ export function infoPageMetadata(enPath: '/about' | '/methodology', lang: RouteL
   const alternates = localeAlternates(enPath, lang);
   const url = lang === 'ar' ? alternates.canonical : localizedUrl(enPath, lang);
   return {
-    title: meta.title,
+    title: meta.seoTitle ? { absolute: meta.seoTitle } : meta.title,
     description: meta.description,
     alternates,
     openGraph: {
@@ -135,6 +136,7 @@ export function AboutView({ lang }: { lang: InfoLocale }) {
         <RichText parts={c.contactParts} lang={lang} />
       </section>
       <Related lang={lang} title={c.relatedTitle} items={c.related} />
+      <LocaleLinks pagePath="/about" served={lang} />
     </InfoShell>
   );
 }
@@ -207,6 +209,7 @@ export function MethodologyView({ lang }: { lang: InfoLocale }) {
         <RichText parts={c.notParts} lang={lang} />
       </section>
       <Related lang={lang} title={c.relatedTitle} items={c.related} />
+      <LocaleLinks pagePath="/methodology" served={lang} />
     </InfoShell>
   );
 }

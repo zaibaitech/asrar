@@ -3,6 +3,7 @@
  * crawlable SEO pages (links and names: ./relatedTools.ts). Same card classes
  * the SEO pages already use; RTL + Arabic font on Arabic pages.
  */
+import { LocaleLinks } from './LocaleLinks';
 import { RELATED_TOOLS_TITLE as TITLE, pageEventId, relatedToolLinksWithIds, type ToolsLang } from './relatedTools';
 
 export function RelatedTools({
@@ -51,5 +52,11 @@ export function RelatedTools({
       </ul>
     </nav>
   );
-  return className ? <div className={className}>{nav}</div> : nav;
+  const withLocales = (
+    <>
+      {nav}
+      <LocaleLinks pagePath={pagePath} served={routeLang} />
+    </>
+  );
+  return className ? <div className={`${className} space-y-3`}>{withLocales}</div> : <div className="space-y-3">{withLocales}</div>;
 }
