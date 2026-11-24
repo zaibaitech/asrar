@@ -21,7 +21,7 @@ export const metadata: Metadata = englishPageMetadata('/99-names-of-allah', 'abj
 const FAQS: FaqItem[] = [
   {
     q: 'Where does this list of the 99 Names come from?',
-    a: 'The Arabic text and order follow the widely used compilation drawn from the hadith of al-Walīd in Jāmiʿ al-Tirmidhī (no. 3507).',
+    a: 'The Arabic text and order follow the widely used compilation drawn from the hadith narrated through al-Walīd ibn Muslim (from Abū Hurayra) in Jāmiʿ al-Tirmidhī (no. 3507).',
   },
   {
     q: 'How are the Abjad values of the Names calculated here?',
@@ -95,7 +95,7 @@ export default function Page() {
         <section className="space-y-3">
           <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100">About this list</h2>
           <p className="text-slate-700 dark:text-slate-300">
-            The Names are given in the order of the compilation drawn from the hadith of al-Walīd in Jāmiʿ al-Tirmidhī
+            The Names are given in the order of the compilation drawn from the hadith narrated through al-Walīd ibn Muslim (from Abū Hurayra) in Jāmiʿ al-Tirmidhī
             (no. 3507). Abjad values drop the article &ldquo;al-&rdquo; and use the Maghribi table, the default across Asrār (the Mashriqi value is shown where it differs). They are listed for learning
             and reflection, not prediction.
           </p>

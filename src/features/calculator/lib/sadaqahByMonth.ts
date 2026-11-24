@@ -4,7 +4,7 @@
  * used by the Ikhtiyarat feature) resolves the Hijri month, and this table
  * supplies the traditional sadaqah suggestions for that month.
  *
- * English and French only — the app doesn't have a Wolof locale.
+ * English and French only.
  */
 
 export interface SadaqahMonthText {
@@ -16,7 +16,7 @@ export interface SadaqahMonthText {
 export interface SadaqahMonthGuidance {
   /** 1-12, matching HijriDate.month from src/lib/ikhtiyarat/hijri.ts */
   month: number;
-  /** Display name including any well-known alternate/local name, e.g. "Muharram (Tamxarit)". */
+  /** Display name: the standard Islamic (Hijri) month name, with an Arabic alternate where helpful. */
   displayName: string;
   en: SadaqahMonthText;
   fr: SadaqahMonthText;
@@ -25,9 +25,9 @@ export interface SadaqahMonthGuidance {
 export const SADAQAH_BY_MONTH: SadaqahMonthGuidance[] = [
   {
     month: 1,
-    displayName: 'Muharram (Tamxarit)',
+    displayName: 'Muharram',
     en: {
-      intro: 'For anyone born in Muharram (Tamxarit), their sadaqah can include:',
+      intro: 'For anyone born in Muharram, their sadaqah can include:',
       items: [
         'Giving water to those in need.',
         'Feeding someone who is fasting.',
@@ -35,11 +35,11 @@ export const SADAQAH_BY_MONTH: SadaqahMonthGuidance[] = [
         'Giving other forms of charity according to their ability.',
       ],
       notes: [
-        'This sadaqah is given sincerely for the sake of Allah, seeking blessings, protection, mercy, and goodness throughout the year.',
+        'This sadaqah is given sincerely for the sake of Allah, seeking blessing, mercy and ease throughout the year.',
       ],
     },
     fr: {
-      intro: 'Pour toute personne née au mois de Muharram (Tamxarit), sa sadaqah peut consister à :',
+      intro: 'Pour toute personne née au mois de Muharram, sa sadaqah peut consister à :',
       items: [
         "Donner de l'eau aux personnes dans le besoin.",
         'Nourrir une personne qui jeûne, notamment pour la rupture du jeûne.',
@@ -47,7 +47,7 @@ export const SADAQAH_BY_MONTH: SadaqahMonthGuidance[] = [
         'Donner toute autre forme de charité selon ses possibilités.',
       ],
       notes: [
-        "Cette sadaqah est donnée sincèrement pour Allah, avec l'intention de rechercher Ses bénédictions, Sa protection, Sa miséricorde et Ses bienfaits tout au long de l'année.",
+        "Cette sadaqah est donnée sincèrement pour Allah, avec l'intention de rechercher Sa bénédiction, Sa miséricorde et Son aisance tout au long de l'année.",
       ],
     },
   },
@@ -79,9 +79,9 @@ export const SADAQAH_BY_MONTH: SadaqahMonthGuidance[] = [
   },
   {
     month: 3,
-    displayName: 'Rabi al-Awwal (Gamo)',
+    displayName: 'Rabi al-Awwal',
     en: {
-      intro: 'For anyone born in Rabi al-Awwal (Gamo), their sadaqah can include:',
+      intro: 'For anyone born in Rabi al-Awwal, their sadaqah can include:',
       items: [
         'Giving sadaqah to children.',
         'Helping poor families.',
@@ -91,7 +91,7 @@ export const SADAQAH_BY_MONTH: SadaqahMonthGuidance[] = [
       notes: [],
     },
     fr: {
-      intro: 'Pour toute personne née au mois de Rabi al-Awwal (Gamo), sa sadaqah peut consister à :',
+      intro: 'Pour toute personne née au mois de Rabi al-Awwal, sa sadaqah peut consister à :',
       items: [
         'Donner aux enfants.',
         'Aider les familles pauvres.',
@@ -187,9 +187,9 @@ export const SADAQAH_BY_MONTH: SadaqahMonthGuidance[] = [
     en: {
       intro: "For anyone born in Rajab, their sadaqah can focus on supporting people who learn and teach the Qur'an:",
       items: [
-        "Giving a complete Qur'an (Kamil) to a mosque or place of Qur'anic learning.",
+        "Giving a complete copy of the Qur'an to a mosque or place of Qur'anic learning.",
         "Providing Qur'ans for people to read and use.",
-        "Donating Qur'ans to daaras.",
+        "Donating Qur'ans to schools and places of Qur'anic learning.",
         "Helping mosques and places of Qur'anic learning.",
         "Supporting Qur'anic students and those who use these places.",
       ],
@@ -198,9 +198,9 @@ export const SADAQAH_BY_MONTH: SadaqahMonthGuidance[] = [
     fr: {
       intro: "Pour toute personne née au mois de Rajab, sa sadaqah peut être consacrée au soutien de ceux qui apprennent et enseignent le Coran :",
       items: [
-        "Donner un Coran complet (Kamil) à une mosquée ou à un lieu d'apprentissage coranique.",
+        "Donner un exemplaire complet du Coran à une mosquée ou à un lieu d'apprentissage coranique.",
         "Fournir des Corans pour la lecture et l'étude.",
-        "Donner des Corans aux daaras.",
+        "Donner des Corans aux écoles et lieux d'apprentissage coranique.",
         "Aider les mosquées et les lieux d'apprentissage du Coran.",
         "Soutenir les élèves coraniques et les personnes qui fréquentent ces lieux.",
       ],
@@ -233,9 +233,9 @@ export const SADAQAH_BY_MONTH: SadaqahMonthGuidance[] = [
   },
   {
     month: 9,
-    displayName: 'Ramadan (Werruk Korr)',
+    displayName: 'Ramadan',
     en: {
-      intro: 'For anyone born in Ramadan (Werruk Korr), their sadaqah can include:',
+      intro: 'For anyone born in Ramadan, their sadaqah can include:',
       items: [
         'Giving iftar to someone who is fasting.',
         'Not being reluctant or hesitant to give their zakat when it is due.',
@@ -243,11 +243,11 @@ export const SADAQAH_BY_MONTH: SadaqahMonthGuidance[] = [
         'Giving this support at night, particularly to those who are in need.',
       ],
       notes: [
-        'This sadaqah is intended to bring goodness, blessings, protection, success, and stability to the person born in Ramadan.',
+        'This sadaqah is given sincerely for the sake of Allah, seeking blessing, mercy and ease for the person born in Ramadan.',
       ],
     },
     fr: {
-      intro: 'Pour toute personne née au mois de Ramadan (Werruk Korr), sa sadaqah peut consister à :',
+      intro: 'Pour toute personne née au mois de Ramadan, sa sadaqah peut consister à :',
       items: [
         "Donner l'iftar à une personne qui jeûne.",
         "Ne pas être réticent à donner sa zakat lorsqu'elle est due.",
@@ -255,15 +255,15 @@ export const SADAQAH_BY_MONTH: SadaqahMonthGuidance[] = [
         'Donner cette aide pendant la nuit, particulièrement aux personnes dans le besoin.',
       ],
       notes: [
-        'Cette sadaqah est destinée à apporter bonté, bénédictions, protection, réussite et stabilité à la personne née pendant le Ramadan.',
+        'Cette sadaqah est donnée sincèrement pour Allah, en demandant bénédiction, miséricorde et aisance pour la personne née pendant le Ramadan.',
       ],
     },
   },
   {
     month: 10,
-    displayName: 'Shawwal (Korité)',
+    displayName: 'Shawwal',
     en: {
-      intro: 'For anyone born in Shawwal (Korité), their sadaqah can include:',
+      intro: 'For anyone born in Shawwal, their sadaqah can include:',
       items: [
         'Giving brand-new clothes to someone in need.',
         'Giving clean, good-quality clothing.',
@@ -272,7 +272,7 @@ export const SADAQAH_BY_MONTH: SadaqahMonthGuidance[] = [
       notes: [],
     },
     fr: {
-      intro: 'Pour toute personne née au mois de Shawwal (Korité), sa sadaqah peut consister à :',
+      intro: 'Pour toute personne née au mois de Shawwal, sa sadaqah peut consister à :',
       items: [
         'Donner des vêtements tout neufs à une personne dans le besoin.',
         'Donner des vêtements propres et de bonne qualité.',
@@ -283,9 +283,9 @@ export const SADAQAH_BY_MONTH: SadaqahMonthGuidance[] = [
   },
   {
     month: 11,
-    displayName: "Dhu al-Qi'dah (Diggi Kor)",
+    displayName: "Dhu al-Qi'dah",
     en: {
-      intro: "For anyone born in Dhu al-Qi'dah (Diggi Kor), their sadaqah can include:",
+      intro: "For anyone born in Dhu al-Qi'dah, their sadaqah can include:",
       items: [
         "Helping a traveller, financially or in any other way that can make their journey easier.",
         'Giving food to poor and needy people.',
@@ -297,7 +297,7 @@ export const SADAQAH_BY_MONTH: SadaqahMonthGuidance[] = [
       ],
     },
     fr: {
-      intro: "Pour toute personne née au mois de Dhu al-Qi'dah (Diggi Kor), sa sadaqah peut consister à :",
+      intro: "Pour toute personne née au mois de Dhu al-Qi'dah, sa sadaqah peut consister à :",
       items: [
         'Aider un voyageur, financièrement ou de toute autre manière pouvant faciliter son voyage.',
         'Donner de la nourriture aux personnes pauvres et nécessiteuses.',
@@ -311,9 +311,9 @@ export const SADAQAH_BY_MONTH: SadaqahMonthGuidance[] = [
   },
   {
     month: 12,
-    displayName: 'Dhu al-Hijjah (Tabaski)',
+    displayName: 'Dhu al-Hijjah',
     en: {
-      intro: 'For anyone born in Dhu al-Hijjah (Tabaski), their sadaqah can include:',
+      intro: 'For anyone born in Dhu al-Hijjah, their sadaqah can include:',
       items: [
         'Giving meat as sadaqah, especially to poor and needy people.',
         'Helping pilgrims who have travelled to Makkah for Hajj, financially or in any other useful way.',
@@ -323,7 +323,7 @@ export const SADAQAH_BY_MONTH: SadaqahMonthGuidance[] = [
       notes: [],
     },
     fr: {
-      intro: 'Pour toute personne née au mois de Dhu al-Hijjah (Tabaski), sa sadaqah peut consister à :',
+      intro: 'Pour toute personne née au mois de Dhu al-Hijjah, sa sadaqah peut consister à :',
       items: [
         'Donner de la viande en sadaqah, particulièrement aux personnes pauvres et nécessiteuses.',
         'Aider les pèlerins qui sont allés à La Mecque pour le Hajj, financièrement ou de toute autre manière utile.',

@@ -123,16 +123,16 @@ export const PUBLIC_TOOLS: PublicTool[] = [
   {
     path: '/sadaqa-of-the-day',
     name: 'Sadaqa of the Day',
-    description: "Today's recommended sadaqah from West African tradition, with the full table for every day of the week.",
+    description: "Today's recommended sadaqah, with the full table for every day of the week.",
     nameFr: "Sadaqa du jour",
-    descriptionFr: "La sadaqa recommandée aujourd'hui selon la tradition ouest-africaine, avec le tableau complet pour chaque jour de la semaine.",
+    descriptionFr: "La sadaqa recommandée aujourd'hui, avec le tableau complet pour chaque jour de la semaine.",
   },
   {
     path: '/sadaqa',
     name: 'Sadaqa Guide',
-    description: 'Sadaqah by day of the week, by Hijri birth month (Tamxarit, Gamo, Korité, Tabaski…) and by burj.',
+    description: 'Sadaqah by day of the week, by Hijri birth month and by burj.',
     nameFr: "Guide de la sadaqa",
-    descriptionFr: "La sadaqa selon le jour de la semaine, le mois hégirien de naissance (Tamxarit, Gamo, Korité, Tabaski…) et le burj.",
+    descriptionFr: "La sadaqa selon le jour de la semaine, le mois hégirien de naissance et le burj.",
   },
   {
     path: '/ramadan',

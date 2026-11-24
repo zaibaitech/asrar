@@ -44,8 +44,8 @@ const STATIC: Partial<Record<OgPageKey, Record<OgLang, StaticCopy>>> = {
     fr: { accent: 'violet', eyebrow: 'Istikhāra al-Asmāʾ', title: 'Trouver son burj avec son nom et le nom de sa mère', subtitle: 'Votre burj (ṭabʿ), élément, jour béni, dhikr et sadaqa à partir de la valeur abjad des deux noms.' },
   },
   sadaqa: {
-    en: { accent: 'emerald', eyebrow: 'Sadaqa Guide', title: 'Sadaqah by Weekday, Hijri Birth Month and Burj', subtitle: 'West African tradition: Tamxarit, Gamo, Korité, Tabaski… and the sadaqah for each day of the week.' },
-    fr: { accent: 'emerald', eyebrow: 'Guide de la sadaqa', title: 'La sadaqa par jour, mois hégirien de naissance et burj', subtitle: 'Tradition ouest-africaine : Tamxarit, Gamo, Korité, Tabaski… et la sadaqa de chaque jour de la semaine.' },
+    en: { accent: 'emerald', eyebrow: 'Sadaqa Guide', title: 'Sadaqah by Weekday, Hijri Birth Month and Burj', subtitle: 'Voluntary charity: suggested forms for each weekday, Hijri birth month and burj.' },
+    fr: { accent: 'emerald', eyebrow: 'Guide de la sadaqa', title: 'La sadaqa par jour, mois hégirien de naissance et burj', subtitle: 'Charité volontaire : des formes suggérées pour chaque jour, mois hégirien de naissance et burj.' },
   },
 };
 
@@ -64,7 +64,7 @@ function sadaqaOfTheDay(lang: OgLang, ymd: string): CardProps {
     eyebrow: lang === 'fr' ? 'Sadaqa du jour' : 'Sadaqa of the Day',
     title: lang === 'fr' ? `La sadaqa du ${dayName}` : `${dayName}'s sadaqah`,
     highlight: {
-      label: lang === 'fr' ? 'Tradition ouest-africaine — recommandé :' : 'West African tradition — recommended:',
+      label: lang === 'fr' ? 'Sadaqah recommandée :' : 'Recommended sadaqah:',
       lines: items.length > 3 ? [...shown.slice(0, 2), lang === 'fr' ? `… et ${items.length - 2} autres` : `… and ${items.length - 2} more`] : shown,
     },
     footer: FOOTER[lang],

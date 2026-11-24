@@ -30,10 +30,10 @@ describe('/ur is in the sitemap and hreflang only for allow-listed pages', () =>
   it('the generated sitemap lists every allow-listed /ur URL (with alternates) and no other /ur URL', () => {
     const entries = sitemap();
     expect(entries.length).toBeGreaterThan(20);
-    const expectedUr = INDEXABLE_UR_PATHS.map((p) => absoluteUrl(UR_PATHS[p])).sort();
+    const expectedUr = INDEXABLE_UR_PATHS.filter((p) => isIndexableUrEnPath(p)).map((p) => absoluteUrl(UR_PATHS[p])).sort();
     const urUrls = entries.map((e) => e.url).filter((u) => /\/ur(\/|$)/.test(u)).sort();
     expect(urUrls).toEqual(expectedUr);
-    for (const p of INDEXABLE_UR_PATHS) {
+    for (const p of INDEXABLE_UR_PATHS.filter((p) => isIndexableUrEnPath(p))) {
       const langs = hreflangLanguages(p);
       expect(langs.ur, p).toBe(absoluteUrl(UR_PATHS[p]));
       for (const u of Object.values(langs)) {
@@ -42,7 +42,7 @@ describe('/ur is in the sitemap and hreflang only for allow-listed pages', () =>
         expect(e.alternates?.languages, u).toEqual(langs);
       }
     }
-    const allowlisted = new Set(INDEXABLE_UR_PATHS.flatMap((p) => Object.values(hreflangLanguages(p))));
+    const allowlisted = new Set(INDEXABLE_UR_PATHS.filter((p) => isIndexableUrEnPath(p)).flatMap((p) => Object.values(hreflangLanguages(p))));
     const others = entries.filter((e) => !allowlisted.has(e.url));
     expect(JSON.stringify(others)).not.toMatch(/\/ur(\/|")|"ur":/);
   });
@@ -77,7 +77,8 @@ describe('/ur is in the sitemap and hreflang only for allow-listed pages', () =>
 describe('/ur layout default stays noindex; middleware honors the allow-list', () => {
   it('every page file under app/(ur)/ur declares metadata through urduMetadata()', () => {
     const files = pages(path.join(root, 'app/(ur)/ur'));
-    expect(files.length).toBe(Object.keys(UR_PATHS).length); // one page file per mapped Urdu page
+    // Dynamic /ur/best-day-for/[purpose] covers four mapped paths with one file.
+    expect(files.length).toBe(Object.keys(UR_PATHS).length - 3);
     for (const f of files) expect(readFileSync(f, 'utf8'), path.relative(root, f)).toMatch(/urduMetadata\(|export const metadata/);
   });
 
@@ -88,13 +89,13 @@ describe('/ur layout default stays noindex; middleware honors the allow-list', (
   });
 
   it('the middleware sends X-Robots-Tag: noindex only on /ur URLs that are not on the allow-list, and not on the English pages', async () => {
-    const indexable = INDEXABLE_UR_PATHS.map((p) => UR_PATHS[p]);
+    const indexable = INDEXABLE_UR_PATHS.filter((p) => isIndexableUrEnPath(p)).map((p) => UR_PATHS[p]);
     for (const p of [...indexable, ...indexable.map((p) => `${p}/`)]) {
       expect(isIndexableUrPath(p.replace(/\/+$/, '') || '/ur'), p).toBe(true);
       const res = await middleware(new NextRequest(`https://asrar.app${p}`));
       expect(res.headers.get('x-robots-tag'), p).toBeNull();
     }
-    for (const p of ['/ur/abjad/x', '/ur/manazil', '/ur/sadaqa', '/ur/sadaqa-of-the-day', '/ur/99-names-of-allah']) {
+    for (const p of ['/ur/abjad/x', '/ur/ramadan', '/ur/planet-transit']) {
       expect(isUrPath(p)).toBe(true);
       expect(isIndexableUrPath(p), p).toBe(false);
       const res = await middleware(new NextRequest(`https://asrar.app${p}`));

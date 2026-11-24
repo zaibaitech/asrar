@@ -6,7 +6,7 @@ import catalog from '../../public/i18n/ur-ui.json';
 
 describe('Urdu public routes and indexing allow-list', () => {
   it('maps the public Urdu pages', () => {
-    expect(Object.keys(UR_PATHS)).toHaveLength(9);
+    expect(Object.keys(UR_PATHS)).toHaveLength(18);
     expect(UR_PATHS['/abjad']).toBe('/ur/abjad');
     expect(isUrPath('/ur')).toBe(true);
     expect(isUrPath('/ur/abjad')).toBe(true);
@@ -30,19 +30,22 @@ describe('Urdu public routes and indexing allow-list', () => {
 
   it('lists /ur in hreflang for every allow-listed path, and not for tools that have no indexable Urdu page', () => {
     expect(INDEXABLE_UR_PATHS.length).toBeGreaterThan(1);
-    for (const p of INDEXABLE_UR_PATHS) {
+    for (const p of INDEXABLE_UR_PATHS.filter((path) => isIndexableUrEnPath(path))) {
       for (const l of ['en', 'fr', 'ar'] as const) {
         expect(localeAlternates(p, l).languages.ur, `${p} ${l}`).toBe(`https://www.asrar.app${UR_PATHS[p]}`);
       }
     }
-    for (const p of ['/sadaqa', '/sadaqa-of-the-day', '/manazil', '/99-names-of-allah']) {
+    expect(hreflangLanguages('/sadaqa').ur).toBe('https://www.asrar.app/ur/sadaqa');
+    expect(hreflangLanguages('/manazil').ur).toBe('https://www.asrar.app/ur/manazil');
+    for (const p of ['/planet-transit', '/ramadan']) {
       expect(hreflangLanguages(p).ur, p).toBeUndefined();
     }
   });
 
   it('links related tools to /ur only where an Urdu page exists', () => {
     expect(relatedToolHref('/abjad', 'ur')).toBe('/ur/abjad');
-    expect(relatedToolHref('/manazil', 'ur')).toBe('/manazil');
+    expect(relatedToolHref('/manazil', 'ur')).toBe('/ur/manazil');
+    expect(relatedToolHref('/sadaqa', 'ur')).toBe('/ur/sadaqa');
   });
 
   it('catalog values are written in Arabic script', () => {

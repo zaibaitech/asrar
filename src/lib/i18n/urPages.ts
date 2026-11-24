@@ -71,6 +71,31 @@ export const UR_TOOLS = {
     name: t('Choosing Suitable Dates (Ikhtiyārāt)', 'مناسب تاریخوں کا انتخاب (اختیارات)'),
     desc: t('Suitable dates for nikāḥ, travel, moving home and business.', 'نکاح، سفر، نئے گھر اور کاروبار کے لیے مناسب تاریخیں۔'),
   },
+  sadaqa: {
+    path: '/ur/sadaqa',
+    name: t('Sadaqa Guide', 'صدقہ گائیڈ'),
+    desc: t('Sadaqah (voluntary charity) by weekday, Hijri birth month and burj.', 'صدقہ (رضاکارانہ خیرات) دنِ ہفتہ، ہجری مہینۂ پیدائش اور برج کے مطابق۔'),
+  },
+  sadaqaOfTheDay: {
+    path: '/ur/sadaqa-of-the-day',
+    name: t('Sadaqa of the Day', 'آج کا صدقہ'),
+    desc: t("Today's recommended sadaqah and the weekly table.", 'آج کا تجویز کردہ صدقہ اور ہفتہ وار جدول۔'),
+  },
+  names99: {
+    path: '/ur/99-names-of-allah',
+    name: t('The 99 Names of Allah', 'اللہ کے ننانوے نام'),
+    desc: t('Asmāʾ al-Ḥusnā in Arabic, with transliteration and Abjad values.', 'اسماء الحسنیٰ عربی میں، نقلِ حرفی اور ابجدی اعداد کے ساتھ۔'),
+  },
+  manazil: {
+    path: '/ur/manazil',
+    name: t('Lunar Mansions (Manāzil al-Qamar)', 'منازل القمر'),
+    desc: t("Today's lunar mansion and all twenty-eight stations.", 'آج کی منزلِ قمر اور تمام اٹھائیس منزلیں۔'),
+  },
+  bestDayFor: {
+    path: '/ur/best-day-for',
+    name: t('Best Day For Nikah, Travel, Moving and Business', 'نکاح، سفر، نئے گھر میں منتقلی اور کاروبار کے لیے مناسب دن'),
+    desc: t('Favourable weekdays and hours in the ikhtiyārāt tradition.', 'علمِ اختیارات کے مطابق مناسب ایامِ ہفتہ اور ساعات۔'),
+  },
 } as const;
 export type UrToolKey = keyof typeof UR_TOOLS;
 

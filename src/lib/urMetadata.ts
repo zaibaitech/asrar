@@ -98,6 +98,96 @@ export const UR_META: Readonly<Record<string, UrMeta>> = {
     title: { en: METHODOLOGY_META.en.title, ur: METHODOLOGY_META.ur.title },
     description: { en: METHODOLOGY_META.en.description, ur: METHODOLOGY_META.ur.description },
   },
+  '/sadaqa': {
+    title: {
+      en: 'Sadaqa Guide: by Weekday, Hijri Birth Month & Burj',
+      ur: 'صدقہ گائیڈ: ایامِ ہفتہ، ہجری مہینۂ پیدائش اور برج',
+    },
+    description: {
+      en: 'A guide to sadaqah (voluntary charity): suggested forms for each weekday, for your Hijri birth month, and for each of the 12 burūj. For reflection, not prediction.',
+      ur: 'صدقہ (رضاکارانہ خیرات) کی رہنمائی: ہر دنِ ہفتہ، آپ کے ہجری مہینۂ پیدائش، اور بارہ بروج میں سے ہر برج کے لیے تجویز کردہ صورتیں۔ غور و فکر کے لیے، پیش گوئی نہیں۔',
+    },
+  },
+  '/sadaqa-of-the-day': {
+    title: {
+      en: 'Sadaqa of the Day: Recommended Sadaqah for Each Weekday',
+      ur: 'آج کا صدقہ: ہفتے کے ہر دن کے لیے تجویز کردہ صدقہ',
+    },
+    description: {
+      en: "Today's recommended sadaqah and the full weekly table: water on Monday, help with medicine on Tuesday, opening the way on Thursday, clothes and perfume on Friday. For reflection, not prediction.",
+      ur: 'آج کا تجویز کردہ صدقہ اور پوری ہفتہ وار جدول: پیر کو پانی، منگل کو دوا میں مدد، جمعرات کو راہ کھلنے کی امید، جمعہ کو کپڑے اور خوشبو۔ غور و فکر کے لیے، پیش گوئی نہیں۔',
+    },
+  },
+  '/99-names-of-allah': {
+    title: {
+      en: 'The 99 Names of Allah (Asmāʾ al-Ḥusnā): Meanings & Abjad Values',
+      ur: 'اللہ کے ننانوے نام (اسماء الحسنیٰ): عربی، نقلِ حرفی اور ابجدی اعداد',
+    },
+    description: {
+      en: 'All 99 Names of Allah in Arabic with transliteration and Abjad (ḥisāb al-jummal) value, plus how the Names appear in your name-and-mother burj. For learning and reflection.',
+      ur: 'اللہ کے تمام ننانوے نام عربی میں، نقلِ حرفی اور ابجدی عدد کے ساتھ، اور یہ کہ وہ نام اور والدہ کے نام والے برج میں کیسے آتے ہیں۔ سیکھنے اور غور و فکر کے لیے۔',
+    },
+  },
+  '/manazil': {
+    title: {
+      en: 'Lunar Mansions (Manāzil al-Qamar)',
+      ur: 'منازل القمر: چاند کی اٹھائیس منزلیں',
+    },
+    description: {
+      en: 'The 28 lunar mansions in classical ʿIlm al-Nujūm: today’s manzil, Arabic names, and how manāzil relate to birth profile and ikhtiyārāt. For reflection, not prediction.',
+      ur: 'کلاسیکی علم النجوم میں چاند کی اٹھائیس منزلیں: آج کی منزل، عربی نام، اور ولادت و اختیارات سے تعلق۔ غور و فکر کے لیے، پیش گوئی نہیں۔',
+    },
+  },
+  '/best-day-for': {
+    title: {
+      en: 'Best Day For Nikah, Travel, Moving & Business (Ikhtiyārāt)',
+      ur: 'نکاح، سفر، نئے گھر میں منتقلی اور کاروبار کے لیے مناسب دن (اختیارات)',
+    },
+    description: {
+      en: 'Favourable weekdays and planetary hours for marriage (nikāḥ), travel, moving home and starting a business in the classical ikhtiyārāt tradition. For reflection.',
+      ur: 'کلاسیکی علمِ اختیارات کے مطابق نکاح، سفر، نئے گھر میں منتقلی اور کاروبار کے لیے مناسب ایامِ ہفتہ اور ساعاتِ کواکب۔ غور و فکر کے لیے۔',
+    },
+  },
+  '/best-day-for/marriage': {
+    title: {
+      en: 'Best Day for Nikah (Marriage) — Islamic Tradition and Ikhtiyārāt',
+      ur: 'نکاح کے لیے مناسب دن — اسلامی روایت اور علمِ اختیارات',
+    },
+    description: {
+      en: 'Favoured weekdays and planetary hours for nikāḥ in the ikhtiyārāt tradition, for reflection alongside istikhāra. No date is religiously forbidden for marriage.',
+      ur: 'علمِ اختیارات کے مطابق نکاح کے لیے مناسب ایامِ ہفتہ اور ساعات، استخارے کے ساتھ غور و فکر کے لیے۔ نکاح کے لیے کوئی تاریخ شرعاً ممنوع نہیں۔',
+    },
+  },
+  '/best-day-for/travel': {
+    title: {
+      en: 'Best Day to Travel (Ikhtiyārāt)',
+      ur: 'سفر کے لیے مناسب دن (اختیارات)',
+    },
+    description: {
+      en: 'Favoured weekdays and planetary hours for beginning a journey in the classical ikhtiyārāt tradition. For reflection, alongside istikhāra and tawakkul.',
+      ur: 'کلاسیکی علمِ اختیارات کے مطابق سفر کے آغاز کے لیے مناسب ایامِ ہفتہ اور ساعات۔ استخارے اور توکل کے ساتھ غور و فکر کے لیے۔',
+    },
+  },
+  '/best-day-for/moving-home': {
+    title: {
+      en: 'Best Day to Move Home (Ikhtiyārāt)',
+      ur: 'نئے گھر میں منتقلی کے لیے مناسب دن (اختیارات)',
+    },
+    description: {
+      en: 'Favoured weekdays and planetary hours for moving home in the classical ikhtiyārāt tradition. For reflection, alongside istikhāra and tawakkul.',
+      ur: 'کلاسیکی علمِ اختیارات کے مطابق نئے گھر میں منتقلی کے لیے مناسب ایامِ ہفتہ اور ساعات۔ استخارے اور توکل کے ساتھ غور و فکر کے لیے۔',
+    },
+  },
+  '/best-day-for/business': {
+    title: {
+      en: 'Best Day to Start a Business (Ikhtiyārāt)',
+      ur: 'کاروبار شروع کرنے کے لیے مناسب دن (اختیارات)',
+    },
+    description: {
+      en: 'Favoured weekdays and planetary hours for starting a business or a contract in the classical ikhtiyārāt tradition. For reflection, alongside istikhāra and tawakkul.',
+      ur: 'کلاسیکی علمِ اختیارات کے مطابق کاروبار شروع کرنے یا معاہدہ کرنے کے لیے مناسب ایامِ ہفتہ اور ساعات۔ استخارے اور توکل کے ساتھ غور و فکر کے لیے۔',
+    },
+  },
 };
 
 /**
