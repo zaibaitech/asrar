@@ -19,12 +19,12 @@ const META = {
   en: {
     title: 'Sadaqa of the Day: Recommended Sadaqah for Each Weekday',
     description:
-      "Today's recommended sadaqah and the full weekly table: water on Monday, healing on Tuesday, opening the way on Thursday, clothes and perfume on Friday. West African tradition, for reflection.",
+      "Today's recommended sadaqah and the full weekly table: water on Monday, help with medicine on Tuesday, opening the way on Thursday, clothes and perfume on Friday. For reflection, not prediction.",
   },
   fr: {
     title: 'Sadaqa du jour : la sadaqah recommandée pour chaque jour',
     description:
-      "La sadaqah recommandée aujourd'hui et le tableau complet de la semaine : l'eau le lundi, la guérison le mardi, l'ouverture le jeudi, vêtements et parfum le vendredi. Tradition ouest-africaine, pour la réflexion.",
+      "La sadaqah recommandée aujourd'hui et le tableau complet de la semaine : l'eau le lundi, l'aide pour les médicaments le mardi, l'ouverture le jeudi, vêtements et parfum le vendredi. Pour la réflexion, non la prédiction.",
   },
 };
 
@@ -48,11 +48,11 @@ function copy(lang: PageLang) {
     const faqs: FaqItem[] = [
       {
         q: "Qu'est-ce que la « sadaqa du jour » ?",
-        a: "C'est la forme de sadaqah (aumône volontaire) traditionnellement associée au jour de la semaine, selon un enseignement ouest-africain (sénégalais / wolof). Cette page affiche la suggestion d'aujourd'hui et le tableau des sept jours.",
+        a: "C'est la forme de sadaqah (charité volontaire) traditionnellement associée au jour de la semaine. Cette page affiche la suggestion d'aujourd'hui et le tableau des sept jours.",
       },
       {
         q: 'Quel est le meilleur jour pour donner la sadaqah ?',
-        a: "La sadaqah est bonne tous les jours, et beaucoup de musulmans prennent l'habitude de donner le vendredi (Jumuʿa). Dans cette tradition, le mardi est lié à la guérison et à la protection, et le jeudi à l'ouverture de la voie et à la levée des blocages. Ne retardez jamais un don parce que ce n'est pas « le bon jour ».",
+        a: "La sadaqah est bonne tous les jours, et beaucoup de musulmans prennent l'habitude de donner le vendredi (Jumuʿa). Dans ces suggestions, le mardi est lié à la guérison et à l'aisance, et le jeudi à l'ouverture de la voie et à la levée des blocages. Ne retardez jamais un don parce que ce n'est pas « le bon jour ».",
       },
       {
         q: 'Quelle sadaqah donner le lundi ?',
@@ -76,7 +76,7 @@ function copy(lang: PageLang) {
       intro1:
         "La sadaqah, l'aumône volontaire, est bonne chaque jour, et beaucoup de musulmans prennent l'habitude de donner le vendredi (Jumuʿa). Donner un peu, régulièrement, vaut mieux qu'attendre le « jour parfait ».",
       intro2:
-        "Dans l'enseignement ouest-africain (sénégalais / wolof) — le sarax — chaque jour de la semaine est aussi associé à des formes précises de sadaqah : l'eau le lundi, l'aide pour les médicaments d'un malade le mardi, papier et stylos le mercredi, nourrir les nécessiteux et soutenir la mosquée le jeudi, vêtements, savon et parfum le vendredi. Voici la suggestion du jour et le tableau complet, tirés du même guide que le calculateur Asrār.",
+        "Chaque jour de la semaine est aussi associé à des formes précises de sadaqah : l'eau le lundi, l'aide pour les médicaments d'un malade le mardi, papier et stylos le mercredi, nourrir les nécessiteux et soutenir la mosquée le jeudi, vêtements, savon et parfum le vendredi. Voici la suggestion du jour et le tableau complet, tirés du même guide que le calculateur Asrār.",
       intro3:
         "Pour la réflexion et l'éducation, sans prédiction ni promesse de résultat ; Allah seul connaît l'invisible.",
       checkerTitle: 'Vérifier une autre date',
@@ -96,11 +96,11 @@ function copy(lang: PageLang) {
   const faqs: FaqItem[] = [
     {
       q: 'What is the "sadaqa of the day"?',
-      a: 'It is the form of sadaqah (voluntary charity) traditionally linked to each day of the week in a West African (Senegalese / Wolof) teaching. This page shows today\'s suggestion and the table for all seven days.',
+      a: 'It is the form of sadaqah (voluntary charity) traditionally linked to each day of the week. This page shows today\'s suggestion and the table for all seven days.',
     },
     {
       q: 'What is the best day to give sadaqah?',
-      a: 'Sadaqah is good on every day, and many Muslims make a habit of giving on Friday (Jumuʿa). In this tradition Tuesday is linked with healing and protection, and Thursday with opening the way and removing blockages. Never delay giving because it is not the "right" day.',
+      a: 'Sadaqah is good on every day, and many Muslims make a habit of giving on Friday (Jumuʿa). In these suggestions Tuesday is linked with healing and ease, and Thursday with opening the way and removing blockages. Never delay giving because it is not the "right" day.',
     },
     {
       q: 'What sadaqah should I give on Monday?',
@@ -124,7 +124,7 @@ function copy(lang: PageLang) {
     intro1:
       'Sadaqah, voluntary charity, is good on every day, and many Muslims make a habit of giving on Friday (Jumuʿa). Giving a little, consistently, is better than waiting for the "perfect" day.',
     intro2:
-      'In West African (Senegalese / Wolof) teaching — sarax — each weekday is also linked to particular forms of sadaqah: water on Monday, help with someone\'s medicine on Tuesday, paper and pens on Wednesday, feeding the needy and supporting the mosque on Thursday, clothes, soap and perfume on Friday. Below is today\'s suggestion and the full weekly table, from the same guidance used by the Asrār calculator.',
+      'Each weekday is also linked to particular forms of sadaqah: water on Monday, help with someone\'s medicine on Tuesday, paper and pens on Wednesday, feeding the needy and supporting the mosque on Thursday, clothes, soap and perfume on Friday. Below is today\'s suggestion and the full weekly table, from the same guidance used by the Asrār calculator.',
     intro3: 'For reflection and education, not prediction or a promise of outcomes; Allah alone knows the unseen.',
     checkerTitle: 'Check another date',
     checkerIntro: 'The day you plan to give, or your date of birth.',
@@ -150,7 +150,7 @@ export default async function Page({
   const routeLang = await getRouteLang();
   const served = await getServedLang();
   const c = copy(lang);
-  // Server default for the highlight (UTC, i.e. Senegal time); the client re-checks local time.
+  // Server default for the highlight (UTC); the client re-checks local time.
   const serverDay = new Date().getUTCDay();
 
   return (

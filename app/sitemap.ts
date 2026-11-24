@@ -9,7 +9,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entry = (path: string, priority: number) => {
     const localized = LOCALIZED_PATHS.includes(path);
     const base = { changeFrequency: 'daily' as const, priority, lastModified };
-    if (!localized) return [{ url: absoluteUrl(path), ...base }];
+    if (!localized) {
+      const ur = indexableUrduUrl(path);
+      if (!ur) return [{ url: absoluteUrl(path), ...base }];
+      const alternates = { languages: hreflangLanguages(path) };
+      return [
+        { url: absoluteUrl(path), ...base, alternates },
+        { url: ur, ...base, alternates },
+      ];
+    }
     // EN URL, its /fr mirror (and /ar page if any), each listing all as hreflang alternates.
     const alternates = { languages: hreflangLanguages(path) };
     const ar = arabicUrl(path);

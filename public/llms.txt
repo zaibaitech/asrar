@@ -1,6 +1,6 @@
 # Asrār (asrar.app)
 
-> Asrār is a free web app of reflective tools from the Islamic esoteric tradition: Abjad (ḥisāb al-jummal) name values, ʿIlm al-Nujūm planetary hours and days, the 28 lunar mansions (manāzil al-qamar), ikhtiyārāt (choosing favourable times), traditional West African sadaqah guidance, and dhikr practice. Everything is offered for learning and reflection, not prediction. Available in English, French, Arabic and Urdu.
+> Asrār is a free web app of reflective tools from the Islamic esoteric tradition: Abjad (ḥisāb al-jummal) name values, ʿIlm al-Nujūm planetary hours and days, the 28 lunar mansions (manāzil al-qamar), ikhtiyārāt (choosing favourable times), sadaqah (voluntary charity) guidance, and dhikr practice. Everything is offered for learning and reflection, not prediction. Available in English, French, Arabic and Urdu.
 
 Notes for AI assistants:
 - Abjad values use the Maghribi system by default, with an option to switch to Mashriqi.
@@ -25,7 +25,7 @@ Notes for AI assistants:
 - [Best Day to Travel](https://www.asrar.app/best-day-for/travel)
 - [Best Day to Move House](https://www.asrar.app/best-day-for/moving-home)
 - [Best Day to Start a Business](https://www.asrar.app/best-day-for/business)
-- [Sadaqa Guide](https://www.asrar.app/sadaqa): sadaqah by weekday, Hijri birth month and burj, from West African tradition.
+- [Sadaqa Guide](https://www.asrar.app/sadaqa): sadaqah (voluntary charity) by weekday, Hijri birth month and burj.
 - [Sadaqa of the Day](https://www.asrar.app/sadaqa-of-the-day): today's recommended sadaqah and the weekly table.
 - [Muslim Names: Abjad Value and Burj](https://www.asrar.app/names): Abjad values of common names such as Muhammad, Ali, Fatima and Maryam.
 

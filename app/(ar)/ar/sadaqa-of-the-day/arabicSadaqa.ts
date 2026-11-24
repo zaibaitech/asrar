@@ -1,8 +1,8 @@
 /**
  * Arabic rendering of the existing SADAQAH_BY_DAY guidance
  * (src/features/calculator/lib/sadaqahByDay.ts). Same days, same items, same
- * order: a translation of the English text, nothing added. The Wolof-specific
- * notes are not translated. arabicSadaqa.test.ts keeps it in step with the source.
+ * order: a translation of the English text, nothing added. Locale-specific
+ * notes in the source are not translated. arabicSadaqa.test.ts keeps it in step with the source.
  */
 export interface ArabicDaySadaqa {
   day: number;
@@ -23,7 +23,7 @@ export const AR_SADAQAH_BY_DAY: readonly ArabicDaySadaqa[] = [
   },
   {
     day: 2,
-    intro: 'يُستحب يوم الثلاثاء للصدقة بنيّة الشفاء والحفظ، ومن صورها:',
+    intro: 'يُستحب يوم الثلاثاء للصدقة بنيّة الشفاء والتيسير، ومن صورها:',
     items: [
       'إطعام الأطفال',
       'مساعدة من يمرّ بضائقة',

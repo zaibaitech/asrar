@@ -119,7 +119,11 @@ describe('equivalentLocalePath', () => {
     expect(equivalentLocalePath('/planet-transit', 'fr')).toBeNull();
     expect(equivalentLocalePath('/planet-transit', 'ar')).toBe('/ar/planet-transit');
     expect(equivalentLocalePath('/planet-transit', 'ur')).toBeNull();
-    expect(equivalentLocalePath('/sadaqa', 'ur')).toBeNull();
+    expect(equivalentLocalePath('/sadaqa', 'ur')).toBe('/ur/sadaqa');
+    expect(equivalentLocalePath('/sadaqa-of-the-day', 'ur')).toBe('/ur/sadaqa-of-the-day');
+    expect(equivalentLocalePath('/99-names-of-allah', 'ur')).toBe('/ur/99-names-of-allah');
+    expect(equivalentLocalePath('/manazil', 'ur')).toBe('/ur/manazil');
+    expect(equivalentLocalePath('/best-day-for/marriage', 'ur')).toBe('/ur/best-day-for/marriage');
     expect(equivalentLocalePath('/', 'fr')).toBe('/fr');
     expect(equivalentLocalePath('/', 'ar')).toBe('/ar');
     expect(equivalentLocalePath('/', 'ur')).toBe('/ur');

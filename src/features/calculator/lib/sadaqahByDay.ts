@@ -5,7 +5,7 @@
  * sadaqahByMonth.ts), so no Hijri conversion is needed here — just
  * `Date.getDay()` on the chosen date.
  *
- * English and French only — the app doesn't have a Wolof locale.
+ * English and French only.
  */
 
 export interface SadaqahDayText {
@@ -69,7 +69,7 @@ export const SADAQAH_BY_DAY: SadaqahDayGuidance[] = [
     day: 2,
     displayName: 'Tuesday',
     en: {
-      intro: 'Tuesday is recommended for sadaqah intended for healing and protection. Recommended forms of sadaqah include:',
+      intro: 'Tuesday is recommended for sadaqah given with the hope of healing and ease. Recommended forms of sadaqah include:',
       items: [
         'Giving food to children.',
         'Helping a person who is experiencing difficulties.',
@@ -81,7 +81,7 @@ export const SADAQAH_BY_DAY: SadaqahDayGuidance[] = [
       ],
     },
     fr: {
-      intro: "Le mardi est recommandé pour une sadaqah destinée à la guérison et à la protection. Les formes de sadaqah recommandées incluent :",
+      intro: "Le mardi est recommandé pour une sadaqah donnée dans l'espoir de la guérison et de l'aisance. Les formes de sadaqah recommandées incluent :",
       items: [
         'Donner de la nourriture aux enfants.',
         'Aider une personne qui traverse des difficultés.',
@@ -117,7 +117,7 @@ export const SADAQAH_BY_DAY: SadaqahDayGuidance[] = [
     day: 4,
     displayName: 'Thursday',
     en: {
-      intro: 'Thursday is considered favourable for sadaqah intended for opening the way to wealth, success, or removing blockages. Recommended acts include:',
+      intro: 'Thursday is considered a customary day for sadaqah given with the hope of ease, provision, or the lifting of difficulties. Recommended acts include:',
       items: [
         'Giving food to people in need.',
         'Giving money as sadaqah.',
@@ -128,7 +128,7 @@ export const SADAQAH_BY_DAY: SadaqahDayGuidance[] = [
       notes: [],
     },
     fr: {
-      intro: "Le jeudi est considéré comme favorable à la sadaqah destinée à ouvrir la voie à la richesse, à la réussite, ou à lever les blocages. Les actes recommandés incluent :",
+      intro: "Le jeudi est considéré comme un jour coutumier pour la sadaqah donnée dans l'espoir de l'aisance, de la subsistance, ou de la levée des difficultés. Les actes recommandés incluent :",
       items: [
         'Donner de la nourriture aux personnes dans le besoin.',
         'Donner de l\'argent en sadaqah.',

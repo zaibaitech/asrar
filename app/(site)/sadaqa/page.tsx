@@ -16,12 +16,12 @@ const META = {
   en: {
     title: 'Sadaqa Guide: by Weekday, Hijri Birth Month & Burj',
     description:
-      'Traditional West African sadaqah guidance in one place: the sadaqa of the day, sadaqah by your Hijri birth month (Tamxarit, Gamo, Korité, Tabaski…) and sadaqah for each of the 12 burūj.',
+      'A guide to sadaqah (voluntary charity): suggested forms for each weekday, for your Hijri birth month, and for each of the 12 burūj. For reflection, not prediction.',
   },
   fr: {
     title: 'Guide de la sadaqa : par jour, mois hégirien et burj',
     description:
-      'Le sarax ouest-africain réuni en un seul guide : la sadaqa du jour, la sadaqah selon votre mois hégirien de naissance (Tamxarit, Gamo, Korité, Tabaski…) et la sadaqah des 12 burūj.',
+      'Un guide de la sadaqah (charité volontaire) : des formes suggérées pour chaque jour de la semaine, pour votre mois hégirien de naissance, et pour chacun des 12 burūj. Pour la réflexion, non la prédiction.',
   },
 };
 
@@ -42,7 +42,7 @@ const COPY = {
   en: {
     h1: 'Sadaqa Guide — By Day of the Week, Hijri Birth Month and Burj',
     intro1:
-      'Sadaqah, voluntary charity, can be given at any time and in any amount. Many Muslims make a habit of giving on Friday (Jumuʿa), and in West African (Senegalese / Wolof) practice — sarax — particular forms of sadaqah are also suggested for each weekday, for the Hijri month you were born in, and for your burj.',
+      'Sadaqah, voluntary charity, can be given at any time and in any amount. Many Muslims make a habit of giving on Friday (Jumuʿa). This guide also gathers customary suggestions for each weekday, for the Hijri month you were born in, and for your burj.',
     intro2:
       'This guide gathers the three in one place, using the same data as the Asrār calculators. Use whichever applies to you, and remember that the best sadaqah is the one given sincerely and regularly.',
     note: 'For reflection and education, not prediction or a promise of outcomes; Allah alone knows the unseen.',
@@ -51,17 +51,17 @@ const COPY = {
     dayLink: "See today's sadaqa →",
     monthTitle: 'Sadaqa by Hijri birth month',
     monthIntro:
-      'Enter your Gregorian date of birth to find the Hijri (Islamic) month you were born in. Wolof names are shown where they are commonly used (Tamxarit, Gamo, Korité, Tabaski…).',
+      'Enter your Gregorian date of birth to find the Hijri (Islamic) month you were born in, and see the sadaqah suggested for that month.',
     burjTitle: 'Sadaqa by burj',
     burjIntro:
-      'Each of the twelve burūj has its own traditional sadaqah, according to the teachings of Serigne Mahdiou Niane (with companion videos in Wolof inside the app). Not sure of your burj? Find it from your name and your mother\'s name.',
+      'Each of the twelve burūj has its own customary sadaqah. Not sure of your burj? Find it from your name and your mother\'s name.',
     burjLink: "Find your burj from your name & mother's name →",
     bestDay: 'Suggested day',
     faqTitle: 'Frequently asked questions',
     faqs: [
       {
-        q: 'What is sarax?',
-        a: 'Sarax is the Wolof word for sadaqah (voluntary charity). In Senegalese and wider West African practice it is often given in specific forms — water, food, clothes, a ram, kola nuts — depending on the day, the person\'s birth month or their burj.',
+        q: 'What is sadaqah?',
+        a: 'Sadaqah is voluntary charity given for the sake of Allah. It can take many forms — water, food, clothes, or money — and may be given at any time. This guide offers customary suggestions by weekday, birth month and burj; they are not obligations.',
       },
       {
         q: 'How do I find my Hijri birth month?',
@@ -77,7 +77,7 @@ const COPY = {
       },
       {
         q: 'Does giving this sadaqah guarantee a result?',
-        a: 'No. Sadaqah is given for the sake of Allah. The intentions mentioned (blessing, protection, ease, provision) are hopes placed with Allah, not promised outcomes.',
+        a: 'No. Sadaqah is given for the sake of Allah. The intentions mentioned (blessing, ease, provision) are hopes placed with Allah, not promised outcomes.',
       },
     ] as FaqItem[],
     relatedTitle: 'Related',
@@ -92,7 +92,7 @@ const COPY = {
   fr: {
     h1: 'Guide de la sadaqa — par jour de la semaine, mois hégirien de naissance et burj',
     intro1:
-      "La sadaqah, l'aumône volontaire, peut se donner à tout moment et en toute quantité. Beaucoup de musulmans prennent l'habitude de donner le vendredi (Jumuʿa) ; dans la pratique ouest-africaine (sénégalaise / wolof) — le sarax — des formes précises de sadaqah sont aussi suggérées pour chaque jour de la semaine, pour le mois hégirien de naissance et pour chaque burj.",
+      "La sadaqah, la charité volontaire, peut se donner à tout moment et en toute quantité. Beaucoup de musulmans prennent l'habitude de donner le vendredi (Jumuʿa). Ce guide rassemble aussi des suggestions coutumières pour chaque jour de la semaine, pour le mois hégirien de naissance et pour chaque burj.",
     intro2:
       "Ce guide réunit les trois, à partir des mêmes données que les calculateurs Asrār. Suivez celle qui vous concerne, en gardant à l'esprit que la meilleure sadaqah est celle donnée avec sincérité et régularité.",
     note: "Pour la réflexion et l'éducation, sans prédiction ni promesse de résultat ; Allah seul connaît l'invisible.",
@@ -101,17 +101,17 @@ const COPY = {
     dayLink: 'Voir la sadaqa du jour →',
     monthTitle: 'Sadaqa par mois hégirien de naissance',
     monthIntro:
-      "Entrez votre date de naissance grégorienne pour trouver votre mois hégirien (islamique) de naissance. Les noms wolof sont indiqués lorsqu'ils sont courants (Tamxarit, Gamo, Korité, Tabaski…).",
+      "Entrez votre date de naissance grégorienne pour trouver votre mois hégirien (islamique) de naissance, et voir la sadaqah suggérée pour ce mois.",
     burjTitle: 'Sadaqa par burj',
     burjIntro:
-      "Chacun des douze burūj a sa sadaqah traditionnelle, selon les enseignements de Serigne Mahdiou Niane (avec des vidéos en wolof dans l'application). Vous ne connaissez pas votre burj ? Trouvez-le avec votre nom et celui de votre mère.",
+      "Chacun des douze burūj a sa sadaqah coutumière. Vous ne connaissez pas votre burj ? Trouvez-le avec votre nom et celui de votre mère.",
     burjLink: 'Trouver votre burj par votre nom et celui de votre mère →',
     bestDay: 'Jour conseillé',
     faqTitle: 'Questions fréquentes',
     faqs: [
       {
-        q: "Qu'est-ce que le sarax ?",
-        a: "Sarax est le mot wolof pour la sadaqah (aumône volontaire). Au Sénégal et en Afrique de l'Ouest, elle est souvent donnée sous des formes précises — eau, nourriture, vêtements, bélier, noix de cola — selon le jour, le mois de naissance ou le burj de la personne.",
+        q: "Qu'est-ce que la sadaqah ?",
+        a: "La sadaqah est une charité volontaire donnée pour Allah. Elle peut prendre bien des formes — eau, nourriture, vêtements ou argent — et se donner à tout moment. Ce guide propose des suggestions coutumières selon le jour, le mois de naissance et le burj ; ce ne sont pas des obligations.",
       },
       {
         q: 'Comment connaître mon mois hégirien de naissance ?',
@@ -127,7 +127,7 @@ const COPY = {
       },
       {
         q: 'Cette sadaqah garantit-elle un résultat ?',
-        a: "Non. La sadaqah se donne pour Allah. Les intentions mentionnées (bénédiction, protection, facilité, subsistance) sont des espoirs remis à Allah, pas des résultats promis.",
+        a: "Non. La sadaqah se donne pour Allah. Les intentions mentionnées (bénédiction, facilité, subsistance) sont des espoirs remis à Allah, pas des résultats promis.",
       },
     ] as FaqItem[],
     relatedTitle: 'Voir aussi',
