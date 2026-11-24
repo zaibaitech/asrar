@@ -5,6 +5,7 @@ import { useAbjad } from '../contexts/AbjadContext';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Globe2 } from 'lucide-react';
 import { useServerText } from '../features/calculator/i18n/CalculatorTextContext';
+import { ABJAD_SYSTEM_SELECTOR_ID } from '../lib/abjadSystemUsedCopy';
 
 /**
  * The one app-wide Abjad system switch. Every calculator reads the same
@@ -23,7 +24,7 @@ export function AbjadSystemSelector({ compact = false, showNote = true }: { comp
 
   if (compact) {
     const toggle = (
-      <div className="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 rounded-lg p-2" title={showNote ? undefined : note} data-testid="abjad-system-selector">
+      <div id={ABJAD_SYSTEM_SELECTOR_ID} className="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 rounded-lg p-2" title={showNote ? undefined : note} data-testid="abjad-system-selector">
         <button
           type="button"
           aria-pressed={system === 'Maghribi'}
@@ -60,7 +61,7 @@ export function AbjadSystemSelector({ compact = false, showNote = true }: { comp
   }
 
   return (
-    <div data-testid="abjad-system-selector" className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 rounded-lg p-4 border border-indigo-200 dark:border-indigo-800">
+    <div id={ABJAD_SYSTEM_SELECTOR_ID} data-testid="abjad-system-selector" className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 rounded-lg p-4 border border-indigo-200 dark:border-indigo-800">
       <div className="flex items-center justify-between gap-4 flex-wrap">
         <div className="flex items-center gap-3">
           <Globe2 className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />

@@ -11,6 +11,7 @@ import { COMPAT_THEME, COMPAT_TINTS } from '../constants/compatibilityTheme';
 import { SoulConnectionRing } from './SoulConnectionRing';
 import { useAbjad } from '../contexts/AbjadContext';
 import { urduToArabicLetters } from '../lib/urduLetters';
+import { AbjadSystemUsedNote } from './AbjadSystemUsedNote';
 
 interface SoulConnectionViewProps {
   result: SoulConnectionResult;
@@ -116,6 +117,7 @@ export function SoulConnectionView({ result, language = 'en', initialContext }: 
           <NameCard arabic={result.person1.arabicName} latin={result.person1.name} value={result.person1.kabir} />
           <div aria-hidden="true" className="text-xl" style={{ color: COMPAT_THEME.indigo }}>۞</div>
           <NameCard arabic={result.person2.arabicName} latin={result.person2.name} value={result.person2.kabir} />
+          <AbjadSystemUsedNote className="basis-full text-center mt-1" />
         </section>
 
         {/* The Abjad dial */}
