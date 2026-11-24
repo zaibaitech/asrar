@@ -1618,16 +1618,16 @@
         "lifetime": {
           "traditional": {
             "en": "Goat with some clothes and 4 coins of money (Néént dërëm in Wolof)",
-            "fr": "Chèvre avec quelques vêtements et 4 pièces de monnaie (Néént dërëm en Wolof)",
-            "ar": "عنزة مع بعض الملابس و4 قطع نقدية (بالولوفية: نينت ديريم)",
+            "fr": "Bouc avec quelques vêtements et 4 pièces de monnaie (Néént dërëm en Wolof)",
+            "ar": "تيس مع بعض الملابس و4 قطع نقدية (بالولوفية: نينت ديريم)",
             "ur": "بکرا، کچھ کپڑوں اور 4 سکّوں کے ساتھ (وولوف: نینت دیریم)"
           },
           "buruj_sadaqa": {
             "element": "water",
             "sacrifice": {
               "en": "Goat with some clothes and 4 coins of money (Néént dërëm)",
-              "fr": "Chèvre avec quelques vêtements et 4 pièces de monnaie (Néént dërëm)",
-              "ar": "ماعز مع بعض الثياب و4 قطع نقدية (بالولوفية: نينت ديريم)",
+              "fr": "Bouc avec quelques vêtements et 4 pièces de monnaie (Néént dërëm)",
+              "ar": "تيس مع بعض الثياب و4 قطع نقدية (بالولوفية: نينت ديريم)",
               "ur": "بکرا، کچھ کپڑوں اور 4 سکّوں کے ساتھ (وولوف: نینت دیریم)"
             },
             "best_day": {
@@ -1648,7 +1648,7 @@
               "All performed with sincere intention"
             ],
             "fr": [
-              "Une chèvre complète et en bonne santé (n'importe quelle couleur)",
+              "Un bouc complet et en bonne santé (n'importe quelle couleur)",
               "Plusieurs articles vestimentaires (modestes et appropriés)",
               "4 pièces ou monnaie (Néént dërëm - symbolique des quatre éléments et du flux de l'eau)",
               "Viande distribuée parmi les croyants et les pauvres",
@@ -1657,7 +1657,7 @@
               "Tout effectué avec intention sincère"
             ],
             "ar": [
-              "عنزة واحدة كاملة وسليمة (بأي لون)",
+              "تيس واحد كامل وسليم (بأي لون)",
               "عدة قطع من الملابس (محتشمة ومناسبة)",
               "4 قطع نقدية أو عملة (بالولوفية: نينت ديريم — رمز للعناصر الأربعة وانسياب الماء)",
               "توزَّع اللحوم بين المؤمنين والفقراء",
@@ -1707,8 +1707,8 @@
           },
           "significance": {
             "en": "In this tradition it is mentioned as a spiritual milestone offered to seek emotional balance for the Water element. Through it one hopes from Allah for balance and boundaries while remaining compassionate, and for openings in sustenance. The combination of elements (goat, cloth, 4 coins) is mentioned in these symbols as a sign of hoping for Allah's protection and the flow of water energy, not as a promise of complete protection.",
-            "fr": "Dans cette tradition, elle est mentionnée comme un jalon spirituel offert pour demander l'équilibre émotionnel pour l'élément Eau. On y espère d'Allah l'équilibre et des limites tout en restant compatissant, ainsi que des ouvertures dans la subsistance. La combinaison d'éléments (chèvre, tissu, 4 pièces) est mentionnée dans ces symboles comme un signe d'espoir en la protection d'Allah et du flux de l'énergie de l'eau, et non comme une promesse de protection complète.",
-            "ar": "محطة روحية عميقة تُذكَر في هذا التقليد لطلب الاتزان العاطفي لعنصر الماء. ويُرجى بها من الله الاتزان والحدود مع بقاء الرحمة، وفتح أبواب الرزق. مزيج العناصر (العنزة والقماش والقطع النقدية الأربع) يُذكَر في هذه الرموز رمزًا لرجاء الحفظ من الله وانسياب طاقة الماء، لا حماية كاملة مضمونة.",
+            "fr": "Dans cette tradition, elle est mentionnée comme un jalon spirituel offert pour demander l'équilibre émotionnel pour l'élément Eau. On y espère d'Allah l'équilibre et des limites tout en restant compatissant, ainsi que des ouvertures dans la subsistance. La combinaison d'éléments (bouc, tissu, 4 pièces) est mentionnée dans ces symboles comme un signe d'espoir en la protection d'Allah et du flux de l'énergie de l'eau, et non comme une promesse de protection complète.",
+            "ar": "محطة روحية عميقة تُذكَر في هذا التقليد لطلب الاتزان العاطفي لعنصر الماء. ويُرجى بها من الله الاتزان والحدود مع بقاء الرحمة، وفتح أبواب الرزق. مزيج العناصر (التيس والقماش والقطع النقدية الأربع) يُذكَر في هذه الرموز رمزًا لرجاء الحفظ من الله وانسياب طاقة الماء، لا حماية كاملة مضمونة.",
             "ur": "ایک گہرا روحانی سنگِ میل، جو روایت میں آبی عنصر کے لیے جذباتی توازن اللہ سے طلب کرنے کا ذریعہ سمجھا جاتا ہے۔ اس سے اللہ سے توازن اور حدود، ہمدردی کے ساتھ، اور رزق کے دروازے امید کیے جاتے ہیں۔ عناصر کا امتزاج (بکرا، کپڑا، 4 سکّے) اللہ سے حفظ کی امید کی علامت ہے، نہ کہ مکمل حفاظت کا وعدہ۔"
           }
         }
@@ -3347,8 +3347,8 @@
         "lifetime": {
           "traditional": {
             "en": "Red goat, one-eighth of a mithqāl gold (sumun mithqāl az-zahab ≈ 0.531g) OR money equivalent",
-            "fr": "Chèvre rouge, un huitième de mithqāl d'or (sumun mithqāl az-zahab ≈ 0,531g) OU équivalent monétaire",
-            "ar": "عنزة حمراء، ثمن مثقال ذهب (ثُمُن مثقال الذهب ≈ 0.531 جرام) أو ما يعادله من المال",
+            "fr": "Bouc rouge, un huitième de mithqāl d'or (sumun mithqāl az-zahab ≈ 0,531g) OU équivalent monétaire",
+            "ar": "تيس أحمر، ثمن مثقال ذهب (ثُمُن مثقال الذهب ≈ 0.531 جرام) أو ما يعادله من المال",
             "ur": "سرخ بکرا، ایک مثقال سونے کا آٹھواں حصہ (ثُمنِ مثقال، تقریباً 0.531 گرام) یا اس کے برابر رقم"
           },
           "components": {
@@ -3363,9 +3363,9 @@
               "Done with sincere niyyah to please Allah"
             ],
             "fr": [
-              "Une chèvre rouge complète (symbolisant la transformation et le pouvoir)",
+              "Un bouc rouge complet (symbolisant la transformation et le pouvoir)",
               "Un huitième d'un mithqāl d'or (environ 0,531 grammes) OU son équivalent monétaire",
-              "La chèvre est choisie en bonne santé et de bonne qualité",
+              "Le bouc est choisi en bonne santé et de bonne qualité",
               "Viande distribuée largement dans la communauté",
               "Or/argent donné en sadaqah aux nécessiteux",
               "Prioriser ceux qui traversent des transitions difficiles",
@@ -3373,9 +3373,9 @@
               "Fait avec niyyah sincère pour plaire à Allah"
             ],
             "ar": [
-              "عنزة حمراء كاملة (ترمز إلى التحول والقوة)",
+              "تيس أحمر كامل (يرمز إلى التحول والقوة)",
               "ثُمُن مثقال من الذهب (حوالي 0.531 جرام) أو ما يعادله من المال",
-              "تُختار عنزة سليمة وذات جودة جيدة",
+              "يُختار تيسٌ سليمٌ وذو جودة جيدة",
               "توزيع اللحم على نطاق واسع بين أفراد المجتمع",
               "إعطاء الذهب/المال صدقة للمحتاجين",
               "إعطاء الأولوية لمن يمرون بانتقالات صعبة",
@@ -3427,8 +3427,8 @@
             "element": "water",
             "sacrifice": {
               "en": "Red goat, one-eighth of a mithqāl gold (sumun mithqāl az-zahab ≈ 0.531g) OR money equivalent",
-              "fr": "Chèvre rouge, un huitième de mithqāl d'or (sumun mithqāl az-zahab ≈ 0,531g) OU équivalent monétaire",
-              "ar": "عنزة حمراء، ثمن مثقال ذهب (ثُمُن مثقال الذهب ≈ 0.531 جرام) أو ما يعادله من المال",
+              "fr": "Bouc rouge, un huitième de mithqāl d'or (sumun mithqāl az-zahab ≈ 0,531g) OU équivalent monétaire",
+              "ar": "تيس أحمر، ثمن مثقال ذهب (ثُمُن مثقال الذهب ≈ 0.531 جرام) أو ما يعادله من المال",
               "ur": "سرخ بکرا، ایک مثقال سونے کا آٹھواں حصہ (ثُمنِ مثقال، تقریباً 0.531 گرام) یا اس کے برابر رقم"
             },
             "zodiac": {
@@ -3446,15 +3446,15 @@
             },
             "note": {
               "en": "The red goat symbolizes Scorpio's transformative power, while Capricorn represents the structured manifestation of that transformation",
-              "fr": "La chèvre rouge symbolise le pouvoir transformateur du Scorpion, tandis que le Capricorne représente la manifestation structurée de cette transformation",
-              "ar": "العنزة الحمراء ترمز إلى قوة العقرب التحويلية، بينما يمثل الجدي التجلي المنظّم لذلك التحول",
+              "fr": "Le bouc rouge symbolise le pouvoir transformateur du Scorpion, tandis que le Capricorne représente la manifestation structurée de cette transformation",
+              "ar": "التيس الأحمر يرمز إلى قوة العقرب التحويلية، بينما يمثل الجدي التجلي المنظّم لذلك التحول",
               "ur": "سرخ بکرا عقرب کی تبدیلی کی قوت کی علامت ہے، جبکہ جدی اس تبدیلی کے منظم اظہار کی نمائندگی کرتا ہے"
             }
           },
           "significance": {
             "en": "In this traditional practice, the red goat is mentioned as a symbol of the power of transformation associated with buruj 8 (Water-Scorpio). In this tradition, this buruj sadaqah is associated with major life transitions, leaving old patterns behind, deep inner reform, and turning obstacles into opportunities. The red color symbolizes the intensity and power of Scorpio water — death and renewal. The gold component (or monetary equivalent) represents the preciousness of transformation, and in these symbols is linked to Capricorn's earthly manifestation.",
-            "fr": "Dans cette pratique traditionnelle, la chèvre rouge est mentionnée comme un symbole du pouvoir de transformation associé au buruj 8 (Eau-Scorpion). Dans cette tradition, cette sadaqah buruj est associée aux grandes transitions de la vie, à l'abandon d'anciens schémas, à une réforme intérieure profonde et à la transformation des obstacles en opportunités. La couleur rouge symbolise l'intensité et le pouvoir de l'eau Scorpion — mort et renouvellement. Le composant or (ou équivalent monétaire) représente le caractère précieux de la transformation, et dans ces symboles il est lié à la manifestation terrestre du Capricorne.",
-            "ar": "تُذكَر المعزة الحمراء في هذه الممارسة التقليدية رمزًا لقوة التحوّل الخاصة بالبرج 8 (الماء-العقرب). في هذا التقليد، ترتبط صدقة هذا البرج بالانتقالات الكبرى في الحياة، وترك الأنماط القديمة، والإصلاح الداخلي العميق، وتحويل العوائق إلى فرص. ويرمز اللون الأحمر إلى شدّة ماء العقرب وقوته، أي الموت والتجدّد. ويمثل مكوّن الذهب (أو ما يعادله نقدًا) نفاسة التحوّل، ويُربَط في هذه الرموز بالتحقّق الأرضي لبرج الجدي.",
+            "fr": "Dans cette pratique traditionnelle, le bouc rouge est mentionné comme un symbole du pouvoir de transformation associé au buruj 8 (Eau-Scorpion). Dans cette tradition, cette sadaqah buruj est associée aux grandes transitions de la vie, à l'abandon d'anciens schémas, à une réforme intérieure profonde et à la transformation des obstacles en opportunités. La couleur rouge symbolise l'intensité et le pouvoir de l'eau Scorpion — mort et renouvellement. Le composant or (ou équivalent monétaire) représente le caractère précieux de la transformation, et dans ces symboles il est lié à la manifestation terrestre du Capricorne.",
+            "ar": "يُذكَر التيس الأحمر في هذه الممارسة التقليدية رمزًا لقوة التحوّل الخاصة بالبرج 8 (الماء-العقرب). في هذا التقليد، ترتبط صدقة هذا البرج بالانتقالات الكبرى في الحياة، وترك الأنماط القديمة، والإصلاح الداخلي العميق، وتحويل العوائق إلى فرص. ويرمز اللون الأحمر إلى شدّة ماء العقرب وقوته، أي الموت والتجدّد. ويمثل مكوّن الذهب (أو ما يعادله نقدًا) نفاسة التحوّل، ويُربَط في هذه الرموز بالتحقّق الأرضي لبرج الجدي.",
             "ur": "اس روایتی عمل میں سرخ بکرے کو برج 8 (آبی-عقرب) سے جوڑی گئی تبدیلی کی قوت کی علامت کہا جاتا ہے۔ اس روایت میں اس برجی صدقے کو زندگی کی بڑی تبدیلیوں، پرانے انداز پیچھے چھوڑنے، گہری باطنی اصلاح اور رکاوٹوں کو مواقع میں بدلنے سے جوڑا جاتا ہے۔ سرخ رنگ عقربی پانی کی شدت اور قوت — موت اور تجدید — کی علامت ہے۔ سونے کا حصہ (یا اس کے برابر رقم) تبدیلی کی قدر و قیمت کا اظہار ہے، اور ان علامات میں جدی کے زمینی اظہار سے جوڑا جاتا ہے۔"
           }
         }
