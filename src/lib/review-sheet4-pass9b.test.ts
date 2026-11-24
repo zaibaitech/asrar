@@ -54,7 +54,23 @@ describe('Pass 9b follow-ups', () => {
   it('Pass 9b reviewed (review 4): L1, A2, B4, B5 corrected, optional B3 applied; 2 Arabic confirmed; zero drafts remain', () => {
     const p = status.pass9b as { en: string; ur: string; status: string }[];
     expect(p).toHaveLength(13);
-    for (const e of p) { expect(ur[e.en], e.en).toBe(e.ur); expect(e.status).toMatch(/^reviewed/); }
+    const supersededSadaqahEn = new Set(
+      p.filter((e) =>
+        e.en.startsWith('The red goat represents the blood of life') ||
+        e.en.startsWith('This is the completion buruj (12th)'),
+      ).map((e) => e.en),
+    );
+    for (const e of p) {
+      expect(e.status).toMatch(/^reviewed/);
+      if (supersededSadaqahEn.has(e.en)) {
+        // Catalog values were updated so a DOM match cannot revive retired wording.
+        expect(ur[e.en], e.en).toBeTruthy();
+        expect(ur[e.en]).not.toContain('زندگی کے خون');
+        expect(ur[e.en]).not.toContain('برکتوں کو بڑھاتی');
+      } else {
+        expect(ur[e.en], e.en).toBe(e.ur);
+      }
+    }
     expect(p.filter((e) => e.status === 'reviewed-corrected')).toHaveLength(3);
     expect(p.filter((e) => e.status === 'reviewed-corrected (optional)')).toHaveLength(1);
     const pass9bAr = Object.values(arFixes).filter((e) => e.id.endsWith('(pass 9b)'));
@@ -88,6 +104,9 @@ describe('Pass 9b follow-ups', () => {
     expect(ur[k]).toContain('الواح');
     expect(status.sf3.status).toBe('reviewed');
     const prev = Object.keys(ur).find((x) => x.startsWith('In the numerological tradition, 10 is the number'))!;
-    expect(ur[prev]).toBe(status.sf3.ur);
+    // Old English key kept so a DOM match cannot revive "Ten Commandments" wording.
+    expect(ur[prev]).toBe(ur[k]);
+    expect(ur[prev]).toContain('الواح');
+    expect(ur[prev]).not.toContain('دس احکام');
   });
 });
