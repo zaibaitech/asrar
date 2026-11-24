@@ -37,6 +37,8 @@ export const LOCALIZED_PATHS: readonly string[] = [
   '/best-day-for/travel',
   '/best-day-for/moving-home',
   '/best-day-for/business',
+  '/about',
+  '/methodology',
 ];
 
 const LOCALIZED_SET = new Set(LOCALIZED_PATHS);
@@ -84,6 +86,8 @@ export const AR_PATHS: Readonly<Record<string, string>> = {
   '/planetary-hours': '/ar/planetary-hours',
   '/name-and-mother-burj': '/ar/name-and-mother-burj',
   '/sadaqa-of-the-day': '/ar/sadaqa-of-the-day',
+  '/about': '/ar/about',
+  '/methodology': '/ar/methodology',
 };
 
 /**
@@ -183,6 +187,8 @@ export const UR_PATHS: Readonly<Record<string, string>> = {
   '/planetary-hours': '/ur/planetary-hours',
   '/planet-of-the-day': '/ur/planet-of-the-day',
   '/ikhtiyarat': '/ur/ikhtiyarat',
+  '/about': '/ur/about',
+  '/methodology': '/ur/methodology',
 };
 
 /** '/ur/abjad' -> '/abjad', '/ur' -> '/'; null if the path is not under /ur. */
@@ -210,6 +216,8 @@ export const INDEXABLE_UR_PATHS: readonly string[] = [
   '/planetary-hours',
   '/planet-of-the-day',
   '/ikhtiyarat',
+  '/about',
+  '/methodology',
 ];
 
 /** True when the EN path's Urdu page is on the allow-list. */

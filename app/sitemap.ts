@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { PUBLIC_TOOLS, absoluteUrl } from '../src/lib/siteRoutes';
+import { PUBLIC_TOOLS, INFO_PAGES, absoluteUrl } from '../src/lib/siteRoutes';
 import { COMMON_NAMES } from '../src/lib/names/commonNames';
 import { NAME_PAGE_PATHS } from '../src/lib/names/seo';
 import { LOCALIZED_PATHS, arabicUrl, hreflangLanguages, indexableUrduUrl, localizedUrl } from '../src/lib/i18nRoutes';
@@ -28,5 +28,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Keep /ramadan on the site, but out of the sitemap until it has real indexable copy.
   const tools = PUBLIC_TOOLS.filter((tool) => tool.path !== '/ramadan');
-  return [...entry('/', 1), ...tools.flatMap((tool) => entry(tool.path, 0.8)), ...namePages];
+  const infoPages = INFO_PAGES.flatMap((page) => entry(page.path, 0.6));
+  return [...entry('/', 1), ...tools.flatMap((tool) => entry(tool.path, 0.8)), ...namePages, ...infoPages];
 }

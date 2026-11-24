@@ -142,3 +142,17 @@ export const PUBLIC_TOOLS: PublicTool[] = [
     descriptionFr: "Suivez votre dhikr : Istighfār, Ṣalawāt, Noms divins et la pratique des 201 Noms prophétiques.",
   },
 ];
+
+/** Information pages: EN/FR/AR/UR are indexable (hreflang and sitemap). */
+export const INFO_PAGES: readonly { path: string; name: string; description: string }[] = [
+  {
+    path: '/about',
+    name: 'About Asrār',
+    description: 'What Asrār is, who builds it, and the reflection-not-prediction stance.',
+  },
+  {
+    path: '/methodology',
+    name: 'Methodology',
+    description: 'How the Abjad, burj, planetary hours, manāzil, ikhtiyārāt and sadaqah tools work.',
+  },
+];

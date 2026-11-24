@@ -17,7 +17,9 @@ export function HomeJsonLd() {
         '@type': 'Organization',
         '@id': orgId,
         name: 'Asrār (asrar.app)',
-        url: SITE_URL,
+        url: absoluteUrl('/about'),
+        description:
+          'Asrār (asrar.app) is a free web app of reflective tools from the Islamic esoteric tradition, built by Zaibai Tech. For learning and reflection, not prediction.',
         logo: absoluteUrl('/icons/icon-512x512.png'),
         sameAs: [FACEBOOK_PAGE_URL],
       },

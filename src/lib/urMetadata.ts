@@ -11,6 +11,7 @@ import type { Metadata } from 'next';
 import { absoluteUrl } from './siteRoutes';
 import { UR_PATHS, hreflangLanguages, isIndexableUrEnPath } from './i18nRoutes';
 import { ogImageUrl, ogKeyForPath, OG_SIZE } from './og/urls';
+import { ABOUT_META, METHODOLOGY_META } from './infoPageCopy';
 
 export interface UrMeta {
   title: { en: string; ur: string };
@@ -88,6 +89,14 @@ export const UR_META: Readonly<Record<string, UrMeta>> = {
       en: "Suitable dates for nikāḥ, travel, moving home and business according to the traditional science of ikhtiyārāt: the day's ruler, the planetary hour and the lunar mansion. For reflection alongside istikhāra and tawakkul.",
       ur: 'نکاح، سفر، نئے گھر میں منتقلی اور کاروبار کے لیے روایتی علمِ اختیارات کے مطابق مناسب تاریخیں۔ استخارے اور توکل کے ساتھ غور و فکر کے لیے۔',
     },
+  },
+  '/about': {
+    title: { en: ABOUT_META.en.title, ur: ABOUT_META.ur.title },
+    description: { en: ABOUT_META.en.description, ur: ABOUT_META.ur.description },
+  },
+  '/methodology': {
+    title: { en: METHODOLOGY_META.en.title, ur: METHODOLOGY_META.ur.title },
+    description: { en: METHODOLOGY_META.en.description, ur: METHODOLOGY_META.ur.description },
   },
 };
 
