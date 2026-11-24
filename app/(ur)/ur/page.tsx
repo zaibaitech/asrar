@@ -34,7 +34,7 @@ export default function Page() {
             ))}
             <li>
               <a href="/ur/about" className="font-semibold text-indigo-700 dark:text-indigo-300 hover:underline">اسرار کا تعارف</a>
-              <p className="text-sm text-slate-600 dark:text-slate-400">ایپ کیا ہے، کس نے بنائی، اور غور و فکر بجائے پیش گوئی کا موقف۔</p>
+              <p className="text-sm text-slate-600 dark:text-slate-400">ایپ کیا ہے، کس نے بنائی، اور غور و فکر نہ کہ پیش گوئی کا موقف۔</p>
             </li>
             <li>
               <a href="/ur/methodology" className="font-semibold text-indigo-700 dark:text-indigo-300 hover:underline">طریقہ کار</a>
