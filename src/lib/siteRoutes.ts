@@ -143,7 +143,7 @@ export const PUBLIC_TOOLS: PublicTool[] = [
   },
 ];
 
-/** English-only information pages (no /fr, /ar or /ur mirrors yet). */
+/** Information pages: EN/FR/AR are indexable; /ur exists but stays noindex until review. */
 export const INFO_PAGES: readonly { path: string; name: string; description: string }[] = [
   {
     path: '/about',

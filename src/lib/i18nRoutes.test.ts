@@ -86,8 +86,8 @@ describe('/ar app mirror', () => {
     expect(stripArPrefix('/arabic')).toBeNull();
     expect(stripArPrefix('/abjad')).toBeNull();
   });
-  it('keeps the 4 dedicated Arabic landing pages out of the mirror', () => {
-    for (const p of ['/abjad', '/planetary-hours', '/name-and-mother-burj', '/sadaqa-of-the-day']) {
+  it('keeps dedicated Arabic landing pages out of the mirror', () => {
+    for (const p of Object.keys(AR_PATHS)) {
       expect(isArAppPath(p)).toBe(false);
       expect(arAppPath(p)).toBe(`/ar${p}`);
     }

@@ -16,8 +16,9 @@ const ROUTES = Object.keys(UR_PATHS);
 const URDU = /[؀-ۿ]/;
 
 describe('technical readiness of every public Urdu route', () => {
-  it('there are exactly 7 public Urdu routes, each with an Urdu title and description', () => {
-    expect(ROUTES.length).toBe(7);
+  it('there is a public Urdu route for each mapped path, each with an Urdu title and description', () => {
+    expect(ROUTES.length).toBe(Object.keys(UR_PATHS).length);
+    expect(ROUTES.length).toBe(9);
     expect(Object.keys(UR_META).sort()).toEqual([...ROUTES].sort());
     for (const p of ROUTES) { expect(UR_META[p].title.ur).toMatch(URDU); expect(UR_META[p].description.ur).toMatch(URDU); }
   });
@@ -59,8 +60,8 @@ describe('indexing controls: only the allow-listed /ur/abjad is indexable', () =
     }
   });
 
-  it('the Urdu routes are the only 7 route files and none is a private, shared-result or user-specific page', () => {
-    const files = ['page.tsx', 'abjad/page.tsx', 'compatibility/page.tsx', 'ikhtiyarat/page.tsx', 'name-and-mother-burj/page.tsx', 'planet-of-the-day/page.tsx', 'planetary-hours/page.tsx'];
+  it('the Urdu routes are the mapped route files and none is a private, shared-result or user-specific page', () => {
+    const files = ['page.tsx', 'abjad/page.tsx', 'compatibility/page.tsx', 'ikhtiyarat/page.tsx', 'name-and-mother-burj/page.tsx', 'planet-of-the-day/page.tsx', 'planetary-hours/page.tsx', 'about/page.tsx', 'methodology/page.tsx'];
     for (const f of files) expect(() => read(`app/(ur)/ur/${f}`), f).not.toThrow();
     for (const f of files) expect(read(`app/(ur)/ur/${f}`)).toMatch(/urduMetadata\(/);
   });

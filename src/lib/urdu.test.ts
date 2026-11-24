@@ -5,8 +5,8 @@ import { relatedToolHref } from '../components/seo/relatedTools';
 import catalog from '../../public/i18n/ur-ui.json';
 
 describe('Urdu (phase 1, noindex)', () => {
-  it('maps the 7 phase-1 pages', () => {
-    expect(Object.keys(UR_PATHS)).toHaveLength(7);
+  it('maps the public Urdu pages', () => {
+    expect(Object.keys(UR_PATHS)).toHaveLength(9);
     expect(UR_PATHS['/abjad']).toBe('/ur/abjad');
     expect(isUrPath('/ur')).toBe(true);
     expect(isUrPath('/ur/abjad')).toBe(true);

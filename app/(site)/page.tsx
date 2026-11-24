@@ -123,6 +123,18 @@ export default async function Home() {
                   <p className="text-sm text-slate-600 dark:text-slate-400">{tool.descriptionFr}</p>
                 </li>
               ))}
+              <li>
+                <a href="/fr/about" className="font-semibold text-indigo-700 dark:text-indigo-300 hover:underline">
+                  À propos d’Asrār
+                </a>
+                <p className="text-sm text-slate-600 dark:text-slate-400">Ce qu’est l’application, qui la conçoit, et la position « réflexion, non prédiction ».</p>
+              </li>
+              <li>
+                <a href="/fr/methodology" className="font-semibold text-indigo-700 dark:text-indigo-300 hover:underline">
+                  Méthodologie
+                </a>
+                <p className="text-sm text-slate-600 dark:text-slate-400">Comment fonctionnent les outils Abjad, burj, heures planétaires, manāzil, ikhtiyārāt et sadaqah.</p>
+              </li>
             </ul>
           </main>
         </HomeSeoShell>
