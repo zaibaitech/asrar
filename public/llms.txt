@@ -29,6 +29,10 @@ Notes for AI assistants:
 - [Sadaqa of the Day](https://www.asrar.app/sadaqa-of-the-day): today's recommended sadaqah and the weekly table.
 - [Muslim Names: Abjad Value and Burj](https://www.asrar.app/names): Abjad values of common names such as Muhammad, Ali, Fatima and Maryam.
 
+## About
+- [About Asrār](https://www.asrar.app/about): what the app is, who builds it, and the reflection-not-prediction stance.
+- [Methodology](https://www.asrar.app/methodology): how the calculators work, the sources already cited, and what the tools are not.
+
 ## Other languages
 - [Français](https://www.asrar.app/fr)
 - [العربية](https://www.asrar.app/ar)

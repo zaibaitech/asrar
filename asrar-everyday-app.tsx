@@ -657,8 +657,16 @@ export default function AsrarEveryday() {
             {/* Bottom Bar */}
             <div className="pt-6 border-t border-slate-200 dark:border-slate-700">
               <div className="flex justify-center items-center">
-                <p className="text-xs text-slate-500 dark:text-slate-400">
-                  © {new Date().getFullYear()} {language === 'fr' ? 'Tous droits réservés' : 'All rights reserved'}
+                <p className="text-xs text-slate-500 dark:text-slate-400 flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
+                  <span>© {new Date().getFullYear()} {language === 'fr' ? 'Tous droits réservés' : 'All rights reserved'}</span>
+                  <span aria-hidden="true">·</span>
+                  <a href="/about" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors hover:underline">
+                    {language === 'fr' ? 'À propos' : 'About'}
+                  </a>
+                  <span aria-hidden="true">·</span>
+                  <a href="/methodology" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors hover:underline">
+                    {language === 'fr' ? 'Méthodologie' : 'Methodology'}
+                  </a>
                 </p>
               </div>
             </div>

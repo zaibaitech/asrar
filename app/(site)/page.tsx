@@ -97,6 +97,8 @@ const SHELL_EN_EXTRA_LINKS: { href: string; name: string; description: string; l
   { href: '/names', name: 'Muslim Names: Abjad Value and Burj', description: 'Common names such as Muhammad, Ali, Fatima and Maryam.' },
   { href: '/99-names-of-allah', name: 'The 99 Names of Allah', description: 'Arabic, meaning and Abjad value of each Name.' },
   { href: '/fr', name: 'Asrār en français', description: 'Tous les outils, avec leurs explications en français.', lang: 'fr' },
+  { href: '/about', name: 'About Asrār', description: 'What the app is, who builds it, and the reflection-not-prediction stance.' },
+  { href: '/methodology', name: 'Methodology', description: 'How the Abjad, burj, planetary hours, manāzil, ikhtiyārāt and sadaqah tools work.' },
 ];
 
 export default async function Home() {
