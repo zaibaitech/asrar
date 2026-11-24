@@ -36,7 +36,7 @@ export const UR_META: Readonly<Record<string, UrMeta>> = {
     },
     description: {
       en: "Find your burj from the Abjad values of your name and your mother's (ammi's) name: element, temperament, blessed day, dhikr and sadaqa. A free calculator for reflection, not prediction.",
-      ur: 'مفت کیلکولیٹر: اپنے نام اور امی کے نام کے ابجد اعداد سے برج، عنصر، مزاج، روایتی دن اور ذکر معلوم کریں۔ غور و فکر کے لیے، پیش گوئی نہیں۔',
+      ur: 'اپنے نام اور امی کے نام کے ابجد اعداد سے برج، عنصر، مزاج، روایتی دن اور ذکر معلوم کریں۔ غور و فکر کے لیے، پیش گوئی نہیں؛ غیب کا علم صرف اللہ کو ہے۔',
     },
   },
   '/compatibility': {
