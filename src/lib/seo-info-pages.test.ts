@@ -26,18 +26,18 @@ describe('About and Methodology information pages', () => {
     expect(wordCount(METHODOLOGY_LEAD)).toBeLessThanOrEqual(60);
   });
 
-  it('lists EN/FR/AR /about and /methodology in the sitemap, with lastModified, and keeps /ur out until review', () => {
+  it('lists EN/FR/AR/UR /about and /methodology in the sitemap, with lastModified and full hreflang', () => {
     const urls = sitemap().map((e) => e.url);
     expect(INFO_PAGES.map((p) => p.path).sort()).toEqual(['/about', '/methodology']);
     for (const path of ['/about', '/methodology']) {
       expect(LOCALIZED_PATHS).toContain(path);
       expect(AR_PATHS[path]).toBe(`/ar${path}`);
       expect(UR_PATHS[path]).toBe(`/ur${path}`);
-      expect(INDEXABLE_UR_PATHS).not.toContain(path);
+      expect(INDEXABLE_UR_PATHS).toContain(path);
       expect(urls).toContain(`https://www.asrar.app${path}`);
       expect(urls).toContain(`https://www.asrar.app/fr${path}`);
       expect(urls).toContain(`https://www.asrar.app/ar${path}`);
-      expect(urls).not.toContain(`https://www.asrar.app/ur${path}`);
+      expect(urls).toContain(`https://www.asrar.app/ur${path}`);
       const entry = sitemap().find((e) => e.url === `https://www.asrar.app${path}`);
       expect(entry?.lastModified, path).toBeInstanceOf(Date);
       const langs = hreflangLanguages(path);
@@ -45,7 +45,7 @@ describe('About and Methodology information pages', () => {
       expect(langs.fr).toContain(`/fr${path}`);
       expect(langs.ar).toContain(`/ar${path}`);
       expect(langs['x-default']).toBe(langs.en);
-      expect(langs).not.toHaveProperty('ur');
+      expect(langs.ur).toContain(`/ur${path}`);
     }
   });
 
@@ -107,6 +107,7 @@ describe('About and Methodology information pages', () => {
     expect(METHOD_COPY.en.sadaqaP2Parts.join(' ')).toMatch(/mother.s-name burj guidance/i);
     expect(METHOD_COPY.en.sadaqaP1).toMatch(/for reflection, not as a prediction/);
     expect(ABOUT_COPY.en.whatP1).toMatch(/voluntary charity for those in need/);
+    expect(JSON.stringify(ABOUT_COPY)).not.toMatch(/Edinburgh|Scotland|Édimbourg|Écosse|إدنبرة|أسكتلندا|ایڈنبرا|اسکاٹ لینڈ/);
     expect(localizeInfoHref('/about', 'fr')).toBe('/fr/about');
     expect(localizeInfoHref('/methodology', 'ar')).toBe('/ar/methodology');
     expect(localizeInfoHref('/methodology', 'ur')).toBe('/ur/methodology');

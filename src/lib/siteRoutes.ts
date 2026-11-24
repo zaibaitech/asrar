@@ -143,7 +143,7 @@ export const PUBLIC_TOOLS: PublicTool[] = [
   },
 ];
 
-/** Information pages: EN/FR/AR are indexable; /ur exists but stays noindex until review. */
+/** Information pages: EN/FR/AR/UR are indexable (hreflang and sitemap). */
 export const INFO_PAGES: readonly { path: string; name: string; description: string }[] = [
   {
     path: '/about',

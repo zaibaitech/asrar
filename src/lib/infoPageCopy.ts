@@ -152,7 +152,7 @@ export const ABOUT_COPY: Record<InfoLocale, AboutCopy> = {
     whatP2: 'The app is free to use. No account is required for the public calculators.',
     builtTitle: 'Who builds it',
     builtParts: [
-      'Asrār is built by Zaibai Tech (Zaibaitech Ltd), a UK company based in Edinburgh, Scotland. ',
+      'Asrār is built by Zaibai Tech (Zaibaitech Ltd), a UK company. ',
       { href: 'https://zaibaitech.com/', label: 'zaibaitech.com', external: true },
       ' is the company website.',
     ],
@@ -195,7 +195,7 @@ export const ABOUT_COPY: Record<InfoLocale, AboutCopy> = {
     whatP2: 'L’application est gratuite. Aucun compte n’est requis pour les calculateurs publics.',
     builtTitle: 'Qui la conçoit',
     builtParts: [
-      'Asrār est conçu par Zaibai Tech (Zaibaitech Ltd), une société britannique basée à Édimbourg, en Écosse. ',
+      'Asrār est conçu par Zaibai Tech (Zaibaitech Ltd), une société britannique. ',
       { href: 'https://zaibaitech.com/', label: 'zaibaitech.com', external: true },
       ' est le site de l’entreprise.',
     ],
@@ -238,7 +238,7 @@ export const ABOUT_COPY: Record<InfoLocale, AboutCopy> = {
     whatP2: 'التطبيق مجاني الاستعمال. ولا يُشترط إنشاء حساب لاستعمال الحاسبات العامة.',
     builtTitle: 'من يُعدّه',
     builtParts: [
-      'يُعدّ أسرار شركة Zaibai Tech (Zaibaitech Ltd)، وهي شركة بريطانية مقرها في إدنبرة بأسكتلندا. وموقع الشركة هو ',
+      'يُعدّ أسرار شركة Zaibai Tech (Zaibaitech Ltd)، وهي شركة بريطانية. وموقع الشركة هو ',
       { href: 'https://zaibaitech.com/', label: 'zaibaitech.com', external: true },
       '.',
     ],
@@ -281,7 +281,7 @@ export const ABOUT_COPY: Record<InfoLocale, AboutCopy> = {
     whatP2: 'ایپ استعمال کرنا مفت ہے۔ عوامی کیلکولیٹرز کے لیے اکاؤنٹ کی ضرورت نہیں۔',
     builtTitle: 'یہ کس نے بنایا',
     builtParts: [
-      'اسرار Zaibai Tech (Zaibaitech Ltd) نے بنایا ہے، جو ایڈنبرا، اسکاٹ لینڈ میں قائم ایک برطانوی کمپنی ہے۔ کمپنی کی ویب سائٹ ',
+      'اسرار Zaibai Tech (Zaibaitech Ltd) نے بنایا ہے، جو ایک برطانوی کمپنی ہے۔ کمپنی کی ویب سائٹ ',
       { href: 'https://zaibaitech.com/', label: 'zaibaitech.com', external: true },
       ' ہے۔',
     ],

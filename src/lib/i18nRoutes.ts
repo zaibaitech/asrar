@@ -216,6 +216,8 @@ export const INDEXABLE_UR_PATHS: readonly string[] = [
   '/planetary-hours',
   '/planet-of-the-day',
   '/ikhtiyarat',
+  '/about',
+  '/methodology',
 ];
 
 /** True when the EN path's Urdu page is on the allow-list. */
