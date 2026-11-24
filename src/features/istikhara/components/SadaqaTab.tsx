@@ -22,6 +22,10 @@ import {
   ZODIAC_SIGN_SYMBOL,
   type SadaqahForm,
 } from "../../../data/zodiacSadaqahData";
+import {
+  zodiacSadaqahInWolofLabel,
+  zodiacSadaqahWolofLine,
+} from "../../../lib/zodiacSadaqahWolofCopy";
 import { isBirthDateSadaqah } from "../sadaqahSource";
 import {
   EnhancedLifetimeOfferingSection,
@@ -36,9 +40,13 @@ interface SadaqaTabProps {
 
 // Card for a single traditional sadaqah practice (title/body/optional bullets)
 function TraditionFormCard({ form, language, colors }: { form: SadaqahForm; language: UiLang; colors: any }) {
+  const { uiLanguage } = useLanguage();
   return (
     <div className="p-4 bg-white/5 rounded-lg space-y-2">
       <h5 className="font-semibold text-white">{form.title[language]}</h5>
+      {form.wolof && (
+        <p className="text-xs leading-snug text-white/55">{zodiacSadaqahWolofLine(uiLanguage, form.wolof)}</p>
+      )}
       <p className="text-white/90 text-sm leading-relaxed">{form.body[language]}</p>
       {form.bullets && (
         <ul className="space-y-1.5 pt-1">
@@ -100,7 +108,7 @@ function ExpandableSection({
  * (same source as asrar-mobile), rendered with the existing sections.
  */
 export function SadaqaTab({ result }: SadaqaTabProps) {
-  const { language } = useLanguage();
+  const { language, uiLanguage } = useLanguage();
   const [expandedSections, setExpandedSections] = useState<string[]>([
     "general",
     "specific",
@@ -340,9 +348,15 @@ export function SadaqaTab({ result }: SadaqaTabProps) {
         onToggle={() => toggleSection("video")}
         colors={colors}
       >
-        <VideoEmbed videoId={tradition.videoId} title={`${tradition.en} — Sadaqah`} />
+        <div className="space-y-1.5">
+          <VideoEmbed videoId={tradition.videoId} title={`${tradition.en} — Sadaqah`} />
+          <p className="text-xs text-white/50">{zodiacSadaqahInWolofLabel(uiLanguage)}</p>
+        </div>
         {tradition.altVideoId && (
-          <VideoEmbed videoId={tradition.altVideoId} title={`${tradition.en} — Sadaqah (2)`} />
+          <div className="space-y-1.5">
+            <VideoEmbed videoId={tradition.altVideoId} title={`${tradition.en} — Sadaqah (2)`} />
+            <p className="text-xs text-white/50">{zodiacSadaqahInWolofLabel(uiLanguage)}</p>
+          </div>
         )}
         <p className="text-white/50 text-xs italic text-center">
           {language === "en"

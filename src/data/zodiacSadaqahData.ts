@@ -70,6 +70,8 @@ export interface SadaqahForm {
   title: LocalizedText;
   body: LocalizedText;
   bullets?: LocalizedList;
+  /** Wolof name, when the source already records one. Do not invent. */
+  wolof?: string;
 }
 
 export interface ZodiacTiming {
@@ -403,6 +405,7 @@ export const ZODIAC_SADAQAH: Record<ZodiacSignId, ZodiacSadaqahEntry> = {
       },
       {
         title: { en: 'Three Bowls of Cheb Yap', fr: 'Trois bols de Cheb Yap', ar: 'ثلاث أطباق من شب ياب' },
+        wolof: 'Cheb Yap',
         body: {
           en: 'Preparing three bowls of Cheb Yap — a Senegalese rice dish made with meat, similar to meat-based jollof rice — and giving the prepared food as sadaqah to people who can benefit from it.',
           fr: "Préparer trois bols de Cheb Yap — un plat sénégalais de riz à la viande, semblable à un riz jollof à la viande — et donner ce plat préparé en sadaqah à des personnes qui peuvent en bénéficier.",
@@ -603,6 +606,7 @@ export const ZODIAC_SADAQAH: Record<ZodiacSignId, ZodiacSadaqahEntry> = {
       },
       {
         title: { en: 'Three Bowls of Laakh', fr: 'Trois bols de laakh', ar: 'ثلاثة أطباق من اللاخ' },
+        wolof: 'laakh',
         body: {
           en: 'Preparing three bowls of laakh — a Wolof-style porridge traditionally prepared with a fermented or sour dairy component such as yogurt — and giving them to people who can benefit from the food.',
           fr: "Préparer trois bols de laakh — une bouillie de style wolof traditionnellement préparée avec un produit laitier fermenté ou acide tel que le yaourt — et les donner à des personnes qui peuvent bénéficier de cette nourriture.",
@@ -682,6 +686,7 @@ export const ZODIAC_SADAQAH: Record<ZodiacSignId, ZodiacSadaqahEntry> = {
       },
       {
         title: { en: 'Cowries — Petaw Sadaqah', fr: 'Cauris — Sadaqah du petaw', ar: 'صدقة الودع — بيتاو' },
+        wolof: 'petaw',
         body: {
           en: 'Giving cowries, known in Wolof as petaw — the small white cowrie shells traditionally used for decoration and in various cultural and spiritual practices. This form of sadaqah is considered special and sensitive within the tradition.',
           fr: "Donner des cauris, connus en wolof sous le nom de petaw — les petits coquillages blancs traditionnellement utilisés pour la décoration et dans diverses pratiques culturelles et spirituelles. Cette forme de sadaqah est considérée comme particulière et sensible au sein de la tradition.",

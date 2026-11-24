@@ -12,6 +12,7 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { ROUTE_LANG_HEADER, frPath, isArAppPath, isIndexableArAppPath, isIndexableUrPath, isLocalizedPath, isUrPath, stripArPrefix, stripFrPrefix } from './src/lib/i18nRoutes';
+import { applyAbjadRegionDefaultCookie } from './src/lib/abjad-region';
 
 const SUPPORTED_LANGUAGES = ['en', 'fr', 'ar'] as const;
 type Language = typeof SUPPORTED_LANGUAGES[number];
@@ -143,6 +144,10 @@ export function middleware(request: NextRequest) {
     maxAge: 60 * 60 * 24 * 365, // 1 year
     sameSite: 'lax',
   });
+
+  // Region default for the Abjad switch (system only; never the country).
+  // Skipped when the visitor already has an explicit preference cookie.
+  applyAbjadRegionDefaultCookie(request, response);
 
   return response;
 }

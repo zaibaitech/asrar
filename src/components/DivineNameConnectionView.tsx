@@ -5,6 +5,7 @@ import { SOUL_CONNECTION_SEVERITY_COLOR } from '../constants/soulConnectionArche
 import { DIVINE_NAME_RESONANCE_FRAMING } from '../constants/divineNameResonance';
 import { COMPAT_THEME, COMPAT_TINTS } from '../constants/compatibilityTheme';
 import { SoulConnectionRing } from './SoulConnectionRing';
+import { AbjadSystemUsedNote } from './AbjadSystemUsedNote';
 
 interface DivineNameConnectionViewProps {
   result: DivineNameConnectionResult;
@@ -70,6 +71,7 @@ export function DivineNameConnectionView({ result, language = 'en', compact = fa
           <div className="text-[12.5px] mt-0.5" style={{ color: COMPAT_THEME.muted }}>{divineName.transliteration}</div>
           <div className="font-technical font-bold text-[15px] mt-1.5" style={{ color: COMPAT_THEME.indigo }}>{divineName.abjadValue}</div>
         </div>
+        <AbjadSystemUsedNote className="basis-full text-center mt-1" />
       </section>
 
       <section className="text-center">

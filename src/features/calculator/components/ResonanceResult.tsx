@@ -8,6 +8,7 @@ import { computeDivineResonance } from '../lib/divineResonance';
 import { useAbjad } from '../../../contexts/AbjadContext';
 import { computeQuranResonance } from '../lib/quranResonance';
 import { InfoDisclosure } from './InfoDisclosure';
+import { AbjadSystemUsedNote } from '../../../components/AbjadSystemUsedNote';
 import type { CalculationType } from './calculatorTypes';
 import { useCalculatorTranslations, type CalculatorLocale } from '../i18n';
 
@@ -77,6 +78,7 @@ export function ResonanceResult({
             {motherName}
           </p>
         )}
+        <AbjadSystemUsedNote className="mt-2" />
       </div>
 
       {calcType === 'divineResonance' &&

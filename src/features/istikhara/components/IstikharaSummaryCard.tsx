@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useLanguage } from "../../../contexts/LanguageContext";
+import { AbjadSystemUsedNote } from "../../../components/AbjadSystemUsedNote";
 import { translations } from "../../../lib/translations";
 import { getCurrentLunarMansion, type CurrentMansion } from "../../../lib/lunarMansions";
 import type { IstikharaCalculationResult } from "../types";
@@ -537,6 +538,12 @@ export function IstikharaSummaryCard({ result }: IstikhSummaryCardProps) {
               </div>
             )}
           </div>
+
+          {result.calculationMethod !== 'birth-date' && result.combinedTotal > 0 && (
+            <div className="text-center -mt-2">
+              <AbjadSystemUsedNote variant="onDark" />
+            </div>
+          )}
 
           {/* Blessed Day Card */}
           <div className={`p-5 rounded-xl border-2 ${config.border} bg-gradient-to-br ${config.bgGradient} backdrop-blur-sm`}>

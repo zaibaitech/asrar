@@ -11,6 +11,11 @@ export type AbjadSystem = 'Maghribi' | 'Mashriqi';
 // Letter values: one shared table for the whole app (src/lib/abjad-maps.ts).
 export { ABJAD_MAGHRIBI, ABJAD_MASHRIQI } from '../lib/abjad-maps';
 import { ABJAD_MAGHRIBI, ABJAD_MASHRIQI, type AbjadSystemKey } from '../lib/abjad-maps';
+import {
+  readRegionAbjadDefault,
+  resolvePreferredAbjadSystem,
+  writeAbjadPrefCookie,
+} from '../lib/abjad-region';
 export type { AbjadSystemKey } from '../lib/abjad-maps';
 
 // ============================================================================
@@ -68,7 +73,7 @@ export const AbjadContext = createContext<AbjadContextType | undefined>(undefine
 
 type KeyValueStorage = Pick<Storage, 'getItem' | 'setItem'>;
 
-/** The remembered choice, or null when none is saved (→ the Maghribi default). */
+/** The remembered choice, or null when none is saved (→ region default, else Mashriqi). */
 export function loadSavedAbjadSystem(storage: KeyValueStorage | undefined): AbjadSystem | null {
   try {
     const saved = storage?.getItem(ABJAD_SYSTEM_STORAGE_KEY);
@@ -88,29 +93,39 @@ export function saveAbjadSystem(storage: KeyValueStorage | undefined, system: Ab
 }
 
 /**
- * One app-wide Abjad system. Maghribi is the default on every page and
- * locale; the user's choice is remembered in localStorage and every
- * calculator reads its letter table from here, so they all switch together.
+ * One app-wide Abjad system. The interactive default is the visitor's
+ * explicit choice (localStorage), else the region default (abjad_default
+ * cookie, set in middleware from the country header), else Mashriqi.
+ * The initial SSR value is Mashriqi so static pages stay cacheable and
+ * do not vary HTML by country. Every calculator reads its letter table
+ * from here, so they all switch together.
  */
 export function AbjadProvider({ children }: { children: ReactNode }) {
-  const [system, setSystemState] = useState<AbjadSystem>('Maghribi');
+  const [system, setSystemState] = useState<AbjadSystem>('Mashriqi');
 
-  // Load from localStorage on mount, and follow changes made in other tabs.
+  // Resolve after mount (localStorage + region cookie), and follow other tabs.
   useEffect(() => {
-    const saved = loadSavedAbjadSystem(window.localStorage);
-    if (saved) setSystemState(saved);
+    const applyResolved = (saved: AbjadSystem | null) => {
+      setSystemState(resolvePreferredAbjadSystem({
+        saved,
+        regionDefault: readRegionAbjadDefault(),
+      }));
+    };
+    applyResolved(loadSavedAbjadSystem(window.localStorage));
     const onStorage = (e: StorageEvent) => {
       if (e.key !== ABJAD_SYSTEM_STORAGE_KEY) return;
-      setSystemState(e.newValue === 'Mashriqi' ? 'Mashriqi' : 'Maghribi');
+      applyResolved(e.newValue === 'Maghribi' || e.newValue === 'Mashriqi' ? e.newValue : null);
     };
     window.addEventListener('storage', onStorage);
     return () => window.removeEventListener('storage', onStorage);
   }, []);
 
-  // Save to localStorage when changed
+  // Remember an explicit choice in localStorage and a pref cookie (so
+  // middleware stops writing a region default).
   const setSystem = (newSystem: AbjadSystem) => {
     setSystemState(newSystem);
     saveAbjadSystem(typeof window === 'undefined' ? undefined : window.localStorage, newSystem);
+    writeAbjadPrefCookie(newSystem);
   };
 
   // Get the appropriate Abjad mapping

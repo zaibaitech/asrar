@@ -48,6 +48,7 @@ import { transliterateLatinToArabic } from '../../lib/text-normalize';
 import { ArabicKeyboard } from '../../components/ArabicKeyboard';
 import { useAbjad } from '../../contexts/AbjadContext';
 import { AbjadSystemSelector } from '../../components/AbjadSystemSelector';
+import { AbjadSystemUsedNote } from '../../components/AbjadSystemUsedNote';
 import { analyzeRelationshipCompatibility, getElementFromAbjadTotal } from '../../utils/relationshipCompatibility';
 import { analyzeFourLayerCompatibility } from '../../utils/fourLayerCompatibility';
 import type { RelationshipCompatibility, FourLayerCompatibility } from '../../types/compatibility';
@@ -3085,6 +3086,10 @@ function DestinyResults({ results }: { results: any }) {
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div className="text-center -mt-4 mb-8">
+              <AbjadSystemUsedNote variant="onDark" />
             </div>
 
             {/* Life Station Section */}

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Star, Link2 } from 'lucide-react';
 import { Card } from './Card';
+import { AbjadSystemUsedNote } from '../../../components/AbjadSystemUsedNote';
 import { pick, ELEMENT_NAME, type Locale } from '../lib/i18nText';
 import { getLetterBreakdown, calculateSaghir } from '../lib/coreCalculations';
 import { getAbjadMap } from '../../../lib/abjad-maps';
@@ -109,6 +110,7 @@ export function CalculatorResult({
         <p className="text-sm font-semibold uppercase tracking-[0.15em] text-indigo-600 dark:text-indigo-400">{t('numericalSignature')}</p>
         <p className="text-sm text-slate-500">{t('abjadKabirLabel')}</p>
         <p className="text-6xl font-bold text-indigo-600 dark:text-indigo-400">{profile.kabir}</p>
+        <AbjadSystemUsedNote />
         {letterBreakdown.length > 0 && (
           <p dir="ltr" className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-1 text-base text-slate-500 dark:text-slate-400">
             {letterBreakdown.map((lv, i) => (
