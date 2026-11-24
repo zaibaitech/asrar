@@ -82,7 +82,7 @@ export default function Page() {
             from a name and a mother&apos;s name, name compatibility, planetary hours and the planet of the
             day, planetary transits, a birth profile, the 28 lunar mansions (manāzil al-qamar), ikhtiyārāt
             (choosing a time to begin something), best-day guides for nikāḥ, travel, moving home and
-            business, West African sadaqah guidance, dhikr challenges, and the 99 Names of Allah with
+            business, sadaqah guidance (voluntary charity for those in need), dhikr challenges, and the 99 Names of Allah with
             their Abjad values.
           </p>
           <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
@@ -167,7 +167,7 @@ export default function Page() {
             ['/methodology', 'Methodology', 'How the calculators work, and what they are not.'],
             ['/abjad', 'Abjad Calculator', 'The Maghribi or Mashriqi value of an Arabic name or phrase.'],
             ['/ikhtiyarat', 'Best Dates (Ikhtiyārāt)', 'Choosing a time for nikāḥ, travel, business or a new start.'],
-            ['/sadaqa', 'Sadaqa Guide', 'West African sadaqah by weekday, Hijri birth month and burj.'],
+            ['/sadaqa', 'Sadaqa Guide', 'Voluntary charity for those in need, offered for reflection.'],
           ]}
         />
 

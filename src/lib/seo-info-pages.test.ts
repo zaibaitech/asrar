@@ -67,4 +67,16 @@ describe('About and Methodology information pages', () => {
     expect(method).toMatch(/not a prediction engine[\s\S]*geomancy/);
     expect(method).not.toMatch(/Ibn Qutayba/);
   });
+
+  it('frames sadaqah as voluntary charity, with two neutral systems, and no regional cultural wording', () => {
+    const about = read('app/(site)/about/page.tsx');
+    const method = read('app/(site)/methodology/page.tsx');
+    const pages = [ABOUT_LEAD, METHODOLOGY_LEAD, about, method].join('\n');
+    expect(pages).not.toMatch(/West African|Senegalese|Gambia|Gambian|Wolof|sarax|Tamxarit|Gamo|Korité|Tabaski/i);
+    expect(method).toMatch(/voluntary charity/);
+    expect(method).toMatch(/date-of-birth guidance/);
+    expect(method).toMatch(/mother(?:&apos;|')s-name burj guidance/i);
+    expect(method).toMatch(/for reflection, not as a prediction/);
+    expect(about).toMatch(/voluntary charity for those in need/);
+  });
 });

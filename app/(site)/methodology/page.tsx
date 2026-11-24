@@ -76,11 +76,10 @@ export default function Page() {
           </h2>
           <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
             Each Arabic letter has a number. Adding the letters of a name or phrase gives its Abjad
-            total. Asrār uses the Maghribi letter order by default — the system used in the Maghreb,
-            historically in al-Andalus, and in West Africa — and offers the Mashriqi order (Egypt, the
-            Middle East and Asia) as a switch. The two orders differ on six letters: ṣād, ḍād, sīn, ẓāʾ,
-            ghayn and shīn. A name that does not use those letters has the same total in both. Vowel
-            marks are not counted. The{' '}
+            total. Asrār uses the Maghribi letter order by default, and offers the Mashriqi order as a
+            switch. The two orders differ on six letters: ṣād, ḍād, sīn, ẓāʾ, ghayn and shīn. A name
+            that does not use those letters has the same total in both. Vowel marks are not counted.
+            The{' '}
             <a href="/abjad" className="font-semibold text-indigo-700 dark:text-indigo-300 hover:underline">
               Abjad calculator
             </a>{' '}
@@ -143,7 +142,7 @@ export default function Page() {
             </a>{' '}
             page so the live card stays consistent with the planetary ephemeris; classical star-tied
             (sidereal) bounds differ. The names and instructional framing draw on Al-Bīrūnī&apos;s Kitāb
-            al-Tafhīm, traditional Arab anwāʾ lore, and Maghribi / classical ikhtiyārāt themes for
+            al-Tafhīm, traditional Arab anwāʾ lore, and classical ikhtiyārāt themes for
             activity adab — not guarantees. The Qur&apos;ān mentions the Moon&apos;s stations as signs (10:5;
             36:39–40). The page does not present talisman or taweez recipes.
           </p>
@@ -184,16 +183,19 @@ export default function Page() {
             Sadaqah guidance
           </h2>
           <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-            The{' '}
+            Sadaqah is voluntary charity — giving to those in need. It is a widely shared value, and
+            Asrār offers its suggestions for reflection, not as a prediction of what must be given or of
+            what will follow. Anyone may give at any time; the tables are not obligations.
+          </p>
+          <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
+            The Who Am I? and burj tools keep two systems of traditional sadaqah guidance separate:
+            date-of-birth guidance, drawn from traditional sadaqah guidance (source: Serigne Mahdiou Niane);
+            and name and mother&apos;s-name burj guidance, drawn from traditional sadaqah guidance for
+            that burj. The{' '}
             <a href="/sadaqa" className="font-semibold text-indigo-700 dark:text-indigo-300 hover:underline">
               Sadaqa Guide
             </a>{' '}
-            gathers traditional West African (Senegalese / Wolof) practice — sarax — in which particular
-            forms of sadaqah are suggested for each weekday, for the Hijri month of birth (with Wolof
-            month names such as Tamxarit, Gamo, Korité and Tabaski where they are commonly used), and
-            for each of the twelve burūj. As already stated on that guide, the burj sadaqah follows the
-            teachings of Serigne Mahdiou Niane. Sadaqah may be given at any time; the tables are
-            traditional suggestions for reflection, not obligations.
+            also presents weekday, birth-month and burj suggestions as a prompt for giving.
           </p>
         </section>
 
@@ -234,7 +236,7 @@ export default function Page() {
             ['/planetary-hours', 'Planetary Hours', 'Chaldean hours from sunrise and sunset at your location.'],
             ['/manazil', 'Lunar Mansions (Manāzil)', 'The 28 stations and the equal tropical method.'],
             ['/ikhtiyarat', 'Best Dates (Ikhtiyārāt)', 'The election tool that uses the rule sets above.'],
-            ['/sadaqa', 'Sadaqa Guide', 'West African sadaqah by weekday, birth month and burj.'],
+            ['/sadaqa', 'Sadaqa Guide', 'Voluntary charity for those in need, offered for reflection.'],
           ]}
         />
 
