@@ -78,12 +78,16 @@ describe('Pass 9b follow-ups', () => {
     expect(Object.values(ur).join('\n')).not.toMatch(/عنصریت/);
     expect(Object.values(arFixes).map((e) => e.ar).join('\n')).not.toMatch(/عنصري|عنصرية|عناصري/);
   });
-  it('SF3: number 10 is "traditionally associated with" authority, not a guarantee (EN/FR); reviewed Urdu kept', () => {
+  it('SF3: number 10 is traditionally associated with authority, not a guarantee (EN/FR/UR)', () => {
     expect(buruj).not.toMatch(/establishes ultimate material and spiritual authority|il établit l'autorité matérielle et spirituelle ultime/);
-    const k = Object.keys(ur).find((x) => x.startsWith('In the numerological tradition, 10 is the number'))!;
-    expect(k).toMatch(/it is traditionally associated with material and spiritual authority\.$/);
-    expect(buruj).toContain("il est traditionnellement lié à l'autorité matérielle et spirituelle.");
-    expect(ur[k]).toBe(status.sf3.ur);
+    expect(buruj).not.toMatch(/Ten Commandments|dix commandements|الوصايا العشر|دس احکام/);
+    const k = Object.keys(ur).find((x) => x.startsWith('In this numerological tradition, 10 is associated'))!;
+    expect(k).toMatch(/traditionally associated, in this practice, with material and spiritual authority\.$/);
+    expect(buruj).toContain("il est traditionnellement lié, dans cette pratique, à l'autorité matérielle et spirituelle.");
+    expect(ur[k]).toContain('علیہ السلام');
+    expect(ur[k]).toContain('الواح');
     expect(status.sf3.status).toBe('reviewed');
+    const prev = Object.keys(ur).find((x) => x.startsWith('In the numerological tradition, 10 is the number'))!;
+    expect(ur[prev]).toBe(status.sf3.ur);
   });
 });

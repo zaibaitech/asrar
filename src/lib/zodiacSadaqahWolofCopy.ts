@@ -4,10 +4,23 @@
  */
 import type { Language } from './translations';
 
+/** Script forms already used in card titles/bodies. Do not invent new names. */
+const WOLOF_SCRIPT: Record<string, { ar: string; ur: string }> = {
+  petaw: { ar: 'بيتاو', ur: 'پیتاو' },
+  laakh: { ar: 'لاخ', ur: 'لاخ' },
+  'Cheb Yap': { ar: 'شب ياب', ur: 'چیب یاپ' },
+};
+
 export function zodiacSadaqahWolofLine(lang: Language, wolofName: string): string {
   if (lang === 'fr') return `Wolof : ${wolofName}`;
-  if (lang === 'ar') return `الولوفية: ${wolofName}`;
-  if (lang === 'ur') return `وولوف: ${wolofName}`;
+  if (lang === 'ar') {
+    const script = WOLOF_SCRIPT[wolofName]?.ar ?? wolofName;
+    return `(الولوفية: ${script})`;
+  }
+  if (lang === 'ur') {
+    const script = WOLOF_SCRIPT[wolofName]?.ur ?? wolofName;
+    return `(وولوف: ${script})`;
+  }
   return `Wolof: ${wolofName}`;
 }
 

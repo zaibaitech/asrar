@@ -28,8 +28,10 @@ describe('zodiac sadaqah Wolof secondary copy', () => {
   });
 
   it('Arabic and Urdu use dedicated Wolof labels', () => {
-    expect(zodiacSadaqahWolofLine('ar', 'laakh')).toBe('الولوفية: laakh');
-    expect(zodiacSadaqahWolofLine('ur', 'laakh')).toBe('وولوف: laakh');
+    expect(zodiacSadaqahWolofLine('ar', 'laakh')).toBe('(الولوفية: لاخ)');
+    expect(zodiacSadaqahWolofLine('ur', 'laakh')).toBe('(وولوف: لاخ)');
+    expect(zodiacSadaqahWolofLine('ar', 'petaw')).toBe('(الولوفية: بيتاو)');
+    expect(zodiacSadaqahWolofLine('ur', 'petaw')).toBe('(وولوف: پیتاو)');
     expect(zodiacSadaqahInWolofLabel('ar')).toBe('بالولوفية');
     expect(zodiacSadaqahInWolofLabel('ur')).toBe('وولوف میں');
   });

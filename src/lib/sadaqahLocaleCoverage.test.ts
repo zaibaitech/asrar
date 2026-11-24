@@ -119,6 +119,33 @@ describe('sadaqah and abjad locale coverage (#121 / #122)', () => {
     expect(blob).not.toMatch(FORBIDDEN);
   });
 
+
+  it('bans guarantee, protection and amulet wording in buruj sadaqah Arabic', () => {
+    const banned = /يضمن|تضمن|يحمي|تحمي|درعًا واقيًا|درعا واقيا|درعًا واقي|السُّنّة|السُّنة/;
+    const hits: string[] = [];
+    const walk = (obj: unknown, path: string) => {
+      if (Array.isArray(obj)) {
+        obj.forEach((item, i) => walk(item, `${path}[${i}]`));
+        return;
+      }
+      if (obj && typeof obj === 'object') {
+        const rec = obj as Record<string, unknown>;
+        if (typeof rec.ar === 'string' && banned.test(rec.ar)) hits.push(`${path}.ar`);
+        if (Array.isArray(rec.ar)) {
+          rec.ar.forEach((s, i) => {
+            if (typeof s === 'string' && banned.test(s)) hits.push(`${path}.ar[${i}]`);
+          });
+        }
+        for (const [k, v] of Object.entries(rec)) {
+          if (k !== 'ar') walk(v, `${path}.${k}`);
+        }
+      }
+    };
+    const data = (burujData as any).buruj_data;
+    for (const n of Object.keys(data)) walk(data[n].sadaqah, n);
+    expect(hits, hits.join(', ')).toEqual([]);
+  });
+
   it('Abjad and Wolof result lines exist in all four languages', () => {
     const labels = { maghribi: 'مغربي', mashriqi: 'مشرقي' };
     const urLabels = { maghribi: 'مغربی', mashriqi: 'مشرقی' };
