@@ -57,7 +57,7 @@ export async function generateMetadata({
   if (challenge && challengeMeta[challenge]) {
     const challengeMetadata = getChallengeOGMeta(challenge, lang, baseUrl);
     if (challengeMetadata) {
-      return { ...challengeMetadata, alternates: { canonical } };
+      return { ...challengeMetadata, alternates: { canonical, languages: { 'x-default': canonical } } };
     }
   }
 
@@ -69,6 +69,7 @@ export async function generateMetadata({
     description: currentMeta.description,
     alternates: {
       canonical,
+      languages: { 'x-default': canonical },
     },
     openGraph: {
       type: 'website',

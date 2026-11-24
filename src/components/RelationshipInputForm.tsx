@@ -62,9 +62,9 @@ export function RelationshipInputForm({ onCalculate, language = 'en', isLoading 
           <div className="font-technical text-[11px] tracking-[4px] font-bold" style={{ color: COMPAT_THEME.indigo }}>
             {isFrench ? 'ASRĀR · COMPATIBILITÉ' : 'ASRĀR · COMPATIBILITY'}
           </div>
-          <h1 className="font-display font-semibold text-4xl mt-3.5 leading-tight">
+          <h2 className="font-display font-semibold text-4xl mt-3.5 leading-tight">
             {isFrench ? 'Entrez Deux Noms' : 'Enter Two Names'}
-          </h1>
+          </h2>
           <p className="text-sm mt-2.5" style={{ color: COMPAT_THEME.muted }}>
             {isFrench
               ? 'Calculez la Connexion d’Âme selon la numérologie islamique traditionnelle'

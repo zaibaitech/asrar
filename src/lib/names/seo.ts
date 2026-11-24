@@ -13,7 +13,7 @@ export function englishPageMetadata(path: string, ogKey: OgPageKey, m: { title: 
   return {
     title: m.title,
     description: m.description,
-    alternates: { canonical: url },
+    alternates: { canonical: url, languages: { 'x-default': url } },
     openGraph: {
       type: 'website',
       url,

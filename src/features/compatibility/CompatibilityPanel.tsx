@@ -290,9 +290,9 @@ export function CompatibilityPanel({ onBack }: CompatibilityPanelProps) {
           <div className="font-technical text-[11px] tracking-[4px] font-bold" style={{ color: COMPAT_THEME.indigo }}>
             {language === 'fr' ? 'ASRĀR · COMPATIBILITÉ' : 'ASRĀR · COMPATIBILITY'}
           </div>
-          <h1 className="font-display font-semibold text-4xl mt-3.5 leading-tight" style={{ color: COMPAT_THEME.ink }}>
+          <h2 className="font-display font-semibold text-4xl mt-3.5 leading-tight" style={{ color: COMPAT_THEME.ink }}>
             {language === 'fr' ? 'Compatibilité' : 'Compatibility'}
-          </h1>
+          </h2>
           <p className="text-sm mt-2.5" style={{ color: COMPAT_THEME.muted }}>
             {category === 'person-to-divine'
               ? (language === 'fr' ? "Découvrez votre résonance spirituelle avec les 99 Noms d'Allah" : 'Discover your spiritual resonance with the 99 Names of Allah')

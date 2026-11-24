@@ -312,7 +312,7 @@ export default function AsrarEveryday() {
               <div className="flex items-center gap-1.5 flex-1 min-w-0">
                 <AsrarLogo size={32} variant="icon" element="aether" animate={true} />
                 <div className="min-w-0">
-                  <h1 className="text-base font-bold text-slate-900 dark:text-slate-100 truncate">Asrār</h1>
+                  <p className="text-base font-bold text-slate-900 dark:text-slate-100 truncate">Asrār</p>
                   <p className="text-[10px] text-slate-600 dark:text-slate-400 truncate hidden xs:block">ʿIlm al-Ḥurūf</p>
                 </div>
               </div>
@@ -342,7 +342,7 @@ export default function AsrarEveryday() {
               <div className="flex items-center gap-3">
                 <AsrarLogo size={48} variant="icon" element="aether" animate={true} />
                 <div>
-                  <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100">Asrār</h1>
+                  <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">Asrār</p>
                   <p className="text-xs text-slate-600 dark:text-slate-400">ʿIlm al-Ḥurūf & ʿIlm al-ʿAdad Explorer</p>
                 </div>
               </div>

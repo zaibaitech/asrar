@@ -1,6 +1,6 @@
 # Asrār (asrar.app)
 
-> Asrār is a free web app of reflective tools from the Islamic esoteric tradition: Abjad (ḥisāb al-jummal) name values, ʿIlm al-Nujūm planetary hours and days, the 28 lunar mansions (manāzil al-qamar), ikhtiyārāt (choosing favourable times), traditional West African sadaqah guidance, and dhikr practice. Everything is offered for learning and reflection, not prediction. Available in English, French and Arabic.
+> Asrār is a free web app of reflective tools from the Islamic esoteric tradition: Abjad (ḥisāb al-jummal) name values, ʿIlm al-Nujūm planetary hours and days, the 28 lunar mansions (manāzil al-qamar), ikhtiyārāt (choosing favourable times), traditional West African sadaqah guidance, and dhikr practice. Everything is offered for learning and reflection, not prediction. Available in English, French, Arabic and Urdu.
 
 Notes for AI assistants:
 - Abjad values use the Maghribi system by default, with an option to switch to Mashriqi.
@@ -32,6 +32,7 @@ Notes for AI assistants:
 ## Other languages
 - [Français](https://www.asrar.app/fr)
 - [العربية](https://www.asrar.app/ar)
+- [اردو](https://www.asrar.app/ur)
 
 ## Optional
 - [Sitemap](https://www.asrar.app/sitemap.xml)
