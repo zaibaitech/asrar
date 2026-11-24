@@ -167,13 +167,13 @@ export function arAppPath(enPath: string): string {
 }
 
 /* ------------------------------------------------------------------------ */
-/* Urdu (/ur/...), phase 1 — under native review.                            */
+/* Urdu (/ur/...).                                                           */
 /*                                                                           */
 /* Dedicated route files (app/ur/**) with Urdu copy around the unchanged     */
 /* tool component, like the /ar landing pages. Every /ur page is noindex and */
 /* out of the sitemap and hreflang, EXCEPT the allow-listed pages in         */
-/* INDEXABLE_UR_PATHS (only /ur/abjad), which are indexable, in the sitemap  */
-/* and paired with EN/FR/AR through hreflang `ur`.                           */
+/* INDEXABLE_UR_PATHS, which are indexable, in the sitemap, and paired with  */
+/* EN/FR/AR through hreflang `ur`.                                           */
 /* ------------------------------------------------------------------------ */
 
 export const UR_PREFIX = '/ur';
@@ -204,7 +204,7 @@ export function isUrPath(pathname: string): boolean {
 }
 
 /**
- * Indexable-Urdu allow-list (21 Oct 2026): EN paths whose Urdu page has passed the native review
+ * Indexable-Urdu allow-list: EN paths whose Urdu page has passed Language Review
  * and is indexable, with hreflang `ur` both ways and a sitemap entry. Every other /ur page keeps
  * the noindex default (layout metadata + X-Robots-Tag in middleware).
  */

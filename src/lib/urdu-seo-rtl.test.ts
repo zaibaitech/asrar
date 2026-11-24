@@ -5,8 +5,8 @@ import { NextRequest } from 'next/server';
 import sitemap from '../../app/sitemap';
 import robots from '../../app/robots';
 import { middleware } from '../../middleware';
-import { LOCALIZED_PATHS, hreflangLanguages, localeAlternates, UR_PATHS, isUrPath } from './i18nRoutes';
-import { PUBLIC_TOOLS } from './siteRoutes';
+import { LOCALIZED_PATHS, hreflangLanguages, localeAlternates, UR_PATHS, INDEXABLE_UR_PATHS, isUrPath, isIndexableUrPath, isIndexableUrEnPath } from './i18nRoutes';
+import { PUBLIC_TOOLS, absoluteUrl } from './siteRoutes';
 
 /**
  * Phase 5: the guarantees that keep /ur invisible to search engines until it is approved, and the RTL setup
@@ -26,20 +26,25 @@ function pages(dir: string, out: string[] = []): string[] {
   return out;
 }
 
-describe('/ur stays out of the sitemap, robots.txt and hreflang, except the allow-listed /ur/abjad', () => {
-  it('the generated sitemap lists /ur/abjad (with alternates) and no other /ur URL', () => {
+describe('/ur is in the sitemap and hreflang only for allow-listed pages', () => {
+  it('the generated sitemap lists every allow-listed /ur URL (with alternates) and no other /ur URL', () => {
     const entries = sitemap();
     expect(entries.length).toBeGreaterThan(20);
-    const urUrls = entries.map((e) => e.url).filter((u) => /\/ur(\/|$)/.test(u));
-    expect(urUrls).toEqual(['https://www.asrar.app/ur/abjad']);
-    const abjadSet = ['https://www.asrar.app/abjad', 'https://www.asrar.app/fr/abjad', 'https://www.asrar.app/ar/abjad', 'https://www.asrar.app/ur/abjad'];
-    for (const u of abjadSet) {
-      const e = entries.find((x) => x.url === u)!;
-      expect(e, u).toBeDefined();
-      expect(e.alternates?.languages, u).toEqual({ en: abjadSet[0], fr: abjadSet[1], ar: abjadSet[2], ur: abjadSet[3], 'x-default': abjadSet[0] });
+    const expectedUr = INDEXABLE_UR_PATHS.map((p) => absoluteUrl(UR_PATHS[p])).sort();
+    const urUrls = entries.map((e) => e.url).filter((u) => /\/ur(\/|$)/.test(u)).sort();
+    expect(urUrls).toEqual(expectedUr);
+    for (const p of INDEXABLE_UR_PATHS) {
+      const langs = hreflangLanguages(p);
+      expect(langs.ur, p).toBe(absoluteUrl(UR_PATHS[p]));
+      for (const u of Object.values(langs)) {
+        const e = entries.find((x) => x.url === u)!;
+        expect(e, u).toBeDefined();
+        expect(e.alternates?.languages, u).toEqual(langs);
+      }
     }
-    const others = entries.filter((e) => !abjadSet.includes(e.url));
-    expect(JSON.stringify(others)).not.toMatch(/\/ur(\/|")|"ur"/);
+    const allowlisted = new Set(INDEXABLE_UR_PATHS.flatMap((p) => Object.values(hreflangLanguages(p))));
+    const others = entries.filter((e) => !allowlisted.has(e.url));
+    expect(JSON.stringify(others)).not.toMatch(/\/ur(\/|")|"ur":/);
   });
 
   it('robots.txt does not mention /ur (it stays crawlable so the noindex tag can be seen) and has no Urdu sitemap', () => {
@@ -50,13 +55,17 @@ describe('/ur stays out of the sitemap, robots.txt and hreflang, except the allo
     expect(r.sitemap).toMatch(/sitemap\.xml$/);
   });
 
-  it('no English/French/Arabic page lists an Urdu alternate, for any localized tool path except /abjad', () => {
+  it('English/French/Arabic pages list an Urdu alternate only for allow-listed paths', () => {
     const paths = [...new Set([...LOCALIZED_PATHS, ...PUBLIC_TOOLS.map((t) => t.path), ...Object.keys(UR_PATHS)])];
     for (const p of paths) {
-      const alt = JSON.stringify([hreflangLanguages(p), localeAlternates(p, 'en'), localeAlternates(p, 'fr'), localeAlternates(p, 'ar')]);
-      if (p === '/abjad') {
-        for (const l of ['en', 'fr', 'ar'] as const) expect(localeAlternates(p, l).languages.ur, l).toBe('https://www.asrar.app/ur/abjad');
-      } else expect(alt, p).not.toMatch(/\/ur(\/|")|"ur"/);
+      if (isIndexableUrEnPath(p)) {
+        for (const l of ['en', 'fr', 'ar'] as const) {
+          expect(localeAlternates(p, l).languages.ur, `${p} ${l}`).toBe(absoluteUrl(UR_PATHS[p]));
+        }
+      } else {
+        const alt = JSON.stringify([hreflangLanguages(p), localeAlternates(p, 'en'), localeAlternates(p, 'fr'), localeAlternates(p, 'ar')]);
+        expect(alt, p).not.toMatch(/\/ur(\/|")|"ur":/);
+      }
     }
   });
 
@@ -65,10 +74,10 @@ describe('/ur stays out of the sitemap, robots.txt and hreflang, except the allo
   });
 });
 
-describe('/ur is noindex everywhere except /ur/abjad', () => {
-  it('every page file under app/(ur)/ur declares the noindex metadata through urduMetadata()', () => {
+describe('/ur layout default stays noindex; middleware honors the allow-list', () => {
+  it('every page file under app/(ur)/ur declares metadata through urduMetadata()', () => {
     const files = pages(path.join(root, 'app/(ur)/ur'));
-    expect(files.length).toBe(Object.keys(UR_PATHS).length); // one page file per mapped Urdu page (7)
+    expect(files.length).toBe(Object.keys(UR_PATHS).length); // one page file per mapped Urdu page
     for (const f of files) expect(readFileSync(f, 'utf8'), path.relative(root, f)).toMatch(/urduMetadata\(|export const metadata/);
   });
 
@@ -78,13 +87,16 @@ describe('/ur is noindex everywhere except /ur/abjad', () => {
     expect(src).toMatch(/lang="ur"\s+dir="rtl"/);
   });
 
-  it('the middleware sends X-Robots-Tag: noindex on /ur and /ur/<page> except /ur/abjad, and not on the English pages', async () => {
-    for (const p of ['/ur/abjad', '/ur/abjad/']) {
+  it('the middleware sends X-Robots-Tag: noindex only on /ur URLs that are not on the allow-list, and not on the English pages', async () => {
+    const indexable = INDEXABLE_UR_PATHS.map((p) => UR_PATHS[p]);
+    for (const p of [...indexable, ...indexable.map((p) => `${p}/`)]) {
+      expect(isIndexableUrPath(p.replace(/\/+$/, '') || '/ur'), p).toBe(true);
       const res = await middleware(new NextRequest(`https://asrar.app${p}`));
       expect(res.headers.get('x-robots-tag'), p).toBeNull();
     }
-    for (const p of ['/ur', '/ur/', '/ur/compatibility', '/ur/planetary-hours', '/ur/planet-of-the-day', '/ur/ikhtiyarat', '/ur/name-and-mother-burj', '/ur/abjad/x', '/ur/manazil']) {
+    for (const p of ['/ur/abjad/x', '/ur/manazil', '/ur/sadaqa', '/ur/sadaqa-of-the-day', '/ur/99-names-of-allah']) {
       expect(isUrPath(p)).toBe(true);
+      expect(isIndexableUrPath(p), p).toBe(false);
       const res = await middleware(new NextRequest(`https://asrar.app${p}`));
       expect(res.headers.get('x-robots-tag'), p).toMatch(/noindex/);
     }

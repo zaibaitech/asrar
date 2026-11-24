@@ -4,8 +4,8 @@
  *
  * /ur pages are noindex with NO hreflang alternates and no sitemap entry (the
  * canonical is the page itself), except the reviewed pages on the allow-list
- * (INDEXABLE_UR_PATHS in i18nRoutes.ts: /ur/abjad only), which are indexable and
- * carry the full EN/FR/AR/UR hreflang set.
+ * (INDEXABLE_UR_PATHS in i18nRoutes.ts), which are indexable and carry the
+ * full EN/FR/AR/UR hreflang set.
  */
 import type { Metadata } from 'next';
 import { absoluteUrl } from './siteRoutes';
