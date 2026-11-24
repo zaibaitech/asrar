@@ -5280,3 +5280,10 @@ Other readiness findings:
 See the final report for the exact `tsc`, Vitest, regeneration, build and browser results.
 
 
+
+#### H. New Urdu string for review (language links on tool pages)
+| Where | Urdu | Meaning |
+|---|---|---|
+| `src/components/seo/localeLinks.ts` (label above the language links) | دیگر زبانیں | "Other languages" |
+
+Hand-written, three words; please confirm the wording. The Urdu link itself only appears on pages in `INDEXABLE_UR_PATHS`.
