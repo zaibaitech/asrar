@@ -52,7 +52,7 @@ function copy(lang: PageLang) {
       },
       {
         q: 'Quel est le meilleur jour pour donner la sadaqah ?',
-        a: "La sadaqah est bonne tous les jours, et beaucoup de musulmans prennent l'habitude de donner le vendredi (Jumuʿa). Dans ces suggestions, le mardi est lié à la guérison et à l'aisance, et le jeudi à l'ouverture de la voie et à la levée des blocages. Ne retardez jamais un don parce que ce n'est pas « le bon jour ».",
+        a: "La sadaqah est bonne tous les jours, et beaucoup de musulmans prennent l'habitude de donner le vendredi (Jumuʿa). Dans ces suggestions, le mardi est lié au bien-être (ʿāfiyah) et à l'aisance, et le jeudi à l'ouverture de la voie et à la levée des blocages. Ne retardez jamais un don parce que ce n'est pas « le bon jour ».",
       },
       {
         q: 'Quelle sadaqah donner le lundi ?',
@@ -60,7 +60,7 @@ function copy(lang: PageLang) {
       },
       {
         q: 'Quelle sadaqah donner le vendredi ?',
-        a: `Le vendredi est associé à Vénus ; les dons recommandés sont : ${itemsFor(5, 'fr')}.`,
+        a: `Les dons recommandés pour le vendredi sont : ${itemsFor(5, 'fr')}.`,
       },
       {
         q: 'Puis-je utiliser le jour de ma naissance ?',
@@ -100,7 +100,7 @@ function copy(lang: PageLang) {
     },
     {
       q: 'What is the best day to give sadaqah?',
-      a: 'Sadaqah is good on every day, and many Muslims make a habit of giving on Friday (Jumuʿa). In these suggestions Tuesday is linked with healing and ease, and Thursday with opening the way and removing blockages. Never delay giving because it is not the "right" day.',
+      a: 'Sadaqah is good on every day, and many Muslims make a habit of giving on Friday (Jumuʿa). In these suggestions Tuesday is linked with wellbeing (ʿāfiyah) and ease, and Thursday with opening the way and removing blockages. Never delay giving because it is not the "right" day.',
     },
     {
       q: 'What sadaqah should I give on Monday?',
@@ -108,7 +108,7 @@ function copy(lang: PageLang) {
     },
     {
       q: 'What sadaqah should I give on Friday?',
-      a: `Friday is associated with Venus; the recommended gifts are: ${itemsFor(5, 'en')}.`,
+      a: `The recommended gifts for Friday are: ${itemsFor(5, 'en')}.`,
     },
     {
       q: 'Can I use the weekday I was born on?',

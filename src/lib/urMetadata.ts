@@ -105,7 +105,7 @@ export const UR_META: Readonly<Record<string, UrMeta>> = {
     },
     description: {
       en: 'A guide to sadaqah (voluntary charity): suggested forms for each weekday, for your Hijri birth month, and for each of the 12 burūj. For reflection, not prediction.',
-      ur: 'صدقہ (رضاکارانہ خیرات) کی رہنمائی: ہر دنِ ہفتہ، آپ کے ہجری مہینۂ پیدائش، اور بارہ بروجز میں سے ہر برج کے لیے تجویز کردہ صورتیں۔ غور و فکر کے لیے، پیش گوئی نہیں۔',
+      ur: 'صدقہ (رضاکارانہ خیرات) کی رہنمائی: ہر دنِ ہفتہ، آپ کے ہجری مہینۂ پیدائش، اور بارہ بروج میں سے ہر برج کے لیے تجویز کردہ صورتیں۔ غور و فکر کے لیے، پیش گوئی نہیں۔',
     },
   },
   '/sadaqa-of-the-day': {
@@ -115,7 +115,7 @@ export const UR_META: Readonly<Record<string, UrMeta>> = {
     },
     description: {
       en: "Today's recommended sadaqah and the full weekly table: water on Monday, help with medicine on Tuesday, opening the way on Thursday, clothes and perfume on Friday. For reflection, not prediction.",
-      ur: 'آج کا تجویز کردہ صدقہ اور پوری ہفتہ وار جدول: پیر کو پانی، منگل کو دوا میں مدد، جمعرات کو راہ کھولنا، جمعہ کو کپڑے اور خوشبو۔ غور و فکر کے لیے، پیش گوئی نہیں۔',
+      ur: 'آج کا تجویز کردہ صدقہ اور پوری ہفتہ وار جدول: پیر کو پانی، منگل کو دوا میں مدد، جمعرات کو راہ کھلنے کی امید، جمعہ کو کپڑے اور خوشبو۔ غور و فکر کے لیے، پیش گوئی نہیں۔',
     },
   },
   '/99-names-of-allah': {
@@ -131,17 +131,17 @@ export const UR_META: Readonly<Record<string, UrMeta>> = {
   '/manazil': {
     title: {
       en: 'Lunar Mansions (Manāzil al-Qamar)',
-      ur: 'منازل القمر: چاند کے اٹھائیس منازل',
+      ur: 'منازل القمر: چاند کی اٹھائیس منزلیں',
     },
     description: {
       en: 'The 28 lunar mansions in classical ʿIlm al-Nujūm: today’s manzil, Arabic names, and how manāzil relate to birth profile and ikhtiyārāt. For reflection, not prediction.',
-      ur: 'کلاسیکی علم النجوم میں چاند کے اٹھائیس منازل: آج کی منزل، عربی نام، اور ولادت و اختیارات سے تعلق۔ غور و فکر کے لیے، پیش گوئی نہیں۔',
+      ur: 'کلاسیکی علم النجوم میں چاند کی اٹھائیس منزلیں: آج کی منزل، عربی نام، اور ولادت و اختیارات سے تعلق۔ غور و فکر کے لیے، پیش گوئی نہیں۔',
     },
   },
   '/best-day-for': {
     title: {
       en: 'Best Day For Nikah, Travel, Moving & Business (Ikhtiyārāt)',
-      ur: 'نکاح، سفر، نئے گھر اور کاروبار کے لیے مناسب دن (اختیارات)',
+      ur: 'نکاح، سفر، نئے گھر میں منتقلی اور کاروبار کے لیے مناسب دن (اختیارات)',
     },
     description: {
       en: 'Favourable weekdays and planetary hours for marriage (nikāḥ), travel, moving home and starting a business in the classical ikhtiyārāt tradition. For reflection.',
@@ -150,8 +150,8 @@ export const UR_META: Readonly<Record<string, UrMeta>> = {
   },
   '/best-day-for/marriage': {
     title: {
-      en: 'Best Day for Nikah (Marriage) in Islam',
-      ur: 'اسلام میں نکاح کے لیے مناسب دن',
+      en: 'Best Day for Nikah (Marriage) — Islamic Tradition and Ikhtiyārāt',
+      ur: 'نکاح کے لیے مناسب دن — اسلامی روایت اور علمِ اختیارات',
     },
     description: {
       en: 'Favoured weekdays and planetary hours for nikāḥ in the ikhtiyārāt tradition, for reflection alongside istikhāra. No date is religiously forbidden for marriage.',
@@ -185,7 +185,7 @@ export const UR_META: Readonly<Record<string, UrMeta>> = {
     },
     description: {
       en: 'Favoured weekdays and planetary hours for starting a business or a contract in the classical ikhtiyārāt tradition. For reflection, alongside istikhāra and tawakkul.',
-      ur: 'کلاسیکی علمِ اختیارات کے مطابق کاروبار یا معاملہ شروع کرنے کے لیے مناسب ایامِ ہفتہ اور ساعات۔ استخارے اور توکل کے ساتھ غور و فکر کے لیے۔',
+      ur: 'کلاسیکی علمِ اختیارات کے مطابق کاروبار شروع کرنے یا معاہدہ کرنے کے لیے مناسب ایامِ ہفتہ اور ساعات۔ استخارے اور توکل کے ساتھ غور و فکر کے لیے۔',
     },
   },
 };

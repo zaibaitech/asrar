@@ -69,7 +69,7 @@ export const SADAQAH_BY_DAY: SadaqahDayGuidance[] = [
     day: 2,
     displayName: 'Tuesday',
     en: {
-      intro: 'Tuesday is recommended for sadaqah given with the hope of healing and ease. Recommended forms of sadaqah include:',
+      intro: 'Tuesday is recommended for sadaqah given with the hope of wellbeing (ʿāfiyah) and ease. Recommended forms of sadaqah include:',
       items: [
         'Giving food to children.',
         'Helping a person who is experiencing difficulties.',
@@ -81,7 +81,7 @@ export const SADAQAH_BY_DAY: SadaqahDayGuidance[] = [
       ],
     },
     fr: {
-      intro: "Le mardi est recommandé pour une sadaqah donnée dans l'espoir de la guérison et de l'aisance. Les formes de sadaqah recommandées incluent :",
+      intro: "Le mardi est recommandé pour une sadaqah donnée dans l'espoir du bien-être (ʿāfiyah) et de l'aisance. Les formes de sadaqah recommandées incluent :",
       items: [
         'Donner de la nourriture aux enfants.',
         'Aider une personne qui traverse des difficultés.',
@@ -143,7 +143,7 @@ export const SADAQAH_BY_DAY: SadaqahDayGuidance[] = [
     day: 5,
     displayName: 'Friday',
     en: {
-      intro: 'Friday is associated with Venus and is considered a favourable day for giving sadaqah. Recommended acts include giving:',
+      intro: 'Friday is considered a favourable day for giving sadaqah. Recommended acts include giving:',
       items: [
         'Clothes.',
         'Soap.',
@@ -154,7 +154,7 @@ export const SADAQAH_BY_DAY: SadaqahDayGuidance[] = [
       ],
     },
     fr: {
-      intro: "Le vendredi est associé à Vénus et est considéré comme un jour favorable pour donner la sadaqah. Les actes recommandés incluent le don de :",
+      intro: "Le vendredi est considéré comme un jour favorable pour donner la sadaqah. Les actes recommandés incluent le don de :",
       items: [
         'Vêtements.',
         'Savon.',

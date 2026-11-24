@@ -47,14 +47,14 @@ export function ArabicTodaySadaqa({ serverDay }: { serverDay: number }) {
 
       <section aria-labelledby="sadaqa-week-heading" className="space-y-3">
         <h2 id="sadaqa-week-heading" className="text-xl font-semibold text-slate-900 dark:text-slate-100">
-          الصدقة المستحبة لكل يوم من أيام الأسبوع
+          الصدقة المقترحة لكل يوم من أيام الأسبوع
         </h2>
         <div className="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-700">
           <table className="w-full text-right text-sm">
             <thead className="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
               <tr>
                 <th scope="col" className="px-4 py-2 font-semibold">اليوم</th>
-                <th scope="col" className="px-4 py-2 font-semibold">الصدقة المستحبة</th>
+                <th scope="col" className="px-4 py-2 font-semibold">الصدقة المقترحة</th>
               </tr>
             </thead>
             <tbody>

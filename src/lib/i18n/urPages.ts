@@ -89,11 +89,11 @@ export const UR_TOOLS = {
   manazil: {
     path: '/ur/manazil',
     name: t('Lunar Mansions (Manāzil al-Qamar)', 'منازل القمر'),
-    desc: t("Today's lunar mansion and all twenty-eight stations.", 'آج کی منزلِ قمر اور تمام اٹھائیس منازل۔'),
+    desc: t("Today's lunar mansion and all twenty-eight stations.", 'آج کی منزلِ قمر اور تمام اٹھائیس منزلیں۔'),
   },
   bestDayFor: {
     path: '/ur/best-day-for',
-    name: t('Best Day For Nikah, Travel, Moving and Business', 'نکاح، سفر، نئے گھر اور کاروبار کے لیے مناسب دن'),
+    name: t('Best Day For Nikah, Travel, Moving and Business', 'نکاح، سفر، نئے گھر میں منتقلی اور کاروبار کے لیے مناسب دن'),
     desc: t('Favourable weekdays and hours in the ikhtiyārāt tradition.', 'علمِ اختیارات کے مطابق مناسب ایامِ ہفتہ اور ساعات۔'),
   },
 } as const;

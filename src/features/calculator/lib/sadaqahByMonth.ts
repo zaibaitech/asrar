@@ -187,7 +187,7 @@ export const SADAQAH_BY_MONTH: SadaqahMonthGuidance[] = [
     en: {
       intro: "For anyone born in Rajab, their sadaqah can focus on supporting people who learn and teach the Qur'an:",
       items: [
-        "Giving a complete Qur'an (Kamil) to a mosque or place of Qur'anic learning.",
+        "Giving a complete copy of the Qur'an to a mosque or place of Qur'anic learning.",
         "Providing Qur'ans for people to read and use.",
         "Donating Qur'ans to schools and places of Qur'anic learning.",
         "Helping mosques and places of Qur'anic learning.",
@@ -198,7 +198,7 @@ export const SADAQAH_BY_MONTH: SadaqahMonthGuidance[] = [
     fr: {
       intro: "Pour toute personne née au mois de Rajab, sa sadaqah peut être consacrée au soutien de ceux qui apprennent et enseignent le Coran :",
       items: [
-        "Donner un Coran complet (Kamil) à une mosquée ou à un lieu d'apprentissage coranique.",
+        "Donner un exemplaire complet du Coran à une mosquée ou à un lieu d'apprentissage coranique.",
         "Fournir des Corans pour la lecture et l'étude.",
         "Donner des Corans aux écoles et lieux d'apprentissage coranique.",
         "Aider les mosquées et les lieux d'apprentissage du Coran.",

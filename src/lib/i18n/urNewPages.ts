@@ -31,7 +31,7 @@ export const UR_SADAQA = {
   burjTitle: t('Sadaqa by burj', 'برج کے مطابق صدقہ'),
   burjIntro: t(
     "Each of the twelve burūj has its own customary sadaqah. Not sure of your burj? Find it from your name and your mother's name.",
-    'بارہ بروجز میں سے ہر برج کا اپنا روایتی صدقہ ہے۔ اپنے برج کا یقین نہیں؟ اسے اپنے نام اور والدہ کے نام سے معلوم کریں۔',
+    'بارہ بروج میں سے ہر برج کا اپنا روایتی صدقہ ہے۔ اپنا برج معلوم نہیں؟ اسے اپنے نام اور والدہ کے نام سے معلوم کریں۔',
   ),
   burjLink: t("Find your burj from your name & mother's name →", 'نام اور والدہ کے نام سے برج معلوم کریں ←'),
   bestDay: t('Suggested day', 'تجویز کردہ دن'),
@@ -61,7 +61,7 @@ export const UR_SADAQA = {
       q: t('Which should I follow: the day, the month or the burj?', 'دن، مہینہ یا برج — کسے اختیار کروں؟'),
       a: t(
         'Any of them, or none. They are complementary customs, not obligations. Sadaqah given sincerely on any day is good; these suggestions simply help you choose a form and a moment.',
-        'ان میں سے کوئی بھی، یا کوئی نہیں۔ یہ ایک دوسرے کی تکمیل کرنے والی رسمیں ہیں، فرائض نہیں۔ کسی بھی دن خلوص سے دیا گیا صدقہ اچھا ہے؛ یہ تجاویز صرف صورت اور لمحہ چننے میں مدد کرتی ہیں۔',
+        'ان میں سے کوئی بھی، یا کوئی نہیں۔ یہ ایک دوسرے کی تکمیل کرنے والی روایات ہیں، فرائض نہیں۔ کسی بھی دن خلوص سے دیا گیا صدقہ اچھا ہے؛ یہ تجاویز صرف صورت اور وقت چننے میں مدد کرتی ہیں۔',
       ),
     },
     {
@@ -86,7 +86,7 @@ export const UR_SADAQA_DAY = {
   aboutTitle: t('About this guide', 'اس رہنمائی کے بارے میں'),
   about: t(
     "Each weekday is also linked to particular forms of sadaqah: water on Monday, help with someone's medicine on Tuesday, paper and pens on Wednesday, feeding the needy and supporting the mosque on Thursday, clothes, soap and perfume on Friday. Below is today's suggestion and the full weekly table, from the same guidance used by the Asrār calculator.",
-    'ہفتے کا ہر دن صدقے کی خاص صورتوں سے بھی جوڑا جاتا ہے: پیر کو پانی، منگل کو کسی کی دوا میں مدد، بدھ کو کاغذ اور قلم، جمعرات کو ضرورت مندوں کو کھانا کھلانا اور مسجد کی مدد، جمعہ کو کپڑے، صابن اور خوشبو۔ نیچے آج کی تجویز اور پوری ہفتہ وار جدول ہے، اسی رہنمائی سے جو اسرار کا کیلکولیٹر استعمال کرتا ہے۔',
+    'ہفتے کا ہر دن صدقے کی خاص صورتوں سے بھی جوڑا جاتا ہے: پیر کو پانی، منگل کو کسی کی دوا میں مدد، بدھ کو کاغذ اور قلم، جمعرات کو ضرورت مندوں کو کھانا کھلانا اور مسجد کی مدد، جمعہ کو کپڑے، صابن اور خوشبو۔ نیچے آج کی تجویز اور پوری ہفتہ وار جدول ہے، جو اسی رہنمائی پر مبنی ہے جسے اسرار کا کیلکولیٹر استعمال کرتا ہے۔',
   ),
   checkerTitle: t('Check another date', 'کوئی اور تاریخ دیکھیں'),
   checkerIntro: t('The day you plan to give, or your date of birth.', 'جس دن آپ صدقہ دینا چاہتے ہیں، یا آپ کی تاریخِ پیدائش۔'),
@@ -101,15 +101,15 @@ export const UR_SADAQA_DAY = {
     {
       q: t('What is the best day to give sadaqah?', 'صدقہ دینے کا بہترین دن کون سا ہے؟'),
       a: t(
-        'Sadaqah is good on every day, and many Muslims make a habit of giving on Friday (Jumuʿa). In this customary guidance Tuesday is linked with healing and ease, and Thursday with opening the way and the lifting of difficulties. Never delay giving because it is not the "right" day.',
-        'صدقہ ہر دن اچھا ہے، اور بہت سے مسلمان جمعہ کے دن دینے کی عادت رکھتے ہیں۔ اس روایتی رہنمائی میں منگل کو شفا اور آسانی سے، اور جمعرات کو راہ کھلنے اور مشکلات کے دور ہونے کی امید سے جوڑا جاتا ہے۔ اس لیے صدقہ نہ روکیں کہ آج «صحیح دن» نہیں۔',
+        'Sadaqah is good on every day, and many Muslims make a habit of giving on Friday (Jumuʿa). In this customary guidance Tuesday is linked with wellbeing (ʿāfiyah) and ease, and Thursday with opening the way and the lifting of difficulties. Never delay giving because it is not the "right" day.',
+        'صدقہ ہر دن اچھا ہے، اور بہت سے مسلمان جمعہ کے دن دینے کی عادت رکھتے ہیں۔ اس روایتی رہنمائی میں منگل کو عافیت اور آسانی کی امید سے، اور جمعرات کو راہ کھلنے اور مشکلات کے دور ہونے کی امید سے جوڑا جاتا ہے۔ صرف اس وجہ سے صدقہ مؤخر نہ کریں کہ آج «صحیح دن» نہیں۔',
       ),
     },
     {
-      q: t('Can I use the weekday I was born on?', 'کیا میں اپنے جنم والے دنِ ہفتہ پر عمل کر سکتا ہوں؟'),
+      q: t('Can I use the weekday I was born on?', 'کیا میں اپنی پیدائش کے دن (دنِ ہفتہ) کو بنیاد بنا سکتا ہوں؟'),
       a: t(
         'Yes. The guidance can be read either for the day you plan to give or for the weekday of your birth. Enter a date in the checker above to see which weekday it falls on.',
-        'ہاں۔ اس رہنمائی کو اس دن کے لیے بھی پڑھا جا سکتا ہے جس دن آپ دینا چاہتے ہیں، اور اپنے جنم والے دنِ ہفتہ کے لیے بھی۔ اوپر والے خانے میں تاریخ درج کر کے دیکھیں کہ وہ کس دن پڑتی ہے۔',
+        'ہاں۔ اس رہنمائی کو اس دن کے لیے بھی پڑھا جا سکتا ہے جس دن آپ دینا چاہتے ہیں، اور اپنی پیدائش کے دنِ ہفتہ کے لیے بھی۔ اوپر والے خانے میں تاریخ درج کر کے دیکھیں کہ وہ کس دن پڑتی ہے۔',
       ),
     },
     {
@@ -146,8 +146,8 @@ export const UR_WEEKDAY_SADAQA: { day: number; name: T; intro: T; items: T[] }[]
     day: 2,
     name: t('Tuesday', 'منگل'),
     intro: t(
-      'Tuesday is recommended for sadaqah given with the hope of healing and ease. Recommended forms of sadaqah include:',
-      'منگل کو شفا اور آسانی کی امید سے دیا جانے والا صدقہ مناسب سمجھا جاتا ہے۔ تجویز کردہ صورتیں یہ ہیں:',
+      'Tuesday is recommended for sadaqah given with the hope of wellbeing (ʿāfiyah) and ease. Recommended forms of sadaqah include:',
+      'منگل کو عافیت اور آسانی کی امید سے دیا جانے والا صدقہ مناسب سمجھا جاتا ہے۔ تجویز کردہ صورتیں یہ ہیں:',
     ),
     items: [
       t('Giving food to children.', 'بچوں کو کھانا دینا۔'),
@@ -184,8 +184,8 @@ export const UR_WEEKDAY_SADAQA: { day: number; name: T; intro: T; items: T[] }[]
     day: 5,
     name: t('Friday', 'جمعہ'),
     intro: t(
-      'Friday is associated with Venus and is considered a favourable day for giving sadaqah. Recommended acts include giving:',
-      'جمعہ کو زہرہ سے جوڑا جاتا ہے، اور صدقہ دینے کے لیے مناسب دن سمجھا جاتا ہے۔ تجویز یہ ہے کہ دیے جائیں:',
+      'Friday is considered a favourable day for giving sadaqah. Recommended acts include giving:',
+      'جمعہ کو صدقہ دینے کے لیے مناسب دن سمجھا جاتا ہے۔ تجویز کردہ چیزیں یہ ہیں:',
     ),
     items: [
       t('Clothes.', 'کپڑے۔'),
@@ -198,7 +198,7 @@ export const UR_WEEKDAY_SADAQA: { day: number; name: T; intro: T; items: T[] }[]
     name: t('Saturday', 'ہفتہ'),
     intro: t(
       'Saturday is recommended for helping poor and needy people. Recommended sadaqah includes:',
-      'ہفتہ کو غریبوں اور ضرورت مندوں کی مدد کے لیے مناسب سمجھا جاتا ہے۔ تجویز کردہ صدقہ اس میں شامل ہے:',
+      'ہفتہ کو غریبوں اور ضرورت مندوں کی مدد کے لیے مناسب سمجھا جاتا ہے۔ تجویز کردہ صدقے میں یہ شامل ہیں:',
     ),
     items: [
       t('Giving essential food items such as rice, oil, and other necessities.', 'چاول، تیل اور دیگر ضروری اشیائے خوردنی دینا۔'),
@@ -212,7 +212,7 @@ export const UR_MONTH_SADAQA: { month: number; name: T; intro: T; items: T[] }[]
   {
     month: 1,
     name: t('Muharram', 'محرم'),
-    intro: t('For anyone born in Muharram, their sadaqah can include:', 'محرم میں پیدا ہونے والوں کا صدقہ اس میں شامل ہو سکتا ہے:'),
+    intro: t('For anyone born in Muharram, their sadaqah can include:', 'محرم میں پیدا ہونے والوں کے صدقے میں یہ صورتیں شامل ہو سکتی ہیں:'),
     items: [
       t('Giving water to those in need.', 'ضرورت مندوں کو پانی دینا۔'),
       t('Feeding someone who is fasting.', 'کسی روزہ دار کو کھانا کھلانا۔'),
@@ -223,11 +223,11 @@ export const UR_MONTH_SADAQA: { month: number; name: T; intro: T; items: T[] }[]
   {
     month: 2,
     name: t('Safar', 'صفر'),
-    intro: t('For anyone born in Safar, their sadaqah can include:', 'صفر میں پیدا ہونے والوں کا صدقہ اس میں شامل ہو سکتا ہے:'),
+    intro: t('For anyone born in Safar, their sadaqah can include:', 'صفر میں پیدا ہونے والوں کے صدقے میں یہ صورتیں شامل ہو سکتی ہیں:'),
     items: [
       t('Giving rice.', 'چاول دینا۔'),
       t('Giving flour.', 'آٹا دینا۔'),
-      t('Giving cooking oil.', 'کوکنگ آئل دینا۔'),
+      t('Giving cooking oil.', 'کھانے کا تیل دینا۔'),
       t('Giving clothes.', 'کپڑے دینا۔'),
       t('Helping sick people, financially or with whatever they need.', 'بیماروں کی مالی یا ان کی ضرورت کے مطابق مدد کرنا۔'),
     ],
@@ -235,7 +235,7 @@ export const UR_MONTH_SADAQA: { month: number; name: T; intro: T; items: T[] }[]
   {
     month: 3,
     name: t('Rabi al-Awwal', 'ربیع الاول'),
-    intro: t('For anyone born in Rabi al-Awwal, their sadaqah can include:', 'ربیع الاول میں پیدا ہونے والوں کا صدقہ اس میں شامل ہو سکتا ہے:'),
+    intro: t('For anyone born in Rabi al-Awwal, their sadaqah can include:', 'ربیع الاول میں پیدا ہونے والوں کے صدقے میں یہ صورتیں شامل ہو سکتی ہیں:'),
     items: [
       t('Giving sadaqah to children.', 'بچوں کو صدقہ دینا۔'),
       t('Helping poor families.', 'غریب گھرانوں کی مدد کرنا۔'),
@@ -246,10 +246,10 @@ export const UR_MONTH_SADAQA: { month: number; name: T; intro: T; items: T[] }[]
   {
     month: 4,
     name: t('Rabi al-Thani (Rabi al-Akhir)', 'ربیع الثانی (ربیع الآخر)'),
-    intro: t('For anyone born in Rabi al-Thani (Rabi al-Akhir), their sadaqah can include:', 'ربیع الثانی (ربیع الآخر) میں پیدا ہونے والوں کا صدقہ اس میں شامل ہو سکتا ہے:'),
+    intro: t('For anyone born in Rabi al-Thani (Rabi al-Akhir), their sadaqah can include:', 'ربیع الثانی (ربیع الآخر) میں پیدا ہونے والوں کے صدقے میں یہ صورتیں شامل ہو سکتی ہیں:'),
     items: [
       t('Helping a widow.', 'بیوہ کی مدد کرنا۔'),
-      t('Giving cooking oil.', 'کوکنگ آئل دینا۔'),
+      t('Giving cooking oil.', 'کھانے کا تیل دینا۔'),
       t('Giving soap.', 'صابن دینا۔'),
       t('Providing kitchen and food supplies.', 'باورچی خانے اور خوراک کا سامان دینا۔'),
       t('Helping with necessities that can support a person or family.', 'ایسی ضروریات میں مدد کرنا جن سے کسی شخص یا خاندان کو سہارا ملے۔'),
@@ -258,7 +258,7 @@ export const UR_MONTH_SADAQA: { month: number; name: T; intro: T; items: T[] }[]
   {
     month: 5,
     name: t('Jumada al-Awwal', 'جمادی الاولیٰ'),
-    intro: t('For anyone born in Jumada al-Awwal, their sadaqah can include:', 'جمادی الاولیٰ میں پیدا ہونے والوں کا صدقہ اس میں شامل ہو سکتا ہے:'),
+    intro: t('For anyone born in Jumada al-Awwal, their sadaqah can include:', 'جمادی الاولیٰ میں پیدا ہونے والوں کے صدقے میں یہ صورتیں شامل ہو سکتی ہیں:'),
     items: [
       t('Giving hot, nourishing food.', 'گرم اور مقوی کھانا دینا۔'),
       t('Helping poor labourers and workers.', 'غریب مزدوروں اور کام کرنے والوں کی مدد کرنا۔'),
@@ -267,10 +267,10 @@ export const UR_MONTH_SADAQA: { month: number; name: T; intro: T; items: T[] }[]
   },
   {
     month: 6,
-    name: t('Jumada al-Akhirah (Jumada al-Thani)', 'جمادی الاخرہ (جمادی الثانی)'),
+    name: t('Jumada al-Akhirah (Jumada al-Thani)', 'جمادی الآخرہ (جمادی الثانی)'),
     intro: t(
       'For anyone born in Jumada al-Akhirah, their sadaqah is especially good when it is given discreetly and privately.',
-      'جمادی الاخرہ میں پیدا ہونے والوں کا صدقہ خاص طور پر تب اچھا سمجھا جاتا ہے جب وہ چھپا کر اور تنہائی میں دیا جائے۔',
+      'جمادی الآخرہ میں پیدا ہونے والوں کا صدقہ خاص طور پر تب اچھا سمجھا جاتا ہے جب وہ چھپا کر اور تنہائی میں دیا جائے۔',
     ),
     items: [
       t('Help anyone who is in need.', 'جسے بھی ضرورت ہو اس کی مدد کریں۔'),
@@ -286,9 +286,9 @@ export const UR_MONTH_SADAQA: { month: number; name: T; intro: T; items: T[] }[]
       'رجب میں پیدا ہونے والوں کا صدقہ ان لوگوں کی مدد پر مرکوز ہو سکتا ہے جو قرآن سیکھتے اور پڑھاتے ہیں:',
     ),
     items: [
-      t("Giving a complete Qur'an (Kamil) to a mosque or place of Qur'anic learning.", 'مسجد یا قرآن سیکھنے کی جگہ کو مکمل قرآن (کامل) دینا۔'),
-      t("Providing Qur'ans for people to read and use.", 'پڑھنے اور استعمال کے لیے قرآن دینا۔'),
-      t("Donating Qur'ans to schools and places of Qur'anic learning.", 'مدارس اور قرآن سیکھنے کی جگہوں کو قرآن دینا۔'),
+      t("Giving a complete copy of the Qur'an to a mosque or place of Qur'anic learning.", 'مسجد یا قرآن سیکھنے کی جگہ کو قرآن مجید کا مکمل نسخہ دینا۔'),
+      t("Providing Qur'ans for people to read and use.", 'لوگوں کے پڑھنے کے لیے قرآن مجید کے نسخے مہیا کرنا۔'),
+      t("Donating Qur'ans to schools and places of Qur'anic learning.", 'مدارس اور قرآن سیکھنے کی جگہوں کو قرآن مجید کے نسخے ہدیہ کرنا۔'),
       t("Helping mosques and places of Qur'anic learning.", 'مساجد اور قرآن سیکھنے کی جگہوں کی مدد کرنا۔'),
       t("Supporting Qur'anic students and those who use these places.", 'قرآن کے طلبہ اور ان جگہوں کو استعمال کرنے والوں کی مدد کرنا۔'),
     ],
@@ -296,7 +296,7 @@ export const UR_MONTH_SADAQA: { month: number; name: T; intro: T; items: T[] }[]
   {
     month: 8,
     name: t("Sha'ban", 'شعبان'),
-    intro: t("For anyone born in Sha'ban, their sadaqah can include:", 'شعبان میں پیدا ہونے والوں کا صدقہ اس میں شامل ہو سکتا ہے:'),
+    intro: t("For anyone born in Sha'ban, their sadaqah can include:", 'شعبان میں پیدا ہونے والوں کے صدقے میں یہ صورتیں شامل ہو سکتی ہیں:'),
     items: [
       t('Giving meals to poor families.', 'غریب گھرانوں کو کھانا دینا۔'),
       t('Sharing the meals prepared in their own home with a family in need.', 'گھر میں تیار کھانا کسی ضرورت مند خاندان کے ساتھ بانٹنا۔'),
@@ -307,7 +307,7 @@ export const UR_MONTH_SADAQA: { month: number; name: T; intro: T; items: T[] }[]
   {
     month: 9,
     name: t('Ramadan', 'رمضان'),
-    intro: t('For anyone born in Ramadan, their sadaqah can include:', 'رمضان میں پیدا ہونے والوں کا صدقہ اس میں شامل ہو سکتا ہے:'),
+    intro: t('For anyone born in Ramadan, their sadaqah can include:', 'رمضان میں پیدا ہونے والوں کے صدقے میں یہ صورتیں شامل ہو سکتی ہیں:'),
     items: [
       t('Giving iftar to someone who is fasting.', 'کسی روزہ دار کو افطار دینا۔'),
       t('Not being reluctant or hesitant to give their zakat when it is due.', 'زکوٰۃ واجب ہونے پر اسے دینے میں ہچکچاہٹ نہ کرنا۔'),
@@ -318,7 +318,7 @@ export const UR_MONTH_SADAQA: { month: number; name: T; intro: T; items: T[] }[]
   {
     month: 10,
     name: t('Shawwal', 'شوال'),
-    intro: t('For anyone born in Shawwal, their sadaqah can include:', 'شوال میں پیدا ہونے والوں کا صدقہ اس میں شامل ہو سکتا ہے:'),
+    intro: t('For anyone born in Shawwal, their sadaqah can include:', 'شوال میں پیدا ہونے والوں کے صدقے میں یہ صورتیں شامل ہو سکتی ہیں:'),
     items: [
       t('Giving brand-new clothes to someone in need.', 'ضرورت مند کو بالکل نئے کپڑے دینا۔'),
       t('Giving clean, good-quality clothing.', 'صاف اور اچھے کپڑے دینا۔'),
@@ -328,7 +328,7 @@ export const UR_MONTH_SADAQA: { month: number; name: T; intro: T; items: T[] }[]
   {
     month: 11,
     name: t("Dhu al-Qi'dah", 'ذوالقعدہ'),
-    intro: t("For anyone born in Dhu al-Qi'dah, their sadaqah can include:", 'ذوالقعدہ میں پیدا ہونے والوں کا صدقہ اس میں شامل ہو سکتا ہے:'),
+    intro: t("For anyone born in Dhu al-Qi'dah, their sadaqah can include:", 'ذوالقعدہ میں پیدا ہونے والوں کے صدقے میں یہ صورتیں شامل ہو سکتی ہیں:'),
     items: [
       t('Helping a traveller, financially or in any other way that can make their journey easier.', 'مسافر کی مالی یا ایسی مدد کرنا جس سے اس کا سفر آسان ہو۔'),
       t('Giving food to poor and needy people.', 'غریبوں اور ضرورت مندوں کو کھانا دینا۔'),
@@ -339,11 +339,11 @@ export const UR_MONTH_SADAQA: { month: number; name: T; intro: T; items: T[] }[]
   {
     month: 12,
     name: t('Dhu al-Hijjah', 'ذوالحجہ'),
-    intro: t('For anyone born in Dhu al-Hijjah, their sadaqah can include:', 'ذوالحجہ میں پیدا ہونے والوں کا صدقہ اس میں شامل ہو سکتا ہے:'),
+    intro: t('For anyone born in Dhu al-Hijjah, their sadaqah can include:', 'ذوالحجہ میں پیدا ہونے والوں کے صدقے میں یہ صورتیں شامل ہو سکتی ہیں:'),
     items: [
       t('Giving meat as sadaqah, especially to poor and needy people.', 'گوشت صدقے میں دینا، خاص طور پر غریبوں اور ضرورت مندوں کو۔'),
       t('Helping pilgrims who have travelled to Makkah for Hajj, financially or in any other useful way.', 'حج کے لیے مکہ گئے حجاج کی مالی یا کسی اور مفید طریقے سے مدد کرنا۔'),
-      t('Visiting and welcoming a pilgrim when they return from Makkah, through ziyar.', 'مکہ سے واپس آنے والے حاجی کی زیارت اور خیرمقدم کرنا۔'),
+      t('Visiting and welcoming a pilgrim when they return from Makkah, through ziyar.', 'مکہ مکرمہ سے واپس آنے والے حاجی سے ملنے جانا اور ان کا استقبال کرنا۔'),
       t('Helping poor and needy people with food, money, clothing, or other necessities.', 'غریبوں اور ضرورت مندوں کی کھانے، رقم، کپڑے یا دیگر ضروریات سے مدد کرنا۔'),
     ],
   },
@@ -360,15 +360,15 @@ export const UR_NAMES99 = {
   mashriqiLabel: t('Mashriqi', 'مشرقی'),
   aboutTitle: t('About this list', 'اس فہرست کے بارے میں'),
   about: t(
-    'The Names are given in the order of the compilation drawn from the hadith of al-Walīd in Jāmiʿ al-Tirmidhī (no. 3507). Abjad values drop the article “al-” and use the Maghribi table, the default across Asrār (the Mashriqi value is shown where it differs). The Arabic of each Name is taken only from the verified data files. They are listed for learning and reflection, not prediction.',
-    'نام اس ترتیب میں دیے گئے ہیں جو جامع الترمذی (حدیث ۳۵۰۷) میں ولید کی روایت سے ماخوذ معروف فہرست کی ہے۔ ابجدی اعداد میں حرفِ تعریف «ال» گرا دیا جاتا ہے اور مغربی جدول استعمال ہوتی ہے، جو اسرار میں طے شدہ ہے (جہاں مشرقی عدد مختلف ہو وہ ساتھ دکھایا جاتا ہے)۔ ہر نام کا عربی متن صرف تصدیق شدہ فائلوں سے لیا گیا ہے۔ یہ فہرست سیکھنے اور غور و فکر کے لیے ہے، پیش گوئی کے لیے نہیں۔',
+    'The Names are given in the order of the compilation drawn from the hadith narrated through al-Walīd ibn Muslim (from Abū Hurayra) in Jāmiʿ al-Tirmidhī (no. 3507). Abjad values drop the article “al-” and use the Maghribi table, the default across Asrār (the Mashriqi value is shown where it differs). The Arabic of each Name is taken only from the verified data files. They are listed for learning and reflection, not prediction.',
+    'نام اس ترتیب میں دیے گئے ہیں جو جامع الترمذی (حدیث ۳۵۰۷) میں ولید بن مسلم کی سند والی روایت سے ماخوذ معروف فہرست ہے۔ ابجدی اعداد میں حرفِ تعریف «ال» گرا دیا جاتا ہے اور مغربی جدول استعمال ہوتی ہے، جو اسرار میں طے شدہ ہے (جہاں مشرقی عدد مختلف ہو وہ ساتھ دکھایا جاتا ہے)۔ ہر نام کا عربی متن صرف تصدیق شدہ فائلوں سے لیا گیا ہے۔ یہ فہرست سیکھنے اور غور و فکر کے لیے ہے، پیش گوئی کے لیے نہیں۔',
   ),
   faqs: [
     {
       q: t('Where does this list of the 99 Names come from?', 'ننانوے ناموں کی یہ فہرست کہاں سے آئی ہے؟'),
       a: t(
-        'The Arabic text and order follow the widely used compilation drawn from the hadith of al-Walīd in Jāmiʿ al-Tirmidhī (no. 3507).',
-        'عربی متن اور ترتیب اس معروف فہرست کی پیروی کرتی ہے جو جامع الترمذی (حدیث ۳۵۰۷) میں ولید کی روایت سے لی گئی ہے۔',
+        'The Arabic text and order follow the widely used compilation drawn from the hadith narrated through al-Walīd ibn Muslim (from Abū Hurayra) in Jāmiʿ al-Tirmidhī (no. 3507).',
+        'عربی متن اور ترتیب اس معروف فہرست کی پیروی کرتی ہے جو جامع الترمذی (حدیث ۳۵۰۷) میں ولید بن مسلم کی سند والی روایت سے لی گئی ہے۔',
       ),
     },
     {
@@ -382,7 +382,7 @@ export const UR_NAMES99 = {
       q: t('How are the Names linked to my burj?', 'یہ نام میرے برج سے کیسے جڑے ہیں؟'),
       a: t(
         'Each of the 12 burūj in the name-and-mother calculator comes with Divine Names for dhikr. Find your burj with the calculator to see yours.',
-        'نام اور والدہ کے نام والے کیلکولیٹر میں بارہ بروجز میں سے ہر برج کے ساتھ ذکر کے لیے اسماء الحسنیٰ ہوتے ہیں۔ کیلکولیٹر سے اپنا برج معلوم کر کے اپنے نام دیکھیں۔',
+        'نام اور والدہ کے نام والے کیلکولیٹر میں بارہ بروج میں سے ہر برج کے ساتھ ذکر کے لیے اسماء الحسنیٰ ہوتے ہیں۔ کیلکولیٹر سے اپنا برج معلوم کر کے اپنے برج کے اسماء دیکھیں۔',
       ),
     },
     {
@@ -396,15 +396,15 @@ export const UR_NAMES99 = {
 };
 
 export const UR_MANAZIL_PAGE = {
-  h1: t('Manāzil al-Qamar — The 28 Lunar Mansions', 'منازل القمر — چاند کے اٹھائیس منازل'),
+  h1: t('Manāzil al-Qamar — The 28 Lunar Mansions', 'منازل القمر — چاند کی اٹھائیس منزلیں'),
   lead: t(
     "See which lunar mansion the Moon occupies today, browse all twenty-eight stations, and learn how classical ʿIlm al-Nujūm uses them for reflection and timing adab.",
-    'دیکھیں کہ آج چاند کس منزل میں ہے، اٹھائیسوں منازل دیکھیں، اور کلاسیکی علم النجوم انہیں غور و فکر اور وقت کے ادب کے لیے کیسے استعمال کرتا ہے۔',
+    'دیکھیں کہ آج چاند کس منزل میں ہے، اٹھائیسوں منازل دیکھیں، اور جانیں کہ کلاسیکی علم النجوم انہیں غور و فکر اور وقت کے آداب کے لیے کیسے استعمال کرتا ہے۔',
   ),
   aboutTitle: t('What are the lunar mansions?', 'منازلِ قمر کیا ہیں؟'),
   about: t(
     'Manāzil al-qamar are twenty-eight stations along the Moon’s path. In classical ʿIlm al-Nujūm they mark seasonal and celestial milestones; later electional (ikhtiyārāt) practice also weighs the mansion the Moon occupies when choosing a time to begin something. They are signs for contemplation, not agents that compel the unseen. This page is for learning and adab with time — not prediction, and not a substitute for istikhāra, mashwara or tawakkul. Allah alone knows the ghayb.',
-    'منازل القمر چاند کے راستے کے اٹھائیس مقام ہیں۔ کلاسیکی علم النجوم میں یہ موسمی اور فلکی نشانیاں ہیں؛ بعد کی اختیارات کی روایت میں کسی کام کے آغاز کا وقت چنتے ہوئے اس منزل کو بھی دیکھا جاتا ہے جس میں چاند ہو۔ یہ غور و فکر کی نشانیاں ہیں، غیب کو مجبور کرنے والی طاقتیں نہیں۔ یہ صفحہ سیکھنے اور وقت کے ادب کے لیے ہے — پیش گوئی نہیں، اور استخارہ، مشورے یا توکل کا بدل نہیں۔ غیب کا علم صرف اللہ کو ہے۔',
+    'منازلِ قمر چاند کے راستے کی اٹھائیس منزلیں ہیں۔ کلاسیکی علم النجوم میں یہ موسمی اور فلکی نشانیاں ہیں؛ بعد کی اختیارات کی روایت میں کسی کام کے آغاز کا وقت چنتے ہوئے اس منزل کو بھی دیکھا جاتا ہے جس میں چاند ہو۔ یہ غور و فکر کی نشانیاں ہیں، غیب کو مجبور کرنے والی طاقتیں نہیں۔ یہ صفحہ سیکھنے اور وقت کے آداب کے لیے ہے — پیش گوئی نہیں، اور استخارے، مشورے یا توکل کا بدل نہیں۔ غیب کا علم صرف اللہ کو ہے۔',
   ),
   browseTitle: t('Browse all 28 manāzil', 'تمام ۲۸ منازل دیکھیں'),
   browseLead: t(
@@ -416,14 +416,14 @@ export const UR_MANAZIL_PAGE = {
       q: t('What is a lunar mansion (manzil)?', 'منزلِ قمر کیا ہے؟'),
       a: t(
         'A manzil (pl. manāzil al-qamar) is one of twenty-eight sectors of the Moon’s path. Classical sources give each station a name and traditional themes. Asrār shows the current station and educational notes for reflection.',
-        'منزل (جمع: منازل القمر) چاند کے راستے کے اٹھائیس حصوں میں سے ایک ہے۔ کلاسیکی مصادر ہر مقام کا نام اور روایتی مضامین بتاتے ہیں۔ اسرار موجودہ منزل اور غور و فکر کے لیے تعلیمی نوٹس دکھاتا ہے۔',
+        'منزل (جمع: منازل؛ منازلِ قمر) چاند کے راستے کے اٹھائیس حصوں میں سے ایک ہے۔ کلاسیکی مصادر ہر منزل کا نام اور روایتی مضامین بتاتے ہیں۔ اسرار موجودہ منزل اور غور و فکر کے لیے تعلیمی نوٹس دکھاتا ہے۔',
       ),
     },
     {
       q: t("How does Asrār calculate today's manzil?", 'اسرار آج کی منزل کیسے نکالتا ہے؟'),
       a: t(
         "From the Moon’s tropical ecliptic longitude, divided into 28 equal sectors of 360°/28. Mansion 1 begins at 0° of the tropical ecliptic. This matches Asrār’s default tropical planetary ephemeris.",
-        'چاند کے استوائی طولِ بلد سے، جسے ۲۸ برابر حصوں (۳۶۰°/۲۸) میں تقسیم کیا جاتا ہے۔ پہلی منزل استوائی دائرة البروج کے ۰° سے شروع ہوتی ہے۔ یہ اسرار کے طے شدہ استوائی زیج سے میل کھاتا ہے۔',
+        'چاند کے دائرۃ البروجی طول (ٹراپیکل، یعنی اعتدالِ ربیعی سے ناپا گیا) سے، جسے ۲۸ برابر حصوں (۳۶۰°/۲۸) میں تقسیم کیا جاتا ہے۔ پہلی منزل ٹراپیکل دائرۃ البروج کے ۰° (اعتدالِ ربیعی) سے شروع ہوتی ہے۔ یہ اسرار کے بنیادی ٹراپیکل سیاروی زیج کے مطابق ہے۔',
       ),
     },
     {
@@ -439,7 +439,7 @@ export const UR_MANAZIL_PAGE = {
 export const UR_BEST_DAY = {
   h1: t(
     'Best Day For Nikah, Travel, Moving and Business (Ikhtiyārāt)',
-    'نکاح، سفر، نئے گھر اور کاروبار کے لیے مناسب دن (اختیارات)',
+    'نکاح، سفر، نئے گھر میں منتقلی اور کاروبار کے لیے مناسب دن (اختیارات)',
   ),
   lead: t(
     'Favourable weekdays and planetary hours for marriage (nikāḥ), travel, moving home and starting a business in the classical ikhtiyārāt tradition. For reflection, alongside istikhāra and tawakkul.',
@@ -447,22 +447,22 @@ export const UR_BEST_DAY = {
   ),
   aboutTitle: t('What is ikhtiyārāt?', 'اختیارات کیا ہیں؟'),
   about: t(
-    'Ikhtiyārāt is the classical practice of choosing a suitable time to begin an important matter, by looking at the ruler of the day, the planetary hour and the Moon’s mansion. No day is unlucky in Islam, and no date is religiously forbidden for nikāḥ. These pages are for reflection; they do not replace istikhāra, consultation (mashwara) or tawakkul.',
-    'اختیارات کسی اہم کام کے آغاز کے لیے مناسب وقت چننے کی کلاسیکی روایت ہے، جس میں دن کے حاکم سیارے، ساعت اور منزلِ قمر کو دیکھا جاتا ہے۔ اسلام میں کوئی دن منحوس نہیں، اور نکاح کے لیے کوئی تاریخ شرعاً ممنوع نہیں۔ یہ صفحات غور و فکر کے لیے ہیں؛ یہ استخارہ، مشورے یا توکل کا بدل نہیں۔',
+    'Ikhtiyārāt is the classical practice of choosing a suitable time to begin an important matter, by looking at the planet of the day, the planetary hour and the Moon’s mansion. No day is unlucky in Islam, and no date is religiously forbidden for nikāḥ. These pages are for reflection; they do not replace istikhāra, consultation (mashwara) or tawakkul.',
+    'اختیارات کسی اہم کام کے آغاز کے لیے مناسب وقت چننے کی کلاسیکی روایت ہے، جس میں دن کے سیارے، سیاروی ساعت اور منزلِ قمر کو دیکھا جاتا ہے۔ اسلام میں کوئی دن منحوس نہیں، اور نکاح کے لیے کوئی تاریخ شرعاً ممنوع نہیں۔ یہ صفحات غور و فکر کے لیے ہیں؛ یہ استخارے، مشورے یا توکل کا بدل نہیں۔',
   ),
   faqs: [
     {
       q: t('Is there one best day for everything?', 'کیا ہر کام کے لیے ایک ہی بہترین دن ہے؟'),
       a: t(
         'No. Each purpose has its own customary days and hours. Thursday is often among the favoured days, but you should read the page for the matter you are planning.',
-        'نہیں۔ ہر مقصد کے اپنے روایتی دن اور ساعات ہیں۔ جمعرات اکثر مناسب دنوں میں ہوتا ہے، مگر جس کام کا ارادہ ہو اس کا صفحہ پڑھیں۔',
+        'نہیں۔ ہر مقصد کے اپنے روایتی دن اور ساعات ہیں۔ جمعرات اکثر مناسب دنوں میں شامل ہوتی ہے، مگر جس کام کا ارادہ ہو اس کا صفحہ پڑھیں۔',
       ),
     },
     {
       q: t('Should I wait for a “perfect” date?', 'کیا مجھے «کامل» تاریخ کا انتظار کرنا چاہیے؟'),
       a: t(
         'No. These rules are a support for reflection. They do not replace istikhāra, consultation or tawakkul, and no day is religiously forbidden for nikāḥ.',
-        'نہیں۔ یہ قواعد غور و فکر کا سہارا ہیں۔ یہ استخارہ، مشورے یا توکل کا بدل نہیں، اور نکاح کے لیے کوئی دن شرعاً ممنوع نہیں۔',
+        'نہیں۔ یہ قواعد غور و فکر کا سہارا ہیں۔ یہ استخارے، مشورے یا توکل کا بدل نہیں، اور نکاح کے لیے کوئی دن شرعاً ممنوع نہیں۔',
       ),
     },
   ] as Faq[],
@@ -470,16 +470,16 @@ export const UR_BEST_DAY = {
     marriage: {
       name: t('Best Day for Nikah (Marriage)', 'نکاح (شادی) کے لیے مناسب دن'),
       short: t('Marriage (nikāḥ)', 'نکاح'),
-      h1: t('Best day for nikāḥ (marriage) — favoured days and hours', 'نکاح کے لیے مناسب دن — مناسب ایام اور ساعات'),
+      h1: t('Best day for nikāḥ (marriage) — favoured days and hours', 'نکاح کے لیے مناسب دن — موزوں ایام اور ساعات'),
       lead: t(
-        'No date is religiously forbidden for nikāḥ. The classical science of ikhtiyārāt offers a frame for reflecting on a blessed time, alongside istikhāra and family counsel.',
-        'نکاح کے لیے کوئی تاریخ شرعاً ممنوع نہیں۔ کلاسیکی علمِ اختیارات ایک بابرکت لمحے پر غور کرنے کا ڈھانچہ دیتا ہے، استخارے اور گھریلو مشورے کے ساتھ۔',
+        'No date is religiously forbidden for nikāḥ. The classical science of ikhtiyārāt offers a frame for reflecting on a suitable time, alongside istikhāra and family counsel.',
+        'نکاح کے لیے کوئی تاریخ شرعاً ممنوع نہیں۔ کلاسیکی علمِ اختیارات مناسب وقت کے بارے میں غور و فکر کا ایک فریم فراہم کرتا ہے، استخارے اور اہلِ خانہ کے مشورے کے ساتھ۔',
       ),
     },
     travel: {
       name: t('Best Day to Travel', 'سفر کے لیے مناسب دن'),
       short: t('Travel', 'سفر'),
-      h1: t('Best day to travel — favoured days and hours', 'سفر کے لیے مناسب دن — مناسب ایام اور ساعات'),
+      h1: t('Best day to travel — favoured days and hours', 'سفر کے لیے مناسب دن — موزوں ایام اور ساعات'),
       lead: t(
         'See the weekdays and planetary hours the ikhtiyārāt tradition considers suitable for beginning a journey, for reflection alongside istikhāra and tawakkul.',
         'دیکھیں کہ علمِ اختیارات سفر کے آغاز کے لیے کن ایامِ ہفتہ اور ساعات کو مناسب سمجھتا ہے — استخارے اور توکل کے ساتھ غور و فکر کے لیے۔',
@@ -488,7 +488,7 @@ export const UR_BEST_DAY = {
     'moving-home': {
       name: t('Best Day to Move Home', 'نئے گھر میں منتقلی کے لیے مناسب دن'),
       short: t('Moving home', 'نئے گھر میں منتقلی'),
-      h1: t('Best day to move home — favoured days and hours', 'نئے گھر میں منتقلی کے لیے مناسب دن — مناسب ایام اور ساعات'),
+      h1: t('Best day to move home — favoured days and hours', 'نئے گھر میں منتقلی کے لیے مناسب دن — موزوں ایام اور ساعات'),
       lead: t(
         'See the weekdays and planetary hours the ikhtiyārāt tradition considers suitable for moving home, for reflection alongside istikhāra and tawakkul.',
         'دیکھیں کہ علمِ اختیارات نئے گھر میں منتقل ہونے کے لیے کن ایامِ ہفتہ اور ساعات کو مناسب سمجھتا ہے — استخارے اور توکل کے ساتھ غور و فکر کے لیے۔',
@@ -496,11 +496,11 @@ export const UR_BEST_DAY = {
     },
     business: {
       name: t('Best Day to Start a Business', 'کاروبار شروع کرنے کے لیے مناسب دن'),
-      short: t('Business & contracts', 'کاروبار اور عقود'),
-      h1: t('Best day to start a business — favoured days and hours', 'کاروبار شروع کرنے کے لیے مناسب دن — مناسب ایام اور ساعات'),
+      short: t('Business & contracts', 'کاروبار اور معاہدے'),
+      h1: t('Best day to start a business — favoured days and hours', 'کاروبار شروع کرنے کے لیے مناسب دن — موزوں ایام اور ساعات'),
       lead: t(
         'See the weekdays and planetary hours the ikhtiyārāt tradition considers suitable for starting a business or a contract, for reflection alongside istikhāra and tawakkul.',
-        'دیکھیں کہ علمِ اختیارات کاروبار یا معاملہ شروع کرنے کے لیے کن ایامِ ہفتہ اور ساعات کو مناسب سمجھتا ہے — استخارے اور توکل کے ساتھ غور و فکر کے لیے۔',
+        'دیکھیں کہ علمِ اختیارات کاروبار شروع کرنے یا معاہدہ کرنے کے لیے کن ایامِ ہفتہ اور ساعات کو مناسب سمجھتا ہے — استخارے اور توکل کے ساتھ غور و فکر کے لیے۔',
       ),
     },
   },
