@@ -33,8 +33,8 @@ export async function generateMetadata({
       description: 'Real-time Chaldean planetary hours based on your location. Discover the ruling planet of the current hour, its spiritual significance, and the best activities to align with natural rhythms in ʿIlm al-Nujūm.',
     },
     fr: {
-      title: 'Guide des Heures Planétaires',
-      description: 'Heures planétaires chaldéennes en temps réel basées sur votre position. Découvrez la planète gouvernante de l\'heure actuelle, sa signification spirituelle et les meilleures activités pour s\'aligner avec les rythmes naturels.',
+      title: 'Heure planétaire aujourd\'hui : heures planétaires du jour',
+      description: 'Heure planétaire aujourd\'hui et heures planétaires du jour, selon votre position : planète de l\'heure actuelle. Pour la réflexion, non la prédiction.',
     },
   };
 
