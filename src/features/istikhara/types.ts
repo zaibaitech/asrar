@@ -8,6 +8,8 @@ export type ElementType = 'fire' | 'earth' | 'air' | 'water';
 export interface BilingualText {
   en: string;
   fr: string;
+  ar?: string;
+  ur?: string;
 }
 
 export interface PersonalityProfile {
@@ -85,6 +87,8 @@ export interface MonthlySadaqah {
   modern_alternatives: {
     en: string[];
     fr: string[];
+    ar?: string[];
+    ur?: string[];
   };
 }
 
@@ -93,10 +97,14 @@ export interface LifetimeSadaqah {
   components?: {
     en: string[];
     fr: string[];
+    ar?: string[];
+    ur?: string[];
   };
   best_timing: {
     en: string[];
     fr: string[];
+    ar?: string[];
+    ur?: string[];
   };
   significance?: BilingualText;
   cultural_note?: BilingualText;

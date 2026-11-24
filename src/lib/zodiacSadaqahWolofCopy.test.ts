@@ -27,11 +27,11 @@ describe('zodiac sadaqah Wolof secondary copy', () => {
     expect(zodiacSadaqahInWolofLabel('fr')).toBe('En wolof');
   });
 
-  it('Arabic and Urdu fall back to the English labels', () => {
-    expect(zodiacSadaqahWolofLine('ar', 'laakh')).toBe('Wolof: laakh');
-    expect(zodiacSadaqahWolofLine('ur', 'laakh')).toBe('Wolof: laakh');
-    expect(zodiacSadaqahInWolofLabel('ar')).toBe('In Wolof');
-    expect(zodiacSadaqahInWolofLabel('ur')).toBe('In Wolof');
+  it('Arabic and Urdu use dedicated Wolof labels', () => {
+    expect(zodiacSadaqahWolofLine('ar', 'laakh')).toBe('الولوفية: laakh');
+    expect(zodiacSadaqahWolofLine('ur', 'laakh')).toBe('وولوف: laakh');
+    expect(zodiacSadaqahInWolofLabel('ar')).toBe('بالولوفية');
+    expect(zodiacSadaqahInWolofLabel('ur')).toBe('وولوف میں');
   });
 
   it('every card has English and French titles; none are Wolof-only', () => {

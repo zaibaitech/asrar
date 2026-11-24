@@ -32,6 +32,8 @@ import { DhikrCounter } from "./DhikrCounter";
 import { TrackingDashboard } from "./TrackingDashboard";
 import { PreciseTimingGuidance } from "./PreciseTimingGuidance";
 import type { IstikharaCalculationResult, ZodiacSign } from "../types";
+import { localeList, localeText } from '../../../lib/localeText';
+import { sadaqahUiCopy } from '../../../lib/sadaqahUiCopy';
 
 interface SpiritualPracticeTabProps {
   result: IstikharaCalculationResult;
@@ -535,7 +537,8 @@ export function EnhancedMonthlySadaqahSection({
   result: IstikharaCalculationResult;
   colors: any;
 }) {
-  const { language } = useLanguage();
+  const { uiLanguage } = useLanguage();
+  const ui = sadaqahUiCopy(uiLanguage);
   const sadaqah = result.burujProfile.sadaqah.monthly;
   const [expanded, setExpanded] = useState<string[]>(['traditional']);
 
@@ -557,10 +560,10 @@ export function EnhancedMonthlySadaqahSection({
           </div>
           <div>
             <h3 className="text-2xl font-bold text-white">
-              {language === 'en' ? 'Monthly Spiritual Balance' : 'Équilibre Spirituel Mensuel'}
+              {ui.monthlyTitle}
             </h3>
             <p className="text-sm text-white">
-              {language === 'en' ? 'Regular practice for ongoing spiritual growth' : 'Pratique régulière pour la croissance spirituelle continue'}
+              {ui.monthlySubtitle}
             </p>
           </div>
         </div>
@@ -568,15 +571,15 @@ export function EnhancedMonthlySadaqahSection({
         <div className="grid md:grid-cols-2 gap-4">
           <InfoCard
             icon="🔄"
-            label={language === 'en' ? 'Frequency' : 'Fréquence'}
-            value={sadaqah.frequency[language]}
+            label={ui.frequency}
+            value={localeText(sadaqah.frequency, uiLanguage)}
             colors={colors}
           />
           {sadaqah.context && (
             <InfoCard
               icon="📍"
-              label={language === 'en' ? 'Context' : 'Contexte'}
-              value={sadaqah.context[language]}
+              label={ui.context}
+              value={localeText(sadaqah.context, uiLanguage)}
               colors={colors}
             />
           )}
@@ -585,7 +588,7 @@ export function EnhancedMonthlySadaqahSection({
 
       {/* Traditional Practice */}
       <ExpandableSection
-        title={language === 'en' ? 'Traditional Practice' : 'Pratique Traditionnelle'}
+        title={ui.traditionalPractice}
         icon="📜"
         isExpanded={expanded.includes('traditional')}
         onToggle={() => toggleSection('traditional')}
@@ -593,7 +596,7 @@ export function EnhancedMonthlySadaqahSection({
       >
         <div className="space-y-4">
           <blockquote className="text-white font-bold italic border-l-4 border-white/20 pl-4 text-lg leading-relaxed">
-            "{sadaqah.traditional[language]}"
+            "{localeText(sadaqah.traditional, uiLanguage)}"
           </blockquote>
 
           {sadaqah.purpose && (
@@ -601,10 +604,10 @@ export function EnhancedMonthlySadaqahSection({
               <div className="flex items-center gap-2 mb-2">
                 <Sparkles className={`w-5 h-5 ${colors.text}`} />
                 <h5 className="font-semibold text-white">
-                  {language === 'en' ? 'Spiritual Benefits' : 'Bienfaits Spirituels'}
+                  {ui.spiritualBenefits}
                 </h5>
               </div>
-              <p className="text-white leading-relaxed">{sadaqah.purpose[language]}</p>
+              <p className="text-white leading-relaxed">{localeText(sadaqah.purpose, uiLanguage)}</p>
             </div>
           )}
         </div>
@@ -612,14 +615,14 @@ export function EnhancedMonthlySadaqahSection({
 
       {/* Modern Alternatives */}
       <ExpandableSection
-        title={language === 'en' ? 'Modern Applications' : 'Applications Modernes'}
+        title={ui.modernApplications}
         icon="🌍"
         isExpanded={expanded.includes('modern')}
         onToggle={() => toggleSection('modern')}
         colors={colors}
       >
         <div className="grid md:grid-cols-2 gap-3">
-          {sadaqah.modern_alternatives[language].map((alt, index) => (
+          {localeList(sadaqah.modern_alternatives, uiLanguage).map((alt, index) => (
             <div 
               key={index} 
               className="flex items-start gap-3 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
@@ -639,31 +642,25 @@ export function EnhancedMonthlySadaqahSection({
           <AlertCircle className="w-6 h-6 text-yellow-400 flex-shrink-0 mt-1" />
           <div>
             <h4 className="font-bold text-white mb-2">
-              {language === 'en' ? 'Getting Started' : 'Pour Commencer'}
+              {ui.gettingStarted}
             </h4>
             <ul className="space-y-2 text-sm text-white">
               <li className="flex items-start gap-2">
                 <span className="text-yellow-400 mt-0.5">•</span>
                 <span>
-                  {language === 'en'
-                    ? 'Set a monthly reminder on your calendar'
-                    : 'Définissez un rappel mensuel dans votre calendrier'}
+{ui.tipCalendarReminder}
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-yellow-400 mt-0.5">•</span>
                 <span>
-                  {language === 'en'
-                    ? 'Choose one modern alternative that fits your lifestyle'
-                    : 'Choisissez une alternative moderne qui correspond à votre style de vie'}
+{ui.tipModernAlternative}
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-yellow-400 mt-0.5">•</span>
                 <span>
-                  {language === 'en'
-                    ? 'Make intention (niyyah) before each practice'
-                    : 'Faites l\'intention (niyyah) avant chaque pratique'}
+{ui.tipNiyyahBefore}
                 </span>
               </li>
             </ul>
@@ -683,7 +680,8 @@ export function EnhancedLifetimeOfferingSection({
   result: IstikharaCalculationResult;
   colors: any;
 }) {
-  const { language } = useLanguage();
+  const { uiLanguage } = useLanguage();
+  const ui = sadaqahUiCopy(uiLanguage);
   const offering = result.burujProfile.sadaqah.lifetime;
 
   return (
@@ -696,20 +694,16 @@ export function EnhancedLifetimeOfferingSection({
           </div>
           <div>
             <h3 className="text-2xl font-bold text-white">
-              {language === 'en' ? 'Sacred Lifetime Offering' : 'Offrande Sacrée de la Vie'}
+              {ui.lifetimeTitle}
             </h3>
             <p className="text-yellow-200 font-semibold">
-              ⚠️ {language === 'en' 
-                ? 'Performed ONCE in Your Lifetime' 
-                : 'Effectué UNE SEULE FOIS dans Votre Vie'}
+              ⚠️ {ui.lifetimeOnce}
             </p>
           </div>
         </div>
         
         <p className="text-white leading-relaxed">
-          {language === 'en'
-            ? 'This is a profound spiritual commitment that should be undertaken with careful preparation and sincere intention.'
-            : 'Ceci est un engagement spirituel profond qui doit être entrepris avec une préparation soigneuse et une intention sincère.'}
+          {ui.lifetimeIntro}
         </p>
       </div>
 
@@ -718,23 +712,23 @@ export function EnhancedLifetimeOfferingSection({
         <div className="flex items-center gap-2 mb-4">
           <BookOpen className={`w-5 h-5 ${colors.text}`} />
           <h4 className="font-bold text-white text-lg">
-            {language === 'en' ? 'Traditional Guidance' : 'Guidance Traditionnelle'}
+            {ui.traditionalGuidance}
           </h4>
         </div>
         <blockquote className="text-white font-bold italic border-l-4 border-white/20 pl-4 text-lg leading-relaxed">
-          "{offering.traditional[language]}"
+          "{localeText(offering.traditional, uiLanguage)}"
         </blockquote>
       </div>
 
       {/* Components Checklist */}
-      {offering.components && offering.components[language].length > 0 && (
+      {offering.components && localeList(offering.components, uiLanguage).length > 0 && (
         <div>
           <h4 className="font-bold text-white text-lg mb-4 flex items-center gap-2">
             <CheckSquare className={`w-5 h-5 ${colors.text}`} />
-            {language === 'en' ? 'Required Components' : 'Composants Requis'}
+            {ui.requiredComponents}
           </h4>
           <div className="grid gap-3">
-            {offering.components[language].map((comp, index) => (
+            {localeList(offering.components, uiLanguage).map((comp, index) => (
               <div 
                 key={index}
                 className={`flex items-start gap-4 p-5 bg-gradient-to-br ${colors.bgGradient} border ${colors.border} rounded-xl hover:scale-[1.02] transition-transform`}
@@ -754,11 +748,11 @@ export function EnhancedLifetimeOfferingSection({
         <div className="flex items-center gap-2 mb-4">
           <Clock className="w-5 h-5 text-blue-400" />
           <h4 className="font-bold text-white text-lg">
-            {language === 'en' ? 'Optimal Timing' : 'Moment Optimal'}
+            {ui.optimalTiming}
           </h4>
         </div>
         <div className="space-y-3">
-          {offering.best_timing[language].map((timing, index) => (
+          {localeList(offering.best_timing, uiLanguage).map((timing, index) => (
             <div 
               key={index}
               className="flex items-start gap-3 p-4 bg-black/30 rounded-lg"
@@ -776,11 +770,11 @@ export function EnhancedLifetimeOfferingSection({
           <div className="flex items-center gap-2 mb-4">
             <Heart className="w-5 h-5 text-green-400" />
             <h4 className="font-bold text-white text-lg">
-              {language === 'en' ? 'Spiritual Significance' : 'Signification Spirituelle'}
+              {ui.spiritualSignificance}
             </h4>
           </div>
           <p className="text-white font-semibold leading-relaxed text-lg">
-            {offering.significance[language]}
+            {localeText(offering.significance, uiLanguage)}
           </p>
         </div>
       )}

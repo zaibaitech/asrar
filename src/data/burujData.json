@@ -5,7 +5,11 @@
       "element": "fire",
       "element_emoji": "🔥",
       "element_number": 1,
-      "colors": ["#FF6B35", "#F7931E", "#DC143C"],
+      "colors": [
+        "#FF6B35",
+        "#F7931E",
+        "#DC143C"
+      ],
       "personality": {
         "en": {
           "temperament": "Slow to anger, but explosive when provoked—impossible to calm down once ignited",
@@ -195,19 +199,27 @@
         "monthly": {
           "traditional": {
             "en": "Beef (cow meat) - shared with those in need",
-            "fr": "Viande de bœuf - partagée avec les nécessiteux"
+            "fr": "Viande de bœuf - partagée avec les nécessiteux",
+            "ar": "لحم البقر - يُشارَك مع المحتاجين",
+            "ur": "گائے کا گوشت — ضرورت مندوں کے ساتھ بانٹنا"
           },
           "frequency": {
             "en": "Every 1-2 months consistently",
-            "fr": "Tous les 1-2 mois de manière cohérente"
+            "fr": "Tous les 1-2 mois de manière cohérente",
+            "ar": "كل شهر إلى شهرين بانتظام",
+            "ur": "ہر 1 تا 2 ماہ میں تسلسل کے ساتھ"
           },
           "context": {
             "en": "Whether in ease or difficulty, prosperity or hardship - consistency is key",
-            "fr": "Que ce soit dans l'aisance ou la difficulté, la prospérité ou l'épreuve - la cohérence est essentielle"
+            "fr": "Que ce soit dans l'aisance ou la difficulté, la prospérité ou l'épreuve - la cohérence est essentielle",
+            "ar": "سواء في اليسر أو العسر، الرخاء أو الشدة - الاستمرارية هي المفتاح",
+            "ur": "آسانی ہو یا مشکل، خوشحالی ہو یا تنگی — تسلسل ہی کلید ہے"
           },
           "purpose": {
             "en": "To balance your fiery ṭabʿ, maintain spiritual equilibrium, cool excessive heat, and attract divine blessings",
-            "fr": "Pour équilibrer votre ṭabʿ ardent, maintenir l'équilibre spirituel, refroidir la chaleur excessive et attirer les bénédictions divines"
+            "fr": "Pour équilibrer votre ṭabʿ ardent, maintenir l'équilibre spirituel, refroidir la chaleur excessive et attirer les bénédictions divines",
+            "ar": "لموازنة طبعك الناري، والحفاظ على التوازن الروحي، وتهدئة الحرارة الزائدة، وجلب البركات الإلهية",
+            "ur": "اپنے آتشی طبع کو متوازن رکھنے، روحانی توازن برقرار رکھنے، حد سے زیادہ گرمی کو ٹھنڈا کرنے اور الٰہی برکتیں پانے کے لیے"
           },
           "modern_alternatives": {
             "en": [
@@ -225,13 +237,31 @@
               "Soutenir les organisations fournissant des repas",
               "Organiser des dîners communautaires avec des plats de viande",
               "Parrainer des repas dans les mosquées ou centres communautaires"
+            ],
+            "ar": [
+              "مشاركة وجبات لحم البقر مع الأسر المحتاجة",
+              "التبرع لبنوك الطعام المتخصصة بالبروتين",
+              "إطعام الجياع في مطابخ الطعام الخيرية",
+              "دعم المنظمات التي توفر الوجبات",
+              "استضافة عشاء مجتمعي بأطباق اللحوم",
+              "رعاية وجبات في المساجد أو المراكز المجتمعية"
+            ],
+            "ur": [
+              "ضرورت مند خاندانوں کے ساتھ گائے کے گوشت کا کھانا بانٹیں",
+              "پروٹین پر توجہ دینے والے فوڈ بینکوں کو عطیہ دیں",
+              "لنگر خانوں میں بھوکوں کو کھانا کھلائیں",
+              "کھانا فراہم کرنے والی تنظیموں کی مدد کریں",
+              "گوشت کے پکوانوں کے ساتھ برادری کے کھانے کا اہتمام کریں",
+              "مساجد یا کمیونٹی سینٹروں میں کھانے کا اہتمام کریں"
             ]
           }
         },
         "lifetime": {
           "traditional": {
             "en": "One lamb without horns (dakaru gaar in Wolof) - a sacred once-in-lifetime offering",
-            "fr": "Un agneau sans cornes (dakaru gaar en Wolof) - une offrande sacrée unique dans la vie"
+            "fr": "Un agneau sans cornes (dakaru gaar en Wolof) - une offrande sacrée unique dans la vie",
+            "ar": "خروف واحد بلا قرون (dakaru gaar بالولوفية) - قربان مقدس يُقدَّم مرة واحدة في العمر",
+            "ur": "بغیر سینگ کا ایک میمنا (وولوف: ڈکارو گار) — زندگی میں ایک بار کا صدقہ"
           },
           "components": {
             "en": [
@@ -247,6 +277,20 @@
               "Viande distribuée parmi les croyants et les pauvres",
               "Effectué avec une intention sincère (niyyah)",
               "Fait pendant un moment spirituellement propice"
+            ],
+            "ar": [
+              "خروف كامل بلا قرون (يرمز إلى الطهارة والاستسلام)",
+              "يجب أن يكون سليمًا وخاليًا من العيوب",
+              "توزَّع اللحوم بين المؤمنين والفقراء",
+              "يُؤدَّى بنية صادقة",
+              "يُفعل خلال وقت مبارك روحيًا"
+            ],
+            "ur": [
+              "بغیر سینگ کا ایک مکمل میمنا (پاکیزگی اور سپردگی کی علامت)",
+              "صحت مند اور بے عیب ہونا ضروری ہے",
+              "گوشت اہلِ ایمان اور غریبوں میں تقسیم کیا جائے",
+              "خلوصِ نیت کے ساتھ کیا جائے",
+              "کسی روحانی طور پر موافق وقت میں کیا جائے"
             ]
           },
           "best_timing": {
@@ -263,11 +307,27 @@
               "Pendant les moments de gratitude ou après des jalons majeurs de la vie",
               "Lors de la recherche d'intervention divine pour des questions importantes",
               "Après avoir terminé un voyage spirituel significatif"
+            ],
+            "ar": [
+              "أدِّه في يومك المبارك (الثلاثاء) لأقصى فائدة روحية",
+              "المناسبات الإسلامية كعيد الأضحى تضخّم البركة",
+              "خلال أوقات الامتنان أو بعد محطات حياتية مهمة",
+              "عند طلب التدخل الإلهي في أمور مهمة",
+              "بعد إتمام رحلة روحية مهمة"
+            ],
+            "ur": [
+              "زیادہ سے زیادہ روحانی فائدے کے لیے اپنے روایتی دن (منگل) کو کریں",
+              "عیدالاضحیٰ جیسے اسلامی مواقع برکت کو بڑھا دیتے ہیں",
+              "شکرگزاری کے اوقات میں یا زندگی کے بڑے سنگِ میل کے بعد",
+              "جب اہم معاملات میں اللہ کی مدد طلب کی جائے",
+              "کسی اہم روحانی سفر کی تکمیل کے بعد"
             ]
           },
           "significance": {
             "en": "A major spiritual milestone that removes obstacles from your path, strengthens your connection with the Divine, balances your fiery nature, and opens doors of sustenance. This sacred act creates lasting spiritual protection for you and your lineage.",
-            "fr": "Un jalon spirituel majeur qui élimine les obstacles de votre chemin, renforce votre connexion avec le Divin, équilibre votre nature ardente et ouvre les portes de la subsistance. Cet acte sacré crée une protection spirituelle durable pour vous et votre lignée."
+            "fr": "Un jalon spirituel majeur qui élimine les obstacles de votre chemin, renforce votre connexion avec le Divin, équilibre votre nature ardente et ouvre les portes de la subsistance. Cet acte sacré crée une protection spirituelle durable pour vous et votre lignée.",
+            "ar": "محطة روحية كبرى تزيل العقبات من طريقك، وتقوّي اتصالك بالله، وتوازن طبيعتك النارية، وتفتح أبواب الرزق. يخلق هذا العمل المقدس حماية روحية دائمة لك ولنسلك.",
+            "ur": "ایک بڑا روحانی سنگِ میل، جسے روایت میں راہ کی رکاوٹیں دور کرنے، اللہ سے تعلق مضبوط کرنے، آپ کے آتشی مزاج کو متوازن کرنے اور رزق کے دروازے کھولنے کا ذریعہ سمجھا جاتا ہے۔ اس مقدس عمل کو آپ اور آپ کی نسل کے لیے دیرپا روحانی حفاظت کا سبب مانا جاتا ہے۔"
           }
         }
       },
@@ -355,7 +415,11 @@
       "element": "earth",
       "element_emoji": "🌍",
       "element_number": 2,
-      "colors": ["#8B4513", "#6B8E23", "#D2691E"],
+      "colors": [
+        "#8B4513",
+        "#6B8E23",
+        "#D2691E"
+      ],
       "personality": {
         "en": {
           "temperament": "Exceptionally patient and enduring - can bear tremendous hardship without complaint",
@@ -573,19 +637,27 @@
         "monthly": {
           "traditional": {
             "en": "Food or earth-derived products - grains, crops, cereals",
-            "fr": "Nourriture ou produits dérivés de la terre - céréales, cultures, grains"
+            "fr": "Nourriture ou produits dérivés de la terre - céréales, cultures, grains",
+            "ar": "الطعام أو المنتجات المستخرجة من الأرض - الحبوب والمحاصيل والغلال",
+            "ur": "مٹی سے حاصل ہونے والی اشیا یا خوراک — اناج، فصلیں، غلہ"
           },
           "frequency": {
             "en": "Every 1-2 months without fail",
-            "fr": "Tous les 1-2 mois sans faute"
+            "fr": "Tous les 1-2 mois sans faute",
+            "ar": "كل شهر إلى شهرين دون انقطاع",
+            "ur": "ہر 1 تا 2 ماہ میں بلا ناغہ"
           },
           "context": {
             "en": "In all circumstances - prosperity or hardship - to maintain spiritual balance",
-            "fr": "En toutes circonstances - prospérité ou épreuve - pour maintenir l'équilibre spirituel"
+            "fr": "En toutes circonstances - prospérité ou épreuve - pour maintenir l'équilibre spirituel",
+            "ar": "في جميع الأحوال - الرخاء أو الشدة - للحفاظ على التوازن الروحي",
+            "ur": "ہر حال میں — خوشحالی ہو یا تنگی — روحانی توازن برقرار رکھنے کے لیے"
           },
           "purpose": {
             "en": "To balance your earthy nature, maintain spiritual grounding, ensure continued divine provision, and avoid stagnation. CRITICAL: Never give fish - this disrupts your elemental balance severely.",
-            "fr": "Pour équilibrer votre nature terrestre, maintenir l'ancrage spirituel, assurer la provision divine continue et éviter la stagnation. CRITIQUE: Ne jamais donner de poisson - cela perturbe gravement votre équilibre élémentaire."
+            "fr": "Pour équilibrer votre nature terrestre, maintenir l'ancrage spirituel, assurer la provision divine continue et éviter la stagnation. CRITIQUE: Ne jamais donner de poisson - cela perturbe gravement votre équilibre élémentaire.",
+            "ar": "لموازنة طبعك الأرضي، والحفاظ على الرسوخ الروحي، وضمان استمرار الرزق الإلهي، وتجنب الركود. تنبيه هام: لا تتصدق بالسمك أبدًا - فهذا يخلّ بتوازن عناصرك بشدة.",
+            "ur": "اپنے زمینی مزاج کو متوازن رکھنے، روحانی استحکام برقرار رکھنے، الٰہی رزق کے تسلسل اور جمود سے بچنے کے لیے۔ نہایت اہم: کبھی مچھلی نہ دیں — روایت میں یہ آپ کے عناصر کے توازن کو شدید بگاڑتی سمجھی جاتی ہے۔"
           },
           "modern_alternatives": {
             "en": [
@@ -603,13 +675,31 @@
               "Parrainer des programmes de repas scolaires",
               "Donner aux organisations nourrissant les affamés (assurer AUCUN produit de poisson)",
               "Fournir des produits secs et des aliments terrestres non périssables"
+            ],
+            "ar": [
+              "التبرع بالأرز أو القمح أو الحبوب لبنوك الطعام",
+              "توفير الخبز والمخبوزات للمحتاجين",
+              "دعم التعاونيات الزراعية التي تساعد المزارعين",
+              "رعاية برامج وجبات المدارس",
+              "التبرع لمنظمات إطعام الجياع (مع التأكد من خلوها من منتجات السمك)",
+              "توفير المواد الجافة والأطعمة الأرضية غير القابلة للتلف"
+            ],
+            "ur": [
+              "فوڈ بینکوں کو چاول، گندم یا اناج عطیہ کریں",
+              "ضرورت مندوں کو روٹی اور بیکری کی اشیا دیں",
+              "کسانوں کی مدد کرنے والی زرعی تعاونی انجمنوں کی معاونت کریں",
+              "اسکولوں کے دوپہر کے کھانے کے پروگراموں کی کفالت کریں",
+              "بھوکوں کو کھانا کھلانے والی تنظیموں کو عطیہ دیں (مچھلی کی کوئی چیز نہ ہو)",
+              "خشک سامان اور دیر تک محفوظ رہنے والی مٹی سے حاصل ہونے والی غذائیں دیں"
             ]
           }
         },
         "lifetime": {
           "traditional": {
             "en": "One cow (complete) - meat distributed among believers and the poor",
-            "fr": "Une vache (complète) - viande distribuée parmi les croyants et les pauvres"
+            "fr": "Une vache (complète) - viande distribuée parmi les croyants et les pauvres",
+            "ar": "بقرة واحدة كاملة - يُوزَّع لحمها بين المؤمنين والفقراء",
+            "ur": "ایک گائے (مکمل) — گوشت اہلِ ایمان اور غریبوں میں تقسیم کیا جائے"
           },
           "components": {
             "en": [
@@ -627,6 +717,22 @@
               "Prioriser nourrir les pauvres et nécessiteux d'abord",
               "Garder une portion minimale pour vous-même (la tradition recommande 1/3 de distribution)",
               "Effectuer avec intention sincère de plaire à Allah"
+            ],
+            "ar": [
+              "بقرة واحدة كاملة وسليمة وخالية من العيوب",
+              "يجب أن تكون البقرة في السن المناسب (بالغة)",
+              "توزَّع اللحوم على نطاق واسع بين أفراد المجتمع",
+              "إعطاء الأولوية لإطعام الفقراء والمحتاجين أولًا",
+              "الاحتفاظ بحصة قليلة لنفسك (توصي التقاليد بتوزيع الثلث)",
+              "أداؤها بنية صادقة لإرضاء الله"
+            ],
+            "ur": [
+              "ایک مکمل، صحت مند اور بے عیب گائے",
+              "گائے مناسب عمر (بالغ) کی ہونی چاہیے",
+              "گوشت برادری میں وسیع پیمانے پر تقسیم کیا جائے",
+              "پہلے غریبوں اور ضرورت مندوں کو کھلانے کو ترجیح دیں",
+              "اپنے لیے کم سے کم حصہ رکھیں (روایت میں 1/3 تقسیم کی سفارش ہے)",
+              "اللہ کی رضا کی خالص نیت سے کریں"
             ]
           },
           "best_timing": {
@@ -643,11 +749,27 @@
               "Pendant Dhul-Hijjah (mois sacré)",
               "Moments de transitions de vie majeures ou de gratitude",
               "Lors de la recherche d'ouvertures divines dans la subsistance"
+            ],
+            "ar": [
+              "أدِّها يوم الجمعة (يومك المبارك) بعد صلاة الجمعة",
+              "عيد الأضحى هو أكثر الأوقات بركة",
+              "خلال شهر ذي الحجة (الشهر المقدس)",
+              "أوقات التحولات الحياتية الكبرى أو الامتنان",
+              "عند طلب فتوحات إلهية في الرزق"
+            ],
+            "ur": [
+              "اپنے روایتی دن جمعہ کو نمازِ جمعہ کے بعد کریں",
+              "عیدالاضحیٰ سب سے بابرکت وقت ہے",
+              "ذوالحجہ (حرمت والے مہینے) کے دوران",
+              "زندگی کی بڑی تبدیلیوں یا شکرگزاری کے اوقات",
+              "جب رزق میں کشادگی کی دعا ہو"
             ]
           },
           "significance": {
             "en": "A profound spiritual milestone that removes major obstacles, opens doors of sustenance from unexpected sources, strengthens family bonds, and establishes lasting barakah (blessing) in your lineage. The earth element connects you deeply to provision.",
-            "fr": "Un jalon spirituel profond qui élimine les obstacles majeurs, ouvre les portes de subsistance de sources inattendues, renforce les liens familiaux et établit une barakah (bénédiction) durable dans votre lignée. L'élément terre vous connecte profondément à la provision."
+            "fr": "Un jalon spirituel profond qui élimine les obstacles majeurs, ouvre les portes de subsistance de sources inattendues, renforce les liens familiaux et établit une barakah (bénédiction) durable dans votre lignée. L'élément terre vous connecte profondément à la provision.",
+            "ar": "محطة روحية عميقة تزيل العقبات الكبرى، وتفتح أبواب الرزق من مصادر غير متوقعة، وتقوّي الروابط الأسرية، وترسّخ بركة دائمة في نسلك. عنصر الأرض يصلك بعمق بمصادر العطاء.",
+            "ur": "ایک گہرا روحانی سنگِ میل، جسے روایت میں بڑی رکاوٹیں دور کرنے، غیر متوقع ذرائع سے رزق کے دروازے کھولنے، خاندانی رشتے مضبوط کرنے اور آپ کی نسل میں دیرپا برکت قائم کرنے کا ذریعہ سمجھا جاتا ہے۔ مٹی کا عنصر آپ کو رزق سے گہرا جوڑتا ہے۔"
           }
         }
       },
@@ -735,7 +857,11 @@
       "element": "air",
       "element_emoji": "💨",
       "element_number": 3,
-      "colors": ["#87CEEB", "#4682B4", "#B0E0E6"],
+      "colors": [
+        "#87CEEB",
+        "#4682B4",
+        "#B0E0E6"
+      ],
       "personality": {
         "en": {
           "temperament": "Quick-tempered and easily provoked - anger rises swiftly like a storm wind",
@@ -960,19 +1086,27 @@
         "monthly": {
           "traditional": {
             "en": "Their own clothing from their wardrobe - garments they have worn",
-            "fr": "Leurs propres vêtements de leur garde-robe - vêtements qu'ils ont portés"
+            "fr": "Leurs propres vêtements de leur garde-robe - vêtements qu'ils ont portés",
+            "ar": "ملابسهم الخاصة من خزانتهم - ثياب قد لبسوها",
+            "ur": "اپنے پہنے ہوئے کپڑے (اپنی الماری سے)"
           },
           "frequency": {
             "en": "Every 1-2 months consistently",
-            "fr": "Tous les 1-2 mois de manière cohérente"
+            "fr": "Tous les 1-2 mois de manière cohérente",
+            "ar": "كل شهر إلى شهرين بانتظام",
+            "ur": "ہر 1 تا 2 ماہ میں تسلسل کے ساتھ"
           },
           "context": {
             "en": "In all circumstances - this practice cools the fiery anger and brings spiritual balance",
-            "fr": "En toutes circonstances - cette pratique refroidit la colère ardente et apporte l'équilibre spirituel"
+            "fr": "En toutes circonstances - cette pratique refroidit la colère ardente et apporte l'équilibre spirituel",
+            "ar": "في كل الأحوال - هذه الممارسة تهدّئ الغضب الملتهب وتجلب التوازن الروحي",
+            "ur": "ہر حال میں — یہ عمل غصے کی آگ کو ٹھنڈا کرتا اور روحانی توازن لاتا سمجھا جاتا ہے"
           },
           "purpose": {
             "en": "To purify the temperament, balance volatile emotions, cool anger, attract patience, and maintain spiritual equilibrium. The act of giving clothes symbolizes shedding negative traits.",
-            "fr": "Pour purifier le tempérament, équilibrer les émotions volatiles, refroidir la colère, attirer la patience et maintenir l'équilibre spirituel. L'acte de donner des vêtements symbolise l'abandon des traits négatifs."
+            "fr": "Pour purifier le tempérament, équilibrer les émotions volatiles, refroidir la colère, attirer la patience et maintenir l'équilibre spirituel. L'acte de donner des vêtements symbolise l'abandon des traits négatifs.",
+            "ar": "لتزكية الطبع، وموازنة المشاعر المتقلبة، وتهدئة الغضب، وجلب الصبر، والحفاظ على التوازن الروحي. فعل التصدق بالملابس يرمز إلى نزع الصفات السلبية.",
+            "ur": "مزاج کو پاک کرنے، بھڑکنے والے جذبات کو متوازن کرنے، غصہ ٹھنڈا کرنے، صبر پیدا کرنے اور روحانی توازن برقرار رکھنے کے لیے۔ کپڑے دینا منفی صفات اتار پھینکنے کی علامت ہے۔"
           },
           "modern_alternatives": {
             "en": [
@@ -990,27 +1124,51 @@
               "Soutenir les collectes de vêtements pour les nécessiteux",
               "Donner à des organisations caritatives locales (p. ex. une banque alimentaire ou une association d'aide)",
               "Parrainer des vêtements pour les enfants dans le besoin"
+            ],
+            "ar": [
+              "التبرع بملابس مستعملة بحالة جيدة للملاجئ",
+              "إعطاء الملابس للجمعيات الخيرية",
+              "توفير الملابس للاجئين والنازحين",
+              "دعم حملات جمع الملابس للمحتاجين",
+              "التبرع لجمعيات خيرية محلية (مثل بنك طعام مجتمعي أو جمعية إغاثة)",
+              "رعاية ملابس للأطفال المحتاجين"
+            ],
+            "ur": [
+              "پناہ گاہوں کو ہلکے استعمال شدہ کپڑے عطیہ کریں",
+              "فلاحی تنظیموں کو کپڑے دیں",
+              "مہاجرین اور بے گھر افراد کو لباس فراہم کریں",
+              "ضرورت مندوں کے لیے کپڑوں کی مہمات کی مدد کریں",
+              "مقامی فلاحی اداروں کو عطیہ دیں (مثلاً محلے کا فوڈ بینک یا امدادی ادارہ)",
+              "ضرورت مند بچوں کے لیے لباس کی کفالت کریں"
             ]
           }
         },
         "lifetime": {
           "traditional": {
             "en": "One complete outfit: shirt + trousers (or full African dress with trousers) + 1000 cowries OR 1000 of any currency",
-            "fr": "Une tenue complète: chemise + pantalon (ou robe africaine complète avec pantalon) + 1000 cauris OU 1000 de toute monnaie"
+            "fr": "Une tenue complète: chemise + pantalon (ou robe africaine complète avec pantalon) + 1000 cauris OU 1000 de toute monnaie",
+            "ar": "طقم كامل: قميص + بنطال (أو زي أفريقي كامل مع بنطال) + 1000 ودعة أو 1000 من أي عملة",
+            "ur": "ایک مکمل جوڑا: قمیص + پتلون (یا پتلون کے ساتھ مکمل افریقی لباس) + 1000 کوڑیاں یا کسی بھی کرنسی کے 1000"
           },
           "buruj_sadaqa": {
             "element": "air",
             "sacrifice": {
               "en": "Shirt and trouser OR full African traditional attire (kaftan with trouser)",
-              "fr": "Chemise et pantalon OU tenue traditionnelle africaine complète (kaftan avec pantalon)"
+              "fr": "Chemise et pantalon OU tenue traditionnelle africaine complète (kaftan avec pantalon)",
+              "ar": "قميص وسروال أو لباس أفريقي تقليدي كامل (قفطان مع سروال)",
+              "ur": "قمیص اور پتلون یا مکمل افریقی روایتی لباس (پتلون کے ساتھ کفتان)"
             },
             "money": {
               "en": "1000 cowries OR 1000 of any currency",
-              "fr": "1000 cauris OU 1000 de toute monnaie"
+              "fr": "1000 cauris OU 1000 de toute monnaie",
+              "ar": "1000 صدفة ودع أو 1000 من أي عملة",
+              "ur": "1000 کوڑیاں یا کسی بھی کرنسی کے 1000"
             },
             "best_day": {
               "en": "Wednesday",
-              "fr": "Mercredi"
+              "fr": "Mercredi",
+              "ar": "الأربعاء",
+              "ur": "بدھ"
             }
           },
           "components": {
@@ -1031,6 +1189,24 @@
               "1000 cauris OU 1000 unités de toute monnaie (symbolique de la liberté et l'échange de l'air)",
               "Donné à quelqu'un réellement dans le besoin",
               "Effectué avec intention sincère de plaire à Allah"
+            ],
+            "ar": [
+              "طقم كامل جديد (ملابس علوية وسفلية)",
+              "يجب أن تكون الملابس محتشمة ومناسبة للصلاة",
+              "يمكن أن تكون زيًا أفريقيًا تقليديًا (بوبو) مع بنطال، أو قميصًا وبنطالًا غربيين",
+              "يجب أن تكون الملابس جديدة، لا مستعملة",
+              "1000 ودعة أو 1000 وحدة من أي عملة (رمزًا لحرية الهواء وتبادله)",
+              "تُعطى لشخص محتاج فعليًا",
+              "تُؤدَّى بنية صادقة لإرضاء الله"
+            ],
+            "ur": [
+              "ایک مکمل نیا جوڑا (اوپر اور نیچے کے کپڑے)",
+              "لباس باحیا اور نماز کے لیے مناسب ہونا چاہیے",
+              "پتلون کے ساتھ روایتی افریقی لباس (بوبو) یا مغربی قمیص اور پتلون ہو سکتا ہے",
+              "لباس نیا ہونا چاہیے، استعمال شدہ نہیں",
+              "1000 کوڑیاں یا کسی بھی کرنسی کی 1000 اکائیاں (ہوا کی آزادی اور تبادلے کی علامت)",
+              "کسی حقیقی ضرورت مند کو دیا جائے",
+              "اللہ کی رضا کی خالص نیت سے کیا جائے"
             ]
           },
           "best_timing": {
@@ -1047,11 +1223,27 @@
               "Avant les célébrations de l'Aïd",
               "Lors de la recherche de surmonter les schémas de colère",
               "Pendant les périodes de transformation spirituelle majeure"
+            ],
+            "ar": [
+              "أدِّه يوم الأربعاء (يومك المبارك) - الأمثل لعنصر الهواء",
+              "خلال رمضان لبركات مضاعفة",
+              "قبل احتفالات العيد",
+              "عند السعي للتغلب على أنماط الغضب",
+              "خلال أوقات التحول الروحي الكبير"
+            ],
+            "ur": [
+              "اپنے روایتی دن بدھ کو کریں — ہوائی عنصر کے لیے بہترین",
+              "زیادہ برکت کے لیے رمضان کے دوران",
+              "عید کی تقریبات سے پہلے",
+              "جب غصے کے انداز پر قابو پانا مقصود ہو",
+              "بڑی روحانی تبدیلی کے اوقات میں"
             ]
           },
           "significance": {
             "en": "A transformative spiritual act that specifically targets anger management and emotional balance. This buruj sadaqah for Air element creates a shield against the negative effects of quick temper and helps develop patience, wisdom, and self-control - your life's spiritual lessons. The monetary component represents the flow and exchange energy of air.",
-            "fr": "Un acte spirituel transformateur qui cible spécifiquement la gestion de la colère et l'équilibre émotionnel. Cette sadaqah buruj pour l'élément Air crée un bouclier contre les effets négatifs du tempérament vif et aide à développer la patience, la sagesse et la maîtrise de soi - les leçons spirituelles de votre vie. Le composant monétaire représente l'énergie de flux et d'échange de l'air."
+            "fr": "Un acte spirituel transformateur qui cible spécifiquement la gestion de la colère et l'équilibre émotionnel. Cette sadaqah buruj pour l'élément Air crée un bouclier contre les effets négatifs du tempérament vif et aide à développer la patience, la sagesse et la maîtrise de soi - les leçons spirituelles de votre vie. Le composant monétaire représente l'énergie de flux et d'échange de l'air.",
+            "ar": "عمل روحي تحويلي يستهدف تحديدًا إدارة الغضب والتوازن العاطفي. هذه الصدقة البروجية لعنصر الهواء تخلق درعًا واقيًا من الآثار السلبية لسرعة الغضب، وتساعد على تنمية الصبر والحكمة وضبط النفس - وهي دروس الحياة الروحية لك. المكوّن المالي يمثّل طاقة التدفق والتبادل الخاصة بالهواء.",
+            "ur": "ایک تبدیلی لانے والا روحانی عمل جو خاص طور پر غصے پر قابو اور جذباتی توازن کو ہدف بناتا ہے۔ ہوائی عنصر کا یہ برجی صدقہ روایت میں جلد غصے کے منفی اثرات کے خلاف ڈھال اور صبر، حکمت اور ضبطِ نفس — آپ کی زندگی کے روحانی اسباق — پیدا کرنے کا ذریعہ سمجھا جاتا ہے۔ رقم کا حصہ ہوا کے بہاؤ اور تبادلے کی توانائی کو ظاہر کرتا ہے۔"
           }
         }
       },
@@ -1144,7 +1336,11 @@
       "element": "water",
       "element_emoji": "💧",
       "element_number": 4,
-      "colors": ["#1E90FF", "#000080", "#4169E1"],
+      "colors": [
+        "#1E90FF",
+        "#000080",
+        "#4169E1"
+      ],
       "personality": {
         "en": {
           "temperament": "Extremely patient - mistaken for being foolish or weak due to extraordinary tolerance",
@@ -1362,19 +1558,27 @@
         "monthly": {
           "traditional": {
             "en": "Rice and fish together (can be cooked or uncooked)",
-            "fr": "Riz et poisson ensemble (peut être cuit ou non cuit)"
+            "fr": "Riz et poisson ensemble (peut être cuit ou non cuit)",
+            "ar": "الأرز والسمك معًا (يمكن أن يكونا مطبوخين أو نيئين)",
+            "ur": "چاول اور مچھلی اکٹھے (پکے ہوئے یا کچے)"
           },
           "frequency": {
             "en": "Every 1-2 months consistently",
-            "fr": "Tous les 1-2 mois de manière cohérente"
+            "fr": "Tous les 1-2 mois de manière cohérente",
+            "ar": "كل شهر إلى شهرين بانتظام",
+            "ur": "ہر 1 تا 2 ماہ میں تسلسل کے ساتھ"
           },
           "context": {
             "en": "In all circumstances - this unique combination balances your water nature perfectly",
-            "fr": "En toutes circonstances - cette combinaison unique équilibre parfaitement votre nature aquatique"
+            "fr": "En toutes circonstances - cette combinaison unique équilibre parfaitement votre nature aquatique",
+            "ar": "في جميع الأحوال — هذا المزيج الفريد يوازن طبيعتك المائية توازنًا تامًا",
+            "ur": "ہر حال میں — یہ منفرد امتزاج آپ کے آبی مزاج کو بہترین طور پر متوازن رکھتا سمجھا جاتا ہے"
           },
           "purpose": {
             "en": "To balance your water element, maintain emotional equilibrium, prevent being overwhelmed by feelings, and ensure spiritual flow. The rice (earth) grounds the fish (water) creating perfect harmony.",
-            "fr": "Pour équilibrer votre élément eau, maintenir l'équilibre émotionnel, éviter d'être submergé par les sentiments et assurer le flux spirituel. Le riz (terre) ancre le poisson (eau) créant une harmonie parfaite."
+            "fr": "Pour équilibrer votre élément eau, maintenir l'équilibre émotionnel, éviter d'être submergé par les sentiments et assurer le flux spirituel. Le riz (terre) ancre le poisson (eau) créant une harmonie parfaite.",
+            "ar": "لموازنة عنصر الماء لديك، والحفاظ على الاتزان العاطفي، ومنع الانغماس المفرط في المشاعر، وضمان الانسياب الروحي. فالأرز (الأرض) يثبّت السمك (الماء) فيصنعان انسجامًا تامًا.",
+            "ur": "اپنے آبی عنصر کو متوازن رکھنے، جذباتی توازن برقرار رکھنے، جذبات سے مغلوب ہونے سے بچنے اور روحانی بہاؤ کے لیے۔ چاول (مٹی) مچھلی (پانی) کو سنبھالتے ہیں اور کامل ہم آہنگی بنتی ہے۔"
           },
           "modern_alternatives": {
             "en": [
@@ -1392,23 +1596,45 @@
               "Soutenir les organisations nourrissant les communautés côtières",
               "Parrainer des repas de fruits de mer dans les centres communautaires",
               "Fournir les deux produits de base aux familles dans le besoin"
+            ],
+            "ar": [
+              "التبرع بوجبات الأرز والسمك للملاجئ",
+              "توفير الأرز والسمك المعلّب لبنوك الطعام",
+              "طهي وتوزيع أطباق الأرز مع السمك",
+              "دعم المنظمات التي تُطعم المجتمعات الساحلية",
+              "رعاية وجبات المأكولات البحرية في المراكز المجتمعية",
+              "توفير كلا الطعامين الأساسيين للأسر المحتاجة"
+            ],
+            "ur": [
+              "پناہ گاہوں کو چاول اور مچھلی کے کھانے عطیہ کریں",
+              "فوڈ بینکوں کو چاول اور ڈبہ بند مچھلی فراہم کریں",
+              "چاول اور مچھلی کے پکوان پکا کر تقسیم کریں",
+              "ساحلی برادریوں کو کھانا کھلانے والی تنظیموں کی مدد کریں",
+              "کمیونٹی سینٹروں میں سمندری خوراک کے کھانوں کی کفالت کریں",
+              "ضرورت مند خاندانوں کو دونوں بنیادی غذائیں فراہم کریں"
             ]
           }
         },
         "lifetime": {
           "traditional": {
             "en": "Goat with some clothes and 4 coins of money (Néént dërëm in Wolof)",
-            "fr": "Chèvre avec quelques vêtements et 4 pièces de monnaie (Néént dërëm en Wolof)"
+            "fr": "Chèvre avec quelques vêtements et 4 pièces de monnaie (Néént dërëm en Wolof)",
+            "ar": "عنزة مع بعض الملابس و4 قطع نقدية (Néént dërëm بالولوفية)",
+            "ur": "بکرا، کچھ کپڑوں اور 4 سکّوں کے ساتھ (وولوف: نینت دیریم)"
           },
           "buruj_sadaqa": {
             "element": "water",
             "sacrifice": {
               "en": "Goat with some clothes and 4 coins of money (Néént dërëm)",
-              "fr": "Chèvre avec quelques vêtements et 4 pièces de monnaie (Néént dërëm)"
+              "fr": "Chèvre avec quelques vêtements et 4 pièces de monnaie (Néént dërëm)",
+              "ar": "ماعز مع بعض الثياب و4 قطع نقدية (Néént dërëm)",
+              "ur": "بکرا، کچھ کپڑوں اور 4 سکّوں کے ساتھ (وولوف: نینت دیریم)"
             },
             "best_day": {
               "en": "Monday",
-              "fr": "Lundi"
+              "fr": "Lundi",
+              "ar": "الاثنين",
+              "ur": "پیر"
             }
           },
           "components": {
@@ -1429,6 +1655,24 @@
               "Vêtements donnés aux nécessiteux",
               "Pièces données en sadaqah aux nécessiteux",
               "Tout effectué avec intention sincère"
+            ],
+            "ar": [
+              "عنزة واحدة كاملة وسليمة (بأي لون)",
+              "عدة قطع من الملابس (محتشمة ومناسبة)",
+              "4 قطع نقدية أو عملة (Néént dërëm — رمز للعناصر الأربعة وانسياب الماء)",
+              "توزَّع اللحوم بين المؤمنين والفقراء",
+              "تُمنح الملابس للمحتاجين",
+              "تُمنح القطع النقدية صدقة للمحتاجين",
+              "يُؤدَّى كل ذلك بنية صادقة"
+            ],
+            "ur": [
+              "ایک مکمل صحت مند بکرا (کسی بھی رنگ کا)",
+              "کئی کپڑے (باحیا اور مناسب)",
+              "4 سکّے یا کرنسی (وولوف: نینت دیریم — چار عناصر اور پانی کے بہاؤ کی علامت)",
+              "گوشت اہلِ ایمان اور غریبوں میں تقسیم کیا جائے",
+              "کپڑے ضرورت مندوں کو دیے جائیں",
+              "سکّے صدقے کے طور پر ضرورت مندوں کو دیے جائیں",
+              "سب کچھ خلوصِ نیت کے ساتھ کیا جائے"
             ]
           },
           "best_timing": {
@@ -1445,11 +1689,27 @@
               "Après des transitions de vie majeures",
               "Lorsque l'on recherche l'apaisement et le bien-être émotionnels",
               "Pendant Dhul-Hijjah (mois sacré)"
+            ],
+            "ar": [
+              "أدِّه يوم الاثنين (يومك المبارك) — الأمثل لعنصر الماء",
+              "خلال عيد الأضحى لبركات مضاعفة",
+              "بعد التحولات الكبرى في الحياة",
+              "عند طلب الطمأنينة والراحة العاطفية",
+              "خلال ذي الحجة (الشهر المبارك)"
+            ],
+            "ur": [
+              "اپنے روایتی دن پیر کو کریں — آبی عنصر کے لیے بہترین",
+              "زیادہ برکت کے لیے عیدالاضحیٰ کے دوران",
+              "زندگی کی بڑی تبدیلیوں کے بعد",
+              "جب جذباتی سکون اور عافیت مقصود ہو",
+              "ذوالحجہ (حرمت والے مہینے) کے دوران"
             ]
           },
           "significance": {
             "en": "A profound spiritual milestone that creates emotional balance for Water element, protects from being overwhelmed, strengthens boundaries while maintaining compassion, and opens doors of sustenance. The combination of elements (goat, cloth, 4 coins) represents complete spiritual protection and the harmonious flow of water energy.",
-            "fr": "Un jalon spirituel profond qui crée l'équilibre émotionnel pour l'élément Eau, protège contre le sentiment d'être submergé, renforce les limites tout en maintenant la compassion et ouvre les portes de la subsistance. La combinaison d'éléments (chèvre, tissu, 4 pièces) représente une protection spirituelle complète et le flux harmonieux de l'énergie de l'eau."
+            "fr": "Un jalon spirituel profond qui crée l'équilibre émotionnel pour l'élément Eau, protège contre le sentiment d'être submergé, renforce les limites tout en maintenant la compassion et ouvre les portes de la subsistance. La combinaison d'éléments (chèvre, tissu, 4 pièces) représente une protection spirituelle complète et le flux harmonieux de l'énergie de l'eau.",
+            "ar": "محطة روحية عميقة تحقق التوازن العاطفي لعنصر الماء، وتحمي من الانغماس المفرط في المشاعر، وتقوّي الحدود مع الحفاظ على الرحمة، وتفتح أبواب الرزق. مزيج العناصر (العنزة والقماش والقطع النقدية الأربع) يمثل حماية روحية كاملة وانسيابًا منسجمًا لطاقة الماء.",
+            "ur": "ایک گہرا روحانی سنگِ میل، جو روایت میں آبی عنصر کے لیے جذباتی توازن پیدا کرنے، مغلوب ہونے سے بچانے، ہمدردی برقرار رکھتے ہوئے حدود مضبوط کرنے اور رزق کے دروازے کھولنے کا ذریعہ سمجھا جاتا ہے۔ عناصر کا امتزاج (بکرا، کپڑا، 4 سکّے) مکمل روحانی حفاظت اور آبی توانائی کے ہم آہنگ بہاؤ کی علامت ہے۔"
           }
         }
       },
@@ -1538,7 +1798,11 @@
       "element": "fire",
       "element_emoji": "🔥",
       "element_number": 1,
-      "colors": ["#FF6B35", "#FFFFFF", "#F7931E"],
+      "colors": [
+        "#FF6B35",
+        "#FFFFFF",
+        "#F7931E"
+      ],
       "personality": {
         "en": {
           "temperament": "Passionate and dynamic - driven by inner fire and enthusiasm for life",
@@ -1736,19 +2000,27 @@
         "monthly": {
           "traditional": {
             "en": "Similar to Buruj 1 - beef or substantial food for those in need",
-            "fr": "Similaire au Buruj 1 - bœuf ou nourriture substantielle pour les nécessiteux"
+            "fr": "Similaire au Buruj 1 - bœuf ou nourriture substantielle pour les nécessiteux",
+            "ar": "مشابه للبرج 1 - لحم بقري أو طعام وفير للمحتاجين",
+            "ur": "برج 1 کی طرح — ضرورت مندوں کے لیے گائے کا گوشت یا ٹھوس خوراک"
           },
           "frequency": {
             "en": "Every 1-2 months consistently",
-            "fr": "Tous les 1-2 mois de manière cohérente"
+            "fr": "Tous les 1-2 mois de manière cohérente",
+            "ar": "كل شهر إلى شهرين بانتظام",
+            "ur": "ہر 1 تا 2 ماہ میں تسلسل کے ساتھ"
           },
           "context": {
             "en": "To maintain spiritual balance and cool excessive fire energy",
-            "fr": "Pour maintenir l'équilibre spirituel et refroidir l'énergie de feu excessive"
+            "fr": "Pour maintenir l'équilibre spirituel et refroidir l'énergie de feu excessive",
+            "ar": "للحفاظ على التوازن الروحي وتهدئة طاقة النار الزائدة",
+            "ur": "روحانی توازن برقرار رکھنے اور حد سے زیادہ آتشی توانائی کو ٹھنڈا کرنے کے لیے"
           },
           "purpose": {
             "en": "Balances fiery nature, attracts divine blessings for new beginnings, maintains leadership barakah",
-            "fr": "Équilibre la nature ardente, attire les bénédictions divines pour les nouveaux départs, maintient la barakah du leadership"
+            "fr": "Équilibre la nature ardente, attire les bénédictions divines pour les nouveaux départs, maintient la barakah du leadership",
+            "ar": "يوازن الطبيعة النارية، ويجذب البركات الإلهية للبدايات الجديدة، ويحافظ على بركة القيادة",
+            "ur": "آتشی مزاج کو متوازن کرتا، نئے آغاز کے لیے الٰہی برکتیں لاتا اور قیادت کی برکت برقرار رکھتا سمجھا جاتا ہے"
           },
           "modern_alternatives": {
             "en": [
@@ -1766,13 +2038,31 @@
               "Parrainer des repas pour voyageurs ou personnes déplacées",
               "Fournir de la nourriture aux travailleurs de la construction ou ouvriers",
               "Soutenir les programmes alimentaires pour réfugiés"
+            ],
+            "ar": [
+              "إطعام الأسر المحتاجة بوجبات وفيرة",
+              "دعم المطابخ الخيرية وبرامج التغذية",
+              "التبرع للمنظمات التي تساعد في البدايات الجديدة",
+              "رعاية وجبات للمسافرين أو النازحين",
+              "توفير الطعام لعمال البناء أو العمال",
+              "دعم برامج تغذية اللاجئين"
+            ],
+            "ur": [
+              "ضرورت مند خاندانوں کو بھرپور کھانا کھلائیں",
+              "لنگر خانوں اور کھانا کھلانے کے پروگراموں کی مدد کریں",
+              "نئے آغاز میں مدد کرنے والی تنظیموں کو عطیہ دیں",
+              "مسافروں یا بے گھر افراد کے لیے کھانے کی کفالت کریں",
+              "تعمیراتی کارکنوں یا مزدوروں کو کھانا فراہم کریں",
+              "مہاجرین کو کھانا کھلانے کے پروگراموں کی مدد کریں"
             ]
           }
         },
         "lifetime": {
           "traditional": {
             "en": "White lamb and white clothing",
-            "fr": "Agneau blanc et vêtements blancs"
+            "fr": "Agneau blanc et vêtements blancs",
+            "ar": "خروف أبيض وملابس بيضاء",
+            "ur": "سفید میمنا اور سفید لباس"
           },
           "components": {
             "en": [
@@ -1790,6 +2080,22 @@
               "Vêtements blancs donnés aux nécessiteux",
               "Effectué avec intention de purification et renouveau",
               "Tout fait avec niyyah sincère pour plaire à Allah"
+            ],
+            "ar": [
+              "خروف أبيض كامل (خالٍ من العيوب)",
+              "قطع ملابس بيضاء (ترمز إلى الطهارة والبدايات الجديدة)",
+              "توزيع لحم الخروف على المؤمنين والفقراء",
+              "إعطاء ملابس بيضاء للمحتاجين",
+              "يُؤدى بنية التطهر والتجدد",
+              "كل ذلك بنية صادقة لإرضاء الله"
+            ],
+            "ur": [
+              "ایک مکمل سفید میمنا (بے داغ)",
+              "سفید کپڑے (پاکیزگی اور نئے آغاز کی علامت)",
+              "میمنے کا گوشت اہلِ ایمان اور غریبوں میں تقسیم کیا جائے",
+              "سفید کپڑے ضرورت مندوں کو دیے جائیں",
+              "پاکیزگی اور تجدید کی نیت سے کیا جائے",
+              "سب کچھ اللہ کی رضا کی خالص نیت کے ساتھ"
             ]
           },
           "best_timing": {
@@ -1806,11 +2112,27 @@
               "Avant de commencer des voyages ou projets de vie majeurs",
               "Lors de la recherche de purification et nouveaux départs",
               "Au début d'une nouvelle année ou phase de vie significative"
+            ],
+            "ar": [
+              "أدِّها يوم الأحد (يومك المبارك) لأقصى فائدة",
+              "خلال عيد الأضحى لبركات مضاعفة",
+              "قبل بدء رحلات أو مشاريع حياتية كبرى",
+              "عند السعي إلى التطهر والبدايات الجديدة",
+              "في بداية عام جديد أو مرحلة حياتية مهمة"
+            ],
+            "ur": [
+              "زیادہ سے زیادہ فائدے کے لیے اپنے روایتی دن اتوار کو کریں",
+              "زیادہ برکت کے لیے عیدالاضحیٰ کے دوران",
+              "زندگی کے بڑے سفروں یا منصوبوں کے آغاز سے پہلے",
+              "جب پاکیزگی اور نیا آغاز مقصود ہو",
+              "نئے سال کے آغاز پر یا زندگی کے کسی اہم مرحلے پر"
             ]
           },
           "significance": {
             "en": "The white lamb represents purity of intention and fresh beginnings - core to your solar nature. This sacred offering removes obstacles from new ventures, blesses travels and construction projects, purifies your path, and establishes divine protection for bold initiatives. The white color symbolizes the purifying light of the sun.",
-            "fr": "L'agneau blanc représente la pureté de l'intention et les nouveaux départs - au cœur de votre nature solaire. Cette offrande sacrée élimine les obstacles des nouvelles entreprises, bénit les voyages et projets de construction, purifie votre chemin et établit une protection divine pour les initiatives audacieuses. La couleur blanche symbolise la lumière purificatrice du soleil."
+            "fr": "L'agneau blanc représente la pureté de l'intention et les nouveaux départs - au cœur de votre nature solaire. Cette offrande sacrée élimine les obstacles des nouvelles entreprises, bénit les voyages et projets de construction, purifie votre chemin et établit une protection divine pour les initiatives audacieuses. La couleur blanche symbolise la lumière purificatrice du soleil.",
+            "ar": "يمثل الخروف الأبيض نقاء النية والبدايات الجديدة - وهو جوهر طبيعتك الشمسية. هذه القربة المباركة تزيل العقبات عن المشاريع الجديدة، وتبارك السفر ومشاريع البناء، وتطهّر طريقك، وترسي حماية إلهية للمبادرات الجريئة. اللون الأبيض يرمز إلى نور الشمس المطهِّر.",
+            "ur": "سفید میمنا نیت کی پاکیزگی اور نئے آغاز کی علامت ہے — جو آپ کے شمسی مزاج کا مرکز ہے۔ یہ صدقہ روایت میں نئے کاموں کی رکاوٹیں دور کرنے، سفر اور تعمیراتی منصوبوں میں برکت، راستے کی تطہیر اور جرأت مندانہ اقدامات کے لیے الٰہی حفاظت کا ذریعہ سمجھی جاتی ہے۔ سفید رنگ سورج کی پاک کرنے والی روشنی کی علامت ہے۔"
           }
         }
       },
@@ -1902,7 +2224,11 @@
       "element": "earth",
       "element_emoji": "🌍",
       "element_number": 2,
-      "colors": ["#8B4513", "#000000", "#6B8E23"],
+      "colors": [
+        "#8B4513",
+        "#000000",
+        "#6B8E23"
+      ],
       "personality": {
         "en": {
           "temperament": "Deeply grounded and practical - embodies stability and reliability",
@@ -2100,19 +2426,27 @@
         "monthly": {
           "traditional": {
             "en": "Grains, crops, earth-derived food products",
-            "fr": "Céréales, cultures, produits alimentaires dérivés de la terre"
+            "fr": "Céréales, cultures, produits alimentaires dérivés de la terre",
+            "ar": "الحبوب والمحاصيل والمنتجات الغذائية المستمدة من الأرض",
+            "ur": "اناج، فصلیں، مٹی سے حاصل ہونے والی غذائی اشیا"
           },
           "frequency": {
             "en": "Every 1-2 months without fail",
-            "fr": "Tous les 1-2 mois sans faute"
+            "fr": "Tous les 1-2 mois sans faute",
+            "ar": "كل شهر إلى شهرين دون انقطاع",
+            "ur": "ہر 1 تا 2 ماہ میں بلا ناغہ"
           },
           "context": {
             "en": "To maintain grounding and prevent stagnation",
-            "fr": "Pour maintenir l'ancrage et prévenir la stagnation"
+            "fr": "Pour maintenir l'ancrage et prévenir la stagnation",
+            "ar": "للحفاظ على الترسّخ ومنع الركود",
+            "ur": "استحکام برقرار رکھنے اور جمود سے بچنے کے لیے"
           },
           "purpose": {
             "en": "Maintains spiritual flow, prevents excessive rigidity, ensures continued blessings in property and assets",
-            "fr": "Maintient le flux spirituel, prévient la rigidité excessive, assure les bénédictions continues dans la propriété et les actifs"
+            "fr": "Maintient le flux spirituel, prévient la rigidité excessive, assure les bénédictions continues dans la propriété et les actifs",
+            "ar": "يحافظ على استمرار التدفق الروحي، ويمنع الصلابة المفرطة، ويضمن استمرار البركات في الممتلكات والأصول",
+            "ur": "روحانی بہاؤ برقرار رکھتا، حد سے زیادہ سختی روکتا اور جائیداد و اثاثوں میں برکت کے تسلسل کا ذریعہ سمجھا جاتا ہے"
           },
           "modern_alternatives": {
             "en": [
@@ -2130,13 +2464,31 @@
               "Parrainer des repas dans les centres communautaires",
               "Donner aux efforts de conservation des terres",
               "Soutenir les initiatives d'agriculture durable"
+            ],
+            "ar": [
+              "التبرع بالأرز والقمح والحبوب لبنوك الطعام",
+              "دعم الجمعيات التعاونية الزراعية",
+              "توفير البذور للمجتمعات الزراعية",
+              "رعاية وجبات في المراكز المجتمعية",
+              "التبرع لجهود الحفاظ على الأراضي",
+              "دعم مبادرات الزراعة المستدامة"
+            ],
+            "ur": [
+              "فوڈ بینکوں کو چاول، گندم اور اناج عطیہ کریں",
+              "زرعی تعاونی انجمنوں کی مدد کریں",
+              "کاشتکار برادریوں کو بیج فراہم کریں",
+              "کمیونٹی سینٹروں میں کھانے کی کفالت کریں",
+              "زمین کے تحفظ کی کوششوں کو عطیہ دیں",
+              "پائیدار کاشتکاری کے اقدامات کی مدد کریں"
             ]
           }
         },
         "lifetime": {
           "traditional": {
             "en": "Zakat al-Fitr in corn for 12 people, One Barred Plymouth Rock chicken",
-            "fr": "Zakat al-Fitr en maïs pour 12 personnes, Un poulet Barred Plymouth Rock"
+            "fr": "Zakat al-Fitr en maïs pour 12 personnes, Un poulet Barred Plymouth Rock",
+            "ar": "زكاة الفطر من الذرة لاثني عشر شخصًا، ودجاجة واحدة من سلالة باريد بليموث روك",
+            "ur": "12 افراد کے لیے مکئی میں صدقۂ فطر، ایک دھاری دار پلائی ماؤتھ راک مرغی"
           },
           "components": {
             "en": [
@@ -2154,21 +2506,43 @@
               "Poulet préparé et partagé avec la communauté",
               "Doit être effectué le mercredi (votre jour béni)",
               "Fait avec niyyah sincère pour plaire à Allah"
+            ],
+            "ar": [
+              "الذرة: مقدار زكاة الفطر لاثني عشر شخصًا - نحو 36 كيلوغرامًا إجمالًا (3 كيلوغرام للفرد الواحد)",
+              "دجاجة واحدة من سلالة باريد بليموث روك - ذات نقشة ريش مخططة بالأسود والأبيض مميزة",
+              "توزيع كل الذرة على المحتاجين والفقراء",
+              "تُحضَّر الدجاجة وتُشارَك مع المجتمع",
+              "يجب أن تُؤدَّى يوم الأربعاء (يومك المبارك)",
+              "تُؤدَّى بنية صادقة لإرضاء الله"
+            ],
+            "ur": [
+              "مکئی: 12 افراد کے لیے صدقۂ فطر کی مقدار — کل تقریباً 36 کلوگرام (فی شخص 3 کلوگرام)",
+              "ایک دھاری دار پلائی ماؤتھ راک مرغی — کالے اور سفید دھاری دار پروں کا نمایاں نمونہ",
+              "ساری مکئی ضرورت مندوں اور غریبوں میں تقسیم کی جائے",
+              "مرغی پکا کر برادری کے ساتھ بانٹی جائے",
+              "اپنے روایتی دن بدھ کو کرنا ضروری ہے",
+              "اللہ کی رضا کی خالص نیت کے ساتھ"
             ]
           },
           "zakat_calculation": {
             "en": "1 person's Zakat al-Fitr ≈ 3kg of grain × 12 people = 36kg of corn",
-            "fr": "Zakat al-Fitr d'1 personne ≈ 3kg de céréales × 12 personnes = 36kg de maïs"
+            "fr": "Zakat al-Fitr d'1 personne ≈ 3kg de céréales × 12 personnes = 36kg de maïs",
+            "ar": "زكاة الفطر لشخص واحد ≈ 3 كغ من الحبوب × 12 شخصًا = 36 كغ من الذرة",
+            "ur": "ایک شخص کا صدقۂ فطر ≈ 3 کلوگرام اناج × 12 افراد = 36 کلوگرام مکئی"
           },
           "chicken_details": {
             "breed": "Barred Plymouth Rock",
             "appearance": {
               "en": "Black and white barred (striped) feather pattern, medium to large heritage breed",
-              "fr": "Motif de plumes rayées noir et blanc, race patrimoniale de taille moyenne à grande"
+              "fr": "Motif de plumes rayées noir et blanc, race patrimoniale de taille moyenne à grande",
+              "ar": "نمط ريش مخطّط بالأسود والأبيض، سلالة تراثية متوسطة إلى كبيرة",
+              "ur": "کالے اور سفید دھاری دار پروں کا نمونہ، درمیانی سے بڑی روایتی نسل"
             },
             "why_this_breed": {
               "en": "The barred pattern symbolizes balance between light and dark, earth duality",
-              "fr": "Le motif rayé symbolise l'équilibre entre lumière et obscurité, dualité terrestre"
+              "fr": "Le motif rayé symbolise l'équilibre entre lumière et obscurité, dualité terrestre",
+              "ar": "يرمز النمط المخطّط إلى التوازن بين النور والظلام، وإلى ازدواجية عنصر الأرض",
+              "ur": "دھاری دار نمونہ روشنی اور تاریکی کے توازن اور زمین کی دوئی کی علامت ہے"
             }
           },
           "best_timing": {
@@ -2185,11 +2559,27 @@
               "Particulièrement béni pendant le Ramadan ou Dhul-Hijjah",
               "Lors de l'acquisition de nouvelle propriété ou atteinte de stabilité majeure",
               "Aux jalons majeurs de la vie"
+            ],
+            "ar": [
+              "الأربعاء (يومك المبارك) - أقوى توقيت",
+              "يمكن أداؤها في أي أربعاء طوال العام",
+              "مباركة بشكل خاص في رمضان أو ذي الحجة",
+              "عند اقتناء ممتلكات جديدة أو بلوغ استقرار كبير",
+              "في المحطات الكبرى من الحياة"
+            ],
+            "ur": [
+              "بدھ (آپ کا روایتی دن) — سب سے مؤثر وقت",
+              "سال بھر کسی بھی بدھ کو کیا جا سکتا ہے",
+              "رمضان یا ذوالحجہ میں خاص طور پر بابرکت",
+              "جب نئی جائیداد حاصل ہو یا بڑا استحکام ملے",
+              "زندگی کے بڑے سنگِ میل پر"
             ]
           },
           "significance": {
             "en": "The number 12 represents completion and fullness in Islamic tradition. Corn (earth's grain) grounds your element. The specific chicken breed symbolizes balanced duality. This sacrifice establishes lasting material barakah, protects property and assets, ensures generational stability, and opens doors of sustenance. Wednesday timing aligns the earth element with communication and manifestation energies.",
-            "fr": "Le nombre 12 représente l'achèvement et la plénitude dans la tradition islamique. Le maïs (céréale de la terre) ancre votre élément. La race de poulet spécifique symbolise la dualité équilibrée. Ce sacrifice établit une barakah matérielle durable, protège la propriété et les actifs, assure la stabilité générationnelle et ouvre les portes de la subsistance. Le timing du mercredi aligne l'élément terre avec les énergies de communication et manifestation."
+            "fr": "Le nombre 12 représente l'achèvement et la plénitude dans la tradition islamique. Le maïs (céréale de la terre) ancre votre élément. La race de poulet spécifique symbolise la dualité équilibrée. Ce sacrifice établit une barakah matérielle durable, protège la propriété et les actifs, assure la stabilité générationnelle et ouvre les portes de la subsistance. Le timing du mercredi aligne l'élément terre avec les énergies de communication et manifestation.",
+            "ar": "يمثل الرقم 12 الاكتمال والتمام في التقليد الإسلامي. الذرة (حبّ الأرض) ترسّخ عنصرك. سلالة الدجاج المحددة ترمز إلى الثنائية المتوازنة. هذا القربان يُرسي بركة مادية دائمة، ويحمي الممتلكات والأصول، ويضمن الاستقرار عبر الأجيال، ويفتح أبواب الرزق. توقيت الأربعاء يوائم عنصر الأرض مع طاقات التواصل والتجلي.",
+            "ur": "اسلامی روایت میں 12 کا عدد تکمیل اور پورے پن کی علامت ہے۔ مکئی (زمین کا اناج) آپ کے عنصر کو سنبھالتی ہے۔ مخصوص مرغی کی نسل متوازن دوئی کی علامت ہے۔ یہ صدقہ روایت میں دیرپا مادی برکت قائم کرنے، جائیداد اور اثاثوں کی حفاظت، نسلی استحکام اور رزق کے دروازے کھولنے کا ذریعہ سمجھا جاتا ہے۔ روایت میں بدھ کا وقت مٹی کے عنصر کو گفتگو اور اظہار کی توانائیوں سے ہم آہنگ کرنے والا سمجھا جاتا ہے۔"
           }
         }
       },
@@ -2278,7 +2668,11 @@
       "element": "air",
       "element_emoji": "💨",
       "element_number": 3,
-      "colors": ["#87CEEB", "#FFFFFF", "#4682B4"],
+      "colors": [
+        "#87CEEB",
+        "#FFFFFF",
+        "#4682B4"
+      ],
       "personality": {
         "en": {
           "temperament": "Quick-minded and intellectually agile - thrives on mental stimulation",
@@ -2474,19 +2868,27 @@
         "monthly": {
           "traditional": {
             "en": "Clothing from your wardrobe - similar to Buruj 3",
-            "fr": "Vêtements de votre garde-robe - similaire au Buruj 3"
+            "fr": "Vêtements de votre garde-robe - similaire au Buruj 3",
+            "ar": "ملابس من خزانتك - مشابه للبرج الثالث",
+            "ur": "آپ کی الماری کے کپڑے — برج 3 کی طرح"
           },
           "frequency": {
             "en": "Every 1-2 months consistently",
-            "fr": "Tous les 1-2 mois de manière cohérente"
+            "fr": "Tous les 1-2 mois de manière cohérente",
+            "ar": "كل شهر إلى شهرين بانتظام",
+            "ur": "ہر 1 تا 2 ماہ میں تسلسل کے ساتھ"
           },
           "context": {
             "en": "To maintain balance and prevent scattered energy",
-            "fr": "Pour maintenir l'équilibre et prévenir l'énergie dispersée"
+            "fr": "Pour maintenir l'équilibre et prévenir l'énergie dispersée",
+            "ar": "للحفاظ على التوازن ومنع تشتت الطاقة",
+            "ur": "توازن برقرار رکھنے اور منتشر توانائی سے بچنے کے لیے"
           },
           "purpose": {
             "en": "Grounds your airy nature, brings focus, attracts meaningful connections, and ensures spiritual clarity in communication",
-            "fr": "Ancre votre nature aérienne, apporte concentration, attire des connexions significatives et assure clarté spirituelle dans la communication"
+            "fr": "Ancre votre nature aérienne, apporte concentration, attire des connexions significatives et assure clarté spirituelle dans la communication",
+            "ar": "يُرسّخ طبيعتك الهوائية، يمنحك التركيز، يجذب الروابط ذات المعنى، ويضمن الصفاء الروحي في التواصل",
+            "ur": "آپ کے ہوائی مزاج کو ٹھہراؤ دیتا، توجہ لاتا، بامعنی تعلقات کی طرف کھینچتا اور گفتگو میں روحانی وضاحت کا ذریعہ سمجھا جاتا ہے"
           },
           "modern_alternatives": {
             "en": [
@@ -2504,13 +2906,31 @@
               "Donner aux organisations aidant les réfugiés",
               "Parrainer des uniformes scolaires pour enfants",
               "Soutenir les programmes de tenue pour le succès"
+            ],
+            "ar": [
+              "تبرّع بملابس مستعملة بحالة جيدة بانتظام",
+              "وفّر ملابس مهنية لباحثين عن عمل",
+              "ادعم برامج الملابس للطلاب",
+              "تبرّع لمنظمات تساعد اللاجئين",
+              "ارعَ الزي المدرسي للأطفال",
+              "ادعم برامج التأنق من أجل النجاح"
+            ],
+            "ur": [
+              "ہلکے استعمال شدہ کپڑے باقاعدگی سے عطیہ کریں",
+              "ملازمت کے متلاشیوں کو پیشہ ورانہ لباس فراہم کریں",
+              "طلبہ کے لیے لباس کے پروگراموں کی مدد کریں",
+              "مہاجرین کی مدد کرنے والی تنظیموں کو عطیہ دیں",
+              "بچوں کے لیے اسکول یونیفارم کی کفالت کریں",
+              "ملازمت کے انٹرویو کے لیے لباس فراہم کرنے والے پروگراموں کی مدد کریں"
             ]
           }
         },
         "lifetime": {
           "traditional": {
             "en": "White lamb (any lamb if white unavailable), 4 coins",
-            "fr": "Agneau blanc (tout agneau si blanc non disponible), 4 pièces"
+            "fr": "Agneau blanc (tout agneau si blanc non disponible), 4 pièces",
+            "ar": "خروف أبيض (أو أي خروف إن لم يتوفر الأبيض)، 4 قطع نقدية",
+            "ur": "سفید میمنا (سفید نہ ملے تو کوئی بھی میمنا)، 4 سکّے"
           },
           "components": {
             "en": [
@@ -2528,6 +2948,22 @@
               "Pièces données en sadaqah à quatre personnes nécessiteuses différentes",
               "Effectué avec intention de clarté spirituelle",
               "Tout fait avec niyyah sincère pour plaire à Allah"
+            ],
+            "ar": [
+              "خروف أبيض (يُفضَّل) أو أي خروف إن لم يتوفر الأبيض",
+              "4 قطع نقدية أو عملة (تمثّل الجهات الأربع الأصلية)",
+              "لحم الخروف يوزَّع بين المؤمنين والفقراء",
+              "القطع النقدية تُعطى كصدقة لأربعة أشخاص محتاجين مختلفين",
+              "يُؤدَّى ذلك بنيّة الصفاء الروحي",
+              "كل ذلك يُنجَز بنية صادقة لإرضاء الله"
+            ],
+            "ur": [
+              "ایک سفید میمنا (ترجیحاً) یا سفید نہ ملے تو کوئی بھی میمنا",
+              "4 سکّے یا کرنسی (چار سمتوں کی نمائندگی)",
+              "میمنے کا گوشت اہلِ ایمان اور غریبوں میں تقسیم کیا جائے",
+              "سکّے چار مختلف ضرورت مند افراد کو صدقے کے طور پر دیے جائیں",
+              "روحانی وضاحت کی نیت سے کیا جائے",
+              "سب کچھ اللہ کی رضا کی خالص نیت کے ساتھ"
             ]
           },
           "best_timing": {
@@ -2544,11 +2980,27 @@
               "Lors de la recherche de clarté dans les communications importantes",
               "Avant des engagements majeurs d'enseignement ou de prise de parole",
               "Pendant les moments de construction de connexions communautaires"
+            ],
+            "ar": [
+              "أدِّها يوم الجمعة (يومك المبارك) بعد صلاة الجمعة",
+              "خلال عيد الأضحى لأقصى قدر من البركات",
+              "عند السعي لتحقيق الوضوح في التواصلات المهمة",
+              "قبل مناسبات التدريس أو الإلقاء الكبرى",
+              "خلال أوقات بناء الروابط المجتمعية"
+            ],
+            "ur": [
+              "اپنے روایتی دن جمعہ کو نمازِ جمعہ کے بعد کریں",
+              "زیادہ سے زیادہ برکت کے لیے عیدالاضحیٰ کے دوران",
+              "جب اہم گفتگو میں وضاحت مقصود ہو",
+              "بڑے تدریسی یا خطاب کے مواقع سے پہلے",
+              "برادری سے روابط بنانے کے اوقات میں"
             ]
           },
           "significance": {
             "en": "This offering grounds your airy nature through the lamb (earth connection) while the 4 coins represent spreading your gifts in all directions. It ensures your words carry barakah, protects your communication endeavors, and opens doors for meaningful connections. The four coins symbolize reaching the four corners of the earth with your message.",
-            "fr": "Cette offrande ancre votre nature aérienne à travers l'agneau (connexion terrestre) tandis que les 4 pièces représentent la diffusion de vos dons dans toutes les directions. Elle assure que vos paroles portent la barakah, protège vos efforts de communication et ouvre les portes pour des connexions significatives. Les quatre pièces symbolisent atteindre les quatre coins de la terre avec votre message."
+            "fr": "Cette offrande ancre votre nature aérienne à travers l'agneau (connexion terrestre) tandis que les 4 pièces représentent la diffusion de vos dons dans toutes les directions. Elle assure que vos paroles portent la barakah, protège vos efforts de communication et ouvre les portes pour des connexions significatives. Les quatre pièces symbolisent atteindre les quatre coins de la terre avec votre message.",
+            "ar": "هذه العطية تُرسّخ طبيعتك الهوائية من خلال الخروف (اتصال بالأرض)، بينما تمثّل القطع الأربع نشر عطاياك في كل الاتجاهات. تضمن أن تحمل كلماتك البركة، وتحمي مساعيك في التواصل، وتفتح الأبواب لروابط ذات معنى. القطع الأربع ترمز إلى بلوغ أركان الأرض الأربعة برسالتك.",
+            "ur": "یہ صدقہ میمنے (زمین سے تعلق) کے ذریعے آپ کے ہوائی مزاج کو ٹھہراؤ دیتی ہے جبکہ 4 سکّے آپ کی عطاؤں کے ہر سمت پھیلنے کی علامت ہیں۔ روایت میں اسے آپ کے کلام میں برکت کا ذریعہ، آپ کی گفتگو سے متعلق کوششوں کی حفاظت اور بامعنی روابط کے دروازے کھولنے والی سمجھا جاتا ہے۔ چار سکّے آپ کے پیغام کے زمین کے چاروں کونوں تک پہنچنے کی علامت ہیں۔"
           }
         }
       },
@@ -2637,7 +3089,11 @@
       "element": "water",
       "element_emoji": "💧",
       "element_number": 4,
-      "colors": ["#8B0000", "#DC143C", "#1E90FF"],
+      "colors": [
+        "#8B0000",
+        "#DC143C",
+        "#1E90FF"
+      ],
       "personality": {
         "en": {
           "temperament": "Intense and transformative - deep emotional currents run beneath calm surface",
@@ -2831,19 +3287,27 @@
         "monthly": {
           "traditional": {
             "en": "Rice and fish together - similar to Buruj 4",
-            "fr": "Riz et poisson ensemble - similaire au Buruj 4"
+            "fr": "Riz et poisson ensemble - similaire au Buruj 4",
+            "ar": "الأرز والسمك معًا - مشابه للبروج 4",
+            "ur": "چاول اور مچھلی اکٹھے — برج 4 کی طرح"
           },
           "frequency": {
             "en": "Every 1-2 months consistently",
-            "fr": "Tous les 1-2 mois de manière cohérente"
+            "fr": "Tous les 1-2 mois de manière cohérente",
+            "ar": "كل شهر إلى شهرين بانتظام",
+            "ur": "ہر 1 تا 2 ماہ میں تسلسل کے ساتھ"
           },
           "context": {
             "en": "To balance intense emotional depth and maintain flow",
-            "fr": "Pour équilibrer la profondeur émotionnelle intense et maintenir le flux"
+            "fr": "Pour équilibrer la profondeur émotionnelle intense et maintenir le flux",
+            "ar": "لموازنة العمق العاطفي الشديد والحفاظ على التدفق",
+            "ur": "شدید جذباتی گہرائی کو متوازن رکھنے اور بہاؤ برقرار رکھنے کے لیے"
           },
           "purpose": {
             "en": "Traditionally associated with moving past what feels stuck, with transformation, emotional ease, and openings for wellbeing",
-            "fr": "Traditionnellement associée au fait de dépasser ce qui bloque, à la transformation, à l'apaisement émotionnel et à des occasions de bien-être"
+            "fr": "Traditionnellement associée au fait de dépasser ce qui bloque, à la transformation, à l'apaisement émotionnel et à des occasions de bien-être",
+            "ar": "تُرتبط تقليديًا بتجاوز ما يبدو عالقًا، وبالتحوّل، وباليسر العاطفي، وبفتح أبواب للعافية",
+            "ur": "روایت میں اسے جمود سے نکلنے، تبدیلی، جذباتی آسودگی اور عافیت کے مواقع سے جوڑا جاتا ہے"
           },
           "modern_alternatives": {
             "en": [
@@ -2861,13 +3325,31 @@
               "Parrainer de la nourriture pour les groupes de soutien au deuil",
               "Donner aux organisations aidant les survivants de traumatismes",
               "Soutenir les programmes de repas pour ceux en transition"
+            ],
+            "ar": [
+              "التبرع بوجبات الأرز والسمك للملاجئ",
+              "دعم البرامج التي تُطعم من هم في أزمة",
+              "تقديم وجبات للمستشفيات ومراكز الرعاية",
+              "رعاية الطعام لمجموعات دعم الحزن",
+              "التبرع لمنظمات تساعد الناجين من الصدمات",
+              "دعم برامج الوجبات لمن هم في مرحلة انتقالية"
+            ],
+            "ur": [
+              "پناہ گاہوں کو چاول اور مچھلی کے کھانے عطیہ کریں",
+              "بحران میں گھرے لوگوں کو کھانا کھلانے والے پروگراموں کی مدد کریں",
+              "ہسپتالوں اور نگہداشت کے مراکز کو کھانا فراہم کریں",
+              "غم میں مبتلا افراد کے معاونتی گروہوں کے لیے کھانے کی کفالت کریں",
+              "صدمے سے گزرنے والوں کی مدد کرنے والی تنظیموں کو عطیہ دیں",
+              "تبدیلی کے مرحلے سے گزرنے والوں کے کھانے کے پروگراموں کی مدد کریں"
             ]
           }
         },
         "lifetime": {
           "traditional": {
             "en": "Red goat, one-eighth of a mithqāl gold (sumun mithqāl az-zahab ≈ 0.531g) OR money equivalent",
-            "fr": "Chèvre rouge, un huitième de mithqāl d'or (sumun mithqāl az-zahab ≈ 0,531g) OU équivalent monétaire"
+            "fr": "Chèvre rouge, un huitième de mithqāl d'or (sumun mithqāl az-zahab ≈ 0,531g) OU équivalent monétaire",
+            "ar": "عنزة حمراء، ثمن مثقال ذهب (ثُمُن مثقال الذهب ≈ 0.531 جرام) أو ما يعادله من المال",
+            "ur": "سرخ بکرا، ایک مثقال سونے کا آٹھواں حصہ (ثُمنِ مثقال، تقریباً 0.531 گرام) یا اس کے برابر رقم"
           },
           "components": {
             "en": [
@@ -2889,6 +3371,26 @@
               "Prioriser ceux qui traversent des transitions difficiles",
               "Donnée avec une intention sincère, en demandant à Allah un changement positif et le bien-être",
               "Fait avec niyyah sincère pour plaire à Allah"
+            ],
+            "ar": [
+              "عنزة حمراء كاملة (ترمز إلى التحول والقوة)",
+              "ثُمُن مثقال من الذهب (حوالي 0.531 جرام) أو ما يعادله من المال",
+              "يجب أن تكون العنزة سليمة وذات جودة جيدة",
+              "توزيع اللحم على نطاق واسع بين أفراد المجتمع",
+              "إعطاء الذهب/المال صدقة للمحتاجين",
+              "إعطاء الأولوية لمن يمرون بانتقالات صعبة",
+              "تُقدَّم بنية صادقة، سائلين الله تغيّرًا حميدًا وعافية",
+              "يُؤدَّى بنية صادقة لإرضاء الله"
+            ],
+            "ur": [
+              "ایک مکمل سرخ بکرا (تبدیلی اور قوت کی علامت)",
+              "ایک مثقال سونے کا آٹھواں حصہ (تقریباً 0.531 گرام) یا اس کے برابر مالیت",
+              "بکرا صحت مند اور اچھی نسل کا ہونا چاہیے",
+              "گوشت برادری میں وسیع پیمانے پر تقسیم کیا جائے",
+              "سونا/رقم ضرورت مندوں کو صدقے کے طور پر دی جائے",
+              "مشکل تبدیلیوں سے گزرنے والوں کو ترجیح دیں",
+              "خالص نیت سے دیا جائے، اور اللہ سے مثبت تبدیلی اور عافیت کی دعا کی جائے",
+              "اللہ کی رضا کی خالص نیت کے ساتھ"
             ]
           },
           "best_timing": {
@@ -2905,31 +3407,55 @@
               "Aux tournants majeurs de la vie",
               "Lorsque l'on demande à Allah d'être soulagé d'un lourd fardeau (en plus des soins nécessaires)",
               "Pendant Muharram"
+            ],
+            "ar": [
+              "أدِّها يوم الثلاثاء (يومك المبارك)",
+              "خلال عيد الأضحى لأقصى تحول",
+              "عند منعطفات الحياة الكبرى",
+              "عندما يسأل المرء الله أن يفرّج عنه ثقلًا (مع أي رعاية يحتاج إليها)",
+              "خلال شهر المحرّم"
+            ],
+            "ur": [
+              "اپنے روایتی دن منگل کو کریں",
+              "زیادہ سے زیادہ تبدیلی کے لیے عیدالاضحیٰ کے دوران",
+              "زندگی کے بڑے موڑ پر",
+              "جب کسی بھاری بوجھ سے نجات کے لیے اللہ سے دعا مقصود ہو (ضروری علاج و نگہداشت کے ساتھ)",
+              "محرم کے دوران"
             ]
           },
           "buruj_sadaqa": {
             "element": "water",
             "sacrifice": {
               "en": "Red goat, one-eighth of a mithqāl gold (sumun mithqāl az-zahab ≈ 0.531g) OR money equivalent",
-              "fr": "Chèvre rouge, un huitième de mithqāl d'or (sumun mithqāl az-zahab ≈ 0,531g) OU équivalent monétaire"
+              "fr": "Chèvre rouge, un huitième de mithqāl d'or (sumun mithqāl az-zahab ≈ 0,531g) OU équivalent monétaire",
+              "ar": "عنزة حمراء، ثمن مثقال ذهب (ثُمُن مثقال الذهب ≈ 0.531 جرام) أو ما يعادله من المال",
+              "ur": "سرخ بکرا، ایک مثقال سونے کا آٹھواں حصہ (ثُمنِ مثقال، تقریباً 0.531 گرام) یا اس کے برابر رقم"
             },
             "zodiac": {
               "en": "Capricorn (Jady)",
               "fr": "Capricorne (Jady)",
-              "arabic": "الجدي"
+              "arabic": "الجدي",
+              "ar": "الجدي",
+              "ur": "جدی"
             },
             "best_day": {
               "en": "Tuesday",
-              "fr": "Mardi"
+              "fr": "Mardi",
+              "ar": "الثلاثاء",
+              "ur": "منگل"
             },
             "note": {
               "en": "The red goat symbolizes Scorpio's transformative power, while Capricorn represents the structured manifestation of that transformation",
-              "fr": "La chèvre rouge symbolise le pouvoir transformateur du Scorpion, tandis que le Capricorne représente la manifestation structurée de cette transformation"
+              "fr": "La chèvre rouge symbolise le pouvoir transformateur du Scorpion, tandis que le Capricorne représente la manifestation structurée de cette transformation",
+              "ar": "العنزة الحمراء ترمز إلى قوة العقرب التحويلية، بينما يمثل الجدي التجلي المنظّم لذلك التحول",
+              "ur": "سرخ بکرا عقرب کی تبدیلی کی قوت کی علامت ہے، جبکہ جدی اس تبدیلی کے منظم اظہار کی نمائندگی کرتا ہے"
             }
           },
           "significance": {
             "en": "The red goat represents the blood of life and the power of transformation specific to buruj 8 (Water-Scorpio). In this tradition, this buruj sadaqah is associated with major life transitions, leaving old patterns behind, deep inner reform, and turning obstacles into opportunities. The red color symbolizes the intensity and power of Scorpio water - death and rebirth. The gold component (or monetary equivalent) represents the preciousness of transformation and connects to Capricorn's earthly manifestation.",
-            "fr": "La chèvre rouge représente le sang de la vie et le pouvoir de transformation spécifique au buruj 8 (Eau-Scorpion). Dans cette tradition, cette sadaqah buruj est associée aux grandes transitions de la vie, à l'abandon d'anciens schémas, à une réforme intérieure profonde et à la transformation des obstacles en opportunités. La couleur rouge symbolise l'intensité et le pouvoir de l'eau Scorpion - mort et renaissance. Le composant or (ou équivalent monétaire) représente le caractère précieux de la transformation et se connecte à la manifestation terrestre du Capricorne."
+            "fr": "La chèvre rouge représente le sang de la vie et le pouvoir de transformation spécifique au buruj 8 (Eau-Scorpion). Dans cette tradition, cette sadaqah buruj est associée aux grandes transitions de la vie, à l'abandon d'anciens schémas, à une réforme intérieure profonde et à la transformation des obstacles en opportunités. La couleur rouge symbolise l'intensité et le pouvoir de l'eau Scorpion - mort et renaissance. Le composant or (ou équivalent monétaire) représente le caractère précieux de la transformation et se connecte à la manifestation terrestre du Capricorne.",
+            "ar": "تمثل المعزة الحمراء دم الحياة وقوة التحوّل الخاصة بالبرج 8 (الماء-العقرب). في هذه السُّنّة، ترتبط صدقة هذا البرج بالانتقالات الكبرى في الحياة، وترك الأنماط القديمة، والإصلاح الداخلي العميق، وتحويل العوائق إلى فرص. ويرمز اللون الأحمر إلى شدّة وقوة ماء العقرب - الموت والبعث. ويمثل مكوّن الذهب (أو ما يعادله نقدًا) نفاسة التحوّل ويرتبط بالتحقّق الأرضي لبرج الجدي.",
+            "ur": "سرخ بکرا زندگی کے خون اور برج 8 (آبی-عقرب) سے مخصوص تبدیلی کی قوت کی نمائندگی کرتا ہے۔ اس روایت میں اس برجی صدقے کو زندگی کی بڑی تبدیلیوں، پرانے انداز پیچھے چھوڑنے، گہری باطنی اصلاح اور رکاوٹوں کو مواقع میں بدلنے سے جوڑا جاتا ہے۔ سرخ رنگ عقربی پانی کی شدت اور قوت — موت اور نئی زندگی — کی علامت ہے۔ سونے کا حصہ (یا اس کے برابر رقم) تبدیلی کی قدر و قیمت کا اظہار ہے اور جدی کے زمینی اظہار سے جڑتا ہے۔"
           }
         }
       },
@@ -3017,7 +3543,11 @@
       "element": "fire",
       "element_emoji": "🔥",
       "element_number": 1,
-      "colors": ["#FF6B35", "#F7931E", "#FFD700"],
+      "colors": [
+        "#FF6B35",
+        "#F7931E",
+        "#FFD700"
+      ],
       "personality": {
         "en": {
           "temperament": "Optimistic and adventurous - seeks expansion and truth",
@@ -3189,19 +3719,27 @@
         "monthly": {
           "traditional": {
             "en": "Food to those in need - similar to other fire buruj",
-            "fr": "Nourriture aux nécessiteux - similaire aux autres buruj de feu"
+            "fr": "Nourriture aux nécessiteux - similaire aux autres buruj de feu",
+            "ar": "إطعام المحتاجين - مشابه لبقية أبراج النار",
+            "ur": "ضرورت مندوں کو کھانا — دیگر آتشی بروج کی طرح"
           },
           "frequency": {
             "en": "Every 1-2 months",
-            "fr": "Tous les 1-2 mois"
+            "fr": "Tous les 1-2 mois",
+            "ar": "كل شهر إلى شهرين",
+            "ur": "ہر 1 تا 2 ماہ میں"
           },
           "context": {
             "en": "To balance fire energy and attract continued blessings",
-            "fr": "Pour équilibrer l'énergie de feu et attirer les bénédictions continues"
+            "fr": "Pour équilibrer l'énergie de feu et attirer les bénédictions continues",
+            "ar": "لموازنة طاقة النار وجذب البركات المستمرة",
+            "ur": "آتشی توانائی کو متوازن کرنے اور برکتوں کے تسلسل کے لیے"
           },
           "purpose": {
             "en": "Maintains spiritual balance and ensures blessings in knowledge and travel",
-            "fr": "Maintient l'équilibre spirituel et assure les bénédictions dans la connaissance et le voyage"
+            "fr": "Maintient l'équilibre spirituel et assure les bénédictions dans la connaissance et le voyage",
+            "ar": "يحافظ على التوازن الروحي ويضمن البركة في العلم والسفر",
+            "ur": "روحانی توازن برقرار رکھتا اور علم و سفر میں برکت کا ذریعہ سمجھا جاتا ہے"
           },
           "modern_alternatives": {
             "en": [
@@ -3217,13 +3755,29 @@
               "Donner aux banques alimentaires universitaires",
               "Parrainer repas pour voyageurs",
               "Soutenir programmes alimentaires pour réfugiés"
+            ],
+            "ar": [
+              "إطعام الطلاب والعلماء",
+              "دعم برامج الوجبات التعليمية",
+              "التبرع لبنوك الطعام الجامعية",
+              "رعاية وجبات للمسافرين",
+              "دعم برامج إطعام اللاجئين"
+            ],
+            "ur": [
+              "طلبہ اور علماء کو کھانا کھلائیں",
+              "تعلیمی کھانے کے پروگراموں کی مدد کریں",
+              "یونیورسٹی کے فوڈ بینکوں کو عطیہ دیں",
+              "مسافروں کے لیے کھانے کی کفالت کریں",
+              "مہاجرین کو کھانا کھلانے کے پروگراموں کی مدد کریں"
             ]
           }
         },
         "lifetime": {
           "traditional": {
             "en": "White hen, 1,000 cowrie shells OR 1,000 in currency",
-            "fr": "Poule blanche, 1 000 cauris OU 1 000 en monnaie"
+            "fr": "Poule blanche, 1 000 cauris OU 1 000 en monnaie",
+            "ar": "دجاجة بيضاء، 1000 ودعة أو ما يعادلها نقدًا",
+            "ur": "سفید مرغی، 1,000 کوڑیاں یا کسی بھی کرنسی میں 1,000"
           },
           "components": {
             "en": [
@@ -3241,6 +3795,22 @@
               "Monnaie/cauris donnés en sadaqah",
               "Effectué avec intention d'expansion et bénédictions",
               "Tout avec niyyah sincère"
+            ],
+            "ar": [
+              "دجاجة بيضاء واحدة (ترمز إلى الطهارة والمعرفة)",
+              "1000 ودعة أو ما يعادلها نقدًا",
+              "توزيع الدجاجة كطعام للمحتاجين",
+              "تقديم النقود أو الودع كصدقة",
+              "تُؤدى بنية التوسع والبركة",
+              "كل ذلك بنية صادقة"
+            ],
+            "ur": [
+              "ایک سفید مرغی (پاکیزگی اور علم کی علامت)",
+              "1,000 کوڑیاں یا اس کے برابر کرنسی",
+              "مرغی ضرورت مندوں کو کھانے کے طور پر تقسیم کی جائے",
+              "کرنسی/کوڑیاں صدقے کے طور پر دی جائیں",
+              "وسعت اور برکتوں کی نیت سے کیا جائے",
+              "سب کچھ خلوصِ نیت کے ساتھ"
             ]
           },
           "best_timing": {
@@ -3255,11 +3825,25 @@
               "Avant voyages majeurs ou entreprises éducatives",
               "Pendant mois islamiques de bénédiction",
               "Lors de la recherche d'expansion dans connaissance ou affaires"
+            ],
+            "ar": [
+              "الخميس (يومك المبارك)",
+              "قبل الأسفار الكبرى أو المساعي التعليمية",
+              "خلال الأشهر الإسلامية المباركة",
+              "عند السعي للتوسع في العلم أو الأعمال"
+            ],
+            "ur": [
+              "جمعرات (آپ کا روایتی دن)",
+              "بڑے سفروں یا تعلیمی منصوبوں سے پہلے",
+              "برکت والے اسلامی مہینوں کے دوران",
+              "جب علم یا کاروبار میں وسعت مقصود ہو"
             ]
           },
           "significance": {
             "en": "Opens doors of knowledge, blesses travels, attracts opportunities for expansion, ensures protection during journeys",
-            "fr": "Ouvre portes de connaissance, bénit voyages, attire opportunités d'expansion, assure protection pendant voyages"
+            "fr": "Ouvre portes de connaissance, bénit voyages, attire opportunités d'expansion, assure protection pendant voyages",
+            "ar": "يفتح أبواب المعرفة، يبارك الأسفار، يجذب فرص التوسع، ويضمن الحماية أثناء الرحلات",
+            "ur": "روایت میں علم کے دروازے کھولنے، سفر میں برکت، وسعت کے مواقع لانے اور سفر کے دوران حفاظت کا ذریعہ سمجھا جاتا ہے"
           }
         }
       },
@@ -3347,7 +3931,11 @@
       "element": "earth",
       "element_emoji": "🌍",
       "element_number": 2,
-      "colors": ["#000000", "#8B4513", "#2F4F4F"],
+      "colors": [
+        "#000000",
+        "#8B4513",
+        "#2F4F4F"
+      ],
       "personality": {
         "en": {
           "temperament": "Disciplined and ambitious - seeks achievement and mastery",
@@ -3525,19 +4113,27 @@
         "monthly": {
           "traditional": {
             "en": "Grains, earth-derived food products",
-            "fr": "Céréales, produits alimentaires dérivés de la terre"
+            "fr": "Céréales, produits alimentaires dérivés de la terre",
+            "ar": "الحبوب، المنتجات الغذائية المشتقة من الأرض",
+            "ur": "اناج، مٹی سے حاصل ہونے والی غذائی اشیا"
           },
           "frequency": {
             "en": "Every 1-2 months",
-            "fr": "Tous les 1-2 mois"
+            "fr": "Tous les 1-2 mois",
+            "ar": "كل 1-2 شهر",
+            "ur": "ہر 1 تا 2 ماہ میں"
           },
           "context": {
             "en": "To maintain spiritual flow and prevent stagnation",
-            "fr": "Pour maintenir flux spirituel et prévenir stagnation"
+            "fr": "Pour maintenir flux spirituel et prévenir stagnation",
+            "ar": "للحفاظ على التدفق الروحي ومنع الركود",
+            "ur": "روحانی بہاؤ برقرار رکھنے اور جمود سے بچنے کے لیے"
           },
           "purpose": {
             "en": "Balances earth energy, ensures continued success, maintains spiritual grounding",
-            "fr": "Équilibre énergie terrestre, assure succès continu, maintient ancrage spirituel"
+            "fr": "Équilibre énergie terrestre, assure succès continu, maintient ancrage spirituel",
+            "ar": "يوازن طاقة الأرض، يضمن استمرار النجاح، يحافظ على الرسوخ الروحي",
+            "ur": "مٹی کی توانائی کو متوازن کرتا، تسلسلِ کامیابی اور روحانی استحکام برقرار رکھتا سمجھا جاتا ہے"
           },
           "modern_alternatives": {
             "en": [
@@ -3553,13 +4149,29 @@
               "Parrainer repas pour travailleurs et ouvriers",
               "Donner aux organisations aidant les chômeurs",
               "Soutenir programmes de formation professionnelle"
+            ],
+            "ar": [
+              "تبرع بالحبوب والمواد الأساسية لبنوك الطعام",
+              "ادعم المجتمعات الزراعية",
+              "ارعَ وجبات للعمال والكادحين",
+              "تبرع للمنظمات التي تساعد العاطلين عن العمل",
+              "ادعم برامج التدريب المهني"
+            ],
+            "ur": [
+              "فوڈ بینکوں کو اناج اور بنیادی اشیا عطیہ کریں",
+              "زرعی برادریوں کی مدد کریں",
+              "مزدوروں اور کارکنوں کے لیے کھانے کی کفالت کریں",
+              "بے روزگاروں کی مدد کرنے والی تنظیموں کو عطیہ دیں",
+              "فنی تربیت کے پروگراموں کی مدد کریں"
             ]
           }
         },
         "lifetime": {
           "traditional": {
             "en": "One black lamb, 10 Miskāl of gold (42.50 grams) or monetary equivalent",
-            "fr": "Un agneau noir, 10 Miskāl d'or (42,50 grammes) ou équivalent monétaire"
+            "fr": "Un agneau noir, 10 Miskāl d'or (42,50 grammes) ou équivalent monétaire",
+            "ar": "حَمَل أسود واحد، 10 مثقال من الذهب (42.50 غرامًا) أو ما يعادله نقدًا",
+            "ur": "ایک کالا میمنا، 10 مثقال سونا (42.50 گرام) یا اس کے برابر رقم"
           },
           "components": {
             "en": [
@@ -3579,39 +4191,71 @@
               "Valeur d'or donnée en sadaqah aux nécessiteux",
               "Doit être effectué le samedi (LE MEILLEUR jour pour ce buruj)",
               "Fait avec niyyah sincère et intention sérieuse"
+            ],
+            "ar": [
+              "حَمَل أسود واحد (يرمز إلى العمق والإتقان وطاقة زحل)",
+              "10 مثقال من الذهب = 42.50 غرامًا من الذهب (10 × 4.25غ)",
+              "أو ما يعادل قيمة 42.50 غرامًا من الذهب نقدًا",
+              "يُوزَّع لحم الحَمَل الأسود على الفقراء والمحتاجين",
+              "تُعطى قيمة الذهب صدقةً للمحتاجين",
+              "يجب أن تُؤدَّى يوم السبت (أفضل يوم لهذا البرج)",
+              "تُؤدَّى بنية صادقة وقصد جاد"
+            ],
+            "ur": [
+              "ایک کالا میمنا (گہرائی، مہارت اور زحل کی توانائی کی علامت)",
+              "10 مثقال سونا = 42.50 گرام سونا (10 × 4.25 گرام)",
+              "یا 42.50 گرام سونے کی نقد مالیت",
+              "کالے میمنے کا گوشت غریبوں اور ضرورت مندوں میں تقسیم کیا جائے",
+              "سونے کی مالیت ضرورت مندوں کو صدقے کے طور پر دی جائے",
+              "ہفتے کو کرنا ضروری ہے (اس برج کے لیے بہترین دن)",
+              "خلوصِ نیت اور سنجیدہ ارادے کے ساتھ کیا جائے"
             ]
           },
           "gold_calculation": {
             "formula": {
               "en": "1 Miskāl (Islamic measure) = 4.25 grams",
-              "fr": "1 Miskāl (mesure islamique) = 4,25 grammes"
+              "fr": "1 Miskāl (mesure islamique) = 4,25 grammes",
+              "ar": "المثقال الواحد (المقياس الإسلامي) = 4.25 غرامًا",
+              "ur": "1 مثقال (اسلامی پیمانہ) = 4.25 گرام"
             },
             "total": {
               "en": "10 Miskāl × 4.25g = 42.50 grams of gold",
-              "fr": "10 Miskāl × 4,25g = 42,50 grammes d'or"
+              "fr": "10 Miskāl × 4,25g = 42,50 grammes d'or",
+              "ar": "10 مثاقيل × 4.25غ = 42.50 غرامًا من الذهب",
+              "ur": "10 مثقال × 4.25 گرام = 42.50 گرام سونا"
             },
             "monetary_option": {
               "en": "Check current gold price per gram and multiply by 42.50 to get the cash equivalent. This amount is given as sadaqah.",
-              "fr": "Vérifiez le prix actuel de l'or par gramme et multipliez par 42,50 pour obtenir l'équivalent en espèces. Ce montant est donné en sadaqah."
+              "fr": "Vérifiez le prix actuel de l'or par gramme et multipliez par 42,50 pour obtenir l'équivalent en espèces. Ce montant est donné en sadaqah.",
+              "ar": "راجع سعر الذهب الحالي للجرام واضربه في 42.50 للحصول على المقابل النقدي. يُقدَّم هذا المبلغ صدقة.",
+              "ur": "سونے کا موجودہ بھاؤ فی گرام دیکھیں اور 42.50 سے ضرب دیں تاکہ نقد مالیت معلوم ہو۔ یہ رقم صدقے کے طور پر دی جاتی ہے۔"
             }
           },
           "lamb_details": {
             "color": {
               "en": "Must be BLACK lamb - this color is essential for Capricorn/Saturn alignment",
-              "fr": "Doit être agneau NOIR - cette couleur est essentielle pour l'alignement Capricorne/Saturne"
+              "fr": "Doit être agneau NOIR - cette couleur est essentielle pour l'alignement Capricorne/Saturne",
+              "ar": "يجب أن يكون الخروف أسود - وهذا اللون أساسي للتوافق مع الجدي/زحل",
+              "ur": "میمنا کالا ہونا ضروری ہے — یہ رنگ جدی/زحل کی نسبت کے لیے لازمی ہے"
             },
             "symbolism": {
               "en": "Black represents depth, mystery, mastery, authority, and Saturn's grounding energy. It symbolizes the culmination of earth element wisdom.",
-              "fr": "Le noir représente profondeur, mystère, maîtrise, autorité et l'énergie d'ancrage de Saturne. Il symbolise l'aboutissement de la sagesse de l'élément terre."
+              "fr": "Le noir représente profondeur, mystère, maîtrise, autorité et l'énergie d'ancrage de Saturne. Il symbolise l'aboutissement de la sagesse de l'élément terre.",
+              "ar": "يرمز الأسود إلى العمق والغموض والإتقان والسلطة، وإلى طاقة زحل المثبتة. وهو يرمز إلى اكتمال حكمة عنصر الأرض.",
+              "ur": "کالا رنگ گہرائی، راز، مہارت، اختیار اور زحل کی ٹھہراؤ والی توانائی کی علامت ہے۔ یہ مٹی کے عنصر کی حکمت کی انتہا کا مظہر ہے۔"
             },
             "quality": {
               "en": "Healthy, mature lamb without defects",
-              "fr": "Agneau sain et mature sans défauts"
+              "fr": "Agneau sain et mature sans défauts",
+              "ar": "خروف صحيح ناضج بلا عيوب",
+              "ur": "صحت مند، بالغ اور بے عیب میمنا"
             }
           },
           "number_significance": {
             "en": "In the numerological tradition, 10 is the number of completion and perfection. It recalls the Ten Commandments given to Prophet Mūsā, complete divine order, and mastery. Combined with earth element and Saturn energy, it is traditionally associated with material and spiritual authority.",
-            "fr": "Dans la tradition numérologique, 10 est le nombre de l'achèvement et de la perfection. Il rappelle les dix commandements donnés au Prophète Mūsā, l'ordre divin complet et la maîtrise. Associé à l'élément terre et à Saturne, il est traditionnellement lié à l'autorité matérielle et spirituelle."
+            "fr": "Dans la tradition numérologique, 10 est le nombre de l'achèvement et de la perfection. Il rappelle les dix commandements donnés au Prophète Mūsā, l'ordre divin complet et la maîtrise. Associé à l'élément terre et à Saturne, il est traditionnellement lié à l'autorité matérielle et spirituelle.",
+            "ar": "في التقليد العددي، 10 هو عدد التمام والكمال. وهو يذكّر بالوصايا العشر التي أُعطيت للنبي موسى، وبالنظام الإلهي التام، وبالإتقان. ومع عنصر الأرض وطاقة زحل، يُربَط تقليديًا بالسلطة المادية والروحية.",
+            "ur": "علم الاعداد کی روایت میں 10 تکمیل اور کمال کا عدد ہے۔ یہ (حضرت موسیٰؑ کے) دس احکام، مکمل الٰہی نظم اور مہارت کی علامت سمجھا جاتا ہے۔ مٹی کے عنصر اور زحل کی توانائی کے ساتھ مل کر یہ اعلیٰ مادی اور روحانی اختیار کی علامت بنتا ہے۔"
           },
           "best_timing": {
             "en": [
@@ -3631,11 +4275,31 @@
               "Aux moments d'établissement de vie majeur",
               "Peut être effectué n'importe quel samedi tout au long de l'année",
               "Particulièrement puissant pendant Dhul-Hijjah (mois du sacrifice)"
+            ],
+            "ar": [
+              "السبت (أفضل يوم لهذا البرج) - أقوى توقيت",
+              "عند تحقيق إنجاز مهني كبير أو ترقية",
+              "عند اقتناء ممتلكات أو ثروة مهمة",
+              "خلال أوقات ترسيخ سلطة أو قيادة كبرى",
+              "في لحظات الاستقرار الكبرى في الحياة",
+              "يمكن أداؤها أي يوم سبت طوال العام",
+              "قوية بشكل خاص خلال ذي الحجة (شهر الأضحية)"
+            ],
+            "ur": [
+              "ہفتہ (اس برج کے لیے بہترین دن) — سب سے مؤثر وقت",
+              "جب کوئی بڑی پیشہ ورانہ کامیابی یا ترقی حاصل ہو",
+              "جب کوئی نمایاں جائیداد یا دولت حاصل ہو",
+              "کوئی بڑا اختیار یا قیادت سنبھالنے کے اوقات میں",
+              "زندگی میں بڑے استحکام کے مواقع پر",
+              "سال بھر کسی بھی ہفتے کو کیا جا سکتا ہے",
+              "ذوالحجہ (قربانی کے مہینے) میں خاص طور پر بابرکت سمجھا جاتا ہے"
             ]
           },
           "significance": {
             "en": "This is one of the most powerful sadaqah combinations in ʿIlm al-Ḥurūf. The black lamb represents mastery over the material world through spiritual discipline. The 10 Miskāl of gold (42.50g) represents complete wealth and divine provision. Together, they establish: lasting success in career and authority, protection of property and generational wealth, divine support in ambitious undertakings, mastery and leadership in your field, unshakeable material stability. Saturn's Saturday energy amplifies discipline, structure, and long-term results. This sacrifice creates a foundation that lasts for generations.",
-            "fr": "C'est l'une des combinaisons sadaqah les plus puissantes dans ʿIlm al-Ḥurūf. L'agneau noir représente la maîtrise du monde matériel par la discipline spirituelle. Les 10 Miskāl d'or (42,50g) représentent la richesse complète et la provision divine. Ensemble, ils établissent: succès durable dans la carrière et l'autorité, protection de la propriété et richesse générationnelle, soutien divin dans les entreprises ambitieuses, maîtrise et leadership dans votre domaine, stabilité matérielle inébranlable. L'énergie du samedi de Saturne amplifie discipline, structure et résultats à long terme. Ce sacrifice crée une fondation qui dure des générations."
+            "fr": "C'est l'une des combinaisons sadaqah les plus puissantes dans ʿIlm al-Ḥurūf. L'agneau noir représente la maîtrise du monde matériel par la discipline spirituelle. Les 10 Miskāl d'or (42,50g) représentent la richesse complète et la provision divine. Ensemble, ils établissent: succès durable dans la carrière et l'autorité, protection de la propriété et richesse générationnelle, soutien divin dans les entreprises ambitieuses, maîtrise et leadership dans votre domaine, stabilité matérielle inébranlable. L'énergie du samedi de Saturne amplifie discipline, structure et résultats à long terme. Ce sacrifice crée une fondation qui dure des générations.",
+            "ar": "هذه من أقوى تركيبات الصدقة في علم الحروف. يرمز الحَمَل الأسود إلى التمكن من العالم المادي عبر الانضباط الروحي. و10 مثقال من الذهب (42.50غ) يرمز إلى الثروة الكاملة والرزق الإلهي. معًا، يُرسِيان: نجاحًا دائمًا في المسيرة المهنية والسلطة، وحماية للممتلكات والثروة الموروثة عبر الأجيال، ودعمًا إلهيًا في المساعي الطموحة، وإتقانًا وقيادة في مجالك، واستقرارًا ماديًا لا يتزعزع. تضخّم طاقة السبت الزحلية الانضباط والبنية والنتائج طويلة الأمد. هذه التضحية تُرسي أساسًا يدوم أجيالًا.",
+            "ur": "یہ علم الحروف میں صدقے کی سب سے مؤثر صورتوں میں سے ایک سمجھی جاتی ہے۔ کالا میمنا روحانی نظم و ضبط کے ذریعے مادی دنیا پر مہارت کی علامت ہے۔ 10 مثقال سونا (42.50 گرام) مکمل دولت اور الٰہی رزق کی علامت ہے۔ دونوں مل کر روایت میں یہ قائم کرنے والے سمجھے جاتے ہیں: پیشے اور اختیار میں دیرپا کامیابی، جائیداد اور نسلی دولت کی حفاظت، بلند ارادوں میں الٰہی مدد، اپنے میدان میں مہارت اور قیادت، اور غیر متزلزل مادی استحکام۔ زحل کے ہفتے کی توانائی نظم و ضبط، ساخت اور طویل مدتی نتائج کو بڑھاتی سمجھی جاتی ہے۔ یہ صدقہ ایسی بنیاد بناتا سمجھا جاتا ہے جو نسلوں تک قائم رہے۔"
           },
           "practical_notes": {
             "en": [
@@ -3651,6 +4315,20 @@
               "Distribution: Donner aux pauvres, nécessiteux ou causes caritatives",
               "L'agneau et l'or/argent doivent être donnés - ils fonctionnent ensemble",
               "C'est une offrande unique dans la vie - choisissez le timing soigneusement"
+            ],
+            "ar": [
+              "خيار الذهب: يمكنك إعطاء ذهب فعلي (حلي أو مسكوكات) قيمته 42.50غ، أو",
+              "خيار النقد: احسب القيمة النقدية لـ 42.50غ من الذهب بسعر السوق الحالي",
+              "التوزيع: يُعطى للفقراء والمحتاجين أو لأوجه البر",
+              "يجب إعطاء الخروف والذهب/المال معًا - فهما يكتملان",
+              "هذه صدقة تُقدَّم مرة واحدة في العمر - فاختر وقتها بعناية"
+            ],
+            "ur": [
+              "سونے کا اختیار: آپ 42.50 گرام کے برابر اصل سونا (زیور، سکّے) دے سکتے ہیں، یا",
+              "نقد اختیار: 42.50 گرام سونے کی موجودہ بازاری قیمت کے مطابق نقد مالیت نکالیں",
+              "تقسیم: غریبوں، ضرورت مندوں یا فلاحی مقاصد کو دیں",
+              "میمنا اور سونا/رقم دونوں دینا ضروری ہے — یہ مل کر کام کرتے ہیں",
+              "یہ زندگی میں ایک بار کا صدقہ ہے — وقت کا انتخاب احتیاط سے کریں"
             ]
           }
         }
@@ -3739,7 +4417,11 @@
       "element": "air",
       "element_emoji": "💨",
       "element_number": 3,
-      "colors": ["#87CEEB", "#4682B4", "#00CED1"],
+      "colors": [
+        "#87CEEB",
+        "#4682B4",
+        "#00CED1"
+      ],
       "personality": {
         "en": {
           "temperament": "Innovative and humanitarian - seeks to serve the collective",
@@ -3911,19 +4593,27 @@
         "monthly": {
           "traditional": {
             "en": "Clothing from wardrobe",
-            "fr": "Vêtements de la garde-robe"
+            "fr": "Vêtements de la garde-robe",
+            "ar": "ملابس من الخزانة",
+            "ur": "الماری کے کپڑے"
           },
           "frequency": {
             "en": "Every 1-2 months",
-            "fr": "Tous les 1-2 mois"
+            "fr": "Tous les 1-2 mois",
+            "ar": "كل شهر إلى شهرين",
+            "ur": "ہر 1 تا 2 ماہ میں"
           },
           "context": {
             "en": "To ground visionary energy and maintain connection to community needs",
-            "fr": "Pour ancrer énergie visionnaire et maintenir connexion aux besoins communautaires"
+            "fr": "Pour ancrer énergie visionnaire et maintenir connexion aux besoins communautaires",
+            "ar": "لترسيخ الطاقة الرؤيوية والحفاظ على الاتصال باحتياجات المجتمع",
+            "ur": "بصیرت والی توانائی کو ٹھہراؤ دینے اور برادری کی ضروریات سے تعلق قائم رکھنے کے لیے"
           },
           "purpose": {
             "en": "Balances detached air nature, maintains connection to practical service, ensures spiritual flow",
-            "fr": "Équilibre nature aérienne détachée, maintient connexion au service pratique, assure flux spirituel"
+            "fr": "Équilibre nature aérienne détachée, maintient connexion au service pratique, assure flux spirituel",
+            "ar": "يوازن طبيعة الهواء المنعزلة، يحافظ على الاتصال بالخدمة العملية، ويضمن تدفق البركة الروحية",
+            "ur": "الگ تھلگ ہوائی مزاج کو متوازن کرتا، عملی خدمت سے تعلق برقرار رکھتا اور روحانی بہاؤ کا ذریعہ سمجھا جاتا ہے"
           },
           "modern_alternatives": {
             "en": [
@@ -3939,13 +4629,29 @@
               "Fournir tenues de travail pour programmes de formation",
               "Donner aux collectes de vêtements communautaires",
               "Soutenir besoins en vêtements des logements transitoires"
+            ],
+            "ar": [
+              "التبرع بالملابس لملاجئ المشردين",
+              "دعم برامج الملابس للاجئين",
+              "توفير ملابس عمل لبرامج التدريب المهني",
+              "التبرع لحملات جمع الملابس المجتمعية",
+              "دعم احتياجات الملابس للسكن الانتقالي"
+            ],
+            "ur": [
+              "بے گھر افراد کی پناہ گاہوں کو کپڑے عطیہ کریں",
+              "مہاجرین کے لباس کے پروگراموں کی مدد کریں",
+              "روزگار کی تربیت کے پروگراموں کے لیے کام کا لباس فراہم کریں",
+              "برادری کی لباس مہمات کو عطیہ دیں",
+              "عارضی رہائش کے لباس کی ضروریات میں مدد کریں"
             ]
           }
         },
         "lifetime": {
           "traditional": {
             "en": "Guinea fowl (pintade), their own clothing, 9 meters of cloth (mbasin/African/Asian fabric), 1,000 cowrie shells OR 1,000 in currency",
-            "fr": "Pintade, leurs propres vêtements, 9 mètres de tissu (mbasin/tissu africain/asiatique), 1 000 cauris OU 1 000 en monnaie"
+            "fr": "Pintade, leurs propres vêtements, 9 mètres de tissu (mbasin/tissu africain/asiatique), 1 000 cauris OU 1 000 en monnaie",
+            "ar": "دجاج غينيا (البانتاد)، ملابسهم الخاصة، 9 أمتار من القماش (مبصن/قماش أفريقي أو آسيوي)، 1000 ودعة أو ما يعادلها من العملة",
+            "ur": "گنی فاؤل (پنتاد)، اپنے کپڑے، 9 میٹر کپڑا (امباسین یا کوئی افریقی/ایشیائی کپڑا)، 1,000 کوڑیاں یا 1,000 کرنسی میں"
           },
           "components": {
             "en": [
@@ -3965,6 +4671,24 @@
               "Tout distribué aux nécessiteux",
               "Effectué avec intention pour bénéfice communautaire",
               "Tout avec niyyah sincère"
+            ],
+            "ar": [
+              "دجاجة غينيا واحدة (رمز المجتمع والتفرد)",
+              "أغراض ملابس شخصية",
+              "9 أمتار من قماش جيد الجودة (قماش أفريقي أو آسيوي)",
+              "1000 ودعة أو ما يعادلها من العملة",
+              "توزَّع جميعها على المحتاجين",
+              "تُؤدّى بنية خدمة المجتمع",
+              "كل ذلك بنية صادقة"
+            ],
+            "ur": [
+              "ایک گنی فاؤل/پنتاد (برادری اور انفرادیت کی علامت)",
+              "ذاتی لباس کی اشیا",
+              "9 میٹر معیاری کپڑا (افریقی یا ایشیائی)",
+              "1,000 کوڑیاں یا اس کے برابر کرنسی",
+              "سب کچھ ضرورت مندوں میں تقسیم کیا جائے",
+              "برادری کے فائدے کی نیت سے کیا جائے",
+              "سب کچھ خلوصِ نیت کے ساتھ"
             ]
           },
           "best_timing": {
@@ -3979,11 +4703,25 @@
               "Lors du lancement de projets communautaires majeurs",
               "Pendant périodes de transition sociale",
               "Lors de la recherche de bénéfice pour le collectif"
+            ],
+            "ar": [
+              "الأحد (يومك المبارك)",
+              "عند إطلاق مشاريع مجتمعية كبرى",
+              "خلال فترات التحول الاجتماعي",
+              "عند السعي لتحقيق نفع للجماعة"
+            ],
+            "ur": [
+              "اتوار (آپ کا روایتی دن)",
+              "جب برادری کے بڑے منصوبے شروع کیے جائیں",
+              "سماجی تبدیلی کے اوقات میں",
+              "جب اجتماعی فائدہ مقصود ہو"
             ]
           },
           "significance": {
             "en": "Opens doors for humanitarian work, blesses community initiatives, attracts support for innovative projects, ensures divine assistance in collective service",
-            "fr": "Ouvre portes pour travail humanitaire, bénit initiatives communautaires, attire soutien pour projets innovants, assure assistance divine dans service collectif"
+            "fr": "Ouvre portes pour travail humanitaire, bénit initiatives communautaires, attire soutien pour projets innovants, assure assistance divine dans service collectif",
+            "ar": "يفتح أبواب العمل الإنساني، ويبارك المبادرات المجتمعية، ويجذب الدعم للمشاريع المبتكرة، ويضمن العون الإلهي في خدمة الجماعة",
+            "ur": "روایت میں انسان دوست کام کے دروازے کھولنے، برادری کے اقدامات میں برکت، جدید منصوبوں کے لیے مدد کی کشش اور اجتماعی خدمت میں الٰہی مدد کا ذریعہ سمجھا جاتا ہے"
           }
         }
       },
@@ -4071,7 +4809,11 @@
       "element": "water",
       "element_emoji": "💧",
       "element_number": 4,
-      "colors": ["#1E90FF", "#7B68EE", "#9370DB"],
+      "colors": [
+        "#1E90FF",
+        "#7B68EE",
+        "#9370DB"
+      ],
       "personality": {
         "en": {
           "temperament": "Compassionate and intuitive - deeply sensitive to others' pain",
@@ -4271,19 +5013,27 @@
         "monthly": {
           "traditional": {
             "en": "Rice and fish together",
-            "fr": "Riz et poisson ensemble"
+            "fr": "Riz et poisson ensemble",
+            "ar": "الأرز والسمك معًا",
+            "ur": "چاول اور مچھلی اکٹھے"
           },
           "frequency": {
             "en": "Every 1-2 months",
-            "fr": "Tous les 1-2 mois"
+            "fr": "Tous les 1-2 mois",
+            "ar": "كل شهر إلى شهرين",
+            "ur": "ہر 1 تا 2 ماہ میں"
           },
           "context": {
             "en": "To maintain spiritual balance and prevent absorption of others' pain",
-            "fr": "Pour maintenir équilibre spirituel et prévenir absorption de la douleur des autres"
+            "fr": "Pour maintenir équilibre spirituel et prévenir absorption de la douleur des autres",
+            "ar": "للحفاظ على التوازن الروحي ومنع امتصاص ألم الآخرين",
+            "ur": "روحانی توازن برقرار رکھنے اور دوسروں کے درد کو جذب کرنے سے بچنے کے لیے"
           },
           "purpose": {
             "en": "Protects empathic nature, maintains boundaries while serving, ensures spiritual clarity",
-            "fr": "Protège nature empathique, maintient limites tout en servant, assure clarté spirituelle"
+            "fr": "Protège nature empathique, maintient limites tout en servant, assure clarté spirituelle",
+            "ar": "يحمي الطبيعة المتعاطفة، يحافظ على الحدود أثناء الخدمة، ويضمن الصفاء الروحي",
+            "ur": "ہمدرد فطرت کی حفاظت کرتا، خدمت کے دوران حدود برقرار رکھتا اور روحانی وضاحت کا ذریعہ سمجھا جاتا ہے"
           },
           "modern_alternatives": {
             "en": [
@@ -4299,13 +5049,29 @@
               "Fournir nourriture aux centres de retraite spirituelle",
               "Parrainer repas pour patients d'hôpital",
               "Donner aux organisations servant les vulnérables"
+            ],
+            "ar": [
+              "التبرع بوجبات الأرز والسمك للمُعزّين والحزانى",
+              "دعم برامج وجبات الرعاية التلطيفية",
+              "تقديم الطعام لمراكز الخلوات الروحية",
+              "رعاية وجبات لمرضى المستشفيات",
+              "التبرع لمنظمات تخدم الفئات الضعيفة"
+            ],
+            "ur": [
+              "غم میں مبتلا لوگوں کو چاول اور مچھلی کے کھانے عطیہ کریں",
+              "تسکینی نگہداشت (ہاسپس) کے کھانے کے پروگراموں کی مدد کریں",
+              "روحانی خلوت کے مراکز کو کھانا فراہم کریں",
+              "ہسپتال کے مریضوں کے لیے کھانے کی کفالت کریں",
+              "کمزور طبقات کی خدمت کرنے والی تنظیموں کو عطیہ دیں"
             ]
           }
         },
         "lifetime": {
           "traditional": {
             "en": "Zakat al-Fitr in rice for 12 people, Fish",
-            "fr": "Zakat al-Fitr en riz pour 12 personnes, Poisson"
+            "fr": "Zakat al-Fitr en riz pour 12 personnes, Poisson",
+            "ar": "زكاة الفطر أرزًا لاثني عشر شخصًا، وسمك",
+            "ur": "12 افراد کے لیے چاول میں صدقۂ فطر، مچھلی"
           },
           "components": {
             "en": [
@@ -4325,20 +5091,44 @@
               "Le nombre 12 symbolise achèvement et perfection spirituelle (12ème buruj)",
               "Doit être effectué le jeudi (LE MEILLEUR jour pour ce buruj)",
               "Fait avec niyyah sincère pour plaire à Allah"
+            ],
+            "ar": [
+              "الأرز: مقدار زكاة الفطر لاثني عشر شخصًا - حوالي 36 كجم إجمالًا (3 كجم للشخص)",
+              "السمك - كمية مناسبة للتوزيع على المجتمع (طازج أو محفوظ)",
+              "يُوزَّع كل الأرز على المحتاجين والفقراء",
+              "يُحضَّر السمك ويُشارَك مع المجتمع",
+              "الرقم 12 يرمز إلى الاكتمال والكمال الروحي (البرج الثاني عشر)",
+              "يجب أداؤه يوم الخميس (أفضل يوم لهذا البرج)",
+              "يُؤدَّى بنية صادقة لإرضاء الله"
+            ],
+            "ur": [
+              "چاول: 12 افراد کے لیے صدقۂ فطر کی مقدار — کل تقریباً 36 کلوگرام (فی شخص 3 کلوگرام)",
+              "مچھلی — برادری میں تقسیم کے لیے مناسب مقدار (تازہ یا محفوظ)",
+              "سارے چاول ضرورت مندوں اور غریبوں میں تقسیم کیے جائیں",
+              "مچھلی پکا کر برادری کے ساتھ بانٹی جائے",
+              "عدد 12 تکمیل اور روحانی کمال کی علامت ہے (12واں برج)",
+              "جمعرات کو کرنا ضروری ہے (اس برج کے لیے بہترین دن)",
+              "اللہ کی رضا کی خالص نیت کے ساتھ"
             ]
           },
           "zakat_calculation": {
             "en": "1 person's Zakat al-Fitr ≈ 3kg of grain × 12 people = 36kg of rice",
-            "fr": "Zakat al-Fitr d'1 personne ≈ 3kg de céréales × 12 personnes = 36kg de riz"
+            "fr": "Zakat al-Fitr d'1 personne ≈ 3kg de céréales × 12 personnes = 36kg de riz",
+            "ar": "زكاة الفطر لشخص واحد ≈ 3 كغ من الحبوب × 12 شخصًا = 36 كغ من الأرز",
+            "ur": "ایک شخص کا صدقۂ فطر ≈ 3 کلوگرام اناج × 12 افراد = 36 کلوگرام چاول"
           },
           "fish_details": {
             "type": {
               "en": "Any halal fish - fresh, dried, or preserved. Amount should feed the community.",
-              "fr": "Tout poisson halal - frais, séché ou conservé. La quantité doit nourrir la communauté."
+              "fr": "Tout poisson halal - frais, séché ou conservé. La quantité doit nourrir la communauté.",
+              "ar": "أي سمك حلال - طازج أو مجفف أو محفوظ. وينبغي أن يكفي المقدار لإطعام الجماعة.",
+              "ur": "کوئی بھی حلال مچھلی — تازہ، خشک یا محفوظ۔ مقدار اتنی ہو کہ برادری کو کھلا سکے۔"
             },
             "symbolism": {
               "en": "Fish represents water element purity, spiritual depth, and ancient sustenance",
-              "fr": "Le poisson représente la pureté de l'élément eau, la profondeur spirituelle et la subsistance ancienne"
+              "fr": "Le poisson représente la pureté de l'élément eau, la profondeur spirituelle et la subsistance ancienne",
+              "ar": "يرمز السمك إلى نقاء عنصر الماء، والعمق الروحي، والقوت العريق",
+              "ur": "مچھلی آبی عنصر کی پاکیزگی، روحانی گہرائی اور قدیم رزق کی علامت ہے"
             }
           },
           "best_timing": {
@@ -4357,11 +5147,29 @@
               "À l'achèvement d'un voyage spirituel majeur ou transformation",
               "Lors de la recherche de clôture spirituelle ou nouveau départ",
               "Après le rétablissement d'une maladie ou une transition de vie majeure"
+            ],
+            "ar": [
+              "الخميس (أفضل يوم لهذا البرج) - أقوى توقيت",
+              "يمكن أداؤه في أي خميس على مدار السنة",
+              "مبارك بشكل خاص خلال شهر رمضان",
+              "عند إتمام رحلة روحية كبرى أو تحول جوهري",
+              "عند السعي إلى ختام روحي أو بداية جديدة",
+              "بعد التعافي من مرض، أو بعد انتقال كبير في الحياة"
+            ],
+            "ur": [
+              "جمعرات (اس برج کے لیے بہترین دن) — سب سے مؤثر وقت",
+              "سال بھر کسی بھی جمعرات کو کیا جا سکتا ہے",
+              "رمضان میں خاص طور پر بابرکت",
+              "کسی بڑے روحانی سفر یا تبدیلی کی تکمیل پر",
+              "جب روحانی اختتام یا نیا آغاز مقصود ہو",
+              "کسی بیماری سے صحت یابی کے بعد، یا زندگی کی کسی بڑی تبدیلی کے بعد"
             ]
           },
           "significance": {
             "en": "This is the completion buruj (12th) with 12 portions - representing full spiritual cycle completion. In this tradition, rice (nourishment) and fish (water element) are associated with spiritual protection and wellbeing, which are sought from Allah. The number 12 appears twice (12th buruj + 12 portions) symbolizing ultimate spiritual wholeness. Thursday's Jupiter energy is traditionally said to amplify compassion, mercy, and divine blessings. This sadaqah is given in the hope of safeguarding your empathic nature, keeping healthy boundaries while maintaining compassion, seeking Allah's protection in service to others, and reaching spiritual completion and closure.",
-            "fr": "C'est le buruj d'achèvement (12ème) avec 12 portions - représentant l'achèvement du cycle spirituel complet. Dans cette tradition, le riz (nourriture) et le poisson (élément eau) sont associés à la protection spirituelle et au bien-être, que l'on demande à Allah. Le nombre 12 apparaît deux fois (12ème buruj + 12 portions) symbolisant la plénitude spirituelle ultime. L'énergie de Jupiter du jeudi est traditionnellement dite amplifier la compassion, la miséricorde et les bénédictions divines. Cette sadaqah est donnée dans l'espoir de préserver votre nature empathique, de garder des limites saines tout en maintenant la compassion, de demander la protection d'Allah dans le service aux autres et d'atteindre l'achèvement et la clôture spirituels."
+            "fr": "C'est le buruj d'achèvement (12ème) avec 12 portions - représentant l'achèvement du cycle spirituel complet. Dans cette tradition, le riz (nourriture) et le poisson (élément eau) sont associés à la protection spirituelle et au bien-être, que l'on demande à Allah. Le nombre 12 apparaît deux fois (12ème buruj + 12 portions) symbolisant la plénitude spirituelle ultime. L'énergie de Jupiter du jeudi est traditionnellement dite amplifier la compassion, la miséricorde et les bénédictions divines. Cette sadaqah est donnée dans l'espoir de préserver votre nature empathique, de garder des limites saines tout en maintenant la compassion, de demander la protection d'Allah dans le service aux autres et d'atteindre l'achèvement et la clôture spirituels.",
+            "ar": "هذا هو برج الاكتمال (الثاني عشر) بحصص عددها 12 - ما يمثّل تمام الدورة الروحية. في هذه السُّنّة، يرتبط الأرز (الغذاء) والسمك (عنصر الماء) بالحماية الروحية والعافية، وهما مما يُطلب من الله. ويظهر الرقم 12 مرّتين (البرج الثاني عشر + 12 حصة) رمزًا للتمام الروحي. ويُقال تقليديًا إن طاقة المشتري يوم الخميس تضاعف الرأفة والرحمة والبركات الإلهية. تُقدَّم هذه الصدقة رجاء حفظ طبيعتك المتعاطفة، والاحتفاظ بحدود سليمة مع بقاء الرحمة، وطلب حماية الله في خدمة الآخرين، وبلوغ التمام والختام الروحيين.",
+            "ur": "یہ تکمیل کا برج (12واں) ہے اور 12 حصوں کے ساتھ — مکمل روحانی دور کی تکمیل کی علامت۔ روایت میں چاول (غذا) اور مچھلی (آبی عنصر) کو روحانی حفاظت اور عافیت سے جوڑا جاتا ہے، جو اللہ ہی سے طلب کی جاتی ہیں۔ عدد 12 دو بار آتا ہے (12واں برج + 12 حصے) جو مکمل روحانی تکمیل کی علامت ہے۔ جمعرات کی مشتری کی توانائی ہمدردی، رحمت اور الٰہی برکتوں کو بڑھاتی سمجھی جاتی ہے۔ یہ صدقہ اس امید کے ساتھ دیا جاتا ہے کہ آپ کی ہمدرد فطرت محفوظ رہے، ہمدردی برقرار رکھتے ہوئے صحت مند حدود قائم رہیں، دوسروں کی خدمت میں اللہ کی حفاظت طلب کی جائے، اور روحانی تکمیل و اختتام نصیب ہو۔"
           }
         }
       },

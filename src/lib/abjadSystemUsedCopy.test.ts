@@ -27,16 +27,19 @@ describe('abjadSystemUsedCopy', () => {
     });
   });
 
-  it('Arabic and Urdu reuse existing system labels and keep the English frame', () => {
-    expect(abjadSystemUsedCopy('ar', 'Mashriqi', arLabels).line).toBe(
-      'Calculated with مشرقي Abjad (غ = 1000)'
-    );
-    expect(abjadSystemUsedCopy('ar', 'Maghribi', arLabels).line).toBe(
-      'Calculated with مغربي Abjad (غ = 900)'
-    );
-    expect(abjadSystemUsedCopy('ur', 'Mashriqi', urLabels).line).toBe(
-      'Calculated with مشرقی Abjad (غ = 1000)'
-    );
-    expect(abjadSystemUsedCopy('ur', 'Maghribi', urLabels).change).toBe('Change');
+  it('Arabic and Urdu use reviewed-ready wording with existing system labels', () => {
+    expect(abjadSystemUsedCopy('ar', 'Mashriqi', arLabels)).toEqual({
+      line: 'حُسِب بحسب الأبجد المشرقي (غ = 1000)',
+      change: 'تغيير',
+    });
+    expect(abjadSystemUsedCopy('ar', 'Maghribi', arLabels)).toEqual({
+      line: 'حُسِب بحسب الأبجد المغربي (غ = 900)',
+      change: 'تغيير',
+    });
+    expect(abjadSystemUsedCopy('ur', 'Mashriqi', urLabels)).toEqual({
+      line: 'مشرقی ابجد سے حساب کیا گیا (غ = 1000)',
+      change: 'تبدیل کریں',
+    });
+    expect(abjadSystemUsedCopy('ur', 'Maghribi', urLabels).change).toBe('تبدیل کریں');
   });
 });
