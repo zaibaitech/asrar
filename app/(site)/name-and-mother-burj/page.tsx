@@ -16,9 +16,9 @@ const META = {
       "Free calculator: your burj (sign, ṭabʿ) from the Abjad value of your name and your mother's name — برجك من اسمك واسم امك. Element, temperament, blessed day, dhikr and burj sadaqah. For reflection.",
   },
   fr: {
-    title: 'Votre burj avec votre nom et celui de votre mère',
+    title: 'Trouver son burj avec son prénom et celui de sa mère',
     description:
-      "Calculateur gratuit : votre burj (signe, ṭabʿ) d'après la valeur abjad de votre prénom et de celui de votre mère — برجك من اسمك واسم امك. Élément, tempérament, jour béni, dhikr et sadaqah du burj.",
+      "Calculateur gratuit : trouver son burj avec son prénom et celui de sa mère (valeur abjad). Jour béni et dhikr. Pour la réflexion, non la prédiction.",
   },
 };
 

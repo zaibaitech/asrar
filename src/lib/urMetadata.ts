@@ -32,11 +32,11 @@ export const UR_META: Readonly<Record<string, UrMeta>> = {
   '/name-and-mother-burj': {
     title: {
       en: "Find Your Burj from Your Name and Your Mother's Name (Abjad)",
-      ur: 'نام اور امی کے نام سے برج معلوم کریں (ابجد)',
+      ur: 'نام اور امی کے نام سے برج معلوم کریں — مفت کیلکولیٹر',
     },
     description: {
       en: "Find your burj from the Abjad values of your name and your mother's (ammi's) name: element, temperament, blessed day, dhikr and sadaqa. A free calculator for reflection, not prediction.",
-      ur: 'اپنے اور امی کے نام کے ابجد اعداد سے برج معلوم کریں: عنصر، مزاج، روایتی دن، ذکر اور صدقہ۔ مفت، غور و فکر کے لیے، پیش گوئی نہیں۔',
+      ur: 'مفت کیلکولیٹر: اپنے نام اور امی کے نام کے ابجد اعداد سے برج، عنصر، مزاج، روایتی دن اور ذکر معلوم کریں۔ غور و فکر کے لیے، پیش گوئی نہیں۔',
     },
   },
   '/compatibility': {
@@ -52,11 +52,11 @@ export const UR_META: Readonly<Record<string, UrMeta>> = {
   '/abjad': {
     title: {
       en: 'Abjad Calculator: The Numerical Value of Names (ʿIlm al-Aʿdād)',
-      ur: 'ابجد کیلکولیٹر: نام کے اعداد معلوم کریں',
+      ur: 'ابجد کیلکولیٹر: حسابِ جمل سے نام کے اعداد',
     },
     description: {
       en: "Find the Abjad (ḥisāb al-jummal) value of any name or Arabic phrase in the Mashriqi or Maghribi order, with each letter's value and the balance of the four elements. For reflection and learning.",
-      ur: 'کسی بھی نام یا عربی عبارت کے ابجد اعداد (حسابِ جمل) مشرقی یا مغربی ترتیب میں، ہر حرف کی قیمت اور عناصر کے توازن کے ساتھ معلوم کریں۔',
+      ur: 'ابجد کیلکولیٹر سے کسی بھی نام یا عبارت کے حسابِ جمل (مشرقی یا مغربی ترتیب) اور ہر حرف کی قیمت معلوم کریں۔ سیکھنے اور غور و فکر کے لیے، پیش گوئی نہیں۔',
     },
   },
   '/planetary-hours': {
