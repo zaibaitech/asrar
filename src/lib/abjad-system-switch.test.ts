@@ -68,19 +68,19 @@ describe('shared table helpers', () => {
 });
 
 describe('the choice: default Maghribi, remembered, shared', () => {
-  it('server-renders Maghribi before any saved choice is read', () => {
+  it('server-renders Mashriqi before any saved choice or region default is read', () => {
     function Probe() {
       const { system, systemKey, abjad } = useAbjad();
       return React.createElement('span', null, `${system}|${systemKey}|${abjad === M ? 'M' : 'E'}`);
     }
     const html = renderToString(React.createElement(AbjadProvider, null, React.createElement(Probe)));
-    expect(html).toContain('Maghribi|maghribi|M');
+    expect(html).toContain('Mashriqi|mashriqi|E');
   });
 
   it('saves and loads the choice (localStorage key "abjadSystem")', () => {
     const store = new Map<string, string>();
     const storage = { getItem: (k: string) => store.get(k) ?? null, setItem: (k: string, v: string) => void store.set(k, v) };
-    expect(loadSavedAbjadSystem(storage)).toBeNull(); // nothing saved → the Maghribi default
+    expect(loadSavedAbjadSystem(storage)).toBeNull(); // nothing saved → region / Mashriqi fallback
     saveAbjadSystem(storage, 'Mashriqi');
     expect(store.get(ABJAD_SYSTEM_STORAGE_KEY)).toBe('Mashriqi');
     expect(loadSavedAbjadSystem(storage)).toBe('Mashriqi');

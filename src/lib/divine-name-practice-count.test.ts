@@ -56,8 +56,8 @@ describe('aḍ-Ḍārr: 291 under Maghribi, 1001 under Mashriqi', () => {
 
   it('switching the app-wide system updates the list used by AllDivineNamesBrowser and DivineNamePicker', () => {
     const byDefault = renderToString(React.createElement(AbjadProvider, null, React.createElement(Probe)));
-    expect(byDefault).toContain('291|Recite 291 times');
-    expect(byDefault).toContain('Récitez 291 fois');
+    expect(byDefault).toContain('1001|Recite 1001 times');
+    expect(byDefault).toContain('Récitez 1001 fois');
     for (const [system, n] of [['Maghribi', 291], ['Mashriqi', 1001]] as const) {
       const html = renderToString(React.createElement(AbjadContext.Provider, { value: ctx(system) }, React.createElement(Probe)));
       expect(html).toContain(`${n}|Recite ${n} times`);

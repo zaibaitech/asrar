@@ -8,7 +8,7 @@ import { useServerText } from '../features/calculator/i18n/CalculatorTextContext
 
 /**
  * The one app-wide Abjad system switch. Every calculator reads the same
- * choice from AbjadContext (Maghribi by default, remembered in localStorage),
+ * choice from AbjadContext (region default, else Mashriqi; remembered in localStorage),
  * so switching here switches them all.
  *
  * `showNote` adds the one-line regional note under the switch; the home
