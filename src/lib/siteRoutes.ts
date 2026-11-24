@@ -135,11 +135,11 @@ export const PUBLIC_TOOLS: PublicTool[] = [
     descriptionFr: "La sadaqa selon le jour de la semaine, le mois hégirien de naissance et le burj.",
   },
   {
-    path: '/ramadan',
-    name: 'Zikr Challenges',
-    description: 'Track your dhikr: Istighfār, Ṣalawāt, Divine Names and the 201 Prophetic Names practice.',
-    nameFr: "Défis de Zikr",
-    descriptionFr: "Suivez votre dhikr : Istighfār, Ṣalawāt, Noms divins et la pratique des 201 Noms prophétiques.",
+    path: '/zikr',
+    name: 'Zikr Portal',
+    description: 'Choose a zikr, count it with a tasbīḥ counter and track your daily dhikr: Istighfār, Ṣalawāt, Divine Names and the 201 Prophetic Names.',
+    nameFr: "Portail du Zikr",
+    descriptionFr: "Choisissez un zikr, comptez-le avec un compteur de tasbīḥ et suivez votre dhikr quotidien : Istighfār, Ṣalawāt, Noms divins et les 201 Noms prophétiques.",
   },
 ];
 

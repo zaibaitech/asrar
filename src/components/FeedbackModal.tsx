@@ -9,7 +9,7 @@ type Status = 'idle' | 'submitting' | 'success' | 'error';
 
 /**
  * Local translations object, following the pattern already used by
- * app/ramadan/RamadanPage.tsx and the calculator feature's copy.ts —
+ * app/(site)/zikr/ZikrPage.tsx and the calculator feature's copy.ts —
  * small page/feature-scoped copy stays local rather than growing the
  * global src/lib/translations.ts dictionary.
  */

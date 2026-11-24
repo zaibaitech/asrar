@@ -1,7 +1,7 @@
 {
   "name": "Asrār Everyday",
   "short_name": "Asrār",
-  "description": "ʿIlm al-Ḥurūf, ʿIlm al-Nujūm & ʿIlm al-ʿAdad — Planetary Hours, Abjad Numerology, Zikr Challenges & Name Destiny.",
+  "description": "ʿIlm al-Ḥurūf, ʿIlm al-Nujūm & ʿIlm al-ʿAdad — Planetary Hours, Abjad Numerology, Zikr Portal & Name Destiny.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -82,10 +82,10 @@
       "icons": [{ "src": "/icons/icon-96x96.png", "sizes": "96x96" }]
     },
     {
-      "name": "Zikr Challenges",
+      "name": "Zikr Portal",
       "short_name": "Zikr",
-      "description": "Track your daily dhikr practice",
-      "url": "/ramadan",
+      "description": "Choose, count and track your daily dhikr",
+      "url": "/zikr",
       "icons": [{ "src": "/icons/icon-96x96.png", "sizes": "96x96" }]
     }
   ],

@@ -31,6 +31,14 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
+      {
+        // The zikr tracker used to live at /ramadan; it is used all year, so it is
+        // now the Zikr Portal at /zikr. Shared /ramadan?challenge=… links keep working
+        // (the query string is carried over).
+        source: '/ramadan',
+        destination: '/zikr',
+        permanent: true,
+      },
     ];
   },
 

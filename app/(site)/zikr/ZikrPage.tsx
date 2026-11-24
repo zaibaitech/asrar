@@ -1,7 +1,7 @@
 /**
- * Ramadan Page Client Component
+ * Zikr Portal tracker (client component)
  * ==============================
- * Dedicated full-page experience for Ramadan spiritual challenges.
+ * Dedicated full-page experience for daily zikr challenges, counting and tracking (used all year).
  * Always expanded, no dropdown - immersive dhikr tracking interface.
  */
 
@@ -60,7 +60,7 @@ const translations = {
 
 // ─── Component ───────────────────────────────────────────────────────────────────
 
-export function RamadanPage() {
+export function ZikrPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { language } = useLanguage();
@@ -104,7 +104,7 @@ export function RamadanPage() {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       if (!state.isHydrated) {
-        console.warn('[RamadanPage] Hydration timeout - forcing display');
+        console.warn('[ZikrPage] Hydration timeout - forcing display');
         setHydrationTimeout(true);
       }
     }, 10000); // 10 second max wait for hydration
@@ -265,7 +265,7 @@ export function RamadanPage() {
   // ─── Share functionality ───
   const handleShare = async () => {
     trackEvent('share_click', { tool: 'ramadan', method: nativeOrCopy() });
-    const shareUrl = withShareUtm(`${process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app'}/ramadan${language === 'fr' ? '?lang=fr' : ''}`, nativeOrCopySource(), { keep: ['lang'] });
+    const shareUrl = withShareUtm(`${process.env.NEXT_PUBLIC_BASE_URL || 'https://www.asrar.app'}/zikr${language === 'fr' ? '?lang=fr' : ''}`, nativeOrCopySource(), { keep: ['lang'] });
     const shareTitle = t.title;
     const shareText = language === 'fr'
       ? '📿 Rejoignez-moi dans mes défis de zikr sur Asrār!'
@@ -311,9 +311,9 @@ export function RamadanPage() {
             <div className="flex items-center gap-2">
               <span className="text-2xl">📿</span>
               <div className="text-center">
-                <h1 className="text-lg font-bold text-emerald-900 dark:text-emerald-100">
+                <h2 className="text-lg font-bold text-emerald-900 dark:text-emerald-100">
                   {t.title}
-                </h1>
+                </h2>
               </div>
             </div>
 

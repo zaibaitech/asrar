@@ -1,7 +1,7 @@
 /**
  * Ramadan Banner Mini Component
  * ==============================
- * Single-line banner for Ramadan challenges - links to /ramadan page.
+ * Single-line banner for zikr challenges - links to /zikr page.
  */
 
 'use client';
@@ -71,7 +71,7 @@ export function RamadanBannerMini({ language = 'en' }: RamadanBannerMiniProps) {
 
   return (
     <Link
-      href="/ramadan"
+      href="/zikr"
       className="block bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/40 dark:to-teal-950/30 rounded-xl border border-emerald-200 dark:border-emerald-700/50 px-4 py-3 sm:px-6 sm:py-4 hover:bg-emerald-100/40 dark:hover:bg-emerald-900/20 transition-colors"
     >
       <div className="flex items-center justify-between">

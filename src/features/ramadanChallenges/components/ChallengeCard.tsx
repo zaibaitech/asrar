@@ -169,7 +169,7 @@ export function ChallengeCard({
   const getShareUrl = (source: ShareSource) => {
     const challengeSlug = getChallengeSlug();
     const langParam = language === 'fr' ? '&lang=fr' : '';
-    return withShareUtm(`${BASE_URL}/ramadan?challenge=${challengeSlug}${langParam}`, source, { keep: ['challenge', 'lang'] });
+    return withShareUtm(`${BASE_URL}/zikr?challenge=${challengeSlug}${langParam}`, source, { keep: ['challenge', 'lang'] });
   };
 
   const handleNativeShare = async () => {

@@ -1,7 +1,7 @@
 /**
  * Page-scoped copy for the Ikhtiyārāt (Best Dates) feature.
  * Follows the local-translations-object convention used by
- * app/ramadan/RamadanPage.tsx and app/planetary-hours/PlanetaryHoursPage.tsx
+ * app/(site)/zikr/ZikrPage.tsx and app/planetary-hours/PlanetaryHoursPage.tsx
  * rather than growing the global src/lib/translations.ts dictionary.
  */
 
