@@ -72,16 +72,16 @@ const nextConfig = {
           {
             key: 'Content-Security-Policy',
             value: [
-              "default-src 'self' https://asrar.app.com",
-              "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://vercel.live https://*.vercel.live https://www.googletagmanager.com https://www.google-analytics.com https://www.clarity.ms https://*.clarity.ms https://asrar.app.com", // Next.js requires unsafe-eval and unsafe-inline, allow Vercel Live
-              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://asrar.app.com", // Allow Google Fonts
-              "img-src 'self' data: https: https://asrar.app.com",
-              "font-src 'self' data: https://fonts.gstatic.com https://asrar.app.com", // Allow Google Fonts
-              "connect-src 'self' https://azjgakbhovanweelkezt.supabase.co wss://azjgakbhovanweelkezt.supabase.co https://api.supabase.co https://generativelanguage.googleapis.com https://nominatim.openstreetmap.org https://api.quran.com https://api.alquran.cloud https://vercel.live https://*.vercel.live https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://*.clarity.ms https://c.bing.com https://asrar.app.com", // Add Supabase, Google AI, OpenStreetMap, Quran APIs, Vercel Live, and production domain
+              "default-src 'self' https://www.asrar.app https://asrar.app",
+              "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://vercel.live https://*.vercel.live https://www.googletagmanager.com https://www.google-analytics.com https://www.clarity.ms https://*.clarity.ms https://www.asrar.app https://asrar.app", // Next.js requires unsafe-eval and unsafe-inline, allow Vercel Live
+              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.asrar.app https://asrar.app", // Allow Google Fonts
+              "img-src 'self' data: https: https://www.asrar.app https://asrar.app",
+              "font-src 'self' data: https://fonts.gstatic.com https://www.asrar.app https://asrar.app", // Allow Google Fonts
+              "connect-src 'self' https://azjgakbhovanweelkezt.supabase.co wss://azjgakbhovanweelkezt.supabase.co https://api.supabase.co https://generativelanguage.googleapis.com https://nominatim.openstreetmap.org https://api.quran.com https://api.alquran.cloud https://vercel.live https://*.vercel.live https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://*.clarity.ms https://c.bing.com https://www.asrar.app https://asrar.app", // Add Supabase, Google AI, OpenStreetMap, Quran APIs, Vercel Live, and the asrar.app origins
               "frame-src 'self' https://vercel.live https://*.vercel.live https://www.youtube-nocookie.com", // Allow Vercel Live frames and YouTube video embeds
               "frame-ancestors 'none'", // Prevent clickjacking
-              "base-uri 'self' https://asrar.app.com",
-              "form-action 'self' https://asrar.app.com",
+              "base-uri 'self' https://www.asrar.app https://asrar.app",
+              "form-action 'self' https://www.asrar.app https://asrar.app",
             ].join('; '),
           },
           // Prevent clickjacking attacks
