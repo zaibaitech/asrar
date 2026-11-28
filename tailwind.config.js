@@ -30,6 +30,11 @@ module.exports = {
           '"Segoe UI Symbol"',
           '"Noto Color Emoji"',
         ],
+        arabic: [
+          '"Noto Naskh Arabic"',
+          'Amiri',
+          'serif',
+        ],
       },
       keyframes: {
         'soft-highlight': {
